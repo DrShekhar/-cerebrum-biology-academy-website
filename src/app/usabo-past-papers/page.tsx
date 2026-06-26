@@ -36,8 +36,11 @@ export const metadata: Metadata = {
     'USABO exam practice',
   ],
   alternates: {
-    canonical: URL,
-    languages: { en: URL, 'en-US': URL },
+    canonical: 'https://cerebrumbiologyacademy.com/usabo-past-papers-archive',
+    languages: {
+      en: 'https://cerebrumbiologyacademy.com/usabo-past-papers-archive',
+      'en-US': 'https://cerebrumbiologyacademy.com/usabo-past-papers-archive',
+    },
   },
   openGraph: {
     title: 'USABO Past Papers 2015–2024 | Open & Semifinal Archive',

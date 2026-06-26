@@ -1418,7 +1418,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     timezoneIana: 'Asia/Hong_Kong',
     addressRegion: 'Hong Kong',
     heroBlurb:
-      'Hong Kong International School (HKIS) is the anchor of AP Biology demand in the region — HKIS publicly reports 95% of AP candidates scoring 3 or higher and 82% scoring 4 or 5, making it one of the strongest AP cohorts in Asia. Feeder demand also comes from Canadian International School of Hong Kong (CDNIS) and the IB-primary cluster (CIS, ESF schools, RCHK, ISF Academy) where students add AP Biology for US-college applications. Hong Kong’s deep expat and local academic communities drive serious AP-5 demand from families dual-applying to HKU, CUHK, and US universities — particularly Ivy League, UC system, and Johns Hopkins.',
+      'Hong Kong International School (HKIS) is the anchor of AP Biology demand in the region — HKIS is among Asia’s strongest AP-Biology cohorts. Feeder demand also comes from Canadian International School of Hong Kong (CDNIS) and the IB-primary cluster (CIS, ESF schools, RCHK, ISF Academy) where students add AP Biology for US-college applications. Hong Kong’s deep expat and local academic communities drive serious AP-5 demand from families dual-applying to HKU, CUHK, and US universities — particularly Ivy League, UC system, and Johns Hopkins.',
     positioningBlurb:
       'Hong Kong AP tutoring agencies — ITS Education Asia, ++tutors, TutorChase, Aegis Advisors, and the long tail of independent tutors — charge HKD 470–1,000+/hr (~US$60–130/hr) for mostly graduate-level tutors with limited biology specialism. Cerebrum is biology-only: AIIMS-trained biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch coaching tradition (max 12) calibrated to retrieval practice. HKT evening live classes (7–10 PM) slot cleanly into HKIS, CDNIS, and CIS schedules. Senior-faculty 1:1 from US$1,800 for 12 hours — competitive once you compare like-for-like specialist depth.',
     schools: [
@@ -1441,9 +1441,9 @@ export const apBiologyMetros: APBiologyMetro[] = [
     faqs: [
       {
         question:
-          'HKIS reports 95% of AP candidates scoring 3+ and 82% scoring 4–5 — what does external tutoring add for a HKIS student?',
+          'HKIS is among Asia’s strongest AP-Biology cohorts — what does external tutoring add for a HKIS student?',
         answer:
-          'Those are excellent class-level numbers, but the 18% who land at 3 rather than 4 or 5 are usually losing points on FRQ writing and timed-exam composure — not on content knowledge. HKIS AP Biology teachers run sections of 20–25 students and cannot mark every FRQ attempt to College Board rubric weekly. Our 1:1 layer fills exactly that: same Campbell-aligned syllabus HKIS teaches, plus dedicated weekly rubric calibration, timed full-length mocks, and the FRQ writing skill that converts a strong 3 into a clean 5.',
+          'Those are excellent class-level results, but the students who land at a 3 rather than a 4 or 5 are usually losing points on FRQ writing and timed-exam composure — not on content knowledge. HKIS AP Biology teachers run sections of 20–25 students and cannot mark every FRQ attempt to College Board rubric weekly. Our 1:1 layer fills exactly that: same Campbell-aligned syllabus HKIS teaches, plus dedicated weekly rubric calibration, timed full-length mocks, and the FRQ writing skill that converts a strong 3 into a clean 5.',
       },
       {
         question:

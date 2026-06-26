@@ -40,8 +40,8 @@ export default function TopIBOPage() {
         pageUrl="https://cerebrumbiologyacademy.com/top-ibo-coaching"
         pageName="Top IBO Coaching Globally"
         parentHub={{
-          name: 'Best IBO Preparation',
-          url: 'https://cerebrumbiologyacademy.com/best-ibo-preparation',
+          name: 'IBO Preparation',
+          url: 'https://cerebrumbiologyacademy.com/ibo-preparation',
         }}
         personKnowsAbout={[
           'International Biology Olympiad',

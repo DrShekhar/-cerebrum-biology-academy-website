@@ -31,21 +31,31 @@ interface FAQ {
 
 const iboSyllabus = [
   {
-    category: 'Cell Biology & Biochemistry',
-    percentage: '25%',
+    category: 'Cell Biology',
+    percentage: '~25%',
     icon: Microscope,
     color: 'bg-blue-500',
   },
   {
-    category: 'Molecular Biology & Genetics',
-    percentage: '20%',
-    icon: Brain,
-    color: 'bg-purple-500',
+    category: 'Animal Anatomy & Physiology',
+    percentage: '~25%',
+    icon: Users,
+    color: 'bg-red-500',
   },
-  { category: 'Plant Biology', percentage: '15%', icon: BookOpen, color: 'bg-green-500' },
-  { category: 'Animal Physiology', percentage: '20%', icon: Users, color: 'bg-red-500' },
-  { category: 'Ecology & Evolution', percentage: '10%', icon: Globe, color: 'bg-teal-500' },
-  { category: 'Practical Skills', percentage: '10%', icon: Beaker, color: 'bg-orange-500' },
+  { category: 'Genetics & Evolution', percentage: '~20%', icon: Brain, color: 'bg-purple-500' },
+  {
+    category: 'Plant Anatomy & Physiology',
+    percentage: '~15%',
+    icon: BookOpen,
+    color: 'bg-green-500',
+  },
+  { category: 'Ecology', percentage: '~10%', icon: Globe, color: 'bg-teal-500' },
+  {
+    category: 'Ethology & Biosystematics',
+    percentage: '~10%',
+    icon: Beaker,
+    color: 'bg-orange-500',
+  },
 ]
 
 const practicalSkills = [
@@ -118,8 +128,9 @@ export default function IBOPreparationGurugramContent({ faqs }: { faqs: FAQ[] })
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
               Advanced coaching for International Biology Olympiad. Expert training for INBO
-              qualifiers aiming to represent India at IBO. Theory (60%) + Practical (40%)
-              preparation at our Sector 51 center.
+              qualifiers aiming to represent India at IBO. Full theory and practical preparation —
+              the practical exams are a major component (historically up to ~50% of the total score)
+              — at our Sector 51 center.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -133,7 +144,7 @@ export default function IBOPreparationGurugramContent({ faqs }: { faqs: FAQ[] })
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Beaker className="w-5 h-5 text-green-400" />
-                <span>40% Practical</span>
+                <span>Theory + Practical</span>
               </div>
             </div>
 
@@ -204,14 +215,15 @@ export default function IBOPreparationGurugramContent({ faqs }: { faqs: FAQ[] })
             <div className="animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Beaker className="w-4 h-4" />
-                40% IBO Weightage
+                Major IBO Component
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                 Practical Skills Training
               </h2>
               <p className="text-lg text-slate-600 mb-8">
-                IBO has a significant practical component (40% weightage). Our training covers all
-                essential laboratory techniques required for international competition.
+                IBO has a major practical component — historically up to ~50% of the total score.
+                Our training covers all essential laboratory techniques required for international
+                competition.
               </p>
               <ul className="space-y-4">
                 {practicalSkills.map((skill) => (

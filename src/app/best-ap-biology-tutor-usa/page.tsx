@@ -2,26 +2,22 @@ import { Metadata } from 'next'
 import { BestVerticalLanding, type BestVerticalConfig } from '@/components/seo/BestVerticalLanding'
 
 export const metadata: Metadata = {
-  title: 'Best AP Biology Tutor (USA & Global) | FRQ Rubric Specialist',
+  title: 'Best AP Biology Tutor in the USA | FRQ Rubric Specialist',
   description:
-    "Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum's AP Biology tutoring — biology-only specialist across 44 pages globally. FRQ rubric mastery, College Board Units 1–8, AP-to-USABO bridging, Anki-based active recall.",
+    "Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum's US AP Biology tutoring — biology-only specialist across 10 US metros + school feeders. FRQ rubric mastery, College Board Units 1–8, AP-to-USABO bridging, Anki-based active recall.",
   keywords: [
-    'best ap biology tutor',
     'best ap biology tutor usa',
-    'best ap biology coaching',
-    'best ap biology teacher',
+    'best ap biology coaching usa',
+    'best ap biology teacher usa',
     'best ap biology tutor for score 5',
     'best ap bio frq tutor',
     'ap biology rubric specialist',
-    'best ap biology tutor 2026',
-    'best ap biology tutor india',
-    'best ap biology tutor canada',
-    'best ap biology online tutor',
+    'best ap biology tutor usa 2026',
   ],
   openGraph: {
-    title: 'Best AP Biology Tutor (USA & Global) | Cerebrum Biology Academy',
+    title: 'Best AP Biology Tutor in the USA | Cerebrum Biology Academy',
     description:
-      'Biology-only AP coaching across 44 pages. FRQ rubric specialist. AP-to-USABO bridging.',
+      'Biology-only AP coaching across 10 US metros + school feeders. FRQ rubric specialist. AP-to-USABO bridging.',
     url: 'https://cerebrumbiologyacademy.com/best-ap-biology-tutor-usa',
     type: 'website',
   },
@@ -31,7 +27,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Best AP Biology Tutor (USA & Global) | FRQ Rubric Specialist',
+    title: 'Best AP Biology Tutor in the USA | FRQ Rubric Specialist',
     description: 'Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum',
   },
 }
@@ -263,5 +259,13 @@ const config: BestVerticalConfig = {
 }
 
 export default function BestAPBiologyTutorUSAPage() {
-  return <BestVerticalLanding config={config} />
+  return (
+    <BestVerticalLanding
+      config={config}
+      breadcrumbParent={{
+        name: 'AP Biology Tutor',
+        url: 'https://cerebrumbiologyacademy.com/ap-biology-tutor',
+      }}
+    />
+  )
 }

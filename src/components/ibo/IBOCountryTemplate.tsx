@@ -195,6 +195,15 @@ export default function IBOCountryTemplate({ country }: { country: IBOCountry })
               </Link>
               .
             </p>
+            {country.relatedHref && country.relatedLabel && (
+              <p className="mt-3 text-sm text-slate-500">
+                New to the pathway?{' '}
+                <Link href={country.relatedHref} className="text-blue-700 underline">
+                  {country.relatedLabel}
+                </Link>
+                .
+              </p>
+            )}
           </div>
         </section>
 

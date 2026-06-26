@@ -212,5 +212,13 @@ const config: BestVerticalConfig = {
 }
 
 export default function BestDATBiologyTutorPage() {
-  return <BestVerticalLanding config={config} />
+  return (
+    <BestVerticalLanding
+      config={config}
+      breadcrumbParent={{
+        name: 'DAT Biology',
+        url: 'https://cerebrumbiologyacademy.com/dat-biology-preparation',
+      }}
+    />
+  )
 }

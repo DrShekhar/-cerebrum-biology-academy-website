@@ -56,7 +56,60 @@ const schools = [
   'Jesuit HS',
 ]
 
+const faqs = [
+  {
+    question: 'Lincoln or Catlin Gabel students — what level should they start at?',
+    answer:
+      "Lincoln is Portland's top public STEM programme; Catlin Gabel is the leading independent school. Both provide strong AP Biology foundations for USABO. Start in October for the February Open.",
+  },
+  {
+    question: 'Beaverton / Hillsboro families — planning conversation?',
+    answer:
+      'The Intel/Nike corridor has growing USABO demand. We discuss: target level, AP Biology bridge, PT evening scheduling, and whether to join multi-city PT batches (with Seattle and Bay Area students).',
+  },
+  {
+    question: 'Can Portland students join Bay Area or Seattle small batches?',
+    answer:
+      'Yes — all in PT timezone. Multi-city batches provide broader peer interaction and exposure to question-discussion patterns from multiple school systems.',
+  },
+  {
+    question: 'How does USABO coaching complement AP Biology?',
+    answer:
+      'USABO Open overlaps ~70% with AP Biology. The Semifinal requires Alberts-level depth beyond AP. We build on the AP foundation.',
+  },
+  {
+    question: 'What does USABO coaching cost?',
+    answer:
+      'Three tiers: Foundation $2,500, Complete Olympiad Year $4,500, and Elite 1:1 Mentoring $6,000 (per USABO cycle).',
+  },
+]
+
 export default function Page() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'USABO Coaching',
+        item: 'https://cerebrumbiologyacademy.com/usabo-coaching',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `USABO Coaching — ${cityName}`,
+        item: `https://cerebrumbiologyacademy.com/${citySlug}`,
+      },
+    ],
+  }
+
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
@@ -79,11 +132,29 @@ export default function Page() {
     },
   }
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <USABOCityTemplate
         cityName={cityName}
@@ -94,33 +165,7 @@ export default function Page() {
         apBiologyCitySlug="portland"
         heroBlurb="Portland's USABO ecosystem centres on Lincoln HS, Catlin Gabel, and Oregon Episcopal — the top STEM programmes in the Pacific Northwest south of Seattle. The Beaverton/Hillsboro corridor (Intel, Nike) adds Indian-American olympiad demand. The smaller PNW cohort means ambitious students benefit from our multi-city small batches."
         rigourBlurb="Portland students share the PT timezone with Seattle and Bay Area, enabling multi-city small-batch sessions for richer peer interaction. OHSU proximity provides research-access opportunities. Our PT evening sessions fit the Oregon school schedule."
-        faqs={[
-          {
-            question: 'Lincoln or Catlin Gabel students — what level should they start at?',
-            answer:
-              "Lincoln is Portland's top public STEM programme; Catlin Gabel is the leading independent school. Both provide strong AP Biology foundations for USABO. Start in October for the February Open.",
-          },
-          {
-            question: 'Beaverton / Hillsboro families — planning conversation?',
-            answer:
-              'The Intel/Nike corridor has growing USABO demand. We discuss: target level, AP Biology bridge, PT evening scheduling, and whether to join multi-city PT batches (with Seattle and Bay Area students).',
-          },
-          {
-            question: 'Can Portland students join Bay Area or Seattle small batches?',
-            answer:
-              'Yes — all in PT timezone. Multi-city batches provide broader peer interaction and exposure to question-discussion patterns from multiple school systems.',
-          },
-          {
-            question: 'How does USABO coaching complement AP Biology?',
-            answer:
-              'USABO Open overlaps ~70% with AP Biology. The Semifinal requires Alberts-level depth beyond AP. We build on the AP foundation.',
-          },
-          {
-            question: 'What does USABO coaching cost?',
-            answer:
-              '1:1 Elite Mentoring: $90/hour. Small-Batch Weekend: $50/hour. Complete Olympiad Year: $4,500/year.',
-          },
-        ]}
+        faqs={faqs}
       />
     </>
   )

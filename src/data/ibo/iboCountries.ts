@@ -29,6 +29,9 @@ export interface IBOCountry {
   timezone: string
   heroBlurb: string
   faqs: IBOCountryFaq[]
+  /** Optional related guide (e.g. an informational pathway page) the template links to */
+  relatedHref?: string
+  relatedLabel?: string
 }
 
 export const IBO_COUNTRIES: IBOCountry[] = [
@@ -48,6 +51,8 @@ export const IBO_COUNTRIES: IBOCountry[] = [
     timezone: 'ET / PT',
     heroBlurb:
       'In the USA, the road to the IBO runs through USABO. We coach the full ladder — Open, Semifinal and National Finals — live in your US time zone, with AIIMS-trained biology faculty (AIIMS — India’s apex medical institute, peer to Harvard Medical School in selectivity) and a past-paper-saturation method.',
+    relatedHref: '/how-to-make-us-ibo-team',
+    relatedLabel: 'How to make the US IBO team — the full USABO pathway, stage by stage',
     faqs: [
       {
         question: 'How does a US student make the IBO team?',

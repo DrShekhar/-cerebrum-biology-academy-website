@@ -58,7 +58,8 @@ const expectedDates = [
     stage: 'USABO Open Exam',
     expectedWindow: 'First or second week of February',
     format: '50 MCQ, 50 minutes, school-administered, single sitting',
-    nextStep: 'Top performers (~10% of registrants) advance to the Semifinal',
+    nextStep:
+      'Top performers advance to the Semifinal (the advancing field is set by CEE each year)',
   },
   {
     stage: 'USABO Semifinal',
@@ -83,20 +84,24 @@ const expectedDates = [
 const historicalCutoffs = [
   {
     year: '2024',
-    openCutoff: 'Approximately 30/50 to advance to Semifinal',
-    semifinalNote: 'Semifinalist field of ~750 students; Finalist top 20 announced in late March',
-    teamHost: 'IBO 2024 hosted in Astana, Kazakhstan — US team brought home 4 medals',
+    openCutoff:
+      'Open cutoff varies each year — CEE publishes results per cycle (not pre-announced)',
+    semifinalNote:
+      'The semifinalist field size varies year to year; the Finalist Top 20 are announced after the Semifinal',
+    teamHost: 'IBO 2024 hosted in Astana, Kazakhstan',
   },
   {
     year: '2023',
-    openCutoff: 'Approximately 29/50 to advance to Semifinal',
+    openCutoff:
+      'Open cutoff varies each year — CEE publishes results per cycle (not pre-announced)',
     semifinalNote:
-      'Strong year for biostats-heavy questions; Finalist scoring concentrated tightly',
-    teamHost: 'IBO 2023 hosted in Al Ain, UAE — US team standard medal performance',
+      'A biostats-heavy paper; as in every cycle, the advancing field is set by CEE after grading',
+    teamHost: 'IBO 2023 hosted in Al Ain, UAE',
   },
   {
     year: '2022',
-    openCutoff: 'Approximately 28/50 to advance to Semifinal',
+    openCutoff:
+      'Open cutoff varies each year — CEE publishes results per cycle (not pre-announced)',
     semifinalNote: 'First post-COVID return to full normal-format Semifinal',
     teamHost: 'IBO 2022 hosted in Yerevan, Armenia',
   },
@@ -235,14 +240,14 @@ export default function USABO2026ResultsPage() {
             <p className="text-lg md:text-xl text-slate-300 mb-6 max-w-3xl">
               Where the 2026 cycle stands — the Open Exam (February) and Semifinal (March) are
               complete, the National Finals camp runs in late May / early June, and Team USA heads
-              to the IBO in July. Below: the recurring USABO calendar, cutoff ranges based on
-              2022–2024 history, and a tracker that also looks ahead to the 2027 cycle.
+              to the IBO in July. Below: the recurring USABO calendar, how cutoffs and advancement
+              have worked across 2022–2024, and a tracker that also looks ahead to the 2027 cycle.
             </p>
             <p className="text-base text-slate-400 mb-8 max-w-3xl">
-              All exam dates and cutoffs are confirmed by the Center for Excellence in Education
-              (CEE), which administers USABO. The numbers below are factual where stated and
-              labelled &quot;expected&quot; or &quot;historical range&quot; everywhere we&apos;re
-              estimating.
+              Exam dates and results are confirmed by the Center for Excellence in Education (CEE),
+              which administers USABO. CEE does not pre-announce a fixed advancement cutoff — it
+              publishes results per cycle — so we describe windows as &quot;expected&quot; and never
+              invent a score threshold.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <ContextualWhatsAppLink className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-6 py-3 rounded-lg font-semibold transition">
@@ -353,13 +358,14 @@ export default function USABO2026ResultsPage() {
             <div className="flex items-center gap-3 mb-2">
               <Trophy className="w-7 h-7 text-yellow-600" />
               <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-                Historical cutoffs (2022–2024)
+                Cutoffs &amp; advancement (2022–2024)
               </h2>
             </div>
             <p className="text-slate-600 mb-8 max-w-3xl">
-              The Open Exam cutoff to advance to the Semifinal has historically sat around the
-              28–30/50 mark, depending on year difficulty. Use this as a calibration target — but
-              CEE sets the cutoff each year based on the actual score distribution.
+              CEE does not pre-announce a fixed Open Exam cutoff. The score needed to advance to the
+              Semifinal — and the size of the semifinalist field — vary each year with the actual
+              score distribution, and CEE publishes results per cycle to member schools. Treat any
+              year-to-year figure as a moving target, not a guaranteed threshold.
             </p>
             <div className="space-y-4">
               {historicalCutoffs.map((y) => (
@@ -385,9 +391,10 @@ export default function USABO2026ResultsPage() {
             <div className="mt-6 p-4 bg-teal-50 border border-teal-200 rounded-xl flex gap-3">
               <Info className="w-5 h-5 text-teal-700 flex-shrink-0 mt-0.5" />
               <p className="text-sm text-slate-700">
-                <strong>How to use these:</strong> if you&apos;re consistently scoring 30+/50 on
-                past Open papers under timed conditions, you&apos;re in Semifinalist range. 35+/50
-                puts you in serious Finalist contention. 40+/50 is the team-camp tier.
+                <strong>How to use these:</strong> because CEE doesn&apos;t publish a fixed cutoff,
+                use timed past-Open scores only as a personal calibration tool — track your trend
+                across several papers rather than chasing a specific number. The stronger and more
+                consistent your timed performance, the better positioned you are for the Semifinal.
               </p>
             </div>
           </div>
@@ -411,8 +418,9 @@ export default function USABO2026ResultsPage() {
                 </a>
               </li>
               <li>
-                Historical cutoffs are from publicly published USABO records and member-school
-                announcements — they are estimates of the official cutoff and not exact figures.
+                CEE does not publish a fixed advancement cutoff; the Open cutoff and the size of the
+                semifinalist field vary each cycle and are released by CEE per cycle to member
+                schools.
               </li>
               <li>
                 Cerebrum Biology Academy is an independent coaching provider and is not affiliated

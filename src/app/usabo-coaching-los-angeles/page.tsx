@@ -3,13 +3,13 @@ import USABOCityTemplate from '@/components/usabo/USABOCityTemplate'
 
 const cityName = 'Los Angeles'
 const citySlug = 'usabo-coaching-los-angeles'
-const region = 'Greater Los Angeles (LA + Orange + Ventura counties + San Diego)'
+const region = 'Greater Los Angeles (LA + Orange + Ventura counties)'
 const timezone = 'PT (Pacific)'
 const url = 'https://cerebrumbiologyacademy.com/usabo-coaching-los-angeles'
 
 export const metadata: Metadata = {
   title: `USABO Coaching Los Angeles | San Gabriel Valley to OC`,
-  description: `USABO coaching across LA, Orange County & San Diego — San Marino, Troy, Arcadia & Torrey Pines. PT-evening live classes with AIIMS-trained biology faculty turn AP-5 into Semifinalist standing.`,
+  description: `USABO coaching across LA, Orange County & Ventura — San Marino, Troy, Arcadia & Diamond Bar. PT-evening live classes with AIIMS-trained biology faculty turn AP-5 into Semifinalist standing.`,
   keywords: [
     'USABO coaching los angeles',
     'USABO los angeles',
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
 }
 
 const heroBlurb =
-  'Greater LA and San Diego host the second-largest USABO talent pool on the West Coast. The San Gabriel Valley schools — Pasadena, San Marino, La Cañada, Arcadia — together with the Orange County prep cluster (Troy, University HS Irvine, Diamond Bar) and Torrey Pines / Canyon Crest in San Diego, consistently send students to Semifinals. PT-evening live classes work for all three sub-regions.'
+  'Greater LA hosts one of the largest USABO talent pools on the West Coast. The San Gabriel Valley schools — Pasadena, San Marino, La Cañada, Arcadia — together with the Orange County prep cluster (Troy, University HS Irvine, Diamond Bar) consistently send students to Semifinals. PT-evening live classes work across all the LA sub-regions. (San Diego students: see our dedicated USABO San Diego page.)'
 const rigourBlurb =
-  'LA and San Diego families weighing options between Curie Learning, individual tutors, and online platforms come to Cerebrum for AIIMS-trained, biology-only faculty teaching at olympiad depth. The Indian small-batch tradition — weekly written feedback, retrieval-heavy methodology, max 12 students per cohort — is exactly what high-achieving STEM students at Pasadena, San Marino, Troy, and Torrey Pines need to convert AP-5 trajectory into Semifinalist standing.'
+  'LA families weighing options between Curie Learning, individual tutors, and online platforms come to Cerebrum for AIIMS-trained, biology-only faculty teaching at olympiad depth. The Indian small-batch tradition — weekly written feedback, retrieval-heavy methodology, max 12 students per cohort — is exactly what high-achieving STEM students at Pasadena, San Marino, Troy, and Diamond Bar need to convert AP-5 trajectory into Semifinalist standing.'
 const schools = [
   'Pasadena HS',
   'San Marino HS',
@@ -64,8 +64,8 @@ const schools = [
   'Diamond Bar HS',
   'Walnut HS',
   'University HS (Irvine)',
-  'Torrey Pines HS (San Diego)',
-  'Canyon Crest Academy',
+  'Northwood HS (Irvine)',
+  'Oxford Academy (Cypress)',
 ]
 
 const faqs = [

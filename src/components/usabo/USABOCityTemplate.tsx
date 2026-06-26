@@ -620,6 +620,41 @@ export default function USABOCityTemplate({
               <h3 className="font-semibold text-teal-700">IBO Preparation</h3>
               <p className="text-xs text-slate-600 mt-1">After USABO Finalist</p>
             </Link>
+            <Link
+              href="/how-to-qualify-for-usabo"
+              className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+            >
+              <h3 className="font-semibold text-teal-700">How to Qualify for USABO</h3>
+              <p className="text-xs text-slate-600 mt-1">Open → Semifinal pathway</p>
+            </Link>
+            <Link
+              href="/usabo-syllabus"
+              className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+            >
+              <h3 className="font-semibold text-teal-700">USABO Syllabus</h3>
+              <p className="text-xs text-slate-600 mt-1">CEE topic breakdown</p>
+            </Link>
+            <Link
+              href="/best-usabo-books"
+              className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+            >
+              <h3 className="font-semibold text-teal-700">Best USABO Books</h3>
+              <p className="text-xs text-slate-600 mt-1">Campbell, Alberts, Lehninger</p>
+            </Link>
+            <Link
+              href="/is-usabo-worth-it"
+              className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+            >
+              <h3 className="font-semibold text-teal-700">Is USABO Worth It?</h3>
+              <p className="text-xs text-slate-600 mt-1">Admissions value</p>
+            </Link>
+            <Link
+              href="/how-to-make-us-ibo-team"
+              className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+            >
+              <h3 className="font-semibold text-teal-700">How to Make US IBO Team</h3>
+              <p className="text-xs text-slate-600 mt-1">Top 4 selection pathway</p>
+            </Link>
           </div>
         </div>
       </section>

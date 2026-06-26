@@ -34,6 +34,9 @@ export const metadata: Metadata = {
       'x-default': 'https://cerebrumbiologyacademy.com/biology-olympiads',
     },
   },
+  // Tier-C doorway: low-local-market city page kept LIVE for inbound visitors
+  // but the index signal is withdrawn (matches the site's doorway pattern).
+  robots: 'noindex, follow',
 
   twitter: {
     card: 'summary_large_image' as const,
@@ -52,7 +55,7 @@ const faqs = [
   {
     question: 'What does IBO coaching cover?',
     answer:
-      'Our IBO coaching covers advanced theoretical concepts using Campbell Biology, practical laboratory skills (40% of IBO), research paper analysis, and competition strategies. We prepare students for both theory and practical exams.',
+      'Our IBO coaching covers advanced theoretical concepts using Campbell Biology, practical laboratory skills (a major component of the IBO — historically up to ~50% of the total score), research paper analysis, and competition strategies. We prepare students for both theory and practical exams.',
   },
   {
     question: 'When should I join IBO coaching?',
@@ -78,8 +81,7 @@ export default function IBOPreparationGurugramPage() {
     description:
       'Advanced International Biology Olympiad preparation for INBO qualifiers at our Gurugram center.',
     provider: {
-      '@type': 'EducationalOrganization',
-      name: 'Cerebrum Biology Academy',
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
     },
     educationalLevel: 'Advanced High School',
     about: 'IBO - International Biology Olympiad',
@@ -125,9 +127,10 @@ export default function IBOPreparationGurugramPage() {
     <>
       <CerebrumPersonSchema
         knowsAbout={[
-          'NEET Gurugram',
-          'NEET Biology Gurugram',
-          'Medical entrance coaching Gurugram',
+          'International Biology Olympiad (IBO)',
+          'IBO Preparation',
+          'INBO to IBO coaching',
+          'Biology Olympiad practical examination',
         ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="ibo-preparation-gurugram" />

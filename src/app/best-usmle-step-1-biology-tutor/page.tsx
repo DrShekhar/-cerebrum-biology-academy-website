@@ -218,5 +218,13 @@ const config: BestVerticalConfig = {
 }
 
 export default function BestUSMLEStep1BiologyTutorPage() {
-  return <BestVerticalLanding config={config} />
+  return (
+    <BestVerticalLanding
+      config={config}
+      breadcrumbParent={{
+        name: 'USMLE Step 1 Biology',
+        url: 'https://cerebrumbiologyacademy.com/usmle-step-1-biology-preparation',
+      }}
+    />
+  )
 }

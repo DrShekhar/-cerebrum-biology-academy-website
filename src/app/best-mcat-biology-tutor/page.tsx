@@ -206,5 +206,13 @@ const config: BestVerticalConfig = {
 }
 
 export default function BestMCATBiologyTutorPage() {
-  return <BestVerticalLanding config={config} />
+  return (
+    <BestVerticalLanding
+      config={config}
+      breadcrumbParent={{
+        name: 'MCAT Biology',
+        url: 'https://cerebrumbiologyacademy.com/mcat-biology',
+      }}
+    />
+  )
 }

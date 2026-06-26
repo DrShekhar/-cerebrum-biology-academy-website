@@ -82,7 +82,7 @@ const ChevronDownIcon = () => (
 // has the full list). Unlocks the otherwise nav-orphaned US/exam pages.
 const EXAM_NAV_LINKS: { href: string; label: string }[] = [
   { href: '/best-biology-tutor-usa', label: 'USA — all exams' },
-  { href: '/ap-biology-tutor-global', label: 'AP Biology' },
+  { href: '/ap-biology-tutor', label: 'AP Biology' },
   { href: '/usabo-coaching', label: 'USABO / Olympiad' },
   { href: '/brain-bee-coaching', label: 'Brain Bee (Neuroscience)' },
   { href: '/mcat-biology', label: 'MCAT Biology' },

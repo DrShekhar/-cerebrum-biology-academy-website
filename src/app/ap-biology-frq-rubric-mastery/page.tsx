@@ -103,7 +103,7 @@ export default function APBiologyFRQRubricMasteryPage() {
       {
         '@type': 'HowToStep',
         position: 1,
-        name: 'Week 1 — Read every 2024 + 2025 FRQ rubric',
+        name: 'Week 1 — Read every 2025 + 2026 FRQ rubric',
         text: 'Download all official AP Biology FRQs and scoring rubrics from College Board. Read the rubric BEFORE attempting answers. Pattern-match what earns a point vs what does not.',
       },
       {
@@ -442,7 +442,7 @@ export default function APBiologyFRQRubricMasteryPage() {
               {[
                 {
                   week: 1,
-                  title: 'Read every 2024 + 2025 FRQ rubric',
+                  title: 'Read every 2025 + 2026 FRQ rubric',
                   detail:
                     'Download official AP Biology FRQs + scoring guides from College Board. Read the rubric BEFORE attempting answers. Pattern-match what earns each point.',
                 },

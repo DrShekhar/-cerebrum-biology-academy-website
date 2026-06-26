@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'AP exam prep Delhi',
   ],
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/courses/ap-biology',
+    canonical: 'https://cerebrumbiologyacademy.com/ap-biology-tutor',
   },
 
   openGraph: {

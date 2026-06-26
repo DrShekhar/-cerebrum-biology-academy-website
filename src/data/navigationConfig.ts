@@ -270,8 +270,8 @@ export const navigationConfig: NavigationSection[] = [
       {
         id: 'ap-biology',
         title: 'AP Biology',
-        href: '/ap-biology-tutor-global',
-        description: 'College Board AP Biology — score-5 coaching, any country',
+        href: '/ap-biology-tutor',
+        description: 'College Board AP Biology — score-5 coaching (US hub)',
         keywords: ['ap biology', 'college board', 'advanced placement', 'usa', 'score 5'],
         isPopular: true,
       },

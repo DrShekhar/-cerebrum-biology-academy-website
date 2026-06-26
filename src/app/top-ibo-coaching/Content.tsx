@@ -62,7 +62,7 @@ const faqs = [
   {
     question: 'What is the cost of IBO coaching at Cerebrum?',
     answer:
-      'Cerebrum IBO coaching is priced USD 1,499–2,999 for the full IBO cycle (typically 12 months covering national Stage 1 prep through IBO theory + practical). This includes live classes, very small batch (6-8 olympiad-track students), research-paper modules, practical coaching, and direct WhatsApp faculty access. Country-specific pricing in INR / GBP / SGD / CAD available.',
+      'Cerebrum IBO coaching runs in three olympiad tiers for the full IBO cycle (typically 12 months covering national Stage 1 prep through IBO theory + practical): Foundation Track USD 2,500/year (small-batch cohort), Complete Olympiad Year USD 4,500/year (full theory + practical), and 1:1 Elite Mentoring USD 6,000/year. This includes live classes, very small batch (6-8 olympiad-track students), research-paper modules, practical coaching, and direct WhatsApp faculty access. Country-specific pricing in INR / GBP / SGD / CAD available.',
   },
 ]
 

@@ -19,25 +19,21 @@ import {
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/ap-biology'
 
 export const metadata: Metadata = {
-  title: 'AP Biology Tutoring Hub | Score-5 Coaching, FRQ Mastery | Cerebrum',
+  title: 'AP Biology Overview | Course, Exam Format & Resources | Cerebrum',
   description:
-    'Biology-only specialist AP Biology tutors — beat Kaplan/The Princeton Review on per-section depth. Score-5 study guide, FRQ rubric mastery, College Board CED-aligned, US metros + APAC + UAE + India coverage.',
+    'AP Biology overview from biology-only specialists — College Board CED units, exam format, FRQ approach, and a guide to our AP Biology resources. For coaching, see our AP Biology tutor programme.',
   keywords: [
     'AP Biology',
-    'AP Biology tutor',
-    'AP Biology tutoring',
-    'AP Biology score 5',
-    'AP Biology FRQ',
-    'AP Biology online tutor',
     'AP Biology CED',
     'College Board AP Biology',
     'AP Biology Units 1-8',
-    'AP Biology MCAT prep',
+    'AP Biology exam format',
+    'AP Biology overview',
   ],
   openGraph: {
-    title: 'AP Biology Tutoring Hub | Score-5 Coaching, FRQ Mastery',
+    title: 'AP Biology Overview | Course, Exam Format & Resources',
     description:
-      'Biology-only specialist AP Biology tutors. Score-5 study guide, FRQ rubric mastery, College Board CED-aligned. US + APAC + UAE + India coverage.',
+      'AP Biology overview from biology-only specialists. College Board CED units, exam format, FRQ approach, and a guide to our AP Biology resources.',
     type: 'website',
     url: PAGE_URL,
     siteName: 'Cerebrum Biology Academy',
@@ -45,12 +41,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AP Biology Tutoring Hub | Cerebrum',
+    title: 'AP Biology Overview | Cerebrum',
     description:
-      'Biology-only specialist AP Biology tutors. Score-5 coaching, FRQ mastery, College Board CED-aligned.',
+      'AP Biology overview from biology-only specialists. College Board CED units, exam format, and resources.',
   },
   alternates: {
-    canonical: PAGE_URL,
+    canonical: 'https://cerebrumbiologyacademy.com/ap-biology-tutor',
   },
   robots: {
     index: true,
@@ -99,7 +95,7 @@ const hubFAQs = [
   {
     question: 'When should an AP Biology student start with a tutor?',
     answer:
-      'Three windows work best. (1) Summer before AP Biology — pre-read Units 1-3 and build the foundational chemistry-of-life vocabulary; this is the highest-leverage window and we run intensive summer bootcamps. (2) During the school year, weekly 1.5-2 hour sessions tracking the school syllabus — best for students aiming to go from a B/3 to an A/5. (3) The 8-12 week pre-exam crash window (Feb-May) — focused on FRQ mastery, full-length mocks, and unit-weakness repair. Students who start in summer and continue weekly through the year hit score-5 at the highest rate (~78% in our 2025-26 cohort).',
+      'Three windows work best. (1) Summer before AP Biology — pre-read Units 1-3 and build the foundational chemistry-of-life vocabulary; this is the highest-leverage window and we run intensive summer bootcamps. (2) During the school year, weekly 1.5-2 hour sessions tracking the school syllabus — best for students aiming to go from a B/3 to an A/5. (3) The 8-12 week pre-exam crash window (Feb-May) — focused on FRQ mastery, full-length mocks, and unit-weakness repair. Students who start in summer and continue weekly through the year hit score-5 at the highest rate — our coaching is built around the AP Biology 4–5 target.',
   },
   {
     question: 'How do I book a free demo with an AP Biology tutor?',
@@ -144,6 +140,12 @@ const serviceHubs = [
 ]
 
 const topicalResources = [
+  {
+    title: 'AP Biology Units 1–8 Study Guides',
+    href: '/ap-biology-units',
+    description:
+      'One detailed study guide per College Board CED unit — Chemistry of Life through Ecology. Topic breakdowns, exam weighting, and the concepts most tested on the FRQ.',
+  },
   {
     title: 'Score-5 Study Guide',
     href: '/ap-biology-score-5-study-guide',
@@ -279,9 +281,9 @@ function HubCollectionSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'AP Biology Tutoring Hub',
+    name: 'AP Biology Overview & Resources',
     description:
-      'Biology-only specialist AP Biology tutoring — score-5 coaching, FRQ rubric mastery, CBSE/NCERT bridge, College Board CED-aligned classes across US, APAC, UAE, India, and Canada.',
+      'AP Biology overview from biology-only specialists — College Board CED units, exam format, FRQ approach, and a guide to Cerebrum AP Biology resources. For coaching, see the AP Biology tutor programme.',
     url: PAGE_URL,
     isPartOf: {
       '@type': 'WebSite',
@@ -369,25 +371,29 @@ export default function APBiologyHubPage() {
                 </li>
                 <li>/</li>
                 <li aria-current="page" className="font-medium text-white">
-                  AP Biology
+                  AP Biology Overview
                 </li>
               </ol>
             </nav>
 
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-blue-500/20 px-4 py-2 text-sm font-medium text-blue-300">
               <Sparkles className="h-4 w-4" />
-              Biology-Only Specialists · CED 2020+ Aligned · Score-5 Outcomes
+              Biology-Only Specialists · CED 2020+ Aligned · Overview &amp; Resources
             </div>
 
             <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-              AP Biology Tutoring Hub
+              AP Biology — Course Overview &amp; Resources
               <span className="mt-2 block text-blue-400">— Cerebrum Biology Academy</span>
             </h1>
 
             <p className="mb-8 max-w-3xl text-lg text-gray-300 sm:text-xl">
-              Biology-only specialist tutors beat generalist test-prep on every metric that matters
-              — College Board CED coverage, FRQ rubric depth, and misconception repair. Live online
-              classes across US, APAC, UAE, India, and Canada.
+              An overview of AP Biology from biology-only specialists — the College Board CED units,
+              the exam format, our FRQ approach, and a guide to our AP Biology resources. Ready to
+              start? See the{' '}
+              <Link href="/ap-biology-tutor" className="font-semibold text-blue-300 underline">
+                AP Biology tutor programme
+              </Link>
+              .
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">

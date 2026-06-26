@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   keywords: [
     'top usabo coaching',
     'usabo open semifinal coaching',
-    'best usabo prep usa',
+    'usabo coaching ranking 2026',
     'usabo national finals coach',
   ],
   alternates: {

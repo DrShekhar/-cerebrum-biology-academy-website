@@ -154,7 +154,7 @@ export const Footer = memo(function Footer() {
 
   const examLinks = [
     { name: 'USA — All Biology Exams', href: '/best-biology-tutor-usa' },
-    { name: 'AP Biology Tutor', href: '/ap-biology-tutor-global' },
+    { name: 'AP Biology Tutor', href: '/ap-biology-tutor' },
     { name: 'USABO / Olympiad Coaching', href: '/usabo-coaching' },
     { name: 'Brain Bee (Neuroscience)', href: '/brain-bee-coaching' },
     { name: 'MCAT Biology Tutor', href: '/mcat-biology' },

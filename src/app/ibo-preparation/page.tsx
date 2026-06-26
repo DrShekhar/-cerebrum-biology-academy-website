@@ -48,53 +48,23 @@ const iboPathway = [
 
 const iboSyllabus = [
   {
-    category: 'Cell Biology & Biochemistry',
-    percentage: '25%',
+    category: 'Cell Biology',
+    percentage: '~25%',
     topics: [
       'Cell structure and organelles',
       'Membrane transport mechanisms',
       'Enzyme kinetics and regulation',
       'Metabolic pathways (glycolysis, Krebs, ETC)',
       'Photosynthesis (light & dark reactions)',
-      'DNA replication and repair',
+      'DNA replication, transcription and translation',
     ],
     icon: Microscope,
     color: 'text-blue-500',
     bgColor: 'bg-blue-50',
   },
   {
-    category: 'Molecular Biology & Genetics',
-    percentage: '20%',
-    topics: [
-      'Gene expression and regulation',
-      'Transcription and translation',
-      'Epigenetics and chromatin',
-      'Mendelian and population genetics',
-      'Molecular cloning techniques',
-      'Genome analysis and bioinformatics',
-    ],
-    icon: FlaskConical,
-    color: 'text-purple-500',
-    bgColor: 'bg-purple-50',
-  },
-  {
-    category: 'Plant Biology',
-    percentage: '15%',
-    topics: [
-      'Plant anatomy and morphology',
-      'Plant physiology and hormones',
-      'Photosynthesis mechanisms',
-      'Water relations and transport',
-      'Plant reproduction',
-      'Plant ecology',
-    ],
-    icon: BookOpen,
-    color: 'text-green-500',
-    bgColor: 'bg-green-50',
-  },
-  {
     category: 'Animal Anatomy & Physiology',
-    percentage: '20%',
+    percentage: '~25%',
     topics: [
       'Comparative animal systems',
       'Nervous system and neuroscience',
@@ -108,34 +78,79 @@ const iboSyllabus = [
     bgColor: 'bg-red-50',
   },
   {
-    category: 'Ecology & Evolution',
-    percentage: '10%',
+    category: 'Genetics & Evolution',
+    percentage: '~20%',
+    topics: [
+      'Gene expression and regulation',
+      'Mendelian and population genetics',
+      'Epigenetics and chromatin',
+      'Evolutionary mechanisms',
+      'Phylogenetics',
+      'Genome analysis and bioinformatics',
+    ],
+    icon: FlaskConical,
+    color: 'text-purple-500',
+    bgColor: 'bg-purple-50',
+  },
+  {
+    category: 'Plant Anatomy & Physiology',
+    percentage: '~15%',
+    topics: [
+      'Plant anatomy and morphology',
+      'Plant physiology and hormones',
+      'Photosynthesis mechanisms',
+      'Water relations and transport',
+      'Plant reproduction',
+      'Plant ecology',
+    ],
+    icon: BookOpen,
+    color: 'text-green-500',
+    bgColor: 'bg-green-50',
+  },
+  {
+    category: 'Ecology',
+    percentage: '~10%',
     topics: [
       'Population dynamics',
       'Community ecology',
       'Ecosystem processes',
-      'Evolutionary mechanisms',
-      'Phylogenetics',
       'Conservation biology',
+      'Energy flow and nutrient cycling',
+      'Biodiversity',
     ],
     icon: Globe,
     color: 'text-teal-500',
     bgColor: 'bg-teal-50',
   },
   {
-    category: 'Practical Skills',
-    percentage: '10%',
+    category: 'Ethology',
+    percentage: '~5%',
     topics: [
-      'Microscopy techniques',
-      'Biochemical assays',
-      'Molecular biology practicals',
-      'Anatomical dissections',
-      'Data analysis',
-      'Experimental design',
+      'Animal behaviour patterns',
+      'Innate vs learned behaviour',
+      'Signalling and communication',
+      'Behavioural ecology',
+      'Observation and experimental design',
+      'Data interpretation',
     ],
     icon: Beaker,
     color: 'text-orange-500',
     bgColor: 'bg-orange-50',
+  },
+  {
+    category: 'Biosystematics',
+    percentage: '~5%',
+    topics: [
+      'Classification and taxonomy',
+      'Phylogenetic trees',
+      'Domains and kingdoms',
+      'Species concepts',
+      'Comparative morphology',
+      'Cladistics',
+    ],
+    icon: Microscope,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
   },
 ]
 
@@ -192,12 +207,12 @@ const faqs = [
   {
     question: 'What topics are covered in IBO?',
     answer:
-      'IBO covers seven major areas: Cell Biology (20%), Plant Anatomy & Physiology (15%), Animal Anatomy & Physiology (25%), Ethology (5%), Genetics & Evolution (20%), Ecology (10%), and Biosystematics (5%). The practical exam tests laboratory skills including microscopy, biochemical assays, and anatomical studies. Questions require integration of concepts across multiple areas.',
+      'IBO covers seven major theory areas: Cell Biology (~25%), Plant Anatomy & Physiology (~15%), Animal Anatomy & Physiology (~25%), Ethology (~5%), Genetics & Evolution (~20%), Ecology (~10%), and Biosystematics (~5%). The practical exam tests laboratory skills including microscopy, biochemical assays, and anatomical studies. Questions require integration of concepts across multiple areas.',
   },
   {
     question: 'How is IBO different from national olympiads?',
     answer:
-      'IBO is significantly more challenging than national olympiads. It has both theoretical (60%) and practical (40%) components. Questions often require applying knowledge to novel research scenarios. The practical exams involve real laboratory work including molecular biology, biochemistry, and anatomy. International training and exposure to IBO-level problems are essential.',
+      'IBO is significantly more challenging than national olympiads. It has both theoretical and practical components — the practical exams are a major part of the competition, historically up to roughly half (~50%) of the total score. Questions often require applying knowledge to novel research scenarios, and the practical exams involve real laboratory work including molecular biology, biochemistry, and anatomy. International training and exposure to IBO-level problems are essential.',
   },
   {
     question: 'What textbook is recommended for IBO preparation?',
@@ -212,12 +227,12 @@ const faqs = [
   {
     question: 'Who is the best IBO coach or trainer?',
     answer:
-      'Cerebrum Biology Academy is one of the leading International Biology Olympiad coaching providers globally. The programme is led by Dr. Shekhar C Singh (AIIMS Delhi alumnus) and covers the full IBO pathway across multiple national tracks — USABO Finalists (US team selection), BBO Round 2 medallists (UK team), INBO toppers (India team), CBO Finalists (Canada team). Coaching includes IBO theory papers (Cell Biology 40%, Animal Anatomy and Physiology 25%, Genetics and Evolution 15%, Plant Anatomy and Physiology 15%, Ethology/Biosystematics/Ecology 5%) and the practical examination (40% IBO weight).',
+      'Cerebrum Biology Academy is one of the leading International Biology Olympiad coaching providers globally. The programme is led by Dr. Shekhar C Singh (AIIMS Delhi alumnus) and covers the full IBO pathway across multiple national tracks — USABO Finalists (US team selection), BBO Round 2 medallists (UK team), INBO toppers (India team), CBO Finalists (Canada team). Coaching includes IBO theory papers (Cell Biology ~25%, Animal Anatomy and Physiology ~25%, Genetics and Evolution ~20%, Plant Anatomy and Physiology ~15%, Ecology ~10%, Ethology ~5%, Biosystematics ~5%) and the practical examination — a major component, historically up to ~50% of the total score.',
   },
   {
     question: 'Who teaches IBO preparation at Cerebrum Biology Academy?',
     answer:
-      'IBO preparation at Cerebrum is led by Dr. Shekhar C Singh — AIIMS Delhi graduate, founder, and lead curriculum architect for olympiad coaching — supported by senior tutors with IBO-medal and national-team-trainer experience. Pricing: Complete Olympiad Year $4,500 (the 9–12 month structured programme), 1:1 Elite Mentoring $90/hour, Small-Batch Weekend $50/hour. The same olympiad pricing matrix applies whether you are targeting USABO, INBO, BBO, CBO, or direct IBO preparation.',
+      'IBO preparation at Cerebrum is led by Dr. Shekhar C Singh — AIIMS Delhi graduate, founder, and lead curriculum architect for olympiad coaching — supported by senior tutors with IBO-medal and national-team-trainer experience. Pricing runs in three olympiad tiers: Foundation Track $2,500/year (small-batch cohort), Complete Olympiad Year $4,500/year (the 9–12 month structured programme), and 1:1 Elite Mentoring $6,000/year. The same olympiad pricing matrix applies whether you are targeting USABO, INBO, BBO, CBO, or direct IBO preparation.',
   },
 ]
 
@@ -822,7 +837,8 @@ export default function IBOPreparationPage() {
           }),
         }}
       />
-      {/* BreadcrumbList — pathway from home → AEO hub → IBO programme. */}
+      {/* BreadcrumbList — /ibo-preparation is the apex IBO hub; it sits
+          directly under the olympiad hub, not under /best-ibo-preparation. */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -839,8 +855,8 @@ export default function IBOPreparationPage() {
               {
                 '@type': 'ListItem',
                 position: 2,
-                name: 'Best IBO Preparation Coach',
-                item: 'https://cerebrumbiologyacademy.com/best-ibo-preparation',
+                name: 'Biology Olympiads',
+                item: 'https://cerebrumbiologyacademy.com/biology-olympiads',
               },
               {
                 '@type': 'ListItem',

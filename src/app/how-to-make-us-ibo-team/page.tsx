@@ -195,6 +195,11 @@ const FAQS = [
     answer:
       'Yes, substantially. AP Biology is a solid foundation, but USABO — especially from the Semifinal onward — demands deeper mechanistic understanding, data and statistical interpretation, and (at the Finals and IBO) genuine laboratory skill. Clearing the Open Exam with an AP background is achievable; reaching the Finals and Team USA requires a significant step up in depth.',
   },
+  {
+    question: 'Is the IBO worth it for college admissions?',
+    answer:
+      'Honestly, it depends how far you go. Simply sitting the USABO Open Exam is common and carries little admissions weight on its own. Reaching the Semifinal signals real biology ability; reaching the National Finals (the top ~20 students nationally) is a genuinely selective, nationally recognised achievement; and making Team USA — four students a year — is an exceptional, internationally distinctive credential that top universities recognise. But the deeper value is the biology itself: the reference-level depth, data interpretation and laboratory skill you build transfer directly into college biology, pre-med and research, regardless of how far you advance. Pursue it because you love biology and want to get genuinely good at it — the admissions benefit follows the achievement, not the other way around.',
+  },
 ]
 
 const breadcrumbSchema = {
@@ -247,11 +252,9 @@ const articleSchema = {
   datePublished: '2026-06-26',
   dateModified: '2026-06-26',
   author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Cerebrum Biology Academy',
-    logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` },
-  },
+  publisher: { '@id': `${SITE_URL}/#organization` },
+  provider: { '@id': `${SITE_URL}/#organization` },
+  spatialCoverage: { '@type': 'Country', name: 'United States' },
   audience: {
     '@type': 'EducationalAudience',
     educationalRole: 'student',

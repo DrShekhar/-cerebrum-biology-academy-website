@@ -4,7 +4,7 @@ import { BestVerticalLanding, type BestVerticalConfig } from '@/components/seo/B
 export const metadata: Metadata = {
   title: 'Best USABO Coach (USA Biology Olympiad) | Open Exam → Semifinal → Finals',
   description:
-    "Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum's USABO coaching — full pathway from Open Exam (Feb) through Semifinal (March) and National Finals. Campbell + Alberts + Lehninger curriculum, US-friendly evening timezones, 11 US city cohorts.",
+    "Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum's USABO coaching — full pathway from Open Exam (Feb) through Semifinal (March) and National Finals. Campbell + Alberts + Lehninger curriculum, US-friendly evening timezones, 19 US city cohorts.",
   keywords: [
     'best usabo coach',
     'best usabo coaching',
@@ -39,20 +39,20 @@ export const metadata: Metadata = {
 const config: BestVerticalConfig = {
   slug: 'best-usabo-coach',
   headline: 'Best USABO Coach (USA Biology Olympiad)',
-  ribbon: 'Open Exam → Semifinal → National Finals · 11 US City Cohorts',
+  ribbon: 'Open Exam → Semifinal → National Finals · 19 US City Cohorts',
   subheadline:
     'AIIMS-trained faculty (AIIMS — India’s apex medical institute, peer to Harvard Medical School in selectivity). Led by Dr. Shekhar C Singh.',
   intro:
     "Cerebrum operates a dedicated USABO coaching programme covering the full pathway — USABO Open Exam (February), Semifinal (March) and National Finals — under Dr. Shekhar C Singh's curriculum direction. Coaching draws on Campbell Biology (canonical), Alberts' Molecular Biology of the Cell (Semifinal-level depth) and Lehninger Biochemistry.",
   clusterSummary:
-    'US-friendly evening timezones (ET, CT, PT) · Often paired with AP Biology · 11 US city cohorts.',
+    'US-friendly evening timezones (ET, CT, PT) · Often paired with AP Biology · 19 US city cohorts.',
   credentials: [
     { label: 'Full Pathway Coverage' },
     { label: 'Campbell + Alberts + Lehninger' },
     { label: 'Semifinal-Level Depth' },
     { label: 'ET / CT / PT Sessions' },
     { label: 'AP-USABO Bridge' },
-    { label: '11 US City Cohorts' },
+    { label: '19 US City Cohorts' },
     { label: 'Past Finalist Mentors' },
     { label: 'AIIMS-Trained' },
   ],
@@ -73,24 +73,33 @@ const config: BestVerticalConfig = {
     { title: 'Northern Virginia / DC', href: '/usabo-coaching-northern-virginia-dc' },
     { title: 'Seattle', href: '/usabo-coaching-seattle' },
     { title: 'Atlanta', href: '/usabo-coaching-atlanta' },
+    { title: 'San Diego', href: '/usabo-coaching-san-diego' },
+    { title: 'Philadelphia', href: '/usabo-coaching-philadelphia' },
+    { title: 'Miami', href: '/usabo-coaching-miami' },
+    { title: 'Portland', href: '/usabo-coaching-portland' },
+    { title: 'Denver', href: '/usabo-coaching-denver' },
+    { title: 'Phoenix', href: '/usabo-coaching-phoenix' },
+    { title: 'Twin Cities', href: '/usabo-coaching-twin-cities' },
+    { title: 'Research Triangle', href: '/usabo-coaching-research-triangle' },
   ],
   pricing: [
     {
+      tier: 'Foundation',
+      price: '$2,500 / cycle',
+      description:
+        'Open Exam-focused small-batch track. Campbell mastery, weekly mock practice, and the AP-to-USABO bridge.',
+    },
+    {
       tier: 'Complete Olympiad Year',
-      price: '$4,500 / year',
+      price: '$4,500 / cycle',
       description:
         'Full pathway from Open Exam through Semifinal and Finals. Includes Alberts deep-dive, Lehninger biochem, weekly mock practice.',
     },
     {
-      tier: '1:1 Elite Mentoring',
-      price: '$90 / hour',
+      tier: 'Elite 1:1 Mentoring',
+      price: '$6,000 / cycle',
       description:
-        'Past USABO Finalist / Semifinalist mentors. Targeted coaching for Semifinal essay-style problems.',
-    },
-    {
-      tier: 'Small-Batch Weekend',
-      price: '$50 / hour',
-      description: 'Weekend cohort sessions. Cost-effective track for Open Exam preparation.',
+        'Past USABO Finalist / Semifinalist mentors. One-to-one coaching for Semifinal essay-style problems and Finals/IBO preparation.',
     },
   ],
   whyBest: [
@@ -120,9 +129,9 @@ const config: BestVerticalConfig = {
         "A USABO Open candidate progressing to Semifinal and Finals benefits from continuity with the same biology-only faculty. Cerebrum's biology-only specialisation across NEET, IB, AP, MCAT and Olympiads provides that continuity — generalist science olympiad coaches do not.",
     },
     {
-      title: '11 US City Cohort Pages',
+      title: '19 US City Cohort Pages',
       description:
-        'Dedicated cohort pages for NYC, Bay Area, Boston, Chicago, Dallas-Austin, Houston, LA, NJ, NoVA-DC, Seattle and Atlanta. Per-cohort cohort timing and peer groups.',
+        'Dedicated cohort pages for NYC, Bay Area, Boston, Chicago, Dallas-Austin, Houston, LA, San Diego, NJ, NoVA-DC, Seattle, Atlanta, Philadelphia, Miami, Portland, Denver, Phoenix, Twin Cities and Research Triangle. Per-cohort timing and peer groups.',
     },
   ],
   testimonials: [
@@ -162,7 +171,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does USABO coaching cost?',
       answer:
-        "Cerebrum's pricing: Complete Olympiad Year $4,500 (full pathway), 1:1 Elite Mentoring $90/hour (past Finalist mentors), Small-Batch Weekend $50/hour (cost-effective Open Exam track).",
+        "Cerebrum's USABO pricing has three tiers per cycle: Foundation $2,500 (Open Exam-focused small-batch track), Complete Olympiad Year $4,500 (full Open → Semifinal → Finals pathway), and Elite 1:1 Mentoring $6,000 (one-to-one with past Finalist mentors).",
     },
     {
       question: 'Can I prepare for AP Biology and USABO together?',
@@ -214,5 +223,13 @@ const config: BestVerticalConfig = {
 }
 
 export default function BestUSABOCoachPage() {
-  return <BestVerticalLanding config={config} />
+  return (
+    <BestVerticalLanding
+      config={config}
+      breadcrumbParent={{
+        name: 'USABO Coaching',
+        url: 'https://cerebrumbiologyacademy.com/usabo-coaching',
+      }}
+    />
+  )
 }

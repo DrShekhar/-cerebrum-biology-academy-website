@@ -44,9 +44,9 @@ const config: BestVerticalConfig = {
   subheadline:
     'AIIMS-trained biology specialist. Coaches INBO, USABO, BBO, CBO Finalists into IBO.',
   intro:
-    'Cerebrum coaches students across multiple national pathways into the International Biology Olympiad (IBO) — including INBO (India national selection), USABO Finalists (US team selection), BBO Round 2 medallists (UK team) and CBO Finalists (Canada team). Programme depth includes IBO theory papers AND the practical examination (40% IBO weight).',
+    'Cerebrum coaches students across multiple national pathways into the International Biology Olympiad (IBO) — including INBO (India national selection), USABO Finalists (US team selection), BBO Round 2 medallists (UK team) and CBO Finalists (Canada team). Programme depth includes IBO theory papers AND the practical examination — a major component, historically up to ~50% of the total score.',
   clusterSummary:
-    'IBO Theory: 40% Cell Biology, 25% Animal Anatomy/Physiology, 15% Genetics/Evolution, 15% Plant Anatomy/Physiology, 5% Ethology + Ecology · Practical: 40% IBO weight.',
+    'IBO Theory: ~25% Cell Biology, ~25% Animal Anatomy/Physiology, ~20% Genetics/Evolution, ~15% Plant Anatomy/Physiology, ~10% Ecology, ~5% Ethology, ~5% Biosystematics · Practical: a major component, historically up to ~50% of the total score.',
   credentials: [
     { label: 'Theory + Practical' },
     { label: '15+ Years Past Papers' },
@@ -68,29 +68,29 @@ const config: BestVerticalConfig = {
   ],
   pricing: [
     {
+      tier: 'Foundation Track',
+      price: '$2,500 / year',
+      description:
+        'Small-batch cohort track — IBO theory across all seven areas, weekly mock problem sets, peer learning and past-paper drilling.',
+    },
+    {
       tier: 'Complete Olympiad Year',
       price: '$4,500 / year',
       description:
         'Full IBO preparation — theory papers + practical examination. Past-paper review across 15+ years of archives.',
     },
     {
-      tier: '1:1 Elite Mentor',
-      price: '$90 / hour',
+      tier: '1:1 Elite Mentoring',
+      price: '$6,000 / year',
       description:
-        'Former IBO mentors and past national team members. Targeted coaching for theory deep-dives and practical lab technique.',
-    },
-    {
-      tier: 'Small-Batch Weekend',
-      price: '$50 / hour',
-      description:
-        'Cohort-based weekend track. Group dynamics, peer learning, weekly mock IBO problem sets.',
+        'One-to-one with former IBO mentors and past national team members. Targeted theory deep-dives and practical lab technique.',
     },
   ],
   whyBest: [
     {
-      title: 'IBO Practical (40% Weight) — The Differentiator',
+      title: 'IBO Practical — The Differentiator',
       description:
-        'The IBO practical examination is 40% of the total score — microscopy, biochemical assays, anatomical dissections, molecular biology techniques, behavioural ethology observations. Most national-stage prep (INBO, USABO Open, BBO Round 1) focuses on theory; the IBO practical is its own discipline. Cerebrum integrates practical preparation.',
+        'The IBO practical examination is a major component of the total score — historically up to ~50% — covering microscopy, biochemical assays, anatomical dissections, molecular biology techniques, behavioural ethology observations. Most national-stage prep (INBO, USABO Open, BBO Round 1) focuses on theory; the IBO practical is its own discipline. Cerebrum integrates practical preparation.',
     },
     {
       title: 'Multi-National Pathway Expertise',
@@ -150,7 +150,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How is the IBO scored — theory vs practical?',
       answer:
-        'The IBO awards 60% weight to theoretical papers (Cell Biology 40%, Animal Anatomy/Physiology 25%, Genetics/Evolution 15%, Plant Anatomy/Physiology 15%, Ethology/Biosystematics/Ecology 5%) and 40% weight to the practical examination (microscopy, biochemical assays, dissections, molecular biology techniques, behavioural ethology). The practical is often the differentiator at medal level.',
+        'The IBO is decided by theoretical papers and a practical examination, with the practical historically a major component — up to roughly half (~50%) of the total score. The theory distribution across the seven areas is approximately Cell Biology ~25%, Animal Anatomy/Physiology ~25%, Genetics/Evolution ~20%, Plant Anatomy/Physiology ~15%, Ecology ~10%, Ethology ~5%, Biosystematics ~5%. The practical (microscopy, biochemical assays, dissections, molecular biology techniques, behavioural ethology) is often the differentiator at medal level.',
     },
     {
       question: 'Which national pathways feed into IBO?',
@@ -170,12 +170,12 @@ const config: BestVerticalConfig = {
     {
       question: 'What is the difference between IBO and USABO / INBO?',
       answer:
-        'USABO and INBO are national-stage olympiads (USA and India respectively). The top 4 students from each national pathway represent their country at the IBO — the international stage held annually in July with ~80 countries. IBO operates at undergraduate-biology depth, much deeper than national stages, with a 40%-weight practical examination.',
+        'USABO and INBO are national-stage olympiads (USA and India respectively). The top 4 students from each national pathway represent their country at the IBO — the international stage held annually in July with ~80 countries. IBO operates at undergraduate-biology depth, much deeper than national stages, with a major practical examination — historically up to ~50% of the total score.',
     },
     {
       question: 'How much does IBO preparation coaching cost?',
       answer:
-        "Cerebrum's pricing: Complete Olympiad Year $4,500 (full theory + practical), 1:1 Elite Mentor $90/hour (former IBO mentors), Small-Batch Weekend $50/hour (cohort track).",
+        "Cerebrum's olympiad pricing runs in three tiers: Foundation Track $2,500/year (small-batch cohort), Complete Olympiad Year $4,500/year (full theory + practical), and 1:1 Elite Mentoring $6,000/year (one-to-one with former IBO mentors). The same olympiad pricing applies whether you are targeting USABO, INBO, BBO, CBO or direct IBO preparation.",
     },
   ],
   knowsAbout: [
@@ -201,5 +201,13 @@ const config: BestVerticalConfig = {
 }
 
 export default function BestIBOPreparationPage() {
-  return <BestVerticalLanding config={config} />
+  return (
+    <BestVerticalLanding
+      config={config}
+      breadcrumbParent={{
+        name: 'IBO Preparation',
+        url: 'https://cerebrumbiologyacademy.com/ibo-preparation',
+      }}
+    />
+  )
 }

@@ -542,7 +542,8 @@ export default function USABOCoachingPage() {
               { slug: 'new-york', label: 'New York City + Long Island' },
               { slug: 'boston', label: 'Greater Boston' },
               { slug: 'houston', label: 'Houston' },
-              { slug: 'los-angeles', label: 'Los Angeles + San Diego' },
+              { slug: 'los-angeles', label: 'Los Angeles' },
+              { slug: 'san-diego', label: 'San Diego' },
               { slug: 'new-jersey', label: 'New Jersey' },
               { slug: 'chicago', label: 'Chicago Suburbs' },
               { slug: 'seattle', label: 'Seattle + Bellevue' },
@@ -551,6 +552,10 @@ export default function USABOCoachingPage() {
               { slug: 'philadelphia', label: 'Philadelphia' },
               { slug: 'miami', label: 'Miami' },
               { slug: 'portland', label: 'Portland' },
+              { slug: 'denver', label: 'Denver' },
+              { slug: 'phoenix', label: 'Phoenix' },
+              { slug: 'twin-cities', label: 'Twin Cities (Minneapolis-St. Paul)' },
+              { slug: 'research-triangle', label: 'Research Triangle (NC)' },
             ].map((c) => (
               <a
                 key={c.slug}

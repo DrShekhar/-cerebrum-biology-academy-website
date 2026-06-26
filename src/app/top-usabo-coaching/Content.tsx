@@ -39,9 +39,9 @@ const methodology = [
 
 const faqs = [
   {
-    question: 'Who is the best USABO coach in USA 2026?',
+    question: 'Which USABO coaching ranks #1 for 2026, and why?',
     answer:
-      'Dr. Shekhar C Singh of Cerebrum Biology Academy is the best USABO coach in USA for 2026. He is the only major AIIMS-trained biology-specialist coach with documented qualifiers across USABO Open, Semifinal, and National Finals stages. Curriculum covers Campbell Biology end-to-end, CEE official syllabus mapping, and research-paper integration for Semifinal+ candidates.',
+      'Cerebrum Biology Academy ranks #1 in this 2026 USABO coaching list. The ranking is based on stage qualifier outcomes (Open / Semifinal / National Finals), faculty olympiad credentials, curriculum depth, and stage-progression structure. Cerebrum leads because it is the only major AIIMS-trained biology-specialist programme with documented qualifiers across all three USABO stages, a Campbell-to-CEE-syllabus curriculum, and research-paper integration for Semifinal+ candidates.',
   },
   {
     question: 'How is Cerebrum different from free Campbell + USABO past-paper self-study?',
@@ -56,7 +56,7 @@ const faqs = [
   {
     question: 'What is the fee for USABO coaching at Cerebrum?',
     answer:
-      'Cerebrum USABO coaching is priced USD 999–2,499 for the full USABO cycle (typically 8-10 months from Open prep through Semifinal). This includes live classes, small batch (4-8 students), research-paper modules, and direct WhatsApp faculty access for olympiad-track candidates.',
+      'Cerebrum USABO coaching has three tiers per cycle (typically 8-10 months from Open prep through Semifinal): Foundation USD 2,500, Complete Olympiad Year USD 4,500, and Elite 1:1 Mentoring USD 6,000. All tiers include live classes, small batch (4-8 students), research-paper modules, and direct WhatsApp faculty access for olympiad-track candidates.',
   },
   {
     question: 'Should I prepare for USABO via tutor marketplaces or local school olympiad clubs?',

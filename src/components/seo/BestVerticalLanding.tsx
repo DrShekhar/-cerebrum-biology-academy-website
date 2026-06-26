@@ -75,7 +75,18 @@ export function buildBestVerticalMetadata(config: BestVerticalConfig, base?: Met
   }
 }
 
-export function BestVerticalLanding({ config }: { config: BestVerticalConfig }) {
+export function BestVerticalLanding({
+  config,
+  breadcrumbParent = {
+    name: 'Best Biology Teacher in India',
+    url: 'https://cerebrumbiologyacademy.com/best-biology-teacher-india',
+  },
+}: {
+  config: BestVerticalConfig
+  /** Breadcrumb position-2 parent. Pass the page's own vertical hub so the
+   *  breadcrumb chains correctly (default kept for backward compatibility). */
+  breadcrumbParent?: { name: string; url: string }
+}) {
   const canonicalUrl = `${SITE_URL}/${config.slug}`
   const areaServedName = config.areaServed ?? 'United States'
 
@@ -241,8 +252,8 @@ export function BestVerticalLanding({ config }: { config: BestVerticalConfig }) 
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Best Biology Teacher in India',
-        item: 'https://cerebrumbiologyacademy.com/best-biology-teacher-india',
+        name: breadcrumbParent.name,
+        item: breadcrumbParent.url,
       },
       {
         '@type': 'ListItem',

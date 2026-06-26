@@ -71,7 +71,7 @@ export default function APBiologyPage() {
     },
     {
       q: 'What score is needed for college credit?',
-      a: 'Most US universities grant credit for scores of 4 or 5. Some competitive universities require a 5. Our students consistently achieve 4+ scores with 70% scoring 5.',
+      a: 'Most US universities grant credit for scores of 4 or 5. Some competitive universities require a 5. Our coaching is built around the AP Biology score-5 target.',
     },
     {
       q: 'Do you cover the lab component?',
@@ -122,8 +122,8 @@ export default function APBiologyPage() {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 max-w-3xl mx-auto">
                 {[
-                  { value: '70%', label: 'Score 5' },
-                  { value: '95%', label: 'Score 4+' },
+                  { value: 'Score 5', label: 'Coaching Focus' },
+                  { value: '4–5', label: 'Target Band' },
                   { value: '13', label: 'Lab Practicals' },
                   { value: '100+', label: 'Students Coached' },
                 ].map((stat, i) => (
@@ -235,7 +235,7 @@ export default function APBiologyPage() {
                 {
                   icon: Target,
                   title: 'Score 5 Focus',
-                  desc: '70% of our students achieve perfect score',
+                  desc: 'Coaching built around the AP Biology score-5 target',
                 },
                 {
                   icon: GraduationCap,
@@ -288,8 +288,8 @@ export default function APBiologyPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-center">
               {[
                 { value: '100+', label: 'AP Students' },
-                { value: '70%', label: 'Score 5' },
-                { value: '95%', label: 'Score 4+' },
+                { value: 'Score 5', label: 'Coaching Focus' },
+                { value: '4–5', label: 'Target Band' },
                 { value: '5.0', label: 'Rating', icon: Star },
               ].map((s, i) => (
                 <div key={i}>

@@ -177,9 +177,9 @@ const features = [
 
 const successStats = [
   { label: 'Students Taught', value: '300+', icon: Users },
-  { label: 'Score 4-5 Rate', value: '90%', icon: Trophy },
+  { label: 'Coaching Focus', value: 'Score 4–5', icon: Trophy },
   { label: 'Expert Tutors', value: 'AIIMS-Trained', icon: Award },
-  { label: 'Avg Score Gain', value: '+1.5', icon: TrendingUp },
+  { label: 'Curriculum', value: 'College Board', icon: TrendingUp },
 ]
 
 const faqs = [
@@ -211,7 +211,7 @@ const faqs = [
   {
     question: 'What makes your AP Biology tutoring program different?',
     answer:
-      'Our tutors are AIIMS-trained biology specialists with proven track records — 90% of students scoring 4-5. We provide College Board-aligned curriculum, extensive FRQ practice with expert feedback, all 13 recommended lab simulations, unit-wise assessments, personalized study plans, and small batch sizes (8-12 students). We teach test-taking strategies specific to AP Bio, not just content.',
+      'Our tutors are AIIMS-trained biology specialists, and the entire programme is built around the AP Biology score-5 target. We provide College Board-aligned curriculum, extensive FRQ practice with expert feedback, all 13 recommended lab simulations, unit-wise assessments, personalized study plans, and small batch sizes (8-12 students). We teach test-taking strategies specific to AP Bio, not just content.',
   },
   {
     question: 'Do I need to take the AP Biology course at school to take the exam?',
@@ -688,7 +688,7 @@ export default function APBiologyTutorPage() {
                 <p className="opacity-90">Most students struggle with FRQs and complex topics</p>
               </div>
               <div>
-                <h4 className="font-bold mb-2 text-lg">Our Students: 90% score 4-5</h4>
+                <h4 className="font-bold mb-2 text-lg">Our Coaching: Built for Score 4–5</h4>
                 <p className="opacity-90">
                   Systematic preparation, expert guidance, proven strategies
                 </p>
@@ -930,7 +930,7 @@ export default function APBiologyTutorPage() {
               </div>
               <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm px-4 py-3 rounded-lg">
                 <CheckCircle className="w-4 h-4 mr-2" />
-                <span>90% Score 4-5</span>
+                <span>Score 4–5 Focused</span>
               </div>
               <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm px-4 py-3 rounded-lg">
                 <CheckCircle className="w-4 h-4 mr-2" />
@@ -992,6 +992,21 @@ export default function APBiologyTutorPage() {
                 title: 'AP Biology vs USABO',
                 desc: 'Decide which track (or both) fits your goals',
                 href: '/ap-biology-vs-usabo',
+              },
+              {
+                title: 'Is AP Biology Worth Taking?',
+                desc: 'Honest take on college credit, course rigor, and who benefits most',
+                href: '/is-ap-biology-worth-taking',
+              },
+              {
+                title: 'Top AP Biology Coaching (USA)',
+                desc: 'How the leading US AP Biology programmes compare on value and outcomes',
+                href: '/top-ap-biology-coaching-usa',
+              },
+              {
+                title: 'AP Biology Units 1–8 Guides',
+                desc: 'One detailed study guide per College Board CED unit',
+                href: '/ap-biology-units',
               },
             ].map((g) => (
               <Link
