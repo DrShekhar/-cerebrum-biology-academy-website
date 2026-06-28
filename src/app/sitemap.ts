@@ -5466,6 +5466,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'how-to-make-us-ibo-team',
       'is-usabo-worth-it',
       'is-ap-biology-worth-taking',
+      // New cohort/enrollment lead-gen pages (mapped to competitor calendar)
+      'ap-biology-score-5-bootcamp',
       // Phase 6: cross-vertical hubs, AP units, US state aggregator hubs
       'us-biology-competitions-hub',
       'us-biology-pathway',
