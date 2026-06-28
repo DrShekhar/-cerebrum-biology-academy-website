@@ -5468,6 +5468,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'is-ap-biology-worth-taking',
       // New cohort/enrollment lead-gen pages (mapped to competitor calendar)
       'ap-biology-score-5-bootcamp',
+      'usabo-online-bootcamp',
+      'mcat-biology-biochem-intensive',
+      'ib-biology-ia-mentorship',
       // Phase 6: cross-vertical hubs, AP units, US state aggregator hubs
       'us-biology-competitions-hub',
       'us-biology-pathway',
