@@ -705,6 +705,12 @@ export default function USABOCoachingPage() {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
+              href="/usabo-online-bootcamp"
+              className="bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:shadow-md transition font-semibold"
+            >
+              USABO Online Bootcamp (Live Cohorts) →
+            </Link>
+            <Link
               href="/how-to-qualify-for-usabo"
               className="bg-[#3d4d3d] text-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >

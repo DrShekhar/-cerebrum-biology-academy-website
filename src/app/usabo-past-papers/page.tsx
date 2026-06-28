@@ -36,11 +36,11 @@ export const metadata: Metadata = {
     'USABO exam practice',
   ],
   alternates: {
+    // This page consolidates into the archive (cross-canonical). hreflang is
+    // intentionally omitted: the canonical /usabo-past-papers-archive owns the
+    // hreflang cluster, so declaring non-reciprocal alternates here would only
+    // emit a signal Google ignores.
     canonical: 'https://cerebrumbiologyacademy.com/usabo-past-papers-archive',
-    languages: {
-      en: 'https://cerebrumbiologyacademy.com/usabo-past-papers-archive',
-      'en-US': 'https://cerebrumbiologyacademy.com/usabo-past-papers-archive',
-    },
   },
   openGraph: {
     title: 'USABO Past Papers 2015–2024 | Open & Semifinal Archive',

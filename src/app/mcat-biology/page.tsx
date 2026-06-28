@@ -226,6 +226,12 @@ const comparisonLinks = [
 
 const authorityLinks = [
   {
+    title: 'MCAT Biology & Biochem Intensive — Live Cohorts',
+    href: '/mcat-biology-biochem-intensive',
+    description:
+      'Time-bound live BBLS-section coaching cohorts — passage strategy, AAMC content mapping, and discrete-question drilling for an MCAT test-date push.',
+  },
+  {
     title: 'Dr. Shekhar C Singh — Lead Biology Faculty',
     href: '/dr-shekhar-singh-biology-faculty-india',
     description:

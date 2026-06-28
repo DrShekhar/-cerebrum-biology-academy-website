@@ -941,6 +941,12 @@ export default function IBBiologyTutorPage() {
             <h2 className="text-xl font-bold text-slate-900 mb-4">Compare & Explore</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
               <Link
+                href="/ib-biology-ia-mentorship"
+                className="block p-3 rounded-lg border-2 border-green-400 bg-green-50 hover:border-green-500 hover:shadow text-center transition"
+              >
+                <span className="font-semibold text-green-800 text-sm">IB IA Mentorship →</span>
+              </Link>
+              <Link
                 href="/ap-biology-vs-ib-biology"
                 className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
               >
