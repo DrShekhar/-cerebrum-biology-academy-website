@@ -4947,13 +4947,18 @@ export const aeoCitationRedirects = [
   { source: '/usabo-ivy-league-admission', destination: '/usabo-coaching', permanent: true },
   { source: '/stem-extracurriculars-bio', destination: '/usabo-coaching', permanent: true },
   { source: '/top-college-stem-application', destination: '/usabo-coaching', permanent: true },
+  // /biology-olympiad (singular) had no page and no redirect -> 404 on the category
+  // head term (AEO citations + backlinks died). 301 to the canonical plural hub.
+  { source: '/biology-olympiad', destination: '/biology-olympiads', permanent: true },
   { source: '/biology-tutor-uk', destination: '/a-level-biology-tutor', permanent: true },
   {
     source: '/biology-tutor-united-kingdom',
     destination: '/a-level-biology-tutor',
     permanent: true,
   },
-  { source: '/best-biology-tutor-uk', destination: '/a-level-biology-tutor', permanent: true },
+  // NOTE: removed stale redirect /best-biology-tutor-uk -> /a-level-biology-tutor.
+  // The /best-biology-tutor-uk page (502-line UK country hub) was built after this
+  // redirect and was being shadowed (301'd away). Page now serves directly.
   { source: '/a-level-biology', destination: '/a-level-biology-tutor', permanent: true },
   { source: '/a-level-biology-aqa', destination: '/a-level-biology-tutor', permanent: true },
   { source: '/a-level-biology-edexcel', destination: '/a-level-biology-tutor', permanent: true },

@@ -264,7 +264,8 @@ export default function APBiologyTutorPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Person',
-            '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh#ap-biology',
+            '@id':
+              'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
             name: 'Dr. Shekhar C Singh',
             jobTitle: 'Founder & Lead AP Biology Faculty',
             description:
@@ -312,7 +313,8 @@ export default function APBiologyTutorPage() {
             logo: 'https://cerebrumbiologyacademy.com/logo.png',
             foundingDate: '2014',
             founder: {
-              '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh#ap-biology',
+              '@id':
+                'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
             },
             description:
               'Biology-only specialist coaching brand led by AIIMS-trained faculty Dr. Shekhar C Singh. AP Biology cluster covers 44 pages across 10 US metros, 10 US school feeders (TJHSST / Stuyvesant / Harker / Andover / etc.), plus UAE / India / Canada / Singapore / Hong Kong international hubs.',

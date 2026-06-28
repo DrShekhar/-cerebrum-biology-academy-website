@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       'AP Biology overview from biology-only specialists. College Board CED units, exam format, and resources.',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/ap-biology-tutor',
+    canonical: PAGE_URL,
   },
   robots: {
     index: true,
@@ -75,7 +75,7 @@ const hubFAQs = [
   {
     question: 'What does AP Biology tutoring cost at Cerebrum?',
     answer:
-      'We offer four tiers. Senior Faculty 1:1 (taught by Dr. Shekhar Singh or equivalent lead faculty): $120-$150 per hour. Junior Faculty 1:1 (vetted associate tutors, fully supervised): $60-$75 per hour. Small-batch group classes (4-8 students, same cohort, fixed schedule): $40 per hour per student. Packaged programs: $499 for an 8-session targeted unit pack, $999 for a full-semester score-5 program, $1,499 for the year-long premium track including FRQ workshops, mock exams, and unlimited WhatsApp support. All pricing is in USD.',
+      'We offer four tiers. Senior Faculty 1:1 (taught by Dr. Shekhar Singh or equivalent lead faculty): $120-$150 per hour. Junior Faculty 1:1 (vetted associate tutors, fully supervised): $60-$75 per hour. Small-batch group classes (4-8 students, same cohort, fixed schedule): $40 per hour per student. Annual programs (school-year, all 8 CED units, FRQ workshops, mock exams, WhatsApp support): Pursuit $2,500/yr, Ascent $4,500/yr, and Pinnacle $7,000/yr (the year-long premium track, with weekly senior 1:1 and the USABO bridge). All pricing is in USD.',
   },
   {
     question: 'How does Cerebrum approach AP Biology FRQ strategy?',
@@ -100,7 +100,7 @@ const hubFAQs = [
   {
     question: 'How do I book a free demo with an AP Biology tutor?',
     answer:
-      "Book a free 30-minute demo at /book-free-demo or message us on WhatsApp at +91 88264 44334. In the demo, a senior tutor diagnoses the student's current AP Biology level using a 10-minute placement quiz, walks through one FRQ together, identifies the top two unit weaknesses, and recommends the right tier (1:1 senior, 1:1 junior, small batch, or one of the $499/$999/$1,499 packages). No payment is taken at the demo. If the family wants to enrol, the first paid session is scheduled within 48 hours.",
+      "Book a free 30-minute demo at /book-free-demo or message us on WhatsApp at +91 88264 44334. In the demo, a senior tutor diagnoses the student's current AP Biology level using a 10-minute placement quiz, walks through one FRQ together, identifies the top two unit weaknesses, and recommends the right tier (1:1 senior, 1:1 junior, small batch, or one of the annual Pursuit/Ascent/Pinnacle programs at $2,500/$4,500/$7,000 per year). No payment is taken at the demo. If the family wants to enrol, the first paid session is scheduled within 48 hours.",
   },
 ]
 
@@ -251,18 +251,18 @@ const pricingTiers = [
     badge: 'Best Value',
   },
   {
-    title: 'Packaged Programs',
-    price: '$499 / $999 / $1,499',
+    title: 'Annual Programs',
+    price: '$2,500 / $4,500 / $7,000 per year',
     bestFor:
-      'Unit packs ($499 / 8 sessions), full-semester score-5 ($999), year-long premium ($1,499).',
+      'Pursuit ($2,500/yr), Ascent ($4,500/yr), Pinnacle ($7,000/yr) — full school-year score-5 programs.',
     features: [
-      '$499 — Targeted 8-session unit pack',
-      '$999 — Full-semester score-5 program',
-      '$1,499 — Year-long premium track',
-      'Mock exams + FRQ workshops bundled',
+      '$2,500/yr — Pursuit (group-first, 24+ live hours, monthly 1:1)',
+      '$4,500/yr — Ascent (36+ live hours, bi-weekly senior 1:1)',
+      '$7,000/yr — Pinnacle (48+ live hours, weekly senior 1:1 + USABO bridge)',
+      'Mock exams + FRQ rubric workshops bundled',
     ],
     accent: 'border-orange-300 bg-orange-50',
-    badge: 'Bundle',
+    badge: 'Annual',
   },
 ]
 

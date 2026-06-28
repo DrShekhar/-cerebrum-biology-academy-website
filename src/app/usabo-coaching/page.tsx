@@ -196,7 +196,8 @@ export default function USABOCoachingPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Person',
-            '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh#usabo',
+            '@id':
+              'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
             name: 'Dr. Shekhar C Singh',
             jobTitle: 'Founder & Lead USABO Coach',
             description:

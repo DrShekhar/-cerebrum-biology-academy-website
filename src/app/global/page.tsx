@@ -31,6 +31,13 @@ export const metadata: Metadata = {
     'AIIMS-trained specialist biology faculty for students in 75+ countries: NEET from abroad, IB & AP Biology, A-Level, GCSE/IGCSE, MCAT Bio/Biochem, GAMSAT, USMLE Step 1, DAT, and biology olympiads (USABO, BBO, IBO). Geo-fair pricing, time-zone-friendly live classes, free trial.',
   alternates: {
     canonical: `${BASE_URL}/global`,
+    // Without this, the root layout's x-default (-> "/", the India-NEET home) wins
+    // sitewide and a non-IN searcher for a generic "biology tutor" can be served
+    // the India page. Declare /global as its own en + x-default target.
+    languages: {
+      en: `${BASE_URL}/global`,
+      'x-default': `${BASE_URL}/global`,
+    },
   },
   robots: 'index, follow, max-image-preview:large',
   openGraph: {

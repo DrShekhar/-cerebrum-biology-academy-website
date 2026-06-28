@@ -10,7 +10,8 @@ import { SEOFAQSection } from './SEOFAQSection'
 import { FinalCTA } from './FinalCTA'
 import { ToolsCTASection } from './ToolsCTASection'
 import { RelatedBlogPosts } from './RelatedBlogPosts'
-import { HowToSchema, DrShekharSinghSchema } from '@/components/seo/StructuredData'
+import { HowToSchema } from '@/components/seo/StructuredData'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { AICitationTracking } from '@/components/seo/AICitationTracking'
 import { CourseOfferingsSection } from '@/components/seo/CourseOfferingsSection'
 import Link from 'next/link'
@@ -40,8 +41,12 @@ export function SEOLandingPage({ content }: SEOLandingPageProps) {
         />
       )}
 
-      {/* Author Schema for E-E-A-T signals */}
-      <DrShekharSinghSchema />
+      {/* Author Schema for E-E-A-T signals. Canonical Person node (@id …#person)
+          so this template's 126 pages — incl. the IB Biology & IGCSE hubs —
+          consolidate onto ONE Dr. Shekhar entity instead of the old NEET-only,
+          @id-less legacy node that Google could not merge. Universal knowsAbout
+          baseline already covers NEET + IB + AP + olympiads. */}
+      <CerebrumPersonSchema knowsAbout={[]} />
       {/* Hero Section with Stats */}
       <SEOLandingHero hero={content.hero} stats={content.stats} />
 

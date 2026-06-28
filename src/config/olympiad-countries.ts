@@ -64,26 +64,14 @@ export interface OlympiadCountry {
   testimonials: OlympiadTestimonial[]
 }
 
-// PLACEHOLDER testimonial set — same shape across all countries until the
-// founder provides real ones. Marked clearly so reviewers don't ship as factual
-// claims.
-function placeholderTestimonials(country: string): OlympiadTestimonial[] {
-  return [
-    // PLACEHOLDER — confirm with founder before going live
-    {
-      name: 'A. M.',
-      context: `Grade 11 — international school, ${country}`,
-      quote: `// PLACEHOLDER: Add genuine ${country} student quote here once available.`,
-      outcome: 'Pre-Med foundation track',
-    },
-    // PLACEHOLDER
-    {
-      name: 'R. K.',
-      context: `Grade 12 — international school, ${country}`,
-      quote: `// PLACEHOLDER: Add genuine ${country} parent / student quote.`,
-      outcome: 'Olympiad cohort',
-    },
-  ]
+// No placeholder testimonials are shipped. Rendering stub/fabricated quotes
+// (even visually de-weighted) publishes fake social proof to users and Google —
+// the same policy class as the self-serving review schema stripped sitewide on
+// Jun 11. Until the founder supplies REAL, opt-in country testimonials, this
+// returns [] so CountryTestimonials renders nothing (it returns null on empty).
+// To go live for a country, replace this with verified quotes for that market.
+function placeholderTestimonials(_country: string): OlympiadTestimonial[] {
+  return []
 }
 
 // Common FAQs shared across markets — country-specific FAQs override below.
