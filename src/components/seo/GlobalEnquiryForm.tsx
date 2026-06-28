@@ -17,6 +17,7 @@
 
 import { useState, type FormEvent } from 'react'
 import { User, Mail, Phone, Globe, Send, Loader2, CheckCircle2 } from 'lucide-react'
+import { isMobileDevice, openDesktopWhatsAppModal } from '@/lib/whatsapp/tracking'
 
 const PROGRAMMES = [
   'IB Biology (HL/SL)',
@@ -38,7 +39,11 @@ interface GlobalEnquiryFormProps {
   source?: string
 }
 
-export function GlobalEnquiryForm({ title, subtitle, source = 'global-hub' }: GlobalEnquiryFormProps) {
+export function GlobalEnquiryForm({
+  title,
+  subtitle,
+  source = 'global-hub',
+}: GlobalEnquiryFormProps) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
@@ -84,9 +89,21 @@ export function GlobalEnquiryForm({ title, subtitle, source = 'global-hub' }: Gl
       }
       setStatus('success')
       if (json.whatsappUrl) {
-        setTimeout(() => {
-          window.location.href = json.whatsappUrl
-        }, 600)
+        const waMessage = `Hi! I just requested a free trial. Programme: ${programme || 'Not specified'}. Country: ${country.trim() || 'Not specified'}.`
+        if (isMobileDevice()) {
+          // Phones have the WhatsApp app — navigate straight to it.
+          setTimeout(() => {
+            window.location.href = json.whatsappUrl
+          }, 600)
+        } else {
+          // iPad / tablet / desktop rarely have the WhatsApp phone app, so
+          // navigating to wa.me dead-ends and the message never sends. Open the
+          // scannable QR modal (mounted globally in layout) instead — same
+          // fallback the CTA buttons use via trackAndOpenWhatsApp.
+          setTimeout(() => {
+            openDesktopWhatsAppModal(json.whatsappUrl, waMessage, source)
+          }, 300)
+        }
       }
     } catch {
       setStatus('error')
@@ -117,8 +134,8 @@ export function GlobalEnquiryForm({ title, subtitle, source = 'global-hub' }: Gl
         >
           <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-green-600" aria-hidden="true" />
           <div className="text-sm font-medium">
-            Thank you! We&apos;ll be in touch. Opening WhatsApp to confirm — please tap{' '}
-            <strong>Send</strong>.
+            Thank you! We&apos;ll be in touch. Opening WhatsApp to confirm — tap{' '}
+            <strong>Send</strong> on your phone, or <strong>scan the QR code</strong> on screen.
           </div>
         </div>
       ) : (
