@@ -207,12 +207,12 @@ export default function PageContent() {
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">Board to NEET Bridge</h1>
                 <p className="text-xl mb-8 text-blue-100">
                   Specialized coaching for board students preparing for NEET. Expert faculty,
-                  comprehensive gap analysis, 98% conversion rate.
+                  comprehensive gap analysis, and NCERT-line-precise answer training.
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center gap-3">
                     <Trophy className="w-6 h-6" />
-                    <span className="text-lg">98% Success Rate</span>
+                    <span className="text-lg">98% NEET-UG Qualification Rate</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Users className="w-6 h-6" />
@@ -220,7 +220,7 @@ export default function PageContent() {
                   </div>
                   <div className="flex items-center gap-3">
                     <Star className="w-6 h-6" />
-                    <span className="text-lg">650+ Average Score</span>
+                    <span className="text-lg">AIIMS-Trained Biology Faculty</span>
                   </div>
                 </div>
                 <SmartWhatsAppCTA
@@ -419,8 +419,8 @@ export default function PageContent() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Bridge Board and NEET?</h2>
           <p className="text-xl mb-8 text-blue-100">
-            Join 98% of students who successfully transitioned from board to NEET. Schedule your
-            free consultation today.
+            Join the students who successfully transitioned from board and AP Biology to NEET with
+            our bridge programme. Schedule your free consultation today.
           </p>
           <SmartWhatsAppCTA
             phoneNumber="918826444334"

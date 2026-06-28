@@ -22,7 +22,15 @@
 | P0-10 stale MCQ stat + header | ✅ FIXED | `19,619` → `10,000+` ×3 in llms-full.txt; header globalized (keeps "India's #1 NEET" claim) |
 
 **Remaining P0 needing OWNER input:** none blocking — but confirm AP hourly rates ($120–150 / $60–75 / $40) are current.
-**Next:** Wave 2 (thin-page enrichment — GAMSAT 8 cities, etc.) and Wave 3 (country hubs). Branch unpushed; deploy only on owner request.
+
+## ✅ WAVE 2 (thin content + fabrication) — SHIPPED 2026-06-28 (unpushed, type-check clean)
+| Item | Status | What changed |
+|------|--------|--------------|
+| GAMSAT 8 "thin" city pages | ⚪ FALSE ALARM | Verified rendered output is ~500–700 UNIQUE words each (real med schools, GAMSAT cutoffs, local geography, native-currency pricing, 4 FAQs). The flag was page.tsx wrapper-size, not content. Left intact — enrichment would be make-work + fabrication risk. |
+| IBO country pages (uk/canada/singapore/australia) | ✅ ENRICHED | 1 FAQ → 4 FAQs each (web-verified national pathway: BBO/UKBC, CBO, SBO/SIBiol, ASO/ASI) in `src/data/ibo/iboCountries.ts`. Now meets Google's 3+ FAQ rich-result bar + real AEO depth. |
+| `/ap-biology-to-neet-preparation` | ✅ FIXED | 6 stub FAQs → substantive answers (AP↔NEET overlap, NCERT-specific gaps, exam differences). Stripped FABRICATED stats: "98% conversion rate", "98% Success Rate", "650+ Average Score", "98% transitioned" across page/layout/PageContent. KEPT canonical "98% NEET-UG qualification rate" where used correctly. |
+
+**Next:** Wave 3 (country hubs). Branch unpushed; deploy only on owner request.
 
 ---
 
