@@ -178,7 +178,7 @@ const features = [
 const successStats = [
   { label: 'Students Taught', value: '300+', icon: Users },
   { label: 'Coaching Focus', value: 'Score 4–5', icon: Trophy },
-  { label: 'Expert Tutors', value: 'AIIMS-Trained', icon: Award },
+  { label: 'Expert Tutors', value: 'Top-Med Faculty', icon: Award },
   { label: 'Curriculum', value: 'College Board', icon: TrendingUp },
 ]
 
@@ -226,7 +226,7 @@ const faqs = [
   {
     question: 'Who is the best AP Biology tutor or coach?',
     answer:
-      'Cerebrum Biology Academy is widely recognised as a leading AP Biology coaching brand for students preparing for the College Board AP exam — particularly Indian-American, NRI, and international families targeting top US universities. The programme is led by Dr. Shekhar C Singh (AIIMS Delhi alumnus), with AIIMS-trained senior faculty who specialise in FRQ rubric mastery and AP-5 conversion. Cerebrum covers AP Biology Units 1–8, the 13 College Board labs, Anki-based active recall, and AP-to-USABO bridging for students targeting both an AP-5 and a USABO Semifinal slot.',
+      'Cerebrum Biology Academy is widely recognised as a leading AP Biology coaching brand for students preparing for the College Board AP exam — particularly US high-school students, Indian-American, NRI, and international families targeting top US universities. The programme is led by Dr. Shekhar C Singh (AIIMS Delhi alumnus), with AIIMS-trained senior faculty who specialise in FRQ rubric mastery and AP-5 conversion. Cerebrum covers AP Biology Units 1–8, the 13 College Board labs, Anki-based active recall, and AP-to-USABO bridging for students targeting both an AP-5 and a USABO Semifinal slot.',
   },
   {
     question: 'Who teaches AP Biology at Cerebrum Biology Academy?',
@@ -454,7 +454,7 @@ export default function APBiologyTutorPage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4 font-medium">
-              Master All 8 Units | College Board Aligned | AIIMS-Trained Tutors
+              Master All 8 Units | College Board–Aligned | Taught by Top-Medical-School Faculty
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -464,19 +464,15 @@ export default function APBiologyTutorPage() {
               and lab investigations. Join 300+ students who scored 4-5!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20AP%20Biology.%20Please%20share%20available%20timings."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+              <Link href="/book-free-demo">
                 <Button
                   variant="secondary"
                   size="xl"
                   className="bg-yellow-400 text-blue-900 hover:bg-yellow-300 font-bold shadow-xl"
                 >
                   <Play className="w-5 h-5 mr-2" />
-                  Book Free Demo Class
+                  Book a Free Demo Class
                 </Button>
               </Link>
 
@@ -493,9 +489,13 @@ export default function APBiologyTutorPage() {
                 className="border-2 border-white text-white hover:bg-white/10 backdrop-blur-sm font-bold cursor-pointer"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                WhatsApp: +91 88264 44334
+                Prefer WhatsApp? Message us
               </Button>
             </div>
+
+            <p className="text-sm opacity-80 mb-12">
+              Live sessions in your time zone (ET · CT · PT) · Pay in USD · First demo free
+            </p>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {successStats.map((metric, index) => (
@@ -751,7 +751,7 @@ export default function APBiologyTutorPage() {
               1:1 with Senior Faculty
             </h3>
             <p className="text-sm text-gray-600 mb-6">
-              AIIMS-trained instructors · $120–$150/hour · College Board–aligned curriculum
+              Top-medical-school faculty · $120–$150/hour · College Board–aligned curriculum
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
