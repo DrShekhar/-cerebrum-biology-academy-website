@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
+import { recomputeEnrollmentProgress } from '@/lib/lms/enrollmentProgress'
 
 export async function GET(request: NextRequest, { params }: { params: { courseId: string } }) {
   try {
@@ -65,6 +66,15 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
       return NextResponse.json({ error: 'Enrollment not found' }, { status: 404 })
     }
 
+    // Recompute + persist real progress on course open (best-effort).
+    let currentProgress = enrollment.currentProgress
+    try {
+      const prog = await recomputeEnrollmentProgress(enrollment.id)
+      if (prog) currentProgress = prog.overallProgress
+    } catch (e) {
+      console.error('progress recompute failed', e)
+    }
+
     const modules = enrollment.courses.chapters.map((chapter) => ({
       id: chapter.id,
       title: chapter.title,
@@ -92,7 +102,7 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
         enrollmentId: enrollment.id,
         status: enrollment.status,
         enrollmentDate: enrollment.enrollmentDate,
-        currentProgress: enrollment.currentProgress,
+        currentProgress,
         lastAccessDate: enrollment.lastAccessDate,
         modules,
         features: enrollment.courses.features,

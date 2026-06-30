@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
+import { recomputeEnrollmentProgress } from '@/lib/lms/enrollmentProgress'
 
 export async function GET(request: NextRequest) {
   try {
@@ -40,6 +41,19 @@ export async function GET(request: NextRequest) {
       orderBy: { enrollmentDate: 'desc' },
     })
 
+    // Refresh real progress for each enrollment (bounded — a student has few).
+    const freshProgress = new Map<string, number>()
+    await Promise.all(
+      enrollments.map(async (e) => {
+        try {
+          const prog = await recomputeEnrollmentProgress(e.id)
+          if (prog) freshProgress.set(e.id, prog.overallProgress)
+        } catch {
+          /* keep stored value on failure */
+        }
+      })
+    )
+
     return NextResponse.json({
       success: true,
       enrollments: enrollments.map((e) => ({
@@ -52,7 +66,7 @@ export async function GET(request: NextRequest) {
         enrollmentDate: e.enrollmentDate,
         startDate: e.startDate,
         endDate: e.endDate,
-        currentProgress: e.currentProgress,
+        currentProgress: freshProgress.get(e.id) ?? e.currentProgress,
         lastAccessDate: e.lastAccessDate,
         totalFees: e.totalFees,
         paidAmount: e.paidAmount,
