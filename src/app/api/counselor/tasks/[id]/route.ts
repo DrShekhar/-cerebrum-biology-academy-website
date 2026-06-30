@@ -6,7 +6,11 @@ import { z } from 'zod'
 const updateTaskSchema = z.object({
   title: z.string().optional(),
   description: z.string().optional(),
-  status: z.enum(['TODO', 'IN_PROGRESS', 'COMPLETED', 'CANCELLED']).optional(),
+  // Accept the legacy 'TODO' alias from older clients but normalize it to the
+  // real TaskStatus enum member (PENDING) below — 'TODO' is not a DB value.
+  status: z
+    .enum(['TODO', 'PENDING', 'IN_PROGRESS', 'COMPLETED', 'SNOOZED', 'CANCELLED'])
+    .optional(),
   priority: z.enum(['LOW', 'MEDIUM', 'HIGH', 'URGENT']).optional(),
   dueDate: z.string().optional(),
 })
@@ -54,6 +58,9 @@ async function handlePATCH(
     }
 
     const updateData: any = { ...validatedData }
+    if (validatedData.status === 'TODO') {
+      updateData.status = 'PENDING'
+    }
     if (validatedData.dueDate) {
       updateData.dueDate = new Date(validatedData.dueDate)
     }

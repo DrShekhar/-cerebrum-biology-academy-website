@@ -2,7 +2,18 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { withAuth } from '@/lib/auth/middleware'
 import { addSecurityHeaders } from '@/lib/auth/config'
+import { parsePositiveInt } from '@/lib/utils'
 import { z } from 'zod'
+
+const TEST_SESSION_STATUSES = [
+  'NOT_STARTED',
+  'IN_PROGRESS',
+  'PAUSED',
+  'COMPLETED',
+  'EXPIRED',
+  'ABANDONED',
+  'TERMINATED',
+]
 
 // Test session creation schema
 const CreateSessionSchema = z.object({
@@ -242,14 +253,16 @@ export const GET = withAuth(async (request: NextRequest, session) => {
   try {
     const url = new URL(request.url)
     const status = url.searchParams.get('status')
-    const limit = parseInt(url.searchParams.get('limit') || '10')
-    const offset = parseInt(url.searchParams.get('offset') || '0')
+    const limit = parsePositiveInt(url.searchParams.get('limit'), 10, { min: 1, max: 100 })
+    const offset = parsePositiveInt(url.searchParams.get('offset'), 0, { min: 0 })
 
     const whereClause: any = {
       userId: session.userId,
     }
 
-    if (status) {
+    // Only filter by status when it's a valid enum value — a raw invalid string
+    // would make Prisma throw a 500.
+    if (status && TEST_SESSION_STATUSES.includes(status)) {
       whereClause.status = status
     }
 

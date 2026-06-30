@@ -120,10 +120,15 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    // Fetch test sessions
+    // Fetch test sessions — only match the identifiers we actually have.
+    // (An empty `{}` inside an OR matches every row, leaking all users' data.)
+    const ownershipFilters = [
+      ...(userId ? [{ userId }] : []),
+      ...(freeUserId ? [{ freeUserId }] : []),
+    ]
     const testSessions = await prisma.test_sessions.findMany({
       where: {
-        OR: [userId ? { userId } : {}, freeUserId ? { freeUserId } : {}],
+        OR: ownershipFilters,
       },
       include: {
         test_templates: {

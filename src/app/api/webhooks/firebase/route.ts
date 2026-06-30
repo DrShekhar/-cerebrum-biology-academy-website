@@ -48,8 +48,15 @@ function verifyWebhookSignature(
 
   const expectedSignature = crypto.createHmac('sha256', secret).update(payload).digest('hex')
 
+  const signatureBuffer = Buffer.from(signature)
+  const expectedBuffer = Buffer.from(expectedSignature)
+
+  // timingSafeEqual throws (RangeError) when the buffers differ in length, so
+  // reject mismatched lengths up front — a bad signature must be 401, not 500.
+  if (signatureBuffer.length !== expectedBuffer.length) return false
+
   // Use timing-safe comparison to prevent timing attacks
-  return crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expectedSignature))
+  return crypto.timingSafeEqual(signatureBuffer, expectedBuffer)
 }
 
 export async function POST(request: NextRequest) {

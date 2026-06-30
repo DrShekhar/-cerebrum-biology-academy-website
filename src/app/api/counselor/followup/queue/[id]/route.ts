@@ -219,8 +219,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
         })
 
       case 'skip':
-        const skipBody = await request.json()
-        const skipReason = skipBody.reason || 'Skipped by counselor'
+        const skipReason = (reqBody.reason as string) || 'Skipped by counselor'
 
         await skipQueueItem(params.id, skipReason)
 

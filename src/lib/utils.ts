@@ -60,3 +60,19 @@ export function typedEntries<K extends string, V>(obj: Record<K, V>): [K, V][] {
 export function typedKeys<K extends string>(obj: Record<K, unknown>): K[] {
   return Object.keys(obj) as K[]
 }
+
+/**
+ * Parse a positive integer query param (e.g. ?limit / ?page) safely.
+ * Returns `fallback` for null/empty/non-numeric values (plain parseInt would
+ * yield NaN, which throws when handed to Prisma `take`/`skip`). The result is
+ * clamped to [min, max].
+ */
+export function parsePositiveInt(
+  value: string | null | undefined,
+  fallback: number,
+  { min = 1, max = Number.MAX_SAFE_INTEGER }: { min?: number; max?: number } = {}
+): number {
+  const parsed = Number.parseInt(value ?? '', 10)
+  const n = Number.isFinite(parsed) ? parsed : fallback
+  return Math.min(Math.max(n, min), max)
+}

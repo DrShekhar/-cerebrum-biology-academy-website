@@ -12,7 +12,21 @@ const createLeadSchema = z.object({
   email: z.string().email('Valid email is required'),
   phone: z.string().min(10, 'Valid phone number is required'),
   courseInterest: z.string().min(1, 'Course interest is required'),
-  source: z.string().optional(),
+  source: z
+    .enum([
+      'MANUAL_ENTRY',
+      'WALK_IN',
+      'PHONE_CALL',
+      'REFERRAL',
+      'WHATSAPP',
+      'EMAIL',
+      'SOCIAL_MEDIA',
+      'WEBSITE',
+      'ADVERTISEMENT',
+      'EVENT',
+      'OTHER',
+    ])
+    .optional(),
   priority: z.enum(['HOT', 'WARM', 'COLD']).optional(),
   demoBookingId: z.string().optional(),
 })

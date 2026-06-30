@@ -400,7 +400,9 @@ async function checkDuplicate(
 ): Promise<{ isDuplicate: boolean; existingLead?: ExistingLeadRecord }> {
   const existingLead = await prisma.leads.findFirst({
     where: {
-      OR: [{ phone }, email ? { email } : {}].filter(Boolean),
+      // Only match on identifiers we actually have — an empty `{}` inside an
+      // OR matches every row and misclassifies email-less leads as duplicates.
+      OR: [{ phone }, ...(email ? [{ email }] : [])],
     },
     include: {
       users: {

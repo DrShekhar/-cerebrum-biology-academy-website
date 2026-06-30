@@ -5,6 +5,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { parsePositiveInt } from '@/lib/utils'
 import { auth } from '@/lib/auth'
 import {
   getNotifications,
@@ -24,8 +25,8 @@ export async function GET(req: NextRequest) {
     }
 
     const { searchParams } = new URL(req.url)
-    const limit = parseInt(searchParams.get('limit') || '20')
-    const offset = parseInt(searchParams.get('offset') || '0')
+    const limit = parsePositiveInt(searchParams.get('limit'), 20, { min: 1, max: 100 })
+    const offset = parsePositiveInt(searchParams.get('offset'), 0, { min: 0 })
     const unreadOnly = searchParams.get('unreadOnly') === 'true'
     const typesParam = searchParams.get('types')
 

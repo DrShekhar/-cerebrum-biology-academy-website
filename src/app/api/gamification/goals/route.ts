@@ -6,6 +6,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { parsePositiveInt } from '@/lib/utils'
 import { auth } from '@/lib/auth'
 import {
   getUserGoals,
@@ -30,8 +31,8 @@ export async function GET(req: NextRequest) {
     const view = searchParams.get('view') || 'current' // 'current', 'history', 'stats'
 
     if (view === 'history') {
-      const limit = parseInt(searchParams.get('limit') || '20')
-      const offset = parseInt(searchParams.get('offset') || '0')
+      const limit = parsePositiveInt(searchParams.get('limit'), 20, { min: 1, max: 100 })
+      const offset = parsePositiveInt(searchParams.get('offset'), 0, { min: 0 })
       const goalType = searchParams.get('goalType') as GoalType | undefined
 
       const history = await getGoalHistory(session.user.id, { limit, offset, goalType })

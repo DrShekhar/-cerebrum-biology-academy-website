@@ -432,7 +432,7 @@ export async function POST(request: NextRequest) {
                 courseInterest: data.courseInterest?.join(', ') || 'NEET Biology',
                 stage: 'DEMO_SCHEDULED',
                 priority: 'WARM',
-                source: utmSource ? 'PAID_ADS' : (source as any) || 'WEBSITE_FORM',
+                source: utmSource ? 'ADVERTISEMENT' : 'WEBSITE',
                 demoBookingId: booking.id,
                 // Auto-assign to first available counselor or leave unassigned
                 assignedToId: await getDefaultCounselorId(tx),

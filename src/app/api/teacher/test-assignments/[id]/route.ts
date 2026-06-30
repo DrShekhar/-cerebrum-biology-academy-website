@@ -194,21 +194,26 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
     })
 
     if (questions !== undefined) {
-      await prisma.test_assignment_questions.deleteMany({
-        where: { testAssignmentId: id },
-      })
-
-      if (questions.length > 0) {
-        await prisma.test_assignment_questions.createMany({
-          data: questions.map((q: any, index: number) => ({
-            testAssignmentId: id,
-            questionId: q.questionId,
-            orderIndex: index,
-            marks: q.marks || 4,
-            negativeMarks: q.negativeMarks || null,
-          })),
+      // Delete + recreate atomically so a failed insert can't leave the test
+      // with zero questions.
+      await prisma.$transaction(async (tx) => {
+        await tx.test_assignment_questions.deleteMany({
+          where: { testAssignmentId: id },
         })
-      }
+
+        if (questions.length > 0) {
+          await tx.test_assignment_questions.createMany({
+            data: questions.map((q: any, index: number) => ({
+              id: `taq_${Date.now()}_${index}_${Math.random().toString(36).slice(2, 9)}`,
+              testAssignmentId: id,
+              questionId: q.questionId,
+              orderIndex: index,
+              marks: q.marks || 4,
+              negativeMarks: q.negativeMarks || null,
+            })),
+          })
+        }
+      })
     }
 
     if (status === 'PUBLISHED' && existing.status === 'DRAFT') {

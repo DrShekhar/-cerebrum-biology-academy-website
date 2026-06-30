@@ -4,6 +4,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { parsePositiveInt } from '@/lib/utils'
 import { auth } from '@/lib/auth'
 import { getXpHistory, getXpBreakdown, XP_REWARDS } from '@/lib/gamification'
 import { XpEventType } from '@/types/prisma-enums'
@@ -20,8 +21,8 @@ export async function GET(req: NextRequest) {
     const view = searchParams.get('view') || 'breakdown' // 'breakdown', 'history'
 
     if (view === 'history') {
-      const limit = parseInt(searchParams.get('limit') || '20')
-      const offset = parseInt(searchParams.get('offset') || '0')
+      const limit = parsePositiveInt(searchParams.get('limit'), 20, { min: 1, max: 100 })
+      const offset = parsePositiveInt(searchParams.get('offset'), 0, { min: 0 })
       const eventType = searchParams.get('eventType') as XpEventType | undefined
       const startDate = searchParams.get('startDate')
       const endDate = searchParams.get('endDate')

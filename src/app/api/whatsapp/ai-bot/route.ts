@@ -66,14 +66,19 @@ export async function GET(request: NextRequest) {
  */
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
+    // Meta signs the RAW request bytes — verify over the raw text, then parse.
+    // Re-serializing with JSON.stringify produces different bytes and the HMAC
+    // never matches, 401-ing every real message in production.
+    const rawBody = await request.text()
 
     // Validate webhook signature (Meta security requirement)
     const signature = request.headers.get('x-hub-signature-256')
-    if (process.env.NODE_ENV === 'production' && !validateSignature(body, signature)) {
+    if (process.env.NODE_ENV === 'production' && !validateSignature(rawBody, signature)) {
       console.error('❌ Invalid webhook signature')
       return NextResponse.json({ error: 'Invalid signature' }, { status: 401 })
     }
+
+    const body = JSON.parse(rawBody)
 
     // Extract message data from webhook payload
     const messageData = extractMessageData(body)
@@ -236,7 +241,7 @@ function checkRateLimit(phoneNumber: string): boolean {
 /**
  * Validate webhook signature from Meta
  */
-function validateSignature(payload: any, signature: string | null): boolean {
+function validateSignature(rawBody: string, signature: string | null): boolean {
   if (!signature) return false
 
   const appSecret = process.env.WHATSAPP_APP_SECRET
@@ -246,13 +251,16 @@ function validateSignature(payload: any, signature: string | null): boolean {
   }
 
   try {
-    // Calculate expected signature
-    const payloadString = JSON.stringify(payload)
+    // Calculate expected signature over the raw request bytes (as Meta signs them)
     const expectedSignature =
-      'sha256=' + crypto.createHmac('sha256', appSecret).update(payloadString).digest('hex')
+      'sha256=' + crypto.createHmac('sha256', appSecret).update(rawBody).digest('hex')
+
+    const signatureBuffer = Buffer.from(signature)
+    const expectedBuffer = Buffer.from(expectedSignature)
+    if (signatureBuffer.length !== expectedBuffer.length) return false
 
     // Compare signatures
-    return crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expectedSignature))
+    return crypto.timingSafeEqual(signatureBuffer, expectedBuffer)
   } catch (error) {
     console.error('❌ Signature validation error:', error)
     return false

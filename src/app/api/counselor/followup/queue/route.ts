@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { parsePositiveInt } from '@/lib/utils'
 import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 import { prisma } from '@/lib/prisma'
 import type { QueueStatus } from '@/generated/prisma'
@@ -13,8 +14,8 @@ export async function GET(request: NextRequest) {
     const status = searchParams.get('status') as QueueStatus | null
     const ruleId = searchParams.get('ruleId')
     const leadId = searchParams.get('leadId')
-    const page = parseInt(searchParams.get('page') || '1')
-    const limit = parseInt(searchParams.get('limit') || '50')
+    const page = parsePositiveInt(searchParams.get('page'), 1, { min: 1 })
+    const limit = parsePositiveInt(searchParams.get('limit'), 50, { min: 1, max: 100 })
 
     const where: any = {}
 

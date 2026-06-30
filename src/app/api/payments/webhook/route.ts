@@ -124,9 +124,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true, message: 'Event already processed' })
     }
 
-    // Mark event as processed in Redis (with TTL for automatic cleanup)
-    await markEventProcessed(eventId)
-
     logger.info(`Webhook received: ${eventType} ${eventId}`)
 
     switch (eventType) {
@@ -160,6 +157,12 @@ export async function POST(request: NextRequest) {
       default:
         logger.info('Webhook: Unhandled event type:', eventType)
     }
+
+    // Mark processed only AFTER successful handling — if a handler throws, the
+    // event stays unmarked so Razorpay's retry can reprocess it. Handlers are
+    // idempotent (they no-op on already-completed payments), so reprocessing a
+    // retried event is safe.
+    await markEventProcessed(eventId)
 
     return NextResponse.json({ success: true })
   } catch (error) {

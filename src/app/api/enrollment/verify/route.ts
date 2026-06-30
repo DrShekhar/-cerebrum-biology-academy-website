@@ -61,6 +61,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Payment record not found' }, { status: 404 })
     }
 
+    // Idempotency: if this payment was already verified, don't re-increment the
+    // enrollment's paid/pending amounts on a replayed request.
+    if (payment.status === 'COMPLETED') {
+      return NextResponse.json({
+        success: true,
+        verified: true,
+        alreadyProcessed: true,
+        enrollmentId: payment.enrollmentId,
+      })
+    }
+
     // Update payment status
     const updatedPayment = await prisma.payments.update({
       where: { id: payment.id },

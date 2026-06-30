@@ -24,7 +24,7 @@ const createOfferSchema = z.object({
 async function handlePOST(req: NextRequest, session: any) {
   try {
     const body = await req.json()
-    const counselorId = session.user.id
+    const counselorId = session.userId
 
     const validatedData = createOfferSchema.parse(body)
 

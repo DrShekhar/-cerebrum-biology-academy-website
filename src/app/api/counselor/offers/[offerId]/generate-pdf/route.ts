@@ -23,7 +23,7 @@ async function handlePOST(
     const body = await req.json()
     const validatedData = generatePDFSchema.parse(body)
 
-    const counselorId = session.user.id
+    const counselorId = session.userId
 
     const eligibility = await offerLetterService.canGenerateOfferLetter(
       validatedData.leadId,
