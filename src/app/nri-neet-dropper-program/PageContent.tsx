@@ -3,10 +3,10 @@ import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimo
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
 
 const stats = [
-  '78% students improve by 150+ marks',
-  '92% qualify for NRI quota',
-  'USD-anchored pricing',
-  '2x daily doubt sessions',
+  '98% NEET qualification rate',
+  '67+ AIIMS selections',
+  'Geo-priced in USD / AED / GBP',
+  'Live classes across global time zones',
 ]
 
 export function PageContent() {
@@ -15,9 +15,14 @@ export function PageContent() {
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">NRI NEET Dropper Program</h1>
-          <p className="text-xl mb-6 opacity-90">
-            Specialized dropper program for NRI students who scored 300-550 in NEET and need 600+
-            for NRI quota. 10-12 months intensive coaching.
+          <p className="text-xl mb-2 opacity-90">
+            A focused 10-12 month second-attempt program for NRI &amp; OCI students who scored
+            300-550 in NEET and need a higher score for the NRI quota.
+          </p>
+          <p className="text-lg mb-6 opacity-90">
+            Study for NEET as a dropper from anywhere abroad — live classes are scheduled across
+            Gulf (GST), SE-Asia (SGT/ICT), UK (GMT) and US/Canada (ET/PT) time zones, with
+            recordings for any session you miss.
           </p>
           <div className="flex gap-4 flex-wrap">
             <SmartWhatsAppCTA
@@ -25,9 +30,14 @@ export function PageContent() {
               buttonText="Get Free Consultation"
               className="bg-green-500 hover:bg-green-600 px-8 py-3 rounded-lg font-bold"
             />
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100">
-              Schedule Call
-            </button>
+            <a
+              href="https://wa.me/918826444334?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20call%20about%20the%20NRI%20NEET%20Dropper%20Program%20(studying%20for%20NEET%20from%20abroad)"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 inline-block"
+            >
+              Schedule a Call
+            </a>
           </div>
         </div>
       </section>
@@ -77,7 +87,23 @@ export function PageContent() {
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">•</span>
-                <span className="text-gray-700">Flexible timings for all timezones</span>
+                <span className="text-gray-700">
+                  Live classes scheduled across Gulf (GST), SE-Asia (SGT/ICT), UK (GMT) and
+                  US/Canada (ET/PT) time zones — recordings for every session
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 font-bold mr-3">•</span>
+                <span className="text-gray-700">
+                  NEET NRI/OCI quota guidance — cut-off targeting for AIIMS, JIPMER, Manipal, KMC
+                  and deemed medical colleges
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 font-bold mr-3">•</span>
+                <span className="text-gray-700">
+                  Printed material shipped internationally, or instant digital access
+                </span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">•</span>
@@ -120,8 +146,11 @@ export function PageContent() {
               <p className="text-gray-700 font-bold">Expert Leadership</p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
-              <p className="text-gray-700 font-bold">NRI Support</p>
+              <div className="text-4xl font-bold text-blue-600 mb-2">Your Time Zone</div>
+              <p className="text-gray-700 font-bold">
+                Live classes across Gulf, SE-Asia, UK &amp; US/Canada — plus recordings for any
+                missed session
+              </p>
             </div>
           </div>
         </div>
@@ -142,25 +171,28 @@ export function PageContent() {
                 How much improvement can I expect as a dropper student?
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                On average, our dropper students improve by 150-200 marks. 78% of our students
-                achieve this improvement.
+                On average, our dropper students improve by 150-200 marks over their previous
+                attempt, and 98% of Cerebrum students go on to qualify NEET.
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="font-bold text-gray-900 mb-3">
-                Is this program suitable for NRI students in different timezones?
+                I am studying abroad — does this work across time zones?
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Yes! We offer flexible timings with recorded sessions available 24/7.
+                Yes. You can study for NEET as a dropper from anywhere abroad. Live classes are
+                scheduled across Gulf (GST), SE-Asia (SGT/ICT), UK (GMT) and US/Canada (ET/PT) time
+                zones, and every session is recorded so you can catch up on anything you miss.
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="font-bold text-gray-900 mb-3">
-                What score improvement is needed for NRI quota?
+                How does the NEET NRI/OCI quota work for dropper students?
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Most NRI quota seats require 600+ marks. 92% of our dropper students qualify for NRI
-                quota.
+                NRI and OCI candidates can apply under the 15% NRI quota at AIIMS, JIPMER, Manipal,
+                KMC and deemed medical colleges. Cut-offs vary by college and year, so we benchmark
+                your target against the latest published cut-offs and build your plan to clear them.
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
@@ -168,7 +200,9 @@ export function PageContent() {
                 How do you personalize the study plan for each student?
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                We conduct a comprehensive gap analysis of your NEET exam performance.
+                We conduct a comprehensive gap analysis of your previous NEET attempt and tailor the
+                plan to your weak areas. Printed material can be shipped internationally, or you can
+                use instant digital access.
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6">
