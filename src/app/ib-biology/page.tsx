@@ -578,7 +578,7 @@ export default function IBBiologyHubPage() {
                   href={`/ib-biology-tutor-${s.slug}`}
                   className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-700 transition-all hover:border-green-300 hover:text-green-700"
                 >
-                  {s.name}
+                  {s.shortName}
                 </Link>
               ))}
             </div>

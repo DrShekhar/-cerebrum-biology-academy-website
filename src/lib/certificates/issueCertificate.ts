@@ -10,6 +10,7 @@
 
 import { prisma } from '@/lib/prisma'
 import { CertificateGenerator } from '@/lib/certificates'
+import type { CertificateTemplate } from '@/lib/certificates/types'
 
 type CertificateType =
   | 'COURSE_COMPLETION'
@@ -88,7 +89,10 @@ export async function issueCertificate(input: IssueCertificateInput) {
 
   const { pdfUrl, qrCodeUrl } = await CertificateGenerator.generateAndUploadCertificate(
     certificateData,
-    { template: template || undefined, includeQRCode: true }
+    {
+      template: (template as unknown as CertificateTemplate) || undefined,
+      includeQRCode: true,
+    }
   )
 
   const certificate = await prisma.certificates.create({

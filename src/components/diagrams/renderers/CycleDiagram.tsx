@@ -23,12 +23,11 @@ function CycleDiagramInner({
   const uid = useId().replace(/:/g, '')
 
   const nodeCount = diagram.nodes.length
-  if (nodeCount === 0) return null
 
   const cx = width / 2
   const cy = height / 2
   const radius = Math.min(width, height) * 0.34
-  const nodeRadius = Math.max(28, Math.min(44, 180 / nodeCount))
+  const nodeRadius = Math.max(28, Math.min(44, 180 / Math.max(1, nodeCount)))
 
   const nodePositions = useMemo(() => {
     return diagram.nodes.map((_, i) => {
@@ -39,6 +38,8 @@ function CycleDiagramInner({
       }
     })
   }, [nodeCount, cx, cy, radius, diagram.nodes])
+
+  if (nodeCount === 0) return null
 
   const isHighlighted = (id: string) => highlightedNodes?.includes(id) ?? false
   const isEdgeHighlighted = (from: string, to: string) =>

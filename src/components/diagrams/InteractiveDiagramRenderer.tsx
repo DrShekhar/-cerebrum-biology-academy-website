@@ -78,6 +78,29 @@ export function InteractiveDiagramRenderer({
   const [activeNode, setActiveNode] = useState<string | null>(null)
   const [selectedNode, setSelectedNode] = useState<string | null>(null)
 
+  const totalSteps = diagram?.steps?.length || 0
+
+  // Hooks must run on every render in the same order — keep them above any
+  // early return below.
+  const handleNodeHover = useCallback((id: string | null) => {
+    setActiveNode(id)
+  }, [])
+
+  const handleNodeClick = useCallback((id: string) => {
+    setSelectedNode((prev) => (prev === id ? null : id))
+  }, [])
+
+  const goToStep = useCallback(
+    (step: number | null) => {
+      if (step === null) {
+        setCurrentStep(null)
+        return
+      }
+      setCurrentStep(Math.max(0, Math.min(totalSteps - 1, step)))
+    },
+    [totalSteps]
+  )
+
   if (!diagram || !diagram.type || !diagram.title) {
     return (
       <div className="p-4 bg-yellow-50 rounded-lg border border-yellow-200 text-sm text-yellow-800">
@@ -104,32 +127,12 @@ export function InteractiveDiagramRenderer({
   }
 
   const steps = diagram.steps
-  const totalSteps = steps?.length || 0
 
   const highlightedNodes =
     currentStep !== null && steps?.[currentStep] ? steps[currentStep].highlightNodes : undefined
 
   const highlightedEdges =
     currentStep !== null && steps?.[currentStep] ? steps[currentStep].highlightEdges : undefined
-
-  const handleNodeHover = useCallback((id: string | null) => {
-    setActiveNode(id)
-  }, [])
-
-  const handleNodeClick = useCallback((id: string) => {
-    setSelectedNode((prev) => (prev === id ? null : id))
-  }, [])
-
-  const goToStep = useCallback(
-    (step: number | null) => {
-      if (step === null) {
-        setCurrentStep(null)
-        return
-      }
-      setCurrentStep(Math.max(0, Math.min(totalSteps - 1, step)))
-    },
-    [totalSteps]
-  )
 
   const allNodes = isComparison
     ? [

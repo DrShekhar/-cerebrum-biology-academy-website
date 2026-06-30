@@ -44,6 +44,7 @@ export function PersonalizedLearningPath() {
   // completed tests we show an onboarding empty state rather than fake data.
   const [loading, setLoading] = useState(true)
   const [noData, setNoData] = useState(false)
+  const [studentProfile, setStudentProfile] = useState<StudentProfile | null>(null)
 
   useEffect(() => {
     let cancelled = false
@@ -111,6 +112,7 @@ export function PersonalizedLearningPath() {
 
         const path = learningEngine.generateLearningPath(profile)
         if (!cancelled) {
+          setStudentProfile(profile)
           setCurrentPath(path)
           setLoading(false)
         }
@@ -209,7 +211,7 @@ export function PersonalizedLearningPath() {
   const analytics = getProgressAnalytics()
 
   // No real performance data yet → honest onboarding state (never fabricated scores).
-  if (!isAuthenticated || (!loading && (noData || !currentPath))) {
+  if (!isAuthenticated || (!loading && (noData || !currentPath || !studentProfile))) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center max-w-md px-4">
@@ -234,7 +236,7 @@ export function PersonalizedLearningPath() {
   }
 
   // Loading real data.
-  if (loading || !currentPath) {
+  if (loading || !currentPath || !studentProfile) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
