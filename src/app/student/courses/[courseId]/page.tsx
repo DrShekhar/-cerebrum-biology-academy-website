@@ -12,7 +12,6 @@ import {
   Loader2,
   Video,
   FileText,
-  Download,
   MessageCircle,
   Target,
   Brain,
@@ -31,31 +30,21 @@ interface CourseDetails {
   name: string
   description: string
   type: string
-  enrolledAt: string
-  validUntil: string
+  enrollmentDate: string
+  endDate: string | null
   status: 'ACTIVE' | 'EXPIRED' | 'CANCELLED'
-  progress: number
+  currentProgress: number
   modules: CourseModule[]
   features: string[]
 }
 
+// Shape returned by /api/enrollments/[courseId]: chapters -> topics + materials.
 interface CourseModule {
   id: string
   title: string
-  description: string
-  order: number
-  isLocked: boolean
-  isCompleted: boolean
-  lessons: ModuleLesson[]
-}
-
-interface ModuleLesson {
-  id: string
-  title: string
-  type: 'video' | 'document' | 'quiz' | 'assignment'
-  duration?: number
-  isCompleted: boolean
-  isLocked: boolean
+  sortOrder: number
+  topics: { id: string; title: string; orderIndex: number }[]
+  materials: { id: string; title: string; materialType: string }[]
 }
 
 export default function CourseDetailPage() {
@@ -161,108 +150,16 @@ export default function CourseDetailPage() {
     )
   }
 
-  const isExpired = course.status === 'EXPIRED' || new Date(course.validUntil) < new Date()
-  const daysRemaining = Math.ceil(
-    (new Date(course.validUntil).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)
-  )
+  const isExpired =
+    course.status === 'EXPIRED' || (!!course.endDate && new Date(course.endDate) < new Date())
+  const daysRemaining = course.endDate
+    ? Math.ceil((new Date(course.endDate).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))
+    : null
 
-  // Mock data for demonstration if no modules exist
-  const displayModules: CourseModule[] =
-    course.modules?.length > 0
-      ? course.modules
-      : [
-          {
-            id: '1',
-            title: 'Introduction to Biology',
-            description: 'Get started with the fundamentals',
-            order: 1,
-            isLocked: false,
-            isCompleted: true,
-            lessons: [
-              {
-                id: '1a',
-                title: 'Welcome to the Course',
-                type: 'video',
-                duration: 10,
-                isCompleted: true,
-                isLocked: false,
-              },
-              {
-                id: '1b',
-                title: 'Course Overview',
-                type: 'document',
-                isCompleted: true,
-                isLocked: false,
-              },
-              {
-                id: '1c',
-                title: 'Introduction Quiz',
-                type: 'quiz',
-                isCompleted: false,
-                isLocked: false,
-              },
-            ],
-          },
-          {
-            id: '2',
-            title: 'Cell Biology',
-            description: 'Understanding cellular structures',
-            order: 2,
-            isLocked: false,
-            isCompleted: false,
-            lessons: [
-              {
-                id: '2a',
-                title: 'Cell Structure',
-                type: 'video',
-                duration: 25,
-                isCompleted: false,
-                isLocked: false,
-              },
-              {
-                id: '2b',
-                title: 'Cell Organelles',
-                type: 'video',
-                duration: 30,
-                isCompleted: false,
-                isLocked: false,
-              },
-              {
-                id: '2c',
-                title: 'Practice Questions',
-                type: 'quiz',
-                isCompleted: false,
-                isLocked: false,
-              },
-            ],
-          },
-          {
-            id: '3',
-            title: 'Genetics',
-            description: 'DNA, RNA and inheritance',
-            order: 3,
-            isLocked: true,
-            isCompleted: false,
-            lessons: [
-              {
-                id: '3a',
-                title: 'DNA Structure',
-                type: 'video',
-                duration: 35,
-                isCompleted: false,
-                isLocked: true,
-              },
-              {
-                id: '3b',
-                title: 'Genetic Inheritance',
-                type: 'video',
-                duration: 40,
-                isCompleted: false,
-                isLocked: true,
-              },
-            ],
-          },
-        ]
+  // Real curriculum only — no fabricated modules. Empty curriculum shows an
+  // honest empty state below.
+  const displayModules: CourseModule[] = course.modules ?? []
+  const totalLessons = displayModules.reduce((acc, m) => acc + m.materials.length, 0)
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -314,12 +211,14 @@ export default function CourseDetailPage() {
           <div className="mt-6">
             <div className="flex items-center justify-between text-sm mb-2">
               <span className="text-gray-600">Course Progress</span>
-              <span className="font-medium text-gray-900">{course.progress || 0}% Complete</span>
+              <span className="font-medium text-gray-900">
+                {course.currentProgress || 0}% Complete
+              </span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-3">
               <div
                 className="bg-gradient-to-r from-blue-500 to-green-600 h-3 rounded-full transition-all"
-                style={{ width: `${course.progress || 0}%` }}
+                style={{ width: `${course.currentProgress || 0}%` }}
               />
             </div>
           </div>
@@ -328,16 +227,18 @@ export default function CourseDetailPage() {
           <div className="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
             <div className="flex items-center">
               <Calendar className="w-4 h-4 mr-2" />
-              Enrolled: {new Date(course.enrolledAt).toLocaleDateString('en-IN')}
+              Enrolled: {new Date(course.enrollmentDate).toLocaleDateString('en-IN')}
             </div>
-            <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2" />
-              {isExpired
-                ? 'Subscription expired'
-                : daysRemaining > 0
-                  ? `${daysRemaining} days remaining`
-                  : 'Expires today'}
-            </div>
+            {(isExpired || daysRemaining !== null) && (
+              <div className="flex items-center">
+                <Clock className="w-4 h-4 mr-2" />
+                {isExpired
+                  ? 'Subscription expired'
+                  : daysRemaining! > 0
+                    ? `${daysRemaining} days remaining`
+                    : 'Expires today'}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -370,55 +271,77 @@ export default function CourseDetailPage() {
           <div className="lg:col-span-2 space-y-4">
             <h2 className="text-xl font-bold text-gray-900">Course Content</h2>
 
-            {displayModules.map((module, index) => (
-              <div key={module.id} className="animate-fadeInUp">
-                <Card className={cn(module.isLocked && 'opacity-75')}>
-                  <CardContent className="p-0">
-                    <button
-                      onClick={() => setActiveModule(activeModule === module.id ? null : module.id)}
-                      className="w-full p-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
-                      disabled={module.isLocked}
-                    >
-                      <div className="flex items-center gap-4">
-                        <div
-                          className={cn(
-                            'w-10 h-10 rounded-lg flex items-center justify-center',
-                            module.isCompleted
-                              ? 'bg-green-100'
-                              : module.isLocked
-                                ? 'bg-gray-100'
-                                : 'bg-blue-100'
-                          )}
-                        >
-                          {module.isLocked ? (
-                            <Lock className="w-5 h-5 text-gray-500" />
-                          ) : module.isCompleted ? (
-                            <CheckCircle className="w-5 h-5 text-green-600" />
-                          ) : (
-                            <BookOpen className="w-5 h-5 text-blue-600" />
-                          )}
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-gray-900">
-                            Module {module.order}: {module.title}
-                          </h3>
-                          <p className="text-sm text-gray-600">{module.description}</p>
-                        </div>
-                      </div>
-                      <div className="text-sm text-gray-500">{module.lessons.length} lessons</div>
-                    </button>
+            {displayModules.length === 0 && (
+              <Card>
+                <CardContent className="p-8">
+                  <EmptyState
+                    icon={BookOpen}
+                    title="Course content is being prepared"
+                    description="Your lectures and study materials for this course are being uploaded. Meanwhile, you can practise with mock tests or ask the AI tutor."
+                    primaryAction={{ label: 'Take a Practice Test', href: '/mock-tests' }}
+                    secondaryAction={{ label: 'Ask the AI Tutor', href: '/student/ai-tutor' }}
+                    size="md"
+                    variant="default"
+                  />
+                </CardContent>
+              </Card>
+            )}
 
-                    {activeModule === module.id && !module.isLocked && (
-                      <div className="border-t bg-gray-50 p-4 space-y-2">
-                        {module.lessons.map((lesson) => (
-                          <LessonItem key={lesson.id} lesson={lesson} isExpired={isExpired} />
-                        ))}
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              </div>
-            ))}
+            {displayModules.map((module) => {
+              const lessonCount = module.materials.length
+              return (
+                <div key={module.id} className="animate-fadeInUp">
+                  <Card>
+                    <CardContent className="p-0">
+                      <button
+                        onClick={() =>
+                          setActiveModule(activeModule === module.id ? null : module.id)
+                        }
+                        className="w-full p-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-blue-100">
+                            <BookOpen className="w-5 h-5 text-blue-600" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-gray-900">
+                              Module {module.sortOrder}: {module.title}
+                            </h3>
+                            {module.topics.length > 0 && (
+                              <p className="text-sm text-gray-600">
+                                {module.topics.length} topic{module.topics.length === 1 ? '' : 's'}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                        <div className="text-sm text-gray-500">
+                          {lessonCount} {lessonCount === 1 ? 'lesson' : 'lessons'}
+                        </div>
+                      </button>
+
+                      {activeModule === module.id && (
+                        <div className="border-t bg-gray-50 p-4 space-y-2">
+                          {module.materials.length === 0 && (
+                            <p className="text-sm text-gray-500 px-3 py-2">
+                              {module.topics.length > 0
+                                ? `Topics: ${module.topics.map((t) => t.title).join(', ')}`
+                                : 'Materials for this module are being prepared.'}
+                            </p>
+                          )}
+                          {module.materials.map((material) => (
+                            <MaterialItem
+                              key={material.id}
+                              material={material}
+                              isExpired={isExpired}
+                            />
+                          ))}
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                </div>
+              )
+            })}
           </div>
 
           {/* Sidebar */}
@@ -430,20 +353,16 @@ export default function CourseDetailPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Completed Modules</span>
-                  <span className="font-semibold">
-                    {displayModules.filter((m) => m.isCompleted).length}/{displayModules.length}
-                  </span>
+                  <span className="text-gray-600">Course Progress</span>
+                  <span className="font-semibold">{course.currentProgress || 0}%</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-600">Modules</span>
+                  <span className="font-semibold">{displayModules.length}</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600">Total Lessons</span>
-                  <span className="font-semibold">
-                    {displayModules.reduce((acc, m) => acc + m.lessons.length, 0)}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Time Spent</span>
-                  <span className="font-semibold">12h 30m</span>
+                  <span className="font-semibold">{totalLessons}</span>
                 </div>
               </CardContent>
             </Card>
@@ -505,49 +424,39 @@ export default function CourseDetailPage() {
   )
 }
 
-function LessonItem({ lesson, isExpired }: { lesson: ModuleLesson; isExpired: boolean }) {
-  const getIcon = () => {
-    switch (lesson.type) {
-      case 'video':
-        return <Video className="w-4 h-4" />
-      case 'document':
-        return <FileText className="w-4 h-4" />
-      case 'quiz':
-        return <Target className="w-4 h-4" />
-      case 'assignment':
-        return <Download className="w-4 h-4" />
-      default:
-        return <BookOpen className="w-4 h-4" />
-    }
-  }
+function MaterialItem({
+  material,
+  isExpired,
+}: {
+  material: { id: string; title: string; materialType: string }
+  isExpired: boolean
+}) {
+  const isVideo = material.materialType?.toUpperCase().includes('VIDEO')
+  const icon = isVideo ? <Video className="w-4 h-4" /> : <FileText className="w-4 h-4" />
+  // The entitlement-gated delivery endpoint resolves the real file/stream URL
+  // server-side (it enforces enrollment), so opening it is safe.
+  const href = `/api/student/materials/${material.id}/download`
 
   return (
     <div
       className={cn(
-        'flex items-center justify-between p-3 rounded-lg',
-        lesson.isCompleted ? 'bg-green-50' : 'bg-white',
-        (lesson.isLocked || isExpired) && 'opacity-60'
+        'flex items-center justify-between p-3 rounded-lg bg-white',
+        isExpired && 'opacity-60'
       )}
     >
       <div className="flex items-center gap-3">
-        <div
-          className={cn(
-            'w-8 h-8 rounded-full flex items-center justify-center',
-            lesson.isCompleted ? 'bg-green-100 text-green-600' : 'bg-gray-100 text-gray-600'
-          )}
-        >
-          {lesson.isLocked || isExpired ? <Lock className="w-4 h-4" /> : getIcon()}
+        <div className="w-8 h-8 rounded-full flex items-center justify-center bg-gray-100 text-gray-600">
+          {isExpired ? <Lock className="w-4 h-4" /> : icon}
         </div>
-        <div>
-          <p className="font-medium text-gray-900 text-sm">{lesson.title}</p>
-          {lesson.duration && <p className="text-xs text-gray-500">{lesson.duration} min</p>}
-        </div>
+        <p className="font-medium text-gray-900 text-sm">{material.title}</p>
       </div>
 
-      {!lesson.isLocked && !isExpired && (
-        <Button variant="ghost" size="sm" className="text-blue-600">
-          {lesson.isCompleted ? 'Review' : 'Start'}
-        </Button>
+      {!isExpired && (
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          <Button variant="ghost" size="sm" className="text-blue-600">
+            {isVideo ? 'Watch' : 'Open'}
+          </Button>
+        </a>
       )}
     </div>
   )

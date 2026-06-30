@@ -67,9 +67,15 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     const isAvailable = assignment.availableFrom ? new Date(assignment.availableFrom) <= now : true
     const isPastDue = new Date(assignment.dueDate) < now
 
+    // The create UI stores showResults lowercase ('immediately' | 'after_deadline'
+    // | 'manual'); older data may be uppercase. Normalize so results actually
+    // reveal. 'manual' shows only once a teacher marks the submission GRADED.
+    const showResultsMode = (assignment.showResults || '').toUpperCase()
     const showAnswers =
       submission.status === 'GRADED' ||
-      (submission.status === 'SUBMITTED' && assignment.showResults === 'IMMEDIATELY')
+      (submission.status === 'SUBMITTED' &&
+        (showResultsMode === 'IMMEDIATELY' ||
+          (showResultsMode === 'AFTER_DEADLINE' && isPastDue)))
 
     let questions = assignment.test_assignment_questions.map((q) => {
       const base = {

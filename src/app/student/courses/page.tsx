@@ -14,11 +14,11 @@ interface EnrolledCourse {
   courseId: string
   courseName: string
   courseType: string
-  enrolledAt: string
-  validUntil: string
+  enrollmentDate: string
+  endDate: string
   status: 'ACTIVE' | 'EXPIRED' | 'CANCELLED'
-  progress?: number
-  lastAccessedAt?: string
+  currentProgress?: number
+  lastAccessDate?: string
 }
 
 export default function StudentCoursesPage() {
@@ -198,10 +198,11 @@ export default function StudentCoursesPage() {
 }
 
 function CourseCard({ course, index }: { course: EnrolledCourse; index: number }) {
-  const isExpired = course.status === 'EXPIRED' || new Date(course.validUntil) < new Date()
-  const daysRemaining = Math.ceil(
-    (new Date(course.validUntil).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)
-  )
+  const isExpired =
+    course.status === 'EXPIRED' || (!!course.endDate && new Date(course.endDate) < new Date())
+  const daysRemaining = course.endDate
+    ? Math.ceil((new Date(course.endDate).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))
+    : null
 
   return (
     <div className="animate-fadeInUp">
@@ -236,16 +237,16 @@ function CourseCard({ course, index }: { course: EnrolledCourse; index: number }
           <p className="text-sm text-gray-600 mb-4">{course.courseType}</p>
 
           {/* Progress Bar */}
-          {course.progress !== undefined && (
+          {course.currentProgress !== undefined && (
             <div className="mb-4">
               <div className="flex items-center justify-between text-sm mb-1">
                 <span className="text-gray-600">Progress</span>
-                <span className="font-medium text-gray-900">{course.progress}%</span>
+                <span className="font-medium text-gray-900">{course.currentProgress}%</span>
               </div>
               <div className="w-full bg-gray-100 rounded-full h-2">
                 <div
                   className="bg-blue-600 h-2 rounded-full transition-all"
-                  style={{ width: `${course.progress}%` }}
+                  style={{ width: `${course.currentProgress}%` }}
                 />
               </div>
             </div>
@@ -255,9 +256,9 @@ function CourseCard({ course, index }: { course: EnrolledCourse; index: number }
           <div className="space-y-2 mb-4">
             <div className="flex items-center text-sm text-gray-600">
               <Calendar className="w-4 h-4 mr-2" />
-              Enrolled: {new Date(course.enrolledAt).toLocaleDateString('en-IN')}
+              Enrolled: {new Date(course.enrollmentDate).toLocaleDateString('en-IN')}
             </div>
-            {!isExpired && (
+            {!isExpired && daysRemaining !== null && (
               <div className="flex items-center text-sm text-gray-600">
                 <Clock className="w-4 h-4 mr-2" />
                 {daysRemaining > 0 ? `${daysRemaining} days remaining` : 'Expires today'}

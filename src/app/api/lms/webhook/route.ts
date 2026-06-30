@@ -13,7 +13,13 @@ import crypto from 'crypto'
 const WEBHOOK_SECRET = process.env.CLOUDFLARE_STREAM_WEBHOOK_SECRET
 
 /**
- * Verify webhook signature from Cloudflare
+ * Verify webhook signature from Cloudflare Stream.
+ *
+ * Cloudflare sends `Webhook-Signature: time=<unix>,sig1=<hex>` and the signed
+ * message is `${time}.${body}` (HMAC-SHA256, hex). The previous implementation
+ * HMAC'd the raw body and compared the whole header, so it never matched in
+ * production — uploaded videos stayed PROCESSING forever and never became
+ * playable. See https://developers.cloudflare.com/stream/manage-video-library/using-webhooks/
  */
 function verifyWebhookSignature(body: string, signature: string | null): boolean {
   if (!WEBHOOK_SECRET || !signature) {
@@ -25,9 +31,38 @@ function verifyWebhookSignature(body: string, signature: string | null): boolean
     return false
   }
 
-  const expectedSignature = crypto.createHmac('sha256', WEBHOOK_SECRET).update(body).digest('hex')
+  // Parse "time=...,sig1=..." into a lookup.
+  const parts: Record<string, string> = {}
+  for (const segment of signature.split(',')) {
+    const idx = segment.indexOf('=')
+    if (idx === -1) continue
+    parts[segment.slice(0, idx).trim()] = segment.slice(idx + 1).trim()
+  }
 
-  return crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expectedSignature))
+  const timestamp = parts.time
+  const providedSig = parts.sig1
+  if (!timestamp || !providedSig) return false
+
+  // Optional anti-replay: reject signatures older than 10 minutes (generous to
+  // absorb processing/clock skew). Skip if timestamp isn't a sane number.
+  const tsSeconds = Number(timestamp)
+  if (Number.isFinite(tsSeconds)) {
+    const ageSeconds = Math.abs(Date.now() / 1000 - tsSeconds)
+    if (ageSeconds > 600) {
+      console.warn('Webhook signature timestamp outside tolerance window')
+      return false
+    }
+  }
+
+  const signedPayload = `${timestamp}.${body}`
+  const expectedSig = crypto.createHmac('sha256', WEBHOOK_SECRET).update(signedPayload).digest('hex')
+
+  const providedBuf = Buffer.from(providedSig)
+  const expectedBuf = Buffer.from(expectedSig)
+  // timingSafeEqual throws on length mismatch — guard first so a bad signature
+  // is a clean 401, not a 500.
+  if (providedBuf.length !== expectedBuf.length) return false
+  return crypto.timingSafeEqual(providedBuf, expectedBuf)
 }
 
 export async function POST(request: NextRequest) {

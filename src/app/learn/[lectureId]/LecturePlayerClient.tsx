@@ -36,6 +36,10 @@ export default function LecturePlayerClient({ lectureId }: { lectureId: string }
   const [error, setError] = useState<string | null>(null)
   // Throttle progress writes to ~once per 10s.
   const lastSavedRef = useRef(0)
+  // The player reports watchedSeconds CUMULATIVELY since mount; the API
+  // increments server-side. Track the last cumulative value we sent and post
+  // only the delta, so watchedSeconds/totalWatchTime don't balloon.
+  const lastWatchedRef = useRef(0)
 
   useEffect(() => {
     if (authLoading) return
@@ -70,13 +74,17 @@ export default function LecturePlayerClient({ lectureId }: { lectureId: string }
     const now = Date.now()
     if (!isCompleted && now - lastSavedRef.current < 10_000) return
     lastSavedRef.current = now
+    // Send the increment since the last save, not the running total.
+    const cumulative = Math.round(watchedSeconds)
+    const delta = Math.max(0, cumulative - lastWatchedRef.current)
+    lastWatchedRef.current = cumulative
     void fetch('/api/lms/videos', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         videoId: lectureId,
         currentPosition: Math.round(position),
-        watchedSeconds: Math.round(watchedSeconds),
+        watchedSeconds: delta,
         isCompleted,
       }),
     }).catch(() => {
