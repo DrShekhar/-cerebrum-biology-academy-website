@@ -217,18 +217,62 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    let totalAssigned = 0
-    if (assignToType === 'ALL_STUDENTS' && courseId) {
-      const enrolledCount = await prisma.enrollments.count({
-        where: {
-          courseId,
-          status: 'ACTIVE',
-        },
-      })
-      totalAssigned = enrolledCount
-    } else if (assignToType === 'INDIVIDUAL_STUDENTS') {
-      totalAssigned = assignedStudentIds?.length || 0
+    // Normalize UI values to the Prisma enums (the create UI uses lowercase /
+    // short forms; the columns are enums, so raw values would 500 on write).
+    const SHOW_RESULTS_MAP: Record<string, string> = {
+      immediately: 'IMMEDIATELY',
+      after_deadline: 'AFTER_DEADLINE',
+      manual: 'MANUAL_RELEASE',
+      never: 'NEVER',
     }
+    const ASSIGN_TO_MAP: Record<string, string> = {
+      ALL: 'ALL_STUDENTS',
+      COURSE: 'ALL_STUDENTS',
+      CLASS: 'SPECIFIC_CLASS',
+      BATCH: 'SPECIFIC_BATCH',
+      INDIVIDUAL: 'INDIVIDUAL_STUDENTS',
+      STUDENTS: 'INDIVIDUAL_STUDENTS',
+    }
+    const normalizedShowResults =
+      SHOW_RESULTS_MAP[String(showResults).toLowerCase()] ||
+      (typeof showResults === 'string' ? showResults.toUpperCase() : 'IMMEDIATELY')
+    const normalizedAssignToType =
+      ASSIGN_TO_MAP[String(assignToType).toUpperCase()] ||
+      (typeof assignToType === 'string' ? assignToType.toUpperCase() : 'ALL_STUDENTS')
+
+    // Resolve the real target students once (reused for totalAssigned + publish).
+    //  - ALL_STUDENTS: everyone with an ACTIVE enrollment in the course.
+    //  - SPECIFIC_CLASS: everyone ACTIVE-enrolled in a course of the selected
+    //    class level(s) (assignedClassIds are StudentClass values, e.g. CLASS_12)
+    //    — batches have no student-membership model, so class is resolved via
+    //    course.class.
+    //  - INDIVIDUAL_STUDENTS: the explicit list.
+    async function resolveStudentIds(): Promise<string[]> {
+      if (normalizedAssignToType === 'ALL_STUDENTS' && courseId) {
+        const e = await prisma.enrollments.findMany({
+          where: { courseId, status: 'ACTIVE' },
+          select: { userId: true },
+        })
+        return Array.from(new Set(e.map((x) => x.userId)))
+      }
+      if (
+        normalizedAssignToType === 'SPECIFIC_CLASS' &&
+        Array.isArray(assignedClassIds) &&
+        assignedClassIds.length > 0
+      ) {
+        const e = await prisma.enrollments.findMany({
+          where: { status: 'ACTIVE', courses: { class: { in: assignedClassIds } } },
+          select: { userId: true },
+        })
+        return Array.from(new Set(e.map((x) => x.userId)))
+      }
+      if (normalizedAssignToType === 'INDIVIDUAL_STUDENTS' && Array.isArray(assignedStudentIds)) {
+        return Array.from(new Set(assignedStudentIds))
+      }
+      return []
+    }
+    const resolvedStudentIds = await resolveStudentIds()
+    const totalAssigned = resolvedStudentIds.length
 
     const assignment = await prisma.test_assignments.create({
       data: {
@@ -246,9 +290,9 @@ export async function POST(request: NextRequest) {
         negativeMarking: negativeMarking || false,
         negativeMarkValue: negativeMarkValue || null,
         shuffleQuestions: shuffleQuestions || false,
-        showResults: showResults || 'IMMEDIATELY',
+        showResults: normalizedShowResults as any,
         passingMarks: passingMarks ? parseInt(passingMarks) : null,
-        assignToType: assignToType || 'ALL_STUDENTS',
+        assignToType: normalizedAssignToType as any,
         assignedClassIds: assignedClassIds || [],
         assignedBatchIds: assignedBatchIds || [],
         assignedStudentIds: assignedStudentIds || [],
@@ -273,55 +317,77 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    if (questions && questions.length > 0) {
+    // Resolve the questions to attach. test_assignment_questions.questionId is a
+    // FK to questions.id, so every attached question MUST be a real DB row.
+    //  - Explicit client list (e.g. curated/static bank): kept only if the id
+    //    actually exists in the DB (avoids FK violations).
+    //  - Otherwise pull from the DB question bank by selected topics/chapters.
+    let resolvedQuestions: { questionId: string; marks?: number; negativeMarks?: number }[] = []
+    if (Array.isArray(questions) && questions.length > 0) {
+      const ids = questions.map((q: any) => q.questionId).filter(Boolean)
+      const existing = await prisma.questions.findMany({
+        where: { id: { in: ids } },
+        select: { id: true },
+      })
+      const existingSet = new Set(existing.map((e) => e.id))
+      resolvedQuestions = questions
+        .filter((q: any) => existingSet.has(q.questionId))
+        .map((q: any) => ({
+          questionId: q.questionId,
+          marks: q.marks,
+          negativeMarks: q.negativeMarks,
+        }))
+    } else if (
+      (Array.isArray(selectedTopics) && selectedTopics.length > 0) ||
+      (Array.isArray(selectedChapters) && selectedChapters.length > 0)
+    ) {
+      const where: any = { isActive: true }
+      if (Array.isArray(selectedTopics) && selectedTopics.length > 0) {
+        where.topic = { in: selectedTopics }
+      } else {
+        where.ncertChapterName = { in: selectedChapters }
+      }
+      const pool = await prisma.questions.findMany({
+        where,
+        select: { id: true },
+        take: parseInt(totalQuestions),
+      })
+      resolvedQuestions = pool.map((q) => ({ questionId: q.id }))
+    }
+
+    if (resolvedQuestions.length > 0) {
       await prisma.test_assignment_questions.createMany({
-        data: questions.map((q: any, index: number) => ({
+        data: resolvedQuestions.map((q, index) => ({
           id: `taq_${Date.now()}_${index}_${Math.random().toString(36).slice(2, 9)}`,
           testAssignmentId: assignment.id,
           questionId: q.questionId,
           orderIndex: index,
           marks: q.marks || 4,
-          negativeMarks: q.negativeMarks || null,
+          negativeMarks: q.negativeMarks ?? null,
         })),
+        skipDuplicates: true,
       })
     }
 
-    if (status === 'PUBLISHED') {
-      let studentIds: string[] = []
-
-      if (assignToType === 'ALL_STUDENTS' && courseId) {
-        const enrollments = await prisma.enrollments.findMany({
-          where: {
-            courseId,
-            status: 'ACTIVE',
-          },
-          select: {
-            userId: true,
-          },
-        })
-        studentIds = enrollments.map((e) => e.userId)
-      } else if (assignToType === 'INDIVIDUAL_STUDENTS' && assignedStudentIds) {
-        studentIds = assignedStudentIds
-      }
-
-      if (studentIds.length > 0) {
-        await prisma.test_assignment_submissions.createMany({
-          data: studentIds.map((studentId: string) => ({
-            id: `tas_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
-            updatedAt: new Date(),
-            testAssignmentId: assignment.id,
-            studentId,
-            status: 'NOT_STARTED' as const,
-          })),
-          skipDuplicates: true,
-        })
-      }
+    if (status === 'PUBLISHED' && resolvedStudentIds.length > 0) {
+      await prisma.test_assignment_submissions.createMany({
+        data: resolvedStudentIds.map((studentId: string, i: number) => ({
+          id: `tas_${Date.now()}_${i}_${Math.random().toString(36).slice(2, 9)}`,
+          updatedAt: new Date(),
+          testAssignmentId: assignment.id,
+          studentId,
+          status: 'NOT_STARTED' as const,
+        })),
+        skipDuplicates: true,
+      })
     }
 
     return NextResponse.json({
       success: true,
       message: 'Test assignment created successfully',
       assignment,
+      attachedQuestions: resolvedQuestions.length,
+      assignedStudents: status === 'PUBLISHED' ? resolvedStudentIds.length : 0,
     })
   } catch (error) {
     console.error('Failed to create test assignment:', error)
