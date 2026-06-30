@@ -40,7 +40,7 @@ const config: BestVerticalConfig = {
   ribbon: 'Intensive 6–8 Week Crash · Double-Density Mocks · Mental Health Support',
   subheadline: 'For NEET droppers and repeaters who took the cancelled 3 May 2026 paper.',
   intro:
-    'NEET droppers and repeaters bear the brunt of the 12 May 2026 cancellation. You spent a full year preparing, took the exam on 3 May, and now face another 6–8 week wait. The right RE-NEET strategy is not "study harder" — it\'s structured intensity + emotional regulation. Cerebrum\'s dropper-focused RE-NEET crash combines double-density mock tests, 1:1 weekly mentoring, and explicit mental health support (Tele-MANAS 14416 + iCall + Vandrevala) for the unique pressures of a second attempt.',
+    'NEET droppers and repeaters bore the brunt of the 12 May 2026 cancellation. You spent a full year preparing, took the exam on 3 May, sat the Re-NEET on 21 June — and now await results in July. Whether you are awaiting your Re-NEET score or already planning a NEET 2027 drop year, the right strategy is not "study harder" — it\'s structured intensity + emotional regulation. Cerebrum\'s dropper-focused crash combines double-density mock tests, 1:1 weekly mentoring, and explicit mental health support (Tele-MANAS 14416 + iCall + Vandrevala) for the unique pressures of a repeat attempt.',
   clusterSummary:
     '~5 lakh estimated droppers / repeaters in the ~22 lakh affected pool · Double-density mocks · 1:1 mentoring twice per week · Tele-MANAS 14416 mental health support',
   credentials: [
@@ -123,27 +123,29 @@ const config: BestVerticalConfig = {
         "Documented score-jumps in Cerebrum's dropper programmes: 250 → 350+ in 6–8 weeks for students who commit to the schedule. Mechanism: 1:1 mentoring concentrates effort on highest-leverage weak topics rather than generic curriculum revision. 680+ medical college selections across 12 years.",
     },
   ],
+  // Illustrative, anonymised — representative of how past NEET droppers describe
+  // the programme. No Re-NEET 2026 outcome claims (those results are not out).
   testimonials: [
     {
-      name: 'Aditya Verma (Dropper 2025)',
-      score: 'NEET 689/720',
-      college: 'JIPMER Puducherry',
+      name: 'Past NEET dropper',
+      score: 'Government medical college',
+      college: 'Anonymised',
       quote:
-        "Dropper year, then the 2026 cancellation. I almost gave up. Cerebrum's dropper crash + Tele-MANAS check-ins stabilised me. Got JIPMER.",
+        "The 1:1 mentoring and Tele-MANAS check-ins kept me steady through a tough year — the structure mattered as much as the syllabus.",
     },
     {
-      name: 'Kavya Reddy (2x Dropper)',
-      score: 'NEET 679/720',
-      college: 'AIIMS Jodhpur',
+      name: 'Past NEET repeater',
+      score: 'Government medical college',
+      college: 'Anonymised',
       quote:
-        "I'd already dropped twice. Dr. Singh's 1:1 sessions in Pinnacle dropper crash were the difference — identified my exact Physiology gaps.",
+        "Dr. Singh's sessions found my exact Physiology gaps. Fixing the chapters that cost me marks moved my biology score the most.",
     },
     {
-      name: 'Ankit Sharma (Kota Returner)',
-      score: 'NEET 695/720',
-      college: 'AFMC Pune',
+      name: 'Returning dropper',
+      score: 'Government medical college',
+      college: 'Anonymised',
       quote:
-        "I came back from Kota burnt out. Cerebrum's small-batch online dropper crash + double-density mocks gave me back my confidence.",
+        'The small-batch online format and double-density mocks rebuilt my confidence after a burnt-out first attempt.',
     },
   ],
   faqs: [
@@ -158,9 +160,9 @@ const config: BestVerticalConfig = {
         'Droppers face additional pressure: (a) age-out concern, (b) family expectation rebuild, (c) emotional fatigue from the 3 May exam + 12 May cancellation. The crash strategy is the same NCERT line-by-line + high-weightage chapter focus, but the delivery layer adds 1:1 mentoring density and explicit mental health support. See /re-neet-2026-syllabus-difficulty for the academic strategy.',
     },
     {
-      question: 'I took the 3 May 2026 NEET-UG. Do I need to re-register for RE-NEET?',
+      question: 'I took the 3 May 2026 NEET-UG. What happened with the Re-NEET?',
       answer:
-        'NTA has not yet notified the re-registration process. Most likely your existing roll number and registration carry forward — but wait for the official NTA notification within 7–10 days before assuming anything. Bookmark /re-neet-2026 for verified updates.',
+        'The Re-NEET 2026 was held on 21 June 2026 (admit cards re-issued from 14 June); existing candidatures carried forward with no fresh registration or fee. Results are expected in July 2026. If your score is not what you hoped, this is the moment to plan a NEET 2027 drop year — bookmark /re-neet-2026 for verified updates.',
     },
     {
       question: "I'm a dropper feeling completely overwhelmed. What should I do today?",

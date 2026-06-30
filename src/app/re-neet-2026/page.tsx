@@ -6,12 +6,10 @@
  * page stays static.
  *
  * Editorial honesty rules
- *  - The original exam (3 May 2026) and the cancellation (12 May 2026)
- *    are CONFIRMED via NTA + multiple major outlets.
- *  - The new exam date is NOT yet officially notified. NTA DG said
- *    "within 7-10 days" on 12 May. Late-June / early-July is
- *    REPORTED-EXPECTED, not confirmed. The article reflects this
- *    explicitly rather than fabricating a date.
+ *  - The original exam (3 May 2026), the cancellation (12 May 2026) and
+ *    the reconduct (Re-NEET held 21 June 2026, admit cards re-issued from
+ *    14 June) are CONFIRMED via NTA + multiple major outlets.
+ *  - Results are expected July 2026 (not yet declared) — stated as such.
  *  - 22 lakh candidate-count is widely reported; the 22.79 lakh /
  *    551 cities / 5,400 centres specifics are single-sourced and
  *    hedged accordingly.
@@ -41,7 +39,7 @@ import {
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
 const CANONICAL = `${SITE_URL}/re-neet-2026`
 const PUBLISHED = '2026-05-12T18:00:00+05:30' // article published same day as cancellation announcement
-const MODIFIED = PUBLISHED
+const MODIFIED = '2026-06-30T12:00:00+05:30' // updated after the 21 June Re-NEET was held
 const WHATSAPP_NUMBER = '918826444334'
 
 const chatLink = (msg: string) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`
@@ -117,14 +115,14 @@ const faqs = [
       "NTA cancelled NEET-UG 2026 (held 3 May 2026) on 12 May after Rajasthan Police's Special Operations Group recovered a handwritten 'guess paper' with around 120 questions matching the actual exam — roughly 90 Biology and 30 Chemistry. The Centre has handed the investigation to the CBI. The cancellation has the approval of the Government of India.",
   },
   {
-    question: 'When will the RE-NEET 2026 exam be held?',
+    question: 'When was the RE-NEET 2026 exam held?',
     answer:
-      'The new exam date has not yet been officially notified as of 12 May 2026. NTA Director General Abhishek Singh has said the revised schedule will be announced within 7–10 days. Late June or early July 2026 is widely reported but not yet confirmed by NTA. Watch neet.nta.nic.in for the official notification.',
+      'The Re-NEET 2026 was held on 21 June 2026. NTA re-issued admit cards from 14 June 2026, and results are expected in July 2026. Watch neet.nta.nic.in for the official result notification.',
   },
   {
     question: 'Do I need to re-register for RE-NEET 2026?',
     answer:
-      'No. NTA has confirmed that all existing candidatures carry forward — no fresh registration is required, no additional fee will be charged, and your existing centre preferences will be retained. The original exam fee will be refunded; the refund SOP has not been published yet. Admit cards will be re-issued ahead of the new exam date.',
+      'No. All existing candidatures carried forward — no fresh registration, no additional fee, and existing centre preferences retained. NTA re-issued admit cards from 14 June 2026 for the 21 June 2026 Re-NEET.',
   },
   {
     question: 'How many candidates are affected by the cancellation?',
@@ -177,7 +175,7 @@ const newsArticleSchema = {
   mainEntityOfPage: { '@type': 'WebPage', '@id': CANONICAL },
   headline: 'RE-NEET 2026 — NEET-UG 2026 Cancelled After Paper-Leak Probe, NTA Confirms Reconduct',
   description:
-    'NTA cancelled the NEET-UG 2026 examination held on 3 May 2026 after Rajasthan SOG recovered a leaked question set. CBI probe ordered. A full reconduct (RE-NEET 2026) has been confirmed; the new date is expected to be notified within 7–10 days.',
+    'NTA cancelled the NEET-UG 2026 examination held on 3 May 2026 after Rajasthan SOG recovered a leaked question set. CBI probe ordered. The reconduct (Re-NEET 2026) was held on 21 June 2026; results are expected in July 2026.',
   url: CANONICAL,
   datePublished: PUBLISHED,
   dateModified: MODIFIED,
@@ -376,9 +374,9 @@ export default function ReNEET2026Page() {
             The National Testing Agency cancelled the NEET-UG 2026 exam (held 3 May 2026) on 12 May
             after Rajasthan Police's Special Operations Group recovered a leaked &ldquo;guess
             paper&rdquo; with around 120 matching questions (≈90 Biology + 30 Chemistry). The Centre
-            has ordered a CBI probe. A complete reconduct — RE-NEET 2026 — has been confirmed. The
-            new exam date has not yet been officially notified; NTA has said the revised schedule
-            will come within 7–10 days. ~22 lakh candidates are affected.
+            ordered a CBI probe. The reconduct — Re-NEET 2026 — was held on 21 June 2026 (admit cards
+            re-issued from 14 June); results are expected in July 2026. ~22 lakh candidates were
+            affected.
           </p>
 
           <div className="mt-7 grid gap-3 sm:grid-cols-2">
@@ -516,11 +514,10 @@ export default function ReNEET2026Page() {
               are single-source and remain to be officially corroborated by CBI or SOG.
             </p>
             <p>
-              Approximately <strong>22 lakh candidates</strong> are affected. NTA Director General
-              Abhishek Singh has confirmed that a full re-test will be conducted, with no fresh
-              registration and no additional fee for any candidate, and that existing centre
-              preferences will be retained. He has said the revised schedule will be announced
-              within 7–10 days.
+              Approximately <strong>22 lakh candidates</strong> were affected. NTA conducted a full
+              re-test (Re-NEET 2026) on <strong>21 June 2026</strong> with no fresh registration and
+              no additional fee, retaining existing centre preferences. Results are expected in July
+              2026.
             </p>
           </div>
 
@@ -538,34 +535,31 @@ export default function ReNEET2026Page() {
                 <li>Full re-conduct of the exam for all registered candidates.</li>
                 <li>No fresh registration required.</li>
                 <li>No additional fee — original fee will be refunded.</li>
-                <li>Existing centre preferences will be carried forward.</li>
-                <li>Admit cards will be re-issued ahead of the new date.</li>
+                <li>Existing centre preferences carried forward.</li>
+                <li>Admit cards re-issued from 14 June 2026; Re-NEET held 21 June 2026.</li>
                 <li>CBI investigation is underway.</li>
               </ul>
             </div>
             <div className="rounded-xl border border-amber-200 bg-amber-50 p-5">
               <h3 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-amber-900">
                 <Clock className="h-4 w-4" aria-hidden="true" />
-                Not yet officially notified
+                Awaited / what&rsquo;s next
               </h3>
               <ul className="mt-3 space-y-2 text-sm leading-relaxed text-slate-800">
                 <li>
-                  <strong>New exam date.</strong> NTA DG indicated &ldquo;within 7–10 days.&rdquo;
-                  Late-June / early-July 2026 is widely reported but unconfirmed.
+                  <strong>Results.</strong> Re-NEET 2026 results are expected in July 2026 — watch
+                  neet.nta.nic.in.
                 </li>
                 <li>
-                  <strong>Re-issued admit-card schedule.</strong> Will follow the date notification.
+                  <strong>MCC counselling.</strong> The June re-exam pushes the counselling calendar;
+                  dates to be notified.
                 </li>
                 <li>
-                  <strong>MCC counselling shift.</strong> A late-June / early-July re-exam will
-                  almost certainly push the counselling calendar.
+                  <strong>Refund SOP.</strong> Original-fee refund process not yet published.
                 </li>
                 <li>
-                  <strong>Refund SOP.</strong> Refund process not yet published.
-                </li>
-                <li>
-                  <strong>Syllabus / pattern.</strong> No change has been signalled — treat as
-                  unchanged unless NTA notifies otherwise.
+                  <strong>Syllabus / pattern.</strong> No change was signalled — treat as unchanged
+                  unless NTA notifies otherwise.
                 </li>
               </ul>
             </div>
@@ -690,9 +684,10 @@ export default function ReNEET2026Page() {
           <div className="mt-12 rounded-2xl bg-slate-900 p-8 text-white">
             <h2 className="text-2xl font-bold">Talk to us — same-day WhatsApp response</h2>
             <p className="mt-3 text-slate-200">
-              The next 7–10 days will define the RE-NEET 2026 calendar. Don&rsquo;t wait for the
-              official notification before booking your child&rsquo;s preparation. Crash-course
-              batches are filling fast.
+              With the Re-NEET done and results due in July, the next decision is whether to plan a
+              NEET 2027 drop year. Don&rsquo;t wait for results day to start — a biology-focused
+              dropper plan built around your weak chapters compounds every week. Batches are filling
+              fast.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a
@@ -757,8 +752,8 @@ export default function ReNEET2026Page() {
                 >
                   neet.nta.nic.in
                 </a>
-                . The new exam date had not been officially notified as of the time this article was
-                published (12 May 2026, IST evening).
+                . The Re-NEET 2026 was subsequently held on 21 June 2026; results are expected in
+                July 2026.
               </li>
             </ul>
           </details>

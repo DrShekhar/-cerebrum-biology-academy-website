@@ -6,8 +6,10 @@
  * Shared, props-driven UI for city-specific NEET dropper batch landing pages.
  * Used by /neet-dropper-batch-{mumbai,bangalore,hyderabad,pune,chennai,kolkata,kota,...}.
  *
- * Existing per-city pages (Faridabad/Noida/Ghaziabad/Gurugram) keep their bespoke
- * Content files — those are ranking pages we don't touch. Only NEW cities use this.
+ * As of 2026-06 ALL city dropper pages (including the NCR set —
+ * Delhi/Gurugram/Noida/Greater Noida/Ghaziabad/Faridabad/Meerut) use this
+ * template. The old bespoke per-city Content files were removed; the two stale
+ * 2025-26 Gurugram pages were consolidated here via redirect.
  */
 
 import { useState } from 'react'
@@ -324,7 +326,7 @@ export default function DropperBatchTemplate({
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <RefreshCw className="w-4 h-4" />
-              NEET 2027 Dropper Batches (after RE-NEET 2026): 25 Jun · 1 Jul · 10 Jul
+              NEET 2027 Dropper Batches — rolling weekly starts (after Re-NEET 2026 results)
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">

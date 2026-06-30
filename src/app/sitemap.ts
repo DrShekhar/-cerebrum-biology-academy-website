@@ -138,7 +138,6 @@ const inlineRedirectPatterns: RegExp[] = [
 // ("Submitted URL marked noindex"). Hand-written family members that remain
 // indexed are allowlisted here.
 const NOINDEXED_FAMILY_ALLOWLIST = new Set([
-  '/neet-dropper-batch-2025-26-gurugram',
   '/neet-dropper-batch-online',
   '/online-neet-coaching-faridabad',
   '/online-neet-coaching-ghaziabad',

@@ -34,7 +34,7 @@ export default function DropperPage() {
       '@type': 'Course',
       name: 'NEET Dropper Program | Second Attempt Success Coaching | Cerebrum Academy',
       description:
-        'NEET Dropper program with 78.4% success rate. Transform your second attempt with 10-month strategic coaching. 1,800+ droppers helped achieve 156+ average score improvement. Expert AIIMS faculty.',
+        'NEET 2027 Dropper program with a 98% NEET-qualification track record. Transform your second attempt with strategic, biology-focused coaching, full-syllabus revision and 30+ full-length mock tests. Faculty led by Dr. Shekhar C Singh (AIIMS).',
       url: 'https://cerebrumbiologyacademy.com/dropper',
       provider: {
         '@type': 'EducationalOrganization',
@@ -58,8 +58,8 @@ export default function DropperPage() {
           '@type': 'Person',
           name: 'Dr. Shekhar C Singh',
         },
-        startDate: '2026-01-01',
-        endDate: '2026-12-31',
+        startDate: '2026-07-01',
+        endDate: '2027-05-31',
         duration: 'P10M',
       },
     }
@@ -77,12 +77,15 @@ export default function DropperPage() {
   }, [])
 
   const handleDemoBooking = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'demo_booking_dropper', {
-        event_category: 'conversion',
-        event_label: 'dropper_landing_page',
-        value: 1,
-      })
+    if (typeof window !== 'undefined') {
+      if ((window as any).gtag) {
+        ;(window as any).gtag('event', 'demo_booking_dropper', {
+          event_category: 'conversion',
+          event_label: 'dropper_landing_page',
+          value: 1,
+        })
+      }
+      window.location.href = '/book-free-demo'
     }
   }
 
@@ -115,30 +118,33 @@ export default function DropperPage() {
     },
   ]
 
+  // Illustrative, anonymised improvement profiles (representative ranges, not
+  // named individuals) — used to show the kind of turnaround a focused dropper
+  // year targets, without claiming specific people/scores.
   const successStories = [
     {
-      name: 'Rohit Agarwal',
+      name: 'Dropper A',
       firstAttempt: 420,
-      secondAttempt: 610,
-      improvement: 190,
-      college: 'Government Medical College Kota',
-      story: 'From feeling hopeless after first attempt to securing government college',
+      secondAttempt: 600,
+      improvement: 180,
+      college: 'Government medical college',
+      story: 'Rebuilt weak chapters first; biology score drove the jump',
     },
     {
-      name: 'Shubham Rai',
+      name: 'Dropper B',
       firstAttempt: 475,
-      secondAttempt: 605,
-      improvement: 130,
-      college: 'BHU Varanasi',
-      story: 'Third attempt success after two failures - never gave up spirit',
+      secondAttempt: 600,
+      improvement: 125,
+      college: 'Government medical college',
+      story: 'Full-syllabus revision + 30+ full-length mocks closed the gap',
     },
     {
-      name: 'Vikash Singh',
+      name: 'Dropper C',
       firstAttempt: 490,
-      secondAttempt: 628,
-      improvement: 138,
-      college: 'CMC Vellore',
-      story: 'Strategic preparation in dropper year led to dream college',
+      secondAttempt: 620,
+      improvement: 130,
+      college: 'Government medical college',
+      story: 'Fixed the 6–8 chapters that cost the most marks last attempt',
     },
   ]
 
@@ -174,10 +180,10 @@ export default function DropperPage() {
   ]
 
   const successMetrics = [
-    { label: '78.4%', sublabel: 'Dropper Success Rate', icon: Trophy },
-    { label: '156+', sublabel: 'Avg Improvement', icon: TrendingUp },
-    { label: '89.2%', sublabel: 'Score 550+ Marks', icon: Star },
-    { label: '1.8K+', sublabel: 'Dropper Selections', icon: Users },
+    { label: '98%', sublabel: 'NEET Qualification Rate', icon: Trophy },
+    { label: '+100–150', sublabel: 'Typical 2nd-Attempt Gain', icon: TrendingUp },
+    { label: '360/720', sublabel: 'Biology = 50% of NEET', icon: Star },
+    { label: '15–20', sublabel: 'Students per Batch', icon: Users },
   ]
 
   return (
@@ -231,8 +237,9 @@ export default function DropperPage() {
               </h1>
 
               <p className="text-xl md:text-2xl opacity-90 mb-8">
-                Failed NEET? Don't lose hope! Our DROPPER program has helped 1,800+ students
-                transform their failures into medical college admissions. Your dream is still alive!
+                Didn&apos;t get the NEET score you wanted? Don&apos;t lose hope. Our biology-focused
+                DROPPER program is built to turn a second attempt into a medical-college admission.
+                Your dream is still alive!
               </p>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
@@ -275,14 +282,16 @@ export default function DropperPage() {
                   Start Your Comeback Journey
                 </Button>
 
-                <Button
-                  variant="outline"
-                  size="xl"
-                  className="border-white text-white hover:bg-white hover:text-orange-600"
-                >
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Download Success Stories
-                </Button>
+                <Link href="/success-stories">
+                  <Button
+                    variant="outline"
+                    size="xl"
+                    className="border-white text-white hover:bg-white hover:text-orange-600"
+                  >
+                    <Calendar className="w-5 h-5 mr-2" />
+                    See Success Stories
+                  </Button>
+                </Link>
               </div>
 
               {/* Quick Stats */}
@@ -300,9 +309,13 @@ export default function DropperPage() {
             <div className="relative animate-fadeInUp">
               {/* Dropper Success Stories */}
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold mb-6 text-center">
+                <h3 className="text-2xl font-bold mb-2 text-center">
                   Dropper Success Transformations
                 </h3>
+                <p className="mb-6 text-center text-xs opacity-80">
+                  Illustrative improvement profiles — representative of a focused dropper year, not
+                  specific individuals.
+                </p>
 
                 <div className="space-y-6">
                   {successStories.map((story, index) => (
@@ -352,13 +365,13 @@ export default function DropperPage() {
             </div>
             <div className="flex-1">
               <h3 className="text-base font-bold text-red-900">
-                NEET-UG 2026 cancelled — RE-NEET reconduct confirmed by NTA
+                Re-NEET 2026 done — results awaited. Weighing a drop year for NEET 2027?
               </h3>
               <p className="mt-1 text-sm leading-snug text-slate-700">
-                Droppers hit hardest by the cancellation — ~22 lakh candidates affected and the
-                window before the next attempt is short. New exam expected late June / early July
-                2026. Our 6–8 week dropper-focused crash course is built for the window — free demo
-                today.
+                NEET-UG 2026 was cancelled over a paper leak and the Re-NEET was held on 21 June
+                2026; results are expected in July. If your score isn&apos;t what you hoped, you
+                don&apos;t have to decide alone — talk to us about a biology-focused NEET 2027 dropper
+                plan built around the chapters that cost you marks. Free demo today.
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
                 <a
@@ -368,12 +381,12 @@ export default function DropperPage() {
                   Read the full update →
                 </a>
                 <a
-                  href="https://wa.me/918826444334?text=Hi!%20I'm%20a%20dropper%20—%20I%20want%20to%20join%20the%20RE-NEET%202026%20crash%20course.%20Please%20share%20batch%20details."
+                  href="https://wa.me/918826444334?text=Hi!%20I%20gave%20Re-NEET%202026%20and%20I'm%20considering%20a%20NEET%202027%20drop%20year.%20Please%20share%20the%20biology%20dropper%20plan."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-md bg-green-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-green-700"
                 >
-                  WhatsApp the crash course
+                  WhatsApp our counsellor
                 </a>
               </div>
             </div>
@@ -542,11 +555,11 @@ export default function DropperPage() {
           <div className="text-center mt-16 animate-fadeInUp">
             <div className="bg-orange-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                🎯 Average Score Improvement: 156+ marks in dropper year
+                🎯 Typical second-attempt gain: 100–150 marks in a focused dropper year
               </h3>
               <p className="text-lg text-gray-600 mb-6">
-                Our systematic approach has helped 1,800+ droppers achieve their medical dreams.
-                Your second attempt will be your successful attempt!
+                A biology-first plan — full-syllabus revision, the 6–8 chapters that cost you most,
+                and 30+ full-length mocks — built to make your second attempt your successful one.
               </p>
               <Button
                 variant="primary"
@@ -592,8 +605,8 @@ export default function DropperPage() {
               Your Medical Dream Deserves a Second Chance
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Don't let one setback define your future. Join 1,800+ droppers who turned their
-              disappointment into determination and failure into success. Your comeback story starts
+              Don&apos;t let one setback define your future. Turn your disappointment into
+              determination with a biology-focused NEET 2027 dropper plan. Your comeback story starts
               now!
             </p>
 
@@ -608,29 +621,35 @@ export default function DropperPage() {
                 Begin Your Comeback Story
               </Button>
 
-              <Button
-                variant="outline"
-                size="xl"
-                className="border-white text-white hover:bg-white hover:text-orange-600"
+              <a
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20a%20NEET%20dropper%20—%20please%20share%20the%20biology%20dropper%20programme%20details."
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Heart className="w-5 h-5 mr-2" />
-                Talk to Dropper Alumni
-              </Button>
+                <Button
+                  variant="outline"
+                  size="xl"
+                  className="border-white text-white hover:bg-white hover:text-orange-600"
+                >
+                  <Heart className="w-5 h-5 mr-2" />
+                  Talk to a Counsellor
+                </Button>
+              </a>
             </div>
 
             {/* Final Inspiration */}
             <div className="flex items-center justify-center space-x-8 text-sm opacity-90">
               <div className="flex items-center">
                 <Trophy className="w-4 h-4 mr-2" />
-                <span>78.4% Dropper Success</span>
+                <span>98% NEET Qualification</span>
               </div>
               <div className="flex items-center">
                 <TrendingUp className="w-4 h-4 mr-2" />
-                <span>156+ Avg Improvement</span>
+                <span>+100–150 Typical Gain</span>
               </div>
               <div className="flex items-center">
                 <Users className="w-4 h-4 mr-2" />
-                <span>1,800+ Dreams Fulfilled</span>
+                <span>Biology = 360/720</span>
               </div>
             </div>
           </div>

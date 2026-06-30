@@ -2681,6 +2681,18 @@ export const gurugramConsolidationRedirects = [
   // ============================================
   // 1D. Course/batch pages → hub (11 redirects)
   // ============================================
+  // Stale 2025-26 dropper pages consolidated into the clean template page
+  // (2026-06). Both advertised an expired "July 2025–May 2026" batch.
+  {
+    source: '/neet-dropper-batch-2025-26-gurugram',
+    destination: '/neet-dropper-batch-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/one-year-dropper-course-gurugram',
+    destination: '/neet-dropper-batch-gurugram',
+    permanent: true,
+  },
 
   // ============================================
   // 1E. School-specific pages → hub (11 redirects)

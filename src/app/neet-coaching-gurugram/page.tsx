@@ -1616,7 +1616,7 @@ export default function NeetCoachingGurugramPage() {
               <p className="text-sm text-gray-600">Notes, MCQs, tests</p>
             </Link>
             <Link
-              href="/one-year-dropper-course-gurugram"
+              href="/neet-dropper-batch-gurugram"
               className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
             >
               <h3 className="font-semibold text-teal-600">Dropper Batch 2027</h3>

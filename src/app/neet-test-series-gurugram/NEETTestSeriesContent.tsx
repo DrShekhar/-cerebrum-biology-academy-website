@@ -457,7 +457,7 @@ export default function NEETTestSeriesContent({ faqs }: { faqs: FAQ[] }) {
               <p className="text-sm text-gray-600">Final revision program</p>
             </Link>
             <Link
-              href="/one-year-dropper-course-gurugram"
+              href="/neet-dropper-batch-gurugram"
               className="bg-white p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Dropper Batch</h3>
