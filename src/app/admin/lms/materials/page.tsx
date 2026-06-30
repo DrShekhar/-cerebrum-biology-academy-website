@@ -124,12 +124,20 @@ export default function MaterialsListPage() {
             <p className="text-gray-600">Manage all uploaded PDFs and study resources</p>
           </div>
 
-          <Link
-            href="/admin/lms/materials/upload"
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            ➕ Upload New Material
-          </Link>
+          <div className="flex gap-3">
+            <Link
+              href="/admin/lms/videos/upload"
+              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+            >
+              🎬 Upload Video
+            </Link>
+            <Link
+              href="/admin/lms/materials/upload"
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              ➕ Upload New Material
+            </Link>
+          </div>
         </div>
 
         {/* Filters & Search */}

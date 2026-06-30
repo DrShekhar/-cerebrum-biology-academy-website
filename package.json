@@ -201,6 +201,7 @@
     "svix": "^1.82.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
+    "tus-js-client": "^4.3.1",
     "uuid": "^9.0.1",
     "web-vitals": "^5.1.0",
     "ws": "^8.18.3",
