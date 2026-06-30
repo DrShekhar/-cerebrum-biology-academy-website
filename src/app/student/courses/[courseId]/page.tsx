@@ -16,12 +16,14 @@ import {
   Target,
   Brain,
   Lock,
+  Award,
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { cn } from '@/lib/utils'
+import { showToast } from '@/lib/toast'
 import Link from 'next/link'
 import { useParams, useRouter } from 'next/navigation'
 
@@ -30,6 +32,7 @@ interface CourseDetails {
   name: string
   description: string
   type: string
+  enrollmentId: string
   enrollmentDate: string
   endDate: string | null
   status: 'ACTIVE' | 'EXPIRED' | 'CANCELLED'
@@ -96,6 +99,30 @@ export default function CourseDetailPage() {
       setIsLoading(false)
     }
   }, [user?.id, courseId, isAuthenticated, authLoading])
+
+  const [claiming, setClaiming] = useState(false)
+  async function handleClaimCertificate() {
+    if (!course?.enrollmentId || claiming) return
+    setClaiming(true)
+    try {
+      const res = await fetch('/api/certificates/claim', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ enrollmentId: course.enrollmentId }),
+      })
+      const json = await res.json()
+      if (res.ok && json.success !== false) {
+        showToast.success('Certificate issued! Find it under My Certificates.')
+      } else {
+        // Server gates eligibility; show its friendly reason (e.g. complete more).
+        showToast.error(json.detail || json.error || 'Not eligible for a certificate yet.')
+      }
+    } catch {
+      showToast.error('Could not claim certificate. Please try again.')
+    } finally {
+      setClaiming(false)
+    }
+  }
 
   if (authLoading || isLoading) {
     return (
@@ -399,6 +426,15 @@ export default function CourseDetailPage() {
                     Ask a Doubt
                   </Button>
                 </Link>
+                <Button
+                  variant="outline"
+                  className="w-full justify-start border-green-300 text-green-700 hover:bg-green-50"
+                  onClick={handleClaimCertificate}
+                  disabled={claiming}
+                >
+                  <Award className="w-4 h-4 mr-2" />
+                  {claiming ? 'Checking…' : 'Claim Certificate'}
+                </Button>
               </CardContent>
             </Card>
 
