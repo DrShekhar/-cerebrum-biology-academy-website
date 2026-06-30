@@ -4,10 +4,10 @@ import { SEOLandingContent } from './types'
 const dropperBaseContent = {
   classLevel: 'dropper' as const,
   stats: [
-    { value: '92%', label: 'Success Rate', icon: 'trophy' },
-    { value: '580+', label: 'Avg NEET Score', icon: 'target' },
-    { value: '1,200+', label: 'Droppers Trained', icon: 'users' },
-    { value: '85+', label: 'AIIMS/JIPMER', icon: 'award' },
+    { value: '98%', label: 'NEET Qualification Rate', icon: 'trophy' },
+    { value: '360/720', label: 'Biology = 50% of NEET', icon: 'target' },
+    { value: '15,000+', label: 'Students Taught', icon: 'users' },
+    { value: '67+', label: 'AIIMS Selections', icon: 'award' },
   ],
   testimonials: [
     {
@@ -88,7 +88,7 @@ export const neetDropperBatchOnline: SEOLandingContent = {
 
   title: 'NEET Dropper Batch Online | Year-Long Intensive Course 2027',
   metaDescription:
-    "Join India's best NEET dropper batch online. Intensive year-long course by AIIMS faculty. 92% success rate, 580+ avg score. Limited seats for 2027 batch!",
+    "Join India's best NEET dropper batch online. Intensive year-long course by AIIMS faculty. 98% NEET qualification rate. Limited seats for 2027 batch!",
   keywords: [
     'NEET dropper batch online',
     'NEET dropper online coaching',
@@ -100,7 +100,7 @@ export const neetDropperBatchOnline: SEOLandingContent = {
   hero: {
     headline: 'Your Second Attempt Will Be Your Best',
     subheadline:
-      'NEET dropper online batch with 92% success rate. Turn your gap year into your winning year.',
+      'NEET dropper online batch with 98% NEET qualification rate. Turn your gap year into your winning year.',
     highlightedText: 'Drop Year Done Right = AIIMS Possible',
     ctaText: 'Join 2027 Dropper Batch',
     ctaLink: '/courses/neet-dropper',
@@ -119,7 +119,7 @@ export const neetDropperBatchOnline: SEOLandingContent = {
       {
         icon: 'users',
         question: 'Feeling judged by family and friends?',
-        solution: 'Our community of 1,200+ successful droppers proves the decision is worth it.',
+        solution: 'Our community of our community of successful droppers proves the decision is worth it.',
       },
       {
         icon: 'alert-triangle',
@@ -175,7 +175,7 @@ export const neetDropperBatchOnline: SEOLandingContent = {
     {
       question: 'Is taking a drop year for NEET worth it?',
       answer:
-        'Absolutely, if done right. Statistics show: Many AIIMS toppers took 2+ attempts. Average improvement with focused drop year is 80-120 marks. Our dropper batch has 92% success rate. The drop year is an investment in your medical career.',
+        'Absolutely, if done right. Statistics show: Many AIIMS toppers took 2+ attempts. Average improvement with focused drop year is 80-120 marks. Our dropper batch has 98% NEET qualification rate. The drop year is an investment in your medical career.',
     },
     {
       question: 'How is the NEET dropper online batch different from regular batch?',
@@ -206,7 +206,7 @@ export const neetDropperBatchOnline: SEOLandingContent = {
 
   cta: {
     title: 'Make Your Drop Year Count',
-    subtitle: 'Join 1,200+ droppers who turned their second chance into AIIMS/JIPMER.',
+    subtitle: 'Join the droppers who turned their second chance into AIIMS/JIPMER.',
     primaryButton: {
       text: 'Enroll in Dropper Batch',
       link: '/courses/neet-dropper',
@@ -325,7 +325,7 @@ export const neetRepeaterCourse2027: SEOLandingContent = {
 
   title: 'NEET Repeater Course 2027 Online | Best Coaching for 2nd Attempt',
   metaDescription:
-    'NEET 2027 repeater course online. Expert coaching for second attempt. 92% success rate, proven methodology. Enroll for NEET 2027 batch now!',
+    'NEET 2027 repeater course online. Expert coaching for second attempt. 98% NEET qualification rate, proven methodology. Enroll for NEET 2027 batch now!',
   keywords: [
     'NEET repeater course 2027',
     'NEET 2027 dropper batch',
@@ -525,7 +525,7 @@ export const neetDropperBiologyCoaching: SEOLandingContent = {
 
   title: 'NEET Dropper Biology Coaching Online | Expert AIIMS Faculty',
   metaDescription:
-    'Specialized biology coaching for NEET droppers online. AIIMS faculty, intensive practice, 50+ marks improvement guaranteed. Join the best biology coaching!',
+    'Specialized biology coaching for NEET droppers online. AIIMS faculty, intensive practice, strong biology-marks improvement. Join the best biology coaching!',
   keywords: [
     'NEET dropper biology coaching',
     'biology for NEET repeaters online',
@@ -744,9 +744,9 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
   ],
   slug: 'best-coaching-neet-droppers',
 
-  title: 'Best Coaching for NEET Droppers Online | 92% Success Rate',
+  title: 'Best Coaching for NEET Droppers Online | 98% NEET Qualification',
   metaDescription:
-    "India's best online coaching for NEET droppers. 92% success rate, 85+ AIIMS selections, AIIMS faculty. Join the proven path to medical college!",
+    "India's best online coaching for NEET droppers. 98% NEET qualification rate, 85+ AIIMS selections, AIIMS faculty. Join the proven path to medical college!",
   keywords: [
     'best coaching for NEET droppers',
     'NEET dropper coaching online',
@@ -758,7 +758,7 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
   hero: {
     headline: 'The Best Coaching for Your Second Chance',
     subheadline:
-      '92% success rate. 85+ AIIMS/JIPMER selections. The online coaching that turns droppers into doctors.',
+      '98% NEET qualification rate. 85+ AIIMS/JIPMER selections. The online coaching that turns droppers into doctors.',
     highlightedText: 'Proven Results. Proven Methodology.',
     ctaText: 'Join The Best',
     ctaLink: '/courses/neet-dropper',
@@ -772,7 +772,7 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
         icon: 'alert-circle',
         question: "Previous coaching didn't deliver?",
         solution:
-          'Experience the difference with proven methodology. 92% of our droppers qualify NEET.',
+          'Experience the difference with proven methodology. 98% of our students qualify NEET.',
       },
       {
         icon: 'dollar-sign',
@@ -796,7 +796,7 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
 
   benefits: {
     title: 'What Makes Us The Best',
-    subtitle: 'The factors that drive our 92% success rate',
+    subtitle: 'The factors that drive our 98% NEET qualification rate',
     items: [
       {
         icon: 'award',
@@ -836,12 +836,12 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
     {
       question: 'What makes Cerebrum the best coaching for NEET droppers?',
       answer:
-        'Three things: 1) Results - 92% success rate, 85+ AIIMS selections, 2) Faculty - AIIMS alumni with 15+ years experience, 3) Approach - Personalized preparation with gap analysis and mental wellness support. Our online droppers match Kota results.',
+        'Three things: 1) Results - 98% NEET qualification rate, 85+ AIIMS selections, 2) Faculty - AIIMS alumni with 15+ years experience, 3) Approach - Personalized preparation with gap analysis and mental wellness support. Our online droppers match Kota results.',
     },
     {
       question: 'How does your success rate compare to offline coaching?',
       answer:
-        'Our 92% success rate matches or exceeds top Kota institutes. Online advantages: no relocation stress, better study environment, same faculty quality, and often more personal attention due to smaller batch sizes.',
+        'Our 98% NEET qualification rate matches or exceeds top Kota institutes. Online advantages: no relocation stress, better study environment, same faculty quality, and often more personal attention due to smaller batch sizes.',
     },
     {
       question: 'Can I see testimonials from successful droppers?',
@@ -856,7 +856,7 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
     {
       question: "What if I don't improve despite best coaching?",
       answer:
-        'This rarely happens with committed students. If you attend regularly, complete assignments, and put in honest effort, improvement is guaranteed. We provide refund policy for genuine cases of no improvement.',
+        'This rarely happens with committed students. If you attend regularly, complete assignments, and put in honest effort, improvement is very likely. Talk to our team about support options for genuine cases of no improvement.',
     },
     {
       question: 'How do I join the best coaching for NEET droppers?',
@@ -867,7 +867,7 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
 
   cta: {
     title: "Join India's Best Dropper Coaching",
-    subtitle: '92% success rate. 85+ AIIMS selections. Your success story awaits.',
+    subtitle: '98% NEET qualification rate. 85+ AIIMS selections. Your success story awaits.',
     primaryButton: {
       text: 'Enroll Now',
       link: '/courses/neet-dropper',
@@ -923,7 +923,7 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
     courseName: 'Best NEET Dropper Coaching',
     provider: 'Cerebrum Biology Academy',
     description:
-      "India's best online coaching for NEET droppers with 92% success rate and 85+ AIIMS selections.",
+      "India's best online coaching for NEET droppers with 98% NEET qualification rate and 85+ AIIMS selections.",
     duration: 'P1Y',
     price: 80000,
     priceCurrency: 'INR',
@@ -1148,7 +1148,7 @@ export const neetRepeaters2026: SEOLandingContent = {
 
   title: 'NEET Repeaters 2026 | Dropper Batch for Second Attempt Success',
   metaDescription:
-    'Join NEET Repeaters 2027 batch designed specifically for droppers. Proven 92% success rate, 100+ marks improvement guarantee. Expert mentorship for your second attempt.',
+    'Join NEET Repeaters 2027 batch designed specifically for droppers. Proven 98% NEET qualification rate, 100+ marks improvement guarantee. Expert mentorship for your second attempt.',
   keywords: [
     'neet repeaters 2026',
     'neet dropper batch 2026',
@@ -1242,10 +1242,10 @@ export const neetRepeaters2026: SEOLandingContent = {
   },
 
   stats: [
-    { value: '92%', label: 'Success Rate', icon: 'trophy' },
-    { value: '650+', label: 'Avg 2nd Attempt Score', icon: 'target' },
-    { value: '1,200+', label: 'Droppers Trained', icon: 'users' },
-    { value: '120+', label: 'Avg Improvement', icon: 'trending-up' },
+    { value: '98%', label: 'NEET Qualification Rate', icon: 'trophy' },
+    { value: '360/720', label: 'Biology = 50% of NEET', icon: 'target' },
+    { value: '15,000+', label: 'Students Taught', icon: 'users' },
+    { value: '+100–150', label: 'Typical 2nd-Attempt Gain', icon: 'trending-up' },
   ],
 
   faqs: [
@@ -1272,7 +1272,7 @@ export const neetRepeaters2026: SEOLandingContent = {
     {
       question: 'What if I fail again in NEET 2027?',
       answer:
-        'Our 92% success rate means this is rare, but we support you regardless. We offer: discounted re-enrollment for third attempt, career counseling for alternative paths (BDS, BAMS, Abroad), and lifetime access to study materials. You will not be abandoned.',
+        'Our 98% NEET qualification rate means this is rare, but we support you regardless. We offer: discounted re-enrollment for third attempt, career counseling for alternative paths (BDS, BAMS, Abroad), and lifetime access to study materials. You will not be abandoned.',
     },
     {
       question: 'What is the fee for NEET Repeaters 2027 batch?',
@@ -1392,7 +1392,7 @@ export const neetDropperBatch: SEOLandingContent = {
 
   title: 'NEET Dropper Batch 2026 Delhi NCR | Online & Offline | Cerebrum Academy',
   metaDescription:
-    'NEET dropper batch 2026 by Cerebrum Academy. Online & offline in Delhi NCR — South Extension, Gurugram, Noida. AIIMS faculty, 15-student batches, 92% success rate. 80-120 marks avg improvement. Join now!',
+    'NEET dropper batch 2026 by Cerebrum Academy. Online & offline in Delhi NCR — South Extension, Gurugram, Noida. AIIMS faculty, 15-student batches, 98% NEET qualification rate. 80-120 marks avg improvement. Join now!',
   keywords: [
     'NEET dropper batch 2026',
     'NEET dropper batch Delhi',
@@ -1411,7 +1411,7 @@ export const neetDropperBatch: SEOLandingContent = {
   hero: {
     headline: 'NEET Dropper Batch 2026 — Your Comeback Starts Here',
     subheadline:
-      'Turn your drop year into a medical seat. Choose online or attend in person at our Delhi NCR centers. AIIMS faculty, 15-student batches, and a proven 92% success rate.',
+      'Turn your drop year into a medical seat. Choose online or attend in person at our Delhi NCR centers. AIIMS faculty, 15-student batches, and a proven 98% NEET qualification rate.',
     highlightedText: '80-120 Marks Average Improvement',
     ctaText: 'Join 2027 Dropper Batch',
     ctaLink: '/enrollment',
@@ -1443,7 +1443,7 @@ export const neetDropperBatch: SEOLandingContent = {
         icon: 'target',
         question: 'Not sure if a drop year is worth it?',
         solution:
-          '1,200+ Cerebrum droppers have cracked NEET. Average improvement: 80-120 marks. The numbers speak for themselves.',
+          'Cerebrum droppers consistently crack NEET. Average improvement: 80-120 marks. The numbers speak for themselves.',
       },
     ],
   },
@@ -1510,7 +1510,7 @@ export const neetDropperBatch: SEOLandingContent = {
     {
       question: 'Is taking a drop year for NEET worth it in 2026?',
       answer:
-        'Absolutely, if done with the right guidance. Statistics show that many AIIMS and top medical college selections come from second-attempt students. Our dropper batch has a 92% success rate. The drop year is an investment — one year now for a 40-year medical career.',
+        'Absolutely, if done with the right guidance. Statistics show that many AIIMS and top medical college selections come from second-attempt students. Our dropper batch has a 98% NEET qualification rate. The drop year is an investment — one year now for a 40-year medical career.',
     },
     {
       question: 'What is the batch size for droppers at Cerebrum?',
@@ -1527,7 +1527,7 @@ export const neetDropperBatch: SEOLandingContent = {
   cta: {
     title: 'Your Drop Year. Your Comeback.',
     subtitle:
-      'Join 1,200+ droppers who turned their second chance into AIIMS, JIPMER, and top medical colleges.',
+      'Join the droppers who turned their second chance into AIIMS, JIPMER, and top medical colleges.',
     primaryButton: {
       text: 'Enroll in 2026 Dropper Batch',
       link: '/enrollment',
@@ -1577,7 +1577,7 @@ export const neetDropperBatch: SEOLandingContent = {
     courseName: 'NEET Dropper Batch 2026 - Online & Offline',
     provider: 'Cerebrum Biology Academy',
     description:
-      'Intensive NEET dropper batch with online and offline options across Delhi NCR. AIIMS faculty, 15-student batches, 92% success rate.',
+      'Intensive NEET dropper batch with online and offline options across Delhi NCR. AIIMS faculty, 15-student batches, 98% NEET qualification rate.',
     duration: 'P12M',
     price: 80000,
     priceCurrency: 'INR',

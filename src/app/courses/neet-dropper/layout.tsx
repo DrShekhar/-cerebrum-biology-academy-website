@@ -111,7 +111,7 @@ export default function NEETDropperLayout({ children }: { children: React.ReactN
                 name: 'How much improvement can I expect as a repeater?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Average improvement: 120 marks. Our repeater students go from 400-500 to 600+ range. 92% success rate for droppers.',
+                  text: 'Average improvement: 120 marks. Our repeater students go from 400-500 to 600+ range. 98% NEET qualification rate for droppers.',
                 },
               },
               {
@@ -127,7 +127,7 @@ export default function NEETDropperLayout({ children }: { children: React.ReactN
                 name: 'Is it worth taking a drop year for NEET?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: '65% of medical students took 2+ attempts. With structured coaching, drop year gives 80-150 marks improvement. 92% of our droppers qualify.',
+                  text: '65% of medical students took 2+ attempts. With structured coaching, drop year gives 80-150 marks improvement. 98% of our students qualify.',
                 },
               },
               {

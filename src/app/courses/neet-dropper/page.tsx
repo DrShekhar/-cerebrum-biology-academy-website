@@ -31,7 +31,8 @@ import { DualCurrencyPrice, formatINR, useForeignPrice } from '@/components/ui/D
 
 export default function NEETDropperPage() {
   const router = useRouter()
-  const [seatsLeft, setSeatsLeft] = useState(18)
+  // Honest batch-size cap (no fake live counter).
+  const batchSeatLabel = '15–20 seats/batch'
 
   // Hide INR-specific copy (EMI, scholarship percentages tied to NEET
   // score) for non-IN visitors — they don't pay in INR or qualify.
@@ -122,21 +123,21 @@ export default function NEETDropperPage() {
 
   const successStats = [
     {
-      number: '89%',
-      label: 'Added 100+ marks',
-      description: 'Rank improvement track record',
+      number: '98%',
+      label: 'NEET qualification rate',
+      description: 'Across Cerebrum cohorts',
       icon: TrendingUp,
     },
     {
-      number: '350+',
-      label: 'Avg biology score',
-      description: 'Cohort biology performance',
+      number: '+100–150',
+      label: 'Typical 2nd-attempt gain',
+      description: 'Focused dropper year',
       icon: Target,
     },
     {
-      number: '1500+',
-      label: 'Droppers coached',
-      description: 'Across 15+ years',
+      number: '360/720',
+      label: 'Biology = 50% of NEET',
+      description: 'The subject we specialise in',
       icon: Users,
     },
   ]
@@ -162,8 +163,8 @@ export default function NEETDropperPage() {
     },
     {
       icon: Trophy,
-      title: 'Success Guarantee',
-      description: 'Structured approach with measurable milestones and guaranteed improvement',
+      title: 'Milestone Tracking',
+      description: 'Structured approach with measurable weekly milestones and a clear improvement path',
       color: 'bg-[#3d4d3d]',
     },
   ]
@@ -212,7 +213,7 @@ export default function NEETDropperPage() {
             '@type': 'Course',
             name: 'NEET Dropper Course - Second Attempt Success',
             description:
-              'Specialized 10-12 month program for NEET droppers with rank improvement strategies, psychology support, and personalized mentoring. 89% average rank improvement.',
+              'Specialized 10-12 month program for NEET droppers with rank improvement strategies, psychology support, and personalized mentoring. Typical second-attempt gain of 100-150 marks.',
             provider: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',
@@ -346,7 +347,7 @@ export default function NEETDropperPage() {
                     Next batch starts {batchStartLabel} — {batchStartDay}
                   </span>
                   <span className="bg-black text-yellow-500 px-2 py-0.5 rounded text-xs">
-                    Only {seatsLeft} seats left
+                    Small-batch: {batchSeatLabel}
                   </span>
                 </div>
               </div>
@@ -400,7 +401,7 @@ export default function NEETDropperPage() {
                     <div className="flex items-center">
                       <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-[#3d4d3d]" />
                       <span>
-                        <strong>1,500+</strong> droppers coached
+                        <strong>15,000+</strong> students taught
                       </span>
                     </div>
                     <div className="flex items-center">
@@ -604,7 +605,7 @@ export default function NEETDropperPage() {
                     <div className="flex items-center">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
                       <span className="text-sm sm:text-base">
-                        Rank-improvement track record (89% of past droppers added 100+ marks)
+                        Rank-improvement track record (droppers typically add 100-150 marks)
                       </span>
                     </div>
                     <div className="flex items-center">
@@ -787,7 +788,7 @@ export default function NEETDropperPage() {
               Your Second Chance Deserves the Best
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 opacity-90">
-              Join 1,500+ droppers who transformed their NEET journey with Cerebrum Biology Academy.
+              Join the droppers who transformed their NEET journey with Cerebrum Biology Academy.
               Expert faculty, proven methodology, and personalized attention await you.
             </p>
 
@@ -815,8 +816,8 @@ export default function NEETDropperPage() {
             </div>
 
             <p className="text-xs sm:text-sm opacity-80">
-              Next dropper batch starts {batchStartLabel} ({batchStartDay}) — only {seatsLeft} seats
-              left.
+              Next dropper batch starts {batchStartLabel} ({batchStartDay}) — small-batch (
+              {batchSeatLabel}).
             </p>
           </div>
         </div>
