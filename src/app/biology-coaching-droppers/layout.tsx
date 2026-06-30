@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-coaching-droppers',
   },
+  // noindex 2026-06 (national dropper doorway consolidation): redundant intent
+  // page; canonical commercial page /courses/neet-dropper carries the index
+  // signal. Stays live for visitors + internal links (follow). Reversible.
+  robots: 'noindex, follow',
 }
 
 export default function BiologyDroppersLayout({ children }: { children: React.ReactNode }) {

@@ -138,7 +138,6 @@ const inlineRedirectPatterns: RegExp[] = [
 // ("Submitted URL marked noindex"). Hand-written family members that remain
 // indexed are allowlisted here.
 const NOINDEXED_FAMILY_ALLOWLIST = new Set([
-  '/neet-dropper-batch-online',
   '/online-neet-coaching-faridabad',
   '/online-neet-coaching-ghaziabad',
   '/online-neet-coaching-greater-noida',
@@ -5319,12 +5318,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/neet-dropper-batch-online`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/neet-dropper-biology-coaching`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -7897,7 +7890,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'neet-coaching-fees-faridabad',
     'neet-coaching-fees-ghaziabad',
     // Non-city batch/content pages
-    'neet-dropper-batch',
+    // 'neet-dropper-batch' removed 2026-06: now noindex,follow (doorway
+    // consolidation) — must not be submitted to Google.
     'test-series-schedule',
     'is-coaching-necessary-for-neet-biology',
     'is-online-neet-coaching-effective',

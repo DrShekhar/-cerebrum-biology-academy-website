@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `https://cerebrumbiologyacademy.com/${content.slug}`,
   },
+  // noindex 2026-06 (national dropper doorway consolidation): redundant intent
+  // page; canonical commercial page /courses/neet-dropper carries the index
+  // signal. Stays live for visitors + internal links (follow). Reversible.
+  robots: 'noindex, follow',
 }
 
 export default function OneYearNeetDropperCoursePage() {

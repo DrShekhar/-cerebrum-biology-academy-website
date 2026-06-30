@@ -30,8 +30,13 @@ export const metadata: Metadata = {
     description: 'Intensive NEET dropper course by AIIMS Faculty. Score 650+ in your next attempt.',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/neet-biology-tutor-for-droppers',
+    canonical: 'https://cerebrumbiologyacademy.com/online-biology-tutor-droppers',
   },
+  // noindex 2026-06 (national dropper doorway consolidation): weaker of the two
+  // 1:1-tutor near-duplicates; canonical points to the kept tutor page
+  // /online-biology-tutor-droppers, which carries the index signal. Stays live
+  // for visitors + internal links (follow). Reversible.
+  robots: 'noindex, follow',
 }
 
 export default function NEETBiologyTutorDroppersLayout({
