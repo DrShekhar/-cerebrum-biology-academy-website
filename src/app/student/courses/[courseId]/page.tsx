@@ -39,12 +39,20 @@ interface CourseDetails {
 }
 
 // Shape returned by /api/enrollments/[courseId]: chapters -> topics + materials.
+interface CourseMaterial {
+  id: string
+  title: string
+  materialType: string
+  videoLectureId?: string | null
+  videoReady?: boolean
+}
+
 interface CourseModule {
   id: string
   title: string
   sortOrder: number
   topics: { id: string; title: string; orderIndex: number }[]
-  materials: { id: string; title: string; materialType: string }[]
+  materials: CourseMaterial[]
 }
 
 export default function CourseDetailPage() {
@@ -424,18 +432,20 @@ export default function CourseDetailPage() {
   )
 }
 
-function MaterialItem({
-  material,
-  isExpired,
-}: {
-  material: { id: string; title: string; materialType: string }
-  isExpired: boolean
-}) {
+function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExpired: boolean }) {
   const isVideo = material.materialType?.toUpperCase().includes('VIDEO')
   const icon = isVideo ? <Video className="w-4 h-4" /> : <FileText className="w-4 h-4" />
-  // The entitlement-gated delivery endpoint resolves the real file/stream URL
-  // server-side (it enforces enrollment), so opening it is safe.
-  const href = `/api/student/materials/${material.id}/download`
+
+  // Video lessons open in the secure /learn player (videoId = video_lectures.id);
+  // documents stream via the entitlement-gated delivery endpoint. A video whose
+  // lecture isn't READY yet shows a disabled "Processing" state.
+  const isVideoLesson = isVideo && !!material.videoLectureId
+  const videoProcessing = isVideo && material.videoLectureId && !material.videoReady
+  const href = isVideoLesson
+    ? `/learn/${material.videoLectureId}`
+    : `/api/student/materials/${material.id}/download`
+  const isInternal = isVideoLesson
+  const label = isVideo ? 'Watch' : 'Open'
 
   return (
     <div
@@ -451,13 +461,22 @@ function MaterialItem({
         <p className="font-medium text-gray-900 text-sm">{material.title}</p>
       </div>
 
-      {!isExpired && (
-        <a href={href} target="_blank" rel="noopener noreferrer">
-          <Button variant="ghost" size="sm" className="text-blue-600">
-            {isVideo ? 'Watch' : 'Open'}
-          </Button>
-        </a>
-      )}
+      {!isExpired &&
+        (videoProcessing ? (
+          <span className="text-xs text-gray-400 px-3">Processing…</span>
+        ) : isInternal ? (
+          <Link href={href}>
+            <Button variant="ghost" size="sm" className="text-blue-600">
+              {label}
+            </Button>
+          </Link>
+        ) : (
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" size="sm" className="text-blue-600">
+              {label}
+            </Button>
+          </a>
+        ))}
     </div>
   )
 }

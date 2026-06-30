@@ -48,6 +48,11 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
                 materialType: true,
                 chapterId: true,
                 topicId: true,
+                // For video materials, surface the linked video lecture so the
+                // syllabus can deep-link to the /learn player (videoId = video_lectures.id).
+                video_lectures: {
+                  select: { id: true, uploadStatus: true },
+                },
               },
               orderBy: { sortOrder: 'asc' },
             },
@@ -65,7 +70,16 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
       title: chapter.title,
       sortOrder: chapter.orderIndex,
       topics: chapter.topics,
-      materials: enrollment.courses.study_materials.filter((m) => m.chapterId === chapter.id),
+      materials: enrollment.courses.study_materials
+        .filter((m) => m.chapterId === chapter.id)
+        .map((m) => ({
+          id: m.id,
+          title: m.title,
+          materialType: m.materialType,
+          // videoLectureId present + READY → syllabus links to /learn/[id].
+          videoLectureId: m.video_lectures?.id ?? null,
+          videoReady: m.video_lectures?.uploadStatus === 'READY',
+        })),
     }))
 
     return NextResponse.json({
