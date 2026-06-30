@@ -24,6 +24,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { showToast } from '@/lib/toast'
 import {
   class11Chapters,
   class12Chapters,
@@ -54,6 +55,11 @@ interface TestConfig {
     batchId?: string
     studentIds?: string[]
   }
+  // Course to assign to (for "All students of a course").
+  courseId?: string
+  // Class levels to assign to (StudentClass values, e.g. CLASS_12), resolved
+  // server-side via enrolments -> course.class.
+  assignedClassIds: string[]
   useAI: boolean
 }
 
@@ -82,17 +88,33 @@ export default function CreateTestAssignmentPage() {
     assignTo: {
       type: 'ALL',
     },
+    courseId: '',
+    assignedClassIds: [],
     useAI: false,
   })
 
   const [expandedChapters, setExpandedChapters] = useState<Set<string>>(new Set())
   const [availableChapters, setAvailableChapters] = useState<any[]>([])
-  const [classes, setClasses] = useState([
-    { id: 'class-11-a', name: 'Class 11 - A', studentCount: 45 },
-    { id: 'class-11-b', name: 'Class 11 - B', studentCount: 42 },
-    { id: 'class-12-a', name: 'Class 12 - A', studentCount: 38 },
-    { id: 'class-12-b', name: 'Class 12 - B', studentCount: 40 },
-  ])
+  const [courses, setCourses] = useState<{ id: string; name: string }[]>([])
+
+  // Real class levels (StudentClass enum) — resolvable to students via course.class.
+  const CLASS_LEVELS = [
+    { id: 'CLASS_11', name: 'Class 11' },
+    { id: 'CLASS_12', name: 'Class 12' },
+    { id: 'DROPPER', name: 'Dropper' },
+    { id: 'FOUNDATION', name: 'Foundation' },
+  ]
+
+  useEffect(() => {
+    fetch('/api/admin/courses?limit=200')
+      .then((r) => r.json())
+      .then((j) => {
+        if (j?.success && j.data?.courses) {
+          setCourses(j.data.courses.map((c: any) => ({ id: c.id, name: c.name })))
+        }
+      })
+      .catch(() => {})
+  }, [])
 
   useEffect(() => {
     if (!authLoading && (!isAuthenticated || user?.role !== 'TEACHER')) {
@@ -168,23 +190,64 @@ export default function CreateTestAssignmentPage() {
         setGenerationProgress(i)
       }
 
+      const assignTypeMap: Record<string, string> = {
+        ALL: 'ALL_STUDENTS',
+        CLASS: 'SPECIFIC_CLASS',
+        BATCH: 'SPECIFIC_BATCH',
+        INDIVIDUAL: 'INDIVIDUAL_STUDENTS',
+      }
+      const difficultyMap: Record<string, string> = {
+        easy: 'EASY',
+        medium: 'MEDIUM',
+        hard: 'HARD',
+        mixed: 'MEDIUM', // no MIXED in DifficultyLevel
+      }
+      const dueDateIso = config.dueDate
+        ? new Date(`${config.dueDate}T${config.dueTime || '18:00'}`).toISOString()
+        : ''
+
       const response = await fetch('/api/teacher/test-assignments', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          ...config,
+          title: config.title,
+          description: config.description,
+          difficulty: difficultyMap[config.difficulty] || 'MEDIUM',
+          totalQuestions: config.totalQuestions,
+          totalMarks: config.totalMarks,
+          duration: config.duration,
+          negativeMarking: config.negativeMarking,
+          shuffleQuestions: config.shuffleQuestions,
+          showResults: config.showResults, // API normalizes case → enum
+          selectedChapters: config.selectedChapters,
+          selectedTopics: config.selectedTopics,
+          questionSource: 'QUESTION_BANK',
+          useAI: config.useAI,
+          assignToType: assignTypeMap[config.assignTo.type] || 'ALL_STUDENTS',
+          courseId: config.courseId || null,
+          assignedClassIds: config.assignedClassIds,
+          assignedStudentIds: config.assignTo.studentIds || [],
+          dueDate: dueDateIso,
           status: asDraft ? 'DRAFT' : 'PUBLISHED',
         }),
       })
 
-      if (response.ok) {
+      const json = await response.json().catch(() => ({}))
+      if (response.ok && json.success !== false) {
+        if (!asDraft) {
+          showToast.success(
+            `Published — ${json.attachedQuestions ?? 0} questions, ${json.assignedStudents ?? 0} students assigned`
+          )
+        } else {
+          showToast.success('Saved as draft')
+        }
         router.push('/teacher/test-assignment')
       } else {
-        router.push('/teacher/test-assignment')
+        showToast.error(json.error || 'Could not create the assignment')
       }
     } catch (error) {
       console.error('Error creating test:', error)
-      router.push('/teacher/test-assignment')
+      showToast.error('Could not create the assignment')
     } finally {
       setIsGenerating(false)
     }
@@ -196,8 +259,13 @@ export default function CreateTestAssignmentPage() {
         return config.title && config.class && config.duration > 0
       case 'questions':
         return config.selectedChapters.length > 0 || config.selectedTopics.length > 0
-      case 'assign':
-        return config.dueDate && config.assignTo.type
+      case 'assign': {
+        if (!config.dueDate) return false
+        if (config.assignTo.type === 'ALL') return !!config.courseId
+        if (config.assignTo.type === 'CLASS') return config.assignedClassIds.length > 0
+        // BATCH / INDIVIDUAL not yet supported as targets.
+        return false
+      }
       case 'review':
         return true
       default:
@@ -564,29 +632,67 @@ export default function CreateTestAssignmentPage() {
                   </div>
                 </div>
 
-                {config.assignTo.type === 'CLASS' && (
+                {config.assignTo.type === 'ALL' && (
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Select Class
+                      Select Course (all actively-enrolled students will be assigned)
                     </label>
                     <select
-                      value={config.assignTo.classId || ''}
-                      onChange={(e) =>
-                        setConfig((prev) => ({
-                          ...prev,
-                          assignTo: { ...prev.assignTo, classId: e.target.value },
-                        }))
-                      }
+                      value={config.courseId || ''}
+                      onChange={(e) => setConfig((prev) => ({ ...prev, courseId: e.target.value }))}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     >
-                      <option value="">Select a class</option>
-                      {classes.map((cls) => (
-                        <option key={cls.id} value={cls.id}>
-                          {cls.name} ({cls.studentCount} students)
+                      <option value="">Select a course</option>
+                      {courses.map((c) => (
+                        <option key={c.id} value={c.id}>
+                          {c.name}
                         </option>
                       ))}
                     </select>
                   </div>
+                )}
+
+                {config.assignTo.type === 'CLASS' && (
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Select Class Level(s) — assigns students enrolled in courses of that level
+                    </label>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                      {CLASS_LEVELS.map((lvl) => {
+                        const checked = config.assignedClassIds.includes(lvl.id)
+                        return (
+                          <button
+                            key={lvl.id}
+                            type="button"
+                            onClick={() =>
+                              setConfig((prev) => ({
+                                ...prev,
+                                assignedClassIds: checked
+                                  ? prev.assignedClassIds.filter((x) => x !== lvl.id)
+                                  : [...prev.assignedClassIds, lvl.id],
+                              }))
+                            }
+                            className={cn(
+                              'p-3 border rounded-lg text-center text-sm transition-all',
+                              checked
+                                ? 'border-purple-500 bg-purple-50 text-purple-700'
+                                : 'border-gray-200 hover:border-gray-300'
+                            )}
+                          >
+                            {lvl.name}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {(config.assignTo.type === 'BATCH' || config.assignTo.type === 'INDIVIDUAL') && (
+                  <p className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-700">
+                    {config.assignTo.type === 'BATCH'
+                      ? 'Batch targeting isn’t available yet (batches have no student roster). Use Course or Class Level.'
+                      : 'Individual-student targeting needs a student picker (coming soon). Use Course or Class Level for now.'}
+                  </p>
                 )}
 
                 <div>
@@ -635,9 +741,11 @@ export default function CreateTestAssignmentPage() {
                     <Users className="w-6 h-6 text-orange-600 mx-auto mb-2" />
                     <p className="text-2xl font-bold text-orange-900">
                       {config.assignTo.type === 'ALL'
-                        ? 'All'
+                        ? courses.find((c) => c.id === config.courseId)?.name
+                          ? 'Course'
+                          : 'All'
                         : config.assignTo.type === 'CLASS'
-                          ? classes.find((c) => c.id === config.assignTo.classId)?.studentCount || 0
+                          ? `${config.assignedClassIds.length} level(s)`
                           : '-'}
                     </p>
                     <p className="text-sm text-orange-700">Students</p>
