@@ -496,7 +496,9 @@ export default function CreateTestAssignmentPage() {
                       className="w-4 h-4 text-purple-600 rounded"
                     />
                     <Zap className="w-4 h-4 text-purple-600" />
-                    <span className="text-sm font-medium">AI Selection</span>
+                    <span className="text-sm font-medium">
+                      AI-generate questions (from selected topics)
+                    </span>
                   </label>
                 </div>
               </div>

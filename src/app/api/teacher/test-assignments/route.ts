@@ -8,6 +8,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
+import { generateAndPersistQuestions } from '@/lib/ai/generateAndPersistQuestions'
+
+// AI generation can take a while for a full paper — allow a longer budget.
+export const maxDuration = 120
 
 export async function GET(request: NextRequest) {
   try {
@@ -323,7 +327,23 @@ export async function POST(request: NextRequest) {
     //    actually exists in the DB (avoids FK violations).
     //  - Otherwise pull from the DB question bank by selected topics/chapters.
     let resolvedQuestions: { questionId: string; marks?: number; negativeMarks?: number }[] = []
-    if (Array.isArray(questions) && questions.length > 0) {
+    if (useAI) {
+      // Generate fresh MCQs with Claude, persist them (FK-safe), and attach.
+      const aiTopics =
+        Array.isArray(selectedTopics) && selectedTopics.length > 0
+          ? selectedTopics
+          : Array.isArray(selectedChapters)
+            ? selectedChapters
+            : []
+      const aiIds = await generateAndPersistQuestions({
+        topics: aiTopics,
+        count: parseInt(totalQuestions),
+        difficulty: typeof difficulty === 'string' ? difficulty : 'MEDIUM',
+        grade: Array.isArray(assignedClassIds) ? assignedClassIds[0] : undefined,
+        curriculum: 'NEET',
+      })
+      resolvedQuestions = aiIds.map((id) => ({ questionId: id }))
+    } else if (Array.isArray(questions) && questions.length > 0) {
       const ids = questions.map((q: any) => q.questionId).filter(Boolean)
       const existing = await prisma.questions.findMany({
         where: { id: { in: ids } },
