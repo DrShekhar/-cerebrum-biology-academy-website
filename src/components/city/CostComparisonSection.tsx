@@ -1,7 +1,6 @@
 'use client'
 
 import { CheckCircle, X, ArrowRight } from 'lucide-react'
-import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import { ContextualWhatsAppLink } from '@/components/common/ContextualWhatsAppLink'
 

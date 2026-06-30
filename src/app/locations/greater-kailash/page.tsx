@@ -243,7 +243,7 @@ export default function GreaterKailashLocationPage() {
                 { icon: Trophy, title: '98% Success', desc: '60% AIIMS selections' },
                 { icon: Train, title: 'Easy Access', desc: '100m from South Extension Metro' },
               ].map((item, idx) => (
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
+                <div key={item.title} className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
                   <div className="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-purple-600" />
                   </div>
@@ -354,7 +354,7 @@ export default function GreaterKailashLocationPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, idx) => (
-                <div className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
+                <div key={faq.q} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
                 </div>

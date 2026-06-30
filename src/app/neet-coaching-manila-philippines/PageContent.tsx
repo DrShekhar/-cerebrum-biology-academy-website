@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import SmartWhatsAppCTA from '@/components/conversion/SmartWhatsAppCTA'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import LocalitySchema from '@/components/seo/LocalitySchema'

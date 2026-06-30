@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
-import { HowToSchema } from '@/components/seo/StructuredData'
 import { MessageCircle } from 'lucide-react'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/how-to-score-7-ib-biology'

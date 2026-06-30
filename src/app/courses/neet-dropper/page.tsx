@@ -6,7 +6,6 @@ import Link from 'next/link'
 import {
   CheckCircle,
   Users,
-  Award,
   Target,
   Star,
   ArrowRight,
@@ -16,7 +15,6 @@ import {
   Phone,
   MessageCircle,
   BookOpen,
-  GraduationCap,
   Calendar,
   TrendingUp,
   HelpCircle,

@@ -1,6 +1,6 @@
 'use client'
 
-import { Trophy, Users, Target, BookOpen, Star, Globe } from 'lucide-react'
+import { Trophy, Users, BookOpen, Star, Globe } from 'lucide-react'
 import { VerticalRankingPage } from '@/components/seo/VerticalRankingPage'
 import { TOP_IB_BIOLOGY_COACHING_GLOBAL } from '@/data/top-ranking-ib-biology-global'
 

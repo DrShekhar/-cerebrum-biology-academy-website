@@ -1,8 +1,6 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
 import { Phone, MapPin, Users, Trophy, Zap, Award } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 

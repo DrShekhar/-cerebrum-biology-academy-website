@@ -15,7 +15,6 @@ import {
   Trophy,
   Target,
   BookOpen,
-  Clock,
 } from 'lucide-react'
 import { Top10List, TOP_10_NEET_COACHING_GURUGRAM } from '@/components/seo/Top10ListSchema'
 import {

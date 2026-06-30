@@ -12,10 +12,7 @@ import {
   BookOpen,
   Phone,
   ArrowRight,
-  Star,
-  CheckCircle,
   Trophy,
-  Clock,
 } from 'lucide-react'
 
 export const metadata: Metadata = {

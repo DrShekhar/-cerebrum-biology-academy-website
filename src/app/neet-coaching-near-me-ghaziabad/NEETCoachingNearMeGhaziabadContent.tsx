@@ -21,8 +21,6 @@ import { Button } from '@/components/ui/Button'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { UrgencyBanner } from '@/components/landing-pages/UrgencyBanner'
 
 interface FAQ {

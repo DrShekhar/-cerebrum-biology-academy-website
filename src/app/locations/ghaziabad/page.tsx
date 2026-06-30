@@ -9,7 +9,6 @@ import {
   Star,
   Users,
   Trophy,
-  CheckCircle2,
   Train,
   Monitor,
   Building2,

@@ -26,7 +26,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { LocalBusinessSchema, FAQSchema, VideoSchema } from '@/components/seo/StructuredData'
-import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
+import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { LocalityCues } from '@/components/seo/LocalityCues'
 import { delhiNCRLocalityCues } from '@/data/delhi-ncr-locality-cues'

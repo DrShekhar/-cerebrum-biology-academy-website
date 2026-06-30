@@ -168,7 +168,7 @@ export default function DelhiLocationPage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {nearestCenters.map((center, idx) => (
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-transparent hover:border-blue-500 transition-all animate-fadeInUp">
+                <div key={center.name} className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-transparent hover:border-blue-500 transition-all animate-fadeInUp">
                   <div className={`bg-${center.color}-500 text-white py-3 px-6`}>
                     <h3 className="font-bold text-lg">{center.name}</h3>
                   </div>
@@ -228,7 +228,7 @@ export default function DelhiLocationPage() {
                   desc: 'All centers near metro stations',
                 },
               ].map((item, idx) => (
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
+                <div key={item.title} className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
                   <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-blue-600" />
                   </div>
@@ -325,7 +325,7 @@ export default function DelhiLocationPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, idx) => (
-                <div className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
+                <div key={faq.q} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
                 </div>

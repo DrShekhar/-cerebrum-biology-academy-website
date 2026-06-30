@@ -1,17 +1,13 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import {
   BookOpen,
   CheckCircle,
-  ArrowRight,
   Phone,
   MessageCircle,
   ChevronDown,
-  Lightbulb,
-  Zap,
-  Brain,
   Target,
   Home,
 } from 'lucide-react'

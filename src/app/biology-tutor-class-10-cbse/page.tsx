@@ -12,7 +12,6 @@ import {
   Play,
   ArrowRight,
   Target,
-  Microscope,
   Dna,
   Leaf,
   Heart,

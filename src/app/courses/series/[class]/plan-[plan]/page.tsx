@@ -14,7 +14,6 @@ import {
   Zap,
   Shield,
 } from 'lucide-react'
-import Link from 'next/link'
 import { getSeriesDetails, getPlanDetails } from '@/data/seriesData'
 
 export default function PlanDetailsPage() {

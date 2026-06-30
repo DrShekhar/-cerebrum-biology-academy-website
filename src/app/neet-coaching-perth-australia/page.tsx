@@ -4,7 +4,7 @@ import {
   NEETNRIPricingTiers,
   neetNRIOffersForSchema,
 } from '@/components/neet-nri/NEETNRIPricingTiers'
-import { Award, GraduationCap, Phone, MessageCircle, ArrowRight, Clock } from 'lucide-react'
+import { Award, GraduationCap, Phone, MessageCircle, ArrowRight } from 'lucide-react'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 

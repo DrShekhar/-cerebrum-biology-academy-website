@@ -24,7 +24,6 @@ import {
   Microscope,
   ShieldCheck,
   Sparkles,
-  Target,
 } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { GlobalEnquiryForm } from '@/components/seo/GlobalEnquiryForm'

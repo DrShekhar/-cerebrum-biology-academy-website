@@ -3,18 +3,14 @@
 import { useState, useEffect } from 'react'
 import {
   Calendar,
-  Clock,
   Plus,
   Search,
-  Filter,
   Phone,
   Video,
   MapPin,
   User,
   FileText,
-  CheckCircle2,
   XCircle,
-  AlertCircle,
   Loader2,
   ChevronLeft,
   ChevronRight,

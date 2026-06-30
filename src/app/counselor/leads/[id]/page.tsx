@@ -10,23 +10,18 @@ import {
   MessageSquare,
   Calendar,
   Clock,
-  Edit3,
   Save,
   X,
   Plus,
   ChevronDown,
   ChevronUp,
-  Send,
   FileText,
   DollarSign,
-  TrendingUp,
-  User,
   BookOpen,
   AlertTriangle,
   CheckCircle2,
   Loader2,
   Star,
-  MoreHorizontal,
 } from 'lucide-react'
 import { format, formatDistanceToNow } from 'date-fns'
 import { showToast } from '@/lib/toast'

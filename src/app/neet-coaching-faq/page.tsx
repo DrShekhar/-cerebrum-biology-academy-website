@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import { Phone, Mail, MessageCircle, ChevronDown } from 'lucide-react'
-import Link from 'next/link'
+import { Phone, MessageCircle, ChevronDown } from 'lucide-react'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
-import { FAQSchema, FAQDisplay } from '@/components/seo/FAQSchema'
+import { FAQSchema } from '@/components/seo/FAQSchema'
 
 const faqData = {
   // Category 1: About Cerebrum Biology Academy (8 questions)

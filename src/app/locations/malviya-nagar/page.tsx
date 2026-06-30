@@ -239,7 +239,7 @@ export default function MalviyaNagarPage() {
                 { icon: Trophy, title: '98% Success', desc: 'Proven results' },
                 { icon: Award, title: 'AIIMS Faculty', desc: 'Expert teachers' },
               ].map((item, idx) => (
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
+                <div key={item.title} className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
                   <div className="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-teal-600" />
                   </div>

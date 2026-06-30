@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 import {
   CheckCircle,
   Clock,
@@ -10,15 +9,12 @@ import {
   BookOpen,
   Target,
   Star,
-  ArrowRight,
   Calculator,
   FileText,
   Brain,
   GraduationCap,
   MessageCircle,
   Sparkles,
-  ChevronRight,
-  Play,
   Shield,
   TrendingUp,
   AlertCircle,

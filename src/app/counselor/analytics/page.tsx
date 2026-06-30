@@ -1,25 +1,18 @@
 'use client'
 
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect } from 'react'
 import {
-  TrendingUp,
-  TrendingDown,
   Users,
   DollarSign,
   Clock,
   Target,
-  Phone,
-  MessageSquare,
   Calendar,
   BarChart3,
   ArrowUpRight,
   ArrowDownRight,
   Loader2,
   RefreshCw,
-  Download,
 } from 'lucide-react'
-import { format } from 'date-fns'
-import { showToast } from '@/lib/toast'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 

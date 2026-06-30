@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronDown, MapPin, Clock, Users, Trophy, Phone, MessageSquare } from 'lucide-react'
+import { ChevronDown, MapPin, Clock, Users, Phone, MessageSquare } from 'lucide-react'
 import { SmartWhatsAppCTA } from '@/components/conversion/SmartWhatsAppCTA'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { PricingSection, CostComparisonSection } from '@/components/city'

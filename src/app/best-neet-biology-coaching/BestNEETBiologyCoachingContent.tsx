@@ -3,10 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import {
-  CheckCircle,
   ChevronRight,
   ChevronDown,
-  MapPin,
   Phone,
   Home,
   Users,
@@ -20,7 +18,6 @@ import {
 import { Button } from '@/components/ui/Button'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import {
-  CONTACT_INFO,
   getWhatsAppLink,
   getPhoneLink,
   getDisplayPhone,

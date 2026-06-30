@@ -12,7 +12,6 @@ import {
   Users,
   Target,
   TrendingUp,
-  DollarSign,
   Calendar,
   AlertTriangle,
   ArrowRight,

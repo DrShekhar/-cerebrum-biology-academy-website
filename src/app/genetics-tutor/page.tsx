@@ -17,13 +17,11 @@ import {
   ChevronRight,
   Clock,
   Dna,
-  FlaskConical,
   GitBranch,
   Home,
   Sigma,
   Sparkles,
   Stethoscope,
-  Target,
 } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { GlobalEnquiryForm } from '@/components/seo/GlobalEnquiryForm'

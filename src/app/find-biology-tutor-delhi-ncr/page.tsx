@@ -5,14 +5,9 @@ import {
   Phone,
   CheckCircle,
   MapPin,
-  Users,
-  BookOpen,
-  Award,
   ArrowRight,
-  Search,
   ShieldCheck,
   XCircle,
-  Star,
   MessageCircle,
 } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'

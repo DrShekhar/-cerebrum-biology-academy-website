@@ -27,7 +27,6 @@ import {
   Award,
   BookOpen,
   Brain,
-  Calendar,
   CheckCircle2,
   ChevronDown,
   ChevronRight,
@@ -44,7 +43,6 @@ import {
   Target,
   TrendingUp,
   Trophy,
-  Users,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'

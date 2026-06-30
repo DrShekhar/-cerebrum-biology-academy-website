@@ -32,7 +32,7 @@ import {
   VideoSchema,
 } from '@/components/seo/StructuredData'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
-import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
+import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
 import { LocalityCues } from '@/components/seo/LocalityCues'
 import { delhiNCRLocalityCues } from '@/data/delhi-ncr-locality-cues'
 import { getAllNoidaAreaSlugs, getNoidaAreaBySlug } from '@/data/noida-areas'

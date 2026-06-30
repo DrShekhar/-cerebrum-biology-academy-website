@@ -2,9 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import {
   Phone,
-  CheckCircle,
   ArrowRight,
-  XCircle,
   Users,
   BookOpen,
   Award,

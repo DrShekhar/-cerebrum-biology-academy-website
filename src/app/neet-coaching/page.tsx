@@ -10,7 +10,6 @@ import {
   Trophy,
   Target,
   BookOpen,
-  Clock,
   GraduationCap,
   ChevronDown,
   ChevronUp,

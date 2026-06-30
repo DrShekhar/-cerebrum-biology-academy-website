@@ -99,7 +99,7 @@ export async function POST(request: NextRequest) {
 
     // Get submitter details
     let submitterName = name || 'Anonymous'
-    let submitterPhone = phone
+    const submitterPhone = phone
     let submitterEmail = email
 
     const freeUser = await prisma.free_users.findUnique({

@@ -7,13 +7,10 @@ import {
   MessageCircle,
   Play,
   Headphones,
-  MapPin,
   Star,
   GraduationCap,
   Target,
-  Building,
   Shield,
-  ArrowRight,
   BookOpen,
   CheckCircle,
 } from 'lucide-react'

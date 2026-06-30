@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Hyderabad | Online Biology Classes by Cerebrum Academy',

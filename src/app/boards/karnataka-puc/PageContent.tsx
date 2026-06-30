@@ -7,18 +7,13 @@ import {
   Award,
   BookOpen,
   Target,
-  Star,
   ArrowRight,
-  Globe,
   Phone,
   MessageCircle,
   ChevronDown,
   ChevronUp,
-  GraduationCap,
-  FileText,
   Microscope,
   Shield,
-  Zap,
 } from 'lucide-react'
 
 const FloatingWhatsAppButton = () => (

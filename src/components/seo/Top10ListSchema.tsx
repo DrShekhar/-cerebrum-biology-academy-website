@@ -8,9 +8,7 @@ import {
   XCircle,
   ChevronDown,
   Award,
-  Users,
   IndianRupee,
-  GraduationCap,
   MapPin,
   ExternalLink,
 } from 'lucide-react'

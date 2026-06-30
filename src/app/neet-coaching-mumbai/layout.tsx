@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Mumbai 2026 | Maharashtra',

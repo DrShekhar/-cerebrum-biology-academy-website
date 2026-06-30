@@ -22,7 +22,6 @@ import {
   Award,
   Target,
   BookOpen,
-  MessageCircle,
 } from 'lucide-react'
 import type { CityHubData } from '@/data/city-seo/cities'
 import { AIOptimizedSchema, AIContentBlock } from '@/components/seo/AIOptimizedSchema'

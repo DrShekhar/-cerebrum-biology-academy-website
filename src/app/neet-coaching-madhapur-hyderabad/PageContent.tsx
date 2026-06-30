@@ -8,15 +8,11 @@ import {
   Play,
   Headphones,
   MapPin,
-  Star,
-  GraduationCap,
-  Target,
   Building,
   Zap,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
-import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'

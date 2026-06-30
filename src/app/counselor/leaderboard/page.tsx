@@ -4,8 +4,6 @@ import { useState, useEffect } from 'react'
 import {
   Trophy,
   Target,
-  TrendingUp,
-  Star,
   Medal,
   Crown,
   Plus,
@@ -17,9 +15,6 @@ import {
   Phone,
   DollarSign,
   Calendar,
-  BarChart3,
-  ChevronUp,
-  ChevronDown,
 } from 'lucide-react'
 import { format } from 'date-fns'
 import { showToast } from '@/lib/toast'

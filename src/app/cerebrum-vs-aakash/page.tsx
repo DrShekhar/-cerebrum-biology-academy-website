@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Check, X } from 'lucide-react'
+import { Check } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Cerebrum vs Aakash: Which is Better for NEET Biology 2026?',

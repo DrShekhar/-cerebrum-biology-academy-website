@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { INDIAN_STATES, getAllStates } from '@/components/seo/StateSchema'
-import { MapPin, Users, GraduationCap, ArrowRight, Stethoscope } from 'lucide-react'
+import { getAllStates } from '@/components/seo/StateSchema'
+import { MapPin, GraduationCap, ArrowRight, Stethoscope } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Coaching by State | All India Coverage',

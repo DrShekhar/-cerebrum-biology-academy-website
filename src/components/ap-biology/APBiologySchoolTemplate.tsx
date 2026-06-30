@@ -20,7 +20,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import {
-  Award,
   BookOpen,
   CheckCircle2,
   ChevronDown,
@@ -29,9 +28,7 @@ import {
   GraduationCap,
   Home,
   Library,
-  MapPin,
   MessageCircle,
-  Microscope,
   Phone,
   School,
   Sparkles,

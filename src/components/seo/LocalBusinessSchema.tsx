@@ -1,6 +1,5 @@
 // Server Component - no client-side interactivity needed
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 
 interface LocalBusinessSchemaProps {
   locationId: 'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad'

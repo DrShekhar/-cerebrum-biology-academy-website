@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
-import { HowToSchema } from '@/components/seo/StructuredData'
 import { iaCriteria, iaMeta } from '@/data/ib-biology/ia-rubric'
 import { ArrowRight, Target, FileText, BookOpen, AlertTriangle, MessageCircle } from 'lucide-react'
 

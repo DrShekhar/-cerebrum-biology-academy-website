@@ -23,12 +23,11 @@ import {
 import { Button } from '@/components/ui/Button'
 import { QuickAnswers } from '@/components/seo/QuickAnswers'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
-import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 import { VideoSchema } from '@/components/seo/StructuredData'
-import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
+import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
 import { getAllAreaSlugs, getAreaBySlug } from '@/data/south-delhi-areas'
 
 const areasForAccordion: AreaCardData[] = getAllAreaSlugs().map((slug) => {

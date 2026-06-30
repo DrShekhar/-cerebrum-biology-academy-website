@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, BookOpen, Target, Award, Clock, GraduationCap } from 'lucide-react'
+import { ArrowRight, BookOpen, Target, Clock, GraduationCap } from 'lucide-react'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { LeadCaptureForm } from '@/components/landing/LeadCaptureForm'

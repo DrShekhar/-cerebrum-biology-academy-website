@@ -4,7 +4,6 @@ import {
   Award,
   Trophy,
   GraduationCap,
-  CheckCircle,
   ArrowRight,
   Phone,
   Star,

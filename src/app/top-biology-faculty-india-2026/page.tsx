@@ -6,9 +6,6 @@ import {
   CheckCircle,
   ArrowRight,
   Phone,
-  Star,
-  GraduationCap,
-  Users,
 } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 

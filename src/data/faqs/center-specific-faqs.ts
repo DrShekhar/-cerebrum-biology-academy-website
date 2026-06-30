@@ -1,4 +1,3 @@
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 export interface CenterFAQ {
   centerId: string

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, memo } from 'react'
 import { usePathname } from 'next/navigation'
-import { Phone, MessageCircle, ChevronUp, Clock, Users } from 'lucide-react'
+import { Phone, MessageCircle, ChevronUp } from 'lucide-react'
 import {
   getContextAwareMessage,
   openDesktopWhatsAppModal,

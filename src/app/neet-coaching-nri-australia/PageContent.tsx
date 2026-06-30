@@ -4,11 +4,8 @@ import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 import {
-  GraduationCap,
   Clock,
   Globe,
-  Users,
-  BookOpen,
   MapPin,
   Phone,
   Star,

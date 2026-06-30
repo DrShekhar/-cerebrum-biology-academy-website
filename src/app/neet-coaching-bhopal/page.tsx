@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import Link from 'next/link'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { FAQSchema } from '@/components/seo/FAQSchema'

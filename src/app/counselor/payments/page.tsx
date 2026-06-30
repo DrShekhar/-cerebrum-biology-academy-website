@@ -4,23 +4,15 @@ import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import {
   DollarSign,
-  Calendar,
-  User,
-  Phone,
-  Mail,
   RefreshCw,
   CheckCircle,
   Send,
   CreditCard,
   AlertCircle,
   Calculator,
-  TrendingUp,
   Clock,
-  Filter,
-  Download,
   Loader2,
   X,
-  IndianRupee,
 } from 'lucide-react'
 import { format, isPast, isToday, differenceInDays } from 'date-fns'
 import { showToast } from '@/lib/toast'

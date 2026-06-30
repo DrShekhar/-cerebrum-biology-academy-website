@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 import {
@@ -14,9 +13,7 @@ import {
   IndianRupee,
   Target,
   MessageCircle,
-  Star,
   Award,
-  TrendingUp,
 } from 'lucide-react'
 import { CompetitorData, CEREBRUM_DATA } from './ComparisonSchema'
 

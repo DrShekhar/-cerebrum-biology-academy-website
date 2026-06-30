@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getAllGurugramAreaSlugs, getGurugramAreaBySlug } from '@/data/gurugram-areas'
+import { getGurugramAreaBySlug } from '@/data/gurugram-areas'
 import {
   CEREBRUM_METRICS,
   GURUGRAM_AREA_COORDINATES,

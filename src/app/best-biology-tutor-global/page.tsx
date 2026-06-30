@@ -18,18 +18,15 @@ import { GlobalEnquiryForm } from '@/components/seo/GlobalEnquiryForm'
 import Link from 'next/link'
 import {
   Award,
-  CheckCircle2,
   ChevronRight,
   Globe,
   GraduationCap,
   Home,
   MessageCircle,
-  Microscope,
   Phone,
   Sparkles,
   Star,
   Target,
-  UserCheck,
 } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 

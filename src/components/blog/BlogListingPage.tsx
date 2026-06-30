@@ -15,8 +15,6 @@ import {
   BookOpen,
   TrendingUp,
   X,
-  SortAsc,
-  Flame,
   Bookmark,
   ArrowUpDown,
   Hash,

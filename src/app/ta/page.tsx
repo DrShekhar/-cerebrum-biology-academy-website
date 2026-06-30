@@ -11,7 +11,6 @@ import {
   MessageCircle,
   BookOpen,
   Phone,
-  ArrowRight,
   Trophy,
 } from 'lucide-react'
 

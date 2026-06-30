@@ -1,6 +1,6 @@
 'use client'
 
-import { Phone, Star, CheckCircle, Download, Users, Award, AlertTriangle } from 'lucide-react'
+import { Phone, Star, CheckCircle, Download, Users, Award } from 'lucide-react'
 import Link from 'next/link'
 
 const benefits = [

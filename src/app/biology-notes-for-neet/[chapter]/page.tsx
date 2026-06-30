@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import ChapterNotesContent from './ChapterNotesContent'
 
 /* ─────────────── Chapter Data ─────────────── */

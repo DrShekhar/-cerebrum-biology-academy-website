@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { cn } from '@/lib/utils'
-import { premiumTypography, premiumAnimations } from '@/lib/design/premiumPatterns'
+import { premiumTypography } from '@/lib/design/premiumPatterns'
 
 // Academic Headline Component with Harvard-level typography
 interface AcademicHeadlineProps {

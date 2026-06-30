@@ -1,7 +1,6 @@
 'use client'
 
 import { CheckCircle, Target, TrendingUp, Award, BookOpen, Clock, Trophy } from 'lucide-react'
-import Link from 'next/link'
 import { useI18n } from '@/contexts/I18nContext'
 import { ContextualWhatsAppLink } from '@/components/common/ContextualWhatsAppLink'
 

@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
   getNoidaAreaBySlug,
-  getAllNoidaAreaSlugs,
   getNearbyNoidaAreas,
   getAICitationFacts,
 } from '@/data/noida-areas'

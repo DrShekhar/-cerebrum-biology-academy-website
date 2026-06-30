@@ -8,7 +8,6 @@ import {
   GraduationCap,
   Clock,
   Globe,
-  MapPin,
   Phone,
   Star,
   CheckCircle,

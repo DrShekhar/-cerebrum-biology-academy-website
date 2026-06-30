@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, BookOpen, MapPin, GraduationCap, Users, Clock } from 'lucide-react'
+import { ArrowRight, BookOpen, MapPin, GraduationCap, Users } from 'lucide-react'
 
 /**
  * RelatedContent Component for Internal Linking

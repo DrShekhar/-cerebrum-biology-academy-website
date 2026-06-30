@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { iaTopics, iaThemes, type IATheme } from '@/data/ib-biology/ia-topics'
-import { ArrowRight, MessageCircle } from 'lucide-react'
+import { MessageCircle } from 'lucide-react'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/ib-biology-ia-topics'
 

@@ -10,14 +10,10 @@ import {
   Star,
   GraduationCap,
   Target,
-  Building,
   Shield,
-  ArrowRight,
-  BookOpen,
   CheckCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'

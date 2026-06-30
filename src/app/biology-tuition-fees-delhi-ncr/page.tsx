@@ -3,7 +3,6 @@ import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import Link from 'next/link'
 import {
   Phone,
-  CheckCircle,
   ArrowRight,
   XCircle,
   IndianRupee,

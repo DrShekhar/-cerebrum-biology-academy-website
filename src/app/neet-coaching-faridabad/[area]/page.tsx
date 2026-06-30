@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getAllFaridabadAreaSlugs, getFaridabadAreaBySlug } from '@/data/faridabad-areas'
+import { getFaridabadAreaBySlug } from '@/data/faridabad-areas'
 import {
   CEREBRUM_METRICS,
   FARIDABAD_AREA_COORDINATES,

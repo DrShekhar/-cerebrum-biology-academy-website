@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getAllAreaSlugs, getAreaBySlug } from '@/data/south-delhi-areas'
+import { getAreaBySlug } from '@/data/south-delhi-areas'
 import { CEREBRUM_METRICS, AREA_COORDINATES } from '@/lib/constants/metrics'
 import AreaPageContent from './AreaPageContent'
 

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { Clock, Users, AlertCircle, TrendingUp, Star, Zap, ChevronRight } from 'lucide-react'
-import Link from 'next/link'
 import { ContextualWhatsAppLink } from '@/components/common/ContextualWhatsAppLink'
 
 export function UrgencySection() {

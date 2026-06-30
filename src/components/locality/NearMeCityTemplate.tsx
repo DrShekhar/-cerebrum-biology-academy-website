@@ -19,7 +19,6 @@ import {
   CheckCircle2,
   ChevronRight,
   Globe,
-  GraduationCap,
   Home,
   MapPin,
   MessageCircle,
@@ -27,7 +26,6 @@ import {
   Phone,
   School,
   Stethoscope,
-  Target,
   Users,
 } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'

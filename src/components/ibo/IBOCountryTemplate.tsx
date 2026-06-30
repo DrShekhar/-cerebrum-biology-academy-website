@@ -10,7 +10,6 @@ import {
   ChevronRight,
   Globe,
   Home,
-  MapPin,
   MessageCircle,
   Phone,
   Route,

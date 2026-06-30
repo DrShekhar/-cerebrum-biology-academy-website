@@ -8,7 +8,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
-import { gamsatPricingAsCourseOffers } from '@/data/gamsat/pricing-matrix'
 
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
 const PAGE_URL = `${SITE_URL}/gamsat-section-3-study-guide`

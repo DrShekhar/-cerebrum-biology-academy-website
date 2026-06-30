@@ -10,12 +10,11 @@ import {
   Star,
   CheckCircle,
   Phone,
-  ArrowRight,
   Award,
   Play,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
+import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
 import { getAllAreaSlugs, getAreaBySlug } from '@/data/east-delhi-areas'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 

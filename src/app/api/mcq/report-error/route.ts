@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
 
     // Get reporter details
     let reporterName = name || 'Anonymous'
-    let reporterPhone = phone
+    const reporterPhone = phone
     let reporterEmail = email
 
     const freeUser = await prisma.free_users.findUnique({

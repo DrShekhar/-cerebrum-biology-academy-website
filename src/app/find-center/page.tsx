@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
 import { MapPin, Phone, MapPinIcon, Zap, Award, Users, Target } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'

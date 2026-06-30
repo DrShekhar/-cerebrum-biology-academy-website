@@ -7,15 +7,12 @@ import {
   Award,
   BookOpen,
   Target,
-  Star,
   ArrowRight,
   Phone,
   MessageCircle,
   ChevronDown,
   ChevronUp,
-  GraduationCap,
   Microscope,
-  Shield,
   MapPin,
 } from 'lucide-react'
 

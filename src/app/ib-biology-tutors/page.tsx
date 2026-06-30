@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
-import { tutors, tutorSlugs, tierPricing, type TutorTier } from '@/data/ib-biology/tutors'
-import { ArrowRight, MessageCircle, Award, CheckCircle2 } from 'lucide-react'
+import { tutors, tierPricing, type TutorTier } from '@/data/ib-biology/tutors'
+import { ArrowRight, MessageCircle } from 'lucide-react'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/ib-biology-tutors'
 

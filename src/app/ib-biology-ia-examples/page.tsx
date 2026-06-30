@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
-import { ArrowRight, MessageCircle, Award, Target } from 'lucide-react'
+import { MessageCircle, Award, Target } from 'lucide-react'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/ib-biology-ia-examples'
 

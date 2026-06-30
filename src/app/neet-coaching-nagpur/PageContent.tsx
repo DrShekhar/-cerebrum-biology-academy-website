@@ -10,10 +10,7 @@ import {
   Star,
   GraduationCap,
   Target,
-  Building,
   Shield,
-  ArrowRight,
-  BookOpen,
   CheckCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

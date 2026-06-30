@@ -12,12 +12,10 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   Award,
-  CheckCircle2,
   ChevronRight,
   GraduationCap,
   Home,
   MessageCircle,
-  Microscope,
   Phone,
   Sparkles,
   Star,

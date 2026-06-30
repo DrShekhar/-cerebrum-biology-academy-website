@@ -23,7 +23,6 @@ import {
   ChevronRight,
   ClipboardCheck,
   Download,
-  FileText,
   Home,
   MessageCircle,
   Microscope,

@@ -5,14 +5,12 @@ import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking
 import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 import {
   MapPin,
-  Star,
   Phone,
   GraduationCap,
   Video,
   MessageCircle,
   Building,
   ArrowRight,
-  Target,
   BookOpen,
   Brain,
   Stethoscope,

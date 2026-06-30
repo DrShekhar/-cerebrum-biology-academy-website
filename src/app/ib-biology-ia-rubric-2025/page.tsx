@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { iaCriteria, iaMeta } from '@/data/ib-biology/ia-rubric'
-import { ArrowRight, CheckCircle2, XCircle, MessageCircle } from 'lucide-react'
+import { CheckCircle2, XCircle, MessageCircle } from 'lucide-react'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/ib-biology-ia-rubric-2025'
 

@@ -1,10 +1,9 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
-import { Phone, Mail, MessageSquare, Clock, GripVertical, ExternalLink, Star } from 'lucide-react'
+import { Phone, Mail, MessageSquare, Clock, GripVertical, ExternalLink } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 import type { Lead, Priority } from '@/app/counselor/leads/page'
 

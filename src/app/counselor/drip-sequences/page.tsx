@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 import {
   Zap,
   Plus,
@@ -11,21 +10,14 @@ import {
   Copy,
   Edit3,
   Clock,
-  MessageSquare,
   Users,
   TrendingUp,
   ChevronDown,
   ChevronRight,
   Loader2,
   X,
-  CheckCircle2,
-  AlertCircle,
-  ArrowDown,
   GitBranch,
-  Send,
-  Eye,
 } from 'lucide-react'
-import { format, formatDistanceToNow } from 'date-fns'
 import { showToast } from '@/lib/toast'
 
 // ─── Types ───────────────────────────────────────────────────────────────────

@@ -10,7 +10,6 @@ import {
   Trophy,
   Video,
   BookOpen,
-  Clock,
   CheckCircle2,
   XCircle,
   ArrowRight,

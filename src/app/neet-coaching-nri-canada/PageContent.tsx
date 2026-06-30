@@ -5,11 +5,8 @@ import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 import {
-  GraduationCap,
   Clock,
   Globe,
-  Users,
-  BookOpen,
   MapPin,
   Phone,
   Star,

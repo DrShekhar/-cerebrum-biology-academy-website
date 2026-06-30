@@ -13,7 +13,6 @@ import {
   Zap,
   Eye,
   RotateCcw,
-  CheckCircle2,
   AlertCircle,
   BarChart3,
   RefreshCw,

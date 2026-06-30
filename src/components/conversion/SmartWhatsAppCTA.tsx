@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { MessageCircle, Clock, Users, Phone } from 'lucide-react'
+import { MessageCircle, Clock, Phone } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import {
   trackAndOpenWhatsApp,

@@ -1,9 +1,8 @@
 'use client'
 
-import { ReactNode } from 'react'
 import Link from 'next/link'
 import { Phone, ArrowRight, CheckCircle, Star } from 'lucide-react'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 export interface LandingPageTemplateProps {
   data: {

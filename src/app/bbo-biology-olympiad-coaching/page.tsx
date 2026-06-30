@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
-import { MessageCircle, Trophy, Target, Award, CheckCircle2, BookOpen } from 'lucide-react'
+import { MessageCircle, Trophy } from 'lucide-react'
 import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 
 const CANONICAL = 'https://cerebrumbiologyacademy.com/bbo-biology-olympiad-coaching'

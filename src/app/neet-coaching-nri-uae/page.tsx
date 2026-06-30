@@ -7,7 +7,6 @@ import {
 import {
   Award,
   GraduationCap,
-  CheckCircle,
   Phone,
   MessageCircle,
   MapPin,

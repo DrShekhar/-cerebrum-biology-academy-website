@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
-import { HowToSchema } from '@/components/seo/StructuredData'
 import { eeMeta } from '@/data/ib-biology/ee-topics'
 import { ArrowRight, BookOpen, MessageCircle } from 'lucide-react'
 

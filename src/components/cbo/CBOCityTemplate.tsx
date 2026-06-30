@@ -15,7 +15,6 @@ import Link from 'next/link'
 import {
   Award,
   BookOpen,
-  CheckCircle2,
   ChevronDown,
   ChevronRight,
   Clock,

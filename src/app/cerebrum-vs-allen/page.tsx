@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ChevronRight, Check, X, Phone, MessageCircle } from 'lucide-react'
+import { ChevronRight, Check, Phone, MessageCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Cerebrum vs Allen: Which is Better for NEET Biology 2026?',

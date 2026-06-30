@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getAllAreaSlugs, getAreaBySlug } from '@/data/west-delhi-areas'
+import { getAreaBySlug } from '@/data/west-delhi-areas'
 import { CEREBRUM_METRICS, ROHINI_CENTER_METRICS, AREA_COORDINATES } from '@/lib/constants/metrics'
 import AreaPageContent from './AreaPageContent'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'

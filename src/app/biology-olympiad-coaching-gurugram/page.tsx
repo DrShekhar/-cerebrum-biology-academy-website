@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import BiologyOlympiadGurugramContent from './BiologyOlympiadGurugramContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-import { CEREBRUM_METRICS, GURUGRAM_CENTER_METRICS } from '@/lib/constants/metrics'
+import { GURUGRAM_CENTER_METRICS } from '@/lib/constants/metrics'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 

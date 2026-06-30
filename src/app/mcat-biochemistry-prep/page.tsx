@@ -12,7 +12,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   Beaker,
-  BookOpen,
   ChevronRight,
   Clock,
   Home,

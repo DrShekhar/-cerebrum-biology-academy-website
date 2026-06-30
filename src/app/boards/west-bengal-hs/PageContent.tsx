@@ -4,14 +4,12 @@ import {
   Trophy,
   Users,
   MessageCircle,
-  Star,
   GraduationCap,
   Target,
   Shield,
   ArrowRight,
   BookOpen,
   CheckCircle,
-  FileText,
   Microscope,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

@@ -10,7 +10,6 @@ import {
   Star,
   CheckCircle,
   Phone,
-  ArrowRight,
   Clock,
   Award,
   Play,

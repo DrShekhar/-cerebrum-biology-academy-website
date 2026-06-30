@@ -3,8 +3,6 @@
 import Link from 'next/link'
 import {
   BookOpen,
-  Download,
-  Star,
   CheckCircle,
   ArrowRight,
   Phone,

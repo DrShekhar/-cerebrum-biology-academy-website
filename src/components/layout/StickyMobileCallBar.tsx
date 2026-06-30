@@ -4,11 +4,8 @@ import { useState, useEffect } from 'react'
 import { Phone, MessageCircle, X } from 'lucide-react'
 import { trackPhoneCall } from '@/lib/ads/googleAdsConversion'
 import {
-  trackAndOpenWhatsApp,
   WHATSAPP_MESSAGES,
   buildWhatsAppUrl,
-  getContextAwareMessage,
-  isMobileDevice,
 } from '@/lib/whatsapp/tracking'
 
 /**

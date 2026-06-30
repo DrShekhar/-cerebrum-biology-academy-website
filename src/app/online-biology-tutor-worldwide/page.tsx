@@ -4,13 +4,8 @@ import {
   Globe,
   Clock,
   Star,
-  Users,
-  Trophy,
-  CheckCircle,
   ArrowRight,
-  Video,
   BookOpen,
-  GraduationCap,
   Phone,
 } from 'lucide-react'
 

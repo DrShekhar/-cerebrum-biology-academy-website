@@ -9,15 +9,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  Award,
-  CheckCircle2,
   ChevronRight,
-  Globe,
   Home,
   MessageCircle,
-  Microscope,
   Phone,
-  Target,
   Trophy,
 } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'

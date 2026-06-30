@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import { Metadata } from 'next'
 import EnrollmentPageClient from './EnrollmentPageClient'
-import { EventSchema, EventListSchema } from '@/components/seo/EventSchema'
+import { EventListSchema } from '@/components/seo/EventSchema'
 
 export const metadata: Metadata = {
   title: 'Enroll Now | Join Cerebrum Biology Academy | NEET Coaching Admission 2026',

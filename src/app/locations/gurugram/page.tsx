@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import GurugramLocationContent from './GurugramLocationContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-import { CEREBRUM_METRICS, GURUGRAM_CENTER_METRICS } from '@/lib/constants/metrics'
+import { GURUGRAM_CENTER_METRICS } from '@/lib/constants/metrics'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { MapPin, GraduationCap, BookOpen, ArrowRight } from 'lucide-react'
+import { MapPin, ArrowRight } from 'lucide-react'
 
 interface CrossLinkGroup {
   title: string

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import {
   Bell,
@@ -11,18 +11,14 @@ import {
   Clock,
   AlertTriangle,
   Zap,
-  Eye,
   Phone,
   MessageSquare,
   DollarSign,
   Users,
   Calendar,
   TrendingUp,
-  FileText,
   Loader2,
-  Filter,
   Settings,
-  Trash2,
   Volume2,
   VolumeX,
 } from 'lucide-react'

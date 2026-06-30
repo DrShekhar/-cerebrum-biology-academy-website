@@ -19,16 +19,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   Award,
-  BookOpen,
   CheckCircle2,
   ChevronRight,
   Globe,
   Home,
   MessageCircle,
-  Microscope,
   Phone,
-  Sparkles,
-  Target,
 } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 

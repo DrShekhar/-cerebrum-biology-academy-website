@@ -13,7 +13,6 @@ import {
   Award,
   BookOpen,
   CalendarDays,
-  CheckCircle2,
   ChevronRight,
   Clock,
   Globe,
