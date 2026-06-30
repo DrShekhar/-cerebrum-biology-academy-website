@@ -20,6 +20,7 @@ import {
   Target,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
+import { paiseToRupees, formatPaiseToINR } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { CreateCourseForm } from '@/components/admin/CreateCourseForm'
@@ -174,7 +175,7 @@ export default function CoursesPage() {
     },
     {
       label: 'Total Revenue',
-      value: `₹${Math.round(courses.reduce((acc, course) => acc + course.price * course.enrolledStudents, 0) / 100000) / 10}L`,
+      value: `₹${(paiseToRupees(courses.reduce((acc, course) => acc + course.price * course.enrolledStudents, 0)) / 100000).toFixed(1)}L`,
       icon: TrendingUp,
       color: 'bg-orange-100 text-orange-600',
       trend: '+18% growth',
@@ -351,7 +352,7 @@ export default function CoursesPage() {
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
                   <TrendingUp className="w-4 h-4 mr-2" />
-                  Price: ₹{course.price.toLocaleString()}
+                  Price: {formatPaiseToINR(course.price)}
                 </div>
               </div>
 

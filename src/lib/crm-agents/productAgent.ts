@@ -12,6 +12,7 @@
 import { BaseAgent, AgentContext, AgentResponse, getLeadContext } from './base'
 import { prisma } from '@/lib/prisma'
 import { AgentType } from '@/generated/prisma'
+import { paiseToRupees } from '@/lib/utils'
 
 // Course interface matching database schema
 interface DatabaseCourse {
@@ -46,7 +47,8 @@ function formatCourseForPrompt(course: DatabaseCourse): object {
     type: course.type,
     targetClass: course.class,
     durationMonths: course.duration,
-    price: course.totalFees,
+    // Report rupees to the model — course.totalFees is stored in paise.
+    price: paiseToRupees(course.totalFees),
     features: features,
   }
 }
@@ -327,7 +329,8 @@ Provide your top 3-4 course recommendations with match scores and reasons.`
       // Map recommendations with actual course prices from database
       const recommendations: CourseRecommendation[] = result.recommendations.map((rec) => {
         const course = courses.find((c) => c.id === rec.courseId)
-        const price = course?.totalFees || 0
+        // course.totalFees is paise; recommendations report rupees.
+        const price = paiseToRupees(course?.totalFees || 0)
         const discount = Math.min(rec.suggestedDiscount, 25)
         const finalPrice = Math.round(price * (1 - discount / 100))
 

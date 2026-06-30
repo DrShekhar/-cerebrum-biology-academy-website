@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Button } from '@/components/ui/Button'
 import { Loader2 } from 'lucide-react'
+import { paiseToRupees, formatPaiseToINR } from '@/lib/utils'
 import toast from 'react-hot-toast'
 
 const feePlanSchema = z.object({
@@ -108,7 +109,8 @@ export function FeePlanForm({ onSuccess, onCancel }: FeePlanFormProps) {
     if (course) {
       setValue('courseId', course.id)
       setValue('courseName', course.name)
-      setValue('baseFee', course.totalFees)
+      // course.totalFees is paise; baseFee (fee_plans) is rupees.
+      setValue('baseFee', paiseToRupees(course.totalFees))
     }
   }
 
@@ -195,7 +197,7 @@ export function FeePlanForm({ onSuccess, onCancel }: FeePlanFormProps) {
               <option value="">Select a course</option>
               {courses.map((course) => (
                 <option key={course.id} value={course.id}>
-                  {course.name} (&#8377;{course.totalFees?.toLocaleString('en-IN')})
+                  {course.name} ({formatPaiseToINR(course.totalFees)})
                 </option>
               ))}
             </select>

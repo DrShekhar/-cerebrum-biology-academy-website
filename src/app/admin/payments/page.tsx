@@ -20,6 +20,7 @@ import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { AddPaymentForm } from '@/components/admin/AddPaymentForm'
+import { formatPaiseToINR } from '@/lib/utils'
 
 interface PaymentRecord {
   id: string
@@ -111,12 +112,8 @@ export default function PaymentsPage() {
       .toLowerCase()
       .replace(/\b\w/g, (c) => c.toUpperCase())
 
-  const formatCurrency = (amount: number) =>
-    new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR',
-      maximumFractionDigits: 0,
-    }).format(amount)
+  // All amounts here come from the `payments` table, which stores integer paise.
+  const formatCurrency = (paise: number) => formatPaiseToINR(paise)
 
   const completedCount = stats?.statusCounts?.COMPLETED?.count || 0
   const pendingCount = stats?.statusCounts?.PENDING?.count || 0

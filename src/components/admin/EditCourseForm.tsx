@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Button } from '@/components/ui/Button'
 import { Loader2 } from 'lucide-react'
+import { paiseToRupees } from '@/lib/utils'
 import toast from 'react-hot-toast'
 
 const editCourseSchema = z.object({
@@ -61,7 +62,8 @@ export function EditCourseForm({ course, onSuccess, onCancel }: EditCourseFormPr
       type: course.type as any,
       class: course.class as any,
       duration: course.duration,
-      totalFees: course.totalFees,
+      // course.totalFees is paise; the "Total Fees (₹)" input edits rupees.
+      totalFees: paiseToRupees(course.totalFees),
       instructor: course.instructor,
       maxCapacity: course.maxCapacity,
       startDate: course.startDate,

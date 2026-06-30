@@ -148,7 +148,8 @@ export async function POST(request: NextRequest) {
         id: uuidv4(),
         userId: validatedData.userId,
         enrollmentId: validatedData.enrollmentId || null,
-        amount: validatedData.amount,
+        // Form collects rupees; payments.amount is stored in paise.
+        amount: Math.round(validatedData.amount * 100),
         status: validatedData.status as any,
         paymentMethod: validatedData.paymentMethod as any,
         transactionId: validatedData.transactionId || null,

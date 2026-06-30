@@ -5,6 +5,7 @@ import { prisma } from '@/lib/prisma'
 import { validateUserSession } from '@/lib/auth/config'
 import { rateLimit } from '@/lib/rateLimit'
 import { logger } from '@/lib/logger'
+import { paiseToRupees } from '@/lib/utils'
 
 const SUPPORTED_CURRENCIES = ['INR', 'USD', 'EUR', 'GBP', 'AUD', 'CAD', 'AED', 'SGD'] as const
 type SupportedCurrency = (typeof SUPPORTED_CURRENCIES)[number]
@@ -111,9 +112,12 @@ export async function POST(request: NextRequest) {
         )
       }
 
-      // Calculate expected payment amount (pending amount or course price for new enrollments)
-      const expectedAmount =
+      // Calculate expected payment amount (pending amount or course price for new
+      // enrollments). Enrollment/course money columns are paise; the request
+      // `amount` is rupees — compare in rupees.
+      const expectedAmount = paiseToRupees(
         enrollment.pendingAmount > 0 ? enrollment.pendingAmount : enrollment.courses?.totalFees || 0
+      )
 
       // Allow a small tolerance (1%) to account for rounding
       const tolerance = expectedAmount * 0.01

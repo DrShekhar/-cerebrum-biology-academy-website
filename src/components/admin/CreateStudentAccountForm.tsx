@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Button } from '@/components/ui/Button'
 import { Loader2, RefreshCw } from 'lucide-react'
+import { formatPaiseToINR } from '@/lib/utils'
 import toast from 'react-hot-toast'
 
 const createStudentAccountSchema = z.object({
@@ -211,7 +212,7 @@ export function CreateStudentAccountForm({ onSuccess, onCancel }: CreateStudentA
                 <option value="">Select a course</option>
                 {courses.map((course) => (
                   <option key={course.id} value={course.id}>
-                    {course.name} (&#8377;{course.totalFees?.toLocaleString('en-IN')})
+                    {course.name} ({formatPaiseToINR(course.totalFees)})
                   </option>
                 ))}
               </select>

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
 import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
+import { formatPaiseToINR } from '@/lib/utils'
 
 function verifyPaymentSignature(orderId: string, paymentId: string, signature: string): boolean {
   const secret = process.env.RAZORPAY_KEY_SECRET || ''
@@ -109,15 +110,11 @@ export async function POST(request: NextRequest) {
     notifyAdminFormSubmission('💰 Enrollment Payment Verified', {
       Student: updatedEnrollment?.users?.name || payment.users?.name || '-',
       Course: updatedEnrollment?.courses?.name || '-',
-      'Amount Paid': `₹${(payment.amount / 100).toLocaleString('en-IN')}`,
+      'Amount Paid': formatPaiseToINR(payment.amount),
       'Payment ID': razorpay_payment_id,
       Status: 'ACTIVE',
-      'Total Paid': updatedEnrollment
-        ? `₹${updatedEnrollment.paidAmount.toLocaleString('en-IN')}`
-        : '-',
-      Pending: updatedEnrollment
-        ? `₹${updatedEnrollment.pendingAmount.toLocaleString('en-IN')}`
-        : '-',
+      'Total Paid': updatedEnrollment ? formatPaiseToINR(updatedEnrollment.paidAmount) : '-',
+      Pending: updatedEnrollment ? formatPaiseToINR(updatedEnrollment.pendingAmount) : '-',
     }).catch(() => {})
 
     return NextResponse.json({

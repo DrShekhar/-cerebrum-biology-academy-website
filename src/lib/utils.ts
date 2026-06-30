@@ -62,6 +62,28 @@ export function typedKeys<K extends string>(obj: Record<K, unknown>): K[] {
 }
 
 /**
+ * Money unit convention:
+ * `courses.totalFees`, `enrollments.{totalFees,paidAmount,pendingAmount}` and
+ * `payments.amount` are all stored as integer PAISE (₹1 = 100 paise), matching
+ * Razorpay's native unit. Convert to rupees ONLY at a display boundary.
+ * (The fee_plans / payment_installments subsystem is separate — Decimal rupees.)
+ */
+
+/** Integer paise → rupees (number). e.g. 7200000 → 72000. */
+export function paiseToRupees(paise: number | null | undefined): number {
+  return Math.round(Number(paise ?? 0)) / 100
+}
+
+/** Integer paise → localized ₹ string for display. e.g. 7200000 → "₹72,000". */
+export function formatPaiseToINR(paise: number | null | undefined): string {
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: 0,
+  }).format(paiseToRupees(paise))
+}
+
+/**
  * Parse a positive integer query param (e.g. ?limit / ?page) safely.
  * Returns `fallback` for null/empty/non-numeric values (plain parseInt would
  * yield NaN, which throws when handed to Prisma `take`/`skip`). The result is

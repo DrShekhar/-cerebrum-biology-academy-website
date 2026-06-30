@@ -107,7 +107,8 @@ export async function POST(request: NextRequest) {
         type: validatedData.type as any,
         class: validatedData.class as any,
         duration: validatedData.duration,
-        totalFees: validatedData.totalFees,
+        // Form collects rupees; courses.totalFees is stored in paise.
+        totalFees: Math.round(validatedData.totalFees * 100),
         syllabus: validatedData.syllabus || null,
         features: validatedData.features || null,
         isActive: true,
@@ -182,7 +183,8 @@ export async function PUT(request: NextRequest) {
         type: validatedData.type as any,
         class: validatedData.class as any,
         duration: validatedData.duration,
-        totalFees: validatedData.totalFees,
+        // Form collects rupees; courses.totalFees is stored in paise.
+        totalFees: Math.round(validatedData.totalFees * 100),
         syllabus: validatedData.syllabus || null,
         features: validatedData.features || null,
         isActive: validatedData.isActive,

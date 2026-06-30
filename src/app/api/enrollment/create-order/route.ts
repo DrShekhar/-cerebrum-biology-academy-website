@@ -90,6 +90,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid amount' }, { status: 400 })
     }
 
+    // The client sends rupee amounts; all course/enrollment money columns are
+    // stored in paise (Razorpay's unit) — convert once here.
+    const totalAmountPaise = Math.round(totalAmount * 100)
+
     if (!process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
       console.error('Razorpay credentials not configured')
       return NextResponse.json({ error: 'Payment service not configured' }, { status: 503 })
@@ -156,7 +160,7 @@ export async function POST(request: NextRequest) {
             | 'NEET_COMPLETE',
           class: courseInfo.class as 'CLASS_9' | 'CLASS_10' | 'CLASS_11' | 'CLASS_12' | 'DROPPER',
           duration: classLevel === '2-year' ? 24 : 12,
-          totalFees: totalAmount,
+          totalFees: totalAmountPaise,
           isActive: true,
           updatedAt: new Date(),
         },
@@ -177,9 +181,9 @@ export async function POST(request: NextRequest) {
         userId: user.id,
         courseId: course.id,
         status: 'PENDING',
-        totalFees: totalAmount,
+        totalFees: totalAmountPaise,
         paidAmount: 0,
-        pendingAmount: totalAmount,
+        pendingAmount: totalAmountPaise,
         paymentPlan: paymentPlanMap[paymentPlan] || 'FULL',
         updatedAt: new Date(),
       },
