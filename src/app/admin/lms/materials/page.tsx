@@ -126,6 +126,12 @@ export default function MaterialsListPage() {
 
           <div className="flex gap-3">
             <Link
+              href="/admin/lms/questions/review"
+              className="px-6 py-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 transition-colors"
+            >
+              ✨ Review AI Questions
+            </Link>
+            <Link
               href="/admin/lms/videos/upload"
               className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
             >
