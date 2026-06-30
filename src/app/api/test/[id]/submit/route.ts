@@ -379,11 +379,23 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     // the analytics/Performance Snapshot + learning path). Without this it stayed
     // IN_PROGRESS/score 0 forever, polluting averages. Complete it with the real
     // score here so both models stay consistent.
-    const linkedResponse = await prisma.user_question_responses.findFirst({
-      where: { testSessionId },
-      select: { testAttemptId: true },
+    //
+    // test_attempts has no FK to test_sessions — they're parallel rows created
+    // together in the session-create route, correlated only by user + template.
+    // Match the still-open attempt for this user (and template, when present). A
+    // miss just skips the guarded attempt sync below, so the session still
+    // completes — never a 500. (Previously this selected a non-existent
+    // `testAttemptId` field on user_question_responses → 500 on every submission.)
+    const linkedAttempt = await prisma.test_attempts.findFirst({
+      where: {
+        freeUserId: session.userId,
+        testTemplateId: testSession.test_templates?.id ?? undefined,
+        status: { not: 'COMPLETED' },
+      },
+      orderBy: { startedAt: 'desc' },
+      select: { id: true },
     })
-    const linkedAttemptId = linkedResponse?.testAttemptId || null
+    const linkedAttemptId = linkedAttempt?.id || null
 
     // Use transaction to update everything atomically
     const result = await prisma.$transaction(async (tx) => {

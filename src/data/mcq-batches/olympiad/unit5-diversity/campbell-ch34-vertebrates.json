@@ -67,7 +67,7 @@
       "topic": "Conodonts — Vertebrate Affinity"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding the characteristics of Urochordata (tunicates), mark each statement as True (T) or False (F):\n(I) Adult tunicates retain the notochord throughout their life\n(II) Tunicate larvae possess a post-anal tail with a notochord\n(III) Tunicates are the closest living relatives of vertebrates based on molecular phylogenetics\n(IV) The tunicate body is covered by a cellulose-containing structure called the tunic",
       "options": ["FTTT", "FFTT", "TFTT", "FTTF"],
       "correctAnswer": "A",
@@ -302,7 +302,7 @@
       "topic": "Chytrid Fungus — Amphibian Decline"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding metamorphosis in anuran amphibians (frogs), mark each statement as True (T) or False (F):\n(I) Thyroid hormones (T3/T4) are the primary endocrine triggers of metamorphosis\n(II) The tail is resorbed through necrosis caused by bacterial infection\n(III) The lateral line system is lost during metamorphosis in most terrestrial species\n(IV) Larval hemoglobin is replaced by adult hemoglobin with different oxygen-binding properties",
       "options": ["TFTT", "TTFT", "TFTF", "TFFT"],
       "correctAnswer": "A",
@@ -577,7 +577,7 @@
       "topic": "Placental Evolution — Viral Contribution"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding primate evolution and human characteristics, mark each statement as True (T) or False (F):\n(I) Humans and chimpanzees share approximately 99% DNA sequence identity\n(II) Bipedalism evolved before significant brain enlargement in the hominin lineage\n(III) Neanderthals (Homo neanderthalensis) are direct ancestors of modern Homo sapiens\n(IV) The genus Homo first appeared in Africa approximately 2.5 million years ago",
       "options": ["TTFT", "TTFF", "TFFT", "TTTF"],
       "correctAnswer": "A",
@@ -952,7 +952,7 @@
       "topic": "Platypus Electroreception"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding the diversity of mammalian reproductive strategies, mark each statement as True (T) or False (F):\n(I) Marsupials have a shorter gestation period than placental mammals of equivalent body size\n(II) In kangaroos, embryonic diapause allows a dormant blastocyst to pause development while an older joey is still nursing\n(III) Monotreme eggs are large, yolk-rich, and have a hard calcareous shell like bird eggs\n(IV) The placenta of eutherian mammals is derived from both fetal and maternal tissues",
       "options": ["TTFT", "TTTF", "TTTT", "TFFT"],
       "correctAnswer": "A",
@@ -1387,7 +1387,7 @@
       "topic": "Tetrapod Terrestrial Locomotion"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding adaptations of marine mammals, mark each statement as True (T) or False (F):\n(I) Whales achieve deep dives partly by collapsing their lungs at depth to prevent nitrogen narcosis\n(II) Pinnipeds (seals) have a higher blood volume per body mass than terrestrial mammals of similar size\n(III) Marine mammals maintain body temperature using blubber, which also functions as an energy reserve and buoyancy aid\n(IV) Dolphins echolocate using vocalizations produced by the larynx, similar to toothed whale sonar",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "B",
@@ -1842,7 +1842,7 @@
       "topic": "Coelacanth — Living Fossil"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding the evolution of tetrapod limbs from fish fins, mark each statement as True (T) or False (F):\n(I) The bones of the tetrapod forelimb (humerus, radius, ulna) have clear homologs in the lobed fins of sarcopterygian fishes\n(II) Digits (fingers and toes) have direct homologs in fish fin rays\n(III) The Hox gene expression patterns that specify limb identity are conserved between fish fins and tetrapod limbs\n(IV) The apical ectodermal ridge (AER) that drives limb bud outgrowth is found only in tetrapods, not in fish fin development",
       "options": ["TFTT", "TTFT", "TFTF", "TFFT"],
       "correctAnswer": "C",

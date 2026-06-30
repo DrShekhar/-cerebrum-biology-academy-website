@@ -1,22 +1,27 @@
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
 export const revalidate = 3600 // Cache for 1 hour
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
+    // Optional curriculum/board scope (e.g. 'Campbell' for AP/USABO/olympiad,
+    // 'NCERT' for NEET) so tab badges can reflect an exam-specific question set.
+    const curriculum = new URL(request.url).searchParams.get('curriculum') || undefined
+    const base = { isActive: true, isVerified: true, ...(curriculum ? { curriculum } : {}) }
+
     const [allCount, ncertCount, pyqCount, olympiadCount] = await Promise.all([
       prisma.questions.count({
-        where: { isActive: true, isVerified: true },
+        where: { ...base },
       }),
       prisma.questions.count({
-        where: { isActive: true, isVerified: true, isNcertBased: true },
+        where: { ...base, isNcertBased: true },
       }),
       prisma.questions.count({
-        where: { isActive: true, isVerified: true, examYear: { not: null } },
+        where: { ...base, examYear: { not: null } },
       }),
       prisma.questions.count({
-        where: { isActive: true, isVerified: true, isOlympiad: true },
+        where: { ...base, isOlympiad: true },
       }),
     ])
 

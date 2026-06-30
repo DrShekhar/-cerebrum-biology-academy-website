@@ -487,7 +487,7 @@
       "topic": "Soil and Plant Nutrition"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match each mineral nutrient deficiency with its most characteristic visual symptom:\n(I) Nitrogen deficiency\n(II) Potassium deficiency\n(III) Calcium deficiency\n(IV) Sulfur deficiency\n\n(P) General chlorosis starting from older leaves, eventually turning purple\n(Q) Marginal leaf scorch (necrosis) beginning on older leaves\n(R) Distorted and necrotic growing points, blossom-end rot in fruits\n(S) Uniform chlorosis of young leaves similar to nitrogen deficiency but not starting from older leaves",
       "options": [
         "I-P, II-Q, III-R, IV-S",
@@ -707,7 +707,7 @@
       "topic": "Soil and Plant Nutrition"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match each plant-microbe interaction with the correct signaling molecule involved in establishing the symbiosis:\n(I) Legume-Rhizobium symbiosis\n(II) Plant-Arbuscular mycorrhizal (AM) symbiosis\n(III) Actinorhizal-Frankia symbiosis\n(IV) Striga parasitism on host crops\n\n(P) Strigolactones\n(Q) Nod factors (lipochitooligosaccharides)\n(R) Myc factors (short-chain chitooligosaccharides and lipochitooligosaccharides)\n(S) Unknown signals; some evidence for Nod factor-independent pathways",
       "options": [
         "I-Q, II-R, III-S, IV-P",
@@ -1587,7 +1587,7 @@
       "topic": "Soil and Plant Nutrition"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match each essential micronutrient with its primary enzymatic or metabolic function in plants:\n(I) Iron (Fe)\n(II) Zinc (Zn)\n(III) Copper (Cu)\n(IV) Manganese (Mn)\n\n(P) Central component of the oxygen-evolving complex in PSII\n(Q) Cofactor for carbonic anhydrase and required for tryptophan synthesis (auxin precursor)\n(R) Component of cytochromes, ferredoxin, and Fe-S clusters in electron transport chains\n(S) Required for plastocyanin (PSI electron carrier) and lignin biosynthesis by laccase",
       "options": [
         "I-R, II-Q, III-S, IV-P",

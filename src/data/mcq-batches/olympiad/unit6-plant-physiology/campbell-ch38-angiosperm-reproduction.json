@@ -767,7 +767,7 @@
       "topic": "Angiosperm Reproduction"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match each type of fruit with its correct botanical definition and example:\n(I) Simple fruit\n(II) Aggregate fruit\n(III) Multiple fruit\n(IV) Accessory fruit\n\n(P) Develops from a single ovary of a single flower (e.g., peach, tomato, pea pod)\n(Q) Develops from an inflorescence—multiple fused flowers (e.g., pineapple, fig, mulberry)\n(R) Develops from multiple separate carpels of a single flower (e.g., raspberry, strawberry receptacle achenes excluded)\n(S) Includes substantial non-carpel tissue (receptacle, hypanthium) as part of the edible flesh (e.g., apple, strawberry)",
       "options": [
         "I-P, II-R, III-Q, IV-S",
@@ -1327,7 +1327,7 @@
       "topic": "Angiosperm Reproduction"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match each component of the mature embryo sac with its function:\n(I) Egg cell\n(II) Synergid cells\n(III) Central cell (with two polar nuclei)\n(IV) Antipodal cells\n\n(P) Fuses with one sperm to form the triploid endosperm that nourishes the developing embryo\n(Q) Fuses with one sperm to form the diploid zygote that develops into the embryo\n(R) Secrete LURE peptides for pollen tube guidance and facilitate pollen tube reception\n(S) May have nutritive functions; degenerate early in many species",
       "options": [
         "I-Q, II-R, III-P, IV-S",

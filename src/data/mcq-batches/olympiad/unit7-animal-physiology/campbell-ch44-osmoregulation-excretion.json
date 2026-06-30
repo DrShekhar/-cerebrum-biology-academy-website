@@ -87,7 +87,7 @@
       "topic": "Osmoregulation and Excretion"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about nitrogen excretion in animals:\n\nI. Ammoniotelic animals excrete nitrogen primarily as ammonia, which is highly toxic but requires little energy to produce and is readily diluted in surrounding water\nII. Ureotelic animals convert ammonia to urea via the ornithine-urea cycle in the liver, requiring ATP but producing a less toxic, moderately soluble compound\nIII. Uricotelic animals excrete nitrogen as uric acid, which requires more ATP but is nearly insoluble, allowing excretion as a semi-solid paste with minimal water loss\nIV. All animals are strictly limited to one form of nitrogen excretion throughout their entire life cycle",
       "options": ["TTTF", "TTFF", "TFTT", "TTTT"],
       "correctAnswer": "A",
@@ -202,7 +202,7 @@
       "topic": "Osmoregulation and Excretion"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about glomerular filtration:\n\nI. Glomerular filtration is driven by net filtration pressure, which equals glomerular capillary hydrostatic pressure minus Bowman's capsule hydrostatic pressure and glomerular capillary oncotic pressure\nII. The filtration barrier consists of fenestrated endothelium, glomerular basement membrane (GBM), and podocyte foot processes with slit diaphragms containing nephrin\nIII. The barrier allows free filtration of molecules up to approximately 7,000 Da while restricting albumin passage based on both size and charge selectivity\nIV. GFR is independent of renal blood flow and cannot be regulated by afferent or efferent arteriolar tone",
       "options": ["TFTT", "TTFF", "TTTF", "TTTT"],
       "correctAnswer": "C",
@@ -377,7 +377,7 @@
       "topic": "Osmoregulation and Excretion"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about potassium homeostasis in the kidney:\n\nI. Approximately 65% of filtered K+ is reabsorbed in the proximal tubule via paracellular pathways driven by solvent drag\nII. The thick ascending limb reabsorbs approximately 25% of filtered K+ via the apical NKCC2 cotransporter, with K+ recycling back to the lumen through ROMK channels\nIII. The cortical collecting duct is the primary site for regulated K+ secretion, where principal cells secrete K+ through apical ROMK and BK (big conductance) channels driven by the lumen-negative transepithelial potential created by ENaC-mediated Na+ reabsorption\nIV. Hyperkalemia directly inhibits aldosterone release from the adrenal cortex",
       "options": ["TTTF", "TFTT", "TTFF", "TTTT"],
       "correctAnswer": "A",
@@ -532,7 +532,7 @@
       "topic": "Osmoregulation and Excretion"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about osmoconformers and osmoregulators:\n\nI. Osmoconformers (most marine invertebrates) allow their body fluid osmolality to match the surrounding seawater, minimizing the energy cost of osmoregulation\nII. Even osmoconformers typically regulate the concentrations of specific ions (particularly K+, Ca2+, Mg2+, SO42-) differently from seawater through ionoregulation\nIII. Osmoregulators (all vertebrates, some crustaceans) maintain internal osmolality different from the environment, expending energy to pump ions against concentration gradients\nIV. Hagfish are the only vertebrates that are marine osmoconformers, with body fluid osmolality nearly identical to seawater",
       "options": ["TTTF", "TFTT", "TTFF", "TTTT"],
       "correctAnswer": "D",
@@ -647,7 +647,7 @@
       "topic": "Osmoregulation and Excretion"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about renal handling of bicarbonate and the kidney's role in acid-base balance:\n\nI. The kidneys reabsorb approximately 4,320 mEq of filtered HCO3- per day, primarily in the proximal tubule via the NHE3/carbonic anhydrase mechanism\nII. The kidneys generate 'new' HCO3- by excreting H+ as titratable acid (primarily H2PO4-) and as ammonium (NH4+), replacing the HCO3- consumed by daily metabolic acid production\nIII. Ammonium (NH4+) is produced by proximal tubular cells from glutamine via glutaminase and glutamate dehydrogenase, and its excretion is upregulated during chronic metabolic acidosis\nIV. The kidneys respond to acid-base disturbances within minutes, making them the fastest compensatory mechanism",
       "options": ["TTTT", "TTFF", "TFTT", "TTTF"],
       "correctAnswer": "D",
@@ -742,7 +742,7 @@
       "topic": "Osmoregulation and Excretion"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about osmoregulation in amphibians:\n\nI. Freshwater frogs are hyperosmotic to their environment and absorb water osmotically across their highly permeable skin, requiring production of large volumes of dilute urine\nII. The frog skin actively absorbs Na+ and Cl- from the surrounding freshwater through apical ENaC-like channels and Cl- channels, driven by basolateral Na+/K+-ATPase — the Koefoed-Johnsen and Ussing model\nIII. During terrestrial exposure, some tree frogs reduce cutaneous water loss by secreting lipid-rich substances from specialized glands, dramatically reducing skin permeability\nIV. The urinary bladder in amphibians is an important osmoregulatory organ that stores dilute urine and can reabsorb water under the influence of arginine vasotocin (AVT, the amphibian ADH analog)",
       "options": ["TTTT", "TTFT", "TFTT", "TTTF"],
       "correctAnswer": "A",

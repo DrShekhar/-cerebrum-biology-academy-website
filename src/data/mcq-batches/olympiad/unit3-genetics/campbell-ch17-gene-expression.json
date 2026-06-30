@@ -107,7 +107,7 @@
       "topic": "Spliceosome first transesterification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the genetic code:\nS1: The genetic code is universal with absolutely no exceptions across all domains of life\nS2: Wobble base pairing allows a single tRNA to recognize multiple codons that differ in their third position\nS3: The code is degenerate because most amino acids are specified by more than one codon\nS4: Frameshift mutations caused by insertions or deletions affect only the codon where the mutation occurs",
       "options": [
         "S1-False, S2-True, S3-True, S4-False",
@@ -327,7 +327,7 @@
       "topic": "SRP translational arrest and targeting"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about eukaryotic mRNA processing:\nS1: The 5' cap (m7GpppN) is added co-transcriptionally when the nascent RNA is approximately 20-30 nucleotides long\nS2: Polyadenylation involves cleavage of the pre-mRNA downstream of the AAUAAA signal followed by addition of ~250 adenines by poly-A polymerase\nS3: Introns are always removed in a strict 5'-to-3' order corresponding to their position in the pre-mRNA\nS4: The exon junction complex (EJC) is deposited 20-24 nucleotides upstream of exon-exon junctions after splicing and plays a role in mRNA quality control",
       "options": [
         "S1-True, S2-True, S3-False, S4-True",
@@ -547,7 +547,7 @@
       "topic": "C-to-U RNA editing of apoB"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about transfer RNA (tRNA) structure and function:\nS1: All tRNAs have the conserved 3' terminal sequence CCA, which is added post-transcriptionally by the CCA-adding enzyme and is the site of amino acid attachment\nS2: The anticodon loop always contains exactly three nucleotides that base-pair with the codon\nS3: tRNAs contain numerous modified nucleosides such as pseudouridine, dihydrouridine, and inosine that are important for proper folding and function\nS4: Each aminoacyl-tRNA synthetase recognizes only the anticodon of its cognate tRNA for identity",
       "options": [
         "S1-True, S2-True, S3-True, S4-False",
@@ -887,7 +887,7 @@
       "topic": "Ribosome recycling factor"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about mutations and their effects on gene expression:\nS1: A silent (synonymous) mutation always has no effect on protein function or gene expression\nS2: A conservative missense mutation replaces an amino acid with one having similar chemical properties and is less likely to disrupt protein function than a non-conservative change\nS3: Insertions and deletions of three nucleotides (or multiples of three) within a coding region do not cause frameshifts\nS4: A mutation in the -10 region (Pribnow box) of a bacterial promoter would likely increase transcription by enhancing RNA polymerase binding",
       "options": [
         "S1-False, S2-True, S3-True, S4-False",
@@ -1187,7 +1187,7 @@
       "topic": "Cycloheximide vs puromycin mechanisms"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about eukaryotic transcription factors and promoter elements:\nS1: The TATA box is found in all eukaryotic promoters and is required for transcription of every gene\nS2: CpG islands are GC-rich regions near promoters of housekeeping genes and are typically unmethylated in expressing cells\nS3: Enhancers can function at distances of hundreds of kilobases from their target promoters and can work in either orientation\nS4: The BRE (TFIIB Recognition Element) is directly recognized by RNA Polymerase II without any transcription factors",
       "options": [
         "S1-False, S2-True, S3-True, S4-False",
@@ -1487,7 +1487,7 @@
       "topic": "eIF4A helicase in scanning"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about bacterial vs eukaryotic transcription:\nS1: Bacterial RNA polymerase is a single enzyme that transcribes all types of RNA (mRNA, tRNA, rRNA), while eukaryotes use three specialized RNA polymerases\nS2: Bacterial promoters use sigma factors for recognition while eukaryotic Pol II promoters use general transcription factors (GTFs)\nS3: Bacterial transcription and translation occur simultaneously in the same compartment\nS4: Eukaryotic pre-mRNAs require no processing before translation; they are translated directly as primary transcripts",
       "options": [
         "S1-True, S2-True, S3-True, S4-False",
@@ -1787,7 +1787,7 @@
       "topic": "Non-stop decay pathway"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about RNA polymerase II transcription elongation:\nS1: The transition from initiation to productive elongation requires phosphorylation of the CTD at Ser2 by P-TEFb (CDK9/Cyclin T)\nS2: DSIF and NELF are negative elongation factors that cause promoter-proximal pausing of RNA Pol II, a widespread regulatory mechanism in metazoans\nS3: During elongation, RNA Pol II maintains a transcription bubble of approximately 12-14 base pairs with 8-9 nucleotides of RNA-DNA hybrid\nS4: Backtracking occurs when RNA Pol II slides backward on the template, and TFIIS stimulates the intrinsic endonuclease activity of Pol II to cleave the extruded 3' RNA and resume forward synthesis",
       "options": [
         "S1-True, S2-True, S3-True, S4-True",
@@ -2107,7 +2107,7 @@
       "topic": "RNA world hypothesis evidence"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about post-translational protein modifications and their functions:\nS1: Phosphorylation by protein kinases adds a phosphate group primarily to serine, threonine, or tyrosine residues and is reversible by phosphatases\nS2: Ubiquitination always targets proteins for proteasomal degradation\nS3: SUMOylation (Small Ubiquitin-like Modifier) often antagonizes ubiquitination at the same lysine residues and typically promotes nuclear localization or protein-protein interactions\nS4: Acetylation of histone lysine residues is catalyzed by histone acetyltransferases (HATs) and generally correlates with transcriptional activation",
       "options": [
         "S1-True, S2-False, S3-True, S4-True",
@@ -2467,7 +2467,7 @@
       "topic": "Divergent transcription asymmetric fate"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about RNA modifications and their biological significance:\nS1: The 5' cap structure (m7GpppN) protects mRNA from 5'-to-3' exonucleolytic degradation and is recognized by eIF4E for translation initiation\nS2: Pseudouridine (the most abundant RNA modification) is found in tRNA, rRNA, and mRNA, and can affect RNA structure and translational fidelity\nS3: 2'-O-methylation of the first and second nucleotides after the cap (Cap1 and Cap2 modifications) is required to distinguish self from non-self RNA in the innate immune system\nS4: RNA modifications are irreversible and cannot be dynamically regulated",
       "options": [
         "S1-True, S2-True, S3-True, S4-False",

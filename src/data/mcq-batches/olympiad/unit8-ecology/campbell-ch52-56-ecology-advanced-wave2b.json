@@ -207,7 +207,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about Lotka-Volterra predator-prey dynamics and trophic cascades:\nS1: TRUE — In the classic Lotka-Volterra predator-prey model, prey and predator populations oscillate in linked cycles, with predator peaks lagging behind prey peaks by approximately one-quarter of the cycle period, because predator population growth depends on prey availability with a time delay.\nS2: FALSE — A trophic cascade occurs when a top predator suppresses herbivore populations, indirectly increasing plant biomass; this is an example of top-down control because the regulatory effect propagates downward from apex predators through lower trophic levels.\nS3: TRUE — Adding a predator refuge (a spatial area where prey are safe from predation) to a Lotka-Volterra system stabilizes oscillations by setting a floor on prey density, preventing the overshooting and crashing dynamics that drive neutral cycles.\nS4: FALSE — In the classic Lotka-Volterra predator-prey model, the oscillations are structurally stable, meaning small perturbations from equilibrium always return the system to the same limit cycle regardless of the magnitude of the perturbation.",
       "options": [
         "A) S1 correct, S2 correct, S3 correct, S4 correct",
@@ -227,7 +227,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about climate change impacts on ecosystems:\nS1: TRUE — Phenological mismatch occurs when climate change causes differential shifts in the timing of interacting species' life-cycle events; for example, if plants flower earlier due to warming but their pollinators do not advance emergence equally, the temporal overlap between flower availability and pollinator activity decreases, reducing reproductive success of both.\nS2: FALSE — Coral bleaching occurs when elevated sea surface temperatures cause corals to expel their symbiotic zooxanthellae (dinoflagellates of the family Symbiodiniaceae); if temperatures remain elevated, the coral cannot recover its photosynthetic symbionts and dies from starvation since zooxanthellae provide up to 90% of the coral's energy.\nS3: TRUE — Climate velocity — the speed at which isotherms shift across a landscape — determines whether species can track suitable climatic conditions through migration; flat terrain has higher climate velocity than mountainous terrain because equivalent temperature changes require longer horizontal distances compared to short elevational shifts.\nS4: TRUE — All biomes will shift poleward at equal rates under global warming because temperature is the sole determinant of biome boundaries, and precipitation patterns, soil types, and disturbance regimes are irrelevant to biome distribution.",
       "options": [
         "A) S1 correct, S2 correct, S3 correct, S4 incorrect",
@@ -247,7 +247,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about landscape ecology and habitat fragmentation:\nS1: TRUE — Edge effects in forest fragments create microclimatic gradients (increased light, wind, temperature, decreased humidity) that penetrate 50-300 m into the fragment interior, favoring generalist and disturbance-adapted species over forest-interior specialists.\nS2: FALSE — The SLOSS debate (Single Large Or Several Small reserves) was definitively resolved in favor of several small reserves because multiple small reserves always capture more total species than a single large reserve of the same total area.\nS3: TRUE — Matrix quality — the permeability of the non-habitat landscape surrounding habitat patches — is often more important than corridor presence in determining functional connectivity for many species, because a hospitable matrix allows diffuse dispersal across the entire landscape rather than channeling movement through narrow corridors.\nS4: FALSE — Habitat fragmentation per se (breaking apart of habitat independent of habitat loss) always has negative effects on biodiversity, and no species benefits from increased edge habitat, smaller patch sizes, or landscape heterogeneity.",
       "options": [
         "A) S1 correct, S2 correct, S3 correct, S4 correct",
@@ -267,7 +267,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about restoration ecology and rewilding:\nS1: TRUE — Reference ecosystems in restoration ecology serve as models or targets for restoration, representing the historical or desired ecological condition; however, the concept is complicated by shifting baselines, novel ecosystems, and the recognition that historical conditions may be unachievable under current climate.\nS2: TRUE — Assisted migration (managed relocation) involves deliberately moving species to areas outside their current range to prevent extinction from climate change; it is universally accepted by conservation biologists because the benefits of preventing extinction always outweigh the risks of creating new invasive species.\nS3: FALSE — Rewilding involves reintroducing large mammals (megafauna) and apex predators to restore top-down ecological processes; the reintroduction of wolves to Yellowstone in 1995 demonstrated trophic cascades as wolf predation on elk reduced browsing pressure, allowing riparian vegetation recovery and associated changes in stream geomorphology.\nS4: TRUE — The novel weapons hypothesis explains some invasion success by proposing that exotic species produce biochemical compounds (allelopathic chemicals, novel pathogens) to which native species have no evolved tolerance, giving invaders a competitive advantage unrelated to enemy release.",
       "options": [
         "A) S1 correct, S2 incorrect, S3 correct, S4 correct",
@@ -287,7 +287,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about biogeochemical cycles:\nS1: TRUE — Denitrification is an anaerobic process carried out by facultative anaerobic bacteria (e.g., Pseudomonas) that reduces NO3- stepwise through NO2-, NO, and N2O to N2 gas, returning fixed nitrogen to the atmosphere and representing a major pathway of nitrogen loss from ecosystems.\nS2: FALSE — The phosphorus cycle has no gaseous phase and no significant atmospheric reservoir; phosphorus cycles between terrestrial rocks/sediments and aquatic systems primarily through weathering, biological uptake, and sedimentation, making phosphorus a slow-cycling nutrient.\nS3: TRUE — Nitrification is an aerobic two-step chemoautotrophic process: ammonia-oxidizing bacteria (e.g., Nitrosomonas) and archaea oxidize NH4+ to NO2-, then nitrite-oxidizing bacteria (e.g., Nitrobacter) oxidize NO2- to NO3-; both steps generate energy for carbon fixation.\nS4: TRUE — Eutrophication in freshwater systems is primarily driven by nitrogen loading because Liebig's law identifies nitrogen as the nutrient in shortest supply relative to biological demand in all freshwater ecosystems worldwide.",
       "options": [
         "A) S1 correct, S2 incorrect, S3 correct, S4 incorrect",
@@ -307,7 +307,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about source-sink metapopulation dynamics and the rescue effect:\nS1: TRUE — Source habitats have positive local population growth (lambda > 1, births + immigration > deaths + emigration), producing surplus individuals that disperse to colonize other patches, while sink habitats have negative local growth (lambda < 1) and persist only through immigration from sources.\nS2: FALSE — The rescue effect in metapopulation biology refers to immigration from occupied patches reducing the probability of local extinction in small subpopulations by supplementing declining populations with new individuals, thereby maintaining genetic diversity and demographic stability.\nS3: TRUE — Ecological traps are sink habitats that organisms preferentially settle in because environmental cues misindicating high habitat quality attract settlers despite low actual fitness; these traps arise when rapid environmental change decouples habitat selection cues from true habitat quality.\nS4: FALSE — In a source-sink system, eliminating corridors between patches would have no effect on sink populations because sink populations are self-sustaining by definition and do not depend on immigration for persistence.",
       "options": [
         "A) S1 correct, S2 incorrect, S3 correct, S4 correct",
@@ -327,7 +327,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about ecosystem services and their valuation:\nS1: TRUE — Ecosystem services are classified into four categories by the Millennium Ecosystem Assessment: provisioning services (food, water, timber), regulating services (climate regulation, flood control, pollination), cultural services (recreation, spiritual values), and supporting services (nutrient cycling, soil formation, primary productivity).\nS2: FALSE — Pollination services provided by wild bees and other insects have been valued at approximately $235-577 billion globally per year; this represents the cost that would be required to replace insect pollination with artificial hand-pollination or technological alternatives.\nS3: TRUE — Wetlands provide ecosystem services worth far more per hectare than most other biomes because they simultaneously deliver flood control (absorbing excess water), water purification (filtering nutrients and pollutants), carbon sequestration (peat accumulation), biodiversity support (nursery habitat), and coastal protection.\nS4: TRUE — Payment for ecosystem services (PES) schemes are guaranteed to conserve biodiversity because landowners receiving financial compensation will always maintain natural habitats rather than converting them to agriculture, regardless of the payment amount relative to agricultural revenue.",
       "options": [
         "A) S1 correct, S2 incorrect, S3 correct, S4 incorrect",
@@ -347,7 +347,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about invasion biology:\nS1: TRUE — Propagule pressure (the number of individuals introduced and the frequency of introduction events) is one of the strongest predictors of invasion success across taxa and ecosystems, because larger and more frequent introductions increase the probability of establishing a self-sustaining population by overcoming demographic stochasticity and Allee effects.\nS2: FALSE — The biotic resistance hypothesis predicts that species-rich communities are more resistant to invasion because diverse communities more completely utilize available resources and harbor more natural enemies, leaving fewer vacant niches for invaders to exploit.\nS3: TRUE — Invasive species that act as ecosystem engineers (e.g., zebra mussels filtering water, Eurasian boar rooting soil, invasive earthworms altering forest floor litter dynamics) can have community-wide impacts far exceeding their direct competitive or predatory effects on individual native species.\nS4: TRUE — All invasive species exhibit r-selected life history traits including high fecundity, rapid growth, small body size, and short generation time, which universally confer invasion advantage regardless of the recipient ecosystem.",
       "options": [
         "A) S1 correct, S2 incorrect, S3 correct, S4 incorrect",

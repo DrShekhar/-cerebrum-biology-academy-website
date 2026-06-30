@@ -207,7 +207,7 @@
       "topic": "Genetics and Evolution"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding histone modifications and the 'histone code' hypothesis in eukaryotic gene regulation, evaluate the following statements:",
       "options": [
         "S1: TRUE — H3K4me3 (trimethylation of lysine 4 on histone H3) is strongly associated with active promoters and is deposited by COMPASS/SET1 family methyltransferases",
@@ -227,7 +227,7 @@
       "topic": "Genetics and Evolution"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding transposable elements and their molecular mechanisms, evaluate the following statements:",
       "options": [
         "S1: TRUE — P elements in Drosophila encode a transposase that is only active in germline cells because a tissue-specific splicing event removes an intron (IVS3) that is retained in somatic cells, producing a repressor protein instead",
@@ -247,7 +247,7 @@
       "topic": "Genetics and Evolution"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding alternative splicing regulation and SR proteins, evaluate the following statements:",
       "options": [
         "S1: TRUE — SR proteins (Serine/Arginine-rich proteins) generally promote exon inclusion by binding to exonic splicing enhancers (ESEs) and recruiting U1 snRNP to the upstream 5' splice site and U2AF to the downstream 3' splice site",
@@ -267,7 +267,7 @@
       "topic": "Genetics and Evolution"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding DNA methylation and epigenetic inheritance, evaluate the following statements:",
       "options": [
         "S1: TRUE — DNMT1 is the maintenance methyltransferase that recognizes hemimethylated CpG sites after DNA replication and methylates the newly synthesized daughter strand, ensuring faithful propagation of methylation patterns",
@@ -287,7 +287,7 @@
       "topic": "Genetics and Evolution"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding quantitative genetics concepts, evaluate the following statements:",
       "options": [
         "S1: TRUE — Broad-sense heritability (H2) measures the proportion of phenotypic variance due to total genetic variance (VG/VP), including additive, dominance, and epistatic components, while narrow-sense heritability (h2) includes only additive genetic variance (VA/VP)",
@@ -307,7 +307,7 @@
       "topic": "Genetics and Evolution"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding the lac operon kinetics and gene regulatory circuit behavior, evaluate the following statements:",
       "options": [
         "S1: TRUE — The lac operon exhibits bistability: at intermediate inducer (IPTG or allolactose) concentrations, individual cells in a genetically identical population can exist in either a fully induced or fully uninduced state, creating a bimodal distribution of expression levels",
@@ -327,7 +327,7 @@
       "topic": "Genetics and Evolution"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding long non-coding RNAs (lncRNAs) in gene regulation, evaluate the following statements:",
       "options": [
         "S1: TRUE — Xist is a 17 kb lncRNA that coats the future inactive X chromosome in cis, recruiting PRC2 to deposit H3K27me3 and initiating X chromosome inactivation in female mammals",
@@ -347,7 +347,7 @@
       "topic": "Genetics and Evolution"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding meiotic drive and segregation distortion, evaluate the following statements:",
       "options": [
         "S1: TRUE — The t-haplotype in mice is a classic segregation distorter where heterozygous +/t males transmit the t-allele to more than 90% of offspring due to a distorter-responder system that impairs the motility of +-bearing sperm",

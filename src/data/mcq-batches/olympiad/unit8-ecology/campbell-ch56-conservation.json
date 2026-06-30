@@ -67,7 +67,7 @@
       "topic": "Historical Extinctions"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about the economics of conservation:\nI. The global cost of effectively protecting the existing protected area network is estimated at $10-30 billion per year\nII. The economic value of ecosystem services provided by biodiversity far exceeds the cost of conservation\nIII. Most countries currently spend enough on conservation to meet their biodiversity protection goals\nIV. Market-based instruments (carbon credits, PES) can supplement but not replace public funding for conservation",
       "options": ["TTFT", "TTTF", "TFTT", "TTTT"],
       "correctAnswer": "A",
@@ -242,7 +242,7 @@
       "topic": "Land Sparing vs Land Sharing"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about the causes of species endangerment:\nI. Habitat destruction is the leading cause of species endangerment globally\nII. Overexploitation is the second most common threat to endangered species\nIII. Climate change is currently causing more species extinctions than habitat loss\nIV. Invasive species are the leading cause of extinction on islands",
       "options": ["TTFT", "TFTF", "TTTT", "TFFT"],
       "correctAnswer": "A",
@@ -852,7 +852,7 @@
       "topic": "Anthropocene Epoch"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about biodiversity hotspots:\nI. Biodiversity hotspots are defined as regions with at least 1,500 endemic plant species that have lost at least 70% of their original habitat\nII. Hotspots cover approximately 2.5% of Earth's land surface but contain over 50% of endemic plant species\nIII. All 36 recognized biodiversity hotspots are located in tropical regions\nIV. Protecting all hotspots would safeguard the majority of globally threatened terrestrial vertebrate species",
       "options": ["TTFT", "TTTF", "TTFF", "TFTT"],
       "correctAnswer": "A",
@@ -1147,7 +1147,7 @@
       "topic": "Global Biodiversity Framework"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about marine protected areas (MPAs):\nI. No-take MPAs (where fishing is prohibited) consistently show higher fish biomass and larger individual fish than adjacent fished areas\nII. MPAs can benefit adjacent fisheries through spillover of adults and larvae (the fishery spillover effect)\nIII. Most of the ocean's protected areas are effectively managed and enforced\nIV. Deep-sea MPAs are less common than coastal MPAs despite the deep sea covering most of the ocean floor",
       "options": ["TTFT", "TFTF", "TTTT", "TFFT"],
       "correctAnswer": "A",

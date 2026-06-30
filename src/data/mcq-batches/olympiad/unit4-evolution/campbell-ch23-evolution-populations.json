@@ -87,7 +87,7 @@
       "topic": "Evolution of Populations"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about genetic drift:\nS1: Genetic drift has a greater effect on allele frequencies in small populations than in large populations.\nS2: Genetic drift can lead to the fixation of deleterious alleles in small populations.\nS3: Genetic drift always increases the frequency of beneficial alleles in a population.\nS4: The founder effect and bottleneck effect are both special cases of genetic drift that reduce genetic variation.",
       "options": ["TTFT", "TTTT", "TFFT", "TFTF"],
       "correctAnswer": "A",
@@ -297,7 +297,7 @@
       "topic": "Evolution of Populations"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about mutation as an evolutionary force:\nS1: Mutation is the ultimate source of all new genetic variation in populations.\nS2: Mutation rates are typically high enough (>0.1 per locus per generation) to drive significant allele frequency changes in a single generation.\nS3: Mutation-selection balance occurs when the rate of introduction of deleterious alleles by mutation equals their rate of removal by selection.\nS4: Mutation alone, without selection, drift, or gene flow, can cause evolution by changing allele frequencies over many generations.",
       "options": ["TFTT", "TTTT", "TFTF", "TTFT"],
       "correctAnswer": "A",
@@ -412,7 +412,7 @@
       "topic": "Evolution of Populations"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about gene flow:\nS1: Gene flow tends to homogenize allele frequencies between populations, reducing genetic differentiation.\nS2: Even very low rates of gene flow (1 migrant per generation in a population of N individuals) can prevent genetic drift from causing substantial differentiation between populations.\nS3: Gene flow always increases the fitness of recipient populations by introducing beneficial alleles.\nS4: Gene flow can counteract local adaptation by introducing alleles that are locally maladapted but favored in the source population.",
       "options": ["TTFT", "TTTT", "TFTF", "TTFF"],
       "correctAnswer": "A",
@@ -587,7 +587,7 @@
       "topic": "Evolution of Populations"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the sources of genetic variation in populations:\nS1: Sexual reproduction through recombination and independent assortment generates new combinations of existing alleles, increasing genotypic diversity without creating new alleles.\nS2: Gene duplication followed by divergence of the duplicate copy can create new genes with novel functions.\nS3: Transposable elements can insert into or near genes, sometimes altering gene expression or function and providing a source of genetic variation.\nS4: Genetic variation is always beneficial to individual organisms.",
       "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
@@ -822,7 +822,7 @@
       "topic": "Evolution of Populations"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about types of natural selection:\nS1: Directional selection shifts the mean phenotype toward one extreme, reducing variation on that side of the distribution.\nS2: Stabilizing selection reduces phenotypic variance without changing the mean, by selecting against extreme phenotypes on both tails.\nS3: Disruptive selection reduces phenotypic variance by favoring intermediate phenotypes.\nS4: Frequency-dependent selection can maintain genetic polymorphism when rare phenotypes have a fitness advantage.",
       "options": ["TTFT", "TTTT", "TFTF", "TTFF"],
       "correctAnswer": "A",
@@ -1057,7 +1057,7 @@
       "topic": "Evolution of Populations"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about sexual selection:\nS1: Intersexual selection (mate choice) occurs when individuals of one sex (typically females) choose mates based on traits indicating genetic quality or direct benefits.\nS2: Intrasexual selection involves direct competition between members of the same sex (typically males) for access to mates.\nS3: The handicap principle (Zahavi) proposes that costly ornamental traits are honest signals of genetic quality because only high-quality individuals can afford to produce and maintain them.\nS4: Sexual selection and natural selection always act in the same direction on the same traits.",
       "options": ["TTTF", "TTTT", "TTFF", "TFTT"],
       "correctAnswer": "A",
@@ -1232,7 +1232,7 @@
       "topic": "Evolution of Populations"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the Hardy-Weinberg equilibrium model:\nS1: The Hardy-Weinberg model is useful because it provides a null hypothesis — deviations from HWE indicate that evolutionary forces are acting on the population.\nS2: A population can deviate from HWE at one locus while being in HWE at another locus.\nS3: If a population is in HWE at a locus, it proves that no evolution is occurring at that locus.\nS4: The Hardy-Weinberg model predicts that genotype frequencies reach equilibrium after one generation of random mating (for autosomal loci).",
       "options": ["TTFT", "TTTT", "TTTF", "TFTT"],
       "correctAnswer": "A",
@@ -1447,7 +1447,7 @@
       "topic": "Evolution of Populations"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about population genetics applications in conservation biology:\nS1: Small populations are vulnerable to inbreeding depression — reduced fitness due to increased homozygosity exposing deleterious recessive alleles.\nS2: Genetic rescue through introducing individuals from other populations can alleviate inbreeding depression by restoring heterozygosity.\nS3: The minimum viable population size for avoiding genetic problems is generally considered to be Ne > 50 for short-term inbreeding avoidance and Ne > 500 for long-term evolutionary potential (the 50/500 rule).\nS4: Genetic diversity has no relevance to population viability because natural selection will always maintain optimal adaptation.",
       "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
@@ -1602,7 +1602,7 @@
       "topic": "Evolution of Populations"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the Wright-Fisher model of genetic drift:\nS1: In the Wright-Fisher model, each generation is formed by randomly sampling 2N gene copies (with replacement) from the parental generation.\nS2: The expected time for a neutral allele to reach fixation, given that it does fix, is 4Ne generations.\nS3: Genetic drift affects all loci in the genome simultaneously, unlike selection which typically acts on specific loci.\nS4: In very large populations (Ne > 1 million), genetic drift has virtually no effect on allele frequencies.",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "A",
@@ -1837,7 +1837,7 @@
       "topic": "Evolution of Populations"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the relationship between evolution and fitness:\nS1: Natural selection always increases the mean fitness of a population.\nS2: The environment determines which traits are adaptive, so a trait that increases fitness in one environment may decrease fitness in a different environment.\nS3: Evolution can occur without any change in mean fitness, as when neutral alleles drift to fixation.\nS4: Individual organisms evolve during their lifetimes to become better adapted to their environment.",
       "options": ["FTTT", "FFTT", "FTTF", "TTTF"],
       "correctAnswer": "C",

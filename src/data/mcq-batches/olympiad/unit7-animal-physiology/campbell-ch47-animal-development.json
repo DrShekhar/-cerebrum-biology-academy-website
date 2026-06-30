@@ -1277,7 +1277,7 @@
       "topic": "Animal Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about epigenetic reprogramming during mammalian development:\n(I) After fertilization, both the maternal and paternal genomes undergo extensive DNA demethylation, but the paternal genome is demethylated more rapidly through an active TET3-mediated oxidation mechanism.\n(II) Imprinted genes escape the global wave of demethylation and maintain parent-of-origin-specific methylation marks throughout preimplantation development.\n(III) De novo methylation by DNMT3A and DNMT3B re-establishes DNA methylation patterns during post-implantation development.\n(IV) Histone modifications play no role in epigenetic reprogramming; only DNA methylation matters.",
       "options": ["FTTT", "TTFT", "TFTT", "TTTF"],
       "correctAnswer": "D",
@@ -1352,7 +1352,7 @@
       "topic": "Animal Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the role of the extracellular matrix (ECM) in embryonic development:\n(I) Fibronectin is essential for mesoderm cell migration during gastrulation, and its RGD (Arg-Gly-Asp) peptide sequence is recognized by integrin receptors on migrating cells.\n(II) Hyaluronic acid, a large glycosaminoglycan, creates hydrated spaces in the ECM that facilitate cell migration and tissue expansion, as seen in neural crest migration pathways and cardiac jelly formation.\n(III) Basal lamina (basement membrane) components including laminin and type IV collagen provide structural support and signaling cues, with laminin being the first ECM molecule deposited during development.\n(IV) The ECM serves only as a passive structural scaffold and has no role in signal transduction during development.",
       "options": ["TTFT", "TTTT", "TFTT", "TTTF"],
       "correctAnswer": "D",
@@ -1427,7 +1427,7 @@
       "topic": "Animal Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about axis determination in the chick embryo:\n(I) The anterior-posterior axis of the chick embryo is determined before gastrulation by the posterior marginal zone (PMZ), which expresses Vg1 (GDF1) and Wnt8C, and induces primitive streak formation through Nodal signaling.\n(II) Gravity plays a role in axis determination — as the egg rotates in the oviduct, the yolk rotates so that the blastoderm sits on top, and this tilting helps establish asymmetry by displacing the blastoderm relative to the yolk.\n(III) Koller's sickle, located at the posterior edge of the area pellucida, contains cells equivalent to the amphibian Nieuwkoop center and is essential for initiating gastrulation.\n(IV) The anterior region of the primitive streak (Hensen's node) is the chick equivalent of the Spemann organizer and can induce a secondary axis when transplanted to an ectopic site.",
       "options": ["TTFT", "TTTF", "TFTT", "TTTT"],
       "correctAnswer": "D",
@@ -1502,7 +1502,7 @@
       "topic": "Animal Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about programmed cell death (apoptosis) in development:\n(I) Apoptosis during development is executed primarily through the intrinsic (mitochondrial) pathway, where pro-apoptotic Bcl-2 family members (Bax, Bak) permeabilize the outer mitochondrial membrane, releasing cytochrome c which activates caspases.\n(II) In C. elegans, 131 of 1090 somatic cells generated during development undergo programmed cell death, and the core pathway involves CED-9 (Bcl-2 homolog, anti-apoptotic) inhibiting CED-4 (Apaf-1 homolog), which when released activates CED-3 (caspase).\n(III) BMP signaling triggers apoptosis in the interdigital mesenchyme of vertebrate limbs, sculpting the digits — blocking this apoptosis (as occurs naturally in duck webbed feet) results in tissue retention between digits.\n(IV) Developmental apoptosis is a pathological process that occurs only when cells are damaged or infected.",
       "options": ["TTTF", "TTFT", "FTTT", "TFTT"],
       "correctAnswer": "A",
@@ -1557,7 +1557,7 @@
       "topic": "Animal Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about Nodal signaling in vertebrate development:\n(I) Nodal is a TGF-beta superfamily ligand that signals through ActRIIB/ALK4 receptor complexes and the co-receptor Cripto (EGF-CFC family), activating Smad2/3 transcription factors.\n(II) Nodal signaling is essential for mesoderm and endoderm induction — different concentrations of Nodal specify different fates, with high concentrations inducing endoderm (Sox17+) and lower concentrations inducing mesoderm.\n(III) Nodal is regulated by positive feedback (Nodal activates its own transcription) and negative feedback through secreted antagonists Lefty1/2 and Cerberus, which limit the range and duration of Nodal signaling.\n(IV) Nodal plays no role in left-right axis determination in vertebrates.",
       "options": ["TTFT", "TTTT", "TTTF", "TFTT"],
       "correctAnswer": "C",
@@ -1652,7 +1652,7 @@
       "topic": "Animal Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the role of microRNAs (miRNAs) in developmental timing:\n(I) In C. elegans, the heterochronic pathway controlling larval stage transitions involves the miRNAs lin-4 and let-7, which repress target mRNAs (lin-14, lin-28, lin-41) to ensure proper temporal progression of cell fate programs.\n(II) lin-4 miRNA, discovered in 1993, was the first microRNA identified and acts by binding to complementary sequences in the 3'UTR of lin-14 mRNA, leading to translational repression and mRNA destabilization.\n(III) let-7 miRNA is highly conserved across bilaterians and regulates the larval-to-adult transition in C. elegans and homologous developmental timing processes in other organisms.\n(IV) MicroRNAs have no role in vertebrate development and function only in C. elegans.",
       "options": ["TTTF", "TTFT", "TTTT", "TFTT"],
       "correctAnswer": "A",
@@ -1707,7 +1707,7 @@
       "topic": "Animal Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about Wnt signaling pathway variants in development:\n(I) The canonical Wnt/beta-catenin pathway promotes axis specification by stabilizing beta-catenin, which enters the nucleus and partners with TCF/LEF transcription factors to activate target genes including Axin2 and c-Myc.\n(II) The non-canonical Wnt/PCP (planar cell polarity) pathway does not involve beta-catenin and instead activates RhoA and Rac1 GTPases through Dishevelled, regulating cytoskeletal dynamics and convergent extension during gastrulation.\n(III) The Wnt/calcium pathway activates PLC (phospholipase C) through heterotrimeric G-proteins, leading to intracellular calcium release, CamKII activation, and NFAT-mediated transcription.\n(IV) All three Wnt pathway variants use the same set of Frizzled receptors and downstream effectors with identical outcomes.",
       "options": ["TTTF", "TTFT", "TTTT", "TFTT"],
       "correctAnswer": "A",
@@ -1802,7 +1802,7 @@
       "topic": "Animal Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about signaling centers in limb development:\n(I) The Apical Ectodermal Ridge (AER) at the distal tip of the limb bud produces FGFs (FGF4, FGF8, FGF9, FGF17) that maintain the underlying mesenchyme (progress zone) in a proliferative, undifferentiated state and are required for proximodistal outgrowth.\n(II) The Zone of Polarizing Activity (ZPA) at the posterior margin produces Sonic hedgehog (Shh), which specifies digit identity along the anteroposterior axis.\n(III) The dorsal and ventral ectoderm produce Wnt7a (dorsal) and En-1/BMP (ventral) respectively, establishing dorsoventral limb polarity — Wnt7a induces Lmx1b in dorsal mesenchyme, while En-1 represses Wnt7a ventrally.\n(IV) The three limb signaling centers (AER, ZPA, dorsal/ventral ectoderm) operate completely independently with no cross-regulation.",
       "options": ["TFTT", "TTTF", "TTTT", "TTFT"],
       "correctAnswer": "B",

@@ -307,7 +307,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about signal transduction termination mechanisms:\n\nS1: GTPase-activating proteins (GAPs) accelerate the intrinsic GTPase activity of G proteins and Ras, converting them from the active GTP-bound to the inactive GDP-bound form.\nS2: Phosphodiesterases (PDEs) terminate cAMP signaling by hydrolyzing cAMP to AMP.\nS3: Protein phosphatases (PP1, PP2A, PTP1B) reverse kinase-mediated signaling by removing phosphate groups from phosphorylated proteins.\nS4: Receptor desensitization involves only receptor degradation; receptor internalization plays no role in signal termination.",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "B",
@@ -322,7 +322,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about second messengers in cell signaling:\n\nS1: cAMP is produced from ATP by adenylyl cyclase and activates protein kinase A (PKA) by binding its regulatory subunits, causing dissociation of the catalytic subunits.\nS2: Ca2+ can function as a second messenger because its cytosolic concentration is maintained at very low levels (~100 nM) by active transport, allowing small influxes to produce large relative concentration changes.\nS3: Diacylglycerol (DAG) is a water-soluble second messenger that diffuses through the cytoplasm to activate nuclear receptors.\nS4: Phosphatidylinositol 3,4,5-trisphosphate (PIP3) is a lipid second messenger produced by PI3K that recruits proteins with PH domains to the plasma membrane.",
       "options": ["TTTT", "TTFT", "TFTT", "TTTF"],
       "correctAnswer": "B",
@@ -717,7 +717,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about G protein-coupled receptor (GPCR) diversity and signaling:\n\nS1: GPCRs are the largest family of cell-surface receptors in the human genome, with approximately 800 members, and are targets of ~35% of approved drugs.\nS2: Different classes of Galpha subunits (Gs, Gi, Gq, G12/13) couple to different effectors: Gs stimulates adenylyl cyclase, Gi inhibits adenylyl cyclase, Gq activates PLCbeta, and G12/13 activates Rho GEFs.\nS3: All GPCRs signal exclusively through heterotrimeric G proteins and have no G protein-independent signaling capabilities.\nS4: A single GPCR can couple to multiple G protein classes, and the specific coupling can depend on the ligand (biased agonism), cellular context, and receptor phosphorylation state.",
       "options": ["TTTT", "TTFT", "TTTF", "TFTT"],
       "correctAnswer": "B",
@@ -732,7 +732,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about receptor tyrosine kinase (RTK) signaling regulation:\n\nS1: RTK activation requires ligand-induced dimerization and trans-autophosphorylation, where each kinase domain phosphorylates the other receptor monomer.\nS2: Phosphotyrosine residues on activated RTKs serve as docking sites for proteins containing SH2 (Src homology 2) or PTB (phosphotyrosine-binding) domains.\nS3: RTK signaling is terminated exclusively by receptor degradation in lysosomes; no other mechanisms exist.\nS4: Negative feedback from the MAPK pathway includes ERK-mediated phosphorylation of SOS (the Ras GEF), causing its dissociation from the Grb2 adaptor and reducing Ras activation.",
       "options": ["TTTT", "TTFT", "TTTF", "TFTT"],
       "correctAnswer": "B",
@@ -747,7 +747,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about calcium signaling:\n\nS1: IP3 receptors (IP3Rs) on the ER are ligand-gated Ca2+ channels that require both IP3 binding and Ca2+ itself for full activation (Ca2+-induced Ca2+ release, positive feedback).\nS2: Store-operated calcium entry (SOCE) is triggered when ER Ca2+ stores are depleted: the ER Ca2+ sensor STIM1 oligomerizes and activates Orai1 channels in the plasma membrane.\nS3: Ca2+ oscillations (repetitive spikes) can encode information in their frequency rather than amplitude, with different frequencies activating different transcription factors (e.g., NFAT vs. NF-kappaB).\nS4: Calmodulin is the only Ca2+-binding protein in cells; no other proteins sense Ca2+ changes.",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "B",
@@ -762,7 +762,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about plant hormone signaling:\n\nS1: Auxin (IAA) signaling involves the TIR1 F-box protein, which acts as an auxin receptor that, upon auxin binding, ubiquitinates Aux/IAA transcriptional repressors for proteasomal degradation, derepressing ARF transcription factors.\nS2: Gibberellin (GA) signaling similarly uses a derepression mechanism: GA binds the GID1 receptor, promoting interaction with DELLA repressors, which are then ubiquitinated and degraded.\nS3: Abscisic acid (ABA) signaling involves the PYR/PYL/RCAR receptor family, which upon ABA binding inhibits PP2C phosphatases, relieving their inhibition of SnRK2 kinases.\nS4: Plant signaling relies exclusively on receptor kinases and never uses two-component histidine kinase signaling systems.",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "B",
@@ -1017,7 +1017,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the Wnt/beta-catenin signaling pathway:\n\nS1: The destruction complex (APC/Axin/GSK3beta/CK1) phosphorylates beta-catenin, targeting it for proteasomal degradation in the absence of Wnt.\nS2: Wnt binding to Frizzled and LRP5/6 causes Axin to be recruited to the membrane, disrupting the destruction complex and stabilizing beta-catenin.\nS3: Stabilized beta-catenin translocates to the nucleus and directly binds DNA through its own DNA-binding domain.\nS4: APC is a tumor suppressor; loss-of-function mutations in APC cause constitutive Wnt pathway activation and are found in >80% of colorectal cancers.",
       "options": ["TTTT", "TTFT", "TFTT", "TTTF"],
       "correctAnswer": "B",
@@ -1032,7 +1032,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about autocrine signaling and its role in disease:\n\nS1: In autocrine signaling, a cell produces a ligand that binds to receptors on the same cell (or cells of the same type), creating a self-stimulatory loop.\nS2: Autocrine signaling is always pathological and never occurs in normal physiology.\nS3: Many cancer cells produce their own growth factors (e.g., TGF-alpha binding to EGFR) in autocrine loops that contribute to self-sufficient proliferative signaling.\nS4: Autocrine signaling can be disrupted therapeutically using monoclonal antibodies (e.g., cetuximab blocking EGFR) or receptor kinase inhibitors (e.g., erlotinib) that break the self-stimulatory cycle.",
       "options": ["TTTT", "TFTT", "TTTF", "FTTT"],
       "correctAnswer": "B",
@@ -1387,7 +1387,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the PI3K/Akt/mTOR signaling axis:\n\nS1: PI3K is activated by RTKs (via p85 SH2 domain binding to pTyr motifs) and produces PIP3, which recruits Akt to the membrane via its PH domain.\nS2: PTEN is a lipid phosphatase that dephosphorylates PIP3 back to PIP2, serving as the major negative regulator of PI3K/Akt signaling.\nS3: Akt promotes cell survival by phosphorylating and activating the pro-apoptotic protein Bad.\nS4: The TSC1/TSC2 complex is a GAP for Rheb GTPase; Akt phosphorylates and inhibits TSC2, relieving Rheb inhibition and activating mTORC1.",
       "options": ["TTTT", "TTFT", "TTTF", "TFTT"],
       "correctAnswer": "B",
@@ -1402,7 +1402,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about nuclear receptor signaling:\n\nS1: Nuclear receptors bind lipophilic ligands (steroids, thyroid hormone, retinoids, vitamin D) that can cross the plasma membrane by diffusion.\nS2: Upon ligand binding, nuclear receptors dimerize, bind specific DNA sequences called hormone response elements (HREs), and recruit co-activator or co-repressor complexes that modify chromatin.\nS3: The glucocorticoid receptor (GR) is located in the nucleus even before ligand binding, constitutively bound to DNA.\nS4: Orphan nuclear receptors are receptors for which no natural ligand has been identified, though some (like PPARgamma) were later 'deorphanized' when fatty acid-derived ligands were discovered.",
       "options": ["TTTT", "TTFT", "TFTT", "TTTF"],
       "correctAnswer": "B",
@@ -1417,7 +1417,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about Rho family GTPases (Rho, Rac, Cdc42) in cell signaling:\n\nS1: Rho, Rac, and Cdc42 are molecular switches that regulate the actin cytoskeleton downstream of cell surface receptors.\nS2: Active Rho promotes stress fiber and focal adhesion formation; active Rac promotes lamellipodia formation; active Cdc42 promotes filopodia formation.\nS3: Rho GTPases are regulated by the same GEF/GAP/GDI cycle as Ras GTPases.\nS4: Rho GTPases signal exclusively to the cytoskeleton and have no role in gene transcription.",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "B",
@@ -1432,7 +1432,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about Hippo pathway signaling:\n\nS1: The Hippo pathway regulates organ size by controlling cell proliferation and apoptosis through the core kinase cascade MST1/2 → LATS1/2 → YAP/TAZ.\nS2: When the Hippo pathway is active (ON), LATS1/2 phosphorylates YAP/TAZ, promoting their cytoplasmic retention (via 14-3-3 binding) and proteasomal degradation.\nS3: When the Hippo pathway is inactive (OFF, e.g., in low cell density or on stiff matrices), unphosphorylated YAP/TAZ enters the nucleus and co-activates TEAD transcription factors, promoting expression of proliferation and survival genes.\nS4: YAP/TAZ are DNA-binding transcription factors that directly recognize specific DNA sequences without requiring partner transcription factors.",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "B",
@@ -1667,7 +1667,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about apoptosis signaling:\n\nS1: The intrinsic (mitochondrial) pathway is triggered by intracellular stress (DNA damage, growth factor withdrawal, ER stress) and converges on mitochondrial outer membrane permeabilization (MOMP) controlled by Bcl-2 family proteins.\nS2: Cytochrome c released from mitochondria binds Apaf-1, forming the apoptosome, which activates caspase-9 (initiator caspase), which then activates caspase-3/7 (effector caspases).\nS3: The extrinsic and intrinsic pathways are completely independent and never cross-talk.\nS4: IAPs (inhibitor of apoptosis proteins, e.g., XIAP) can directly inhibit caspases, and Smac/DIABLO (released from mitochondria during MOMP) antagonizes IAPs to promote apoptosis.",
       "options": ["TTTT", "TTFT", "TFTT", "TTTF"],
       "correctAnswer": "B",
@@ -1682,7 +1682,7 @@
       "topic": "Cell Communication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the Notch signaling pathway:\n\nS1: Notch activation requires physical cell-cell contact because both receptor (Notch) and ligands (Delta/Jagged) are transmembrane proteins on adjacent cells.\nS2: The mechanical pulling force generated by endocytosis of Delta-Notch-bound complex in the signal-sending cell is essential for exposing the S2 cleavage site on Notch.\nS3: Gamma-secretase cleaves Notch within the transmembrane domain (S3 cleavage), releasing NICD that enters the nucleus and directly binds DNA without any partner.\nS4: Notch signaling is a rapid, enzyme-catalyzed signal amplification cascade similar to the MAPK cascade.",
       "options": ["TTTF", "TTFF", "TFTT", "TTFT"],
       "correctAnswer": "B",

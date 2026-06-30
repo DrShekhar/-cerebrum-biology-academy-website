@@ -327,7 +327,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about immunoglobulin classes:\n(I) IgM is the first antibody class produced during a primary immune response and exists as a pentamer in serum, giving it 10 antigen-binding sites and high avidity for agglutination\n(II) IgA is the predominant antibody in mucosal secretions (saliva, tears, breast milk, intestinal fluid), where it exists as a dimer linked by a J chain and secretory component\n(III) IgE is present at the highest concentration in serum and is the primary antibody mediating opsonization of bacteria\n(IV) IgG is the most abundant serum immunoglobulin, crosses the placenta to provide passive immunity to the fetus, and is the main antibody of secondary immune responses",
       "options": [
         "False, True, False, True",
@@ -347,7 +347,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about autoimmune diseases:\n(I) Molecular mimicry occurs when pathogen antigens share structural similarity with self-antigens, leading to cross-reactive immune responses that attack host tissues\n(II) Regulatory T cells (Tregs) expressing Foxp3 suppress autoreactive T cells in the periphery, and Treg deficiency causes severe autoimmunity\n(III) All autoimmune diseases are caused by a single gene defect and follow simple Mendelian inheritance\n(IV) The hygiene hypothesis suggests that reduced exposure to infections in developed countries may contribute to increased autoimmune disease prevalence by altering immune regulation",
       "options": [
         "True, False, False, True",
@@ -367,7 +367,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about immune evasion strategies used by pathogens:\n(I) Many viruses downregulate MHC class I expression on infected cells to avoid recognition by CD8+ cytotoxic T cells\n(II) Trypanosoma brucei (African sleeping sickness) evades antibody responses through antigenic variation — periodically switching its variant surface glycoprotein (VSG) coat\n(III) Mycobacterium tuberculosis survives inside macrophages by preventing phagosome-lysosome fusion\n(IV) All pathogens that evade the immune system do so through a single universal mechanism",
       "options": [
         "False, True, True, False",
@@ -747,7 +747,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about T cell development in the thymus:\n(I) T cell progenitors from the bone marrow enter the thymus cortex as double-negative (CD4-CD8-) cells and undergo V(D)J recombination of TCR genes\n(II) Positive selection in the thymic cortex ensures that only T cells whose TCR can recognize self-MHC molecules survive — cells that fail to bind any MHC die by neglect\n(III) Negative selection in the thymic medulla eliminates T cells that bind self-peptide-MHC with high affinity, preventing autoimmunity\n(IV) All T cells that leave the thymus are CD4+CD8+ double-positive cells that later choose their lineage in the periphery",
       "options": [
         "True, False, True, False",
@@ -767,7 +767,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about vaccine types:\n(I) Live attenuated vaccines (e.g., MMR, yellow fever) use weakened pathogens that replicate without causing disease, generating strong humoral and cellular immunity including long-lasting memory\n(II) mRNA vaccines (e.g., COVID-19 Pfizer/Moderna) deliver mRNA encoding a pathogen protein; host cells translate the mRNA, express the protein, and present it to the immune system, without any risk of genomic integration\n(III) Toxoid vaccines (e.g., tetanus, diphtheria) use inactivated toxins that generate immunity against the toxin but not against the organism itself\n(IV) Conjugate vaccines link polysaccharide antigens to protein carriers to convert a T-independent response into a T-dependent response, improving immunogenicity especially in young children",
       "options": [
         "True, True, True, False",
@@ -787,7 +787,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the complement system:\n(I) The three complement activation pathways (classical, lectin, and alternative) all converge at the formation of C3 convertase, which cleaves C3 into C3a and C3b\n(II) C3b covalently binds to pathogen surfaces through a thioester bond and serves as an opsonin, marking pathogens for phagocytosis by cells bearing complement receptors (CR1, CR3)\n(III) The complement system is part of the adaptive immune system and is only activated after T cell responses\n(IV) Anaphylatoxins C3a and C5a are small peptide fragments that promote inflammation by triggering mast cell degranulation, increasing vascular permeability, and serving as chemotactic factors for neutrophils",
       "options": [
         "True, True, True, True",
@@ -1087,7 +1087,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the three signals required for T cell activation:\n(I) Signal 1 is provided by the interaction of the TCR with peptide-MHC on the APC, providing antigen specificity\n(II) Signal 2 (co-stimulation) is provided by CD80/CD86 on the APC binding CD28 on the T cell; without this signal, T cells become anergic (functionally unresponsive)\n(III) Signal 3 is provided by polarizing cytokines from the APC that determine which effector subset the T cell will differentiate into\n(IV) All three signals can be provided by any nucleated cell in the body, not just professional APCs",
       "options": [
         "True, True, True, False",
@@ -1107,7 +1107,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about immune privilege:\n(I) The brain, eyes, testes, and uterus (during pregnancy) are considered immune-privileged sites where immune responses are actively suppressed\n(II) Immune privilege in the eye is maintained by physical barriers (blood-retinal barrier), immunosuppressive factors (TGF-beta, alpha-MSH), and FasL expression on ocular tissues\n(III) Immune privilege means these organs cannot be affected by any immune-mediated disease\n(IV) The fetus is semi-allogeneic (expressing paternal MHC) yet is not rejected by the maternal immune system, partly due to trophoblast expression of non-classical HLA-G instead of classical HLA-A/B",
       "options": [
         "True, False, False, True",
@@ -1447,7 +1447,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the structure and function of antibodies:\n(I) Each antibody molecule has two identical heavy chains and two identical light chains, forming a Y-shaped structure with two antigen-binding sites (Fab regions) and one Fc region\n(II) The variable regions of heavy and light chains form the antigen-binding site, with CDR3 (complementarity-determining region 3) being the most diverse and contributing most to antigen specificity\n(III) The Fc region determines antibody effector functions including complement activation, Fc receptor binding, and placental transfer\n(IV) Antibodies can only bind protein antigens and cannot recognize carbohydrates, lipids, or nucleic acids",
       "options": [
         "True, True, True, True",
@@ -1467,7 +1467,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the evolution of immune systems:\n(I) Invertebrates rely exclusively on innate immunity; adaptive immunity with lymphocytes and rearranging antigen receptors first appeared in jawed vertebrates (gnathostomes)\n(II) Jawless vertebrates (lampreys, hagfish) have an alternative adaptive immune system using variable lymphocyte receptors (VLRs) assembled through a gene conversion mechanism rather than V(D)J recombination\n(III) The Drosophila Toll pathway, important in fruit fly innate immunity against fungi, is the evolutionary precursor of mammalian Toll-like receptors\n(IV) All animals, including sponges, possess some form of immune defense against pathogens",
       "options": [
         "True, True, False, True",
@@ -1607,7 +1607,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about cytokine signaling in the immune system:\n\nI. IL-12 produced by dendritic cells and macrophages promotes Th1 differentiation via STAT4 activation and T-bet induction\nII. IL-4 drives Th2 differentiation through STAT6 and GATA-3, and also promotes IgE class switching in B cells\nIII. TGF-beta alone promotes Treg (Foxp3+) differentiation, but TGF-beta combined with IL-6 drives Th17 (RORgammat+) differentiation instead\nIV. IL-10 is exclusively produced by regulatory T cells and has no role in B cell biology",
       "options": ["TTTF", "TTFF", "TFTT", "TTTT"],
       "correctAnswer": "A",
@@ -1622,7 +1622,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about autoimmune diseases:\n\nI. In systemic lupus erythematosus (SLE), anti-dsDNA antibodies form immune complexes that deposit in kidneys, joints, and blood vessels, causing type III hypersensitivity reactions\nII. Molecular mimicry between streptococcal M protein and cardiac myosin epitopes contributes to rheumatic heart disease\nIII. Multiple sclerosis involves autoreactive T cells targeting myelin basic protein (MBP) and other myelin components, causing demyelination in the central nervous system\nIV. Type 1 diabetes results from autoimmune destruction of pancreatic alpha cells by CD8+ T cells",
       "options": ["TTTF", "TFTF", "TTFT", "TTTT"],
       "correctAnswer": "A",
@@ -1817,7 +1817,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about mucosal immunity:\n\nI. Peyer's patches in the small intestine contain M cells that transcytose luminal antigens to underlying dendritic cells and lymphocytes for immune sampling\nII. Secretory IgA (sIgA) is a dimer linked by J chain and protected from proteolytic degradation by the secretory component derived from the polymeric immunoglobulin receptor (pIgR) during transcytosis\nIII. The gut-associated lymphoid tissue (GALT) contains more lymphocytes than any other lymphoid organ in the body\nIV. Oral tolerance develops exclusively through deletion of food-reactive T cells in the thymus",
       "options": ["TTFT", "TTTF", "TFTT", "TTTT"],
       "correctAnswer": "B",
@@ -1832,7 +1832,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about immune evasion strategies employed by pathogens:\n\nI. Trypanosoma brucei evades antibody responses through antigenic variation, periodically switching expression among approximately 1,000 variant surface glycoprotein (VSG) genes\nII. Mycobacterium tuberculosis survives inside macrophages by inhibiting phagosome-lysosome fusion and blocking the acidification of the phagosome\nIII. Herpes simplex virus (HSV) establishes latency in sensory neurons where MHC I expression is naturally low, effectively hiding from CD8+ T cell surveillance\nIV. Staphylococcus aureus Protein A binds the Fc region of IgG in the correct orientation for opsonization, enhancing phagocytosis",
       "options": ["TTTT", "TTTF", "TTFF", "TFTT"],
       "correctAnswer": "B",
@@ -2007,7 +2007,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about vaccine immunology:\n\nI. Live attenuated vaccines (e.g., MMR, yellow fever) generate stronger and more durable immune responses than inactivated vaccines because they replicate within the host, mimicking natural infection and activating both cellular and humoral immunity\nII. Conjugate vaccines link polysaccharide antigens to protein carriers to convert T-independent responses into T-dependent responses, enabling germinal center reactions, affinity maturation, and memory B cell generation in young children\nIII. mRNA vaccines (e.g., COVID-19 BNT162b2) encode the antigen of interest, are translated by host ribosomes, and the resulting protein is processed and presented on both MHC I and MHC II, activating both CD8+ and CD4+ T cell responses\nIV. Adjuvants like aluminum hydroxide enhance vaccine responses by directly activating T cells through the T cell receptor",
       "options": ["TTTT", "TTFF", "TFTT", "TTTF"],
       "correctAnswer": "D",
@@ -2142,7 +2142,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about immunoglobulin isotypes:\n\nI. IgM is the first antibody produced during a primary immune response and exists as a pentamer in serum, giving it 10 antigen-binding sites and high avidity for multivalent antigens\nII. IgA is the most abundant antibody in the body by daily production, primarily functioning as secretory IgA at mucosal surfaces\nIII. IgG is the only antibody class that crosses the placenta, mediated by the neonatal Fc receptor (FcRn) in syncytiotrophoblast cells\nIV. IgD has no known function and is not expressed on mature B cells",
       "options": ["TTFF", "TFTT", "TTTF", "TTTT"],
       "correctAnswer": "C",
@@ -2157,7 +2157,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about innate lymphoid cells (ILCs):\n\nI. ILCs mirror the CD4+ T helper cell subsets — ILC1s parallel Th1 (produce IFN-gamma, express T-bet), ILC2s parallel Th2 (produce IL-5/IL-13, express GATA-3), and ILC3s parallel Th17 (produce IL-17/IL-22, express RORgammat)\nII. ILCs require RAG-dependent V(D)J recombination to generate diverse antigen receptors\nIII. ILC2s are activated by epithelial-derived alarmins (IL-25, IL-33, TSLP) released in response to tissue damage and are important in anti-helminth immunity and allergic inflammation\nIV. ILC3s in the gut produce IL-22 which acts on epithelial cells to enhance barrier function, antimicrobial peptide production, and mucus secretion",
       "options": ["TFTT", "TFTF", "TFTF", "TTTT"],
       "correctAnswer": "A",
@@ -2412,7 +2412,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about fever and the acute phase response:\n\nI. Fever is triggered by endogenous pyrogens (IL-1beta, IL-6, TNF-alpha, PGE2) acting on the hypothalamic thermoregulatory center, raising the temperature set point\nII. The acute phase response involves hepatic production of C-reactive protein (CRP), serum amyloid A, fibrinogen, and complement components, stimulated primarily by IL-6\nIII. Moderate fever (38-39 degrees C) enhances immune function by increasing lymphocyte proliferation, neutrophil migration, and interferon activity\nIV. Fever provides no benefit to the host and is purely a pathological response that should always be suppressed",
       "options": ["TTFF", "TTTT", "TTTF", "TFTT"],
       "correctAnswer": "C",
@@ -2547,7 +2547,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about neutrophil extracellular traps (NETs):\n\nI. NETs are web-like structures composed of decondensed chromatin fibers decorated with antimicrobial proteins (neutrophil elastase, myeloperoxidase, cathelicidins, defensins) released by activated neutrophils through NETosis\nII. NET formation requires citrullination of histones by PAD4 (peptidylarginine deiminase 4), which weakens histone-DNA interactions and promotes chromatin decondensation\nIII. NETs can trap and immobilize large pathogens (bacteria, fungi, parasites) that cannot be phagocytosed, but excessive NET formation contributes to thrombosis, autoimmunity (SLE), and sepsis-associated organ damage\nIV. NETs are formed exclusively through a non-lytic process where neutrophils survive after releasing the chromatin structures",
       "options": ["TTTF", "TFTT", "TTTT", "TTFT"],
       "correctAnswer": "A",
@@ -2562,7 +2562,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the cGAS-STING innate immune pathway:\n\nI. cGAS (cyclic GMP-AMP synthase) is a cytosolic DNA sensor that produces the second messenger 2'3'-cGAMP upon binding double-stranded DNA in the cytoplasm\nII. cGAMP activates STING (stimulator of interferon genes) on the endoplasmic reticulum membrane, which then recruits and activates TBK1 kinase, leading to IRF3 phosphorylation and type I interferon production\nIII. The cGAS-STING pathway detects cytosolic DNA from viral infections, intracellular bacteria, damaged mitochondria, and micronuclei from chromosomal instability in cancer cells\nIV. cGAS discriminates between self and foreign DNA based on DNA methylation patterns, only activating when unmethylated CpG DNA is detected",
       "options": ["TTTF", "TFTT", "TTFF", "TTTT"],
       "correctAnswer": "A",
@@ -2577,7 +2577,7 @@
       "topic": "The Immune System"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the lymphatic system and its role in immunity:\n\nI. Afferent lymphatic vessels carry antigen, dendritic cells, and lymph from peripheral tissues into lymph nodes, while efferent lymphatic vessels carry activated lymphocytes out of the node\nII. High endothelial venules (HEVs) in lymph nodes are specialized blood vessels through which naive T and B cells exit the bloodstream and enter the lymph node through a multistep adhesion cascade involving L-selectin, CCR7, and LFA-1\nIII. The lymph node cortex contains B cell follicles while the paracortex contains T cells and dendritic cells — this organization optimizes antigen presentation and T-B cell interactions\nIV. Lymph nodes function solely as passive filters and play no active role in initiating adaptive immune responses",
       "options": ["TTTT", "TFTT", "TTFT", "TTTF"],
       "correctAnswer": "D",

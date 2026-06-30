@@ -267,7 +267,7 @@
       "topic": "Metapopulation Persistence"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding the concept of carrying capacity (K), mark each statement as True (T) or False (F):\n(I) K is a fixed, unchanging property of a particular habitat\n(II) K may differ for the same species in different habitats depending on resource availability\n(III) Populations can temporarily exceed K (overshoot) before declining back toward it\n(IV) K is determined solely by food availability and is not influenced by other resources or interactions",
       "options": ["FTTT", "FTTF", "FTFT", "TFTT"],
       "correctAnswer": "B",
@@ -302,7 +302,7 @@
       "topic": "Human Population Growth"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding density-dependent factors in population regulation, mark each statement as True (T) or False (F):\n(I) Density-dependent factors increase in intensity as population density increases\n(II) Competition, predation, and disease are all examples of density-dependent factors\n(III) Density-dependent factors can only reduce population growth, never increase it\n(IV) Density-dependent regulation is necessary for a population to have a stable equilibrium",
       "options": ["TTFT", "TTTF", "TTTT", "TFFT"],
       "correctAnswer": "A",
@@ -337,7 +337,7 @@
       "topic": "Demographic vs Environmental Stochasticity"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding human population growth and its ecological implications, mark each statement as True (T) or False (F):\n(I) The global human population growth rate has been declining since the 1960s\n(II) Total fertility rate (TFR) is now below replacement level in most developed countries\n(III) Even with declining growth rates, the global population is still increasing in absolute numbers\n(IV) Earth's human carrying capacity has been reliably estimated at exactly 10 billion people",
       "options": ["TTTF", "TTFT", "TTFF", "TFTT"],
       "correctAnswer": "A",
@@ -632,7 +632,7 @@
       "topic": "Evidence for Density-Dependent Competition"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding population growth models, mark each statement as True (T) or False (F):\n(I) The exponential model assumes unlimited resources and no density dependence\n(II) The logistic model assumes that the effect of density on growth rate is linear\n(III) Both models assume discrete, non-overlapping generations\n(IV) The logistic model always produces stable equilibrium at K without oscillations",
       "options": ["TTFF", "TTTF", "TTFT", "TFFF"],
       "correctAnswer": "A",
@@ -1047,7 +1047,7 @@
       "topic": "Generation Time and Intrinsic Growth Rate"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding survivorship curves (Deevey curves), mark each statement as True (T) or False (F):\n(I) Type I curves show high survival rates throughout most of life with increased mortality at old age (typical of mammals)\n(II) Type III curves show high mortality early in life with high survival for the few individuals that survive to adulthood (typical of marine invertebrates)\n(III) Type II curves show constant mortality rate throughout life (typical of some bird species)\n(IV) All three survivorship types can occur within a single species in different environments",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "A",

@@ -67,7 +67,7 @@
       "topic": "Descent with Modification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about homology and analogy:\nS1: The forelimbs of bats and the forelimbs of whales are homologous structures derived from a common tetrapod ancestor.\nS2: The wings of butterflies and the wings of birds are homologous structures because both are used for flight.\nS3: Molecular homologies, such as conserved DNA sequences across taxa, provide evidence for common descent independent of morphological data.\nS4: Analogous structures arise through convergent evolution and reflect similar selective pressures rather than shared ancestry.",
       "options": ["TTTT", "TTFT", "TFTT", "TFTF"],
       "correctAnswer": "C",
@@ -162,7 +162,7 @@
       "topic": "Descent with Modification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about Darwin's observations and their significance:\nS1: The geographic distribution of species on oceanic islands more closely resembles that of the nearest mainland than of similar islands at the same latitude elsewhere.\nS2: Darwin concluded that the fossil record shows a perfect, unbroken chain of transitional forms between all species.\nS3: Artificial selection by plant and animal breeders demonstrated that heritable variation could be directionally modified over generations.\nS4: Darwin's theory required knowledge of Mendelian genetics to explain the mechanism of inheritance.",
       "options": ["TTTT", "TFTT", "TFTF", "TFFT"],
       "correctAnswer": "C",
@@ -297,7 +297,7 @@
       "topic": "Descent with Modification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about biogeographic evidence for evolution:\nS1: Endemic species on oceanic islands often include many bird and insect species but few amphibians and freshwater fish, consistent with over-water dispersal as the colonization mechanism.\nS2: The distribution of marsupials primarily in Australia and South America reflects their origin on the supercontinent Gondwana before its breakup.\nS3: Closely related species found on different continents always indicate recent dispersal events rather than vicariance.\nS4: Islands closer to the mainland typically have species more closely related to mainland species than do more distant islands.",
       "options": ["TTTT", "TTTF", "TFTT", "TTFT"],
       "correctAnswer": "D",
@@ -452,7 +452,7 @@
       "topic": "Descent with Modification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about evidence for evolution from comparative anatomy:\nS1: The similar bone structure in the forelimbs of humans, cats, bats, and whales is evidence of homology inherited from a common ancestor.\nS2: The presence of both eyes on one side of an adult flatfish (flounder) represents an embryological rearrangement consistent with descent with modification from a bilaterally symmetrical ancestor.\nS3: Structures that appear similar but evolved independently in unrelated lineages (like the eyes of octopi and vertebrates) are called homoplasies.\nS4: All vestigial structures are completely non-functional and serve no purpose whatsoever in the organisms that possess them.",
       "options": ["TFTT", "TTTT", "TTFF", "TTTF"],
       "correctAnswer": "D",
@@ -627,7 +627,7 @@
       "topic": "Descent with Modification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about evolutionary developmental biology (evo-devo) evidence for descent with modification:\nS1: Changes in the cis-regulatory elements of developmental genes can produce major morphological differences without altering the protein-coding sequence.\nS2: The Dll/Dlx gene family is involved in appendage development in both arthropods and vertebrates, suggesting deep homology of the genetic toolkit for limb formation.\nS3: All morphological differences between species are caused by mutations in protein-coding sequences rather than regulatory elements.\nS4: Toolkit genes like Hox, Pax, and hedgehog families are found only in vertebrates and are absent in invertebrates.",
       "options": ["TTFT", "TFTF", "TFFT", "TTFF"],
       "correctAnswer": "D",
@@ -742,7 +742,7 @@
       "topic": "Descent with Modification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the fossil record as evidence for evolution:\nS1: Fossils document the existence of intermediate forms (transitional fossils) between major taxonomic groups, such as Archaeopteryx between dinosaurs and modern birds.\nS2: The fossil record is complete and documents every species that has ever lived.\nS3: Radiometric dating of volcanic rock layers above and below fossil-bearing strata allows estimation of fossil ages, providing a temporal framework for evolutionary events.\nS4: The law of superposition states that in undisturbed sedimentary sequences, older strata lie below younger strata, consistent with the pattern of evolutionary change over time.",
       "options": ["TFTT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "A",
@@ -917,7 +917,7 @@
       "topic": "Descent with Modification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about molecular evidence for evolution:\nS1: The universal genetic code (with minor variations) shared by virtually all life on Earth supports the hypothesis of common descent from a universal ancestor.\nS2: Phylogenetic trees constructed from different genes (e.g., rRNA, cytochrome c, hemoglobin) that produce the same branching topology provide strong corroboration for descent with modification.\nS3: The presence of introns in eukaryotic genes but not in prokaryotic genes proves that eukaryotes and prokaryotes are unrelated.\nS4: Molecular phylogenetics can only resolve relationships between closely related species and is useless for deep evolutionary divergences.",
       "options": ["TTFT", "TFFF", "TTFF", "TFTF"],
       "correctAnswer": "C",
@@ -1132,7 +1132,7 @@
       "topic": "Descent with Modification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the evidence for evolution from imperfect design:\nS1: The human spine's S-curve, which causes back problems, reflects evolutionary modification of a horizontal quadrupedal spine for bipedal locomotion.\nS2: The pharyngeal nerve routing in giraffes represents optimal design for long-necked animals.\nS3: The backward-wired retina in vertebrates, with photoreceptors facing away from light, creates a blind spot that would not exist in a freshly designed eye.\nS4: Imperfect designs in organisms are expected under descent with modification because evolution modifies existing structures rather than engineering solutions from scratch.",
       "options": ["TFTF", "TTTT", "TFTT", "TFFT"],
       "correctAnswer": "C",
@@ -1327,7 +1327,7 @@
       "topic": "Descent with Modification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about artificial selection as evidence for descent with modification:\nS1: All domestic dog breeds descended from wolves, demonstrating that selection on heritable variation can produce dramatic phenotypic change.\nS2: Artificial selection differs fundamentally from natural selection because artificial selection creates new genetic variation while natural selection cannot.\nS3: The diversity among Brassica oleracea cultivars (broccoli, cauliflower, kale, Brussels sprouts, cabbage) from a single wild ancestor demonstrates the power of selective breeding.\nS4: Artificial selection experiments in laboratory populations have demonstrated the evolution of reproductive isolation between divergently selected lines.",
       "options": ["TFTT", "TTTT", "TFTF", "TTFT"],
       "correctAnswer": "A",
@@ -1502,7 +1502,7 @@
       "topic": "Descent with Modification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the evidence provided by the geographic distribution of species:\nS1: Continental islands (once connected to the mainland) typically have more terrestrial mammal species than oceanic islands (formed by volcanic activity).\nS2: The Hawaiian Islands have native terrestrial mammals that colonized by walking across ancient land bridges.\nS3: The presence of Darwin's finches only in the Galapagos and Cocos Island supports colonization from South America followed by adaptive radiation.\nS4: Species richness on islands tends to decrease with increasing distance from the mainland source, consistent with decreased colonization rates.",
       "options": ["TFTT", "TTTT", "TFTF", "TTFT"],
       "correctAnswer": "A",
@@ -1717,7 +1717,7 @@
       "topic": "Descent with Modification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the Modern Synthesis (Neo-Darwinism) and its relationship to Darwin's original theory:\nS1: The Modern Synthesis integrated Darwin's natural selection with Mendelian genetics, providing the mechanism of inheritance that Darwin lacked.\nS2: The Modern Synthesis demonstrated that evolution occurs through changes in allele frequencies within populations.\nS3: The Modern Synthesis rejected natural selection as a mechanism of evolution, replacing it entirely with genetic drift.\nS4: The Modern Synthesis established that mutations provide the ultimate source of new genetic variation upon which natural selection acts.",
       "options": ["TTTT", "TTFT", "TFTF", "TTFF"],
       "correctAnswer": "B",

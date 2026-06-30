@@ -207,7 +207,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding the blood coagulation cascade and anticoagulant mechanisms, evaluate each statement:\nS1: TRUE — Antithrombin III is a serine protease inhibitor (serpin) that inactivates thrombin, Factor Xa, and several other serine protease clotting factors; heparin enhances antithrombin III activity approximately 1,000-fold by inducing a conformational change that exposes its reactive site loop\nS2: TRUE — The prothrombin time (PT/INR) primarily assesses the extrinsic and common pathways (Factors VII, X, V, II, and fibrinogen), while the activated partial thromboplastin time (aPTT) assesses the intrinsic and common pathways (Factors XII, XI, IX, VIII, X, V, II, and fibrinogen)\nS3: FALSE — Tissue factor pathway inhibitor (TFPI) is a natural anticoagulant that inhibits the TF-VIIa-Xa complex; it does NOT activate the coagulation cascade\nS4: TRUE — Protein C, when activated by the thrombin-thrombomodulin complex on endothelial surfaces, proteolytically inactivates Factors Va and VIIIa with protein S as a cofactor, providing a critical negative feedback loop that limits clot propagation",
       "options": [
         "A) All four statements (S1, S2, S3, S4) are correctly classified",
@@ -227,7 +227,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding respiratory physiology, lung mechanics, and ventilation-perfusion matching, evaluate each statement:\nS1: TRUE — Lung compliance is defined as the change in lung volume per unit change in transpulmonary pressure (delta-V/delta-P); emphysema increases compliance (floppy lungs) while pulmonary fibrosis decreases compliance (stiff lungs)\nS2: TRUE — In a normal upright human lung, the ventilation-perfusion (V/Q) ratio is highest at the apex and lowest at the base, because although both ventilation and perfusion increase from apex to base due to gravity, perfusion increases far more steeply than ventilation\nS3: TRUE — Airway resistance is inversely proportional to the fourth power of the airway radius (Poiseuille's law); during an asthma attack, bronchospasm reduces airway radius, dramatically increasing resistance and the work of breathing\nS4: FALSE — Physiological dead space equals anatomical dead space plus alveolar dead space; alveolar dead space consists of ventilated alveoli with poor or no perfusion (high V/Q units) that contribute minimally to gas exchange; in healthy individuals, alveolar dead space is substantial and accounts for most of the physiological dead space",
       "options": [
         "A) All four statements (S1, S2, S3, S4) are correctly classified",
@@ -247,7 +247,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding acid-base physiology and the Henderson-Hasselbalch equation applied to blood, evaluate each statement:\nS1: TRUE — The Henderson-Hasselbalch equation for the bicarbonate buffer system is pH = 6.1 + log([HCO3-] / [0.03 x PCO2]), where 6.1 is the pKa of the CO2/HCO3- system in plasma and 0.03 is the solubility coefficient of CO2 in mmol/L per mmHg\nS2: FALSE — A patient with uncontrolled diabetes who develops diabetic ketoacidosis (DKA) has a primary respiratory acidosis because ketone bodies stimulate the respiratory center to produce excess CO2\nS3: TRUE — In metabolic acidosis, respiratory compensation occurs within minutes to hours as peripheral chemoreceptors detect decreased pH and stimulate hyperventilation (Kussmaul breathing), reducing PCO2; however, respiratory compensation alone cannot fully normalize pH\nS4: FALSE — Renal compensation for respiratory acidosis involves increased secretion of H+ and increased reabsorption of HCO3- in the proximal tubule and collecting duct, along with increased ammoniagenesis from glutamine in the proximal tubule to generate new HCO3-; this process requires 3-5 days to reach maximal compensation",
       "options": [
         "A) All four statements are correctly classified",
@@ -267,7 +267,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding Starling forces, lymphatic function, and edema formation, evaluate each statement:\nS1: TRUE — The net filtration pressure across a capillary is determined by four Starling forces: capillary hydrostatic pressure (Pc, favoring filtration), interstitial hydrostatic pressure (Pi, opposing filtration), plasma oncotic pressure (pi-c, opposing filtration), and interstitial oncotic pressure (pi-i, favoring filtration)\nS2: FALSE — In nephrotic syndrome, massive urinary protein loss causes hypoalbuminemia, which reduces plasma oncotic pressure (pi-c); this does NOT cause edema because reduced oncotic pressure inhibits filtration\nS3: TRUE — The lymphatic system returns approximately 2-4 liters of interstitial fluid per day to the venous circulation; blockage of lymphatic drainage (e.g., by filarial parasites in elephantiasis or surgical lymph node removal) causes lymphedema because filtered fluid cannot be returned to the blood\nS4: TRUE — At the arteriolar end of a typical systemic capillary, net filtration occurs because Pc (~35 mmHg) exceeds the opposing forces, while at the venular end, net absorption occurs because Pc falls (~15 mmHg) below pi-c (~25 mmHg); however, modern revisions of Starling's hypothesis emphasize that the glycocalyx layer, not bulk interstitial protein, is the primary determinant of the effective oncotic pressure gradient",
       "options": [
         "A) All four statements are correctly classified",
@@ -287,7 +287,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding comparative nervous system organization and invertebrate neural circuits, evaluate each statement:\nS1: TRUE — The squid giant axon (up to 1 mm diameter) achieves rapid action potential conduction through its large diameter, which decreases internal resistance (ri) and increases the space constant (lambda); this is an alternative strategy to myelination for fast signal transmission\nS2: FALSE — Central pattern generators (CPGs) are neural circuits that produce rhythmic motor outputs (e.g., locomotion, breathing, chewing) entirely dependent on continuous sensory feedback; they cannot generate rhythmic patterns without afferent input\nS3: TRUE — In the medicinal leech (Hirudo medicinalis), the heartbeat CPG consists of pairs of reciprocally inhibitory interneurons (HN cells) that generate alternating bursting activity through intrinsic membrane properties (including Ih current and Ca2+-dependent mechanisms) combined with synaptic inhibition\nS4: TRUE — The stomatogastric ganglion (STG) of crustaceans (e.g., lobster) contains only ~30 neurons but generates multiple distinct rhythmic motor patterns (gastric mill and pyloric rhythms); neuromodulators such as serotonin, dopamine, and neuropeptides can reconfigure the same anatomical circuit to produce fundamentally different output patterns",
       "options": [
         "A) All four statements are correctly classified",
@@ -307,7 +307,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding gut-associated lymphoid tissue (GALT), mucosal immunity, and the gut microbiome, evaluate each statement:\nS1: TRUE — Peyer's patches are organized lymphoid follicles in the ileal submucosa that contain M cells (microfold cells) in the overlying follicle-associated epithelium; M cells transcytose luminal antigens to underlying dendritic cells and lymphocytes without degrading them, initiating mucosal immune responses\nS2: TRUE — Secretory IgA (sIgA) is the predominant immunoglobulin at mucosal surfaces; it is produced as dimeric IgA by plasma cells in the lamina propria, transported across the epithelium by the polymeric immunoglobulin receptor (pIgR), and released with a secretory component that protects it from proteolytic degradation\nS3: FALSE — Commensal bacteria in the gut induce immune tolerance through multiple mechanisms including promotion of regulatory T cell (Treg) differentiation via bacterial metabolites such as short-chain fatty acids (butyrate, propionate), which inhibit histone deacetylases and promote Foxp3 expression; this mechanism is PRO-inflammatory rather than tolerogenic\nS4: TRUE — Oral tolerance is the phenomenon whereby ingestion of a protein antigen leads to systemic immune unresponsiveness to that antigen upon subsequent parenteral challenge; breakdown of oral tolerance to dietary proteins or commensal antigens is implicated in food allergies and inflammatory bowel disease",
       "options": [
         "A) All four statements are correctly classified",
@@ -327,7 +327,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding bone remodeling, calcium homeostasis, and the RANKL/OPG signaling axis, evaluate each statement:\nS1: TRUE — Osteoblasts express RANKL (receptor activator of NF-kB ligand) on their surface, which binds to RANK on osteoclast precursors, stimulating their differentiation into mature multinucleated osteoclasts via NF-kB and MAPK signaling cascades; osteoprotegerin (OPG) is a soluble decoy receptor secreted by osteoblasts that binds RANKL and prevents it from activating RANK, thereby inhibiting osteoclastogenesis\nS2: TRUE — Vitamin D3 (cholecalciferol) is biologically active immediately after synthesis in the skin and does NOT require any hydroxylation steps in the liver or kidney to function as a hormone\nS3: TRUE — PTH stimulates bone resorption indirectly by upregulating RANKL expression and downregulating OPG expression on osteoblasts, thereby promoting osteoclast differentiation and activity; mature osteoclasts do not express PTH receptors\nS4: TRUE — Calcitonin, produced by thyroid parafollicular C cells, directly inhibits osteoclast activity by binding to calcitonin receptors on osteoclasts, causing them to retract their ruffled borders and cease resorption; however, calcitonin's physiological importance in adult human calcium homeostasis is minimal compared to PTH and vitamin D",
       "options": [
         "A) All four statements are correctly classified",
@@ -347,7 +347,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding exercise physiology, cardiovascular adaptations, and skeletal muscle fiber recruitment, evaluate each statement:\nS1: TRUE — VO2max (maximal oxygen consumption) is limited primarily by central cardiovascular factors (maximum cardiac output = heart rate x stroke volume) rather than peripheral oxygen extraction in most healthy individuals; elite endurance athletes have VO2max values of 70-85 mL/kg/min compared to ~35-45 mL/kg/min in untrained individuals, largely due to greater stroke volume from eccentric cardiac hypertrophy\nS2: TRUE — According to Henneman's size principle, motor units are recruited in order from smallest to largest during voluntary contractions; type I (slow oxidative) motor neurons are recruited first at low force levels, while type IIx (fast glycolytic) motor neurons are recruited only at high force levels — however, this principle does NOT apply to rapid ballistic movements, where large motor units are recruited preferentially\nS3: TRUE — The lactate threshold (onset of blood lactate accumulation, OBLA, typically ~4 mmol/L) represents the exercise intensity above which lactate production by working muscle exceeds the rate of lactate clearance by the liver (Cori cycle), heart, and oxidative skeletal muscle fibers; training shifts the lactate threshold to higher percentages of VO2max\nS4: TRUE — Endurance training induces mitochondrial biogenesis in skeletal muscle through PGC-1alpha (peroxisome proliferator-activated receptor gamma coactivator 1-alpha), which is activated by AMPK and calcium/calmodulin-dependent protein kinase (CaMK) signaling during repeated contractions, leading to increased oxidative enzyme capacity and capillary density",
       "options": [
         "A) All four statements are correctly classified",

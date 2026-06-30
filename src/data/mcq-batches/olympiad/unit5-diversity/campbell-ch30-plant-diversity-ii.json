@@ -47,7 +47,7 @@
       "topic": "Pollinator-Driven Speciation"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about conifer reproduction:\n(I) Conifers are monoecious, bearing both pollen and ovulate cones on the same tree\n(II) Pollen tube growth in pines requires over a year to reach the archegonium\n(III) Each ovulate cone scale bears exactly one ovule\n(IV) Conifer seeds typically bear wings for wind dispersal\nWhich are TRUE?",
       "options": [
         "TTFT — I, II, and IV are true",
@@ -267,7 +267,7 @@
       "topic": "Angiosperm economic importance"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About gymnosperm diversity and ecology:\n(I) Conifers dominate the boreal (taiga) biome, forming the largest terrestrial biome on Earth\n(II) All gymnosperms are evergreen trees that never shed their leaves\n(III) Cycads harbor nitrogen-fixing cyanobacteria (Nostoc) in specialized coralloid roots\n(IV) The ginkgophytes were most diverse during the Jurassic and Cretaceous periods\nWhich are TRUE?",
       "options": [
         "TFTF — I and III are true",
@@ -527,7 +527,7 @@
       "topic": "Gymnosperm polyembryony"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate statements about angiosperm classification:\n(I) Monocots and eudicots are the two major clades within angiosperms, together comprising over 97% of species\n(II) Magnoliids (magnolias, laurels, black pepper) represent a third major clade of angiosperms\n(III) The number of cotyledons is the only reliable character distinguishing monocots from eudicots\n(IV) Basal angiosperms include Amborella, water lilies, and star anise, which diverged before the monocot-eudicot split\nWhich are TRUE?",
       "options": [
         "TTFT — I, II, and IV are true",
@@ -887,7 +887,7 @@
       "topic": "Angiosperm rapid diversification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Consider the following about angiosperm flower evolution:\n(I) The earliest angiosperms likely had radially symmetric flowers with many undifferentiated tepals\n(II) Bilateral symmetry (zygomorphy) evolved independently in many angiosperm lineages\n(III) Flower color is always determined by a single gene controlling pigment production\n(IV) The shift from insect to bird pollination often involves a change from blue/purple to red flowers\nWhich are TRUE?",
       "options": [
         "TTFT — I, II, and IV are true",
@@ -1207,7 +1207,7 @@
       "topic": "Obligate vs facultative mutualism testing"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate statements about pollen biology:\n(I) The exine (outer wall) of pollen grains is composed of sporopollenin, one of the most resistant biological polymers known\n(II) Pollen tube growth is guided by chemical signals from the synergid cells of the embryo sac\n(III) All seed plants produce pollen grains with identical morphology\n(IV) Self-incompatibility systems in many angiosperms involve recognition between pollen and stigma proteins encoded by the S-locus\nWhich are TRUE?",
       "options": [
         "TTFT — I, II, and IV are true",
@@ -1407,7 +1407,7 @@
       "topic": "Fruit-animal mutualism"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About seed dormancy mechanisms:\n(I) Physical dormancy involves a hard, impermeable seed coat that prevents water uptake\n(II) Physiological dormancy involves internal chemical inhibitors that prevent germination\n(III) All seeds require light for germination\n(IV) Stratification (exposure to cold, moist conditions) breaks dormancy in many temperate species\nWhich are TRUE?",
       "options": [
         "TTFT — I, II, and IV are true",

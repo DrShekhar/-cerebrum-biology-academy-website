@@ -147,7 +147,7 @@
       "topic": "Arthropod species dominance"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About invertebrate nervous systems:\n(I) The octopus brain contains specialized lobes for learning and memory (vertical lobe system)\n(II) Insect mushroom bodies function in olfactory learning and memory\n(III) The giant axon of the squid was instrumental in understanding the ionic basis of nerve impulse conduction\n(IV) All invertebrates lack any form of learning capability\nWhich are TRUE?",
       "options": [
         "TTTF -- I, II, and III are true",
@@ -687,7 +687,7 @@
       "topic": "Insect tracheal system"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About arthropod exoskeleton:\n(I) The exoskeleton is composed primarily of chitin and proteins, often hardened by sclerotization or calcification\n(II) The exoskeleton must be periodically molted (ecdysis) to allow growth\n(III) The exoskeleton provides attachment points for muscles, acting as an external skeleton\n(IV) The arthropod exoskeleton is permeable to water, providing no protection against desiccation\nWhich are TRUE?",
       "options": [
         "TTTF -- I, II, and III are true",
@@ -727,7 +727,7 @@
       "topic": "Sponge spicule function"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About annelid diversity:\n(I) Polychaetes are predominantly marine worms with paired parapodia bearing bristles (chaetae)\n(II) Oligochaetes (including earthworms) have reduced chaetae and lack parapodia\n(III) Leeches (Hirudinea) are segmented worms with suckers used for attachment to hosts\n(IV) All annelids are parasitic bloodsuckers\nWhich are TRUE?",
       "options": [
         "TTTF -- I, II, and III are true",
@@ -747,7 +747,7 @@
       "topic": "Annelid diversity"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Consider the following about arthropod diversity:\n(I) Insects are the most species-rich group of arthropods and the most species-rich animal group overall\n(II) Crustaceans are primarily marine and include the only arthropods that are secondary aquatic organisms\n(III) Arachnids (spiders, scorpions, mites) were among the first arthropods to colonize land\n(IV) All arthropods have exactly six legs\nWhich are TRUE?",
       "options": [
         "TTTF -- I, II, and III are true",
@@ -847,7 +847,7 @@
       "topic": "Complete metamorphosis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Consider the following about echinoderm biology:\n(I) All echinoderms are exclusively marine—no freshwater or terrestrial species exist\n(II) Echinoderms have remarkable regenerative abilities, with some sea stars able to regrow entire arms\n(III) The echinoderm endoskeleton is composed of calcium carbonate ossicles\n(IV) Echinoderms have a highly centralized brain that controls their water vascular system\nWhich are TRUE?",
       "options": [
         "TTTF -- I, II, and III are true",
@@ -887,7 +887,7 @@
       "topic": "Flatworm gas exchange"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About nematode biology:\n(I) Nematodes are the most abundant animals on Earth in terms of individual numbers\n(II) Caenorhabditis elegans is a model organism whose complete cell lineage has been mapped\n(III) All nematodes are parasites of humans\n(IV) Nematodes molt their cuticle, placing them in the Ecdysozoa\nWhich are TRUE?",
       "options": [
         "TTFT -- I, II, and IV are true",
@@ -1387,7 +1387,7 @@
       "topic": "Arthropod Diversification"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About molluscan diversity:\n(I) Gastropoda (snails and slugs) is the most species-rich molluscan class\n(II) Bivalvia (clams, mussels, oysters) are characterized by two shell valves and filter-feeding lifestyles\n(III) Cephalopoda (octopuses, squids) have the most complex nervous systems of any invertebrate\n(IV) All molluscs have external shells\nWhich are TRUE?",
       "options": [
         "TTTF -- I, II, and III are true",

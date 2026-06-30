@@ -1,6 +1,6 @@
 {
   "batch": {
-    "name": "Campbell Ch14 Mendel and the Gene Idea \u2014 Olympiad Expansion",
+    "name": "Campbell Ch14 Mendel and the Gene Idea — Olympiad Expansion",
     "version": 1,
     "source": "olympiad-expansion",
     "totalQuestions": 131
@@ -16,7 +16,7 @@
         "600 dominant : 400 recessive"
       ],
       "correctAnswer": "C",
-      "explanation": "To evaluate each option, we calculate the chi-square statistic comparing observed to expected (750:250 for a 3:1 ratio in 1000 offspring). Option A: chi-square = (600-750)^2/750 + (400-250)^2/250 = 30 + 90 = 120. Option B: chi-square = (750-750)^2/750 + (250-250)^2/250 = 0 + 0 = 0. Option C: chi-square = (780-750)^2/750 + (220-250)^2/250 = 1.2 + 3.6 = 4.8. Option D: chi-square = (720-750)^2/750 + (280-250)^2/250 = 1.2 + 3.6 = 4.8. Wait \u2014 Options C and D give the same value. However, Option A gives chi-square = 120, which is the strongest evidence against the 3:1 hypothesis. With 1 degree of freedom, critical chi-square at p=0.05 is 3.84. Option A (120) massively exceeds this, providing overwhelming evidence against 3:1. The 600:400 ratio actually suggests a 1:1 ratio, not 3:1.",
+      "explanation": "To evaluate each option, we calculate the chi-square statistic comparing observed to expected (750:250 for a 3:1 ratio in 1000 offspring). Option A: chi-square = (600-750)^2/750 + (400-250)^2/250 = 30 + 90 = 120. Option B: chi-square = (750-750)^2/750 + (250-250)^2/250 = 0 + 0 = 0. Option C: chi-square = (780-750)^2/750 + (220-250)^2/250 = 1.2 + 3.6 = 4.8. Option D: chi-square = (720-750)^2/750 + (280-250)^2/250 = 1.2 + 3.6 = 4.8. Wait — Options C and D give the same value. However, Option A gives chi-square = 120, which is the strongest evidence against the 3:1 hypothesis. With 1 degree of freedom, critical chi-square at p=0.05 is 3.84. Option A (120) massively exceeds this, providing overwhelming evidence against 3:1. The 600:400 ratio actually suggests a 1:1 ratio, not 3:1.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 3,
@@ -92,7 +92,7 @@
       "topic": "Mendel and the Gene Idea"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about Mendel's laws and their molecular basis:\nS1: The law of segregation states that two alleles of a gene separate during gamete formation so that each gamete carries only one allele.\nS2: The law of independent assortment applies to all genes, including those on the same chromosome.\nS3: Mendel's law of segregation is explained by the separation of homologous chromosomes during anaphase I of meiosis.\nS4: Codominance, where both alleles are fully expressed in heterozygotes, violates Mendel's law of dominance but not the law of segregation.",
       "options": ["TFFT", "TTTT", "TFTT", "TFTF"],
       "correctAnswer": "C",
@@ -116,7 +116,7 @@
         "1 black : 1 chocolate"
       ],
       "correctAnswer": "C",
-      "explanation": "Crossing EeBb x eebb is a testcross for both genes. The gametes from EeBb are: EB, Eb, eB, eb (each 1/4). The gametes from eebb are only: eb. So the offspring are: EeBb (black, 1/4), Eebb (chocolate, 1/4), eeBb (yellow, 1/4), eebb (yellow, 1/4). This gives a phenotypic ratio of 1 black : 1 chocolate : 2 yellow. The ee genotype is epistatic \u2014 it prevents pigment deposition regardless of the B locus genotype, making both eeBb and eebb yellow. Option A incorrectly omits chocolate offspring. Option C ignores the yellow class entirely. Option D would require at least one dominant E allele in all offspring, which cannot happen when one parent is ee.",
+      "explanation": "Crossing EeBb x eebb is a testcross for both genes. The gametes from EeBb are: EB, Eb, eB, eb (each 1/4). The gametes from eebb are only: eb. So the offspring are: EeBb (black, 1/4), Eebb (chocolate, 1/4), eeBb (yellow, 1/4), eebb (yellow, 1/4). This gives a phenotypic ratio of 1 black : 1 chocolate : 2 yellow. The ee genotype is epistatic — it prevents pigment deposition regardless of the B locus genotype, making both eeBb and eebb yellow. Option A incorrectly omits chocolate offspring. Option C ignores the yellow class entirely. Option D would require at least one dominant E allele in all offspring, which cannot happen when one parent is ee.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -186,7 +186,7 @@
         "Cross the purple plant with a white-flowered (pp) plant and examine the offspring phenotypes"
       ],
       "correctAnswer": "D",
-      "explanation": "A testcross (crossing with a homozygous recessive individual) is the most efficient and definitive method for determining the genotype of an individual showing the dominant phenotype. If the purple plant is PP, all offspring from PP x pp will be Pp (purple). If the purple plant is Pp, offspring from Pp x pp will be 1/2 Pp (purple) and 1/2 pp (white). The presence of ANY white offspring confirms the plant is Pp. This requires examining relatively few offspring to reach a conclusion. Option B (cross with known Pp) could work but is less efficient \u2014 Pp x PP gives all purple, while Pp x Pp gives 3:1, requiring more offspring to distinguish. Option C (self-pollination) works but requires more offspring; PP selfed gives all purple, Pp selfed gives 3:1. Option D provides no useful information without knowing the genotype of the other variety.",
+      "explanation": "A testcross (crossing with a homozygous recessive individual) is the most efficient and definitive method for determining the genotype of an individual showing the dominant phenotype. If the purple plant is PP, all offspring from PP x pp will be Pp (purple). If the purple plant is Pp, offspring from Pp x pp will be 1/2 Pp (purple) and 1/2 pp (white). The presence of ANY white offspring confirms the plant is Pp. This requires examining relatively few offspring to reach a conclusion. Option B (cross with known Pp) could work but is less efficient — Pp x PP gives all purple, while Pp x Pp gives 3:1, requiring more offspring to distinguish. Option C (self-pollination) works but requires more offspring; PP selfed gives all purple, Pp selfed gives 3:1. Option D provides no useful information without knowing the genotype of the other variety.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 3,
@@ -232,7 +232,7 @@
       "topic": "Mendel and the Gene Idea"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about multiple alleles and blood type genetics:\nS1: The ABO blood group system involves three alleles (I^A, I^B, and i), where I^A and I^B are codominant to each other and both dominant over i.\nS2: A couple where the father is type AB and the mother is type O can have a child with type B blood.\nS3: If both parents are type A, all their children must also be type A.\nS4: The Bombay phenotype (hh) results in an O-like blood type regardless of ABO genotype because the H antigen precursor is required for A and B antigen synthesis.",
       "options": ["TFFT", "TFTF", "TTTT", "TTFT"],
       "correctAnswer": "D",
@@ -371,7 +371,7 @@
         "All yellow"
       ],
       "correctAnswer": "C",
-      "explanation": "When two yellow mice (Yy) are crossed, the expected genotypic ratio is 1 YY : 2 Yy : 1 yy. However, YY is homozygous lethal \u2014 these embryos die before birth. Among the surviving offspring: 2/3 are Yy (yellow) and 1/3 are yy (agouti), giving a 2:1 phenotypic ratio instead of the typical 3:1. This was one of the first demonstrations that Mendelian ratios could be modified by lethality. The yellow mice are always heterozygous because the homozygous dominant genotype is lethal. Litter sizes from Yy x Yy crosses are also reduced by approximately 25% compared to normal. Option B (3:1) would be expected without the lethal allele. Option C (1:1) would be expected from a cross of Yy x yy. Option D ignores both the lethal effect and the recessive yy offspring.",
+      "explanation": "When two yellow mice (Yy) are crossed, the expected genotypic ratio is 1 YY : 2 Yy : 1 yy. However, YY is homozygous lethal — these embryos die before birth. Among the surviving offspring: 2/3 are Yy (yellow) and 1/3 are yy (agouti), giving a 2:1 phenotypic ratio instead of the typical 3:1. This was one of the first demonstrations that Mendelian ratios could be modified by lethality. The yellow mice are always heterozygous because the homozygous dominant genotype is lethal. Litter sizes from Yy x Yy crosses are also reduced by approximately 25% compared to normal. Option B (3:1) would be expected without the lethal allele. Option C (1:1) would be expected from a cross of Yy x yy. Option D ignores both the lethal effect and the recessive yy offspring.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -383,7 +383,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "In a genetic screen of Drosophila, a researcher identifies a novel recessive mutation causing curly wings. She performs the following crosses: Cross 1: curly female x wild-type male \u2192 all F1 wild-type. Cross 2: F1 females x F1 males \u2192 3/4 wild-type : 1/4 curly, with equal ratios in males and females. These results indicate that the curly mutation is:",
+      "question": "In a genetic screen of Drosophila, a researcher identifies a novel recessive mutation causing curly wings. She performs the following crosses: Cross 1: curly female x wild-type male → all F1 wild-type. Cross 2: F1 females x F1 males → 3/4 wild-type : 1/4 curly, with equal ratios in males and females. These results indicate that the curly mutation is:",
       "options": [
         "Autosomal dominant with incomplete penetrance",
         "Autosomal recessive",
@@ -431,7 +431,7 @@
         "Cannot be determined from this information"
       ],
       "correctAnswer": "A",
-      "explanation": "Since all F1 offspring are tall, the tall parent must have contributed only dominant alleles to all offspring. The short parent is tt (homozygous recessive), so all its gametes carry the t allele. For all F1 to be tall, the tall parent must have provided a T allele to every offspring, meaning it must be TT (homozygous dominant). The F2 ratio of 787:277 approximates 3:1 (expected: 798:266), confirming that the F1 plants are Tt (heterozygous). The original cross was TT x tt \u2192 F1 all Tt \u2192 F2 3/4 T_ : 1/4 tt. Option B is incorrect because if the tall parent were Tt, the F1 from Tt x tt would have been 1/2 tall : 1/2 short, not all tall. Option C is incorrect because tt would be short. Option D is incorrect because the data clearly indicate the parent was TT.",
+      "explanation": "Since all F1 offspring are tall, the tall parent must have contributed only dominant alleles to all offspring. The short parent is tt (homozygous recessive), so all its gametes carry the t allele. For all F1 to be tall, the tall parent must have provided a T allele to every offspring, meaning it must be TT (homozygous dominant). The F2 ratio of 787:277 approximates 3:1 (expected: 798:266), confirming that the F1 plants are Tt (heterozygous). The original cross was TT x tt → F1 all Tt → F2 3/4 T_ : 1/4 tt. Option B is incorrect because if the tall parent were Tt, the F1 from Tt x tt would have been 1/2 tall : 1/2 short, not all tall. Option C is incorrect because tt would be short. Option D is incorrect because the data clearly indicate the parent was TT.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 3,
@@ -486,7 +486,7 @@
         "He chose pea plants with clearly contrasting traits controlled by single genes"
       ],
       "correctAnswer": "A",
-      "explanation": "Mendel never observed chromosomes or meiosis; the chromosome theory of inheritance was not established until after his work was rediscovered in 1900 by de Vries, Correns, and von Tschermak. Sutton and Boveri later proposed the chromosome theory of inheritance (1902-1903), linking Mendel's factors to chromosomes. Mendel's success was due to his experimental approach: Option B is correct \u2014 he chose pea plants with discrete, contrasting traits (e.g., tall vs. short, round vs. wrinkled) that happened to be controlled by single genes on different chromosomes. Option C is correct \u2014 he grew thousands of plants and applied quantitative analysis. Option D is correct \u2014 he studied monohybrid crosses before dihybrid crosses, building complexity incrementally.",
+      "explanation": "Mendel never observed chromosomes or meiosis; the chromosome theory of inheritance was not established until after his work was rediscovered in 1900 by de Vries, Correns, and von Tschermak. Sutton and Boveri later proposed the chromosome theory of inheritance (1902-1903), linking Mendel's factors to chromosomes. Mendel's success was due to his experimental approach: Option B is correct — he chose pea plants with discrete, contrasting traits (e.g., tall vs. short, round vs. wrinkled) that happened to be controlled by single genes on different chromosomes. Option C is correct — he grew thousands of plants and applied quantitative analysis. Option D is correct — he studied monohybrid crosses before dihybrid crosses, building complexity incrementally.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 3,
@@ -497,7 +497,7 @@
       "topic": "Mendel and the Gene Idea"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about pedigree analysis:\nS1: In a pedigree for an autosomal recessive trait, affected individuals can have unaffected parents who are both carriers.\nS2: X-linked dominant traits are characterized by affected fathers passing the trait to all daughters but no sons.\nS3: Autosomal dominant traits always skip generations in pedigrees.\nS4: Consanguinity (mating between relatives) increases the probability of offspring being homozygous for autosomal recessive alleles.",
       "options": ["TTTT", "TTFF", "TFFT", "TTFT"],
       "correctAnswer": "D",
@@ -611,7 +611,7 @@
         "Autosomal dominant inheritance"
       ],
       "correctAnswer": "D",
-      "explanation": "The described pattern \u2014 trait in every generation, both sexes equally affected, and affected individuals always having at least one affected parent \u2014 is the hallmark of autosomal dominant inheritance. In dominant inheritance, the trait does not skip generations because only one copy of the mutant allele is needed for expression. Both sexes are equally likely to inherit an autosomal allele. Option B (autosomal recessive) typically shows trait skipping generations, with affected children often having unaffected carrier parents. Option C (X-linked dominant) would show a sex bias: affected fathers pass the trait to all daughters but no sons. Option D (mitochondrial) shows maternal inheritance exclusively \u2014 all children of affected mothers are affected, but affected fathers do not transmit the trait.",
+      "explanation": "The described pattern — trait in every generation, both sexes equally affected, and affected individuals always having at least one affected parent — is the hallmark of autosomal dominant inheritance. In dominant inheritance, the trait does not skip generations because only one copy of the mutant allele is needed for expression. Both sexes are equally likely to inherit an autosomal allele. Option B (autosomal recessive) typically shows trait skipping generations, with affected children often having unaffected carrier parents. Option C (X-linked dominant) would show a sex bias: affected fathers pass the trait to all daughters but no sons. Option D (mitochondrial) shows maternal inheritance exclusively — all children of affected mothers are affected, but affected fathers do not transmit the trait.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 3,
@@ -651,7 +651,7 @@
         "Penetrance refers to the proportion of individuals with a given genotype who show the expected phenotype, while expressivity refers to the degree or severity of phenotype expression among those who do show it"
       ],
       "correctAnswer": "D",
-      "explanation": "Penetrance and expressivity are distinct concepts. Penetrance is measured at the population level \u2014 it is the fraction of individuals with a given genotype who actually display the expected phenotype. For example, if a dominant allele has 80% penetrance, 20% of individuals carrying the allele will appear phenotypically normal. Expressivity describes the range of phenotype severity among individuals who do express the trait. For example, neurofibromatosis type 1 has high penetrance (nearly 100%) but variable expressivity (from mild cafe-au-lait spots to severe tumors). Both penetrance and expressivity can be influenced by modifier genes, environmental factors, and stochastic developmental processes. Option B incorrectly equates the two concepts. Option C incorrectly limits them to specific inheritance patterns. Option D incorrectly assigns exclusive causation to environment or genetics.",
+      "explanation": "Penetrance and expressivity are distinct concepts. Penetrance is measured at the population level — it is the fraction of individuals with a given genotype who actually display the expected phenotype. For example, if a dominant allele has 80% penetrance, 20% of individuals carrying the allele will appear phenotypically normal. Expressivity describes the range of phenotype severity among individuals who do express the trait. For example, neurofibromatosis type 1 has high penetrance (nearly 100%) but variable expressivity (from mild cafe-au-lait spots to severe tumors). Both penetrance and expressivity can be influenced by modifier genes, environmental factors, and stochastic developmental processes. Option B incorrectly equates the two concepts. Option C incorrectly limits them to specific inheritance patterns. Option D incorrectly assigns exclusive causation to environment or genetics.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 3,
@@ -726,7 +726,7 @@
       "question": "In a cross between two organisms heterozygous for four independently assorting genes (AaBbCcDd x AaBbCcDd), what is the probability of obtaining an offspring that is heterozygous for all four genes (AaBbCcDd)?",
       "options": ["1/8", "1/4", "1/16", "1/256"],
       "correctAnswer": "C",
-      "explanation": "For each gene, the probability of heterozygous offspring from a cross between two heterozygotes is: Aa x Aa \u2192 1/4 AA, 2/4 Aa, 1/4 aa. So P(Aa) = 1/2. Similarly, P(Bb) = 1/2, P(Cc) = 1/2, P(Dd) = 1/2. Since the four genes assort independently, the combined probability of being heterozygous for all four is: 1/2 x 1/2 x 1/2 x 1/2 = 1/16. Option B (1/256) would be the probability of a specific quadruple-homozygous genotype like AABBCCDD (1/4^4). Option C (1/4) would be for one gene only. Option D (1/8) would be for three genes.",
+      "explanation": "For each gene, the probability of heterozygous offspring from a cross between two heterozygotes is: Aa x Aa → 1/4 AA, 2/4 Aa, 1/4 aa. So P(Aa) = 1/2. Similarly, P(Bb) = 1/2, P(Cc) = 1/2, P(Dd) = 1/2. Since the four genes assort independently, the combined probability of being heterozygous for all four is: 1/2 x 1/2 x 1/2 x 1/2 = 1/16. Option B (1/256) would be the probability of a specific quadruple-homozygous genotype like AABBCCDD (1/4^4). Option C (1/4) would be for one gene only. Option D (1/8) would be for three genes.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 3,
@@ -737,7 +737,7 @@
       "topic": "Mendel and the Gene Idea"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about epistatic interactions:\nS1: In recessive epistasis (e.g., Labrador coat color), the homozygous recessive genotype at one locus masks the expression of alleles at a second locus, producing a modified 9:3:4 ratio.\nS2: In duplicate recessive epistasis, both loci must have at least one dominant allele for the wild-type phenotype, producing a 9:7 ratio.\nS3: Epistasis between two genes always reduces the number of phenotypic classes compared to the expected four classes of a standard dihybrid cross.\nS4: Epistasis violates Mendel's law of independent assortment because the genes interact during inheritance.",
       "options": ["TTFF", "TTTT", "TFFT", "TTFT"],
       "correctAnswer": "A",
@@ -776,7 +776,7 @@
         "Eye color shows maternal inheritance"
       ],
       "correctAnswer": "A",
-      "explanation": "Wait \u2014 this result is NOT consistent with classical X-linked inheritance of white eye color in Drosophila. If eye color were X-linked: F1 females from X^R X^w mother x X^w Y father would be X^R X^w (red-eyed) and X^w X^w (white-eyed), not all red-eyed. For all F1 to be red-eyed, the mother must be X^R X^R. But then the question says 'all red-eyed F1 offspring' from a red female x white male. If the gene were X-linked, F1 males would be X^R Y from an X^R X^R mother (all red-eyed) or X^R Y and X^w Y from X^R X^w mother (half red, half white). The given F2 pattern (equal ratios in both sexes) is actually more consistent with autosomal inheritance where the original female was Rr. Cross: Rr x rr (which should give 1/2 red, 1/2 white in F1). But the question says ALL F1 are red, implying the original female is RR. This contradicts the F2 pattern. The answer describes the autosomal testcross interpretation.",
+      "explanation": "Wait — this result is NOT consistent with classical X-linked inheritance of white eye color in Drosophila. If eye color were X-linked: F1 females from X^R X^w mother x X^w Y father would be X^R X^w (red-eyed) and X^w X^w (white-eyed), not all red-eyed. For all F1 to be red-eyed, the mother must be X^R X^R. But then the question says 'all red-eyed F1 offspring' from a red female x white male. If the gene were X-linked, F1 males would be X^R Y from an X^R X^R mother (all red-eyed) or X^R Y and X^w Y from X^R X^w mother (half red, half white). The given F2 pattern (equal ratios in both sexes) is actually more consistent with autosomal inheritance where the original female was Rr. Cross: Rr x rr (which should give 1/2 red, 1/2 white in F1). But the question says ALL F1 are red, implying the original female is RR. This contradicts the F2 pattern. The answer describes the autosomal testcross interpretation.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -796,7 +796,7 @@
         "Quite low, suggesting Mendel may have been fortunate or may have selected traits that showed independent assortment"
       ],
       "correctAnswer": "D",
-      "explanation": "With only 7 chromosome pairs in pea plants (2n = 14), the probability that 7 randomly selected genes would each be on a different chromosome is: 7/7 x 6/7 x 5/7 x 4/7 x 3/7 x 2/7 x 1/7 = 7!/7^7 = 5040/823543 \u2248 0.006 or about 0.6%. This probability is very low, and in fact, modern molecular analysis has shown that some of Mendel's seven genes are on the same chromosome. However, genes far apart on the same chromosome can still assort independently due to high recombination frequency (approaching 50%). Additionally, Mendel may have preferentially selected traits that showed independent assortment in his crosses. Option B is clearly false. Option C is too absolute \u2014 linked genes far apart can effectively assort independently. Option D has no mathematical basis.",
+      "explanation": "With only 7 chromosome pairs in pea plants (2n = 14), the probability that 7 randomly selected genes would each be on a different chromosome is: 7/7 x 6/7 x 5/7 x 4/7 x 3/7 x 2/7 x 1/7 = 7!/7^7 = 5040/823543 ≈ 0.006 or about 0.6%. This probability is very low, and in fact, modern molecular analysis has shown that some of Mendel's seven genes are on the same chromosome. However, genes far apart on the same chromosome can still assort independently due to high recombination frequency (approaching 50%). Additionally, Mendel may have preferentially selected traits that showed independent assortment in his crosses. Option B is clearly false. Option C is too absolute — linked genes far apart can effectively assort independently. Option D has no mathematical basis.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -816,7 +816,7 @@
         "Perform a single F1 x F1 cross and examine F2 phenotypes"
       ],
       "correctAnswer": "A",
-      "explanation": "Genetic anticipation \u2014 where a genetic disorder becomes more severe or has earlier onset in successive generations \u2014 requires multi-generational analysis with careful phenotypic measurement. The researcher must track the trait across at least 3-4 generations, measuring quantitative aspects of the phenotype (age of onset, severity scores) in each generation. Environmental variables must be controlled (same diet, housing, temperature) to ensure that apparent anticipation is not due to environmental changes. In humans, anticipation is often caused by trinucleotide repeat expansion (e.g., Huntington's disease, myotonic dystrophy). Molecular analysis of repeat length across generations can confirm the mechanism. Option B provides only one generation of data. Option C eliminates gene function entirely but does not test for anticipation. Option D tests for sex-influenced expression, not anticipation.",
+      "explanation": "Genetic anticipation — where a genetic disorder becomes more severe or has earlier onset in successive generations — requires multi-generational analysis with careful phenotypic measurement. The researcher must track the trait across at least 3-4 generations, measuring quantitative aspects of the phenotype (age of onset, severity scores) in each generation. Environmental variables must be controlled (same diet, housing, temperature) to ensure that apparent anticipation is not due to environmental changes. In humans, anticipation is often caused by trinucleotide repeat expansion (e.g., Huntington's disease, myotonic dystrophy). Molecular analysis of repeat length across generations can confirm the mechanism. Option B provides only one generation of data. Option C eliminates gene function entirely but does not test for anticipation. Option D tests for sex-influenced expression, not anticipation.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -862,7 +862,7 @@
       "topic": "Mendel and the Gene Idea"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about non-Mendelian inheritance patterns:\nS1: Mitochondrial inheritance shows a maternal pattern because mitochondria in the zygote come almost exclusively from the egg cell.\nS2: Genomic imprinting can cause different phenotypes depending on whether an allele is inherited from the mother or father, due to epigenetic modifications.\nS3: Trinucleotide repeat expansion disorders show anticipation because the number of repeats tends to increase across generations, especially when transmitted through the male germline for some disorders.\nS4: Extranuclear genes in chloroplasts follow Mendelian segregation ratios because chloroplasts divide by fission like bacteria.",
       "options": ["TTTF", "TFTT", "TTFT", "TTTT"],
       "correctAnswer": "A",
@@ -886,7 +886,7 @@
         "Epistasis between the two genes"
       ],
       "correctAnswer": "A",
-      "explanation": "Wait \u2014 the results show all 500 offspring are tall (252 + 248 = 500 tall, 0 short). This cannot be explained by linkage, which would affect the ratio of T and G together but should still produce some short offspring. The absence of any short offspring from a testcross of TtGg x ttgg is unexpected. In a testcross, we expect 50% Tt (tall) and 50% tt (short). The complete absence of short offspring suggests a lethal combination \u2014 perhaps the tt genotype in combination with certain G alleles is lethal, or T is a hemizygous lethal. However, Option A (complete linkage with no recombination of TG) would give: TG and tg gametes from the F1, producing TtGg (tall green) and ttgg (short yellow) in a 1:1 ratio. This would give short offspring, contradicting the data. The data actually show 252 tall green : 248 tall yellow : 0 short, suggesting that all short (tt) offspring are nonviable regardless of the G genotype.",
+      "explanation": "Wait — the results show all 500 offspring are tall (252 + 248 = 500 tall, 0 short). This cannot be explained by linkage, which would affect the ratio of T and G together but should still produce some short offspring. The absence of any short offspring from a testcross of TtGg x ttgg is unexpected. In a testcross, we expect 50% Tt (tall) and 50% tt (short). The complete absence of short offspring suggests a lethal combination — perhaps the tt genotype in combination with certain G alleles is lethal, or T is a hemizygous lethal. However, Option A (complete linkage with no recombination of TG) would give: TG and tg gametes from the F1, producing TtGg (tall green) and ttgg (short yellow) in a 1:1 ratio. This would give short offspring, contradicting the data. The data actually show 252 tall green : 248 tall yellow : 0 short, suggesting that all short (tt) offspring are nonviable regardless of the G genotype.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -906,7 +906,7 @@
         "Epistasis is masking some phenotypic classes"
       ],
       "correctAnswer": "C",
-      "explanation": "The chi-square value of 132.0 massively exceeds the critical value of 7.815, so we strongly reject the null hypothesis of a 1:1:1:1 ratio (independent assortment). Examining the data: AaBb (126) and aabb (121) are parental classes, while Aabb (24) and aaBb (29) are recombinant classes. The parental classes are approximately equal to each other and much more frequent than the recombinant classes (also approximately equal to each other). This pattern is the hallmark of genetic linkage \u2014 the A and B genes are on the same chromosome, and the parental combinations (AB and ab) are inherited together more frequently than recombinant combinations (Ab and aB). The recombination frequency is (24 + 29) / 300 = 53/300 = 17.7%. Option B is unlikely given the systematic deviation. Option C would produce modified ratios but not the specific pattern of excess parentals. Option D is incorrect; 300 is adequate.",
+      "explanation": "The chi-square value of 132.0 massively exceeds the critical value of 7.815, so we strongly reject the null hypothesis of a 1:1:1:1 ratio (independent assortment). Examining the data: AaBb (126) and aabb (121) are parental classes, while Aabb (24) and aaBb (29) are recombinant classes. The parental classes are approximately equal to each other and much more frequent than the recombinant classes (also approximately equal to each other). This pattern is the hallmark of genetic linkage — the A and B genes are on the same chromosome, and the parental combinations (AB and ab) are inherited together more frequently than recombinant combinations (Ab and aB). The recombination frequency is (24 + 29) / 300 = 53/300 = 17.7%. Option B is unlikely given the systematic deviation. Option C would produce modified ratios but not the specific pattern of excess parentals. Option D is incorrect; 300 is adequate.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -968,7 +968,7 @@
     },
     {
       "type": "MCQ",
-      "question": "A plant shows a novel phenotype when two genes interact. Cross: AABB (phenotype 1) x aabb (phenotype 2) \u2192 F1 AaBb (phenotype 1). F2 ratio: 15 phenotype 1 : 1 phenotype 2. This ratio indicates:",
+      "question": "A plant shows a novel phenotype when two genes interact. Cross: AABB (phenotype 1) x aabb (phenotype 2) → F1 AaBb (phenotype 1). F2 ratio: 15 phenotype 1 : 1 phenotype 2. This ratio indicates:",
       "options": [
         "Recessive epistasis at both loci",
         "Dominant epistasis with one gene masking the other",
@@ -996,7 +996,7 @@
         "Group 1 (83:17), because 100 is the ideal sample size"
       ],
       "correctAnswer": "C",
-      "explanation": "Group 4 has the largest sample size (n=1000), and its ratio of 749:251 = 2.98:1, which is very close to the expected 3:1 (expected: 750:250). This illustrates the law of large numbers \u2014 as sample size increases, the observed ratio tends to converge on the expected ratio. Group 1 (83:17 = 4.88:1) deviates substantially, as does Group 5 (45:5 = 9:1). Group 2 (154:46 = 3.35:1) and Group 3 (378:122 = 3.10:1) show improving accuracy with sample size. Option B confuses a large deviation with accuracy. Option C implies an 'ideal' sample size that does not exist in this context. Option D is false; random sampling always introduces variation from expected ratios.",
+      "explanation": "Group 4 has the largest sample size (n=1000), and its ratio of 749:251 = 2.98:1, which is very close to the expected 3:1 (expected: 750:250). This illustrates the law of large numbers — as sample size increases, the observed ratio tends to converge on the expected ratio. Group 1 (83:17 = 4.88:1) deviates substantially, as does Group 5 (45:5 = 9:1). Group 2 (154:46 = 3.35:1) and Group 3 (378:122 = 3.10:1) show improving accuracy with sample size. Option B confuses a large deviation with accuracy. Option C implies an 'ideal' sample size that does not exist in this context. Option D is false; random sampling always introduces variation from expected ratios.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 3,
@@ -1071,7 +1071,7 @@
       "question": "In a population, the frequency of individuals affected with an autosomal recessive disorder is 1/10,000. What is the probability that a random mating between two phenotypically normal individuals from this population will produce an affected child?",
       "options": ["1/4", "Approximately 1/10,000", "1/100", "1/40,000"],
       "correctAnswer": "B",
-      "explanation": "If q^2 = 1/10,000, then q = 1/100 and p = 99/100. The carrier frequency (2pq) = 2 x 99/100 x 1/100 \u2248 1/50. The probability both parents are carriers = (1/50)^2 = 1/2500. Given both are carriers, probability of affected child = 1/4. Overall probability = 1/2500 x 1/4 = 1/10,000. This makes intuitive sense: the frequency of affected individuals in the population should equal the probability that a random mating produces an affected child (this is a Hardy-Weinberg equilibrium consequence). More precisely: (2pq)^2 x 1/4 = 4p^2q^2/4 = p^2q^2 \u2248 q^2 when p \u2248 1. Option B assumes both parents are already known carriers. Option C is the allele frequency, not the child probability. Option D incorrectly multiplies the affected frequency by 4.",
+      "explanation": "If q^2 = 1/10,000, then q = 1/100 and p = 99/100. The carrier frequency (2pq) = 2 x 99/100 x 1/100 ≈ 1/50. The probability both parents are carriers = (1/50)^2 = 1/2500. Given both are carriers, probability of affected child = 1/4. Overall probability = 1/2500 x 1/4 = 1/10,000. This makes intuitive sense: the frequency of affected individuals in the population should equal the probability that a random mating produces an affected child (this is a Hardy-Weinberg equilibrium consequence). More precisely: (2pq)^2 x 1/4 = 4p^2q^2/4 = p^2q^2 ≈ q^2 when p ≈ 1. Option B assumes both parents are already known carriers. Option C is the allele frequency, not the child probability. Option D incorrectly multiplies the affected frequency by 4.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -1082,11 +1082,11 @@
       "topic": "Mendel and the Gene Idea"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the chi-square goodness-of-fit test in genetics:\nS1: The chi-square test compares observed data to an expected ratio based on a genetic hypothesis (null hypothesis).\nS2: Degrees of freedom equal the number of phenotypic classes minus one.\nS3: A large chi-square value (exceeding the critical value) means the data support the null hypothesis.\nS4: The chi-square test requires a minimum expected value of at least 5 in each category for the test to be valid.",
       "options": ["TTTT", "TTTF", "TTFT", "TFFT"],
       "correctAnswer": "C",
-      "explanation": "S1 is TRUE: The chi-square goodness-of-fit test evaluates whether observed frequencies differ significantly from expected frequencies based on a genetic hypothesis. The null hypothesis is that the observed data fit the expected ratio. S2 is TRUE: For a goodness-of-fit test, degrees of freedom = number of classes - 1. For a monohybrid 3:1 ratio (2 classes), df = 1. For a dihybrid 9:3:3:1 ratio (4 classes), df = 3. S3 is FALSE: A large chi-square value (exceeding the critical value at the chosen significance level) means we REJECT the null hypothesis \u2014 the data do NOT fit the expected ratio. A small chi-square value means we fail to reject the null hypothesis, supporting the expected ratio. S4 is TRUE: One of the assumptions of the chi-square test is that expected frequencies should be at least 5 in each category. When expected values are less than 5, the chi-square approximation becomes unreliable, and alternative tests (such as Fisher's exact test) should be used.",
+      "explanation": "S1 is TRUE: The chi-square goodness-of-fit test evaluates whether observed frequencies differ significantly from expected frequencies based on a genetic hypothesis. The null hypothesis is that the observed data fit the expected ratio. S2 is TRUE: For a goodness-of-fit test, degrees of freedom = number of classes - 1. For a monohybrid 3:1 ratio (2 classes), df = 1. For a dihybrid 9:3:3:1 ratio (4 classes), df = 3. S3 is FALSE: A large chi-square value (exceeding the critical value at the chosen significance level) means we REJECT the null hypothesis — the data do NOT fit the expected ratio. A small chi-square value means we fail to reject the null hypothesis, supporting the expected ratio. S4 is TRUE: One of the assumptions of the chi-square test is that expected frequencies should be at least 5 in each category. When expected values are less than 5, the chi-square approximation becomes unreliable, and alternative tests (such as Fisher's exact test) should be used.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 3,
@@ -1151,7 +1151,7 @@
       "question": "A cross between organisms with genotypes AaBbCcDd and aabbccdd (where all genes assort independently) would produce how many different genotypic classes among the offspring?",
       "options": ["81", "8", "16", "256"],
       "correctAnswer": "C",
-      "explanation": "For each gene, the heterozygote x homozygous recessive cross produces 2 genotypic classes (e.g., Aa x aa \u2192 Aa and aa). With four independently assorting genes, the total number of genotypic classes is 2^4 = 16. These range from AaBbCcDd (heterozygous at all four loci) to aabbccdd (homozygous recessive at all four loci), with various combinations in between. Option B (81) would be 3^4, the number of genotypic classes from a cross between two quadruple heterozygotes (AaBbCcDd x AaBbCcDd, where each gene produces 3 genotypes). Option C (256) would be 4^4 or 2^8. Option D (8) would be the number of genotypic classes for 3 genes in a testcross.",
+      "explanation": "For each gene, the heterozygote x homozygous recessive cross produces 2 genotypic classes (e.g., Aa x aa → Aa and aa). With four independently assorting genes, the total number of genotypic classes is 2^4 = 16. These range from AaBbCcDd (heterozygous at all four loci) to aabbccdd (homozygous recessive at all four loci), with various combinations in between. Option B (81) would be 3^4, the number of genotypic classes from a cross between two quadruple heterozygotes (AaBbCcDd x AaBbCcDd, where each gene produces 3 genotypes). Option C (256) would be 4^4 or 2^8. Option D (8) would be the number of genotypic classes for 3 genes in a testcross.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 3,
@@ -1222,11 +1222,11 @@
       "topic": "Mendel and the Gene Idea"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the molecular basis of Mendel's factors (genes):\nS1: Mendel's 'factors' correspond to genes, which are segments of DNA that encode proteins or functional RNA molecules.\nS2: The law of segregation is explained by the physical separation of homologous chromosomes during anaphase I of meiosis.\nS3: Mendel's observations were initially rejected because they contradicted the prevailing blending inheritance theory and were not understood in the context of chromosomes.\nS4: All of Mendel's seven traits in pea plants are now known to be encoded by genes on different chromosomes.",
       "options": ["TFTT", "TTTF", "TTTT", "TTFT"],
       "correctAnswer": "B",
-      "explanation": "S1 is TRUE: Mendel's abstract 'factors' are now understood to be genes \u2014 specific DNA sequences on chromosomes that encode proteins (through mRNA) or functional RNA molecules. S2 is TRUE: The physical basis of Mendel's law of segregation is the separation of homologous chromosomes at anaphase I of meiosis. Each homolog carries one allele of each gene located on that chromosome, so when homologs separate, alleles segregate into different gametes. S3 is TRUE: Mendel's 1866 paper was largely ignored for 34 years. The prevailing view was blending inheritance, where parental traits mixed irreversibly in offspring (like mixing paints). Mendel's particulate model, where discrete factors maintained their identity through generations, was not appreciated until the rediscovery in 1900 by de Vries, Correns, and von Tschermak, after the behavior of chromosomes during meiosis had been described. S4 is FALSE: Modern molecular analysis has shown that some of Mendel's seven genes are actually on the same chromosome. Specifically, genes for stem length and pod shape are both on chromosome 4, and genes for flower color and pod color are on chromosomes 1 and 4 or 5 respectively. However, genes on the same chromosome that are far apart can still assort independently, which is likely why Mendel did not detect linkage.",
+      "explanation": "S1 is TRUE: Mendel's abstract 'factors' are now understood to be genes — specific DNA sequences on chromosomes that encode proteins (through mRNA) or functional RNA molecules. S2 is TRUE: The physical basis of Mendel's law of segregation is the separation of homologous chromosomes at anaphase I of meiosis. Each homolog carries one allele of each gene located on that chromosome, so when homologs separate, alleles segregate into different gametes. S3 is TRUE: Mendel's 1866 paper was largely ignored for 34 years. The prevailing view was blending inheritance, where parental traits mixed irreversibly in offspring (like mixing paints). Mendel's particulate model, where discrete factors maintained their identity through generations, was not appreciated until the rediscovery in 1900 by de Vries, Correns, and von Tschermak, after the behavior of chromosomes during meiosis had been described. S4 is FALSE: Modern molecular analysis has shown that some of Mendel's seven genes are actually on the same chromosome. Specifically, genes for stem length and pod shape are both on chromosome 4, and genes for flower color and pod color are on chromosomes 1 and 4 or 5 respectively. However, genes on the same chromosome that are far apart can still assort independently, which is likely why Mendel did not detect linkage.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 3,
@@ -1281,7 +1281,7 @@
         "The two mutations are in different genes, each providing a functional copy that the other lacks"
       ],
       "correctAnswer": "D",
-      "explanation": "The complementation test determines whether two recessive mutations causing the same phenotype are in the same gene or different genes. If two white-flowered strains are crossed and the F1 is purple, the mutations complement each other. This means each parent provides a functional copy of the gene that is mutant in the other parent: Parent 1 is aaBB (mutant at gene A, normal at gene B) and Parent 2 is AAbb (normal at gene A, mutant at gene B). The F1 is AaBb, with at least one functional allele at each gene, restoring the wild-type phenotype. If the mutations were in the same gene, the F1 would be aa (still mutant) and would remain white. Option B is the opposite \u2014 if they fail to complement, they are in the same gene. Option C would not explain restoration of wild-type. Option D is extremely unlikely in both strains simultaneously.",
+      "explanation": "The complementation test determines whether two recessive mutations causing the same phenotype are in the same gene or different genes. If two white-flowered strains are crossed and the F1 is purple, the mutations complement each other. This means each parent provides a functional copy of the gene that is mutant in the other parent: Parent 1 is aaBB (mutant at gene A, normal at gene B) and Parent 2 is AAbb (normal at gene A, mutant at gene B). The F1 is AaBb, with at least one functional allele at each gene, restoring the wild-type phenotype. If the mutations were in the same gene, the F1 would be aa (still mutant) and would remain white. Option B is the opposite — if they fail to complement, they are in the same gene. Option C would not explain restoration of wild-type. Option D is extremely unlikely in both strains simultaneously.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -1321,7 +1321,7 @@
         "Cross two affected individuals and examine F1"
       ],
       "correctAnswer": "C",
-      "explanation": "Reciprocal crosses are the most informative first step for distinguishing between different inheritance modes because they reveal sex-linked inheritance. For autosomal traits, reciprocal crosses give identical results regardless of which sex is affected. For X-linked traits, reciprocal crosses give different results: an affected female x normal male gives different F1 phenotypic ratios than an affected male x normal female. Specifically, for X-linked recessive: affected female x normal male \u2192 all sons affected, all daughters carriers (appear normal); while affected male x normal female \u2192 all offspring appear normal. For X-linked dominant: affected female x normal male \u2192 all offspring affected; while affected male x normal female \u2192 all daughters affected, all sons normal. These asymmetries immediately distinguish autosomal from X-linked inheritance. Option B does not distinguish dominant from recessive efficiently. Option C is too indirect. Option D is irrelevant.",
+      "explanation": "Reciprocal crosses are the most informative first step for distinguishing between different inheritance modes because they reveal sex-linked inheritance. For autosomal traits, reciprocal crosses give identical results regardless of which sex is affected. For X-linked traits, reciprocal crosses give different results: an affected female x normal male gives different F1 phenotypic ratios than an affected male x normal female. Specifically, for X-linked recessive: affected female x normal male → all sons affected, all daughters carriers (appear normal); while affected male x normal female → all offspring appear normal. For X-linked dominant: affected female x normal male → all offspring affected; while affected male x normal female → all daughters affected, all sons normal. These asymmetries immediately distinguish autosomal from X-linked inheritance. Option B does not distinguish dominant from recessive efficiently. Option C is too indirect. Option D is irrelevant.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -1372,7 +1372,7 @@
       "topic": "Mendel and the Gene Idea"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about extensions to Mendelian genetics:\nS1: In sex-influenced inheritance, a trait may be dominant in one sex and recessive in the other due to hormonal differences.\nS2: Sex-limited traits are expressed in only one sex, even though the gene may be present in both sexes.\nS3: Incomplete penetrance means that not all individuals with a given genotype express the expected phenotype, which can make dominant traits appear to skip generations.\nS4: Phenocopy refers to an environmentally induced phenotype that mimics a genetic disorder.",
       "options": ["TTTF", "TFTT", "TTTT", "TTFT"],
       "correctAnswer": "C",
@@ -1411,7 +1411,7 @@
         "Mitochondrial"
       ],
       "correctAnswer": "A",
-      "explanation": "The key features point to X-linked recessive inheritance: (1) Males are more frequently affected than females (10 males vs. 5 females, a 2:1 ratio). (2) No affected father has an affected son \u2014 this is expected because fathers pass their Y chromosome (not X) to sons. (3) All sons of affected mothers are affected \u2014 affected mothers are homozygous (X^a X^a), so all their sons receive an X^a chromosome and are affected (X^a Y). The 5 affected females could be homozygous (X^a X^a), which requires receiving X^a from both parents. Option B (autosomal dominant) would show equal sex ratios and father-to-son transmission. Option C (autosomal recessive) would show equal sex ratios. Option D (mitochondrial) would show maternal inheritance to all children, not sex-biased.",
+      "explanation": "The key features point to X-linked recessive inheritance: (1) Males are more frequently affected than females (10 males vs. 5 females, a 2:1 ratio). (2) No affected father has an affected son — this is expected because fathers pass their Y chromosome (not X) to sons. (3) All sons of affected mothers are affected — affected mothers are homozygous (X^a X^a), so all their sons receive an X^a chromosome and are affected (X^a Y). The 5 affected females could be homozygous (X^a X^a), which requires receiving X^a from both parents. Option B (autosomal dominant) would show equal sex ratios and father-to-son transmission. Option C (autosomal recessive) would show equal sex ratios. Option D (mitochondrial) would show maternal inheritance to all children, not sex-biased.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -1471,7 +1471,7 @@
         "Move the affected mouse to a different cage and see if the phenotype persists"
       ],
       "correctAnswer": "B",
-      "explanation": "The most definitive way to distinguish genetic from environmental causes is breeding analysis. If the phenotype is genetic (whether dominant or recessive), it will segregate in predictable Mendelian ratios across generations. If dominant: crossing affected x normal \u2192 expect approximately 1/2 affected F1; if recessive: F1 all normal, then F1 x F1 \u2192 approximately 1/4 affected F2. If the phenotype NEVER reappears in any offspring across multiple generations of crosses, it is likely environmental (a phenocopy). Option B tests whether the specific cage environment causes the phenotype but does not definitively rule out genetics. Option C may identify sequence variants but cannot prove causation without genetic crosses. Option D provides physiological data but cannot distinguish genetic from environmental causes.",
+      "explanation": "The most definitive way to distinguish genetic from environmental causes is breeding analysis. If the phenotype is genetic (whether dominant or recessive), it will segregate in predictable Mendelian ratios across generations. If dominant: crossing affected x normal → expect approximately 1/2 affected F1; if recessive: F1 all normal, then F1 x F1 → approximately 1/4 affected F2. If the phenotype NEVER reappears in any offspring across multiple generations of crosses, it is likely environmental (a phenocopy). Option B tests whether the specific cage environment causes the phenotype but does not definitively rule out genetics. Option C may identify sequence variants but cannot prove causation without genetic crosses. Option D provides physiological data but cannot distinguish genetic from environmental causes.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 3,
@@ -1511,7 +1511,7 @@
         "Environmental variation causes the three phenotypic classes"
       ],
       "correctAnswer": "B",
-      "explanation": "The 1:2:1 ratio and the correlation between enzyme dosage and phenotype strongly support dosage sensitivity (incomplete dominance). Homozygotes with two copies of the functional allele (e.g., BB) produce 100% enzyme and dark coat color. Heterozygotes with one functional and one non-functional allele (Bb) produce 50% enzyme and medium coat color. Homozygotes with no functional allele (bb) produce 0% enzyme and light coat color. This is a molecular example of incomplete dominance \u2014 the heterozygote is phenotypically intermediate because it has half the gene dosage. This occurs when the pathway is dosage-sensitive and 50% enzyme activity produces a visibly intermediate phenotype. Option B would require different crosses to demonstrate three alleles. Option C would typically produce ratios other than 1:2:1. Option D is ruled out by the consistent enzyme level-phenotype correlation.",
+      "explanation": "The 1:2:1 ratio and the correlation between enzyme dosage and phenotype strongly support dosage sensitivity (incomplete dominance). Homozygotes with two copies of the functional allele (e.g., BB) produce 100% enzyme and dark coat color. Heterozygotes with one functional and one non-functional allele (Bb) produce 50% enzyme and medium coat color. Homozygotes with no functional allele (bb) produce 0% enzyme and light coat color. This is a molecular example of incomplete dominance — the heterozygote is phenotypically intermediate because it has half the gene dosage. This occurs when the pathway is dosage-sensitive and 50% enzyme activity produces a visibly intermediate phenotype. Option B would require different crosses to demonstrate three alleles. Option C would typically produce ratios other than 1:2:1. Option D is ruled out by the consistent enzyme level-phenotype correlation.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -1557,7 +1557,7 @@
       "topic": "Mendel and the Gene Idea"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about probability in genetics:\nS1: The probability of two independent events both occurring is the product of their individual probabilities (multiplication rule).\nS2: The probability of one event OR another mutually exclusive event occurring is the sum of their individual probabilities (addition rule).\nS3: The binomial probability formula can be used to calculate the probability of obtaining a specific number of offspring with a given phenotype in a family of known size.\nS4: If a couple has already had four sons, the probability that their fifth child will be a daughter is greater than 1/2 due to the law of averages.",
       "options": ["TFTT", "TTTT", "TTFT", "TTTF"],
       "correctAnswer": "D",
@@ -1581,7 +1581,7 @@
         "Heterozygotes have completely normal hemoglobin function with no consequences"
       ],
       "correctAnswer": "B",
-      "explanation": "Sickle cell heterozygote advantage (balanced polymorphism) occurs because HbA HbS heterozygotes have a fitness advantage over BOTH homozygotes in malaria-endemic regions. HbS HbS homozygotes have severe sickle cell disease (reduced fitness). HbA HbA homozygotes are susceptible to severe malaria (reduced fitness in endemic regions). HbA HbS heterozygotes have mild or no symptoms of sickle cell disease while having increased resistance to malaria \u2014 the parasite cannot effectively replicate in cells containing some HbS, and infected cells are preferentially removed by the spleen. This balancing selection maintains both alleles in the population. Option B is incorrect because heterozygotes do have slight sickling under extreme conditions. Option C is incorrect because heterozygotes are not completely resistant, just more resistant. Option D is incorrect in malaria-endemic regions specifically.",
+      "explanation": "Sickle cell heterozygote advantage (balanced polymorphism) occurs because HbA HbS heterozygotes have a fitness advantage over BOTH homozygotes in malaria-endemic regions. HbS HbS homozygotes have severe sickle cell disease (reduced fitness). HbA HbA homozygotes are susceptible to severe malaria (reduced fitness in endemic regions). HbA HbS heterozygotes have mild or no symptoms of sickle cell disease while having increased resistance to malaria — the parasite cannot effectively replicate in cells containing some HbS, and infected cells are preferentially removed by the spleen. This balancing selection maintains both alleles in the population. Option B is incorrect because heterozygotes do have slight sickling under extreme conditions. Option C is incorrect because heterozygotes are not completely resistant, just more resistant. Option D is incorrect in malaria-endemic regions specifically.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -1601,7 +1601,7 @@
         "m1 is dominant to m2"
       ],
       "correctAnswer": "A",
-      "explanation": "In a complementation test, two homozygous recessive mutant strains are crossed: m1/m1 x m2/m2 \u2192 F1 = m1/m2. If the F1 shows the mutant phenotype (failure to complement), this means neither mutation provides a functional copy of the gene in the F1. This occurs when both mutations are in the same gene \u2014 the F1 is a trans-heterozygote (m1/m2 at one locus) with no wild-type allele, so no functional protein is produced. If the two mutations were in different genes, each parent would provide a wild-type allele for the gene mutant in the other parent, restoring wild-type phenotype (complementation). Complementation testing defines 'complementation groups,' each corresponding to a gene. Option B describes the opposite result (complementation). Option C is irrelevant because complementation tests use recessive mutations. Option D would produce wild-type, not mutant phenotype.",
+      "explanation": "In a complementation test, two homozygous recessive mutant strains are crossed: m1/m1 x m2/m2 → F1 = m1/m2. If the F1 shows the mutant phenotype (failure to complement), this means neither mutation provides a functional copy of the gene in the F1. This occurs when both mutations are in the same gene — the F1 is a trans-heterozygote (m1/m2 at one locus) with no wild-type allele, so no functional protein is produced. If the two mutations were in different genes, each parent would provide a wild-type allele for the gene mutant in the other parent, restoring wild-type phenotype (complementation). Complementation testing defines 'complementation groups,' each corresponding to a gene. Option B describes the opposite result (complementation). Option C is irrelevant because complementation tests use recessive mutations. Option D would produce wild-type, not mutant phenotype.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -1633,7 +1633,7 @@
     },
     {
       "type": "MCQ",
-      "question": "A geneticist discovers that a particular enzyme shows three electrophoretic variants (fast, medium, and slow) in a population. Crosses reveal: fast x fast \u2192 all fast; slow x slow \u2192 all slow; fast x slow \u2192 all medium. Medium x medium \u2192 1 fast : 2 medium : 1 slow. At the protein level, this represents:",
+      "question": "A geneticist discovers that a particular enzyme shows three electrophoretic variants (fast, medium, and slow) in a population. Crosses reveal: fast x fast → all fast; slow x slow → all slow; fast x slow → all medium. Medium x medium → 1 fast : 2 medium : 1 slow. At the protein level, this represents:",
       "options": [
         "Post-translational modification creating three forms",
         "Codominance, where both alleles produce functional but electrophoretically distinct protein products that are both present in heterozygotes",
@@ -1641,7 +1641,7 @@
         "Two genes controlling protein migration speed"
       ],
       "correctAnswer": "B",
-      "explanation": "This is a classic example of codominance at the molecular (protein) level. Fast and slow electrophoretic variants are produced by different alleles of the same gene, each encoding a slightly different version of the enzyme with different charge or size. In heterozygotes, BOTH allele products are present and detectable on electrophoresis as a 'medium' band pattern (which is actually both bands or a heterodimer band at intermediate position). The 1:2:1 ratio from medium x medium confirms single-gene inheritance. At the protein level, this is codominance because both allelic products are expressed and detectable. However, the question says 'medium' phenotype appears in heterozygotes \u2014 if this is truly an intermediate single band rather than two bands, it might be due to heterodimer formation. Option B describes the phenotype-level observation but misses the molecular mechanism. Option C is ruled out by single-gene inheritance ratios. Option D would not show Mendelian inheritance patterns.",
+      "explanation": "This is a classic example of codominance at the molecular (protein) level. Fast and slow electrophoretic variants are produced by different alleles of the same gene, each encoding a slightly different version of the enzyme with different charge or size. In heterozygotes, BOTH allele products are present and detectable on electrophoresis as a 'medium' band pattern (which is actually both bands or a heterodimer band at intermediate position). The 1:2:1 ratio from medium x medium confirms single-gene inheritance. At the protein level, this is codominance because both allelic products are expressed and detectable. However, the question says 'medium' phenotype appears in heterozygotes — if this is truly an intermediate single band rather than two bands, it might be due to heterodimer formation. Option B describes the phenotype-level observation but misses the molecular mechanism. Option C is ruled out by single-gene inheritance ratios. Option D would not show Mendelian inheritance patterns.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -1681,7 +1681,7 @@
         "An allele of the same gene as w3, but in a different gene from w1, w2, w4, and w5"
       ],
       "correctAnswer": "D",
-      "explanation": "Complementation tests define genes (complementation groups). When two mutations fail to complement (F1 shows mutant phenotype), they are in the same gene (allelic). When they complement (F1 shows wild-type), they are in different genes. The novel mutation fails to complement w3, indicating they are alleles of the same gene. The novel mutation complements w1, w2, w4, and w5, indicating it is in a different gene from each of these. This means there are at least 5 genes controlling flower color in this species, with w1, w2, w4, and w5 each in separate genes and the novel mutation + w3 in the same gene. Option B is contradicted by the failure to complement with w3. Option C goes too far \u2014 failure to complement means same gene, not necessarily same molecular change. Option D confuses complementation with epistasis.",
+      "explanation": "Complementation tests define genes (complementation groups). When two mutations fail to complement (F1 shows mutant phenotype), they are in the same gene (allelic). When they complement (F1 shows wild-type), they are in different genes. The novel mutation fails to complement w3, indicating they are alleles of the same gene. The novel mutation complements w1, w2, w4, and w5, indicating it is in a different gene from each of these. This means there are at least 5 genes controlling flower color in this species, with w1, w2, w4, and w5 each in separate genes and the novel mutation + w3 in the same gene. Option B is contradicted by the failure to complement with w3. Option C goes too far — failure to complement means same gene, not necessarily same molecular change. Option D confuses complementation with epistasis.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -1757,11 +1757,11 @@
       "topic": "Mendel and the Gene Idea"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about Mendel's experimental design and its significance:\nS1: Mendel used true-breeding (homozygous) parental lines to ensure that any variation in the F2 was due to segregation rather than pre-existing genetic variation.\nS2: Mendel's use of reciprocal crosses helped demonstrate that the inheritance of his traits was not sex-linked or maternally inherited.\nS3: Mendel tracked traits for only one generation (P to F1) before drawing conclusions about inheritance patterns.\nS4: Mendel's mathematical approach to inheritance was revolutionary because previous breeders had relied on qualitative descriptions rather than quantitative analysis.",
       "options": ["TTFT", "TFFT", "TTFF", "TTTT"],
       "correctAnswer": "A",
-      "explanation": "S1 is TRUE: By starting with true-breeding (homozygous) parental lines, Mendel ensured that any genetic variation in the F2 was the result of allele segregation and recombination during meiosis, not pre-existing heterozygosity. This was critical to obtaining clean, interpretable ratios. S2 is TRUE: Mendel performed reciprocal crosses (e.g., using each parent as both pollen donor and pollen recipient) and obtained identical results, demonstrating that inheritance was the same regardless of which parent contributed which allele. This ruled out cytoplasmic inheritance and sex-linked inheritance. S3 is FALSE: Mendel tracked traits across multiple generations \u2014 from P to F1 to F2 (and sometimes F3). His analysis of F2 ratios (3:1 and 9:3:3:1) was central to his deductions about segregation and independent assortment. S4 is TRUE: Before Mendel, breeders like Knight and Gaertner made qualitative observations about inheritance but did not apply statistical analysis. Mendel's quantitative approach \u2014 counting offspring, calculating ratios, and recognizing mathematical patterns \u2014 was revolutionary and essential to his discoveries.",
+      "explanation": "S1 is TRUE: By starting with true-breeding (homozygous) parental lines, Mendel ensured that any genetic variation in the F2 was the result of allele segregation and recombination during meiosis, not pre-existing heterozygosity. This was critical to obtaining clean, interpretable ratios. S2 is TRUE: Mendel performed reciprocal crosses (e.g., using each parent as both pollen donor and pollen recipient) and obtained identical results, demonstrating that inheritance was the same regardless of which parent contributed which allele. This ruled out cytoplasmic inheritance and sex-linked inheritance. S3 is FALSE: Mendel tracked traits across multiple generations — from P to F1 to F2 (and sometimes F3). His analysis of F2 ratios (3:1 and 9:3:3:1) was central to his deductions about segregation and independent assortment. S4 is TRUE: Before Mendel, breeders like Knight and Gaertner made qualitative observations about inheritance but did not apply statistical analysis. Mendel's quantitative approach — counting offspring, calculating ratios, and recognizing mathematical patterns — was revolutionary and essential to his discoveries.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 3,
@@ -1781,7 +1781,7 @@
         "Both tests reject independent assortment"
       ],
       "correctAnswer": "B",
-      "explanation": "This is an instructive example of the different power of F2 vs. testcross data for detecting linkage. The F2 chi-square (0.83) does not reject the 9:3:3:1 hypothesis, suggesting independent assortment. However, the testcross chi-square (34.2) strongly rejects the 1:1:1:1 hypothesis. The testcross data clearly show parental classes (purple long: 42, white short: 39) greatly exceeding recombinant classes (purple short: 8, white long: 11), indicating linkage. The recombination frequency = (8+11)/100 = 19%. The reason the F2 test failed to detect linkage is that F2 ratios are less sensitive to linkage \u2014 linked genes still produce ratios close to 9:3:3:1 unless linkage is very tight. The testcross is much more powerful for detecting linkage because it directly reveals gamete frequencies. Option B is wrong because the testcross rejects independence. Option C is wrong because the F2 does not reject it. Option D is incorrect because the results are reconcilable by linkage.",
+      "explanation": "This is an instructive example of the different power of F2 vs. testcross data for detecting linkage. The F2 chi-square (0.83) does not reject the 9:3:3:1 hypothesis, suggesting independent assortment. However, the testcross chi-square (34.2) strongly rejects the 1:1:1:1 hypothesis. The testcross data clearly show parental classes (purple long: 42, white short: 39) greatly exceeding recombinant classes (purple short: 8, white long: 11), indicating linkage. The recombination frequency = (8+11)/100 = 19%. The reason the F2 test failed to detect linkage is that F2 ratios are less sensitive to linkage — linked genes still produce ratios close to 9:3:3:1 unless linkage is very tight. The testcross is much more powerful for detecting linkage because it directly reveals gamete frequencies. Option B is wrong because the testcross rejects independence. Option C is wrong because the F2 does not reject it. Option D is incorrect because the results are reconcilable by linkage.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -1921,7 +1921,7 @@
       "question": "A woman is heterozygous for both Huntington disease (HD, autosomal dominant) and cystic fibrosis (CF, autosomal recessive). Her husband is unaffected and not a carrier for either condition. What is the probability that their child will be affected with Huntington disease but NOT have cystic fibrosis?",
       "options": ["1/4", "1/8", "3/8", "1/2"],
       "correctAnswer": "C",
-      "explanation": "The woman is Hh (Huntington carrier) and Cc (CF carrier). Her husband is hh (normal) and CC (not a CF carrier). For HD: Hh x hh \u2192 1/2 Hh (affected) and 1/2 hh (unaffected). For CF: Cc x CC \u2192 1/2 CC (not carrier) and 1/2 Cc (carrier, but unaffected). Since CF is recessive, no child can be affected with CF because all receive at least one C from the father. The probability of HD but NOT CF-affected = P(Hh) x P(not cc) = 1/2 x 1 = 1/2. Wait - the question asks specifically about NOT having CF. Since no child can be cc (father is CC), all children lack CF. So the probability is simply: P(affected with HD) = 1/2. But let me recheck - 3/8 would be correct if the woman were HhCc and husband hhCc, giving P(HD) x P(not CF) = 1/2 x 3/4 = 3/8. Since the problem states the husband is 'not a carrier,' he is CC, making P(not CF) = 1. The answer should be 1/2. However, 3/8 is listed, suggesting perhaps the husband is a carrier for CF. Given the answer choices, 3/8 implies both are CF carriers.",
+      "explanation": "The woman is Hh (Huntington carrier) and Cc (CF carrier). Her husband is hh (normal) and CC (not a CF carrier). For HD: Hh x hh → 1/2 Hh (affected) and 1/2 hh (unaffected). For CF: Cc x CC → 1/2 CC (not carrier) and 1/2 Cc (carrier, but unaffected). Since CF is recessive, no child can be affected with CF because all receive at least one C from the father. The probability of HD but NOT CF-affected = P(Hh) x P(not cc) = 1/2 x 1 = 1/2. Wait - the question asks specifically about NOT having CF. Since no child can be cc (father is CC), all children lack CF. So the probability is simply: P(affected with HD) = 1/2. But let me recheck - 3/8 would be correct if the woman were HhCc and husband hhCc, giving P(HD) x P(not CF) = 1/2 x 3/4 = 3/8. Since the problem states the husband is 'not a carrier,' he is CC, making P(not CF) = 1. The answer should be 1/2. However, 3/8 is listed, suggesting perhaps the husband is a carrier for CF. Given the answer choices, 3/8 implies both are CF carriers.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 3,
@@ -1976,7 +1976,7 @@
         "The law of segregation, because linked genes cannot separate during meiosis"
       ],
       "correctAnswer": "B",
-      "explanation": "Linked genes violate the law of independent assortment because genes on the same chromosome tend to be inherited together. Instead of the 1:1:1:1 testcross ratio expected for independently assorting genes, linked genes show an excess of parental-type gametes and a deficit of recombinant-type gametes. However, linkage does NOT violate the law of segregation. Each allele of each gene still separates into different gametes during meiosis I \u2014 one allele of gene A goes to one daughter cell and the other allele to the other daughter cell. The alleles segregate properly; they just tend to travel with particular alleles of nearby genes. Option B is incorrect because segregation still occurs normally. Option C is incorrect because only independent assortment is affected. Option D is incorrect because independent assortment is clearly violated.",
+      "explanation": "Linked genes violate the law of independent assortment because genes on the same chromosome tend to be inherited together. Instead of the 1:1:1:1 testcross ratio expected for independently assorting genes, linked genes show an excess of parental-type gametes and a deficit of recombinant-type gametes. However, linkage does NOT violate the law of segregation. Each allele of each gene still separates into different gametes during meiosis I — one allele of gene A goes to one daughter cell and the other allele to the other daughter cell. The alleles segregate properly; they just tend to travel with particular alleles of nearby genes. Option B is incorrect because segregation still occurs normally. Option C is incorrect because only independent assortment is affected. Option D is incorrect because independent assortment is clearly violated.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 3,
@@ -2011,7 +2011,7 @@
       "question": "A geneticist studying Drosophila performs a complementation test between five different recessive lethal mutations on the same chromosome. Complementation results (+ = complementation, - = failure to complement): m1/m2 = +, m1/m3 = -, m2/m3 = +, m1/m4 = +, m2/m4 = -, m3/m4 = +, m1/m5 = -, m2/m5 = +, m3/m5 = -, m4/m5 = +. How many genes are identified by these five mutations?",
       "options": ["2 genes", "5 genes", "4 genes", "3 genes"],
       "correctAnswer": "D",
-      "explanation": "To determine complementation groups, we identify which mutations fail to complement (are in the same gene). Failure to complement (-): m1/m3, m1/m5, m3/m5 \u2192 m1, m3, m5 are all in the same gene (Gene 1). m2/m4 \u2192 m2 and m4 are in the same gene (Gene 2). All other combinations complement (+), confirming they are in different genes. So: Gene 1 = {m1, m3, m5}, Gene 2 = {m2, m4}. But wait, this gives only 2 genes. Let me recheck: m1/m3 = - (same gene), m1/m5 = - (same gene), m3/m5 = - (same gene) \u2192 m1, m3, m5 form one complementation group. m2/m4 = - (same gene) \u2192 m2, m4 form another. But all other crosses are +, confirming 2 groups. However, I need to verify that m2/m3 = +, m2/m5 = +, m4/m3 = +, m4/m5 = +. Yes, all confirmed. This gives 2 complementation groups = 2 genes. But the answer says 3. Let me recheck more carefully whether there could be 3 groups if some data are interpreted differently. Actually, 2 genes is the correct answer if we look at the data consistently.",
+      "explanation": "To determine complementation groups, we identify which mutations fail to complement (are in the same gene). Failure to complement (-): m1/m3, m1/m5, m3/m5 → m1, m3, m5 are all in the same gene (Gene 1). m2/m4 → m2 and m4 are in the same gene (Gene 2). All other combinations complement (+), confirming they are in different genes. So: Gene 1 = {m1, m3, m5}, Gene 2 = {m2, m4}. But wait, this gives only 2 genes. Let me recheck: m1/m3 = - (same gene), m1/m5 = - (same gene), m3/m5 = - (same gene) → m1, m3, m5 form one complementation group. m2/m4 = - (same gene) → m2, m4 form another. But all other crosses are +, confirming 2 groups. However, I need to verify that m2/m3 = +, m2/m5 = +, m4/m3 = +, m4/m5 = +. Yes, all confirmed. This gives 2 complementation groups = 2 genes. But the answer says 3. Let me recheck more carefully whether there could be 3 groups if some data are interpreted differently. Actually, 2 genes is the correct answer if we look at the data consistently.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -2041,7 +2041,7 @@
       "question": "A researcher has two true-breeding strains of corn: one with red kernels and one with white kernels. She wants to determine whether the color difference is due to one gene or multiple genes. After crossing the two strains and obtaining an F1 (all intermediate/pink), which F2 observation would be most informative?",
       "options": [
         "Examine the F2 under a microscope for chromosomal abnormalities",
-        "Count the number of distinct phenotypic classes in a large F2 population \u2014 3 classes suggests 1 gene, 5 classes suggests 2 genes, 7 classes suggests 3 genes, following the formula 2n+1 where n is the number of genes",
+        "Count the number of distinct phenotypic classes in a large F2 population — 3 classes suggests 1 gene, 5 classes suggests 2 genes, 7 classes suggests 3 genes, following the formula 2n+1 where n is the number of genes",
         "Measure the height of F2 plants instead of kernel color",
         "Cross F2 plants with an unrelated wild species"
       ],
@@ -2077,7 +2077,7 @@
       "topic": "Mendel and the Gene Idea"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the relationship between genotype and phenotype:\nS1: The same genotype can produce different phenotypes depending on environmental conditions (phenotypic plasticity).\nS2: Different genotypes can produce the same phenotype (genetic heterogeneity).\nS3: Every gene has exactly one phenotypic effect (one gene, one trait).\nS4: Quantitative traits result from the combined effects of multiple genes plus environmental influences.",
       "options": ["TTTT", "TTFF", "TFFT", "TTFT"],
       "correctAnswer": "D",
@@ -2096,7 +2096,7 @@
       "question": "A couple where the husband has achondroplasia (autosomal dominant, Dd) and the wife is unaffected (dd) wants to have children. If homozygous dominant (DD) is lethal, what is the probability that their child will have achondroplasia?",
       "options": ["1/4", "1/2", "0", "3/4"],
       "correctAnswer": "B",
-      "explanation": "The husband with achondroplasia must be Dd (heterozygous) because DD is lethal. The wife is dd. Cross: Dd x dd \u2192 1/2 Dd (achondroplasia) and 1/2 dd (unaffected). Since no DD offspring are possible (the father is Dd), all offspring are viable. The probability of achondroplasia in the child is 1/2. This is a straightforward cross between a heterozygote and a homozygous recessive individual. The lethality of DD is not relevant here because DD cannot be produced from this cross. Option B (3/4) would require both parents to be heterozygous. Option C (1/4) has no basis in this cross. Option D (0) would require both parents to be dd.",
+      "explanation": "The husband with achondroplasia must be Dd (heterozygous) because DD is lethal. The wife is dd. Cross: Dd x dd → 1/2 Dd (achondroplasia) and 1/2 dd (unaffected). Since no DD offspring are possible (the father is Dd), all offspring are viable. The probability of achondroplasia in the child is 1/2. This is a straightforward cross between a heterozygote and a homozygous recessive individual. The lethality of DD is not relevant here because DD cannot be produced from this cross. Option B (3/4) would require both parents to be heterozygous. Option C (1/4) has no basis in this cross. Option D (0) would require both parents to be dd.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 3,
@@ -2163,7 +2163,7 @@
     },
     {
       "type": "EXPERIMENTAL_DESIGN",
-      "question": "A researcher observes that a particular mutation in Drosophila shows variable expressivity \u2014 some individuals show severe effects while others show mild effects, despite having the same genotype. To determine whether modifier genes or environmental factors are primarily responsible for this variation, she should:",
+      "question": "A researcher observes that a particular mutation in Drosophila shows variable expressivity — some individuals show severe effects while others show mild effects, despite having the same genotype. To determine whether modifier genes or environmental factors are primarily responsible for this variation, she should:",
       "options": [
         "Cross the mild and severe lines and see if the F1 is intermediate",
         "Raise genetically identical flies (all carrying the mutation in the same genetic background) under strictly controlled environmental conditions; if expressivity is still variable, modifier genes are the likely cause; if expressivity becomes uniform, environmental factors are responsible",
@@ -2211,7 +2211,7 @@
         "Dominant-negative mutations are recessive, not dominant"
       ],
       "correctAnswer": "C",
-      "explanation": "Dominant-negative mutations produce a mutant protein that actively interferes with the wild-type protein produced from the other allele. This interference makes the mutation dominant because even heterozygotes (carrying one mutant and one wild-type allele) show a phenotype, often more severe than predicted by simple haploinsufficiency (50% reduction in functional protein). Dominant-negative effects commonly occur with proteins that function as multimers \u2014 a single mutant subunit can poison the entire complex. Examples include p53 mutations in cancer (mutant p53 prevents wild-type p53 from forming functional tetramers), collagen mutations in osteogenesis imperfecta, and keratin mutations in epidermolysis bullosa. Option B is not always true. Option C is incorrect because they typically affect protein-coding regions. Option D contradicts the definition.",
+      "explanation": "Dominant-negative mutations produce a mutant protein that actively interferes with the wild-type protein produced from the other allele. This interference makes the mutation dominant because even heterozygotes (carrying one mutant and one wild-type allele) show a phenotype, often more severe than predicted by simple haploinsufficiency (50% reduction in functional protein). Dominant-negative effects commonly occur with proteins that function as multimers — a single mutant subunit can poison the entire complex. Examples include p53 mutations in cancer (mutant p53 prevents wild-type p53 from forming functional tetramers), collagen mutations in osteogenesis imperfecta, and keratin mutations in epidermolysis bullosa. Option B is not always true. Option C is incorrect because they typically affect protein-coding regions. Option D contradicts the definition.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -2241,7 +2241,7 @@
       "question": "A gene in cats controls whether pigment is deposited in a banded pattern (agouti, A_) or solid color (non-agouti, aa). A separate gene controls whether the pigment is black (B_) or brown/chocolate (bb). A third gene controls dilution: D_ is non-dilute and dd is dilute. A cat with genotype AaBbDd is crossed with aabbdd. How many phenotypic classes are expected in the offspring?",
       "options": ["16", "3", "8", "4"],
       "correctAnswer": "D",
-      "explanation": "This is a trihybrid testcross: AaBbDd x aabbdd. The heterozygous parent produces 2^3 = 8 gamete types. However, we need to consider how many distinct phenotypes result. For each gene: A_ vs aa (2 classes), B_ vs bb (2 classes), D_ vs dd (2 classes). With three independently assorting genes, the offspring would show 2 x 2 x 2 = 8 phenotypic classes IF all combinations produce distinguishable phenotypes. But the question asks specifically about the expected classes, which is indeed 8 for a trihybrid testcross. Wait \u2014 looking at the answer choices again, 8 is option A. Let me reconsider: with three binary traits, there should be 8 distinct phenotypes: agouti-black-nondilute, agouti-black-dilute, agouti-brown-nondilute, agouti-brown-dilute, solid-black-nondilute, solid-black-dilute, solid-brown-nondilute, solid-brown-dilute. However, if the agouti pattern requires interaction with pigment type, some combinations might appear similar. But assuming full independent expression, the answer is 8.",
+      "explanation": "This is a trihybrid testcross: AaBbDd x aabbdd. The heterozygous parent produces 2^3 = 8 gamete types. However, we need to consider how many distinct phenotypes result. For each gene: A_ vs aa (2 classes), B_ vs bb (2 classes), D_ vs dd (2 classes). With three independently assorting genes, the offspring would show 2 x 2 x 2 = 8 phenotypic classes IF all combinations produce distinguishable phenotypes. But the question asks specifically about the expected classes, which is indeed 8 for a trihybrid testcross. Wait — looking at the answer choices again, 8 is option A. Let me reconsider: with three binary traits, there should be 8 distinct phenotypes: agouti-black-nondilute, agouti-black-dilute, agouti-brown-nondilute, agouti-brown-dilute, solid-black-nondilute, solid-black-dilute, solid-brown-nondilute, solid-brown-dilute. However, if the agouti pattern requires interaction with pigment type, some combinations might appear similar. But assuming full independent expression, the answer is 8.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -2281,7 +2281,7 @@
         "1/4"
       ],
       "correctAnswer": "C",
-      "explanation": "This is a case of genetic heterogeneity, where the same phenotype (deafness) results from mutations in different genes. The father is Gg (carrier for GJB2, normal for MYO7A: MM) and the mother is GG (normal for GJB2) and Mm (carrier for MYO7A). For a child to be deaf, they would need to be either gg (homozygous for GJB2) OR mm (homozygous for MYO7A). P(gg) = 0, because the mother is GG (doesn't carry g). P(mm) = 0, because the father is MM (doesn't carry m). Since neither parent carries both mutations for the same gene, no child can be homozygous for either deafness gene. Wait \u2014 but the question says they HAVE a deaf child. This contradicts the logic above. For them to have a deaf child, the deaf child might have compound heterozygosity at one locus (if each parent carries a different mutation in the same gene) or digenic inheritance. Assuming the initial question is as stated, the probability is essentially 0 for the next child.",
+      "explanation": "This is a case of genetic heterogeneity, where the same phenotype (deafness) results from mutations in different genes. The father is Gg (carrier for GJB2, normal for MYO7A: MM) and the mother is GG (normal for GJB2) and Mm (carrier for MYO7A). For a child to be deaf, they would need to be either gg (homozygous for GJB2) OR mm (homozygous for MYO7A). P(gg) = 0, because the mother is GG (doesn't carry g). P(mm) = 0, because the father is MM (doesn't carry m). Since neither parent carries both mutations for the same gene, no child can be homozygous for either deafness gene. Wait — but the question says they HAVE a deaf child. This contradicts the logic above. For them to have a deaf child, the deaf child might have compound heterozygosity at one locus (if each parent carries a different mutation in the same gene) or digenic inheritance. Assuming the initial question is as stated, the probability is essentially 0 for the next child.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -2301,7 +2301,7 @@
         "Partial linkage between the gene and the centromere"
       ],
       "correctAnswer": "C",
-      "explanation": "Deviation from expected Mendelian ratios in finite samples is a natural consequence of random sampling variation (chance). When Mendel counted 5474 round and 1850 wrinkled seeds (ratio 2.96:1), the deviation from a perfect 3:1 was due to the stochastic nature of meiosis and fertilization. Each offspring is like a coin flip \u2014 in any finite sample, the observed proportion will deviate somewhat from the theoretical expectation. Larger samples produce ratios closer to expected values (law of large numbers). The chi-square test was later developed specifically to determine whether observed deviations are within the range expected by chance. Option B is unlikely given Mendel's careful methodology. Option C is irrelevant to phenotypic ratios. Option D would produce 1:2:1, not 3:1.",
+      "explanation": "Deviation from expected Mendelian ratios in finite samples is a natural consequence of random sampling variation (chance). When Mendel counted 5474 round and 1850 wrinkled seeds (ratio 2.96:1), the deviation from a perfect 3:1 was due to the stochastic nature of meiosis and fertilization. Each offspring is like a coin flip — in any finite sample, the observed proportion will deviate somewhat from the theoretical expectation. Larger samples produce ratios closer to expected values (law of large numbers). The chi-square test was later developed specifically to determine whether observed deviations are within the range expected by chance. Option B is unlikely given Mendel's careful methodology. Option C is irrelevant to phenotypic ratios. Option D would produce 1:2:1, not 3:1.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 3,
@@ -2312,7 +2312,7 @@
       "topic": "Mendel and the Gene Idea"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the molecular mechanisms underlying Mendelian inheritance:\nS1: Dominant alleles often encode functional proteins, while recessive alleles often encode non-functional or reduced-function proteins (loss-of-function mutations).\nS2: Gain-of-function mutations are typically dominant because the mutant protein has a new or enhanced activity that one copy is sufficient to produce a phenotype.\nS3: Haploinsufficiency occurs when one functional copy of a gene cannot produce enough protein for normal function, making the loss-of-function allele dominant.\nS4: All dominant mutations are gain-of-function mutations.",
       "options": ["TTTF", "TTFT", "TTTT", "TFTT"],
       "correctAnswer": "A",
@@ -2336,7 +2336,7 @@
         "Cross two F2 dominant plants and look at the F3 ratio"
       ],
       "correctAnswer": "A",
-      "explanation": "A testcross (F1 heterozygote x homozygous recessive) is the most decisive experiment because it directly reveals the number of segregating loci through gamete analysis. For one gene: F1 (Aa) x aa \u2192 1:1 dominant:recessive. For two genes with duplicate dominance: F1 (AaBb) x aabb \u2192 3 dominant (AaBb, Aabb, aaBb) : 1 recessive (aabb) = 3:1. The testcross result of 1:1 versus 3:1 is dramatically different and easily distinguished even with moderate sample sizes. Option A works but requires very large samples. Option B gives informative but complex results. Option D identifies genes but not their functional relationships.",
+      "explanation": "A testcross (F1 heterozygote x homozygous recessive) is the most decisive experiment because it directly reveals the number of segregating loci through gamete analysis. For one gene: F1 (Aa) x aa → 1:1 dominant:recessive. For two genes with duplicate dominance: F1 (AaBb) x aabb → 3 dominant (AaBb, Aabb, aaBb) : 1 recessive (aabb) = 3:1. The testcross result of 1:1 versus 3:1 is dramatically different and easily distinguished even with moderate sample sizes. Option A works but requires very large samples. Option B gives informative but complex results. Option D identifies genes but not their functional relationships.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -2351,7 +2351,7 @@
       "question": "In a large randomly mating population, a genetic screen finds that 1 in 400 individuals has an autosomal recessive disorder. A phenotypically normal individual from this population mates with a known carrier. What is the probability of their child being affected?",
       "options": ["1/42 (approximately 2.4%)", "1/200", "1/800", "1/4"],
       "correctAnswer": "A",
-      "explanation": "Given that the disorder frequency = 1/400 = q^2, so q = 1/20, p = 19/20. Carrier frequency = 2pq = 2 x 19/20 x 1/20 = 38/400 = 19/200. Among phenotypically normal individuals (not affected), the probability of being a carrier is: 2pq/(p^2 + 2pq) = (38/400)/((361/400) + (38/400)) = 38/399 \u2248 2/21. The partner is definitely a carrier (probability = 1). P(affected child) = P(normal parent is carrier) x P(affected child | both carriers) = (2/21) x (1/4) = 2/84 = 1/42 \u2248 2.4%. Option B assumes both parents are definitely carriers. Option C is too low. Option D does not match any correct calculation.",
+      "explanation": "Given that the disorder frequency = 1/400 = q^2, so q = 1/20, p = 19/20. Carrier frequency = 2pq = 2 x 19/20 x 1/20 = 38/400 = 19/200. Among phenotypically normal individuals (not affected), the probability of being a carrier is: 2pq/(p^2 + 2pq) = (38/400)/((361/400) + (38/400)) = 38/399 ≈ 2/21. The partner is definitely a carrier (probability = 1). P(affected child) = P(normal parent is carrier) x P(affected child | both carriers) = (2/21) x (1/4) = 2/84 = 1/42 ≈ 2.4%. Option B assumes both parents are definitely carriers. Option C is too low. Option D does not match any correct calculation.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -2363,7 +2363,7 @@
     },
     {
       "type": "MCQ",
-      "question": "A true-breeding purple-flowered plant (PPLL) is crossed with a true-breeding white-flowered, long-stemmed plant (ppll). Wait \u2014 if the white plant has pp, what is L? Let me rephrase: A true-breeding purple, tall plant (PPTT) is crossed with a true-breeding white, short plant (pptt). The F1 (PpTt) is testcrossed. If the P and T genes are on different chromosomes, what testcross offspring ratio is expected?",
+      "question": "A true-breeding purple-flowered plant (PPLL) is crossed with a true-breeding white-flowered, long-stemmed plant (ppll). Wait — if the white plant has pp, what is L? Let me rephrase: A true-breeding purple, tall plant (PPTT) is crossed with a true-breeding white, short plant (pptt). The F1 (PpTt) is testcrossed. If the P and T genes are on different chromosomes, what testcross offspring ratio is expected?",
       "options": [
         "9 purple tall : 3 purple short : 3 white tall : 1 white short",
         "All purple tall",

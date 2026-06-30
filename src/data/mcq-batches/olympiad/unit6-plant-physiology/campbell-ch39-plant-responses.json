@@ -527,7 +527,7 @@
       "topic": "Plant Responses to Signals"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match the plant hormone with its primary biosynthetic precursor:\n1. Auxin (IAA)\n2. Gibberellins\n3. Abscisic acid\n4. Ethylene\n\nA. Geranylgeranyl diphosphate (GGPP) via ent-kaurene\nB. Tryptophan via indole-3-pyruvic acid (TAA1/YUCCA pathway)\nC. Carotenoid (C40) via xanthoxin\nD. S-adenosylmethionine (SAM) via ACC",
       "options": [
         "1-B, 2-A, 3-C, 4-D",
@@ -667,7 +667,7 @@
       "topic": "Plant Responses to Signals"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match each plant response with the photoreceptor primarily responsible:\n1. Phototropism toward blue light\n2. Shade avoidance (stem elongation under canopy)\n3. UV-B acclimation and flavonoid production\n4. Stomatal opening in blue light\n\nA. UVR8 (UV RESISTANCE LOCUS 8)\nB. Phototropin 1/2 (PHOT1/PHOT2)\nC. Phytochrome B (phyB), sensing low R:FR ratio\nD. Phototropin 1/2 (PHOT1/PHOT2) via blue-light activated H+-ATPase",
       "options": [
         "1-B, 2-C, 3-A, 4-D",
@@ -1647,7 +1647,7 @@
       "topic": "Plant Responses to Signals"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match each mutant phenotype with the affected hormone signaling component:\n1. Constitutive triple response in the dark (short thick hypocotyl, exaggerated hook)\n2. Extremely tall stems, pale green leaves (resembles GA-treated plants)\n3. Bushy plant with excessive axillary branch outgrowth\n4. Viviparous germination (seeds germinate on the parent ear)\n\nA. Loss of DELLA proteins (GA signaling repressors)\nB. ctr1 loss-of-function (constitutive ethylene signaling)\nC. max3/max4 (strigolactone biosynthesis) loss-of-function\nD. vp1/abi3 (ABA signaling) loss-of-function",
       "options": [
         "1-B, 2-A, 3-C, 4-D",

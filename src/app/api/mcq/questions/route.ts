@@ -75,6 +75,7 @@ export async function GET(request: NextRequest) {
       campbellUnit?: number
       conceptualDepth?: string
       questionType?: string
+      curriculum?: string
     } = {
       topic: searchParams.get('topic') || undefined,
       chapter: searchParams.get('chapter') || undefined,
@@ -105,6 +106,9 @@ export async function GET(request: NextRequest) {
         : undefined,
       conceptualDepth: searchParams.get('conceptualDepth') || undefined,
       questionType: searchParams.get('questionType') || undefined,
+      // Curriculum/board filter (e.g. 'Campbell' for AP/USABO/olympiad content,
+      // 'NCERT' for NEET) — enables exam-specific question sets (AP/USABO diagnostic).
+      curriculum: searchParams.get('curriculum') || undefined,
     }
 
     const excludeIdsParam = searchParams.get('excludeIds')
@@ -173,6 +177,9 @@ export async function GET(request: NextRequest) {
     }
     if (filters.questionType) {
       officialWhere.type = filters.questionType
+    }
+    if (filters.curriculum) {
+      officialWhere.curriculum = filters.curriculum
     }
 
     // Build where clause for community questions

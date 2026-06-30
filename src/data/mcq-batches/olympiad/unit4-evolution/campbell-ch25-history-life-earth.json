@@ -107,7 +107,7 @@
       "topic": "History of Life on Earth"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about mass extinctions in Earth's history:\n\nI. The end-Permian extinction (~252 Ma) was the largest mass extinction, eliminating approximately 96% of marine species.\nII. The end-Cretaceous extinction (~66 Ma) was caused primarily by an asteroid impact at Chicxulub, Mexico.\nIII. Mass extinctions have always been followed by rapid recovery of biodiversity within thousands of years.\nIV. The Big Five mass extinctions occurred in the Ordovician, Devonian, Permian, Triassic, and Cretaceous periods.",
       "options": ["TTFT", "TTTF", "TTFF", "FTFT"],
       "correctAnswer": "A",
@@ -342,7 +342,7 @@
       "topic": "History of Life on Earth"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the timeline of life on Earth:\n\nI. Prokaryotes appeared before eukaryotes in the fossil record.\nII. Multicellular organisms appeared in the Archean eon, before 2.5 billion years ago.\nIII. The first land plants preceded the first land animals.\nIV. Flowering plants (angiosperms) first appeared during the Cretaceous period.",
       "options": ["TFTT", "TFTF", "TFFT", "TTFT"],
       "correctAnswer": "C",
@@ -517,7 +517,7 @@
       "topic": "History of Life on Earth"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the origin of eukaryotic cells:\n\nI. The nuclear envelope likely evolved from infoldings of the prokaryotic plasma membrane.\nII. Mitochondria evolved from an endosymbiotic alpha-proteobacterium.\nIII. Chloroplasts evolved from an endosymbiotic cyanobacterium.\nIV. The endosymbiotic origin of mitochondria occurred after the origin of chloroplasts.",
       "options": ["TTTF", "TTTT", "TTFT", "FTTT"],
       "correctAnswer": "A",
@@ -732,7 +732,7 @@
       "topic": "History of Life on Earth"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about key evolutionary transitions:\n\nI. The evolution of multicellularity occurred only once in the history of life.\nII. Photosynthesis evolved before aerobic respiration.\nIII. The colonization of land by vertebrates occurred during the Devonian period.\nIV. The first cells were likely heterotrophic, obtaining energy from organic molecules in the primordial environment.",
       "options": ["FTTT", "FTTF", "TFTT", "FTFT"],
       "correctAnswer": "A",
@@ -1107,7 +1107,7 @@
       "topic": "History of Life on Earth"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the Cambrian explosion:\n\nI. The Cambrian explosion occurred approximately 541-530 million years ago.\nII. All modern animal phyla first appeared during the Cambrian explosion.\nIII. The evolution of eyes may have been a trigger for the Cambrian explosion by enabling predator-prey arms races.\nIV. The Cambrian explosion is recorded only in the Burgess Shale of Canada.",
       "options": ["TFTT", "TFTF", "TTFF", "TFFT"],
       "correctAnswer": "B",
@@ -1362,7 +1362,7 @@
       "topic": "History of Life on Earth"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about evidence for the history of life:\n\nI. Fossils preserved in amber can retain three-dimensional soft tissue detail.\nII. Radiocarbon dating can accurately date fossils that are 500 million years old.\nIII. The law of faunal succession states that fossil species succeed each other in a definite, recognizable order.\nIV. Trace fossils (ichnofossils) such as burrows and footprints provide evidence of animal behavior.",
       "options": ["TFTT", "TFTF", "TTFT", "TFFT"],
       "correctAnswer": "A",
@@ -1617,7 +1617,7 @@
       "topic": "History of Life on Earth"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about continental drift and biogeography:\n\nI. Australia's unique marsupial fauna is explained by its long isolation after separating from Antarctica ~35 Ma.\nII. The Himalayan mountain range formed when the Indian subcontinent collided with Asia.\nIII. Wallace's Line, separating Asian and Australian biogeographic realms, runs between Borneo and Sulawesi.\nIV. Plate tectonics has no influence on ocean circulation patterns or global climate.",
       "options": ["TTTF", "TTFF", "TFTT", "FTTT"],
       "correctAnswer": "A",

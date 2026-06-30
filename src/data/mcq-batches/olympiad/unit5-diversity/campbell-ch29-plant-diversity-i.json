@@ -287,7 +287,7 @@
       "topic": "Mycorrhizal dependency experiment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Consider the following statements about bryophyte reproduction:\n(I) Antheridia produce biflagellate sperm that require water to reach the archegonium\n(II) The calyptra is a protective cap derived from the enlarged archegonial wall\n(III) Bryophyte sporophytes are always heterosporous\n(IV) The protonema stage in mosses develops directly from the fertilized egg\nWhich statements are TRUE?",
       "options": [
         "TTFF — Only I and II are true",
@@ -547,7 +547,7 @@
       "topic": "Endosporic development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the evolutionary significance of plant-fungal symbioses:\n(I) Arbuscular mycorrhizal fungi penetrate root cortical cells and form tree-like arbuscules for nutrient exchange\n(II) Fossil evidence of mycorrhizal associations dates back to the Ordovician period\n(III) Modern liverworts and hornworts can form mycorrhizal-like associations despite lacking true roots\n(IV) Mycorrhizal fungi primarily benefit plants by enhancing water absorption rather than mineral nutrient uptake\nWhich combination is correct?",
       "options": [
         "TTFF — Only I and II are true",
@@ -627,7 +627,7 @@
       "topic": "Embryophyte defining feature"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Consider the following about plant cuticle and gas exchange:\n(I) The cuticle is composed primarily of cutin and associated waxes\n(II) Stomata are found in all land plant groups including liverworts\n(III) Guard cell turgor changes drive stomatal opening through differential wall thickening\n(IV) The evolution of internal air spaces was necessary for efficient CO2 diffusion to mesophyll cells\nWhich statements are TRUE?",
       "options": [
         "TFTF — I and III are true",
@@ -967,7 +967,7 @@
       "topic": "Bryophyte Life Cycle Constraints"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the transition from water to land in plant evolution:\n(I) UV-absorbing compounds such as flavonoids evolved as protection against increased UV radiation on land\n(II) The first land plants likely had a dominant sporophyte generation like modern vascular plants\n(III) Auxin transport mechanisms found in land plants are also present in some charophyte algae\n(IV) The evolution of roots preceded the evolution of leaves in land plant phylogeny\nWhich statements are TRUE?",
       "options": [
         "TFTT — I, III, and IV are true",
@@ -1207,7 +1207,7 @@
       "topic": "Plant group dominance over time"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Consider the following about fern (monilophyte) biology:\n(I) Fern sporangia are typically clustered in sori on the abaxial leaf surface\n(II) The annulus is a row of thick-walled cells that aids in spore dispersal via a catapult mechanism\n(III) All ferns are homosporous\n(IV) Fern gametophytes produce both antheridia and archegonia and are thus bisexual\nWhich are TRUE?",
       "options": [
         "TTFT — I, II, and IV are true",
@@ -1367,7 +1367,7 @@
       "topic": "Freshwater origin hypothesis testing"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate statements about early land plant evolution:\n(I) The first land plants appeared in the Ordovician period based on fossil spore evidence\n(II) Cooksonia is the earliest known vascular plant with confirmed tracheids\n(III) The Devonian period saw the first forests and the first seed plants\n(IV) Bryophytes evolved from vascular plant ancestors through reduction\nWhich are TRUE?",
       "options": [
         "TFTF — I and III are true",
@@ -1407,7 +1407,7 @@
       "topic": "Vascular plant height evolution"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About Sphagnum moss and peatlands:\n(I) Sphagnum acidifies its environment by exchanging H+ ions for mineral cations\n(II) Peat bogs are carbon sinks because decomposition exceeds production\n(III) Dead Sphagnum cells (hyaline cells) can hold 20-25 times their dry weight in water\n(IV) Peatland drainage for agriculture releases stored carbon as CO2\nWhich are TRUE?",
       "options": [
         "TTFT — I, II, and IV are true",

@@ -577,7 +577,7 @@
       "topic": "Nondisjunction stage determination"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about chromosomal aberrations:\n\nS1: A pericentric inversion includes the centromere within the inverted segment\nS2: A Robertsonian translocation results in a net loss of one chromosome in the carrier\nS3: Duplication of a chromosomal segment always produces a lethal phenotype\nS4: Reciprocal translocations involve exchange of segments between non-homologous chromosomes",
       "options": [
         "All statements are correct",
@@ -597,7 +597,7 @@
       "topic": "Chromosomal aberrations"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about sex-linked inheritance:\n\nS1: In X-linked recessive inheritance, an affected father cannot have an affected son (assuming the mother is not a carrier)\nS2: In Z-linked inheritance in birds, a father transmits his Z chromosome to both sons and daughters\nS3: Y-linked traits in humans are transmitted exclusively from father to all sons\nS4: X-linked dominant traits affect heterozygous females and hemizygous males equally",
       "options": [
         "Only S1 and S3 are correct; S2 and S4 are incorrect",
@@ -617,7 +617,7 @@
       "topic": "Sex-linked inheritance patterns"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about aneuploidy in humans:\n\nS1: Trisomy 21 (Down syndrome) is the most common autosomal trisomy seen in live births\nS2: The risk of trisomy increases with maternal age due to the prolonged arrest of oocytes in meiosis I\nS3: Monosomy for any autosome is always lethal in humans\nS4: Individuals with Klinefelter syndrome (47,XXY) are phenotypically female",
       "options": [
         "S1, S2, and S3 are correct; S4 is incorrect",
@@ -777,7 +777,7 @@
       "topic": "Allopolyploidy mechanism"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about genetic linkage and recombination:\n\nS1: Two genes with 50% recombination frequency could be on the same chromosome if they are far apart\nS2: Recombination frequency between two genes can never exceed 50%\nS3: Genes that are 1 cM apart will show 1% recombination in a testcross\nS4: Crossing over occurs during prophase I of meiosis between non-sister chromatids of homologous chromosomes",
       "options": [
         "Only S1, S2, and S4 are correct; S3 is incorrect",
@@ -797,7 +797,7 @@
       "topic": "Linkage and recombination principles"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about genomic imprinting:\n\nS1: Imprinted genes are expressed monoallelically based on the parental origin of the allele\nS2: Imprinting marks are erased during gametogenesis and re-established according to the sex of the individual producing the gametes\nS3: The IGF2 gene is normally expressed only from the paternal allele\nS4: Imprinting defects can cause the same phenotype as chromosomal deletion of the imprinted region",
       "options": [
         "Only S1, S2, and S3 are correct; S4 is incorrect",
@@ -1017,7 +1017,7 @@
       "topic": "Chromosome theory of inheritance"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about polyploidy:\n\nS1: Autopolyploids arise from chromosome doubling within a single species\nS2: Allopolyploids contain chromosome sets from two or more different species\nS3: Bread wheat (Triticum aestivum) is an allohexaploid with genome formula AABBDD\nS4: Triploid organisms are always sterile because they cannot form balanced gametes",
       "options": [
         "S1, S2, and S3 are correct; S4 is incorrect",
@@ -1277,7 +1277,7 @@
       "topic": "Karyotype interpretation"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about dosage compensation across species:\n\nS1: In mammals, dosage compensation occurs by X-inactivation of one X chromosome in females\nS2: In Drosophila, dosage compensation occurs by doubling transcription from the single male X chromosome\nS3: In C. elegans, dosage compensation occurs by halving transcription from both X chromosomes in hermaphrodites (XX)\nS4: In birds, dosage compensation for Z-linked genes is complete, similar to mammalian X-inactivation",
       "options": [
         "S1, S2, and S3 are correct; S4 is incorrect",
@@ -1297,7 +1297,7 @@
       "topic": "Dosage compensation comparison"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the consequences of chromosomal inversions in heterozygotes:\n\nS1: In paracentric inversion heterozygotes, crossovers within the inverted region produce a dicentric bridge and an acentric fragment\nS2: In pericentric inversion heterozygotes, crossovers within the inverted region produce chromosomes with duplications and deletions\nS3: Inversions effectively suppress recombination, making them important for maintaining co-adapted gene complexes\nS4: Inversion heterozygotes always show reduced fertility compared to normal homozygotes",
       "options": [
         "Only S3 is correct; S1, S2, and S4 are incorrect",
@@ -1557,7 +1557,7 @@
       "topic": "Allopolyploidy and colchicine"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about X-inactivation:\n\nS1: The counting mechanism ensures that only one X remains active per diploid autosome set\nS2: X-inactivation is initiated at the X-inactivation center (XIC) located on Xq13\nS3: Once established, X-inactivation is stably maintained through subsequent cell divisions via DNA methylation and histone modifications\nS4: All genes on the inactive X chromosome are completely silenced with no exceptions",
       "options": [
         "All four statements are correct",
@@ -1697,7 +1697,7 @@
       "topic": "Chimerism"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the relationship between genetic and physical maps:\n\nS1: One centiMorgan corresponds to approximately 1 megabase of DNA on average in the human genome\nS2: Recombination hotspots cause genetic map distances to be non-uniform relative to physical distances\nS3: Centromeric regions typically show lower recombination rates than chromosome arms\nS4: The genetic map distance between two genes is always proportional to their physical distance in base pairs",
       "options": [
         "S1, S2, and S3 are correct; S4 is incorrect",
@@ -1897,7 +1897,7 @@
       "topic": "X0 sex determination"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about sex-linked conditions in humans:\n\nS1: Hemophilia A (factor VIII deficiency) is X-linked recessive, affecting primarily males\nS2: Color blindness (red-green type) is X-linked recessive, with approximately 8% of males affected\nS3: Rett syndrome is X-linked dominant and is almost exclusively seen in females because it is typically lethal in hemizygous males\nS4: Hypertrichosis pinnae (excessive ear hair) was historically claimed to be Y-linked but this inheritance pattern has been disputed",
       "options": [
         "Only S1 is correct; S2, S3, and S4 are incorrect",

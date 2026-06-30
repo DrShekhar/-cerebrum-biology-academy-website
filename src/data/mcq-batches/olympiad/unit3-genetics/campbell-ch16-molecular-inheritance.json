@@ -407,7 +407,7 @@
       "topic": "DNA base composition and Tm"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about DNA replication in E. coli:\n\nS1: Replication is bidirectional, proceeding from oriC in both directions around the circular chromosome\nS2: The two replication forks meet at the terminus region (ter), where Tus protein-ter complexes act as replication fork traps\nS3: Helicase (DnaB) unwinds DNA by moving 5'-to-3' on the lagging strand template\nS4: DNA ligase requires a free 3'-OH and a 5'-phosphate to form a phosphodiester bond",
       "options": [
         "S1, S2, and S4 are correct; S3 is incorrect",
@@ -427,7 +427,7 @@
       "topic": "E. coli replication details"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about eukaryotic DNA replication:\n\nS1: Eukaryotic chromosomes have multiple origins of replication to compensate for slower replication fork rates compared to prokaryotes\nS2: The MCM complex functions as the replicative helicase at eukaryotic replication forks\nS3: PCNA (proliferating cell nuclear antigen) serves as the sliding clamp for eukaryotic replicative polymerases\nS4: Origin licensing (loading MCM helicases) occurs only during G1 phase to prevent re-replication",
       "options": [
         "Only S1 and S3 are correct; S2 and S4 are incorrect",
@@ -707,7 +707,7 @@
       "topic": "GC content and melting temperature"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about DNA repair mechanisms:\n\nS1: Direct reversal repair by photolyase uses visible light energy to monomerize thymine dimers\nS2: Base excision repair corrects small non-helix-distorting lesions like oxidized bases\nS3: Nucleotide excision repair corrects bulky helix-distorting lesions like thymine dimers\nS4: Homologous recombination repair can accurately repair double-strand breaks using the sister chromatid as template",
       "options": [
         "All four statements are correct",
@@ -727,7 +727,7 @@
       "topic": "DNA repair overview"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about telomeres and telomerase:\n\nS1: Human telomeric DNA consists of the tandem repeat sequence TTAGGG\nS2: The 3' single-stranded overhang at chromosome ends can fold back and invade the double-stranded telomeric DNA, forming a T-loop structure\nS3: The shelterin complex protects telomeres from being recognized as DNA double-strand breaks\nS4: Telomerase is constitutively active in all human somatic cells",
       "options": [
         "Only S1 is correct; S2, S3, and S4 are incorrect",
@@ -947,7 +947,7 @@
       "topic": "Hayflick limit and telomeres"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the enzymes at the replication fork:\n\nS1: Helicase uses ATP hydrolysis to unwind the parental double helix\nS2: Primase synthesizes short DNA primers to initiate new strand synthesis\nS3: DNA polymerase III is the main replicative enzyme in E. coli for both leading and lagging strands\nS4: DNA polymerase I removes RNA primers and fills gaps with DNA using nick translation",
       "options": [
         "All four statements are correct",
@@ -1207,7 +1207,7 @@
       "topic": "Base composition calculation"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about DNA polymerase activities:\n\nS1: All DNA polymerases require a primer with a free 3'-OH group to initiate synthesis\nS2: E. coli DNA Pol I has both 5'-to-3' and 3'-to-5' exonuclease activities in addition to polymerase activity\nS3: Eukaryotic DNA Pol alpha lacks 3'-to-5' exonuclease (proofreading) activity\nS4: DNA polymerases add nucleotides to the 5' end of the growing chain",
       "options": [
         "S1, S2, and S3 are correct; S4 is incorrect",
@@ -1307,7 +1307,7 @@
       "topic": "Epigenetic maintenance during replication"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the structure of DNA:\n\nS1: The two strands of DNA run antiparallel, with one strand oriented 5'-to-3' and the other 3'-to-5'\nS2: The major groove is wider and contains more chemical information than the minor groove, making it the preferred binding site for most transcription factors\nS3: The bases are stacked with a spacing of 0.34 nm and there are 10 base pairs per turn in B-DNA\nS4: DNA is a left-handed helix under all conditions",
       "options": [
         "Only S2 is correct; S1, S3, and S4 are incorrect",
@@ -1387,7 +1387,7 @@
       "topic": "ALT pathway"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the evidence that DNA is the genetic material:\n\nS1: Griffith showed that a transforming principle could change R-strain pneumococci into S-strain\nS2: Avery, MacLeod, and McCarty identified the transforming principle as DNA through enzyme degradation experiments\nS3: Hershey and Chase used radioactive isotopes to show that phage DNA, not protein, enters the bacterial cell during infection\nS4: Watson and Crick's model showed that DNA structure is incompatible with carrying genetic information",
       "options": [
         "S1, S2, and S3 are correct; S4 is incorrect",
@@ -1587,7 +1587,7 @@
       "topic": "Interstrand crosslink repair"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the fidelity of DNA replication:\n\nS1: Base selection by the polymerase active site contributes an error rate of approximately 1 in 10^5\nS2: Proofreading by the 3'-to-5' exonuclease reduces the error rate by approximately 100-fold to 1 in 10^7\nS3: Mismatch repair further reduces the error rate by approximately 100-1000-fold to 1 in 10^9-10^10\nS4: The overall error rate of DNA replication is higher than the error rate of RNA transcription",
       "options": [
         "S1, S2, and S3 are correct; S4 is incorrect",
@@ -1762,7 +1762,7 @@
       "topic": "Complementary strand writing"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the differences between prokaryotic and eukaryotic DNA replication:\n\nS1: Prokaryotes have a single origin of replication while eukaryotes have multiple origins per chromosome\nS2: Eukaryotic Okazaki fragments (~100-200 nt) are shorter than prokaryotic ones (~1000-2000 nt)\nS3: Both prokaryotes and eukaryotes use RNA primers to initiate DNA synthesis\nS4: Eukaryotic DNA replication occurs only during S phase while prokaryotic replication can occur continuously",
       "options": [
         "All four statements are correct",
@@ -1982,7 +1982,7 @@
       "topic": "FEN1 Okazaki processing"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about DNA damage and repair in relation to cancer:\n\nS1: Defects in NER (nucleotide excision repair) cause xeroderma pigmentosum, increasing skin cancer risk\nS2: Defects in mismatch repair cause Lynch syndrome, increasing colorectal cancer risk\nS3: Defects in homologous recombination (BRCA1/BRCA2) increase breast and ovarian cancer risk\nS4: DNA repair defects always protect against cancer by preventing cell division",
       "options": [
         "All four statements are correct",
@@ -2062,7 +2062,7 @@
       "topic": "Replication licensing system"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about DNA damage and repair pathways:\nS1: Cyclobutane pyrimidine dimers (CPDs) are repaired exclusively by nucleotide excision repair (NER) in humans\nS2: O6-methylguanine is directly reversed by MGMT (methylguanine methyltransferase) in a stoichiometric, suicide reaction\nS3: Double-strand breaks in G1 phase are primarily repaired by homologous recombination because sister chromatids are available\nS4: Mismatch repair requires strand discrimination, which in E. coli relies on the methylation state of GATC sequences",
       "options": [
         "S1-True, S2-True, S3-False, S4-False",

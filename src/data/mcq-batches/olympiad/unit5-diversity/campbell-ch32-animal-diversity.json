@@ -427,7 +427,7 @@
       "topic": "Through-gut evolution"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Consider statements about gastrulation:\n(I) Gastrulation converts the blastula into a gastrula with distinct germ layers\n(II) The archenteron formed during gastrulation becomes the lumen of the digestive tract\n(III) The blastopore becomes the mouth in all animals\n(IV) Gastrulation typically involves cell movements including invagination, involution, and ingression\nWhich are TRUE?",
       "options": [
         "TTFT — I, II, and IV are true",
@@ -707,7 +707,7 @@
       "topic": "Choanoflagellate-animal relationship"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Consider the following about animal body symmetry:\n(I) Radial symmetry is ancestral and found in the most basal animal lineages\n(II) Bilateral symmetry is associated with cephalization and active locomotion\n(III) Some bilaterally symmetric animals secondarily evolved radial symmetry (e.g., echinoderms)\n(IV) All adult cnidarians show perfect bilateral symmetry\nWhich are TRUE?",
       "options": [
         "TTTF — I, II, and III are true",
@@ -887,7 +887,7 @@
       "topic": "Morphological disparity concept"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About animal phylogenetic relationships:\n(I) Molecular evidence supports monophyly of Ecdysozoa (arthropods + nematodes + related phyla)\n(II) Chordates are more closely related to echinoderms than to any protostome phylum\n(III) Platyhelminthes (flatworms) are now placed within Lophotrochozoa based on molecular data\n(IV) Arthropods and annelids are sister groups that together form the Articulata\nWhich are TRUE?",
       "options": [
         "TTTF — I, II, and III are true",
@@ -967,7 +967,7 @@
       "topic": "Serial homology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About the Cambrian explosion:\n(I) Nearly all major animal body plans (phyla) appear in the fossil record within a geologically brief period\n(II) The Cambrian explosion was likely driven partly by an increase in atmospheric oxygen levels\n(III) The evolution of predation and hard shells was an important driver of diversification\n(IV) No animal fossils exist before the Cambrian period\nWhich are TRUE?",
       "options": [
         "TTTF — I, II, and III are true",
@@ -1167,7 +1167,7 @@
       "topic": "Neurulation process"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate statements about germ layers:\n(I) Diploblastic animals (cnidarians) have ectoderm and endoderm but lack mesoderm\n(II) Triploblastic animals have three germ layers: ectoderm, mesoderm, and endoderm\n(III) The nervous system derives from mesoderm in all animals\n(IV) Mesoderm gives rise to muscles, the circulatory system, and the skeletal system\nWhich are TRUE?",
       "options": [
         "TTFT — I, II, and IV are true",
@@ -1207,7 +1207,7 @@
       "topic": "Animal defining characteristics"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About animal multicellularity:\n(I) Animal multicellularity evolved independently from plant and fungal multicellularity\n(II) Cell-cell adhesion in animals relies on cadherins and integrins rather than cell walls\n(III) The transition from unicellular to multicellular animals occurred in the Precambrian\n(IV) Gap junctions are required for cell communication in all multicellular organisms\nWhich are TRUE?",
       "options": [
         "TTTF -- I, II, and III are true",
@@ -1387,7 +1387,7 @@
       "topic": "Larval form phylogenetic evidence"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About the phylogenetic position of Ctenophora:\n(I) Some analyses place ctenophores as the sister group to all other animals (Ctenophora-first hypothesis)\n(II) This would imply that neurons and muscles evolved independently in ctenophores and other animals, or were lost in sponges\n(III) The Ctenophora-first hypothesis is universally accepted by all researchers\n(IV) Ctenophores possess colloblasts (sticky cells) rather than cnidocytes for prey capture\nWhich are TRUE?",
       "options": [
         "TFFT -- I and IV are true, but also II is true so TTFT",

@@ -107,7 +107,7 @@
       "topic": "Plant Structure, Growth, and Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about plant tissue systems:\n\nI. The dermal tissue system includes the epidermis and periderm, providing protection against water loss and pathogens.\nII. The vascular tissue system consists of xylem (water and mineral transport) and phloem (sugar transport).\nIII. Ground tissue is composed exclusively of sclerenchyma cells.\nIV. Collenchyma cells have unevenly thickened primary cell walls and provide flexible support to growing organs.",
       "options": ["TTFT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "A",
@@ -362,7 +362,7 @@
       "topic": "Plant Structure, Growth, and Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about root anatomy:\n\nI. The root epidermis produces root hairs that increase the surface area for water and mineral absorption.\nII. The pericycle, located just inside the endodermis, gives rise to lateral (branch) roots.\nIII. The cortex of the root is composed of dead sclerenchyma cells that provide rigid support.\nIV. In the root tip, the zone of cell division is located behind (proximal to) the root cap.",
       "options": ["TTFT", "TTFF", "TFTT", "TFTF"],
       "correctAnswer": "A",
@@ -777,7 +777,7 @@
       "topic": "Plant Structure, Growth, and Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about leaf morphology and adaptation:\n\nI. Xerophytic leaves (adapted to dry conditions) often have thick cuticles, sunken stomata, and trichomes to reduce water loss.\nII. Hydrophytic leaves (adapted to aquatic environments) typically have large air spaces (aerenchyma) and stomata on the upper surface.\nIII. Sun leaves on the same tree are typically thicker than shade leaves, with more layers of palisade mesophyll.\nIV. All leaves have the same internal anatomy regardless of environment.",
       "options": ["TTTF", "TTFT", "TTFF", "FTTT"],
       "correctAnswer": "A",
@@ -1152,7 +1152,7 @@
       "topic": "Plant Structure, Growth, and Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match the following plant tissue types with their defining characteristics:\n(P) Collenchyma\n(Q) Sclerenchyma\n(R) Parenchyma\n(S) Meristematic tissue\n\n1. Thick secondary walls impregnated with lignin; dead at functional maturity\n2. Unevenly thickened primary walls rich in pectin; provides flexible mechanical support; alive at maturity\n3. Thin primary walls; versatile cells capable of photosynthesis, storage, and secretion; totipotent\n4. Cells with dense cytoplasm, small vacuoles, and no secondary walls; actively dividing",
       "options": [
         "P-2, Q-1, R-3, S-4",
@@ -1452,7 +1452,7 @@
       "topic": "Plant Structure, Growth, and Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match each type of secondary wall thickening pattern in protoxylem and metaxylem elements with its description:\n(P) Annular\n(Q) Helical (spiral)\n(R) Scalariform\n(S) Pitted\n\n1. Secondary wall deposited as complete layer with pit areas; found in metaxylem vessels that are fully elongated\n2. Secondary wall deposited as discrete rings; found in protoxylem that is still elongating\n3. Secondary wall deposited as ladder-like parallel bars; transitional between extensible and non-extensible types\n4. Secondary wall deposited as a continuous spiral band; found in protoxylem, allows some extension",
       "options": [
         "P-2, Q-4, R-3, S-1",
@@ -1812,7 +1812,7 @@
       "topic": "Plant Structure, Growth, and Development"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match the following leaf anatomical features with their primary functions:\n(P) Palisade mesophyll\n(Q) Spongy mesophyll\n(R) Bundle sheath extensions\n(S) Abaxial epidermis with higher stomatal density\n\n1. Facilitates gas exchange within the leaf through interconnected air spaces; also participates in photosynthesis\n2. Contains tightly packed columnar cells oriented perpendicular to the leaf surface for maximum light interception and photosynthesis\n3. Columns of parenchyma or sclerenchyma connecting vascular bundles to the epidermis; facilitate water distribution and provide structural support\n4. Allows CO2 uptake preferentially from the shaded underside, reducing water loss compared to adaxial stomata exposed to direct sunlight",
       "options": [
         "P-1, Q-2, R-4, S-3",

@@ -212,7 +212,7 @@
       "topic": "Ecological Stoichiometry"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about the global water cycle and its interaction with ecosystems:\nI. Transpiration by terrestrial plants returns more water to the atmosphere than direct evaporation from land surfaces\nII. The residence time of water in the atmosphere is approximately 9 days\nIII. Deforestation in the Amazon basin could reduce regional rainfall by disrupting the 'flying rivers' phenomenon\nIV. Groundwater represents the largest reservoir of liquid freshwater on Earth",
       "options": ["TTTT", "TFTF", "FTTT", "TFTT"],
       "correctAnswer": "A",
@@ -1067,7 +1067,7 @@
       "topic": "Net Ecosystem Production"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about ecosystem restoration:\nI. Reference ecosystems provide targets for restoration but may not be achievable under changed climate conditions\nII. Restoration of degraded ecosystems always returns them to their historical state\nIII. Assisted migration of species to track climate change is a controversial but increasingly discussed restoration strategy\nIV. Ecosystem restoration can recover some but rarely all ecosystem functions and services of undegraded systems",
       "options": ["TFTT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "A",
@@ -1162,7 +1162,7 @@
       "topic": "Phosphorus Cycle Limitations"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about ecosystem energy budgets:\nI. Secondary production efficiency is generally higher in ectotherms than endotherms\nII. Detritivores process more energy than herbivores in most terrestrial ecosystems\nIII. Net primary productivity equals the total amount of biomass available to consumers\nIV. Assimilation efficiency is higher for carnivores than for herbivores",
       "options": ["TTTT", "TTFT", "TFFT", "TTTF"],
       "correctAnswer": "B",
@@ -1217,7 +1217,7 @@
       "topic": "Land Use Change and Carbon"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about nutrient limitation in ecosystems:\nI. Liebig's Law of the Minimum states that growth is limited by the nutrient in shortest supply relative to demand\nII. Co-limitation by two or more nutrients simultaneously is common in natural ecosystems\nIII. Nitrogen typically limits productivity in marine ecosystems, while phosphorus limits freshwater ecosystems\nIV. Adding a limiting nutrient always increases primary productivity proportionally",
       "options": ["TTTF", "TTTT", "TTFF", "TFTT"],
       "correctAnswer": "A",

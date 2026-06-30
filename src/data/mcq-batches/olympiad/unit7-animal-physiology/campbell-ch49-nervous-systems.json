@@ -1872,7 +1872,7 @@
       "topic": "Spinal cord organization"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the organization of the cerebral cortex:\n(I) The neocortex is organized into six layers (I-VI), each with distinct cell types and connectivity — layer IV receives thalamocortical input, layers II/III project to other cortical areas, layer V projects subcortically, and layer VI provides feedback to the thalamus.\n(II) Brodmann mapped 52 distinct cytoarchitectonic areas based on cellular organization, many corresponding to functional areas (e.g., area 4 = motor cortex, area 17 = V1).\n(III) Cortical asymmetry (lateralization) is demonstrated by language localization — Broca's area (speech production) and Wernicke's area (speech comprehension) are predominantly in the left hemisphere.\n(IV) All cortical areas have identical cytoarchitecture with no regional variation.",
       "options": ["TTTT", "TFTT", "TTTF", "TTFT"],
       "correctAnswer": "C",
@@ -1887,7 +1887,7 @@
       "topic": "Nervous Systems"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the basal ganglia:\n(I) The basal ganglia consist of the striatum (caudate + putamen), globus pallidus (GPe, GPi), subthalamic nucleus (STN), and substantia nigra (SNc, SNr).\n(II) The direct pathway (D1-MSNs → GPi/SNr) disinhibits thalamocortical circuits to facilitate movement.\n(III) The indirect pathway (D2-MSNs → GPe → STN → GPi/SNr) increases thalamic inhibition to suppress unwanted movements.\n(IV) Parkinson's disease results from excessive dopamine in the substantia nigra.",
       "options": ["TTTT", "TFTT", "TTTF", "TTFT"],
       "correctAnswer": "C",
@@ -1902,7 +1902,7 @@
       "topic": "Nervous Systems"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about invertebrate nervous system organization:\n(I) Cnidarians have a nerve net — diffuse, non-centralized neurons allowing radially symmetric responses.\n(II) Planarians show the earliest cephalization — anterior cerebral ganglion with ventral nerve cords.\n(III) Arthropods have segmental ventral ganglia that function semi-independently plus a cerebral ganglion with mushroom bodies (learning) and central complex (navigation).\n(IV) All invertebrate nervous systems are structurally identical to the vertebrate brain.",
       "options": ["TTFT", "TTTT", "TTTF", "TFTT"],
       "correctAnswer": "C",
@@ -2087,7 +2087,7 @@
       "topic": "Nervous Systems"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding the reticular formation and its role in brain function, evaluate these statements:\nI. The reticular formation is a diffuse network of neurons extending through the brainstem core from medulla to midbrain\nII. It plays a critical role in regulating arousal and sleep-wake transitions via the ascending reticular activating system (ARAS)\nIII. Damage to the reticular formation can result in irreversible coma even when the cerebral cortex is intact\nIV. The reticular formation exclusively controls motor functions and has no role in sensory filtering",
       "options": ["TTTF", "TTFT", "TFTT", "FTTT"],
       "correctAnswer": "A",
@@ -2162,7 +2162,7 @@
       "topic": "Nervous Systems"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about cerebrospinal fluid (CSF) and the ventricular system:\nI. CSF is produced primarily by choroid plexus epithelial cells at approximately 500 mL/day in humans\nII. CSF flows from lateral ventricles through foramina of Monro to third ventricle, cerebral aqueduct to fourth ventricle, then exits via median and lateral apertures to subarachnoid space\nIII. CSF is absorbed into venous sinuses through arachnoid granulations projecting into the superior sagittal sinus\nIV. Total CSF volume in humans is approximately 5 liters, replacing itself once per year",
       "options": ["TTFT", "TTTF", "FTTT", "TFTT"],
       "correctAnswer": "B",
@@ -2237,7 +2237,7 @@
       "topic": "Nervous Systems"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding the hypothalamus and neuroendocrine functions:\nI. Osmoreceptor neurons detect blood osmolarity changes of 1-2% and trigger ADH release from posterior pituitary\nII. Magnocellular neurons of supraoptic and paraventricular nuclei synthesize oxytocin and vasopressin, transported along axons to posterior pituitary\nIII. Parvocellular neurons release CRH into hypophyseal portal system to stimulate anterior pituitary ACTH release\nIV. The hypothalamus has no role in thermoregulation",
       "options": ["TTTF", "FTTT", "TFTT", "TTFT"],
       "correctAnswer": "A",
@@ -2312,7 +2312,7 @@
       "topic": "Nervous Systems"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate statements about the cerebral cortex and lateralization:\nI. The corpus callosum contains ~200 million axons connecting homologous regions of both hemispheres\nII. Split-brain studies revealed left hemisphere dominance for language production in right-handed individuals\nIII. The right hemisphere shows superiority for visuospatial processing, face recognition, and emotional prosody\nIV. Hemispheric lateralization means each hemisphere functions completely independently",
       "options": ["TFTT", "FTTT", "TTFT", "TTTF"],
       "correctAnswer": "D",

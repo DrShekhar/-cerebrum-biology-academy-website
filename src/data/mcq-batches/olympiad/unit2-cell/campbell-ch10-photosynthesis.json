@@ -577,7 +577,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the structure and function of chloroplast thylakoid membranes:\n\nS1: Grana stacks are enriched in PSII and LHCII, while stroma lamellae are enriched in PSI and ATP synthase.\nS2: The thylakoid lumen is topologically equivalent to the mitochondrial intermembrane space (both are sites of proton accumulation).\nS3: The lipid composition of thylakoid membranes is dominated by phosphatidylcholine, similar to other eukaryotic membranes.\nS4: Plastocyanin is a mobile electron carrier that diffuses within the thylakoid lumen between cytochrome b6f and PSI.",
       "options": ["TTTT", "TTFT", "TFTT", "TFTF"],
       "correctAnswer": "B",
@@ -592,7 +592,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the Calvin cycle (carbon reactions):\n\nS1: The Calvin cycle operates in three phases: carbon fixation (carboxylation), reduction, and regeneration of the CO2 acceptor (RuBP).\nS2: For every three molecules of CO2 fixed, the Calvin cycle consumes 9 ATP and 6 NADPH.\nS3: Rubisco is the only enzyme in the Calvin cycle that is regulated by light.\nS4: The net product of three turns of the Calvin cycle is one molecule of glyceraldehyde-3-phosphate (G3P), which exits the cycle.",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "C",
@@ -607,7 +607,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about C4 photosynthesis:\n\nS1: In NADP-malic enzyme type C4 plants (e.g., maize), malate is the primary C4 acid transported from mesophyll to bundle sheath cells.\nS2: Bundle sheath cells in C4 plants typically lack PSII activity, which helps maintain low O2 concentration around Rubisco.\nS3: The energy cost of C4 photosynthesis is 2 ATP per CO2 fixed (for PEP regeneration by pyruvate phosphate dikinase), in addition to the 3 ATP used by the Calvin cycle.\nS4: C4 photosynthesis evolved independently more than 60 times across different angiosperm lineages.",
       "options": ["TTTT", "TTTF", "TFTT", "TTFT"],
       "correctAnswer": "A",
@@ -622,7 +622,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about photoprotection mechanisms in plants:\n\nS1: Non-photochemical quenching (NPQ) dissipates excess excitation energy as heat, primarily through the xanthophyll cycle and PsbS protein.\nS2: Under high-light stress, violaxanthin is converted to zeaxanthin by violaxanthin de-epoxidase (VDE), which is activated by low lumen pH.\nS3: Superoxide dismutase (SOD) and ascorbate peroxidase (APX) in the water-water cycle scavenge reactive oxygen species produced at PSI.\nS4: Chloroplast movement (chloroplast avoidance response) is mediated by the blue-light receptor cryptochrome.",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "B",
@@ -1077,7 +1077,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about Rubisco (ribulose-1,5-bisphosphate carboxylase/oxygenase):\n\nS1: Rubisco is the most abundant protein on Earth, comprising up to 50% of total leaf protein in C3 plants.\nS2: Rubisco's catalytic rate is extremely fast (~1000 reactions per second), compensating for its dual specificity.\nS3: Rubisco form I (found in plants) is an L8S8 hexadecamer consisting of 8 large and 8 small subunits, with the large subunit encoded by the chloroplast rbcL gene.\nS4: Rubisco requires carbamylation of an active-site lysine by CO2 (distinct from substrate CO2) and Mg2+ binding for activation.",
       "options": ["TTTT", "TFTT", "TTTF", "FTTT"],
       "correctAnswer": "B",
@@ -1092,7 +1092,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the electron carriers in the photosynthetic electron transport chain:\n\nS1: Plastoquinone (PQ) is a mobile lipid-soluble carrier that shuttles electrons and protons between PSII and the cytochrome b6f complex within the thylakoid membrane.\nS2: Plastocyanin is a small iron-containing protein that transfers electrons from cytochrome b6f to PSI in the thylakoid lumen.\nS3: Ferredoxin is a small iron-sulfur protein ([2Fe-2S]) on the stromal side that accepts electrons from PSI and can donate them to either FNR (linear flow) or the PQ pool (cyclic flow).\nS4: The primary electron donor in PSI is P700, a special pair of chlorophyll a molecules that absorbs maximally at 700 nm.",
       "options": ["TTTT", "TFTT", "TFTF", "TFFT"],
       "correctAnswer": "B",
@@ -1482,7 +1482,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about cyclic electron flow in chloroplasts:\n\nS1: Cyclic electron flow involves only PSI and does not require PSII or water splitting.\nS2: Cyclic electron flow produces both ATP and NADPH.\nS3: The main pathway for cyclic electron flow in angiosperms involves PGR5/PGRL1, which mediates electron transfer from ferredoxin to the plastoquinone pool.\nS4: Cyclic electron flow is enhanced when the stromal NADPH/NADP+ ratio is high, redirecting electrons away from FNR.",
       "options": ["TTTT", "TFTT", "TFTF", "FTTT"],
       "correctAnswer": "B",
@@ -1497,7 +1497,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about chloroplast structure and compartmentalization:\n\nS1: The chloroplast stroma contains Rubisco, Calvin cycle enzymes, the chloroplast genome, and 70S ribosomes.\nS2: The chloroplast outer envelope membrane is freely permeable to molecules up to ~10 kDa due to porins.\nS3: The thylakoid membrane and inner envelope membrane are continuous, forming a single membrane system.\nS4: The intermembrane space between the outer and inner envelope is a distinct metabolic compartment with unique enzymes involved in galactolipid synthesis.",
       "options": ["TTTT", "TTFT", "TFTT", "TFTF"],
       "correctAnswer": "B",
@@ -1512,7 +1512,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about CAM (Crassulacean Acid Metabolism) photosynthesis:\n\nS1: CAM is an adaptation to arid environments and is found in succulents, cacti, pineapple, and some orchids and bromeliads.\nS2: CAM plants have higher water-use efficiency (WUE) than both C3 and C4 plants because they open stomata only at night when transpiration rates are lower.\nS3: All CAM plants are obligate CAM performers and cannot switch to C3 photosynthesis under any conditions.\nS4: In CAM plants, the large central vacuole of mesophyll cells serves as a reservoir for malic acid stored during the night.",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "C",
@@ -1527,7 +1527,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the regulation of photosynthesis by light:\n\nS1: Stromal pH increases from ~7 in the dark to ~8 in the light, which activates Rubisco and other Calvin cycle enzymes that have alkaline pH optima.\nS2: Stromal Mg2+ concentration increases in the light as Mg2+ moves from the lumen to the stroma in exchange for H+ pumped into the lumen.\nS3: The ferredoxin-thioredoxin system is active in the dark, ensuring Calvin cycle enzymes are always in the reduced (active) form.\nS4: Light activation of Rubisco requires Rubisco activase, which is itself activated by the thioredoxin system and ATP/ADP ratio.",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "C",
@@ -1542,7 +1542,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the photorespiratory pathway:\n\nS1: Photorespiration consumes O2 and releases CO2, hence the name 'photo-respiration', but it does not produce ATP.\nS2: The photorespiratory pathway generates NADH in the mitochondria (from the glycine decarboxylase reaction), which can contribute to oxidative phosphorylation.\nS3: Photorespiration is beneficial to plants because it protects the photosynthetic apparatus from photoinhibition by consuming excess ATP and NADPH.\nS4: Plants with engineered photorespiratory bypasses (e.g., glycolate decarboxylation in the chloroplast) show increased photosynthetic efficiency in field trials.",
       "options": ["TTTT", "TTTF", "TFTT", "FTTT"],
       "correctAnswer": "A",
@@ -1992,7 +1992,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the evolution and diversity of photosynthesis:\n\nS1: Anoxygenic photosynthesis (using H2S, Fe2+, or organic compounds as electron donors) evolved before oxygenic photosynthesis.\nS2: Purple bacteria use bacteriochlorophyll and a single type II reaction center (similar to PSII), while green sulfur bacteria use a type I reaction center (similar to PSI).\nS3: The endosymbiotic event that gave rise to chloroplasts occurred only once (primary endosymbiosis with a cyanobacterium), leading to the Archaeplastida (green plants, red algae, glaucophytes).\nS4: Secondary endosymbiosis (engulfment of a eukaryotic alga) gave rise to chloroplasts with only two envelope membranes in groups like diatoms and brown algae.",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "B",
@@ -2007,7 +2007,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about herbicides that target photosynthesis:\n\nS1: DCMU (diuron) and atrazine both block electron transport at the QB binding site on the D1 protein of PSII.\nS2: Paraquat (methyl viologen) accepts electrons from PSI and generates toxic superoxide radicals that kill plant cells.\nS3: Glyphosate (Roundup) directly inhibits the light reactions by binding to the PQ pool.\nS4: Resistance to DCMU/atrazine in weeds typically involves point mutations in the psbA gene (encoding D1) that alter the QB binding site.",
       "options": ["TTTT", "TTFT", "TFTT", "TTTF"],
       "correctAnswer": "B",
@@ -2022,7 +2022,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the stoichiometry and energetics of photosynthesis:\n\nS1: The overall equation for photosynthesis (6CO2 + 12H2O → C6H12O6 + 6O2 + 6H2O) shows that 12 water molecules are consumed and 6 are produced, for a net consumption of 6 H2O.\nS2: The 12 O atoms in the 6 O2 molecules produced all come from water, not from CO2.\nS3: The minimum energy input from light to fix one mole of CO2 is approximately 8 moles of photons (red light at 680 nm provides ~175 kJ/mol each, totaling ~1400 kJ), while the energy stored in glucose is only ~2870 kJ per mole of CO2.\nS4: The overall free energy change of photosynthesis (CO2 + H2O → CH2O + O2) is +478 kJ/mol, making it a strongly endergonic process driven by light energy.",
       "options": ["TTTT", "TTFT", "TTTF", "TFTT"],
       "correctAnswer": "A",
@@ -2037,7 +2037,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the comparison of C3, C4, and CAM photosynthetic strategies:\n\nS1: C3 plants have the highest water-use efficiency among the three types because they keep stomata open during cool morning hours.\nS2: C4 plants have a higher temperature optimum for photosynthesis (~35-40°C) compared to C3 plants (~25-30°C) because their CO2-concentrating mechanism suppresses photorespiration at high temperatures.\nS3: CAM plants typically have slower growth rates than C3 or C4 plants because nocturnal CO2 fixation and vacuolar acid storage limit the total amount of carbon that can be fixed per day.\nS4: Under elevated atmospheric CO2 (e.g., 800 ppm), C3 plants benefit more than C4 plants because C4 Rubisco is already CO2-saturated at current atmospheric levels.",
       "options": ["TTTT", "FTTT", "TFTT", "FTFT"],
       "correctAnswer": "B",
@@ -2212,7 +2212,7 @@
       "topic": "Photosynthesis"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the chloroplast ATP synthase (CF0-CF1):\n\nS1: The CF1 complex (alpha3-beta3-gamma-delta-epsilon) protrudes into the stroma and catalyzes ATP synthesis.\nS2: The CF0 complex is embedded in the thylakoid membrane and forms the proton channel through its c-ring.\nS3: Rotation of the gamma subunit within the alpha3-beta3 hexamer drives sequential conformational changes (open → loose → tight → open) at each beta subunit, a mechanism known as binding change mechanism.\nS4: The chloroplast ATP synthase can only synthesize ATP and cannot hydrolyze it, unlike mitochondrial ATP synthase.",
       "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
       "correctAnswer": "B",

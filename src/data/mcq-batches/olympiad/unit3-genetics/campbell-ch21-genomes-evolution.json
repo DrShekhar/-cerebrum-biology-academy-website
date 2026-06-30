@@ -1452,7 +1452,7 @@
       "topic": "Biased Gene Conversion"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about genome evolution:\nI. Genome size correlates well with organismal complexity across all domains of life\nII. Gene duplication followed by divergence is a major source of evolutionary novelty\nIII. Exon shuffling can create novel proteins by combining exons from different genes\nIV. Horizontal gene transfer has significantly contributed to prokaryotic genome evolution",
       "options": ["FTTT", "TTTT", "TFTT", "FTTF"],
       "correctAnswer": "A",
@@ -1467,7 +1467,7 @@
       "topic": "Genome Evolution Principles"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about transposable elements:\nI. DNA transposons move by a 'cut-and-paste' mechanism using transposase\nII. Retrotransposons move by a 'copy-and-paste' mechanism via an RNA intermediate\nIII. Transposable elements comprise less than 1% of the human genome\nIV. Some transposable element-derived sequences have been co-opted for host genome function (exaptation)",
       "options": ["TTFT", "TTTT", "TFFT", "TFTF"],
       "correctAnswer": "A",
@@ -1482,7 +1482,7 @@
       "topic": "Transposable Elements"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about the evolution of genome size:\nI. Polyploidy (whole-genome duplication) is a common mechanism of genome size increase in plants\nII. Transposable element proliferation is the primary mechanism of genome size increase in mammals\nIII. Genome reduction commonly occurs in obligate intracellular symbionts and parasites\nIV. Genome size is always strongly correlated with phenotypic complexity",
       "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
@@ -1497,7 +1497,7 @@
       "topic": "Genome Size Evolution"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about horizontal gene transfer (HGT) in eukaryotes:\nI. HGT is common in prokaryotes but extremely rare in multicellular eukaryotes\nII. The endosymbiotic transfer of genes from mitochondria and chloroplasts to the nuclear genome is a form of HGT\nIII. Some plants have acquired genes from parasitic plants through HGT\nIV. HGT never occurs between different domains of life",
       "options": ["FTFT", "FTFF", "FTTF", "TTFF"],
       "correctAnswer": "C",
@@ -1512,7 +1512,7 @@
       "topic": "HGT in Eukaryotes"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about non-coding RNA in genome evolution:\nI. MicroRNAs (miRNAs) are short (~22 nt) non-coding RNAs that regulate gene expression post-transcriptionally\nII. The number of miRNA genes tends to increase with organismal complexity across animal evolution\nIII. Long non-coding RNAs (lncRNAs) evolve more rapidly than protein-coding genes\nIV. All transcribed sequences in the genome encode functional non-coding RNAs",
       "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
@@ -1727,7 +1727,7 @@
       "topic": "Metagenomics and Microbial Genome Dark Matter"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about comparative model organism genomics:\n\nS1: Saccharomyces cerevisiae (12 Mb, ~6,000 genes) was the first eukaryotic genome sequenced (1996) and approximately 30% of its genes have identifiable homologs in the human genome.\nS2: Drosophila melanogaster has approximately the same number of protein-coding genes (~14,000) as C. elegans (~20,000).\nS3: The mouse genome shares approximately 99% nucleotide identity with human coding sequences, making it the closest model organism to humans.\nS4: Arabidopsis thaliana (135 Mb, ~27,000 genes) contains more protein-coding genes than the human genome, partly due to ancient whole-genome duplication events.",
       "options": ["TFFT", "TTTT", "TTFT", "TFTF"],
       "correctAnswer": "A",

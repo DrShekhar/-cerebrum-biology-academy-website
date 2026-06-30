@@ -1,6 +1,6 @@
 {
   "batch": {
-    "name": "Campbell Ch13 Meiosis and Sexual Life Cycles \u2014 Olympiad Expansion",
+    "name": "Campbell Ch13 Meiosis and Sexual Life Cycles — Olympiad Expansion",
     "version": 1,
     "source": "olympiad-expansion",
     "totalQuestions": 109
@@ -187,7 +187,7 @@
       "topic": "Meiosis and Sexual Life Cycles"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about crossing over during meiosis:\nS1: Crossing over occurs between non-sister chromatids of homologous chromosomes during pachytene of prophase I.\nS2: A single crossover event between two linked genes always produces 50% recombinant gametes.\nS3: The frequency of crossing over between two genes is proportional to the physical distance between them on the chromosome.\nS4: Interference refers to the phenomenon where one crossover event inhibits additional crossovers nearby on the same chromosome.",
       "options": ["TFTF", "TTTT", "TFFT", "TFTT"],
       "correctAnswer": "D",
@@ -202,8 +202,8 @@
       "topic": "Meiosis and Sexual Life Cycles"
     },
     {
-      "type": "MTF",
-      "question": "Evaluate the following statements about the stages of meiosis:\nS1: During metaphase I, homologous pairs (bivalents) align at the metaphase plate, whereas during metaphase II, individual chromosomes align at the metaphase plate.\nS2: Reduction in chromosome number occurs during meiosis II when sister chromatids are separated.\nS3: DNA replication occurs between meiosis I and meiosis II during a brief interkinesis period.\nS4: The attachment of kinetochore microtubules differs between meiosis I and meiosis II \u2014 in meiosis I, sister kinetochores attach to microtubules from the same pole.",
+      "type": "MCQ",
+      "question": "Evaluate the following statements about the stages of meiosis:\nS1: During metaphase I, homologous pairs (bivalents) align at the metaphase plate, whereas during metaphase II, individual chromosomes align at the metaphase plate.\nS2: Reduction in chromosome number occurs during meiosis II when sister chromatids are separated.\nS3: DNA replication occurs between meiosis I and meiosis II during a brief interkinesis period.\nS4: The attachment of kinetochore microtubules differs between meiosis I and meiosis II — in meiosis I, sister kinetochores attach to microtubules from the same pole.",
       "options": ["TFTT", "TFTF", "TTFT", "TFFT"],
       "correctAnswer": "D",
       "explanation": "S1 is TRUE: During metaphase I, bivalents (pairs of homologous chromosomes, each consisting of two sister chromatids) align at the metaphase plate. During metaphase II, individual chromosomes (each consisting of two sister chromatids) align at the metaphase plate, similar to mitotic metaphase. S2 is FALSE: The reduction in chromosome number (from 2n to n) occurs during meiosis I, when homologous chromosomes separate. Meiosis II separates sister chromatids, similar to mitosis, and does not change the chromosome number (it remains n). S3 is FALSE: DNA replication does NOT occur between meiosis I and meiosis II. The interkinesis period is brief and lacks an S phase. The cells proceed directly from the products of meiosis I into meiosis II without replicating their DNA. S4 is TRUE: In meiosis I, the sister kinetochores of each chromosome are modified to function as a single unit and attach to microtubules from the same pole (mono-orientation), ensuring that homologs separate rather than sister chromatids.",
@@ -417,7 +417,7 @@
       "topic": "Meiosis and Sexual Life Cycles"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about genetic variation generated during meiosis:\nS1: Independent assortment of homologous chromosomes during meiosis I can produce 2^n different gamete combinations, where n is the haploid number.\nS2: Crossing over during prophase I creates new allele combinations on individual chromosomes that did not exist in either parent.\nS3: Random fertilization doubles the number of genetically unique offspring possible from independent assortment alone.\nS4: Gene conversion during meiotic recombination can alter allele ratios, producing non-Mendelian segregation patterns in individual tetrads.",
       "options": ["TFFT", "TTFF", "TTFT", "TTTT"],
       "correctAnswer": "C",
@@ -441,7 +441,7 @@
         "Cells with aneuploid chromosome numbers from nondisjunction events"
       ],
       "correctAnswer": "B",
-      "explanation": "Flow cytometry measures total DNA content per cell. In meiotic tissue, the four expected peaks are: 1C (mature haploid gametes after meiosis II), 2C (either diploid somatic cells in G1 or haploid cells after meiosis I with replicated chromosomes \u2014 though these are technically 2C because sister chromatids are still joined), and 4C (diploid cells that have completed S phase and are in prophase I through metaphase I). An intermediate value between 1C and 2C most likely represents cells actively undergoing S phase of premeiotic interphase, where DNA replication is in progress but not yet complete. Option B is less likely as apoptotic cells typically show sub-1C peaks due to DNA degradation. Option C is incorrect because synaptonemal complex degradation does not affect DNA content. Option D could produce peaks near 2C but would not create a consistent intermediate peak.",
+      "explanation": "Flow cytometry measures total DNA content per cell. In meiotic tissue, the four expected peaks are: 1C (mature haploid gametes after meiosis II), 2C (either diploid somatic cells in G1 or haploid cells after meiosis I with replicated chromosomes — though these are technically 2C because sister chromatids are still joined), and 4C (diploid cells that have completed S phase and are in prophase I through metaphase I). An intermediate value between 1C and 2C most likely represents cells actively undergoing S phase of premeiotic interphase, where DNA replication is in progress but not yet complete. Option B is less likely as apoptotic cells typically show sub-1C peaks due to DNA degradation. Option C is incorrect because synaptonemal complex degradation does not affect DNA content. Option D could produce peaks near 2C but would not create a consistent intermediate peak.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -461,7 +461,7 @@
         "Fertilization between gametes"
       ],
       "correctAnswer": "C",
-      "explanation": "In organisms exhibiting alternation of generations (plants, some algae), spores are produced by meiosis within the diploid sporophyte. These haploid spores then germinate and develop by mitosis into the multicellular haploid gametophyte. Option B describes how gametes are produced \u2014 gametophytes produce gametes by mitosis (since the gametophyte is already haploid). Option C describes syngamy, which produces a diploid zygote that develops into the sporophyte. Option D describes vegetative growth of the sporophyte, not spore production. The key distinction is that meiosis in the sporophyte produces spores, while mitosis in the gametophyte produces gametes.",
+      "explanation": "In organisms exhibiting alternation of generations (plants, some algae), spores are produced by meiosis within the diploid sporophyte. These haploid spores then germinate and develop by mitosis into the multicellular haploid gametophyte. Option B describes how gametes are produced — gametophytes produce gametes by mitosis (since the gametophyte is already haploid). Option C describes syngamy, which produces a diploid zygote that develops into the sporophyte. Option D describes vegetative growth of the sporophyte, not spore production. The key distinction is that meiosis in the sporophyte produces spores, while mitosis in the gametophyte produces gametes.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 3,
@@ -501,7 +501,7 @@
         "Overexpression of Protein X in somatic cells and examination of whether SC-like structures form, combined with mass spectrometry of the protein complex"
       ],
       "correctAnswer": "C",
-      "explanation": "The most rigorous approach combines loss-of-function analysis with direct visualization of the phenotype. CRISPR knockout removes Protein X function entirely, and immunofluorescence with antibodies against known SC components (SYCP1 for the transverse filaments, SYCP3 for the lateral elements) would reveal whether the SC assembles properly. Electron microscopy provides ultrastructural confirmation of SC defects at nanometer resolution, showing whether the tripartite structure (two lateral elements connected by transverse filaments) forms correctly. Option B provides useful but indirect evidence \u2014 expression data and protein interactions do not demonstrate functional requirement. Option C is problematic because SC formation requires the meiotic context (homologous chromosomes, meiosis-specific signals), so ectopic expression in somatic cells would not recapitulate normal SC assembly. Option D measures transcription and DNA binding but does not directly assess SC structure or formation.",
+      "explanation": "The most rigorous approach combines loss-of-function analysis with direct visualization of the phenotype. CRISPR knockout removes Protein X function entirely, and immunofluorescence with antibodies against known SC components (SYCP1 for the transverse filaments, SYCP3 for the lateral elements) would reveal whether the SC assembles properly. Electron microscopy provides ultrastructural confirmation of SC defects at nanometer resolution, showing whether the tripartite structure (two lateral elements connected by transverse filaments) forms correctly. Option B provides useful but indirect evidence — expression data and protein interactions do not demonstrate functional requirement. Option C is problematic because SC formation requires the meiotic context (homologous chromosomes, meiosis-specific signals), so ectopic expression in somatic cells would not recapitulate normal SC assembly. Option D measures transcription and DNA binding but does not directly assess SC structure or formation.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -561,7 +561,7 @@
         "Males complete meiosis during fetal development; females begin meiosis at puberty"
       ],
       "correctAnswer": "B",
-      "explanation": "In human males, spermatogenesis begins at puberty when spermatogonia enter meiosis, and this process continues throughout adult life, producing mature sperm in approximately 64 days per cycle. In human females, oogonia enter meiosis during fetal development (around weeks 11-12 of gestation), and primary oocytes arrest at the diplotene stage of prophase I (dictyate arrest). These primary oocytes remain arrested until ovulation, which begins at puberty and can span decades. Only the LH surge before ovulation triggers completion of meiosis I. Option B reverses the male pattern entirely. Option C incorrectly states that both sexes begin meiosis at puberty. Option D is partially incorrect \u2014 while females do arrest at metaphase II (the secondary oocyte), the initial entry into meiosis begins during fetal life, not at puberty.",
+      "explanation": "In human males, spermatogenesis begins at puberty when spermatogonia enter meiosis, and this process continues throughout adult life, producing mature sperm in approximately 64 days per cycle. In human females, oogonia enter meiosis during fetal development (around weeks 11-12 of gestation), and primary oocytes arrest at the diplotene stage of prophase I (dictyate arrest). These primary oocytes remain arrested until ovulation, which begins at puberty and can span decades. Only the LH surge before ovulation triggers completion of meiosis I. Option B reverses the male pattern entirely. Option C incorrectly states that both sexes begin meiosis at puberty. Option D is partially incorrect — while females do arrest at metaphase II (the secondary oocyte), the initial entry into meiosis begins during fetal life, not at puberty.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 3,
@@ -592,7 +592,7 @@
       "topic": "Meiosis and Sexual Life Cycles"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about life cycle strategies in eukaryotes:\nS1: In organisms with a haplontic life cycle, the only diploid cell is the zygote, which immediately undergoes meiosis.\nS2: Fungi such as Neurospora typically have a diplontic life cycle with a dominant diploid phase.\nS3: Alternation of generations involves both multicellular haploid and multicellular diploid stages in the life cycle.\nS4: In animals, gametes are the only haploid cells, and meiosis is gametic.",
       "options": ["TFTT", "TTTT", "TFTF", "TFFT"],
       "correctAnswer": "A",
@@ -722,11 +722,11 @@
       "topic": "Meiosis and Sexual Life Cycles"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements comparing meiosis in plants and animals:\nS1: In animals, meiosis directly produces gametes, while in plants, meiosis produces spores that develop into gametophytes.\nS2: Plant gametes are produced by mitosis within the gametophyte, while animal gametes are produced by meiosis.\nS3: Both plant and animal meiosis involve crossing over during prophase I and independent assortment during metaphase I.\nS4: Unlike animal cells, plant cells undergoing meiosis lack centrioles and instead use other microtubule organizing centers.",
       "options": ["TTTF", "TTFT", "TFTT", "TTTT"],
       "correctAnswer": "D",
-      "explanation": "S1 is TRUE: In animals, meiosis is gametic \u2014 it directly produces haploid gametes (sperm and eggs). In plants, meiosis is sporic \u2014 it produces haploid spores within the sporophyte. These spores germinate and divide mitotically to form a multicellular haploid gametophyte. S2 is TRUE: Within the plant gametophyte, gametes are produced by mitosis, not meiosis, because the gametophyte is already haploid. In contrast, animal gametes are direct products of meiosis. S3 is TRUE: The fundamental mechanisms of meiosis \u2014 crossing over during prophase I and independent assortment of homologous chromosomes during metaphase I \u2014 are conserved across both plants and animals, as these are universal features of meiosis. S4 is TRUE: Most plant cells (with the exception of some bryophytes and pteridophytes) lack centrioles. Instead, they use alternative microtubule organizing centers (acentrosomal MTOCs) to form the meiotic spindle. Animal cells typically use centriole-containing centrosomes.",
+      "explanation": "S1 is TRUE: In animals, meiosis is gametic — it directly produces haploid gametes (sperm and eggs). In plants, meiosis is sporic — it produces haploid spores within the sporophyte. These spores germinate and divide mitotically to form a multicellular haploid gametophyte. S2 is TRUE: Within the plant gametophyte, gametes are produced by mitosis, not meiosis, because the gametophyte is already haploid. In contrast, animal gametes are direct products of meiosis. S3 is TRUE: The fundamental mechanisms of meiosis — crossing over during prophase I and independent assortment of homologous chromosomes during metaphase I — are conserved across both plants and animals, as these are universal features of meiosis. S4 is TRUE: Most plant cells (with the exception of some bryophytes and pteridophytes) lack centrioles. Instead, they use alternative microtubule organizing centers (acentrosomal MTOCs) to form the meiotic spindle. Animal cells typically use centriole-containing centrosomes.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 3,
@@ -878,7 +878,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A population geneticist sequences a 1 Mb region of chromosome 6 in 200 unrelated individuals and constructs a linkage disequilibrium (LD) map. The map shows strong LD (r\u00b2 > 0.8) extending over blocks of 50-100 kb, interrupted by narrow regions of rapid LD decay. The regions of rapid LD decay most likely correspond to:",
+      "question": "A population geneticist sequences a 1 Mb region of chromosome 6 in 200 unrelated individuals and constructs a linkage disequilibrium (LD) map. The map shows strong LD (r² > 0.8) extending over blocks of 50-100 kb, interrupted by narrow regions of rapid LD decay. The regions of rapid LD decay most likely correspond to:",
       "options": [
         "Regions of high mutation rate that break up LD",
         "Centromeric regions that suppress recombination",
@@ -886,7 +886,7 @@
         "Regions under strong positive selection that create new haplotypes"
       ],
       "correctAnswer": "C",
-      "explanation": "Linkage disequilibrium (LD) is the non-random association of alleles at different loci. LD is broken down primarily by recombination over generations. Regions of rapid LD decay (narrow regions where r\u00b2 drops sharply) correspond to recombination hotspots \u2014 localized regions where crossover frequency is 10-1000 times higher than the genome average. In humans, recombination hotspots are typically 1-2 kb wide and are associated with the PRDM9 zinc finger protein, which binds specific DNA motifs and recruits the recombination machinery. The blocks of strong LD between hotspots represent regions where recombination is rare, maintaining ancestral haplotype structure. Option B is less likely because mutation rates alone do not typically cause rapid LD decay over short distances. Option C is incorrect because centromeric regions suppress recombination, which would maintain LD rather than break it. Option D is incorrect because positive selection typically creates extended LD, not rapid LD decay.",
+      "explanation": "Linkage disequilibrium (LD) is the non-random association of alleles at different loci. LD is broken down primarily by recombination over generations. Regions of rapid LD decay (narrow regions where r² drops sharply) correspond to recombination hotspots — localized regions where crossover frequency is 10-1000 times higher than the genome average. In humans, recombination hotspots are typically 1-2 kb wide and are associated with the PRDM9 zinc finger protein, which binds specific DNA motifs and recruits the recombination machinery. The blocks of strong LD between hotspots represent regions where recombination is rare, maintaining ancestral haplotype structure. Option B is less likely because mutation rates alone do not typically cause rapid LD decay over short distances. Option C is incorrect because centromeric regions suppress recombination, which would maintain LD rather than break it. Option D is incorrect because positive selection typically creates extended LD, not rapid LD decay.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -906,7 +906,7 @@
         "Use fluorescent in situ hybridization (FISH) to localize the gene on metaphase chromosomes"
       ],
       "correctAnswer": "B",
-      "explanation": "A temperature-sensitive allele provides temporal control over gene function, which is crucial for studying stage-specific roles. By allowing meiosis I to proceed at the permissive temperature and then shifting to the restrictive temperature to inactivate the gene product, the researcher can specifically assess whether the gene is required for the meiosis I-to-meiosis II transition without affecting earlier meiotic events. Monitoring spindle assembly (indicating entry into meiosis II) and chromosome morphology would reveal whether cells arrest between the two divisions. Option B identifies interacting proteins but does not demonstrate functional requirement for the transition. Option C reveals chromosomal location of the gene but provides no functional information about the meiosis I-II transition. Option D shows expression timing but does not demonstrate whether the gene is functionally required for the transition \u2014 correlation of expression does not prove causation.",
+      "explanation": "A temperature-sensitive allele provides temporal control over gene function, which is crucial for studying stage-specific roles. By allowing meiosis I to proceed at the permissive temperature and then shifting to the restrictive temperature to inactivate the gene product, the researcher can specifically assess whether the gene is required for the meiosis I-to-meiosis II transition without affecting earlier meiotic events. Monitoring spindle assembly (indicating entry into meiosis II) and chromosome morphology would reveal whether cells arrest between the two divisions. Option B identifies interacting proteins but does not demonstrate functional requirement for the transition. Option C reveals chromosomal location of the gene but provides no functional information about the meiosis I-II transition. Option D shows expression timing but does not demonstrate whether the gene is functionally required for the transition — correlation of expression does not prove causation.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -957,7 +957,7 @@
       "topic": "Meiosis and Sexual Life Cycles"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the molecular events of meiotic recombination:\nS1: After Spo11 creates DSBs, the MRX/MRN complex processes the break ends to generate 3' single-stranded overhangs.\nS2: Dmc1 is a meiosis-specific recombinase that works alongside Rad51 to catalyze strand invasion during homologous recombination.\nS3: All Holliday junctions formed during meiosis are resolved as crossovers to ensure genetic diversity.\nS4: The ZMM pathway (including proteins Zip1-4, Mer3, Msh4-5) is required for the formation of Class I (interference-sensitive) crossovers.",
       "options": ["TTTT", "TTFF", "TFFT", "TTFT"],
       "correctAnswer": "D",
@@ -1042,7 +1042,7 @@
       "topic": "Meiosis and Sexual Life Cycles"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the relationship between meiosis and genetic disorders:\nS1: Down syndrome (trisomy 21) results from nondisjunction of chromosome 21, most commonly during maternal meiosis I.\nS2: Turner syndrome (45,X) can result from nondisjunction in either the father or mother, and individuals have only one sex chromosome.\nS3: Klinefelter syndrome (47,XXY) can only arise from nondisjunction during maternal meiosis.\nS4: Robertsonian translocation between chromosomes 14 and 21 can lead to familial Down syndrome without a change in total chromosome number in the carrier parent.",
       "options": ["TTFT", "TTTT", "TFFT", "TTFF"],
       "correctAnswer": "A",
@@ -1066,7 +1066,7 @@
         "A reciprocal translocation between two non-homologous chromosomes, where the four chromosomes involved form a cross-shaped quadrivalent during synapsis"
       ],
       "correctAnswer": "D",
-      "explanation": "A quadrivalent (four chromosomes associating together during meiosis I) is the hallmark of a heterozygous reciprocal translocation. When segments are exchanged between two non-homologous chromosomes, all four chromosomes (two normal and two translocated) must pair with their homologous segments during prophase I, forming a cross-shaped (cruciform) configuration at pachytene and a ring or chain quadrivalent at metaphase I. This explains why only 21 bivalents are seen \u2014 two of the normal bivalents are replaced by the single quadrivalent (21 bivalents + 1 quadrivalent = 23 pairs of chromosomes). Option B would produce an inversion loop within a bivalent, not a quadrivalent. Option C would cause a loop but within a normal bivalent configuration. Option D would produce a trivalent plus a univalent (if trisomy), not a quadrivalent.",
+      "explanation": "A quadrivalent (four chromosomes associating together during meiosis I) is the hallmark of a heterozygous reciprocal translocation. When segments are exchanged between two non-homologous chromosomes, all four chromosomes (two normal and two translocated) must pair with their homologous segments during prophase I, forming a cross-shaped (cruciform) configuration at pachytene and a ring or chain quadrivalent at metaphase I. This explains why only 21 bivalents are seen — two of the normal bivalents are replaced by the single quadrivalent (21 bivalents + 1 quadrivalent = 23 pairs of chromosomes). Option B would produce an inversion loop within a bivalent, not a quadrivalent. Option C would cause a loop but within a normal bivalent configuration. Option D would produce a trivalent plus a univalent (if trisomy), not a quadrivalent.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -1106,7 +1106,7 @@
         "At prophase I, when chromosomes first become visible"
       ],
       "correctAnswer": "D",
-      "explanation": "When BrdU is incorporated during premeiotic S phase, each chromosome replaces one strand with BrdU-containing DNA. After replication, each chromosome consists of two sister chromatids, each with one BrdU-labeled strand and one unlabeled strand (harlequin staining pattern). This differential staining between the two DNA strands of each chromatid is visible as soon as chromosomes condense during prophase I. The technique can reveal sister chromatid exchanges (SCEs) when crossing over occurs between sister chromatids. However, the question asks when sister chromatids become distinguishable \u2014 this requires a second round of replication in the presence of BrdU. After one round of BrdU incorporation, both sister chromatids have the same composition (one BrdU strand, one normal strand). They become distinguishable only after a second S phase. Since there is no S phase between meiosis I and II, the standard harlequin technique actually requires modifications for meiotic analysis. In practice, the chromatids become distinguishable at the earliest stages when chromosomes are visible.",
+      "explanation": "When BrdU is incorporated during premeiotic S phase, each chromosome replaces one strand with BrdU-containing DNA. After replication, each chromosome consists of two sister chromatids, each with one BrdU-labeled strand and one unlabeled strand (harlequin staining pattern). This differential staining between the two DNA strands of each chromatid is visible as soon as chromosomes condense during prophase I. The technique can reveal sister chromatid exchanges (SCEs) when crossing over occurs between sister chromatids. However, the question asks when sister chromatids become distinguishable — this requires a second round of replication in the presence of BrdU. After one round of BrdU incorporation, both sister chromatids have the same composition (one BrdU strand, one normal strand). They become distinguishable only after a second S phase. Since there is no S phase between meiosis I and II, the standard harlequin technique actually requires modifications for meiotic analysis. In practice, the chromatids become distinguishable at the earliest stages when chromosomes are visible.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -1141,7 +1141,7 @@
         "Treat cells with taxol to stabilize all microtubules and observe the effect on chromosome segregation"
       ],
       "correctAnswer": "C",
-      "explanation": "Micromanipulation directly tests whether unattached bivalents generate a 'wait' signal that delays anaphase I. If detaching one bivalent from the spindle causes a delay in anaphase I onset, this demonstrates that the checkpoint monitors attachment status. This approach was pioneered by Bruce Nicklas and others studying meiotic checkpoints. The experiment requires careful controls: timing must be compared to cells where the needle touches but does not detach a bivalent (sham manipulation). Option B tests microtubule stability effects on segregation but does not specifically address whether the checkpoint monitors bipolar attachment \u2014 taxol affects all microtubules globally. Option C shows expression patterns but not function. Option D compares bivalent counts but does not directly test whether the checkpoint monitors attachment; checkpoint mutants might have normal bivalent formation but fail to delay anaphase when attachment is defective.",
+      "explanation": "Micromanipulation directly tests whether unattached bivalents generate a 'wait' signal that delays anaphase I. If detaching one bivalent from the spindle causes a delay in anaphase I onset, this demonstrates that the checkpoint monitors attachment status. This approach was pioneered by Bruce Nicklas and others studying meiotic checkpoints. The experiment requires careful controls: timing must be compared to cells where the needle touches but does not detach a bivalent (sham manipulation). Option B tests microtubule stability effects on segregation but does not specifically address whether the checkpoint monitors bipolar attachment — taxol affects all microtubules globally. Option C shows expression patterns but not function. Option D compares bivalent counts but does not directly test whether the checkpoint monitors attachment; checkpoint mutants might have normal bivalent formation but fail to delay anaphase when attachment is defective.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -1247,7 +1247,7 @@
       "topic": "Meiosis and Sexual Life Cycles"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the evolution of meiosis:\nS1: Meiosis likely evolved from mitosis, with meiosis-specific features like homolog pairing and recombination being later modifications of the mitotic cell division program.\nS2: The key genes involved in meiotic recombination (such as Spo11 and Dmc1) are found only in animals and not in other eukaryotes.\nS3: Some protists can switch between mitotic and meiotic divisions depending on environmental conditions, supporting the idea that meiosis evolved as a stress response.\nS4: The core components of the cohesin complex are shared between mitosis and meiosis, with meiosis using specialized subunits like Rec8.",
       "options": ["TFFT", "TTTT", "TFTF", "TFTT"],
       "correctAnswer": "D",
@@ -1366,7 +1366,7 @@
         "Condensation of chromosomes during prophase"
       ],
       "correctAnswer": "B",
-      "explanation": "Synapsis \u2014 the intimate pairing of homologous chromosomes along their length via the synaptonemal complex \u2014 is unique to meiosis I and does not occur during mitosis. This pairing leads to bivalent formation (tetrads of four chromatids) and is essential for crossing over and proper homolog segregation. In mitosis, homologous chromosomes do not pair with each other; instead, all chromosomes function independently. Option B occurs in both meiosis and mitosis as chromosomes condense from dispersed chromatin into visible structures. Option C occurs in both processes, though the units aligned differ (bivalents in meiosis I vs. individual chromosomes in mitosis and meiosis II). Option D occurs in both meiosis and mitosis as the mechanism for chromosome movement along the spindle.",
+      "explanation": "Synapsis — the intimate pairing of homologous chromosomes along their length via the synaptonemal complex — is unique to meiosis I and does not occur during mitosis. This pairing leads to bivalent formation (tetrads of four chromatids) and is essential for crossing over and proper homolog segregation. In mitosis, homologous chromosomes do not pair with each other; instead, all chromosomes function independently. Option B occurs in both meiosis and mitosis as chromosomes condense from dispersed chromatin into visible structures. Option C occurs in both processes, though the units aligned differ (bivalents in meiosis I vs. individual chromosomes in mitosis and meiosis II). Option D occurs in both meiosis and mitosis as the mechanism for chromosome movement along the spindle.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 3,
@@ -1417,7 +1417,7 @@
       "topic": "Meiosis and Sexual Life Cycles"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the differences between spermatogenesis and oogenesis in mammals:\nS1: Spermatogenesis produces four functional haploid sperm from each primary spermatocyte, while oogenesis produces one functional egg and three polar bodies.\nS2: Spermatogenesis begins at puberty and continues throughout life, while all oocytes enter meiosis during fetal development.\nS3: The first meiotic arrest in oogenesis occurs at metaphase I, while spermatocytes have no meiotic arrest points.\nS4: Spermatocytes complete meiosis in approximately 24 days, while the completion of oogenesis can span decades.",
       "options": ["TTTT", "TTTF", "TFFT", "TTFT"],
       "correctAnswer": "D",
@@ -1501,7 +1501,7 @@
         "The crossover is suppressed and no recombination products are formed"
       ],
       "correctAnswer": "B",
-      "explanation": "In a heterozygous pericentric inversion carrier, the chromosomes form an inversion loop during synapsis to achieve homologous pairing. If a crossover occurs within this loop, the recombinant chromosomes are unbalanced \u2014 they carry duplications of some segments and deletions of others. Specifically, in a pericentric inversion, a single crossover within the loop produces two recombinant chromosomes: one with a duplication of the segment distal to one breakpoint and deletion of the segment distal to the other breakpoint, and vice versa. These unbalanced gametes typically produce inviable offspring. This effectively suppresses the recovery of recombinants in the inverted region without actually preventing crossing over. Option B is incorrect because crossovers still occur, but recombinant products are selected against. Option C is incorrect because inversions profoundly affect the viability of crossover products. Option D describes what happens with paracentric inversions (acentric fragments and dicentric chromosomes), not pericentric inversions.",
+      "explanation": "In a heterozygous pericentric inversion carrier, the chromosomes form an inversion loop during synapsis to achieve homologous pairing. If a crossover occurs within this loop, the recombinant chromosomes are unbalanced — they carry duplications of some segments and deletions of others. Specifically, in a pericentric inversion, a single crossover within the loop produces two recombinant chromosomes: one with a duplication of the segment distal to one breakpoint and deletion of the segment distal to the other breakpoint, and vice versa. These unbalanced gametes typically produce inviable offspring. This effectively suppresses the recovery of recombinants in the inverted region without actually preventing crossing over. Option B is incorrect because crossovers still occur, but recombinant products are selected against. Option C is incorrect because inversions profoundly affect the viability of crossover products. Option D describes what happens with paracentric inversions (acentric fragments and dicentric chromosomes), not pericentric inversions.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -1591,7 +1591,7 @@
         "They are deleted from the genome to prevent deleterious effects"
       ],
       "correctAnswer": "C",
-      "explanation": "Meiotic silencing of unsynapsed chromatin (MSUC) is a surveillance mechanism that transcriptionally silences DNA sequences that fail to synapse during prophase I of meiosis. Unsynapsed chromosomes or chromosomal regions are marked by specific histone modifications, including H3K9 methylation and gamma-H2AX phosphorylation, leading to heterochromatin formation and transcriptional repression. This process is particularly important in sex chromosomes during male meiosis (MSCI \u2014 meiotic sex chromosome inactivation), where the unsynapsed portions of the X and Y chromosomes are silenced and form the sex body (XY body). MSUC serves as a quality control mechanism, potentially eliminating cells with asynapsis. Option B describes the opposite of what occurs. Option C is incorrect because DNA is not deleted. Option D is incorrect because additional replication does not occur in response to asynapsis.",
+      "explanation": "Meiotic silencing of unsynapsed chromatin (MSUC) is a surveillance mechanism that transcriptionally silences DNA sequences that fail to synapse during prophase I of meiosis. Unsynapsed chromosomes or chromosomal regions are marked by specific histone modifications, including H3K9 methylation and gamma-H2AX phosphorylation, leading to heterochromatin formation and transcriptional repression. This process is particularly important in sex chromosomes during male meiosis (MSCI — meiotic sex chromosome inactivation), where the unsynapsed portions of the X and Y chromosomes are silenced and form the sex body (XY body). MSUC serves as a quality control mechanism, potentially eliminating cells with asynapsis. Option B describes the opposite of what occurs. Option C is incorrect because DNA is not deleted. Option D is incorrect because additional replication does not occur in response to asynapsis.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -1686,7 +1686,7 @@
         "Class I crossovers occur during meiosis I and Class II during meiosis II"
       ],
       "correctAnswer": "B",
-      "explanation": "Meiotic crossovers in most organisms are produced by two distinct pathways. Class I crossovers (constituting approximately 85-90% of all crossovers in most organisms) are generated by the ZMM pathway (Zip1-4, Mer3, Msh4-5) and resolved by the MLH1-MLH3 heterodimer. These crossovers exhibit positive interference \u2014 one crossover inhibits nearby crossovers. The obligate crossover per chromosome pair is a Class I crossover. Class II crossovers (approximately 10-15%) are generated by the Mus81-Mms4 (Eme1 in mammals) endonuclease complex and do not show interference \u2014 they are distributed randomly. In some organisms like fission yeast, Class II crossovers predominate. Option B incorrectly assigns the classes to different meiotic divisions. Option C incorrectly states Class II involves only gene conversion. Option D incorrectly states Class II is synapsis-independent.",
+      "explanation": "Meiotic crossovers in most organisms are produced by two distinct pathways. Class I crossovers (constituting approximately 85-90% of all crossovers in most organisms) are generated by the ZMM pathway (Zip1-4, Mer3, Msh4-5) and resolved by the MLH1-MLH3 heterodimer. These crossovers exhibit positive interference — one crossover inhibits nearby crossovers. The obligate crossover per chromosome pair is a Class I crossover. Class II crossovers (approximately 10-15%) are generated by the Mus81-Mms4 (Eme1 in mammals) endonuclease complex and do not show interference — they are distributed randomly. In some organisms like fission yeast, Class II crossovers predominate. Option B incorrectly assigns the classes to different meiotic divisions. Option C incorrectly states Class II involves only gene conversion. Option D incorrectly states Class II is synapsis-independent.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -1697,7 +1697,7 @@
       "topic": "Meiosis and Sexual Life Cycles"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about aneuploidy and its consequences:\nS1: Monosomy (2n - 1) is generally more detrimental than trisomy (2n + 1) because the loss of one chromosome copy exposes recessive lethal alleles.\nS2: Trisomy 21 (Down syndrome) is the most common autosomal trisomy in live births because chromosome 21 is the smallest human autosome with the fewest genes.\nS3: Polyploidy is invariably lethal in animals but common in plants.\nS4: Uniparental disomy (both copies of a chromosome inherited from one parent) can result from trisomy rescue and may have phenotypic consequences due to imprinting effects.",
       "options": ["TFFT", "TFTF", "TTTT", "TTFT"],
       "correctAnswer": "D",
@@ -1756,7 +1756,7 @@
         "Muller's ratchet describes the mechanism by which beneficial mutations are fixed in asexual populations faster than in sexual ones"
       ],
       "correctAnswer": "A",
-      "explanation": "Muller's ratchet is a concept in evolutionary genetics describing how asexual populations irreversibly accumulate deleterious mutations over generations. In an asexual population, once the least-mutated class of individuals is lost by genetic drift, it cannot be regenerated \u2014 the 'ratchet' clicks forward. This process continues, progressively increasing the mutational load. Sexual reproduction, through meiotic recombination, can counteract this by generating offspring with fewer mutations than either parent through recombination between chromosomes carrying different mutations. This is one of the major hypotheses for why sexual reproduction is maintained despite its twofold cost. Option B reverses the concept; Muller's ratchet is about deleterious mutations, not beneficial ones. Option C confuses the concept with recombination rate evolution. Option D confuses it with DNA repair mechanisms.",
+      "explanation": "Muller's ratchet is a concept in evolutionary genetics describing how asexual populations irreversibly accumulate deleterious mutations over generations. In an asexual population, once the least-mutated class of individuals is lost by genetic drift, it cannot be regenerated — the 'ratchet' clicks forward. This process continues, progressively increasing the mutational load. Sexual reproduction, through meiotic recombination, can counteract this by generating offspring with fewer mutations than either parent through recombination between chromosomes carrying different mutations. This is one of the major hypotheses for why sexual reproduction is maintained despite its twofold cost. Option B reverses the concept; Muller's ratchet is about deleterious mutations, not beneficial ones. Option C confuses the concept with recombination rate evolution. Option D confuses it with DNA repair mechanisms.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 3,
@@ -1776,7 +1776,7 @@
         "Treat the mutant mice with colchicine and observe whether missegregation increases"
       ],
       "correctAnswer": "B",
-      "explanation": "This experiment requires distinguishing between two possible causes: defective crossover formation and defective kinetochore function. Analyzing MLH1 foci at pachytene directly assesses crossover formation \u2014 MLH1 marks the sites of future Class I crossovers, and reduced or absent MLH1 foci would indicate crossover deficiency. Separately, examining kinetochore-microtubule attachments at metaphase I using anti-CENP-A (centromere marker) and anti-tubulin (spindle marker) antibodies would reveal attachment defects such as merotelic or syntelic attachments. By performing both analyses, the researcher can pinpoint which step is defective. Option B quantifies the problem but does not diagnose its cause. Option C measures expression changes but does not directly assess chromosome behavior. Option D would increase missegregation regardless of the underlying cause and therefore would not discriminate between the two hypotheses.",
+      "explanation": "This experiment requires distinguishing between two possible causes: defective crossover formation and defective kinetochore function. Analyzing MLH1 foci at pachytene directly assesses crossover formation — MLH1 marks the sites of future Class I crossovers, and reduced or absent MLH1 foci would indicate crossover deficiency. Separately, examining kinetochore-microtubule attachments at metaphase I using anti-CENP-A (centromere marker) and anti-tubulin (spindle marker) antibodies would reveal attachment defects such as merotelic or syntelic attachments. By performing both analyses, the researcher can pinpoint which step is defective. Option B quantifies the problem but does not diagnose its cause. Option C measures expression changes but does not directly assess chromosome behavior. Option D would increase missegregation regardless of the underlying cause and therefore would not discriminate between the two hypotheses.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 3,
@@ -1922,7 +1922,7 @@
       "topic": "Meiosis and Sexual Life Cycles"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the consequences of errors in meiosis:\nS1: Nondisjunction during meiosis II produces gametes that are either disomic or nullisomic for the affected chromosome, but unlike meiosis I nondisjunction, both homologs in the disomic gamete come from the same parent.\nS2: Premature loss of centromeric cohesion can lead to random segregation of sister chromatids during meiosis I.\nS3: In humans, the risk of trisomy increases with maternal age primarily because of age-related degradation of cohesin proteins in oocytes.\nS4: Complete failure of cytokinesis during meiosis II would produce two diploid cells instead of four haploid cells.",
       "options": ["TTTT", "TTFT", "TFTT", "TTTF"],
       "correctAnswer": "A",

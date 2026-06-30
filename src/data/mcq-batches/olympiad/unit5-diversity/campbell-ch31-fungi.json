@@ -87,7 +87,7 @@
       "topic": "Fairy ring formation"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About lichen biology:\n(I) The fungal partner (mycobiont) provides structure and protection while the photobiont provides carbohydrates\n(II) Lichens can colonize bare rock surfaces and contribute to soil formation through chemical weathering\n(III) Lichens grow rapidly, averaging 10 cm per year in most environments\n(IV) Lichens are sensitive to air pollution, particularly sulfur dioxide, making them useful bioindicators\nWhich are TRUE?",
       "options": [
         "TTFT — I, II, and IV are true",
@@ -247,7 +247,7 @@
       "topic": "Yeast as model organism"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About fungal bioluminescence:\n(I) Approximately 80 fungal species are known to produce bioluminescence\n(II) Fungal bioluminescence uses a luciferin-luciferase system similar to but distinct from firefly bioluminescence\n(III) Bioluminescence in fungi may attract insects that disperse fungal spores\n(IV) All basidiomycete mushrooms are bioluminescent\nWhich are TRUE?",
       "options": [
         "TTTF — I, II, and III are true",
@@ -287,7 +287,7 @@
       "topic": "Mycoheterotrophy"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate statements about fungal pathogenesis in humans:\n(I) Candida albicans can switch between yeast and hyphal growth forms, enhancing pathogenicity\n(II) Aspergillus fumigatus causes invasive aspergillosis primarily in immunocompromised patients\n(III) Dermatophytes infect keratinized tissues (skin, hair, nails) using keratinase enzymes\n(IV) All fungal infections are easily treated with a single dose of antibacterial antibiotics\nWhich are TRUE?",
       "options": [
         "TTTF — I, II, and III are true",
@@ -857,7 +857,7 @@
       "topic": "Ophiocordyceps behavioral manipulation"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Consider statements about fungal genetics and genomics:\n(I) The yeast Saccharomyces cerevisiae was the first eukaryote to have its complete genome sequenced\n(II) Fungi typically have small, compact genomes compared to plants and animals\n(III) Horizontal gene transfer has been documented between fungi and their plant hosts\n(IV) All fungi are strictly haploid throughout their entire life cycle\nWhich are TRUE?",
       "options": [
         "TTTF — I, II, and III are true",
@@ -897,7 +897,7 @@
       "topic": "Ug99 wheat rust threat"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About the Microsporidia:\n(I) Microsporidia are now classified as highly reduced fungi based on molecular phylogenetic evidence\n(II) They are obligate intracellular parasites with extremely reduced genomes\n(III) Microsporidia possess large mitochondria with active oxidative phosphorylation\n(IV) They infect a wide range of hosts including insects, fish, and immunocompromised humans\nWhich are TRUE?",
       "options": [
         "TTFT — I, II, and IV are true",
@@ -957,7 +957,7 @@
       "topic": "Endophytic fungi benefits"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "About mycorrhizal symbioses:\n(I) Ectomycorrhizal fungi form a mantle around the root and a Hartig net between cortical cells, but do not penetrate cell walls\n(II) Arbuscular mycorrhizal fungi penetrate root cortical cell walls but not the plasma membrane\n(III) Mycorrhizal networks can transfer nutrients between connected plants ('wood wide web')\n(IV) Mycorrhizal associations always benefit the plant and never the fungus\nWhich are TRUE?",
       "options": [
         "TTTF — I, II, and III are true",
@@ -1277,7 +1277,7 @@
       "topic": "Fungal substrate preference experiment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Consider the following statements about fungal reproduction:\n(I) Fungi can reproduce both sexually and asexually\n(II) Asexual reproduction in fungi often involves production of conidia or sporangiospores\n(III) Sexual reproduction in all fungi involves a prolonged diploid phase\n(IV) Mating type is determined by specific genetic loci rather than by sex chromosomes\nWhich are TRUE?",
       "options": [
         "TTFT — I, II, and IV are true",

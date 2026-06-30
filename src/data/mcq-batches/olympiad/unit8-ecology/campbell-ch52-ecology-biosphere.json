@@ -647,7 +647,7 @@
       "topic": "Mycorrhizal Networks — Wood Wide Web"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding the vertical structure of tropical rainforests, mark each statement as True (T) or False (F):\n(I) The emergent layer receives the most direct sunlight, with trees reaching 60-70 m\n(II) The understory receives approximately 50% of sunlight that reaches the canopy\n(III) Epiphytes in the canopy obtain water and nutrients from rainfall and airborne detritus, not from the host tree\n(IV) The forest floor receives less than 2% of sunlight, resulting in sparse ground vegetation",
       "options": ["TFTT", "TTFT", "TFTF", "TFFT"],
       "correctAnswer": "A",
@@ -682,7 +682,7 @@
       "topic": "Iron Limitation in HNLC Waters"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding the factors that create the distinct vertical zones in a lake, mark each statement as True (T) or False (F):\n(I) The thermocline is a zone of rapid temperature change that acts as a barrier to mixing between the epilimnion and hypolimnion\n(II) Lake turnover in temperate lakes occurs twice per year (spring and fall) when surface water temperature reaches 4°C\n(III) The photic zone always extends to the bottom of the thermocline in all lakes\n(IV) Dissolved oxygen is typically lowest in the hypolimnion of eutrophic lakes during summer stratification",
       "options": ["TTFT", "TTTT", "TFFT", "TFTF"],
       "correctAnswer": "A",
@@ -937,7 +937,7 @@
       "topic": "Estuarine Productivity"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding ocean circulation and its effects on climate and biome distribution, mark each statement as True (T) or False (F):\n(I) The Gulf Stream carries warm water from the tropics northward, moderating the climate of Western Europe\n(II) El Nino events involve warming of surface waters in the eastern tropical Pacific, suppressing upwelling off South America\n(III) Ocean acidification is caused by increased absorption of atmospheric sulfur dioxide by seawater\n(IV) The Southern Ocean surrounding Antarctica has the strongest wind-driven surface currents on Earth",
       "options": ["TTFT", "TTTT", "TFFT", "TTTF"],
       "correctAnswer": "A",
@@ -1232,7 +1232,7 @@
       "topic": "Climate Zone Shift Detection"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding adaptations of organisms to their abiotic environment, mark each statement as True (T) or False (F):\n(I) CAM photosynthesis allows plants to fix CO2 at night, reducing water loss in arid environments\n(II) Bergmann's rule states that body size increases with latitude in endotherms, which is an adaptation to conserve heat\n(III) Counter-current heat exchangers in Arctic mammals warm venous blood returning from extremities to reduce heat loss\n(IV) Hibernation in mammals involves complete cessation of metabolic activity until spring",
       "options": ["TTFF", "TTTF", "TTFT", "TFFF"],
       "correctAnswer": "B",

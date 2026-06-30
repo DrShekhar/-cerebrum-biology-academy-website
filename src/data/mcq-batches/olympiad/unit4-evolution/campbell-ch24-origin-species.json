@@ -47,7 +47,7 @@
       "topic": "Origin of Species"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about prezygotic reproductive barriers:\nS1: Habitat isolation occurs when two species occupy different habitats within the same geographic area, reducing encounter rates.\nS2: Temporal isolation occurs when two species breed at different times (different seasons, different times of day).\nS3: Behavioral isolation involves differences in courtship rituals, mating calls, or pheromones that prevent interspecific mating.\nS4: Mechanical isolation is always caused by chromosome number differences between species.",
       "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
@@ -302,7 +302,7 @@
       "topic": "Origin of Species"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about sympatric speciation:\nS1: Sympatric speciation can occur through host race formation in phytophagous insects, where different populations specialize on different host plants in the same geographic area.\nS2: Rhagoletis pomonella (apple maggot fly) provides a potential example of sympatric speciation in progress, with partially isolated host races on hawthorn and apple trees.\nS3: Sympatric speciation requires complete geographic isolation between populations.\nS4: Disruptive selection combined with assortative mating can theoretically produce sympatric speciation by creating reproductive isolation without geographic barriers.",
       "options": ["TTFT", "TTTT", "TFTF", "TTFF"],
       "correctAnswer": "A",
@@ -417,7 +417,7 @@
       "topic": "Origin of Species"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the role of sexual selection in speciation:\nS1: Divergent sexual selection between isolated populations (different female preferences evolving in different populations) can lead to rapid behavioral isolation and speciation.\nS2: In African cichlid fish, female preference for different male coloration patterns has driven rapid speciation in lakes with clear water but not in turbid water (where color signals are degraded).\nS3: Sexual selection can only slow down speciation because it reduces genetic variation.\nS4: Runaway sexual selection (Fisher process) can cause rapid, arbitrary divergence in mating signals between populations, potentially leading to reproductive isolation.",
       "options": ["TTFT", "TTTT", "TFFT", "TFTF"],
       "correctAnswer": "A",
@@ -532,7 +532,7 @@
       "topic": "Origin of Species"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about different species concepts:\nS1: The morphological species concept defines species based on physical appearance and is applicable to both living and fossil organisms.\nS2: The ecological species concept defines a species by its ecological niche — the set of environmental resources and conditions the species utilizes.\nS3: No single species concept is universally applicable to all organisms in all situations.\nS4: The biological species concept is the most useful concept for classifying bacteria and archaea.",
       "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
@@ -747,7 +747,7 @@
       "topic": "Origin of Species"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the genetics of speciation:\nS1: Reproductive isolation typically evolves through the accumulation of many small-effect genetic changes, not a single 'speciation gene.'\nS2: Large-effect 'speciation genes' have been identified in some cases, such as the Hmr and Lhr genes causing hybrid lethality between D. melanogaster and D. simulans.\nS3: The number of genetic incompatibilities between species increases faster than linearly with divergence time because each new substitution can potentially interact incompatibly with all previously fixed substitutions (the 'snowball effect').\nS4: All speciation events require the evolution of complete reproductive isolation before populations can co-occur in sympatry.",
       "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
@@ -962,7 +962,7 @@
       "topic": "Origin of Species"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the tempo and mode of speciation:\nS1: Allopatric speciation is considered the most common mode of speciation across most taxa.\nS2: Sympatric speciation, while theoretically possible, is difficult to demonstrate unequivocally in nature because historical episodes of allopatry can be difficult to rule out.\nS3: Polyploid speciation can produce new species within a single generation, representing the fastest possible mode of speciation.\nS4: All speciation events take exactly 1 million years to complete.",
       "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
@@ -1157,7 +1157,7 @@
       "topic": "Origin of Species"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about hybrid zones and their outcomes:\n\nI. In a stable hybrid zone, hybrids have equal or greater fitness than parentals, maintaining the zone indefinitely.\nII. Reinforcement occurs when natural selection strengthens prezygotic barriers in hybrid zones where hybrids have reduced fitness.\nIII. Fusion occurs when reproductive barriers weaken over time, and the two species merge into a single population.\nIV. Hybrid zones can only form between species that diverged through allopatric speciation.",
       "options": ["TFTT", "FTTT", "FTTF", "TFTF"],
       "correctAnswer": "C",
@@ -1312,7 +1312,7 @@
       "topic": "Origin of Species"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about mechanisms of speciation:\n\nI. Allopatric speciation requires a geographic barrier that reduces gene flow to zero or near zero.\nII. Sympatric speciation can occur through polyploidy in a single generation.\nIII. Peripatric speciation, a subtype of allopatric speciation, involves a small peripheral population becoming isolated and diverging through both genetic drift and natural selection.\nIV. All speciation events require millions of years to complete.",
       "options": ["TTTF", "TTFT", "FTTT", "TFFT"],
       "correctAnswer": "A",
@@ -1587,7 +1587,7 @@
       "topic": "Origin of Species"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about species concepts:\n\nI. The biological species concept can be applied to all organisms, including bacteria and archaea.\nII. The ecological species concept defines a species by its ecological niche.\nIII. Under the morphological species concept, species are distinguished primarily by physical appearance.\nIV. The phylogenetic species concept focuses on reproductive isolation as the defining criterion.",
       "options": ["FTTF", "FTFT", "TFFT", "TTFF"],
       "correctAnswer": "A",

@@ -3,7 +3,7 @@
     "name": "Campbell Ch18 Regulation of Gene Expression — Olympiad Expansion",
     "version": 1,
     "source": "olympiad-expansion",
-    "totalQuestions": 99
+    "totalQuestions": 98
   },
   "questions": [
     {
@@ -107,7 +107,7 @@
       "topic": "Xist-mediated X inactivation"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the lac operon regulation:\nS1: In the absence of both glucose and lactose, the lac operon is transcribed at a low basal level because CAP-cAMP is bound but the repressor is also bound to the operator\nS2: IPTG (isopropyl-beta-D-thiogalactopyranoside) is a gratuitous inducer that binds the lac repressor but cannot be metabolized by beta-galactosidase\nS3: The lac repressor binds as a tetramer to the primary operator (O1) and can simultaneously contact auxiliary operators (O2, O3) through DNA looping, increasing repression ~70-fold\nS4: Allolactose, not lactose itself, is the natural inducer of the lac operon; it is produced by a side reaction of beta-galactosidase",
       "options": [
         "S1-True, S2-True, S3-True, S4-True",
@@ -247,7 +247,7 @@
       "topic": "Dscam extreme alternative splicing"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about eukaryotic transcription factor regulation:\nS1: Zinc finger domains (C2H2 type) coordinate a zinc ion between two cysteine and two histidine residues, creating a compact structure that inserts into the major groove of DNA\nS2: Leucine zipper domains mediate dimerization through hydrophobic interactions between leucine residues at every seventh position in an alpha-helix, positioning adjacent basic regions for DNA contact\nS3: Helix-turn-helix (HTH) motifs are found exclusively in prokaryotic regulatory proteins and are never present in eukaryotic transcription factors\nS4: Homeodomain proteins contain a 60-amino-acid HTH variant that binds DNA and plays critical roles in developmental gene regulation across all animal phyla",
       "options": [
         "S1-True, S2-True, S3-False, S4-True",
@@ -387,7 +387,7 @@
       "topic": "Mediator complex in transcription regulation"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about post-transcriptional gene regulation:\nS1: Iron regulatory proteins (IRP1/IRP2) regulate ferritin and transferrin receptor mRNAs by binding iron-responsive elements (IREs) in their UTRs — binding the 5' UTR IRE of ferritin mRNA blocks translation, while binding 3' UTR IREs of TfR mRNA stabilizes it against endonucleolytic cleavage\nS2: Nonsense-mediated mRNA decay (NMD) degrades mRNAs containing premature termination codons (PTCs) through recognition by the UPF1 helicase when translation terminates upstream of an exon junction complex (EJC)\nS3: The poly(A) tail of eukaryotic mRNAs is gradually shortened by deadenylase complexes (CCR4-NOT), and once the tail is shorter than ~25 nucleotides, the mRNA is rapidly degraded by either 3'-to-5' exosomal decay or 5'-to-3' XRN1 decay following DCP1/DCP2-mediated decapping\nS4: AU-rich elements (AREs) in the 3' UTR of cytokine mRNAs recruit stabilizing proteins that increase mRNA half-life from minutes to several hours",
       "options": [
         "S1-True, S2-True, S3-True, S4-False",
@@ -587,7 +587,7 @@
       "topic": "Riboswitch metabolite sensing"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the ubiquitin-proteasome pathway in gene regulation:\nS1: Ubiquitination of transcription factors can serve as an activation signal — the transactivation domain and the degron (degradation signal) of some activators overlap, coupling transcriptional activity to protein turnover\nS2: K48-linked polyubiquitin chains target proteins for proteasomal degradation, while K63-linked chains serve non-degradative signaling roles such as NF-kB activation\nS3: The 26S proteasome consists of a 20S core particle (barrel-shaped protease) capped by 19S regulatory particles that recognize ubiquitinated substrates, unfold them, and thread them into the proteolytic chamber\nS4: Deubiquitinating enzymes (DUBs) are exclusively found in the cytoplasm and never act on nuclear substrates",
       "options": [
         "S1-True, S2-True, S3-True, S4-False",
@@ -767,7 +767,7 @@
       "topic": "Heterochromatin boundary mechanisms"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about CRISPR-based gene regulation tools:\nS1: CRISPRi (CRISPR interference) uses a catalytically dead Cas9 (dCas9) fused to the KRAB repressor domain to silence target genes without cutting DNA, by recruiting HP1 and the SETDB1 methyltransferase to deposit H3K9me3\nS2: CRISPRa (CRISPR activation) uses dCas9 fused to transcriptional activation domains (VP64, p65, Rta in the VPR system) to upregulate target gene expression from the endogenous locus\nS3: The advantage of CRISPRi/a over traditional knockout/overexpression is that it modulates expression from the native genomic context, preserving normal mRNA processing and regulatory elements\nS4: CRISPRi and CRISPRa both require the Cas9 nuclease to cut the target DNA to exert their effects",
       "options": [
         "S1-True, S2-True, S3-True, S4-False",
@@ -927,26 +927,6 @@
       "topic": "Lambda N protein anti-termination"
     },
     {
-      "type": "MCQ",
-      "question": "Signal transduction pathways converge on transcription factors to regulate gene expression. In the canonical Wnt signaling pathway, what happens to beta-catenin when Wnt ligand binds the Frizzled receptor?",
-      "options": [
-        "Wnt signaling activates beta-catenin by promoting its acetylation by p300",
-        "Without Wnt, the destruction complex (APC, Axin, GSK3beta, CK1) phosphorylates beta-catenin for ubiquitination by beta-TrCP and proteasomal degradation; Wnt binding to Frizzled and LRP5/6 recruits Dishevelled, which inhibits the destruction complex, allowing beta-catenin to accumulate, enter the nucleus, and activate TCF/LEF target genes",
-        "Wnt binding directly phosphorylates beta-catenin to create an active transcription factor",
-        "Beta-catenin is a membrane receptor that releases its intracellular domain upon Wnt binding"
-      ],
-      "correctAnswer": "B",
-      "explanation": "The canonical Wnt/beta-catenin pathway controls cell fate through transcriptional regulation: (1) OFF state: The destruction complex (Axin scaffold, APC, GSK3beta, CK1alpha) continuously phosphorylates beta-catenin. CK1alpha primes at Ser45, then GSK3beta phosphorylates Ser33, Ser37, Thr41. Phosphorylated beta-catenin is recognized by beta-TrCP E3 ligase for ubiquitination and proteasomal degradation. (2) ON state: Wnt binds Frizzled and LRP5/6 co-receptor. LRP5/6 is phosphorylated, recruiting Axin to the membrane. Dishevelled aggregates and inhibits the destruction complex. (3) Beta-catenin accumulates and enters the nucleus, displacing Groucho corepressor from TCF/LEF and recruiting p300/CBP, BRG1, BCL9, Pygopus to activate targets including c-Myc, Cyclin D1, and stem cell genes.",
-      "isOlympiad": true,
-      "olympiadLevel": "NSEB",
-      "campbellUnit": 3,
-      "campbellChapter": 18,
-      "sourceTextbook": "Campbell Biology 12th Edition",
-      "conceptualDepth": "ANALYSIS",
-      "difficulty": "EXPERT",
-      "topic": "Wnt/beta-catenin signaling pathway"
-    },
-    {
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher wants to determine whether a specific histone modification (H3K27me3) at a gene promoter is causally responsible for silencing that gene. Which approach best establishes causality?",
       "options": [
@@ -1047,7 +1027,7 @@
       "topic": "ChIP-exo high-resolution mapping"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about the ubiquitin-proteasome pathway in gene regulation:\nS1: The transactivation domain and degron of some transcription factors overlap, coupling transcriptional activity to protein turnover — blocking degradation paradoxically reduces transcription\nS2: K48-linked polyubiquitin chains target proteins for proteasomal degradation, while K63-linked chains serve non-degradative signaling roles such as NF-kB activation\nS3: The 26S proteasome consists of a 20S catalytic core capped by 19S regulatory particles that recognize ubiquitinated substrates, unfold them, and thread them into the proteolytic chamber\nS4: Deubiquitinating enzymes (DUBs) are exclusively cytoplasmic and never act on nuclear substrates",
       "options": [
         "S1-True, S2-True, S3-True, S4-False",
@@ -1267,7 +1247,7 @@
       "topic": "Glucocorticoid receptor activation"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about histone modifications and their functions:\nS1: H3K36me3, deposited by SETD2 during transcription elongation, recruits HDAC complexes to restore chromatin behind elongating RNA polymerase, suppressing cryptic intragenic transcription\nS2: H3K9me3 is the hallmark of constitutive heterochromatin and is recognized by HP1's chromodomain, which self-oligomerizes to compact chromatin and recruit DNA methyltransferases\nS3: H4K20me1 is deposited exclusively during S phase and is required for DNA replication licensing\nS4: H3K79me2 is deposited by DOT1L — the only non-SET domain histone methyltransferase — on the globular domain of H3 and is associated with active transcription",
       "options": [
         "S1-True, S2-True, S3-False, S4-True",
@@ -1487,7 +1467,7 @@
       "topic": "Natural antisense transcript regulation"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about bacterial global regulatory systems:\nS1: The stringent response is triggered by uncharged tRNAs in the ribosomal A site, which activate RelA to synthesize ppGpp (guanosine tetraphosphate) that redirects transcription from rRNA genes to amino acid biosynthesis genes\nS2: Catabolite repression in E. coli ensures that glucose is used preferentially over other carbon sources through the cAMP-CAP system, where low glucose causes high cAMP and CAP-cAMP activates operons for alternative carbon source utilization\nS3: The heat shock response is mediated by the alternative sigma factor sigma-32 (RpoH), which directs RNA polymerase to heat shock gene promoters encoding chaperones (DnaK, DnaJ, GroEL, GroES) and proteases\nS4: Sigma factor competition is irrelevant in bacteria because only one sigma factor exists",
       "options": [
         "S1-True, S2-True, S3-True, S4-False",
@@ -1787,7 +1767,7 @@
       "topic": "HS4 insulator dual function"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about RNA splicing regulation:\nS1: SR proteins (serine/arginine-rich) bind exonic splicing enhancers (ESEs) and promote inclusion of the upstream exon by recruiting U1 snRNP to the 5' splice site and U2AF to the 3' splice site\nS2: hnRNP proteins generally act as splicing repressors by binding exonic or intronic splicing silencers (ESSs/ISSs) and blocking spliceosome assembly at nearby splice sites\nS3: The ratio of SR proteins to hnRNP proteins at a given splice site determines whether an exon is included or skipped, creating a combinatorial code for tissue-specific alternative splicing\nS4: All introns are removed by the major U2-type spliceosome; no alternative spliceosome exists",
       "options": [
         "S1-True, S2-True, S3-True, S4-False",

@@ -167,7 +167,7 @@
       "topic": "Resource Acquisition and Transport"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match the following mineral nutrient transport mechanisms in roots with their descriptions:\n(P) Mass flow in the apoplast\n(Q) Symplastic transport via plasmodesmata\n(R) Active transport across the endodermis\n(S) Mycorrhizal hyphal delivery\n\n1. Ions move through continuous cytoplasmic connections between cells without crossing any membranes\n2. Water and dissolved ions move through cell walls and intercellular spaces, driven by transpirational bulk flow\n3. Ions must cross the plasma membrane of endodermal cells because the Casparian strip blocks the apoplastic pathway\n4. Fungal hyphae absorb mineral nutrients from soil beyond the root depletion zone and transport them to the root cortex through the fungal network",
       "options": [
         "P-1, Q-2, R-4, S-3",
@@ -487,7 +487,7 @@
       "topic": "Resource Acquisition and Transport"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match the following experimental techniques used in plant physiology with what they measure:\n(P) Scholander pressure chamber\n(Q) Porometer\n(R) Aphid stylet technique\n(S) Potometer\n\n1. Measures the rate of water uptake by a cut shoot, which approximates transpiration rate\n2. Measures xylem water potential (tension) of a shoot or leaf\n3. Measures stomatal conductance or aperture by assessing gas exchange through the leaf surface\n4. Allows collection of pure phloem sap and measurement of sieve tube turgor pressure",
       "options": [
         "P-2, Q-3, R-4, S-1",
@@ -1067,7 +1067,7 @@
       "topic": "Resource Acquisition and Transport"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match the following types of xylem conduits with their characteristics:\n(P) Vessel elements\n(Q) Tracheids\n(R) Protoxylem\n(S) Metaxylem\n\n1. First-formed xylem with annular or helical wall thickenings that permit stretching during organ elongation\n2. Wide cells with perforation plates at end walls; found in angiosperms; connected end-to-end to form vessels\n3. Elongated cells with tapered end walls lacking perforations; water passes through pit pairs; found in all vascular plants including gymnosperms\n4. Later-formed xylem with reticulate or pitted wall thickenings; matures after organ elongation ceases",
       "options": [
         "P-3, Q-2, R-4, S-1",
@@ -1387,7 +1387,7 @@
       "topic": "Resource Acquisition and Transport"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Match each nutrient deficiency symptom with the deficient element:\n(P) Interveinal chlorosis of young leaves while veins remain green\n(Q) Purple coloration of leaves, especially older leaves\n(R) Necrosis of leaf margins beginning with older leaves\n(S) Stunted growth with pale, uniformly chlorotic leaves\n\n1. Potassium (K) — mobile nutrient; retranslocated from old leaves causing marginal necrosis\n2. Iron (Fe) — immobile in phloem; deficiency appears first in youngest leaves as interveinal chlorosis\n3. Nitrogen (N) — highly mobile; general chlorosis starts in older leaves due to N remobilization\n4. Phosphorus (P) — mobile; anthocyanin accumulation causes purple color, especially in older leaves",
       "options": [
         "P-2, Q-4, R-1, S-3",

@@ -202,7 +202,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding fetal hemoglobin (HbF) and its physiological significance, evaluate each statement:\nS1: TRUE — HbF (alpha2-gamma2) has a lower affinity for 2,3-BPG than adult HbA (alpha2-beta2) because the gamma chain has a serine at position 143 instead of histidine, reducing electrostatic interactions with 2,3-BPG in the central cavity.\nS2: FALSE — The higher O2 affinity of HbF compared to HbA ensures that oxygen transfers from maternal to fetal blood across the placenta, where maternal and fetal blood mix directly.\nS3: TRUE — In sickle cell disease, persistence of HbF expression (hereditary persistence of fetal hemoglobin, HPFH) is clinically protective because HbF inhibits the polymerization of deoxy-HbS.\nS4: FALSE — HbF has the same P50 as HbA when stripped of all organic phosphates, demonstrating that the difference in O2 affinity is entirely due to differential 2,3-BPG binding.",
       "options": [
         "A) S1 TRUE, S2 FALSE, S3 TRUE, S4 TRUE — all evaluated correctly",
@@ -222,7 +222,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding the comparative physiology of circulatory systems, evaluate each statement:\nS1: TRUE — In fish, blood passes through the gill capillaries and then directly to the systemic capillaries in a single circuit, meaning systemic blood pressure is relatively low compared to the pulmonary-systemic double circuit of mammals.\nS2: FALSE — Amphibians such as frogs have a completely septated ventricle that prevents any mixing of oxygenated and deoxygenated blood.\nS3: TRUE — The spiral valve (conus arteriosus) in frogs helps direct oxygenated blood preferentially toward the systemic arches and deoxygenated blood toward the pulmocutaneous arches, despite having a single ventricle.\nS4: TRUE — Octopuses have a closed circulatory system with branchial hearts that pump blood through the gills, in contrast to most other molluscs which have open circulatory systems.",
       "options": [
         "A) All four statements are correctly evaluated",
@@ -242,7 +242,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding immune evasion strategies and cancer immunology, evaluate each statement:\nS1: TRUE — Trypanosoma brucei (African sleeping sickness) evades the adaptive immune response through antigenic variation, sequentially expressing different variant surface glycoprotein (VSG) genes from a repertoire of over 1,000, so each new wave of parasitemia presents a novel antigenic coat.\nS2: FALSE — PD-1 (Programmed Death-1) is a co-stimulatory receptor on T cells that enhances T cell activation when it binds PD-L1 on antigen-presenting cells.\nS3: TRUE — Tumor cells that upregulate PD-L1 exploit the PD-1/PD-L1 checkpoint to suppress cytotoxic T cell responses; anti-PD-1 antibodies (e.g., nivolumab) block this interaction and restore anti-tumor immunity.\nS4: FALSE — MHC class I downregulation by tumor cells makes them more susceptible to cytotoxic CD8⁺ T cell killing because T cells can recognize cells lacking MHC I.",
       "options": [
         "A) S1 and S3 are correctly evaluated; S2 is correctly labeled FALSE; S4 is incorrectly evaluated because MHC I loss actually makes cells targets for NK cells, not CD8⁺ T cells",
@@ -262,7 +262,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding the hypothalamic-pituitary-thyroid (HPT) axis, evaluate each statement:\nS1: TRUE — TRH (thyrotropin-releasing hormone) is a tripeptide (pyroGlu-His-Pro-NH2) released from the paraventricular nucleus of the hypothalamus into the hypophyseal portal system, stimulating TSH release from anterior pituitary thyrotrophs.\nS2: TRUE — T4 (thyroxine) is the predominant thyroid hormone secreted by the thyroid gland, but T3 (triiodothyronine) is the more biologically active form, generated primarily by peripheral 5'-deiodination of T4 by type 1 and type 2 deiodinases.\nS3: FALSE — Negative feedback of thyroid hormones operates exclusively at the hypothalamic level by suppressing TRH release, with no direct effect on the anterior pituitary.\nS4: TRUE — Graves' disease is caused by thyroid-stimulating immunoglobulins (TSI) that bind and activate the TSH receptor, causing hyperthyroidism that is NOT suppressed by negative feedback because TSI production is independent of the HPT axis.",
       "options": [
         "A) S1, S2, and S4 are correctly evaluated; S3 is incorrectly labeled FALSE — negative feedback does operate only at the hypothalamus",
@@ -282,7 +282,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding cochlear mechanics and auditory transduction, evaluate each statement:\nS1: TRUE — The basilar membrane exhibits tonotopic organization: it is narrow and stiff at the base (responding to high frequencies) and wide and flexible at the apex (responding to low frequencies).\nS2: FALSE — Inner hair cells are the primary sensory receptors responsible for auditory perception, while outer hair cells are primarily structural support cells with no role in amplification.\nS3: TRUE — Outer hair cells contain the motor protein prestin, which undergoes voltage-dependent conformational changes (electromotility) that amplify basilar membrane motion by up to 40-60 dB, sharpening frequency selectivity.\nS4: TRUE — The endolymph in the scala media has an unusually high K⁺ concentration (~150 mM) and a positive endocochlear potential (~+80 mV), maintained by the stria vascularis, creating a large electrochemical driving force for K⁺ entry through mechanotransduction channels at hair cell stereocilia tips.",
       "options": [
         "A) S1, S3, and S4 are correctly evaluated; S2 is incorrectly labeled FALSE — outer hair cells truly are only structural",
@@ -302,7 +302,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding motor unit recruitment and muscle fiber types, evaluate each statement:\nS1: TRUE — According to the size principle (Henneman), smaller alpha motor neurons innervating type I (slow-oxidative) fibers are recruited first, and larger motor neurons innervating type IIx (fast-glycolytic) fibers are recruited last as force demand increases.\nS2: FALSE — A single motor unit can contain a mixture of type I and type II muscle fibers within the same muscle.\nS3: TRUE — The force-velocity relationship of skeletal muscle shows that as the velocity of shortening increases, the force a muscle can generate decreases hyperbolically, reaching zero at Vmax.\nS4: TRUE — Cardiac muscle cannot undergo tetanic contraction because the long duration of the cardiac action potential (plateau phase due to L-type Ca²⁺ channels) creates an extended refractory period that outlasts the mechanical contraction.",
       "options": [
         "A) S1, S3, and S4 are correctly evaluated; S2 is incorrectly labeled FALSE — motor units can indeed contain mixed fiber types",
@@ -322,7 +322,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding torpor, hibernation, and heterothermy, evaluate each statement:\nS1: TRUE — During hibernation, ground squirrels reduce their body temperature to near ambient (as low as ~2-5°C), with heart rate dropping from ~300 bpm to ~5 bpm, achieving up to 90% energy savings.\nS2: FALSE — Hummingbirds enter daily torpor at night, reducing body temperature from ~40°C to ~18°C, but this is fundamentally different from hibernation because torpor lasts only hours whereas hibernation lasts weeks to months.\nS3: TRUE — Heterothermic mammals can selectively maintain brain temperature above body temperature during torpor entry by using countercurrent heat exchange in the carotid rete mirabile.\nS4: FALSE — Arousal from hibernation is powered exclusively by shivering thermogenesis, with brown adipose tissue playing no role in rewarming.",
       "options": [
         "A) S1, S2, and S3 are correctly evaluated; S4 is incorrectly labeled FALSE — BAT is actually the primary heat source during arousal from hibernation",
@@ -342,7 +342,7 @@
       "topic": "Animal Physiology"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding Spemann's organizer and morphogen gradients in vertebrate development, evaluate each statement:\nS1: TRUE — The Spemann-Mangold organizer (dorsal lip of the blastopore in amphibians) secretes BMP antagonists such as Chordin, Noggin, and Follistatin, which establish a BMP activity gradient — low BMP dorsally induces neural tissue, high BMP ventrally specifies epidermis.\nS2: FALSE — Morphogen gradients specify cell fate based on concentration thresholds (the French Flag model), but this requires direct cell-cell contact and cannot work over distances greater than one cell diameter.\nS3: TRUE — Sonic hedgehog (Shh) secreted by the notochord and floor plate of the neural tube acts as a ventral morphogen, specifying different neuronal subtypes (floor plate, V3 interneurons, motor neurons, V2 interneurons) at progressively lower concentrations.\nS4: TRUE — Fate mapping experiments using vital dyes, genetic lineage tracing (Cre-lox), or chimeric grafts can determine the prospective fate of cells at specific positions in the early embryo.",
       "options": [
         "A) S1, S3, and S4 are correctly evaluated; S2 is correctly labeled FALSE because morphogens act as long-range signals through diffusion, transcytosis, or cytoneme-mediated transport — they do NOT require direct contact",

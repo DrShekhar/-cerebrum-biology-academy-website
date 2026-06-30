@@ -1062,7 +1062,7 @@
       "topic": "Bisulfite Sequencing"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about biotechnology applications:\nI. Transgenic organisms contain DNA from another species introduced through genetic engineering\nII. Golden rice was engineered to produce beta-carotene (provitamin A) to address vitamin A deficiency\nIII. Bt crops produce Bacillus thuringiensis toxin that kills insect pests\nIV. All genetically modified organisms are produced using CRISPR-Cas9",
       "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
@@ -1077,7 +1077,7 @@
       "topic": "Biotechnology Applications"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about cloning vectors:\nI. A cloning vector must contain an origin of replication (ori) to replicate in host cells\nII. Selectable markers (e.g., antibiotic resistance) allow identification of cells that have taken up the vector\nIII. A multiple cloning site (polylinker) contains several unique restriction enzyme recognition sequences for inserting foreign DNA\nIV. All cloning vectors can accept DNA inserts larger than 500 kb",
       "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
@@ -1092,7 +1092,7 @@
       "topic": "Cloning Vector Features"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about gene therapy:\nI. Ex vivo gene therapy involves modifying cells outside the body and then transplanting them back into the patient\nII. In vivo gene therapy delivers the therapeutic gene directly to cells within the patient's body\nIII. Gene therapy has successfully cured some patients with severe combined immunodeficiency (SCID)\nIV. Gene therapy carries no risk of adverse effects such as insertional mutagenesis",
       "options": ["TTTF", "TTTT", "TTFT", "TFTT"],
       "correctAnswer": "A",
@@ -1107,7 +1107,7 @@
       "topic": "Gene Therapy Approaches"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate these statements about emerging biotechnologies:\nI. Base editing can convert one DNA base to another (e.g., C to T) without creating double-strand breaks\nII. Prime editing can install any type of point mutation, small insertion, or deletion without double-strand breaks or donor DNA\nIII. Organoids are three-dimensional cell cultures that recapitulate some structural and functional features of organs\nIV. All CRISPR applications require cutting both strands of DNA",
       "options": ["TTTF", "TTTT", "TFTT", "TFTF"],
       "correctAnswer": "A",
@@ -1262,7 +1262,7 @@
       "topic": "RNAi vs CRISPR"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about next-generation sequencing (NGS) technologies:\nS1: Illumina sequencing uses reversible terminator chemistry where fluorescently labeled nucleotides are incorporated one at a time\nS2: Oxford Nanopore sequencing can produce reads exceeding 100 kb by threading single DNA molecules through protein nanopores\nS3: PacBio SMRT sequencing achieves high accuracy on single reads comparable to Illumina\nS4: All NGS platforms require PCR amplification of the DNA library before sequencing",
       "options": ["TTFT", "TTFF", "TTTT", "TFFT"],
       "correctAnswer": "B",
@@ -1377,7 +1377,7 @@
       "topic": "Recombinant Protein Expression"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about molecular cloning strategies:\nS1: Restriction enzyme-based cloning requires compatible cohesive or blunt ends between insert and vector\nS2: Gateway cloning uses site-specific recombination (att sites) to transfer inserts between vectors without restriction enzymes\nS3: Gibson assembly can join multiple DNA fragments in a single isothermal reaction using overlapping sequences\nS4: TA cloning exploits the terminal transferase activity of Taq polymerase which adds a single adenine to 3' ends of PCR products",
       "options": ["TTTT", "TTFT", "TFTT", "FTTT"],
       "correctAnswer": "A",

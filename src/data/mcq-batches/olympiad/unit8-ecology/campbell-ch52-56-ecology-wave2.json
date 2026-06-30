@@ -197,7 +197,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Regarding population ecology models and life history strategies, evaluate the following statements:\nS1: TRUE — In the logistic model dN/dt = rN(K-N)/K, the term (K-N)/K represents the fraction of carrying capacity still available, and the model assumes that the effect of each additional individual on population growth rate is equal.\nS2: FALSE — Type III survivorship curves, typical of oysters and many marine invertebrates, show high mortality in early life stages and high survival once individuals reach a critical size or age.\nS3: TRUE — K-selected species invariably have longer generation times than r-selected species because natural selection always favors either maximum reproductive rate or maximum competitive ability, never both.\nS4: FALSE — Density-independent factors such as severe weather events can regulate a population, meaning they act in a manner proportional to population density to return it toward carrying capacity.",
       "options": [
         "A) S1 correct, S2 correct, S3 incorrect, S4 incorrect",
@@ -217,7 +217,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about community ecology concepts:\nS1: TRUE — The competitive exclusion principle states that two species competing for the same limiting resource cannot stably coexist; one will inevitably be eliminated unless the species differentiate their niches.\nS2: TRUE — Character displacement refers to the phenomenon where sympatric populations of two competing species evolve greater morphological differences than allopatric populations of the same species, reducing niche overlap.\nS3: FALSE — Keystone species always occupy the highest trophic level in a community because their disproportionate effect on community structure derives solely from top-down predation.\nS4: TRUE — In Batesian mimicry, a palatable species (mimic) evolves to resemble an unpalatable or dangerous species (model), and the effectiveness of the mimicry decreases as the mimic becomes more abundant relative to the model.",
       "options": [
         "A) S1 correct, S2 correct, S3 incorrect, S4 incorrect",
@@ -237,7 +237,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about ecosystem ecology and nutrient cycling:\nS1: TRUE — Biological magnification causes DDT and mercury to reach highest concentrations in top predators because these lipophilic or protein-binding substances are not readily metabolized or excreted, so they accumulate through successive trophic levels.\nS2: FALSE — The phosphorus cycle lacks a significant atmospheric gaseous phase, unlike carbon and nitrogen cycles, which means phosphorus enters ecosystems primarily through weathering of rocks and is often the limiting nutrient in freshwater systems.\nS3: TRUE — In eutrophic lakes, algal blooms caused by excess nitrogen and phosphorus loading ultimately lead to hypoxic dead zones because decomposition of the massive algal biomass by aerobic bacteria consumes dissolved oxygen faster than it can be replenished.\nS4: FALSE — Net ecosystem production (NEP) is defined as GPP minus total ecosystem respiration (both autotrophic and heterotrophic), and a positive NEP indicates the ecosystem is a net carbon sink.",
       "options": [
         "A) S1 correct, S2 incorrect, S3 correct, S4 incorrect",
@@ -257,7 +257,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about conservation biology:\nS1: TRUE — The extinction vortex describes a positive feedback loop in which small populations lose genetic diversity through drift, which reduces fitness via inbreeding depression, further shrinking the population and accelerating drift — a self-reinforcing cycle toward extinction.\nS2: FALSE — Minimum viable population (MVP) analysis attempts to determine the smallest population size that has a specified probability (often 95%) of persisting for a defined time period (often 100 years), incorporating stochastic models of demographic, environmental, and genetic variation.\nS3: TRUE — Habitat corridors connecting fragmented reserves always increase species diversity by facilitating gene flow, even though they may also facilitate the spread of invasive species and disease between reserves.\nS4: TRUE — Biodiversity hotspots, as defined by Norman Myers, are regions with at least 1,500 endemic vascular plant species that have lost at least 70% of their original habitat, and collectively they contain approximately 44% of all vascular plant species in less than 2% of Earth's land area.",
       "options": [
         "A) S1 correct, S2 correct, S3 correct, S4 correct",
@@ -277,7 +277,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about ecological succession and restoration:\nS1: TRUE — Primary succession occurs on newly formed or newly exposed substrates with no prior soil (e.g., lava flows, glacial till), and pioneer species like lichens and mosses are critical because they begin the slow process of soil formation through weathering and organic matter accumulation.\nS2: FALSE — During secondary succession following a disturbance such as a forest fire, the community always returns to the exact same climax community that existed before the disturbance, regardless of changed environmental conditions.\nS3: TRUE — The intermediate disturbance hypothesis predicts that species diversity is greatest at moderate levels of disturbance because low disturbance allows competitive exclusion while high disturbance eliminates all but the most resilient colonizers.\nS4: FALSE — Facilitation, tolerance, and inhibition are three models of succession mechanisms; in the facilitation model, early-arriving species modify the environment in ways that make it MORE suitable for later-arriving species.",
       "options": [
         "A) S1 correct, S2 correct, S3 correct, S4 incorrect",
@@ -297,7 +297,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about biogeography, dispersal, and climate:\nS1: TRUE — Rain shadow deserts form on the leeward side of mountain ranges because orographic lift forces air upward on the windward side, causing adiabatic cooling and precipitation, so that the descending air on the leeward side is warm and dry.\nS2: FALSE — The thermocline in a temperate lake is a narrow zone of rapid temperature change that separates the warm epilimnion from the cold hypolimnion; during fall turnover, the thermocline breaks down as surface waters cool and wind mixing homogenizes the water column.\nS3: TRUE — Biome boundaries are determined solely by average annual temperature and precipitation, and local factors such as soil type, fire frequency, and topography have negligible effects on vegetation type within a climatic zone.\nS4: TRUE — Oceanic islands typically have lower species richness than equivalent-area mainland habitats, partly because they are more isolated and partly because they have fewer habitat types due to smaller area and less topographic complexity.",
       "options": [
         "A) S1 correct, S2 correct, S3 incorrect, S4 correct",
@@ -317,7 +317,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about metapopulations and age structure:\nS1: TRUE — In a metapopulation, local extinction of a subpopulation can be reversed by recolonization from neighboring subpopulations, and the long-term persistence of the metapopulation depends on the regional balance between local extinction rates and recolonization rates.\nS2: FALSE — A country with a broad-based age structure pyramid (many pre-reproductive individuals relative to reproductive and post-reproductive) is expected to experience rapid population growth even if per capita birth rates decline slightly, due to population momentum.\nS3: TRUE — Density-dependent factors such as intraspecific competition, disease transmission, and predation intensify as population density increases and are the only factors capable of true population regulation (returning N toward K).\nS4: FALSE — In the metapopulation model, corridors between habitat patches are irrelevant because recolonization depends entirely on long-distance aerial dispersal of propagules.",
       "options": [
         "A) S1 correct, S2 correct, S3 correct, S4 correct",
@@ -337,7 +337,7 @@
       "topic": "Ecology and Environment"
     },
     {
-      "type": "MTF",
+      "type": "MCQ",
       "question": "Evaluate the following statements about global change and conservation:\nS1: TRUE — Ozone (O3) depletion in the stratosphere is caused primarily by chlorofluorocarbons (CFCs) that release chlorine atoms via UV-driven photolysis; each chlorine atom can catalytically destroy thousands of ozone molecules through a chain reaction.\nS2: FALSE — The greenhouse effect is entirely anthropogenic; without human-produced CO2 and methane, Earth's atmosphere would not trap any infrared radiation and the planet's average surface temperature would be the same as it is today.\nS3: TRUE — Biological magnification and eutrophication are both consequences of nutrient pollution; biological magnification concentrates toxins through food chains while eutrophication results from excess nutrient input stimulating primary productivity.\nS4: TRUE — Assisted migration (managed relocation) of species threatened by climate change is considered risk-free because relocated species always integrate into recipient communities without disrupting existing ecological interactions.",
       "options": [
         "A) S1 correct, S2 correct, S3 incorrect, S4 incorrect",
