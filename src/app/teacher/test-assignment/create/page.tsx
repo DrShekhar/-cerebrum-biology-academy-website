@@ -105,6 +105,13 @@ export default function CreateTestAssignmentPage() {
     { id: 'FOUNDATION', name: 'Foundation' },
   ]
 
+  // Individual-student picker (search-driven).
+  const [studentSearch, setStudentSearch] = useState('')
+  const [studentResults, setStudentResults] = useState<
+    { id: string; name: string; email: string }[]
+  >([])
+  const [selectedStudents, setSelectedStudents] = useState<{ id: string; name: string }[]>([])
+
   useEffect(() => {
     fetch('/api/admin/courses?limit=200')
       .then((r) => r.json())
@@ -115,6 +122,30 @@ export default function CreateTestAssignmentPage() {
       })
       .catch(() => {})
   }, [])
+
+  // Debounced student search (only while the Individual target is active).
+  useEffect(() => {
+    if (config.assignTo.type !== 'INDIVIDUAL' || studentSearch.trim().length < 2) {
+      setStudentResults([])
+      return
+    }
+    const t = setTimeout(() => {
+      fetch(`/api/teacher/students?search=${encodeURIComponent(studentSearch.trim())}&limit=25`)
+        .then((r) => r.json())
+        .then((j) => setStudentResults(j?.success ? j.students : []))
+        .catch(() => setStudentResults([]))
+    }, 300)
+    return () => clearTimeout(t)
+  }, [studentSearch, config.assignTo.type])
+
+  function toggleStudent(s: { id: string; name: string }) {
+    setSelectedStudents((prev) => {
+      const exists = prev.some((x) => x.id === s.id)
+      const next = exists ? prev.filter((x) => x.id !== s.id) : [...prev, s]
+      setConfig((c) => ({ ...c, assignTo: { ...c.assignTo, studentIds: next.map((x) => x.id) } }))
+      return next
+    })
+  }
 
   useEffect(() => {
     if (!authLoading && (!isAuthenticated || user?.role !== 'TEACHER')) {
@@ -263,7 +294,9 @@ export default function CreateTestAssignmentPage() {
         if (!config.dueDate) return false
         if (config.assignTo.type === 'ALL') return !!config.courseId
         if (config.assignTo.type === 'CLASS') return config.assignedClassIds.length > 0
-        // BATCH / INDIVIDUAL not yet supported as targets.
+        if (config.assignTo.type === 'INDIVIDUAL')
+          return (config.assignTo.studentIds?.length || 0) > 0
+        // BATCH not yet supported (no roster model).
         return false
       }
       case 'review':
@@ -687,12 +720,70 @@ export default function CreateTestAssignmentPage() {
                   </div>
                 )}
 
-                {(config.assignTo.type === 'BATCH' || config.assignTo.type === 'INDIVIDUAL') && (
+                {config.assignTo.type === 'BATCH' && (
                   <p className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-700">
-                    {config.assignTo.type === 'BATCH'
-                      ? 'Batch targeting isn’t available yet (batches have no student roster). Use Course or Class Level.'
-                      : 'Individual-student targeting needs a student picker (coming soon). Use Course or Class Level for now.'}
+                    Batch targeting isn’t available yet (batches have no student roster). Use Course,
+                    Class Level, or Individual.
                   </p>
+                )}
+
+                {config.assignTo.type === 'INDIVIDUAL' && (
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Search &amp; select students
+                    </label>
+                    {selectedStudents.length > 0 && (
+                      <div className="mb-2 flex flex-wrap gap-2">
+                        {selectedStudents.map((s) => (
+                          <button
+                            key={s.id}
+                            type="button"
+                            onClick={() => toggleStudent(s)}
+                            className="inline-flex items-center gap-1 rounded-full bg-purple-100 px-3 py-1 text-xs font-medium text-purple-700 hover:bg-purple-200"
+                          >
+                            {s.name} ✕
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                    <input
+                      value={studentSearch}
+                      onChange={(e) => setStudentSearch(e.target.value)}
+                      placeholder="Type a name or email (min 2 characters)…"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                    {studentResults.length > 0 && (
+                      <ul className="mt-2 max-h-56 overflow-auto rounded-lg border border-gray-200 divide-y">
+                        {studentResults.map((s) => {
+                          const picked = selectedStudents.some((x) => x.id === s.id)
+                          return (
+                            <li key={s.id}>
+                              <button
+                                type="button"
+                                onClick={() => toggleStudent({ id: s.id, name: s.name })}
+                                className={cn(
+                                  'flex w-full items-center justify-between px-3 py-2 text-left text-sm hover:bg-gray-50',
+                                  picked && 'bg-purple-50'
+                                )}
+                              >
+                                <span>
+                                  <span className="font-medium text-gray-900">{s.name}</span>{' '}
+                                  <span className="text-gray-500">{s.email}</span>
+                                </span>
+                                <span className="text-xs text-purple-600">
+                                  {picked ? 'Selected' : 'Add'}
+                                </span>
+                              </button>
+                            </li>
+                          )
+                        })}
+                      </ul>
+                    )}
+                    <p className="mt-1 text-xs text-gray-500">
+                      {selectedStudents.length} student{selectedStudents.length === 1 ? '' : 's'}{' '}
+                      selected
+                    </p>
+                  </div>
                 )}
 
                 <div>
@@ -746,7 +837,9 @@ export default function CreateTestAssignmentPage() {
                           : 'All'
                         : config.assignTo.type === 'CLASS'
                           ? `${config.assignedClassIds.length} level(s)`
-                          : '-'}
+                          : config.assignTo.type === 'INDIVIDUAL'
+                            ? `${config.assignTo.studentIds?.length || 0} student(s)`
+                            : '-'}
                     </p>
                     <p className="text-sm text-orange-700">Students</p>
                   </div>
