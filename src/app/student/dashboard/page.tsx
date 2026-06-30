@@ -415,9 +415,9 @@ export default function StudentDashboard() {
                 <FocusCard
                   icon={<BookOpen className="w-5 h-5 text-blue-600" />}
                   title="Study Materials"
-                  description="Browse your course notes and chapters"
+                  description="Open the PDFs & resources for your courses"
                   action="Start Learning"
-                  href="/student/notes"
+                  href="/student/materials"
                   color="bg-blue-50"
                 />
                 <FocusCard
@@ -578,7 +578,7 @@ export default function StudentDashboard() {
                 icon={<FileText className="w-6 h-6" />}
                 title="Browse Materials"
                 description="Study resources"
-                href="/student/notes"
+                href="/student/materials"
                 color="bg-green-600"
               />
               {isPaidUser ? (
