@@ -13628,6 +13628,124 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
+  'class-9-biology-tuition-south-delhi': {
+    slug: 'class-9-biology-tuition-south-delhi',
+    cityName: 'South Delhi',
+    stateName: 'Delhi',
+    metaTitle:
+      'Class 9 Biology Tuition in South Delhi | Foundation Course | Cerebrum Biology Academy',
+    metaDescription:
+      'Class 9 Biology tuition in South Delhi at our South Extension flagship centre — small batches, AIIMS-trained faculty, strong NCERT foundation. Serving South Ex, GK, Defence Colony, Saket, Hauz Khas. Free demo!',
+    heroTitle: 'Class 9 Biology Tuition in South Delhi',
+    heroSubtitle:
+      'A biology-only foundation for South Delhi students — Cell Biology, Tissues and Life Processes taught through experiments and visuals, not rote learning. In-person at our South Extension centre (Block D, South Extension Part 2) or live online.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'South Extension Centre',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: 'In South Delhi',
+    },
+    localities: [
+      { name: 'South Extension', url: '/neet-coaching-south-delhi' },
+      { name: 'Greater Kailash', url: '/biology-classes-south-delhi/gk' },
+      { name: 'Defence Colony', url: '/biology-classes-south-delhi/defence-colony' },
+      { name: 'Saket', url: '/neet-coaching-south-delhi' },
+      { name: 'Hauz Khas', url: '/biology-classes-hauz-khas' },
+    ],
+    relatedCities: [
+      { name: 'Class 10 Biology South Delhi', url: '/class-10-biology-coaching-south-delhi' },
+      { name: 'NEET Foundation Class 9', url: '/neet-foundation-class-9' },
+      { name: 'Biology Classes South Delhi', url: '/biology-classes-south-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which South Delhi schools do your Class 9 students come from?',
+        answer:
+          'DPS RK Puram, Sanskriti School, The Shri Ram School, Modern School, DPS Vasant Kunj, Bal Bharati (GK) and many other South Delhi schools. Our South Extension centre is central to most South Delhi neighbourhoods.',
+      },
+      {
+        question: 'Is this only for future NEET aspirants?',
+        answer:
+          'No. Many South Delhi parents enrol their Class 9 child simply to strengthen Biology understanding and school scores. A NEET head-start is a bonus — the primary benefit is early conceptual clarity and curiosity in Biology.',
+      },
+      {
+        question: 'What are the fees and schedule?',
+        answer:
+          '₹35,000–45,000/year depending on tier. Roughly 3 hours/week (a weekend session). In-person at South Extension or live online. Small batches so every child gets attention.',
+      },
+      {
+        question: 'How is this different from generic Science tuition in South Delhi?',
+        answer:
+          "We teach ONLY Biology — not Physics or Chemistry — so 100% of the time builds Biology depth: microscope sessions, 3D cell models, specimen observation. That's the biology-specialist difference.",
+      },
+    ],
+    stats: { studentsFromCity: '100+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '28.5677', lng: '77.2237' },
+    areaSpecificContent: {
+      whyThisArea:
+        'South Delhi has one of the highest densities of competitive-exam aspirants in the country, and our flagship centre sits at South Extension — central to Greater Kailash, Defence Colony, Saket and Hauz Khas. Starting Biology in Class 9 gives South Delhi students a multi-year head start with the family support system intact.',
+    },
+  },
+
+  'class-10-biology-coaching-south-delhi': {
+    slug: 'class-10-biology-coaching-south-delhi',
+    cityName: 'South Delhi',
+    stateName: 'Delhi',
+    metaTitle:
+      'Class 10 Biology Coaching in South Delhi | Board + NEET Foundation | Cerebrum Biology Academy',
+    metaDescription:
+      'Class 10 Biology coaching in South Delhi at our South Extension centre — board excellence + early NEET foundation. AIIMS-trained faculty, small batches. Serving South Ex, GK, Defence Colony, Saket. Free demo!',
+    heroTitle: 'Class 10 Biology Coaching in South Delhi',
+    heroSubtitle:
+      'Board marks and an early NEET foundation, together — for South Delhi Class 10 students. NCERT depth plus scientific reasoning and MCQ technique, in-person at our South Extension centre (Block D, South Extension Part 2) or live online.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'South Extension Centre',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: 'In South Delhi',
+    },
+    localities: [
+      { name: 'South Extension', url: '/neet-coaching-south-delhi' },
+      { name: 'Greater Kailash', url: '/biology-classes-south-delhi/gk' },
+      { name: 'Defence Colony', url: '/biology-classes-south-delhi/defence-colony' },
+      { name: 'Saket', url: '/neet-coaching-south-delhi' },
+      { name: 'Hauz Khas', url: '/biology-classes-hauz-khas' },
+    ],
+    relatedCities: [
+      { name: 'Class 9 Biology South Delhi', url: '/class-9-biology-tuition-south-delhi' },
+      { name: 'NEET Foundation Class 10', url: '/neet-foundation-class-10' },
+      { name: 'Biology Classes South Delhi', url: '/biology-classes-south-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Does this help both boards and NEET for South Delhi students?',
+        answer:
+          'Yes — Class 10 Biology is taught for board excellence first, with NEET-style reasoning and MCQ practice layered on. South Delhi students build board marks and a genuine NEET foundation in the same year.',
+      },
+      {
+        question: 'Which South Delhi schools do your Class 10 students come from?',
+        answer:
+          'DPS RK Puram, Sanskriti School, The Shri Ram School, Modern School, DPS Vasant Kunj and other South Delhi schools. Our South Extension centre is central to most South Delhi neighbourhoods.',
+      },
+      {
+        question: 'What are the fees and schedule?',
+        answer:
+          '₹40,000–50,000/year depending on tier. A weekend session (~3–4 hours/week), in-person at South Extension or live online. Small batches with weekly tests.',
+      },
+      {
+        question: 'Is it worth starting NEET foundation this early?',
+        answer:
+          'For Biology specifically — yes. Biology is 360/720 marks of NEET and rewards early, spaced learning. A Class 10 head-start means less pressure in Class 11-12 and a stronger conceptual base.',
+      },
+    ],
+    stats: { studentsFromCity: '100+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '28.5677', lng: '77.2237' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Our flagship centre at South Extension is central to South Delhi — Greater Kailash, Defence Colony, Saket, Hauz Khas. Class 10 is the ideal point to begin a biology-first NEET foundation while boards are still the priority.',
+    },
+  },
+
   'biology-classes-east-delhi': {
     slug: 'biology-classes-east-delhi',
     cityName: 'East Delhi',

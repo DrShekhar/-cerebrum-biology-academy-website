@@ -1507,6 +1507,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'best-neet-coaching-coimbatore',
       'best-neet-coaching-kochi',
       'best-neet-coaching-madurai',
+      // South Delhi class-level pages (2026-07 gap fill — flagship catchment)
+      'class-9-biology-tuition-south-delhi',
+      'class-10-biology-coaching-south-delhi',
       'neet-coaching-fee-noida',
       'neet-coaching-fees-greater-noida',
       'neet-coaching-near-me-noida',
