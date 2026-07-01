@@ -72,6 +72,13 @@ export interface DropperBatchTemplateProps {
     feederSchools?: string[]
     majorAreas?: string[]
     localCoachingPresence?: string
+    // Unique per-city prose (from NearMeCityData) — rendered so the page clears
+    // the scaled-content bar and can be indexed.
+    cityContext?: string
+    whyOnlineHere?: string
+    typicalAspirant?: string
+    localFaqs?: { question: string; answer: string }[]
+    notableAlumni?: { name: string; year: number; score?: string }[]
   }
   faqs: FAQ[]
 }
@@ -166,6 +173,12 @@ export default function DropperBatchTemplate({
     .trim()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
+  // Merge the city's unique FAQs (from NearMeCityData) with the dropper FAQs so
+  // both the visible list and the FAQ schema carry per-city-unique content.
+  const allFaqs: FAQ[] = [...faqs, ...(cityData?.localFaqs ?? [])]
+  // Prefer explicit cityContext prop, else the city's own context paragraph.
+  const cityContextText = cityContext || cityData?.cityContext
+
   // Geo-aware fee range. Foreign visitors (US-based parents of Indian-
   // origin droppers are a real cohort) see local currency primary with
   // INR as secondary context. Indian visitors see INR-only.
@@ -209,7 +222,7 @@ export default function DropperBatchTemplate({
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
+    mainEntity: allFaqs.map((f) => ({
       '@type': 'Question',
       name: f.question,
       acceptedAnswer: { '@type': 'Answer', text: f.answer },
@@ -383,16 +396,47 @@ export default function DropperBatchTemplate({
         </div>
       </section>
 
-      {/* City-specific context (additive — only renders if prop provided) */}
-      {cityContext && (
+      {/* City-specific context + profile (unique per-city prose from the data —
+          this is what lets the page clear the scaled-content bar and be indexed). */}
+      {(cityContextText || cityData?.typicalAspirant || cityData?.whyOnlineHere) && (
         <section className="py-12 md:py-16 bg-white">
-          <div className="max-w-4xl mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+          <div className="max-w-4xl mx-auto px-4 space-y-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
               Dropper coaching for {cityName} — what to know
             </h2>
-            <p className="text-base md:text-lg text-slate-700 leading-relaxed whitespace-pre-line">
-              {cityContext}
-            </p>
+            {cityContextText && (
+              <p className="text-base md:text-lg text-slate-700 leading-relaxed whitespace-pre-line">
+                {cityContextText}
+              </p>
+            )}
+            {cityData?.typicalAspirant && (
+              <div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                  The typical {cityName} dropper
+                </h3>
+                <p className="text-base text-slate-700 leading-relaxed">
+                  {cityData.typicalAspirant}
+                </p>
+              </div>
+            )}
+            {cityData?.whyOnlineHere && (
+              <div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                  Why online biology coaching works for {cityName} droppers
+                </h3>
+                <p className="text-base text-slate-700 leading-relaxed">
+                  {cityData.whyOnlineHere}
+                </p>
+              </div>
+            )}
+            {cityData?.notableAlumni && cityData.notableAlumni.length > 0 && (
+              <p className="text-sm text-slate-500">
+                NEET achievers connected to {cityName}:{' '}
+                {cityData.notableAlumni
+                  .map((a) => `${a.name} (${a.year}${a.score ? `, ${a.score}` : ''})`)
+                  .join(' · ')}
+              </p>
+            )}
           </div>
         </section>
       )}
@@ -694,7 +738,7 @@ export default function DropperBatchTemplate({
             Frequently Asked Questions — {cityName} Dropper Batch
           </h2>
           <div className="space-y-4">
-            {faqs.map((faq, index) => (
+            {allFaqs.map((faq, index) => (
               <div key={index} className="bg-gray-50 rounded-xl overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}

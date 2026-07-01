@@ -155,6 +155,21 @@ const NOINDEXED_FAMILY_ALLOWLIST = new Set([
   '/neet-dropper-batch-chennai',
   '/neet-dropper-batch-kolkata',
   '/neet-dropper-batch-kota',
+  // Wave 0.1 (2026-07): tier-1 + South hubs re-indexed after the DropperBatchTemplate
+  // now renders unique per-city prose (cityContext/typicalAspirant/whyOnlineHere)
+  // + the city's own localFaqs — well past the doorway-uniqueness bar.
+  '/neet-dropper-batch-delhi',
+  '/neet-dropper-batch-jaipur',
+  '/neet-dropper-batch-indore',
+  '/neet-dropper-batch-lucknow',
+  '/neet-dropper-batch-patna',
+  '/neet-dropper-batch-visakhapatnam',
+  '/neet-dropper-batch-vijayawada',
+  '/neet-dropper-batch-coimbatore',
+  '/neet-dropper-batch-kochi',
+  '/neet-dropper-batch-madurai',
+  '/neet-dropper-batch-noida',
+  '/neet-dropper-batch-gurugram',
 ])
 const NOINDEXED_FAMILY_PATTERNS = [
   /^\/neet-dropper-batch-[a-z-]+$/,

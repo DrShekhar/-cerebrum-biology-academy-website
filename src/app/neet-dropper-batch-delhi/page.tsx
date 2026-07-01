@@ -47,12 +47,10 @@ export const metadata: Metadata = city
         title: `NEET Coaching in ${city.displayName} · Cerebrum Biology Academy`,
         description: `Best NEET Biology coaching for ${city.displayName} students at Cerebrum.`,
       },
-      // noindex 2026-06 (doorway consolidation Tier C): this intent page shares
-      // ~96% of its rendered copy with its city siblings — Google's scaled-content
-      // policy territory. Page stays fully live for visitors and internal links
-      // (follow); the Delhi hub + near-me page carry the indexable signal.
-      // Reversible: restore 'index, follow' when the page gets >=40% unique copy.
-      robots: 'noindex, follow',
+      // index 2026-07 (Wave 0.1): re-indexed for a tier-1 city — the template now
+      // renders unique per-city prose (cityContext, typicalAspirant, whyOnlineHere)
+      // + the city's own localFaqs, clearing the scaled-content bar.
+      robots: 'index, follow',
     }
   : { title: 'City not found' }
 
