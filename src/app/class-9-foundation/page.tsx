@@ -62,7 +62,7 @@ export default function Class9FoundationPage() {
         name: 'How long is the Class 9 NEET foundation program?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The Class 9 NEET foundation program runs for the full academic year, providing 4 years of total preparation time from Class 9 to Class 12. This extended timeline reduces pressure and builds strong fundamentals for NEET 2028-2029.',
+          text: 'The Class 9 NEET foundation program runs for the full academic year, providing 4 years of total preparation time from Class 9 to Class 12. This extended timeline reduces pressure and builds strong fundamentals for NEET 2030-2031.',
         },
       },
       {
@@ -95,7 +95,7 @@ export default function Class9FoundationPage() {
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: 'Class 9 Biology Foundation Course for NEET 2028-2029',
+    name: 'Class 9 Biology Foundation Course for NEET 2030-2031',
     description:
       'Specialized Class 9 biology foundation program for NEET preparation. Build strong fundamentals, develop scientific thinking, and set up for success with 4 years of strategic preparation. Complete NCERT Class 9 Biology coverage with NEET-oriented concept building.',
     provider: {
@@ -227,7 +227,7 @@ export default function Class9FoundationPage() {
 
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Class 9 Biology Foundation Course for{' '}
-                <span className="text-yellow-300">NEET 2028-2029</span>
+                <span className="text-yellow-300">NEET 2030-2031</span>
               </h1>
 
               <p className="text-xl md:text-2xl opacity-90 mb-8">
@@ -495,7 +495,7 @@ export default function Class9FoundationPage() {
               Give Your Child the Early Start Advantage
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join 850+ Class 9 students who are building strong foundations for NEET 2028-2029.
+              Join 850+ Class 9 students who are building strong foundations for NEET 2030-2031.
               Start early, learn systematically, and set up your child for medical career success!
             </p>
 

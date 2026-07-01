@@ -501,6 +501,26 @@ export default function OnlineNEETBiologyCoachingPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
+            '@type': 'Course',
+            name: 'Online NEET Biology Coaching',
+            description:
+              'Live online NEET Biology coaching by AIIMS-trained faculty — small batches, NCERT line-by-line, weekly tests with per-MCQ review. Biology is 360/720 marks (half the NEET exam).',
+            url: 'https://cerebrumbiologyacademy.com/online-neet-biology-coaching',
+            courseMode: 'online',
+            inLanguage: 'en-IN',
+            provider: {
+              '@type': 'EducationalOrganization',
+              '@id': 'https://cerebrumbiologyacademy.com/#organization',
+              name: 'Cerebrum Biology Academy',
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
             '@type': 'FAQPage',
             mainEntity: faqs.map((faq) => ({
               '@type': 'Question',

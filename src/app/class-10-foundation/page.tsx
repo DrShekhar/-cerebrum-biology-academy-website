@@ -44,7 +44,7 @@ export default function Class10FoundationPage() {
         name: 'Should I start NEET preparation in Class 10 or after boards?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Both options work! Current Class 10 students can prepare alongside boards with dual preparation strategy. Students who passed Class 10 can start with full focus. Both paths offer 3-year preparation timeline for NEET 2027.',
+          text: 'Both options work! Current Class 10 students can prepare alongside boards with dual preparation strategy. Students who passed Class 10 can start with full focus. Both paths offer 3-year preparation timeline for NEET 2029.',
         },
       },
       {
@@ -60,7 +60,7 @@ export default function Class10FoundationPage() {
         name: 'How long does the Class 10 foundation program last?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The Class 10 foundation program runs for one full academic year, providing 3 years total preparation time from Class 10 to NEET 2027. This timeline offers perfect balance - not too early, not too late.',
+          text: 'The Class 10 foundation program runs for one full academic year, providing 3 years total preparation time from Class 10 to NEET 2029. This timeline offers perfect balance - not too early, not too late.',
         },
       },
       {
@@ -101,7 +101,7 @@ export default function Class10FoundationPage() {
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: 'Class 10 Biology Foundation Course for NEET 2027',
+    name: 'Class 10 Biology Foundation Course for NEET 2029',
     description:
       'Perfect timing to begin your NEET journey! Class 10 biology foundation program offers 3-year structured pathway to NEET success. Complete NCERT Class 10 Biology coverage aligned with board exams, plus additional NEET foundation topics. Available for current Class 10 students and those who passed boards.',
     provider: {
@@ -189,7 +189,7 @@ export default function Class10FoundationPage() {
     { label: '3 Years', sublabel: 'Preparation Timeline', icon: Clock },
     { label: '92%', sublabel: 'Board Pass Rate', icon: Award },
     { label: '1.2K+', sublabel: 'Class 10 Students', icon: Users },
-    { label: 'NEET 2027', sublabel: 'Target Year', icon: Trophy },
+    { label: 'NEET 2029', sublabel: 'Target Year', icon: Trophy },
   ]
 
   const programOptions = [
@@ -250,7 +250,7 @@ export default function Class10FoundationPage() {
               <p className="text-xl md:text-2xl opacity-90 mb-8">
                 The ideal time to begin your NEET journey! Whether you're in Class 10 or just
                 finished boards, our foundation program gives you a 3-year structured pathway to
-                NEET 2027 success.
+                NEET 2029 success.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -325,7 +325,7 @@ export default function Class10FoundationPage() {
                     <div>
                       <div className="font-semibold">Year 3: NEET Mastery</div>
                       <div className="text-sm opacity-80">
-                        Class 12 + Full NEET preparation, mock tests, revision, and NEET 2027
+                        Class 12 + Full NEET preparation, mock tests, revision, and NEET 2029
                         success!
                       </div>
                     </div>
@@ -585,7 +585,7 @@ export default function Class10FoundationPage() {
               </div>
               <div className="flex items-center">
                 <Trophy className="w-4 h-4 mr-2" />
-                <span>NEET 2027 Ready</span>
+                <span>NEET 2029 Ready</span>
               </div>
             </div>
           </div>

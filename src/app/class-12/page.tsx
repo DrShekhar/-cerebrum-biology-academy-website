@@ -239,7 +239,7 @@ export default function Class12Page() {
 
               {/* Recent NEET Toppers */}
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold mb-6 text-center">Our NEET 2024 Toppers</h3>
+                <h3 className="text-2xl font-bold mb-6 text-center">Our Recent NEET Toppers</h3>
 
                 <div className="space-y-4">
                   <div className="flex items-center bg-white/10 rounded-lg p-4">
