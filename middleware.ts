@@ -417,6 +417,21 @@ export default async function middleware(req: NextRequest) {
     ) {
       response.headers.set('X-Robots-Tag', 'noindex, nofollow')
     }
+
+    // SEO (2026-07 Wave 0.2): noindex thin scaled-content doorways in the plain
+    // neet-coaching family. They stay LIVE for visitors + internal links
+    // (follow) — only the index signal is withdrawn, to protect the subdomain's
+    // quality signal. Their parent city hub carries the ranking intent.
+    //  - school-name doorways: /neet-coaching-<school>-<city>-students (no real
+    //    search volume, near-identical copy)
+    //  - single-city fees doorways: /neet-coaching-fees-<city> (thin duplicates;
+    //    the comparison hub /neet-coaching-fees-comparison stays indexed)
+    const isSchoolDoorway = /^\/neet-coaching-[a-z0-9-]+-students$/.test(pathname)
+    const isFeesCityDoorway =
+      pathname.startsWith('/neet-coaching-fees-') && pathname !== '/neet-coaching-fees-comparison'
+    if (isSchoolDoorway || isFeesCityDoorway) {
+      response.headers.set('X-Robots-Tag', 'noindex, follow')
+    }
   }
 
   // PERFORMANCE: Check public routes BEFORE JWT verification to skip auth on 90%+ of traffic

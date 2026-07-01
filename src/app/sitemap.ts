@@ -159,11 +159,22 @@ const NOINDEXED_FAMILY_ALLOWLIST = new Set([
 const NOINDEXED_FAMILY_PATTERNS = [
   /^\/neet-dropper-batch-[a-z-]+$/,
   /^\/online-neet-coaching-[a-z-]+$/,
+  // Wave 0.2: thin scaled-content doorways in the plain neet-coaching family,
+  // now noindex,follow via middleware — must not be submitted.
+  /^\/neet-coaching-[a-z0-9-]+-students$/, // school-name doorways
 ]
+
+// /neet-coaching-fees-<city> (single-city fees doorways) are noindexed too, but
+// the comparison hub stays indexed.
+function isFeesCityDoorway(urlPath: string): boolean {
+  return (
+    urlPath.startsWith('/neet-coaching-fees-') && urlPath !== '/neet-coaching-fees-comparison'
+  )
+}
 
 function isNoindexedDoorway(urlPath: string): boolean {
   if (NOINDEXED_FAMILY_ALLOWLIST.has(urlPath)) return false
-  return NOINDEXED_FAMILY_PATTERNS.some((re) => re.test(urlPath))
+  return NOINDEXED_FAMILY_PATTERNS.some((re) => re.test(urlPath)) || isFeesCityDoorway(urlPath)
 }
 
 function isRedirectedPath(urlPath: string): boolean {
