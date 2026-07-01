@@ -13746,6 +13746,251 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
+  'biology-classes-mumbai': {
+    slug: 'biology-classes-mumbai',
+    cityName: 'Mumbai',
+    stateName: 'Maharashtra',
+    metaTitle:
+      'Biology Classes in Mumbai 2026-27 | Class 9-12 Board + NEET | Cerebrum Biology Academy',
+    metaDescription:
+      'Online Biology classes in Mumbai — Andheri, Bandra, Powai, Thane, Navi Mumbai. Class 9-12, CBSE/ICSE board + NEET. AIIMS-trained biology-specialist faculty, small live batches. Free demo!',
+    heroTitle: 'Biology Classes in Mumbai',
+    heroSubtitle:
+      'Live online Biology classes for Mumbai students — Class 9 to 12, board excellence plus a real NEET foundation. Biology-only teaching by AIIMS-trained faculty, small batches, from Andheri to Navi Mumbai without the commute.',
+    hasOfflineCenter: false,
+    localities: [
+      { name: 'Andheri', url: '/neet-coaching-mumbai' },
+      { name: 'Bandra', url: '/neet-coaching-mumbai' },
+      { name: 'Powai', url: '/neet-coaching-mumbai' },
+      { name: 'Thane', url: '/neet-coaching-mumbai' },
+      { name: 'Navi Mumbai', url: '/neet-coaching-mumbai' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Mumbai', url: '/neet-coaching-mumbai' },
+      { name: 'Best NEET Coaching Mumbai', url: '/best-neet-coaching-mumbai' },
+      { name: 'Online NEET Coaching Mumbai', url: '/online-neet-coaching-mumbai' },
+    ],
+    faqs: [
+      {
+        question: 'Are there good Biology classes in Mumbai for Class 9-12?',
+        answer:
+          'Yes — Cerebrum runs live online Biology classes for Mumbai students across Andheri, Bandra, Powai, Worli, Goregaon, Thane and Navi Mumbai. We teach ONLY Biology (Class 9-12, board + NEET) with AIIMS-trained faculty and small batches, so Mumbai students skip the traffic and still get specialist attention.',
+      },
+      {
+        question: 'Is this for board exams or NEET?',
+        answer:
+          'Both. Separate board-focused and Board+NEET batches. Board-only students (Maharashtra HSC / CBSE / ICSE) get strong Biology scores; Board+NEET students also build the NEET foundation (Biology = 360/720). Target for NEET aspirants: Grant Government Medical College Mumbai and other Maharashtra colleges.',
+      },
+      {
+        question: 'What are the fees for Biology classes in Mumbai?',
+        answer:
+          '₹35,000-60,000/year depending on class and tier. Live online, small batches, weekly tests, English medium. EMI options available. Book a free demo to see the teaching before you decide.',
+      },
+    ],
+    stats: { studentsFromCity: '60+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '19.0760', lng: '72.8777' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Mumbai has excellent PCM coaching but few biology-specialist options — and cross-city commutes eat study time. Live online biology from Cerebrum gives Andheri-to-Navi-Mumbai students the same AIIMS-faculty teaching without the travel.',
+    },
+  },
+
+  'biology-classes-bangalore': {
+    slug: 'biology-classes-bangalore',
+    cityName: 'Bengaluru',
+    stateName: 'Karnataka',
+    metaTitle:
+      'Biology Classes in Bangalore 2026-27 | Class 9-12 Board + NEET | Cerebrum Biology Academy',
+    metaDescription:
+      'Online Biology classes in Bangalore — Indiranagar, Koramangala, HSR, Whitefield, Jayanagar. Class 9-12, CBSE/ICSE board + NEET. AIIMS-trained biology-specialist faculty, small live batches. Free demo!',
+    heroTitle: 'Biology Classes in Bengaluru',
+    heroSubtitle:
+      'Live online Biology classes for Bengaluru students — Class 9 to 12, board plus NEET foundation. Biology-only, AIIMS-trained faculty, small batches, from Whitefield to Jayanagar without the traffic.',
+    hasOfflineCenter: false,
+    localities: [
+      { name: 'Indiranagar', url: '/neet-coaching-bangalore' },
+      { name: 'Koramangala', url: '/neet-coaching-bangalore' },
+      { name: 'HSR Layout', url: '/neet-coaching-bangalore' },
+      { name: 'Whitefield', url: '/neet-coaching-bangalore' },
+      { name: 'Jayanagar', url: '/neet-coaching-bangalore' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Bangalore', url: '/neet-coaching-bangalore' },
+      { name: 'Best NEET Coaching Bangalore', url: '/best-neet-coaching-bangalore' },
+      { name: 'Online NEET Coaching Bangalore', url: '/online-neet-coaching-bangalore' },
+    ],
+    faqs: [
+      {
+        question: 'Are there good Biology classes in Bangalore for Class 9-12?',
+        answer:
+          'Yes — Cerebrum runs live online Biology classes for Bengaluru students across Indiranagar, Koramangala, HSR Layout, Whitefield, Jayanagar and Electronic City. Biology-only (Class 9-12, board + NEET), AIIMS-trained faculty, small batches — no Bengaluru traffic required.',
+      },
+      {
+        question: 'Board exams or NEET?',
+        answer:
+          'Both. Board-focused and Board+NEET batches. Board-only students (Karnataka board / CBSE / ICSE) get strong Biology scores; NEET aspirants build the Biology foundation (360/720) targeting Bangalore Medical College and Research Institute (BMCRI) and other Karnataka colleges.',
+      },
+      {
+        question: 'Fees for Biology classes in Bangalore?',
+        answer:
+          '₹35,000-60,000/year by class and tier. Live online, small batches, weekly tests, English medium, EMI options. Free demo available.',
+      },
+    ],
+    stats: { studentsFromCity: '60+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '12.9716', lng: '77.5946' },
+    areaSpecificContent: {
+      whyThisArea:
+        "Bengaluru's tech-family students value flexible, high-quality online learning. Cerebrum's live biology-specialist classes fit around school and beat cross-city commutes from Whitefield or Electronic City.",
+    },
+  },
+
+  'biology-classes-hyderabad': {
+    slug: 'biology-classes-hyderabad',
+    cityName: 'Hyderabad',
+    stateName: 'Telangana',
+    metaTitle:
+      'Biology Classes in Hyderabad 2026-27 | Class 9-12 Board + NEET | Cerebrum Biology Academy',
+    metaDescription:
+      'Online Biology classes in Hyderabad — Kukatpally, Ameerpet, Madhapur, Gachibowli, Banjara Hills. Class 9-12, board + NEET. AIIMS-trained biology-specialist faculty, small live batches. Free demo!',
+    heroTitle: 'Biology Classes in Hyderabad',
+    heroSubtitle:
+      'Live online Biology classes for Hyderabad students — Class 9 to 12, board plus NEET foundation. Biology-only, AIIMS-trained faculty, small batches, from Kukatpally to Gachibowli.',
+    hasOfflineCenter: false,
+    localities: [
+      { name: 'Kukatpally', url: '/neet-coaching-hyderabad' },
+      { name: 'Ameerpet', url: '/neet-coaching-hyderabad' },
+      { name: 'Madhapur', url: '/neet-coaching-hyderabad' },
+      { name: 'Gachibowli', url: '/neet-coaching-hyderabad' },
+      { name: 'Banjara Hills', url: '/neet-coaching-hyderabad' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Hyderabad', url: '/neet-coaching-hyderabad' },
+      { name: 'Best NEET Coaching Hyderabad', url: '/best-neet-coaching-hyderabad' },
+      { name: 'Online NEET Coaching Hyderabad', url: '/online-neet-coaching-hyderabad' },
+    ],
+    faqs: [
+      {
+        question: 'Are there good Biology classes in Hyderabad for Class 9-12?',
+        answer:
+          'Yes — Cerebrum runs live online Biology classes for Hyderabad students across Kukatpally, Ameerpet, Madhapur, Gachibowli, Kondapur and Banjara Hills. Biology-only (Class 9-12, board + NEET) with AIIMS-trained faculty and small batches — a specialist alternative to the large Hyderabad chains.',
+      },
+      {
+        question: 'Board exams or NEET?',
+        answer:
+          'Both. Board-focused and Board+NEET batches. NEET aspirants build the Biology foundation (360/720) targeting Osmania Medical College Hyderabad and other Telangana colleges; board-only students get strong Biology scores.',
+      },
+      {
+        question: 'Fees for Biology classes in Hyderabad?',
+        answer:
+          '₹35,000-60,000/year by class and tier. Live online, small batches, weekly tests, English medium, EMI options. Free demo available.',
+      },
+    ],
+    stats: { studentsFromCity: '60+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '17.3850', lng: '78.4867' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Hyderabad has one of the densest NEET-coaching corridors in India (Kukatpally-Ameerpet), but biology runs in very large batches. Cerebrum offers a small-batch biology-specialist alternative, live online across the city.',
+    },
+  },
+
+  'biology-classes-chennai': {
+    slug: 'biology-classes-chennai',
+    cityName: 'Chennai',
+    stateName: 'Tamil Nadu',
+    metaTitle:
+      'Biology Classes in Chennai 2026-27 | Class 9-12 Board + NEET | Cerebrum Biology Academy',
+    metaDescription:
+      'Online Biology classes in Chennai — Anna Nagar, T. Nagar, Adyar, Velachery, OMR. Class 9-12, board + NEET. AIIMS-trained biology-specialist faculty, small live batches. Free demo!',
+    heroTitle: 'Biology Classes in Chennai',
+    heroSubtitle:
+      'Live online Biology classes for Chennai students — Class 9 to 12, board plus NEET foundation. Biology-only, AIIMS-trained faculty, small batches, from Anna Nagar to OMR.',
+    hasOfflineCenter: false,
+    localities: [
+      { name: 'Anna Nagar', url: '/neet-coaching-chennai' },
+      { name: 'T. Nagar', url: '/neet-coaching-chennai' },
+      { name: 'Adyar', url: '/neet-coaching-chennai' },
+      { name: 'Velachery', url: '/neet-coaching-chennai' },
+      { name: 'OMR', url: '/neet-coaching-chennai' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Chennai', url: '/neet-coaching-chennai' },
+      { name: 'Best NEET Coaching Chennai', url: '/best-neet-coaching-chennai' },
+      { name: 'Online NEET Coaching Chennai', url: '/online-neet-coaching-chennai' },
+    ],
+    faqs: [
+      {
+        question: 'Are there good Biology classes in Chennai for Class 9-12?',
+        answer:
+          'Yes — Cerebrum runs live online Biology classes for Chennai students across Anna Nagar, T. Nagar, Adyar, Velachery, OMR and Mylapore. Biology-only (Class 9-12, board + NEET), AIIMS-trained faculty, small batches.',
+      },
+      {
+        question: 'Board exams or NEET?',
+        answer:
+          'Both. Board-focused and Board+NEET batches. NEET aspirants build the Biology foundation (360/720) targeting Madras Medical College and other Tamil Nadu colleges; board-only students get strong Biology scores. English medium (NCERT-aligned).',
+      },
+      {
+        question: 'Fees for Biology classes in Chennai?',
+        answer:
+          '₹35,000-60,000/year by class and tier. Live online, small batches, weekly tests, EMI options. Free demo available.',
+      },
+    ],
+    stats: { studentsFromCity: '60+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '13.0827', lng: '80.2707' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Chennai families take NEET seriously and value English-medium NCERT depth. Cerebrum delivers small-batch biology-specialist teaching live online, from Anna Nagar to OMR.',
+    },
+  },
+
+  'biology-classes-pune': {
+    slug: 'biology-classes-pune',
+    cityName: 'Pune',
+    stateName: 'Maharashtra',
+    metaTitle:
+      'Biology Classes in Pune 2026-27 | Class 9-12 Board + NEET | Cerebrum Biology Academy',
+    metaDescription:
+      'Online Biology classes in Pune — Kothrud, Aundh, Baner, Wakad, Koregaon Park. Class 9-12, board + NEET. AIIMS-trained biology-specialist faculty, small live batches. Free demo!',
+    heroTitle: 'Biology Classes in Pune',
+    heroSubtitle:
+      'Live online Biology classes for Pune students — Class 9 to 12, board plus NEET foundation. Biology-only, AIIMS-trained faculty, small batches, from Kothrud to Hinjewadi.',
+    hasOfflineCenter: false,
+    localities: [
+      { name: 'Kothrud', url: '/neet-coaching-pune' },
+      { name: 'Aundh', url: '/neet-coaching-pune' },
+      { name: 'Baner', url: '/neet-coaching-pune' },
+      { name: 'Wakad', url: '/neet-coaching-pune' },
+      { name: 'Koregaon Park', url: '/neet-coaching-pune' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Pune', url: '/neet-coaching-pune' },
+      { name: 'Best NEET Coaching Pune', url: '/best-neet-coaching-pune' },
+      { name: 'Online NEET Coaching Pune', url: '/online-neet-coaching-pune' },
+    ],
+    faqs: [
+      {
+        question: 'Are there good Biology classes in Pune for Class 9-12?',
+        answer:
+          'Yes — Cerebrum runs live online Biology classes for Pune students across Kothrud, Aundh, Baner, Wakad, Hadapsar and Koregaon Park. Biology-only (Class 9-12, board + NEET), AIIMS-trained faculty, small batches.',
+      },
+      {
+        question: 'Board exams or NEET?',
+        answer:
+          'Both. Board-focused and Board+NEET batches. NEET aspirants build the Biology foundation (360/720) targeting BJ Government Medical College Pune and other Maharashtra colleges; board-only students get strong Biology scores.',
+      },
+      {
+        question: 'Fees for Biology classes in Pune?',
+        answer:
+          '₹35,000-60,000/year by class and tier. Live online, small batches, weekly tests, EMI options. Free demo available.',
+      },
+    ],
+    stats: { studentsFromCity: '60+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '18.5204', lng: '73.8567' },
+    areaSpecificContent: {
+      whyThisArea:
+        "Pune's education-focused families increasingly prefer flexible online learning. Cerebrum's live biology-specialist classes fit around school across Kothrud, Baner and the Hinjewadi belt.",
+    },
+  },
+
   'biology-classes-east-delhi': {
     slug: 'biology-classes-east-delhi',
     cityName: 'East Delhi',

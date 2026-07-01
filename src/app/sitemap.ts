@@ -1510,6 +1510,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       // South Delhi class-level pages (2026-07 gap fill — flagship catchment)
       'class-9-biology-tuition-south-delhi',
       'class-10-biology-coaching-south-delhi',
+      // Metro biology-classes pages (2026-07 gap fill — were Delhi/NCR-only)
+      'biology-classes-mumbai',
+      'biology-classes-bangalore',
+      'biology-classes-hyderabad',
+      'biology-classes-chennai',
+      'biology-classes-pune',
       'neet-coaching-fee-noida',
       'neet-coaching-fees-greater-noida',
       'neet-coaching-near-me-noida',
