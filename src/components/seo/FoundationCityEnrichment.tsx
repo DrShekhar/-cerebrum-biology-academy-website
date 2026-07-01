@@ -5,6 +5,12 @@ interface FoundationCityEnrichmentProps {
   slug: string
   /** Foundation class level */
   classLevel: 9 | 10
+  /**
+   * Render the "Why start early" intro block. Set false on pages that already
+   * have their own why-start section to avoid a duplicate heading; the
+   * schools / colleges / roadmap blocks still render.
+   */
+  showIntro?: boolean
 }
 
 /**
@@ -15,7 +21,11 @@ interface FoundationCityEnrichmentProps {
  * prose, which would read wrong for early-stage students. Renders null if the
  * city has no data entry, so callers can drop it in safely.
  */
-export function FoundationCityEnrichment({ slug, classLevel }: FoundationCityEnrichmentProps) {
+export function FoundationCityEnrichment({
+  slug,
+  classLevel,
+  showIntro = true,
+}: FoundationCityEnrichmentProps) {
   const city = NEAR_ME_CITY_BY_SLUG[slug]
   if (!city) return null
 
@@ -32,26 +42,29 @@ export function FoundationCityEnrichment({ slug, classLevel }: FoundationCityEnr
     <section className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4 space-y-12">
         {/* Why start early, here */}
-        <div>
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
-            Why start NEET Foundation in Class {classLevel} from {city.displayName}?
-          </h2>
-          <p className="text-slate-700 leading-relaxed mb-4">
-            A Class {classLevel} student in {city.displayName}, {city.state} has a {yearsRunway}
-            -year runway to NEET {neetYear} — the single biggest advantage in medical-entrance
-            preparation. NCERT Class {classLevel} Biology maps directly onto the NEET syllabus, so
-            building depth now means Class 11 and 12 are spent mastering application and MCQ speed
-            rather than catching up on fundamentals. Cerebrum runs live online, biology-specialist
-            foundation batches for {city.displayName} families, so early starters get AIIMS-trained
-            faculty and small-batch attention without a daily commute across the city.
-          </p>
-          <p className="text-slate-700 leading-relaxed">
-            The plan is deliberate: strengthen Class {classLevel} boards (targeting {boardYear}),
-            keep NCERT Biology airtight, and enter Class 11 already ahead. Students across{' '}
-            {city.majorAreas.slice(0, 4).join(', ')} and the wider {city.displayName} region attend
-            the same live evening batches.
-          </p>
-        </div>
+        {showIntro ? (
+          <div>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Why start NEET Foundation in Class {classLevel} from {city.displayName}?
+            </h2>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              A Class {classLevel} student in {city.displayName}, {city.state} has a {yearsRunway}
+              -year runway to NEET {neetYear} — the single biggest advantage in medical-entrance
+              preparation. NCERT Class {classLevel} Biology maps directly onto the NEET syllabus, so
+              building depth now means Class 11 and 12 are spent mastering application and MCQ speed
+              rather than catching up on fundamentals. Cerebrum runs live online, biology-specialist
+              foundation batches for {city.displayName} families, so early starters get
+              AIIMS-trained faculty and small-batch attention without a daily commute across the
+              city.
+            </p>
+            <p className="text-slate-700 leading-relaxed">
+              The plan is deliberate: strengthen Class {classLevel} boards (targeting {boardYear}),
+              keep NCERT Biology airtight, and enter Class 11 already ahead. Students across{' '}
+              {city.majorAreas.slice(0, 4).join(', ')} and the wider {city.displayName} region
+              attend the same live evening batches.
+            </p>
+          </div>
+        ) : null}
 
         {/* Feeder schools */}
         {city.feederSchools?.length ? (

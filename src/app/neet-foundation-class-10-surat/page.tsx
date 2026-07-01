@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { FAQSchema } from '@/components/seo/FAQSchema'
+import { FoundationCityEnrichment } from '@/components/seo/FoundationCityEnrichment'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/neet-foundation-class-10-surat'
 
@@ -159,6 +160,7 @@ export default function Page() {
         </div>
       </section>
 
+      <FoundationCityEnrichment slug="surat" classLevel={10} showIntro={false} />
       <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-slate-900 mb-8">FAQs from Surat families</h2>
