@@ -34,8 +34,11 @@ const GOOGLE_MAPS_EMBEDS: Record<CenterKey, string> = {
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.5!2d77.0426!3d28.4295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19c4e0000001%3A0xm2k_corporate_park!2sM2K%20Corporate%20Park%2C%20Sector%2051%2C%20Gurugram!5e0!3m2!1sen!2sin!4v1710000000000',
   faridabad:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.8!2d77.3178!3d28.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdd7ae0000001%3A0xhuda_market_sector17!2sHuda%20Market%2C%20Sector%2017%2C%20Faridabad!5e0!3m2!1sen!2sin!4v1710000000000',
+  // ONLINE-ONLY area (no walk-in center). Kept only to satisfy the CenterKey
+  // Record; no city routes to it now — online cities map to South Extension.
+  // Points at the real South Extension flagship, NOT a fake Sector 62 pin.
   noida:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.5!2d77.3649!3d28.628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a0e0000001%3A0xsector_62_noida!2sSector%2062%2C%20Noida!5e0!3m2!1sen!2sin!4v1710000000000',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5351350896896!2d77.22066!3d28.5678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c16e000001%3A0x5027e47c24e3e43e!2sSouth%20Extension%20Part%202%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1710000000000',
 }
 
 /**
@@ -43,16 +46,18 @@ const GOOGLE_MAPS_EMBEDS: Record<CenterKey, string> = {
  * Used to determine which center's data to show on location pages.
  */
 export function getCenterForCity(citySlug: string): CenterKey {
+  // Online-only areas (noida, greater-noida, ghaziabad, east-delhi) map to their
+  // nearest REAL walk-in center (South Extension), NOT a fake Noida center.
   const mapping: Record<string, CenterKey> = {
-    noida: 'noida',
-    'greater-noida': 'noida',
+    noida: 'southExtension',
+    'greater-noida': 'southExtension',
     gurugram: 'gurugram',
     gurgaon: 'gurugram',
     faridabad: 'faridabad',
-    ghaziabad: 'noida',
+    ghaziabad: 'southExtension',
     'south-delhi': 'southExtension',
     'north-delhi': 'rohini',
-    'east-delhi': 'noida',
+    'east-delhi': 'southExtension',
     'west-delhi': 'rohini',
     delhi: 'southExtension',
     'delhi-ncr': 'southExtension',

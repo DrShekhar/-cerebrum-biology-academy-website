@@ -175,8 +175,11 @@ export const CONTACT_INFO = {
       ],
     },
     noida: {
+      // ONLINE-ONLY area — Cerebrum has NO walk-in center in Noida. Classes are
+      // live online; nearest in-person center is South Extension, Delhi. Do not
+      // add a street address / GBP / metro landmark here.
       name: 'Cerebrum Biology Academy - Noida (Online)',
-      streetAddress: 'B-45, Sector 62',
+      streetAddress: '',
       addressLocality: 'Noida',
       addressRegion: 'Uttar Pradesh',
       postalCode: '201301',
@@ -185,13 +188,9 @@ export const CONTACT_INFO = {
         latitude: 28.628,
         longitude: 77.3649,
       },
-      mapUrl: 'https://maps.google.com/maps?q=Sector+62+Noida',
-      googleBusinessUrl: 'https://g.page/cerebrum-biology-academy-noida',
-      nearbyLandmarks: [
-        'Near Sector 62 Metro Station (Blue Line)',
-        'Electronic City',
-        'Near Noida City Centre',
-      ],
+      mapUrl: 'https://maps.google.com/maps?q=Noida',
+      googleBusinessUrl: '',
+      nearbyLandmarks: [],
       isPhysicalCenter: false,
       nearestCenter: 'southExtension',
     },
@@ -200,8 +199,10 @@ export const CONTACT_INFO = {
   // Areas We Serve - Online/hybrid coaching available (no physical center)
   location: {
     delhi: {
+      // ONLINE-ONLY area (West Delhi) — no walk-in center. Nearest in-person
+      // center is Rohini. Do not add a street address here.
       name: 'NEET Coaching in Delhi (West Delhi)',
-      streetAddress: 'Patel Nagar, West Delhi',
+      streetAddress: '',
       addressLocality: 'New Delhi',
       addressRegion: 'Delhi',
       postalCode: '110008',
@@ -210,8 +211,8 @@ export const CONTACT_INFO = {
         latitude: 28.6508,
         longitude: 77.1726,
       },
-      mapUrl: 'https://maps.google.com/maps?q=Patel+Nagar+Delhi',
-      nearbyLandmarks: ['Patel Nagar Metro Station', 'Karol Bagh', 'Rajendra Place'],
+      mapUrl: 'https://maps.google.com/maps?q=West+Delhi',
+      nearbyLandmarks: [],
       isPhysicalCenter: false,
       nearestCenter: 'rohini',
     },
@@ -252,8 +253,10 @@ export const CONTACT_INFO = {
       isPhysicalCenter: true,
     },
     noida: {
-      name: 'Cerebrum Biology Academy - Noida',
-      streetAddress: 'B-45, Sector 62',
+      // ONLINE-ONLY area — Cerebrum has NO walk-in center in Noida. Classes are
+      // live online; nearest in-person center is South Extension, Delhi.
+      name: 'Cerebrum Biology Academy - Noida (Online)',
+      streetAddress: '',
       addressLocality: 'Noida',
       addressRegion: 'Uttar Pradesh',
       postalCode: '201301',
@@ -262,14 +265,11 @@ export const CONTACT_INFO = {
         latitude: 28.628,
         longitude: 77.3649,
       },
-      mapUrl: 'https://maps.google.com/maps?q=Sector+62+Noida',
-      googleBusinessUrl: 'https://g.page/cerebrum-biology-academy-noida',
-      nearbyLandmarks: [
-        'Near Sector 62 Metro Station (Blue Line)',
-        'Electronic City',
-        'Near Noida City Centre',
-      ],
-      isPhysicalCenter: true,
+      mapUrl: 'https://maps.google.com/maps?q=Noida',
+      googleBusinessUrl: '',
+      nearbyLandmarks: [],
+      isPhysicalCenter: false,
+      nearestCenter: 'southExtension',
     },
     faridabad: {
       name: 'Cerebrum Biology Academy - Faridabad',
