@@ -37,25 +37,98 @@ export async function GET(req: NextRequest) {
       dateFrom = new Date(startDate)
       dateTo = new Date(endDate)
     } else {
-      const days = parseInt(period)
+      const parsed = Number.parseInt(period, 10)
+      const days = Number.isFinite(parsed) ? parsed : 30 // tolerate 'week'/'month'/etc.
       dateFrom = new Date()
       dateFrom.setDate(dateFrom.getDate() - days)
     }
 
-    // Fetch work tracking records
-    const workTracking = await prisma.work_tracking.findMany({
-      where: {
-        studentId,
-        ...(courseId && { courseId }),
-        date: {
-          gte: dateFrom,
-          lte: dateTo,
-        },
-      },
-      orderBy: {
-        date: 'desc',
-      },
-    })
+    // Real daily activity, computed from student-side signals. The work_tracking
+    // table has no writer, so instead of returning an empty (fake-looking) report
+    // we aggregate real events: completed test sessions, material study time, and
+    // class attendance. Teacher-side counters (assigned/checked) stay 0 until a
+    // teacher-tracking flow exists.
+    const dayKey = (d: Date) => d.toISOString().slice(0, 10)
+    type DayRecord = {
+      date: Date
+      assignmentsAssigned: number
+      assignmentsSubmitted: number
+      assignmentsChecked: number
+      testsAssigned: number
+      testsAttempted: number
+      testsChecked: number
+      worksheetsAssigned: number
+      worksheetsSubmitted: number
+      worksheetsChecked: number
+      classesScheduled: number
+      classesAttended: number
+      studyMinutes: number
+      remarks: string | null
+      specialNotes: string | null
+    }
+    const byDay = new Map<string, DayRecord>()
+    const ensureDay = (key: string): DayRecord => {
+      let rec = byDay.get(key)
+      if (!rec) {
+        rec = {
+          date: new Date(key),
+          assignmentsAssigned: 0,
+          assignmentsSubmitted: 0,
+          assignmentsChecked: 0,
+          testsAssigned: 0,
+          testsAttempted: 0,
+          testsChecked: 0,
+          worksheetsAssigned: 0,
+          worksheetsSubmitted: 0,
+          worksheetsChecked: 0,
+          classesScheduled: 0,
+          classesAttended: 0,
+          studyMinutes: 0,
+          remarks: null,
+          specialNotes: null,
+        }
+        byDay.set(key, rec)
+      }
+      return rec
+    }
+
+    const [sessions, matProgress, attendance] = await Promise.all([
+      prisma.test_sessions.findMany({
+        where: { userId: studentId, status: 'COMPLETED', createdAt: { gte: dateFrom, lte: dateTo } },
+        select: { createdAt: true, timeSpent: true },
+      }),
+      prisma.material_progress.findMany({
+        where: { userId: studentId, lastViewedAt: { gte: dateFrom, lte: dateTo } },
+        select: { lastViewedAt: true, timeSpent: true },
+      }),
+      prisma.student_attendance.findMany({
+        where: { studentId, markedAt: { gte: dateFrom, lte: dateTo } },
+        select: { markedAt: true, status: true },
+      }),
+    ])
+
+    for (const s of sessions) {
+      const rec = ensureDay(dayKey(s.createdAt))
+      rec.testsAttempted += 1
+      rec.studyMinutes += Math.round((s.timeSpent || 0) / 60)
+    }
+    for (const m of matProgress) {
+      if (!m.lastViewedAt) continue
+      const rec = ensureDay(dayKey(m.lastViewedAt))
+      rec.studyMinutes += Math.round((m.timeSpent || 0) / 60)
+    }
+    for (const a of attendance) {
+      const rec = ensureDay(dayKey(a.markedAt))
+      rec.classesScheduled += 1
+      if (a.status === 'PRESENT' || a.status === 'LATE' || a.status === 'HALF_DAY') {
+        rec.classesAttended += 1
+      }
+    }
+
+    const workTracking = Array.from(byDay.values()).sort(
+      (x, y) => y.date.getTime() - x.date.getTime()
+    )
+    void courseId // course-scoping not applied to computed activity (period-based)
 
     // Calculate aggregate statistics
     const totals = workTracking.reduce(
