@@ -163,6 +163,7 @@ const NOINDEXED_FAMILY_ALLOWLIST = new Set([
   '/online-neet-coaching-madurai',
   '/online-neet-coaching-noida',
   '/online-neet-coaching-gurugram',
+  '/online-neet-coaching-pune', // Wave 1.2: new page (gap filled)
   // Priority dropper metros promoted back to index (2026-06): each now carries a
   // city-unique "local roadmap" body (real target colleges, feeder schools,
   // delivery areas) + 7 city-specific FAQs — well past the doorway-uniqueness bar.
