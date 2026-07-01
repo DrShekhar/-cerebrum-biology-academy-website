@@ -195,12 +195,12 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Trophy className="w-4 h-4" />
-              2026 Comparison Guide
+               2026-27 Comparison Guide
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Best NEET Coaching
-              <span className="block text-yellow-400 mt-2">in Greater Noida 2026</span>
+              <span className="block text-yellow-400 mt-2">in Greater Noida 2026-27</span>
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
@@ -220,7 +220,7 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Clock className="w-5 h-5 text-green-400" />
-                <span>Updated Jan 2026</span>
+                <span>Updated Jul 2026</span>
               </div>
             </div>
 

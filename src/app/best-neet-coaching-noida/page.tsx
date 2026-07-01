@@ -4,9 +4,9 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Noida 2026 | Top Institutes Compared',
+  title: 'Best NEET Coaching in Noida 2026-27 | Top Institutes Compared',
   description:
-    'Compare the best NEET coaching institutes in Noida for 2026. Fees, faculty, success rates, batch sizes compared. Find which coaching is right for you.',
+    'Compare the best NEET coaching institutes in Noida for 2026-27. Fees, faculty, success rates, batch sizes compared. Find which coaching is right for you.',
   keywords: [
     'best neet coaching noida',
     'best neet coaching in noida',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     locale: 'en_IN',
-    title: 'Best NEET Coaching in Noida 2026 | Top Institutes Compared',
+    title: 'Best NEET Coaching in Noida 2026-27 | Top Institutes Compared',
     description: 'Compare top NEET coaching institutes in Noida. Fees, faculty, results compared.',
     url: 'https://cerebrumbiologyacademy.com/best-neet-coaching-noida',
   },
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Best NEET Coaching in Noida 2026 | Top Institutes Compared',
+    title: 'Best NEET Coaching in Noida 2026-27 | Top Institutes Compared',
     description:
-      'Compare the best NEET coaching institutes in Noida for 2026. Fees, faculty, success rates, batch sizes compared. Find which coaching is right for you.',
+      'Compare the best NEET coaching institutes in Noida for 2026-27. Fees, faculty, success rates, batch sizes compared. Find which coaching is right for you.',
   },
 }
 
@@ -104,7 +104,7 @@ export default function BestNEETCoachingNoidaPage() {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Best NEET Coaching in Noida 2026 - Complete Comparison Guide',
+    headline: 'Best NEET Coaching in Noida 2026-27 - Complete Comparison Guide',
     description:
       'Comprehensive comparison of top NEET coaching institutes in Noida with fees, faculty details, and success rates.',
     author: {
@@ -120,7 +120,7 @@ export default function BestNEETCoachingNoidaPage() {
       },
     },
     datePublished: '2025-01-01',
-    dateModified: '2026-06-08',
+    dateModified: '2026-07-01',
   }
 
   const faqSchema = {

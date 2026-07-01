@@ -3,9 +3,9 @@ import BestNEETCoachingContent from './BestNEETCoachingContent'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Greater Noida 2026 | Top Institutes Compared',
+  title: 'Best NEET Coaching in Greater Noida 2026-27 | Top Institutes Compared',
   description:
-    'Compare the best NEET coaching institutes for Greater Noida students for 2026. Fees, faculty, success rates, batch sizes compared. Only biology-specialist coaching serving Greater Noida with online + hybrid model.',
+    'Compare the best NEET coaching institutes for Greater Noida students for 2026-27. Fees, faculty, success rates, batch sizes compared. Only biology-specialist coaching serving Greater Noida with online + hybrid model.',
   keywords: [
     'best neet coaching greater noida',
     'best neet coaching in greater noida',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     locale: 'en_IN',
-    title: 'Best NEET Coaching in Greater Noida 2026 | Top Institutes Compared',
+    title: 'Best NEET Coaching in Greater Noida 2026-27 | Top Institutes Compared',
     description:
       'Compare top NEET coaching institutes for Greater Noida students. Fees, faculty, results compared.',
     url: 'https://cerebrumbiologyacademy.com/best-neet-coaching-greater-noida',
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Best NEET Coaching in Greater Noida 2026 | Top Institutes Compared',
+    title: 'Best NEET Coaching in Greater Noida 2026-27 | Top Institutes Compared',
     description:
-      'Compare the best NEET coaching institutes for Greater Noida students for 2026. Fees, faculty, success rates, batch sizes compared. Only biology-specialist coaching serving Greater Noida with online...',
+      'Compare the best NEET coaching institutes for Greater Noida students for 2026-27. Fees, faculty, success rates, batch sizes compared. Only biology-specialist coaching serving Greater Noida with online...',
   },
 }
 
@@ -106,7 +106,7 @@ export default function BestNEETCoachingGreaterNoidaPage() {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Best NEET Coaching in Greater Noida 2026 - Complete Comparison Guide',
+    headline: 'Best NEET Coaching in Greater Noida 2026-27 - Complete Comparison Guide',
     description:
       'Comprehensive comparison of top NEET coaching institutes for Greater Noida students with fees, faculty details, and success rates.',
     author: {
@@ -122,7 +122,7 @@ export default function BestNEETCoachingGreaterNoidaPage() {
       },
     },
     datePublished: '2025-01-01',
-    dateModified: '2026-06-08',
+    dateModified: '2026-07-01',
   }
 
   const faqSchema = {
