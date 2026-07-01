@@ -10,7 +10,6 @@ import {
   Users,
   Trophy,
   CheckCircle2,
-  Navigation,
   Train,
   Car,
   Building2,
@@ -21,7 +20,6 @@ import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
-import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import Link from 'next/link'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import {
@@ -55,52 +53,25 @@ export default function NoidaLocationPage() {
     })
   }
 
-  const handleGetDirections = () => {
-    window.open(CONTACT_INFO.location.noida.mapUrl, '_blank')
-  }
-
-  const nearbyAreas = [
-    'Sector 62',
-    'Sector 63',
-    'Sector 18',
-    'Sector 15',
-    'Sector 16',
-    'Sector 50',
-    'Sector 51',
-    'Sector 52',
-    'Noida City Centre',
-    'Electronic City',
-    'Film City',
-    'Botanical Garden',
-    'Greater Noida',
-    'Noida Extension',
-    'Crossing Republik',
-    'Indirapuram',
-    'Vaishali',
-    'Vasundhara',
-    'Ghaziabad',
-    'Mayur Vihar',
-  ]
-
   const faqs = [
     {
-      q: 'Where is Cerebrum Biology Academy located in Noida?',
-      a: `Our center is located at ${CONTACT_INFO.location.noida.streetAddress}, ${CONTACT_INFO.location.noida.addressLocality}. We are near Sector 62 Metro Station.`,
+      q: 'Do you have a coaching center in Noida?',
+      a: 'We teach Noida students through live online classes — there is no need to travel. Our nearest in-person center is the South Extension flagship in New Delhi, but Noida, Greater Noida and Ghaziabad students learn entirely online with the same AIIMS-trained faculty.',
     },
     {
-      q: 'Do you offer offline classes in Noida?',
-      a: 'Yes, we offer both offline classroom coaching at our Noida center and online live classes. Students can choose based on their preference.',
+      q: 'How do the online classes for Noida students work?',
+      a: 'Classes are live and interactive over video — you see the teacher, ask doubts in real time, and get every session recorded for revision. Small batches of maximum 15 students ensure personalized attention.',
     },
     {
-      q: 'What is the batch size at your Noida center?',
-      a: 'We maintain small batches of maximum 15 students to ensure personalized attention for every NEET aspirant.',
+      q: 'What is the batch size for Noida students?',
+      a: 'We maintain small batches of maximum 15 students to ensure personalized attention for every NEET aspirant, the same online as offline.',
     },
     {
-      q: 'Is your Noida center accessible from Greater Noida?',
-      a: 'Yes! Students from Greater Noida and Noida Extension can easily reach us via the Aqua Line Metro or by road.',
+      q: 'Can students from Greater Noida and Ghaziabad join?',
+      a: 'Yes! Because classes are live online, students from Greater Noida, Noida Extension, Ghaziabad and East Delhi all join the same batches from home — no commute required.',
     },
     {
-      q: 'What are the class timings at the Noida center?',
+      q: 'What are the class timings for Noida students?',
       a: `We operate ${CONTACT_INFO.hours.displayText}. We offer morning and evening batches to accommodate school schedules.`,
     },
   ]
@@ -125,7 +96,9 @@ export default function NoidaLocationPage() {
             <div className="space-y-6 animate-fadeInUp">
               <div className="inline-flex items-center space-x-2 bg-blue-500/20 border border-blue-500/40 rounded-full px-4 py-2">
                 <MapPin className="w-4 h-4 text-blue-400" />
-                <span className="text-blue-300 text-sm font-medium">Noida Center</span>
+                <span className="text-blue-300 text-sm font-medium">
+                  Live Online · Serving Noida
+                </span>
               </div>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
@@ -133,22 +106,22 @@ export default function NoidaLocationPage() {
               </h1>
 
               <p className="text-lg text-gray-300 leading-relaxed">
-                Premier NEET Biology coaching by AIIMS faculty in Noida&apos;s IT hub. Small batches
-                of 15 students, personalized attention, 98% success rate. Perfect for students from
-                Noida, Greater Noida & Ghaziabad!
+                Premier live online NEET Biology coaching by AIIMS-trained faculty for Noida
+                students. Small batches of 15, personalized attention, 98% qualification rate.
+                Perfect for students from Noida, Greater Noida & Ghaziabad — study from home, no
+                commute!
               </p>
 
-              {/* Address Card */}
+              {/* Online Mode Card */}
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <MapPin className="w-5 h-5 text-yellow-400 mt-1" />
                     <div>
-                      <p className="font-medium">{CONTACT_INFO.location.noida.streetAddress}</p>
+                      <p className="font-medium">Live Online Classes for Noida</p>
                       <p className="text-gray-300">
-                        {CONTACT_INFO.location.noida.addressLocality},{' '}
-                        {CONTACT_INFO.location.noida.addressRegion} -{' '}
-                        {CONTACT_INFO.location.noida.postalCode}
+                        Study from home — no travel needed. Nearest in-person center: South
+                        Extension, New Delhi.
                       </p>
                     </div>
                   </div>
@@ -167,14 +140,6 @@ export default function NoidaLocationPage() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={handleGetDirections}
-                  className="flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors"
-                >
-                  <Navigation className="w-5 h-5" />
-                  <span>Get Directions</span>
-                </button>
-
                 <a
                   href={`tel:${CONTACT_INFO.phone.primary}`}
                   onClick={handleCallNow}
@@ -194,28 +159,44 @@ export default function NoidaLocationPage() {
               </div>
             </div>
 
-            {/* Right - Map Embed */}
-            <div className="h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-fadeInUp">
-              <LazyGoogleMap
-                embedUrl={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.5!2d${CONTACT_INFO.location.noida.geo.longitude}!3d${CONTACT_INFO.location.noida.geo.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM3JzQxLjAiTiA3N8KwMjEnNTMuNiJF!5e0!3m2!1sen!2sin!4v1234567890`}
-                title="Noida NEET Coaching Center"
-                height={400}
-                placeholder={{
-                  lat: CONTACT_INFO.location.noida.geo.latitude,
-                  lng: CONTACT_INFO.location.noida.geo.longitude,
-                  address: `${CONTACT_INFO.location.noida.streetAddress}, ${CONTACT_INFO.location.noida.addressLocality}`,
-                }}
-              />
+            {/* Right - Online Highlights */}
+            <div className="min-h-[400px] rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-8 shadow-2xl animate-fadeInUp flex flex-col justify-center space-y-6">
+              <h2 className="text-2xl font-bold">Live Online — Built for Noida Students</h2>
+              {[
+                {
+                  icon: Train,
+                  title: 'Zero Commute',
+                  text: 'No travel across Noida traffic — join live from home anywhere in Noida, Noida Extension, Greater Noida or Ghaziabad.',
+                },
+                {
+                  icon: Users,
+                  title: 'Small Live Batches',
+                  text: 'Maximum 15 students per batch with real-time doubt solving and AIIMS-trained faculty.',
+                },
+                {
+                  icon: Trophy,
+                  title: 'Recorded for Revision',
+                  text: 'Every live class is recorded, so you never miss a concept before NEET.',
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start space-x-3">
+                  <item.icon className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">{item.title}</p>
+                    <p className="text-gray-300 text-sm">{item.text}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
 
-      {/* How to Reach */}
+      {/* How Online Classes Work */}
       <div className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
-            How to Reach Us
+            How Online Classes Work for Noida Students
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -223,10 +204,10 @@ export default function NoidaLocationPage() {
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <Train className="w-6 h-6 text-blue-600" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">By Metro</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Live &amp; Interactive</h3>
               <p className="text-gray-600">
-                Nearest metro station: <strong>Sector 62</strong> (Blue Line). We are 5 minutes walk
-                from the station. Also accessible from Noida City Centre.
+                Real-time video classes where you see the teacher and ask doubts live — from
+                anywhere in Noida, Greater Noida or Ghaziabad. No commute.
               </p>
             </div>
 
@@ -234,10 +215,10 @@ export default function NoidaLocationPage() {
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
                 <Car className="w-6 h-6 text-green-600" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">By Car</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Recorded Lessons</h3>
               <p className="text-gray-600">
-                Located in <strong>Sector 62</strong>, well connected via Noida Expressway.
-                Dedicated parking available for students and parents.
+                Every class is recorded so you can revise any topic before NEET, and never fall
+                behind if you miss a session.
               </p>
             </div>
 
@@ -245,21 +226,21 @@ export default function NoidaLocationPage() {
               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
                 <Building2 className="w-6 h-6 text-purple-600" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Landmarks</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">In-Person Option</h3>
               <p className="text-gray-600">
-                Near <strong>Electronic City</strong> and NSEZ. Close to major IT companies. Look
-                for our signboard at the entrance.
+                Prefer a classroom? Our nearest walk-in center is the{' '}
+                <strong>South Extension flagship</strong> in New Delhi.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Why Choose Noida Center */}
+      {/* Why Choose Cerebrum for Noida */}
       <div className="py-12">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
-            Why Choose Our Noida Center?
+            Why Choose Cerebrum for Noida?
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -366,20 +347,23 @@ export default function NoidaLocationPage() {
         </div>
       </div>
 
-      {/* Other Centers in Delhi NCR */}
+      {/* Our Walk-in Centers (for those who prefer classroom) */}
       <div className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
-            Other Centers in Delhi NCR
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
+            Prefer a Classroom? Our Walk-in Centers
           </h2>
+          <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+            Noida is served online, but if you want in-person classes, these are our physical
+            centers across Delhi &amp; Haryana.
+          </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {[
               { name: 'South Extension (Flagship)', href: '/locations/south-extension' },
+              { name: 'Green Park', href: '/locations/green-park' },
               { name: 'Rohini (DC Chowk)', href: '/locations/rohini' },
               { name: 'Gurugram (Sector 51)', href: '/locations/gurugram' },
               { name: 'Faridabad (Sector 17)', href: '/locations/faridabad' },
-              { name: 'Delhi', href: '/locations/delhi' },
-              { name: 'Ghaziabad', href: '/locations/ghaziabad' },
             ].map((center) => (
               <Link
                 key={center.href}
@@ -402,7 +386,7 @@ export default function NoidaLocationPage() {
       <div className="py-12">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
-            Frequently Asked Questions - Noida Center
+            Frequently Asked Questions - Noida (Online)
           </h2>
 
           <div className="space-y-4">

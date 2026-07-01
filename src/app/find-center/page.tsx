@@ -7,20 +7,20 @@ import { FAQSchema } from '@/components/seo/FAQSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Find Your Nearest Cerebrum Biology Academy Center - 6 Locations',
+  title: 'Find Your Nearest Cerebrum Biology Academy Center - 5 Locations',
   description:
-    'Locate Cerebrum Biology Academy centers in Delhi NCR. 5 offline centres in Rohini, Gurugram, South Extension, Green Park, Faridabad, Noida. Visit us or book a demo class.',
+    'Locate Cerebrum Biology Academy centers in Delhi NCR. 5 walk-in centres in South Extension, Green Park, Rohini (Delhi), Gurugram and Faridabad (Haryana), plus live online classes for Noida, Ghaziabad and all of NCR. Visit us or book a demo class.',
   keywords: [
     'cerebrum biology academy near me',
     'cerebrum center locations',
     'neet coaching center delhi ncr',
     'find cerebrum center',
     'biology coaching center',
-    'cerebrum rohini gurugram noida',
+    'cerebrum rohini gurugram south extension green park faridabad',
   ],
   openGraph: {
     title: 'Find Your Nearest Cerebrum Biology Academy Center',
-    description: 'Locate our 4 centers in Delhi NCR with addresses, phone numbers, and directions.',
+    description: 'Locate our 5 centers in Delhi NCR with addresses, phone numbers, and directions.',
     url: 'https://cerebrumbiologyacademy.com/find-center',
   },
   alternates: {
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Find Your Nearest Cerebrum Biology Academy Center - 6 Locations',
+    title: 'Find Your Nearest Cerebrum Biology Academy Center - 5 Locations',
     description:
-      'Locate Cerebrum Biology Academy centers in Delhi NCR. 5 offline centres in Rohini, Gurugram, South Extension, Green Park, Faridabad, Noida. Visit us or book a demo class.',
+      'Locate Cerebrum Biology Academy centers in Delhi NCR. 5 walk-in centres in South Extension, Green Park, Rohini (Delhi), Gurugram and Faridabad (Haryana), plus live online classes for Noida, Ghaziabad and all of NCR. Visit us or book a demo class.',
   },
 }
 
@@ -97,25 +97,13 @@ const centers = [
     mapsUrl: 'https://maps.google.com/?q=28.3870,77.3070',
     googleBusinessUrl: CONTACT_INFO.centers.faridabad.googleBusinessUrl,
   },
-  {
-    id: 'noida',
-    name: 'Noida',
-    address: 'B-45, Sector 62, Noida, Uttar Pradesh - 201301',
-    phone: CONTACT_INFO.phone.primary,
-    metro: 'Sector 62 Metro Station',
-    nearbyAreas: ['Electronic City', 'Noida City Centre', 'Indirapuram'],
-    distance: '30 km from Delhi Center',
-    students: '480+',
-    mapsUrl: 'https://maps.google.com/?q=28.6280,77.3649',
-    googleBusinessUrl: CONTACT_INFO.centers.noida.googleBusinessUrl,
-  },
 ]
 
 const faqItems = [
   {
     question: 'Which Cerebrum center is closest to me?',
     answer:
-      'We have 4 centers strategically located across Delhi NCR: Rohini (North Delhi), Gurugram (Haryana), South Extension & Green Park (South Delhi), Faridabad (Haryana), and Noida (UP). Visit our map above to find the nearest center.',
+      'We have 5 walk-in centers across Delhi NCR: South Extension & Green Park (South Delhi), Rohini (North Delhi), Gurugram and Faridabad (Haryana). Noida, Greater Noida and Ghaziabad are served through live online classes — no travel needed. Visit our map above to find the nearest center.',
   },
   {
     question: 'What are the center timings?',
@@ -132,12 +120,12 @@ const faqItems = [
     answer:
       'Absolutely! All our centers offer free demo classes. Simply call ' +
       CONTACT_INFO.phone.primary +
-      ' or WhatsApp us to book a demo. You can attend at any of our 4 centers.',
+      ' or WhatsApp us to book a demo. You can attend at any of our 5 centers, or online.',
   },
   {
     question: 'Is there a center closest to my school?',
     answer:
-      'With 6 strategically located centers, most Delhi NCR students find a center within 10-15 km. If you live in an area between two centers, you can join either based on your convenience.',
+      'With 5 strategically located centers, most Delhi NCR students find a center within 10-15 km. If you live in an area between two centers, you can join either based on your convenience.',
   },
   {
     question: 'What is the parking facility at centers?',
@@ -154,7 +142,7 @@ export default function FindCenterPage() {
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Find Your Nearest Cerebrum Center</h1>
           <p className="text-xl text-gray-300 max-w-3xl">
-            Visit our 6 strategically located centers across Delhi NCR. Expert faculty, world-class
+            Visit our 5 walk-in centers across Delhi NCR. Expert faculty, world-class
             infrastructure, and proven results awaiting you.
           </p>
         </div>

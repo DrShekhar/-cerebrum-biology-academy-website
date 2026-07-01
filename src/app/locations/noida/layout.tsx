@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Biology Coaching in Noida',
   description:
-    'Best NEET Biology coaching in Noida by AIIMS faculty. Small batches of 15 students, 98% success rate. Located in Sector 62. Call +91 88264 44334.',
+    'Best live online NEET Biology coaching for Noida students by AIIMS faculty. Small batches of 15, 98% qualification rate. Learn from home — no travel. Call +91 88264 44334.',
   keywords: [
     'NEET coaching Noida',
     'Biology coaching Noida',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: 'https://cerebrumbiologyacademy.com/images/noida-center.jpg',
         width: 1200,
         height: 630,
-        alt: 'Cerebrum Biology Academy Noida Center',
+        alt: 'Cerebrum Biology Academy - Online NEET Coaching for Noida',
       },
     ],
   },
@@ -55,56 +55,43 @@ export const metadata: Metadata = {
 }
 
 function NoidaServiceSchema() {
+  // ONLINE service — Cerebrum has NO physical center in Noida. This is a Service
+  // with areaServed (accurate) and a provider whose address is the REAL South
+  // Extension flagship. Do NOT add a Noida PostalAddress / geo / opening hours.
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    additionalType: 'EducationalOrganization',
-    name: 'Cerebrum Biology Academy - Noida',
+    '@type': 'Service',
+    serviceType: 'Online NEET Biology Coaching',
+    name: 'Cerebrum Biology Academy - Noida (Online)',
     description:
-      'Best NEET Biology coaching in Noida with AIIMS faculty. 98% success rate, small batches, Sector 62 location.',
+      'Live online NEET Biology coaching for Noida students with AIIMS-trained faculty, small batches and a 98% qualification rate. Classes are live online — the nearest walk-in center is South Extension, New Delhi.',
     url: 'https://cerebrumbiologyacademy.com/locations/noida',
-    telephone: '+91-88264-44334',
-    email: 'info@cerebrumbiologyacademy.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'B-45, Sector 62',
-      addressLocality: 'Noida',
-      addressRegion: 'Uttar Pradesh',
-      postalCode: '201301',
-      addressCountry: 'IN',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 28.628,
-      longitude: 77.3649,
+    provider: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+      telephone: '+91-88264-44334',
+      email: 'info@cerebrumbiologyacademy.com',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
+        addressCountry: 'IN',
+      },
     },
     areaServed: [
-      'Sector 62',
-      'Sector 18',
-      'Sector 15',
-      'Sector 16',
-      'Sector 50',
-      'Sector 63',
-      'Noida City Centre',
-      'Greater Noida',
-      'Greater Noida West',
-      'Gaur City',
+      { '@type': 'City', name: 'Noida' },
+      { '@type': 'City', name: 'Greater Noida' },
+      { '@type': 'City', name: 'Ghaziabad' },
     ],
-    // IMPORTANT: Must match Google Business Profile exactly (verified Feb 2026)
-    priceRange: '₹40,000 - ₹1,80,000',
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '09:00',
-        closes: '20:00',
-      },
-    ],
-    sameAs: [
-      'https://www.facebook.com/cerebrumbiologyacademy',
-      'https://www.instagram.com/cerebrumbiologyacademy',
-      'https://www.youtube.com/@cerebrumbiologyacademy',
-    ],
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://cerebrumbiologyacademy.com/locations/noida',
+      servicePhone: '+91-88264-44334',
+      availableLanguage: ['English', 'Hindi'],
+    },
   }
 
   return (
@@ -114,9 +101,6 @@ function NoidaServiceSchema() {
     />
   )
 }
-
-// NoidaLocalBusinessSchema REMOVED — was duplicate with wrong address (South Extension/110049 for Noida)
-// LocalBusiness schema is now handled by NoidaServiceSchema above with correct Sector 62 address
 
 export default function NoidaLocationLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -131,10 +115,10 @@ export default function NoidaLocationLayout({ children }: { children: React.Reac
             mainEntity: [
               {
                 '@type': 'Question',
-                name: 'How far is Cerebrum Academy from Noida Sector 62?',
+                name: 'Does Cerebrum Academy have a physical center in Noida?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Academy has a dedicated center in Noida itself at B-45, Sector 62, making it extremely convenient for Noida students. It is right in the heart of Sector 62 near the metro station, so no need to travel to Delhi.',
+                  text: 'No — we teach Noida students through live online classes, so there is nothing to travel to. Our nearest walk-in center is the South Extension flagship in New Delhi. Noida, Greater Noida and Ghaziabad students learn entirely online with the same AIIMS-trained faculty.',
                 },
               },
               {
@@ -142,23 +126,23 @@ export default function NoidaLocationLayout({ children }: { children: React.Reac
                 name: 'What makes Cerebrum Academy the best NEET coaching choice for Noida students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Academy is the premier choice for Noida students because of our AIIMS Delhi trained faculty, small personalized batches, 98% success rate, and proven track record. Our structured curriculum and individual mentoring ensure every Noida student achieves their NEET goals.',
+                  text: 'Cerebrum Academy is the premier choice for Noida students because of our AIIMS Delhi trained faculty, small personalized live batches, 98% qualification rate, and proven track record. Our structured curriculum and individual mentoring ensure every Noida student achieves their NEET goals.',
                 },
               },
               {
                 '@type': 'Question',
-                name: 'What are the batch timings at Cerebrum Academy for Noida students?',
+                name: 'What are the batch timings for Noida students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our Noida center at B-45, Sector 62 is open 24/7 with online classes available for students worldwide. We offer flexible in-person batch schedules including morning, afternoon, and evening batches, plus round-the-clock online support for international students. Contact +91-88264-44334 for details.',
+                  text: 'We offer flexible live online batch schedules including morning and evening batches to fit school timings, with every class recorded for revision. Contact +91-88264-44334 for the current schedule.',
                 },
               },
               {
                 '@type': 'Question',
-                name: 'How can Noida students reach Cerebrum Academy from Sector 62?',
+                name: 'Do Noida students need to travel for classes?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our Noida center at B-45, Sector 62 is just a short walk from Sector 62 Metro Station on the Blue Line. Students from all Noida sectors can easily reach us by metro, bus, or personal vehicle. The location is right in the IT hub area with excellent connectivity.',
+                  text: 'No travel needed — classes are live online from home. Students across all Noida sectors, Greater Noida and Ghaziabad join the same online batches with real-time doubt solving.',
                 },
               },
               {
