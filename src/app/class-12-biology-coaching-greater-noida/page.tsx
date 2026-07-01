@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { CityHubPage } from '@/components/seo/CityHubPage'
+import { CityAreaSchema } from '@/components/seo/CityAreaSchema'
 import { getCityData } from '@/data/city-seo/cities'
 
 const cityData = getCityData('class-12-biology-coaching-greater-noida')!
@@ -27,5 +28,16 @@ export const metadata: Metadata = {
 export const revalidate = 86400
 
 export default function Page() {
-  return <CityHubPage data={cityData} />
+  return (
+    <>
+      <CityAreaSchema
+        city="Greater Noida"
+        state="Uttar Pradesh"
+        pageSlug="class-12-biology-coaching-greater-noida"
+        serviceName="Class 12 Biology Coaching Greater Noida"
+        altNames={['Gr. Noida']}
+      />
+      <CityHubPage data={cityData} />
+    </>
+  )
 }

@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { CityHubPage } from '@/components/seo/CityHubPage'
+import { CityAreaSchema } from '@/components/seo/CityAreaSchema'
 import { getCityData } from '@/data/city-seo/cities'
 
 const cityData = getCityData('biology-class-12-ghaziabad')!
@@ -37,5 +38,15 @@ export const metadata: Metadata = {
 export const revalidate = 86400
 
 export default function Page() {
-  return <CityHubPage data={cityData} />
+  return (
+    <>
+      <CityAreaSchema
+        city="Ghaziabad"
+        state="Uttar Pradesh"
+        pageSlug="biology-class-12-ghaziabad"
+        serviceName="Class 12 Biology Coaching Ghaziabad"
+      />
+      <CityHubPage data={cityData} />
+    </>
+  )
 }
