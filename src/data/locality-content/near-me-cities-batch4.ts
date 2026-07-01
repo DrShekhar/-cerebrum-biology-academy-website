@@ -489,4 +489,283 @@ export const NEAR_ME_CITIES_BATCH4: NearMeCityData[] = [
       },
     ],
   },
+
+  // ─── WAVE 1.2 GAP CITIES ───────────────────────────────────────────
+  {
+    slug: 'nagpur',
+    displayName: 'Nagpur',
+    altNames: ['Orange City'],
+    state: 'Maharashtra',
+    region: 'Central India',
+    metroPopulationMn: 2.9,
+    majorAreas: [
+      'Dharampeth',
+      'Ramdaspeth',
+      'Civil Lines',
+      'Sadar',
+      'Pratap Nagar',
+      'Wardhaman Nagar',
+      'Manish Nagar',
+    ],
+    feederSchools: [
+      'Centre Point School',
+      'Delhi Public School Nagpur',
+      'Bhavans Bhagwandas Purohit Vidya Mandir',
+      'St. Ursula Girls High School',
+      'Somalwar High School',
+      'Modern School Nagpur',
+    ],
+    localCoachingPresence:
+      'Allen Career Institute (Ramdaspeth), Aakash Institute (Dharampeth), plus several strong regional institutes — Nagpur is the NEET hub for the entire Vidarbha region, but classroom batches run 100-200 students',
+    stateQuotaCollege: 'Government Medical College Nagpur (GMC)',
+    otherStateMedicalColleges: [
+      'Indira Gandhi Government Medical College Nagpur (IGGMC)',
+      'AIIMS Nagpur',
+      'Grant Medical College Mumbai',
+    ],
+    cityContext:
+      'Nagpur sits at the geographic centre of India and draws NEET aspirants from across Vidarbha — Amravati, Chandrapur, Wardha, Gondia. It has a serious three-college local target: GMC Nagpur, IGGMC, and the newer AIIMS Nagpur. Allen and Aakash anchor the coaching market alongside respected regional players, but batches are large and biology gets the same 45-minute treatment as physics. The recurring Vidarbha pattern: a strong, disciplined student whose biology recall plateaus at 280-300 while PCM holds up. Cerebrum runs as a biology-only specialist layer for Nagpur students who keep their existing PCM coaching.',
+    whyOnlineHere:
+      'Nagpur summers hit 45-47°C and the city sprawls from Dharampeth to Manish Nagar to Wardhaman Nagar — a daily coaching commute in that heat costs hours and stamina. Live online biology at fixed 5:30-8 PM IST slots removes the travel entirely and hands those hours back for NCERT revision.',
+    typicalAspirant:
+      'Class 11 or 12 student at Centre Point, DPS Nagpur, or Somalwar. Solid NCERT base, biology recall lagging PCM. Family target: GMC Nagpur or AIIMS Nagpur on Maharashtra state quota.',
+    localFaqs: [
+      {
+        question: 'Is Cerebrum better than Allen Ramdaspeth or Aakash Nagpur for biology?',
+        answer:
+          "For biology alone — yes on batch size and depth. Allen and Aakash Nagpur run 100-200 student batches; Cerebrum runs 10-40 with weekly per-student review of your wrong MCQs. We don't teach physics or chemistry — keep your Nagpur PCM coaching and add Cerebrum biology as a ~6 hour/week layer.",
+      },
+      {
+        question: 'What NEET score targets GMC Nagpur or AIIMS Nagpur?',
+        answer:
+          'GMC Nagpur on Maharashtra state quota historically needs ~630-650 general category; AIIMS Nagpur is more competitive at 680+. Biology (360/720) is where most Vidarbha students leave 40-60 marks on the table — that is exactly the gap we close.',
+      },
+      {
+        question: 'Can a Centre Point or DPS Nagpur student attend alongside school?',
+        answer:
+          'Yes — live classes run 5:30-8 PM IST on Mon/Wed/Fri or weekend mornings, school-friendly. Recordings cover any clash with school tests.',
+      },
+      {
+        question: 'Is study material delivered across Nagpur?',
+        answer:
+          'Yes — printed NCERT-line-by-line biology guide and chapter test booklets ship to all Nagpur pincodes; Dharampeth / Civil Lines / Manish Nagar typically 3-4 days by tracked courier.',
+      },
+    ],
+  },
+
+  {
+    slug: 'agra',
+    displayName: 'Agra',
+    state: 'Uttar Pradesh',
+    region: 'North India',
+    metroPopulationMn: 1.8,
+    majorAreas: ['Sanjay Place', 'Kamla Nagar', 'Dayalbagh', 'Civil Lines', 'Sikandra', 'Tajganj'],
+    feederSchools: [
+      "St. Peter's College Agra",
+      "St. Conrad's Inter College",
+      'Delhi Public School Agra',
+      "St. Patrick's Junior College",
+      'Summer Fields School',
+      'Spring Dales School',
+    ],
+    localCoachingPresence:
+      'Allen Career Institute (Sanjay Place), Aakash Institute (Kamla Nagar), plus local NEET institutes — Agra serves western UP but classroom batches are 100-180 students and biology-specialist attention is scarce',
+    stateQuotaCollege: 'S.N. Medical College Agra (Sarojini Naidu)',
+    otherStateMedicalColleges: ['KGMU Lucknow', 'GSVM Medical College Kanpur', 'IMS BHU Varanasi'],
+    cityContext:
+      "Agra anchors NEET prep for western UP — Mathura, Firozabad, Aligarh, and Etawah students come here or study online from home. S.N. Medical College Agra is the prized local state-quota target, with KGMU Lucknow the state-wide dream. The coaching market runs on Allen Sanjay Place and Aakash Kamla Nagar in large batches. The gap families report is biology: a child at St. Peter's or DPS Agra whose physics-chemistry climbs while biology recall stalls around 290. Cerebrum fits as a biology-only specialist add-on, not a replacement for existing PCM coaching.",
+    whyOnlineHere:
+      'Agra traffic between Sanjay Place, Dayalbagh, and Sikandra is heavy, and evening tuition commutes are slow. Live online biology at fixed 5:30-8 PM IST slots removes the travel and lets western-UP students who are outside Agra city attend the same specialist batch as those inside it.',
+    typicalAspirant:
+      "Class 11 or 12 student at St. Peter's, St. Conrad's, or DPS Agra. Strong NCERT base, biology recall the weak link. Family target: S.N. Medical College Agra (state quota) or KGMU Lucknow.",
+    localFaqs: [
+      {
+        question: 'Is Cerebrum better than Allen Sanjay Place or Aakash Agra for biology?',
+        answer:
+          'For biology specifically — yes, on batch size and per-student review. Allen and Aakash Agra batches are 100-180 students; Cerebrum is 10-40 with weekly review of your wrong MCQs. We teach only biology — keep your Agra PCM coaching and layer Cerebrum biology on top at ~6 hours/week.',
+      },
+      {
+        question: "What's the target for an Agra aspirant — S.N. Medical College or KGMU?",
+        answer:
+          'S.N. Medical College Agra on UP state quota historically needs ~630-650 general category; KGMU Lucknow, the most aspirational statewide, typically needs 680+. We calibrate the biology target to whichever college the family is aiming for.',
+      },
+      {
+        question: 'Can a student from Mathura or Firozabad attend without moving to Agra?',
+        answer:
+          'Yes — that is the point of live online. Students from Mathura, Firozabad, and Aligarh attend the same 5:30-8 PM IST batch as Agra-city students, no relocation or hostel needed.',
+      },
+      {
+        question: 'Does study material reach Dayalbagh and Kamla Nagar reliably?',
+        answer:
+          'Yes — printed NCERT-line-by-line biology guide and chapter test booklets ship to all Agra pincodes; Sanjay Place / Kamla Nagar / Dayalbagh typically 4-5 days by tracked courier.',
+      },
+    ],
+  },
+
+  {
+    slug: 'jodhpur',
+    displayName: 'Jodhpur',
+    altNames: ['Blue City'],
+    state: 'Rajasthan',
+    region: 'North India',
+    metroPopulationMn: 1.5,
+    majorAreas: [
+      'Sardarpura',
+      'Ratanada',
+      'Shastri Nagar',
+      'Paota',
+      'Chopasni Housing Board',
+      'Basni',
+    ],
+    feederSchools: [
+      'Delhi Public School Jodhpur',
+      "St. Patrick's Sr. Sec. School",
+      "Rajmata Krishna Kumari Girls' Public School",
+      'Central Academy Sr. Sec. School',
+      'Cambridge Sr. Sec. School',
+      'Kendriya Vidyalaya Jodhpur',
+    ],
+    localCoachingPresence:
+      "Allen Career Institute (Shastri Nagar), Aakash Institute (Sardarpura), plus local institutes riding on Kota's proximity — but biology is taught in the same large PCB batches, not as a specialism",
+    stateQuotaCollege: 'AIIMS Jodhpur',
+    otherStateMedicalColleges: ['Dr. S.N. Medical College Jodhpur', 'SMS Medical College Jaipur'],
+    cityContext:
+      "Jodhpur is western Rajasthan's NEET hub, drawing aspirants from Pali, Barmer, Jaisalmer, and Nagaur. It has a rare double target locally — AIIMS Jodhpur (one of the strongest AIIMS outside Delhi) and Dr. S.N. Medical College — which raises the bar and the ambition. Kota is only 5 hours away, so many families default to the Kota mould of huge PCB batches. The gap is the same one Kota is famous for: biology recall stalling while a student grinds physics-chemistry. Cerebrum runs as a biology-only specialist layer for Jodhpur students who keep their PCM coaching (local or Kota-style).",
+    whyOnlineHere:
+      "Jodhpur's spread from Sardarpura to Basni to Chopasni, plus the pull toward Kota for offline coaching, makes local specialist biology hard to access. Live online biology at 5:30-8 PM IST lets a Jodhpur student stay home, keep school, and still get small-batch biology depth that even Kota's mega-batches do not offer.",
+    typicalAspirant:
+      "Class 11 or 12 student at DPS Jodhpur, St. Patrick's, or Central Academy. Disciplined, Kota-aware, biology the weak link. Family target: AIIMS Jodhpur or Dr. S.N. Medical College on Rajasthan state quota.",
+    localFaqs: [
+      {
+        question: 'Do I need to go to Kota, or can I prepare from Jodhpur?',
+        answer:
+          "You can prepare from Jodhpur. Kota's advantage is intensity, not biology depth — its batches are 100-200 students. Cerebrum gives you 10-40 student biology batches live online from home, so you get the specialist attention Kota lacks without leaving family and school.",
+      },
+      {
+        question: 'What NEET score targets AIIMS Jodhpur or Dr. S.N. Medical College?',
+        answer:
+          'AIIMS Jodhpur is highly competitive — typically 690+ general category. Dr. S.N. Medical College on Rajasthan state quota historically needs ~640-660. Biology is where most students leave marks on the table; that is the gap we close.',
+      },
+      {
+        question: 'Can a Pali or Barmer student join the Jodhpur batch online?',
+        answer:
+          'Yes — students from Pali, Barmer, Jaisalmer, and Nagaur attend the same live 5:30-8 PM IST batch as Jodhpur-city students, no relocation needed.',
+      },
+      {
+        question: 'Does material reach Sardarpura and Ratanada reliably?',
+        answer:
+          'Yes — printed NCERT-line-by-line biology guide and chapter test booklets ship to all Jodhpur pincodes; Sardarpura / Ratanada / Shastri Nagar typically 4-5 days by tracked courier.',
+      },
+    ],
+  },
+
+  {
+    slug: 'udaipur',
+    displayName: 'Udaipur',
+    altNames: ['City of Lakes'],
+    state: 'Rajasthan',
+    region: 'North India',
+    metroPopulationMn: 0.65,
+    majorAreas: [
+      'Fatehpura',
+      'Hiran Magri',
+      'Bhupalpura',
+      'Panchwati',
+      'Sukhadia Circle',
+      'Ashok Nagar',
+    ],
+    feederSchools: [
+      'Delhi Public School Udaipur',
+      "St. Paul's Sr. Sec. School",
+      'Vidya Bhawan Sr. Sec. School',
+      'Seedling Public School',
+      "St. Anthony's Sr. Sec. School",
+      'The Study Sr. Sec. School',
+    ],
+    localCoachingPresence:
+      'Allen Career Institute (Hiran Magri), Aakash Institute (Sukhadia Circle), plus regional NEET institutes — Udaipur serves the Mewar belt but classroom batches are large and biology is not taught as a specialism',
+    stateQuotaCollege: 'R.N.T. Medical College Udaipur',
+    otherStateMedicalColleges: ['Geetanjali Medical College Udaipur', 'SMS Medical College Jaipur'],
+    cityContext:
+      'Udaipur is the NEET hub for the Mewar region — Rajsamand, Banswara, Dungarpur, Chittorgarh, and Pratapgarh feed into it. R.N.T. Medical College Udaipur is the prized local state-quota target, with Geetanjali the private option and SMS Jaipur the statewide aspiration. Allen and Aakash anchor the coaching market in large batches. The familiar gap: a disciplined Mewar student, strong on PCM, whose biology recall plateaus around 290-300. Cerebrum runs as a biology-only specialist add-on for Udaipur students who keep their existing PCM coaching.',
+    whyOnlineHere:
+      "Udaipur's hilly, lake-broken geography and the long commutes in from Rajsamand or Chittorgarh make daily offline biology coaching costly in time. Live online at 5:30-8 PM IST removes the travel and lets students across the Mewar belt share one specialist biology batch.",
+    typicalAspirant:
+      "Class 11 or 12 student at DPS Udaipur, St. Paul's, or Vidya Bhawan. Strong PCM, biology the weak link. Family target: R.N.T. Medical College Udaipur or SMS Jaipur on Rajasthan state quota.",
+    localFaqs: [
+      {
+        question: 'Is Cerebrum better than Allen Hiran Magri or Aakash Udaipur for biology?',
+        answer:
+          'For biology specifically — yes, on batch size and per-student review. Allen and Aakash Udaipur run large PCB batches; Cerebrum runs 10-40 student biology-only batches with weekly review of your wrong MCQs. Keep your Udaipur PCM coaching and add Cerebrum biology at ~6 hours/week.',
+      },
+      {
+        question: 'What NEET score targets R.N.T. Medical College Udaipur?',
+        answer:
+          'R.N.T. Medical College on Rajasthan state quota historically needs ~635-655 general category. Biology (360/720) is where most Mewar students leave marks on the table — exactly the gap we close.',
+      },
+      {
+        question: 'Can a Rajsamand or Chittorgarh student join the Udaipur batch online?',
+        answer:
+          'Yes — students from Rajsamand, Banswara, Dungarpur, and Chittorgarh attend the same live 5:30-8 PM IST batch as Udaipur-city students, no relocation needed.',
+      },
+      {
+        question: 'Does material reach Fatehpura and Hiran Magri reliably?',
+        answer:
+          'Yes — printed NCERT-line-by-line biology guide and chapter test booklets ship to all Udaipur pincodes; Fatehpura / Hiran Magri / Sukhadia Circle typically 4-5 days by tracked courier.',
+      },
+    ],
+  },
+
+  {
+    slug: 'gwalior',
+    displayName: 'Gwalior',
+    state: 'Madhya Pradesh',
+    region: 'Central India',
+    metroPopulationMn: 1.2,
+    majorAreas: ['City Center', 'Thatipur', 'Lashkar', 'Morar', 'DD Nagar', 'Govindpuri'],
+    feederSchools: [
+      'The Scindia School',
+      'Delhi Public School Gwalior',
+      'Carmel Convent Sr. Sec. School',
+      "St. Paul's School Gwalior",
+      'Little Angels High School',
+      'Kendriya Vidyalaya Gwalior',
+    ],
+    localCoachingPresence:
+      'Allen Career Institute (City Center), Aakash Institute (Thatipur), plus local NEET institutes — Gwalior serves the Chambal region but classroom batches are large and biology gets no specialist track',
+    stateQuotaCollege: 'Gajra Raja Medical College Gwalior (GRMC)',
+    otherStateMedicalColleges: [
+      'Gandhi Medical College Bhopal',
+      'Netaji Subhash Chandra Bose Medical College Jabalpur',
+      'MGM Medical College Indore',
+    ],
+    cityContext:
+      'Gwalior is the NEET hub for the Chambal-Gwalior region of Madhya Pradesh — Morena, Bhind, Datia, and Shivpuri students study here or online from home. Gajra Raja Medical College (GRMC) is the prized local state-quota target, with Gandhi Medical College Bhopal the statewide aspiration. The city has a strong schooling culture led by The Scindia School and DPS Gwalior. Allen and Aakash run the coaching market in large batches, and the recurring gap is biology depth — a strong student whose recall stalls around 290 while PCM improves. Cerebrum runs as a biology-only specialist layer for Gwalior students who keep their PCM coaching.',
+    whyOnlineHere:
+      "Gwalior's spread from Lashkar to Morar to City Center, and the long commutes in from Morena or Bhind, make daily offline biology coaching time-expensive. Live online at 5:30-8 PM IST removes the travel and lets Chambal-region students share one specialist biology batch.",
+    typicalAspirant:
+      'Class 11 or 12 student at The Scindia School, DPS Gwalior, or Carmel Convent. Strong PCM, biology the weak link. Family target: GRMC Gwalior or Gandhi Medical College Bhopal on MP state quota.',
+    localFaqs: [
+      {
+        question: 'Is Cerebrum better than Allen City Center or Aakash Gwalior for biology?',
+        answer:
+          'For biology alone — yes, on batch size and per-student review. Allen and Aakash Gwalior run large PCB batches; Cerebrum runs 10-40 student biology-only batches with weekly review of your wrong MCQs. Keep your Gwalior PCM coaching and layer Cerebrum biology on top at ~6 hours/week.',
+      },
+      {
+        question: 'What NEET score targets GRMC Gwalior?',
+        answer:
+          'Gajra Raja Medical College on MP state quota historically needs ~630-650 general category; Gandhi Medical College Bhopal is more competitive. Biology is where most Chambal-region students leave marks on the table — that is the gap we close.',
+      },
+      {
+        question: 'Can a Morena or Bhind student join the Gwalior batch online?',
+        answer:
+          'Yes — students from Morena, Bhind, Datia, and Shivpuri attend the same live 5:30-8 PM IST batch as Gwalior-city students, no relocation needed.',
+      },
+      {
+        question: 'Does material reach Thatipur and Lashkar reliably?',
+        answer:
+          'Yes — printed NCERT-line-by-line biology guide and chapter test booklets ship to all Gwalior pincodes; City Center / Thatipur / Lashkar typically 4-5 days by tracked courier.',
+      },
+    ],
+  },
 ]

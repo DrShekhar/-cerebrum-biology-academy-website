@@ -133,8 +133,18 @@ export default function Class11BiologyTuitionPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-                { '@type': 'ListItem', position: 2, name: 'Class 11 Biology Tuition', item: PAGE_URL },
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://cerebrumbiologyacademy.com',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Class 11 Biology Tuition',
+                  item: PAGE_URL,
+                },
               ],
             },
           ]),
@@ -150,7 +160,7 @@ export default function Class11BiologyTuitionPage() {
       {/* Urgency Banner */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <UrgencyBanner batchStartDate="Feb 12, 2026" seatsTotal={15} seatsFilled={10} />
+          <UrgencyBanner batchStartDate="Aug 4, 2026" seatsTotal={15} seatsFilled={10} />
         </div>
       </section>
 

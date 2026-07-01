@@ -203,9 +203,7 @@ const NOINDEXED_FAMILY_PATTERNS = [
 // /neet-coaching-fees-<city> (single-city fees doorways) are noindexed too, but
 // the comparison hub stays indexed.
 function isFeesCityDoorway(urlPath: string): boolean {
-  return (
-    urlPath.startsWith('/neet-coaching-fees-') && urlPath !== '/neet-coaching-fees-comparison'
-  )
+  return urlPath.startsWith('/neet-coaching-fees-') && urlPath !== '/neet-coaching-fees-comparison'
 }
 
 function isNoindexedDoorway(urlPath: string): boolean {
@@ -1507,6 +1505,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'best-neet-coaching-coimbatore',
       'best-neet-coaching-kochi',
       'best-neet-coaching-madurai',
+      // Wave 1.2 (2026-07): best-neet-coaching-<city> for gap cities
+      'best-neet-coaching-ahmedabad',
+      'best-neet-coaching-nagpur',
+      'best-neet-coaching-agra',
+      'best-neet-coaching-jodhpur',
+      'best-neet-coaching-udaipur',
+      'best-neet-coaching-gwalior',
       // South Delhi class-level + foundation pages (2026-07 gap fill — flagship catchment)
       'class-9-biology-tuition-south-delhi',
       'class-10-biology-coaching-south-delhi',

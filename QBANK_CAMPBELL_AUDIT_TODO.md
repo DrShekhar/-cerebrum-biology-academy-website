@@ -12,7 +12,13 @@
 - **#3 (c) test-submit 500 — DONE.** Replaced the invalid `user_question_responses.testAttemptId` lookup with a match on `test_attempts` by `freeUserId` (+ template); guarded so a miss still completes the session. Also cleared 2 pre-existing TS errors.
 - **#4 (d) hygiene — DONE.** Removed 2 dup stems (ch18 #47, ch50 #48, totals decremented); resolved ch26 to Unit 4 everywhere (the lone MCQ file tagged Unit 5 was the outlier vs chapter metadata + the ch22–26 wave file — retagged 93 Qs + moved file to unit4-evolution/).
 - **#5 (e) AP/USABO enabler — PARTIAL.** Added a `curriculum` filter to `/api/mcq/questions` + `/api/mcq/counts` (the backend enabler). STILL TODO: a visible exam/curriculum toggle in the UI; a fixed-length scored "diagnostic" mode (depends on #2 for the email-gated report); verify AP/Campbell Qs are seeded **and `isVerified:true`** in the live DB.
-- **#2 (b) wire lead modal — NOT DONE** (deferred per user).
+- **#2 (b) wire lead modal — WON'T DO (by design).** Owner confirmed (30 Jun 2026): the lead modal should ONLY offer "Message us on WhatsApp" — NO email form, NO /api/free-users capture. The audit's "dead-wired" finding is intended behaviour, not a bug. Do not add an email gate. Side effect (accepted): anonymous users never get a freeUserId, so gamification/weak-topic report stays off for them.
+
+## OPEN — ClaudeChat copy/paste issue (reported 30 Jun 2026, UNRESOLVED)
+- Symptom (owner): "unable to copy text and paste back in the chat" / "not working the same way."
+- Code pass found NO paste blocker anywhere: all 4 chat inputs (`/claudechat` page `inputMessage`, `EnhancedClaudeChatBoard` `inputText`, site `ChatInput.tsx` textarea, Ceri `IntelligentChatbot` `inputValue`) are standard controlled fields; no onPaste/preventDefault-on-paste, no document clipboard listener, no `user-select:none` on messages.
+- **Most likely cause:** `/claudechat` page + Ceri widget use single-line `<input type="text">` (Ceri has `maxLength={500}`) → pasting multi-line/long text gets stripped/truncated. Likely fix: swap `<input>` → `<textarea>` + raise/remove the cap.
+- **Blocked on owner answer:** (1) which surface — `/claudechat` page or the floating Ceri bubble? (2) which direction — pasting INTO the box, or copying the AI reply OUT? desktop or phone? Fix differs by answer.
 
 ## TO-DO (priority order)
 
