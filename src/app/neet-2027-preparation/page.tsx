@@ -171,6 +171,52 @@ export default function NEET2026PreparationPage() {
     { label: '15+', sublabel: 'Years Experience', icon: Award },
   ]
 
+  const bestCoachingCities: [string, string][] = [
+    ['delhi-ncr', 'Delhi NCR'],
+    ['noida', 'Noida'],
+    ['gurugram', 'Gurugram'],
+    ['faridabad', 'Faridabad'],
+    ['ghaziabad', 'Ghaziabad'],
+    ['greater-noida', 'Greater Noida'],
+    ['kota', 'Kota'],
+    ['jaipur', 'Jaipur'],
+    ['jodhpur', 'Jodhpur'],
+    ['udaipur', 'Udaipur'],
+    ['lucknow', 'Lucknow'],
+    ['agra', 'Agra'],
+    ['patna', 'Patna'],
+    ['indore', 'Indore'],
+    ['gwalior', 'Gwalior'],
+    ['nagpur', 'Nagpur'],
+    ['mumbai', 'Mumbai'],
+    ['pune', 'Pune'],
+    ['ahmedabad', 'Ahmedabad'],
+    ['hyderabad', 'Hyderabad'],
+    ['bangalore', 'Bengaluru'],
+    ['chennai', 'Chennai'],
+    ['kolkata', 'Kolkata'],
+    ['kochi', 'Kochi'],
+    ['coimbatore', 'Coimbatore'],
+    ['madurai', 'Madurai'],
+    ['visakhapatnam', 'Visakhapatnam'],
+    ['vijayawada', 'Vijayawada'],
+  ]
+
+  const dropperMetros: [string, string][] = [
+    ['kota', 'Kota'],
+    ['delhi', 'Delhi'],
+    ['mumbai', 'Mumbai'],
+    ['bangalore', 'Bengaluru'],
+    ['hyderabad', 'Hyderabad'],
+    ['chennai', 'Chennai'],
+    ['pune', 'Pune'],
+    ['kolkata', 'Kolkata'],
+    ['jaipur', 'Jaipur'],
+    ['lucknow', 'Lucknow'],
+    ['patna', 'Patna'],
+    ['indore', 'Indore'],
+  ]
+
   return (
     <div className="min-h-screen">
       {/* RE-NEET 2026 Cancellation Banner */}
@@ -501,6 +547,50 @@ export default function NEET2026PreparationPage() {
         </div>
       </section>
 
+      {/* NEET 2027 Coaching by City — hub-and-spoke internal links */}
+      <section className="bg-gray-50 py-12 sm:py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">
+            NEET 2027 Coaching in Your City
+          </h2>
+          <p className="text-gray-600 text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+            Cerebrum runs live online, biology-specialist NEET 2027 batches for aspirants across
+            India. Explore city-specific guidance, local college targets, and how our small-batch
+            biology coaching pairs with your existing PCM prep.
+          </p>
+
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">
+            Best NEET Coaching by City
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-3 mb-10">
+            {bestCoachingCities.map(([slug, label]) => (
+              <a
+                key={slug}
+                href={`/best-neet-coaching-${slug}`}
+                className="block rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-700 hover:border-[#3d4d3d] hover:text-[#3d4d3d] transition-colors"
+              >
+                Best NEET Coaching in {label}
+              </a>
+            ))}
+          </div>
+
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">
+            NEET 2027 Dropper &amp; Repeater Batches by City
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-3">
+            {dropperMetros.map(([slug, label]) => (
+              <a
+                key={slug}
+                href={`/neet-dropper-batch-${slug}`}
+                className="block rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-700 hover:border-[#3d4d3d] hover:text-[#3d4d3d] transition-colors"
+              >
+                NEET 2027 Dropper Batch {label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* NEET Toppers */}
       <NEETToppersShowcase maxToppers={6} showVideos={true} />
 
@@ -549,22 +639,63 @@ export default function NEET2026PreparationPage() {
         </div>
       </section>
 
-      {/* FAQ Schema for SEO */}
+      {/* Structured data: Course + FAQ + Breadcrumb */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: neet2027FAQs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.answer,
+          __html: JSON.stringify([
+            {
+              '@context': 'https://schema.org',
+              '@type': 'Course',
+              name: 'NEET 2027 Biology Preparation Program',
+              description:
+                'Live online, biology-specialist NEET 2027 preparation — NCERT line-by-line coverage, Class 11 + 12 chapter weightage strategy, weekly mock tests, and small-batch doubt review. Designed to pair with a student’s existing PCM coaching.',
+              url: 'https://cerebrumbiologyacademy.com/neet-2027-preparation',
+              inLanguage: 'en-IN',
+              educationalLevel: 'NEET UG (Class 11–12)',
+              teaches: 'NEET Biology (Botany & Zoology), NCERT mastery, MCQ technique',
+              provider: {
+                '@type': 'EducationalOrganization',
+                '@id': 'https://cerebrumbiologyacademy.com/#organization',
+                name: 'Cerebrum Biology Academy',
               },
-            })),
-          }),
+              hasCourseInstance: {
+                '@type': 'CourseInstance',
+                courseMode: 'online',
+                courseWorkload: 'PT6H',
+              },
+            },
+            {
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: neet2027FAQs.map((faq) => ({
+                '@type': 'Question',
+                name: faq.question,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: faq.answer,
+                },
+              })),
+            },
+            {
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://cerebrumbiologyacademy.com',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'NEET 2027 Preparation',
+                  item: 'https://cerebrumbiologyacademy.com/neet-2027-preparation',
+                },
+              ],
+            },
+          ]),
         }}
       />
     </div>
