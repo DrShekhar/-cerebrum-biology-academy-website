@@ -96,9 +96,50 @@ const faqs: FAQ[] = [
   },
 ]
 
+const PAGE_URL = 'https://cerebrumbiologyacademy.com/class-11-biology-tuition'
+
 export default function Class11BiologyTuitionPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              '@context': 'https://schema.org',
+              '@type': 'Course',
+              name: 'Class 11 Biology Tuition (CBSE Board + NEET Foundation)',
+              description:
+                'Class 11 Biology tuition with CBSE board focus and NEET foundation — small batches, AIIMS-trained faculty, NCERT depth, practicals covered.',
+              url: PAGE_URL,
+              inLanguage: 'en-IN',
+              educationalLevel: 'Class 11',
+              provider: {
+                '@type': 'EducationalOrganization',
+                '@id': 'https://cerebrumbiologyacademy.com/#organization',
+                name: 'Cerebrum Biology Academy',
+              },
+            },
+            {
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: faqs.map((f) => ({
+                '@type': 'Question',
+                name: f.question,
+                acceptedAnswer: { '@type': 'Answer', text: f.answer },
+              })),
+            },
+            {
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+                { '@type': 'ListItem', position: 2, name: 'Class 11 Biology Tuition', item: PAGE_URL },
+              ],
+            },
+          ]),
+        }}
+      />
       <LandingHero
         h1="Class 11 Biology Tuition - Score 95+ in CBSE Boards"
         subheadline="Expert coaching for Class 11 CBSE Biology. Build strong foundation and excel in board exams with personalized attention."
