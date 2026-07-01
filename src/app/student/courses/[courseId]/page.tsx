@@ -48,6 +48,7 @@ interface CourseMaterial {
   materialType: string
   videoLectureId?: string | null
   videoReady?: boolean
+  completed?: boolean
 }
 
 interface CourseModule {
@@ -471,6 +472,8 @@ export default function CourseDetailPage() {
 function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExpired: boolean }) {
   const isVideo = material.materialType?.toUpperCase().includes('VIDEO')
   const icon = isVideo ? <Video className="w-4 h-4" /> : <FileText className="w-4 h-4" />
+  const [done, setDone] = useState(!!material.completed)
+  const [saving, setSaving] = useState(false)
 
   // Video lessons open in the secure /learn player (videoId = video_lectures.id);
   // documents stream via the entitlement-gated delivery endpoint. A video whose
@@ -482,6 +485,26 @@ function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExp
     : `/api/student/materials/${material.id}/download`
   const isInternal = isVideoLesson
   const label = isVideo ? 'Watch' : 'Open'
+
+  async function toggleComplete() {
+    if (saving) return
+    const next = !done
+    setSaving(true)
+    setDone(next) // optimistic
+    try {
+      const res = await fetch(`/api/student/materials/${material.id}/complete`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ completed: next }),
+      })
+      if (!res.ok) throw new Error()
+    } catch {
+      setDone(!next) // revert
+      showToast.error('Could not update progress')
+    } finally {
+      setSaving(false)
+    }
+  }
 
   return (
     <div
@@ -497,22 +520,37 @@ function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExp
         <p className="font-medium text-gray-900 text-sm">{material.title}</p>
       </div>
 
-      {!isExpired &&
-        (videoProcessing ? (
-          <span className="text-xs text-gray-400 px-3">Processing…</span>
-        ) : isInternal ? (
-          <Link href={href}>
-            <Button variant="ghost" size="sm" className="text-blue-600">
-              {label}
-            </Button>
-          </Link>
-        ) : (
-          <a href={href} target="_blank" rel="noopener noreferrer">
-            <Button variant="ghost" size="sm" className="text-blue-600">
-              {label}
-            </Button>
-          </a>
-        ))}
+      <div className="flex items-center gap-1">
+        {!isExpired && (
+          <button
+            onClick={toggleComplete}
+            disabled={saving}
+            title={done ? 'Mark as not done' : 'Mark complete'}
+            className={cn(
+              'p-1.5 rounded-full transition-colors',
+              done ? 'text-green-600' : 'text-gray-300 hover:text-gray-500'
+            )}
+          >
+            <CheckCircle className="w-5 h-5" />
+          </button>
+        )}
+        {!isExpired &&
+          (videoProcessing ? (
+            <span className="text-xs text-gray-400 px-3">Processing…</span>
+          ) : isInternal ? (
+            <Link href={href}>
+              <Button variant="ghost" size="sm" className="text-blue-600">
+                {label}
+              </Button>
+            </Link>
+          ) : (
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="sm" className="text-blue-600">
+                {label}
+              </Button>
+            </a>
+          ))}
+      </div>
     </div>
   )
 }

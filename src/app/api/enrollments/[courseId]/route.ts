@@ -75,6 +75,17 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
       console.error('progress recompute failed', e)
     }
 
+    // Which of this course's materials has the student marked complete?
+    const completedRows = await prisma.material_progress.findMany({
+      where: {
+        userId,
+        status: 'COMPLETED',
+        study_materials: { courseId },
+      },
+      select: { materialId: true },
+    })
+    const completedIds = new Set(completedRows.map((r) => r.materialId))
+
     const modules = enrollment.courses.chapters.map((chapter) => ({
       id: chapter.id,
       title: chapter.title,
@@ -89,6 +100,7 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
           // videoLectureId present + READY → syllabus links to /learn/[id].
           videoLectureId: m.video_lectures?.id ?? null,
           videoReady: m.video_lectures?.uploadStatus === 'READY',
+          completed: completedIds.has(m.id),
         })),
     }))
 
