@@ -143,6 +143,26 @@ const NOINDEXED_FAMILY_ALLOWLIST = new Set([
   '/online-neet-coaching-greater-noida',
   '/online-neet-coaching-india',
   '/online-neet-coaching-pcb',
+  // Wave 0.1b (2026-07): tier-1 + South online pages re-indexed — each renders
+  // unique cityContext + city-interpolated FAQs + feeder-school/area lists.
+  '/online-neet-coaching-kota',
+  '/online-neet-coaching-delhi',
+  '/online-neet-coaching-hyderabad',
+  '/online-neet-coaching-bangalore',
+  '/online-neet-coaching-chennai',
+  '/online-neet-coaching-mumbai',
+  '/online-neet-coaching-kolkata',
+  '/online-neet-coaching-jaipur',
+  '/online-neet-coaching-indore',
+  '/online-neet-coaching-lucknow',
+  '/online-neet-coaching-patna',
+  '/online-neet-coaching-visakhapatnam',
+  '/online-neet-coaching-vijayawada',
+  '/online-neet-coaching-coimbatore',
+  '/online-neet-coaching-kochi',
+  '/online-neet-coaching-madurai',
+  '/online-neet-coaching-noida',
+  '/online-neet-coaching-gurugram',
   // Priority dropper metros promoted back to index (2026-06): each now carries a
   // city-unique "local roadmap" body (real target colleges, feeder schools,
   // delivery areas) + 7 city-specific FAQs — well past the doorway-uniqueness bar.

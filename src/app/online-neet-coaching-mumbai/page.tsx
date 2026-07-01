@@ -43,7 +43,7 @@ export const metadata: Metadata = city
       // policy territory. Page stays fully live for visitors and internal links
       // (follow); the city's near-me page + city hub carry the indexable signal.
       // Reversible: restore 'index, follow' when the page gets >=40% unique copy.
-      robots: 'noindex, follow',
+      robots: 'index, follow',
     }
   : { title: 'City not found' }
 
