@@ -243,9 +243,9 @@ export const NEET_BIOLOGY_PAA_QUESTIONS: PAQuestion[] = [
       'To score 340+ in NEET Biology: (1) Master NCERT line by line, (2) Practice 5000+ MCQs chapter-wise, (3) Focus on diagrams and labeling, (4) Revise regularly using spaced repetition, (5) Take weekly mock tests and analyze mistakes thoroughly.',
   },
   {
-    question: 'Does Cerebrum Biology Academy have centers in Noida?',
+    question: 'Does Cerebrum Biology Academy teach students in Noida?',
     answer:
-      'Yes, Cerebrum Biology Academy has a center in Noida at B-45, Sector 62. It serves students from Noida, Greater Noida, Ghaziabad, and surrounding areas. The center offers all NEET Biology course options.',
+      'Yes, Cerebrum Biology Academy teaches Noida students through live online NEET Biology classes, serving Noida, Greater Noida, Ghaziabad, and surrounding areas with no travel needed. Our nearest in-person centre is South Extension, New Delhi. All NEET Biology course options are available online.',
   },
   {
     question: 'What study material does Cerebrum provide for NEET Biology?',
@@ -275,7 +275,7 @@ export const NEET_BIOLOGY_PAA_QUESTIONS: PAQuestion[] = [
   {
     question: 'What makes Cerebrum different from other NEET coaching?',
     answer:
-      'Cerebrum stands out for: (1) AIIMS-trained faculty, (2) Biology-only specialization (not general coaching), (3) Small batch sizes (max 25), (4) 98% success rate, (5) 4 centers across Delhi NCR, (6) Comprehensive study material with 10,000+ MCQs.',
+      'Cerebrum stands out for: (1) AIIMS-trained faculty, (2) Biology-only specialization (not general coaching), (3) Small batch sizes (max 25), (4) 98% success rate, (5) 5 walk-in centres across Delhi NCR plus live online classes, (6) Comprehensive study material with 10,000+ MCQs.',
   },
 ]
 
@@ -337,7 +337,7 @@ export const DELHI_NCR_PAA_QUESTIONS: PAQuestion[] = [
   {
     question: 'Is NEET coaching available in Noida?',
     answer:
-      'Yes, Cerebrum Biology Academy has a center at B-45, Sector 62, Noida. It caters to students from Noida, Greater Noida, Ghaziabad, Indirapuram, and Vaishali. Students get the same expert AIIMS faculty and comprehensive study material as other centers.',
+      'Yes, Cerebrum Biology Academy serves Noida through live online NEET Biology classes for students from Noida, Greater Noida, Ghaziabad, Indirapuram, and Vaishali. You get the same expert AIIMS faculty and comprehensive study material as our in-person batches; the nearest walk-in centre is South Extension, New Delhi.',
   },
   {
     question: 'How much does NEET Biology coaching cost in Delhi NCR?',
@@ -450,7 +450,7 @@ export const PARENT_BOARD_PAA_QUESTIONS: PAQuestion[] = [
   {
     question: 'Does Cerebrum provide progress reports to parents?',
     answer:
-      'Yes, Cerebrum provides weekly test scores, monthly progress reports, and regular parent-teacher meetings. Parents get a dedicated WhatsApp group for updates, attendance tracking, and direct communication with faculty. Bi-monthly PTMs are held at all 4 centers.',
+      'Yes, Cerebrum provides weekly test scores, monthly progress reports, and regular parent-teacher meetings. Parents get a dedicated WhatsApp group for updates, attendance tracking, and direct communication with faculty. Bi-monthly PTMs are held at all 5 walk-in centres and online.',
   },
   {
     question: 'Can Biology Board exam marks help in NEET?',

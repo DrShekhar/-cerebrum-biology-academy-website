@@ -35,7 +35,7 @@ export default function GhaziabadCoachingLayout({ children }: { children: React.
       <NearMeKeywordInjector
         location="Ghaziabad"
         parentLocation="Delhi NCR"
-        centerAddress="B-45, Sector 62, Noida, Uttar Pradesh - 201301"
+        centerAddress="D 35, South Extension Part 2, New Delhi - 110049"
         centerPhone="+91-8826-444-334"
         nearbyAreas={[
           'Indirapuram',

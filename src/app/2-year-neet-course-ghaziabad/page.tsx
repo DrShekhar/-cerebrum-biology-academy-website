@@ -116,9 +116,9 @@ const faqs = [
       'Our schedule is designed for balance: 3-4 hours coaching daily (evening batch) + 2 hours self-study. Weekends: 4-5 hours. Total: 25-30 hours/week for NEET + full school attendance. Students from DPS Indirapuram, Ryan International Ghaziabad, and Amity successfully manage both.',
   },
   {
-    question: 'How do Ghaziabad students travel to the center?',
+    question: 'How do Ghaziabad students attend classes?',
     answer:
-      'Blue Line Metro from Vaishali or Kaushambi to Sector 62 Noida takes 20-25 minutes. For evening batch students (5-8 PM), this is very manageable. Online mode is also available for days with heavy school schedule.',
+      'Ghaziabad students join live online classes from home — ideal for evening batch students (5-8 PM) balancing a heavy school schedule, with no commute. Everyone learns with the same AIIMS-trained faculty. Prefer in-person? Our nearest walk-in center is South Extension, New Delhi.',
   },
   {
     question: 'Is there a difference in faculty for 2-year course?',
@@ -448,50 +448,40 @@ export default function TwoYearNEETCourseGhaziabad() {
         </div>
       </section>
 
-      {/* Center Location */}
+      {/* How Ghaziabad Students Learn */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="md:flex">
-              <div className="md:w-1/2 p-8">
-                <h2 className="text-2xl font-bold mb-4">2-Year Program Location</h2>
-                <div className="flex items-start gap-3 mb-4">
-                  <MapPin className="w-5 h-5 text-teal-600 mt-1" />
-                  <div>
-                    <p className="font-semibold">B-45, Sector 62</p>
-                    <p className="text-gray-600">Noida, UP 201301</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      20-25 min via Blue Line Metro from Vaishali/Kaushambi Ghaziabad
-                    </p>
-                  </div>
+            <div className="p-8">
+              <h2 className="text-2xl font-bold mb-4">Live Online — Study From Ghaziabad</h2>
+              <div className="flex items-start gap-3 mb-4">
+                <MapPin className="w-5 h-5 text-teal-600 mt-1" />
+                <div>
+                  <p className="font-semibold">Live Online Classes for Ghaziabad</p>
+                  <p className="text-gray-600">
+                    Learn from home across Indirapuram, Vaishali, Kaushambi and all Ghaziabad areas
+                    — no commute needed.
+                  </p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Prefer in-person? Nearest walk-in center: South Extension, New Delhi.
+                  </p>
                 </div>
-                <div className="flex items-start gap-3 mb-4">
-                  <Calendar className="w-5 h-5 text-teal-600 mt-1" />
-                  <div>
-                    <p className="font-semibold">Next Batch Starts</p>
-                    <p className="text-gray-600">April 2025 (Class 11 entry)</p>
-                    <p className="text-gray-600">Enrollment open: Now - July 2025</p>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3 mb-4">
+                <Calendar className="w-5 h-5 text-teal-600 mt-1" />
+                <div>
+                  <p className="font-semibold">Next Batch Starts</p>
+                  <p className="text-gray-600">April 2025 (Class 11 entry)</p>
+                  <p className="text-gray-600">Enrollment open: Now - July 2025</p>
                 </div>
-                <a
-                  href="tel:+918826444334"
-                  className="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition"
-                >
-                  <Phone className="w-5 h-5" />
-                  Book Free Counseling
-                </a>
               </div>
-              <div className="md:w-1/2">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.1234567890123!2d77.3683!3d28.6271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSector%2062%2C%20Noida!5e0!3m2!1sen!2sin!4v1234567890"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
+              <a
+                href="tel:+918826444334"
+                className="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition"
+              >
+                <Phone className="w-5 h-5" />
+                Book Free Counseling
+              </a>
             </div>
           </div>
         </div>

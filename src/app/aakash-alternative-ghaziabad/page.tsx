@@ -3,12 +3,10 @@ import AakashAlternativeGhaziabadContent from './AakashAlternativeGhaziabadConte
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
-const noidaAddress = 'B-45, Sector 62, Noida, UP 201301'
-
 export const metadata: Metadata = {
   title: 'Aakash Alternative in Ghaziabad | NEET Biology Coaching',
   description:
-    'Looking for Aakash alternative in Ghaziabad? Cerebrum Biology Academy offers personalized NEET coaching with smaller batches (10-20 students), AIIMS faculty, and 98% success rate. Near Ghaziabad via Blue Line Metro.',
+    'Looking for Aakash alternative in Ghaziabad? Cerebrum Biology Academy offers personalized NEET coaching with smaller batches (10-20 students), AIIMS faculty, and 98% success rate. Live online classes serving Ghaziabad.',
   keywords: [
     'aakash alternative ghaziabad',
     'aakash coaching alternative ghaziabad',
@@ -71,8 +69,9 @@ const faqs = [
       "Aakash was acquired by BYJU'S in 2021. While Aakash continues operations, some students prefer independent institutes like Cerebrum that are not part of large corporate structures. We focus purely on quality education without corporate distractions.",
   },
   {
-    question: 'Where is Cerebrum located and how do Ghaziabad students reach there?',
-    answer: `Our center is at ${noidaAddress}. Ghaziabad students can take the Blue Line Metro to Sector 62 station (15-20 min from Vaishali/Kaushambi). Easily accessible from Indirapuram, Vasundhara, Raj Nagar Extension, and Crossings Republik.`,
+    question: 'Do you have a center in Ghaziabad?',
+    answer:
+      'We teach Ghaziabad students through live online classes — no travel needed. Students from Indirapuram, Vasundhara, Raj Nagar Extension and Crossings Republik learn with the same AIIMS-trained faculty online. Our nearest in-person center is South Extension, New Delhi.',
   },
 ]
 
@@ -88,12 +87,13 @@ export default function AakashAlternativeGhaziabadPage() {
       name: 'Cerebrum Biology Academy',
       description:
         'Specialized NEET Biology coaching with small batches and personalized attention',
+      areaServed: 'Ghaziabad',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'B-45, Sector 62',
-        addressLocality: 'Noida',
-        addressRegion: 'Uttar Pradesh',
-        postalCode: '201301',
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
       },
     },
   }

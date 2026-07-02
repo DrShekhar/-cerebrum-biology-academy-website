@@ -42,7 +42,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching institute in Ghaziabad?',
     answer:
-      'For Biology-focused NEET preparation, Cerebrum Biology Academy stands out with AIIMS-trained faculty (Dr. Shekhar C Singh), 98% success rate, small batch sizes (15-20 students), and 15+ years of experience. Easily accessible from Ghaziabad via Blue Line Metro to Sector 62 Noida. For Physics-Chemistry focused, students also consider Aakash, Allen, and Smart Achievers.',
+      'For Biology-focused NEET preparation, Cerebrum Biology Academy stands out with AIIMS-trained faculty (Dr. Shekhar C Singh), 98% success rate, small batch sizes (15-20 students), and 15+ years of experience. Ghaziabad students learn through live online classes — no commute needed. For Physics-Chemistry focused, students also consider Aakash, Allen, and Smart Achievers.',
   },
   {
     question: 'What are the fees for NEET coaching for Ghaziabad students?',
@@ -50,9 +50,9 @@ const faqs = [
       'NEET coaching fees range from ₹60,000 to ₹2,00,000+ per year. Budget options like Cerebrum start at ₹60,000/year with AIIMS faculty. Premium institutes like Aakash and Allen charge ₹1,50,000-2,00,000/year. Online options start at ₹45,000.',
   },
   {
-    question: 'Is it better to join coaching in Noida or stay in Ghaziabad?',
+    question: 'Do Ghaziabad students need to travel for Cerebrum classes?',
     answer:
-      'Cerebrum at Sector 62 Noida is directly accessible from Ghaziabad via Blue Line Metro (Vaishali/Kaushambi stations). Students save time with metro commute and get AIIMS-quality teaching. Online hybrid options are also available for maximum flexibility.',
+      'No travel needed — Cerebrum teaches Ghaziabad students through live online classes with AIIMS-quality faculty and small batches. Students save commute time and study from home. For anyone wanting in-person study, our nearest walk-in center is South Extension, New Delhi.',
   },
   {
     question: 'What factors should I consider when choosing NEET coaching?',

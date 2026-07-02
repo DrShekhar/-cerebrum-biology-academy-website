@@ -315,8 +315,9 @@ export default function AakashVsAllenNoida() {
               <p className="text-center text-gray-700 mb-6">
                 Cerebrum Biology Academy offers what national chains like Allen can&apos;t:{' '}
                 <strong>small batches, personal attention, and AIIMS faculty</strong> at half the
-                price. Located at Sector 62, Noida — easily accessible from Sector 18, Sector 44,
-                Sector 50, Indirapuram, Vaishali, and Greater Noida West.
+                price. Live online classes serve students across Noida — Sector 18, Sector 44,
+                Sector 50, Indirapuram, Vaishali, and Greater Noida West. Prefer in-person? Our
+                nearest walk-in center is South Extension, New Delhi.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/aakash-alternative-noida" className="text-indigo-600 hover:underline">

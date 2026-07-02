@@ -81,34 +81,9 @@ export const offlineLocations: Location[] = [
     timing: 'Offline & Online Classes Available',
     type: 'offline',
   },
-  {
-    id: 'noida',
-    name: 'Noida Center',
-    address: 'Sector 18, Noida',
-    city: 'Noida',
-    pincode: '201301',
-    phone: ['+918826444334', '+919311946297'],
-    googleMapsUrl: 'https://maps.google.com/?q=Sector+18+Noida+201301',
-    googleMapsEmbed:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.123!2d77.320!3d28.570!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM0JzEyLjAiTiA3N8KwMTknMTIuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
-    features: ['Online + Hybrid Classes', 'Mock Test Center', 'Digital Classrooms'],
-    timing: 'Offline & Online Classes Available',
-    type: 'offline',
-  },
-  {
-    id: 'ghaziabad',
-    name: 'Ghaziabad Center',
-    address: 'Indirapuram, Ghaziabad',
-    city: 'Ghaziabad',
-    pincode: '201014',
-    phone: ['+918826444334', '+919311946297'],
-    googleMapsUrl: 'https://maps.google.com/?q=Indirapuram+Ghaziabad+201014',
-    googleMapsEmbed:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.123!2d77.370!3d28.630!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM3JzQ4LjAiTiA3N8KwMjInMTIuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
-    features: ['Online + Hybrid Classes', 'Spacious Classrooms', 'Study Material Library'],
-    timing: 'Offline & Online Classes Available',
-    type: 'offline',
-  },
+  // Noida & Ghaziabad are served via LIVE ONLINE classes only — no walk-in
+  // center. (Removed fabricated "Sector 18, Noida" / "Indirapuram, Ghaziabad"
+  // offline entries.) See onlineRegions below for online coverage.
 ]
 
 export const onlineRegions: OnlineRegion[] = [

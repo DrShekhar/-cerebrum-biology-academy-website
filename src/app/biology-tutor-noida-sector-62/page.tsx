@@ -78,24 +78,24 @@ const whyChooseUs = [
 
 const faqs = [
   {
-    question: 'How far is your center from Sector 62?',
+    question: 'Do you have a center in Sector 62?',
     answer:
-      'Our center in Greater Noida is about 8 km from Sector 62, which is 15-20 minutes by road. You can reach us via Noida-Greater Noida Expressway or take Aqua Line metro. Many Sector 62 students attend our classes.',
+      'We teach Sector 62 and nearby-sector students through live online classes - no travel needed. Our nearest in-person center is South Extension, New Delhi. Many Sector 62 students learn with us online.',
   },
   {
     question: 'Do you have flexible timings for IT professional families?',
     answer:
-      'Yes! We understand Sector 62 is an IT hub with parents having varied schedules. We offer: (1) Early morning batches (6-9 AM), (2) Evening batches (6-9 PM), (3) Weekend intensive batches, (4) Online classes for maximum flexibility.',
+      'Yes! We understand Sector 62 is an IT hub with parents having varied schedules. We offer: (1) Early morning batches (6-9 AM), (2) Evening batches (6-9 PM), (3) Weekend intensive batches, all delivered as live online classes for maximum flexibility.',
   },
   {
-    question: 'Is metro connectivity available?',
+    question: 'How do the live online classes work?',
     answer:
-      'Yes! Sector 62 has its own metro station on Blue Line. From there, you can switch to Aqua Line at Sector 52 or travel by expressway. Both options are convenient.',
+      'Classes are live and fully interactive over video - you can ask questions in real time, and every session is recorded for revision. Sector 62 students join from home with zero commute.',
   },
   {
-    question: 'Do you offer pickup service for Sector 62 students?',
+    question: 'What support do Sector 62 students get?',
     answer:
-      'We dont have pickup service, but many parents form carpools. We can connect you with other Sector 62 families for shared transport. Alternatively, metro is very convenient.',
+      'Every student gets live doubt-clearing sessions, study material, tests, and one-on-one mentoring - all online. We also connect nearby families for peer study groups.',
   },
 ]
 
@@ -132,15 +132,17 @@ export default function BiologyTutorNoidaSector62Page() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
-            name: 'Cerebrum Biology Academy - Noida Sector 62',
+            name: 'Cerebrum Biology Academy - Noida Sector 62 (Online)',
             description:
-              'Best Biology Tutor for Noida Sector 62 students - NEET & Board exam preparation',
+              'Live online Biology Tutor for Noida Sector 62 students - NEET & Board exam preparation',
             url: 'https://cerebrumbiologyacademy.com/biology-tutor-noida-sector-62',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',
-              addressLocality: 'Greater Noida',
-              addressRegion: 'Uttar Pradesh',
+              streetAddress: 'D 35, South Extension Part 2',
+              addressLocality: 'New Delhi',
+              addressRegion: 'Delhi',
+              postalCode: '110049',
               addressCountry: 'IN',
             },
             areaServed: ['Sector 62', 'Sector 63', 'Sector 61', 'Sector 59', 'Sector 60'],
@@ -257,7 +259,7 @@ export default function BiologyTutorNoidaSector62Page() {
               >
                 <MapPin className="w-8 h-8 text-green-600 mb-4" />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{area.name}</h3>
-                <p className="text-sm text-gray-500 mb-1">{area.distance} from center</p>
+                <p className="text-sm text-gray-500 mb-1">Served live online</p>
                 <p className="text-sm text-blue-600">{area.landmark}</p>
               </div>
             ))}

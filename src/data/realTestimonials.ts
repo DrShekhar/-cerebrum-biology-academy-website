@@ -37,7 +37,7 @@ export const areaTestimonials: Record<CityKey, RealTestimonial[]> = {
       year: 2024,
       college: 'UCMS Delhi',
       quote:
-        'From DPS Noida Sector 30, I joined Cerebrum in Class 11. The Sector 62 center was just 15 minutes from my school. Scored 662 in NEET and got UCMS!',
+        'From DPS Noida Sector 30, I joined Cerebrum in Class 11. The live online classes fit perfectly around my school schedule. Scored 662 in NEET and got UCMS!',
       area: 'Sector 30',
       city: 'noida',
     },
@@ -51,7 +51,7 @@ export const areaTestimonials: Record<CityKey, RealTestimonial[]> = {
       year: 2024,
       college: 'AIIMS Delhi',
       quote:
-        'Living in Amity Sector 125, I was worried about the commute. But online + weekend offline classes at Sector 62 worked perfectly. 648 in NEET!',
+        "Living in Amity Sector 125, I was worried about the commute. But Cerebrum's live online classes worked perfectly — no travel needed. 648 in NEET!",
       area: 'Sector 125',
       city: 'noida',
     },
@@ -65,7 +65,7 @@ export const areaTestimonials: Record<CityKey, RealTestimonial[]> = {
       year: 2023,
       college: 'AIIMS Delhi',
       quote:
-        'From Sector 62 itself — I could walk to the center! Dr. Shekhar Sir personal mentoring helped me jump from 580 to 670. Best decision of my life.',
+        "Living in Noida's Sector 62, I joined the live online classes — Dr. Shekhar Sir's personal mentoring helped me jump from 580 to 670. Best decision of my life.",
       area: 'Sector 62',
       city: 'noida',
     },
@@ -158,7 +158,7 @@ export const areaTestimonials: Record<CityKey, RealTestimonial[]> = {
       year: 2024,
       college: 'UCMS Delhi',
       quote:
-        'From Indirapuram — I took Blue Line metro to Sector 62 Noida center. 40 minutes door to door but the teaching quality made it worth every minute.',
+        'From Indirapuram — I joined the live online classes, so there was no commute at all. The teaching quality made every session worth it.',
       area: 'Indirapuram',
       city: 'ghaziabad',
     },
@@ -232,7 +232,7 @@ export const areaTestimonials: Record<CityKey, RealTestimonial[]> = {
       thumbnail: '',
       year: 2024,
       quote:
-        'From Mayur Vihar Phase 2, I took the Blue Line metro to Noida Sector 62. The coaching quality was exceptional — completely worth the commute.',
+        'From Mayur Vihar Phase 2, I joined the live online classes from home. The coaching quality was exceptional — and there was no commute at all.',
       area: 'Mayur Vihar',
       city: 'east-delhi',
     },

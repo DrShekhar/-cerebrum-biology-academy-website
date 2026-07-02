@@ -34,7 +34,7 @@ const coachingComparison = [
   {
     name: 'Cerebrum Biology Academy',
     highlight: true,
-    location: 'Sector 62, Noida',
+    location: 'Live online for Noida (nearest center: South Ext, New Delhi)',
     specialty: 'Biology Specialist',
     faculty: 'AIIMS Alumni (Dr. Shekhar C Singh)',
     batchSize: '15-20 students',
@@ -46,7 +46,7 @@ const coachingComparison = [
       'Small batches',
       'Personalized attention',
       'Biology specialist',
-      'Noida-based',
+      'Live online for Noida',
     ],
     cons: ['Biology only (refer partners for PCM)'],
     rating: 5.0,
@@ -122,8 +122,8 @@ const whyChooseCerebrum = [
     icon: BookOpen,
   },
   {
-    title: 'Local Convenience',
-    description: 'Noida-based center saves 2-3 hours daily commute to Delhi',
+    title: 'Live Online Access',
+    description: 'Live online classes for Noida save 2-3 hours of daily commute — study from home',
     icon: MapPin,
   },
   {
@@ -194,7 +194,7 @@ export default function BestNEETCoachingNoidaContent({ faqs }: { faqs: FAQ[] }) 
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Trophy className="w-4 h-4" />
-               2026-27 Comparison Guide
+              2026-27 Comparison Guide
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -504,8 +504,8 @@ export default function BestNEETCoachingNoidaContent({ faqs }: { faqs: FAQ[] }) 
               href="/locations/noida"
               className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-teal-600">Noida Center</h3>
-              <p className="text-sm text-gray-600">Visit our center</p>
+              <h3 className="font-semibold text-teal-600">Noida Classes</h3>
+              <p className="text-sm text-gray-600">Live online for Noida</p>
             </Link>
             <Link
               href="/neet-dropper-batch-noida"

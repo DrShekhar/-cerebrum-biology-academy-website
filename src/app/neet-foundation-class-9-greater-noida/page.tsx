@@ -2,12 +2,10 @@ import { Metadata } from 'next'
 import NEETFoundationClass9GreaterNoidaContent from './NEETFoundationClass9GreaterNoidaContent'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
-const greaterNoidaAddress = 'B-45, Sector 62, Noida, UP 201301 (nearest center)'
-
 export const metadata: Metadata = {
   title: 'NEET Foundation Class 9 in Greater Noida | Early NEET Preparation',
   description:
-    'Start NEET preparation from Class 9 in Greater Noida. 4-year head start, NCERT foundation, board + NEET dual prep. Online + hybrid classes. Expert faculty. Book free demo.',
+    'Start NEET preparation from Class 9 in Greater Noida. 4-year head start, NCERT foundation, board + NEET dual prep. Live online classes. Expert faculty. Book free demo.',
   keywords: [
     'neet foundation class 9 greater noida',
     'class 9 neet preparation greater noida',
@@ -22,7 +20,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     title: 'NEET Foundation Class 9 in Greater Noida | 4-Year Head Start',
     description:
-      'Start your NEET journey from Class 9 in Greater Noida. Online + hybrid classes with expert faculty.',
+      'Start your NEET journey from Class 9 in Greater Noida. Live online classes with expert faculty.',
     url: 'https://cerebrumbiologyacademy.com/neet-foundation-class-9-greater-noida',
   },
   alternates: {
@@ -33,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Greater Noida | Early NEET Preparation',
     description:
-      'Start NEET preparation from Class 9 in Greater Noida. 4-year head start, NCERT foundation, board + NEET dual prep. Online + hybrid classes. Expert faculty. Book free demo.',
+      'Start NEET preparation from Class 9 in Greater Noida. 4-year head start, NCERT foundation, board + NEET dual prep. Live online classes. Expert faculty. Book free demo.',
   },
 }
 
@@ -61,7 +59,7 @@ const faqs = [
   {
     question: 'What is the batch size and timing?',
     answer:
-      'Batch sizes vary by tier: Pinnacle (10-12 students), Ascent (16-18 students), Pursuit (30-40 students). Weekend batches (Sat-Sun) and weekday evening batches are available to accommodate school schedules. Online classes available for Greater Noida students.',
+      'Batch sizes vary by tier: Pinnacle (10-12 students), Ascent (16-18 students), Pursuit (30-40 students). Weekend batches (Sat-Sun) and weekday evening batches are available to accommodate school schedules. All classes are live online for Greater Noida students.',
   },
   {
     question: 'How is this different from regular tuition?',
@@ -70,7 +68,8 @@ const faqs = [
   },
   {
     question: 'How do Greater Noida Class 9 students attend the classes?',
-    answer: `Greater Noida students can attend online classes from home (most popular), or visit our nearest center at ${greaterNoidaAddress}. Online mode is ideal for Class 9 students to avoid long daily commutes. Hybrid mode (online + weekend offline) is also available.`,
+    answer:
+      'Greater Noida students attend live online classes from home - no travel needed, which is ideal for Class 9. For anyone who prefers in-person coaching, our nearest walk-in center is South Extension, New Delhi.',
   },
 ]
 
@@ -80,19 +79,20 @@ export default function NEETFoundationClass9GreaterNoidaPage() {
     '@type': 'Course',
     name: 'NEET Foundation Class 9 - Greater Noida',
     description:
-      'Early NEET preparation program for Class 9 students in Greater Noida. 4-year head start with strong conceptual foundation. Online + hybrid classes.',
+      'Early NEET preparation program for Class 9 students in Greater Noida. 4-year head start with strong conceptual foundation. Live online classes.',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'B-45, Sector 62',
-        addressLocality: 'Noida',
-        addressRegion: 'UP',
-        postalCode: '201301',
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
         addressCountry: 'IN',
       },
     },
+    areaServed: 'Greater Noida',
     educationalLevel: 'Class 9',
     teaches: [
       'Cell Biology',
@@ -104,7 +104,7 @@ export default function NEETFoundationClass9GreaterNoidaPage() {
     timeRequired: 'P1Y',
     hasCourseInstance: {
       '@type': 'CourseInstance',
-      courseMode: 'Blended',
+      courseMode: 'Online',
       courseWorkload: 'Weekend classes + Weekday doubt sessions',
     },
   }

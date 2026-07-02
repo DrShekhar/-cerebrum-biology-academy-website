@@ -14,9 +14,9 @@ import {
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
-  title: 'PhysicsWallah Alternative Noida | Offline Expert Biology',
+  title: 'PhysicsWallah Alternative Noida | Live Expert Biology',
   description:
-    'Need offline alternative to PhysicsWallah in Noida? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 88264-44334!',
+    'Need a live alternative to PhysicsWallah in Noida? Cerebrum: live small-batch classes, instant doubt resolution, AIIMS faculty, 98% success rate. Better than mass video lectures. Call 88264-44334!',
   keywords: [
     'physics wallah alternative noida',
     'offline neet coaching noida',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     title: 'PhysicsWallah Alternative Noida',
     description:
-      'Want real classroom interaction instead of video lectures? Experience offline NEET biology coaching.',
+      'Want real-time interaction instead of pre-recorded video lectures? Experience live small-batch NEET biology coaching.',
     url: 'https://cerebrumbiologyacademy.com/physics-wallah-alternative-noida',
   },
   alternates: {
@@ -41,17 +41,17 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'PhysicsWallah Alternative Noida | Offline Expert Biology',
+    title: 'PhysicsWallah Alternative Noida | Live Expert Biology',
     description:
-      'Need offline alternative to PhysicsWallah in Noida? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 88264-44334!',
+      'Need a live alternative to PhysicsWallah in Noida? Cerebrum: live small-batch classes, instant doubt resolution, AIIMS faculty, 98% success rate. Better than mass video lectures. Call 88264-44334!',
   },
 }
 
 const comparisonData = [
   {
     feature: 'Teaching Mode',
-    pw: 'Video lectures',
-    cerebrum: 'Live offline classes',
+    pw: 'Recorded video lectures',
+    cerebrum: 'Live interactive classes',
     winner: 'cerebrum',
   },
   {
@@ -85,14 +85,14 @@ const comparisonData = [
 
 const faqs = [
   {
-    question: 'Why consider offline coaching over PhysicsWallah?',
+    question: 'Why consider live coaching over PhysicsWallah?',
     answer:
-      'Key differences: 1) Real classroom interaction vs passive video watching, 2) Instant doubt resolution vs waiting for replies, 3) Structured discipline vs self-study challenges, 4) Peer learning environment, 5) Regular assessments with immediate feedback. Online works for some, but many need offline structure.',
+      'Key differences: 1) Real-time interaction vs passive video watching, 2) Instant doubt resolution vs waiting for replies, 3) Structured discipline vs self-study challenges, 4) Peer learning environment, 5) Regular assessments with immediate feedback. Pre-recorded videos work for some, but many need the structure of live classes.',
   },
   {
     question: 'How do PhysicsWallah and Cerebrum compare for biology?',
     answer:
-      'PW: Video-based, low-cost (₹5-15K), 500+ students in batch, doubt resolution in 24-48 hrs. Cerebrum: Live offline classes, ₹45-75K, 25 students max, doubts cleared instantly. For biology (visual subject with diagrams), offline teaching is significantly more effective.',
+      'PW: Video-based, low-cost (₹5-15K), 500+ students in batch, doubt resolution in 24-48 hrs. Cerebrum: live interactive classes, ₹45-75K, 25 students max, doubts cleared instantly. For biology (visual subject with diagrams), live teaching is significantly more effective.',
   },
   {
     question: 'Is PhysicsWallah enough for NEET biology?',
@@ -120,9 +120,9 @@ const faqs = [
       'PW Vidyapeeth has offline centers but: 1) Very large batches (80-120 students), 2) Recent entrant - less track record, 3) Generic all-subject approach, 4) Fees similar to traditional coaching (₹80K-1.2L). Cerebrum offers biology specialization with 25-student batches at lower cost.',
   },
   {
-    question: 'How to decide: PW online vs Cerebrum offline?',
+    question: 'How to decide: PW recorded videos vs Cerebrum live classes?',
     answer:
-      "Choose PW if: Budget is tight (<₹20K), you have strong self-discipline, you don't need personal attention. Choose Cerebrum if: You need structured learning, you have doubt-heavy learning style, biology is your weak subject, you want guaranteed classroom discipline.",
+      "Choose PW if: Budget is tight (<₹20K), you have strong self-discipline, you don't need personal attention. Choose Cerebrum if: You need structured learning, you have doubt-heavy learning style, biology is your weak subject, you want the discipline of live classes.",
   },
 ]
 
@@ -166,8 +166,8 @@ export default function PhysicsWallahAlternativeNoida() {
               PhysicsWallah Alternative in Noida
             </h1>
             <p className="text-xl text-purple-100 mb-8">
-              Want real classroom interaction instead of video lectures? Experience offline NEET
-              biology coaching at Cerebrum.
+              Want real-time interaction instead of pre-recorded video lectures? Experience live,
+              small-batch NEET biology coaching at Cerebrum — live online for Noida students.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -197,8 +197,8 @@ export default function PhysicsWallahAlternativeNoida() {
               <div className="flex justify-center mb-2">
                 <Building className="w-8 h-8 text-purple-600" />
               </div>
-              <div className="text-2xl font-bold text-purple-600">Offline</div>
-              <div className="text-gray-600">Real Classroom</div>
+              <div className="text-2xl font-bold text-purple-600">Live</div>
+              <div className="text-gray-600">Real-Time Classes</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-600">25</div>
@@ -219,7 +219,9 @@ export default function PhysicsWallahAlternativeNoida() {
       {/* Online vs Offline Visual */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Online Videos vs Real Classroom</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Recorded Mass Videos vs Live Small Batches
+          </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200">
               <div className="flex items-center gap-3 mb-6">
@@ -252,7 +254,7 @@ export default function PhysicsWallahAlternativeNoida() {
             <div className="bg-purple-50 rounded-xl shadow-lg p-8 border-2 border-purple-400">
               <div className="flex items-center gap-3 mb-6">
                 <Building className="w-10 h-10 text-purple-600" />
-                <h3 className="text-2xl font-bold text-purple-700">Cerebrum Offline</h3>
+                <h3 className="text-2xl font-bold text-purple-700">Cerebrum Live</h3>
               </div>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -382,54 +384,44 @@ export default function PhysicsWallahAlternativeNoida() {
         </div>
       </section>
 
-      {/* Center Location */}
+      {/* How Classes Run */}
       <section className="py-16 bg-purple-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="md:flex">
-              <div className="md:w-1/2 p-8">
-                <h2 className="text-2xl font-bold mb-4">Visit Our Noida Center</h2>
-                <p className="text-gray-600 mb-4">
-                  Experience a real classroom - something online can never replace.
-                </p>
-                <div className="flex items-start gap-3 mb-4">
-                  <MapPin className="w-5 h-5 text-purple-600 mt-1" />
-                  <div>
-                    <p className="font-semibold">B-45, Sector 62</p>
-                    <p className="text-gray-600">Noida, UP 201301</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Near Sector 62 Metro Station (Blue Line)
-                    </p>
-                  </div>
+            <div className="p-8">
+              <h2 className="text-2xl font-bold mb-4">Live Classes for Noida Students</h2>
+              <p className="text-gray-600 mb-4">
+                Experience real-time, small-batch teaching with instant doubt resolution — something
+                pre-recorded videos can never replace.
+              </p>
+              <div className="flex items-start gap-3 mb-4">
+                <MapPin className="w-5 h-5 text-purple-600 mt-1" />
+                <div>
+                  <p className="font-semibold">Serving Noida Online</p>
+                  <p className="text-gray-600">
+                    Join live interactive classes from anywhere in Noida — no travel needed.
+                  </p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Prefer in-person? Our nearest walk-in center is South Extension, New Delhi.
+                  </p>
                 </div>
-                <div className="flex items-start gap-3 mb-4">
-                  <Clock className="w-5 h-5 text-purple-600 mt-1" />
-                  <div>
-                    <p className="font-semibold">Batch Timings</p>
-                    <p className="text-gray-600">Morning: 8 AM - 12 PM</p>
-                    <p className="text-gray-600">Evening: 5 PM - 8 PM</p>
-                    <p className="text-gray-600">Weekend: Sat-Sun 9 AM - 1 PM</p>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3 mb-4">
+                <Clock className="w-5 h-5 text-purple-600 mt-1" />
+                <div>
+                  <p className="font-semibold">Batch Timings</p>
+                  <p className="text-gray-600">Morning: 8 AM - 12 PM</p>
+                  <p className="text-gray-600">Evening: 5 PM - 8 PM</p>
+                  <p className="text-gray-600">Weekend: Sat-Sun 9 AM - 1 PM</p>
                 </div>
-                <a
-                  href="tel:+918826444334"
-                  className="inline-flex items-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition"
-                >
-                  <Phone className="w-5 h-5" />
-                  Book Free Trial Class
-                </a>
               </div>
-              <div className="md:w-1/2">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.1234567890123!2d77.3649!3d28.628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSector%2062%2C%20Noida!5e0!3m2!1sen!2sin!4v1234567890"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
+              <a
+                href="tel:+918826444334"
+                className="inline-flex items-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition"
+              >
+                <Phone className="w-5 h-5" />
+                Book Free Trial Class
+              </a>
             </div>
           </div>
         </div>

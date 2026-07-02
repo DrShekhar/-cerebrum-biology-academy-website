@@ -33,8 +33,8 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Sector 15', 'Sector 16', 'Film City', 'Old Noida'],
     landmarks: ['Sector 15 Market', 'Film City Road', 'Sector 15 Residential'],
     description:
-      'Noida Sector 15 Metro is one of the first stations entering Noida from Delhi. Students from Old Noida sectors access our Sector 62 center via this station.',
-    walkingTime: '20 minutes from our center',
+      'Noida Sector 15 Metro is one of the first stations entering Noida from Delhi. Students from Old Noida sectors are served by Cerebrum live online NEET classes.',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.585, lng: 77.31 },
     voiceSearchPhrases: [
       'NEET coaching near Sector 15 Metro Noida',
@@ -49,8 +49,8 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Sector 16', 'Sector 15', 'Sector 17', 'Film City'],
     landmarks: ['Sector 16 Market', 'Residential Area', 'Metro Station'],
     description:
-      'Noida Sector 16 Metro serves the established residential sectors of Old Noida. Direct Blue Line connectivity to our Sector 62 center.',
-    walkingTime: '18 minutes from our center',
+      'Noida Sector 16 Metro serves the established residential sectors of Old Noida, whose students are served by Cerebrum live online NEET classes.',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.578, lng: 77.315 },
     voiceSearchPhrases: [
       'NEET coaching near Sector 16 Metro',
@@ -65,8 +65,8 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Sector 18', 'Atta Market', 'GIP Mall', 'Wave Mall'],
     landmarks: ['Atta Market', 'Great India Place', 'Wave Mall', 'Brahmaputra'],
     description:
-      'Noida Sector 18 Metro is the commercial heart of Noida, near Atta Market and GIP Mall. Students from this busy area access our coaching easily.',
-    walkingTime: '15 minutes from our center',
+      'Noida Sector 18 Metro is the commercial heart of Noida, near Atta Market and GIP Mall. Students from this busy area are served by Cerebrum live online NEET classes.',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.57, lng: 77.32 },
     voiceSearchPhrases: [
       'NEET coaching near Atta Market Metro',
@@ -82,8 +82,8 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Botanical Garden', 'Sector 37', 'Sector 38', 'Interchange Point'],
     landmarks: ['Botanical Garden', 'Blue-Magenta Interchange', 'Sector 37'],
     description:
-      'Botanical Garden Metro is a key interchange station between Blue and Magenta lines. Students from South Delhi can access our Noida center via this station.',
-    walkingTime: '25 minutes from our center',
+      'Botanical Garden Metro is a key interchange station between Blue and Magenta lines. Students across South Delhi and Noida are served by Cerebrum live online NEET classes.',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.5635, lng: 77.334 },
     voiceSearchPhrases: [
       'NEET coaching near Botanical Garden Metro',
@@ -99,7 +99,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     landmarks: ['Noida Golf Course', 'Sector 38 Market', 'Residential Area'],
     description:
       'Golf Course Metro serves the upscale golf course area of Noida. Premium residents here seek quality NEET coaching.',
-    walkingTime: '22 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.558, lng: 77.34 },
     voiceSearchPhrases: [
       'NEET coaching near Golf Course Metro Noida',
@@ -114,8 +114,8 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['City Centre', 'Sector 32', 'Sector 33', 'Commercial Hub'],
     landmarks: ['City Centre Mall', 'Commercial Complex', 'Sector 32 Market'],
     description:
-      'Noida City Centre Metro is a major commercial hub. Students from surrounding sectors access our coaching via this busy station.',
-    walkingTime: '12 minutes from our center',
+      'Noida City Centre Metro is a major commercial hub. Students from surrounding sectors are served by Cerebrum live online NEET classes.',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.574, lng: 77.356 },
     voiceSearchPhrases: [
       'NEET coaching near Noida City Centre Metro',
@@ -130,8 +130,8 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Sector 34', 'Sector 33', 'Sector 35'],
     landmarks: ['Sector 34 Market', 'Residential Area', 'Metro Station'],
     description:
-      'Noida Sector 34 Metro serves residential sectors in central Noida. Easy access to our Sector 62 center.',
-    walkingTime: '10 minutes from our center',
+      'Noida Sector 34 Metro serves residential sectors in central Noida, whose students are served by Cerebrum live online NEET classes.',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.58, lng: 77.362 },
     voiceSearchPhrases: ['NEET coaching near Sector 34 Metro', 'Biology classes in central Noida'],
   },
@@ -144,7 +144,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     landmarks: ['Sector 52 Market', 'Commercial Area', 'Residential Blocks'],
     description:
       'Noida Sector 52 Metro is near the Blue-Aqua interchange area. Students can connect to both metro lines from here.',
-    walkingTime: '8 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.59, lng: 77.37 },
     voiceSearchPhrases: [
       'NEET coaching near Sector 52 Metro',
@@ -159,8 +159,8 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Sector 61', 'Sector 60', 'Sector 62'],
     landmarks: ['Sector 61 Market', 'IT Offices', 'Metro Station'],
     description:
-      'Noida Sector 61 Metro is adjacent to our Sector 62 center. Students from Sectors 60-61 have the easiest access.',
-    walkingTime: '6 minutes from our center',
+      'Noida Sector 61 Metro serves Sectors 60-62, whose students are served by Cerebrum live online NEET classes.',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.61, lng: 77.375 },
     voiceSearchPhrases: [
       'NEET coaching near Sector 61 Metro Noida',
@@ -173,15 +173,15 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     line: 'Blue',
     lineColor: '#0066B3',
     nearbyAreas: ['Sector 62', 'Electronic City', 'NSEZ', 'IT Hub'],
-    landmarks: ['Electronic City', 'NSEZ', 'HCL Campus', 'Sector 62 Metro Station'],
+    landmarks: ['Electronic City', 'NSEZ', 'HCL Campus', 'Sector 62 Blue Line station'],
     description:
-      'Noida Sector 62 Metro is the NEAREST station to our center - just 5 minutes walk. This IT hub station serves thousands of professionals and students daily.',
-    walkingTime: '5 minutes from our center',
+      'Sector 62 (Electronic City) is the IT hub of Noida, serving thousands of professionals and students daily. Cerebrum serves Sector 62 families through live online NEET classes — no commute needed.',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.627, lng: 77.372 },
     voiceSearchPhrases: [
-      'NEET coaching near Sector 62 Metro Noida',
-      'Best NEET classes near Electronic City Metro',
-      'Biology coaching 5 minutes from Sector 62 station',
+      'online NEET coaching for Noida Sector 62 (Electronic City)',
+      'Best online NEET classes for Electronic City Noida',
+      'online Biology coaching for Noida Sector 62',
     ],
   },
   'noida-electronic-city-metro': {
@@ -192,8 +192,8 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Electronic City', 'Sector 63', 'IT Park', 'NSEZ'],
     landmarks: ['Electronic City', 'IT Companies', 'NSEZ Gate', 'Tech Hub'],
     description:
-      'Noida Electronic City Metro is the terminal station of Blue Line in Noida. Our center is easily accessible from this major IT hub.',
-    walkingTime: '8 minutes from our center',
+      'Noida Electronic City Metro is the terminal station of Blue Line in Noida. Cerebrum serves this major IT hub through live online NEET classes.',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.635, lng: 77.37 },
     voiceSearchPhrases: [
       'NEET coaching near Electronic City Metro',
@@ -212,8 +212,8 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Sector 51', 'Sector 50', 'Sector 52'],
     landmarks: ['Sector 51 Market', 'Aqua Line Start', 'Residential Area'],
     description:
-      'Sector 51 Metro is the starting point of Aqua Line. Students from this area can connect to Blue Line at Sector 52 for our center.',
-    walkingTime: '10 minutes from our center (via interchange)',
+      'Sector 51 Metro is the starting point of Aqua Line. Students from this area are served by Cerebrum live online NEET classes.',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.575, lng: 77.355 },
     voiceSearchPhrases: [
       'NEET coaching near Sector 51 Metro',
@@ -228,8 +228,8 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Sector 76', 'Sector 77', 'Sector 75', 'Premium Societies'],
     landmarks: ['Mahagun Mywoods', 'Amrapali Zodiac', 'Premium Towers'],
     description:
-      'Sector 76 Metro serves the premium residential sectors along the Aqua Line corridor. Many NEET aspirants from here travel to our center.',
-    walkingTime: '20 minutes from our center',
+      'Sector 76 Metro serves the premium residential sectors along the Aqua Line corridor. Many NEET aspirants from here choose Cerebrum live online NEET classes.',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.54, lng: 77.39 },
     voiceSearchPhrases: [
       'NEET coaching near Sector 76 Metro',
@@ -245,7 +245,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     landmarks: ['Noida Expressway', 'Sector 101 Commercial', 'IT Parks'],
     description:
       'Sector 101 Metro serves the premium expressway sectors. Students from ATS and Supertech societies use this station.',
-    walkingTime: '25 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.51, lng: 77.41 },
     voiceSearchPhrases: [
       'NEET coaching near Sector 101 Metro',
@@ -261,7 +261,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     landmarks: ['ATS Destinaire', 'ATS Le Grandiose', 'Supertech Supernova', 'Mahagun'],
     description:
       'Sector 137 Metro serves one of the most premium sectors in Noida. ATS Destinaire, Supertech, and Mahagun residents use this station.',
-    walkingTime: '30 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.48, lng: 77.43 },
     voiceSearchPhrases: [
       'NEET coaching near Sector 137 Metro',
@@ -278,7 +278,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     landmarks: ['Extension Border', 'New Development', 'Metro Station'],
     description:
       'Sector 142 Metro is near the Noida Extension border. Students from developing sectors use this station.',
-    walkingTime: '35 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.46, lng: 77.45 },
     voiceSearchPhrases: [
       'NEET coaching near Sector 142 Metro',
@@ -294,7 +294,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     landmarks: ['Noida Extension Start', 'New Projects', 'Metro Station'],
     description:
       'Sector 143 Metro marks the beginning of Noida Extension area. Growing student population from new projects.',
-    walkingTime: '38 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.45, lng: 77.46 },
     voiceSearchPhrases: [
       'NEET coaching near Sector 143 Metro',
@@ -309,7 +309,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Sector 144', 'Sector 145', 'Noida Extension'],
     landmarks: ['Extension Area', 'New Development', 'Metro Station'],
     description: 'Sector 144 Metro serves the Noida Extension area with new residential projects.',
-    walkingTime: '40 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.44, lng: 77.47 },
     voiceSearchPhrases: ['NEET coaching accessible from Sector 144 Metro'],
   },
@@ -322,7 +322,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     landmarks: ['Gaur City Approach', 'Extension Area', 'Metro Station'],
     description:
       'Sector 145 Metro is approaching Gaur City area. Many students from Noida Extension use this station.',
-    walkingTime: '42 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.43, lng: 77.48 },
     voiceSearchPhrases: ['NEET coaching near Gaur City Metro'],
   },
@@ -335,7 +335,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     landmarks: ['Near Gaur City', 'Supertech Ecovillage', 'Metro Station'],
     description:
       'Sector 146 Metro is near Gaur City and Supertech Ecovillage. High student density area.',
-    walkingTime: '45 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.42, lng: 77.49 },
     voiceSearchPhrases: ['NEET coaching near Supertech Ecovillage Metro'],
   },
@@ -348,7 +348,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     landmarks: ['Gaur City Mall', 'Ace Divino', 'Metro Station'],
     description:
       'Sector 147 Metro is closest to Gaur City Mall and Ace City. Major student hub in Noida Extension.',
-    walkingTime: '48 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.41, lng: 77.5 },
     voiceSearchPhrases: [
       'NEET coaching near Gaur City Mall Metro',
@@ -364,7 +364,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     landmarks: ['GN Border', 'Extension Terminal Area', 'Metro Station'],
     description:
       'Sector 148 Metro is near the Greater Noida border, serving the far end of Noida Extension.',
-    walkingTime: '50 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.4, lng: 77.51 },
     voiceSearchPhrases: ['NEET coaching accessible from Sector 148 Metro'],
   },
@@ -377,7 +377,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     landmarks: ['Galgotias University', 'Sharda University', 'IT Companies'],
     description:
       "Knowledge Park II Metro is Greater Noida's educational hub. University students and families use this station.",
-    walkingTime: '55 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.38, lng: 77.52 },
     voiceSearchPhrases: [
       'NEET coaching near Knowledge Park Metro',
@@ -389,11 +389,11 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     slug: 'pari-chowk-metro',
     line: 'Aqua',
     lineColor: '#00CED1',
-    nearbyAreas: ['Pari Chowk', 'Greater Noida Center', 'Commercial Hub'],
+    nearbyAreas: ['Pari Chowk', 'Greater Noida Central', 'Commercial Hub'],
     landmarks: ['Pari Chowk Roundabout', 'Commercial Center', 'Shopping Hub'],
     description:
       'Pari Chowk Metro is the commercial heart of Greater Noida. Students from surrounding areas access metro here.',
-    walkingTime: '58 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.37, lng: 77.53 },
     voiceSearchPhrases: [
       'NEET coaching accessible from Pari Chowk Metro',
@@ -408,7 +408,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Alpha 1', 'Alpha 2', 'Greater Noida Sectors'],
     landmarks: ['Alpha 1 Market', 'Alpha Commercial Belt', 'Residential'],
     description: 'Alpha 1 Metro serves the established Alpha sectors of Greater Noida.',
-    walkingTime: '60 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.36, lng: 77.54 },
     voiceSearchPhrases: ['NEET coaching for Alpha Greater Noida students'],
   },
@@ -420,7 +420,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Alpha 2', 'Alpha 1', 'Commercial Area'],
     landmarks: ['Alpha 2 Commercial', 'Residential Blocks', 'Metro Station'],
     description: 'Alpha 2 Metro serves residential and commercial areas of Greater Noida.',
-    walkingTime: '62 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.355, lng: 77.545 },
     voiceSearchPhrases: ['NEET coaching accessible from Alpha 2 Metro'],
   },
@@ -432,7 +432,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Delta 1', 'Industrial Area', 'Greater Noida'],
     landmarks: ['Delta Industrial', 'Factories', 'Residential'],
     description: 'Delta 1 Metro serves the industrial sectors of Greater Noida.',
-    walkingTime: '65 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.35, lng: 77.55 },
     voiceSearchPhrases: ['NEET coaching for Delta Greater Noida students'],
   },
@@ -444,7 +444,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['GNIDA', 'Greater Noida Admin', 'Government Offices'],
     landmarks: ['GNIDA Office', 'Administrative Hub', 'Government Complex'],
     description: 'GNIDA Office Metro serves the administrative heart of Greater Noida.',
-    walkingTime: '68 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.345, lng: 77.555 },
     voiceSearchPhrases: ['NEET coaching accessible from GNIDA Metro'],
   },
@@ -456,7 +456,7 @@ export const noidaMetroStations: Record<string, NoidaMetroStation> = {
     nearbyAreas: ['Depot Area', 'Greater Noida Terminal', 'End Station'],
     landmarks: ['Metro Depot', 'Terminal Station', 'Greater Noida End'],
     description: 'Depot Metro is the terminal station of Aqua Line in Greater Noida.',
-    walkingTime: '70 minutes from our center',
+    walkingTime: 'Live online classes — no commute',
     coordinates: { lat: 28.34, lng: 77.56 },
     voiceSearchPhrases: ['NEET coaching for far Greater Noida students'],
   },
@@ -479,7 +479,7 @@ export function getNoidaMetrosByLine(line: NoidaMetroStation['line']): string[] 
 }
 
 export function getNearestNoidaMetroStations(): string[] {
-  // Return metros closest to our Sector 62 center
+  // Return Blue Line stations serving the Noida Sector 62 (Electronic City) area
   return [
     'noida-sector-62-metro',
     'noida-sector-61-metro',

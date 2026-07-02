@@ -44,14 +44,14 @@ function useScrollAnimation(threshold = 0.1) {
 }
 
 const eastDelhiAreas = [
-  { name: 'Preet Vihar', distance: '25 km from center', available: 'Online' },
-  { name: 'Laxmi Nagar', distance: '22 km from center', available: 'Online' },
-  { name: 'Mayur Vihar Phase 1', distance: '20 km from center', available: 'Online' },
-  { name: 'Mayur Vihar Phase 2', distance: '18 km from center', available: 'Online' },
-  { name: 'Patparganj', distance: '18 km from center', available: 'Online' },
-  { name: 'Shahdara', distance: '28 km from center', available: 'Online' },
-  { name: 'Dilshad Garden', distance: '30 km from center', available: 'Online' },
-  { name: 'Anand Vihar', distance: '24 km from center', available: 'Online' },
+  { name: 'Preet Vihar', distance: 'Served live online', available: 'Online' },
+  { name: 'Laxmi Nagar', distance: 'Served live online', available: 'Online' },
+  { name: 'Mayur Vihar Phase 1', distance: 'Served live online', available: 'Online' },
+  { name: 'Mayur Vihar Phase 2', distance: 'Served live online', available: 'Online' },
+  { name: 'Patparganj', distance: 'Served live online', available: 'Online' },
+  { name: 'Shahdara', distance: 'Served live online', available: 'Online' },
+  { name: 'Dilshad Garden', distance: 'Served live online', available: 'Online' },
+  { name: 'Anand Vihar', distance: 'Served live online', available: 'Online' },
 ]
 
 const whyChooseUs = [
@@ -70,7 +70,7 @@ const whyChooseUs = [
     icon: Clock,
     title: 'Convenient Access',
     description:
-      'East Delhi students can easily access our online classes or travel to Greater Noida.',
+      'East Delhi students learn from home through live online classes - no commute needed.',
   },
   {
     icon: Star,
@@ -81,24 +81,24 @@ const whyChooseUs = [
 
 const faqs = [
   {
-    question: 'How far is your center from East Delhi?',
+    question: 'Do you have a center in East Delhi?',
     answer:
-      'Our center is in Greater Noida, approximately 18-30 km from various East Delhi localities. However, our live online classes are equally effective and save commute time. Many East Delhi students prefer hybrid mode - online regular classes with occasional offline doubt sessions.',
+      'We teach East Delhi students through live online classes - no travel needed, saving commute time. Classes are fully interactive with live doubt-clearing. If you prefer in-person study, our nearest walk-in center is South Extension, New Delhi.',
   },
   {
     question: 'Do students from Mayur Vihar attend your classes?',
     answer:
-      'Yes! We have many successful students from Mayur Vihar Phase 1, 2, and 3. Some attend online classes while others come to our Greater Noida center on weekends for special sessions.',
+      'Yes! We have many successful students from Mayur Vihar Phase 1, 2, and 3, all learning through our live online classes from home.',
   },
   {
     question: 'What timings suit East Delhi students?',
     answer:
-      'We offer evening batches (5-8 PM) which are popular with East Delhi students. Weekend intensive batches are also available for those who prefer offline classes.',
+      'We offer evening batches (5-8 PM) which are popular with East Delhi students, plus weekend intensive batches - all delivered as live online classes.',
   },
   {
-    question: 'Is there any test center in East Delhi?',
+    question: 'How are mock tests conducted for East Delhi students?',
     answer:
-      'Major mock tests can be taken at our Greater Noida center. For convenience, we also conduct online proctored tests that students can take from home.',
+      'We conduct online proctored tests that students can take from home, with detailed performance analysis and feedback - no travel required.',
   },
 ]
 
@@ -140,15 +140,17 @@ export default function BiologyTutorEastDelhiPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
-            name: 'Cerebrum Biology Academy - East Delhi',
+            name: 'Cerebrum Biology Academy - East Delhi (Online)',
             description:
-              'Best Biology Tutor for East Delhi students - NEET & Board exam preparation',
+              'Live online Biology Tutor for East Delhi students - NEET & Board exam preparation',
             url: 'https://cerebrumbiologyacademy.com/biology-tutor-east-delhi',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',
-              addressLocality: 'Greater Noida',
-              addressRegion: 'Uttar Pradesh',
+              streetAddress: 'D 35, South Extension Part 2',
+              addressLocality: 'New Delhi',
+              addressRegion: 'Delhi',
+              postalCode: '110049',
               addressCountry: 'IN',
             },
             areaServed: [

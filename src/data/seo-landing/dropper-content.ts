@@ -119,7 +119,8 @@ export const neetDropperBatchOnline: SEOLandingContent = {
       {
         icon: 'users',
         question: 'Feeling judged by family and friends?',
-        solution: 'Our community of our community of successful droppers proves the decision is worth it.',
+        solution:
+          'Our community of our community of successful droppers proves the decision is worth it.',
       },
       {
         icon: 'alert-triangle',
@@ -1392,7 +1393,7 @@ export const neetDropperBatch: SEOLandingContent = {
 
   title: 'NEET Dropper Batch 2026 Delhi NCR | Online & Offline | Cerebrum Academy',
   metaDescription:
-    'NEET dropper batch 2026 by Cerebrum Academy. Online & offline in Delhi NCR — South Extension, Gurugram, Noida. AIIMS faculty, 15-student batches, 98% NEET qualification rate. 80-120 marks avg improvement. Join now!',
+    'NEET dropper batch 2026 by Cerebrum Academy. Offline at South Extension & Gurugram, plus live online for Noida and all of Delhi NCR. AIIMS faculty, 15-student batches, 98% NEET qualification rate. 80-120 marks avg improvement. Join now!',
   keywords: [
     'NEET dropper batch 2026',
     'NEET dropper batch Delhi',
@@ -1431,7 +1432,7 @@ export const neetDropperBatch: SEOLandingContent = {
         icon: 'map-pin',
         question: 'Confused between online and offline coaching?',
         solution:
-          'Choose what works for you — attend live classes at our South Extension, Gurugram or Noida centers, or study from home with our online batch. Same faculty, same results.',
+          'Choose what works for you — attend live classes at our South Extension or Gurugram centres, or study from home with our online batch (which serves Noida and all of Delhi NCR). Same faculty, same results.',
       },
       {
         icon: 'users',
@@ -1462,7 +1463,7 @@ export const neetDropperBatch: SEOLandingContent = {
         icon: 'map-pin',
         title: 'Online + Offline Flexibility',
         description:
-          'Attend classes at South Extension, Gurugram or Noida centers or join the online batch. Switch modes anytime.',
+          'Attend classes at our South Extension or Gurugram centres, or join the online batch from Noida or anywhere in India. Switch modes anytime.',
       },
       {
         icon: 'calendar',
@@ -1500,7 +1501,7 @@ export const neetDropperBatch: SEOLandingContent = {
     {
       question: 'Is the dropper batch available online and offline both?',
       answer:
-        'Yes. You can attend classes in person at our South Extension (Delhi), Gurugram, or Noida centers, or join the fully online batch from anywhere in India. Both modes have the same AIIMS faculty, same curriculum, and same test series. Many students start offline and switch to online closer to the exam.',
+        'Yes. You can attend classes in person at our South Extension (Delhi) or Gurugram centres, or join the fully online batch from Noida or anywhere in India. Both modes have the same AIIMS faculty, same curriculum, and same test series. Many students start offline and switch to online closer to the exam.',
     },
     {
       question: 'How much can I improve my NEET score in a drop year?',
@@ -1542,7 +1543,7 @@ export const neetDropperBatch: SEOLandingContent = {
     paragraphs: [
       {
         heading: 'Online vs Offline Dropper Batch: Choosing What Works for You',
-        body: 'The debate between online and offline coaching is especially relevant for dropper students who have a full year dedicated to NEET preparation. Offline classes at our Delhi NCR centers in South Extension, Gurugram, and Noida provide the structure of a fixed daily routine, face-to-face interaction with faculty, and the social accountability of attending classes with peers. Online classes offer flexibility to study from home, elimination of commute time that can add 1-2 productive hours daily, and the ability to replay recorded sessions for revision. At Cerebrum, both modes use the same AIIMS faculty, identical curriculum, and the same test series. Many students start with offline classes for the discipline of a fixed routine and transition to online mode in the final three months when intensive self-practice becomes the priority. Our hybrid flexibility allows you to switch modes at any point based on what maximizes your productivity.',
+        body: 'The debate between online and offline coaching is especially relevant for dropper students who have a full year dedicated to NEET preparation. Offline classes at our Delhi NCR centres in South Extension and Gurugram provide the structure of a fixed daily routine, face-to-face interaction with faculty, and the social accountability of attending classes with peers. Online classes offer flexibility to study from home, elimination of commute time that can add 1-2 productive hours daily, and the ability to replay recorded sessions for revision. At Cerebrum, both modes use the same AIIMS faculty, identical curriculum, and the same test series. Many students start with offline classes for the discipline of a fixed routine and transition to online mode in the final three months when intensive self-practice becomes the priority. Our hybrid flexibility allows you to switch modes at any point based on what maximizes your productivity.',
       },
       {
         heading: 'How Small Batch Sizes Transform Dropper Outcomes in Delhi NCR',
@@ -1550,7 +1551,7 @@ export const neetDropperBatch: SEOLandingContent = {
       },
       {
         heading: 'Delhi NCR Dropper Batch Locations and Accessibility',
-        body: 'Cerebrum operates dropper batch centers at three strategic locations across Delhi NCR. The South Extension center is accessible via the Lajpat Nagar Metro station and serves students from South Delhi, Faridabad, and surrounding areas. The Gurugram center caters to students from Gurugram, Manesar, and Rewari, located near Huda City Centre Metro. The Noida center serves students from Noida, Greater Noida, and Ghaziabad. Each center is equipped with smart classrooms, a quiet self-study area, and a dedicated doubt resolution room where students can meet faculty between sessions. For students who live beyond comfortable commuting distance from any center, our online batch provides identical content with the added advantage of studying from home. All three centers and the online batch follow synchronized schedules so that students can attend a session at a different center if needed on any given day.',
+        body: 'Cerebrum runs offline dropper batches at two strategic centres across Delhi NCR, plus a live online batch that serves the rest of the region. The South Extension centre is accessible via the Lajpat Nagar Metro station and serves students from South Delhi, Faridabad, and surrounding areas. The Gurugram centre caters to students from Gurugram, Manesar, and Rewari, located near Huda City Centre Metro. Students from Noida, Greater Noida, Ghaziabad, and East Delhi are served through our live online batch — the same AIIMS faculty and test series with no commute. Each offline centre is equipped with smart classrooms, a quiet self-study area, and a dedicated doubt resolution room where students can meet faculty between sessions. For students who live beyond comfortable commuting distance from either centre, the online batch provides identical content with the added advantage of studying from home. All batches follow synchronized schedules so that students can switch between online and offline sessions as needed.',
       },
     ],
     checklist: [

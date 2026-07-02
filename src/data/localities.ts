@@ -2768,9 +2768,9 @@ export const localities: Locality[] = [
   },
   {
     id: 'noi-02',
-    name: 'Sector 62 Noida',
+    name: 'Noida Sector 62',
     slug: 'sector-62',
-    displayName: 'Sector 62, Noida',
+    displayName: 'Noida Sector 62',
     city: 'Noida',
     citySlug: 'noida',
     region: 'Noida',
@@ -2780,27 +2780,27 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching in Noida Sector 62 | IT Hub | Expert Faculty',
       description:
-        'Top NEET Biology coaching in Noida Sector 62. Near Sector 62 Metro, expert faculty, small batches, 340+ average score. Best coaching in Noida IT hub area.',
+        'Top online NEET Biology coaching for Noida Sector 62. Expert faculty, small batches, 340+ average score. Best coaching for the Noida IT hub area.',
       keywords: [
         'neet coaching noida sector 62',
         'biology coaching sector 62',
         'electronic city coaching',
       ],
-      localKeywords: ['sector 62 metro', 'electronic city', 'sector 59', 'sector 63'],
+      localKeywords: ['noida sector 62', 'electronic city', 'sector 59', 'sector 63'],
       h1: 'Best NEET Biology Coaching in Noida Sector 62',
       metaRobots: 'index,follow',
     },
 
     coordinates: { lat: 28.6271, lng: 77.3713 },
-    centerAddress: 'Online live classes with personalized Sector 62 Noida support',
+    centerAddress: 'Online live classes with personalized support for Noida Sector 62',
     nearbyLandmarks: [
-      'Sector 62 Metro',
+      'Sector 62 (Blue Line)',
       'Electronic City Metro',
       'Noida IT Hub',
       'Sector 59 Market',
     ],
     transportLinks: {
-      metros: ['Sector 62 Metro (Blue Line)', 'Sector 59 Metro', 'Electronic City Metro'],
+      metros: ['Sector 62 (Blue Line)', 'Sector 59 Metro', 'Electronic City Metro'],
       buses: ['Noida local buses'],
       accessibility: 'Blue Line connectivity, IT hub area with good transport',
     },
@@ -2826,7 +2826,7 @@ export const localities: Locality[] = [
     },
 
     content: {
-      heroTitle: "Sector 62 Noida's Trusted NEET Biology Coaching",
+      heroTitle: "Noida Sector 62's Trusted Online NEET Biology Coaching",
       heroSubtitle: 'Expert Biology coaching for Noida IT hub area',
       valueProposition: 'Quality NEET Biology coaching for Sector 62 and nearby sectors',
       urgencyMessage: 'Sector 62 batch starting soon! Enroll now.',
@@ -3527,12 +3527,12 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.585, lng: 77.31 },
-    centerAddress: 'Sector 62, Noida - 20 min via Blue Line Metro',
+    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Sector 15 Metro', 'Film City Road', 'Sector 15 Market'],
     transportLinks: {
       metros: ['Sector 15 Metro (Blue Line)', 'Sector 16 Metro'],
       buses: ['DTC buses', 'Noida local buses'],
-      accessibility: 'Direct Blue Line connectivity to our Sector 62 center',
+      accessibility: 'Served by Cerebrum live online NEET classes — no commute',
     },
 
     demographics: {
@@ -3573,9 +3573,9 @@ export const localities: Locality[] = [
 
     faqs: [
       {
-        question: 'How do Sector 15 students reach your center?',
+        question: 'Do Sector 15 students need to travel for coaching?',
         answer:
-          'Take Blue Line metro from Sector 15 Metro to Sector 62 Metro - just 20 minutes direct journey. Our center is 5 minutes walk from Sector 62 station.',
+          'No travel needed — Sector 15 students join our live online NEET classes from home. The nearest walk-in centre is South Extension, New Delhi.',
       },
       {
         question: 'Do you offer online classes for Sector 15 students?',
@@ -3622,7 +3622,7 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.578, lng: 77.315 },
-    centerAddress: 'Sector 62, Noida - 18 min via Blue Line Metro',
+    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Sector 16 Metro', 'Film City', 'Sector 16 Market'],
     transportLinks: {
       metros: ['Sector 16 Metro (Blue Line)', 'Sector 15 Metro'],
@@ -3665,9 +3665,9 @@ export const localities: Locality[] = [
 
     faqs: [
       {
-        question: 'How far is your center from Sector 16?',
+        question: 'Do Sector 16 students need to commute for coaching?',
         answer:
-          'Just 18 minutes via Blue Line Metro. Take metro from Sector 16 to Sector 62 station.',
+          'No commute needed — Sector 16 students join our live online NEET classes from home. The nearest walk-in centre is South Extension, New Delhi.',
       },
     ],
 
@@ -3709,7 +3709,7 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.55, lng: 77.38 },
-    centerAddress: 'Sector 62, Noida - Aqua Line connected',
+    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Noida Expressway', 'IT Parks', 'Commercial Hub'],
     transportLinks: {
       metros: ['Sector 93 Metro (Aqua Line)'],
@@ -3796,7 +3796,7 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.53, lng: 77.4 },
-    centerAddress: 'Sector 62, Noida - 15 min via Aqua Line',
+    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['ATS Pristine', 'Supertech Supernova', 'Mahagun Moderne'],
     transportLinks: {
       metros: ['Noida City Centre Metro', 'Sector 101 Metro'],
@@ -3886,7 +3886,7 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.51, lng: 77.42 },
-    centerAddress: 'Sector 62, Noida - Online and Offline options',
+    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Jaypee Greens', 'Jaypee Wishtown', 'Golf Course'],
     transportLinks: {
       metros: ['Sector 120 Metro (Aqua Line)'],
@@ -3973,7 +3973,7 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.48, lng: 77.43 },
-    centerAddress: 'Sector 62, Noida - 30 min via Aqua Line',
+    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['ATS Destinaire', 'ATS Le Grandiose', 'Sector 137 Metro'],
     transportLinks: {
       metros: ['Sector 137 Metro (Aqua Line)'],
@@ -4019,9 +4019,9 @@ export const localities: Locality[] = [
 
     faqs: [
       {
-        question: 'How do Sector 137 students reach your center?',
+        question: 'How do Sector 137 students attend Cerebrum?',
         answer:
-          'Direct Aqua Line metro from Sector 137 station. Alternatively, our online classes are very popular with Sector 137 families.',
+          'Sector 137 families join our live online NEET classes from home — no commute. The nearest walk-in centre is South Extension, New Delhi.',
       },
     ],
 
@@ -4063,7 +4063,7 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.5, lng: 77.415 },
-    centerAddress: 'Sector 62, Noida - Fellow IT hub location',
+    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['IT Park', 'Tech Companies', 'Noida Expressway'],
     transportLinks: {
       metros: ['Nearby Aqua Line stations'],
@@ -4150,7 +4150,7 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.41, lng: 77.5 },
-    centerAddress: 'Sector 62, Noida - Online classes popular; Weekend offline',
+    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Gaur City Mall', 'Gaur City 1', 'Gaur City 2'],
     transportLinks: {
       metros: ['Sector 147 Metro (Aqua Line) - nearest'],
@@ -4250,7 +4250,7 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.38, lng: 77.52 },
-    centerAddress: 'Sector 62, Noida - Online popular; Aqua Line metro access',
+    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Galgotias University', 'Sharda University', 'IT Companies'],
     transportLinks: {
       metros: ['Knowledge Park II Metro (Aqua Line)'],
@@ -4328,16 +4328,16 @@ export const localities: Locality[] = [
         'Best NEET Biology coaching near Pari Chowk Greater Noida. Aqua Line metro connected. AIIMS faculty, small batches.',
       keywords: [
         'neet coaching pari chowk',
-        'biology coaching greater noida center',
+        'biology coaching greater noida',
         'neet tuition pari chowk',
       ],
-      localKeywords: ['pari chowk', 'greater noida center', 'commercial hub'],
+      localKeywords: ['pari chowk', 'greater noida', 'commercial hub'],
       h1: 'NEET Biology Coaching near Pari Chowk Greater Noida',
       metaRobots: 'index,follow',
     },
 
     coordinates: { lat: 28.37, lng: 77.53 },
-    centerAddress: 'Sector 62, Noida - Aqua Line metro connected',
+    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Pari Chowk Roundabout', 'Commercial Center', 'Shopping Hub'],
     transportLinks: {
       metros: ['Pari Chowk Metro (Aqua Line)'],
@@ -4363,7 +4363,7 @@ export const localities: Locality[] = [
     content: {
       heroTitle: 'NEET Coaching for Pari Chowk Families',
       heroSubtitle: 'Metro connected quality coaching',
-      valueProposition: 'Accessible coaching for Greater Noida center',
+      valueProposition: 'Accessible online coaching for Greater Noida',
       urgencyMessage: 'Pari Chowk area batch starting!',
       localChallenge: 'Commercial area lacks specialized coaching.',
       successMetric: '80% success rate among Pari Chowk students',
@@ -4380,9 +4380,9 @@ export const localities: Locality[] = [
 
     faqs: [
       {
-        question: 'How long does it take from Pari Chowk to your center?',
+        question: 'How do Pari Chowk students attend Cerebrum?',
         answer:
-          'About 58 minutes via Aqua Line metro. Many students prefer our online classes for convenience.',
+          'Pari Chowk students join our live online NEET classes from home — no commute. Many prefer this for convenience.',
       },
     ],
 
@@ -4424,7 +4424,7 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.36, lng: 77.54 },
-    centerAddress: 'Sector 62, Noida - Online and Aqua Line metro options',
+    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Alpha 1 Market', 'Alpha Commercial Belt', 'Metro Stations'],
     transportLinks: {
       metros: ['Alpha 1 Metro', 'Alpha 2 Metro (Aqua Line)'],
@@ -4511,7 +4511,7 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.62, lng: 77.45 },
-    centerAddress: 'Sector 62, Noida - Online coaching most popular',
+    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Crossing Republik Mall', 'Main Gate', 'NH-24'],
     transportLinks: {
       metros: ['Proposed Metro'],
@@ -4559,7 +4559,7 @@ export const localities: Locality[] = [
       {
         question: 'Why is online coaching best for Crossing Republik students?',
         answer:
-          'Crossing Republik is 20 km from our center. Online coaching saves 2+ hours daily travel while providing same quality teaching and personal attention.',
+          'Crossing Republik is far from any Delhi walk-in centre. Online coaching saves 2+ hours daily travel while providing the same quality teaching and personal attention.',
       },
       {
         question: 'Do you offer scholarships?',

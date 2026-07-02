@@ -246,9 +246,8 @@ export default function NEETCoachingMayurViharPage() {
           </p>
           <p>
             <strong>Father Agnel School (Noida-adjacent):</strong> Straddles the Delhi-Noida border.
-            Father Agnel students can access both our Green Park (Delhi) centre and Noida centre —
-            the commute to Noida Sector 62 is often shorter (20 minutes via Noida Expressway) than
-            to Green Park (30 minutes via Blue Line).
+            Father Agnel students can attend our Green Park (Delhi) walk-in centre, or join live
+            online classes from home in Noida — no commute needed.
           </p>
           <p>
             <strong>KV / Government school students (Mayur Vihar Phase 1-3):</strong> Three Kendriya

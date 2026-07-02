@@ -166,8 +166,8 @@ export default function NEETTestSeriesGreaterNoidaContent({ faqs }: { faqs: FAQ[
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
               Comprehensive test series for Greater Noida students with detailed analysis, rank
-              prediction, and personalized improvement suggestions. Take tests online from home or
-              at our Sector 62, Noida center.
+              prediction, and personalized improvement suggestions. Take tests online from home —
+              same interface as the actual NEET exam.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -343,16 +343,14 @@ export default function NEETTestSeriesGreaterNoidaContent({ faqs }: { faqs: FAQ[
                   <div className="flex items-center gap-4">
                     <Clock className="w-6 h-6 text-purple-600" />
                     <div>
-                      <p className="font-semibold">Offline Tests</p>
-                      <p className="text-sm text-slate-500">
-                        Every Sunday, 9 AM - 12 PM at Sector 62, Noida
-                      </p>
+                      <p className="font-semibold">Live Proctored Tests</p>
+                      <p className="text-sm text-slate-500">Every Sunday, 9 AM - 12 PM (online)</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <BarChart3 className="w-6 h-6 text-purple-600" />
                     <div>
-                      <p className="font-semibold">Online Tests</p>
+                      <p className="font-semibold">Flexible Online Tests</p>
                       <p className="text-sm text-slate-500">
                         48-hour window, take anytime from Greater Noida
                       </p>
@@ -361,8 +359,10 @@ export default function NEETTestSeriesGreaterNoidaContent({ faqs }: { faqs: FAQ[
                   <div className="flex items-center gap-4">
                     <MapPin className="w-6 h-6 text-purple-600" />
                     <div>
-                      <p className="font-semibold">Offline Center</p>
-                      <p className="text-sm text-slate-500">B-45, Sector 62, Noida</p>
+                      <p className="font-semibold">Serving Greater Noida Online</p>
+                      <p className="text-sm text-slate-500">
+                        Attend from anywhere — nearest walk-in center: South Extension, New Delhi
+                      </p>
                     </div>
                   </div>
                 </div>

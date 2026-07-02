@@ -86,12 +86,12 @@ const faqs = [
   {
     question: 'Do you have a coaching center in Bhondsi?',
     answer:
-      'Our main center is in Greater Noida. For Bhondsi students, we offer premium live online NEET classes. Since Bhondsi is a new development area with growing residential population, many families prefer flexible online classes. Our comprehensive material and recorded lectures ensure continuity in preparation.',
+      'We serve Bhondsi students through premium live online NEET classes — no travel needed. Since Bhondsi is a new development area with a growing residential population, many families prefer flexible online classes. Our comprehensive material and recorded lectures ensure continuity in preparation. For anyone wanting in-person classes, our nearest walk-in centre is Gurugram (Sector 51).',
   },
   {
-    question: 'Is Bhondsi to Greater Noida center travel practical?',
+    question: 'Should Bhondsi students choose online or in-person classes?',
     answer:
-      'For Bhondsi students, we strongly recommend our online NEET program. Given the distance (60+ km) and traffic on Gurgaon-Noida route, online live classes are more practical. You get the same quality teaching without commute stress.',
+      'For Bhondsi students, we strongly recommend our live online NEET program — same AIIMS faculty, same curriculum, no commute stress. If you prefer in-person coaching, our nearest walk-in centre is Gurugram (Sector 51, M2K Corporate Park).',
   },
   {
     question: 'What schools do your Bhondsi and Sohna Road students come from?',
@@ -124,8 +124,10 @@ const localBusinessSchema = {
   telephone: '+91-88264-44334',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Greater Noida',
-    addressRegion: 'Uttar Pradesh',
+    streetAddress: 'Unit 17, M2K Corporate Park, Sector 51',
+    addressLocality: 'Gurugram',
+    addressRegion: 'Haryana',
+    postalCode: '122018',
     addressCountry: 'IN',
   },
   areaServed: [
@@ -282,7 +284,7 @@ export default function PageContent() {
               >
                 <MapPin className="w-8 h-8 text-green-600 mb-4" />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{area.name}</h3>
-                <p className="text-sm text-gray-500 mb-1">{area.distance} from center</p>
+                <p className="text-sm text-gray-500 mb-1">Live online coverage</p>
                 <p className="text-sm text-gray-400">{area.landmark}</p>
               </div>
             ))}

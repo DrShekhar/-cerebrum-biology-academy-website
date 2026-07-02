@@ -64,7 +64,7 @@ const faqs = [
   {
     question: 'How do I find biology classes near my location?',
     answer:
-      'We have 5 offline centres in Delhi NCR: Rohini, Gurugram, South Extension, Faridabad, Green Park, and Noida. If you are not near these centers, our online classes provide the same quality education with live interactive sessions.',
+      'We have 5 offline centres in Delhi NCR: South Extension, Green Park, and Rohini in Delhi, plus Gurugram and Faridabad in Haryana. Other areas such as Noida, Greater Noida, and Ghaziabad are served through our live online classes with the same quality education and live interactive sessions.',
   },
   {
     question: 'Are offline and online classes the same quality?',
@@ -79,7 +79,7 @@ const faqs = [
   {
     question: 'What areas do your offline centers cover?',
     answer:
-      'Our Rohini center covers North Delhi, Gurugram center covers Gurgaon, South Extension and Green Park cover South Delhi, Faridabad center covers the entire Faridabad district, and Noida center covers Noida and Greater Noida.',
+      'Our Rohini center covers North Delhi, Gurugram center covers Gurgaon, South Extension and Green Park cover South Delhi, and Faridabad center covers the entire Faridabad district. Noida, Greater Noida, and Ghaziabad are served through our live online classes.',
   },
 ]
 
@@ -88,7 +88,13 @@ export default function BiologyClassesNearMePage() {
   const [showLocationModal, setShowLocationModal] = useState(false)
   const [isInDelhiNCR, setIsInDelhiNCR] = useState<boolean | null>(null)
 
-  const offlineCenters = getOfflineCenters()
+  // Only the 5 real walk-in centers (South Extension, Green Park, Rohini, Gurugram,
+  // Faridabad). Noida/Ghaziabad/Greater Noida are online-only served areas — never
+  // present them as physical centers.
+  const ONLINE_ONLY_CITIES = ['Noida', 'Greater Noida', 'Ghaziabad']
+  const offlineCenters = getOfflineCenters().filter(
+    (center) => !ONLINE_ONLY_CITIES.includes(center.city)
+  )
   const onlineRegions = getOnlineRegions()
   const localBusinessSchemas = generateLocalBusinessSchema(PAGE_KEYWORD, offlineCenters)
   const faqSchema = generateFAQSchema(faqs)
@@ -158,7 +164,7 @@ export default function BiologyClassesNearMePage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              4 Offline Centers in Delhi NCR + Pan-India Online Classes
+              5 Offline Centers in Delhi NCR + Pan-India Online Classes
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
@@ -197,7 +203,7 @@ export default function BiologyClassesNearMePage() {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="text-2xl font-bold text-yellow-300">4</div>
+                <div className="text-2xl font-bold text-yellow-300">5</div>
                 <div className="text-xs opacity-80">Offline Centers</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
@@ -224,7 +230,7 @@ export default function BiologyClassesNearMePage() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Select Your Location</h3>
 
             <div className="space-y-4 mb-6">
-              <h4 className="font-semibold text-gray-700">Delhi NCR (Offline Available)</h4>
+              <h4 className="font-semibold text-gray-700">Delhi NCR</h4>
               {['Rohini, Delhi', 'Gurugram', 'South Delhi', 'Faridabad', 'Noida', 'Ghaziabad'].map(
                 (loc) => (
                   <button
@@ -234,9 +240,13 @@ export default function BiologyClassesNearMePage() {
                   >
                     <Building className="w-5 h-5 mr-3 text-blue-600" />
                     {loc}
-                    {['Rohini, Delhi', 'Gurugram', 'South Delhi'].includes(loc) && (
+                    {['Rohini, Delhi', 'Gurugram', 'South Delhi', 'Faridabad'].includes(loc) ? (
                       <span className="ml-auto text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
                         Center Available
+                      </span>
+                    ) : (
+                      <span className="ml-auto text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                        Live Online
                       </span>
                     )}
                   </button>

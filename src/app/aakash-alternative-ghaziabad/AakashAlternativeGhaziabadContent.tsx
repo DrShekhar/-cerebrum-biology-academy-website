@@ -200,9 +200,9 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Overwhelmed by digital overload? Want real classroom interaction with expert faculty?
-              Discover why Ghaziabad students chose Cerebrum over Aakash Indirapuram for focused
-              NEET Biology preparation. Just 15-20 min via Blue Line Metro.
+              Want real interaction with expert faculty from home? Discover why Ghaziabad students
+              chose Cerebrum over Aakash Indirapuram for focused NEET Biology preparation — live
+              online, no commute.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -418,22 +418,21 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                  Conveniently Located at Sector 62, Noida
+                  Live Online NEET Biology for Ghaziabad
                 </h2>
                 <p className="text-slate-600 mb-6">
-                  Our center is at <strong>B-45, Sector 62, Noida</strong> — accessible from
-                  Ghaziabad via Blue Line Metro to Sector 62 station (15-20 min from
-                  Vaishali/Kaushambi). Perfect for students from Indirapuram, Vasundhara, Raj Nagar
-                  Extension.
+                  We teach Ghaziabad students through live online classes — no travel needed.
+                  Perfect for students from Indirapuram, Vasundhara and Raj Nagar Extension, all
+                  with the same AIIMS-trained faculty and small batches.
                 </p>
                 <div className="space-y-3 mb-6">
                   <p className="flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-purple-600" />
-                    B-45, Sector 62, Noida, UP 201301
+                    Live online classes serving all of Ghaziabad
                   </p>
                   <p className="flex items-center gap-2">
                     <Clock className="w-5 h-5 text-purple-600" />
-                    Sector 62 Metro Station, Blue Line (15-20 min from Vaishali/Kaushambi)
+                    Prefer in-person? Nearest walk-in center: South Extension, New Delhi
                   </p>
                 </div>
                 <div className="flex gap-4">
@@ -443,14 +442,10 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
                       Call Now
                     </Button>
                   </a>
-                  <a
-                    href="https://maps.google.com/?q=B-45+Sector+62+Noida"
-                    target="_blank"
-                    rel="noopener"
-                  >
+                  <a href="/book-free-demo">
                     <Button>
-                      <MapPin className="w-4 h-4 mr-2" />
-                      Get Directions
+                      <BookOpen className="w-4 h-4 mr-2" />
+                      Book Free Demo
                     </Button>
                   </a>
                 </div>

@@ -21,7 +21,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'Online NEET Coaching for Ghaziabad Students | Live & Hybrid Mode',
   description:
-    'Online NEET Biology classes for Ghaziabad & Indirapuram students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 88264-44334!',
+    'Online NEET Biology classes for Ghaziabad & Indirapuram students. Live interactive sessions from home. Hybrid mode with optional in-person sessions at our South Extension, New Delhi center. 800+ students. Call 88264-44334!',
   keywords: [
     'online neet classes ghaziabad',
     'online neet coaching ghaziabad',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Online NEET Coaching for Ghaziabad Students | Live & Hybrid Mode',
     description:
-      'Online NEET Biology classes for Ghaziabad & Indirapuram students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 88264-44334!',
+      'Online NEET Biology classes for Ghaziabad & Indirapuram students. Live interactive sessions from home. Hybrid mode with optional in-person sessions at our South Extension, New Delhi center. 800+ students. Call 88264-44334!',
   },
 }
 
@@ -57,11 +57,6 @@ const travelTimes = [
   { area: 'Raj Nagar Extension', time: '0 min', mode: 'Study from home!' },
   { area: 'Crossings Republik', time: '0 min', mode: 'Study from home!' },
   { area: 'Vasundhara', time: '0 min', mode: 'Study from home!' },
-  {
-    area: 'To Sector 62 Noida Center (Weekend)',
-    time: '20-25 min via Blue Line Metro',
-    mode: 'For offline sessions',
-  },
 ]
 
 const onlineFeatures = [
@@ -89,7 +84,7 @@ const onlineFeatures = [
 
 const hybridBenefits = [
   'All online class benefits included',
-  'Weekly mock tests at Sector 62 Noida center',
+  'Weekly live proctored mock tests',
   'Face-to-face doubt clearing sessions',
   'Peer learning with other NEET aspirants',
   'Library and study room access',
@@ -105,7 +100,7 @@ const faqs = [
   {
     question: 'What is hybrid mode for Ghaziabad students?',
     answer:
-      'Hybrid mode combines online weekday classes with weekend offline sessions at our Sector 62 Noida center. You attend 5-6 online classes per week from home, and travel to Sector 62 on Saturdays/Sundays via Blue Line Metro (20-25 minutes from Vaishali/Kaushambi) for mock tests, doubt sessions, and face-to-face interaction.',
+      'Hybrid mode combines online weekday classes with optional in-person sessions at our South Extension, New Delhi center. You attend 5-6 online classes per week from home, and can visit our Delhi center for mock tests, doubt sessions, and face-to-face interaction. Most Ghaziabad students stay fully online — no travel needed.',
   },
   {
     question: 'Which mode is better - online or hybrid?',
@@ -147,8 +142,8 @@ export default function OnlineNEETCoachingGhaziabadPage() {
             </h1>
             <p className="text-xl text-indigo-100 mb-6">
               Study from your Ghaziabad home. Live interactive Biology classes with AIIMS faculty.
-              Save 1-2 hours daily on travel. Hybrid mode available for weekend offline sessions at
-              Sector 62 Noida.
+              Save 1-2 hours daily on travel. Hybrid mode available with optional in-person sessions
+              at our South Extension, New Delhi center.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -305,7 +300,8 @@ export default function OnlineNEETCoachingGhaziabadPage() {
               </div>
               <h3 className="text-xl font-bold mb-2">Hybrid Mode</h3>
               <p className="text-indigo-900 mb-4">
-                Online + Weekend offline at Sector 62 Noida (20-25 min via Blue Line Metro).
+                Online classes + optional in-person sessions at our South Extension, New Delhi
+                center.
               </p>
               <ul className="space-y-2 text-sm mb-6">
                 {hybridBenefits.slice(0, 4).map((benefit, index) => (
@@ -328,7 +324,7 @@ export default function OnlineNEETCoachingGhaziabadPage() {
               </div>
               <h3 className="text-xl font-bold mb-2">Full Offline</h3>
               <p className="text-gray-600 mb-4">
-                Daily classes at Sector 62 Noida center. Blue Line Metro from Ghaziabad.
+                Daily in-person classes at our South Extension, New Delhi center.
               </p>
               <ul className="space-y-2 text-sm mb-6">
                 <li className="flex items-center gap-2">
@@ -351,7 +347,7 @@ export default function OnlineNEETCoachingGhaziabadPage() {
               <p className="text-2xl font-bold text-gray-700">
                 Rs 65,000<span className="text-sm font-normal text-gray-500">/year</span>
               </p>
-              <p className="text-sm text-gray-500 mt-2">Near Sector 62 Metro Station (Blue Line)</p>
+              <p className="text-sm text-gray-500 mt-2">At our South Extension, New Delhi center</p>
             </div>
           </div>
         </div>
@@ -411,19 +407,20 @@ export default function OnlineNEETCoachingGhaziabadPage() {
             '@type': 'Course',
             name: 'Online NEET Biology Coaching for Ghaziabad Students',
             description:
-              'Online NEET Biology classes for Ghaziabad students. Live interactive sessions + hybrid mode with weekend offline at Sector 62 Noida.',
+              'Online NEET Biology classes for Ghaziabad students. Live interactive sessions + hybrid mode with optional in-person sessions at our South Extension, New Delhi center.',
             provider: {
               '@type': 'EducationalOrganization',
               name: 'Cerebrum Biology Academy',
               url: 'https://cerebrumbiologyacademy.com',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'B-45, Sector 62',
-                addressLocality: 'Noida',
-                addressRegion: 'Uttar Pradesh',
-                postalCode: '201301',
+                streetAddress: 'D 35, South Extension Part 2',
+                addressLocality: 'New Delhi',
+                addressRegion: 'Delhi',
+                postalCode: '110049',
                 addressCountry: 'IN',
               },
+              areaServed: 'Ghaziabad',
             },
             educationalLevel: 'Class 11, 12, Dropper',
             courseMode: ['Online', 'Blended'],

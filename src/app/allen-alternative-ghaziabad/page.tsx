@@ -3,8 +3,6 @@ import AllenAlternativeGhaziabadContent from './AllenAlternativeGhaziabadContent
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
-const noidaAddress = 'B-45, Sector 62, Noida, UP 201301'
-
 export const metadata: Metadata = {
   title: 'Allen Alternative in Ghaziabad | Better NEET Biology Coaching',
   description:
@@ -42,7 +40,7 @@ const faqs = [
   {
     question: 'Does Allen have a center in Ghaziabad?',
     answer:
-      'Allen does not have a dedicated center in Ghaziabad. Ghaziabad students opting for Allen must travel to Noida or Delhi centers, adding significant commute time. Cerebrum Biology Academy at Sector 62, Noida is much more accessible from Ghaziabad via Blue Line Metro (15-20 min from Vaishali/Kaushambi).',
+      'Allen does not have a dedicated center in Ghaziabad. Cerebrum Biology Academy teaches Ghaziabad students through live online classes — no commute needed, with the same AIIMS-trained faculty and small batches.',
   },
   {
     question: 'Why should I consider Cerebrum over Allen for NEET Biology?',
@@ -52,7 +50,7 @@ const faqs = [
   {
     question: 'How is Cerebrum different from Allen for Ghaziabad students?',
     answer:
-      "Key differences: 1) Batch size: Cerebrum has 10-20 students vs Allen's 80-100+. 2) Faculty: Direct teaching by Dr. Shekhar (AIIMS alumnus) vs rotating faculty. 3) Focus: Biology-specialized vs all subjects. 4) Location: Easy 15-20 min metro ride from Ghaziabad vs longer commute to Allen centers. 5) Fee: More affordable with better value.",
+      "Key differences: 1) Batch size: Cerebrum has 10-20 students vs Allen's 80-100+. 2) Faculty: Direct teaching by Dr. Shekhar (AIIMS alumnus) vs rotating faculty. 3) Focus: Biology-specialized vs all subjects. 4) Access: Live online from home in Ghaziabad vs commuting to distant Allen centers. 5) Fee: More affordable with better value.",
   },
   {
     question: 'Can I join Cerebrum along with Allen for extra Biology support?',
@@ -70,8 +68,9 @@ const faqs = [
       'Cerebrum offers competitive pricing with better value. Our fees range from ₹45,000 to ₹1,56,000 depending on the tier and program, often 20-30% lower than Allen for comparable quality with significantly smaller batch sizes.',
   },
   {
-    question: 'Where is Cerebrum located and how do Ghaziabad students reach there?',
-    answer: `Our center is at ${noidaAddress}. Ghaziabad students can take the Blue Line Metro to Sector 62 station (15-20 min from Vaishali/Kaushambi). Easily accessible from Indirapuram, Vasundhara, Raj Nagar Extension, and Crossings Republik.`,
+    question: 'Do you have a center in Ghaziabad?',
+    answer:
+      'We teach Ghaziabad students through live online classes — no travel needed. Students from Indirapuram, Vasundhara, Raj Nagar Extension and Crossings Republik learn with the same AIIMS-trained faculty online. Our nearest in-person center is South Extension, New Delhi.',
   },
 ]
 
@@ -87,12 +86,13 @@ export default function AllenAlternativeGhaziabadPage() {
       name: 'Cerebrum Biology Academy',
       description:
         'Specialized NEET Biology coaching with small batches and personalized attention',
+      areaServed: 'Ghaziabad',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'B-45, Sector 62',
-        addressLocality: 'Noida',
-        addressRegion: 'Uttar Pradesh',
-        postalCode: '201301',
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
       },
     },
   }

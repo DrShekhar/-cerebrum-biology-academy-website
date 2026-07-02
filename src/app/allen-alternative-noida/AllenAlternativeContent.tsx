@@ -24,8 +24,6 @@ import { Button } from '@/components/ui/Button'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-
 interface FAQ {
   question: string
   answer: string
@@ -87,8 +85,8 @@ const comparisonData = [
     winner: 'cerebrum',
   },
   {
-    feature: 'Local Noida Presence',
-    cerebrum: 'Yes - Sector 62, Noida',
+    feature: 'Noida Coverage',
+    cerebrum: 'Yes - live online for Noida',
     allen: 'No dedicated Noida center',
     winner: 'cerebrum',
   },
@@ -96,9 +94,9 @@ const comparisonData = [
 
 const reasons = [
   {
-    title: 'No Noida Center',
+    title: 'No Allen Noida Center',
     description:
-      'Allen has no dedicated Noida center. Students commute far, wasting time and energy. Cerebrum is right here in Sector 62.',
+      'Allen has no dedicated Noida center — students commute far, wasting time and energy. Cerebrum teaches Noida students live online, so there is no commute at all.',
     icon: MapPin,
   },
   {
@@ -192,7 +190,7 @@ export default function AllenAlternativeNoidaContent({ faqs }: { faqs: FAQ[] }) 
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-red-500/20 text-red-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
-              Allen Has No Noida Center — Cerebrum Does
+              Allen Has No Noida Center — Cerebrum Serves Noida Online
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -201,8 +199,8 @@ export default function AllenAlternativeNoidaContent({ faqs }: { faqs: FAQ[] }) 
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Allen has NO dedicated Noida center. Stop commuting! Cerebrum Biology Academy is right
-              here in Sector 62, Noida - with 100+ student batches replaced by 10-20 student
+              Allen has NO dedicated Noida center. Stop commuting! Cerebrum Biology Academy teaches
+              Noida students live online - with 100+ student batches replaced by 10-20 student
               personalized classes.
             </p>
 
@@ -349,7 +347,7 @@ export default function AllenAlternativeNoidaContent({ faqs }: { faqs: FAQ[] }) 
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Near Sector 62 Metro - easy commute from all Noida sectors
+                  Live online - study from anywhere in Noida
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -424,21 +422,22 @@ export default function AllenAlternativeNoidaContent({ faqs }: { faqs: FAQ[] }) 
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                  Conveniently Located in Sector 62, Noida
+                  Live Online NEET Biology for Noida
                 </h2>
                 <p className="text-slate-600 mb-6">
-                  Our Noida center is at <strong>B-45, Sector 62</strong> - near Sector 62 Metro
-                  Station (Blue Line). Whether you&apos;re switching or complementing Allen, easily
-                  accessible from Sectors 18, 44, 50, 76, 78, Indirapuram, and Vaishali.
+                  We teach Noida students through live online classes — no travel needed. Whether
+                  you&apos;re switching or complementing Allen, join from Sectors 18, 44, 50, 76,
+                  78, Indirapuram and Vaishali with the same AIIMS-trained faculty and small
+                  batches.
                 </p>
                 <div className="space-y-3 mb-6">
                   <p className="flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-red-600" />
-                    {CONTACT_INFO.location.noida.streetAddress}, Noida, UP 201301
+                    Live online classes serving all of Noida
                   </p>
                   <p className="flex items-center gap-2">
                     <Clock className="w-5 h-5 text-red-600" />
-                    Near Sector 62 Metro Station (Blue Line)
+                    Prefer in-person? Nearest walk-in center: South Extension, New Delhi
                   </p>
                 </div>
                 <div className="flex gap-4">
@@ -448,10 +447,10 @@ export default function AllenAlternativeNoidaContent({ faqs }: { faqs: FAQ[] }) 
                       Call Now
                     </Button>
                   </a>
-                  <a href={CONTACT_INFO.location.noida.mapUrl} target="_blank" rel="noopener">
+                  <a href="/book-free-demo">
                     <Button>
-                      <MapPin className="w-4 h-4 mr-2" />
-                      Get Directions
+                      <BookOpen className="w-4 h-4 mr-2" />
+                      Book Free Demo
                     </Button>
                   </a>
                 </div>

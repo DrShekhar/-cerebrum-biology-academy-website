@@ -401,20 +401,21 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                  Conveniently Located in Sector 62, Noida
+                  Live Online Biology Coaching for Noida
                 </h2>
                 <p className="text-slate-600 mb-6">
-                  Our center is at <strong>B-45, Sector 62, Noida</strong> - easily accessible from
-                  Sector 62 Metro Station (Blue Line).
+                  We teach Noida students through <strong>live online classes</strong> - no travel
+                  needed. For anyone wanting in-person study, our nearest walk-in center is South
+                  Extension, New Delhi.
                 </p>
                 <div className="space-y-3 mb-6">
                   <p className="flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-purple-600" />
-                    {CONTACT_INFO.location.noida.streetAddress}, Noida
+                    Live online classes serving all of Noida
                   </p>
                   <p className="flex items-center gap-2">
                     <Clock className="w-5 h-5 text-purple-600" />
-                    Near Sector 62 Metro Station (Blue Line)
+                    Nearest in-person center: South Extension, New Delhi
                   </p>
                 </div>
                 <div className="flex gap-4">
@@ -422,12 +423,6 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
                     <Button variant="outline">
                       <Phone className="w-4 h-4 mr-2" />
                       Call Now
-                    </Button>
-                  </a>
-                  <a href={CONTACT_INFO.location.noida.mapUrl} target="_blank" rel="noopener">
-                    <Button>
-                      <MapPin className="w-4 h-4 mr-2" />
-                      Get Directions
                     </Button>
                   </a>
                 </div>

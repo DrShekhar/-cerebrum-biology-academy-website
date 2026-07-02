@@ -18,7 +18,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'Free NEET Demo Class Ghaziabad | Book Now',
   description:
-    'Book your FREE NEET Biology demo class for Ghaziabad students. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 88264-44334!',
+    'Book your FREE NEET Biology demo class for Ghaziabad students. Experience AIIMS faculty teaching, small batches, and our proven methodology. Live online classes for Ghaziabad students. No obligation. Call 88264-44334!',
   keywords: [
     'free neet demo class ghaziabad',
     'free neet trial class ghaziabad',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Free NEET Demo Class Ghaziabad | Book Now',
     description:
-      'Book your FREE NEET Biology demo class for Ghaziabad students. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 88264-44334!',
+      'Book your FREE NEET Biology demo class for Ghaziabad students. Experience AIIMS faculty teaching, small batches, and our proven methodology. Live online classes for Ghaziabad students. No obligation. Call 88264-44334!',
   },
 }
 
@@ -60,8 +60,8 @@ const demoIncludes = [
   },
   {
     icon: Video,
-    title: 'Online or Offline',
-    description: 'Choose to attend at our Sector 62 Noida center or join from home via Zoom',
+    title: 'Live Online Demo',
+    description: 'Join a live interactive session from home via Zoom - no travel needed',
   },
   {
     icon: Gift,
@@ -92,9 +92,9 @@ const faqs = [
       'Call us at 88264-44334 or fill the form on this page. We schedule demos instantly — same day slots available 7 days a week. Online demo available anytime from Ghaziabad.',
   },
   {
-    question: 'How do Ghaziabad students reach the center?',
+    question: 'Do you have a center in Ghaziabad?',
     answer:
-      'Very easily! The Blue Line Metro connects Vaishali and Kaushambi (Ghaziabad) directly to Sector 62 Noida in 20-25 minutes. Many students from Indirapuram, Vasundhara, and Raj Nagar Extension use this route daily. Online demo is also available.',
+      'We teach Ghaziabad students - including Indirapuram, Vasundhara, and Raj Nagar Extension - through live online classes, no travel needed. Our nearest in-person center is South Extension, New Delhi.',
   },
 ]
 
@@ -272,23 +272,20 @@ export default function FreeNEETDemoClassGhaziabad() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <div className="flex items-start gap-3 mb-4">
-                  <MapPin className="w-5 h-5 text-green-600 mt-1" />
+                  <Video className="w-5 h-5 text-green-600 mt-1" />
                   <div>
-                    <p className="font-semibold">Offline Demo - Noida Center</p>
-                    <p className="text-gray-600">B-45, Sector 62</p>
-                    <p className="text-gray-600">Noida, UP 201301</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Near Sector 62 Metro Station (Blue Line) — 20-25 min from Vaishali/Kaushambi
-                      Ghaziabad
-                    </p>
+                    <p className="font-semibold">Live Online Demo - Zoom</p>
+                    <p className="text-gray-600">Join from anywhere in Ghaziabad</p>
+                    <p className="text-gray-600">Link sent after booking</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Video className="w-5 h-5 text-green-600 mt-1" />
+                  <MapPin className="w-5 h-5 text-green-600 mt-1" />
                   <div>
-                    <p className="font-semibold">Online Demo - Zoom</p>
-                    <p className="text-gray-600">Join from anywhere in Ghaziabad</p>
-                    <p className="text-gray-600">Link sent after booking</p>
+                    <p className="font-semibold">Prefer in-person?</p>
+                    <p className="text-gray-600">
+                      Nearest walk-in center: South Extension, New Delhi
+                    </p>
                   </div>
                 </div>
               </div>
@@ -373,25 +370,11 @@ export default function FreeNEETDemoClassGhaziabad() {
             description:
               'Free 60-minute demo class for NEET Biology preparation with AIIMS faculty',
             eventStatus: 'https://schema.org/EventScheduled',
-            eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
-            location: [
-              {
-                '@type': 'Place',
-                name: 'Cerebrum Biology Academy',
-                address: {
-                  '@type': 'PostalAddress',
-                  streetAddress: 'B-45, Sector 62',
-                  addressLocality: 'Noida',
-                  addressRegion: 'Uttar Pradesh',
-                  postalCode: '201301',
-                  addressCountry: 'IN',
-                },
-              },
-              {
-                '@type': 'VirtualLocation',
-                url: 'https://zoom.us',
-              },
-            ],
+            eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+            location: {
+              '@type': 'VirtualLocation',
+              url: 'https://zoom.us',
+            },
             offers: {
               '@type': 'Offer',
               price: '0',

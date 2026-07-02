@@ -7,9 +7,9 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Sector 62 Noida | Best Biology Classes Near You',
+  title: 'NEET Coaching in Sector 62 Noida | Live Online Biology Classes',
   description:
-    'Top-rated NEET biology coaching in Sector 62, Noida. Expert AIIMS faculty, 98% success rate, live classes & test series. Join 480+ successful students. Call 88264-44334.',
+    'Live online NEET biology coaching for Sector 62, Noida. Expert AIIMS faculty, 98% success rate, live classes & test series. Join 480+ successful students. Call 88264-44334.',
   keywords: [
     'neet coaching sector 62 noida',
     'biology coaching sector 62',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     locale: 'en_IN',
-    title: 'NEET Coaching in Sector 62 Noida | Best Biology Classes',
+    title: 'NEET Coaching in Sector 62 Noida | Live Online Biology Classes',
     description:
-      'Expert NEET biology coaching at Sector 62, Noida. 98% success rate, AIIMS faculty.',
+      'Live online NEET biology coaching for Sector 62, Noida. 98% success rate, AIIMS faculty.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-sector-62-noida',
   },
   alternates: {
@@ -32,44 +32,44 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'NEET Coaching in Sector 62 Noida | Best Biology Classes Near You',
+    title: 'NEET Coaching in Sector 62 Noida | Live Online Biology Classes',
     description:
-      'Top-rated NEET biology coaching in Sector 62, Noida. Expert AIIMS faculty, 98% success rate, live classes & test series. Join 480+ successful students. Call 88264-44334.',
+      'Live online NEET biology coaching for Sector 62, Noida. Expert AIIMS faculty, 98% success rate, live classes & test series. Join 480+ successful students. Call 88264-44334.',
   },
 }
 
 const faqItems = [
   {
-    question: 'Where is Cerebrum Noida center located?',
+    question: 'Do you have a center in Sector 62, Noida?',
     answer:
-      'Our Noida center is located at B-45, Sector 62, Noida, UP - 201301. It is just 200 meters from Sector 62 Metro Station, making it highly accessible for students across Noida and Greater Noida.',
+      'We teach Sector 62 and Noida students through live online classes - no travel needed. For anyone who prefers in-person coaching, our nearest walk-in center is South Extension, New Delhi.',
   },
   {
     question: 'What courses are available for Sector 62 students?',
     answer:
-      'We offer Class 11, Class 12, Dropper/Repeater batches, and specialized NEET preparation. All courses include live classes, comprehensive study material, weekly tests, doubt sessions, and online recorded lectures.',
+      'We offer Class 11, Class 12, Dropper/Repeater batches, and specialized NEET preparation. All courses include live online classes, comprehensive study material, weekly tests, doubt sessions, and recorded lectures.',
   },
   {
     question: 'Are there batch timings suitable for working professionals?',
     answer:
-      'Yes! We have morning, afternoon, and evening batch options from 7 AM to 9 PM. Students from Sector 62, Indirapuram, Vaishali, and Crossing Republik can choose timings that suit them best.',
+      'Yes! We have morning, afternoon, and evening live online batch options from 7 AM to 9 PM. Students from Sector 62, Indirapuram, Vaishali, and Crossing Republik can choose timings that suit them best.',
   },
   {
-    question: 'Is there free demo class available?',
+    question: 'Is there a free demo class available?',
     answer:
-      'Absolutely! We offer free demo classes at our Sector 62 center. Call ' +
+      'Absolutely! We offer free live online demo classes for Sector 62 students. Call ' +
       CONTACT_INFO.phone.primary +
       ' to book your demo and experience our teaching methodology directly.',
   },
   {
-    question: 'What is the average success rate at Cerebrum Noida?',
+    question: 'What is the average success rate for Cerebrum Noida students?',
     answer:
       'We maintain a 98% NEET success rate with average biology scores of 330+/360. Our students have scored AIR ranks from various medical colleges including AIIMS, MAMC, and top government medical colleges.',
   },
   {
     question: 'Are there scholarships available for Sector 62 students?',
     answer:
-      'Yes, we offer merit-based scholarships and flexible EMI options. Call our center to discuss scholarship eligibility and payment plans tailored to your needs.',
+      'Yes, we offer merit-based scholarships and flexible EMI options. Call us to discuss scholarship eligibility and payment plans tailored to your needs.',
   },
 ]
 
@@ -113,15 +113,19 @@ export default function NEETCoachingSector62NoidaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-6">
-                Cerebrum Biology Academy - Noida
+                Cerebrum Biology Academy - Live Online for Noida
               </h2>
               <div className="space-y-4">
                 <div className="flex gap-3">
                   <MapPin className="w-6 h-6 text-green-500 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900">Location</p>
-                    <p className="text-gray-700">B-45, Sector 62, Noida, UP - 201301</p>
-                    <p className="text-sm text-gray-600">200 meters from Sector 62 Metro Station</p>
+                    <p className="font-semibold text-gray-900">How We Teach</p>
+                    <p className="text-gray-700">
+                      Live online classes for Sector 62 &amp; all of Noida - no travel needed
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Nearest in-person center: South Extension, New Delhi
+                    </p>
                   </div>
                 </div>
                 <div className="flex gap-3">
@@ -207,8 +211,8 @@ export default function NEETCoachingSector62NoidaPage() {
               },
               {
                 icon: MapPin,
-                title: 'Metro Adjacent',
-                desc: '200m from Sector 62 Metro for easy access',
+                title: 'Learn From Home',
+                desc: 'Live online classes across Noida - no commute',
               },
             ].map((item, idx) => (
               <div

@@ -1776,7 +1776,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Where are the Cerebrum Delhi centres located?',
         answer:
-          'Three Delhi centres: (1) South Extension Flagship — Block D, South Extension Part 2, New Delhi 110049 — 5 min from South Extension Metro (Pink Line). (2) Rohini — 211 Vikas Surya Tower, DC Chowk, Sector 9, Delhi 110085 — close to Rohini West Metro (Red Line). (3) Green Park — B-113 FF Gulmohar Park, New Delhi 110049 — central South Delhi. Plus 3 NCR centres at Gurugram (Sector 51), Faridabad (Sector 17), and Noida (Sector 62).',
+          'Three Delhi centres: (1) South Extension Flagship — Block D, South Extension Part 2, New Delhi 110049 — 5 min from South Extension Metro (Pink Line). (2) Rohini — 211 Vikas Surya Tower, DC Chowk, Sector 9, Delhi 110085 — close to Rohini West Metro (Red Line). (3) Green Park — B-113 FF Gulmohar Park, New Delhi 110049 — central South Delhi. Plus 2 NCR centres at Gurugram (Sector 51) and Faridabad (Sector 17). Noida, Greater Noida, and Ghaziabad are served through live online classes.',
       },
       {
         question: 'What is the fee for NEET biology coaching in Delhi?',
@@ -9093,9 +9093,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Top-rated NEET biology coaching for Greater Noida students. Online + hybrid classes with AIIMS faculty and proven 98% success rate.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
-      distance: '15-20 km from Greater Noida via Aqua Line Metro',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Gaur City', url: '/biology-classes-greater-noida/gaur-city' },
@@ -9115,17 +9115,17 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Which is the best biology coaching in Greater Noida for NEET?',
         answer:
-          'Cerebrum Biology Academy is the top-rated biology coaching for Greater Noida students. We offer live online classes from home and hybrid mode (online + weekend offline at Sector 62, Noida center). Our AIIMS-trained faculty and 98% success rate make us the preferred choice for Greater Noida NEET aspirants.',
+          'Cerebrum Biology Academy is the top-rated biology coaching for Greater Noida students. We offer live online classes that Greater Noida students join from home. Our AIIMS-trained faculty and 98% success rate make us the preferred choice for Greater Noida NEET aspirants.',
       },
       {
         question: 'Do you have an offline center in Greater Noida?',
         answer:
-          'Our nearest offline center is at B-45, Sector 62, Noida (15-20 km from Greater Noida). Students can reach it via Aqua Line Metro to Noida, then Blue Line to Sector 62 Metro Station. Most Greater Noida students prefer our online or hybrid mode to avoid daily commute.',
+          'We teach Greater Noida students through live online classes — no travel needed. Our nearest walk-in centre is in South Extension, New Delhi (about 15-20 km away) for anyone who wants an in-person visit.',
       },
       {
         question: 'What is the fee for biology classes for Greater Noida students?',
         answer:
-          'Our biology coaching fees for Greater Noida students range from ₹35,000 to ₹60,000 per year for online classes. This includes live classes, study material, test series, and WhatsApp doubt support. Offline hybrid mode at our Noida center is also available.',
+          'Our biology coaching fees for Greater Noida students range from ₹35,000 to ₹60,000 per year for online classes. This includes live classes, study material, test series, and WhatsApp doubt support — all delivered live online.',
       },
       {
         question: 'How do online biology classes work for Greater Noida students?',
@@ -9146,11 +9146,11 @@ export const cityHubData: Record<string, CityHubData> = {
       nearbyLandmarks:
         'Serving students across Greater Noida — Gaur City, Knowledge Park, Pari Chowk, Jaypee Greens, Alpha, Beta, Delta sectors.',
       transportOptions:
-        'Aqua Line Metro connects Greater Noida to Noida City Centre, then Blue Line to Sector 62 Metro Station (15-20 min). Online classes available for all Greater Noida students — zero commute.',
+        'Live online classes reach all Greater Noida students — zero commute. Our nearest walk-in centre is in South Extension, New Delhi for anyone who prefers in-person.',
     },
     areaSpecificContent: {
       whyThisArea:
-        'Greater Noida has 400+ NEET aspirants but very few dedicated Biology coaching options. Most students either commute long distances to Noida/Delhi or settle for coaching that covers all subjects superficially. Our live online classes bring AIIMS-faculty teaching directly to Greater Noida homes, saving 1-2 hours of daily commute. Students can also attend our Sector 62 Noida center on weekends via the Aqua Line Metro for practical sessions and mock tests.',
+        'Greater Noida has 400+ NEET aspirants but very few dedicated Biology coaching options. Most students either commute long distances to Noida/Delhi or settle for coaching that covers all subjects superficially. Our live online classes bring AIIMS-faculty teaching directly to Greater Noida homes, saving 1-2 hours of daily commute. Our nearest walk-in centre is in South Extension, New Delhi for anyone who wants in-person sessions.',
     },
     studentSuccessStory: {
       name: 'Priya S.',
@@ -11018,9 +11018,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Expert NEET & Board Biology coaching for Janakpuri, Dwarka, Rajouri Garden, and all West Delhi areas. Live online classes from AIIMS faculty.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Greater Noida Center',
-      address: 'Omaxe NRI City, Greater Noida, UP 201310',
-      distance: 'Online classes recommended',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Janakpuri', url: '/biology-tutor-janakpuri' },
@@ -11041,7 +11041,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Do you have a center in West Delhi?',
         answer:
-          'Our main center is in Greater Noida. For West Delhi students, we highly recommend our live online classes which provide the same quality teaching without the long commute. Online classes save 3-4 hours of daily travel time.',
+          'We teach West Delhi students through live online classes with the same quality teaching and no commute — saving 3-4 hours of daily travel. Our nearest walk-in centres are Rohini and South Extension in Delhi.',
       },
       {
         question: 'Are online classes suitable for NEET preparation?',
@@ -11056,7 +11056,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Can Dwarka students attend offline classes?',
         answer:
-          'Yes, Dwarka students can attend our Greater Noida center. Metro connectivity via Blue Line makes it accessible. However, for daily classes, online mode is more practical and equally effective.',
+          'Dwarka students can visit our Rohini centre in Delhi, accessible via Blue Line Metro. For daily classes, our live online mode is more practical and equally effective.',
       },
     ],
     stats: {
@@ -11879,12 +11879,12 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best NEET Biology coaching for Noida Extension & Greater Noida West students. Gaur City, Ace City, Supertech covered. AIIMS faculty, 98% success. ₹35K-75K. Free demo!',
     heroTitle: 'NEET Biology Coaching for Noida Extension Students',
     heroSubtitle:
-      'Noida Extension is home to 5 lakh+ residents across Gaur City, Ace City, Supertech Ecovillage, and 50+ societies — yet has zero dedicated NEET Biology coaching. We bridge that gap with live online classes + weekend offline sessions at our Noida center.',
+      'Noida Extension is home to 5 lakh+ residents across Gaur City, Ace City, Supertech Ecovillage, and 50+ societies — yet has zero dedicated NEET Biology coaching. We bridge that gap with live online classes that students join from home.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida, Uttar Pradesh - 201301',
-      distance: '12-18 km from Noida Extension',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Gaur City 1 & 2', url: '/neet-coaching-noida/gaur-city' },
@@ -11902,7 +11902,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is there NEET coaching in Noida Extension?',
         answer:
-          'While Noida Extension lacks dedicated NEET Biology coaching centers, Cerebrum Biology Academy serves 200+ students from Gaur City, Ace City, and Supertech townships through live online classes. Weekend offline sessions are available at our Noida Sector 62 center, a 25-minute drive via the Noida Extension expressway.',
+          'While Noida Extension lacks dedicated NEET Biology coaching centers, Cerebrum Biology Academy serves 200+ students from Gaur City, Ace City, and Supertech townships through live online classes. Classes are live online, so students learn from home with no travel. Our nearest walk-in centre is in South Extension, New Delhi.',
       },
       {
         question: 'Which societies in Noida Extension do your students come from?',
@@ -11912,7 +11912,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'How do Noida Extension students attend classes?',
         answer:
-          'Most Noida Extension students attend live online classes during weekdays (Mon-Fri, 2 batches: 4-6 PM and 6-8 PM). On weekends, many students visit our Noida Sector 62 center for practical lab sessions and doubt-clearing. We also offer a fully online option with recorded backup.',
+          'Most Noida Extension students attend live online classes during weekdays (Mon-Fri, 2 batches: 4-6 PM and 6-8 PM). Doubt-clearing and practical demonstrations happen within the live online sessions, with recorded backup available for revision.',
       },
       {
         question: 'What are the fees for Noida Extension students?',
@@ -11932,7 +11932,7 @@ export const cityHubData: Record<string, CityHubData> = {
     localContext: {
       nearbyLandmarks: 'Gaur Chowk, Pari Chowk, Knowledge Park, Greater Noida Expressway',
       transportOptions:
-        'Aqua Line Metro to Pari Chowk (under construction). Currently 25 min drive to Sector 62 center via Noida Extension Expressway. Shared cab pools organized by student groups.',
+        'Live online classes mean zero travel for Noida Extension students. Our nearest walk-in centre is in South Extension, New Delhi for anyone who prefers in-person.',
     },
     areaSpecificContent: {
       whyThisArea:
@@ -11943,7 +11943,7 @@ export const cityHubData: Record<string, CityHubData> = {
       area: 'Gaur City 2, Noida Extension',
       achievement: 'NEET 2025 — 598/720, Government Medical College Allahabad',
       quote:
-        "Living in Gaur City, I had no good Biology coaching options nearby. Cerebrum's online classes were a lifesaver — I could study from home during weekdays and go to the Sector 62 center on Saturdays for labs. Saved 3 hours of daily travel and scored better than students who went to Kota.",
+        "Living in Gaur City, I had no good Biology coaching options nearby. Cerebrum's online classes were a lifesaver — I could study from home every day with live interactive classes. Saved 3 hours of daily travel and scored better than students who went to Kota.",
     },
     competitorComparison: {
       localAlternatives:
@@ -11959,15 +11959,15 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Uttar Pradesh',
     metaTitle: 'NEET Coaching for Gaur City Students | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
-      'NEET Biology coaching for Gaur City 1 & 2 students. 120+ students enrolled, AIIMS faculty, live online + weekend offline at Sector 62. ₹35K-60K/year. Book free demo!',
+      'NEET Biology coaching for Gaur City 1 & 2 students. 120+ students enrolled, AIIMS faculty, live online classes. ₹35K-60K/year. Book free demo!',
     heroTitle: 'NEET Biology Coaching for Gaur City Students',
     heroSubtitle:
       'Gaur City is home to 50,000+ families — the largest township in Delhi NCR. With 120+ students already enrolled from Gaur City 1 & 2, we understand the unique needs of this community: zero commute, affordable fees, and NEET results that match Kota coaching.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida, Uttar Pradesh - 201301',
-      distance: '14 km from Gaur City',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Gaur City 1', url: '/neet-coaching-noida/gaur-city' },
@@ -11989,7 +11989,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Do Gaur City students need to travel for coaching?',
         answer:
-          'No. Weekday classes are fully online (live, interactive — not recorded). Weekend practical sessions and tests can be attended at our Sector 62 center (14 km, 20-25 min drive). Many Gaur City parents organize shared cabs for Saturday sessions. Fully online option is also available.',
+          'No. Classes are fully online (live, interactive — not recorded), so Gaur City students learn from home. Practical demonstrations and tests happen within the online sessions, with recordings available for revision.',
       },
       {
         question: 'Which schools do Gaur City students attend?',
@@ -12014,7 +12014,7 @@ export const cityHubData: Record<string, CityHubData> = {
     localContext: {
       nearbyLandmarks: 'Gaur City Mall, Gaur City Club, Near Gaur Chowk, Greater Noida West',
       transportOptions:
-        'Shared cab pools to Sector 62 center (20 min drive). Upcoming Aqua Line Metro extension will connect Gaur City to Noida. Bus route to Pari Chowk available.',
+        'Live online classes mean zero travel for Gaur City students. Our nearest walk-in centre is in South Extension, New Delhi for anyone who prefers in-person.',
     },
     areaSpecificContent: {
       whyThisArea:
@@ -12047,9 +12047,9 @@ export const cityHubData: Record<string, CityHubData> = {
       "Raj Nagar Extension is Ghaziabad's fastest-growing residential corridor with 150+ societies. We serve 80+ NEET aspirants from RNE through live online classes and weekend sessions at our center — no more 45-minute commutes to Indirapuram or Delhi for coaching.",
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida, Uttar Pradesh - 201301',
-      distance: '20 km from Raj Nagar Extension',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Raj Nagar Extension', url: '/neet-coaching-ghaziabad/raj-nagar-extension' },
@@ -12125,12 +12125,12 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best NEET Biology coaching near Sector 18 & Atta Market Noida. 5 min from Sector 18 Metro. AIIMS faculty, small batches, 98% success. ₹45K-90K. Free demo class!',
     heroTitle: 'NEET Biology Coaching Near Sector 18 Noida',
     heroSubtitle:
-      "Sector 18 is Noida's commercial and educational hub — home to Atta Market, GIP Mall, and some of the city's best schools. Our Sector 62 center is just 10 minutes from Sector 18 Metro, making us the most accessible quality NEET coaching for this area.",
-    hasOfflineCenter: true,
+      "Sector 18 is Noida's commercial and educational hub — home to Atta Market, GIP Mall, and some of the city's best schools. Our live online classes bring quality NEET coaching directly to Sector 18 homes — no travel needed.",
+    hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida, Uttar Pradesh - 201301',
-      distance: '4 km from Sector 18 (10 min by metro)',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Sector 18', url: '/neet-coaching-noida/sector-18' },
@@ -12146,9 +12146,9 @@ export const cityHubData: Record<string, CityHubData> = {
     ],
     faqs: [
       {
-        question: 'Where is the nearest NEET coaching to Sector 18 Noida?',
+        question: 'Do you have a NEET coaching centre in Sector 18 Noida?',
         answer:
-          "Cerebrum Biology Academy in Sector 62 is just 4 km from Sector 18 — a 10-minute metro ride on the Blue Line (Sector 18 Metro → Sector 62 Metro). We're also accessible by auto-rickshaw (₹30-40) or 10-minute drive via the internal Noida road.",
+          'Cerebrum Biology Academy teaches Sector 18 students through live online classes — join from home with no travel. Our nearest walk-in centre is in South Extension, New Delhi.',
       },
       {
         question: 'Which schools near Sector 18 do your students attend?',
@@ -12179,11 +12179,11 @@ export const cityHubData: Record<string, CityHubData> = {
       nearbyLandmarks:
         'Atta Market, Great India Place (GIP) Mall, Wave Mall, Brahmaputra Market, Sector 18 Metro Station',
       transportOptions:
-        'Blue Line Metro: Sector 18 → Sector 62 (3 stops, 10 min). Auto-rickshaw: ₹30-40. By road: 10 min via Sector 18-62 internal road.',
+        'Live online classes mean zero travel for Sector 18 students. Our nearest walk-in centre is in South Extension, New Delhi for anyone who prefers in-person.',
     },
     areaSpecificContent: {
       whyThisArea:
-        "Sector 18 is Noida's most connected area — the Blue Line Metro makes our Sector 62 center just 10 minutes away. Students from Sectors 12, 15, 16, 18, and 25 all converge here. With 180+ students from this catchment, it's our highest-density area. The after-school timing works perfectly: students finish at 2 PM, reach us by 3:30 PM, and attend the 4 PM batch.",
+        "Sector 18 is Noida's most connected area, and our live online classes reach students from Sectors 12, 15, 16, 18, and 25. With 180+ students from this catchment, it's one of our highest-density areas. The after-school timing works perfectly: students finish at 2 PM and join the 4 PM live online batch from home.",
     },
     studentSuccessStory: {
       name: 'Meera S.',
@@ -12212,9 +12212,9 @@ export const cityHubData: Record<string, CityHubData> = {
       "Knowledge Park is Greater Noida's educational hub — surrounded by Sharda University, Galgotias, NIET, and GL Bajaj. Our students from this area benefit from an academic environment plus our specialized NEET Biology coaching that these colleges don't offer.",
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida, Uttar Pradesh - 201301',
-      distance: '18 km from Knowledge Park',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Knowledge Park I', url: '/neet-coaching-noida/knowledge-park' },
@@ -12232,7 +12232,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is there NEET coaching near Knowledge Park Greater Noida?',
         answer:
-          'Cerebrum Biology Academy serves 60+ students from Knowledge Park and nearby Greater Noida areas through live online classes. Our Sector 62 center is 18 km away, accessible for weekend lab sessions. Online classes during weekdays eliminate the daily commute.',
+          'Cerebrum Biology Academy serves 60+ students from Knowledge Park and nearby Greater Noida areas through live online classes. Live online classes eliminate the daily commute. Our nearest walk-in centre is in South Extension, New Delhi for anyone who prefers in-person.',
       },
       {
         question: 'Do dropper students from Greater Noida colleges enroll?',
@@ -12262,7 +12262,7 @@ export const cityHubData: Record<string, CityHubData> = {
     localContext: {
       nearbyLandmarks: 'Sharda University, Galgotias University, NIET, GL Bajaj, Pari Chowk',
       transportOptions:
-        'Greater Noida Expressway to Noida (30 min). Upcoming Aqua Line extension. Online classes eliminate commute.',
+        'Live online classes eliminate commute for Knowledge Park students. Our nearest walk-in centre is in South Extension, New Delhi.',
     },
     areaSpecificContent: {
       whyThisArea:
@@ -12456,9 +12456,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Ghaziabad students no longer need to travel to Delhi for quality Biology coaching. Our live online classes bring AIIMS-faculty teaching to Indirapuram, Vaishali, Crossing Republik, and Raj Nagar Extension — with integrated Board + NEET preparation.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '10-20 km from Ghaziabad areas',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
@@ -12475,7 +12475,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Do you have offline classes for Class 11 Biology in Ghaziabad?',
         answer:
-          'We offer live online classes for Ghaziabad students with weekend offline options at our Noida Sector 62 center (15 min from Vaishali, 20 min from Indirapuram). Online classes are fully interactive with Dr. Shekhar — not recorded videos. 85% of our Ghaziabad students prefer the online mode as it saves 2 hours daily.',
+          'We offer live online classes for Ghaziabad students — fully interactive with Dr. Shekhar, not recorded videos. Students learn from home with no travel, and 85% of our Ghaziabad students prefer the online mode as it saves 2 hours daily.',
       },
       {
         question: 'Is this suitable for UP Board students or only CBSE?',
@@ -12490,7 +12490,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What are the fees for Ghaziabad students?',
         answer:
-          'Online classes: ₹35,000-60,000/year (3 tiers). Hybrid (online + weekend offline at Noida center): ₹45,000-75,000/year. This includes study material, test series, and doubt support. EMI available. Scholarship for 90%+ students.',
+          'Online classes: ₹35,000-60,000/year (3 tiers). This includes study material, test series, and doubt support. EMI available. Scholarship for 90%+ students.',
       },
     ],
     stats: {
@@ -12502,7 +12502,7 @@ export const cityHubData: Record<string, CityHubData> = {
     localContext: {
       nearbyLandmarks: 'Indirapuram, Vaishali, Kaushambi, Raj Nagar Extension, NH-24',
       transportOptions:
-        'Blue Line Metro to Vaishali. Red Line to Shaheed Sthal. NH-24 road to Noida center (20 min).',
+        'Live online classes mean zero travel for Ghaziabad students. Our nearest walk-in centre is in South Extension, New Delhi.',
     },
     areaSpecificContent: {
       whyThisArea:
@@ -12535,9 +12535,9 @@ export const cityHubData: Record<string, CityHubData> = {
       "The decisive year. Board marks determine your college options. NEET score determines your medical career. Don't choose between them — our integrated Class 12 Biology program covers both at NEET depth, which automatically handles board-level questions.",
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '10-20 km from Ghaziabad',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
@@ -12720,7 +12720,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What is the schedule for Class 12 Biology?',
         answer:
-          'Online batches: Mon-Fri (4-6 PM or 6-8 PM). Weekend offline lab sessions at center (optional). Total 6 hours/week. Board revision batch (Jan-Mar): additional 3 hours/week. The schedule is designed around school timings so there is no conflict.',
+          'Online batches: Mon-Fri (4-6 PM or 6-8 PM). Practical demonstrations are covered within the live online sessions. Total 6 hours/week. Board revision batch (Jan-Mar): additional 3 hours/week. The schedule is designed around school timings so there is no conflict.',
       },
       {
         question: 'Do you provide practical/viva preparation for boards?',
@@ -12763,15 +12763,15 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Uttar Pradesh',
     metaTitle: 'NEET Revision Batch Noida 2026 | 3-Month Final Revision | Cerebrum Biology Academy',
     metaDescription:
-      'NEET Biology revision batch in Noida — 3-month intensive final revision. NCERT x2, 2000+ MCQs, 12 mock exams. AIIMS faculty. ₹40,000. Sector 62 center + online.',
+      'NEET Biology revision batch in Noida — 3-month intensive final revision. NCERT x2, 2000+ MCQs, 12 mock exams. AIIMS faculty. ₹40,000. Live online classes.',
     heroTitle: 'NEET Final Revision Batch — Noida',
     heroSubtitle:
       'Boards are done. NEET is 3 months away. This is not the time for new learning — it is the time for strategic revision. Our 3-month revision batch covers the entire NCERT twice, with 2000+ MCQs and 12 full-length mocks. 92% of revision batch students score 550+.',
-    hasOfflineCenter: true,
+    hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: 'In Noida (Sector 62)',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Sector 18', url: '/neet-coaching-noida/sector-18' },
@@ -12803,7 +12803,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What is the fee for the Noida revision batch?',
         answer:
-          'Offline (Sector 62 center): ₹40,000-60,000. Online: ₹35,000-50,000. Includes all material, tests, mocks, and doubt support. EMI: ₹13,000-20,000/month for 3 months. Scholarship test available for additional discount.',
+          'Live online: ₹35,000-50,000. Includes all material, tests, mocks, and doubt support. EMI: ₹13,000-20,000/month for 3 months. Scholarship test available for additional discount.',
       },
     ],
     stats: {
@@ -12813,20 +12813,20 @@ export const cityHubData: Record<string, CityHubData> = {
     },
     geoCoordinates: { lat: '28.5355', lng: '77.3910' },
     localContext: {
-      nearbyLandmarks: 'Sector 62 Metro Station, Electronic City, Noida Film City',
+      nearbyLandmarks: 'Noida City Centre, Electronic City, Noida Film City',
       transportOptions:
-        'Blue Line Metro to Sector 62 (direct). All Noida sectors accessible within 20 min.',
+        'Live online classes reach all Noida sectors with zero travel. Our nearest walk-in centre is in South Extension, New Delhi.',
     },
     areaSpecificContent: {
       whyThisArea:
-        'Noida is our home base — the Sector 62 center is purpose-built for intensive revision programs. Students from all 40+ Noida sectors, Greater Noida, and Noida Extension attend the revision batch. The offline option is popular for revision because in-person mock exam practice simulates actual NEET conditions better than online.',
+        'Our live online revision programme reaches students across all 40+ Noida sectors, Greater Noida, and Noida Extension. Full-length mock exams run under timed conditions online, and detailed analysis after each mock simulates real NEET pressure.',
     },
     studentSuccessStory: {
       name: 'Tanvi S.',
       area: 'Sector 137, Noida',
       achievement: 'NEET 2025 — 632/720 (Revision Batch)',
       quote:
-        'I had covered syllabus twice on my own but my mock scores were stuck at 520. The revision batch at Sector 62 center changed everything — the mock exam analysis showed me I was losing 60 marks on silly mistakes. Fixed that in 3 weeks. Final score: 632.',
+        'I had covered syllabus twice on my own but my mock scores were stuck at 520. The revision batch changed everything — the mock exam analysis showed me I was losing 60 marks on silly mistakes. Fixed that in 3 weeks. Final score: 632.',
     },
   },
 
@@ -12840,12 +12840,12 @@ export const cityHubData: Record<string, CityHubData> = {
       'NEET Biology revision batch for Ghaziabad students — Indirapuram, Vaishali, Raj Nagar. 3-month intensive, NCERT x2, 12 mock exams. Online + offline. ₹35,000-50,000.',
     heroTitle: 'NEET Final Revision Batch — Ghaziabad',
     heroSubtitle:
-      'Ghaziabad students: boards are over, NEET is approaching. Join our focused 3-month revision program — cover entire NCERT twice, practice 2000+ MCQs, and take 12 full-length mock exams. Online classes + optional weekend offline at Noida center.',
+      'Ghaziabad students: boards are over, NEET is approaching. Join our focused 3-month revision program — cover entire NCERT twice, practice 2000+ MCQs, and take 12 full-length mock exams. Fully live online classes.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '15-20 km from Ghaziabad areas',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
@@ -12861,7 +12861,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is the revision batch available online for Ghaziabad students?',
         answer:
-          'Yes! Most Ghaziabad students attend the revision batch online — live interactive sessions, daily tests, and doubt clearing. Weekend mock exams can be taken at our Noida center (15 min from Vaishali) for real exam simulation.',
+          'Yes! Most Ghaziabad students attend the revision batch online — live interactive sessions, daily tests, and doubt clearing. Full-length mock exams run online under timed conditions for real exam simulation.',
       },
       {
         question: 'How is revision batch different from crash course?',
@@ -12888,7 +12888,7 @@ export const cityHubData: Record<string, CityHubData> = {
     localContext: {
       nearbyLandmarks: 'Indirapuram, Vaishali Metro, NH-24, Raj Nagar Extension',
       transportOptions:
-        'Online classes eliminate commute. Weekend offline at Noida Sector 62 (15 min from Vaishali via Blue Line Metro).',
+        'Live online classes eliminate commute for Ghaziabad students. Our nearest walk-in centre is in South Extension, New Delhi.',
     },
     areaSpecificContent: {
       whyThisArea:
@@ -12915,9 +12915,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Greater Noida and Noida Extension students: the final 3 months before NEET decide everything. Our revision batch is designed for students who have covered the syllabus but need systematic revision, extensive practice, and mock exam training to convert knowledge into marks.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '18-25 km from Greater Noida',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' },
@@ -12939,7 +12939,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'How do Greater Noida students attend?',
         answer:
-          'Online during weekdays (live, interactive). Optional weekend offline at Noida Sector 62 center for mock exam practice. Many Gaur City and Noida Extension students organize shared cabs for Saturday mock exam sessions.',
+          'Classes are live and interactive online. Full-length mock exams run online under timed conditions, with detailed analysis after each test.',
       },
       {
         question: 'What is the revision batch schedule?',
@@ -12961,7 +12961,7 @@ export const cityHubData: Record<string, CityHubData> = {
     localContext: {
       nearbyLandmarks: 'Knowledge Park, Pari Chowk, Gaur City, Greater Noida Expressway',
       transportOptions:
-        'Online classes eliminate commute. Greater Noida Expressway to Noida center (25-30 min). Shared cabs organized by students.',
+        'Live online classes eliminate commute for Greater Noida students. Our nearest walk-in centre is in South Extension, New Delhi.',
     },
     areaSpecificContent: {
       whyThisArea:
@@ -13063,12 +13063,12 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best Biology classes in Ghaziabad for Class 9-12. CBSE + UP Board. Indirapuram, Vaishali, Raj Nagar. AIIMS faculty, 15-student batches. ₹35,000-60,000/year. Free demo!',
     heroTitle: 'Biology Classes in Ghaziabad — Class 9 to 12',
     heroSubtitle:
-      'Whether your child is in Class 9 building foundations or Class 12 preparing for boards and NEET — our Biology classes cover every level. CBSE and UP Board patterns both covered. Live online classes from Ghaziabad with optional weekend offline at our Noida center.',
+      'Whether your child is in Class 9 building foundations or Class 12 preparing for boards and NEET — our Biology classes cover every level. CBSE and UP Board patterns both covered. Fully live online classes for Ghaziabad students.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '15-20 km from Ghaziabad',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
@@ -13131,9 +13131,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Greater Noida and Noida Extension have 5 lakh+ families but zero dedicated Biology coaching. Our live online classes bring AIIMS-faculty Biology teaching to Gaur City, Knowledge Park, Pari Chowk, and all Greater Noida sectors — for board exam prep, NEET, or both.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '18-25 km from Greater Noida',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
@@ -13150,7 +13150,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is there Biology tuition available in Greater Noida?',
         answer:
-          'Yes! Cerebrum Biology Academy serves 100+ Greater Noida students through live online classes. Our Noida Sector 62 center is accessible for weekend lab/practical sessions. We cover Class 9-12 Biology for CBSE board exams and NEET.',
+          'Yes! Cerebrum Biology Academy serves 100+ Greater Noida students through live online classes. We cover Class 9-12 Biology for CBSE board exams and NEET.',
       },
       {
         question: 'Which Greater Noida societies are your students from?',
@@ -13189,15 +13189,15 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Uttar Pradesh',
     metaTitle: 'Class 11 Biology Coaching Greater Noida | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
-      'Class 11 Biology coaching for Greater Noida students. CBSE Board + NEET integrated. AIIMS faculty, 15-student batches, ₹48,000-65,000/year. Online + weekend offline. Free demo!',
+      'Class 11 Biology coaching for Greater Noida students. CBSE Board + NEET integrated. AIIMS faculty, 15-student batches, ₹48,000-65,000/year. Live online classes. Free demo!',
     heroTitle: 'Class 11 Biology Coaching — Greater Noida',
     heroSubtitle:
       'Class 11 Biology is the foundation year — Cell Biology, Plant Physiology, Human Anatomy all start here. Our integrated Board + NEET approach means your child builds deep understanding from Day 1, scoring well in school AND preparing for NEET simultaneously.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '18-25 km',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
@@ -13228,7 +13228,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'How do Greater Noida students attend?',
         answer:
-          'Weekday classes: fully online (live, interactive). Weekend: optional offline at Noida Sector 62 for practicals. Many Gaur City and Knowledge Park students organize shared transport for Saturday sessions.',
+          'Weekday classes: fully online (live, interactive). All learning is fully online (live, interactive), so students study from home with recordings for revision.',
       },
     ],
     stats: { studentsFromCity: '50+', successRate: '95%', rating: '4.8' },
@@ -13259,9 +13259,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Class 12 is the decisive year — board marks for college, NEET score for medical career. Our integrated program covers both without doubling study hours. Genetics, Ecology, Reproduction, Biotechnology — all taught at NEET depth, board exams covered automatically.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '18-25 km',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
@@ -13383,11 +13383,11 @@ export const cityHubData: Record<string, CityHubData> = {
     heroTitle: 'Class 10 Biology Coaching in Noida',
     heroSubtitle:
       'Class 10 Biology is the gateway — strong foundation here determines Class 11-12 performance and NEET readiness. Our coaching covers complete NCERT Class 10 at a depth that makes both board exams easy AND prepares students for the leap to Class 11.',
-    hasOfflineCenter: true,
+    hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: 'In Noida',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Sector 18', url: '/neet-coaching-noida/sector-18' },
@@ -13413,7 +13413,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What are the fees?',
         answer:
-          'Board prep: ₹38,000/year. Board + NEET foundation: ₹45,000-50,000/year. Offline at Sector 62 or online. Includes study material, weekly tests, practical prep. EMI available.',
+          'Board prep: ₹38,000/year. Board + NEET foundation: ₹45,000-50,000/year. Live online classes. Includes study material, weekly tests, practical prep. EMI available.',
       },
       {
         question: 'What is the weekly time commitment?',
@@ -13510,11 +13510,11 @@ export const cityHubData: Record<string, CityHubData> = {
     heroTitle: 'Class 9 Biology Tuition in Noida',
     heroSubtitle:
       'Class 9 is when Biology gets interesting — Cells, Tissues, Diversity of Life, Life Processes. Our age-appropriate teaching makes these topics fun while building conceptual depth that pays off in Class 10, 11, and beyond. Just 3 hours/week.',
-    hasOfflineCenter: true,
+    hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: 'In Noida',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Sector 18', url: '/neet-coaching-noida/sector-18' },
@@ -13541,7 +13541,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What is the fee?',
         answer:
-          '₹35,000/year (Pursuit tier, 20 students). ₹45,000/year (Ascent tier, 15 students). ₹60,000/year (Pinnacle tier, 12 students + mentoring). Offline at Sector 62 or online. Free lab kit included with Pinnacle tier.',
+          '₹35,000/year (Pursuit tier, 20 students). ₹45,000/year (Ascent tier, 15 students). ₹60,000/year (Pinnacle tier, 12 students + mentoring). Live online classes. Free lab kit included with Pinnacle tier.',
       },
       {
         question: 'What makes this different from school Biology?',
@@ -13560,7 +13560,7 @@ export const cityHubData: Record<string, CityHubData> = {
       area: 'Sector 50, Noida',
       achievement: 'Class 9 Board: 93/100 Science | Now Class 10 topper',
       quote:
-        'Biology went from my most boring subject to my favorite. The microscope sessions at Sector 62 center were amazing — actually seeing cells and tissues made everything click. Scored 93 in Class 9 Science.',
+        'Biology went from my most boring subject to my favorite. The live microscope demonstrations were amazing — actually seeing cells and tissues made everything click. Scored 93 in Class 9 Science.',
     },
   },
 
@@ -14132,11 +14132,11 @@ export const cityHubData: Record<string, CityHubData> = {
     heroTitle: 'Best Biology Coaching in Noida — Ranked #1',
     heroSubtitle:
       'Searching for the "best Biology coaching in Noida"? Here\'s why 1,200+ Noida students chose us: AIIMS faculty (not generic teachers), 15-student batches (not 60+), and dual results — 92/100 average board score AND 160+/180 average NEET Biology score. No other institute in Noida delivers both.',
-    hasOfflineCenter: true,
+    hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: 'In Noida',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Sector 18', url: '/neet-coaching-sector-18-noida' },
@@ -14389,9 +14389,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Expert Biology tutoring by AIIMS faculty for Greater Noida students. Better than private tutors — structured curriculum, regular tests, and 15-student batches that give personal attention at 1/3 the cost of home tutors.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '18-25 km',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
@@ -14512,7 +14512,7 @@ export const cityHubData: Record<string, CityHubData> = {
     heroTitle: 'Biology Tuition in West Delhi',
     heroSubtitle:
       'West Delhi students from Dwarka, Janakpuri, Rajouri Garden — access AIIMS-faculty Biology tuition online or at our Rohini center. Board exam + NEET preparation for Class 9-12.',
-    hasOfflineCenter: true,
+    hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
       address: 'Block-A, Sector 7, Rohini, Delhi 110085',
@@ -14952,9 +14952,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Build strong Biology foundations in Class 9. Interactive teaching with hands-on experiments — just 3 hours/week. Perfect for Ghaziabad students who want to ace school exams and prepare for the Class 10-11 leap.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '15-20 km',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
@@ -15013,9 +15013,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Class 10 Biology is the gateway to Class 11-12. Our coaching builds deep understanding of Life Processes, Heredity, and Environment — scoring well in boards AND preparing for the Class 11 leap.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '15-20 km',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
@@ -15194,9 +15194,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Greater Noida students: start Biology early with fun, interactive classes. Hands-on experiments and 3D models make Cell Biology and Life Processes memorable. Just 3 hours/week online.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '18-25 km',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
@@ -15211,7 +15211,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is Class 9 Biology coaching available in Greater Noida?',
         answer:
-          'Yes! Online classes with AIIMS faculty. 3 hrs/week from home. Weekend lab sessions available at Noida center.',
+          'Yes! Online classes with AIIMS faculty. 3 hrs/week from home. Practical demonstrations are covered within the live online sessions.',
       },
       {
         question: 'What is the fee?',
@@ -15253,9 +15253,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Score 90+ in Class 10 Biology boards and build the foundation for Class 11. Online coaching for Gaur City, Knowledge Park, and all Greater Noida areas.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '18-25 km',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
@@ -15313,9 +15313,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'CBSE Biology needs diagram perfection, practical confidence, and HOTS mastery. Our board-focused coaching covers all of this while optionally building NEET readiness. Average board score: 91/100.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '15-20 km',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
@@ -15432,9 +15432,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Greater Noida CBSE students: score 90+ in Biology boards with focused coaching on diagrams, practicals, and HOTS questions. Online classes with AIIMS faculty.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '18-25 km',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
@@ -15491,9 +15491,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Why 200+ Ghaziabad students chose Cerebrum: AIIMS faculty, 15-student batches, 91/100 average board score. The only Biology-specialist serving Indirapuram, Vaishali, and Raj Nagar Extension.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '15-20 km',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
@@ -15615,9 +15615,9 @@ export const cityHubData: Record<string, CityHubData> = {
       'Greater Noida finally has access to the best Biology coaching in Delhi NCR. 100+ students from Gaur City, Knowledge Park, and Pari Chowk chose Cerebrum for AIIMS-faculty quality at affordable prices.',
     hasOfflineCenter: false,
     nearestCenter: {
-      name: 'Noida Sector 62 Center',
-      address: 'B-45, Sector 62, Noida - 201301',
-      distance: '18-25 km',
+      name: 'South Extension Center, New Delhi',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
+      distance: 'live online, no travel needed',
     },
     localities: [
       { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
@@ -15638,7 +15638,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'How do Greater Noida students attend?',
         answer:
-          'Online weekdays (live, interactive). Optional weekend offline at Noida Sector 62 center. Shared transport from Gaur City organized by students.',
+          'Online weekdays (live, interactive). Fully online (live, interactive), so students learn from home with recordings for revision.',
       },
       {
         question: 'What are the fees?',
@@ -15903,7 +15903,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Where are the centers?',
         answer:
-          'Noida Sector 62, Gurugram Sector 51, South Delhi South Extension, North Delhi Rohini. Online everywhere.',
+          'Gurugram (Sector 51), Faridabad (Sector 17), South Extension and Green Park (South Delhi), Rohini (North Delhi). Online everywhere, including across Noida, Greater Noida, and Ghaziabad.',
       },
       {
         question: 'What are the fees?',

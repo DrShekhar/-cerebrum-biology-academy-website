@@ -158,7 +158,8 @@ export default function NEETFoundationClass9NoidaContent({ faqs }: { faqs: FAQ[]
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
               Start your medical dream journey from Class 9. Build strong biology foundation while
-              excelling in board exams. Join our Sector 62, Noida center for expert guidance.
+              excelling in board exams. Join our live online classes for Noida students with expert
+              guidance.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -321,7 +322,7 @@ export default function NEETFoundationClass9NoidaContent({ faqs }: { faqs: FAQ[]
                 </div>
                 <div className="flex justify-between py-3">
                   <span className="text-slate-600">Mode</span>
-                  <span className="font-semibold">Offline + Online Support</span>
+                  <span className="font-semibold">Live Online Classes</span>
                 </div>
               </div>
               <Link
@@ -337,16 +338,14 @@ export default function NEETFoundationClass9NoidaContent({ faqs }: { faqs: FAQ[]
             <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 animate-fadeInUp">
               <div className="flex items-center mb-6">
                 <MapPin className="w-8 h-8 text-green-600 mr-3" />
-                <h2 className="text-2xl font-bold text-gray-900">Our Noida Center</h2>
+                <h2 className="text-2xl font-bold text-gray-900">Live Online for Noida</h2>
               </div>
               <p className="text-gray-700 mb-4">
-                <strong>Address:</strong> B-45, Sector 62, Noida, UP 201301
-              </p>
-              <p className="text-gray-700 mb-4">
-                <strong>Landmark:</strong> Near Sector 62 Metro Station (Blue Line, 5 min walk)
+                We teach Noida students through interactive live online classes — join from anywhere
+                in Noida or Greater Noida with no travel needed.
               </p>
               <p className="text-gray-700 mb-6">
-                <strong>Metro:</strong> Sector 62 Metro Station (Blue Line)
+                Prefer in-person? Our nearest walk-in center is South Extension, New Delhi.
               </p>
               <div className="flex gap-4">
                 <a href={`tel:${CONTACT_INFO.phone.primary}`}>
@@ -355,16 +354,16 @@ export default function NEETFoundationClass9NoidaContent({ faqs }: { faqs: FAQ[]
                     Call Now
                   </Button>
                 </a>
-                <a
-                  href="https://maps.google.com/?q=B-45+Sector+62+Noida"
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20join%20live%20online%20NEET%20Foundation%20classes%20from%20Noida.%20Please%20share%20details."
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <Button>
-                    <MapPin className="w-4 h-4 mr-2" />
-                    Directions
+                    <Play className="w-4 h-4 mr-2" />
+                    Join Live Online
                   </Button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

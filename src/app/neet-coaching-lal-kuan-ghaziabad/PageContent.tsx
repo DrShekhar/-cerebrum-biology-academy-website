@@ -86,12 +86,12 @@ const faqs = [
   {
     question: 'Do you have a coaching center in Lal Kuan or Ghaziabad?',
     answer:
-      'Our main center is in Greater Noida. For Lal Kuan and Ghaziabad students, we offer premium live online NEET classes. Lal Kuan is rapidly developing as a satellite area with excellent housing options for middle-class families. Our online program provides the same expert coaching without requiring daily commute to Noida.',
+      'We serve Lal Kuan and Ghaziabad students through premium live online NEET classes — no travel needed. Lal Kuan is rapidly developing as a satellite area with excellent housing options for middle-class families. Our online program provides the same expert coaching from home. For anyone wanting in-person classes, our nearest walk-in centre is South Extension, New Delhi.',
   },
   {
-    question: 'Is Greater Noida center accessible from Lal Kuan?',
+    question: 'Should Lal Kuan students choose online or in-person classes?',
     answer:
-      'Lal Kuan to Greater Noida is approximately 55-60 km through NH-24 and inner roads. While theoretically possible, we recommend online classes given traffic conditions and the time investment. Our online live classes offer the same teaching quality with recorded sessions for revision.',
+      'For Lal Kuan and Ghaziabad students, we recommend our live online NEET program — same AIIMS faculty, recorded sessions for revision, and no commute. If you prefer in-person coaching, our nearest walk-in centre is South Extension, New Delhi.',
   },
   {
     question: 'What schools do your Lal Kuan and Ghaziabad students come from?',
@@ -124,8 +124,10 @@ const localBusinessSchema = {
   telephone: '+91-88264-44334',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Greater Noida',
-    addressRegion: 'Uttar Pradesh',
+    streetAddress: 'D 35, South Extension Part 2',
+    addressLocality: 'New Delhi',
+    addressRegion: 'Delhi',
+    postalCode: '110049',
     addressCountry: 'IN',
   },
   areaServed: [
@@ -282,7 +284,7 @@ export default function PageContent() {
               >
                 <MapPin className="w-8 h-8 text-green-600 mb-4" />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{area.name}</h3>
-                <p className="text-sm text-gray-500 mb-1">{area.distance} from center</p>
+                <p className="text-sm text-gray-500 mb-1">Live online coverage</p>
                 <p className="text-sm text-gray-400">{area.landmark}</p>
               </div>
             ))}

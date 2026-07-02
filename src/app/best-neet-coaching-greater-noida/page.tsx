@@ -43,7 +43,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching institute for Greater Noida students?',
     answer:
-      'For Biology-focused NEET preparation, Cerebrum Biology Academy stands out with AIIMS-trained faculty (Dr. Shekhar C Singh), 98% success rate, small batch sizes (15-20 students), and 15+ years of experience. Greater Noida students attend via online/hybrid or visit our Sector 62 Noida center (accessible via Aqua Line Metro). For Physics-Chemistry focused, students also consider Aakash and Allen.',
+      'For Biology-focused NEET preparation, Cerebrum Biology Academy stands out with AIIMS-trained faculty (Dr. Shekhar C Singh), 98% success rate, small batch sizes (15-20 students), and 15+ years of experience. Greater Noida students learn through live online classes — no commute needed. For Physics-Chemistry focused, students also consider Aakash and Allen.',
   },
   {
     question: 'What are the fees for NEET coaching for Greater Noida students?',
@@ -51,9 +51,9 @@ const faqs = [
       'NEET coaching fees range from ₹60,000 to ₹2,00,000+ per year. Budget options like Cerebrum start at ₹60,000/year with AIIMS faculty. Premium institutes like Aakash and Allen charge ₹1,50,000-2,00,000/year. Online options start at ₹45,000. Greater Noida students often prefer online/hybrid for convenience.',
   },
   {
-    question: 'Is it better to join coaching in Noida or Greater Noida?',
+    question: 'Do Greater Noida students need to travel for Cerebrum classes?',
     answer:
-      'Greater Noida students can easily reach our Sector 62 Noida center via the Aqua Line Metro (connects to Blue Line). Alternatively, our online + hybrid classes provide the same quality experience without commute. Cerebrum offers the same AIIMS faculty quality without travel hassle.',
+      'No travel needed — Cerebrum teaches Greater Noida students through live online classes with the same AIIMS faculty quality and small batches, without any commute. For anyone wanting in-person study, our nearest walk-in center is South Extension, New Delhi.',
   },
   {
     question: 'What factors should I consider when choosing NEET coaching?',

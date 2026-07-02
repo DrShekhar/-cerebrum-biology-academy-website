@@ -78,28 +78,28 @@ export default function GhaziabadLocationPage() {
       href: '/locations/rohini',
     },
     {
-      name: 'Noida Center (Sector 62)',
-      distance: '~20 min from Indirapuram',
-      href: '/locations/noida',
+      name: 'South Extension Center, New Delhi',
+      distance: 'Flagship walk-in center for in-person study',
+      href: '/locations/south-extension',
     },
   ]
 
   const faqs = [
     {
       q: 'Is there a Cerebrum Biology Academy center in Ghaziabad?',
-      a: 'Cerebrum Biology Academy offers online and hybrid NEET Biology classes for Ghaziabad students. Our nearest physical centers are in Rohini (DC Chowk, ~30 min from Vaishali) and Noida (Sector 62, ~20 min from Indirapuram). Book a free demo class to experience our teaching!',
+      a: 'We teach Ghaziabad students through live online classes - no travel needed. If you prefer in-person study, our nearest walk-in centers are Rohini (DC Chowk, ~30 min from Vaishali) and South Extension, New Delhi. Book a free demo class to experience our teaching!',
     },
     {
       q: 'How can Ghaziabad students attend classes at Cerebrum Academy?',
-      a: 'Ghaziabad students have three options: (1) Online live classes from home, (2) Visit our Noida center at B-45, Sector 62 (closest for Indirapuram/Vaishali), (3) Visit our Rohini center at DC Chowk (accessible via Blue Line from Vaishali Metro). All options include full access to study material and doubt sessions.',
+      a: 'Ghaziabad students have three options: (1) Live online classes from home (most convenient), (2) Visit our Rohini center at DC Chowk (accessible via Blue Line from Vaishali Metro), (3) Visit our flagship South Extension center in New Delhi. All options include full access to study material and doubt sessions.',
     },
     {
-      q: 'What metro route should I take from Ghaziabad to Cerebrum Academy?',
-      a: 'From Vaishali: Take Blue Line to Rohini West (for Rohini center) or to Sector 62 (for Noida center). From Indirapuram: Reach Noida Sector 62 in ~20 minutes by road. From Mohan Nagar: Red Line connects to Rohini West directly.',
+      q: 'What metro route should I take from Ghaziabad to a Cerebrum center?',
+      a: 'From Vaishali: Take Blue Line to Rohini West for our Rohini center. From Mohan Nagar: Red Line connects to Rohini West directly. Most Ghaziabad students simply join our live online classes from home instead.',
     },
     {
       q: 'What are the batch timings for Ghaziabad students?',
-      a: 'We offer flexible batch timings: Morning (7:00-9:00 AM), Afternoon (2:00-4:00 PM), and Evening (5:00-7:00 PM). Online students can also access recorded sessions. Weekend batches are available for students who prefer in-person classes.',
+      a: 'We offer flexible batch timings: Morning (7:00-9:00 AM), Afternoon (2:00-4:00 PM), and Evening (5:00-7:00 PM). Online students can also access recorded sessions. Weekend batches are available too.',
     },
     {
       q: 'How many students from Ghaziabad have cleared NEET through Cerebrum?',
@@ -136,9 +136,7 @@ export default function GhaziabadLocationPage() {
             <div className="space-y-6 animate-fadeInUp">
               <div className="inline-flex items-center space-x-2 bg-purple-500/20 border border-purple-500/40 rounded-full px-4 py-2">
                 <MapPin className="w-4 h-4 text-purple-400" />
-                <span className="text-purple-300 text-sm font-medium">
-                  Ghaziabad (Online + Hybrid)
-                </span>
+                <span className="text-purple-300 text-sm font-medium">Ghaziabad (Live Online)</span>
               </div>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
@@ -147,8 +145,8 @@ export default function GhaziabadLocationPage() {
 
               <p className="text-lg text-gray-300 leading-relaxed">
                 Top-rated NEET Biology coaching for Ghaziabad students. AIIMS faculty, small
-                batches, 98% success rate. Online classes + in-person options at our nearby Rohini
-                and Noida centers.
+                batches, 98% success rate. Live online classes, with in-person options at our nearby
+                Rohini and South Extension centers.
               </p>
 
               {/* Info Card */}
@@ -157,9 +155,9 @@ export default function GhaziabadLocationPage() {
                   <div className="flex items-start space-x-3">
                     <Monitor className="w-5 h-5 text-yellow-400 mt-1" />
                     <div>
-                      <p className="font-medium">Online Live Classes + Hybrid Options</p>
+                      <p className="font-medium">Live Online Classes</p>
                       <p className="text-gray-300">
-                        Nearest centers: Rohini (DC Chowk) & Noida (Sector 62)
+                        Nearest walk-in centers: Rohini (DC Chowk) & South Extension, New Delhi
                       </p>
                     </div>
                   </div>
@@ -281,10 +279,11 @@ export default function GhaziabadLocationPage() {
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
                 <Train className="w-6 h-6 text-green-600" />
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Noida Center (~20 min)</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">South Extension Center</h3>
               <p className="text-gray-600">
-                Our <strong>Noida center at B-45, Sector 62</strong> is the closest option for
-                Indirapuram and Vaishali students. Reach via NH-24 or Sector 62 Metro (Blue Line).
+                Our <strong>flagship South Extension center in New Delhi</strong> is open for
+                in-person study if you prefer to attend classes in person. Full study material and
+                doubt sessions included.
               </p>
             </div>
 
@@ -380,7 +379,7 @@ export default function GhaziabadLocationPage() {
       <div className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
-            Other Centers in Delhi NCR
+            Our Walk-in Centers in Delhi NCR
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {[
@@ -388,7 +387,6 @@ export default function GhaziabadLocationPage() {
               { name: 'Rohini (DC Chowk)', href: '/locations/rohini' },
               { name: 'Gurugram (Sector 51)', href: '/locations/gurugram' },
               { name: 'Faridabad (Sector 17)', href: '/locations/faridabad' },
-              { name: 'Noida (Sector 62)', href: '/locations/noida' },
               { name: 'Delhi (All Areas)', href: '/locations/delhi' },
             ].map((center) => (
               <Link

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     title: 'NEET Evening Batch Ghaziabad 2026',
     description:
-      'After-school NEET preparation! Evening classes from 5 PM at Sector 62 Noida, accessible via Blue Line Metro.',
+      'After-school NEET preparation! Live online evening classes from 5 PM for Ghaziabad students - learn from home.',
     url: 'https://cerebrumbiologyacademy.com/neet-evening-batch-ghaziabad',
   },
   alternates: {
@@ -107,7 +107,7 @@ const faqs = [
   {
     question: 'Which Ghaziabad schools can conveniently attend evening batch?',
     answer:
-      "Ideal for students from: DPS Indirapuram, Ryan International Ghaziabad, Amity International Vaishali, GD Goenka Indirapuram, St. Mary's Convent, Jaipuria School, and other Ghaziabad schools ending by 3-4 PM. Blue Line Metro from Vaishali/Kaushambi reaches Sector 62 in 20-25 min.",
+      "Ideal for students from: DPS Indirapuram, Ryan International Ghaziabad, Amity International Vaishali, GD Goenka Indirapuram, St. Mary's Convent, Jaipuria School, and other Ghaziabad schools ending by 3-4 PM. Classes are live online, so students simply log in from home after school - no travel needed.",
   },
   {
     question: 'Is evening batch as effective as morning batch?',
@@ -122,7 +122,7 @@ const faqs = [
   {
     question: 'How to manage school + evening coaching for Ghaziabad students?',
     answer:
-      'Recommended routine: School (8 AM-3 PM) → Rest/Lunch (3-4 PM) → Metro to Sector 62 Noida (4-4:30 PM) → Coaching (5-8 PM) → Return home → Dinner (9 PM) → Self-study (9:30-11 PM) → Sleep. Our syllabus aligns with CBSE, so school and coaching complement each other.',
+      'Recommended routine: School (8 AM-3 PM) → Rest/Lunch (3-4:30 PM) → Log in for live online coaching (5-8 PM) → Dinner (8:30 PM) → Self-study (9:30-11 PM) → Sleep. Our syllabus aligns with CBSE, so school and coaching complement each other.',
   },
   {
     question: 'What if school has extra classes/activities?',
@@ -130,14 +130,14 @@ const faqs = [
       'Flexible attendance: 1) Inform us in advance for planned absences, 2) Recorded summaries available, 3) Weekend catch-up sessions, 4) No penalty for occasional misses. We understand school schedules vary.',
   },
   {
-    question: 'Do you provide snacks/refreshments?',
+    question: 'Is there a break during the evening class?',
     answer:
-      'Yes! Light refreshments provided during break (6:30-6:45 PM): Biscuits, juice/water. Students can also bring their own snacks. AC classroom ensures comfort after long school day.',
+      'Yes! A short break (6:30-6:45 PM) lets students grab a snack and recharge before the second half. Learning from home means you stay comfortable after a long school day.',
   },
   {
     question: 'Can droppers join evening batch?',
     answer:
-      'Droppers typically prefer morning batches (more time for self-study). But evening batch is available if preferred. Dropper-specific: Additional morning doubt sessions available, extra test series, extended library hours.',
+      'Droppers typically prefer morning batches (more time for self-study). But the evening batch is available if preferred. Dropper-specific: Additional morning doubt sessions, extra test series, and extended access to recorded lectures.',
   },
 ]
 
@@ -162,8 +162,8 @@ export default function NEETEveningBatchGhaziabad() {
               NEET Evening Batch for Ghaziabad Students
             </h1>
             <p className="text-xl text-indigo-100 mb-8">
-              After-school NEET preparation! Evening classes from 5 PM at Sector 62 Noida. Blue Line
-              Metro from Vaishali/Kaushambi in 20-25 minutes.
+              After-school NEET preparation! Live online evening classes from 5 PM for Ghaziabad
+              students - learn from home, no travel needed.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -218,8 +218,8 @@ export default function NEETEveningBatchGhaziabad() {
             Ghaziabad Schools Compatible with Evening Batch
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Students from these Ghaziabad schools can comfortably reach our Sector 62 Noida center
-            by 5 PM via Blue Line Metro
+            Students from these Ghaziabad schools can comfortably join our live online evening batch
+            by 5 PM from home
           </p>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -288,10 +288,8 @@ export default function NEETEveningBatchGhaziabad() {
               <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-md">
                 <div className="w-24 text-center font-bold text-indigo-600">3 - 4:30 PM</div>
                 <div className="flex-1">
-                  <p className="font-semibold">Rest & Travel</p>
-                  <p className="text-sm text-gray-600">
-                    Recharge + Blue Line Metro to Sector 62 Noida
-                  </p>
+                  <p className="font-semibold">Rest & Recharge</p>
+                  <p className="text-sm text-gray-600">Relax at home before logging in for class</p>
                 </div>
               </div>
               <div className="flex items-center gap-4 bg-indigo-100 p-4 rounded-lg shadow-md border-2 border-indigo-400">
@@ -372,7 +370,7 @@ export default function NEETEveningBatchGhaziabad() {
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>15 hours weekly classroom sessions</span>
+                    <span>15 hours weekly live online sessions</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
@@ -384,7 +382,7 @@ export default function NEETEveningBatchGhaziabad() {
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Light refreshments during break</span>
+                    <span>Recorded lectures for revision</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
@@ -407,50 +405,39 @@ export default function NEETEveningBatchGhaziabad() {
         </div>
       </section>
 
-      {/* Center Location */}
+      {/* How It Works */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="md:flex">
-              <div className="md:w-1/2 p-8">
-                <h2 className="text-2xl font-bold mb-4">Evening Batch Location</h2>
-                <div className="flex items-start gap-3 mb-4">
-                  <MapPin className="w-5 h-5 text-indigo-600 mt-1" />
-                  <div>
-                    <p className="font-semibold">B-45, Sector 62</p>
-                    <p className="text-gray-600">Noida, UP 201301</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Blue Line Metro: Vaishali/Kaushambi → Sector 62 (20-25 min)
-                    </p>
-                  </div>
+            <div className="p-8">
+              <h2 className="text-2xl font-bold mb-4">How the Evening Batch Works</h2>
+              <div className="flex items-start gap-3 mb-4">
+                <MapPin className="w-5 h-5 text-indigo-600 mt-1" />
+                <div>
+                  <p className="font-semibold">Live Online for Ghaziabad</p>
+                  <p className="text-gray-600">
+                    Join interactive live classes from home - no travel needed.
+                  </p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Prefer in-person? Our nearest walk-in center is South Extension, New Delhi.
+                  </p>
                 </div>
-                <div className="flex items-start gap-3 mb-4">
-                  <Clock className="w-5 h-5 text-indigo-600 mt-1" />
-                  <div>
-                    <p className="font-semibold">Evening Timings</p>
-                    <p className="text-gray-600">Monday - Friday: 5 PM - 8 PM</p>
-                    <p className="text-gray-600">Saturday (Optional): 10 AM - 1 PM</p>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3 mb-4">
+                <Clock className="w-5 h-5 text-indigo-600 mt-1" />
+                <div>
+                  <p className="font-semibold">Evening Timings</p>
+                  <p className="text-gray-600">Monday - Friday: 5 PM - 8 PM</p>
+                  <p className="text-gray-600">Saturday (Optional): 10 AM - 1 PM</p>
                 </div>
-                <a
-                  href="tel:+918826444334"
-                  className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
-                >
-                  <Phone className="w-5 h-5" />
-                  Book Free Demo
-                </a>
               </div>
-              <div className="md:w-1/2">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.1234567890123!2d77.3649!3d28.628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSector%2062%2C%20Noida!5e0!3m2!1sen!2sin!4v1234567890"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
+              <a
+                href="tel:+918826444334"
+                className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
+              >
+                <Phone className="w-5 h-5" />
+                Book Free Demo
+              </a>
             </div>
           </div>
         </div>
@@ -515,16 +502,17 @@ export default function NEETEveningBatchGhaziabad() {
               name: 'Cerebrum Biology Academy',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'B-45, Sector 62',
-                addressLocality: 'Noida',
-                addressRegion: 'Uttar Pradesh',
-                postalCode: '201301',
+                streetAddress: 'D 35, South Extension Part 2',
+                addressLocality: 'New Delhi',
+                addressRegion: 'Delhi',
+                postalCode: '110049',
                 addressCountry: 'IN',
               },
             },
+            areaServed: 'Ghaziabad',
             hasCourseInstance: {
               '@type': 'CourseInstance',
-              courseMode: 'Offline',
+              courseMode: 'Online',
               courseSchedule: {
                 '@type': 'Schedule',
                 byDay: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

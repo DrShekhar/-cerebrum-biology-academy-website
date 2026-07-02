@@ -2,12 +2,10 @@ import { Metadata } from 'next'
 import NEETFoundationClass9NoidaContent from './NEETFoundationClass9NoidaContent'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
-const noidaAddress = 'B-45, Sector 62, Noida, UP 201301'
-
 export const metadata: Metadata = {
   title: 'NEET Foundation Class 9 in Noida | Early NEET Preparation',
   description:
-    'Start NEET preparation from Class 9 in Noida. 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 62 center. Book free demo.',
+    'Start NEET preparation from Class 9 in Noida. 4-year head start, NCERT foundation, board + NEET dual prep. Live online expert faculty for Noida. Book free demo.',
   keywords: [
     'neet foundation class 9 noida',
     'class 9 neet preparation noida',
@@ -41,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Noida | Early NEET Preparation',
     description:
-      'Start NEET preparation from Class 9 in Noida. 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 62 center. Book free demo.',
+      'Start NEET preparation from Class 9 in Noida. 4-year head start, NCERT foundation, board + NEET dual prep. Live online expert faculty for Noida. Book free demo.',
   },
 }
 
@@ -77,8 +75,9 @@ const faqs = [
       'Unlike regular tuition that focuses only on board exams, our foundation course builds conceptual depth required for NEET. We use NCERT as base but go beyond with application-based learning and early introduction to MCQ patterns.',
   },
   {
-    question: 'Where is the Noida center located?',
-    answer: `Our center is at ${noidaAddress}. We are near Sector 62 Metro Station (Blue Line), easily accessible from all Noida areas.`,
+    question: 'Do you have a center in Noida?',
+    answer:
+      'We teach Noida students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
   },
 ]
 
@@ -94,12 +93,13 @@ export default function NEETFoundationClass9NoidaPage() {
       name: 'Cerebrum Biology Academy',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'B-45, Sector 62',
-        addressLocality: 'Noida',
-        addressRegion: 'UP',
-        postalCode: '201301',
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
         addressCountry: 'IN',
       },
+      areaServed: 'Noida',
     },
     educationalLevel: 'Class 9',
     teaches: [
@@ -112,8 +112,8 @@ export default function NEETFoundationClass9NoidaPage() {
     timeRequired: 'P1Y',
     hasCourseInstance: {
       '@type': 'CourseInstance',
-      courseMode: 'Blended',
-      courseWorkload: 'Weekend classes + Weekday doubt sessions',
+      courseMode: 'Online',
+      courseWorkload: 'Live online weekend classes + weekday doubt sessions',
     },
   }
 

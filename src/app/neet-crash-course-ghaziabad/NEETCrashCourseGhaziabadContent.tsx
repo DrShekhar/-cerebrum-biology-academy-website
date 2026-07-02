@@ -133,8 +133,8 @@ export default function NEETCrashCourseGhaziabadContent({ faqs }: { faqs: FAQ[] 
 
             <p className="text-xl text-slate-200 mb-8 max-w-3xl">
               Complete Biology revision in 45 days. 1000+ questions, 15 mock tests, daily doubt
-              clearing. Average improvement: 75 marks. Accessible from Ghaziabad via Blue Line Metro
-              to Sector 62.
+              clearing. Average improvement: 75 marks. Live online classes for Ghaziabad students -
+              learn from home, no travel needed.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -404,13 +404,13 @@ export default function NEETCrashCourseGhaziabadContent({ faqs }: { faqs: FAQ[] 
                   Join the Next Batch
                 </h2>
                 <p className="text-slate-600 mb-6">
-                  Limited seats available. New batches start every 2 weeks. Book your seat today for
-                  the upcoming intensive crash course.
+                  Limited seats available. New live online batches start every 2 weeks. Book your
+                  seat today for the upcoming intensive crash course.
                 </p>
                 <div className="space-y-3 mb-6">
                   <p className="flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-orange-600" />
-                    B-45, Sector 62, Noida — Sector 62 Metro Station (Blue Line)
+                    Live online classes for Ghaziabad - learn from home, no travel needed
                   </p>
                   <p className="flex items-center gap-2">
                     <Calendar className="w-5 h-5 text-orange-600" />

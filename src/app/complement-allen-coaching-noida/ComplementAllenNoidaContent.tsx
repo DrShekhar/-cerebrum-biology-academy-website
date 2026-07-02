@@ -30,9 +30,9 @@ interface FAQ {
 
 const benefits = [
   {
-    title: 'Convenient Location',
+    title: 'Learn from Anywhere',
     description:
-      'Cerebrum Sector 62, Noida is centrally located near Sector 62 Metro Station (Blue Line). Easy access for Allen students across Noida, Indirapuram, Vaishali, and Greater Noida West.',
+      'Cerebrum teaches Allen students across Noida, Indirapuram, Vaishali, and Greater Noida West through live online classes - no commute, same AIIMS faculty.',
     icon: MapPin,
   },
   {
@@ -93,7 +93,7 @@ const testimonials = [
     score: '642/720',
     combo: 'Allen + Cerebrum Weekend',
     quote:
-      'The weekend batch at Cerebrum perfectly complemented my Allen weekday classes. Sector 62 Noida location is very convenient.',
+      'The weekend batch at Cerebrum perfectly complemented my Allen weekday classes. The live online sessions were very convenient - no commute at all.',
   },
   {
     name: 'Vikram R.',
@@ -174,7 +174,7 @@ export default function ComplementAllenNoidaContent({ faqs }: { faqs: FAQ[] }) {
             <div className="flex flex-wrap items-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <MapPin className="w-5 h-5 text-yellow-400" />
-                <span>Near Sector 62 Metro</span>
+                <span>Live Online for Noida</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Calendar className="w-5 h-5 text-yellow-400" />
@@ -330,36 +330,31 @@ export default function ComplementAllenNoidaContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fadeInUp">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Central Noida Location</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Live Online for All of Noida</h2>
               <p className="text-xl text-blue-100 mb-6">
-                Cerebrum is located at <strong>B-45, Sector 62, Noida</strong> - near Sector 62
-                Metro Station (Blue Line). Easily accessible from Sector 18, Sector 44, Sector 50,
-                Sector 76, Indirapuram, Vaishali, and Greater Noida West.
+                Cerebrum teaches Allen students through <strong>live online classes</strong> - no
+                commute. We serve Sector 18, Sector 44, Sector 50, Sector 76, Indirapuram, Vaishali,
+                and Greater Noida West. For anyone wanting in-person study, our nearest walk-in
+                center is South Extension, New Delhi.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Finish Allen class, start Cerebrum session
+                  Finish Allen class, join Cerebrum live online session
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Near Sector 62 Metro Station (Blue Line)
+                  Learn from home - zero travel time
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Study room access between classes
+                  Recorded sessions and doubt support between classes
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Accessible from Indirapuram, Vaishali, Greater Noida West
+                  Serving Indirapuram, Vaishali, Greater Noida West online
                 </li>
               </ul>
-              <a href={CONTACT_INFO.location.noida.mapUrl} target="_blank" rel="noopener">
-                <Button className="bg-white text-blue-600 hover:bg-blue-50">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  See Location on Map
-                </Button>
-              </a>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
               <h3 className="text-2xl font-bold mb-6">Special Package for Allen Students</h3>

@@ -402,7 +402,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     cityHubUrl: '/neet-coaching-noida',
     curriculum: 'CBSE',
     area: 'Sector 30, Noida',
-    nearestCerebrumCentre: 'Noida Sector 62 (8 km · 18 min)',
+    nearestCerebrumCentre: 'Live online · nearest walk-in centre: South Extension, New Delhi',
     metroNote: 'Botanical Garden Metro (Blue Line) — 4 km',
     feederContext:
       'DPS Noida is the flagship Noida CBSE school. Annual NEET cohort consistently produces AIIMS, MAMC and KMC Manipal selections.',
@@ -416,7 +416,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     cityHubUrl: '/neet-coaching-noida',
     curriculum: 'CBSE + IGCSE / A-Level',
     area: 'Sector 27, Noida',
-    nearestCerebrumCentre: 'Noida Sector 62 (10 km · 22 min)',
+    nearestCerebrumCentre: 'Live online · nearest walk-in centre: South Extension, New Delhi',
     metroNote: 'Sector 51 Metro (Aqua Line) — 5 km',
     feederContext:
       'Cambridge International runs both CBSE and Cambridge International (IGCSE / A-Level) streams. IGCSE Biology + A-Level Biology students often transition to NEET via NRI quota or US premed.',
@@ -430,7 +430,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     cityHubUrl: '/neet-coaching-noida',
     curriculum: 'CBSE',
     area: 'Sector 44, Noida',
-    nearestCerebrumCentre: 'Noida Sector 62 (5 km · 12 min)',
+    nearestCerebrumCentre: 'Live online · nearest walk-in centre: South Extension, New Delhi',
     metroNote: 'Botanical Garden Metro (Blue Line) — 3 km',
     feederContext:
       'Amity International Noida is one of multiple Amity schools across NCR. Strong CBSE Class 12 science cohort, NEET-bound students typically target AIIMS Delhi and Delhi-region medical colleges.',
@@ -444,7 +444,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     cityHubUrl: '/neet-coaching-noida',
     curriculum: 'CBSE + IGCSE / IB Diploma',
     area: 'Sector 126, Noida',
-    nearestCerebrumCentre: 'Noida Sector 62 (12 km · 28 min) · Online preferred',
+    nearestCerebrumCentre: 'Live online · nearest walk-in centre: South Extension, New Delhi',
     metroNote: 'Botanical Garden Metro (Blue Line) — 6 km',
     feederContext:
       'Lotus Valley International is a premium multi-curriculum school in Noida (CBSE + IGCSE + IB Diploma). NEET cohort combines CBSE-stream Class 12 + IB Biology HL students considering Indian medical colleges via NRI quota.',
@@ -486,7 +486,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     cityHubUrl: '/neet-coaching-ghaziabad',
     curriculum: 'CBSE',
     area: 'Vasundhara, Ghaziabad',
-    nearestCerebrumCentre: 'Noida Sector 62 (10 km · 25 min) · Online',
+    nearestCerebrumCentre: 'Live online · nearest walk-in centre: South Extension, New Delhi',
     metroNote: 'Vaishali Metro (Blue Line) — 4 km',
     feederContext:
       'DPS Ghaziabad serves Vasundhara, Indirapuram and broader Ghaziabad. Strong Class 12 science feeder; NEET cohort typically targets Delhi-region and UP-state medical colleges.',

@@ -183,8 +183,8 @@ export default function NEETFoundationClass10GhaziabadContent({ faqs }: { faqs: 
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
               Class 10 is the ideal time to start NEET preparation. 40% of NEET Biology overlaps
-              with your board syllabus. Get a 2-year head start at our Sector 62, Noida center —
-              accessible via Blue Line Metro from Vaishali and Kaushambi in just 20-25 minutes.
+              with your board syllabus. Get a 2-year head start with live online classes for
+              Ghaziabad students — learn from home, no travel needed.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -374,7 +374,7 @@ export default function NEETFoundationClass10GhaziabadContent({ faqs }: { faqs: 
                 </div>
                 <div className="flex justify-between py-3">
                   <span className="text-slate-600">Mode</span>
-                  <span className="font-semibold">Offline + Online Support</span>
+                  <span className="font-semibold">Live Online</span>
                 </div>
               </div>
               <Link
@@ -390,20 +390,18 @@ export default function NEETFoundationClass10GhaziabadContent({ faqs }: { faqs: 
             <div className="bg-white rounded-2xl p-8 shadow-xl animate-fadeInUp">
               <div className="flex items-center mb-6">
                 <MapPin className="w-8 h-8 text-blue-600 mr-3" />
-                <h2 className="text-2xl font-bold text-gray-900">Center Location</h2>
+                <h2 className="text-2xl font-bold text-gray-900">How You Learn</h2>
               </div>
               <p className="text-gray-700 mb-4">
-                <strong>Address:</strong> B-45, Sector 62, Noida, UP 201301
+                <strong>Mode:</strong> Live online classes for Ghaziabad — learn from home, no
+                travel needed
               </p>
               <p className="text-gray-700 mb-4">
-                <strong>Landmark:</strong> Near Sector 62 Metro Station (Blue Line, 5 min walk)
-              </p>
-              <p className="text-gray-700 mb-4">
-                <strong>From Ghaziabad:</strong> Blue Line Metro from Vaishali or Kaushambi to
-                Sector 62 (20-25 min)
+                <strong>In-person option:</strong> Nearest walk-in center is South Extension, New
+                Delhi
               </p>
               <p className="text-gray-700 mb-6">
-                <strong>Nearby:</strong> Indirapuram, Vasundhara, Raj Nagar Extension, Crossings
+                <strong>Serving:</strong> Indirapuram, Vasundhara, Raj Nagar Extension, Crossings
                 Republik
               </p>
               <div className="flex gap-4">
@@ -414,13 +412,13 @@ export default function NEETFoundationClass10GhaziabadContent({ faqs }: { faqs: 
                   </Button>
                 </a>
                 <a
-                  href="https://maps.google.com/?q=B-45+Sector+62+Noida"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%2010)%20in%20Ghaziabad."
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <Button>
-                    <MapPin className="w-4 h-4 mr-2" />
-                    Directions
+                    <Phone className="w-4 h-4 mr-2" />
+                    Book Free Demo
                   </Button>
                 </a>
               </div>

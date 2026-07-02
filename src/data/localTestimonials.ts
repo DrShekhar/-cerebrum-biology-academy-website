@@ -93,21 +93,21 @@ export const localTestimonials: LocalTestimonial[] = [
     },
     college: 'Lady Hardinge Medical College',
     quote:
-      'The Sector 18 location was perfect! I could attend classes after school and the faculty made biology so interesting that I started loving the subject.',
+      'The live online classes were perfect! I could attend right after school and the faculty made biology so interesting that I started loving the subject.',
     longStory:
-      "As a Noida student, I was looking for quality coaching that wouldn't disrupt my school schedule. Cerebrum's Sector 18 center was perfectly located - just 10 minutes from my school. The teachers here have a unique way of explaining complex biological processes. They use real-life examples and stories that make everything memorable. The mock tests helped me practice time management, and the regular counseling sessions kept me motivated throughout my preparation.",
+      "As a Noida student, I was looking for quality coaching that wouldn't disrupt my school schedule. Cerebrum's live online classes fit perfectly around it - no commute at all. The teachers here have a unique way of explaining complex biological processes. They use real-life examples and stories that make everything memorable. The mock tests helped me practice time management, and the regular counseling sessions kept me motivated throughout my preparation.",
     image: '/testimonials/priya-noida.jpg',
     parentQuote:
-      "Living in Sector 62, the transportation to Sector 18 was convenient. Priya's biology scores improved dramatically - from struggling with 110 marks to consistently scoring above 170 in mocks.",
+      "Living in Noida, the online classes meant no travel at all. Priya's biology scores improved dramatically - from struggling with 110 marks to consistently scoring above 170 in mocks.",
     studyTips: [
       'Created biology corner in bedroom with diagrams',
-      'Used Noida metro travel time for MCQ practice',
-      'Visited coaching library on Sundays for group study',
+      'Used spare time between online classes for MCQ practice',
+      'Joined online study groups on Sundays',
       'Made mnemonics for taxonomy and classification',
     ],
     localDetails: {
-      transportUsed: 'Noida Metro (Sector 18 station)',
-      studySpot: 'Coaching center library',
+      transportUsed: 'Live online classes (no commute)',
+      studySpot: 'Home study desk',
       favoriteFeature: 'After-school timing perfect for DPS students',
     },
     socialProof: {
@@ -205,21 +205,21 @@ export const localTestimonials: LocalTestimonial[] = [
     },
     college: 'VMMC & Safdarjung Hospital',
     quote:
-      'The personal attention I received at Greater Noida center was incredible. The small batch size meant every doubt was cleared immediately.',
+      "The personal attention I received in Cerebrum's live online classes was incredible. The small batch size meant every doubt was cleared immediately.",
     longStory:
-      "Being from Greater Noida, I had limited coaching options nearby. Cerebrum's Alpha 1 center was a blessing. The small batches meant personal attention from every teacher. They knew my strengths and weaknesses individually. The faculty helped me balance my Shiv Nadar School assignments with NEET preparation. The mock test series was challenging and prepared me well for the actual exam. The career counseling sessions helped me choose the right college during counseling.",
+      "Being from Greater Noida, I had limited quality coaching options nearby. Cerebrum's live online classes were a blessing. The small batches meant personal attention from every teacher. They knew my strengths and weaknesses individually. The faculty helped me balance my Shiv Nadar School assignments with NEET preparation. The mock test series was challenging and prepared me well for the actual exam. The career counseling sessions helped me choose the right college during counseling.",
     image: '/testimonials/vikram-greater-noida.jpg',
     parentQuote:
-      'The personalized approach at Greater Noida center was perfect for Vikram. The teachers regularly updated us about his progress and areas of improvement.',
+      "The personalized approach in Cerebrum's online classes was perfect for Vikram. The teachers regularly updated us about his progress and areas of improvement.",
     studyTips: [
-      'Used Greater Noida metro for peaceful study',
+      'Used quiet early mornings for peaceful study',
       'Created biology museum at home with models',
       'Formed online study group with batch mates',
       'Visited medical colleges for motivation',
     ],
     localDetails: {
-      transportUsed: 'Greater Noida Metro (Alpha 1 station)',
-      studySpot: 'Knowledge Park libraries',
+      transportUsed: 'Live online classes (no commute)',
+      studySpot: 'Home study desk',
       favoriteFeature: 'Small batch size with personal mentoring',
     },
     socialProof: {

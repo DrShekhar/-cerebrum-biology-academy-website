@@ -11,13 +11,12 @@ import {
   ArrowRight,
   Coffee,
 } from 'lucide-react'
-import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Evening Batch Noida 2026 | After-School Classes 5-8 PM',
   description:
-    'Join NEET evening batch in Noida - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students. Sector 62. Call 88264-44334!',
+    'Join NEET evening batch for Noida - live online 5 PM to 8 PM classes after school. Perfect for Class 11-12 students. Learn from home. Call 88264-44334!',
   keywords: [
     'neet evening batch noida',
     'neet evening classes noida',
@@ -33,7 +32,8 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'NEET Evening Batch Noida 2026',
-    description: 'After-school NEET preparation! Evening classes from 5 PM at Sector 62.',
+    description:
+      'After-school NEET preparation! Live online evening classes from 5 PM for Noida students - learn from home.',
     url: 'https://cerebrumbiologyacademy.com/neet-evening-batch-noida',
   },
   alternates: {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Evening Batch Noida 2026 | After-School Classes 5-8 PM',
     description:
-      'Join NEET evening batch in Noida - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students. Sector 62. Call 88264-44334!',
+      'Join NEET evening batch for Noida - live online 5 PM to 8 PM classes after school. Perfect for Class 11-12 students. Learn from home. Call 88264-44334!',
   },
 }
 
@@ -130,14 +130,14 @@ const faqs = [
       'Flexible attendance: 1) Inform us in advance for planned absences, 2) Recorded summaries available, 3) Weekend catch-up sessions, 4) No penalty for occasional misses. We understand school schedules vary.',
   },
   {
-    question: 'Do you provide snacks/refreshments?',
+    question: 'Is there a break during the evening class?',
     answer:
-      'Yes! Light refreshments provided during break (6:30-6:45 PM): Biscuits, juice/water. Students can also bring their own snacks. AC classroom ensures comfort after long school day.',
+      'Yes! A short break (6:30-6:45 PM) lets students grab a snack and recharge before the second half. Learning from home means you stay comfortable after a long school day.',
   },
   {
     question: 'Can droppers join evening batch?',
     answer:
-      'Droppers typically prefer morning batches (more time for self-study). But evening batch is available if preferred. Dropper-specific: Additional morning doubt sessions available, extra test series, extended library hours.',
+      'Droppers typically prefer morning batches (more time for self-study). But the evening batch is available if preferred. Dropper-specific: Additional morning doubt sessions, extra test series, and extended access to recorded lectures.',
   },
 ]
 
@@ -156,7 +156,8 @@ export default function NEETEveningBatchNoida() {
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">NEET Evening Batch in Noida</h1>
             <p className="text-xl text-indigo-100 mb-8">
-              After-school NEET preparation! Evening classes from 5 PM at Sector 62.
+              After-school NEET preparation! Live online evening classes from 5 PM for Noida
+              students - learn from home, no travel needed.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -211,7 +212,8 @@ export default function NEETEveningBatchNoida() {
             Schools Compatible with Evening Batch
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Students from these schools can comfortably reach our Sector 62 center by 5 PM
+            Students from these schools can comfortably join our live online evening batch by 5 PM
+            from home
           </p>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -360,7 +362,7 @@ export default function NEETEveningBatchNoida() {
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>15 hours weekly classroom sessions</span>
+                    <span>15 hours weekly live online sessions</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
@@ -372,7 +374,7 @@ export default function NEETEveningBatchNoida() {
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Light refreshments during break</span>
+                    <span>Recorded lectures for revision</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
@@ -395,51 +397,39 @@ export default function NEETEveningBatchNoida() {
         </div>
       </section>
 
-      {/* Center Location */}
+      {/* How It Works */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="md:flex">
-              <div className="md:w-1/2 p-8">
-                <h2 className="text-2xl font-bold mb-4">Evening Batch Location</h2>
-                <div className="flex items-start gap-3 mb-4">
-                  <MapPin className="w-5 h-5 text-indigo-600 mt-1" />
-                  <div>
-                    <p className="font-semibold">B-45, Sector 62</p>
-                    <p className="text-gray-600">Noida, UP 201301</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Easy reach from Sector 62 Metro Station (Blue Line)
-                    </p>
-                  </div>
+            <div className="p-8">
+              <h2 className="text-2xl font-bold mb-4">How the Evening Batch Works</h2>
+              <div className="flex items-start gap-3 mb-4">
+                <MapPin className="w-5 h-5 text-indigo-600 mt-1" />
+                <div>
+                  <p className="font-semibold">Live Online for Noida</p>
+                  <p className="text-gray-600">
+                    Join interactive live classes from home - no travel needed.
+                  </p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Prefer in-person? Our nearest walk-in center is South Extension, New Delhi.
+                  </p>
                 </div>
-                <div className="flex items-start gap-3 mb-4">
-                  <Clock className="w-5 h-5 text-indigo-600 mt-1" />
-                  <div>
-                    <p className="font-semibold">Evening Timings</p>
-                    <p className="text-gray-600">Monday - Friday: 5 PM - 8 PM</p>
-                    <p className="text-gray-600">Saturday (Optional): 10 AM - 1 PM</p>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3 mb-4">
+                <Clock className="w-5 h-5 text-indigo-600 mt-1" />
+                <div>
+                  <p className="font-semibold">Evening Timings</p>
+                  <p className="text-gray-600">Monday - Friday: 5 PM - 8 PM</p>
+                  <p className="text-gray-600">Saturday (Optional): 10 AM - 1 PM</p>
                 </div>
-                <a
-                  href="tel:+918826444334"
-                  className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
-                >
-                  <Phone className="w-5 h-5" />
-                  Book Free Demo
-                </a>
               </div>
-              <div className="md:w-1/2">
-                <LazyGoogleMap
-                  embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.1234567890123!2d77.3649!3d28.628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSector%2062%2C%20Noida!5e0!3m2!1sen!2sin!4v1234567890"
-                  title="NEET Evening Batch Noida Location"
-                  height={300}
-                  placeholder={{
-                    lat: 28.628,
-                    lng: 77.3649,
-                    address: 'Sector 62, Noida',
-                  }}
-                />
-              </div>
+              <a
+                href="tel:+918826444334"
+                className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
+              >
+                <Phone className="w-5 h-5" />
+                Book Free Demo
+              </a>
             </div>
           </div>
         </div>
@@ -504,16 +494,17 @@ export default function NEETEveningBatchNoida() {
               name: 'Cerebrum Biology Academy',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'B-45, Sector 62',
-                addressLocality: 'Noida',
-                addressRegion: 'Uttar Pradesh',
-                postalCode: '201301',
+                streetAddress: 'D 35, South Extension Part 2',
+                addressLocality: 'New Delhi',
+                addressRegion: 'Delhi',
+                postalCode: '110049',
                 addressCountry: 'IN',
               },
             },
+            areaServed: 'Noida',
             hasCourseInstance: {
               '@type': 'CourseInstance',
-              courseMode: 'Offline',
+              courseMode: 'Online',
               courseSchedule: {
                 '@type': 'Schedule',
                 byDay: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

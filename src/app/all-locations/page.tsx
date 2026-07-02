@@ -45,16 +45,16 @@ const offlineCenters = [
   },
   {
     name: 'Noida',
-    tag: null,
-    address: 'Sector 62',
-    landmark: 'Near Sector 62 Metro',
+    tag: 'Online',
+    address: 'Live Online Classes',
+    landmark: 'Nearest center: South Ext, New Delhi',
     href: '/locations/noida',
   },
   {
     name: 'Ghaziabad',
-    tag: null,
-    address: 'Online + Hybrid',
-    landmark: 'Nearest: Rohini / Noida',
+    tag: 'Online',
+    address: 'Live Online Classes',
+    landmark: 'Nearest center: South Ext, New Delhi',
     href: '/locations/ghaziabad',
   },
   {

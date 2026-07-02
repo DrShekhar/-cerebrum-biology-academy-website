@@ -140,7 +140,6 @@ export function NoidaLocalBusinessSchema({
   area = 'Noida',
   sector,
   society,
-  coordinates = { lat: '28.5355', lng: '77.3910' },
 }: NoidaLocalBusinessSchemaProps) {
   const locationName = society || (sector ? `Sector ${sector}` : area)
   const fullArea = society ? `${society}, ${area}` : sector ? `Sector ${sector}, ${area}` : area
@@ -155,7 +154,7 @@ export function NoidaLocalBusinessSchema({
       `Biology Tuition ${fullArea}`,
       `Best NEET Coaching ${locationName}`,
     ],
-    description: `Premier NEET Biology coaching in ${fullArea} with AIIMS faculty. 98% success rate, small batches, online & offline classes. Serving students from ${locationName} and nearby areas.`,
+    description: `Premier live online NEET Biology coaching for ${fullArea} with AIIMS faculty. 98% qualification rate, small batches. Serving students from ${locationName} and nearby areas online — nearest walk-in center is South Extension, New Delhi.`,
     url: 'https://cerebrumbiologyacademy.com',
     telephone: CONTACT_INFO.phone.primary,
     email: CONTACT_INFO.email.info,
@@ -164,19 +163,10 @@ export function NoidaLocalBusinessSchema({
     priceRange: '₹48,000 - ₹1,56,000',
     currenciesAccepted: 'INR',
     paymentAccepted: 'Cash, Credit Card, Debit Card, UPI, Bank Transfer, EMI',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: sector ? `Sector ${sector}` : 'Gaur City',
-      addressLocality: area.includes('Greater Noida') ? 'Greater Noida' : 'Noida',
-      addressRegion: 'Uttar Pradesh',
-      postalCode: '201301',
-      addressCountry: 'IN',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: coordinates.lat,
-      longitude: coordinates.lng,
-    },
+    // ONLINE-ONLY: no walk-in center in Noida/Greater Noida. No PostalAddress or
+    // geo pin is emitted here — the org's only physical address is South
+    // Extension (handled by the flagship org schema). areaServed below is
+    // accurate (live online reaches these cities).
     areaServed: [
       {
         '@type': 'City',
@@ -193,20 +183,6 @@ export function NoidaLocalBusinessSchema({
         name: 'Greater Noida West',
         alternateName: 'Noida Extension',
         containedIn: { '@type': 'State', name: 'Uttar Pradesh' },
-      },
-    ],
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '07:00',
-        closes: '21:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Sunday',
-        opens: '09:00',
-        closes: '18:00',
       },
     ],
     // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
@@ -846,12 +822,16 @@ export function NoidaEventSchema({
           url: 'https://cerebrumbiologyacademy.com/book-free-demo',
         }
       : {
+          // No walk-in venue in Noida — any in-person event is held at the real
+          // South Extension flagship, New Delhi.
           '@type': 'Place',
-          name: location,
+          name: 'Cerebrum Biology Academy - South Extension',
           address: {
             '@type': 'PostalAddress',
-            addressLocality: 'Noida',
-            addressRegion: 'Uttar Pradesh',
+            streetAddress: 'D 35, South Extension Part 2',
+            addressLocality: 'New Delhi',
+            addressRegion: 'Delhi',
+            postalCode: '110049',
             addressCountry: 'IN',
           },
         },

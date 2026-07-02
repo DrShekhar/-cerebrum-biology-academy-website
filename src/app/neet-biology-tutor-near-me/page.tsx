@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import { BestVerticalLanding, type BestVerticalConfig } from '@/components/seo/BestVerticalLanding'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Tutor Near Me | 6 NCR Centres + Pan-India Online',
+  title: 'NEET Biology Tutor Near Me | 5 NCR Centres + Pan-India Online',
   description:
-    'NEET biology tutor near me — Cerebrum Biology Academy. AIIMS-trained tutor at 6 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) + 1:1 online tutoring pan-India. 680+ medical college selections, 98% NEET qualification rate.',
+    'NEET biology tutor near me — Cerebrum Biology Academy. AIIMS-trained tutor at 5 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad) + live online 1:1 tutoring serving Noida and pan-India. 680+ medical college selections, 98% NEET qualification rate.',
   keywords: [
     'neet biology tutor near me',
     'biology tutor near me neet',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Biology Tutor Near Me | Cerebrum Biology Academy',
     description:
-      'Find AIIMS-trained NEET biology tutors at 6 Delhi NCR centres or online pan-India. 680+ medical college selections.',
+      'Find AIIMS-trained NEET biology tutors at 5 Delhi NCR centres or online pan-India. 680+ medical college selections.',
     url: 'https://cerebrumbiologyacademy.com/neet-biology-tutor-near-me',
     type: 'website',
   },
@@ -30,24 +30,24 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'NEET Biology Tutor Near Me | 6 NCR Centres + Pan-India Online',
+    title: 'NEET Biology Tutor Near Me | 5 NCR Centres + Pan-India Online',
     description:
-      'NEET biology tutor near me — Cerebrum Biology Academy. AIIMS-trained tutor at 6 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) + 1:1 online tutoring pan-India. ...',
+      'NEET biology tutor near me — Cerebrum Biology Academy. AIIMS-trained tutor at 5 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad) + live online 1:1 tutoring serving Noida and pan-India. ...',
   },
 }
 
 const config: BestVerticalConfig = {
   slug: 'neet-biology-tutor-near-me',
   headline: 'NEET Biology Tutor Near Me',
-  ribbon: '6 Delhi NCR Centres + Pan-India Online · AIIMS Faculty · 1:1 Mentoring',
+  ribbon: '5 Delhi NCR Centres + Pan-India Online · AIIMS Faculty · 1:1 Mentoring',
   subheadline:
     'Find an AIIMS-trained NEET biology tutor at the centre closest to you — or online from anywhere in India.',
   intro:
-    'When you search "NEET biology tutor near me" you want two things: AIIMS-grade pedagogy + proximity. Cerebrum Biology Academy has 5 offline centres across Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) — one is almost certainly within 30 minutes of you. Outside NCR? Online 1:1 sessions deliver the same faculty pan-India.',
+    'When you search "NEET biology tutor near me" you want two things: AIIMS-grade pedagogy + proximity. Cerebrum Biology Academy has 5 offline centres across Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad) — one is almost certainly within 30 minutes of you. In Noida, Ghaziabad or outside NCR? Live online 1:1 sessions deliver the same faculty pan-India.',
   clusterSummary:
     'AIIMS-trained 1:1 tutors · 15+ years pedagogy · 680+ medical college selections · WhatsApp same-day doubts.',
   credentials: [
-    { label: '6 Delhi NCR Centres' },
+    { label: '5 Delhi NCR Centres' },
     { label: 'Pan-India Online 1:1' },
     { label: 'AIIMS-Trained Tutors' },
     { label: '15+ Years NEET Pedagogy' },
@@ -77,7 +77,7 @@ const config: BestVerticalConfig = {
       tier: 'Group Tutor (Small Batch)',
       price: '₹40,000–₹90,000 / year',
       description:
-        'Pursuit / Ascent tier batches at any of the 6 NCR centres. Weekly 1:1 doubt slots included with Ascent.',
+        'Pursuit / Ascent tier batches at any of the 5 NCR centres. Weekly 1:1 doubt slots included with Ascent.',
     },
     {
       tier: 'Pinnacle 1:1 + Micro-Batch',
@@ -93,9 +93,9 @@ const config: BestVerticalConfig = {
   ],
   whyBest: [
     {
-      title: '6 Delhi NCR Centres = Almost Always Within 30 Minutes',
+      title: '5 Delhi NCR Centres = Almost Always Within 30 Minutes',
       description:
-        'South Extension (Block D), Rohini (Sector 9), Green Park (Gulmohar Park), Gurugram (Sector 51), Faridabad (Sector 17), Noida (Sector 62). For most NCR addresses, a Cerebrum centre is within 30-minute travel time.',
+        'South Extension (Block D), Rohini (Sector 9), Green Park (Gulmohar Park), Gurugram (Sector 51), Faridabad (Sector 17). For most NCR addresses, a Cerebrum centre is within 30-minute travel time. Noida, Ghaziabad and Greater Noida are served by live online classes.',
     },
     {
       title: 'Outside NCR? Online 1:1 (Same Faculty)',
@@ -120,7 +120,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Free Demo + 7-Day Refund Guarantee',
       description:
-        "Free demo class at any of the 6 NCR centres or online. 7-day full refund after enrollment if the tutor isn't the right fit. Both terms in writing.",
+        "Free demo class at any of the 5 NCR centres or online. 7-day full refund after enrollment if the tutor isn't the right fit. Both terms in writing.",
     },
   ],
   testimonials: [
@@ -136,7 +136,7 @@ const config: BestVerticalConfig = {
       score: 'NEET 658/720',
       college: 'MAMC Delhi',
       quote:
-        'Noida Sector 78 to Cerebrum Sector 62 = 10-minute auto ride. Closest premium biology tutor in NCR by far.',
+        'Live online 1:1 from Noida Sector 78 — same AIIMS faculty as the Delhi centres, zero commute. Best premium biology tutoring for NCR by far.',
     },
     {
       name: 'Aditya Verma',
@@ -150,7 +150,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Where can I find a NEET biology tutor near me in Delhi NCR?',
       answer:
-        'Cerebrum Biology Academy operates 5 offline centres across Delhi NCR — South Extension, Rohini, Green Park, Gurugram (Sector 51), Faridabad (Sector 17) and Noida (Sector 62). For most NCR addresses, a centre is within 30 minutes. AIIMS-trained tutors, 1:1 + small-batch options, 680+ medical college selections.',
+        'Cerebrum Biology Academy operates 5 offline centres across Delhi NCR — South Extension, Rohini, Green Park, Gurugram (Sector 51) and Faridabad (Sector 17). For most NCR addresses, a centre is within 30 minutes. Noida, Ghaziabad and Greater Noida are covered by live online classes. AIIMS-trained tutors, 1:1 + small-batch options, 680+ medical college selections.',
     },
     {
       question: 'Is there a NEET biology tutor near me outside Delhi NCR?',
@@ -165,7 +165,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Can I take a free demo with the nearest NEET biology tutor?',
       answer:
-        'Yes. Free demo class at any of the 6 NCR centres — no obligation to enrol. Online demo also available. Book via WhatsApp +91 88264-44334 or call directly.',
+        'Yes. Free demo class at any of the 5 NCR centres — no obligation to enrol. Online demo also available. Book via WhatsApp +91 88264-44334 or call directly.',
     },
     {
       question: 'Are NEET biology tutors near me available in Hindi?',
@@ -178,9 +178,9 @@ const config: BestVerticalConfig = {
         'Cerebrum Gurugram is in M2K Corporate Park, Mayfield Garden, Sector 51 — central Gurugram. Catchment spans 10–15 km including DLF phases, Cyber City, Golf Course Road, Sohna Road, Sector 14–50.',
     },
     {
-      question: 'Which Cerebrum centre is closest to me in Noida?',
+      question: 'Do you have a centre in Noida?',
       answer:
-        'Cerebrum Noida is in B-45, Sector 62 — central Noida. Catchment spans 10–15 km including Sectors 16, 18, 50, 62, 75, 78, 100, 110 and Greater Noida West.',
+        'We teach Noida students through live online classes — no travel needed, covering Sectors 16, 18, 50, 62, 75, 78, 100, 110 and Greater Noida West. Our nearest in-person centre is South Extension, New Delhi.',
     },
   ],
   knowsAbout: [

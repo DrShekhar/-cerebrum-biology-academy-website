@@ -70,8 +70,9 @@ const faqs = [
       'We offer special packages for students already enrolled elsewhere. Weekend-only batch starts at ₹30,000/year. Full supplementary program ranges from ₹45,000-90,000 depending on intensity.',
   },
   {
-    question: 'Where is Cerebrum located in Noida?',
-    answer: `Our center is at ${noidaLocation.streetAddress}, ${noidaLocation.addressLocality}. Near Sector 62 Metro Station (Blue Line).`,
+    question: 'Do you have a center in Noida?',
+    answer:
+      'We teach Noida students through live online classes - no travel needed. Our nearest in-person center is South Extension, New Delhi.',
   },
 ]
 
@@ -85,14 +86,7 @@ export default function ComplementAakashCoachingNoidaPage() {
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: noidaLocation.streetAddress,
-        addressLocality: noidaLocation.addressLocality,
-        addressRegion: noidaLocation.addressRegion,
-        postalCode: noidaLocation.postalCode,
-        addressCountry: 'IN',
-      },
+      areaServed: noidaLocation.addressLocality,
     },
     educationalLevel: 'Class 11-12',
     teaches: ['NEET Biology', 'NCERT Biology', 'Biology Diagrams', 'Mock Test Analysis'],

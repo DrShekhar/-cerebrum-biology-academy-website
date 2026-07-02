@@ -1,10 +1,7 @@
 import { Metadata } from 'next'
 import AllenAlternativeNoidaContent from './AllenAlternativeContent'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { LocalBusinessSchema } from '@/components/seo/StructuredData'
-
-const noidaLocation = CONTACT_INFO.location.noida
 
 export const metadata: Metadata = {
   title: 'Allen Alternative in Noida | Better NEET Biology Coaching',
@@ -24,7 +21,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     title: 'Allen Alternative in Noida | Personalized NEET Biology Coaching',
     description:
-      'Why 500+ Noida students chose Cerebrum over Allen for NEET Biology preparation. Allen has no Noida center - Cerebrum does.',
+      'Why 500+ Noida students chose Cerebrum over Allen for NEET Biology preparation. Allen has no Noida center - Cerebrum serves Noida with live online classes.',
     url: 'https://cerebrumbiologyacademy.com/allen-alternative-noida',
   },
   alternates: {
@@ -43,17 +40,17 @@ const faqs = [
   {
     question: 'Why should I consider Cerebrum over Allen for NEET Biology in Noida?',
     answer:
-      'While Allen is reputed, they have NO dedicated Noida center - students travel far to reach Allen centers. Cerebrum offers: local presence at Sector 62 Noida, smaller batches (10-20 vs 100+ at Allen), personalized attention from AIIMS faculty, Biology-only specialization. Our 98% success rate speaks for itself.',
+      'While Allen is reputed, they have NO dedicated Noida center - students travel far to reach Allen centers. Cerebrum offers: live online classes serving Noida (no commute), smaller batches (10-20 vs 100+ at Allen), personalized attention from AIIMS faculty, Biology-only specialization. Our 98% success rate speaks for itself.',
   },
   {
     question: 'Does Allen have a center in Noida?',
     answer:
-      "Allen does not have a dedicated Noida center. Students from Noida often have to travel to distant centers, adding commute time and stress. Cerebrum's Sector 62 center gives you local access to AIIMS-level teaching without the commute burden.",
+      "Allen does not have a dedicated Noida center. Students from Noida often have to travel to distant centers, adding commute time and stress. Cerebrum's live online classes give you AIIMS-level teaching from home in Noida without any commute burden.",
   },
   {
     question: 'How is Cerebrum different from Allen for Noida students?',
     answer:
-      "Key differences: 1) Batch size: Cerebrum has 10-20 students vs Allen's 80-100+. 2) Faculty: Direct teaching by Dr. Shekhar (AIIMS alumnus) vs rotating faculty. 3) Local presence: Cerebrum is IN Noida, Allen requires commuting out. 4) Focus: Biology-specialized vs all subjects. 5) Fee: More affordable with better value.",
+      "Key differences: 1) Batch size: Cerebrum has 10-20 students vs Allen's 80-100+. 2) Faculty: Direct teaching by Dr. Shekhar (AIIMS alumnus) vs rotating faculty. 3) Access: Cerebrum teaches Noida students live online from home, Allen requires commuting to distant centers. 4) Focus: Biology-specialized vs all subjects. 5) Fee: More affordable with better value.",
   },
   {
     question: 'Can I join Cerebrum along with Allen for extra Biology support?',
@@ -71,8 +68,9 @@ const faqs = [
       'Cerebrum offers competitive pricing with better value. Our fees range from ₹45,000 to ₹1,56,000 depending on the tier and program, often 20-30% lower than Allen for comparable quality with significantly smaller batch sizes. Plus no commuting costs.',
   },
   {
-    question: 'Where is Cerebrum located in Noida?',
-    answer: `Our center is at ${noidaLocation.streetAddress}, ${noidaLocation.addressLocality}. We're near Sector 62 Metro Station (Blue Line), making it convenient for students from Sectors 18, 44, 50, 76, 78, Indirapuram, and Vaishali.`,
+    question: 'Do you have a center in Noida?',
+    answer:
+      'We teach Noida students through live online classes — no travel needed. Students across Sectors 18, 44, 50, 76, 78, Indirapuram and Vaishali learn with the same AIIMS-trained faculty online. Our nearest in-person center is South Extension, New Delhi.',
   },
 ]
 
@@ -87,12 +85,13 @@ export default function AllenAlternativeNoidaPage() {
       name: 'Cerebrum Biology Academy',
       description:
         'Specialized NEET Biology coaching with small batches and personalized attention',
+      areaServed: 'Noida',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: noidaLocation.streetAddress,
-        addressLocality: noidaLocation.addressLocality,
-        addressRegion: noidaLocation.addressRegion,
-        postalCode: noidaLocation.postalCode,
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
       },
     },
   }

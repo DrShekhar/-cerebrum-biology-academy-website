@@ -2,12 +2,10 @@ import { Metadata } from 'next'
 import NEETFoundationClass10GreaterNoidaContent from './NEETFoundationClass10GreaterNoidaContent'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
-const greaterNoidaAddress = 'B-45, Sector 62, Noida, UP 201301 (nearest center)'
-
 export const metadata: Metadata = {
   title: 'NEET Foundation Class 10 in Greater Noida | 2-Year Head Start',
   description:
-    'NEET Foundation for Class 10 students in Greater Noida. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty, online + hybrid classes available.',
+    'NEET Foundation for Class 10 students in Greater Noida. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty, live online classes.',
   keywords: [
     'neet foundation class 10 greater noida',
     'class 10 neet preparation greater noida',
@@ -28,7 +26,7 @@ export const metadata: Metadata = {
       },
     ],
     description:
-      'Get 2-year head start for NEET from Class 10 in Greater Noida. Online + hybrid classes available.',
+      'Get 2-year head start for NEET from Class 10 in Greater Noida. Live online classes available.',
     url: 'https://cerebrumbiologyacademy.com/neet-foundation-class-10-greater-noida',
   },
   alternates: {
@@ -39,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 10 in Greater Noida | 2-Year Head Start',
     description:
-      'NEET Foundation for Class 10 students in Greater Noida. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty, online + hybrid classes available.',
+      'NEET Foundation for Class 10 students in Greater Noida. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty, live online classes.',
   },
 }
 
@@ -66,7 +64,8 @@ const faqs = [
   },
   {
     question: 'How do Greater Noida Class 10 students attend the classes?',
-    answer: `Greater Noida students can attend online classes from home (most popular for Class 10 to avoid travel) or visit our nearest center at ${greaterNoidaAddress} via Aqua Line Metro. Hybrid mode (online on weekdays + offline on weekends) is also available.`,
+    answer:
+      'Greater Noida students attend live online classes from home - no travel needed, which is ideal for Class 10. For anyone who prefers in-person coaching, our nearest walk-in center is South Extension, New Delhi.',
   },
 ]
 
@@ -76,19 +75,20 @@ export default function NEETFoundationClass10GreaterNoidaPage() {
     '@type': 'Course',
     name: 'NEET Foundation Class 10 - Greater Noida',
     description:
-      '2-year NEET preparation program for Class 10 students in Greater Noida. Online + hybrid classes.',
+      '2-year NEET preparation program for Class 10 students in Greater Noida. Live online classes.',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'B-45, Sector 62',
-        addressLocality: 'Noida',
-        addressRegion: 'UP',
-        postalCode: '201301',
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
         addressCountry: 'IN',
       },
     },
+    areaServed: 'Greater Noida',
     educationalLevel: 'Class 10',
   }
   const faqSchema = {

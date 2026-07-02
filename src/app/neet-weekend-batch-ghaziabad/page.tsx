@@ -10,13 +10,12 @@ import {
   Users,
   ArrowRight,
 } from 'lucide-react'
-import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Weekend Batch Ghaziabad 2026 | Saturday-Sunday Classes',
   description:
-    'Join NEET weekend batch for Ghaziabad students - Saturday & Sunday intensive classes. Complete syllabus coverage. Sector 62 Noida center, Blue Line Metro accessible. Call 88264-44334!',
+    'Join NEET weekend batch for Ghaziabad students - Saturday & Sunday intensive live online classes. Complete syllabus coverage. Live online expert faculty for Ghaziabad. Call 88264-44334!',
   keywords: [
     'neet weekend batch ghaziabad',
     'neet weekend classes ghaziabad',
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     title: 'NEET Weekend Batch Ghaziabad 2026',
     description:
-      'Balance school and NEET prep! Saturday-Sunday intensive classes at Sector 62 Noida for Ghaziabad students.',
+      'Balance school and NEET prep! Saturday-Sunday intensive live online classes for Ghaziabad students.',
     url: 'https://cerebrumbiologyacademy.com/neet-weekend-batch-ghaziabad',
   },
   alternates: {
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Weekend Batch Ghaziabad 2026 | Saturday-Sunday Classes',
     description:
-      'Join NEET weekend batch for Ghaziabad students - Saturday & Sunday intensive classes. Complete syllabus coverage. Sector 62 Noida center, Blue Line Metro accessible. Call 88264-44334!',
+      'Join NEET weekend batch for Ghaziabad students - Saturday & Sunday intensive live online classes. Complete syllabus coverage. Live online expert faculty for Ghaziabad. Call 88264-44334!',
   },
 }
 
@@ -81,7 +80,7 @@ const faqs = [
   {
     question: 'What are the weekend batch timings for Ghaziabad students?',
     answer:
-      'Weekend batch schedule: Saturday 9 AM - 1 PM (4 hours), Sunday 9 AM - 1 PM (4 hours). Total 8 hours of intensive biology coaching per week. Optional doubt session: Sunday 2-4 PM. Blue Line Metro from Vaishali/Kaushambi Ghaziabad reaches Sector 62 Noida in 20-25 minutes.',
+      'Weekend batch schedule: Saturday 9 AM - 1 PM (4 hours), Sunday 9 AM - 1 PM (4 hours). Total 8 hours of intensive live online biology coaching per week. Optional doubt session: Sunday 2-4 PM. Ghaziabad students attend live online from home — no travel needed.',
   },
   {
     question: 'Is weekend-only coaching enough for NEET?',
@@ -141,8 +140,8 @@ export default function NEETWeekendBatchGhaziabad() {
               NEET Weekend Batch for Ghaziabad Students
             </h1>
             <p className="text-xl text-orange-100 mb-8">
-              Balance school and NEET prep! Saturday-Sunday intensive classes at Sector 62 Noida.
-              Blue Line Metro from Vaishali/Kaushambi in 20-25 minutes.
+              Balance school and NEET prep! Saturday-Sunday intensive live online classes — join
+              from anywhere in Ghaziabad, no travel needed.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -252,8 +251,8 @@ export default function NEETWeekendBatchGhaziabad() {
               </div>
               <h3 className="text-xl font-bold mb-3">Weekday Prep</h3>
               <p className="text-gray-600">
-                Pre-class reading assignments sent via WhatsApp. Come prepared to maximize classroom
-                time.
+                Pre-class reading assignments sent via WhatsApp. Come prepared to maximize your live
+                class time.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg text-center">
@@ -297,7 +296,7 @@ export default function NEETWeekendBatchGhaziabad() {
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>8 hours weekly classroom sessions</span>
+                    <span>8 hours weekly live online sessions</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
@@ -332,52 +331,40 @@ export default function NEETWeekendBatchGhaziabad() {
         </div>
       </section>
 
-      {/* Center Location */}
+      {/* How Classes Run */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="md:flex">
-              <div className="md:w-1/2 p-8">
-                <h2 className="text-2xl font-bold mb-4">Weekend Batch Location</h2>
-                <div className="flex items-start gap-3 mb-4">
-                  <MapPin className="w-5 h-5 text-orange-500 mt-1" />
-                  <div>
-                    <p className="font-semibold">B-45, Sector 62</p>
-                    <p className="text-gray-600">Noida, UP 201301</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Blue Line Metro: Vaishali/Kaushambi → Sector 62 (20-25 min)
-                    </p>
-                  </div>
+            <div className="p-8">
+              <h2 className="text-2xl font-bold mb-4">Live Online Weekend Batch</h2>
+              <div className="flex items-start gap-3 mb-4">
+                <MapPin className="w-5 h-5 text-orange-500 mt-1" />
+                <div>
+                  <p className="font-semibold">Serving Ghaziabad Online</p>
+                  <p className="text-gray-600">
+                    Attend live interactive classes from anywhere in Ghaziabad — no travel needed.
+                  </p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Prefer in-person? Our nearest walk-in center is South Extension, New Delhi.
+                  </p>
                 </div>
-                <div className="flex items-start gap-3 mb-4">
-                  <Clock className="w-5 h-5 text-orange-500 mt-1" />
-                  <div>
-                    <p className="font-semibold">Weekend Timings</p>
-                    <p className="text-gray-600">Saturday: 9 AM - 1 PM</p>
-                    <p className="text-gray-600">Sunday: 9 AM - 1 PM</p>
-                    <p className="text-gray-600">Doubt Session: Sun 2 PM - 4 PM</p>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3 mb-4">
+                <Clock className="w-5 h-5 text-orange-500 mt-1" />
+                <div>
+                  <p className="font-semibold">Weekend Timings</p>
+                  <p className="text-gray-600">Saturday: 9 AM - 1 PM</p>
+                  <p className="text-gray-600">Sunday: 9 AM - 1 PM</p>
+                  <p className="text-gray-600">Doubt Session: Sun 2 PM - 4 PM</p>
                 </div>
-                <a
-                  href="tel:+918826444334"
-                  className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition"
-                >
-                  <Phone className="w-5 h-5" />
-                  Book Free Demo
-                </a>
               </div>
-              <div className="md:w-1/2">
-                <LazyGoogleMap
-                  embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.1234567890123!2d77.3649!3d28.628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSector%2062%2C%20Noida!5e0!3m2!1sen!2sin!4v1234567890"
-                  title="NEET Weekend Batch Ghaziabad Location"
-                  height={300}
-                  placeholder={{
-                    lat: 28.628,
-                    lng: 77.3649,
-                    address: 'Sector 62, Noida',
-                  }}
-                />
-              </div>
+              <a
+                href="tel:+918826444334"
+                className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition"
+              >
+                <Phone className="w-5 h-5" />
+                Book Free Demo
+              </a>
             </div>
           </div>
         </div>
@@ -436,22 +423,24 @@ export default function NEETWeekendBatchGhaziabad() {
             '@context': 'https://schema.org',
             '@type': 'Course',
             name: 'NEET Weekend Batch for Ghaziabad Students',
-            description: 'Weekend NEET biology coaching for school students from Ghaziabad',
+            description:
+              'Weekend live online NEET biology coaching for school students from Ghaziabad',
             provider: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'B-45, Sector 62',
-                addressLocality: 'Noida',
-                addressRegion: 'Uttar Pradesh',
-                postalCode: '201301',
+                streetAddress: 'D 35, South Extension Part 2',
+                addressLocality: 'New Delhi',
+                addressRegion: 'Delhi',
+                postalCode: '110049',
                 addressCountry: 'IN',
               },
+              areaServed: 'Ghaziabad',
             },
             hasCourseInstance: {
               '@type': 'CourseInstance',
-              courseMode: 'Offline',
+              courseMode: 'Online',
               courseSchedule: {
                 '@type': 'Schedule',
                 byDay: ['Saturday', 'Sunday'],

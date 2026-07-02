@@ -2,12 +2,10 @@ import { Metadata } from 'next'
 import NEETFoundationClass10NoidaContent from './NEETFoundationClass10NoidaContent'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
-const noidaAddress = 'B-45, Sector 62, Noida, UP 201301'
-
 export const metadata: Metadata = {
   title: 'NEET Foundation Class 10 in Noida | 2-Year Head Start',
   description:
-    'NEET Foundation for Class 10 students in Noida. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty at Sector 62 center.',
+    'NEET Foundation for Class 10 students in Noida. 2-year head start, 40% NEET syllabus overlap with boards. Live online expert faculty for Noida students.',
   keywords: [
     'neet foundation class 10 noida',
     'class 10 neet preparation noida',
@@ -30,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 10 in Noida | 2-Year Head Start',
     description:
-      'NEET Foundation for Class 10 students in Noida. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty at Sector 62 center.',
+      'NEET Foundation for Class 10 students in Noida. 2-year head start, 40% NEET syllabus overlap with boards. Live online expert faculty for Noida students.',
   },
 }
 
@@ -56,8 +54,9 @@ const faqs = [
       'Class X Foundation (NEET) fees range from ₹45,000 to ₹90,000/year depending on the tier: Pursuit (₹45,000, 30-40 students), Ascent (₹60,000-90,000, 16-18 students), or Pinnacle (₹90,000, 10-12 students with personal mentorship from Dr. Shekhar).',
   },
   {
-    question: 'Where is the Noida center?',
-    answer: `Located at ${noidaAddress}, near Sector 62 Metro Station (Blue Line, 5 min walk), easily accessible from all Noida areas.`,
+    question: 'Do you have a center in Noida?',
+    answer:
+      'We teach Noida students through live online classes - no travel needed, accessible from all Noida areas. For anyone who prefers in-person coaching, our nearest walk-in center is South Extension, New Delhi.',
   },
 ]
 
@@ -72,13 +71,14 @@ export default function NEETFoundationClass10NoidaPage() {
       name: 'Cerebrum Biology Academy',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'B-45, Sector 62',
-        addressLocality: 'Noida',
-        addressRegion: 'UP',
-        postalCode: '201301',
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
         addressCountry: 'IN',
       },
     },
+    areaServed: 'Noida',
     educationalLevel: 'Class 10',
   }
   const faqSchema = {

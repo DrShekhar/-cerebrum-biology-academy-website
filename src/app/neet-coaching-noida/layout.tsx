@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Noida — Sector 62 Centre | Cerebrum Biology Academy',
+  title: 'NEET Coaching Noida — Live Online + Delhi NCR Centres | Cerebrum Biology Academy',
   other: { 'article:modified_time': '2026-05-25' },
   description:
     'Top NEET biology coaching in Noida & Greater Noida. AIIMS faculty Dr. Shekhar C Singh, 98% success rate, 67+ AIIMS selections. Fee Rs 48,000-98,000. Sector 18, 62, 137, 150 covered. FREE demo class!',
@@ -87,7 +87,7 @@ export default function NoidaCoachingLayout({ children }: { children: React.Reac
       <NearMeKeywordInjector
         location="Noida"
         parentLocation="Delhi NCR"
-        centerAddress="B-45, Sector 62, Noida, Uttar Pradesh - 201301"
+        centerAddress="D 35, South Extension Part 2, New Delhi - 110049"
         centerPhone="+91-8826-444-334"
         nearbyAreas={[
           'Sector 18',

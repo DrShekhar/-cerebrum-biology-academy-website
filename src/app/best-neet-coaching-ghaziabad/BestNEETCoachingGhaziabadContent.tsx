@@ -34,7 +34,7 @@ const coachingComparison = [
   {
     name: 'Cerebrum Biology Academy',
     highlight: true,
-    location: 'B-45, Sector 62, Noida (via Blue Line Metro)',
+    location: 'Live online for Ghaziabad (nearest center: South Ext, New Delhi)',
     specialty: 'Biology Specialist',
     faculty: 'AIIMS Alumni (Dr. Shekhar C Singh)',
     batchSize: '15-20 students',
@@ -46,7 +46,7 @@ const coachingComparison = [
       'Small batches',
       'Personalized attention',
       'Biology specialist',
-      'Blue Line Metro accessible',
+      'Live online classes',
     ],
     cons: ['Biology only (refer partners for PCM)'],
     rating: 5.0,
@@ -122,9 +122,9 @@ const whyChooseCerebrum = [
     icon: BookOpen,
   },
   {
-    title: 'Metro Accessible',
+    title: 'Live Online Access',
     description:
-      'Blue Line Metro connects Ghaziabad (Vaishali/Kaushambi) to Sector 62 Noida directly',
+      'Join live online NEET Biology classes from anywhere in Ghaziabad — no commute needed',
     icon: MapPin,
   },
   {
@@ -195,7 +195,7 @@ export default function BestNEETCoachingGhaziabadContent({ faqs }: { faqs: FAQ[]
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Trophy className="w-4 h-4" />
-               2026-27 Comparison Guide
+              2026-27 Comparison Guide
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -258,12 +258,12 @@ export default function BestNEETCoachingGhaziabadContent({ faqs }: { faqs: FAQ[]
         </div>
       </section>
 
-      {/* Metro Access Banner */}
+      {/* Online Access Banner */}
       <section className="py-4 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-sm font-medium">
-            Easily accessible from all Ghaziabad areas via Blue Line Metro to Sector 62 — Vaishali
-            &amp; Kaushambi metro stations connect directly to our center
+            Live online NEET Biology classes for all Ghaziabad areas — study from home with
+            AIIMS-trained faculty, no commute needed
           </p>
         </div>
       </section>

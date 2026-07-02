@@ -29,71 +29,69 @@ interface FAQ {
 }
 
 const nearbyAreas = [
-  { name: 'Vaishali', distance: '5 km', time: '10 min', direction: 'Blue Line Metro' },
-  { name: 'Kaushambi', distance: '6 km', time: '12 min', direction: 'Blue Line Metro' },
-  { name: 'Indirapuram', distance: '8 km', time: '20 min', direction: 'Via NH-58' },
-  { name: 'Raj Nagar Extension', distance: '14 km', time: '30 min', direction: 'Via NH-58' },
-  { name: 'Vasundhara', distance: '9 km', time: '22 min', direction: 'Via NH-58' },
-  { name: 'Crossings Republik', distance: '18 km', time: '35 min', direction: 'Via NH-58' },
-  { name: 'Sector 62 Noida', distance: '0 km', time: '0 min', direction: 'Our Center' },
-  { name: 'Sector 63 Noida', distance: '2 km', time: '5 min', direction: 'South' },
-  { name: 'Pratap Vihar', distance: '7 km', time: '18 min', direction: 'Via NH-58' },
-  { name: 'Shalimar Garden', distance: '8 km', time: '20 min', direction: 'Via NH-58' },
-  { name: 'Mohan Nagar', distance: '10 km', time: '25 min', direction: 'Via NH-58' },
-  { name: 'Govindpuram', distance: '12 km', time: '28 min', direction: 'Via NH-58' },
+  { name: 'Vaishali', direction: 'Live online' },
+  { name: 'Kaushambi', direction: 'Live online' },
+  { name: 'Indirapuram', direction: 'Live online' },
+  { name: 'Raj Nagar Extension', direction: 'Live online' },
+  { name: 'Vasundhara', direction: 'Live online' },
+  { name: 'Crossings Republik', direction: 'Live online' },
+  { name: 'Pratap Vihar', direction: 'Live online' },
+  { name: 'Shalimar Garden', direction: 'Live online' },
+  { name: 'Mohan Nagar', direction: 'Live online' },
+  { name: 'Govindpuram', direction: 'Live online' },
 ]
 
 const transportOptions = [
   {
-    mode: 'By Metro (Recommended)',
-    icon: Train,
-    details:
-      'Blue Line Metro from Vaishali or Kaushambi station directly to Sector 62. 15-20 min commute. No traffic hassle.',
-  },
-  {
-    mode: 'By Car',
-    icon: Car,
-    details:
-      'Ample parking available. Easy access via NH-58/NH-24. Takes 20-35 min depending on Ghaziabad area.',
-  },
-  {
-    mode: 'By Auto/Cab',
+    mode: 'Live Online (Recommended)',
     icon: Navigation,
     details:
-      'Ola/Uber readily available. Shared autos from Vaishali/Kaushambi. Approx ₹80-200 from most Ghaziabad areas.',
+      'Zero travel time. Join live interactive classes from your Ghaziabad home — same AIIMS faculty, recorded sessions for revision.',
+  },
+  {
+    mode: 'Flexible Timings',
+    icon: Clock,
+    details:
+      'Morning, evening and weekend batches available online. Balance school and NEET prep without commuting.',
+  },
+  {
+    mode: 'Nearest Walk-in Centre',
+    icon: Car,
+    details:
+      'Prefer in-person? Our nearest walk-in centre is South Extension, New Delhi. Most Ghaziabad students choose online for convenience.',
   },
 ]
 
 const whyLocation = [
   {
-    title: 'Blue Line Metro Access',
+    title: 'Learn From Home',
     description:
-      'Direct metro connectivity from Vaishali and Kaushambi stations to Sector 62 Noida.',
-    icon: Train,
-  },
-  {
-    title: 'Central for Ghaziabad',
-    description:
-      'Sector 62 Noida is strategically positioned for students from Indirapuram, Vaishali, Kaushambi.',
+      'Live online NEET Biology classes for Vaishali, Kaushambi, Indirapuram and all Ghaziabad areas — no commute.',
     icon: Compass,
   },
   {
-    title: 'Parking Available',
-    description: 'Free parking for students near our Sector 62 center.',
-    icon: Car,
+    title: 'Same AIIMS Faculty',
+    description:
+      'Online students get the same AIIMS-trained faculty and curriculum as our in-person centres.',
+    icon: Building,
   },
   {
-    title: 'Safe Neighborhood',
+    title: 'Recorded Revision',
+    description: 'Every live class is recorded so Ghaziabad students can revise anytime.',
+    icon: Train,
+  },
+  {
+    title: 'Small Batches',
     description:
-      'Located in a well-developed commercial area of Noida with security and well-lit surroundings.',
-    icon: Building,
+      'Small online batches ensure personal attention and doubt-clearing for every student.',
+    icon: Users,
   },
 ]
 
 const successStats = [
-  { stat: '20 min', label: 'Avg. Commute via Metro' },
+  { stat: 'Live', label: 'Online Classes Daily' },
   { stat: '500+', label: 'Students from 50+ Areas' },
-  { stat: '98%', label: 'Students Find Location Convenient' },
+  { stat: '98%', label: 'NEET Qualification Rate' },
   { stat: '24/7', label: 'Online Support Available' },
 ]
 
@@ -144,7 +142,7 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-teal-500/20 text-teal-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-4 h-4" />
-              B-45, Sector 62, Noida - via Blue Line Metro
+              Live Online NEET Coaching for Ghaziabad
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -153,18 +151,19 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Looking for the best NEET coaching near you? Our Sector 62 Noida center is easily
-              accessible from all Ghaziabad areas via Blue Line Metro from Vaishali and Kaushambi.
+              Looking for the best NEET coaching near you in Ghaziabad? Join our live online classes
+              from home — same AIIMS-trained faculty for students across Vaishali, Kaushambi,
+              Indirapuram and all Ghaziabad areas. No commute needed.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <MapPin className="w-5 h-5 text-yellow-400" />
-                <span>Sector 62, Noida</span>
+                <span>Live Online Classes</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Clock className="w-5 h-5 text-yellow-400" />
-                <span>20 min via Blue Line Metro</span>
+                <span>Learn From Home</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Users className="w-5 h-5 text-green-400" />
@@ -173,26 +172,26 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://maps.google.com/?q=B-45+Sector+62+Noida"
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="secondary"
                   size="xl"
                   className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold"
                 >
-                  <Navigation className="w-5 h-5 mr-2" />
-                  Get Directions
+                  <Play className="w-5 h-5 mr-2" />
+                  Book Free Demo
                 </Button>
-              </a>
+              </Link>
               <button
                 onClick={handleWhatsApp}
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
               >
                 <Phone className="w-5 h-5" />
-                Ask Distance from My Area
+                Ask on WhatsApp
               </button>
             </div>
 
@@ -207,12 +206,12 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
         </div>
       </section>
 
-      {/* Metro Access Banner */}
+      {/* Online Access Banner */}
       <section className="py-4 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-sm font-medium">
-            Easily accessible from all Ghaziabad areas via Blue Line Metro to Sector 62 — Vaishali
-            &amp; Kaushambi stations connect directly (15-20 min)
+            Live online NEET Biology coaching for all Ghaziabad areas — Vaishali, Kaushambi,
+            Indirapuram and more. Learn from home, no commute needed.
           </p>
         </div>
       </section>
@@ -231,40 +230,42 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
         </div>
       </section>
 
-      {/* Location Info */}
+      {/* How We Teach Ghaziabad */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Location</h2>
-            <p className="text-xl text-slate-600">B-45, Sector 62, Noida, UP 201301</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Live Online NEET Coaching for Ghaziabad
+            </h2>
+            <p className="text-xl text-slate-600">
+              Same AIIMS faculty and curriculum as our in-person centres — delivered live to your
+              home
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-[400px]">
-              <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                <p className="text-gray-500">Map: B-45, Sector 62, Noida</p>
-              </div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
+                Why Online Works for Ghaziabad
+              </h3>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start gap-2">
+                  <MapPin className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+                  Learn from home across Vaishali, Kaushambi, Indirapuram and all Ghaziabad areas —
+                  no daily commute.
+                </li>
+                <li className="flex items-start gap-2">
+                  <Users className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+                  Small live batches with the same AIIMS-trained faculty as our in-person centres.
+                </li>
+                <li className="flex items-start gap-2">
+                  <Clock className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+                  Recorded sessions for revision. Prefer in-person? Our nearest walk-in centre is
+                  South Extension, New Delhi.
+                </li>
+              </ul>
             </div>
             <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Address</h3>
-                <p className="text-slate-600 mb-4">B-45, Sector 62, Noida, UP 201301</p>
-                <p className="text-slate-500 text-sm mb-4">
-                  Nearest Metro: Sector 62 Station (Blue Line) — 5 min walk
-                </p>
-                <div className="flex gap-4">
-                  <a
-                    href="https://maps.google.com/?q=B-45+Sector+62+Noida"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <Button>
-                      <Navigation className="w-4 h-4 mr-2" />
-                      Open in Google Maps
-                    </Button>
-                  </a>
-                </div>
-              </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-slate-900 mb-4">Contact</h3>
                 <p className="flex items-center gap-2 text-slate-600 mb-2">
@@ -275,43 +276,48 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
                 </p>
                 <p className="flex items-center gap-2 text-slate-600">
                   <Clock className="w-5 h-5 text-teal-600" />
-                  Open 24/7 — Online Classes Available Globally
+                  Online classes available with flexible batch timings
                 </p>
+                <div className="flex gap-4 mt-4">
+                  <button onClick={handleWhatsApp}>
+                    <Button>
+                      <Phone className="w-4 h-4 mr-2" />
+                      Chat on WhatsApp
+                    </Button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Distance from Areas */}
+      {/* Areas Served */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Distance from Your Ghaziabad Area
+              Ghaziabad Areas We Serve
             </h2>
-            <p className="text-xl text-slate-600">Find how far we are from your location</p>
+            <p className="text-xl text-slate-600">
+              Live online NEET Biology coaching across Ghaziabad
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {nearbyAreas.map((area, index) => (
+            {nearbyAreas.map((area) => (
               <div
                 key={area.name}
                 className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-4 border border-teal-100 animate-fadeInUp"
               >
                 <h3 className="font-bold text-slate-900">{area.name}</h3>
-                <div className="flex items-center gap-4 mt-2">
-                  <span className="text-2xl font-bold text-teal-600">{area.distance}</span>
-                  <span className="text-slate-500">|</span>
-                  <span className="text-slate-600">{area.time}</span>
-                </div>
-                <p className="text-xs text-slate-500 mt-1">{area.direction}</p>
+                <p className="text-xs text-teal-600 font-medium mt-2">{area.direction}</p>
               </div>
             ))}
           </div>
 
           <p className="text-center text-slate-500 mt-6">
-            Cant find your area?{' '}
+            Dont see your area?{' '}
             <button onClick={handleWhatsApp} className="text-teal-600 hover:underline">
               Ask us on WhatsApp
             </button>
@@ -319,14 +325,14 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
         </div>
       </section>
 
-      {/* Transport Options */}
+      {/* How to Join */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              How to Reach Us from Ghaziabad
+              How to Join from Ghaziabad
             </h2>
-            <p className="text-xl text-slate-600">Multiple transport options available</p>
+            <p className="text-xl text-slate-600">Flexible ways to start your NEET preparation</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -351,10 +357,10 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Sector 62 Noida is Ideal for Ghaziabad Students
+              Why Online Coaching is Ideal for Ghaziabad Students
             </h2>
             <p className="text-xl text-teal-100">
-              Direct Blue Line Metro connection from Vaishali and Kaushambi
+              Same AIIMS faculty, small batches, zero commute — learn from home
             </p>
           </div>
 
@@ -452,9 +458,9 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-teal-600 to-cyan-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Visit Our Center?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start from Home?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Book a free demo class and see our facility in person
+            Book a free live online demo class and experience our teaching
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -471,18 +477,14 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
                 Book Free Demo
               </Button>
             </Link>
-            <a
-              href="https://maps.google.com/?q=B-45+Sector+62+Noida"
-              target="_blank"
-              rel="noopener"
-            >
+            <a href="tel:+918826444334">
               <Button
                 variant="outline"
                 size="xl"
                 className="border-white text-white hover:bg-white hover:text-teal-600"
               >
-                <Navigation className="w-5 h-5 mr-2" />
-                Get Directions
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
               </Button>
             </a>
           </div>

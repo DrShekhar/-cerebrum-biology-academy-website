@@ -57,28 +57,28 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
   },
   'sector-62': {
     name: 'Sector 62',
-    fullName: 'Sector 62, Noida (Our Location)',
-    description: 'IT hub and our center location - Electronic City area',
+    fullName: 'Sector 62 (Electronic City), Noida',
+    description: 'IT hub in the Electronic City area, served via live online classes',
     heroDescription:
-      'Sector 62 is home to our Noida center, located in the prestigious Electronic City area. This IT hub hosts major tech companies and has excellent metro connectivity. Students here enjoy the most convenient access to our NEET Biology coaching.',
-    nearbyMetro: ['Sector 62 Metro Station', 'Electronic City Metro'],
+      "Sector 62 is Noida's IT and Electronic City hub, home to major tech companies and educated professional families. Cerebrum serves Sector 62 NEET aspirants through live online Biology classes — the same AIIMS-trained faculty and small batches, with no commute needed.",
+    nearbyMetro: ['Sector 62 (Blue Line)', 'Electronic City (Blue Line)'],
     metroLine: 'Blue',
-    landmarks: ['Electronic City', 'NSEZ', 'Sector 62 Metro Station', 'HCL Campus'],
+    landmarks: ['Electronic City', 'NSEZ', 'HCL Campus', 'Sector 62 Blue Line station'],
     schools: ['Ryan International', 'Amity Global', 'DPS Greater Noida', 'Somerville School'],
     societies: ['Sector 62 Apartments', 'Electronic City Residences', 'NSEZ Housing'],
-    highlights: ['Our Center', 'IT Hub', 'Best Metro Access', 'Walk-in Distance'],
+    highlights: ['Live Online Classes', 'IT Hub', 'AIIMS Faculty', 'No Commute'],
     type: 'it-hub',
     pincode: '201301',
-    distanceFromCenter: '0 km',
+    distanceFromCenter: 'Online — no travel',
     voiceSearchPhrases: [
-      'NEET coaching in Sector 62 Noida',
+      'NEET coaching in Noida Sector 62',
       'Best NEET biology classes in Electronic City Noida',
-      'NEET institute near Sector 62 Metro',
+      'online NEET institute for Noida Sector 62',
     ],
     aiCitationFacts: [
-      'Cerebrum Biology Academy Noida center is located in Sector 62, Electronic City area',
-      'The center is 5 minutes walk from Sector 62 Metro Station (Blue Line)',
-      'Sector 62 serves as the primary NEET coaching hub for Noida students',
+      'Cerebrum Biology Academy serves Noida Sector 62 students through live online NEET Biology classes',
+      'Sector 62 students learn from home with no commute; nearest walk-in centre is South Extension, New Delhi',
+      'Live online coaching brings AIIMS-trained faculty to Sector 62 IT hub families',
       'Small batches of 15 students with AIIMS-trained faculty',
     ],
   },
@@ -105,7 +105,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     aiCitationFacts: [
       'Sector 15 is one of the oldest residential areas in Noida',
       "Students from St. Xavier's and Mayoor School attend Cerebrum Biology Academy",
-      'Direct Blue Line metro connectivity to our Sector 62 center',
+      'Sector 16 students attend Cerebrum live online NEET classes with no commute',
     ],
   },
   'sector-16': {
@@ -129,7 +129,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
       'NEET classes near Film City Noida',
     ],
     aiCitationFacts: [
-      "Sector 16 residents enjoy direct metro access to Cerebrum's Sector 62 center",
+      'Sector 16 students attend Cerebrum live online NEET classes with no commute',
       'Cambridge School and Apeejay students from Sector 16 attend our NEET batches',
     ],
   },
@@ -154,7 +154,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
       'NEET institute in mid Noida',
     ],
     aiCitationFacts: [
-      'Sector 50 students can reach our center via Blue Line interchange at Botanical Garden',
+      'Sector 50 students attend Cerebrum live online NEET classes from home',
       'Ryan International and Pathways students from Sector 50 trust Cerebrum for NEET prep',
     ],
   },
@@ -181,7 +181,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     aiCitationFacts: [
       'Sector 76 is a premium residential sector with direct Aqua Line metro access',
       'Students from Mahagun Mywoods and Amrapali Zodiac attend our NEET batches',
-      'Travel time to our Sector 62 center: 20 minutes via metro',
+      'Sector 76 students save daily commute time with our live online NEET classes',
     ],
   },
   'sector-78': {
@@ -231,7 +231,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     ],
     aiCitationFacts: [
       'Sector 93 is strategically located on the Noida Expressway',
-      'Easy metro access via Aqua Line to our Sector 62 center',
+      'Served by Cerebrum live online NEET classes across the Aqua Line corridor',
     ],
   },
   'sector-104': {
@@ -257,7 +257,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     aiCitationFacts: [
       'Sector 104 hosts ATS Pristine, Supertech Supernova, and Mahagun Moderne',
       'Premium society residents prefer our personalized NEET coaching approach',
-      'Travel time to Sector 62 center: 15-20 minutes',
+      'Sector 104 students attend Cerebrum live online NEET classes with no commute',
     ],
   },
   'sector-117': {
@@ -410,7 +410,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     ],
     aiCitationFacts: [
       'Sector 143 is the last Noida sector before Noida Extension begins',
-      'Aqua Line metro provides easy access to our Sector 62 center',
+      'Cerebrum live online NEET classes serve this area with no commute',
     ],
   },
   'sector-150': {
@@ -825,7 +825,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     aiCitationFacts: [
       'Sector 12 is one of the original residential sectors of Noida',
       "Students from St. Xavier's and Mayoor School in Sector 12 attend Cerebrum Biology Academy",
-      'Direct Blue Line metro connectivity via Sector 15 Metro to our Sector 62 center',
+      'Sector 12 students attend Cerebrum live online NEET classes with no commute',
     ],
   },
   'sector-25': {
@@ -851,7 +851,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     aiCitationFacts: [
       'Sector 25 is a residential area in Noida close to Film City Road',
       'Students from Cambridge School and Apeejay School attend our NEET batches',
-      'Blue Line metro connectivity to our Sector 62 center via Sector 15 or 16 stations',
+      'Sector 25 students attend Cerebrum live online NEET classes with no commute',
     ],
   },
   'film-city': {
@@ -877,7 +877,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     aiCitationFacts: [
       "Film City (Sector 16A) is Noida's famous media and entertainment hub",
       'Students from families of media professionals attend our flexible NEET batches',
-      'Located 4 km from our Sector 62 center with Blue Line metro access',
+      'Film City students attend Cerebrum live online NEET classes with no commute',
     ],
   },
   'atta-market': {
@@ -903,7 +903,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     aiCitationFacts: [
       "Atta Market is one of Noida's most iconic commercial landmarks in Sector 18",
       'Students from DPS Noida and Amity International near Atta Market attend our coaching',
-      'Sector 18 Metro Station provides direct Blue Line access to our center',
+      'Atta Market students attend Cerebrum live online NEET classes with no commute',
     ],
   },
 }

@@ -128,7 +128,7 @@ const faqs = [
   {
     question: 'What is the fee structure at Cerebrum Biology Academy for Greater Noida students?',
     answer:
-      'Our fee for Class 11+12 (2-year program) is Rs 60,000-75,000 per year. Dropper batch is Rs 65,000 for the full program. This is all-inclusive with no hidden charges. Center is at B-45, Sector 62, Noida — accessible via Aqua Line + Blue Line Metro, or online/hybrid classes available for Greater Noida students.',
+      'Our fee for Class 11+12 (2-year program) is Rs 60,000-75,000 per year. Dropper batch is Rs 65,000 for the full program. This is all-inclusive with no hidden charges. Greater Noida students learn through live online classes with the same AIIMS faculty — no commute needed. Our nearest in-person centre is South Extension, New Delhi.',
   },
   {
     question: 'Is EMI available for NEET coaching fees?',
@@ -153,7 +153,7 @@ const faqs = [
   {
     question: 'Can I switch between online and offline mode?',
     answer:
-      'Yes, you can switch between online and offline mode at any time. If upgrading to offline, you pay the difference. If switching to online, the excess amount is adjusted for the next term. Many Greater Noida students start online and visit offline periodically.',
+      'Yes, you can switch between online and offline mode at any time. If upgrading to offline at our nearest centre (South Extension, New Delhi), you pay the difference. If switching to online, the excess amount is adjusted for the next term. Most Greater Noida students choose fully online classes for zero commute.',
   },
 ]
 

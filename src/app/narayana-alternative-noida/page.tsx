@@ -360,14 +360,14 @@ export default function NarayanaAlternativeNoida() {
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
             <div className="md:flex">
               <div className="md:w-1/2 p-8">
-                <h2 className="text-2xl font-bold mb-4">Our Noida Center</h2>
+                <h2 className="text-2xl font-bold mb-4">Live Online Classes for Noida</h2>
                 <div className="flex items-start gap-3 mb-4">
                   <MapPin className="w-5 h-5 text-green-600 mt-1" />
                   <div>
-                    <p className="font-semibold">B-45, Sector 62</p>
-                    <p className="text-gray-600">Noida, UP 201301</p>
+                    <p className="font-semibold">Live online - serving all of Noida</p>
+                    <p className="text-gray-600">Learn from home, no travel needed</p>
                     <p className="text-sm text-gray-500 mt-1">
-                      Near Sector 62 Metro Station (Blue Line)
+                      Nearest in-person center: South Extension, New Delhi
                     </p>
                   </div>
                 </div>

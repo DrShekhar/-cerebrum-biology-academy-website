@@ -87,7 +87,7 @@ const DELHI_NCR_LOCALITIES = [
   { title: 'Biology Classes near Mayur Vihar', slug: '/neet-coaching-mayur-vihar', priority: 5 },
   { title: 'NEET Coaching near Indirapuram', slug: '/biology-coaching-indirapuram', priority: 5 },
   {
-    title: 'Biology Classes near Sector 62 Noida',
+    title: 'Online Biology Classes for Noida Sector 62',
     slug: '/biology-coaching-sector-62-noida',
     priority: 5,
   },

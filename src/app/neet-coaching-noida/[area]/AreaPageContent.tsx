@@ -67,7 +67,7 @@ export function AreaPageContent({
   const handleWhatsApp = async () => {
     await trackAndOpenWhatsApp({
       source: `noida-${slug}-page`,
-      message: `Hi! I am from ${area.name}, Noida (${area.distanceFromCenter} from your Sector 62 center) and interested in NEET Biology coaching. Please share details about batch timings and fees.`,
+      message: `Hi! I am from ${area.name}, Noida and interested in live online NEET Biology coaching. Please share details about batch timings and fees.`,
       campaign: `noida-${slug}`,
     })
   }
@@ -229,7 +229,7 @@ export function AreaPageContent({
                   </div>
                 ))}
                 <p className="text-sm text-gray-500 mt-2">
-                  Distance from our Sector 62 center: {area.distanceFromCenter}
+                  {area.name} students learn through live online classes — no commute needed.
                 </p>
               </div>
             </div>
@@ -377,21 +377,21 @@ export function AreaPageContent({
             Ready to Start Your NEET Journey from {area.name}?
           </h2>
           <p className="text-lg text-blue-100 mb-4">
-            Join {CEREBRUM_METRICS.totalStudentsText} students. Book your free demo at our Sector 62
-            Noida center!
+            Join {CEREBRUM_METRICS.totalStudentsText} students. Book your free live online demo
+            class today!
           </p>
           <p className="text-sm text-blue-200 mb-8">
-            Just {area.distanceFromCenter} from {area.name} | Online classes also available
+            Live online classes for {area.name} — learn from home, no commute needed
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href={`/demo-booking?center=noida&area=${slug}`} onClick={handleDemoBooking}>
+            <Link href={`/demo-booking?area=${slug}`} onClick={handleDemoBooking}>
               <Button
                 size="xl"
                 className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold w-full sm:w-auto"
               >
                 <Play className="w-5 h-5 mr-2" />
-                Book Demo at Noida Center
+                Book Free Demo
               </Button>
             </Link>
             <a href={`tel:${CONTACT_INFO.phone.primary}`} onClick={handlePhoneCall}>

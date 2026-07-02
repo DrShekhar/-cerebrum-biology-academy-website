@@ -4,9 +4,9 @@ import { Phone, MessageCircle, MapPin, ArrowRight } from 'lucide-react'
 import { BestVerticalLanding, type BestVerticalConfig } from '@/components/seo/BestVerticalLanding'
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching Near Me | 6 NCR Centres + Pan-India Online',
+  title: 'Best NEET Coaching Near Me | 5 NCR Centres + Pan-India Online',
   description:
-    'Best NEET coaching near me — Cerebrum Biology Academy. 5 offline centres in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) + online live classes pan-India. AIIMS faculty, 680+ medical college selections, 98% NEET qualification rate.',
+    'Best NEET coaching near me — Cerebrum Biology Academy. 5 offline centres in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad) + online live classes pan-India (including Noida & Ghaziabad). AIIMS faculty, 680+ medical college selections, 98% NEET qualification rate.',
   keywords: [
     'best neet coaching near me',
     'neet coaching near me',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best NEET Coaching Near Me | Cerebrum Biology Academy',
     description:
-      '6 Delhi NCR centres + pan-India online. AIIMS faculty, 680+ medical college selections.',
+      '5 Delhi NCR centres + pan-India online. AIIMS faculty, 680+ medical college selections.',
     url: 'https://cerebrumbiologyacademy.com/best-neet-coaching-near-me',
     type: 'website',
   },
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Best NEET Coaching Near Me | 6 NCR Centres + Pan-India Online',
+    title: 'Best NEET Coaching Near Me | 5 NCR Centres + Pan-India Online',
     description:
-      'Best NEET coaching near me — Cerebrum Biology Academy. 5 offline centres in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) + online live classes pan-India. AIIMS facult...',
+      'Best NEET coaching near me — Cerebrum Biology Academy. 5 offline centres in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad) + online live classes pan-India. AIIMS facult...',
   },
 }
 
@@ -78,27 +78,20 @@ const centres = [
     geo: { lat: 28.398, lng: 77.3066 },
     href: '/neet-coaching-faridabad',
   },
-  {
-    name: 'Noida',
-    address: 'B-45, Sector 62, Noida 201301',
-    locality: 'Noida',
-    geo: { lat: 28.6253, lng: 77.3713 },
-    href: '/neet-coaching-noida',
-  },
 ]
 
 const config: BestVerticalConfig = {
   slug: 'best-neet-coaching-near-me',
   headline: 'Best NEET Coaching Near Me',
-  ribbon: '6 Delhi NCR Centres + Pan-India Online · AIIMS Faculty',
+  ribbon: '5 Delhi NCR Centres + Pan-India Online · AIIMS Faculty',
   subheadline:
     'Find the closest Cerebrum centre — or join online live classes from anywhere in India.',
   intro:
-    'When you search "best NEET coaching near me" you want two things: faculty quality + proximity. Cerebrum Biology Academy operates 5 offline centres across Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) — one is almost certainly within 30 minutes of you. For students outside Delhi NCR, online live (not recorded) classes use the same AIIMS-trained faculty pan-India.',
+    'When you search "best NEET coaching near me" you want two things: faculty quality + proximity. Cerebrum Biology Academy operates 5 offline centres across Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad) — one is almost certainly within 30 minutes of you. For Noida, Ghaziabad and everywhere outside Delhi NCR, online live (not recorded) classes use the same AIIMS-trained faculty pan-India.',
   clusterSummary:
     '15–20 student batches · NCERT + PYQ curriculum · 680+ medical college selections · 98% NEET qualification rate.',
   credentials: [
-    { label: '6 Delhi NCR Centres' },
+    { label: '5 Delhi NCR Centres' },
     { label: 'Pan-India Online Live' },
     { label: 'AIIMS-Trained Faculty' },
     { label: 'Small Batches 15–20' },
@@ -115,7 +108,7 @@ const config: BestVerticalConfig = {
       note: 'South Extension + Green Park + Rohini',
     },
     { title: 'NEET Coaching Gurugram', href: '/neet-coaching-gurugram', note: 'Sector 51' },
-    { title: 'NEET Coaching Noida', href: '/neet-coaching-noida', note: 'Sector 62' },
+    { title: 'NEET Coaching Noida', href: '/neet-coaching-noida', note: 'Online live' },
     { title: 'NEET Coaching Faridabad', href: '/neet-coaching-faridabad', note: 'Sector 17' },
     { title: 'NEET Coaching Ghaziabad', href: '/neet-coaching-ghaziabad' },
     { title: 'NEET Coaching Mumbai', href: '/neet-coaching-mumbai', note: 'Online live' },
@@ -190,7 +183,7 @@ const config: BestVerticalConfig = {
       score: 'NEET 658/720',
       college: 'MAMC Delhi',
       quote:
-        'I live in Noida Sector 78 — the Sector 62 centre was a 10-minute auto ride. Convenience + small batch = ideal combination.',
+        'I live in Noida Sector 78 and joined Cerebrum online. Same faculty as the Delhi batches, live doubt-solving, and no commute — the small batch made all the difference.',
     },
     {
       name: 'Aditya Verma',
@@ -204,7 +197,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Which is the best NEET coaching near me in Delhi NCR?',
       answer:
-        'Cerebrum Biology Academy operates 5 offline centres across Delhi NCR — South Extension, Rohini, Green Park, Gurugram (Sector 51), Faridabad (Sector 17) and Noida (Sector 62). For most NCR addresses, a centre is within 30 minutes. AIIMS-trained faculty, 15–20 student batches, 680+ medical college selections.',
+        'Cerebrum Biology Academy operates 5 offline centres across Delhi NCR — South Extension, Rohini, Green Park, Gurugram (Sector 51) and Faridabad (Sector 17). For most NCR addresses, a centre is within 30 minutes. Noida and Ghaziabad students are served through live online classes with the same faculty. AIIMS-trained faculty, 15–20 student batches, 680+ medical college selections.',
     },
     {
       question: "What is the best NEET coaching near me if I'm not in Delhi NCR?",
@@ -217,14 +210,14 @@ const config: BestVerticalConfig = {
         'Delhi: South Extension (Block D, Part 2 — flagship, central South Delhi), Green Park (Gulmohar Park — South Delhi), Rohini (Sector 9, DC Chowk — North Delhi). All three cover the bulk of Delhi proper.',
     },
     {
-      question: 'Which Cerebrum centre is closest to me in Gurugram, Noida or Faridabad?',
+      question: 'Which Cerebrum centre is closest to me in Gurugram or Faridabad?',
       answer:
-        'Gurugram: M2K Corporate Park, Sector 51 — central Gurugram. Noida: B-45, Sector 62 — central Noida. Faridabad: Sector 17 — central Faridabad. Each centre serves a 10–15 km catchment.',
+        'Gurugram: M2K Corporate Park, Sector 51 — central Gurugram. Faridabad: Sector 17 — central Faridabad. Each centre serves a 10–15 km catchment. Noida and Ghaziabad students study through live online classes with the same AIIMS-trained faculty — the nearest walk-in centre is South Extension, New Delhi.',
     },
     {
       question: 'How much does NEET coaching cost at the centres near me?',
       answer:
-        'Pricing is identical across all 6 centres: Pursuit ₹40,000–₹75,000/year, Ascent ₹58,000–₹90,000/year (most popular), Pinnacle ₹1,20,000–₹1,56,000/year (premium with Dr. Shekhar personal mentorship). Online tier matches offline pricing. EMI options available.',
+        'Pricing is identical across all 5 centres: Pursuit ₹40,000–₹75,000/year, Ascent ₹58,000–₹90,000/year (most popular), Pinnacle ₹1,20,000–₹1,56,000/year (premium with Dr. Shekhar personal mentorship). Online tier matches offline pricing. EMI options available.',
     },
     {
       question:
@@ -235,7 +228,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Can I book a free demo class at the centre near me?',
       answer:
-        'Yes — free demo class at any of the 6 Delhi NCR centres or online. No obligation to enrol. Book via WhatsApp +91 88264-44334 or call directly.',
+        'Yes — free demo class at any of the 5 Delhi NCR centres or online. No obligation to enrol. Book via WhatsApp +91 88264-44334 or call directly.',
     },
   ],
   knowsAbout: [
@@ -314,7 +307,7 @@ export default function BestNEETCoachingNearMePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-10">
             <h2 className="text-3xl font-bold text-slate-900 mb-3">
-              6 Delhi NCR Centres — Find One Near You
+              5 Delhi NCR Centres — Find One Near You
             </h2>
             <p className="text-lg text-slate-600">
               Tap any centre to call or WhatsApp for a free demo class at that location.

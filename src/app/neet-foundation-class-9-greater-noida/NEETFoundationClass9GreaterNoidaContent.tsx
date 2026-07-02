@@ -109,7 +109,7 @@ export default function NEETFoundationClass9GreaterNoidaContent({ faqs }: { faqs
     trackAndOpenWhatsApp({
       source: 'foundation-class9-greater-noida',
       message:
-        'Hi! I am a Class 9 student from Greater Noida interested in NEET Foundation course. Please share details about online/hybrid classes.',
+        'Hi! I am a Class 9 student from Greater Noida interested in NEET Foundation course. Please share details about live online classes.',
       campaign: 'foundation-class9-greater-noida',
     })
   }
@@ -159,8 +159,8 @@ export default function NEETFoundationClass9GreaterNoidaContent({ faqs }: { faqs
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
               Start your medical dream journey from Class 9 in Greater Noida. Build strong biology
-              foundation while excelling in board exams. Online + hybrid classes available — no need
-              to commute daily.
+              foundation while excelling in board exams. Live online classes available — learn from
+              home, no need to commute.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -325,7 +325,7 @@ export default function NEETFoundationClass9GreaterNoidaContent({ faqs }: { faqs
                 </div>
                 <div className="flex justify-between py-3">
                   <span className="text-slate-600">Mode</span>
-                  <span className="font-semibold">Online + Offline Support</span>
+                  <span className="font-semibold">Live Online</span>
                 </div>
               </div>
               <Link
@@ -341,17 +341,15 @@ export default function NEETFoundationClass9GreaterNoidaContent({ faqs }: { faqs
             <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 animate-fadeInUp">
               <div className="flex items-center mb-6">
                 <MapPin className="w-8 h-8 text-green-600 mr-3" />
-                <h2 className="text-2xl font-bold text-gray-900">Nearest Center</h2>
+                <h2 className="text-2xl font-bold text-gray-900">How You Learn</h2>
               </div>
               <p className="text-gray-700 mb-4">
-                <strong>Address:</strong> B-45, Sector 62, Noida, UP 201301
-              </p>
-              <p className="text-gray-700 mb-4">
-                <strong>From Greater Noida:</strong> Aqua Line Metro → Blue Line → Sector 62 Metro
-                Station
+                <strong>Mode:</strong> Live online classes for Greater Noida — learn from home, no
+                travel needed
               </p>
               <p className="text-gray-700 mb-6">
-                <strong>Online:</strong> Classes available from Greater Noida home
+                <strong>In-person option:</strong> Nearest walk-in center is South Extension, New
+                Delhi
               </p>
               <div className="flex gap-4">
                 <a href={`tel:${CONTACT_INFO.phone.primary}`}>
@@ -361,13 +359,13 @@ export default function NEETFoundationClass9GreaterNoidaContent({ faqs }: { faqs
                   </Button>
                 </a>
                 <a
-                  href="https://maps.google.com/?q=B-45+Sector+62+Noida"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209)%20in%20Greater%20Noida."
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <Button>
-                    <MapPin className="w-4 h-4 mr-2" />
-                    Directions
+                    <Phone className="w-4 h-4 mr-2" />
+                    Book Free Demo
                   </Button>
                 </a>
               </div>

@@ -44,31 +44,21 @@ function useScrollAnimation(threshold = 0.1) {
 }
 
 const noidaAreas = [
-  { name: 'Sector 62', distance: '8 km', metro: 'Sector 62 Metro', highlight: 'IT Hub' },
-  { name: 'Sector 18', distance: '12 km', metro: 'Sector 18 Metro', highlight: 'Atta Market' },
-  {
-    name: 'Sector 15',
-    distance: '14 km',
-    metro: 'Sector 15 Metro',
-    highlight: 'Brahmaputra Market',
-  },
-  { name: 'Sector 16', distance: '13 km', metro: 'Sector 16 Metro', highlight: 'Noida Stadium' },
-  { name: 'Sector 50', distance: '6 km', metro: 'Sector 50 Metro', highlight: 'Residential Hub' },
-  { name: 'Sector 44', distance: '10 km', metro: 'Sector 34 Metro', highlight: 'Film City' },
-  {
-    name: 'Noida Extension',
-    distance: '5 km',
-    metro: 'Nearby Aqua Line',
-    highlight: 'Greater Noida West',
-  },
-  { name: 'Greater Noida', distance: '2 km', metro: 'Aqua Line', highlight: 'Our Center Location' },
+  { name: 'Sector 62', highlight: 'IT Hub' },
+  { name: 'Sector 18', highlight: 'Atta Market' },
+  { name: 'Sector 15', highlight: 'Brahmaputra Market' },
+  { name: 'Sector 16', highlight: 'Noida Stadium' },
+  { name: 'Sector 50', highlight: 'Residential Hub' },
+  { name: 'Sector 44', highlight: 'Film City' },
+  { name: 'Noida Extension', highlight: 'Greater Noida West' },
+  { name: 'Greater Noida', highlight: 'Served Live Online' },
 ]
 
 const whyChooseUs = [
   {
     icon: Building2,
-    title: 'Local Center',
-    description: 'Our center is in Greater Noida - closest coaching for Noida students.',
+    title: 'Live Online Classes',
+    description: 'Learn from home anywhere in Noida - no commute, same AIIMS faculty.',
   },
   {
     icon: GraduationCap,
@@ -89,24 +79,24 @@ const whyChooseUs = [
 
 const faqs = [
   {
-    question: 'Where is your coaching center located?',
+    question: 'Do you have a coaching center in Noida?',
     answer:
-      'Our center is in Greater Noida, which is very close to Noida. Students from Noida sectors can easily reach us via Noida-Greater Noida Expressway or Aqua Line metro. We are just 15-30 minutes from most Noida sectors.',
+      'We teach Noida students through live online classes - no travel needed. Our nearest in-person center is South Extension, New Delhi, if you prefer to visit.',
   },
   {
     question: 'Do you have students from Sector 62 and other IT hub areas?',
     answer:
-      'Yes! We have many students whose parents work in Sector 62 IT companies. Our flexible timing options (morning, afternoon, evening) and weekend batches suit their schedules.',
+      'Yes! We have many students whose parents work in Sector 62 IT companies. Our flexible timing options (morning, afternoon, evening) and weekend batches suit their schedules - all delivered as live online classes.',
   },
   {
-    question: 'Is metro connectivity available from Noida?',
+    question: 'How do the live online classes work?',
     answer:
-      'Yes! Aqua Line metro connects Noida to Greater Noida. Students can also use Blue Line and then switch to Aqua Line. We are well connected by metro and road.',
+      'Classes are live and fully interactive over video - you can ask questions in real time. Every session is recorded for revision, and we provide digital study material and WhatsApp doubt support. Noida students join from home with zero commute.',
   },
   {
-    question: 'Do you offer online classes for Noida students?',
+    question: 'What results have Noida students achieved with online classes?',
     answer:
-      'Yes! While we prefer offline classes for better interaction, we offer online classes with live teaching, recorded lectures, digital material, and WhatsApp doubt support for students who prefer it.',
+      'Many Noida students have scored 650+ in NEET learning with us online. Live teaching, small batches, and personalised mentoring deliver the same results as in-person coaching without the travel.',
   },
 ]
 
@@ -143,14 +133,17 @@ export default function BiologyTutorNoidaPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
-            name: 'Cerebrum Biology Academy - Noida',
-            description: 'Best Biology Tutor for Noida students - NEET & Board exam preparation',
+            name: 'Cerebrum Biology Academy - Noida (Online)',
+            description:
+              'Live online Biology Tutor for Noida students - NEET & Board exam preparation',
             url: 'https://cerebrumbiologyacademy.com/biology-tutor-noida',
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',
-              addressLocality: 'Greater Noida',
-              addressRegion: 'Uttar Pradesh',
+              streetAddress: 'D 35, South Extension Part 2',
+              addressLocality: 'New Delhi',
+              addressRegion: 'Delhi',
+              postalCode: '110049',
               addressCountry: 'IN',
             },
             areaServed: ['Noida', 'Sector 62', 'Sector 18', 'Greater Noida', 'Noida Extension'],
@@ -171,7 +164,7 @@ export default function BiologyTutorNoidaPage() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-400" />
-              Center in Greater Noida - Serving All Noida
+              Live Online - Serving All Noida
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -179,7 +172,7 @@ export default function BiologyTutorNoidaPage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              NEET & Board Preparation | Offline & Online Classes | All Noida Sectors
+              NEET & Board Preparation | Live Online Classes | All Noida Sectors
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
@@ -233,8 +226,8 @@ export default function BiologyTutorNoidaPage() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Train className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
-                <div className="text-2xl font-bold">Aqua</div>
-                <div className="text-sm opacity-80">Line Metro</div>
+                <div className="text-2xl font-bold">Live</div>
+                <div className="text-sm opacity-80">Online Classes</div>
               </div>
             </div>
           </div>
@@ -254,7 +247,7 @@ export default function BiologyTutorNoidaPage() {
               Noida Sectors We Serve
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our center is in Greater Noida - close to all Noida sectors
+              Live online classes reaching every Noida sector
             </p>
           </div>
 
@@ -267,11 +260,7 @@ export default function BiologyTutorNoidaPage() {
               >
                 <MapPin className="w-8 h-8 text-green-600 mb-4" />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{area.name}</h3>
-                <p className="text-sm text-gray-500 mb-1">{area.distance} from center</p>
-                <div className="flex items-center text-sm text-blue-600 mb-2">
-                  <Train className="w-4 h-4 mr-1" />
-                  {area.metro}
-                </div>
+                <p className="text-sm text-gray-500 mb-2">Served live online</p>
                 <span className="inline-block bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
                   {area.highlight}
                 </span>

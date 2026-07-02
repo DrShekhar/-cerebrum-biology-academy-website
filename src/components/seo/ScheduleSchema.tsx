@@ -99,13 +99,13 @@ export function ScheduleSchema({
           : batch.location === 'offline'
             ? {
                 '@type': 'Place',
-                name: 'Cerebrum Biology Academy - Noida',
+                name: 'Cerebrum Biology Academy - South Extension',
                 address: {
                   '@type': 'PostalAddress',
-                  streetAddress: 'Sector 62',
-                  addressLocality: 'Noida',
-                  addressRegion: 'Uttar Pradesh',
-                  postalCode: '201301',
+                  streetAddress: 'D 35, South Extension Part 2',
+                  addressLocality: 'New Delhi',
+                  addressRegion: 'Delhi',
+                  postalCode: '110049',
                   addressCountry: 'IN',
                 },
               }
@@ -226,10 +226,10 @@ export function DemoClassScheduleSchema({ upcomingDemos }: DemoClassScheduleProp
               name: 'Cerebrum Biology Academy',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'Sector 62',
-                addressLocality: 'Noida',
-                addressRegion: 'UP',
-                postalCode: '201301',
+                streetAddress: 'D 35, South Extension Part 2',
+                addressLocality: 'New Delhi',
+                addressRegion: 'Delhi',
+                postalCode: '110049',
                 addressCountry: 'IN',
               },
             },

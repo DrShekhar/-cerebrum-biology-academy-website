@@ -34,7 +34,7 @@ export default function MeerutCoachingLayout({ children }: { children: React.Rea
       <NearMeKeywordInjector
         location="Meerut"
         parentLocation="UP"
-        centerAddress="B-45, Sector 62, Noida, Uttar Pradesh - 201301"
+        centerAddress="D 35, South Extension Part 2, New Delhi - 110049"
         centerPhone="+91-8826-444-334"
         nearbyAreas={[
           'Sadar Bazaar',

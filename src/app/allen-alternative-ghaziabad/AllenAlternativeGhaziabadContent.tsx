@@ -85,8 +85,8 @@ const comparisonData = [
     winner: 'cerebrum',
   },
   {
-    feature: 'Ghaziabad Center',
-    cerebrum: 'Sector 62 (15-20 min Metro)',
+    feature: 'Ghaziabad Access',
+    cerebrum: 'Live online (no commute)',
     allen: 'No Ghaziabad center',
     winner: 'cerebrum',
   },
@@ -114,7 +114,7 @@ const reasons = [
   {
     title: 'No Allen Center in Ghaziabad',
     description:
-      'Allen has no dedicated Ghaziabad center. Cerebrum at Sector 62 Noida is just 15-20 min via Blue Line Metro.',
+      'Allen has no dedicated Ghaziabad center. Cerebrum teaches Ghaziabad students live online — no commute at all.',
     icon: Target,
   },
 ]
@@ -199,8 +199,8 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Allen has no dedicated center in Ghaziabad. Cerebrum Biology Academy at Sector 62,
-              Noida is just 15-20 min from Ghaziabad via Blue Line Metro. Smaller batches, AIIMS
+              Allen has no dedicated center in Ghaziabad. Cerebrum Biology Academy teaches Ghaziabad
+              students through live online classes — no commute needed. Smaller batches, AIIMS
               faculty, 98% success rate.
             </p>
 
@@ -345,7 +345,7 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Sector 62 Metro — easy 15-20 min commute from Ghaziabad
+                  Live online — study from anywhere in Ghaziabad
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -415,22 +415,21 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                  Conveniently Located at Sector 62, Noida
+                  Live Online NEET Biology for Ghaziabad
                 </h2>
                 <p className="text-slate-600 mb-6">
-                  Our center is at <strong>B-45, Sector 62, Noida</strong>. Ghaziabad students reach
-                  us in just 15-20 min via Blue Line Metro (Vaishali/Kaushambi to Sector 62).
-                  Whether you&apos;re switching or complementing, easily accessible from all parts
-                  of Ghaziabad.
+                  We teach Ghaziabad students through live online classes — no travel needed.
+                  Whether you&apos;re switching or complementing, join from anywhere in Ghaziabad
+                  with the same AIIMS-trained faculty and small batches.
                 </p>
                 <div className="space-y-3 mb-6">
                   <p className="flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-red-600" />
-                    B-45, Sector 62, Noida, UP 201301
+                    Live online classes serving all of Ghaziabad
                   </p>
                   <p className="flex items-center gap-2">
                     <Clock className="w-5 h-5 text-red-600" />
-                    Sector 62 Metro Station, Blue Line (15-20 min from Vaishali/Kaushambi)
+                    Prefer in-person? Nearest walk-in center: South Extension, New Delhi
                   </p>
                 </div>
                 <div className="flex gap-4">
@@ -440,14 +439,10 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
                       Call Now
                     </Button>
                   </a>
-                  <a
-                    href="https://maps.google.com/?q=B-45+Sector+62+Noida"
-                    target="_blank"
-                    rel="noopener"
-                  >
+                  <a href="/book-free-demo">
                     <Button>
-                      <MapPin className="w-4 h-4 mr-2" />
-                      Get Directions
+                      <BookOpen className="w-4 h-4 mr-2" />
+                      Book Free Demo
                     </Button>
                   </a>
                 </div>

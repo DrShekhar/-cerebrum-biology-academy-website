@@ -2,13 +2,10 @@ import { Metadata } from 'next'
 import NEETFoundationClass9GhaziabadContent from './NEETFoundationClass9GhaziabadContent'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
-const ghaziabadAddress =
-  'B-45, Sector 62, Noida, UP 201301 (20-25 min via Blue Line Metro from Vaishali/Kaushambi Ghaziabad)'
-
 export const metadata: Metadata = {
   title: 'NEET Foundation Class 9 in Ghaziabad | Early NEET Preparation',
   description:
-    'Start NEET preparation from Class 9 in Ghaziabad. 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 62 Noida center. Book free demo.',
+    'Start NEET preparation from Class 9 in Ghaziabad. 4-year head start, NCERT foundation, board + NEET dual prep. Live online expert faculty for Ghaziabad. Book free demo.',
   keywords: [
     'neet foundation class 9 ghaziabad',
     'class 9 neet preparation ghaziabad',
@@ -34,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 9 in Ghaziabad | Early NEET Preparation',
     description:
-      'Start NEET preparation from Class 9 in Ghaziabad. 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 62 Noida center. Book free demo.',
+      'Start NEET preparation from Class 9 in Ghaziabad. 4-year head start, NCERT foundation, board + NEET dual prep. Live online expert faculty for Ghaziabad. Book free demo.',
   },
 }
 
@@ -42,7 +39,7 @@ const faqs = [
   {
     question: 'Why should I start NEET preparation from Class 9 in Ghaziabad?',
     answer:
-      'Starting in Class 9 gives you a 4-year head start. You can build strong fundamentals, cover syllabus without rushing, reduce stress in Class 11-12, and have more time for revision and practice. Ghaziabad students who start early consistently score 50-100 marks higher. Our center at Sector 62 Noida is easily accessible via Blue Line Metro from Vaishali and Kaushambi.',
+      'Starting in Class 9 gives you a 4-year head start. You can build strong fundamentals, cover syllabus without rushing, reduce stress in Class 11-12, and have more time for revision and practice. Ghaziabad students who start early consistently score 50-100 marks higher. Classes are live online, so students learn from home with no travel.',
   },
   {
     question: 'What is covered in NEET Foundation Class 9?',
@@ -70,8 +67,9 @@ const faqs = [
       'Unlike regular tuition that focuses only on board exams, our foundation course builds conceptual depth required for NEET. We use NCERT as base but go beyond with application-based learning and early introduction to MCQ patterns.',
   },
   {
-    question: 'Where is the center located and how do Ghaziabad students reach?',
-    answer: `Our center is at ${ghaziabadAddress}. Ghaziabad students from Indirapuram, Vaishali, Kaushambi, Raj Nagar Extension, and Vasundhara can take the Blue Line Metro to Sector 62 station. The center is 5 min walk from the metro station.`,
+    question: 'Do you have a center in Ghaziabad?',
+    answer:
+      'We teach Ghaziabad students through live online classes - no travel needed. This serves Indirapuram, Vaishali, Kaushambi, Raj Nagar Extension, and Vasundhara. For anyone who prefers in-person coaching, our nearest walk-in center is South Extension, New Delhi.',
   },
 ]
 
@@ -87,13 +85,14 @@ export default function NEETFoundationClass9GhaziabadPage() {
       name: 'Cerebrum Biology Academy',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'B-45, Sector 62',
-        addressLocality: 'Noida',
-        addressRegion: 'UP',
-        postalCode: '201301',
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
         addressCountry: 'IN',
       },
     },
+    areaServed: 'Ghaziabad',
     educationalLevel: 'Class 9',
     teaches: [
       'Cell Biology',
@@ -105,7 +104,7 @@ export default function NEETFoundationClass9GhaziabadPage() {
     timeRequired: 'P1Y',
     hasCourseInstance: {
       '@type': 'CourseInstance',
-      courseMode: 'Blended',
+      courseMode: 'Online',
       courseWorkload: 'Weekend classes + Weekday doubt sessions',
     },
   }

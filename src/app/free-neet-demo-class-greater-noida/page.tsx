@@ -18,7 +18,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'Free NEET Demo Class Greater Noida | Book Now',
   description:
-    'Book your FREE NEET Biology demo class in Greater Noida. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 88264-44334!',
+    'Book your FREE NEET Biology demo class in Greater Noida. Experience AIIMS faculty teaching, small batches, and our proven methodology. Live online classes for Greater Noida students. No obligation. Call 88264-44334!',
   keywords: [
     'free neet demo class greater noida',
     'free neet trial class greater noida',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     title: 'Free NEET Demo Class Greater Noida',
     description:
-      'Book your FREE NEET demo class. Online from Greater Noida home or offline at Sector 62 Noida. Experience our teaching before you decide.',
+      'Book your FREE NEET demo class. Join live online from your Greater Noida home. Experience our teaching before you decide.',
     url: 'https://cerebrumbiologyacademy.com/free-neet-demo-class-greater-noida',
   },
   alternates: {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Free NEET Demo Class Greater Noida | Book Now',
     description:
-      'Book your FREE NEET Biology demo class in Greater Noida. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 88264-44334!',
+      'Book your FREE NEET Biology demo class in Greater Noida. Experience AIIMS faculty teaching, small batches, and our proven methodology. Live online classes for Greater Noida students. No obligation. Call 88264-44334!',
   },
 }
 
@@ -61,9 +61,9 @@ const demoIncludes = [
   },
   {
     icon: Video,
-    title: 'Online or Offline',
+    title: 'Live Online Demo',
     description:
-      'Join online from your Greater Noida home via Zoom, or visit our Sector 62, Noida center',
+      'Join a live interactive session from your Greater Noida home via Zoom - no travel needed',
   },
   {
     icon: Gift,
@@ -91,7 +91,7 @@ const faqs = [
   {
     question: 'How do I book a demo class from Greater Noida?',
     answer:
-      'Call us at 88264-44334 or fill the form on this page. We schedule demos instantly — same day slots available 7 days a week, online or offline.',
+      'Call us at 88264-44334 or fill the form on this page. We schedule demos instantly — same day live online slots available 7 days a week.',
   },
   {
     question: 'What if I dont like the demo class?',
@@ -102,8 +102,8 @@ const faqs = [
 
 const demoSlots = [
   { day: 'Monday - Friday', time: '5:00 PM - 6:00 PM', type: 'Online Evening Slot' },
-  { day: 'Saturday', time: '10:00 AM - 11:00 AM', type: 'Weekend Morning (Online/Offline)' },
-  { day: 'Sunday', time: '10:00 AM - 11:00 AM', type: 'Weekend Morning (Online/Offline)' },
+  { day: 'Saturday', time: '10:00 AM - 11:00 AM', type: 'Weekend Morning (Online)' },
+  { day: 'Sunday', time: '10:00 AM - 11:00 AM', type: 'Weekend Morning (Online)' },
   { day: 'Online', time: 'Flexible Timing', type: 'Zoom Class - Any Day' },
 ]
 
@@ -130,8 +130,7 @@ export default function FreeNEETDemoClassGreaterNoida() {
             </h1>
             <p className="text-xl text-green-100 mb-4">
               Experience our AIIMS faculty teaching before you decide. Book your free 60-minute demo
-              class today! Join online from your Greater Noida home or visit our Sector 62, Noida
-              center.
+              class today! Join live online from your Greater Noida home - no travel needed.
             </p>
             <div className="flex items-center justify-center gap-4 text-yellow-300 mb-8">
               <div className="flex items-center gap-2">
@@ -279,7 +278,9 @@ export default function FreeNEETDemoClassGreaterNoida() {
                 <div className="flex items-start gap-3 mb-4">
                   <Video className="w-5 h-5 text-green-600 mt-1" />
                   <div>
-                    <p className="font-semibold">Online Demo (Recommended for Greater Noida)</p>
+                    <p className="font-semibold">
+                      Live Online Demo (Recommended for Greater Noida)
+                    </p>
                     <p className="text-gray-600">Join from your Greater Noida home via Zoom</p>
                     <p className="text-gray-600">Link sent after booking — zero travel</p>
                     <p className="text-sm text-green-600 mt-1">Most popular choice</p>
@@ -288,11 +289,9 @@ export default function FreeNEETDemoClassGreaterNoida() {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-green-600 mt-1" />
                   <div>
-                    <p className="font-semibold">Offline Demo - Noida Center</p>
-                    <p className="text-gray-600">B-45, Sector 62</p>
-                    <p className="text-gray-600">Noida, UP 201301</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Aqua Line Metro → Blue Line → Sector 62 Metro Station
+                    <p className="font-semibold">Prefer in-person?</p>
+                    <p className="text-gray-600">
+                      Nearest walk-in center: South Extension, New Delhi
                     </p>
                   </div>
                 </div>
@@ -377,27 +376,13 @@ export default function FreeNEETDemoClassGreaterNoida() {
             '@type': 'Event',
             name: 'Free NEET Biology Demo Class for Greater Noida Students',
             description:
-              'Free 60-minute demo class for NEET Biology preparation with AIIMS faculty. Online from Greater Noida or offline at Sector 62, Noida.',
+              'Free 60-minute live online demo class for NEET Biology preparation with AIIMS faculty, serving Greater Noida students.',
             eventStatus: 'https://schema.org/EventScheduled',
-            eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
-            location: [
-              {
-                '@type': 'Place',
-                name: 'Cerebrum Biology Academy',
-                address: {
-                  '@type': 'PostalAddress',
-                  streetAddress: 'B-45, Sector 62',
-                  addressLocality: 'Noida',
-                  addressRegion: 'Uttar Pradesh',
-                  postalCode: '201301',
-                  addressCountry: 'IN',
-                },
-              },
-              {
-                '@type': 'VirtualLocation',
-                url: 'https://zoom.us',
-              },
-            ],
+            eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+            location: {
+              '@type': 'VirtualLocation',
+              url: 'https://zoom.us',
+            },
             offers: {
               '@type': 'Offer',
               price: '0',

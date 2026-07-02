@@ -60,22 +60,24 @@ function GhaziabadServiceSchema() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     additionalType: 'EducationalOrganization',
-    name: 'Cerebrum Biology Academy - Ghaziabad',
+    name: 'Cerebrum Biology Academy - Ghaziabad (Online)',
     description:
-      'Best NEET Biology coaching in Ghaziabad with AIIMS faculty. 98% success rate, small batches. Online and hybrid classes for Indirapuram, Vaishali, Raj Nagar, Vasundhara students.',
+      'Live online NEET Biology coaching for Ghaziabad with AIIMS faculty. 98% success rate, small batches. Online classes for Indirapuram, Vaishali, Raj Nagar, Vasundhara students.',
     url: 'https://cerebrumbiologyacademy.com/locations/ghaziabad',
     telephone: '+91-88264-44334',
     email: 'info@cerebrumbiologyacademy.com',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Ghaziabad',
-      addressRegion: 'Uttar Pradesh',
+      streetAddress: 'D 35, South Extension Part 2',
+      addressLocality: 'New Delhi',
+      addressRegion: 'Delhi',
+      postalCode: '110049',
       addressCountry: 'IN',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 28.6692,
-      longitude: 77.4538,
+      latitude: 28.5725,
+      longitude: 77.2217,
     },
     areaServed: [
       'Indirapuram',
@@ -123,7 +125,7 @@ function GhaziabadFAQSchema() {
         name: 'Is there a Cerebrum Biology Academy center in Ghaziabad?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Biology Academy currently offers online and hybrid NEET Biology classes for Ghaziabad students from Indirapuram, Vaishali, Raj Nagar, Vasundhara, and surrounding areas. Students can also attend in-person classes at our nearest centers in Rohini (DC Chowk) and Noida (Sector 62).',
+          text: 'Cerebrum Biology Academy currently offers live online NEET Biology classes for Ghaziabad students from Indirapuram, Vaishali, Raj Nagar, Vasundhara, and surrounding areas. Students who prefer in-person study can attend our nearest walk-in centers in Rohini (DC Chowk) and South Extension, New Delhi.',
         },
       },
       {
@@ -131,7 +133,7 @@ function GhaziabadFAQSchema() {
         name: 'Which is the best NEET coaching in Ghaziabad?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Biology Academy is rated among the best NEET Biology coaching options for Ghaziabad students with a 98% success rate, AIIMS faculty, and small batches of 10-15 students. Our hybrid model combines online flexibility with in-person doubt sessions at nearby centers.',
+          text: 'Cerebrum Biology Academy is rated among the best NEET Biology coaching options for Ghaziabad students with a 98% success rate, AIIMS faculty, and small batches of 10-15 students. We teach Ghaziabad students through live online classes, with in-person study available at our Rohini and South Extension centers for those who prefer it.',
         },
       },
       {
@@ -139,7 +141,7 @@ function GhaziabadFAQSchema() {
         name: 'How can Ghaziabad students join Cerebrum Academy?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Ghaziabad students can join through online classes or attend our Rohini center (20 min from Vaishali via Blue Line Metro) or Noida center (15 min from Indirapuram). Book a free demo class at cerebrumbiologyacademy.com/demo-booking or call +91-88264-44334.',
+          text: 'Ghaziabad students can join through live online classes, or attend our Rohini center (DC Chowk, ~20 min from Vaishali via Blue Line Metro) or South Extension center in New Delhi if they prefer in-person study. Book a free demo class at cerebrumbiologyacademy.com/demo-booking or call +91-88264-44334.',
         },
       },
       {
@@ -173,7 +175,7 @@ function GhaziabadEventSchema() {
   const locationEvents = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Upcoming NEET Biology Batches - Ghaziabad (Online/Hybrid)',
+    name: 'Upcoming NEET Biology Batches - Ghaziabad (Online)',
     description:
       'Scheduled batch starts and demo classes for Ghaziabad students at Cerebrum Biology Academy',
     itemListElement: [
@@ -182,11 +184,11 @@ function GhaziabadEventSchema() {
         position: 1,
         name: 'NEET Biology Class 12 Online Batch - Ghaziabad Students',
         description:
-          'Intensive NEET Biology preparation for Class 12 students from Ghaziabad. Complete syllabus coverage with online live classes and in-person test series.',
+          'Intensive NEET Biology preparation for Class 12 students from Ghaziabad. Complete syllabus coverage with live online classes and online proctored test series.',
         startDate: '2026-03-01',
         endDate: '2027-04-30',
         eventStatus: 'https://schema.org/EventScheduled',
-        eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
+        eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
         organizer: {
           '@type': 'EducationalOrganization',
           name: 'Cerebrum Biology Academy',

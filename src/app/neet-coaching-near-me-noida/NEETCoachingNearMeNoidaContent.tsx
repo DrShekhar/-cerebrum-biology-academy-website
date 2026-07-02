@@ -29,69 +29,71 @@ interface FAQ {
 }
 
 const nearbyAreas = [
-  { name: 'Sector 50', distance: '2 km', time: '5 min', direction: 'South' },
-  { name: 'Sector 44', distance: '3 km', time: '7 min', direction: 'West' },
-  { name: 'Sector 18', distance: '6 km', time: '12 min', direction: 'South-West' },
-  { name: 'Sector 76', distance: '5 km', time: '10 min', direction: 'East' },
-  { name: 'Sector 78', distance: '6 km', time: '12 min', direction: 'East' },
-  { name: 'Indirapuram', distance: '10 km', time: '20 min', direction: 'North' },
-  { name: 'Vaishali', distance: '12 km', time: '22 min', direction: 'North' },
-  { name: 'Greater Noida West', distance: '14 km', time: '25 min', direction: 'South-East' },
-  { name: 'Sector 137', distance: '8 km', time: '15 min', direction: 'South' },
-  { name: 'Gaur City', distance: '10 km', time: '18 min', direction: 'East' },
-  { name: 'Sector 120', distance: '7 km', time: '14 min', direction: 'South' },
-  { name: 'Sector 100', distance: '9 km', time: '17 min', direction: 'South' },
+  { name: 'Sector 50', direction: 'Live online' },
+  { name: 'Sector 44', direction: 'Live online' },
+  { name: 'Sector 18', direction: 'Live online' },
+  { name: 'Sector 76', direction: 'Live online' },
+  { name: 'Sector 78', direction: 'Live online' },
+  { name: 'Indirapuram', direction: 'Live online' },
+  { name: 'Vaishali', direction: 'Live online' },
+  { name: 'Greater Noida West', direction: 'Live online' },
+  { name: 'Sector 137', direction: 'Live online' },
+  { name: 'Gaur City', direction: 'Live online' },
+  { name: 'Sector 120', direction: 'Live online' },
+  { name: 'Sector 100', direction: 'Live online' },
 ]
 
 const transportOptions = [
   {
-    mode: 'By Car',
-    icon: Car,
-    details: 'Ample parking available. Easy access via Noida Expressway and Sector 62 main road.',
-  },
-  {
-    mode: 'By Metro',
-    icon: Train,
-    details:
-      'Nearest: Sector 62 Metro Station (5 min walk, Blue Line). Also accessible from Sector 59 and Sector 61 stations.',
-  },
-  {
-    mode: 'By Auto/Cab',
+    mode: 'Live Online (Recommended)',
     icon: Navigation,
     details:
-      'Ola/Uber readily available. Shared autos from major junctions. Approx ₹50-150 from most areas.',
+      'Zero travel time. Join live interactive classes from your Noida home — same AIIMS faculty, recorded sessions for revision.',
+  },
+  {
+    mode: 'Flexible Timings',
+    icon: Clock,
+    details:
+      'Morning, evening and weekend batches available online. Balance school and NEET prep without commuting.',
+  },
+  {
+    mode: 'Nearest Walk-in Centre',
+    icon: Car,
+    details:
+      'Prefer in-person? Our nearest walk-in centre is South Extension, New Delhi. Most Noida students choose online for convenience.',
   },
 ]
 
 const whyLocation = [
   {
-    title: 'Central Location',
+    title: 'Learn From Home',
     description:
-      'Sector 62 is centrally positioned for all major Noida areas - Sector 18, 44, 50, 76, Indirapuram.',
+      'Live online NEET Biology classes for all Noida areas — Sector 18, 44, 50, 76, Indirapuram and more. No commute.',
     icon: Compass,
   },
   {
-    title: 'Easy Metro Access',
-    description: 'Just 5 minutes walk from Sector 62 Metro Station on Blue Line.',
+    title: 'Same AIIMS Faculty',
+    description:
+      'Online students get the same AIIMS-trained faculty and curriculum as our in-person centres.',
     icon: Train,
   },
   {
-    title: 'Parking Available',
-    description: 'Free parking for students near our Sector 62 center.',
+    title: 'Recorded Revision',
+    description: 'Every live class is recorded so Noida students can revise anytime.',
     icon: Car,
   },
   {
-    title: 'Safe Neighborhood',
+    title: 'Small Batches',
     description:
-      'Located in a well-developed IT and commercial area with security and well-lit surroundings.',
+      'Small online batches ensure personal attention and doubt-clearing for every student.',
     icon: Building,
   },
 ]
 
 const successStats = [
-  { stat: '15 min', label: 'Avg. Commute Time' },
+  { stat: 'Live', label: 'Online Classes Daily' },
   { stat: '500+', label: 'Students from 50+ Areas' },
-  { stat: '98%', label: 'Students Find Location Convenient' },
+  { stat: '98%', label: 'NEET Qualification Rate' },
   { stat: '24/7', label: 'Online Support Available' },
 ]
 
@@ -142,7 +144,7 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-teal-500/20 text-teal-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-4 h-4" />
-              Central Noida Location - Sector 62
+              Live Online NEET Coaching for Noida
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -151,18 +153,19 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Looking for the best NEET coaching near you? Our Sector 62 center is centrally
-              located, accessible within 15-20 minutes from all major Noida areas.
+              Looking for the best NEET coaching near you in Noida? Join our live online classes
+              from home — same AIIMS-trained faculty for students across all Noida sectors. No
+              commute needed.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <MapPin className="w-5 h-5 text-yellow-400" />
-                <span>Sector 62, Noida</span>
+                <span>Live Online Classes</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Clock className="w-5 h-5 text-yellow-400" />
-                <span>15 min from most areas</span>
+                <span>Learn From Home</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Users className="w-5 h-5 text-green-400" />
@@ -171,26 +174,26 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://maps.google.com/?q=B-45+Sector+62+Noida"
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="secondary"
                   size="xl"
                   className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold"
                 >
-                  <Navigation className="w-5 h-5 mr-2" />
-                  Get Directions
+                  <Play className="w-5 h-5 mr-2" />
+                  Book Free Demo
                 </Button>
-              </a>
+              </Link>
               <button
                 onClick={handleWhatsApp}
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
               >
                 <Phone className="w-5 h-5" />
-                Ask Distance from My Area
+                Ask on WhatsApp
               </button>
             </div>
 
@@ -224,9 +227,11 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Distance from Your Area
+              Noida Areas We Serve
             </h2>
-            <p className="text-xl text-slate-600">Find how far we are from your location</p>
+            <p className="text-xl text-slate-600">
+              Live online NEET Biology coaching across Noida — no commute needed
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -236,18 +241,13 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
                 className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-xl p-4 border border-teal-100 animate-fadeInUp"
               >
                 <h3 className="font-bold text-slate-900">{area.name}</h3>
-                <div className="flex items-center gap-4 mt-2">
-                  <span className="text-2xl font-bold text-teal-600">{area.distance}</span>
-                  <span className="text-slate-500">|</span>
-                  <span className="text-slate-600">{area.time} drive</span>
-                </div>
-                <p className="text-xs text-slate-500 mt-1">{area.direction}</p>
+                <p className="text-xs text-teal-600 font-medium mt-2">{area.direction}</p>
               </div>
             ))}
           </div>
 
           <p className="text-center text-slate-500 mt-6">
-            Cant find your area?{' '}
+            Dont see your area?{' '}
             <button onClick={handleWhatsApp} className="text-teal-600 hover:underline">
               Ask us on WhatsApp
             </button>
@@ -255,12 +255,12 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
         </div>
       </section>
 
-      {/* Transport Options */}
+      {/* How to Join */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">How to Reach Us</h2>
-            <p className="text-xl text-slate-600">Multiple transport options available</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">How to Join</h2>
+            <p className="text-xl text-slate-600">Flexible ways to start your NEET preparation</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -285,10 +285,10 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Sector 62 is the Perfect Location
+              Why Online Coaching is Ideal for Noida Students
             </h2>
             <p className="text-xl text-teal-100">
-              Central position for students from all Noida areas
+              Same AIIMS faculty, small batches, zero commute — learn from home
             </p>
           </div>
 
@@ -313,16 +313,20 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Our Noida Center Address</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">
+              Live Online Coaching for Noida Students
+            </h2>
             <div className="space-y-4">
               <p className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
-                <span className="text-slate-700">B-45, Sector 62, Noida, UP 201301</span>
+                <span className="text-slate-700">
+                  Live online classes across all Noida sectors — learn from home, no commute.
+                </span>
               </p>
               <p className="flex items-center gap-3">
-                <Train className="w-5 h-5 text-teal-600 flex-shrink-0" />
+                <Users className="w-5 h-5 text-teal-600 flex-shrink-0" />
                 <span className="text-slate-700">
-                  Sector 62 Metro Station (Blue Line) - 5 min walk
+                  Same AIIMS-trained faculty and small batches as our in-person centres.
                 </span>
               </p>
               <p className="flex items-center gap-3">
@@ -334,21 +338,17 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
               <p className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-teal-600 flex-shrink-0" />
                 <span className="text-slate-700">
-                  Open 24/7 — Online Classes Available Globally
+                  Prefer in-person? Our nearest walk-in centre is South Extension, New Delhi.
                 </span>
               </p>
             </div>
             <div className="flex gap-4 mt-6">
-              <a
-                href="https://maps.google.com/?q=B-45+Sector+62+Noida"
-                target="_blank"
-                rel="noopener"
-              >
+              <button onClick={handleWhatsApp}>
                 <Button>
-                  <Navigation className="w-4 h-4 mr-2" />
-                  Open in Maps
+                  <Phone className="w-4 h-4 mr-2" />
+                  Chat on WhatsApp
                 </Button>
-              </a>
+              </button>
               <a href="tel:+918826444334">
                 <Button variant="outline">
                   <Phone className="w-4 h-4 mr-2" />
@@ -434,9 +434,9 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Visit Our Center?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start from Home?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Book a free demo class and see our facility in person
+            Book a free live online demo class and experience our teaching
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -453,18 +453,14 @@ export default function NEETCoachingNearMeNoidaContent({ faqs }: { faqs: FAQ[] }
                 Book Free Demo
               </Button>
             </Link>
-            <a
-              href="https://maps.google.com/?q=B-45+Sector+62+Noida"
-              target="_blank"
-              rel="noopener"
-            >
+            <a href="tel:+918826444334">
               <Button
                 variant="outline"
                 size="xl"
                 className="border-white text-white hover:bg-white hover:text-teal-600"
               >
-                <Navigation className="w-5 h-5 mr-2" />
-                Get Directions
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
               </Button>
             </a>
           </div>

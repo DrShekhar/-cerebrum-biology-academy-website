@@ -1,10 +1,7 @@
 import { Metadata } from 'next'
 import AakashAlternativeNoidaContent from './AakashAlternativeContent'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { LocalBusinessSchema } from '@/components/seo/StructuredData'
-
-const noidaLocation = CONTACT_INFO.location.noida
 
 export const metadata: Metadata = {
   title: 'Aakash Alternative in Noida | NEET Biology Coaching',
@@ -71,8 +68,9 @@ const faqs = [
       "Aakash was acquired by BYJU'S in 2021. While Aakash continues operations, some students prefer independent institutes like Cerebrum that are not part of large corporate structures. We focus purely on quality education without corporate distractions.",
   },
   {
-    question: 'Where is Cerebrum located in Noida?',
-    answer: `Our center is at ${noidaLocation.streetAddress}, ${noidaLocation.addressLocality}. We're conveniently located near Sector 62 Metro Station (Blue Line), easily accessible from Sectors 18, 44, 50, 76, 78, Indirapuram, and Vaishali.`,
+    question: 'Do you have a center in Noida?',
+    answer:
+      'We teach Noida students through live online classes — no travel needed. Students across Sectors 18, 44, 50, 76, 78, Indirapuram and Vaishali learn with the same AIIMS-trained faculty online. Our nearest in-person center is South Extension, New Delhi.',
   },
 ]
 
@@ -87,12 +85,13 @@ export default function AakashAlternativeNoidaPage() {
       name: 'Cerebrum Biology Academy',
       description:
         'Specialized NEET Biology coaching with small batches and personalized attention',
+      areaServed: 'Noida',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: noidaLocation.streetAddress,
-        addressLocality: noidaLocation.addressLocality,
-        addressRegion: noidaLocation.addressRegion,
-        postalCode: noidaLocation.postalCode,
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
       },
     },
   }

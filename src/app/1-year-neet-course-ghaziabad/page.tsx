@@ -17,7 +17,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: '1 Year NEET Course Ghaziabad 2026 | Class 12 + Dropper',
   description:
-    'Join 1-year NEET course for Ghaziabad students. Class 12 & droppers. Complete syllabus in 12 months. Sector 62 Noida center, accessible via Blue Line Metro. Call 88264-44334!',
+    'Join 1-year NEET course for Ghaziabad students. Class 12 & droppers. Complete syllabus in 12 months. Live online classes with AIIMS-trained faculty. Call 88264-44334!',
   keywords: [
     '1 year neet course ghaziabad',
     'one year neet coaching ghaziabad',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: '1 Year NEET Course Ghaziabad 2026 | Class 12 + Dropper',
     description:
-      'Join 1-year NEET course for Ghaziabad students. Class 12 & droppers. Complete syllabus in 12 months. Sector 62 Noida center, accessible via Blue Line Metro. Call 88264-44334!',
+      'Join 1-year NEET course for Ghaziabad students. Class 12 & droppers. Complete syllabus in 12 months. Live online classes with AIIMS-trained faculty. Call 88264-44334!',
   },
 }
 
@@ -115,9 +115,9 @@ const faqs = [
       'Yes, if you: 1) Have basic Class 11 foundation, 2) Can dedicate 8-10 hours daily, 3) Follow the structured plan strictly. Many of our 1-year students score 600+ in NEET. Key is consistency and completing 5000+ MCQs.',
   },
   {
-    question: 'How do Ghaziabad students reach the center?',
+    question: 'How do Ghaziabad students attend classes?',
     answer:
-      'Ghaziabad students take the Blue Line Metro from Vaishali or Kaushambi directly to Sector 62 Noida in 20-25 minutes. Many students from Indirapuram, Raj Nagar Extension, Vasundhara, and Crossings Republik attend daily. Online mode also available.',
+      'Ghaziabad students join our live online classes from home — no travel needed. Students from Indirapuram, Raj Nagar Extension, Vasundhara, and Crossings Republik learn with the same AIIMS-trained faculty online. For anyone wanting in-person study, our nearest walk-in center is South Extension, New Delhi.',
   },
   {
     question: 'What is the daily schedule for 1-year batch?',
@@ -395,50 +395,40 @@ export default function OneYearNEETCourseGhaziabad() {
         </div>
       </section>
 
-      {/* Center Location */}
+      {/* How Ghaziabad Students Learn */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="md:flex">
-              <div className="md:w-1/2 p-8">
-                <h2 className="text-2xl font-bold mb-4">1-Year Program Location</h2>
-                <div className="flex items-start gap-3 mb-4">
-                  <MapPin className="w-5 h-5 text-red-600 mt-1" />
-                  <div>
-                    <p className="font-semibold">B-45, Sector 62</p>
-                    <p className="text-gray-600">Noida, UP 201301</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      20-25 min via Blue Line Metro from Vaishali/Kaushambi Ghaziabad
-                    </p>
-                  </div>
+            <div className="p-8">
+              <h2 className="text-2xl font-bold mb-4">Live Online — Study From Ghaziabad</h2>
+              <div className="flex items-start gap-3 mb-4">
+                <MapPin className="w-5 h-5 text-red-600 mt-1" />
+                <div>
+                  <p className="font-semibold">Live Online Classes for Ghaziabad</p>
+                  <p className="text-gray-600">
+                    Learn from home in Indirapuram, Vaishali, Kaushambi, Raj Nagar Extension,
+                    Vasundhara and Crossings Republik — no travel needed.
+                  </p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Prefer in-person? Nearest walk-in center: South Extension, New Delhi.
+                  </p>
                 </div>
-                <div className="flex items-start gap-3 mb-4">
-                  <Calendar className="w-5 h-5 text-red-600 mt-1" />
-                  <div>
-                    <p className="font-semibold">Next Batch Starts</p>
-                    <p className="text-gray-600">April 2025 (New Session)</p>
-                    <p className="text-gray-600">Late joining accepted till August</p>
-                  </div>
+              </div>
+              <div className="flex items-start gap-3 mb-4">
+                <Calendar className="w-5 h-5 text-red-600 mt-1" />
+                <div>
+                  <p className="font-semibold">Next Batch Starts</p>
+                  <p className="text-gray-600">April 2025 (New Session)</p>
+                  <p className="text-gray-600">Late joining accepted till August</p>
                 </div>
-                <a
-                  href="tel:+918826444334"
-                  className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition"
-                >
-                  <Phone className="w-5 h-5" />
-                  Book Free Counseling
-                </a>
               </div>
-              <div className="md:w-1/2">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.1234567890123!2d77.3683!3d28.6271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSector%2062%2C%20Noida!5e0!3m2!1sen!2sin!4v1234567890"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
+              <a
+                href="tel:+918826444334"
+                className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition"
+              >
+                <Phone className="w-5 h-5" />
+                Book Free Counseling
+              </a>
             </div>
           </div>
         </div>

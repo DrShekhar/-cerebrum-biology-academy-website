@@ -1925,14 +1925,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-dps-noida-students',
     schoolName: 'DPS Noida',
     locality: 'Sector 30, Noida',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '4 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for DPS Noida Students | Cerebrum Biology Academy',
     metaDescription:
-      'Top NEET biology coaching for DPS Noida Sector 30 students. After-school batches, AIIMS faculty, 19,000+ MCQ bank. Just 4 km from DPS Noida campus.',
+      'Top live online NEET biology coaching for DPS Noida Sector 30 students. Live online batches, AIIMS-trained faculty, 19,000+ MCQ bank. Study from home in Noida.',
     heroTitle: 'NEET Biology Coaching for DPS Noida Students',
     heroSubtitle:
-      'Join DPS Noida students preparing for NEET at Cerebrum Biology Academy, Sector 62 — only 4 km from your school. Expert faculty, small batches, proven results.',
+      'Join DPS Noida students preparing for NEET in Cerebrum Biology Academy live online classes — study from anywhere in Noida. Expert faculty, small batches, proven results.',
     schoolHighlights: [
       'CBSE school with strong science stream',
       'Excellent track record in board and competitive exams',
@@ -1942,9 +1942,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     whyStudentsChoose: [
       {
-        title: 'Close to School',
+        title: 'Learn From Home',
         description:
-          'Our Sector 62 center is just 4 km from DPS Noida, making post-school commute easy.',
+          'Attend live online classes from anywhere in Noida — no commute, more time to study.',
       },
       {
         title: 'Small Batches',
@@ -1975,14 +1975,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         batch: 'DPS Noida, Class of 2025',
         result: 'NEET Score: 642',
         quote:
-          'The proximity to school and evening batches made managing both DPS academics and NEET prep seamless.',
+          'The live online evening batches made managing both DPS academics and NEET prep seamless.',
       },
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from DPS Noida Sector 30?',
+        question: 'Do you have a center in Noida?',
         answer:
-          'Our Sector 62 center is approximately 4 km from DPS Noida, about 10-15 minutes by car or auto.',
+          'We teach DPS Noida students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'What batch timings are available for DPS Noida students?',
@@ -2002,7 +2002,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'Is there a free demo class for DPS Noida students?',
         answer:
-          'Yes, we offer a free demo class. Call +91-88264-44334 or WhatsApp us to schedule your session at the Sector 62 center.',
+          'Yes, we offer a free demo class. Call +91-88264-44334 or WhatsApp us to schedule your live online session.',
       },
     ],
     relatedSchools: [
@@ -2012,8 +2012,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'Somerville School Noida', url: '/neet-coaching-somerville-noida-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -2023,14 +2023,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-amity-noida-students',
     schoolName: 'Amity International School Noida',
     locality: 'Sector 44, Noida',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '3 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for Amity International Noida Students | Cerebrum Biology Academy',
     metaDescription:
-      'Specialized NEET biology coaching for Amity International Noida Sector 44 students. 3 km away, small batches, AIIMS faculty. Achieve your medical dream.',
+      'Specialized live online NEET biology coaching for Amity International Noida Sector 44 students. Small batches, AIIMS-trained faculty. Achieve your medical dream.',
     heroTitle: 'NEET Biology Coaching for Amity International Noida Students',
     heroSubtitle:
-      'Cerebrum Biology Academy is just 3 km from Amity International School Noida. Join our focused NEET batches and boost your biology score significantly.',
+      'Cerebrum Biology Academy brings live online NEET biology coaching to Amity International School Noida students. Join our focused NEET batches and boost your biology score significantly.',
     schoolHighlights: [
       'CBSE affiliated with strong academic reputation',
       'Comprehensive science stream with modern labs',
@@ -2041,9 +2041,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     whyStudentsChoose: [
       {
-        title: 'Nearest Center',
+        title: 'Learn From Home',
         description:
-          'Sector 62 is only 3 km from Amity Sector 44 — the closest quality NEET coaching available.',
+          'Live online classes reach Amity Sector 44 students at home — quality NEET biology coaching with no commute.',
       },
       {
         title: 'Small Batches',
@@ -2077,9 +2077,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from Amity International School Sector 44?',
+        question: 'Do you have a center in Noida?',
         answer:
-          'Our Sector 62 Noida center is approximately 3 km from Amity International School Sector 44, about 8-10 minutes by car.',
+          'We teach Amity International School Sector 44 students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'What timings are available for Amity students?',
@@ -2097,9 +2097,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
           'Absolutely. We recommend joining in Class 11 for best results. Starting early gives more time for thorough NCERT coverage and revision cycles.',
       },
       {
-        question: 'Is Cerebrum the best NEET coaching near Amity Noida?',
+        question: 'Is Cerebrum a good NEET coaching option for Amity Noida students?',
         answer:
-          'We are the nearest specialized biology-focused NEET coaching center to Amity Noida, with AIIMS faculty and the largest MCQ bank in the NCR region.',
+          'Yes. We deliver specialized biology-focused NEET coaching to Amity Noida students via live online classes, with AIIMS-trained faculty and one of the largest MCQ banks in the region.',
       },
     ],
     relatedSchools: [
@@ -2109,8 +2109,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'Lotus Valley International', url: '/neet-coaching-lotus-valley-noida-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -2120,14 +2120,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-ryan-noida-students',
     schoolName: 'Ryan International School Noida',
     locality: 'Sector 39, Noida',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '3 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for Ryan International Noida Students | Cerebrum Biology Academy',
     metaDescription:
-      'Expert NEET biology coaching for Ryan International School Noida Sector 39 students. Only 3 km away. Small batches, 19,000+ MCQs, AIIMS faculty.',
+      'Expert live online NEET biology coaching for Ryan International School Noida Sector 39 students. Small batches, 19,000+ MCQs, AIIMS-trained faculty.',
     heroTitle: 'NEET Biology Coaching for Ryan International Noida Students',
     heroSubtitle:
-      'Ryan International Noida students trust Cerebrum Biology Academy for NEET prep — just 3 km from your Sector 39 campus. Expert biology faculty, proven methods.',
+      'Ryan International Noida students trust Cerebrum Biology Academy for NEET prep — live online classes you can join from your Sector 39 home. Expert biology faculty, proven methods.',
     schoolHighlights: [
       'CBSE school with strong science and medical stream focus',
       'Modern laboratories supporting practical biology learning',
@@ -2137,9 +2137,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     whyStudentsChoose: [
       {
-        title: 'Proximity',
+        title: 'Learn From Home',
         description:
-          'Our Sector 62 center is just 3 km from Ryan International Sector 39 for a hassle-free commute.',
+          'Ryan International Sector 39 students join live online classes from home — no commute, zero travel time.',
       },
       {
         title: 'AIIMS-Level Teaching',
@@ -2175,9 +2175,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from Ryan International Noida Sector 39?',
+        question: 'Do you have a center in Noida?',
         answer:
-          'Our Sector 62 Noida center is about 3 km from Ryan International School Sector 39, roughly 10 minutes by car.',
+          'We teach Ryan International School Sector 39 students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'What NEET batch options are available for Ryan students?',
@@ -2192,7 +2192,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'Can we attend a trial class before enrolling?',
         answer:
-          'Yes, we offer a free demo class at our Sector 62 center. Call or WhatsApp +91-88264-44334 to book your slot.',
+          'Yes, we offer a free live online demo class. Call or WhatsApp +91-88264-44334 to book your slot.',
       },
       {
         question: 'How do you track individual student progress?',
@@ -2207,8 +2207,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'Somerville School Noida', url: '/neet-coaching-somerville-noida-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -2218,11 +2218,11 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-lotus-valley-noida-students',
     schoolName: 'Lotus Valley International School',
     locality: 'Sector 126, Noida',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '7 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for Lotus Valley International Students | Cerebrum Biology Academy',
     metaDescription:
-      'Top NEET biology coaching for Lotus Valley International School Noida students. 7 km from Sector 126, AIIMS faculty, small batches, 19,000+ MCQ bank.',
+      'Top live online NEET biology coaching for Lotus Valley International School Noida Sector 126 students. AIIMS-trained faculty, small batches, 19,000+ MCQ bank.',
     heroTitle: 'NEET Biology Coaching for Lotus Valley International Students',
     heroSubtitle:
       'Lotus Valley International School students from Noida Sector 126 choose Cerebrum Biology Academy for focused NEET preparation. Expert faculty, structured batches.',
@@ -2235,9 +2235,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     whyStudentsChoose: [
       {
-        title: 'Accessible Location',
+        title: 'Learn From Home',
         description:
-          'Sector 62 center is 7 km from Lotus Valley Sector 126 — easy via Noida Expressway.',
+          'Lotus Valley Sector 126 students join live online classes from home — no Expressway commute needed.',
       },
       {
         title: 'Small Batches',
@@ -2268,14 +2268,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         batch: 'Lotus Valley International, Class of 2025',
         result: 'NEET Score: 628',
         quote:
-          'Coming 7 km was worth it. The biology teaching here is in a different league altogether.',
+          'The live online classes were worth it. The biology teaching here is in a different league altogether.',
       },
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from Lotus Valley International Sector 126?',
+        question: 'Do you have a center in Noida?',
         answer:
-          'Our Sector 62 center is approximately 7 km from Lotus Valley International School Sector 126, about 15-20 minutes via Noida Expressway.',
+          'We teach Lotus Valley International Sector 126 students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'Are there weekend batches for Lotus Valley students?',
@@ -2293,9 +2293,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
           'We recommend joining in Class 11 to cover the full 2-year NEET syllabus thoroughly. Class 12 and dropper batches are also available.',
       },
       {
-        question: 'Is there online coaching available for Lotus Valley students?',
+        question: 'How are classes delivered for Lotus Valley students?',
         answer:
-          'Yes, we offer hybrid options with online classes that can supplement your in-center coaching for added flexibility.',
+          'All classes are live and online, so Lotus Valley students learn from home with full interactivity and recordings for revision.',
       },
     ],
     relatedSchools: [
@@ -2305,8 +2305,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'Amity International Noida', url: '/neet-coaching-amity-noida-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -2316,14 +2316,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-kv-noida-students',
     schoolName: 'Kendriya Vidyalaya Noida',
     locality: 'Sector 24, Noida',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '4 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for Kendriya Vidyalaya Noida Students | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET biology coaching for KV Noida Sector 24 students. 4 km from your school, small batches, AIIMS faculty, 19,000+ MCQs. Start your medical journey.',
+      'Best live online NEET biology coaching for KV Noida Sector 24 students. Study from home, small batches, AIIMS-trained faculty, 19,000+ MCQs. Start your medical journey.',
     heroTitle: 'NEET Biology Coaching for Kendriya Vidyalaya Noida Students',
     heroSubtitle:
-      'KV Noida students preparing for NEET — Cerebrum Biology Academy in Sector 62 is just 4 km away. Join small focused batches and achieve your AIIMS dream.',
+      'KV Noida students preparing for NEET — join Cerebrum Biology Academy live online classes from home. Small focused batches to achieve your AIIMS dream.',
     schoolHighlights: [
       'CBSE school under central government with disciplined academics',
       'Strong focus on science and mathematics from early classes',
@@ -2333,9 +2333,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     whyStudentsChoose: [
       {
-        title: 'Nearby Center',
+        title: 'Learn From Home',
         description:
-          'Sector 62 is just 4 km from KV Noida Sector 24, making daily commute convenient.',
+          'KV Noida Sector 24 students attend live online classes from home — convenient daily learning with no commute.',
       },
       {
         title: 'Affordable Excellence',
@@ -2371,9 +2371,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from Kendriya Vidyalaya Noida Sector 24?',
+        question: 'Do you have a center in Noida?',
         answer:
-          'Our Sector 62 center is approximately 4 km from KV Noida Sector 24, about 10-12 minutes by auto or car.',
+          'We teach KV Noida Sector 24 students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'What are the fee options for KV Noida students?',
@@ -2392,8 +2392,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       },
       {
         question: 'Can KV students get a free trial class?',
-        answer:
-          'Yes, call or WhatsApp +91-88264-44334 to book a free demo class at our Sector 62 Noida center.',
+        answer: 'Yes, call or WhatsApp +91-88264-44334 to book a free live online demo class.',
       },
     ],
     relatedSchools: [
@@ -2403,8 +2402,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'Amity International Noida', url: '/neet-coaching-amity-noida-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -2414,14 +2413,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-pathways-noida-students',
     schoolName: 'Pathways World School Noida',
     locality: 'Sector 100, Noida',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '5 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for Pathways World School Noida Students | Cerebrum Biology Academy',
     metaDescription:
-      'Specialized NEET biology coaching for Pathways World School Noida Sector 100 students. 5 km away, AIIMS faculty, small batches, 19,000+ MCQ bank.',
+      'Specialized live online NEET biology coaching for Pathways World School Noida Sector 100 students. AIIMS-trained faculty, small batches, 19,000+ MCQ bank.',
     heroTitle: 'NEET Biology Coaching for Pathways World School Noida Students',
     heroSubtitle:
-      'Pathways World School Noida students — Cerebrum Biology Academy at Sector 62 is just 5 km away. Top NEET biology faculty, structured preparation, small batches.',
+      'Pathways World School Noida students — join Cerebrum Biology Academy live online classes from home. Top NEET biology faculty, structured preparation, small batches.',
     schoolHighlights: [
       'IB and CBSE streams with international academic standards',
       'Globally minded curriculum encouraging critical thinking',
@@ -2468,9 +2467,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from Pathways World School Sector 100?',
+        question: 'Do you have a center in Noida?',
         answer:
-          'Our Sector 62 center is approximately 5 km from Pathways World School Sector 100, about 12-15 minutes by car.',
+          'We teach Pathways World School Sector 100 students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'Do you help IB students prepare for NEET?',
@@ -2500,8 +2499,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'Jaypee Public School Noida', url: '/neet-coaching-jaypee-noida-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -2511,14 +2510,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-jaypee-noida-students',
     schoolName: 'Jaypee Public School Noida',
     locality: 'Sector 128, Noida',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '8 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for Jaypee Public School Noida Students | Cerebrum Biology Academy',
     metaDescription:
-      'Top NEET biology coaching for Jaypee Public School Noida Sector 128 students. 8 km to Sector 62 center. AIIMS faculty, small batches, 19,000+ MCQs.',
+      'Top live online NEET biology coaching for Jaypee Public School Noida Sector 128 students. AIIMS-trained faculty, small batches, 19,000+ MCQs. Study from home.',
     heroTitle: 'NEET Biology Coaching for Jaypee Public School Noida Students',
     heroSubtitle:
-      'Jaypee Public School Noida students choose Cerebrum Biology Academy for focused NEET biology preparation. Expert faculty at our Sector 62 center, 8 km away.',
+      'Jaypee Public School Noida students choose Cerebrum Biology Academy for focused NEET biology preparation. Expert faculty in live online classes you join from home.',
     schoolHighlights: [
       'CBSE school with strong science programs',
       'Modern infrastructure with science and biology labs',
@@ -2561,14 +2560,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         batch: 'Jaypee Public School, Class of 2025',
         result: 'NEET Score: 622',
         quote:
-          'The distance from Sector 128 was worth every minute. Cerebrum prepared me better than I imagined.',
+          'Learning online from Sector 128 was seamless. Cerebrum prepared me better than I imagined.',
       },
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from Jaypee Public School Sector 128?',
+        question: 'Do you have a center in Noida?',
         answer:
-          'Our Sector 62 center is approximately 8 km from Jaypee Public School Sector 128, about 20 minutes via Noida Expressway.',
+          'We teach Jaypee Public School Sector 128 students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'Are there weekend batches for Jaypee students?',
@@ -2576,9 +2575,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
           'Yes, Saturday and Sunday batches are available for Jaypee students who prefer weekend-intensive NEET prep.',
       },
       {
-        question: 'What makes Cerebrum worth the commute from Sector 128?',
+        question: 'What makes Cerebrum a strong choice for Sector 128 students?',
         answer:
-          'Our AIIMS faculty, small batch size, 19,000+ MCQ bank, and proven results make Cerebrum the best NEET biology coaching in Noida, worth any commute.',
+          'Our AIIMS-trained faculty, small batch size, 19,000+ MCQ bank, and proven results make Cerebrum a leading live online NEET biology coaching for Noida students.',
       },
       {
         question: 'How often are tests conducted?',
@@ -2587,8 +2586,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       },
       {
         question: 'Is there a free demo class available for Jaypee students?',
-        answer:
-          'Yes, contact us at +91-88264-44334 to schedule a free demo class at our Sector 62 Noida center.',
+        answer: 'Yes, contact us at +91-88264-44334 to schedule a free live online demo class.',
       },
     ],
     relatedSchools: [
@@ -2598,8 +2596,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'DPS Noida', url: '/neet-coaching-dps-noida-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -2609,14 +2607,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-somerville-noida-students',
     schoolName: 'Somerville School Noida',
     locality: 'Sector 22, Noida',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '4 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for Somerville School Noida Students | Cerebrum Biology Academy',
     metaDescription:
-      'Focused NEET biology coaching for Somerville School Noida Sector 22 students. 4 km from campus, AIIMS faculty, small batches. Achieve top NEET scores.',
+      'Focused live online NEET biology coaching for Somerville School Noida Sector 22 students. AIIMS-trained faculty, small batches. Achieve top NEET scores from home.',
     heroTitle: 'NEET Biology Coaching for Somerville School Noida Students',
     heroSubtitle:
-      'Somerville School Noida students — Cerebrum Biology Academy at Sector 62 is just 4 km away. Expert NEET biology teaching, small batches, structured preparation.',
+      'Somerville School Noida students — join Cerebrum Biology Academy live online classes from home. Expert NEET biology teaching, small batches, structured preparation.',
     schoolHighlights: [
       'CBSE school with strong academic reputation in Noida',
       'Excellent science stream with well-equipped labs',
@@ -2626,9 +2624,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     whyStudentsChoose: [
       {
-        title: 'Close to Home',
+        title: 'Learn From Home',
         description:
-          'Sector 62 is just 4 km from Somerville School Sector 22 — easy after-school commute.',
+          'Somerville School Sector 22 students join live online classes from home — no after-school commute.',
       },
       {
         title: 'Small Batches',
@@ -2664,9 +2662,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from Somerville School Noida?',
+        question: 'Do you have a center in Noida?',
         answer:
-          'Our Sector 62 center is approximately 4 km from Somerville School Sector 22, about 10 minutes by car or auto.',
+          'We teach Somerville School Sector 22 students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'What timings work best for Somerville students?',
@@ -2686,7 +2684,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How do I enroll at Cerebrum from Somerville School?',
         answer:
-          'Call or WhatsApp +91-88264-44334, visit our Sector 62 center, or fill the enrollment form on our website to get started.',
+          'Call or WhatsApp +91-88264-44334, or fill the enrollment form on our website to get started with live online classes.',
       },
     ],
     relatedSchools: [
@@ -2696,8 +2694,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'Amity International Noida', url: '/neet-coaching-amity-noida-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -2707,14 +2705,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-dps-indirapuram-students',
     schoolName: 'DPS Indirapuram',
     locality: 'Indirapuram, Ghaziabad',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '8 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for DPS Indirapuram Students | Cerebrum Biology Academy',
     metaDescription:
-      'Expert NEET biology coaching for DPS Indirapuram Ghaziabad students. 8 km to Sector 62 Noida center. AIIMS faculty, small batches, 19,000+ MCQs.',
+      'Expert live online NEET biology coaching for DPS Indirapuram Ghaziabad students. AIIMS-trained faculty, small batches, 19,000+ MCQs. Study from home.',
     heroTitle: 'NEET Biology Coaching for DPS Indirapuram Students',
     heroSubtitle:
-      'DPS Indirapuram students — Cerebrum Biology Academy at Sector 62 Noida is just 8 km away. Top NEET biology coaching with AIIMS faculty and small batches.',
+      'DPS Indirapuram students — join Cerebrum Biology Academy live online classes from home in Ghaziabad. Top NEET biology coaching with AIIMS-trained faculty and small batches.',
     schoolHighlights: [
       'Premier CBSE school in Indirapuram, Ghaziabad',
       'Strong science stream with excellent infrastructure',
@@ -2724,9 +2722,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     whyStudentsChoose: [
       {
-        title: 'Nearest Specialized Coaching',
+        title: 'Specialist Biology Coaching From Home',
         description:
-          'Cerebrum at Sector 62 Noida is the closest NEET biology specialist center for Indirapuram students.',
+          'Cerebrum brings dedicated NEET biology specialists to Indirapuram students through live online classes.',
       },
       {
         title: 'Small Batches',
@@ -2749,7 +2747,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         name: 'Shreya Pandey',
         batch: 'DPS Indirapuram, Class of 2024',
         result: 'NEET Score: 654',
-        quote: 'The 8 km drive to Cerebrum was the best investment of my NEET preparation year.',
+        quote:
+          'Joining Cerebrum live online classes was the best investment of my NEET preparation year.',
       },
       {
         name: 'Aditya Mishra',
@@ -2761,14 +2760,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from DPS Indirapuram?',
+        question: 'Do you have a center in Indirapuram or Ghaziabad?',
         answer:
-          'Our Sector 62 Noida center is approximately 8 km from DPS Indirapuram, about 20-25 minutes by car.',
+          'We teach DPS Indirapuram students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
-        question: 'Is the commute from Indirapuram to Sector 62 Noida easy?',
+        question: 'How do live online classes work for Indirapuram students?',
         answer:
-          'Yes, there are direct roads from Indirapuram to Sector 62 Noida. Many students car pool or use autos. The commute is straightforward.',
+          'Classes are live and interactive over video, so DPS Indirapuram students learn from home in real time and can ask doubts directly. Session recordings are available for revision.',
       },
       {
         question: 'Do you have batches that accommodate DPS Indirapuram school schedule?',
@@ -2782,8 +2781,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       },
       {
         question: 'How do I book a free demo class?',
-        answer:
-          'Call or WhatsApp +91-88264-44334 to schedule your free demo class at our Sector 62 Noida center.',
+        answer: 'Call or WhatsApp +91-88264-44334 to schedule your free live online demo class.',
       },
     ],
     relatedSchools: [
@@ -2793,8 +2791,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'KR Mangalam Ghaziabad', url: '/neet-coaching-kr-mangalam-ghaziabad-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -2804,14 +2802,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-cambridge-ghaziabad-students',
     schoolName: 'Cambridge School Indirapuram',
     locality: 'Indirapuram, Ghaziabad',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '8 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for Cambridge School Ghaziabad Students | Cerebrum Biology Academy',
     metaDescription:
-      'Top NEET biology coaching for Cambridge School Indirapuram Ghaziabad students. 8 km to Noida Sector 62. AIIMS faculty, small batches, 19,000+ MCQs.',
+      'Top live online NEET biology coaching for Cambridge School Indirapuram Ghaziabad students. AIIMS-trained faculty, small batches, 19,000+ MCQs. Study from home.',
     heroTitle: 'NEET Biology Coaching for Cambridge School Ghaziabad Students',
     heroSubtitle:
-      'Cambridge School Indirapuram Ghaziabad students — join Cerebrum Biology Academy Sector 62 for expert NEET biology coaching. Small batches, AIIMS faculty.',
+      'Cambridge School Indirapuram Ghaziabad students — join Cerebrum Biology Academy live online classes for expert NEET biology coaching. Small batches, AIIMS-trained faculty.',
     schoolHighlights: [
       'CBSE school with strong academic standards in Ghaziabad',
       'Science stream with well-equipped biology and chemistry labs',
@@ -2857,9 +2855,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from Cambridge School Indirapuram?',
+        question: 'Do you have a center in Indirapuram or Ghaziabad?',
         answer:
-          'Our Sector 62 Noida center is approximately 8 km from Cambridge School Indirapuram, about 20-25 minutes by car.',
+          'We teach Cambridge School Indirapuram students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'Are there batch options after school hours?',
@@ -2879,7 +2877,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How can Cambridge School Ghaziabad students enroll?',
         answer:
-          'Call or WhatsApp +91-88264-44334, or visit our Sector 62 Noida center to enroll and book a free demo class.',
+          'Call or WhatsApp +91-88264-44334 to enroll and book a free live online demo class.',
       },
     ],
     relatedSchools: [
@@ -2889,8 +2887,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'KR Mangalam Ghaziabad', url: '/neet-coaching-kr-mangalam-ghaziabad-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -2900,14 +2898,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-gd-goenka-ghaziabad-students',
     schoolName: 'GD Goenka School Indirapuram',
     locality: 'Indirapuram, Ghaziabad',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '9 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for GD Goenka Ghaziabad Students | Cerebrum Biology Academy',
     metaDescription:
-      'Expert NEET biology coaching for GD Goenka School Indirapuram Ghaziabad students. 9 km to Sector 62 Noida. AIIMS faculty, small batches, 19,000+ MCQs.',
+      'Expert live online NEET biology coaching for GD Goenka School Indirapuram Ghaziabad students. AIIMS-trained faculty, small batches, 19,000+ MCQs. Study from home.',
     heroTitle: 'NEET Biology Coaching for GD Goenka Ghaziabad Students',
     heroSubtitle:
-      'GD Goenka Indirapuram Ghaziabad students — Cerebrum Biology Academy at Sector 62 Noida is the top choice for NEET biology. AIIMS faculty, focused batches.',
+      'GD Goenka Indirapuram Ghaziabad students — Cerebrum Biology Academy live online classes are a top choice for NEET biology. AIIMS-trained faculty, focused batches.',
     schoolHighlights: [
       'CBSE school with high academic standards',
       'Comprehensive science stream with practical focus',
@@ -2942,7 +2940,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         batch: 'GD Goenka Indirapuram, Class of 2024',
         result: 'NEET Score: 649',
         quote:
-          'The 9 km commute to Cerebrum was absolutely worth it. My biology marks jumped 35 points.',
+          'Cerebrum live online classes were absolutely worth it. My biology marks jumped 35 points.',
       },
       {
         name: 'Vivek Tiwari',
@@ -2954,9 +2952,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from GD Goenka Indirapuram?',
+        question: 'Do you have a center in Indirapuram or Ghaziabad?',
         answer:
-          'Our Sector 62 Noida center is approximately 9 km from GD Goenka School Indirapuram, about 20-25 minutes by car.',
+          'We teach GD Goenka School Indirapuram students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'Are evening and weekend batches available for GD Goenka students?',
@@ -2976,7 +2974,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How do GD Goenka Ghaziabad students enroll at Cerebrum?',
         answer:
-          'Call or WhatsApp +91-88264-44334 or visit our Sector 62 Noida center. A free demo class is available before enrollment.',
+          'Call or WhatsApp +91-88264-44334 to enroll. A free live online demo class is available before enrollment.',
       },
     ],
     relatedSchools: [
@@ -2986,8 +2984,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'KR Mangalam Ghaziabad', url: '/neet-coaching-kr-mangalam-ghaziabad-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -2997,14 +2995,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-kr-mangalam-ghaziabad-students',
     schoolName: 'K.R. Mangalam World School Vaishali',
     locality: 'Vaishali, Ghaziabad',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '5 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for KR Mangalam Ghaziabad Students | Cerebrum Biology Academy',
     metaDescription:
-      'Specialized NEET biology coaching for KR Mangalam World School Vaishali Ghaziabad students. Only 5 km to Sector 62 Noida. AIIMS faculty, small batches.',
+      'Specialized live online NEET biology coaching for KR Mangalam World School Vaishali Ghaziabad students. AIIMS-trained faculty, small batches. Study from home.',
     heroTitle: 'NEET Biology Coaching for K.R. Mangalam World School Students',
     heroSubtitle:
-      'K.R. Mangalam World School Vaishali Ghaziabad students — Cerebrum Biology Academy at Sector 62 Noida is just 5 km away. Top NEET biology preparation.',
+      'K.R. Mangalam World School Vaishali Ghaziabad students — join Cerebrum Biology Academy live online classes from home. Top NEET biology preparation.',
     schoolHighlights: [
       'CBSE school with outstanding academic reputation in Vaishali',
       'Strong science stream with state-of-the-art laboratories',
@@ -3015,9 +3013,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     whyStudentsChoose: [
       {
-        title: 'Closest Quality Coaching',
+        title: 'Specialist Coaching From Home',
         description:
-          'At just 5 km from Vaishali, Cerebrum Sector 62 is the nearest specialized NEET biology center.',
+          'Vaishali students access Cerebrum specialized NEET biology coaching through live online classes — no travel needed.',
       },
       {
         title: 'Small Batches',
@@ -3053,9 +3051,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from KR Mangalam World School Vaishali?',
+        question: 'Do you have a center in Vaishali or Ghaziabad?',
         answer:
-          'Our Sector 62 Noida center is approximately 5 km from KR Mangalam Vaishali, about 12-15 minutes by car.',
+          'We teach KR Mangalam Vaishali students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'What batch timings are suitable for KR Mangalam students?',
@@ -3075,7 +3073,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How can KR Mangalam students enroll at Cerebrum?',
         answer:
-          'Call or WhatsApp +91-88264-44334 or visit the Sector 62 Noida center. A free demo class is available before enrollment.',
+          'Call or WhatsApp +91-88264-44334 to enroll. A free live online demo class is available before enrollment.',
       },
     ],
     relatedSchools: [
@@ -3085,8 +3083,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'Presidium School Ghaziabad', url: '/neet-coaching-presidium-ghaziabad-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -3096,14 +3094,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-presidium-ghaziabad-students',
     schoolName: 'Presidium School Indirapuram',
     locality: 'Indirapuram, Ghaziabad',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '8 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for Presidium School Ghaziabad Students | Cerebrum Biology Academy',
     metaDescription:
-      'Top NEET biology coaching for Presidium School Indirapuram Ghaziabad students. 8 km to Noida Sector 62. AIIMS faculty, small batches, 19,000+ MCQs.',
+      'Top live online NEET biology coaching for Presidium School Indirapuram Ghaziabad students. AIIMS-trained faculty, small batches, 19,000+ MCQs. Study from home.',
     heroTitle: 'NEET Biology Coaching for Presidium School Ghaziabad Students',
     heroSubtitle:
-      'Presidium School Indirapuram Ghaziabad students choose Cerebrum Biology Academy at Sector 62 Noida for top NEET biology preparation. Expert faculty, focused batches.',
+      'Presidium School Indirapuram Ghaziabad students choose Cerebrum Biology Academy live online classes for top NEET biology preparation. Expert faculty, focused batches.',
     schoolHighlights: [
       'CBSE school with progressive teaching methodology',
       'Holistic education with focus on academics and development',
@@ -3145,19 +3143,19 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         batch: 'Presidium Indirapuram, Class of 2025',
         result: 'NEET Score: 615',
         quote:
-          'Coming from Indirapuram, I was worried about commute. But the quality at Cerebrum made it worth it.',
+          'Studying from Indirapuram, I loved that classes were live online. The quality at Cerebrum made it worth it.',
       },
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from Presidium School Indirapuram?',
+        question: 'Do you have a center in Indirapuram or Ghaziabad?',
         answer:
-          'Our Sector 62 Noida center is approximately 8 km from Presidium School Indirapuram, about 20 minutes by car.',
+          'We teach Presidium School Indirapuram students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
-        question: 'Is there a convenient route from Indirapuram to Sector 62 Noida?',
+        question: 'How do live online classes work for Indirapuram students?',
         answer:
-          'Yes, there is a direct road from Indirapuram to Sector 62 Noida. Many students use autos or car pools for the commute.',
+          'Classes are live and interactive over video, so Presidium students learn from home in real time and can ask doubts directly. Recordings are available for revision.',
       },
       {
         question: 'Do you have batch options for Class 11 and Class 12 separately?',
@@ -3172,7 +3170,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How do Presidium Ghaziabad students enroll at Cerebrum?',
         answer:
-          'Call or WhatsApp +91-88264-44334 or visit our Sector 62 Noida center. A free demo class is available.',
+          'Call or WhatsApp +91-88264-44334 to enroll. A free live online demo class is available.',
       },
     ],
     relatedSchools: [
@@ -3182,8 +3180,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'KR Mangalam Ghaziabad', url: '/neet-coaching-kr-mangalam-ghaziabad-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -3193,12 +3191,12 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-sharda-greater-noida-students',
     schoolName: 'Sharda University School',
     locality: 'Knowledge Park, Greater Noida',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '18 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle:
       'NEET Coaching for Sharda University School Greater Noida Students | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET biology coaching for Sharda University School Greater Noida students. 18 km to Sector 62 Noida. AIIMS faculty, small batches, 19,000+ MCQs.',
+      'Best live online NEET biology coaching for Sharda University School Greater Noida students. AIIMS-trained faculty, small batches, 19,000+ MCQs. Study from home.',
     heroTitle: 'NEET Biology Coaching for Sharda University School Students',
     heroSubtitle:
       'Sharda University School Greater Noida students — Cerebrum Biology Academy is the top NEET biology coaching in the NCR. AIIMS faculty, small batches, structured preparation.',
@@ -3237,7 +3235,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         batch: 'Sharda University School, Class of 2024',
         result: 'NEET Score: 638',
         quote:
-          'Despite the distance from Greater Noida, Cerebrum was worth it. Faculty quality is exceptional.',
+          'Studying live online from Greater Noida, Cerebrum was worth it. Faculty quality is exceptional.',
       },
       {
         name: 'Manish Kumar',
@@ -3249,19 +3247,19 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from Sharda University School Greater Noida?',
+        question: 'Do you have a center in Greater Noida?',
         answer:
-          'Our Sector 62 Noida center is approximately 18 km from Sharda University School Knowledge Park, about 30-40 minutes via Yamuna Expressway.',
+          'We teach Sharda University School Greater Noida students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'Are weekend batches a good option for Greater Noida students?',
         answer:
-          'Yes, many Greater Noida students prefer our Saturday and Sunday intensive batches to minimize weekday commute while maintaining preparation quality.',
+          'Yes, many Greater Noida students prefer our Saturday and Sunday intensive live online batches for focused preparation without any commute.',
       },
       {
-        question: 'Is online coaching available for Greater Noida students?',
+        question: 'How are classes delivered for Greater Noida students?',
         answer:
-          'Yes, we offer hybrid and online coaching options to supplement in-center classes, ideal for students from Greater Noida.',
+          'All classes are live and online, so Greater Noida students learn from home in real time with full interactivity and recordings for revision.',
       },
       {
         question: 'What is the fee structure for Greater Noida students?',
@@ -3271,7 +3269,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How can Sharda University School students enroll?',
         answer:
-          'Call or WhatsApp +91-88264-44334, visit our Sector 62 Noida center, or fill the online enrollment form on our website.',
+          'Call or WhatsApp +91-88264-44334, or fill the online enrollment form on our website to start live online classes.',
       },
     ],
     relatedSchools: [
@@ -3281,8 +3279,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'DPS Indirapuram', url: '/neet-coaching-dps-indirapuram-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },
@@ -3292,14 +3290,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     slug: 'neet-coaching-dps-greater-noida-students',
     schoolName: 'DPS Greater Noida',
     locality: 'Sector 132, Greater Noida',
-    nearestCenter: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-    distance: '10 km',
+    nearestCenter: 'Live online classes | Nearest walk-in centre: South Extension, New Delhi',
+    distance: 'a live online class away',
     metaTitle: 'NEET Coaching for DPS Greater Noida Students | Cerebrum Biology Academy',
     metaDescription:
-      'Expert NEET biology coaching for DPS Greater Noida Sector 132 students. 10 km to Sector 62 Noida. AIIMS faculty, small batches, 19,000+ MCQ bank.',
+      'Expert live online NEET biology coaching for DPS Greater Noida Sector 132 students. AIIMS-trained faculty, small batches, 19,000+ MCQ bank. Study from home.',
     heroTitle: 'NEET Biology Coaching for DPS Greater Noida Students',
     heroSubtitle:
-      'DPS Greater Noida Sector 132 students — Cerebrum Biology Academy at Sector 62 Noida is just 10 km away. Expert NEET biology coaching, AIIMS faculty, small batches.',
+      'DPS Greater Noida Sector 132 students — join Cerebrum Biology Academy live online classes from home. Expert NEET biology coaching, AIIMS-trained faculty, small batches.',
     schoolHighlights: [
       'Premier CBSE school in Greater Noida with excellent academics',
       'Strong science stream with modern labs and infrastructure',
@@ -3309,9 +3307,9 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     ],
     whyStudentsChoose: [
       {
-        title: 'Nearby NEET Specialist',
+        title: 'NEET Specialist From Home',
         description:
-          'Cerebrum at Sector 62 is just 10 km from DPS Greater Noida — the best NEET biology coaching accessible from Sector 132.',
+          'DPS Greater Noida Sector 132 students access Cerebrum specialist NEET biology coaching through live online classes — no commute.',
       },
       {
         title: 'Small Batches',
@@ -3342,14 +3340,14 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         batch: 'DPS Greater Noida, Class of 2025',
         result: 'NEET Score: 627',
         quote:
-          'The 10 km drive to Cerebrum was a small price for the quality of teaching I received.',
+          'Learning live online with Cerebrum was effortless for the quality of teaching I received.',
       },
     ],
     faqs: [
       {
-        question: 'How far is Cerebrum from DPS Greater Noida Sector 132?',
+        question: 'Do you have a center in Greater Noida?',
         answer:
-          'Our Sector 62 Noida center is approximately 10 km from DPS Greater Noida Sector 132, about 20-25 minutes by car.',
+          'We teach DPS Greater Noida Sector 132 students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'Are there batch options suited for DPS Greater Noida timings?',
@@ -3357,19 +3355,19 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
           'Yes, we have evening batches at 4:30 PM and 5:30 PM on weekdays and morning/afternoon batches on Saturday and Sunday.',
       },
       {
-        question: 'Do you offer online sessions for students who cannot commute daily?',
+        question: 'How are classes delivered for DPS Greater Noida students?',
         answer:
-          'Yes, we offer hybrid coaching options combining in-center classes with online sessions for students who prefer flexibility.',
+          'All classes are live and online, so students learn from home in real time with full interactivity and recordings for revision.',
       },
       {
-        question: 'Is there transport available from DPS Greater Noida to Cerebrum?',
+        question: 'Do DPS Greater Noida students need to travel for classes?',
         answer:
-          'We do not arrange transport but many DPS Greater Noida students coordinate car pools. Our team can help connect you with other students from your area.',
+          'No travel is required — all classes are live online, so students study from home. Our nearest in-person center is South Extension, New Delhi.',
       },
       {
         question: 'How do DPS Greater Noida students book a free demo?',
         answer:
-          'Call or WhatsApp +91-88264-44334 to schedule a free demo class at our Sector 62 Noida center. No commitment required.',
+          'Call or WhatsApp +91-88264-44334 to schedule a free live online demo class. No commitment required.',
       },
     ],
     relatedSchools: [
@@ -3379,8 +3377,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       { name: 'DPS Noida', url: '/neet-coaching-dps-noida-students' },
     ],
     centerDetails: {
-      name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
-      address: 'B-45, Sector 62, Noida, UP 201301',
+      name: 'South Extension Center (Nearest Walk-in)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
       timing: 'Available 24/7',
       phone: '+91-88264-44334',
     },

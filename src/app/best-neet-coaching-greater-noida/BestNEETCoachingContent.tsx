@@ -34,7 +34,7 @@ const coachingComparison = [
   {
     name: 'Cerebrum Biology Academy',
     highlight: true,
-    location: 'Sector 62, Noida (serves Greater Noida)',
+    location: 'Live online for Greater Noida (nearest center: South Ext, New Delhi)',
     specialty: 'Biology Specialist',
     faculty: 'AIIMS Alumni (Dr. Shekhar C Singh)',
     batchSize: '15-20 students',
@@ -122,9 +122,9 @@ const whyChooseCerebrum = [
     icon: BookOpen,
   },
   {
-    title: 'Online + Hybrid',
+    title: 'Live Online Access',
     description:
-      'Greater Noida students can attend live online or visit our Sector 62 Noida center via Aqua Line Metro',
+      'Greater Noida students attend live online NEET Biology classes from home — no commute needed',
     icon: MapPin,
   },
   {
@@ -195,7 +195,7 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Trophy className="w-4 h-4" />
-               2026-27 Comparison Guide
+              2026-27 Comparison Guide
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">

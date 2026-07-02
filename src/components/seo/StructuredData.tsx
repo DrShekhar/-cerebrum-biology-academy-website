@@ -1506,7 +1506,7 @@ export function LocationsPageWebPageSchema() {
     '@id': 'https://cerebrumbiologyacademy.com/locations#webpage',
     name: 'NEET Biology Coaching Centers - Delhi NCR & Pan-India Locations',
     description:
-      'Cerebrum Biology Academy coaching centers across Delhi NCR (Gurugram, Delhi, Noida, Faridabad) and online classes for students worldwide.',
+      'Cerebrum Biology Academy coaching centers across Delhi NCR (South Extension, Green Park, Rohini, Gurugram, Faridabad) and live online classes for students worldwide.',
     url: 'https://cerebrumbiologyacademy.com/locations',
     isPartOf: {
       '@type': 'WebSite',

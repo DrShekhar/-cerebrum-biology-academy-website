@@ -56,7 +56,7 @@ const areasForAccordion: AreaCardData[] = allAreaSlugs.map((slug) => {
 
 const noidaSectors = [
   { sector: '18', area: 'Atta Market, Great India Place', students: '120+', metro: 'Sector 18' },
-  { sector: '62', area: 'IT Hub, Coaching Center', students: '95+', metro: 'Sector 62' },
+  { sector: '62', area: 'IT & Business Hub', students: '95+', metro: 'Sector 62' },
   { sector: '44', area: 'Golf Course, Premium Area', students: '65+', metro: 'Golf Course' },
   { sector: '137', area: 'IT/ITES Hub', students: '85+', metro: 'Sector 137' },
   { sector: '50', area: 'Residential Hub', students: '70+', metro: 'Sector 52' },
@@ -103,7 +103,7 @@ const metroStations = [
   { name: 'Botanical Garden', line: 'Blue Line', areas: 'Sector 37, 38, 39' },
   { name: 'Noida City Centre', line: 'Blue Line', areas: 'Sector 32, 33, 34' },
   { name: 'Sector 18', line: 'Blue Line', areas: 'Atta Market, GIP Mall' },
-  { name: 'Sector 62', line: 'Blue Line', areas: 'IT Hub, Coaching Hub' },
+  { name: 'Sector 62', line: 'Blue Line', areas: 'IT & Business Hub' },
   { name: 'Sector 137', line: 'Aqua Line', areas: 'IT/ITES, Logix' },
   { name: 'Sector 142', line: 'Aqua Line', areas: 'Advant Navis' },
   { name: 'Sector 144', line: 'Aqua Line', areas: 'Gulshan Dynasty' },
@@ -237,7 +237,7 @@ export default function NeetCoachingNoidaPage() {
           'NEET Biology Noida Catchment (Noida-Sector 18-62-15-Greater Noida-Indirapuram-Knowledge Park)',
         ]}
         courseName="Best NEET Coaching in Noida — Programme"
-        courseDescription="Biology-only specialist NEET coaching for Noida aspirants. AIIMS-trained faculty led by Dr. Shekhar C Singh, 6 Delhi NCR offline centres plus online live with 15-20 student batches. Pursuit/Ascent/Pinnacle tier options at ₹40K-₹1.56L/year. 680+ medical college selections, 98% NEET-UG qualification rate."
+        courseDescription="Biology-only specialist NEET coaching for Noida aspirants. AIIMS-trained faculty led by Dr. Shekhar C Singh, 5 Delhi NCR offline centres plus live online (serving Noida) with 15-20 student batches. Pursuit/Ascent/Pinnacle tier options at ₹40K-₹1.56L/year. 680+ medical college selections, 98% NEET-UG qualification rate."
       />
 
       {/* Hero Section */}
@@ -1002,9 +1002,7 @@ export default function NeetCoachingNoidaPage() {
                       K
                     </div>
                     <div>
-                      <div className="font-bold text-gray-900">
-                        Kavya S., Sector 62 Coaching Hub
-                      </div>
+                      <div className="font-bold text-gray-900">Kavya S., Sector 62, Noida</div>
                       <div className="text-sm text-gray-600">Class 12 Student</div>
                     </div>
                   </div>
@@ -1032,13 +1030,13 @@ export default function NeetCoachingNoidaPage() {
             {/* Google Maps */}
             <div className="rounded-xl overflow-hidden shadow-lg">
               <LazyGoogleMap
-                embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.5!2d77.3649!3d28.628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a0e0000001%3A0xsector_62_noida!2sSector%2062%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1710000000000"
-                title="NEET Coaching Center Location - Noida Sector 62"
+                embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5351350896896!2d77.22066!3d28.5678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c16e000001%3A0x5027e47c24e3e43e!2sSouth%20Extension%20Part%202%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1710000000000"
+                title="Cerebrum Biology Academy - Nearest Centre for Noida (South Extension, New Delhi)"
                 height={300}
                 placeholder={{
-                  lat: 28.628,
-                  lng: 77.3649,
-                  address: 'Cerebrum Biology Academy, B-45 Sector 62, Noida',
+                  lat: 28.5678,
+                  lng: 77.22066,
+                  address: 'Cerebrum Biology Academy, D 35 South Extension Part 2, New Delhi',
                 }}
               />
             </div>
@@ -1544,7 +1542,7 @@ export default function NeetCoachingNoidaPage() {
               Area-Wise Success
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Noida&apos;s Top NEET Coaching Hubs - Student Success by Area
+              NEET Success Across Noida - Student Results by Area
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Discover how students from your Noida area are excelling in NEET preparation. Each
@@ -1570,7 +1568,7 @@ export default function NeetCoachingNoidaPage() {
                 <h3 className="text-2xl font-bold mb-2">Sector 18, 62 & Central Noida</h3>
                 <div className="space-y-1 text-sm opacity-90">
                   <div>• Sector 18 (Atta Market, Great India Place)</div>
-                  <div>• Sector 62 (IT Hub, Coaching Center)</div>
+                  <div>• Sector 62 (IT & Business Hub)</div>
                   <div>• Sectors 15A, 37, 50</div>
                   <div>• Nearby: Botanical Garden, Noida City Centre</div>
                 </div>

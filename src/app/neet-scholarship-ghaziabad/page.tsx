@@ -185,7 +185,7 @@ export default function NEETScholarshipGhaziabad() {
               Up to 100% fee waiver based on merit! Dont let finances stop your medical dream.
             </p>
             <p className="text-sm text-yellow-100 mb-6">
-              Easily accessible from all Ghaziabad areas via Blue Line Metro to Sector 62 Noida
+              Live online scholarship program — apply from anywhere in Ghaziabad, no travel needed
             </p>
             <div className="flex items-center justify-center gap-4 text-white mb-8">
               <div className="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">

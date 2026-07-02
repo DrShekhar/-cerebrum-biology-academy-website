@@ -1,4 +1,3 @@
-
 export interface CenterFAQ {
   centerId: string
   centerName: string
@@ -289,62 +288,6 @@ export const centerSpecificFAQs: CenterFAQ[] = [
         answer:
           'Our Green Park center primarily serves students from Hauz Khas, Safdarjung, SDA, IIT Delhi area, and surrounding South Delhi neighborhoods. Students from these premium localities prefer our center for its strategic location, excellent metro connectivity, and proven academic excellence.',
         keywords: ['areas', 'coverage', 'localities', 'neighborhoods', 'service area'],
-      },
-    ],
-  },
-  {
-    centerId: 'noida',
-    centerName: 'Noida Center',
-    city: 'Noida',
-    address: 'Sector 62, Noida, UP 201301',
-    faqs: [
-      {
-        question: 'Where can I find the best NEET coaching in Noida?',
-        answer:
-          'Cerebrum Biology Academy Noida is one of the finest NEET coaching centers in Noida, located in Sector 62. We offer comprehensive NEET preparation with experienced faculty, advanced infrastructure, and consistently excellent results. Our center is trusted by hundreds of students from Noida and nearby regions.',
-        keywords: ['NEET coaching', 'Noida', 'biology coaching', 'best coaching'],
-      },
-      {
-        question: 'How do I reach Cerebrum Noida from Sector 62?',
-        answer:
-          'Our Noida center is strategically located in Sector 62, easily accessible by personal vehicles, autos, and taxis. The location is well-connected via major roads in Noida. Detailed directions and maps are available at cerebrumbiologyacademy.com. Contact us at +91-8826444334 for specific navigation assistance.',
-        keywords: ['directions', 'location', 'reach', 'address', 'transport'],
-      },
-      {
-        question: 'What are the batch timings at Cerebrum Noida?',
-        answer:
-          'We provide flexible coaching with multiple batch options available Monday to Saturday: Morning Batch (8:00 AM - 11:00 AM), Afternoon Batch (2:00 PM - 5:00 PM), and Evening Batch (5:00 PM - 8:00 PM). Batches are kept small at 15-20 students for individualized attention.',
-        keywords: ['timings', 'batch', 'schedule', 'hours', 'classes'],
-      },
-      {
-        question: 'Is there parking and good connectivity at Noida center?',
-        answer:
-          'Yes, our Noida center in Sector 62 offers dedicated parking facilities. The location is well-connected by road with easy access via local transportation including autos and cabs. Sector 62 is strategically positioned in Noida, making it accessible from multiple surrounding areas.',
-        keywords: ['parking', 'accessibility', 'transportation', 'connectivity', 'commute'],
-      },
-      {
-        question: 'What facilities are provided at Cerebrum Noida?',
-        answer:
-          'Our Noida center is equipped with air-conditioned classrooms, fully functional biology labs, online test platforms, regular doubt-clearing sessions, comprehensive study materials, mock test series, and expert mentorship programs. We maintain high academic standards with emphasis on conceptual understanding.',
-        keywords: ['facilities', 'classrooms', 'lab', 'AC', 'amenities'],
-      },
-      {
-        question: 'What is the fee structure at Noida Center?',
-        answer:
-          'Annual fees for Class 11 & 12 students: ₹72,200. Foundation course fees: ₹57,000 per year. Flexible payment plans available to suit student needs. Scholarships for meritorious students. For detailed fee information and applicable discounts, contact us at +91-8826444334.',
-        keywords: ['fees', 'cost', 'charges', 'payment', 'scholarship'],
-      },
-      {
-        question: 'Can I attend a free demo class at Cerebrum Noida?',
-        answer:
-          'Yes! We offer free demo classes for all interested prospective students. This gives you an opportunity to experience our teaching style, meet our faculty, and understand our comprehensive NEET curriculum. Book your free demo at cerebrumbiologyacademy.com or call +91-8826444334.',
-        keywords: ['demo class', 'free trial', 'sample class', 'visit', 'experience'],
-      },
-      {
-        question: 'Which areas around Noida does the center serve?',
-        answer:
-          'Our Noida center serves students from Sectors 50-70, Indirapuram, Vaishali, and parts of Ghaziabad. Students from across Noida and Eastern NCR region choose our center for quality NEET preparation and proven success track record.',
-        keywords: ['areas', 'coverage', 'sectors', 'localities', 'neighborhoods'],
       },
     ],
   },

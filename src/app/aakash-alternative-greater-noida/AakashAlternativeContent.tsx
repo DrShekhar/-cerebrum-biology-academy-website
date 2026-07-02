@@ -25,8 +25,6 @@ import { Button } from '@/components/ui/Button'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-
 interface FAQ {
   question: string
   answer: string
@@ -437,22 +435,21 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                  Serving Greater Noida via Sector 62 Noida Center
+                  Live Online NEET Biology for Greater Noida
                 </h2>
                 <p className="text-slate-600 mb-6">
-                  Our Noida center at <strong>Sector 62</strong> is accessible from Greater Noida
-                  via Aqua Line Metro (connecting to Blue Line). Online + hybrid classes also
-                  available for Greater Noida, Gaur City, Knowledge Park, Pari Chowk, Jaypee Greens,
-                  Alpha, Beta areas.
+                  We teach Greater Noida students through live online classes — no travel needed.
+                  Serving Gaur City, Knowledge Park, Pari Chowk, Jaypee Greens, Alpha and Beta with
+                  the same AIIMS-trained faculty and small batches.
                 </p>
                 <div className="space-y-3 mb-6">
                   <p className="flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-purple-600" />
-                    {CONTACT_INFO.centers.noida.streetAddress}, Noida
+                    Live online classes serving all of Greater Noida
                   </p>
                   <p className="flex items-center gap-2">
                     <Clock className="w-5 h-5 text-purple-600" />
-                    Aqua Line Metro from Greater Noida
+                    Prefer in-person? Nearest walk-in center: South Extension, New Delhi
                   </p>
                 </div>
                 <div className="flex gap-4">
@@ -462,14 +459,10 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
                       Call Now
                     </Button>
                   </a>
-                  <a
-                    href={CONTACT_INFO.centers.noida.mapUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href="/book-free-demo">
                     <Button>
-                      <MapPin className="w-4 h-4 mr-2" />
-                      Get Directions
+                      <BookOpen className="w-4 h-4 mr-2" />
+                      Book Free Demo
                     </Button>
                   </a>
                 </div>

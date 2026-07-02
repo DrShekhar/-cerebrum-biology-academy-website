@@ -45,22 +45,22 @@ function useScrollAnimation(threshold = 0.1) {
 }
 
 const omicronAreas = [
-  { name: 'Omicron Sector I', distance: '8 km', landmark: 'Main Business Hub' },
-  { name: 'Omicron Sector II', distance: '9 km', landmark: 'Residential Complex' },
-  { name: 'Omicron Sector III', distance: '10 km', landmark: 'Education Zone' },
-  { name: 'Pari Chowk', distance: '5 km', landmark: 'Central Junction' },
-  { name: 'Alpha Sector', distance: '12 km', landmark: 'Commercial Area' },
-  { name: 'Beta Sector', distance: '13 km', landmark: 'Residential Zone' },
-  { name: 'Knowledge Park', distance: '7 km', landmark: 'Educational Hub' },
-  { name: 'Noida Extension', distance: '15 km', landmark: 'Developing Area' },
+  { name: 'Omicron Sector I', landmark: 'Main Business Hub' },
+  { name: 'Omicron Sector II', landmark: 'Residential Complex' },
+  { name: 'Omicron Sector III', landmark: 'Education Zone' },
+  { name: 'Pari Chowk', landmark: 'Central Junction' },
+  { name: 'Alpha Sector', landmark: 'Commercial Area' },
+  { name: 'Beta Sector', landmark: 'Residential Zone' },
+  { name: 'Knowledge Park', landmark: 'Educational Hub' },
+  { name: 'Noida Extension', landmark: 'Developing Area' },
 ]
 
 const whyChooseUs = [
   {
     icon: Building,
-    title: 'Local to Greater Noida Hub',
+    title: 'Live Online for Greater Noida',
     description:
-      'Omicron Sector is right in our backyard - just 8-10 km from our coaching center. Convenient access for daily classes or hybrid learning options for local students.',
+      'Omicron Sector students join our live online NEET batches from home - no travel needed. Interactive classes, doubt-solving, and recorded lectures for flexible learning.',
   },
   {
     icon: Target,
@@ -70,9 +70,9 @@ const whyChooseUs = [
   },
   {
     icon: GraduationCap,
-    title: 'AIIMS Faculty on Campus',
+    title: 'AIIMS Faculty, Live Online',
     description:
-      'Dr. Shekhar C Singh, AIIMS Alumnus, teaches from our Greater Noida center - you get direct access to top faculty.',
+      'Dr. Shekhar C Singh, AIIMS Alumnus, teaches every live online batch - you get direct access to top faculty from anywhere in Greater Noida.',
   },
   {
     icon: Star,
@@ -84,24 +84,24 @@ const whyChooseUs = [
 
 const faqs = [
   {
-    question: 'Where is your coaching center relative to Omicron Sector?',
+    question: 'Do you have a center in Omicron Sector, Greater Noida?',
     answer:
-      'Our main center is in Greater Noida, just 8-10 km from Omicron Sector via Pari Chowk route. Omicron students have the fastest access to our center. You can attend live classes in person, join hybrid sessions, or opt for full online coaching - maximum flexibility!',
+      'We teach Omicron Sector and Greater Noida students through live online classes - no travel needed. For anyone who prefers in-person coaching, our nearest walk-in center is South Extension, New Delhi.',
   },
   {
-    question: 'Can I attend classes in-person from Omicron Sector?',
+    question: 'How do Omicron Sector students attend classes?',
     answer:
-      'Yes! Omicron Sector students are within 15-20 minute commute to our Greater Noida center during normal traffic. Many students from Omicron, Alpha, Beta, and surrounding sectors attend our in-person classes. We also offer hybrid batches combining in-person teaching with online access.',
+      'Students from Omicron, Alpha, Beta, Pari Chowk, and surrounding sectors join our live online NEET batches from home. Every class is interactive with live doubt-solving, and recorded lectures are available for revision.',
   },
   {
     question: 'What schools do your Omicron and Greater Noida students come from?',
     answer:
-      'We have students from DPS Greater Noida, Ryan International, Apeejay, and other reputable schools in Greater Noida region. Omicron Sector families have strong educational aspirations and our proximity ensures consistent, quality coaching.',
+      'We have students from DPS Greater Noida, Ryan International, Apeejay, and other reputable schools in Greater Noida region. Omicron Sector families have strong educational aspirations and our live online coaching delivers consistent, quality teaching.',
   },
   {
     question: 'Why choose Cerebrum for Omicron Sector students?',
     answer:
-      'Proximity, quality, and proven results. Being just 8-10 km away, Omicron students enjoy flexible attendance options - in-person, hybrid, or full online. Our 67+ AIIMS selections, 98% success rate, and AIIMS faculty make us the obvious choice for Greater Noida region families.',
+      'Live online access to AIIMS faculty and proven results. Omicron students learn from home with maximum flexibility. Our 67+ AIIMS selections, 98% success rate, and AIIMS faculty make us the obvious choice for Greater Noida region families.',
   },
 ]
 
@@ -123,12 +123,6 @@ const localBusinessSchema = {
     'Best NEET Coaching for Omicron Sector, Greater Noida students - Expert AIIMS Faculty',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-omicron-noida',
   telephone: '+91-88264-44334',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Greater Noida',
-    addressRegion: 'Uttar Pradesh',
-    addressCountry: 'IN',
-  },
   areaServed: [
     'Omicron Sectors I-III',
     'Pari Chowk',
@@ -171,7 +165,7 @@ export default function PageContent() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Building className="w-5 h-5 mr-2 text-yellow-400" />
-              Greater Noida Hub | Near Pari Chowk
+              Live Online for Greater Noida
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -184,8 +178,8 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for Omicron Sectors I-III, Pari Chowk, Alpha, Beta & nearby
-              areas. Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - just 8 km away
+              Premium live online NEET coaching for Omicron Sectors I-III, Pari Chowk, Alpha, Beta &
+              nearby areas. Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - live
               from your home, trusted by growing Greater Noida residential families.
             </p>
 
@@ -271,7 +265,7 @@ export default function PageContent() {
               Omicron Sector & Greater Noida Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Local NEET coaching for Greater Noida and surrounding sectors
+              Live online NEET coaching for Greater Noida and surrounding sectors
             </p>
           </div>
 
@@ -284,7 +278,7 @@ export default function PageContent() {
               >
                 <MapPin className="w-8 h-8 text-green-600 mb-4" />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{area.name}</h3>
-                <p className="text-sm text-gray-500 mb-1">{area.distance} from center</p>
+                <p className="text-sm text-gray-500 mb-1">Live online coaching</p>
                 <p className="text-sm text-gray-400">{area.landmark}</p>
               </div>
             ))}
@@ -364,10 +358,10 @@ export default function PageContent() {
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Omicron Sector Students, Crack NEET Just 8 km Away!
+              Omicron Sector Students, Crack NEET from Home!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Closest expert NEET coaching to your home in Greater Noida
+              Expert live online NEET coaching for your home in Greater Noida
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

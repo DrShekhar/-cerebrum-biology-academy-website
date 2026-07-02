@@ -55,8 +55,9 @@ const faqs = [
       'We offer: 1) Weekend intensive batches (Saturday-Sunday) 2) Evening sessions (6-8 PM weekdays) 3) Flexible online sessions. Choose what fits your Allen schedule.',
   },
   {
-    question: 'Is Cerebrum conveniently located for Allen students in Noida?',
-    answer: `Yes! Our Noida center is at ${noidaLocation.streetAddress}, ${noidaLocation.addressLocality}. Near Sector 62 Metro Station (Blue Line) - easily accessible for students across Noida, Sector 18, Sector 44, Sector 50, Indirapuram, and Greater Noida West.`,
+    question: 'Do you have a center in Noida for Allen students?',
+    answer:
+      'We teach Noida students - including Sector 18, Sector 44, Sector 50, Indirapuram, and Greater Noida West - through live online classes, no travel needed. Our nearest in-person center is South Extension, New Delhi.',
   },
   {
     question: 'What topics can I focus on?',
@@ -85,14 +86,7 @@ export default function ComplementAllenCoachingNoidaPage() {
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: noidaLocation.streetAddress,
-        addressLocality: noidaLocation.addressLocality,
-        addressRegion: noidaLocation.addressRegion,
-        postalCode: noidaLocation.postalCode,
-        addressCountry: 'IN',
-      },
+      areaServed: noidaLocation.addressLocality,
     },
     educationalLevel: 'Class 11-12',
     teaches: ['NEET Biology', 'NCERT Biology', 'Biology Diagrams', 'Mock Test Analysis'],

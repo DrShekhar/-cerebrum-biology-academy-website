@@ -129,7 +129,7 @@ const faqs = [
   {
     question: 'What is the fee structure at Cerebrum Biology Academy for Ghaziabad students?',
     answer:
-      'Our fee for Class 11+12 (2-year program) is Rs 60,000-75,000 per year. Dropper batch is Rs 65,000 for the full program. This is all-inclusive with no hidden charges. Center is at B-45, Sector 62, Noida — 15-20 min from Ghaziabad via Blue Line Metro.',
+      'Our fee for Class 11+12 (2-year program) is Rs 60,000-75,000 per year. Dropper batch is Rs 65,000 for the full program. This is all-inclusive with no hidden charges. Ghaziabad students learn through live online classes with the same AIIMS faculty — no commute needed. Our nearest in-person centre is South Extension, New Delhi.',
   },
   {
     question: 'Is EMI available for NEET coaching fees?',
@@ -423,7 +423,7 @@ export default function NEETCoachingFeesGhaziabadPage() {
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your NEET Journey?</h2>
           <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
             Best quality at the most affordable fees for Ghaziabad students. Small batches, AIIMS
-            faculty, proven results. Just 15-20 min via Blue Line Metro from Ghaziabad.
+            faculty, proven results. Live online classes — learn from home, no commute needed.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

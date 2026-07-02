@@ -29,71 +29,70 @@ interface FAQ {
 }
 
 const nearbyAreas = [
-  { name: 'Gaur City', distance: '12 km', time: '20 min', direction: 'North-West' },
-  { name: 'Knowledge Park', distance: '14 km', time: '25 min', direction: 'South' },
-  { name: 'Pari Chowk', distance: '18 km', time: '30 min', direction: 'South' },
-  { name: 'Jaypee Greens', distance: '20 km', time: '35 min', direction: 'South' },
-  { name: 'Greater Noida West', distance: '10 km', time: '18 min', direction: 'North' },
-  { name: 'Alpha Sector', distance: '16 km', time: '28 min', direction: 'South-West' },
-  { name: 'Beta Sector', distance: '15 km', time: '26 min', direction: 'South-West' },
-  { name: 'Surajpur', distance: '13 km', time: '22 min', direction: 'West' },
-  { name: 'Kasna', distance: '22 km', time: '38 min', direction: 'South' },
-  { name: 'Sector 62 (Noida)', distance: '0 km', time: '0 min', direction: 'Our Center' },
-  { name: 'Noida Extension', distance: '8 km', time: '15 min', direction: 'North' },
-  { name: 'Techzone', distance: '11 km', time: '20 min', direction: 'West' },
+  { name: 'Gaur City', direction: 'Live online' },
+  { name: 'Knowledge Park', direction: 'Live online' },
+  { name: 'Pari Chowk', direction: 'Live online' },
+  { name: 'Jaypee Greens', direction: 'Live online' },
+  { name: 'Greater Noida West', direction: 'Live online' },
+  { name: 'Alpha Sector', direction: 'Live online' },
+  { name: 'Beta Sector', direction: 'Live online' },
+  { name: 'Surajpur', direction: 'Live online' },
+  { name: 'Kasna', direction: 'Live online' },
+  { name: 'Noida Extension', direction: 'Live online' },
+  { name: 'Techzone', direction: 'Live online' },
 ]
 
 const transportOptions = [
   {
-    mode: 'By Car',
-    icon: Car,
-    details:
-      'Via Noida-Greater Noida Expressway to Sector 62, Noida. Ample parking available. 30-45 min from most Greater Noida areas.',
-  },
-  {
-    mode: 'By Metro',
-    icon: Train,
-    details:
-      'Aqua Line Metro to Noida (Sector 52 or City Centre), then Blue Line to Sector 62 (5 min walk from station). Total 45-60 min.',
-  },
-  {
-    mode: 'Online Classes',
+    mode: 'Live Online (Recommended)',
     icon: Navigation,
     details:
       'Zero travel time. Join live interactive classes from your Greater Noida home. Most popular choice for Greater Noida students.',
+  },
+  {
+    mode: 'Flexible Timings',
+    icon: Clock,
+    details:
+      'Morning, evening and weekend batches available online. Balance school and NEET prep without commuting.',
+  },
+  {
+    mode: 'Nearest Walk-in Centre',
+    icon: Car,
+    details:
+      'Prefer in-person? Our nearest walk-in centre is South Extension, New Delhi. Most Greater Noida students choose online for convenience.',
   },
 ]
 
 const whyLocation = [
   {
-    title: 'Online + Hybrid Available',
+    title: 'Learn From Home',
     description:
-      'Greater Noida students can attend online classes from home or hybrid mode — save daily travel time.',
+      'Greater Noida students attend live online classes from home — save daily travel time.',
     icon: Compass,
   },
   {
-    title: 'Aqua Line Metro Access',
+    title: 'Same AIIMS Faculty',
     description:
-      'For offline attendance: Aqua Line connects Greater Noida to Noida. Then Blue Line to Sector 62.',
+      'Online students get the same AIIMS-trained faculty and curriculum as our in-person centres.',
     icon: Train,
   },
   {
-    title: 'Expressway Route',
-    description: 'Quick road access via Noida-Greater Noida Expressway to our Sector 62 center.',
+    title: 'Recorded Revision',
+    description: 'Every live class is recorded so Greater Noida students can revise anytime.',
     icon: Car,
   },
   {
-    title: 'Safe Neighborhood',
+    title: 'Small Batches',
     description:
-      'Sector 62 is a well-developed IT and commercial area with security and well-lit surroundings.',
+      'Small online batches ensure personal attention and doubt-clearing for every student.',
     icon: Building,
   },
 ]
 
 const successStats = [
-  { stat: '30 min', label: 'Avg. Commute by Road' },
+  { stat: 'Live', label: 'Online Classes Daily' },
   { stat: '500+', label: 'Greater Noida Students Online' },
-  { stat: '98%', label: 'Student Satisfaction Rate' },
+  { stat: '98%', label: 'NEET Qualification Rate' },
   { stat: '24/7', label: 'Online Support Available' },
 ]
 
@@ -153,18 +152,18 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Looking for the best NEET coaching near you in Greater Noida? Join online classes from
-              home (zero travel) or visit our Sector 62, Noida center via Aqua Line Metro.
+              Looking for the best NEET coaching near you in Greater Noida? Join our live online
+              classes from home (zero travel) — same AIIMS-trained faculty as our in-person centres.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <MapPin className="w-5 h-5 text-yellow-400" />
-                <span>Sector 62, Noida Center</span>
+                <span>Live Online Classes</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Clock className="w-5 h-5 text-yellow-400" />
-                <span>Online: 0 min from Greater Noida</span>
+                <span>0 min travel from Greater Noida</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Users className="w-5 h-5 text-green-400" />
@@ -173,20 +172,20 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://maps.google.com/?q=B-45+Sector+62+Noida"
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Greater%20Noida.%20Please%20share%20available%20timings."
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="secondary"
                   size="xl"
                   className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold"
                 >
-                  <Navigation className="w-5 h-5 mr-2" />
-                  Get Directions
+                  <Play className="w-5 h-5 mr-2" />
+                  Book Free Demo
                 </Button>
-              </a>
+              </Link>
               <button
                 onClick={handleWhatsApp}
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
@@ -226,10 +225,10 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Distance from Your Greater Noida Area
+              Greater Noida Areas We Serve
             </h2>
             <p className="text-xl text-slate-600">
-              Find how far our Sector 62 Noida center is from your location
+              Live online NEET Biology coaching across Greater Noida — no commute needed
             </p>
           </div>
 
@@ -240,12 +239,7 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
                 className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-xl p-4 border border-teal-100 animate-fadeInUp"
               >
                 <h3 className="font-bold text-slate-900">{area.name}</h3>
-                <div className="flex items-center gap-4 mt-2">
-                  <span className="text-2xl font-bold text-teal-600">{area.distance}</span>
-                  <span className="text-slate-500">|</span>
-                  <span className="text-slate-600">{area.time} drive</span>
-                </div>
-                <p className="text-xs text-slate-500 mt-1">{area.direction}</p>
+                <p className="text-xs text-teal-600 font-medium mt-2">{area.direction}</p>
               </div>
             ))}
           </div>
@@ -315,22 +309,24 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
         </div>
       </section>
 
-      {/* Address Card */}
+      {/* Info Card */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-slate-900 mb-6">
-              Nearest Center for Greater Noida Students
+              Live Online Coaching for Greater Noida Students
             </h2>
             <div className="space-y-4">
               <p className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
-                <span className="text-slate-700">B-45, Sector 62, Noida, UP 201301</span>
+                <span className="text-slate-700">
+                  Live online classes across all Greater Noida areas — learn from home, no commute.
+                </span>
               </p>
               <p className="flex items-center gap-3">
-                <Train className="w-5 h-5 text-teal-600 flex-shrink-0" />
+                <Users className="w-5 h-5 text-teal-600 flex-shrink-0" />
                 <span className="text-slate-700">
-                  Aqua Line Metro (Greater Noida) → Blue Line → Sector 62 Metro Station
+                  Same AIIMS-trained faculty and small batches as our in-person centres.
                 </span>
               </p>
               <p className="flex items-center gap-3">
@@ -342,21 +338,17 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
               <p className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-teal-600 flex-shrink-0" />
                 <span className="text-slate-700">
-                  Open 24/7 — Online Classes Available Globally
+                  Prefer in-person? Our nearest walk-in centre is South Extension, New Delhi.
                 </span>
               </p>
             </div>
             <div className="flex gap-4 mt-6">
-              <a
-                href="https://maps.google.com/?q=B-45+Sector+62+Noida"
-                target="_blank"
-                rel="noopener"
-              >
+              <button onClick={handleWhatsApp}>
                 <Button>
-                  <Navigation className="w-4 h-4 mr-2" />
-                  Open in Maps
+                  <Phone className="w-4 h-4 mr-2" />
+                  Chat on WhatsApp
                 </Button>
-              </a>
+              </button>
               <a href="tel:+918826444334">
                 <Button variant="outline">
                   <Phone className="w-4 h-4 mr-2" />
@@ -444,11 +436,11 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Join from Greater Noida?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Book a free demo class — online or at our Sector 62, Noida center
+            Book a free live online demo class and experience our teaching
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Greater%20Noida.%20Please%20share%20available%20timings."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -461,18 +453,14 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
                 Book Free Demo
               </Button>
             </Link>
-            <a
-              href="https://maps.google.com/?q=B-45+Sector+62+Noida"
-              target="_blank"
-              rel="noopener"
-            >
+            <a href="tel:+918826444334">
               <Button
                 variant="outline"
                 size="xl"
                 className="border-white text-white hover:bg-white hover:text-teal-600"
               >
-                <Navigation className="w-5 h-5 mr-2" />
-                Get Directions
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
               </Button>
             </a>
           </div>

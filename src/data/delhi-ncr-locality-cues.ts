@@ -135,7 +135,7 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
     cityName: 'Noida',
     cityShortName: 'Noida',
     introCopy:
-      'Cerebrum Noida at B-45, Sector 62 serves Noida NEET aspirants from Sectors 18, 50, 62, 75, 78, 100, 110, and Greater Noida West — with AIIMS-trained biology faculty available in IST evening batches that fit Noida school schedules.',
+      'Cerebrum serves Noida NEET aspirants from Sectors 18, 50, 62, 75, 78, 100, 110, and Greater Noida West through live online classes — with AIIMS-trained biology faculty in IST evening batches that fit Noida school schedules. Nearest walk-in centre: South Extension, New Delhi.',
     feederSchools: [
       { name: 'DPS Noida', area: 'Sector 30 · 8 km' },
       { name: 'Cambridge International School', area: 'Sector 27 · 6 km' },
@@ -145,8 +145,8 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
       { name: 'Apeejay School Noida', area: 'Sector 16A · 8 km' },
     ],
     subAreas: [
-      { name: 'Sector 62 (Cerebrum centre)', description: 'Electronic City' },
-      { name: 'Sector 18 (Atta Market)', description: '7 km · 20 min · main hub' },
+      { name: 'Sector 62', description: 'Electronic City · IT hub' },
+      { name: 'Sector 18 (Atta Market)', description: 'Main commercial hub' },
       { name: 'Sectors 50–75', description: 'Central Noida' },
       { name: 'Sectors 75, 78, 100, 110', description: 'Residential clusters' },
       { name: 'Sector 16A / 16B', description: 'Established residential' },
@@ -154,7 +154,7 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
       { name: 'Greater Noida', description: 'Online preferred' },
     ],
     metroStations: [
-      { name: 'Sector 62 (Electronic City)', line: 'Blue Line (closest)' },
+      { name: 'Sector 62 (Electronic City)', line: 'Blue Line' },
       { name: 'Noida Sector 52', line: 'Aqua Line (Sector 51 interchange)' },
       { name: 'Botanical Garden', line: 'Blue + Magenta Line · 8 km' },
       { name: 'Noida City Centre', line: 'Blue Line · 5 km' },

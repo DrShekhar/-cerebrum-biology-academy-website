@@ -26,7 +26,7 @@ const CITY_CROSS_LINKS: Record<string, CrossLinkGroup[]> = {
     {
       title: 'Nearby Centers',
       links: [
-        { label: 'Noida Center', href: '/locations/noida' },
+        { label: 'Noida (Online)', href: '/locations/noida' },
         { label: 'Greater Noida', href: '/best-neet-coaching-greater-noida' },
         { label: 'Ghaziabad', href: '/best-neet-coaching-ghaziabad' },
         { label: 'All Locations', href: '/all-locations' },
@@ -105,7 +105,7 @@ const CITY_CROSS_LINKS: Record<string, CrossLinkGroup[]> = {
     {
       title: 'Nearby Centers',
       links: [
-        { label: 'Noida Center', href: '/locations/noida' },
+        { label: 'Noida (Online)', href: '/locations/noida' },
         { label: 'Noida Coaching', href: '/best-neet-coaching-noida' },
         { label: 'Ghaziabad', href: '/best-neet-coaching-ghaziabad' },
         { label: 'All Locations', href: '/all-locations' },

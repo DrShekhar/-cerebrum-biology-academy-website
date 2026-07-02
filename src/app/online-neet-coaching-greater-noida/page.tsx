@@ -21,7 +21,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'Online NEET Coaching for Greater Noida Students | Live & Hybrid Mode',
   description:
-    'Online NEET Biology classes for Greater Noida students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 88264-44334!',
+    'Online NEET Biology classes for Greater Noida students. Live interactive sessions from home. Hybrid mode with optional in-person sessions at our South Extension, New Delhi center. 800+ students. Call 88264-44334!',
   keywords: [
     'online neet classes greater noida',
     'online neet coaching greater noida',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Online NEET Coaching for Greater Noida Students | Live & Hybrid Mode',
     description:
-      'Online NEET Biology classes for Greater Noida students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 88264-44334!',
+      'Online NEET Biology classes for Greater Noida students. Live interactive sessions from home. Hybrid mode with optional in-person sessions at our South Extension, New Delhi center. 800+ students. Call 88264-44334!',
   },
 }
 
@@ -56,11 +56,6 @@ const travelTimes = [
   { area: 'Pari Chowk', time: '0 min', mode: 'Study from home!' },
   { area: 'Jaypee Greens', time: '0 min', mode: 'Study from home!' },
   { area: 'Alpha/Beta Sectors', time: '0 min', mode: 'Study from home!' },
-  {
-    area: 'To Sector 62, Noida (Weekend)',
-    time: '30-45 min by road',
-    mode: 'For offline sessions',
-  },
 ]
 
 const onlineFeatures = [
@@ -88,7 +83,7 @@ const onlineFeatures = [
 
 const hybridBenefits = [
   'All online class benefits included',
-  'Weekly mock tests at Sector 62 Noida center',
+  'Weekly live proctored mock tests',
   'Face-to-face doubt clearing sessions',
   'Peer learning with other NEET aspirants',
   'Library and study room access',
@@ -104,17 +99,17 @@ const faqs = [
   {
     question: 'What is hybrid mode for Greater Noida students?',
     answer:
-      'Hybrid mode combines online weekday classes with weekend offline sessions at our Sector 62, Noida center. You attend 5-6 online classes per week from your Greater Noida home, and visit Sector 62 on Saturdays/Sundays for mock tests, doubt sessions, and face-to-face interaction.',
+      'Hybrid mode combines online weekday classes with optional in-person sessions at our South Extension, New Delhi center. You attend 5-6 online classes per week from your Greater Noida home, and can visit our Delhi center for mock tests, doubt sessions, and face-to-face interaction. Most Greater Noida students stay fully online — no travel needed.',
   },
   {
     question: 'Which mode is better - online or hybrid?',
     answer:
-      'For most Greater Noida students, online mode works best due to the distance from our Sector 62, Noida center. However, if you need classroom environment motivation or struggle with self-discipline, hybrid mode provides weekly accountability. We recommend starting with online and upgrading to hybrid if needed.',
+      'For most Greater Noida students, online mode works best due to the distance from our in-person center. However, if you need classroom environment motivation or struggle with self-discipline, hybrid mode provides weekly accountability. We recommend starting with online and upgrading to hybrid if needed.',
   },
   {
     question: 'Is online coaching as effective as offline for Greater Noida students?',
     answer:
-      'Yes! Our online students consistently score 650+ in NEET. The key advantages: more study time (no 30-45 min travel to Noida), recorded lectures for revision, instant doubt resolution via WhatsApp, and comfortable home environment. 800+ Greater Noida area students are currently enrolled in our online program.',
+      'Yes! Our online students consistently score 650+ in NEET. The key advantages: more study time (no daily commute), recorded lectures for revision, instant doubt resolution via WhatsApp, and comfortable home environment. 800+ Greater Noida area students are currently enrolled in our online program.',
   },
   {
     question: 'What equipment do I need for online classes from Greater Noida?',
@@ -146,8 +141,8 @@ export default function OnlineNEETCoachingGreaterNoidaPage() {
             </h1>
             <p className="text-xl text-indigo-100 mb-6">
               Study from your Greater Noida home. Live interactive Biology classes with AIIMS
-              faculty. Save 1-2 hours daily on travel. Hybrid mode available for weekend offline
-              sessions at Sector 62, Noida.
+              faculty. Save 1-2 hours daily on travel. Hybrid mode available with optional in-person
+              sessions at our South Extension, New Delhi center.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -305,7 +300,10 @@ export default function OnlineNEETCoachingGreaterNoidaPage() {
                 <Building2 className="w-7 h-7 text-yellow-400" />
               </div>
               <h3 className="text-xl font-bold mb-2">Hybrid Mode</h3>
-              <p className="text-indigo-900 mb-4">Online + Weekend offline at Sector 62, Noida.</p>
+              <p className="text-indigo-900 mb-4">
+                Online classes + optional in-person sessions at our South Extension, New Delhi
+                center.
+              </p>
               <ul className="space-y-2 text-sm mb-6">
                 {hybridBenefits.slice(0, 4).map((benefit, index) => (
                   <li key={index} className="flex items-center gap-2">
@@ -327,7 +325,7 @@ export default function OnlineNEETCoachingGreaterNoidaPage() {
               </div>
               <h3 className="text-xl font-bold mb-2">Full Offline</h3>
               <p className="text-gray-600 mb-4">
-                Daily classes at Sector 62, Noida center. Via Aqua Line Metro.
+                Daily in-person classes at our South Extension, New Delhi center.
               </p>
               <ul className="space-y-2 text-sm mb-6">
                 <li className="flex items-center gap-2">
@@ -350,9 +348,7 @@ export default function OnlineNEETCoachingGreaterNoidaPage() {
               <p className="text-2xl font-bold text-gray-700">
                 Rs 65,000<span className="text-sm font-normal text-gray-500">/year</span>
               </p>
-              <p className="text-sm text-gray-500 mt-2">
-                Aqua Line → Blue Line → Sector 62 Metro Station
-              </p>
+              <p className="text-sm text-gray-500 mt-2">At our South Extension, New Delhi center</p>
             </div>
           </div>
         </div>
@@ -412,19 +408,20 @@ export default function OnlineNEETCoachingGreaterNoidaPage() {
             '@type': 'Course',
             name: 'Online NEET Biology Coaching for Greater Noida Students',
             description:
-              'Online NEET Biology classes for Greater Noida students. Live interactive sessions + hybrid mode with weekend offline at Sector 62, Noida.',
+              'Online NEET Biology classes for Greater Noida students. Live interactive sessions + hybrid mode with optional in-person sessions at our South Extension, New Delhi center.',
             provider: {
               '@type': 'EducationalOrganization',
               name: 'Cerebrum Biology Academy',
               url: 'https://cerebrumbiologyacademy.com',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'B-45, Sector 62',
-                addressLocality: 'Noida',
-                addressRegion: 'UP',
-                postalCode: '201301',
+                streetAddress: 'D 35, South Extension Part 2',
+                addressLocality: 'New Delhi',
+                addressRegion: 'Delhi',
+                postalCode: '110049',
                 addressCountry: 'IN',
               },
+              areaServed: 'Greater Noida',
             },
             educationalLevel: 'Class 11, 12, Dropper',
             courseMode: ['Online', 'Blended'],

@@ -54,12 +54,12 @@ const faqs = [
   {
     question: 'What are the batch timings?',
     answer:
-      'Crash course runs 6 hours daily (9 AM - 3 PM or 2 PM - 8 PM). Weekend batches available with 8-hour sessions. Online live option also available for students who cannot attend offline.',
+      'Crash course runs 6 hours daily (9 AM - 3 PM or 2 PM - 8 PM) as live online classes. Weekend batches available with 8-hour sessions. Noida students attend from home - no travel needed.',
   },
   {
     question: 'What is the fee for the crash course?',
     answer:
-      'Crash course fee is Rs 25,000 for 45 days (offline) and Rs 20,000 for online. This includes study material, test series, and doubt clearing. EMI options available.',
+      'The live online crash course fee is Rs 25,000 for 45 days. This includes study material, test series, and doubt clearing. EMI options available.',
   },
   {
     question: 'When does the next batch start?',
@@ -85,13 +85,14 @@ export default function NEETCrashCourseNoidaPage() {
       name: 'Cerebrum Biology Academy',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'B-45, Sector 62',
-        addressLocality: 'Noida',
-        addressRegion: 'UP',
-        postalCode: '201301',
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
         addressCountry: 'IN',
       },
     },
+    areaServed: 'Noida',
     educationalLevel: 'Class 12 / Dropper',
     timeRequired: 'P45D',
     teaches: ['NEET Biology Revision', 'High-Yield Topics', 'Mock Tests', 'Previous Year Analysis'],
@@ -103,7 +104,7 @@ export default function NEETCrashCourseNoidaPage() {
     },
     hasCourseInstance: {
       '@type': 'CourseInstance',
-      courseMode: 'Blended',
+      courseMode: 'Online',
       courseWorkload: '6 hours/day for 45 days',
     },
   }

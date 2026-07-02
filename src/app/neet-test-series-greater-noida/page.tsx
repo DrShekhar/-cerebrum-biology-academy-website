@@ -5,7 +5,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'NEET Test Series in Greater Noida | 50+ Mock Tests with Analysis',
   description:
-    'Join our comprehensive NEET Biology test series in Greater Noida. 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
+    'Join our comprehensive NEET Biology test series in Greater Noida. 50+ full-length mock tests, detailed analysis, rank prediction. Take tests online from home. Starting ₹8,000.',
   keywords: [
     'neet test series greater noida',
     'neet mock test greater noida',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Test Series in Greater Noida | 50+ Mock Tests with Analysis',
     description:
-      'Join our comprehensive NEET Biology test series in Greater Noida. 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
+      'Join our comprehensive NEET Biology test series in Greater Noida. 50+ full-length mock tests, detailed analysis, rank prediction. Take tests online from home. Starting ₹8,000.',
   },
 }
 
@@ -44,7 +44,7 @@ const faqs = [
   {
     question: 'Is the test series available online for Greater Noida students?',
     answer:
-      'Yes, all tests are available both online and offline. Online tests can be taken from your Greater Noida home with the same interface as the actual NEET exam. Offline tests are conducted at our Sector 62, Noida center.',
+      'Yes, all tests are taken online from your Greater Noida home with the same interface as the actual NEET exam. No travel needed. Our nearest walk-in center is South Extension, New Delhi.',
   },
   {
     question: 'What analysis do I get after each test?',
@@ -64,7 +64,7 @@ const faqs = [
   {
     question: 'When are tests conducted?',
     answer:
-      'Offline tests are conducted every Sunday (9 AM - 12 PM) at our Sector 62, Noida center. Online tests can be taken anytime within a 48-hour window after release. New tests are released every week.',
+      'Live proctored online tests are held every Sunday (9 AM - 12 PM). Flexible online tests can be taken anytime within a 48-hour window after release. New tests are released every week.',
   },
   {
     question: 'Do you provide rank prediction?',
@@ -85,12 +85,13 @@ export default function NEETTestSeriesGreaterNoidaPage() {
       name: 'Cerebrum Biology Academy',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'B-45, Sector 62',
-        addressLocality: 'Noida',
-        addressRegion: 'UP',
-        postalCode: '201301',
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
         addressCountry: 'IN',
       },
+      areaServed: 'Greater Noida',
     },
     educationalLevel: 'Class 11-12 / Dropper',
     teaches: ['NEET Mock Tests', 'Test Taking Strategy', 'Time Management', 'Performance Analysis'],
@@ -102,7 +103,7 @@ export default function NEETTestSeriesGreaterNoidaPage() {
     },
     hasCourseInstance: {
       '@type': 'CourseInstance',
-      courseMode: 'Blended',
+      courseMode: 'Online',
       courseWorkload: 'Weekly tests for 6 months',
     },
   }

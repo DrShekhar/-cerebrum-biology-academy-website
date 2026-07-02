@@ -1,9 +1,6 @@
 import { Metadata } from 'next'
 import AakashAlternativeGreaterNoidaContent from './AakashAlternativeContent'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
-
-const noidaLocation = CONTACT_INFO.centers.noida
 
 export const metadata: Metadata = {
   title: 'Aakash Alternative in Greater Noida | NEET Biology Coaching',
@@ -72,7 +69,8 @@ const faqs = [
   },
   {
     question: 'How can Greater Noida students access Cerebrum?',
-    answer: `Greater Noida students can access Cerebrum via online + hybrid classes from home, or visit our Sector 62 Noida center (${noidaLocation.streetAddress}) via Aqua Line Metro connecting Greater Noida to Noida. Nearby areas served: Gaur City, Knowledge Park, Pari Chowk, Jaypee Greens, Greater Noida West, Alpha, Beta.`,
+    answer:
+      'Greater Noida students learn with Cerebrum through live online classes from home — no travel needed. Areas served: Gaur City, Knowledge Park, Pari Chowk, Jaypee Greens, Greater Noida West, Alpha and Beta. Prefer in-person? Our nearest walk-in center is South Extension, New Delhi.',
   },
 ]
 
@@ -88,12 +86,13 @@ export default function AakashAlternativeGreaterNoidaPage() {
       name: 'Cerebrum Biology Academy',
       description:
         'Specialized NEET Biology coaching with small batches, personalized attention, and 19600+ MCQ bank',
+      areaServed: 'Greater Noida',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: noidaLocation.streetAddress,
-        addressLocality: noidaLocation.addressLocality,
-        addressRegion: noidaLocation.addressRegion,
-        postalCode: noidaLocation.postalCode,
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
       },
     },
   }

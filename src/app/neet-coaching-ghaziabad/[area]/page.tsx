@@ -57,7 +57,7 @@ function getMetaDescriptionByType(area: ReturnType<typeof getGhaziabadAreaBySlug
       return `Quality NEET Biology coaching near ${area.name}. ${CEREBRUM_METRICS.successRateText} success rate, AIIMS faculty. Students from ${schoolsText}. Near ${metroText}. Book free demo!`
 
     case 'residential':
-      return `Best NEET Biology coaching near ${area.name}, Ghaziabad. ${CEREBRUM_METRICS.successRateText} success rate, AIIMS faculty. Students from ${schoolsText}. ${area.distanceFromCenter} from our center. Book free demo!`
+      return `Best NEET Biology coaching near ${area.name}, Ghaziabad. ${CEREBRUM_METRICS.successRateText} success rate, AIIMS faculty. Students from ${schoolsText}. Live online classes, learn from home. Book free demo!`
 
     case 'commercial':
       return `NEET coaching near ${area.name} for Ghaziabad families. ${CEREBRUM_METRICS.successRateText} success rate. Convenient location. Students from ${schoolsText}. Flexible timings!`
@@ -185,10 +185,10 @@ export default async function GhaziabadAreaPage({ params }: Props) {
     email: CONTACT_INFO.email.info,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Sector 62',
-      addressLocality: 'Ghaziabad',
-      addressRegion: 'Uttar Pradesh',
-      postalCode: areaData.pincode,
+      streetAddress: 'D 35, South Extension Part 2',
+      addressLocality: 'New Delhi',
+      addressRegion: 'Delhi',
+      postalCode: '110049',
       addressCountry: 'IN',
     },
     areaServed: {
@@ -209,16 +209,11 @@ export default async function GhaziabadAreaPage({ params }: Props) {
     priceRange: '\u20B9\u20B9-\u20B9\u20B9\u20B9',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Sector 62',
-      addressLocality: 'Ghaziabad',
-      addressRegion: 'Uttar Pradesh',
-      postalCode: areaData.pincode,
+      streetAddress: 'D 35, South Extension Part 2',
+      addressLocality: 'New Delhi',
+      addressRegion: 'Delhi',
+      postalCode: '110049',
       addressCountry: 'IN',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 28.627,
-      longitude: 77.372,
     },
     openingHoursSpecification: [
       {
@@ -271,10 +266,10 @@ export default async function GhaziabadAreaPage({ params }: Props) {
       },
       {
         '@type': 'Question',
-        name: `How far is ${areaData.name} from your Noida center?`,
+        name: `Do you have a center in ${areaData.name}?`,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `${areaData.name} is ${areaData.distanceFromCenter} from our Sector 62 Noida center. ${areaData.nearbyMetro.length > 0 ? `Students can reach via ${areaData.nearbyMetro[0]}.` : 'Online classes also available.'}`,
+          text: `We teach ${areaData.name} students through live online classes — no travel needed. Our nearest in-person center is South Extension, New Delhi.`,
         },
       },
       {
@@ -334,8 +329,12 @@ export default async function GhaziabadAreaPage({ params }: Props) {
     eventStatus: 'https://schema.org/EventScheduled',
     location: {
       '@type': 'Place',
-      name: 'Cerebrum Biology Academy - Noida',
-      address: { streetAddress: 'Sector 62', addressLocality: 'Noida', addressRegion: 'UP' },
+      name: 'Cerebrum Biology Academy - South Extension',
+      address: {
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+      },
     },
     offers: {
       '@type': 'Offer',

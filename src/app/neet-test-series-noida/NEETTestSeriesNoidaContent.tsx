@@ -342,22 +342,25 @@ export default function NEETTestSeriesNoidaContent({ faqs }: { faqs: FAQ[] }) {
                   <div className="flex items-center gap-4">
                     <Clock className="w-6 h-6 text-purple-600" />
                     <div>
-                      <p className="font-semibold">Offline Tests</p>
-                      <p className="text-sm text-slate-500">Every Sunday, 9 AM - 12 PM</p>
+                      <p className="font-semibold">Live Proctored Tests</p>
+                      <p className="text-sm text-slate-500">Every Sunday, 9 AM - 12 PM (online)</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <BarChart3 className="w-6 h-6 text-purple-600" />
                     <div>
-                      <p className="font-semibold">Online Tests</p>
+                      <p className="font-semibold">Flexible Online Tests</p>
                       <p className="text-sm text-slate-500">48-hour window, take anytime</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <MapPin className="w-6 h-6 text-purple-600" />
                     <div>
-                      <p className="font-semibold">Offline Center</p>
-                      <p className="text-sm text-slate-500">B-45, Sector 62, Noida</p>
+                      <p className="font-semibold">Serving Noida Online</p>
+                      <p className="text-sm text-slate-500">
+                        Attend from anywhere in Noida — nearest walk-in center: South Extension, New
+                        Delhi
+                      </p>
                     </div>
                   </div>
                 </div>

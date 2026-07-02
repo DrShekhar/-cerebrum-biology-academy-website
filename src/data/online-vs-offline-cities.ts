@@ -56,7 +56,8 @@ export const onlineOfflineCityProfiles: Record<OnlineOfflineCityKey, OnlineOffli
     slug: 'online-neet-coaching-noida',
     displayName: 'Noida',
     hasCerebrumCentre: true,
-    cerebrumCentreLine: 'Cerebrum Noida centre at Sector 62 + online live',
+    cerebrumCentreLine:
+      'Cerebrum live online for Noida · nearest walk-in centre: South Extension, New Delhi',
     commuteContext:
       'Noida Sectors 100/110/137/150 to Sector 62 centre = 30–45 min by car. Online live is the practical choice for Greater Noida West students.',
     cityHubUrl: '/neet-coaching-noida',
@@ -75,7 +76,7 @@ export const onlineOfflineCityProfiles: Record<OnlineOfflineCityKey, OnlineOffli
     displayName: 'Ghaziabad',
     hasCerebrumCentre: false,
     cerebrumCentreLine:
-      'No Cerebrum offline centre in Ghaziabad — nearest is Noida Sector 62 (10–12 km) + pan-India online live',
+      'No Cerebrum walk-in centre in Ghaziabad or Noida — nearest is South Extension, New Delhi; pan-India online live classes',
     commuteContext:
       'Ghaziabad to Noida commute can be 45–60 min during weekday peak. Online live is the practical choice for Vasundhara, Indirapuram, Vaishali, Crossings Republik students.',
     cityHubUrl: '/neet-coaching-ghaziabad',

@@ -101,7 +101,7 @@ const comparisonData = [
 const cityData = [
   {
     city: 'Noida',
-    address: 'Sector 62, Noida — Near Fortis Hospital',
+    address: 'Live online classes available for Noida students',
     areas: ['Sector 18', 'Sector 62', 'Sector 44', 'Greater Noida', 'Noida Extension'],
     slug: '/biology-classes-noida',
   },
@@ -161,7 +161,7 @@ const faqs = [
   {
     question: 'Which is the best biology tuition for Class 11 and 12 in Delhi NCR?',
     answer:
-      'Cerebrum Biology Academy is rated among the top biology-only coaching institutes in Delhi NCR. With AIIMS faculty, 15-student batches, 19,000+ MCQ bank, integrated Board + NEET preparation, and 4 physical centers, it offers specialized biology coaching that general NEET factories cannot match.',
+      'Cerebrum Biology Academy is rated among the top biology-only coaching institutes in Delhi NCR. With AIIMS faculty, 15-student batches, 19,000+ MCQ bank, integrated Board + NEET preparation, and 5 physical centers (South Extension, Green Park, Rohini, Gurugram, Faridabad) plus live online classes for other areas, it offers specialized biology coaching that general NEET factories cannot match.',
   },
   {
     question: 'Do you offer online biology tuition for Delhi NCR students?',

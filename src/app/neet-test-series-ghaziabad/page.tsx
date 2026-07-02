@@ -6,7 +6,7 @@ import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 export const metadata: Metadata = {
   title: 'NEET Test Series in Ghaziabad | 50+ Mock Tests with Analysis',
   description:
-    'Join our comprehensive NEET Biology test series for Ghaziabad students. 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
+    'Join our comprehensive NEET Biology test series for Ghaziabad students. 50+ full-length mock tests, detailed analysis, rank prediction. Take tests online from home. Starting ₹8,000.',
   keywords: [
     'neet test series ghaziabad',
     'neet mock test ghaziabad',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Test Series in Ghaziabad | 50+ Mock Tests with Analysis',
     description:
-      'Join our comprehensive NEET Biology test series for Ghaziabad students. 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
+      'Join our comprehensive NEET Biology test series for Ghaziabad students. 50+ full-length mock tests, detailed analysis, rank prediction. Take tests online from home. Starting ₹8,000.',
   },
 }
 
@@ -45,7 +45,7 @@ const faqs = [
   {
     question: 'Is the test series available online for Ghaziabad students?',
     answer:
-      'Yes, all tests are available both online and offline. Online tests can be taken from home with the same interface as the actual NEET exam. Offline tests are conducted at our Sector 62 Noida center — 15-20 min from Ghaziabad via Blue Line Metro.',
+      'Yes, all tests are taken online from home with the same interface as the actual NEET exam. Ghaziabad students attend live online — no travel needed. Our nearest walk-in center is South Extension, New Delhi.',
   },
   {
     question: 'What analysis do I get after each test?',
@@ -65,7 +65,7 @@ const faqs = [
   {
     question: 'When are tests conducted?',
     answer:
-      'Offline tests are conducted every Sunday (9 AM - 12 PM) at our Sector 62 Noida center. Online tests can be taken anytime within a 48-hour window after release. New tests are released every week.',
+      'Live proctored online tests are held every Sunday (9 AM - 12 PM). Flexible online tests can be taken anytime within a 48-hour window after release. New tests are released every week.',
   },
   {
     question: 'Do you provide rank prediction?',
@@ -86,12 +86,13 @@ export default function NEETTestSeriesGhaziabadPage() {
       name: 'Cerebrum Biology Academy',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'B-45, Sector 62',
-        addressLocality: 'Noida',
-        addressRegion: 'Uttar Pradesh',
-        postalCode: '201301',
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
         addressCountry: 'IN',
       },
+      areaServed: 'Ghaziabad',
     },
     educationalLevel: 'Class 11-12 / Dropper',
     teaches: ['NEET Mock Tests', 'Test Taking Strategy', 'Time Management', 'Performance Analysis'],
@@ -103,7 +104,7 @@ export default function NEETTestSeriesGhaziabadPage() {
     },
     hasCourseInstance: {
       '@type': 'CourseInstance',
-      courseMode: 'Blended',
+      courseMode: 'Online',
       courseWorkload: 'Weekly tests for 6 months',
     },
   }

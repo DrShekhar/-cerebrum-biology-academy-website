@@ -257,8 +257,8 @@ export const FARIDABAD_AREA_COORDINATES: Record<string, { lat: number; lng: numb
 }
 
 /**
- * Noida Area Coordinates
- * Center: Sector 62, Noida
+ * Noida Area Coordinates (areas served via live online classes)
+ * No physical centre in Noida — nearest walk-in centre: South Extension, New Delhi
  * Coverage: 40km radius
  */
 export const NOIDA_AREA_COORDINATES: Record<string, { lat: number; lng: number }> = {
@@ -305,8 +305,8 @@ export const NOIDA_AREA_COORDINATES: Record<string, { lat: number; lng: number }
 }
 
 /**
- * Ghaziabad Area Coordinates
- * Center: Sector 62, Noida (serving Ghaziabad)
+ * Ghaziabad Area Coordinates (areas served via live online classes)
+ * No physical centre in Ghaziabad — nearest walk-in centre: South Extension, New Delhi
  * Coverage: 25km radius
  */
 export const GHAZIABAD_AREA_COORDINATES: Record<string, { lat: number; lng: number }> = {
@@ -386,20 +386,21 @@ export const ROHINI_CENTER_METRICS = {
 } as const
 
 /**
- * Noida Center Specific Metrics
- * B-45, Sector 62, Noida
- * Serves: Noida, Greater Noida, Ghaziabad, East Delhi
+ * Nearest-Centre Metrics for Online-Served Areas (Noida, Greater Noida, Ghaziabad, East Delhi)
+ * There is NO physical walk-in centre in Noida/Ghaziabad/East Delhi — these areas are
+ * served by live online classes. For any page needing an org address, this points to the
+ * REAL nearest walk-in centre: D 35, South Extension Part 2, New Delhi.
  */
 export const NOIDA_CENTER_METRICS = {
-  address: 'B-45, Sector 62',
-  locality: 'Noida',
-  region: 'Uttar Pradesh',
-  pincode: '201301',
+  address: 'D 35, South Extension Part 2',
+  locality: 'New Delhi',
+  region: 'Delhi',
+  pincode: '110049',
   coordinates: {
-    latitude: 28.628,
-    longitude: 77.3649,
+    latitude: 28.5725,
+    longitude: 77.2217,
   },
   coverageRadiusKm: 20,
-  nearbyLandmark: 'Near Sector 62 Metro Station (Blue Line)',
-  metroAccess: 'Sector 62 Metro (Blue Line, 5 min walk)',
+  nearbyLandmark: 'Live online classes — nearest walk-in centre at South Extension, New Delhi',
+  metroAccess: 'Live online classes — no travel required',
 } as const

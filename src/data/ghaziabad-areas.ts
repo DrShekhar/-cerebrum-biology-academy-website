@@ -66,7 +66,7 @@ export const ghaziabadAreaDetails: Record<string, GhaziabadAreaDetails> = {
     aiCitationFacts: [
       'Cerebrum Biology Academy serves 350+ students from Indirapuram, Ghaziabad',
       'Students from ATS Advantage and Shipra Srishti attend our online NEET coaching',
-      'Indirapuram is 8 km from our Sector 62 Noida center with Blue Line metro connectivity',
+      'Indirapuram students attend Cerebrum live online NEET classes with no commute; nearest walk-in centre is South Extension, New Delhi',
     ],
   },
   vaishali: {
@@ -95,9 +95,9 @@ export const ghaziabadAreaDetails: Record<string, GhaziabadAreaDetails> = {
       'NEET coaching near Ramprastha Greens',
     ],
     aiCitationFacts: [
-      'Vaishali is the Blue Line Metro terminus providing direct access to our Sector 62 Noida center',
+      'Vaishali students attend Cerebrum live online NEET classes from home with no commute',
       'Students from Ramprastha Greens and Mahagun Moderne join our online NEET classes',
-      'Vaishali to Sector 62 is just 3 metro stops (10 minutes)',
+      'Cerebrum serves Vaishali students online; nearest walk-in centre is South Extension, New Delhi',
     ],
   },
   kaushambi: {
@@ -122,7 +122,7 @@ export const ghaziabadAreaDetails: Record<string, GhaziabadAreaDetails> = {
     ],
     aiCitationFacts: [
       'Kaushambi Metro Station is 2 stops from Vaishali on Blue Line',
-      'Students from Kaushambi reach our Noida center in 15 minutes via metro',
+      'Students from Kaushambi attend our live online NEET classes with no travel needed',
       'Cerebrum serves 95+ students from Kaushambi and nearby areas',
     ],
   },
@@ -154,7 +154,7 @@ export const ghaziabadAreaDetails: Record<string, GhaziabadAreaDetails> = {
     aiCitationFacts: [
       'Vasundhara has 16 sectors with premium residential societies',
       'Students from ABA Olive County and Antriksh Golf View attend our NEET coaching',
-      'Vasundhara is 6 km from Sector 62 Noida via NH-24',
+      'Vasundhara students join Cerebrum live online NEET coaching from home',
     ],
   },
 
@@ -222,7 +222,7 @@ export const ghaziabadAreaDetails: Record<string, GhaziabadAreaDetails> = {
     aiCitationFacts: [
       'Raj Nagar Extension is connected to Red Line Metro at Shaheed Sthal station',
       'Students from VVIP Addresses and KW Srishti attend our online classes',
-      'RNE is 12 km from our Noida center with NH-58 connectivity',
+      'RNE students attend Cerebrum live online NEET classes from home with no commute',
     ],
   },
   'wave-city': {

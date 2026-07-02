@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const schoolsText = areaData.schools.slice(0, 2).join(', ')
-  const metroText = areaData.nearbyMetro[0] || 'Sector 62 Metro'
+  const metroText = areaData.nearbyMetro[0] || 'Noida City Centre'
 
   const title = `NEET Coaching in ${areaData.name}, Noida | ${CEREBRUM_METRICS.successRateText} Success`
   const description = `Best NEET Biology coaching in ${areaData.name}, Noida. ${CEREBRUM_METRICS.successRateText} success rate. Students from ${schoolsText}. Near ${metroText}. Expert AIIMS faculty. Book free demo!`

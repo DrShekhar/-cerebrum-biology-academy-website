@@ -2,13 +2,10 @@ import { Metadata } from 'next'
 import NEETFoundationClass10GhaziabadContent from './NEETFoundationClass10GhaziabadContent'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
-const ghaziabadAddress =
-  'B-45, Sector 62, Noida, UP 201301 (20-25 min via Blue Line Metro from Vaishali/Kaushambi Ghaziabad)'
-
 export const metadata: Metadata = {
   title: 'NEET Foundation Class 10 in Ghaziabad | 2-Year Head Start',
   description:
-    'NEET Foundation for Class 10 students in Ghaziabad. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty at Sector 62 Noida center, accessible via Blue Line Metro.',
+    'NEET Foundation for Class 10 students in Ghaziabad. 2-year head start, 40% NEET syllabus overlap with boards. Live online expert faculty for Ghaziabad students.',
   keywords: [
     'neet foundation class 10 ghaziabad',
     'class 10 neet preparation ghaziabad',
@@ -31,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Foundation Class 10 in Ghaziabad | 2-Year Head Start',
     description:
-      'NEET Foundation for Class 10 students in Ghaziabad. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty at Sector 62 Noida center, accessible via Blue Line Metro.',
+      'NEET Foundation for Class 10 students in Ghaziabad. 2-year head start, 40% NEET syllabus overlap with boards. Live online expert faculty for Ghaziabad students.',
   },
 }
 
@@ -39,7 +36,7 @@ const faqs = [
   {
     question: 'Why is Class 10 ideal for starting NEET preparation in Ghaziabad?',
     answer:
-      'Class 10 is the perfect time as 40% of NEET Biology concepts are introduced here. You get a 2-year head start while the syllabus load is manageable. This builds strong fundamentals for Class 11-12. Ghaziabad students from Indirapuram, Vaishali, and Kaushambi can easily attend via Blue Line Metro to Sector 62 Noida.',
+      'Class 10 is the perfect time as 40% of NEET Biology concepts are introduced here. You get a 2-year head start while the syllabus load is manageable. This builds strong fundamentals for Class 11-12. Ghaziabad students from Indirapuram, Vaishali, and Kaushambi join our live online classes from home.',
   },
   {
     question: 'What is the overlap between Class 10 and NEET syllabus?',
@@ -57,8 +54,9 @@ const faqs = [
       'Class X Foundation (NEET) fees range from ₹45,000 to ₹90,000/year depending on the tier: Pursuit (₹45,000, 30-40 students), Ascent (₹60,000-90,000, 16-18 students), or Pinnacle (₹90,000, 10-12 students with personal mentorship from Dr. Shekhar).',
   },
   {
-    question: 'Where is the center and how do Ghaziabad students reach?',
-    answer: `Located at ${ghaziabadAddress}. Ghaziabad students take the Blue Line Metro from Vaishali or Kaushambi station directly to Sector 62 station (20-25 minutes). The center is 5 min walk from the metro. Serves all Ghaziabad areas: Indirapuram, Vasundhara, Raj Nagar Extension, Crossings Republik.`,
+    question: 'Do you have a center in Ghaziabad?',
+    answer:
+      'We teach Ghaziabad students through live online classes - no travel needed. This serves all Ghaziabad areas: Indirapuram, Vasundhara, Raj Nagar Extension, Crossings Republik. For anyone who prefers in-person coaching, our nearest walk-in center is South Extension, New Delhi.',
   },
 ]
 
@@ -73,13 +71,14 @@ export default function NEETFoundationClass10GhaziabadPage() {
       name: 'Cerebrum Biology Academy',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'B-45, Sector 62',
-        addressLocality: 'Noida',
-        addressRegion: 'UP',
-        postalCode: '201301',
+        streetAddress: 'D 35, South Extension Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        postalCode: '110049',
         addressCountry: 'IN',
       },
     },
+    areaServed: 'Ghaziabad',
     educationalLevel: 'Class 10',
   }
   const faqSchema = {

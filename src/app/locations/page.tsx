@@ -195,7 +195,7 @@ export default function LocationsPage() {
               Visit Our Delhi NCR Centers
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600">
-              4 centers across Delhi NCR with AIIMS faculty, small batches of 15 students
+              5 centers across Delhi NCR with AIIMS faculty, small batches of 15 students
             </p>
           </div>
 
@@ -206,6 +206,13 @@ export default function LocationsPage() {
                 area: 'South Extension Part 2',
                 metro: 'South Extension Metro (100m)',
                 href: '/locations/south-extension',
+                color: 'green',
+              },
+              {
+                name: 'Green Park',
+                area: 'B 113, Gulmohar Park',
+                metro: 'Green Park Metro',
+                href: '/locations/green-park',
                 color: 'green',
               },
               {
@@ -228,20 +235,6 @@ export default function LocationsPage() {
                 metro: 'Bata Chowk Metro',
                 href: '/locations/faridabad',
                 color: 'orange',
-              },
-              {
-                name: 'Noida',
-                area: 'Sector 62',
-                metro: 'Sector 62 Metro',
-                href: '/locations/noida',
-                color: 'blue',
-              },
-              {
-                name: 'Ghaziabad',
-                area: 'Online + Hybrid',
-                metro: 'Nearest: Rohini / Noida',
-                href: '/locations/ghaziabad',
-                color: 'teal',
               },
             ].map((center) => (
               <Link key={center.name} href={center.href}>

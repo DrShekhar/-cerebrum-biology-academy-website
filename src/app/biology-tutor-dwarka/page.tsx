@@ -67,8 +67,8 @@ const whyChooseUs = [
   },
   {
     icon: Train,
-    title: 'Metro Connected',
-    description: 'Dwarka is well connected via Blue Line to Greater Noida.',
+    title: 'Learn From Home',
+    description: 'Live online classes for all Dwarka sectors - no commute, save 3-4 hours daily.',
   },
   {
     icon: Star,
@@ -81,7 +81,7 @@ const faqs = [
   {
     question: 'How can Dwarka students attend your classes?',
     answer:
-      'Dwarka students have two options: (1) Online live classes - most convenient, saves 3-4 hours daily commute, (2) Weekend intensive batches at our Greater Noida center - Dwarka is connected via Blue Line metro. Many Dwarka students prefer online for regular classes.',
+      'Dwarka students learn through live online classes - the most convenient option, saving 3-4 hours of daily commute. Classes are fully interactive with live doubt-clearing. If you prefer in-person study, our nearest walk-in center is South Extension, New Delhi.',
   },
   {
     question: 'Which Dwarka sectors do you cover?',
@@ -140,8 +140,10 @@ export default function BiologyTutorDwarkaPage() {
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',
-              addressLocality: 'Greater Noida',
-              addressRegion: 'Uttar Pradesh',
+              streetAddress: 'D 35, South Extension Part 2',
+              addressLocality: 'New Delhi',
+              addressRegion: 'Delhi',
+              postalCode: '110049',
               addressCountry: 'IN',
             },
             areaServed: ['Dwarka', 'Dwarka Mor', 'Uttam Nagar', 'Nawada', 'Dabri'],
@@ -170,7 +172,7 @@ export default function BiologyTutorDwarkaPage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              NEET & Board Preparation | All Sectors Covered | Metro Connected
+              NEET & Board Preparation | All Sectors Covered | Live Online Classes
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
@@ -224,8 +226,8 @@ export default function BiologyTutorDwarkaPage() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Train className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
-                <div className="text-2xl font-bold">Blue</div>
-                <div className="text-sm opacity-80">Line Metro</div>
+                <div className="text-2xl font-bold">Live</div>
+                <div className="text-sm opacity-80">Online Classes</div>
               </div>
             </div>
           </div>
@@ -258,7 +260,7 @@ export default function BiologyTutorDwarkaPage() {
               >
                 <MapPin className="w-8 h-8 text-green-600 mb-4" />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{sector.name}</h3>
-                <p className="text-sm text-gray-500 mb-1">{sector.distance} from center</p>
+                <p className="text-sm text-gray-500 mb-1">Served live online</p>
                 <div className="flex items-center text-sm text-blue-600">
                   <Train className="w-4 h-4 mr-1" />
                   {sector.metro}

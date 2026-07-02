@@ -25,8 +25,6 @@ import { Button } from '@/components/ui/Button'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-
 interface FAQ {
   question: string
   answer: string
@@ -425,21 +423,21 @@ export default function AakashAlternativeNoidaContent({ faqs }: { faqs: FAQ[] })
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                  Conveniently Located in Sector 62, Noida
+                  Live Online NEET Biology for Noida
                 </h2>
                 <p className="text-slate-600 mb-6">
-                  Our Noida center is at <strong>B-45, Sector 62</strong> - near Sector 62 Metro
-                  Station (Blue Line). Perfect location for students from Sectors 18, 44, 50, 76,
-                  78, Indirapuram, Vaishali, and Greater Noida West.
+                  We teach Noida students through live online classes — no travel needed. Perfect
+                  for students from Sectors 18, 44, 50, 76, 78, Indirapuram, Vaishali and Greater
+                  Noida West, all with the same AIIMS-trained faculty and small batches.
                 </p>
                 <div className="space-y-3 mb-6">
                   <p className="flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-purple-600" />
-                    {CONTACT_INFO.location.noida.streetAddress}, Noida, UP 201301
+                    Live online classes serving all of Noida
                   </p>
                   <p className="flex items-center gap-2">
                     <Clock className="w-5 h-5 text-purple-600" />
-                    Near Sector 62 Metro Station (Blue Line)
+                    Prefer in-person? Nearest walk-in center: South Extension, New Delhi
                   </p>
                 </div>
                 <div className="flex gap-4">
@@ -449,10 +447,10 @@ export default function AakashAlternativeNoidaContent({ faqs }: { faqs: FAQ[] })
                       Call Now
                     </Button>
                   </a>
-                  <a href={CONTACT_INFO.location.noida.mapUrl} target="_blank" rel="noopener">
+                  <a href="/book-free-demo">
                     <Button>
-                      <MapPin className="w-4 h-4 mr-2" />
-                      Get Directions
+                      <BookOpen className="w-4 h-4 mr-2" />
+                      Book Free Demo
                     </Button>
                   </a>
                 </div>

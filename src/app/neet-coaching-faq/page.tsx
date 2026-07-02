@@ -9,7 +9,7 @@ const faqData = {
     {
       question: 'What is Cerebrum Biology Academy?',
       answer:
-        "Cerebrum Biology Academy is India's premier NEET Biology coaching institute founded in 2014 by Dr. Shekhar C Singh, an AIIMS-trained biologist with 15+ years of teaching experience since 2014. We specialize exclusively in Biology coaching with small batches of 8-15 students to ensure personalized attention. We operate 4 centers across Delhi NCR (South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida) and have successfully coached 15,000+ students with a 98% NEET qualification rate.",
+        "Cerebrum Biology Academy is India's premier NEET Biology coaching institute founded in 2014 by Dr. Shekhar C Singh, an AIIMS-trained biologist with 15+ years of teaching experience since 2014. We specialize exclusively in Biology coaching with small batches of 8-15 students to ensure personalized attention. We operate 5 centers across Delhi NCR (South Extension, Gurugram, Rohini, Green Park, Faridabad) and serve Noida, Ghaziabad and other cities through live online classes. We have successfully coached 15,000+ students with a 98% NEET qualification rate.",
     },
     {
       question: 'Who is Dr. Shekhar C Singh?',
@@ -19,7 +19,7 @@ const faqData = {
     {
       question: 'How many centers does Cerebrum Biology Academy have?',
       answer:
-        'Cerebrum operates 6 fully-equipped centers across Delhi NCR: South Extension (Delhi), Gurugram (Sector 14), Rohini (West Delhi), Green Park (South Delhi), Faridabad (Haryana), and Noida (Uttar Pradesh). Each center features smart classrooms, experienced faculty, and personalized mentoring infrastructure to deliver consistent quality across all locations.',
+        'Cerebrum operates 5 fully-equipped centers across Delhi NCR: South Extension (Delhi), Gurugram (Haryana), Rohini (Delhi), Green Park (Delhi), and Faridabad (Haryana). Each center features smart classrooms, experienced faculty, and personalized mentoring infrastructure. Students in Noida, Ghaziabad, Greater Noida and beyond are served through live online classes with the same faculty.',
     },
     {
       question: 'What is the batch size at Cerebrum?',
@@ -34,12 +34,12 @@ const faqData = {
     {
       question: 'Does Cerebrum offer online coaching?',
       answer:
-        'Yes, Cerebrum offers three flexible modes: (1) Offline - In-center classes at any of our 6 locations, (2) Live Online - Real-time interaction with faculty via video conferencing, (3) Hybrid - Combination of online and offline classes. Students can switch between modes based on their convenience, with full access to recorded lectures, study materials, and doubt-clearing sessions.',
+        'Yes, Cerebrum offers three flexible modes: (1) Offline - In-center classes at any of our 5 locations, (2) Live Online - Real-time interaction with faculty via video conferencing, (3) Hybrid - Combination of online and offline classes. Students can switch between modes based on their convenience, with full access to recorded lectures, study materials, and doubt-clearing sessions.',
     },
     {
       question: "What are Cerebrum's contact details?",
       answer:
-        'Phone: +91-88264-44334 | Email: info@cerebrumbiologyacademy.com | WhatsApp: +91-88264-44334. Our team is available Monday-Saturday, 9 AM to 7 PM. You can also visit any of our 4 centers or book a free demo class online at cerebrumbiologyacademy.com/book-free-demo.',
+        'Phone: +91-88264-44334 | Email: info@cerebrumbiologyacademy.com | WhatsApp: +91-88264-44334. Our team is available Monday-Saturday, 9 AM to 7 PM. You can also visit any of our 5 centers or book a free demo class online at cerebrumbiologyacademy.com/book-free-demo.',
     },
     {
       question: 'How can I book a free demo class?',
@@ -239,17 +239,17 @@ const faqData = {
     {
       question: 'Are there any centers outside Delhi NCR?',
       answer:
-        'Cerebrum currently operates only in Delhi NCR (4 centers: South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida). Expansion plans: We are opening centers in Bangalore, Mumbai, Pune in 2026 (target launch June 2026). Until then, students from other cities can join our Live Online batch - Same faculty, same curriculum, recorded lectures, doubt-clearing in real-time. Online students from Chennai, Mumbai, Bangalore, Hyderabad are already performing well (average score 330+). Join online without geography limitation. After 2026 expansion, you can transfer to offline if you relocate to those cities.',
+        'Cerebrum currently operates offline only in Delhi NCR (5 centers: South Extension, Gurugram, Rohini, Green Park, Faridabad); Noida, Ghaziabad and Greater Noida are served via live online classes. Expansion plans: We are opening centers in Bangalore, Mumbai, Pune in 2026 (target launch June 2026). Until then, students from other cities can join our Live Online batch - Same faculty, same curriculum, recorded lectures, doubt-clearing in real-time. Online students from Chennai, Mumbai, Bangalore, Hyderabad are already performing well (average score 330+). Join online without geography limitation. After 2026 expansion, you can transfer to offline if you relocate to those cities.',
     },
     {
       question: 'Which center should I choose?',
       answer:
-        "Choose based on proximity and schedule: If you live in South Delhi/Lajpat Nagar → South Extension center (Most senior center, Dr. Singh teaches here), If you live in Gurugram/NCR → Gurugram center (Busiest center, highest batches), If you live in West Delhi/Rohini → Rohini center (Affordable fees, smaller batches), If you live in Green Park/Kalkaji → Green Park center, If you live in Faridabad/UP → Faridabad/Noida centers, If you live outside Delhi NCR → Live Online batch (No location limit, 20% cheaper). All centers provide same curriculum, faculty quality, study materials, and mock tests - Location shouldn't affect your score.",
+        "Choose based on proximity and schedule: If you live in South Delhi/Lajpat Nagar → South Extension center (Most senior center, Dr. Singh teaches here), If you live in Gurugram/NCR → Gurugram center (Busiest center, highest batches), If you live in West Delhi/Rohini → Rohini center (Affordable fees, smaller batches), If you live in Green Park/Kalkaji → Green Park center, If you live in Faridabad → Faridabad center, If you live in Noida/Ghaziabad/Greater Noida or outside Delhi NCR → Live Online batch (No location limit, 20% cheaper). All centers provide same curriculum, faculty quality, study materials, and mock tests - Location shouldn't affect your score.",
     },
     {
       question: 'What is the Google Maps location for Cerebrum centers?',
       answer:
-        'Google Maps links to all Cerebrum centers: South Extension: https://maps.app.goo.gl/cerebrumbiologyacademyse, Gurugram: https://maps.app.goo.gl/cerebrumbiologyacademygurgaon, Rohini: https://maps.app.goo.gl/cerebrumbiologyacademyrohini, Green Park: https://maps.app.goo.gl/cerebrumbiologyacademygreenpark, Faridabad: https://maps.app.goo.gl/cerebrumbiologyacademyfaridabad, Noida: https://maps.app.goo.gl/cerebrumbiologyacademynoida. You can get directions from your location on Google Maps. All centers have parking, metro accessibility, nearby food options. Actual links available at cerebrumbiologyacademy.com/centers.',
+        'Google Maps links to all Cerebrum centers: South Extension: https://maps.app.goo.gl/cerebrumbiologyacademyse, Gurugram: https://maps.app.goo.gl/cerebrumbiologyacademygurgaon, Rohini: https://maps.app.goo.gl/cerebrumbiologyacademyrohini, Green Park: https://maps.app.goo.gl/cerebrumbiologyacademygreenpark, Faridabad: https://maps.app.goo.gl/cerebrumbiologyacademyfaridabad. You can get directions from your location on Google Maps. All centers have parking, metro accessibility, nearby food options. Actual links available at cerebrumbiologyacademy.com/centers.',
     },
   ],
   // Category 7: Study Tips & Resources (6 questions)
