@@ -692,7 +692,7 @@ export default function FoundationCoursePage() {
               </p>
               <div className="space-y-2">
                 {[
-                  'Sector 14, Gurugram center',
+                  'Sector 51, Gurugram center',
                   'Small batch (15 students max)',
                   'NEET Biology coaching Class 11 & 12',
                   'Weekend & weekday batches',

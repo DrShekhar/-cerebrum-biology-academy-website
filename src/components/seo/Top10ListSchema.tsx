@@ -378,7 +378,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
       { label: 'Style', value: 'Kota Pattern' },
     ],
     feeRange: '₹1,20,000 - ₹2,00,000/year',
-    location: 'Sector 14, Gurugram',
+    location: 'Sector 51, Gurugram',
   },
   {
     rank: 4,
@@ -399,7 +399,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
       { label: 'Focus', value: 'IIT + NEET' },
     ],
     feeRange: '₹1,50,000 - ₹2,50,000/year',
-    location: 'Sector 14, Gurugram',
+    location: 'Sector 51, Gurugram',
   },
   {
     rank: 5,

@@ -107,19 +107,19 @@ const cityData = [
   },
   {
     city: 'Gurugram',
-    address: 'Sector 14, Gurugram — Near HUDA City Centre Metro',
-    areas: ['Sector 14', 'DLF Phase 1-5', 'Sohna Road', 'Golf Course Road', 'Palam Vihar'],
+    address: 'Sector 51 (M2K Corporate Park), Gurugram — Near HUDA City Centre Metro',
+    areas: ['Sector 51', 'DLF Phase 1-5', 'Sohna Road', 'Golf Course Road', 'Palam Vihar'],
     slug: '/biology-classes-gurgaon',
   },
   {
     city: 'Faridabad',
-    address: 'Sector 15, Faridabad — Near NIT',
+    address: 'Sector 17 (Huda Market), Faridabad',
     areas: ['NIT', 'Sector 15-21', 'Ballabgarh', 'Greater Faridabad', 'Old Faridabad'],
     slug: '/biology-classes-faridabad',
   },
   {
     city: 'Rohini',
-    address: 'Sector 7, Rohini — Near Rithala Metro',
+    address: 'Sector 9 (DC Chowk), Rohini — Near Rohini West Metro',
     areas: ['Sector 3-24', 'Pitampura', 'Shalimar Bagh', 'Paschim Vihar', 'Prashant Vihar'],
     slug: '/biology-classes-rohini',
   },

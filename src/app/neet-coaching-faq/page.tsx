@@ -224,17 +224,17 @@ const faqData = {
     {
       question: "Where is Cerebrum's South Extension center?",
       answer:
-        'South Extension Center: A-68, South Extension Part-1, New Delhi 110049. Landmark: Next to Gita restaurant, opposite DLF Green Park. Distance: 2 km from Lajpat Nagar Metro. Facilities: Smart classroom with interactive board, 60-seat capacity, separate mentor room, online class studio. Serving: Delhi South (South Extension, Lajpat Nagar, Kalkaji, Nehru Place, Chhatarpur). Contact: 011-4141-0102. Demo class: Available 24/7 — book online or call anytime.',
+        'South Extension Center: D 35, South Extension Part 2, New Delhi 110049. Landmark: South Extension Metro Station (Violet Line) — 100m, near AIIMS Delhi. Facilities: Smart classroom with interactive board, separate mentor room, online class studio. Serving: Delhi South (South Extension, Lajpat Nagar, Kalkaji, Nehru Place). Contact: +91 88264 44334. Demo class: book online or call.',
     },
     {
       question: "Where is Cerebrum's Gurugram center?",
       answer:
-        'Gurugram Center: Tower B, 2nd Floor, Sector 14, Gurugram, Haryana 122001. Landmark: Opposite Sector 14 market, 500m from Sector 14 Metro. Facilities: 2 classrooms (capacity 60 each), lab for specimen viewing, library with NCERT books, ac rooms, high-speed wifi, separate online studio. Serving: Gurugram, Noida, Faridabad, Indore, and online pan-India. Contact: 0124-409-6200. Demo class: Available 24/7 — book online or WhatsApp anytime for instant scheduling.',
+        'Gurugram Center: Unit 17, M2K Corporate Park, Mayfield Garden, Sector 51, Gurugram, Haryana 122018. Landmark: Near HUDA City Centre Metro Station (Yellow Line), Sector 51 Market. Facilities: classrooms, library with NCERT books, high-speed wifi, separate online studio. Serving: Gurugram and online pan-India. Contact: +91 88264 44334. Demo class: book online or WhatsApp us.',
     },
     {
       question: "Where is Cerebrum's Rohini center?",
       answer:
-        'Rohini Center: Block-A, Sector 7, Rohini, Delhi 110085. Landmark: Near Rohini East Metro, opposite Rohini Mall, walking distance from Sector 7 market. Facilities: 1 classroom (capacity 40), mentor chamber, test room, all basic facilities. Serving: Rohini, Bhayandar, Meerut, West Delhi. Contact: 011-4769-8899. Demo class: Available 24/7 — book online or call anytime. Good location for north Delhi students, lower fees than South Extension.',
+        'Rohini Center: 211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, Delhi 110085. Landmark: Near Rohini West Metro Station (Red Line), DC Chowk, Sector 9 Market. Facilities: classroom, mentor chamber, test room. Serving: Rohini, North Delhi, West Delhi. Contact: +91 88264 44334. Demo class: book online or call. Good location for north Delhi students.',
     },
     {
       question: 'Are there any centers outside Delhi NCR?',

@@ -7861,7 +7861,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'Sector 7, Rohini, New Delhi',
+      address: 'DC Chowk, Sector 9, Rohini, New Delhi',
       distance: '3-5 km from DPS Rohini',
     },
     localities: [
@@ -14070,7 +14070,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'Block-A, Sector 7, Rohini, Delhi 110085',
+      address: '211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, Delhi 110085',
       distance: 'In North Delhi (Rohini)',
     },
     localities: [
@@ -14515,7 +14515,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'Block-A, Sector 7, Rohini, Delhi 110085',
+      address: '211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, Delhi 110085',
       distance: '5-15 km from West Delhi areas',
     },
     localities: [
@@ -14640,7 +14640,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'Block-A, Sector 7, Rohini, Delhi 110085',
+      address: '211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, Delhi 110085',
       distance: 'In North Delhi',
     },
     localities: [
@@ -14829,7 +14829,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Rohini Center',
-      address: 'Block-A, Sector 7, Rohini, Delhi 110085',
+      address: '211 Vikas Surya Tower, DC Chowk, Sector 9, Rohini, Delhi 110085',
       distance: 'In North Delhi',
     },
     localities: [
