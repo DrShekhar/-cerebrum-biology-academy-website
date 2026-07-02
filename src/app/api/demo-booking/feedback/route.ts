@@ -199,6 +199,26 @@ export async function POST(request: NextRequest) {
       },
     })
 
+    // Auto-advance the linked CRM lead: feedback means the demo happened.
+    // Only move forward from earlier stages — never regress a lead a counselor
+    // has already advanced past DEMO_COMPLETED.
+    try {
+      const lead = await prisma.leads.findUnique({
+        where: { demoBookingId: bookingId },
+        select: { id: true, stage: true },
+      })
+      if (lead && (lead.stage === 'NEW_LEAD' || lead.stage === 'DEMO_SCHEDULED')) {
+        await prisma.leads.update({
+          where: { id: lead.id },
+          data: { stage: 'DEMO_COMPLETED', lastContactedAt: new Date(), updatedAt: new Date() },
+        })
+        const { updateLeadScore } = await import('@/lib/leadScoring')
+        void updateLeadScore(lead.id).catch(() => {})
+      }
+    } catch (stageError) {
+      logger.warn('Failed to auto-advance lead stage on demo feedback', { error: stageError })
+    }
+
     // Log activity
     try {
       await prisma.activities.create({

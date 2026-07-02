@@ -45,6 +45,11 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
           orderBy: { sentAt: 'desc' },
           take: 30,
         },
+        activities: {
+          orderBy: { createdAt: 'desc' },
+          take: 50,
+          include: { users: { select: { name: true } } },
+        },
         fee_plans: {
           include: {
             installments: {
@@ -110,6 +115,15 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         content: c.message,
         status: c.status,
         sentAt: c.sentAt,
+      })),
+      // Real event timeline (lead created, touchpoints, stage changes, demo
+      // feedback) — was previously not surfaced despite being written by capture.
+      activities: lead.activities.map((a) => ({
+        id: a.id,
+        action: a.action,
+        description: a.description,
+        createdAt: a.createdAt,
+        by: a.users?.name || 'System',
       })),
       feePlans: lead.fee_plans.map((fp) => ({
         id: fp.id,

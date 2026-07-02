@@ -16,6 +16,9 @@
 
 import { prisma } from '@/lib/prisma'
 import { logger } from '@/lib/utils/logger'
+import { sendAdminLeadNotification } from '@/lib/notifications/adminLeadNotification'
+import { updateLeadScore } from '@/lib/leadScoring'
+import { startWelcomeSeries } from '@/lib/whatsapp/welcomeSeries'
 import type { LeadSource, Priority } from '@/generated/prisma'
 
 export interface UpsertLeadInput {
@@ -116,6 +119,8 @@ export async function upsertLead(
           },
         },
       })
+      // Touchpoints change engagement signals — rescore in the background.
+      void updateLeadScore(existing.id).catch(() => {})
       return { leadId: existing.id, created: false }
     }
 
@@ -209,6 +214,28 @@ Phone: ${phone}${email ? `\nEmail: ${email}` : ''}${
       phone,
       source: sourceDetail,
     })
+
+    // Fire-and-forget: WhatsApp alert to admin + initial score. Without this,
+    // leads captured via generic forms (enquiry/blog/exit-intent) land in the
+    // CRM silently and wait for task discovery.
+    void sendAdminLeadNotification({
+      name: name || 'Website Lead',
+      phone,
+      email: email || undefined,
+      type: 'course_interest',
+      courseInterest: input.courseInterest?.trim() || undefined,
+      message: input.message?.slice(0, 300) || undefined,
+      source: sourceDetail || undefined,
+      gclid: input.gclid || undefined,
+      utmSource: input.utmSource || undefined,
+      utmMedium: input.utmMedium || undefined,
+      leadId,
+    }).catch(() => {})
+    void updateLeadScore(leadId).catch(() => {})
+    // WhatsApp welcome series (day 0 now, day 1/3/7 via nurturing cron).
+    // No-ops until INTERAKT_API_KEY is configured, so owner controls activation.
+    void startWelcomeSeries(leadId).catch(() => {})
+
     return { leadId, created: true }
   } catch (error) {
     // Never break the caller — the capture-log row + WhatsApp already hold it.

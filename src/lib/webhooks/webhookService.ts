@@ -311,10 +311,14 @@ export class WebhookService {
     succeeded: number
     failed: number
   }> {
+    // Retry context lives on the delivery row itself (webhookId + payload) and
+    // its parent webhooks row (url/secret/headers/retryPolicy) — no metadata
+    // column needed.
     const pendingRetries = await prisma.webhook_deliveries.findMany({
       where: {
         status: 'RETRYING',
       },
+      include: { webhooks: true },
       take: 50, // Process in batches
       orderBy: { createdAt: 'asc' },
     })
@@ -325,36 +329,41 @@ export class WebhookService {
 
     for (const delivery of pendingRetries) {
       processed++
-      // NOTE: webhook_deliveries has no `metadata` column, so retry context
-      // (webhookId/url/payload) cannot be recovered here; such deliveries are skipped.
-      const metadata = null as Record<string, unknown> | null
-      if (!metadata?.webhookId || !metadata?.webhookUrl || !metadata?.payload) {
-        console.warn(`Skipping invalid retry delivery ${delivery.id}`)
+
+      const webhook = delivery.webhooks
+      if (!webhook || !webhook.isActive) {
+        console.warn(`Skipping retry delivery ${delivery.id}: webhook missing or inactive`)
+        await prisma.webhook_deliveries
+          .update({
+            where: { id: delivery.id },
+            data: { status: 'FAILED', completedAt: new Date() },
+          })
+          .catch(() => {})
         failed++
         continue
       }
 
+      const retryPolicy =
+        (webhook.retryPolicy as { maxRetries?: number; retryDelayMs?: number } | null) || null
+
       const webhookConfig: WebhookConfig = {
-        id: String(metadata.webhookId),
-        name: 'retry-webhook',
-        url: String(metadata.webhookUrl),
-        events: [],
-        secret: null, // Will be retrieved from original webhook
-        headers: null,
-        isActive: true,
-        retryPolicy: {
-          maxRetries: Number(metadata.maxRetries) || 3,
-          retryDelayMs: Number(metadata.retryDelayMs) || 5000,
-        },
+        id: webhook.id,
+        name: webhook.name,
+        url: webhook.url,
+        events: webhook.events,
+        secret: webhook.secret,
+        headers: (webhook.headers as Record<string, string> | null) || null,
+        isActive: webhook.isActive,
+        retryPolicy,
       }
 
       const result = await this.sendWebhook(
         webhookConfig,
-        metadata.payload as WebhookPayload,
+        delivery.payload as unknown as WebhookPayload,
         false,
         delivery.attempts + 1,
         delivery.id,
-        webhookConfig.retryPolicy?.maxRetries || 3
+        retryPolicy?.maxRetries || 3
       )
 
       if (result.success) {

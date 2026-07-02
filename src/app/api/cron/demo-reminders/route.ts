@@ -13,7 +13,9 @@ import { sendWhatsAppMessage, isInteraktConfigured } from '@/lib/interakt'
  * Run every 15 minutes via Vercel cron
  */
 
-export async function POST(request: NextRequest) {
+// Vercel Cron invokes registered paths with GET (Authorization: Bearer CRON_SECRET),
+// so GET must run the real processing — a 405 stub here means no reminder ever sends.
+async function handleCron(request: NextRequest) {
   try {
     // Verify cron authentication
     const authHeader = request.headers.get('authorization')
@@ -229,13 +231,10 @@ async function sendDemoReminder(
   }
 }
 
-// GET method returns 405 - use POST with authorization
-export async function GET() {
-  return NextResponse.json(
-    {
-      success: false,
-      error: 'Method not allowed. Use POST with proper authorization.',
-    },
-    { status: 405 }
-  )
+export async function GET(request: NextRequest) {
+  return handleCron(request)
+}
+
+export async function POST(request: NextRequest) {
+  return handleCron(request)
 }

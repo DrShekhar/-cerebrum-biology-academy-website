@@ -160,26 +160,26 @@ export async function startWelcomeSeries(leadId: string): Promise<{
       `welcome_series_${lead.id}_day0`
     )
 
-    // Schedule remaining messages in the series
-    const scheduledMessages: string[] = []
+    // Persist series state on the lead so the cron-driven queue processor can
+    // send the day-1/3/7 messages on schedule (serverless — no setTimeout).
+    const existingMetadata = (lead.metadata as Record<string, unknown>) || {}
+    await prisma.leads.update({
+      where: { id: lead.id },
+      data: {
+        metadata: {
+          ...existingMetadata,
+          welcomeSeriesStarted: new Date().toISOString(),
+          welcomeSeriesSent: immediateResult.success ? ['day0'] : [],
+        },
+        updatedAt: new Date(),
+      },
+    })
 
-    for (let i = 1; i < WELCOME_SERIES.length; i++) {
-      const message = WELCOME_SERIES[i]
-      const scheduledTime = new Date()
-      scheduledTime.setHours(scheduledTime.getHours() + message.delayHours)
-
-      // In production, you would use your task scheduler here
-      // For now, we'll log the scheduled messages
-      console.log(`WhatsApp: Scheduled ${message.templateName} for ${scheduledTime.toISOString()}`)
-      scheduledMessages.push(message.templateName)
-    }
-
-    // NOTE: leads has no `metadata` column, so welcome-series status is not
-    // persisted to the lead record. Messages are still sent/scheduled above.
+    const remaining = WELCOME_SERIES.length - 1
 
     return {
       success: true,
-      scheduled: scheduledMessages.length + (immediateResult.success ? 1 : 0),
+      scheduled: remaining + (immediateResult.success ? 1 : 0),
     }
   } catch (error) {
     console.error('WhatsApp: Welcome series error:', error)
@@ -224,8 +224,22 @@ export async function sendWelcomeSeriesMessage(
       `welcome_series_${lead.id}_day${day}`
     )
 
-    // NOTE: leads has no `metadata` column, so per-message sent state is not
-    // persisted to the lead record.
+    if (result.success) {
+      const metadata = (lead.metadata as Record<string, unknown>) || {}
+      const sent = Array.isArray(metadata.welcomeSeriesSent)
+        ? (metadata.welcomeSeriesSent as string[])
+        : []
+      const dayKey = `day${day}`
+      if (!sent.includes(dayKey)) {
+        await prisma.leads.update({
+          where: { id: lead.id },
+          data: {
+            metadata: { ...metadata, welcomeSeriesSent: [...sent, dayKey] },
+            updatedAt: new Date(),
+          },
+        })
+      }
+    }
 
     return result
   } catch (error) {
@@ -245,14 +259,18 @@ export async function processWelcomeSeriesQueue(): Promise<{
   const stats = { processed: 0, sent: 0, errors: 0 }
 
   try {
-    // NOTE: leads has no `metadata` column to track welcome-series state, so
-    // this queue cannot filter or read prior progress and effectively no-ops.
+    // The series spans 7 days; look at recent leads only and read the state
+    // persisted by startWelcomeSeries. In-code filtering avoids fragile JSON
+    // path queries at this volume.
+    const tenDaysAgo = new Date(Date.now() - 10 * 24 * 60 * 60 * 1000)
     const leads = await prisma.leads.findMany({
-      take: 100,
+      where: { createdAt: { gte: tenDaysAgo } },
+      take: 500,
+      orderBy: { createdAt: 'desc' },
     })
 
     for (const lead of leads) {
-      const metadata = {} as Record<string, unknown>
+      const metadata = (lead.metadata as Record<string, unknown>) || {}
       const startDate = metadata.welcomeSeriesStarted as string
 
       if (!startDate) continue

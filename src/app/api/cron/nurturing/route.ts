@@ -10,6 +10,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { processScheduledNurturing, cleanupFollowupQueue } from '@/lib/automation/leadNurturing'
 import { whatsappDripService } from '@/lib/automation/whatsappDripService'
+import { processWelcomeSeriesQueue } from '@/lib/whatsapp/welcomeSeries'
 import {
   verifyCronAuth,
   createCronUnauthorizedResponse,
@@ -35,6 +36,9 @@ export async function GET(request: NextRequest) {
     // Process WhatsApp drip sequences
     const dripStats = await whatsappDripService.processScheduledDrips()
 
+    // Send due welcome-series messages (day 1/3/7) — state lives in leads.metadata
+    const welcomeStats = await processWelcomeSeriesQueue()
+
     // NOTE: Demo reminders are handled by dedicated /api/cron/demo-reminders cron job.
     // Previously called here too, causing double reminders.
 
@@ -52,6 +56,7 @@ export async function GET(request: NextRequest) {
       message: 'Cron job completed',
       stats,
       dripStats,
+      welcomeStats,
       cleanupCount,
       duration: `${duration}ms`,
       timestamp: new Date().toISOString(),

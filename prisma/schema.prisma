@@ -1530,6 +1530,7 @@ model leads {
   score                   Int?
   scoreBreakdown          Json?
   scoreUpdatedAt          DateTime?
+  metadata                Json?
   activities              activities[]
   agent_tasks             agent_tasks[]
   crm_communications      crm_communications[]

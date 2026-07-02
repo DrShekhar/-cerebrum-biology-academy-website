@@ -473,6 +473,12 @@ export async function POST(request: NextRequest) {
 
       demoBooking = result.booking
       lead = result.lead
+
+      // Demo booked = strong engagement signal — rescore in the background.
+      if (lead?.id) {
+        const { updateLeadScore } = await import('@/lib/leadScoring')
+        void updateLeadScore(lead.id).catch(() => {})
+      }
     } catch (dbError) {
       // DEMO-005: Handle slot conflict error specifically
       if (dbError instanceof Error && dbError.message === 'SLOT_CONFLICT') {

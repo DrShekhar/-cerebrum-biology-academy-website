@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { processQueue } from '@/lib/followupProcessor'
 
-export async function POST(request: NextRequest) {
+// Vercel Cron invokes registered paths with GET (Authorization: Bearer CRON_SECRET),
+// so GET must run the real processing — a 405 stub here means the queue is never drained.
+async function handleCron(request: NextRequest) {
   try {
     const authHeader = request.headers.get('authorization')
     const cronSecret = process.env.CRON_SECRET
@@ -39,12 +41,10 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export async function GET() {
-  return NextResponse.json(
-    {
-      success: false,
-      error: 'Method not allowed. Use POST with proper authorization.',
-    },
-    { status: 405 }
-  )
+export async function GET(request: NextRequest) {
+  return handleCron(request)
+}
+
+export async function POST(request: NextRequest) {
+  return handleCron(request)
 }

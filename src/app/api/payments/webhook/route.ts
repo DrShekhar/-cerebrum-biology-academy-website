@@ -386,6 +386,9 @@ async function handlePaymentLinkPaid(event: any) {
         currency: updatedLink.currency,
       },
     })
+    // Payment is the strongest scoring signal — rescore in the background.
+    const { updateLeadScore } = await import('@/lib/leadScoring')
+    void updateLeadScore(updatedLink.leads.id).catch(() => {})
   }
 }
 

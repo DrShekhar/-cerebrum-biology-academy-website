@@ -28,6 +28,22 @@ interface ExecutionResult {
 }
 
 /**
+ * followup_rules.priority is the lead Priority enum (HOT/WARM/COLD);
+ * tasks.priority is TaskPriority (HIGH/MEDIUM/LOW). Writing one into the
+ * other is an invalid-enum insert at runtime, so map explicitly.
+ */
+function toTaskPriority(rulePriority: string): 'HIGH' | 'MEDIUM' | 'LOW' {
+  switch (rulePriority) {
+    case 'HOT':
+      return 'HIGH'
+    case 'COLD':
+      return 'LOW'
+    default:
+      return 'MEDIUM'
+  }
+}
+
+/**
  * Process all pending queue items that are due for execution
  * Should be run periodically via cron job (every 5 minutes)
  */
@@ -502,7 +518,7 @@ async function createCallTask(lead: any, rule: any, content: string): Promise<Ex
         title: `Follow-up Call: ${lead.studentName}`,
         description: content || `Call ${lead.studentName} regarding ${rule.name}`,
         type: 'FOLLOW_UP_CALL',
-        priority: rule.priority,
+        priority: toTaskPriority(rule.priority),
         status: 'PENDING',
         dueDate: new Date(Date.now() + 24 * 60 * 60 * 1000),
         assignedToId: lead.assignedToId,
@@ -633,7 +649,7 @@ async function createTask(lead: any, rule: any, content: string): Promise<Execut
         title: `Follow-up: ${lead.studentName}`,
         description: content || `Follow up with ${lead.studentName} regarding ${rule.name}`,
         type: 'FOLLOW_UP_CALL',
-        priority: rule.priority,
+        priority: toTaskPriority(rule.priority),
         status: 'PENDING',
         dueDate: new Date(Date.now() + 24 * 60 * 60 * 1000),
         assignedToId: lead.assignedToId,

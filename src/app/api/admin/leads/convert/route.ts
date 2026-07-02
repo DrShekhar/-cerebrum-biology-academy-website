@@ -11,6 +11,9 @@ const convertLeadSchema = z.object({
   coachingTier: z.enum(['FREE', 'PURSUIT', 'ASCENT', 'PINNACLE']),
   courseId: z.string().optional(),
   createEnrollment: z.boolean().default(false),
+  // Real email to use when the lead has none on file. Prevents the converted
+  // student from getting an unreachable @placeholder.cerebrum.app address.
+  email: z.string().email('A valid email is required').optional(),
 })
 
 export async function POST(request: NextRequest) {
@@ -35,9 +38,18 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Resolve a real email: lead's own, else the one supplied at conversion.
+    // Only fall back to a placeholder if neither exists (keeps old behaviour
+    // working, but the UI should collect an email when lead.email is empty).
+    const resolvedEmail =
+      lead.email ||
+      validatedData.email ||
+      `${lead.phone.replace(/\D/g, '')}@placeholder.cerebrum.app`
+    const hasRealEmail = Boolean(lead.email || validatedData.email)
+
     const existingUser = await prisma.users.findFirst({
       where: {
-        OR: [...(lead.email ? [{ email: lead.email }] : []), { phone: lead.phone }],
+        OR: [{ email: resolvedEmail }, { phone: lead.phone }],
       },
     })
 
@@ -45,7 +57,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           success: false,
-          error: `A user already exists with this ${existingUser.email === lead.email ? 'email' : 'phone number'}`,
+          error: `A user already exists with this ${existingUser.email === resolvedEmail ? 'email' : 'phone number'}`,
         },
         { status: 409 }
       )
@@ -59,12 +71,12 @@ export async function POST(request: NextRequest) {
         data: {
           id: userId,
           name: lead.studentName,
-          email: lead.email || `${lead.phone.replace(/\D/g, '')}@placeholder.cerebrum.app`,
+          email: resolvedEmail,
           phone: lead.phone,
           role: 'STUDENT',
           passwordHash,
           coachingTier: validatedData.coachingTier as any,
-          emailVerified: lead.email ? new Date() : null,
+          emailVerified: hasRealEmail ? new Date() : null,
           profile: {
             status: 'active',
             convertedFromLead: lead.id,
