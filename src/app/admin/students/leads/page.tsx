@@ -542,11 +542,19 @@ export default function LeadsPage() {
                         <button className="text-blue-600 hover:text-blue-900">
                           <Send className="w-4 h-4" />
                         </button>
-                        <button className="text-purple-600 hover:text-purple-900">
+                        <button
+                          className="text-purple-600 hover:text-purple-900"
+                          title="View / edit lead"
+                          onClick={() => {
+                            setSelectedLead(lead)
+                            setIsEditLeadModalOpen(true)
+                          }}
+                        >
                           <Eye className="w-4 h-4" />
                         </button>
                         <button
                           className="text-gray-600 hover:text-gray-900"
+                          title="Edit lead"
                           onClick={() => {
                             setSelectedLead(lead)
                             setIsEditLeadModalOpen(true)
@@ -569,6 +577,37 @@ export default function LeadsPage() {
               <UserPlus className="mx-auto h-12 w-12 text-gray-400" />
               <h3 className="mt-2 text-sm font-medium text-gray-900">No leads found</h3>
               <p className="mt-1 text-sm text-gray-500">No leads match your current filters.</p>
+            </div>
+          )}
+          {pagination.total > 0 && (
+            <div className="flex items-center justify-between border-t border-gray-200 px-4 py-3 sm:px-6">
+              <div className="text-sm text-gray-600">
+                Showing{' '}
+                <span className="font-medium">{(pagination.page - 1) * pagination.limit + 1}</span>–
+                <span className="font-medium">
+                  {Math.min(pagination.page * pagination.limit, pagination.total)}
+                </span>{' '}
+                of <span className="font-medium">{pagination.total}</span> leads
+              </div>
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  disabled={pagination.page <= 1}
+                  onClick={() => setPagination((p) => ({ ...p, page: p.page - 1 }))}
+                >
+                  Previous
+                </Button>
+                <span className="text-sm text-gray-600">
+                  Page {pagination.page} of {Math.max(pagination.totalPages, 1)}
+                </span>
+                <Button
+                  variant="outline"
+                  disabled={pagination.page >= pagination.totalPages}
+                  onClick={() => setPagination((p) => ({ ...p, page: p.page + 1 }))}
+                >
+                  Next
+                </Button>
+              </div>
             </div>
           )}
         </div>
