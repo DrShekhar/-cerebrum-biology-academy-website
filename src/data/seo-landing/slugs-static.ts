@@ -61,6 +61,7 @@ export const SEO_PAGE_SLUGS = {
     'live-biology-classes-neet',
   ],
   ncert: [
+    'ncert-based-neet-biology-coaching',
     'ncert-biology-class-11',
     'ncert-biology-class-12',
     'ncert-fingertips-biology',
@@ -236,7 +237,7 @@ export function getSEOPageCount(): number {
  * Metadata about the slugs
  */
 export const SEO_SLUGS_METADATA = {
-  totalCount: 136,
+  totalCount: 137,
   lastGenerated: '2026-01-19',
   categories: [
     'class9',
@@ -262,7 +263,7 @@ export const SEO_SLUGS_METADATA = {
     class12: 6,
     dropper: 5,
     universal: 5,
-    ncert: 8,
+    ncert: 9,
     topics: 15,
     international: 10,
     neetGuide: 19,

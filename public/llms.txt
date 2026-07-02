@@ -23,6 +23,7 @@
 ## NEET (India)
 
 - [NEET coaching hub](https://cerebrumbiologyacademy.com/neet-coaching): programmes for Class 11, Class 12, droppers/repeaters.
+- [NCERT-based NEET Biology coaching](https://cerebrumbiologyacademy.com/ncert-based-neet-biology-coaching): NEET Biology taught line by line directly from the NCERT Class 11 & 12 textbooks (~95% of NEET Biology comes from NCERT), with NCERT-tagged MCQ practice and AIIMS faculty; live online for students across India and NRI students abroad.
 - [NEET Delhi hub](https://cerebrumbiologyacademy.com/neet-coaching-delhi): Delhi students — centres, batches, results.
 - [Dropper programme](https://cerebrumbiologyacademy.com/dropper): one-year NEET 2027 repeater track — admissions OPEN. Previous-attempt analysis, weekly tests, mentorship; fees ₹40,000–₹1,56,000/year by tier (Pursuit / Ascent / Pinnacle ZA).
 - [NEET 2027 dropper biology specialist](https://cerebrumbiologyacademy.com/neet-dropper-biology-specialist-2027): biology-only add-on for droppers already at PW / Allen / Aakash / Kota — move biology 65 → 90+ marks.

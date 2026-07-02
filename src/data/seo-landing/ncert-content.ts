@@ -1728,7 +1728,285 @@ export const ncertPunchBiology: SEOLandingContent = {
 }
 
 // Export all NCERT pages
+// Page 9: /ncert-based-neet-biology-coaching/ — flagship intent hub (all-India + NRI)
+export const ncertBasedNeetBiologyCoaching: SEOLandingContent = {
+  ...ncertBaseContent,
+  slug: 'ncert-based-neet-biology-coaching',
+  classLevel: 'universal',
+
+  title: 'NCERT-Based NEET Biology Coaching | Line-by-Line NCERT Classes',
+  metaDescription:
+    'NCERT-based NEET Biology coaching that teaches directly from the NCERT textbook, line by line. ~95% of NEET Biology comes from NCERT — master it with AIIMS faculty. Online classes for students across India and NRI students abroad.',
+  keywords: [
+    'ncert based neet biology coaching',
+    'neet biology coaching based on ncert',
+    'ncert focused neet biology coaching',
+    'ncert line by line neet biology',
+    'best ncert based neet biology coaching',
+    'ncert neet biology classes online',
+    'ncert based biology coaching for neet',
+    'neet biology from ncert',
+    'ncert based neet biology coaching for nri',
+  ],
+
+  hero: {
+    headline: 'NCERT-Based NEET Biology Coaching',
+    subheadline:
+      'Around 95% of NEET Biology comes straight from the NCERT textbook. We teach Biology line by line from NCERT — every sentence, diagram and table decoded for NEET — so you master the one book that actually gets tested.',
+    highlightedText: 'Taught Directly from NCERT, Line by Line',
+    ctaText: 'Book a Free Demo Class',
+    ctaLink: '/book-free-demo',
+    backgroundGradient: 'from-green-800 via-green-900 to-green-800',
+  },
+
+  painPoints: {
+    title: 'Why Most NEET Biology Coaching Fails Students',
+    points: [
+      {
+        icon: 'book-open',
+        question: 'Coaching that ignores NCERT and pushes thick reference books?',
+        solution:
+          'We teach NCERT first, as the primary text. Reference books are used only to practise, never to replace the source NEET actually examines.',
+      },
+      {
+        icon: 'target',
+        question: 'Reading NCERT but still getting NEET questions wrong?',
+        solution:
+          'We show you HOW to read NCERT — which lines become MCQs, which diagrams get tested, which tables hide assertion-reason questions.',
+      },
+      {
+        icon: 'layers',
+        question: 'Skipping NCERT lines that look unimportant?',
+        solution:
+          'Every NCERT line, figure caption and footnote is covered. NEET regularly frames questions from exactly the parts students skim.',
+      },
+      {
+        icon: 'help-circle',
+        question: 'Studying abroad with no NCERT-aligned teacher nearby?',
+        solution:
+          'Our live online NCERT classes reach NRI students across the Gulf, USA, UK, Canada, Singapore and beyond — same NCERT-first method, timezone-friendly batches.',
+      },
+    ],
+  },
+
+  benefits: {
+    title: 'What "NCERT-Based" Actually Means at Cerebrum',
+    subtitle: 'Not a slogan — a teaching method built around the book NEET is set from',
+    items: [
+      {
+        icon: 'book',
+        title: 'Line-by-Line NCERT Teaching',
+        description:
+          'Class 11 and Class 12 Biology taught sentence by sentence from NCERT — nothing assumed, nothing skipped.',
+      },
+      {
+        icon: 'image',
+        title: 'Every NCERT Diagram Decoded',
+        description:
+          'Learn to draw, label and interpret each NCERT figure. Diagram-based questions alone carry 40-50 marks in NEET.',
+      },
+      {
+        icon: 'list',
+        title: 'NEET-Relevant Lines Flagged',
+        description:
+          'We mark exactly which NCERT lines have been asked before and which are likely next, so revision is targeted.',
+      },
+      {
+        icon: 'clipboard',
+        title: 'NCERT-Anchored MCQ Practice',
+        description:
+          'A 10,000+ question bank tagged to NCERT chapters and lines — practise the exact concepts NEET tests.',
+      },
+      {
+        icon: 'repeat',
+        title: 'Board + NEET in One Track',
+        description:
+          'The same NCERT source prepares you for board exams and NEET together, without duplicated study hours.',
+      },
+      {
+        icon: 'award',
+        title: 'AIIMS-Trained Faculty',
+        description:
+          'Learn NCERT the way toppers read it — from doctors who cleared NEET and AIIMS using NCERT themselves.',
+      },
+    ],
+  },
+
+  faqs: [
+    {
+      question: 'What is NCERT-based NEET Biology coaching?',
+      answer:
+        'NCERT-based NEET Biology coaching teaches directly from the NCERT Class 11 and Class 12 Biology textbooks as the primary source, rather than relying on third-party reference books. Since roughly 95% of NEET Biology questions are drawn from NCERT, this approach focuses your effort on the exact text that is examined. At Cerebrum, every NCERT line, diagram, table and figure caption is explained and mapped to NEET question patterns.',
+    },
+    {
+      question: 'Is NCERT really enough for NEET Biology?',
+      answer:
+        'For Biology, NCERT is the backbone. Analysis of past NEET papers shows about 95% of Biology questions can be answered directly from NCERT content. NCERT alone gives you the theory; what you additionally need is disciplined MCQ practice and revision so you can recall and apply that NCERT content under exam pressure. Our coaching pairs line-by-line NCERT teaching with NCERT-tagged MCQ practice to close that gap.',
+    },
+    {
+      question: 'How is NCERT-based coaching different from normal NEET Biology coaching?',
+      answer:
+        'Normal coaching often front-loads bulky reference books and treats NCERT as optional reading. NCERT-based coaching inverts this: NCERT is the classroom text, taught line by line, and reference material is used only for extra practice. This means less time wasted on low-yield content and more retention of the high-yield NCERT lines that actually appear in NEET.',
+    },
+    {
+      question: 'Do you cover both Class 11 and Class 12 NCERT Biology?',
+      answer:
+        'Yes. The programme covers the full NEET Biology syllabus — all 22 Class 11 chapters and all 16 Class 12 chapters of NCERT — because NEET draws almost equally from both years. Class 11 builds cellular, physiological and diversity foundations; Class 12 builds genetics, biotechnology, reproduction and ecology on top of them.',
+    },
+    {
+      question: 'Is this coaching available online across India?',
+      answer:
+        'Yes. Classes are conducted live online, so students anywhere in India — metros, tier-2 cities or remote towns — get the same NCERT-based teaching, recordings for revision, and doubt support. There is no dependence on a local physical centre.',
+    },
+    {
+      question: 'Can NRI students studying abroad join NCERT-based NEET Biology coaching?',
+      answer:
+        'Absolutely. We run timezone-friendly live online batches for NRI students in the Gulf (UAE, Qatar, Saudi Arabia, Oman, Kuwait, Bahrain), USA, UK, Canada, Singapore, Malaysia, Nepal and Australia. NRI students following CBSE, IB or other boards abroad are brought onto the NCERT framework that NEET requires, with guidance on the NRI/MBBS admission process where needed.',
+    },
+    {
+      question: 'How long does the NCERT-based NEET Biology programme take?',
+      answer:
+        'A full two-year track (Class 11 + Class 12) covers the entire NCERT syllabus with time for MCQ practice and revision. One-year and dropper-focused tracks compress the NCERT coverage with intensive revision. In every track, the sequence is the same: line-by-line NCERT, diagram mastery, NCERT-tagged MCQs, then repeated revision.',
+    },
+    {
+      question: 'Who teaches the NCERT-based NEET Biology classes?',
+      answer:
+        'Classes are led by Cerebrum Biology Academy faculty headed by Dr. Shekhar C Singh, with AIIMS-trained biology teachers who prepared for NEET/AIIMS from NCERT themselves. The academy has taught 15,000+ students since 2014, with a 98% NEET-UG qualification rate among enrolled students and 680+ medical-college selections.',
+    },
+  ],
+
+  cta: {
+    title: 'Learn NEET Biology from the Book It Is Actually Set From',
+    subtitle:
+      'Line-by-line NCERT teaching, NCERT-tagged MCQ practice, AIIMS faculty — online for students across India and NRI students abroad.',
+    primaryButton: {
+      text: 'Book a Free Demo Class',
+      link: '/book-free-demo',
+    },
+    secondaryButton: {
+      text: 'Explore NEET Courses',
+      link: '/courses',
+    },
+    tertiaryButton: {
+      text: 'Free NCERT Resources',
+      link: '/resources',
+    },
+  },
+
+  toolsCTA: {
+    title: 'Practise NCERT-Based NEET Biology Free',
+    tools: [
+      {
+        name: 'NCERT-Tagged MCQ Practice',
+        description: '10,000+ NEET Biology questions mapped to NCERT chapters and lines.',
+        link: '/neet-biology-mcq-practice',
+        icon: 'mcq',
+      },
+      {
+        name: 'Free NCERT Biology Notes',
+        description: 'Chapter-wise NCERT notes with diagrams and highlighted NEET points.',
+        link: '/free-neet-biology-ncert-notes',
+        icon: 'notes',
+      },
+    ],
+  },
+
+  contactButtons: {
+    whatsapp: {
+      number: '918826444334',
+      message:
+        "Hi Cerebrum! I'm interested in NCERT-based NEET Biology coaching. Please share batch details.",
+    },
+    phone: '+918826444334',
+  },
+
+  relatedPages: [
+    { title: 'NCERT Biology Class 11', link: '/ncert-biology-class-11' },
+    { title: 'NCERT Biology Class 12', link: '/ncert-biology-class-12' },
+    { title: 'NEET Biology Coaching', link: '/neet-biology-coaching' },
+    { title: 'NEET Coaching for NRI Students', link: '/nri-students' },
+    { title: 'Free NCERT Biology Notes', link: '/free-neet-biology-ncert-notes' },
+    { title: 'NCERT-Based NEET Questions', link: '/ncert-based-neet-questions' },
+  ],
+
+  deepContent: {
+    paragraphs: [
+      {
+        heading: 'What "NCERT-Based NEET Biology Coaching" Really Means',
+        body: 'Almost every NEET aspirant is told the same thing: "NCERT is enough for Biology." It is true — roughly 95 percent of NEET Biology questions can be traced directly to lines, diagrams, tables and figure captions in the NCERT Class 11 and Class 12 textbooks. Yet most coaching institutes hand students a stack of thick reference books and treat NCERT as background reading. NCERT-based coaching does the opposite. The NCERT textbook is the classroom text. We open the actual NCERT page, read it line by line, and explain what each sentence means, why it is there, and how NEET has framed or could frame a question from it. Reference books and question banks are used only afterwards, to practise — never to replace the source that the exam is genuinely built from. If you have searched for NEET Biology coaching that is based on NCERT rather than random material, this is exactly the method you were looking for.',
+      },
+      {
+        heading: 'How Line-by-Line NCERT Teaching Converts Reading into Marks',
+        body: 'Reading NCERT passively and being taught NCERT actively are very different experiences. A student reading alone skims familiar-looking lines and misses that a single clause — "the pyrimidines are cytosine, thymine and uracil" — is a ready-made MCQ. In our classes, each NCERT line is read with the examiner\'s eye: which fact could become a direct question, which comparison could become an assertion-reason pair, which diagram label is a favourite distractor. Figure captions and the small print in tables, which students routinely ignore, are covered deliberately because NEET repeatedly draws from them. This targeted reading takes barely more time than passive reading but produces dramatically higher retention and exam-day recall, because you are learning the content in the exact form it will be tested.',
+      },
+      {
+        heading: 'The Full NCERT Syllabus: Class 11 and Class 12 Together',
+        body: 'NEET Biology draws almost equally from both NCERT years, so a serious NCERT-based programme covers all 38 chapters — 22 in Class 11 and 16 in Class 12. Class 11 lays the foundation: diversity of living organisms, structural organisation, cell structure and function, plant physiology and human physiology. Class 12 builds on it: reproduction, genetics and evolution, biology in human welfare, biotechnology, and ecology. Skipping or rushing Class 11 to reach Class 12 faster is the single most common preparation mistake, because molecular genetics, biotechnology and evolution all assume the cellular and physiological grounding that Class 11 NCERT provides. Our sequencing respects this dependency so concepts compound instead of collapsing.',
+      },
+      {
+        heading: 'For Students Across India and NRI Students Abroad',
+        body: 'Because the teaching is delivered through live online classes, a student in a small town in India gets exactly the same NCERT-based instruction, recordings and doubt support as one in a metro — the quality of teaching no longer depends on the coaching available locally. The same reach serves NRI families. Indian-origin students in the UAE, Qatar, Saudi Arabia, Oman, Kuwait, Bahrain, Singapore, Malaysia, the USA, UK, Canada, Nepal and Australia often study CBSE, IB, A-Level or American curricula abroad, none of which is aligned to the NCERT framework NEET demands. Our NCERT-based coaching bridges that gap: it brings NRI students onto the NCERT syllabus, runs in timezone-friendly batches, and pairs the academics with guidance on NEET registration and the NRI/MBBS admission route where required.',
+      },
+    ],
+    comparisonTable: [
+      {
+        Approach: 'Reference-book-first coaching',
+        'Primary Text': 'Thick guide books',
+        'NCERT Coverage': 'Skimmed / optional',
+        'NEET Alignment': 'Low — tests material NEET rarely asks',
+      },
+      {
+        Approach: 'Self-study from NCERT',
+        'Primary Text': 'NCERT (read alone)',
+        'NCERT Coverage': 'Full but passive',
+        'NEET Alignment': 'Moderate — right source, weak recall',
+      },
+      {
+        Approach: 'NCERT-based coaching (Cerebrum)',
+        'Primary Text': 'NCERT (taught line by line)',
+        'NCERT Coverage': 'Full, active, NEET-mapped',
+        'NEET Alignment': 'High — learn the exact tested content',
+      },
+    ],
+    checklist: [
+      {
+        item: 'Confirm the coaching teaches from the NCERT textbook, not a substitute guide',
+        explanation:
+          'If NCERT is not the primary classroom text, it is not truly NCERT-based, whatever the marketing says.',
+      },
+      {
+        item: 'Check that figure captions, tables and footnotes are covered',
+        explanation: 'NEET frequently frames questions from these easily-skipped parts of NCERT.',
+      },
+      {
+        item: 'Ensure MCQ practice is tagged to NCERT lines and chapters',
+        explanation:
+          'Practice that maps back to the exact NCERT source reinforces recall of tested content.',
+      },
+      {
+        item: 'Verify both Class 11 and Class 12 NCERT are fully covered',
+        explanation:
+          'NEET draws almost equally from both years; a gap in either caps your Biology score.',
+      },
+    ],
+  },
+
+  schema: {
+    '@type': 'Course',
+    courseName: 'NCERT-Based NEET Biology Coaching',
+    provider: 'Cerebrum Biology Academy',
+    description:
+      'NCERT-based NEET Biology coaching that teaches the Class 11 and Class 12 NCERT textbooks line by line, with NCERT-tagged MCQ practice and AIIMS-trained faculty. Live online classes for students across India and NRI students abroad.',
+    duration: 'P2Y',
+    price: 75000,
+    priceCurrency: 'INR',
+    educationalLevel: 'Class 11, Class 12 and NEET Droppers',
+    coursePrerequisites: 'Class 10 pass; enrolment in or completion of Class 11/12 science stream',
+  },
+}
+
 export const ncertSEOPages: Record<string, SEOLandingContent> = {
+  'ncert-based-neet-biology-coaching': ncertBasedNeetBiologyCoaching,
   'ncert-biology-class-11': ncertBiologyClass11,
   'ncert-biology-class-12': ncertBiologyClass12,
   'ncert-fingertips-biology': ncertFingertipsBiology,

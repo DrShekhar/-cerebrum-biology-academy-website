@@ -82,6 +82,7 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
     heading: 'Courses & Programs',
     links: [
       { label: 'All Courses', href: '/courses' },
+      { label: 'NCERT-Based NEET Biology', href: '/ncert-based-neet-biology-coaching' },
       { label: 'Intensive Biology', href: '/courses/intensive-neet-biology' },
       { label: 'Dropper Batch', href: '/neet-dropper-batch' },
       { label: 'NEET Preparation', href: '/neet-preparation-roadmap' },
