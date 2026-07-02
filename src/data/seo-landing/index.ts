@@ -4,6 +4,9 @@
 export * from './types'
 
 // Import all page content
+import { class6SEOPages } from './class-6-content'
+import { class7SEOPages } from './class-7-content'
+import { class8SEOPages } from './class-8-content'
 import { class9SEOPages } from './class-9-content'
 import { class10SEOPages } from './class-10-content'
 import { class11SEOPages } from './class-11-content'
@@ -20,6 +23,9 @@ import { crashCourseSEOPages } from './crash-course-content'
 import { comparisonSEOPages } from './comparison-content'
 
 // Re-export individual content modules
+export { class6SEOPages } from './class-6-content'
+export { class7SEOPages } from './class-7-content'
+export { class8SEOPages } from './class-8-content'
 export { class9SEOPages } from './class-9-content'
 export { class10SEOPages } from './class-10-content'
 export { class11SEOPages } from './class-11-content'
@@ -70,6 +76,9 @@ export function getComparisonSlugs(): string[] {
 
 // Combined export of all SEO pages
 export const allSEOPages = {
+  ...class6SEOPages,
+  ...class7SEOPages,
+  ...class8SEOPages,
   ...class9SEOPages,
   ...class10SEOPages,
   ...class11SEOPages,

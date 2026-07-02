@@ -2595,6 +2595,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // NEET Foundation SEO Pages
     {
+      url: `${baseUrl}/neet-biology-foundation-class-6-to-8`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
       url: `${baseUrl}/neet-foundation-class-9`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,

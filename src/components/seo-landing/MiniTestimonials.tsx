@@ -8,6 +8,9 @@ interface MiniTestimonialsProps {
 }
 
 export function MiniTestimonials({ testimonials }: MiniTestimonialsProps) {
+  if (!testimonials || testimonials.length === 0) {
+    return null
+  }
   return (
     <section className="bg-indigo-900 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

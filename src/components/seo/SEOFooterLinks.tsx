@@ -212,6 +212,17 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
     ],
   },
   {
+    heading: 'Early Foundation (6–10)',
+    links: [
+      { label: 'Foundation Class 6–8', href: '/neet-biology-foundation-class-6-to-8' },
+      { label: 'NEET Foundation Class 6', href: '/neet-foundation-class-6' },
+      { label: 'NEET Foundation Class 7', href: '/neet-foundation-class-7' },
+      { label: 'NEET Foundation Class 8', href: '/neet-foundation-class-8' },
+      { label: 'NEET Foundation Class 9', href: '/neet-foundation-class-9' },
+      { label: 'NEET Foundation Class 10', href: '/neet-foundation-class-10' },
+    ],
+  },
+  {
     heading: 'Class 11 Biology',
     links: [
       { label: 'All 5 Curricula Hub', href: '/class-11-biology-by-curriculum' },

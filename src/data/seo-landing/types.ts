@@ -1,6 +1,15 @@
 // Types for SEO Landing Pages
 
-export type ClassLevel = 'class-9' | 'class-10' | 'class-11' | 'class-12' | 'dropper' | 'universal'
+export type ClassLevel =
+  | 'class-6'
+  | 'class-7'
+  | 'class-8'
+  | 'class-9'
+  | 'class-10'
+  | 'class-11'
+  | 'class-12'
+  | 'dropper'
+  | 'universal'
 
 /**
  * HowTo step for instructional content pages
@@ -192,6 +201,9 @@ export interface SEOLandingPageProps {
 
 // Quick reference for class labels
 export const classLabels: Record<ClassLevel, string> = {
+  'class-6': 'Class 6 Foundation',
+  'class-7': 'Class 7 Foundation',
+  'class-8': 'Class 8 Foundation',
   'class-9': 'Class 9 Foundation',
   'class-10': 'Class 10 Foundation',
   'class-11': 'Class 11 NEET',
@@ -202,6 +214,9 @@ export const classLabels: Record<ClassLevel, string> = {
 
 // Course page links
 export const coursePageLinks: Record<ClassLevel, string> = {
+  'class-6': '/neet-biology-foundation-class-6-to-8',
+  'class-7': '/neet-biology-foundation-class-6-to-8',
+  'class-8': '/neet-biology-foundation-class-6-to-8',
   'class-9': '/courses/class-9-foundation',
   'class-10': '/courses/class-10-foundation',
   'class-11': '/class-11',
@@ -212,6 +227,9 @@ export const coursePageLinks: Record<ClassLevel, string> = {
 
 // Tier page links with query params
 export const tierPageLinks: Record<ClassLevel, string> = {
+  'class-6': '/courses?class=foundation-6',
+  'class-7': '/courses?class=foundation-7',
+  'class-8': '/courses?class=foundation-8',
   'class-9': '/courses?class=foundation-9',
   'class-10': '/courses?class=foundation-10',
   'class-11': '/courses?class=class-11',

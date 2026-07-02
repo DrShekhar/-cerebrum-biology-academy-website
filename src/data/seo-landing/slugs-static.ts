@@ -18,6 +18,9 @@
  * All SEO landing page slugs organized by category
  */
 export const SEO_PAGE_SLUGS = {
+  class6: ['neet-foundation-class-6'],
+  class7: ['neet-foundation-class-7'],
+  class8: ['neet-foundation-class-8'],
   class9: [
     'class-9-biology-tuition-online',
     'neet-foundation-class-9',
@@ -187,6 +190,9 @@ export const SEO_PAGE_SLUGS = {
  * Use this for sitemap generation and slug validation
  */
 export const ALL_SEO_SLUGS: readonly string[] = [
+  ...SEO_PAGE_SLUGS.class6,
+  ...SEO_PAGE_SLUGS.class7,
+  ...SEO_PAGE_SLUGS.class8,
   ...SEO_PAGE_SLUGS.class9,
   ...SEO_PAGE_SLUGS.class10,
   ...SEO_PAGE_SLUGS.class11,
@@ -237,9 +243,12 @@ export function getSEOPageCount(): number {
  * Metadata about the slugs
  */
 export const SEO_SLUGS_METADATA = {
-  totalCount: 137,
+  totalCount: 140,
   lastGenerated: '2026-01-19',
   categories: [
+    'class6',
+    'class7',
+    'class8',
     'class9',
     'class10',
     'class11',
@@ -257,6 +266,9 @@ export const SEO_SLUGS_METADATA = {
     'comparison',
   ],
   categoryCounts: {
+    class6: 1,
+    class7: 1,
+    class8: 1,
     class9: 4,
     class10: 4,
     class11: 6,
