@@ -46,6 +46,12 @@ interface SecureVideoPlayerProps {
   pdfSyncEnabled?: boolean
   onPdfPageChange?: (page: number) => void
   pdfSyncData?: Array<{ timestamp: number; page: number }>
+  /** Interactive-video quiz checkpoints: the player pauses when playback crosses
+   *  one and calls onCheckpoint; the parent renders the quiz overlay and bumps
+   *  resumeKey to continue playback. */
+  checkpoints?: Array<{ id: string; timeSeconds: number }>
+  onCheckpoint?: (checkpointId: string) => void
+  resumeKey?: number
 }
 
 const PLAYBACK_SPEEDS = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]
@@ -68,6 +74,9 @@ export default function SecureVideoPlayer({
   pdfSyncEnabled,
   onPdfPageChange,
   pdfSyncData = [],
+  checkpoints = [],
+  onCheckpoint,
+  resumeKey = 0,
 }: SecureVideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const hlsRef = useRef<HlsType | null>(null)
@@ -267,6 +276,33 @@ export default function SecureVideoPlayer({
       setCurrentChapter(chapter)
     }
   }, [currentTime, chapters, currentChapter])
+
+  // Interactive-video checkpoints: pause once when playback crosses one.
+  const firedCheckpointsRef = useRef<Set<string>>(new Set())
+  useEffect(() => {
+    if (!onCheckpoint || checkpoints.length === 0) return
+    for (const cp of checkpoints) {
+      if (
+        currentTime >= cp.timeSeconds &&
+        currentTime < cp.timeSeconds + 2 &&
+        !firedCheckpointsRef.current.has(cp.id)
+      ) {
+        firedCheckpointsRef.current.add(cp.id)
+        videoRef.current?.pause()
+        onCheckpoint(cp.id)
+        break
+      }
+    }
+  }, [currentTime, checkpoints, onCheckpoint])
+
+  // Parent bumps resumeKey after the checkpoint quiz is done → resume playback.
+  const lastResumeKeyRef = useRef(resumeKey)
+  useEffect(() => {
+    if (resumeKey !== lastResumeKeyRef.current) {
+      lastResumeKeyRef.current = resumeKey
+      videoRef.current?.play().catch(() => {})
+    }
+  }, [resumeKey])
 
   // PDF sync
   useEffect(() => {

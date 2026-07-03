@@ -2327,6 +2327,7 @@ model questions {
   test_assignment_questions test_assignment_questions[]
   test_questions            test_questions[]
   user_question_responses   user_question_responses[]
+  video_checkpoints         video_checkpoints[]
 
   @@index([curriculum, grade])
   @@index([isActive, isVerified])
@@ -3218,6 +3219,7 @@ model video_lectures {
   study_materials     study_materials       @relation(fields: [studyMaterialId], references: [id], onDelete: Cascade)
   video_notes         video_notes[]
   video_progress      video_progress[]
+  video_checkpoints   video_checkpoints[]
 
   @@index([avgRating])
   @@index([cloudflareVideoId])
@@ -4839,6 +4841,23 @@ model welcome_series_events {
 
   @@unique([leadId, day])
   @@index([leadId])
+}
+
+// Interactive-video checkpoints: an in-video quiz that pauses playback at
+// timeSeconds and asks a question from the question bank. Answers are validated
+// server-side and recorded as user_question_responses (STUDY_MODE).
+model video_checkpoints {
+  id             String         @id
+  videoLectureId String
+  questionId     String
+  timeSeconds    Int
+  isRequired     Boolean        @default(true)
+  createdAt      DateTime       @default(now())
+  video_lectures video_lectures @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
+  questions      questions      @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([videoLectureId, timeSeconds])
+  @@index([videoLectureId])
 }
 
 // Web-push subscriptions (VAPID). One row per browser subscription; endpoint is

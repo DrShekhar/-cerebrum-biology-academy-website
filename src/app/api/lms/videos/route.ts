@@ -47,7 +47,19 @@ export async function GET(request: NextRequest) {
     // coachingTier must be at or above it.
     const lecture = await prisma.video_lectures.findFirst({
       where: { OR: [{ cloudflareVideoId: videoId }, { id: videoId }] },
-      select: { study_materials: { select: { requiredTier: true } } },
+      select: {
+        id: true,
+        study_materials: { select: { requiredTier: true } },
+        video_checkpoints: {
+          orderBy: { timeSeconds: 'asc' },
+          select: {
+            id: true,
+            timeSeconds: true,
+            isRequired: true,
+            questions: { select: { id: true, question: true, options: true } },
+          },
+        },
+      },
     })
     const requiredTier = lecture?.study_materials?.requiredTier
     if (requiredTier) {
@@ -72,6 +84,36 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ success: false, error: result.error }, { status: 404 })
     }
 
+    // In-video quiz checkpoints — question text + lettered options only; the
+    // correct answer stays server-side (validated at /api/lms/videos/checkpoint).
+    const parseOpts = (raw: unknown): string[] => {
+      if (Array.isArray(raw)) return raw.map(String)
+      if (typeof raw === 'string') {
+        try {
+          const p = JSON.parse(raw)
+          return Array.isArray(p) ? p.map(String) : []
+        } catch {
+          return []
+        }
+      }
+      return []
+    }
+    const checkpoints = (lecture?.video_checkpoints || [])
+      .map((c) => {
+        const opts = parseOpts(c.questions.options)
+        if (opts.length === 0) return null
+        return {
+          id: c.id,
+          timeSeconds: c.timeSeconds,
+          isRequired: c.isRequired,
+          question: {
+            text: c.questions.question,
+            options: opts.map((text, i) => ({ id: String.fromCharCode(65 + i), text })),
+          },
+        }
+      })
+      .filter(Boolean)
+
     return NextResponse.json({
       success: true,
       video: {
@@ -80,6 +122,7 @@ export async function GET(request: NextRequest) {
         duration: result.duration,
         chapters: result.chapters,
       },
+      checkpoints,
       progress: result.progress,
     })
   } catch (error) {
