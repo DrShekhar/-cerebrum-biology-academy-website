@@ -104,6 +104,32 @@ export default async function MockTestsPage() {
         </div>
       </section>
 
+      {/* CBT exam simulator CTA */}
+      <section className="py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col items-start justify-between gap-4 rounded-2xl border border-green-200 bg-gradient-to-r from-green-800 to-green-900 p-6 text-white sm:flex-row sm:items-center">
+            <div>
+              <div className="inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-medium">
+                New · NEET 2027 goes computer-based
+              </div>
+              <h2 className="mt-2 text-xl font-bold sm:text-2xl">
+                Full CBT Exam Simulator — 180 Q / 720 marks
+              </h2>
+              <p className="mt-1 text-sm text-white/85">
+                Real NTA-style interface: question palette, sections, mark-for-review, timer,
+                anti-cheat — with server-scored results, rank &amp; solutions.
+              </p>
+            </div>
+            <Link
+              href="/cbt/neet-full"
+              className="shrink-0 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-green-800 hover:bg-white/90"
+            >
+              Start CBT Mock
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content */}
       <section className="py-8 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

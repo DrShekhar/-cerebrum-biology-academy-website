@@ -36,6 +36,21 @@ export interface CBTResult {
   score: number
   maxScore: number
   perSection: Record<string, { correct: number; incorrect: number; unattempted: number }>
+  rank?: number
+  percentile?: number
+  totalCandidates?: number
+}
+
+export interface CBTReviewItem {
+  id: string
+  questionText: string
+  options: { id: string; text: string }[]
+  subject: string
+  topic: string
+  yourAnswer: string | null
+  correctAnswer: string
+  isCorrect: boolean
+  explanation: string
 }
 
 /** Attempt state passed to server save/submit callbacks. */
@@ -53,6 +68,8 @@ interface CBTServer {
   onSave: (state: CBTAttemptState) => void
   /** Server-side scoring — returns the scorecard (client has no answer key). */
   onSubmit: (state: CBTAttemptState) => Promise<CBTResult | null>
+  /** Post-submit solutions review (correct answers + explanations). */
+  onReview?: () => Promise<CBTReviewItem[] | null>
   initialState?: { answers: Record<string, string>; marked: string[]; visited: string[] }
   initialRemaining?: number
   initialIndex?: number
@@ -97,6 +114,8 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
   const storageKey = `cbt_attempt_${test.id}`
   const [serverResult, setServerResult] = useState<CBTResult | null>(null)
   const [submitting, setSubmitting] = useState(false)
+  const [reviewItems, setReviewItems] = useState<CBTReviewItem[] | null>(null)
+  const [loadingReview, setLoadingReview] = useState(false)
 
   // Order questions by section so navigation + palette are grouped.
   const orderedQuestions = useMemo<Question[]>(() => {
@@ -499,7 +518,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
 
   // ── RENDER: Result ────────────────────────────────────────────────────────
   if (phase === 'result') {
-    const r = serverResult ?? result
+    const r: CBTResult = serverResult ?? result
     const pct = r.maxScore > 0 ? Math.round((Math.max(0, r.score) / r.maxScore) * 100) : 0
     return (
       <div className="mx-auto max-w-3xl p-6">
@@ -511,6 +530,19 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
             <span className="text-2xl text-gray-400"> / {r.maxScore}</span>
           </div>
           <p className="mt-1 text-gray-500">{pct}%</p>
+
+          {typeof r.rank === 'number' && typeof r.totalCandidates === 'number' && (
+            <div className="mt-4 inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-1 rounded-lg bg-blue-50 px-4 py-2 text-sm text-blue-900">
+              <span>
+                Rank <b>{r.rank}</b> of {r.totalCandidates}
+              </span>
+              {typeof r.percentile === 'number' && (
+                <span>
+                  Percentile <b>{r.percentile.toFixed(1)}</b>
+                </span>
+              )}
+            </div>
+          )}
 
           <div className="mt-6 grid grid-cols-3 gap-4">
             <Stat label="Correct" value={String(r.correct)} tone="green" />
@@ -550,13 +582,89 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
             </p>
           )}
 
-          <button
-            onClick={onExit}
-            className="mt-6 rounded-lg bg-green-700 px-6 py-2.5 text-sm font-semibold text-white hover:bg-green-800"
-          >
-            Done
-          </button>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            {server?.onReview && !reviewItems && (
+              <button
+                disabled={loadingReview}
+                onClick={async () => {
+                  setLoadingReview(true)
+                  try {
+                    const items = await server.onReview!()
+                    if (items) setReviewItems(items)
+                  } finally {
+                    setLoadingReview(false)
+                  }
+                }}
+                className="rounded-lg border border-green-700 px-6 py-2.5 text-sm font-semibold text-green-700 hover:bg-green-50 disabled:opacity-60"
+              >
+                {loadingReview ? 'Loading…' : 'Review solutions'}
+              </button>
+            )}
+            <button
+              onClick={onExit}
+              className="rounded-lg bg-green-700 px-6 py-2.5 text-sm font-semibold text-white hover:bg-green-800"
+            >
+              Done
+            </button>
+          </div>
         </div>
+
+        {/* Solutions review */}
+        {reviewItems && (
+          <div className="mt-6 space-y-4">
+            {reviewItems.map((item, i) => (
+              <div key={item.id} className="rounded-xl border border-gray-200 bg-white p-5">
+                <div className="mb-2 flex items-center justify-between text-xs">
+                  <span className="font-semibold text-gray-500">
+                    Q{i + 1} · {item.subject}
+                  </span>
+                  <span
+                    className={`rounded-full px-2 py-0.5 font-medium ${
+                      item.isCorrect
+                        ? 'bg-green-100 text-green-700'
+                        : item.yourAnswer
+                          ? 'bg-red-100 text-red-700'
+                          : 'bg-gray-100 text-gray-600'
+                    }`}
+                  >
+                    {item.isCorrect ? 'Correct' : item.yourAnswer ? 'Incorrect' : 'Unattempted'}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-900">{item.questionText}</p>
+                <div className="mt-3 space-y-1.5">
+                  {item.options.map((opt) => {
+                    const isCorrect = opt.id === item.correctAnswer
+                    const isYours = opt.id === item.yourAnswer
+                    return (
+                      <div
+                        key={opt.id}
+                        className={`rounded-md border px-3 py-2 text-sm ${
+                          isCorrect
+                            ? 'border-green-500 bg-green-50 text-green-900'
+                            : isYours
+                              ? 'border-red-400 bg-red-50 text-red-900'
+                              : 'border-gray-200 text-gray-700'
+                        }`}
+                      >
+                        <span className="font-medium">{opt.id}.</span> {opt.text}
+                        {isCorrect && <span className="ml-2 text-xs font-semibold">✓ correct</span>}
+                        {isYours && !isCorrect && (
+                          <span className="ml-2 text-xs font-semibold">your answer</span>
+                        )}
+                      </div>
+                    )
+                  })}
+                </div>
+                {item.explanation && (
+                  <div className="mt-3 rounded-lg bg-gray-50 p-3 text-sm text-gray-700">
+                    <span className="font-semibold text-gray-900">Explanation: </span>
+                    {item.explanation}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     )
   }

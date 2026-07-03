@@ -3,7 +3,12 @@
 import { useEffect, useState, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
-import { CBTExam, type CBTAttemptState, type CBTResult } from '@/components/cbt/CBTExam'
+import {
+  CBTExam,
+  type CBTAttemptState,
+  type CBTResult,
+  type CBTReviewItem,
+} from '@/components/cbt/CBTExam'
 import type { MockTest } from '@/types/mockTest'
 
 /**
@@ -83,11 +88,22 @@ export default function NeetFullCBTPage() {
           return null
         }
       }
+      const onReview = async (): Promise<CBTReviewItem[] | null> => {
+        try {
+          const r = await fetch(`/api/cbt/session/${sessionIdRef.current}/review`).then((x) =>
+            x.json()
+          )
+          return r.success ? (r.items as CBTReviewItem[]) : null
+        } catch {
+          return null
+        }
+      }
 
       setTest(mockTest)
       setServer({
         onSave,
         onSubmit,
+        onReview,
         initialState: data.savedState,
         initialRemaining: data.remainingTime,
         initialIndex: data.currentIndex,

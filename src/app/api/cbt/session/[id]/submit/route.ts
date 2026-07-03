@@ -126,9 +126,39 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       }),
     ])
 
+    // Rank + percentile across all completed attempts of this paper (this
+    // attempt is now COMPLETED, so it's included in the population).
+    const [above, totalCandidates] = await Promise.all([
+      prisma.test_sessions.count({
+        where: {
+          testTemplateId: row.testTemplateId,
+          status: 'COMPLETED',
+          totalScore: { gt: score },
+        },
+      }),
+      prisma.test_sessions.count({
+        where: { testTemplateId: row.testTemplateId, status: 'COMPLETED' },
+      }),
+    ])
+    const rank = above + 1
+    const percentile =
+      totalCandidates > 1 ? ((totalCandidates - rank) / (totalCandidates - 1)) * 100 : 100
+
+    await prisma.test_sessions.update({ where: { id: row.id }, data: { rank } }).catch(() => {})
+
     return NextResponse.json({
       success: true,
-      result: { correct, incorrect, unattempted, score, maxScore, perSection },
+      result: {
+        correct,
+        incorrect,
+        unattempted,
+        score,
+        maxScore,
+        perSection,
+        rank,
+        percentile: Math.round(percentile * 100) / 100,
+        totalCandidates,
+      },
     })
   } catch (error) {
     console.error('CBT submit error:', error)
