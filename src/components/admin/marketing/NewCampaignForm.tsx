@@ -14,6 +14,17 @@ const CLASSES = ['10th', '11th', '12th', 'Dropper'] as const
 const ENROLLMENT_STATUS = ['enrolled', 'demo_taken', 'lead', 'inactive'] as const
 const FREQUENCIES = ['once', 'daily', 'weekly', 'monthly'] as const
 
+// Approved templates already used in production sends (suggestions only — the
+// admin can type any template name approved in their Interakt dashboard).
+const KNOWN_WA_TEMPLATES = [
+  'course_information',
+  'limited_offer',
+  'last_chance_offer',
+  'cart_recovery_discount',
+  'welcome_message',
+  'special_offer',
+] as const
+
 type CampaignType = (typeof CAMPAIGN_TYPES)[number]
 
 export function NewCampaignForm({ onSuccess, onCancel }: NewCampaignFormProps) {
@@ -25,7 +36,10 @@ export function NewCampaignForm({ onSuccess, onCancel }: NewCampaignFormProps) {
   const [city, setCity] = useState('')
 
   // Content
+  const [waMode, setWaMode] = useState<'text' | 'template'>('text')
   const [waMessage, setWaMessage] = useState('')
+  const [waTemplateName, setWaTemplateName] = useState('')
+  const [waParams, setWaParams] = useState<string[]>([])
   const [smsMessage, setSmsMessage] = useState('')
   const [emailSubject, setEmailSubject] = useState('')
   const [emailBody, setEmailBody] = useState('')
@@ -55,7 +69,17 @@ export function NewCampaignForm({ onSuccess, onCancel }: NewCampaignFormProps) {
     }
 
     const content: Record<string, unknown> = {}
-    if (showWhatsapp && waMessage.trim()) content.whatsapp = { message: waMessage.trim() }
+    if (showWhatsapp) {
+      if (waMode === 'template' && waTemplateName.trim()) {
+        const templateParams: Record<string, string> = {}
+        waParams.forEach((v, i) => {
+          if (v.trim()) templateParams[String(i + 1)] = v.trim()
+        })
+        content.whatsapp = { templateName: waTemplateName.trim(), templateParams }
+      } else if (waMode === 'text' && waMessage.trim()) {
+        content.whatsapp = { message: waMessage.trim() }
+      }
+    }
     if (showSms && smsMessage.trim()) content.sms = { message: smsMessage.trim() }
     if (showEmail && (emailSubject.trim() || emailBody.trim())) {
       content.email = {
@@ -208,16 +232,99 @@ export function NewCampaignForm({ onSuccess, onCancel }: NewCampaignFormProps) {
 
       {/* Content */}
       {showWhatsapp && (
-        <div>
-          <label className={label}>WhatsApp message</label>
-          <textarea
-            className={input}
-            rows={3}
-            value={waMessage}
-            onChange={(e) => setWaMessage(e.target.value)}
-            placeholder="Hi {{name}}, admissions for NEET 2027 are open…"
-          />
-        </div>
+        <fieldset className="rounded-lg border border-gray-200 p-4">
+          <legend className="px-1 text-sm font-semibold text-gray-700">WhatsApp content</legend>
+          <div className="mb-3 flex gap-4 text-sm">
+            <label className="flex items-center gap-1.5 text-gray-700">
+              <input type="radio" checked={waMode === 'text'} onChange={() => setWaMode('text')} />
+              Free text
+            </label>
+            <label className="flex items-center gap-1.5 text-gray-700">
+              <input
+                type="radio"
+                checked={waMode === 'template'}
+                onChange={() => setWaMode('template')}
+              />
+              Approved template
+            </label>
+          </div>
+
+          {waMode === 'text' ? (
+            <>
+              <textarea
+                className={input}
+                rows={3}
+                value={waMessage}
+                onChange={(e) => setWaMessage(e.target.value)}
+                placeholder="Hi, admissions for NEET 2027 are open…"
+              />
+              <p className="mt-1 text-xs text-amber-700">
+                Free text is only delivered inside an open 24-hour chat window. For broadcasts to
+                cold contacts, use an approved template.
+              </p>
+            </>
+          ) : (
+            <div className="space-y-3">
+              <div>
+                <label className={label}>Template name (approved in Interakt)</label>
+                <input
+                  className={input}
+                  list="wa-template-suggestions"
+                  value={waTemplateName}
+                  onChange={(e) => setWaTemplateName(e.target.value)}
+                  placeholder="e.g. limited_offer"
+                />
+                <datalist id="wa-template-suggestions">
+                  {KNOWN_WA_TEMPLATES.map((t) => (
+                    <option key={t} value={t} />
+                  ))}
+                </datalist>
+              </div>
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className={label}>
+                    Body values (in order: {'{{1}}'}, {'{{2}}'}…)
+                  </span>
+                  <button
+                    type="button"
+                    className="text-xs font-medium text-blue-600 hover:text-blue-800"
+                    onClick={() => setWaParams([...waParams, ''])}
+                  >
+                    + Add value
+                  </button>
+                </div>
+                {waParams.length === 0 && (
+                  <p className="text-xs text-gray-500">
+                    No parameters — add one per {'{{n}}'} placeholder your template uses.
+                  </p>
+                )}
+                <div className="space-y-2">
+                  {waParams.map((v, i) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <span className="w-10 text-xs text-gray-500">{`{{${i + 1}}}`}</span>
+                      <input
+                        className={input}
+                        value={v}
+                        onChange={(e) => {
+                          const next = [...waParams]
+                          next[i] = e.target.value
+                          setWaParams(next)
+                        }}
+                      />
+                      <button
+                        type="button"
+                        className="text-xs text-red-600 hover:text-red-800"
+                        onClick={() => setWaParams(waParams.filter((_, idx) => idx !== i))}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </fieldset>
       )}
       {showSms && (
         <div>
