@@ -5,6 +5,7 @@ import {
   DashboardMetrics,
   TeacherAnalytics,
   AdminAnalytics,
+  UserActivity,
 } from '@/lib/types/analytics'
 import { prisma as db } from '@/lib/database'
 import { auth } from '@/lib/auth'
@@ -51,128 +52,276 @@ async function checkAuthAndRole(
 }
 
 // Mock data for demonstration - in production, this would come from your database
-const generateMockDashboardData = (): AnalyticsDashboard => {
-  return {
-    totalUsers: 15847,
-    activeUsers: 1243,
-    newUsers: 234,
-    returningUsers: 1009,
-    totalPageViews: 45678,
-    averageSessionDuration: 425000, // in milliseconds
-    bounceRate: 0.34,
-    conversionRate: 0.068,
-    revenueGenerated: 1247500,
+/** Parse a '7d' | '30d' | '90d' range string to a start Date (default 30d). */
+function rangeStart(dateRange: string): Date {
+  const days = parseInt(dateRange, 10)
+  const n = Number.isFinite(days) && days > 0 ? days : 30
+  const d = new Date()
+  d.setDate(d.getDate() - n)
+  return d
+}
 
-    topPages: [
-      { page: '/courses/class-12', views: 8567, uniqueUsers: 2341 },
-      { page: '/courses/neet-dropper', views: 6789, uniqueUsers: 1876 },
-      { page: '/', views: 12456, uniqueUsers: 4321 },
-      { page: '/courses/class-11', views: 5432, uniqueUsers: 1654 },
-      { page: '/about', views: 3456, uniqueUsers: 1234 },
-    ],
+function deviceFromUA(ua: string | null): 'mobile' | 'tablet' | 'desktop' {
+  const s = (ua || '').toLowerCase()
+  if (/ipad|tablet|playbook|silk/.test(s)) return 'tablet'
+  if (/mobi|android|iphone|ipod|phone/.test(s)) return 'mobile'
+  return 'desktop'
+}
 
-    topCourses: [
-      {
-        courseId: 'neet-class-12',
-        title: 'NEET Class 12th Biology',
-        views: 8567,
-        enrollments: 456,
-        revenue: 456000,
-      },
-      {
-        courseId: 'neet-dropper',
-        title: 'NEET Dropper Program',
-        views: 6789,
-        enrollments: 234,
-        revenue: 351000,
-      },
-      {
-        courseId: 'neet-class-11',
-        title: 'NEET Class 11th Biology',
-        views: 5432,
-        enrollments: 198,
-        revenue: 297000,
-      },
-      {
-        courseId: 'neet-foundation',
-        title: 'NEET Foundation Course',
-        views: 4321,
-        enrollments: 89,
-        revenue: 133500,
-      },
-    ],
+/**
+ * Real analytics dashboard, computed from analytics_events (web metrics) plus
+ * users / enrollments / leads (business metrics). No fabricated numbers — if a
+ * metric has no data yet it simply reads 0/empty rather than a random value.
+ */
+async function getRealDashboardData(dateRange: string): Promise<AnalyticsDashboard> {
+  const start = rangeStart(dateRange)
 
-    userGrowth: Array.from({ length: 30 }, (_, i) => {
-      const date = new Date()
-      date.setDate(date.getDate() - i)
-      return {
-        date: date.toISOString().split('T')[0],
-        newUsers: Math.floor(Math.random() * 50) + 10,
-        totalUsers: 15847 - i * 12,
-      }
-    }).reverse(),
-
-    sessionData: Array.from({ length: 24 }, (_, hour) => ({
-      hour,
-      sessions: Math.floor(Math.random() * 200) + 50,
-      averageDuration: Math.floor(Math.random() * 300) + 200,
-    })),
-
-    deviceBreakdown: {
-      mobile: 0.67,
-      tablet: 0.18,
-      desktop: 0.15,
+  // One bounded pull of web events → many metrics in JS (cheap, single query).
+  const events = await db.analytics_events.findMany({
+    where: { createdAt: { gte: start } },
+    select: {
+      eventType: true,
+      pagePath: true,
+      sessionId: true,
+      userId: true,
+      userAgent: true,
+      country: true,
+      createdAt: true,
     },
+    orderBy: { createdAt: 'desc' },
+    take: 50000,
+  })
 
-    locationData: [
-      { country: 'India', users: 12456, sessions: 34567 },
-      { country: 'United States', users: 1234, sessions: 2345 },
-      { country: 'United Kingdom', users: 567, sessions: 890 },
-      { country: 'Canada', users: 345, sessions: 567 },
-      { country: 'Australia', users: 234, sessions: 456 },
-    ],
+  const pageViews = events.filter((e) => e.eventType === 'page_view')
+  const totalPageViews = pageViews.length
+
+  // Top pages: views + unique sessions per path.
+  const pageAgg = new Map<string, { views: number; users: Set<string> }>()
+  for (const e of pageViews) {
+    if (!e.pagePath) continue
+    const a = pageAgg.get(e.pagePath) || { views: 0, users: new Set<string>() }
+    a.views++
+    if (e.sessionId) a.users.add(e.sessionId)
+    pageAgg.set(e.pagePath, a)
+  }
+  const topPages = [...pageAgg.entries()]
+    .map(([page, a]) => ({ page, views: a.views, uniqueUsers: a.users.size }))
+    .sort((x, y) => y.views - x.views)
+    .slice(0, 5)
+
+  // Per-session spans → average duration + bounce rate.
+  const sessionSpans = new Map<string, { first: number; last: number; count: number }>()
+  const deviceCount = { mobile: 0, tablet: 0, desktop: 0 }
+  const seenSessionForDevice = new Set<string>()
+  const countryAgg = new Map<string, { users: Set<string>; sessions: Set<string> }>()
+  const hourAgg = new Map<number, { sessions: Set<string>; durSum: number }>()
+  const activeUserSet = new Set<string>()
+
+  for (const e of events) {
+    const t = e.createdAt.getTime()
+    if (e.userId) activeUserSet.add(e.userId)
+    else if (e.sessionId) activeUserSet.add(e.sessionId)
+
+    if (e.sessionId) {
+      const s = sessionSpans.get(e.sessionId) || { first: t, last: t, count: 0 }
+      s.first = Math.min(s.first, t)
+      s.last = Math.max(s.last, t)
+      s.count++
+      sessionSpans.set(e.sessionId, s)
+
+      if (!seenSessionForDevice.has(e.sessionId)) {
+        seenSessionForDevice.add(e.sessionId)
+        deviceCount[deviceFromUA(e.userAgent)]++
+      }
+    }
+
+    const country = e.country || 'Unknown'
+    const c = countryAgg.get(country) || { users: new Set<string>(), sessions: new Set<string>() }
+    if (e.userId) c.users.add(e.userId)
+    if (e.sessionId) c.sessions.add(e.sessionId)
+    countryAgg.set(country, c)
+
+    const hour = e.createdAt.getHours()
+    const h = hourAgg.get(hour) || { sessions: new Set<string>(), durSum: 0 }
+    if (e.sessionId) h.sessions.add(e.sessionId)
+    hourAgg.set(hour, h)
+  }
+
+  const spans = [...sessionSpans.values()]
+  const totalSessions = spans.length
+  const avgDurationMs = totalSessions
+    ? Math.round(spans.reduce((sum, s) => sum + (s.last - s.first), 0) / totalSessions)
+    : 0
+  const bounceRate = totalSessions ? spans.filter((s) => s.count <= 1).length / totalSessions : 0
+
+  const deviceTotal = deviceCount.mobile + deviceCount.tablet + deviceCount.desktop || 1
+  const deviceBreakdown = {
+    mobile: deviceCount.mobile / deviceTotal,
+    tablet: deviceCount.tablet / deviceTotal,
+    desktop: deviceCount.desktop / deviceTotal,
+  }
+
+  const locationData = [...countryAgg.entries()]
+    .map(([country, a]) => ({ country, users: a.users.size, sessions: a.sessions.size }))
+    .sort((x, y) => y.sessions - x.sessions)
+    .slice(0, 8)
+
+  const sessionData = Array.from({ length: 24 }, (_, hour) => {
+    const h = hourAgg.get(hour)
+    return { hour, sessions: h ? h.sessions.size : 0, averageDuration: 0 }
+  })
+
+  // Business metrics (real counts).
+  const [totalUsers, newUsers, recentUsers, enrollAgg, leadTotal, enrolledLeads] =
+    await Promise.all([
+      db.users.count(),
+      db.users.count({ where: { createdAt: { gte: start } } }),
+      db.users.findMany({ where: { createdAt: { gte: start } }, select: { createdAt: true } }),
+      db.enrollments.groupBy({
+        by: ['courseId'],
+        _count: { _all: true },
+        _sum: { paidAmount: true },
+      }),
+      db.leads.count(),
+      db.leads.count({ where: { stage: { in: ['ENROLLED', 'ACTIVE_STUDENT'] } } }),
+    ])
+
+  const revenueGenerated = enrollAgg.reduce((sum, e) => sum + (e._sum.paidAmount || 0), 0)
+
+  // Top courses by enrollment (+ real revenue); title resolved from courses.
+  const topEnroll = [...enrollAgg]
+    .sort((a, b) => (b._sum.paidAmount || 0) - (a._sum.paidAmount || 0))
+    .slice(0, 5)
+  const courseRows = await db.courses.findMany({
+    where: { id: { in: topEnroll.map((e) => e.courseId) } },
+    select: { id: true, name: true },
+  })
+  const courseName = new Map(courseRows.map((c) => [c.id, c.name]))
+  const topCourses = topEnroll.map((e) => ({
+    courseId: e.courseId,
+    title: courseName.get(e.courseId) || e.courseId,
+    views: 0, // course→page mapping isn't tracked; enrollments/revenue are the real signal
+    enrollments: e._count._all,
+    revenue: e._sum.paidAmount || 0,
+  }))
+
+  // User growth by day over the range.
+  const growthByDay = new Map<string, number>()
+  for (const u of recentUsers) {
+    const key = u.createdAt.toISOString().split('T')[0]
+    growthByDay.set(key, (growthByDay.get(key) || 0) + 1)
+  }
+  const days = Math.max(1, Math.round((Date.now() - start.getTime()) / (24 * 3600 * 1000)))
+  let runningTotal = totalUsers - newUsers
+  const userGrowth = Array.from({ length: days }, (_, i) => {
+    const d = new Date(start)
+    d.setDate(d.getDate() + i)
+    const key = d.toISOString().split('T')[0]
+    const dayNew = growthByDay.get(key) || 0
+    runningTotal += dayNew
+    return { date: key, newUsers: dayNew, totalUsers: runningTotal }
+  })
+
+  const activeUsers = activeUserSet.size
+  const conversionRate = leadTotal > 0 ? enrolledLeads / leadTotal : 0
+
+  return {
+    totalUsers,
+    activeUsers,
+    newUsers,
+    returningUsers: Math.max(0, activeUsers - newUsers),
+    totalPageViews,
+    averageSessionDuration: avgDurationMs,
+    bounceRate,
+    conversionRate,
+    revenueGenerated,
+    topPages,
+    topCourses,
+    userGrowth,
+    sessionData,
+    deviceBreakdown,
+    locationData,
   }
 }
 
-const generateMockRealTimeData = (): RealTimeMetrics => {
-  return {
-    activeUsers: 1243,
-    activeSessions: Array.from({ length: 20 }, (_, i) => ({
-      userId: `user_${i + 1}`,
-      sessionId: `session_${Date.now()}_${i}`,
-      currentPage: ['/courses/class-12', '/courses/neet-dropper', '/', '/about'][
-        Math.floor(Math.random() * 4)
-      ],
-      startTime: new Date(Date.now() - Math.random() * 3600000), // Random time in last hour
-      lastActivity: new Date(Date.now() - Math.random() * 300000), // Random time in last 5 minutes
-    })),
-    livePageViews: [
-      { page: '/courses/class-12', count: 89 },
-      { page: '/courses/neet-dropper', count: 67 },
-      { page: '/', count: 156 },
-      { page: '/courses/class-11', count: 45 },
-      { page: '/about', count: 23 },
-    ],
-    recentActivities: Array.from({ length: 50 }, (_, i) => ({
-      id: `activity_${i}`,
-      userId: `user_${Math.floor(Math.random() * 100)}`,
-      sessionId: `session_${Math.floor(Math.random() * 50)}`,
-      type: ['page_view', 'course_view', 'video_play', 'download', 'demo_booking'][
-        Math.floor(Math.random() * 5)
-      ] as any,
-      timestamp: new Date(Date.now() - Math.random() * 3600000),
-      metadata: {
-        page: ['/courses/class-12', '/courses/neet-dropper', '/', '/about'][
-          Math.floor(Math.random() * 4)
-        ],
-      },
-    })),
-    conversionFunnel: {
-      visitors: 15847,
-      demoBookings: 2341,
-      enrollments: 567,
-      payments: 456,
+/**
+ * Real-time metrics from analytics_events (last 30 min) + the live business
+ * funnel. No random data.
+ */
+async function getRealTimeData(): Promise<RealTimeMetrics> {
+  const thirtyMinAgo = new Date(Date.now() - 30 * 60 * 1000)
+  const fiveMinAgo = new Date(Date.now() - 5 * 60 * 1000)
+
+  const recent = await db.analytics_events.findMany({
+    where: { createdAt: { gte: thirtyMinAgo } },
+    select: {
+      id: true,
+      userId: true,
+      sessionId: true,
+      eventType: true,
+      pagePath: true,
+      createdAt: true,
     },
+    orderBy: { createdAt: 'desc' },
+    take: 2000,
+  })
+
+  // Active sessions = latest event per session in the last 5 minutes.
+  const sessionLatest = new Map<
+    string,
+    { userId: string; sessionId: string; currentPage: string; startTime: Date; lastActivity: Date }
+  >()
+  const activeUserSet = new Set<string>()
+  const livePageAgg = new Map<string, number>()
+
+  for (const e of recent) {
+    if (e.pagePath) livePageAgg.set(e.pagePath, (livePageAgg.get(e.pagePath) || 0) + 1)
+    if (!e.sessionId) continue
+    if (e.createdAt >= fiveMinAgo) {
+      activeUserSet.add(e.userId || e.sessionId)
+      const existing = sessionLatest.get(e.sessionId)
+      if (!existing) {
+        sessionLatest.set(e.sessionId, {
+          userId: e.userId || 'anonymous',
+          sessionId: e.sessionId,
+          currentPage: e.pagePath || '/',
+          startTime: e.createdAt,
+          lastActivity: e.createdAt,
+        })
+      } else {
+        // recent is desc, so first seen is latest; keep earliest as startTime
+        existing.startTime = e.createdAt
+      }
+    }
+  }
+
+  const livePageViews = [...livePageAgg.entries()]
+    .map(([page, count]) => ({ page, count }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 8)
+
+  const recentActivities: RealTimeMetrics['recentActivities'] = recent.slice(0, 50).map((e) => ({
+    id: e.id,
+    userId: e.userId || 'anonymous',
+    sessionId: e.sessionId || 'unknown',
+    type: (e.eventType === 'page_view' ? 'page_view' : 'page_view') as UserActivity['type'],
+    timestamp: e.createdAt,
+    metadata: { page: e.pagePath || undefined },
+  }))
+
+  const [visitors, demoBookings, enrollments, payments] = await Promise.all([
+    db.leads.count(),
+    db.demo_bookings.count(),
+    db.leads.count({ where: { stage: { in: ['ENROLLED', 'ACTIVE_STUDENT'] } } }),
+    db.enrollments.count({ where: { paidAmount: { gt: 0 } } }),
+  ])
+
+  return {
+    activeUsers: activeUserSet.size,
+    activeSessions: [...sessionLatest.values()],
+    livePageViews,
+    recentActivities,
+    conversionFunnel: { visitors, demoBookings, enrollments, payments },
   }
 }
 
@@ -241,7 +390,7 @@ export async function GET(request: NextRequest) {
         if (!authCheck.authorized) {
           return NextResponse.json({ error: authCheck.error }, { status: authCheck.status })
         }
-        const realTimeData = generateMockRealTimeData()
+        const realTimeData = await getRealTimeData()
         return NextResponse.json(realTimeData)
       }
 
@@ -251,7 +400,7 @@ export async function GET(request: NextRequest) {
         if (!authCheck.authorized) {
           return NextResponse.json({ error: authCheck.error }, { status: authCheck.status })
         }
-        const dashboardData = generateMockDashboardData()
+        const dashboardData = await getRealDashboardData(dateRange)
         return NextResponse.json(dashboardData)
       }
 
@@ -271,11 +420,11 @@ export async function GET(request: NextRequest) {
               { status: realtimeCheck.status }
             )
           }
-          const realTimeDataLegacy = generateMockRealTimeData()
+          const realTimeDataLegacy = await getRealTimeData()
           return NextResponse.json(realTimeDataLegacy)
         }
 
-        const dashboardDataDefault = generateMockDashboardData()
+        const dashboardDataDefault = await getRealDashboardData(dateRange)
         return NextResponse.json(dashboardDataDefault)
       }
     }
@@ -297,7 +446,7 @@ export async function POST(request: NextRequest) {
     const { filters, dateRange, metrics } = body
 
     // In production, apply filters and return filtered data
-    const dashboardData = generateMockDashboardData()
+    const dashboardData = await getRealDashboardData(dateRange)
 
     return NextResponse.json({
       ...dashboardData,
