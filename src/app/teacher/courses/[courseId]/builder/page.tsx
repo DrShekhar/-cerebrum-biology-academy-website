@@ -25,6 +25,7 @@ import {
   FileText,
   X,
   Check,
+  Sparkles,
 } from 'lucide-react'
 
 interface TopicNode {
@@ -62,6 +63,7 @@ export default function CourseBuilderPage({ params }: { params: Promise<{ course
   const [newChapter, setNewChapter] = useState('')
   const [editingId, setEditingId] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
+  const [showAI, setShowAI] = useState(false)
 
   const load = useCallback(async () => {
     setLoading(true)
@@ -210,11 +212,32 @@ export default function CourseBuilderPage({ params }: { params: Promise<{ course
       >
         <ArrowLeft className="h-4 w-4" /> All courses
       </button>
-      <h1 className="text-2xl font-bold text-gray-900">{course?.name}</h1>
-      <p className="mt-1 text-sm text-gray-600">
-        Structure the course below. Use the drip date to schedule a chapter’s release, and the
-        prerequisite lock to require the previous chapter first.
-      </p>
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <h1 className="text-2xl font-bold text-gray-900">{course?.name}</h1>
+          <p className="mt-1 text-sm text-gray-600">
+            Structure the course below. Use the drip date to schedule a chapter’s release, and the
+            prerequisite lock to require the previous chapter first.
+          </p>
+        </div>
+        <button
+          onClick={() => setShowAI((v) => !v)}
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-purple-300 bg-purple-50 px-4 py-2 text-sm font-semibold text-purple-700 hover:bg-purple-100"
+        >
+          <Sparkles className="h-4 w-4" /> Generate with AI
+        </button>
+      </div>
+
+      {showAI && (
+        <AIOutlinePanel
+          courseId={courseId}
+          existingCount={chapters.length}
+          onApplied={async () => {
+            setShowAI(false)
+            await load()
+          }}
+        />
+      )}
 
       {/* Add chapter */}
       <div className="mt-5 flex gap-2">
@@ -495,6 +518,183 @@ function AddTopicInput({ onAdd }: { onAdd: (title: string) => void }) {
       >
         <Plus className="h-3.5 w-3.5" /> Topic
       </button>
+    </div>
+  )
+}
+
+interface DraftChapter {
+  title: string
+  description?: string
+  topics: string[]
+}
+
+/** AI outline: describe the course → Claude drafts chapters/topics → review → apply. */
+function AIOutlinePanel({
+  courseId,
+  existingCount,
+  onApplied,
+}: {
+  courseId: string
+  existingCount: number
+  onApplied: () => void
+}) {
+  const [prompt, setPrompt] = useState('')
+  const [count, setCount] = useState('10')
+  const [generating, setGenerating] = useState(false)
+  const [applying, setApplying] = useState(false)
+  const [draft, setDraft] = useState<DraftChapter[] | null>(null)
+
+  const generate = async () => {
+    setGenerating(true)
+    setDraft(null)
+    try {
+      const res = await fetch(`/api/teacher/builder/${courseId}/ai-outline`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: prompt.trim(), chapterCount: parseInt(count, 10) || 10 }),
+      })
+      const data = await res.json()
+      if (res.ok && data.success) {
+        setDraft(data.outline.chapters)
+      } else {
+        toast.error(data.error || 'Generation failed')
+      }
+    } catch {
+      toast.error('Network error')
+    } finally {
+      setGenerating(false)
+    }
+  }
+
+  const apply = async () => {
+    if (!draft) return
+    setApplying(true)
+    try {
+      const res = await fetch(`/api/teacher/builder/${courseId}/ai-outline`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ outline: { chapters: draft } }),
+      })
+      const data = await res.json()
+      if (res.ok && data.success) {
+        toast.success(`Added ${data.chapterCount} chapters, ${data.topicCount} topics`)
+        onApplied()
+      } else {
+        toast.error(data.error || 'Could not apply outline')
+      }
+    } catch {
+      toast.error('Network error')
+    } finally {
+      setApplying(false)
+    }
+  }
+
+  const removeChapter = (i: number) => setDraft((d) => (d ? d.filter((_, idx) => idx !== i) : d))
+
+  return (
+    <div className="mt-4 rounded-2xl border border-purple-200 bg-purple-50/50 p-4">
+      <div className="flex flex-wrap items-end gap-3">
+        <div className="min-w-0 flex-1">
+          <label className="mb-1 block text-xs font-medium text-gray-600" htmlFor="ai-prompt">
+            Describe the course (topics to cover, level, focus)
+          </label>
+          <input
+            id="ai-prompt"
+            value={prompt}
+            onChange={(e) => setPrompt(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && !generating && generate()}
+            placeholder="e.g. Class 12 Genetics & Evolution for NEET, PYQ-focused"
+            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+          />
+        </div>
+        <div>
+          <label className="mb-1 block text-xs font-medium text-gray-600" htmlFor="ai-count">
+            Chapters
+          </label>
+          <input
+            id="ai-count"
+            type="number"
+            min={3}
+            max={30}
+            value={count}
+            onChange={(e) => setCount(e.target.value)}
+            className="w-20 rounded-lg border border-gray-300 px-3 py-2 text-sm"
+          />
+        </div>
+        <button
+          onClick={generate}
+          disabled={generating}
+          className="inline-flex items-center gap-1.5 rounded-lg bg-purple-700 px-4 py-2 text-sm font-semibold text-white hover:bg-purple-800 disabled:opacity-50"
+        >
+          {generating ? (
+            <>
+              <Loader2 className="h-4 w-4 animate-spin" /> Drafting…
+            </>
+          ) : (
+            <>
+              <Sparkles className="h-4 w-4" /> Generate
+            </>
+          )}
+        </button>
+      </div>
+
+      {draft && (
+        <div className="mt-4">
+          <div className="mb-2 flex items-center justify-between">
+            <p className="text-sm font-semibold text-gray-700">
+              Draft outline — {draft.length} chapters (review, then apply)
+            </p>
+            {existingCount > 0 && (
+              <span className="text-xs text-gray-500">
+                Appended after your {existingCount} existing
+              </span>
+            )}
+          </div>
+          <div className="max-h-80 space-y-2 overflow-y-auto">
+            {draft.map((ch, i) => (
+              <div key={i} className="rounded-lg border border-gray-200 bg-white p-3">
+                <div className="flex items-start justify-between gap-2">
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-gray-900">
+                      {i + 1}. {ch.title}
+                    </p>
+                    {ch.description && (
+                      <p className="mt-0.5 text-xs text-gray-500">{ch.description}</p>
+                    )}
+                    {ch.topics.length > 0 && (
+                      <p className="mt-1 text-xs text-gray-600">{ch.topics.join(' · ')}</p>
+                    )}
+                  </div>
+                  <button
+                    onClick={() => removeChapter(i)}
+                    className="shrink-0 rounded p-1 text-red-400 hover:text-red-600"
+                    title="Drop this chapter from the draft"
+                    aria-label="Drop chapter"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-3 flex justify-end gap-2">
+            <button
+              onClick={() => setDraft(null)}
+              className="rounded-lg border border-gray-300 px-4 py-2 text-sm text-gray-700 hover:bg-white"
+            >
+              Discard
+            </button>
+            <button
+              onClick={apply}
+              disabled={applying || draft.length === 0}
+              className="inline-flex items-center gap-1.5 rounded-lg bg-green-700 px-5 py-2 text-sm font-semibold text-white hover:bg-green-800 disabled:opacity-50"
+            >
+              <Check className="h-4 w-4" />{' '}
+              {applying ? 'Applying…' : `Apply ${draft.length} chapters`}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
