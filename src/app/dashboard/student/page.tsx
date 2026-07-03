@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import dynamicImport from 'next/dynamic'
+import Link from 'next/link'
 import { useAuth } from '@/contexts/AuthContext'
 import { DashboardAccessControl } from '@/components/DashboardAccessControl'
 import { DashboardErrorBoundary } from '@/components/errors/DashboardErrorBoundary'
@@ -273,6 +274,24 @@ export default function StudentDashboard() {
                 </Button>
               </div>
             </div>
+
+            {/* CBT exam simulator CTA */}
+            <Link
+              href="/cbt"
+              className="mb-4 flex items-center justify-between gap-3 rounded-2xl bg-gradient-to-r from-green-800 to-green-900 p-4 sm:p-5 text-white hover:from-green-800 hover:to-green-950"
+            >
+              <div>
+                <div className="flex items-center gap-2 text-sm font-semibold sm:text-base">
+                  <Target className="h-4 w-4" /> NEET CBT Exam Simulator
+                </div>
+                <p className="mt-0.5 text-xs text-white/80 sm:text-sm">
+                  180 Q · 720 marks · real NTA interface — NEET 2027 goes computer-based.
+                </p>
+              </div>
+              <span className="shrink-0 rounded-lg bg-white px-3 py-1.5 text-xs font-semibold text-green-800 sm:px-4 sm:py-2 sm:text-sm">
+                Start
+              </span>
+            </Link>
 
             {/* Key Metrics Cards - Mobile Optimized (2 columns on mobile) */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
