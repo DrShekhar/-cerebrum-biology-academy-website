@@ -152,26 +152,46 @@ export async function startWelcomeSeries(leadId: string): Promise<{
       stage: lead.stage || 'NEW',
     }
 
+    // Claim day 0 atomically (idempotent if startWelcomeSeries is called twice
+    // for the same lead) before sending the immediate message.
+    let day0Claimed = false
+    try {
+      await prisma.welcome_series_events.create({
+        data: { id: `wse_${lead.id}_0`, leadId: lead.id, day: 0 },
+      })
+      day0Claimed = true
+    } catch (e: any) {
+      if (e?.code !== 'P2002') throw e
+      // Already started for this lead — don't re-send day 0.
+    }
+
     // Send immediate welcome message (Day 0)
     const firstMessage = WELCOME_SERIES[0]
-    const immediateResult = await sendWhatsAppMessage(
-      lead.phone,
-      firstMessage.templateName,
-      firstMessage.bodyValues(leadData),
-      `welcome_series_${lead.id}_day0`
-    )
+    const immediateResult = day0Claimed
+      ? await sendWhatsAppMessage(
+          lead.phone,
+          firstMessage.templateName,
+          firstMessage.bodyValues(leadData),
+          `welcome_series_${lead.id}_day0`
+        )
+      : { success: false }
 
-    // Persist series state on the lead so the cron-driven queue processor can
-    // send the day-1/3/7 messages on schedule (serverless — no setTimeout).
+    // Release the day-0 claim if the immediate send failed, so it retries.
+    if (day0Claimed && !immediateResult.success) {
+      await prisma.welcome_series_events
+        .delete({ where: { leadId_day: { leadId: lead.id, day: 0 } } })
+        .catch(() => {})
+    }
+
+    // Persist series-start on the lead so the cron-driven queue processor knows
+    // to send the day-1/3/7 messages on schedule (serverless — no setTimeout).
     const existingMetadata = (lead.metadata as Record<string, unknown>) || {}
+    const startedAt =
+      (existingMetadata.welcomeSeriesStarted as string | undefined) || new Date().toISOString()
     await prisma.leads.update({
       where: { id: lead.id },
       data: {
-        metadata: {
-          ...existingMetadata,
-          welcomeSeriesStarted: new Date().toISOString(),
-          welcomeSeriesSent: immediateResult.success ? ['day0'] : [],
-        },
+        metadata: { ...existingMetadata, welcomeSeriesStarted: startedAt },
         updatedAt: new Date(),
       },
     })
@@ -218,6 +238,17 @@ export async function sendWelcomeSeriesMessage(
       stage: lead.stage || 'NEW',
     }
 
+    // Atomic claim: only ONE concurrent cron run wins the (leadId, day) insert;
+    // the rest get a P2002 and bail out here — no double-send.
+    try {
+      await prisma.welcome_series_events.create({
+        data: { id: `wse_${lead.id}_${day}`, leadId: lead.id, day },
+      })
+    } catch (e: any) {
+      if (e?.code === 'P2002') return { success: true } // already sent/sending
+      throw e
+    }
+
     const result = await sendWhatsAppMessage(
       lead.phone,
       message.templateName,
@@ -225,21 +256,11 @@ export async function sendWelcomeSeriesMessage(
       `welcome_series_${lead.id}_day${day}`
     )
 
-    if (result.success) {
-      const metadata = (lead.metadata as Record<string, unknown>) || {}
-      const sent = Array.isArray(metadata.welcomeSeriesSent)
-        ? (metadata.welcomeSeriesSent as string[])
-        : []
-      const dayKey = `day${day}`
-      if (!sent.includes(dayKey)) {
-        await prisma.leads.update({
-          where: { id: lead.id },
-          data: {
-            metadata: { ...metadata, welcomeSeriesSent: [...sent, dayKey] },
-            updatedAt: new Date(),
-          },
-        })
-      }
+    // If the send failed, release the claim so a later run can retry.
+    if (!result.success) {
+      await prisma.welcome_series_events
+        .delete({ where: { leadId_day: { leadId: lead.id, day } } })
+        .catch(() => {})
     }
 
     return result
@@ -270,6 +291,22 @@ export async function processWelcomeSeriesQueue(): Promise<{
       orderBy: { createdAt: 'desc' },
     })
 
+    // Source of truth for which days were sent = the welcome_series_events table
+    // (atomic, race-safe), not the metadata array.
+    const leadIds = leads.map((l) => l.id)
+    const sentEvents = leadIds.length
+      ? await prisma.welcome_series_events.findMany({
+          where: { leadId: { in: leadIds } },
+          select: { leadId: true, day: true },
+        })
+      : []
+    const sentByLead = new Map<string, Set<number>>()
+    for (const ev of sentEvents) {
+      const set = sentByLead.get(ev.leadId) || new Set<number>()
+      set.add(ev.day)
+      sentByLead.set(ev.leadId, set)
+    }
+
     for (const lead of leads) {
       const metadata = (lead.metadata as Record<string, unknown>) || {}
       const startDate = metadata.welcomeSeriesStarted as string
@@ -279,13 +316,10 @@ export async function processWelcomeSeriesQueue(): Promise<{
       const daysSinceStart = Math.floor(
         (Date.now() - new Date(startDate).getTime()) / (24 * 60 * 60 * 1000)
       )
-
-      const sentMessages = (metadata.welcomeSeriesSent as string[]) || []
+      const alreadySent = sentByLead.get(lead.id) || new Set<number>()
 
       for (const message of WELCOME_SERIES) {
-        const dayKey = `day${message.day}`
-
-        if (message.day <= daysSinceStart && !sentMessages.includes(dayKey)) {
+        if (message.day <= daysSinceStart && !alreadySent.has(message.day)) {
           stats.processed++
 
           const result = await sendWelcomeSeriesMessage(lead.id, message.day)

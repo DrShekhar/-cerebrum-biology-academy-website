@@ -4816,3 +4816,16 @@ model whatsapp_message_events {
   @@unique([messageId, status])
   @@index([campaignId])
 }
+
+// Atomic claim ledger for the WhatsApp welcome series. A row is the proof that
+// (leadId, day) was sent — the @@unique makes concurrent cron runs race-safe
+// (the loser gets a P2002 and skips instead of double-sending).
+model welcome_series_events {
+  id       String   @id
+  leadId   String
+  day      Int
+  sentAt   DateTime @default(now())
+
+  @@unique([leadId, day])
+  @@index([leadId])
+}
