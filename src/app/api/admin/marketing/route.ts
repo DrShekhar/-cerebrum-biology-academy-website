@@ -1,116 +1,195 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { adminDb as db } from '@/lib/db-admin'
-import type { MarketingCampaign } from '@/lib/admin-schema'
+import { prisma } from '@/lib/prisma'
 import { requireAdminAuth } from '@/lib/auth'
 
-// Type definitions for marketing data
-// Note: CampaignRecord is a standalone interface to avoid status type conflicts with MarketingCampaign
-interface CampaignRecord {
+/**
+ * Admin marketing API — real Prisma (replaces the InstantDB mock).
+ *
+ * - Campaigns are stored in `marketing_campaigns` (aggregate metrics on the row).
+ * - Abandoned carts are DERIVED live from PENDING enrollments (pendingAmount > 0)
+ *   with a short grace window; a cart "recovers" when its enrollment goes ACTIVE.
+ *   No separate table and no seeding required.
+ * - Metrics are never fabricated: a fresh campaign reads 0 sent/opened/etc. until
+ *   real sends/tracking update it.
+ */
+
+const GRACE_MS = 60 * 60 * 1000 // 1h before a pending enrollment counts as abandoned
+const HIGH_VALUE = 10000 // ₹ threshold for a "high value" cart
+
+type CampaignRow = {
   id: string
   name: string
-  type: 'whatsapp' | 'sms' | 'email' | 'facebook' | 'google' | 'mixed'
-  status: 'draft' | 'scheduled' | 'active' | 'paused' | 'completed' | 'failed'
-  metrics: {
-    sent: number
-    delivered: number
-    opened: number
-    clicked: number
-    converted: number
-    unsubscribed: number
-    cost: number
+  type: string
+  status: string
+  objective: string
+  targetAudience: unknown
+  contentWhatsapp: unknown
+  contentSms: unknown
+  contentEmail: unknown
+  scheduledAt: Date | null
+  frequency: string | null
+  endDate: Date | null
+  metricsSent: number
+  metricsDelivered: number
+  metricsOpened: number
+  metricsClicked: number
+  metricsConverted: number
+  metricsUnsubscribed: number
+  metricsCost: number
+  createdById: string | null
+  createdAt: Date
+  updatedAt: Date
+}
+
+/** Shape a DB row into the object the UI expects (metrics as a nested object). */
+function toCampaignDTO(c: CampaignRow) {
+  return {
+    id: c.id,
+    name: c.name,
+    type: c.type,
+    status: c.status,
+    objective: c.objective,
+    targetAudience: c.targetAudience,
+    content: {
+      whatsapp: c.contentWhatsapp || undefined,
+      sms: c.contentSms || undefined,
+      email: c.contentEmail || undefined,
+    },
+    scheduledAt: c.scheduledAt ? c.scheduledAt.getTime() : undefined,
+    frequency: c.frequency || undefined,
+    endDate: c.endDate ? c.endDate.getTime() : undefined,
+    metrics: {
+      sent: c.metricsSent,
+      delivered: c.metricsDelivered,
+      opened: c.metricsOpened,
+      clicked: c.metricsClicked,
+      converted: c.metricsConverted,
+      unsubscribed: c.metricsUnsubscribed,
+      cost: c.metricsCost,
+    },
+    createdBy: c.createdById || 'system',
+    createdAt: c.createdAt.getTime(),
+    updatedAt: c.updatedAt.getTime(),
   }
 }
 
-interface AbandonedCartRecord {
-  id: string
-  userId: string
-  totalAmount: number
-  abandonedAt: number
-  recovered: boolean
-  finalPurchaseAmount?: number
-  user?: UserRecord
-}
-
-interface DemoBookingRecord {
-  id: string
-  userId: string
-  source: string
-  createdAt: number
-  convertedToEnrollment: boolean
-  conversionDate?: number
-}
-
-interface EnrollmentRecord {
-  id: string
-  userId: string
-  enrollmentDate: number
-  finalAmount: number
-}
-
-interface UserRecord {
-  id: string
-  email: string
-  phone?: string
-  profile?: {
-    currentClass?: string
-    city?: string
+/** Derive current abandoned carts from PENDING enrollments. */
+async function loadAbandonedCarts(limit: number, offset: number) {
+  const cutoff = new Date(Date.now() - GRACE_MS)
+  const where = {
+    status: 'PENDING' as const,
+    pendingAmount: { gt: 0 },
+    createdAt: { lte: cutoff },
   }
+  const [rows, total] = await Promise.all([
+    prisma.enrollments.findMany({
+      where,
+      orderBy: { createdAt: 'desc' },
+      take: limit,
+      skip: offset,
+      select: {
+        id: true,
+        userId: true,
+        pendingAmount: true,
+        createdAt: true,
+        courses: { select: { name: true } },
+        users: {
+          select: { id: true, email: true, phone: true, profile: true },
+        },
+      },
+    }),
+    prisma.enrollments.count({ where }),
+  ])
+
+  const abandonedCarts = rows.map((e) => {
+    const profile = (e.users?.profile as { currentClass?: string } | null) || null
+    return {
+      id: e.id,
+      userId: e.userId,
+      totalAmount: e.pendingAmount,
+      abandonedAt: e.createdAt.getTime(),
+      recovered: false,
+      course: e.courses?.name || null,
+      user: e.users
+        ? {
+            id: e.users.id,
+            email: e.users.email,
+            phone: e.users.phone || undefined,
+            profile: { currentClass: profile?.currentClass || undefined },
+          }
+        : undefined,
+    }
+  })
+
+  return { abandonedCarts, total }
 }
 
-interface TargetAudienceCriteria {
-  demographics: {
-    class: ('10th' | '11th' | '12th' | 'Dropper')[]
-    city?: string[]
-    state?: string[]
-    score_range?: { min: number; max: number }
-  }
-  behavior: {
-    enrollment_status?: ('enrolled' | 'demo_taken' | 'lead' | 'inactive')[]
-    last_activity_days?: number
-    course_interest?: string[]
-  }
-  customSegment?: string
-}
-
-interface PeriodMetrics {
-  enrollments: number
-  demoBookings: number
-  newUsers: number
-  conversionRate: number
-}
-
-interface CampaignExecutionResult {
-  sent: number
-  delivered: number
-  failed: number
-}
-
-// Use a more flexible type for InstantDB query conditions
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type WhereConditions = Record<string, any>
-
-// GET /api/admin/marketing - Get marketing campaigns and automation data
+// ─────────────────────────────────────────────────────────────────────────────
+// GET
+// ─────────────────────────────────────────────────────────────────────────────
 export async function GET(request: NextRequest) {
   try {
     await requireAdminAuth()
 
     const { searchParams } = new URL(request.url)
-    const type = searchParams.get('type') // 'campaigns', 'abandoned-carts', 'automation'
+    const type = searchParams.get('type')
     const status = searchParams.get('status')
-    const page = parseInt(searchParams.get('page') || '1')
-    const limit = parseInt(searchParams.get('limit') || '20')
+    const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10))
+    const limit = Math.min(100, Math.max(1, parseInt(searchParams.get('limit') || '20', 10)))
+    const offset = (page - 1) * limit
 
     switch (type) {
-      case 'campaigns':
-        return await getCampaigns(status, page, limit)
-      case 'abandoned-carts':
-        return await getAbandonedCarts(page, limit)
-      case 'automation':
-        return await getAutomationMetrics()
+      case 'campaigns': {
+        const where = status ? { status } : {}
+        const [rows, total] = await Promise.all([
+          prisma.marketing_campaigns.findMany({
+            where,
+            orderBy: { createdAt: 'desc' },
+            take: limit,
+            skip: offset,
+          }),
+          prisma.marketing_campaigns.count({ where }),
+        ])
+        return NextResponse.json({
+          success: true,
+          data: {
+            campaigns: rows.map((r) => toCampaignDTO(r as CampaignRow)),
+            pagination: { page, limit, total, pages: Math.ceil(total / limit) },
+          },
+        })
+      }
+
+      case 'abandoned-carts': {
+        const { abandonedCarts, total } = await loadAbandonedCarts(limit, offset)
+        const recoveryOpportunities = {
+          highValue: abandonedCarts.filter((c) => c.totalAmount > HIGH_VALUE).length,
+          recentAbandonment: abandonedCarts.filter(
+            (c) => Date.now() - c.abandonedAt < 24 * 60 * 60 * 1000
+          ).length,
+          totalPotentialRevenue: abandonedCarts.reduce((s, c) => s + c.totalAmount, 0),
+        }
+        return NextResponse.json({
+          success: true,
+          data: {
+            abandonedCarts,
+            recoveryOpportunities,
+            pagination: { page, limit, total, pages: Math.ceil(total / limit) },
+          },
+        })
+      }
+
+      case 'automation': {
+        const automationMetrics = await getAutomationMetrics()
+        return NextResponse.json({ success: true, data: { automationMetrics } })
+      }
+
       default:
-        return await getMarketingOverview()
+        return NextResponse.json({ success: true, data: await getMarketingOverview() })
     }
   } catch (error) {
+    if (error instanceof Error && error.message === 'Admin authentication required') {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
     console.error('Marketing API error:', error)
     return NextResponse.json(
       { success: false, error: 'Failed to fetch marketing data' },
@@ -119,65 +198,187 @@ export async function GET(request: NextRequest) {
   }
 }
 
-// POST /api/admin/marketing - Create new marketing campaign
+async function getMarketingOverview() {
+  const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
+
+  const [totalCampaigns, activeCampaigns, allAgg, weekAgg, cartData] = await Promise.all([
+    prisma.marketing_campaigns.count(),
+    prisma.marketing_campaigns.count({ where: { status: 'active' } }),
+    prisma.marketing_campaigns.aggregate({
+      _sum: { metricsSent: true, metricsConverted: true },
+    }),
+    prisma.marketing_campaigns.aggregate({
+      where: { createdAt: { gte: weekAgo } },
+      _sum: {
+        metricsSent: true,
+        metricsOpened: true,
+        metricsClicked: true,
+        metricsConverted: true,
+      },
+    }),
+    loadAbandonedCarts(10, 0),
+  ])
+
+  const totalReach = allAgg._sum.metricsSent || 0
+  const totalConverted = allAgg._sum.metricsConverted || 0
+  const conversionRate = totalReach > 0 ? totalConverted / totalReach : 0
+
+  const recentCampaigns = await prisma.marketing_campaigns.findMany({
+    orderBy: { createdAt: 'desc' },
+    take: 5,
+  })
+
+  return {
+    totalCampaigns,
+    activeCampaigns,
+    totalReach,
+    conversionRate,
+    weeklyMetrics: {
+      sent: weekAgg._sum.metricsSent || 0,
+      opened: weekAgg._sum.metricsOpened || 0,
+      clicked: weekAgg._sum.metricsClicked || 0,
+      converted: weekAgg._sum.metricsConverted || 0,
+    },
+    recentCampaigns: recentCampaigns.map((r) => toCampaignDTO(r as CampaignRow)),
+    urgentAbandonedCarts: cartData.abandonedCarts,
+    recommendations: buildRecommendations({
+      activeCampaigns,
+      conversionRate,
+      abandonedCartCount: cartData.total,
+    }),
+  }
+}
+
+async function getAutomationMetrics() {
+  const monthAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
+  const cutoff = new Date(Date.now() - GRACE_MS)
+
+  const [
+    campaignAgg,
+    activeCampaigns,
+    totalCampaigns,
+    pendingCarts,
+    recoveredCount,
+    whatsappCount,
+  ] = await Promise.all([
+    prisma.marketing_campaigns.aggregate({
+      where: { createdAt: { gte: monthAgo } },
+      _sum: { metricsSent: true, metricsConverted: true },
+    }),
+    prisma.marketing_campaigns.count({ where: { status: 'active' } }),
+    prisma.marketing_campaigns.count({ where: { createdAt: { gte: monthAgo } } }),
+    prisma.enrollments.aggregate({
+      where: { status: 'PENDING', pendingAmount: { gt: 0 }, createdAt: { lte: cutoff } },
+      _count: { _all: true },
+      _sum: { pendingAmount: true },
+    }),
+    prisma.enrollments.aggregate({
+      where: { status: 'ACTIVE', enrollmentDate: { gte: monthAgo } },
+      _count: { _all: true },
+      _sum: { paidAmount: true },
+    }),
+    prisma.crm_communications.count({
+      where: { type: 'WHATSAPP', sentAt: { gte: monthAgo } },
+    }),
+  ])
+
+  const abandonedTotal = pendingCarts._count._all
+  const recoveredTotal = recoveredCount._count._all
+  const enrolledLeads = await prisma.leads.count({
+    where: { stage: { in: ['ENROLLED', 'ACTIVE_STUDENT'] } },
+  })
+  const totalLeads = await prisma.leads.count()
+
+  return {
+    campaigns: {
+      total: totalCampaigns,
+      active: activeCampaigns,
+      totalSent: campaignAgg._sum.metricsSent || 0,
+      totalConverted: campaignAgg._sum.metricsConverted || 0,
+    },
+    abandonedCarts: {
+      total: abandonedTotal,
+      recovered: recoveredTotal,
+      totalValue: pendingCarts._sum.pendingAmount || 0,
+      recoveredValue: recoveredCount._sum.paidAmount || 0,
+    },
+    whatsappEngagement: {
+      messagesSent: whatsappCount,
+    },
+    overallPerformance: {
+      conversionRate: totalLeads > 0 ? enrolledLeads / totalLeads : 0,
+      enrolledLeads,
+      totalLeads,
+    },
+  }
+}
+
+function buildRecommendations(input: {
+  activeCampaigns: number
+  conversionRate: number
+  abandonedCartCount: number
+}): string[] {
+  const recs: string[] = []
+  if (input.abandonedCartCount > 0) {
+    recs.push(
+      `${input.abandonedCartCount} pending enrolments haven't been paid — launch a recovery campaign.`
+    )
+  }
+  if (input.activeCampaigns === 0) {
+    recs.push('No active campaigns. Create one to re-engage leads and past demo attendees.')
+  }
+  if (input.conversionRate > 0 && input.conversionRate < 0.05) {
+    recs.push('Campaign conversion is under 5% — tighten targeting or refresh the message.')
+  }
+  return recs
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// POST — create a campaign (draft/scheduled). Does NOT auto-send.
+// ─────────────────────────────────────────────────────────────────────────────
 export async function POST(request: NextRequest) {
   try {
-    await requireAdminAuth()
-
+    const session = await requireAdminAuth()
     const body = await request.json()
     const { name, type, objective, targetAudience, content, scheduledAt, frequency, endDate } = body
 
     if (!name || !type || !objective || !targetAudience) {
       return NextResponse.json(
-        { success: false, error: 'Missing required campaign fields' },
+        {
+          success: false,
+          error: 'Missing required campaign fields (name, type, objective, targetAudience)',
+        },
         { status: 400 }
       )
     }
 
-    const campaignId = crypto.randomUUID()
-    const now = Date.now()
-
-    const newCampaign: MarketingCampaign = {
-      id: campaignId,
-      name,
-      type,
-      status: scheduledAt ? 'scheduled' : 'draft',
-      objective,
-      targetAudience,
-      content,
-      scheduledAt,
-      frequency,
-      endDate,
-      metrics: {
-        sent: 0,
-        delivered: 0,
-        opened: 0,
-        clicked: 0,
-        converted: 0,
-        unsubscribed: 0,
-        cost: 0,
+    const created = await prisma.marketing_campaigns.create({
+      data: {
+        id: crypto.randomUUID(),
+        name,
+        type,
+        status: scheduledAt ? 'scheduled' : 'draft',
+        objective,
+        targetAudience,
+        contentWhatsapp: content?.whatsapp ?? undefined,
+        contentSms: content?.sms ?? undefined,
+        contentEmail: content?.email ?? undefined,
+        scheduledAt: scheduledAt ? new Date(scheduledAt) : null,
+        frequency: frequency || null,
+        endDate: endDate ? new Date(endDate) : null,
+        createdById: session.user?.id || null,
+        updatedAt: new Date(),
       },
-      createdBy: 'admin', // Would be actual admin ID in production
-      createdAt: now,
-      updatedAt: now,
-    }
-
-    // Save campaign to database
-    await db.transact([db.tx.marketingCampaigns[campaignId].update(newCampaign)])
-
-    // If scheduled for immediate send, trigger execution
-    if (!scheduledAt || scheduledAt <= now) {
-      await executeCampaign(campaignId)
-    }
+    })
 
     return NextResponse.json(
-      {
-        success: true,
-        data: newCampaign,
-      },
+      { success: true, data: toCampaignDTO(created as CampaignRow) },
       { status: 201 }
     )
   } catch (error) {
+    if (error instanceof Error && error.message === 'Admin authentication required') {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
     console.error('Create campaign error:', error)
     return NextResponse.json(
       { success: false, error: 'Failed to create campaign' },
@@ -186,421 +387,70 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// Helper function to get campaigns
-async function getCampaigns(status: string | null, page: number, limit: number) {
-  const whereConditions: WhereConditions = {}
-  if (status) whereConditions.status = status
-
-  const campaigns = await db.query({
-    marketingCampaigns: {
-      $: {
-        where: whereConditions,
-        order: { createdAt: 'desc' },
-        limit,
-        offset: (page - 1) * limit,
-      },
-    },
-    totalCount: {
-      $: { where: whereConditions },
-    },
-  })
-
-  return NextResponse.json({
-    success: true,
-    data: {
-      campaigns: campaigns.marketingCampaigns,
-      pagination: {
-        page,
-        limit,
-        total: campaigns.totalCount.length,
-        pages: Math.ceil(campaigns.totalCount.length / limit),
-      },
-    },
-  })
-}
-
-// Helper function to get abandoned carts
-async function getAbandonedCarts(page: number, limit: number) {
-  const abandonedCarts = await db.query({
-    abandonedCarts: {
-      $: {
-        where: { recovered: false },
-        order: { abandonedAt: 'desc' },
-        limit,
-        offset: (page - 1) * limit,
-      },
-      user: {}, // Join with user data
-    },
-    totalCount: {
-      $: { where: { recovered: false } },
-    },
-  })
-
-  // Calculate recovery opportunities
-  const recoveryOpportunities = calculateRecoveryOpportunities(
-    abandonedCarts.abandonedCarts as unknown as AbandonedCartRecord[]
-  )
-
-  return NextResponse.json({
-    success: true,
-    data: {
-      abandonedCarts: abandonedCarts.abandonedCarts,
-      recoveryOpportunities,
-      pagination: {
-        page,
-        limit,
-        total: abandonedCarts.totalCount.length,
-        pages: Math.ceil(abandonedCarts.totalCount.length / limit),
-      },
-    },
-  })
-}
-
-// Helper function to get automation metrics
-async function getAutomationMetrics() {
-  const now = Date.now()
-  const last30Days = now - 30 * 24 * 60 * 60 * 1000
-
-  // Query various automation data
-  const [campaigns, abandonedCarts, demoBookings, enrollments] = await Promise.all([
-    db.query({
-      marketingCampaigns: {
-        $: { where: { createdAt: { $gte: last30Days } } },
-      },
-    }),
-    db.query({
-      abandonedCarts: {
-        $: { where: { abandonedAt: { $gte: last30Days } } },
-      },
-    }),
-    db.query({
-      demoBookings: {
-        $: { where: { createdAt: { $gte: last30Days } } },
-      },
-    }),
-    db.query({
-      enrollments: {
-        $: { where: { enrollmentDate: { $gte: last30Days } } },
-      },
-    }),
-  ])
-
-  const campaignRecords = campaigns.marketingCampaigns as CampaignRecord[]
-  const cartRecords = abandonedCarts.abandonedCarts as AbandonedCartRecord[]
-  const demoRecords = demoBookings.demoBookings as DemoBookingRecord[]
-  const enrollmentRecords = enrollments.enrollments as EnrollmentRecord[]
-
-  const automationMetrics = {
-    campaigns: {
-      total: campaignRecords.length,
-      active: campaignRecords.filter((c) => c.status === 'active').length,
-      totalSent: campaignRecords.reduce((sum, c) => sum + c.metrics.sent, 0),
-      totalConverted: campaignRecords.reduce((sum, c) => sum + c.metrics.converted, 0),
-    },
-    abandonedCarts: {
-      total: cartRecords.length,
-      recovered: cartRecords.filter((cart) => cart.recovered).length,
-      totalValue: cartRecords.reduce((sum, cart) => sum + cart.totalAmount, 0),
-      recoveredValue: cartRecords
-        .filter((cart) => cart.recovered)
-        .reduce((sum, cart) => sum + (cart.finalPurchaseAmount || 0), 0),
-    },
-    whatsappEngagement: {
-      demoBookingConversions: demoRecords.filter(
-        (demo) => demo.source === 'whatsapp' && demo.convertedToEnrollment
-      ).length,
-      totalWhatsappLeads: demoRecords.filter((demo) => demo.source === 'whatsapp').length,
-    },
-    overallPerformance: {
-      conversionRate: calculateOverallConversionRate(demoRecords, enrollmentRecords),
-      averageTimeToConversion: calculateAverageTimeToConversion(demoRecords, enrollmentRecords),
-      customerLifetimeValue: calculateCLV(enrollmentRecords),
-    },
-  }
-
-  return NextResponse.json({
-    success: true,
-    data: automationMetrics,
-  })
-}
-
-// Helper function to get marketing overview
-async function getMarketingOverview() {
-  const now = Date.now()
-  const last7Days = now - 7 * 24 * 60 * 60 * 1000
-  const last30Days = now - 30 * 24 * 60 * 60 * 1000
-
-  // Get overview data
-  const [recentCampaigns, recentCarts, weeklyMetrics, monthlyMetrics] = await Promise.all([
-    db.query({
-      marketingCampaigns: {
-        $: {
-          order: { createdAt: 'desc' },
-          limit: 5,
-        },
-      },
-    }),
-    db.query({
-      abandonedCarts: {
-        $: {
-          where: { recovered: false },
-          order: { abandonedAt: 'desc' },
-          limit: 10,
-        },
-      },
-    }),
-    getMetricsForPeriod(last7Days, now),
-    getMetricsForPeriod(last30Days, now),
-  ])
-
-  const overview = {
-    recentCampaigns: recentCampaigns.marketingCampaigns,
-    urgentAbandonedCarts: recentCarts.abandonedCarts,
-    weeklyPerformance: weeklyMetrics,
-    monthlyPerformance: monthlyMetrics,
-    recommendations: generateMarketingRecommendations(weeklyMetrics, monthlyMetrics),
-  }
-
-  return NextResponse.json({
-    success: true,
-    data: overview,
-  })
-}
-
-// Campaign execution function
-async function executeCampaign(campaignId: string) {
+// ─────────────────────────────────────────────────────────────────────────────
+// PATCH — update campaign status (pause/resume/activate) or metrics.
+// ─────────────────────────────────────────────────────────────────────────────
+export async function PATCH(request: NextRequest) {
   try {
-    // Get campaign details
-    const campaignData = await db.query({
-      marketingCampaigns: {
-        $: { where: { id: campaignId } },
-      },
+    await requireAdminAuth()
+    const body = await request.json()
+    const { id, status } = body
+    if (!id) {
+      return NextResponse.json({ success: false, error: 'Campaign id required' }, { status: 400 })
+    }
+    const allowed = ['draft', 'scheduled', 'active', 'paused', 'completed', 'failed']
+    if (status && !allowed.includes(status)) {
+      return NextResponse.json({ success: false, error: 'Invalid status' }, { status: 400 })
+    }
+
+    const updated = await prisma.marketing_campaigns.update({
+      where: { id },
+      data: { ...(status ? { status } : {}), updatedAt: new Date() },
     })
-
-    if (campaignData.marketingCampaigns.length === 0) {
-      throw new Error('Campaign not found')
-    }
-
-    const campaign = campaignData.marketingCampaigns[0] as MarketingCampaign
-
-    // Get target audience based on criteria
-    const targetUsers = await getTargetAudience(campaign.targetAudience)
-
-    // Execute campaign based on type
-    let executionResults
-    switch (campaign.type) {
-      case 'whatsapp':
-        executionResults = await executeWhatsAppCampaign(campaign, targetUsers)
-        break
-      case 'sms':
-        executionResults = await executeSMSCampaign(campaign, targetUsers)
-        break
-      case 'email':
-        executionResults = await executeEmailCampaign(campaign, targetUsers)
-        break
-      default:
-        throw new Error(`Unsupported campaign type: ${campaign.type}`)
-    }
-
-    // Update campaign metrics
-    await db.transact([
-      db.tx.marketingCampaigns[campaignId].update({
-        status: 'active',
-        metrics: {
-          ...campaign.metrics,
-          sent: executionResults.sent,
-          delivered: executionResults.delivered,
-        },
-        updatedAt: Date.now(),
-      }),
-    ])
-
-    return executionResults
+    return NextResponse.json({ success: true, data: toCampaignDTO(updated as CampaignRow) })
   } catch (error) {
-    console.error('Campaign execution error:', error)
-
-    // Update campaign status to failed
-    await db.transact([
-      db.tx.marketingCampaigns[campaignId].update({
-        status: 'failed',
-        updatedAt: Date.now(),
-      }),
-    ])
-
-    throw error
+    if (error instanceof Error && error.message === 'Admin authentication required') {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
+    console.error('Update campaign error:', error)
+    return NextResponse.json(
+      { success: false, error: 'Failed to update campaign' },
+      { status: 500 }
+    )
   }
 }
 
-// Helper functions for campaign execution
-async function getTargetAudience(criteria: TargetAudienceCriteria): Promise<UserRecord[]> {
-  // Build complex query based on targeting criteria
-  const whereConditions: WhereConditions = {}
-
-  if (criteria.demographics?.class) {
-    whereConditions['profile.currentClass'] = { $in: criteria.demographics.class }
+// ─────────────────────────────────────────────────────────────────────────────
+// DELETE — remove a draft campaign.
+// ─────────────────────────────────────────────────────────────────────────────
+export async function DELETE(request: NextRequest) {
+  try {
+    await requireAdminAuth()
+    const { searchParams } = new URL(request.url)
+    const id = searchParams.get('id')
+    if (!id) {
+      return NextResponse.json({ success: false, error: 'Campaign id required' }, { status: 400 })
+    }
+    const campaign = await prisma.marketing_campaigns.findUnique({ where: { id } })
+    if (!campaign) {
+      return NextResponse.json({ success: false, error: 'Campaign not found' }, { status: 404 })
+    }
+    if (campaign.status !== 'draft') {
+      return NextResponse.json(
+        { success: false, error: 'Only draft campaigns can be deleted' },
+        { status: 400 }
+      )
+    }
+    await prisma.marketing_campaigns.delete({ where: { id } })
+    return NextResponse.json({ success: true })
+  } catch (error) {
+    if (error instanceof Error && error.message === 'Admin authentication required') {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
+    console.error('Delete campaign error:', error)
+    return NextResponse.json(
+      { success: false, error: 'Failed to delete campaign' },
+      { status: 500 }
+    )
   }
-
-  if (criteria.demographics?.city) {
-    whereConditions['profile.city'] = { $in: criteria.demographics.city }
-  }
-
-  if (criteria.behavior?.enrollment_status) {
-    // Complex query logic for enrollment status
-  }
-
-  const users = await db.query({
-    users: {
-      $: { where: whereConditions },
-    },
-  })
-
-  return users.users as UserRecord[]
-}
-
-async function executeWhatsAppCampaign(
-  campaign: MarketingCampaign,
-  targetUsers: UserRecord[]
-): Promise<CampaignExecutionResult> {
-  // WhatsApp API integration
-
-  // Mock execution results
-  return {
-    sent: targetUsers.length,
-    delivered: Math.floor(targetUsers.length * 0.95), // 95% delivery rate
-    failed: Math.floor(targetUsers.length * 0.05),
-  }
-}
-
-async function executeSMSCampaign(
-  campaign: MarketingCampaign,
-  targetUsers: UserRecord[]
-): Promise<CampaignExecutionResult> {
-  // SMS API integration
-
-  return {
-    sent: targetUsers.length,
-    delivered: Math.floor(targetUsers.length * 0.92), // 92% delivery rate
-    failed: Math.floor(targetUsers.length * 0.08),
-  }
-}
-
-async function executeEmailCampaign(
-  campaign: MarketingCampaign,
-  targetUsers: UserRecord[]
-): Promise<CampaignExecutionResult> {
-  // Email API integration
-
-  return {
-    sent: targetUsers.length,
-    delivered: Math.floor(targetUsers.length * 0.98), // 98% delivery rate
-    failed: Math.floor(targetUsers.length * 0.02),
-  }
-}
-
-// Helper calculation functions
-interface RecoveryOpportunities {
-  highValue: number
-  recentAbandonment: number
-  totalPotentialRevenue: number
-}
-
-function calculateRecoveryOpportunities(carts: AbandonedCartRecord[]): RecoveryOpportunities {
-  const highValue = carts.filter((cart) => cart.totalAmount > 10000).length
-  const recentAbandonment = carts.filter(
-    (cart) => Date.now() - cart.abandonedAt < 24 * 60 * 60 * 1000
-  ).length
-
-  return {
-    highValue,
-    recentAbandonment,
-    totalPotentialRevenue: carts.reduce((sum, cart) => sum + cart.totalAmount, 0),
-  }
-}
-
-function calculateOverallConversionRate(
-  demos: DemoBookingRecord[],
-  _enrollments: EnrollmentRecord[]
-): number {
-  if (demos.length === 0) return 0
-  const converted = demos.filter((demo) => demo.convertedToEnrollment).length
-  return (converted / demos.length) * 100
-}
-
-function calculateAverageTimeToConversion(
-  demos: DemoBookingRecord[],
-  _enrollments: EnrollmentRecord[]
-): number {
-  const convertedDemos = demos.filter((demo) => demo.convertedToEnrollment && demo.conversionDate)
-  if (convertedDemos.length === 0) return 0
-
-  const totalTime = convertedDemos.reduce(
-    (sum, demo) => sum + ((demo.conversionDate || 0) - demo.createdAt),
-    0
-  )
-
-  return totalTime / convertedDemos.length / (24 * 60 * 60 * 1000) // Days
-}
-
-function calculateCLV(enrollments: EnrollmentRecord[]): number {
-  // Simplified CLV calculation
-  const totalRevenue = enrollments.reduce(
-    (sum, enrollment) => sum + (enrollment.finalAmount || 0),
-    0
-  )
-
-  return enrollments.length > 0 ? totalRevenue / enrollments.length : 0
-}
-
-async function getMetricsForPeriod(startTime: number, endTime: number): Promise<PeriodMetrics> {
-  // Get metrics for specific time period
-  const data = await db.query({
-    enrollments: {
-      $: { where: { enrollmentDate: { $gte: startTime, $lte: endTime } } },
-    },
-    demoBookings: {
-      $: { where: { createdAt: { $gte: startTime, $lte: endTime } } },
-    },
-    users: {
-      $: { where: { createdAt: { $gte: startTime, $lte: endTime } } },
-    },
-  })
-
-  return {
-    enrollments: data.enrollments.length,
-    demoBookings: data.demoBookings.length,
-    newUsers: data.users.length,
-    conversionRate:
-      data.demoBookings.length > 0 ? (data.enrollments.length / data.demoBookings.length) * 100 : 0,
-  }
-}
-
-interface MarketingRecommendation {
-  type: 'conversion' | 'lead_generation'
-  priority: 'high' | 'medium' | 'low'
-  message: string
-}
-
-function generateMarketingRecommendations(
-  weeklyMetrics: PeriodMetrics,
-  monthlyMetrics: PeriodMetrics
-): MarketingRecommendation[] {
-  const recommendations: MarketingRecommendation[] = []
-
-  if (weeklyMetrics.conversionRate < monthlyMetrics.conversionRate) {
-    recommendations.push({
-      type: 'conversion',
-      priority: 'high',
-      message: 'Conversion rate has decreased. Consider running retargeting campaigns.',
-    })
-  }
-
-  if (weeklyMetrics.demoBookings < monthlyMetrics.demoBookings / 4) {
-    recommendations.push({
-      type: 'lead_generation',
-      priority: 'medium',
-      message: 'Demo bookings are below average. Increase lead generation activities.',
-    })
-  }
-
-  return recommendations
 }

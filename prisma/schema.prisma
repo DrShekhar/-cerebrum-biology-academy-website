@@ -3139,6 +3139,7 @@ model users {
   achiever_nominations                                                  achiever_nominations[]
   self_evaluations                                                      self_evaluations[]
   work_tracking                                                         work_tracking[]
+  marketing_campaigns                                                   marketing_campaigns[]
 
   @@index([coachingTier])
   @@index([emailVerified])
@@ -4763,4 +4764,36 @@ model work_tracking {
 
   @@index([studentId, date])
   @@index([courseId])
+}
+
+// Admin marketing campaigns (WhatsApp/SMS/Email/etc). Aggregate metrics live on
+// the row; abandoned carts are derived live from PENDING enrollments (no table).
+model marketing_campaigns {
+  id                  String    @id
+  name                String
+  type                String
+  status              String    @default("draft")
+  objective           String
+  targetAudience      Json
+  contentWhatsapp     Json?
+  contentSms          Json?
+  contentEmail        Json?
+  scheduledAt         DateTime?
+  frequency           String?
+  endDate             DateTime?
+  metricsSent         Int       @default(0)
+  metricsDelivered    Int       @default(0)
+  metricsOpened       Int       @default(0)
+  metricsClicked      Int       @default(0)
+  metricsConverted    Int       @default(0)
+  metricsUnsubscribed Int       @default(0)
+  metricsCost         Int       @default(0)
+  createdById         String?
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime
+  users               users?    @relation(fields: [createdById], references: [id])
+
+  @@index([status, createdAt])
+  @@index([scheduledAt, status])
+  @@index([type, status])
 }

@@ -67,6 +67,31 @@ export default function CampaignsPage() {
     fetchCampaigns()
   }, [fetchCampaigns])
 
+  const setStatus = async (id: string, status: string) => {
+    try {
+      const res = await fetch('/api/admin/marketing', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, status }),
+      })
+      if (res.ok) fetchCampaigns()
+    } catch (error) {
+      console.error('Failed to update campaign status:', error)
+    }
+  }
+
+  const deleteCampaign = async (id: string) => {
+    if (!confirm('Delete this draft campaign? This cannot be undone.')) return
+    try {
+      const res = await fetch(`/api/admin/marketing?id=${encodeURIComponent(id)}`, {
+        method: 'DELETE',
+      })
+      if (res.ok) fetchCampaigns()
+    } catch (error) {
+      console.error('Failed to delete campaign:', error)
+    }
+  }
+
   const filteredCampaigns = campaigns.filter((c) => {
     if (searchTerm && !c.name.toLowerCase().includes(searchTerm.toLowerCase())) return false
     if (typeFilter !== 'all' && c.type !== typeFilter) return false
@@ -279,16 +304,28 @@ export default function CampaignsPage() {
                             <Eye className="w-4 h-4" />
                           </button>
                           {campaign.status === 'active' ? (
-                            <button className="text-yellow-600 hover:text-yellow-900" title="Pause">
+                            <button
+                              className="text-yellow-600 hover:text-yellow-900"
+                              title="Pause"
+                              onClick={() => setStatus(campaign.id, 'paused')}
+                            >
                               <Pause className="w-4 h-4" />
                             </button>
                           ) : campaign.status === 'draft' || campaign.status === 'paused' ? (
-                            <button className="text-green-600 hover:text-green-900" title="Start">
+                            <button
+                              className="text-green-600 hover:text-green-900"
+                              title="Start"
+                              onClick={() => setStatus(campaign.id, 'active')}
+                            >
                               <Play className="w-4 h-4" />
                             </button>
                           ) : null}
                           {campaign.status === 'draft' && (
-                            <button className="text-red-600 hover:text-red-900" title="Delete">
+                            <button
+                              className="text-red-600 hover:text-red-900"
+                              title="Delete"
+                              onClick={() => deleteCampaign(campaign.id)}
+                            >
                               <Trash2 className="w-4 h-4" />
                             </button>
                           )}
