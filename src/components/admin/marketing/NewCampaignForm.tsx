@@ -147,18 +147,24 @@ export function NewCampaignForm({ onSuccess, onCancel }: NewCampaignFormProps) {
 
       <div className="grid gap-4 md:grid-cols-2">
         <div>
-          <label className={label}>Campaign name *</label>
+          <label className={label} htmlFor="cf-name">
+            Campaign name *
+          </label>
           <input
             className={input}
+            id="cf-name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="NEET 2027 Dropper re-engagement"
           />
         </div>
         <div>
-          <label className={label}>Channel *</label>
+          <label className={label} htmlFor="cf-type">
+            Channel *
+          </label>
           <select
             className={input}
+            id="cf-type"
             value={type}
             onChange={(e) => setType(e.target.value as CampaignType)}
           >
@@ -172,9 +178,12 @@ export function NewCampaignForm({ onSuccess, onCancel }: NewCampaignFormProps) {
       </div>
 
       <div>
-        <label className={label}>Objective *</label>
+        <label className={label} htmlFor="cf-objective">
+          Objective *
+        </label>
         <select
           className={input}
+          id="cf-objective"
           value={objective}
           onChange={(e) => setObjective(e.target.value as (typeof OBJECTIVES)[number])}
         >
@@ -220,9 +229,12 @@ export function NewCampaignForm({ onSuccess, onCancel }: NewCampaignFormProps) {
           </div>
         </div>
         <div>
-          <label className={label}>Cities (comma-separated, optional)</label>
+          <label className={label} htmlFor="cf-city">
+            Cities (comma-separated, optional)
+          </label>
           <input
             className={input}
+            id="cf-city"
             value={city}
             onChange={(e) => setCity(e.target.value)}
             placeholder="Delhi, Noida, Gurugram"
@@ -254,6 +266,8 @@ export function NewCampaignForm({ onSuccess, onCancel }: NewCampaignFormProps) {
               <textarea
                 className={input}
                 rows={3}
+                id="cf-wa-message"
+                aria-label="WhatsApp message"
                 value={waMessage}
                 onChange={(e) => setWaMessage(e.target.value)}
                 placeholder="Hi, admissions for NEET 2027 are open…"
@@ -266,10 +280,13 @@ export function NewCampaignForm({ onSuccess, onCancel }: NewCampaignFormProps) {
           ) : (
             <div className="space-y-3">
               <div>
-                <label className={label}>Template name (approved in Interakt)</label>
+                <label className={label} htmlFor="cf-wa-template">
+                  Template name (approved in Interakt)
+                </label>
                 <input
                   className={input}
                   list="wa-template-suggestions"
+                  id="cf-wa-template"
                   value={waTemplateName}
                   onChange={(e) => setWaTemplateName(e.target.value)}
                   placeholder="e.g. limited_offer"
@@ -328,10 +345,13 @@ export function NewCampaignForm({ onSuccess, onCancel }: NewCampaignFormProps) {
       )}
       {showSms && (
         <div>
-          <label className={label}>SMS message</label>
+          <label className={label} htmlFor="cf-sms">
+            SMS message
+          </label>
           <textarea
             className={input}
             rows={2}
+            id="cf-sms"
             value={smsMessage}
             onChange={(e) => setSmsMessage(e.target.value)}
           />
@@ -340,18 +360,24 @@ export function NewCampaignForm({ onSuccess, onCancel }: NewCampaignFormProps) {
       {showEmail && (
         <div className="space-y-3">
           <div>
-            <label className={label}>Email subject</label>
+            <label className={label} htmlFor="cf-email-subject">
+              Email subject
+            </label>
             <input
               className={input}
+              id="cf-email-subject"
               value={emailSubject}
               onChange={(e) => setEmailSubject(e.target.value)}
             />
           </div>
           <div>
-            <label className={label}>Email body (HTML allowed)</label>
+            <label className={label} htmlFor="cf-email-body">
+              Email body (HTML allowed)
+            </label>
             <textarea
               className={input}
               rows={5}
+              id="cf-email-body"
               value={emailBody}
               onChange={(e) => setEmailBody(e.target.value)}
             />
@@ -362,18 +388,24 @@ export function NewCampaignForm({ onSuccess, onCancel }: NewCampaignFormProps) {
       {/* Scheduling */}
       <div className="grid gap-4 md:grid-cols-2">
         <div>
-          <label className={label}>Schedule for (optional)</label>
+          <label className={label} htmlFor="cf-scheduled">
+            Schedule for (optional)
+          </label>
           <input
             type="datetime-local"
             className={input}
+            id="cf-scheduled"
             value={scheduledAt}
             onChange={(e) => setScheduledAt(e.target.value)}
           />
         </div>
         <div>
-          <label className={label}>Frequency</label>
+          <label className={label} htmlFor="cf-frequency">
+            Frequency
+          </label>
           <select
             className={input}
+            id="cf-frequency"
             value={frequency}
             onChange={(e) => setFrequency(e.target.value as (typeof FREQUENCIES)[number])}
           >

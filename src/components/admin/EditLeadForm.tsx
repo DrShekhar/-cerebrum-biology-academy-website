@@ -126,11 +126,12 @@ export function EditLeadForm({ lead, counselors, onSuccess, onCancel }: EditLead
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="studentName">
               Student Name <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
+              id="studentName"
               {...register('studentName')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Enter full name"
@@ -141,9 +142,12 @@ export function EditLeadForm({ lead, counselors, onSuccess, onCancel }: EditLead
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="email">
+              Email
+            </label>
             <input
               type="email"
+              id="email"
               {...register('email')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="student@example.com"
@@ -152,11 +156,12 @@ export function EditLeadForm({ lead, counselors, onSuccess, onCancel }: EditLead
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="phone">
               Phone <span className="text-red-500">*</span>
             </label>
             <input
               type="tel"
+              id="phone"
               {...register('phone')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="+91 98765 43210"
@@ -165,11 +170,15 @@ export function EditLeadForm({ lead, counselors, onSuccess, onCancel }: EditLead
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label
+              className="block text-sm font-medium text-gray-700 mb-1"
+              htmlFor="courseInterest"
+            >
               Course Interest <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
+              id="courseInterest"
               {...register('courseInterest')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="e.g., NEET Biology Class 12"
@@ -187,10 +196,11 @@ export function EditLeadForm({ lead, counselors, onSuccess, onCancel }: EditLead
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="source">
               Source <span className="text-red-500">*</span>
             </label>
             <select
+              id="source"
               {...register('source')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
@@ -210,10 +220,11 @@ export function EditLeadForm({ lead, counselors, onSuccess, onCancel }: EditLead
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="stage">
               Stage <span className="text-red-500">*</span>
             </label>
             <select
+              id="stage"
               {...register('stage')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
@@ -230,10 +241,11 @@ export function EditLeadForm({ lead, counselors, onSuccess, onCancel }: EditLead
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="priority">
               Priority <span className="text-red-500">*</span>
             </label>
             <select
+              id="priority"
               {...register('priority')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
@@ -247,10 +259,11 @@ export function EditLeadForm({ lead, counselors, onSuccess, onCancel }: EditLead
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="assignedToId">
               Assigned Counselor <span className="text-red-500">*</span>
             </label>
             <select
+              id="assignedToId"
               {...register('assignedToId')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
@@ -267,9 +280,15 @@ export function EditLeadForm({ lead, counselors, onSuccess, onCancel }: EditLead
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Next Follow-Up</label>
+            <label
+              className="block text-sm font-medium text-gray-700 mb-1"
+              htmlFor="nextFollowUpAt"
+            >
+              Next Follow-Up
+            </label>
             <input
               type="datetime-local"
+              id="nextFollowUpAt"
               {...register('nextFollowUpAt')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
@@ -277,11 +296,12 @@ export function EditLeadForm({ lead, counselors, onSuccess, onCancel }: EditLead
 
           {watchedStage === 'LOST' && (
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="lostReason">
                 Lost Reason <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
+                id="lostReason"
                 {...register('lostReason')}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter reason why lead was lost"
@@ -299,8 +319,11 @@ export function EditLeadForm({ lead, counselors, onSuccess, onCancel }: EditLead
         <h3 className="text-sm font-semibold text-gray-900 border-b pb-2">Additional Notes</h3>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Notes</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="notes">
+            Notes
+          </label>
           <textarea
+            id="notes"
             {...register('notes')}
             rows={3}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"

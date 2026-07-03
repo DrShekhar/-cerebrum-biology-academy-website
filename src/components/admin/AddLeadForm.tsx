@@ -119,11 +119,12 @@ export function AddLeadForm({
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="studentName">
               Student Name <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
+              id="studentName"
               {...register('studentName')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Enter full name"
@@ -134,9 +135,12 @@ export function AddLeadForm({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="email">
+              Email
+            </label>
             <input
               type="email"
+              id="email"
               {...register('email')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="student@email.com"
@@ -145,11 +149,12 @@ export function AddLeadForm({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="phone">
               Phone <span className="text-red-500">*</span>
             </label>
             <input
               type="tel"
+              id="phone"
               {...register('phone')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="+91 98765 43210"
@@ -158,11 +163,15 @@ export function AddLeadForm({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label
+              className="block text-sm font-medium text-gray-700 mb-1"
+              htmlFor="courseInterest"
+            >
               Course Interest <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
+              id="courseInterest"
               {...register('courseInterest')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="e.g., NEET Biology Class 12"
@@ -179,10 +188,11 @@ export function AddLeadForm({
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="source">
               Lead Source <span className="text-red-500">*</span>
             </label>
             <select
+              id="source"
               {...register('source')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
@@ -196,10 +206,11 @@ export function AddLeadForm({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="priority">
               Priority <span className="text-red-500">*</span>
             </label>
             <select
+              id="priority"
               {...register('priority')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
@@ -215,10 +226,11 @@ export function AddLeadForm({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="assignedToId">
               Assign to Counselor <span className="text-red-500">*</span>
             </label>
             <select
+              id="assignedToId"
               {...register('assignedToId')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
@@ -235,11 +247,15 @@ export function AddLeadForm({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label
+              className="block text-sm font-medium text-gray-700 mb-1"
+              htmlFor="nextFollowUpAt"
+            >
               Next Follow-up Date
             </label>
             <input
               type="date"
+              id="nextFollowUpAt"
               {...register('nextFollowUpAt')}
               min={today}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -251,8 +267,11 @@ export function AddLeadForm({
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Notes</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="notes">
+            Notes
+          </label>
           <textarea
+            id="notes"
             {...register('notes')}
             rows={3}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
