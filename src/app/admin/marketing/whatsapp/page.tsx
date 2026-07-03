@@ -14,6 +14,7 @@ import {
   ExternalLink,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
+import { FetchErrorState } from '@/components/admin/FetchErrorState'
 import { Button } from '@/components/ui/Button'
 
 interface WhatsAppAnalytics {
@@ -38,6 +39,7 @@ interface WhatsAppAnalytics {
 export default function WhatsAppAnalyticsPage() {
   const [data, setData] = useState<WhatsAppAnalytics | null>(null)
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   const [dateRange, setDateRange] = useState('7d')
 
   useEffect(() => {
@@ -47,13 +49,17 @@ export default function WhatsAppAnalyticsPage() {
   const fetchData = async () => {
     try {
       setLoading(true)
+      setError(null)
       const res = await fetch(`/api/admin/analytics/whatsapp?dateRange=${dateRange}`)
       const json = await res.json()
       if (json.success) {
         setData(json.data)
+      } else {
+        setError(json.error || 'Failed to load WhatsApp analytics')
       }
     } catch (error) {
       console.error('Failed to fetch WhatsApp analytics:', error)
+      setError('Failed to load WhatsApp analytics')
     } finally {
       setLoading(false)
     }
@@ -91,7 +97,9 @@ export default function WhatsAppAnalyticsPage() {
           </div>
         </div>
 
-        {loading ? (
+        {error && !loading ? (
+          <FetchErrorState message={error} onRetry={fetchData} />
+        ) : loading ? (
           <div className="p-12 text-center">
             <div className="w-8 h-8 border-2 border-green-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
             <p className="text-gray-500">Loading WhatsApp analytics...</p>

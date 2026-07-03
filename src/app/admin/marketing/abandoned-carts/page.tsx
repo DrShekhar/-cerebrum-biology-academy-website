@@ -15,6 +15,7 @@ import {
   Mail,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
+import { FetchErrorState } from '@/components/admin/FetchErrorState'
 import { Button } from '@/components/ui/Button'
 
 interface AbandonedCart {
@@ -37,19 +38,24 @@ export default function AbandonedCartsPage() {
   const [carts, setCarts] = useState<AbandonedCart[]>([])
   const [recovery, setRecovery] = useState<RecoveryOpportunities | null>(null)
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
 
   const fetchCarts = useCallback(async () => {
     try {
       setLoading(true)
+      setError(null)
       const res = await fetch('/api/admin/marketing?type=abandoned-carts&limit=50')
       const json = await res.json()
       if (json.success) {
         setCarts(json.data.abandonedCarts || [])
         setRecovery(json.data.recoveryOpportunities || null)
+      } else {
+        setError(json.error || 'Failed to load abandoned carts')
       }
     } catch (error) {
       console.error('Failed to fetch abandoned carts:', error)
+      setError('Failed to load abandoned carts')
     } finally {
       setLoading(false)
     }
@@ -167,6 +173,7 @@ export default function AbandonedCartsPage() {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
             <input
               type="text"
+              aria-label="Search abandoned carts"
               placeholder="Search by email or user ID..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -175,122 +182,126 @@ export default function AbandonedCartsPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-          {loading ? (
-            <div className="p-12 text-center">
-              <div className="w-8 h-8 border-2 border-red-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-              <p className="text-gray-500">Loading abandoned carts...</p>
-            </div>
-          ) : (
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      User
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Amount
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Urgency
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Abandoned
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Status
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Actions
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  {filtered.map((cart) => {
-                    const urg = urgency(cart.abandonedAt)
-                    return (
-                      <tr key={cart.id} className="hover:bg-gray-50">
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm font-medium text-gray-900">
-                            {cart.user?.email || cart.userId}
-                          </div>
-                          {cart.user?.phone && (
-                            <div className="text-xs text-gray-500">{cart.user.phone}</div>
-                          )}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm font-medium text-gray-900">
-                            {formatCurrency(cart.totalAmount)}
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <span
-                            className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${urg.color}`}
-                          >
-                            {urg.label}
-                          </span>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="flex items-center text-sm text-gray-600">
-                            <Clock className="w-4 h-4 mr-1" />
-                            {timeSince(cart.abandonedAt)}
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          {cart.recovered ? (
-                            <span className="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-green-100 text-green-700">
-                              <CheckCircle className="w-3 h-3 mr-1" />
-                              Recovered
-                            </span>
-                          ) : (
-                            <span className="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-red-100 text-red-700">
-                              <AlertTriangle className="w-3 h-3 mr-1" />
-                              Not recovered
-                            </span>
-                          )}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          {!cart.recovered && (
-                            <div className="flex items-center space-x-2">
-                              <button
-                                className="text-green-600 hover:text-green-900"
-                                title="Send WhatsApp reminder"
-                              >
-                                <MessageSquare className="w-4 h-4" />
-                              </button>
-                              <button
-                                className="text-purple-600 hover:text-purple-900"
-                                title="Send email reminder"
-                              >
-                                <Mail className="w-4 h-4" />
-                              </button>
-                              <button
-                                className="text-blue-600 hover:text-blue-900"
-                                title="Send SMS reminder"
-                              >
-                                <Send className="w-4 h-4" />
-                              </button>
+        {error && !loading ? (
+          <FetchErrorState message={error} onRetry={fetchCarts} />
+        ) : (
+          <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+            {loading ? (
+              <div className="p-12 text-center">
+                <div className="w-8 h-8 border-2 border-red-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+                <p className="text-gray-500">Loading abandoned carts...</p>
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        User
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Amount
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Urgency
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Abandoned
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Status
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    {filtered.map((cart) => {
+                      const urg = urgency(cart.abandonedAt)
+                      return (
+                        <tr key={cart.id} className="hover:bg-gray-50">
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-gray-900">
+                              {cart.user?.email || cart.userId}
                             </div>
-                          )}
-                        </td>
-                      </tr>
-                    )
-                  })}
-                </tbody>
-              </table>
-            </div>
-          )}
-          {!loading && filtered.length === 0 && (
-            <div className="text-center py-12">
-              <ShoppingCart className="mx-auto h-12 w-12 text-gray-300" />
-              <h3 className="mt-2 text-sm font-medium text-gray-900">No abandoned carts</h3>
-              <p className="mt-1 text-sm text-gray-500">
-                Great news! No users have abandoned their carts recently.
-              </p>
-            </div>
-          )}
-        </div>
+                            {cart.user?.phone && (
+                              <div className="text-xs text-gray-500">{cart.user.phone}</div>
+                            )}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-gray-900">
+                              {formatCurrency(cart.totalAmount)}
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <span
+                              className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${urg.color}`}
+                            >
+                              {urg.label}
+                            </span>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="flex items-center text-sm text-gray-600">
+                              <Clock className="w-4 h-4 mr-1" />
+                              {timeSince(cart.abandonedAt)}
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            {cart.recovered ? (
+                              <span className="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-green-100 text-green-700">
+                                <CheckCircle className="w-3 h-3 mr-1" />
+                                Recovered
+                              </span>
+                            ) : (
+                              <span className="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-red-100 text-red-700">
+                                <AlertTriangle className="w-3 h-3 mr-1" />
+                                Not recovered
+                              </span>
+                            )}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            {!cart.recovered && (
+                              <div className="flex items-center space-x-2">
+                                <button
+                                  className="text-green-600 hover:text-green-900"
+                                  title="Send WhatsApp reminder"
+                                >
+                                  <MessageSquare className="w-4 h-4" />
+                                </button>
+                                <button
+                                  className="text-purple-600 hover:text-purple-900"
+                                  title="Send email reminder"
+                                >
+                                  <Mail className="w-4 h-4" />
+                                </button>
+                                <button
+                                  className="text-blue-600 hover:text-blue-900"
+                                  title="Send SMS reminder"
+                                >
+                                  <Send className="w-4 h-4" />
+                                </button>
+                              </div>
+                            )}
+                          </td>
+                        </tr>
+                      )
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+            {!loading && filtered.length === 0 && (
+              <div className="text-center py-12">
+                <ShoppingCart className="mx-auto h-12 w-12 text-gray-300" />
+                <h3 className="mt-2 text-sm font-medium text-gray-900">No abandoned carts</h3>
+                <p className="mt-1 text-sm text-gray-500">
+                  Great news! No users have abandoned their carts recently.
+                </p>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </AdminLayout>
   )

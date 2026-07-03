@@ -376,6 +376,7 @@ export default function LeadsPage() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                 <input
                   type="text"
+                  aria-label="Search leads"
                   placeholder="Search leads by name, email, phone, or city..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
@@ -538,15 +539,28 @@ export default function LeadsPage() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                       <div className="flex items-center space-x-2">
-                        <button className="text-green-600 hover:text-green-900">
+                        <a
+                          className="text-green-600 hover:text-green-900"
+                          title="Call lead"
+                          aria-label="Call lead"
+                          href={`tel:${lead.phone.replace(/[^\d+]/g, '')}`}
+                        >
                           <PhoneCall className="w-4 h-4" />
-                        </button>
-                        <button className="text-blue-600 hover:text-blue-900">
+                        </a>
+                        <a
+                          className="text-blue-600 hover:text-blue-900"
+                          title="Message lead on WhatsApp"
+                          aria-label="Message lead on WhatsApp"
+                          href={`https://wa.me/${lead.phone.replace(/\D/g, '')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Send className="w-4 h-4" />
-                        </button>
+                        </a>
                         <button
                           className="text-purple-600 hover:text-purple-900"
                           title="View lead detail & timeline"
+                          aria-label="View lead detail and timeline"
                           onClick={() => router.push(`/admin/students/leads/${lead.id}`)}
                         >
                           <Eye className="w-4 h-4" />
@@ -554,6 +568,7 @@ export default function LeadsPage() {
                         <button
                           className="text-gray-600 hover:text-gray-900"
                           title="Edit lead"
+                          aria-label="Edit lead"
                           onClick={() => {
                             setSelectedLead(lead)
                             setIsEditLeadModalOpen(true)
@@ -561,7 +576,12 @@ export default function LeadsPage() {
                         >
                           <Edit className="w-4 h-4" />
                         </button>
-                        <button className="text-orange-600 hover:text-orange-900">
+                        <button
+                          className="text-orange-600 hover:text-orange-900"
+                          title="Open lead detail"
+                          aria-label="Open lead detail"
+                          onClick={() => router.push(`/admin/students/leads/${lead.id}`)}
+                        >
                           <ArrowRight className="w-4 h-4" />
                         </button>
                       </div>

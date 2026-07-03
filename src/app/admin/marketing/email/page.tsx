@@ -14,6 +14,7 @@ import {
   AlertCircle,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
+import { FetchErrorState } from '@/components/admin/FetchErrorState'
 import { Button } from '@/components/ui/Button'
 
 interface Campaign {
@@ -36,18 +37,23 @@ interface Campaign {
 export default function EmailCampaignsPage() {
   const [campaigns, setCampaigns] = useState<Campaign[]>([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
 
   const fetchCampaigns = useCallback(async () => {
     try {
       setLoading(true)
+      setError(null)
       const res = await fetch('/api/admin/marketing?type=campaigns&limit=50')
       const json = await res.json()
       if (json.success) {
         setCampaigns((json.data.campaigns || []).filter((c: Campaign) => c.type === 'email'))
+      } else {
+        setError(json.error || 'Failed to load email campaigns')
       }
     } catch (error) {
       console.error('Failed to fetch email campaigns:', error)
+      setError('Failed to load email campaigns')
     } finally {
       setLoading(false)
     }
@@ -133,6 +139,7 @@ export default function EmailCampaignsPage() {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
             <input
               type="text"
+              aria-label="Search email campaigns"
               placeholder="Search email campaigns..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -141,119 +148,123 @@ export default function EmailCampaignsPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-          {loading ? (
-            <div className="p-12 text-center">
-              <div className="w-8 h-8 border-2 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-              <p className="text-gray-500">Loading email campaigns...</p>
-            </div>
-          ) : (
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Campaign
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Status
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Sent
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Opened
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Clicked
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Unsubscribed
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Date
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Actions
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  {filtered.map((campaign) => {
-                    const openRate =
-                      campaign.metrics.sent > 0
-                        ? ((campaign.metrics.opened / campaign.metrics.sent) * 100).toFixed(1)
-                        : '0'
-                    return (
-                      <tr key={campaign.id} className="hover:bg-gray-50">
-                        <td className="px-6 py-4">
-                          <div className="text-sm font-medium text-gray-900">{campaign.name}</div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <span
-                            className={`inline-flex items-center px-2 py-1 text-xs font-medium rounded-full ${
-                              campaign.status === 'completed'
-                                ? 'bg-green-100 text-green-700'
-                                : campaign.status === 'active'
-                                  ? 'bg-blue-100 text-blue-700'
-                                  : campaign.status === 'scheduled'
-                                    ? 'bg-yellow-100 text-yellow-700'
-                                    : 'bg-gray-100 text-gray-700'
-                            }`}
-                          >
-                            {campaign.status === 'completed' ? (
-                              <CheckCircle className="w-3 h-3 mr-1" />
-                            ) : campaign.status === 'active' ? (
-                              <Send className="w-3 h-3 mr-1" />
-                            ) : (
-                              <Clock className="w-3 h-3 mr-1" />
+        {error && !loading ? (
+          <FetchErrorState message={error} onRetry={fetchCampaigns} />
+        ) : (
+          <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+            {loading ? (
+              <div className="p-12 text-center">
+                <div className="w-8 h-8 border-2 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+                <p className="text-gray-500">Loading email campaigns...</p>
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Campaign
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Status
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Sent
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Opened
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Clicked
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Unsubscribed
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Date
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    {filtered.map((campaign) => {
+                      const openRate =
+                        campaign.metrics.sent > 0
+                          ? ((campaign.metrics.opened / campaign.metrics.sent) * 100).toFixed(1)
+                          : '0'
+                      return (
+                        <tr key={campaign.id} className="hover:bg-gray-50">
+                          <td className="px-6 py-4">
+                            <div className="text-sm font-medium text-gray-900">{campaign.name}</div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <span
+                              className={`inline-flex items-center px-2 py-1 text-xs font-medium rounded-full ${
+                                campaign.status === 'completed'
+                                  ? 'bg-green-100 text-green-700'
+                                  : campaign.status === 'active'
+                                    ? 'bg-blue-100 text-blue-700'
+                                    : campaign.status === 'scheduled'
+                                      ? 'bg-yellow-100 text-yellow-700'
+                                      : 'bg-gray-100 text-gray-700'
+                              }`}
+                            >
+                              {campaign.status === 'completed' ? (
+                                <CheckCircle className="w-3 h-3 mr-1" />
+                              ) : campaign.status === 'active' ? (
+                                <Send className="w-3 h-3 mr-1" />
+                              ) : (
+                                <Clock className="w-3 h-3 mr-1" />
+                              )}
+                              {campaign.status.charAt(0).toUpperCase() + campaign.status.slice(1)}
+                            </span>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            {campaign.metrics.sent.toLocaleString()}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm text-gray-900">
+                              {campaign.metrics.opened.toLocaleString()}
+                            </div>
+                            <div className="text-xs text-gray-500">{openRate}%</div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            {campaign.metrics.clicked.toLocaleString()}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm text-gray-900">
+                              {campaign.metrics.unsubscribed}
+                            </div>
+                            {campaign.metrics.unsubscribed > 0 && (
+                              <AlertCircle className="w-3 h-3 text-yellow-500 inline ml-1" />
                             )}
-                            {campaign.status.charAt(0).toUpperCase() + campaign.status.slice(1)}
-                          </span>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          {campaign.metrics.sent.toLocaleString()}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">
-                            {campaign.metrics.opened.toLocaleString()}
-                          </div>
-                          <div className="text-xs text-gray-500">{openRate}%</div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          {campaign.metrics.clicked.toLocaleString()}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">
-                            {campaign.metrics.unsubscribed}
-                          </div>
-                          {campaign.metrics.unsubscribed > 0 && (
-                            <AlertCircle className="w-3 h-3 text-yellow-500 inline ml-1" />
-                          )}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          {new Date(campaign.createdAt).toLocaleDateString('en-IN')}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <button className="text-blue-600 hover:text-blue-900" title="View">
-                            <Eye className="w-4 h-4" />
-                          </button>
-                        </td>
-                      </tr>
-                    )
-                  })}
-                </tbody>
-              </table>
-            </div>
-          )}
-          {!loading && filtered.length === 0 && (
-            <div className="text-center py-12">
-              <Mail className="mx-auto h-12 w-12 text-gray-300" />
-              <h3 className="mt-2 text-sm font-medium text-gray-900">No email campaigns</h3>
-              <p className="mt-1 text-sm text-gray-500">Create your first email campaign.</p>
-            </div>
-          )}
-        </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                            {new Date(campaign.createdAt).toLocaleDateString('en-IN')}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <button className="text-blue-600 hover:text-blue-900" title="View">
+                              <Eye className="w-4 h-4" />
+                            </button>
+                          </td>
+                        </tr>
+                      )
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+            {!loading && filtered.length === 0 && (
+              <div className="text-center py-12">
+                <Mail className="mx-auto h-12 w-12 text-gray-300" />
+                <h3 className="mt-2 text-sm font-medium text-gray-900">No email campaigns</h3>
+                <p className="mt-1 text-sm text-gray-500">Create your first email campaign.</p>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </AdminLayout>
   )
