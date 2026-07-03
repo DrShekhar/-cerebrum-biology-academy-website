@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { useRouter } from 'next/navigation'
 import {
   Users,
   Search,
@@ -121,6 +122,7 @@ function transformLead(apiLead: APILead): Lead {
 }
 
 export default function LeadsPage() {
+  const router = useRouter()
   const [leads, setLeads] = useState<Lead[]>([])
   const [filteredLeads, setFilteredLeads] = useState<Lead[]>([])
   const [counselors, setCounselors] = useState<Counselor[]>([])
@@ -544,11 +546,8 @@ export default function LeadsPage() {
                         </button>
                         <button
                           className="text-purple-600 hover:text-purple-900"
-                          title="View / edit lead"
-                          onClick={() => {
-                            setSelectedLead(lead)
-                            setIsEditLeadModalOpen(true)
-                          }}
+                          title="View lead detail & timeline"
+                          onClick={() => router.push(`/admin/students/leads/${lead.id}`)}
                         >
                           <Eye className="w-4 h-4" />
                         </button>

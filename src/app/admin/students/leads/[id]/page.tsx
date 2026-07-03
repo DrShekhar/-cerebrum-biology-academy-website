@@ -1,0 +1,312 @@
+'use client'
+
+import { useEffect, useState, useCallback } from 'react'
+import { useParams, useRouter } from 'next/navigation'
+import {
+  ArrowLeft,
+  Phone,
+  Mail,
+  Star,
+  Clock,
+  Activity,
+  CheckSquare,
+  MessageSquare,
+  StickyNote,
+  Loader2,
+  Calendar,
+} from 'lucide-react'
+import { AdminLayout } from '@/components/admin/AdminLayout'
+import { Button } from '@/components/ui/Button'
+
+interface TimelineActivity {
+  id: string
+  action: string
+  description: string
+  createdAt: string
+  by: string
+}
+interface LeadDetail {
+  id: string
+  studentName: string
+  email: string | null
+  phone: string
+  courseInterest: string
+  stage: string
+  priority: string
+  source: string
+  sourceDetail: string | null
+  score: number | null
+  assignedTo: { name: string; email: string } | null
+  createdAt: string
+  lastContactedAt: string | null
+  nextFollowUpAt: string | null
+  convertedAt: string | null
+  lostReason: string | null
+  demoBooking: {
+    status: string
+    preferredDate: string
+    preferredTime: string
+    demoCompleted: boolean
+    demoRating: number | null
+  } | null
+  activities: TimelineActivity[]
+  notes: { id: string; content: string; createdAt: string; by: string }[]
+  tasks: {
+    id: string
+    title: string
+    type: string
+    priority: string
+    status: string
+    dueDate: string | null
+  }[]
+  communications: {
+    id: string
+    type: string
+    content: string
+    status: string
+    sentAt: string | null
+  }[]
+}
+
+const stageColor = (s: string) => {
+  const map: Record<string, string> = {
+    NEW_LEAD: 'bg-blue-100 text-blue-800',
+    DEMO_SCHEDULED: 'bg-orange-100 text-orange-800',
+    DEMO_COMPLETED: 'bg-yellow-100 text-yellow-800',
+    OFFER_SENT: 'bg-purple-100 text-purple-800',
+    NEGOTIATING: 'bg-pink-100 text-pink-800',
+    ENROLLED: 'bg-green-100 text-green-800',
+    ACTIVE_STUDENT: 'bg-green-100 text-green-800',
+    LOST: 'bg-red-100 text-red-800',
+  }
+  return map[s] || 'bg-gray-100 text-gray-800'
+}
+
+const fmt = (d: string | null) =>
+  d ? new Date(d).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) : '—'
+
+export default function AdminLeadDetailPage() {
+  const params = useParams()
+  const router = useRouter()
+  const id = params?.id as string
+  const [lead, setLead] = useState<LeadDetail | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  const load = useCallback(async () => {
+    try {
+      setLoading(true)
+      setError(null)
+      const res = await fetch(`/api/admin/leads/${id}`)
+      const data = await res.json()
+      if (!res.ok || !data.success) throw new Error(data.error || 'Failed to load lead')
+      setLead(data.data)
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Failed to load lead')
+    } finally {
+      setLoading(false)
+    }
+  }, [id])
+
+  useEffect(() => {
+    if (id) load()
+  }, [id, load])
+
+  return (
+    <AdminLayout>
+      <div className="p-6 max-w-6xl mx-auto">
+        <button
+          onClick={() => router.push('/admin/students/leads')}
+          className="mb-4 inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900"
+        >
+          <ArrowLeft className="w-4 h-4" /> Back to leads
+        </button>
+
+        {loading && (
+          <div className="flex items-center justify-center py-24 text-gray-500">
+            <Loader2 className="w-6 h-6 animate-spin mr-2" /> Loading lead…
+          </div>
+        )}
+
+        {error && !loading && (
+          <div className="rounded-xl border border-red-200 bg-red-50 p-6 text-center">
+            <p className="text-red-700">{error}</p>
+            <Button className="mt-4" onClick={() => load()}>
+              Try again
+            </Button>
+          </div>
+        )}
+
+        {lead && !loading && (
+          <div className="space-y-6">
+            {/* Header */}
+            <div className="rounded-2xl border border-gray-200 bg-white p-6">
+              <div className="flex flex-wrap items-start justify-between gap-4">
+                <div>
+                  <h1 className="text-2xl font-bold text-gray-900">{lead.studentName}</h1>
+                  <div className="mt-2 flex flex-wrap items-center gap-4 text-sm text-gray-600">
+                    <span className="inline-flex items-center gap-1">
+                      <Phone className="w-4 h-4" /> {lead.phone}
+                    </span>
+                    {lead.email && (
+                      <span className="inline-flex items-center gap-1">
+                        <Mail className="w-4 h-4" /> {lead.email}
+                      </span>
+                    )}
+                    <span>{lead.courseInterest}</span>
+                  </div>
+                </div>
+                <div className="flex flex-col items-end gap-2">
+                  <span
+                    className={`rounded-full px-3 py-1 text-xs font-semibold ${stageColor(lead.stage)}`}
+                  >
+                    {lead.stage.replace(/_/g, ' ')}
+                  </span>
+                  {typeof lead.score === 'number' && (
+                    <span className="inline-flex items-center gap-1 text-sm font-medium text-gray-700">
+                      <Star className="w-4 h-4 text-yellow-500" /> Score {lead.score}
+                    </span>
+                  )}
+                </div>
+              </div>
+              <div className="mt-4 grid grid-cols-2 gap-4 border-t border-gray-100 pt-4 text-sm md:grid-cols-4">
+                <Field label="Priority" value={lead.priority} />
+                <Field label="Source" value={lead.sourceDetail || lead.source} />
+                <Field label="Assigned to" value={lead.assignedTo?.name || 'Unassigned'} />
+                <Field label="Created" value={fmt(lead.createdAt)} />
+                <Field label="Last contacted" value={fmt(lead.lastContactedAt)} />
+                <Field label="Next follow-up" value={fmt(lead.nextFollowUpAt)} />
+                {lead.convertedAt && <Field label="Converted" value={fmt(lead.convertedAt)} />}
+                {lead.lostReason && <Field label="Lost reason" value={lead.lostReason} />}
+              </div>
+              {lead.demoBooking && (
+                <div className="mt-4 flex items-center gap-2 rounded-lg bg-orange-50 px-4 py-3 text-sm text-orange-900">
+                  <Calendar className="w-4 h-4" />
+                  Demo {lead.demoBooking.status.toLowerCase()} for {lead.demoBooking.preferredDate}{' '}
+                  at {lead.demoBooking.preferredTime}
+                  {lead.demoBooking.demoCompleted && ' · completed'}
+                  {lead.demoBooking.demoRating ? ` · rated ${lead.demoBooking.demoRating}/5` : ''}
+                </div>
+              )}
+            </div>
+
+            <div className="grid gap-6 lg:grid-cols-3">
+              {/* Timeline */}
+              <div className="lg:col-span-2 rounded-2xl border border-gray-200 bg-white p-6">
+                <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-gray-900">
+                  <Activity className="w-5 h-5 text-green-600" /> Activity Timeline
+                </h2>
+                {lead.activities.length === 0 ? (
+                  <p className="text-sm text-gray-500">No activity recorded yet.</p>
+                ) : (
+                  <ol className="relative space-y-5 border-l border-gray-200 pl-6">
+                    {lead.activities.map((a) => (
+                      <li key={a.id} className="relative">
+                        <span className="absolute -left-[27px] mt-1 h-3 w-3 rounded-full border-2 border-white bg-green-500" />
+                        <div className="text-sm font-medium text-gray-900">
+                          {a.action.replace(/_/g, ' ')}
+                        </div>
+                        <div className="text-sm text-gray-600">{a.description}</div>
+                        <div className="mt-0.5 text-xs text-gray-400">
+                          {fmt(a.createdAt)} · {a.by}
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                )}
+              </div>
+
+              {/* Side column: tasks, comms, notes */}
+              <div className="space-y-6">
+                <Panel icon={<CheckSquare className="w-5 h-5 text-blue-600" />} title="Tasks">
+                  {lead.tasks.length === 0 ? (
+                    <Empty text="No tasks." />
+                  ) : (
+                    lead.tasks.map((t) => (
+                      <div key={t.id} className="border-b border-gray-100 py-2 last:border-0">
+                        <div className="text-sm font-medium text-gray-900">{t.title}</div>
+                        <div className="text-xs text-gray-500">
+                          {t.status} · {t.priority} · due {fmt(t.dueDate)}
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </Panel>
+
+                <Panel
+                  icon={<MessageSquare className="w-5 h-5 text-purple-600" />}
+                  title="Communications"
+                >
+                  {lead.communications.length === 0 ? (
+                    <Empty text="No messages logged." />
+                  ) : (
+                    lead.communications.map((c) => (
+                      <div key={c.id} className="border-b border-gray-100 py-2 last:border-0">
+                        <div className="text-xs font-medium uppercase text-gray-500">
+                          {c.type} · {c.status}
+                        </div>
+                        <div className="text-sm text-gray-700 line-clamp-2">{c.content}</div>
+                        <div className="text-xs text-gray-400">{fmt(c.sentAt)}</div>
+                      </div>
+                    ))
+                  )}
+                </Panel>
+
+                <Panel icon={<StickyNote className="w-5 h-5 text-amber-600" />} title="Notes">
+                  {lead.notes.length === 0 ? (
+                    <Empty text="No notes." />
+                  ) : (
+                    lead.notes.map((n) => (
+                      <div key={n.id} className="border-b border-gray-100 py-2 last:border-0">
+                        <div className="text-sm text-gray-700">{n.content}</div>
+                        <div className="text-xs text-gray-400">
+                          {fmt(n.createdAt)} · {n.by}
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </Panel>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </AdminLayout>
+  )
+}
+
+function Field({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <div className="text-xs uppercase tracking-wide text-gray-400">{label}</div>
+      <div className="mt-0.5 font-medium text-gray-900 capitalize">{value}</div>
+    </div>
+  )
+}
+
+function Panel({
+  icon,
+  title,
+  children,
+}: {
+  icon: React.ReactNode
+  title: string
+  children: React.ReactNode
+}) {
+  return (
+    <div className="rounded-2xl border border-gray-200 bg-white p-5">
+      <h3 className="mb-3 flex items-center gap-2 text-sm font-bold text-gray-900">
+        {icon} {title}
+      </h3>
+      <div>{children}</div>
+    </div>
+  )
+}
+
+function Empty({ text }: { text: string }) {
+  return (
+    <p className="flex items-center gap-1 text-sm text-gray-400">
+      <Clock className="w-3.5 h-3.5" /> {text}
+    </p>
+  )
+}
