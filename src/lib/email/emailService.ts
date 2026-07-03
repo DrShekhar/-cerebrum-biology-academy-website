@@ -17,6 +17,20 @@
 
 import { z } from 'zod'
 import { redactObject } from '@/lib/security/logger'
+import { prisma } from '@/lib/prisma'
+
+/** Is this address on the suppression list (hard bounce / complaint)? */
+async function isSuppressed(email: string): Promise<boolean> {
+  try {
+    const hit = await prisma.email_suppressions.findUnique({
+      where: { email: email.toLowerCase().trim() },
+      select: { id: true },
+    })
+    return !!hit
+  } catch {
+    return false // never block sending on a suppression-lookup failure
+  }
+}
 
 /**
  * Heuristic: is an email provider error worth retrying? Timeouts, rate limits
@@ -213,6 +227,13 @@ class EmailService {
         }
       }
       return { success: false, error: 'Invalid email options' }
+    }
+
+    // Skip addresses that hard-bounced or complained — re-sending to them hurts
+    // sender reputation and can get the whole domain throttled/blocked.
+    if (await isSuppressed(options.to)) {
+      console.warn(`✋ Email to ${options.to} skipped — address is suppressed`)
+      return { success: false, error: 'Recipient suppressed (bounce/complaint)' }
     }
 
     // Try each provider in sequence, with a short backoff retry for TRANSIENT

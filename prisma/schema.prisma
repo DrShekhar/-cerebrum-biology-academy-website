@@ -4829,3 +4829,16 @@ model welcome_series_events {
   @@unique([leadId, day])
   @@index([leadId])
 }
+
+// Email suppression list — addresses that hard-bounced or filed a spam
+// complaint. emailService skips these to protect sender reputation. Fed by the
+// provider bounce/complaint webhook (/api/webhooks/email).
+model email_suppressions {
+  id        String   @id
+  email     String   @unique
+  reason    String // 'bounce' | 'complaint' | 'manual'
+  detail    String?
+  createdAt DateTime @default(now())
+
+  @@index([reason])
+}
