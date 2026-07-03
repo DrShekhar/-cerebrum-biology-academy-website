@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import {
   MessageSquare,
   Send,
@@ -29,6 +30,7 @@ interface MarketingOverview {
 }
 
 export default function MarketingPage() {
+  const router = useRouter()
   const [overview, setOverview] = useState<MarketingOverview | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -73,7 +75,10 @@ export default function MarketingPage() {
               Manage campaigns, automation, and customer engagement
             </p>
           </div>
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+          <Button
+            className="bg-blue-600 hover:bg-blue-700 text-white"
+            onClick={() => router.push('/admin/marketing/campaigns')}
+          >
             <Plus className="w-4 h-4 mr-2" />
             New Campaign
           </Button>
@@ -227,7 +232,10 @@ export default function MarketingPage() {
             <MessageSquare className="w-16 h-16 text-gray-400 mx-auto mb-4" />
             <h3 className="text-lg font-medium text-gray-900 mb-2">No Marketing Data Available</h3>
             <p className="text-gray-600 mb-4">Start by creating your first marketing campaign</p>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+              onClick={() => router.push('/admin/marketing/campaigns')}
+            >
               <Plus className="w-4 h-4 mr-2" />
               Create Campaign
             </Button>

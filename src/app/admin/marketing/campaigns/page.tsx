@@ -18,6 +18,8 @@ import {
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
+import { Modal } from '@/components/ui/Modal'
+import { NewCampaignForm } from '@/components/admin/marketing/NewCampaignForm'
 
 interface Campaign {
   id: string
@@ -44,6 +46,7 @@ export default function CampaignsPage() {
   const [loading, setLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState('all')
+  const [isNewOpen, setIsNewOpen] = useState(false)
   const [typeFilter, setTypeFilter] = useState('all')
 
   const fetchCampaigns = useCallback(async () => {
@@ -134,7 +137,10 @@ export default function CampaignsPage() {
             <h1 className="text-3xl font-bold text-gray-900">Campaigns</h1>
             <p className="text-gray-600 mt-1">Create and manage marketing campaigns</p>
           </div>
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+          <Button
+            className="bg-blue-600 hover:bg-blue-700 text-white"
+            onClick={() => setIsNewOpen(true)}
+          >
             <Plus className="w-4 h-4 mr-2" />
             New Campaign
           </Button>
@@ -342,7 +348,10 @@ export default function CampaignsPage() {
               <MessageSquare className="mx-auto h-12 w-12 text-gray-300" />
               <h3 className="mt-2 text-sm font-medium text-gray-900">No campaigns found</h3>
               <p className="mt-1 text-sm text-gray-500">Create your first marketing campaign.</p>
-              <Button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white">
+              <Button
+                className="mt-4 bg-blue-600 hover:bg-blue-700 text-white"
+                onClick={() => setIsNewOpen(true)}
+              >
                 <Plus className="w-4 h-4 mr-2" />
                 New Campaign
               </Button>
@@ -350,6 +359,22 @@ export default function CampaignsPage() {
           )}
         </div>
       </div>
+
+      <Modal
+        open={isNewOpen}
+        onOpenChange={setIsNewOpen}
+        title="New Campaign"
+        description="Create a marketing campaign. Saved as a draft — sending is a separate step."
+        size="xl"
+      >
+        <NewCampaignForm
+          onSuccess={() => {
+            setIsNewOpen(false)
+            fetchCampaigns()
+          }}
+          onCancel={() => setIsNewOpen(false)}
+        />
+      </Modal>
     </AdminLayout>
   )
 }
