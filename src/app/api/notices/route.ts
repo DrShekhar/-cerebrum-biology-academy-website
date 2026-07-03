@@ -223,6 +223,29 @@ export async function POST(request: NextRequest) {
       },
     })
 
+    // Fire-and-forget web push for immediately-published notices. ALL-targeted
+    // notices broadcast; SPECIFIC_USERS push only to those users. No-ops when
+    // VAPID keys are unset.
+    if (!body.publishedAt || new Date(body.publishedAt) <= new Date()) {
+      const payload = {
+        title: notice.title,
+        body: notice.content.slice(0, 140),
+        url: '/notices',
+        tag: `notice-${notice.id}`,
+      }
+      if (notice.targetType === 'ALL') {
+        void import('@/lib/push/webPush')
+          .then(({ sendPushToAll }) => sendPushToAll(payload))
+          .catch(() => {})
+      } else if (notice.targetType === 'SPECIFIC_USERS' && notice.targetUserIds.length > 0) {
+        void import('@/lib/push/webPush')
+          .then(({ sendPushToUser }) =>
+            Promise.allSettled(notice.targetUserIds.map((uid) => sendPushToUser(uid, payload)))
+          )
+          .catch(() => {})
+      }
+    }
+
     return NextResponse.json({
       success: true,
       data: notice,

@@ -491,14 +491,18 @@ self.addEventListener('push', (event) => {
   if (event.data) {
     try {
       const payload = event.data.json()
+      options.title = payload.title
       options.body = payload.body || options.body
       options.data.url = payload.url || options.data.url
+      if (payload.tag) options.tag = payload.tag
     } catch (error) {
       console.error('Failed to parse push payload:', error)
     }
   }
 
-  event.waitUntil(self.registration.showNotification('Cerebrum Biology Academy', options))
+  event.waitUntil(
+    self.registration.showNotification(options.title || 'Cerebrum Biology Academy', options)
+  )
 })
 
 // Notification click handling

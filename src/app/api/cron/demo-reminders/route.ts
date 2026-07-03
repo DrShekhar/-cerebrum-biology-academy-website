@@ -91,6 +91,7 @@ async function processDemoReminders() {
     },
     select: {
       id: true,
+      userId: true,
       studentName: true,
       email: true,
       phone: true,
@@ -125,6 +126,26 @@ async function processDemoReminders() {
 
       if (reminderType) {
         const success = await sendDemoReminder(demo, reminderType)
+
+        // Also web-push to the student's subscribed devices (no-op sans VAPID).
+        if (demo.userId) {
+          const timeLabel =
+            reminderType === '24h'
+              ? 'tomorrow'
+              : reminderType === '1h'
+                ? 'in 1 hour'
+                : 'in 15 minutes'
+          void import('@/lib/push/webPush')
+            .then(({ sendPushToUser }) =>
+              sendPushToUser(demo.userId!, {
+                title: 'Demo class reminder',
+                body: `Your NEET Biology demo class is ${timeLabel} (${demo.preferredTime}). See you there!`,
+                url: '/dashboard/student',
+                tag: `demo-reminder-${demo.id}`,
+              })
+            )
+            .catch(() => {})
+        }
 
         if (success) {
           // Update remindersSent count

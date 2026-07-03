@@ -8,6 +8,7 @@ import { DashboardAccessControl } from '@/components/DashboardAccessControl'
 import { DashboardErrorBoundary } from '@/components/errors/DashboardErrorBoundary'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
+import { EnablePushButton } from '@/components/push/EnablePushButton'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
   Trophy,
@@ -272,6 +273,8 @@ export default function StudentDashboard() {
                   <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   <span className="text-sm sm:text-base">Export PDF</span>
                 </Button>
+
+                <EnablePushButton className="flex-1 sm:flex-none justify-center" />
               </div>
             </div>
 

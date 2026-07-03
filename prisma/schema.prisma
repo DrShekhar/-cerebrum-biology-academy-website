@@ -4834,6 +4834,21 @@ model welcome_series_events {
   @@index([leadId])
 }
 
+// Web-push subscriptions (VAPID). One row per browser subscription; endpoint is
+// globally unique. userId is optional so guests (freeUserId identity) can also
+// subscribe. Dead subscriptions (410 Gone on send) are pruned automatically.
+model push_subscriptions {
+  id        String   @id
+  userId    String?
+  endpoint  String   @unique
+  p256dh    String
+  auth      String
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
+
 // Email suppression list — addresses that hard-bounced or filed a spam
 // complaint. emailService skips these to protect sender reputation. Fed by the
 // provider bounce/complaint webhook (/api/webhooks/email).
