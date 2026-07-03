@@ -83,8 +83,10 @@ export async function upsertLead(
     // "+919876543210" (15/18 existing rows use the +91 form). International
     // numbers (>10 digits after normalize) match exactly.
     const last10 = phone.slice(-10)
+    // Dedup on phoneNormalized (indexed, backfilled) with a fallback to the
+    // legacy phone endsWith for rows not yet backfilled.
     const existing = await prisma.leads.findFirst({
-      where: phone.length === 10 ? { phone: { endsWith: last10 } } : { phone },
+      where: { OR: [{ phoneNormalized: last10 }, { phone: { endsWith: last10 } }] },
       select: { id: true, studentName: true, email: true, assignedToId: true },
     })
 
@@ -97,6 +99,7 @@ export async function upsertLead(
         data: {
           lastContactedAt: new Date(),
           updatedAt: new Date(),
+          phoneNormalized: last10, // backfill legacy rows on first touch
           ...(name && !existing.studentName ? { studentName: name } : {}),
           ...(email && !existing.email ? { email } : {}),
         },
@@ -149,6 +152,7 @@ export async function upsertLead(
         id: leadId,
         studentName: name || 'Website Lead',
         phone,
+        phoneNormalized: last10,
         email,
         courseInterest: input.courseInterest?.trim() || 'Biology coaching (website enquiry)',
         stage: 'NEW_LEAD',

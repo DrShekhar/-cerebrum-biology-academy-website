@@ -1531,6 +1531,10 @@ model leads {
   scoreBreakdown          Json?
   scoreUpdatedAt          DateTime?
   metadata                Json?
+  // Last-10 digits of phone — the canonical dedup key. Indexed (non-unique for
+  // now; a unique index is added by a separate migration AFTER dedup so it can
+  // then back an atomic upsert to fully close the concurrent-duplicate race).
+  phoneNormalized         String?
   activities              activities[]
   agent_tasks             agent_tasks[]
   crm_communications      crm_communications[]
@@ -1553,6 +1557,7 @@ model leads {
   @@index([nextFollowUpAt])
   @@index([gclid])
   @@index([phone])
+  @@index([phoneNormalized])
   @@index([score])
 }
 
@@ -4796,4 +4801,18 @@ model marketing_campaigns {
   @@index([status, createdAt])
   @@index([scheduledAt, status])
   @@index([type, status])
+}
+
+// Idempotency ledger for inbound WhatsApp delivery/read status webhooks.
+// Interakt retries webhooks; without this a repeated (messageId,status) would
+// double-increment campaign metricsDelivered/metricsOpened.
+model whatsapp_message_events {
+  id         String   @id
+  messageId  String
+  status     String
+  campaignId String?
+  createdAt  DateTime @default(now())
+
+  @@unique([messageId, status])
+  @@index([campaignId])
 }

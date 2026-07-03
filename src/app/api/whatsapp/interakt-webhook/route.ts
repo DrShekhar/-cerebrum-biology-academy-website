@@ -623,6 +623,23 @@ async function handleStatusUpdate(data: any) {
     else if (normalized === 'read' || normalized === 'opened') field = 'metricsOpened'
     if (!field) return
 
+    // Idempotency: Interakt retries webhooks. Record this exact (messageId,status)
+    // first; if it already exists (unique violation) we've counted it — skip.
+    const dedupeKey = messageId || `${campaignId}:${normalized}:${Date.now()}`
+    try {
+      await prisma.whatsapp_message_events.create({
+        data: {
+          id: `wme_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          messageId: String(dedupeKey),
+          status: normalized,
+          campaignId,
+        },
+      })
+    } catch (e: any) {
+      if (e?.code === 'P2002') return // already processed this status for this message
+      throw e
+    }
+
     await prisma.marketing_campaigns.update({
       where: { id: campaignId },
       data: { [field]: { increment: 1 }, updatedAt: new Date() },
