@@ -2900,6 +2900,9 @@ model test_sessions {
   fullscreenExits          Int                       @default(0)
   suspiciousActivity       Json?
   isProctored              Boolean                   @default(false)
+  // CBT attempt state: { questionIds, answers, marked, visited } — lets the
+  // exam simulator autosave and resume the exact paper + progress server-side.
+  answerState              Json?
   totalScore               Int?
   percentage               Float?
   rank                     Int?

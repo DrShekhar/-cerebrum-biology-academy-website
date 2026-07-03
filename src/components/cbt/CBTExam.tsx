@@ -29,10 +29,42 @@ import type { MockTest, Question } from '@/types/mockTest'
 
 type Phase = 'instructions' | 'exam' | 'result'
 
+export interface CBTResult {
+  correct: number
+  incorrect: number
+  unattempted: number
+  score: number
+  maxScore: number
+  perSection: Record<string, { correct: number; incorrect: number; unattempted: number }>
+}
+
+/** Attempt state passed to server save/submit callbacks. */
+export interface CBTAttemptState {
+  answers: Record<string, string>
+  marked: string[]
+  visited: string[]
+  currentIndex: number
+  remainingTime: number
+  tabSwitchCount: number
+}
+
+interface CBTServer {
+  /** Fire-and-forget autosave. */
+  onSave: (state: CBTAttemptState) => void
+  /** Server-side scoring — returns the scorecard (client has no answer key). */
+  onSubmit: (state: CBTAttemptState) => Promise<CBTResult | null>
+  initialState?: { answers: Record<string, string>; marked: string[]; visited: string[] }
+  initialRemaining?: number
+  initialIndex?: number
+  resumed?: boolean
+}
+
 interface CBTExamProps {
   test: MockTest
   candidateName?: string
   onExit: () => void
+  /** When provided, the exam persists + scores on the server instead of locally. */
+  server?: CBTServer
 }
 
 interface QuestionState {
@@ -61,8 +93,10 @@ function formatTime(totalSeconds: number): string {
   return [h, m, sec].map((n) => String(n).padStart(2, '0')).join(':')
 }
 
-export function CBTExam({ test, candidateName, onExit }: CBTExamProps) {
+export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
   const storageKey = `cbt_attempt_${test.id}`
+  const [serverResult, setServerResult] = useState<CBTResult | null>(null)
+  const [submitting, setSubmitting] = useState(false)
 
   // Order questions by section so navigation + palette are grouped.
   const orderedQuestions = useMemo<Question[]>(() => {
@@ -100,8 +134,31 @@ export function CBTExam({ test, candidateName, onExit }: CBTExamProps) {
 
   const currentQ = orderedQuestions[currentIndex]
 
+  const collectState = useCallback((): CBTAttemptState => {
+    const answers: Record<string, string> = {}
+    const marked: string[] = []
+    const visited: string[] = []
+    for (const [qid, st] of Object.entries(states)) {
+      if (st.answer) answers[qid] = st.answer
+      if (st.marked) marked.push(qid)
+      if (st.visited) visited.push(qid)
+    }
+    return {
+      answers,
+      marked,
+      visited,
+      currentIndex,
+      remainingTime: timeRemaining,
+      tabSwitchCount: tabSwitches,
+    }
+  }, [states, currentIndex, timeRemaining, tabSwitches])
+
   // ── Resume detection ──────────────────────────────────────────────────────
   useEffect(() => {
+    if (server) {
+      setResumeAvailable(Boolean(server.resumed))
+      return
+    }
     try {
       const saved = localStorage.getItem(storageKey)
       if (saved) {
@@ -116,6 +173,10 @@ export function CBTExam({ test, candidateName, onExit }: CBTExamProps) {
 
   const persist = useCallback(
     (extra: Record<string, unknown> = {}) => {
+      if (server) {
+        server.onSave(collectState())
+        return
+      }
       try {
         localStorage.setItem(
           storageKey,
@@ -125,7 +186,7 @@ export function CBTExam({ test, candidateName, onExit }: CBTExamProps) {
         /* storage full / disabled — non-fatal */
       }
     },
-    [storageKey, states, currentIndex, timeRemaining]
+    [server, collectState, storageKey, states, currentIndex, timeRemaining]
   )
 
   // ── Countdown ─────────────────────────────────────────────────────────────
@@ -295,20 +356,51 @@ export function CBTExam({ test, candidateName, onExit }: CBTExamProps) {
     return { correct, incorrect, unattempted, score, maxScore, perSection }
   }, [orderedQuestions, states])
 
-  const handleSubmit = (auto = false) => {
+  const handleSubmit = async (auto = false) => {
     setShowSubmitConfirm(false)
-    try {
-      localStorage.setItem(storageKey, JSON.stringify({ submitted: true }))
-    } catch {
-      /* ignore */
-    }
     if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {})
+    if (server) {
+      setSubmitting(true)
+      try {
+        const res = await server.onSubmit(collectState())
+        if (res) setServerResult(res)
+      } catch {
+        /* fall through to result with whatever we have */
+      }
+      setSubmitting(false)
+    } else {
+      try {
+        localStorage.setItem(storageKey, JSON.stringify({ submitted: true }))
+      } catch {
+        /* ignore */
+      }
+    }
     setPhase('result')
     if (auto) setShowWarning(null)
   }
 
   const startExam = (resume: boolean) => {
-    if (resume) {
+    if (server) {
+      if (resume && server.initialState) {
+        const { answers, marked, visited } = server.initialState
+        const markedSet = new Set(marked)
+        const visitedSet = new Set(visited)
+        const hydrated: Record<string, QuestionState> = {}
+        for (const q of orderedQuestions) {
+          const a = answers[q.id]
+          if (a || markedSet.has(q.id) || visitedSet.has(q.id)) {
+            hydrated[q.id] = {
+              answer: a || null,
+              marked: markedSet.has(q.id),
+              visited: visitedSet.has(q.id),
+            }
+          }
+        }
+        setStates(hydrated)
+        if (typeof server.initialIndex === 'number') setCurrentIndex(server.initialIndex)
+      }
+      if (typeof server.initialRemaining === 'number') setTimeRemaining(server.initialRemaining)
+    } else if (resume) {
       try {
         const saved = JSON.parse(localStorage.getItem(storageKey) || '{}')
         if (saved.states) setStates(saved.states)
@@ -407,23 +499,23 @@ export function CBTExam({ test, candidateName, onExit }: CBTExamProps) {
 
   // ── RENDER: Result ────────────────────────────────────────────────────────
   if (phase === 'result') {
-    const pct =
-      result.maxScore > 0 ? Math.round((Math.max(0, result.score) / result.maxScore) * 100) : 0
+    const r = serverResult ?? result
+    const pct = r.maxScore > 0 ? Math.round((Math.max(0, r.score) / r.maxScore) * 100) : 0
     return (
       <div className="mx-auto max-w-3xl p-6">
         <div className="rounded-2xl border border-gray-200 bg-white p-6 md:p-8 text-center">
           <CheckCircle2 className="mx-auto h-12 w-12 text-green-600" />
           <h1 className="mt-3 text-2xl font-bold text-gray-900">Test Submitted</h1>
           <div className="mt-6 text-5xl font-bold text-gray-900">
-            {result.score}
-            <span className="text-2xl text-gray-400"> / {result.maxScore}</span>
+            {r.score}
+            <span className="text-2xl text-gray-400"> / {r.maxScore}</span>
           </div>
           <p className="mt-1 text-gray-500">{pct}%</p>
 
           <div className="mt-6 grid grid-cols-3 gap-4">
-            <Stat label="Correct" value={String(result.correct)} tone="green" />
-            <Stat label="Incorrect" value={String(result.incorrect)} tone="red" />
-            <Stat label="Unattempted" value={String(result.unattempted)} />
+            <Stat label="Correct" value={String(r.correct)} tone="green" />
+            <Stat label="Incorrect" value={String(r.incorrect)} tone="red" />
+            <Stat label="Unattempted" value={String(r.unattempted)} />
           </div>
 
           <div className="mt-6 text-left">
@@ -439,12 +531,12 @@ export function CBTExam({ test, candidateName, onExit }: CBTExamProps) {
                   </tr>
                 </thead>
                 <tbody>
-                  {Object.entries(result.perSection).map(([sec, r]) => (
+                  {Object.entries(r.perSection).map(([sec, row]) => (
                     <tr key={sec} className="border-t border-gray-100">
                       <td className="py-1.5 font-medium text-gray-900">{sec}</td>
-                      <td className="py-1.5 text-green-700">{r.correct}</td>
-                      <td className="py-1.5 text-red-600">{r.incorrect}</td>
-                      <td className="py-1.5 text-gray-500">{r.unattempted}</td>
+                      <td className="py-1.5 text-green-700">{row.correct}</td>
+                      <td className="py-1.5 text-red-600">{row.incorrect}</td>
+                      <td className="py-1.5 text-gray-500">{row.unattempted}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -676,9 +768,10 @@ export function CBTExam({ test, candidateName, onExit }: CBTExamProps) {
               </button>
               <button
                 onClick={() => handleSubmit(false)}
-                className="rounded-lg bg-green-700 px-5 py-2 text-sm font-semibold text-white hover:bg-green-800"
+                disabled={submitting}
+                className="rounded-lg bg-green-700 px-5 py-2 text-sm font-semibold text-white hover:bg-green-800 disabled:opacity-60"
               >
-                Submit
+                {submitting ? 'Submitting…' : 'Submit'}
               </button>
             </div>
           </div>
