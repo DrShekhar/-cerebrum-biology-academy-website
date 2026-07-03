@@ -109,7 +109,7 @@ export default function CBTHubPage() {
                   <th className="px-4 py-2">Date</th>
                   <th className="px-4 py-2">Status</th>
                   <th className="px-4 py-2">Score</th>
-                  <th className="px-4 py-2">Percentile</th>
+                  <th className="px-4 py-2">Score %</th>
                   <th className="px-4 py-2">Rank</th>
                   <th className="px-4 py-2"></th>
                 </tr>
