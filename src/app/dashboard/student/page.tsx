@@ -309,6 +309,23 @@ export default function StudentDashboard() {
                   Ask
                 </span>
               </Link>
+              <Link
+                href="/flashcards"
+                className="flex items-center justify-between gap-3 rounded-2xl bg-gradient-to-r from-teal-600 to-green-700 p-4 sm:p-5 text-white hover:from-teal-700 hover:to-green-800 sm:col-span-2"
+              >
+                <div>
+                  <div className="flex items-center gap-2 text-sm font-semibold sm:text-base">
+                    <BookOpen className="h-4 w-4" /> Smart Flashcards
+                  </div>
+                  <p className="mt-0.5 text-xs text-white/80 sm:text-sm">
+                    Spaced-repetition revision — the questions you struggle with come back exactly
+                    when you're about to forget them.
+                  </p>
+                </div>
+                <span className="shrink-0 rounded-lg bg-white px-3 py-1.5 text-xs font-semibold text-teal-700 sm:px-4 sm:py-2 sm:text-sm">
+                  Revise
+                </span>
+              </Link>
             </div>
 
             {/* Key Metrics Cards - Mobile Optimized (2 columns on mobile) */}
