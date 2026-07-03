@@ -275,23 +275,41 @@ export default function StudentDashboard() {
               </div>
             </div>
 
-            {/* CBT exam simulator CTA */}
-            <Link
-              href="/cbt"
-              className="mb-4 flex items-center justify-between gap-3 rounded-2xl bg-gradient-to-r from-green-800 to-green-900 p-4 sm:p-5 text-white hover:from-green-800 hover:to-green-950"
-            >
-              <div>
-                <div className="flex items-center gap-2 text-sm font-semibold sm:text-base">
-                  <Target className="h-4 w-4" /> NEET CBT Exam Simulator
+            {/* Quick-action CTAs */}
+            <div className="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <Link
+                href="/cbt"
+                className="flex items-center justify-between gap-3 rounded-2xl bg-gradient-to-r from-green-800 to-green-900 p-4 sm:p-5 text-white hover:from-green-800 hover:to-green-950"
+              >
+                <div>
+                  <div className="flex items-center gap-2 text-sm font-semibold sm:text-base">
+                    <Target className="h-4 w-4" /> NEET CBT Exam Simulator
+                  </div>
+                  <p className="mt-0.5 text-xs text-white/80 sm:text-sm">
+                    180 Q · 720 marks · real NTA interface — NEET 2027 goes computer-based.
+                  </p>
                 </div>
-                <p className="mt-0.5 text-xs text-white/80 sm:text-sm">
-                  180 Q · 720 marks · real NTA interface — NEET 2027 goes computer-based.
-                </p>
-              </div>
-              <span className="shrink-0 rounded-lg bg-white px-3 py-1.5 text-xs font-semibold text-green-800 sm:px-4 sm:py-2 sm:text-sm">
-                Start
-              </span>
-            </Link>
+                <span className="shrink-0 rounded-lg bg-white px-3 py-1.5 text-xs font-semibold text-green-800 sm:px-4 sm:py-2 sm:text-sm">
+                  Start
+                </span>
+              </Link>
+              <Link
+                href="/doubt-solver"
+                className="flex items-center justify-between gap-3 rounded-2xl bg-gradient-to-r from-blue-700 to-purple-700 p-4 sm:p-5 text-white hover:from-blue-800 hover:to-purple-800"
+              >
+                <div>
+                  <div className="flex items-center gap-2 text-sm font-semibold sm:text-base">
+                    <Brain className="h-4 w-4" /> AI Doubt Solver
+                  </div>
+                  <p className="mt-0.5 text-xs text-white/80 sm:text-sm">
+                    Type or snap a photo of any Biology question — instant step-by-step solution.
+                  </p>
+                </div>
+                <span className="shrink-0 rounded-lg bg-white px-3 py-1.5 text-xs font-semibold text-purple-700 sm:px-4 sm:py-2 sm:text-sm">
+                  Ask
+                </span>
+              </Link>
+            </div>
 
             {/* Key Metrics Cards - Mobile Optimized (2 columns on mobile) */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
