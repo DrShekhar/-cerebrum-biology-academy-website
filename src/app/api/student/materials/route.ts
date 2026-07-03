@@ -7,6 +7,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
+import { hasTierAccess, getUserTier } from '@/lib/access/tierAccess'
 
 /**
  * GET - Fetch published materials for student
@@ -141,27 +142,36 @@ export async function GET(request: NextRequest) {
       }),
     ])
 
+    // Tier context: tier-locked materials stay VISIBLE (upsell) but without a
+    // usable file URL; the download endpoint enforces the same gate server-side.
+    const userTier = await getUserTier(userId)
+
     return NextResponse.json({
       success: true,
-      materials: materials.map((m) => ({
-        id: m.id,
-        title: m.title,
-        description: m.description,
-        fileName: m.fileName,
-        fileSize: m.fileSize,
-        fileUrl: m.fileUrl, // Students need URL to download
-        materialType: m.materialType,
-        category: m.category,
-        tags: m.tags ? JSON.parse(m.tags as string) : [],
-        totalDownloads: m.totalDownloads,
-        totalViews: m.totalViews,
-        avgRating: m.avgRating,
-        course: m.courses,
-        chapter: m.chapters,
-        topic: m.topics,
-        publishedAt: m.publishedAt,
-        createdAt: m.createdAt,
-      })),
+      materials: materials.map((m) => {
+        const tierLocked = !hasTierAccess(userTier, m.requiredTier)
+        return {
+          id: m.id,
+          title: m.title,
+          description: m.description,
+          fileName: m.fileName,
+          fileSize: m.fileSize,
+          fileUrl: tierLocked ? null : m.fileUrl, // no URL for tier-locked content
+          requiredTier: m.requiredTier,
+          tierLocked,
+          materialType: m.materialType,
+          category: m.category,
+          tags: m.tags ? JSON.parse(m.tags as string) : [],
+          totalDownloads: m.totalDownloads,
+          totalViews: m.totalViews,
+          avgRating: m.avgRating,
+          course: m.courses,
+          chapter: m.chapters,
+          topic: m.topics,
+          publishedAt: m.publishedAt,
+          createdAt: m.createdAt,
+        }
+      }),
       pagination: {
         page,
         limit,

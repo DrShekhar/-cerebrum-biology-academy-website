@@ -8,6 +8,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { cloudflareStreamService } from '@/lib/lms/cloudflareStream'
 import { auth } from '@/lib/auth/config'
+import { prisma } from '@/lib/prisma'
+import { hasTierAccess, getUserTier, tierLabel } from '@/lib/access/tierAccess'
 
 export async function GET(request: NextRequest) {
   try {
@@ -40,6 +42,29 @@ export async function GET(request: NextRequest) {
 
     // Get user ID from session (using email as fallback)
     const userId = (session.user as { id?: string }).id || session.user.email
+
+    // Tier gate: if the lecture's study material requires a tier, the user's
+    // coachingTier must be at or above it.
+    const lecture = await prisma.video_lectures.findFirst({
+      where: { OR: [{ cloudflareVideoId: videoId }, { id: videoId }] },
+      select: { study_materials: { select: { requiredTier: true } } },
+    })
+    const requiredTier = lecture?.study_materials?.requiredTier
+    if (requiredTier) {
+      const realUserId = (session.user as { id?: string }).id
+      const userTier = realUserId ? await getUserTier(realUserId) : 'FREE'
+      if (!hasTierAccess(userTier, requiredTier)) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: `This lecture is part of the ${tierLabel(requiredTier)} plan. Upgrade to watch it.`,
+            requiredTier,
+            upgradeUrl: '/pricing',
+          },
+          { status: 403 }
+        )
+      }
+    }
 
     const result = await cloudflareStreamService.getVideoForPlayback(videoId, userId)
 

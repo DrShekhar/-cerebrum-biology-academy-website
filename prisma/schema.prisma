@@ -2624,6 +2624,9 @@ model study_materials {
   topicId           String?
   tags              Json?
   accessLevel       AccessLevel         @default(ENROLLED)
+  // Minimum coaching tier required (null = no tier restriction). Gates both the
+  // material and any video lecture hanging off it (video_lectures.studyMaterialId).
+  requiredTier      CoachingTier?
   requiredCourseId  String?
   sortOrder         Int                 @default(0)
   category          String?

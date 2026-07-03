@@ -118,6 +118,12 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
     if (body.materialType !== undefined) updateData.materialType = body.materialType
     if (body.category !== undefined) updateData.category = body.category || null
     if (body.accessLevel !== undefined) updateData.accessLevel = body.accessLevel
+    // Tier gating: null clears the restriction; only valid CoachingTier values apply.
+    if (body.requiredTier !== undefined) {
+      const valid = ['FREE', 'PURSUIT', 'ASCENT', 'PINNACLE']
+      updateData.requiredTier =
+        body.requiredTier && valid.includes(body.requiredTier) ? body.requiredTier : null
+    }
     if (body.courseId !== undefined) updateData.courseId = body.courseId || null
     if (body.chapterId !== undefined) updateData.chapterId = body.chapterId || null
     if (body.topicId !== undefined) updateData.topicId = body.topicId || null

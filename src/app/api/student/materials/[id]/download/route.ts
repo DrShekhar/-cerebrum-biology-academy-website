@@ -7,6 +7,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
+import { hasTierAccess, getUserTier, tierLabel } from '@/lib/access/tierAccess'
 
 /**
  * POST - Track material download and update progress
@@ -30,6 +31,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
         isPublished: true,
         title: true,
         accessLevel: true,
+        requiredTier: true,
         courseId: true,
       },
     })
@@ -65,6 +67,22 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       if (!allowed) {
         return NextResponse.json(
           { success: false, error: 'You need to be enrolled to access this material.' },
+          { status: 403 }
+        )
+      }
+    }
+
+    // Tier gate: enrollment alone isn't enough for tier-exclusive content.
+    if (material.requiredTier) {
+      const userTier = await getUserTier(userId)
+      if (!hasTierAccess(userTier, material.requiredTier)) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: `“${material.title}” is part of the ${tierLabel(material.requiredTier)} plan. Upgrade to access it.`,
+            requiredTier: material.requiredTier,
+            upgradeUrl: '/pricing',
+          },
           { status: 403 }
         )
       }
