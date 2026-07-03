@@ -10,7 +10,7 @@ import { auth } from '@/lib/auth'
 export async function GET(request: NextRequest) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'TEACHER') {
+    if (!session || (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN')) {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 

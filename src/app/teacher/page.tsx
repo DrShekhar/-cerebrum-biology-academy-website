@@ -233,6 +233,13 @@ export default function TeacherDashboardPage() {
                   href="/teacher/questions"
                   color="from-orange-500 to-orange-600"
                 />
+                <QuickActionCard
+                  icon={FileText}
+                  title="Course Builder"
+                  description="Chapters, topics, drip & prerequisites"
+                  href="/teacher/courses"
+                  color="from-teal-500 to-teal-600"
+                />
               </div>
             </section>
 

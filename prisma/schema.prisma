@@ -388,6 +388,10 @@ model chapters {
   title           String
   description     String?
   orderIndex      Int
+  // Drip scheduling: chapter stays locked for students until this date (null = immediate).
+  releaseAt       DateTime?
+  // Prerequisite progression: locked until the previous chapter's materials are completed.
+  requiresPrevious Boolean          @default(false)
   isActive        Boolean           @default(true)
   createdAt       DateTime          @default(now())
   updatedAt       DateTime

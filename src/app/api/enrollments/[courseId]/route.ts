@@ -29,8 +29,11 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
         courses: {
           include: {
             chapters: {
+              // Hidden chapters (builder's hide toggle) never reach students.
+              where: { isActive: true },
               include: {
                 topics: {
+                  where: { isActive: true },
                   select: {
                     id: true,
                     title: true,
@@ -86,23 +89,51 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
     })
     const completedIds = new Set(completedRows.map((r) => r.materialId))
 
-    const modules = enrollment.courses.chapters.map((chapter) => ({
-      id: chapter.id,
-      title: chapter.title,
-      sortOrder: chapter.orderIndex,
-      topics: chapter.topics,
-      materials: enrollment.courses.study_materials
-        .filter((m) => m.chapterId === chapter.id)
-        .map((m) => ({
-          id: m.id,
-          title: m.title,
-          materialType: m.materialType,
-          // videoLectureId present + READY → syllabus links to /learn/[id].
-          videoLectureId: m.video_lectures?.id ?? null,
-          videoReady: m.video_lectures?.uploadStatus === 'READY',
-          completed: completedIds.has(m.id),
-        })),
-    }))
+    // Drip + prerequisite locking (set in the course builder). A chapter is
+    // locked if its releaseAt is in the future, or if it requires the previous
+    // chapter and that chapter's published materials aren't all completed.
+    const now = new Date()
+    const chapterCompleted = (chapterId: string): boolean => {
+      const mats = enrollment.courses.study_materials.filter((m) => m.chapterId === chapterId)
+      if (mats.length === 0) return true // nothing to complete
+      return mats.every((m) => completedIds.has(m.id))
+    }
+
+    const orderedChapters = enrollment.courses.chapters
+    const modules = orderedChapters.map((chapter, idx) => {
+      const dripLocked = Boolean(chapter.releaseAt && chapter.releaseAt > now)
+      const prev = idx > 0 ? orderedChapters[idx - 1] : null
+      const prereqLocked = Boolean(chapter.requiresPrevious && prev && !chapterCompleted(prev.id))
+      const locked = dripLocked || prereqLocked
+
+      return {
+        id: chapter.id,
+        title: chapter.title,
+        sortOrder: chapter.orderIndex,
+        locked,
+        lockReason: dripLocked
+          ? (`Unlocks on ${chapter.releaseAt!.toLocaleDateString('en-IN')}` as string)
+          : prereqLocked
+            ? `Complete “${prev!.title}” first`
+            : null,
+        releaseAt: chapter.releaseAt,
+        topics: locked ? [] : chapter.topics,
+        // Locked chapters expose no materials (titles/URLs stay server-side).
+        materials: locked
+          ? []
+          : enrollment.courses.study_materials
+              .filter((m) => m.chapterId === chapter.id)
+              .map((m) => ({
+                id: m.id,
+                title: m.title,
+                materialType: m.materialType,
+                // videoLectureId present + READY → syllabus links to /learn/[id].
+                videoLectureId: m.video_lectures?.id ?? null,
+                videoReady: m.video_lectures?.uploadStatus === 'READY',
+                completed: completedIds.has(m.id),
+              })),
+      }
+    })
 
     return NextResponse.json({
       success: true,
