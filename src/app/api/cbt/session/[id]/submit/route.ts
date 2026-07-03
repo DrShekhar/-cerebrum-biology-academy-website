@@ -144,7 +144,20 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     const percentile =
       totalCandidates > 1 ? ((totalCandidates - rank) / (totalCandidates - 1)) * 100 : 100
 
-    await prisma.test_sessions.update({ where: { id: row.id }, data: { rank } }).catch(() => {})
+    await prisma.test_sessions
+      .update({
+        where: { id: row.id },
+        data: {
+          rank,
+          percentileRank: Math.round(percentile * 100) / 100,
+          fullscreenExits:
+            typeof body.fullscreenExits === 'number' ? body.fullscreenExits : undefined,
+          suspiciousActivity: Array.isArray(body.suspiciousActivity)
+            ? body.suspiciousActivity.slice(0, 200)
+            : undefined,
+        },
+      })
+      .catch(() => {})
 
     return NextResponse.json({
       success: true,

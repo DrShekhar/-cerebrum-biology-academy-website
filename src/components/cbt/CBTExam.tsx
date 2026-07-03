@@ -53,6 +53,12 @@ export interface CBTReviewItem {
   explanation: string
 }
 
+/** A recorded proctoring event during the attempt. */
+export interface CBTProctorEvent {
+  type: 'tab_switch' | 'fullscreen_exit' | 'copy_attempt'
+  at: string
+}
+
 /** Attempt state passed to server save/submit callbacks. */
 export interface CBTAttemptState {
   answers: Record<string, string>
@@ -61,6 +67,8 @@ export interface CBTAttemptState {
   currentIndex: number
   remainingTime: number
   tabSwitchCount: number
+  fullscreenExits: number
+  suspiciousActivity: CBTProctorEvent[]
 }
 
 interface CBTServer {
@@ -149,7 +157,15 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false)
   const [showPalette, setShowPalette] = useState(true)
   const [resumeAvailable, setResumeAvailable] = useState(false)
+  const [fullscreenExits, setFullscreenExits] = useState(0)
   const examRef = useRef<HTMLDivElement>(null)
+  const proctorRef = useRef<CBTProctorEvent[]>([])
+
+  const logProctorEvent = useCallback((type: CBTProctorEvent['type']) => {
+    if (proctorRef.current.length < 500) {
+      proctorRef.current.push({ type, at: new Date().toISOString() })
+    }
+  }, [])
 
   const currentQ = orderedQuestions[currentIndex]
 
@@ -169,8 +185,10 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
       currentIndex,
       remainingTime: timeRemaining,
       tabSwitchCount: tabSwitches,
+      fullscreenExits,
+      suspiciousActivity: proctorRef.current,
     }
-  }, [states, currentIndex, timeRemaining, tabSwitches])
+  }, [states, currentIndex, timeRemaining, tabSwitches, fullscreenExits])
 
   // ── Resume detection ──────────────────────────────────────────────────────
   useEffect(() => {
@@ -232,28 +250,40 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
     return () => clearInterval(id)
   }, [phase, persist])
 
-  // ── Anti-cheat: tab-switch + copy/right-click block ───────────────────────
+  // ── Anti-cheat: tab-switch + fullscreen-exit + copy/right-click block ──────
   useEffect(() => {
     if (phase !== 'exam') return
     const onVisibility = () => {
       if (document.hidden) {
         setTabSwitches((n) => n + 1)
+        logProctorEvent('tab_switch')
         setShowWarning('You left the exam window. This is recorded. Stay on the exam tab.')
       }
     }
-    const block = (e: Event) => e.preventDefault()
+    const onFullscreenChange = () => {
+      if (!document.fullscreenElement) {
+        setFullscreenExits((n) => n + 1)
+        logProctorEvent('fullscreen_exit')
+      }
+    }
+    const block = (e: Event) => {
+      e.preventDefault()
+      logProctorEvent('copy_attempt')
+    }
     document.addEventListener('visibilitychange', onVisibility)
+    document.addEventListener('fullscreenchange', onFullscreenChange)
     const el = examRef.current
     el?.addEventListener('copy', block)
     el?.addEventListener('contextmenu', block)
     el?.addEventListener('cut', block)
     return () => {
       document.removeEventListener('visibilitychange', onVisibility)
+      document.removeEventListener('fullscreenchange', onFullscreenChange)
       el?.removeEventListener('copy', block)
       el?.removeEventListener('contextmenu', block)
       el?.removeEventListener('cut', block)
     }
-  }, [phase])
+  }, [phase, logProctorEvent])
 
   const enterFullscreen = () => {
     examRef.current?.requestFullscreen?.().catch(() => {})
@@ -576,9 +606,11 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
             </div>
           </div>
 
-          {tabSwitches > 0 && (
+          {(tabSwitches > 0 || fullscreenExits > 0) && (
             <p className="mt-4 text-xs text-amber-700">
-              Note: {tabSwitches} tab-switch/away event(s) were recorded during this attempt.
+              Proctoring: {tabSwitches} tab-switch/away event(s)
+              {fullscreenExits > 0 ? ` and ${fullscreenExits} full-screen exit(s)` : ''} were
+              recorded during this attempt.
             </p>
           )}
 

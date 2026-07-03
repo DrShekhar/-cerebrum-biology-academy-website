@@ -10,6 +10,7 @@ interface Attempt {
   status: string
   score: number | null
   percentage: number | null
+  percentile: number | null
   rank: number | null
   date: string
 }
@@ -110,6 +111,7 @@ export default function CBTHubPage() {
                   <th className="px-4 py-2">Status</th>
                   <th className="px-4 py-2">Score</th>
                   <th className="px-4 py-2">Score %</th>
+                  <th className="px-4 py-2">Percentile</th>
                   <th className="px-4 py-2">Rank</th>
                   <th className="px-4 py-2"></th>
                 </tr>
@@ -137,6 +139,11 @@ export default function CBTHubPage() {
                     <td className="px-4 py-2.5 text-gray-700">
                       {a.percentage !== null && a.status === 'COMPLETED'
                         ? `${a.percentage.toFixed(1)}%`
+                        : '—'}
+                    </td>
+                    <td className="px-4 py-2.5 text-gray-700">
+                      {a.percentile !== null && a.status === 'COMPLETED'
+                        ? a.percentile.toFixed(1)
                         : '—'}
                     </td>
                     <td className="px-4 py-2.5 text-gray-700">{a.rank ?? '—'}</td>

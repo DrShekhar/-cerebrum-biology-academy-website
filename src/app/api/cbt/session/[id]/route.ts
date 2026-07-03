@@ -41,6 +41,11 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
         questionsAnswered: Object.keys(answers as object).length,
         questionsMarkedForReview: Array.isArray(marked) ? marked.length : undefined,
         tabSwitchCount: typeof body.tabSwitchCount === 'number' ? body.tabSwitchCount : undefined,
+        fullscreenExits:
+          typeof body.fullscreenExits === 'number' ? body.fullscreenExits : undefined,
+        suspiciousActivity: Array.isArray(body.suspiciousActivity)
+          ? body.suspiciousActivity.slice(0, 200)
+          : undefined,
         updatedAt: new Date(),
       },
     })
