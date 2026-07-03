@@ -7,6 +7,7 @@
 
 import { BaseAgent, AgentContext, AgentResponse, getLeadContext } from './base'
 import { prisma } from '@/lib/prisma'
+import { ensureSystemUser } from '@/lib/constants/systemUser'
 import { AgentType, Priority } from '@/generated/prisma'
 
 const SYSTEM_PROMPT = `You are an AI Lead Qualification Agent for Cerebrum Biology Academy, a premier NEET biology coaching institute in India.
@@ -202,7 +203,7 @@ Analyze this lead and provide your qualification assessment.`
     await prisma.activities.create({
       data: {
         id: `act_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-        userId: 'system',
+        userId: await ensureSystemUser(),
         leadId: leadId,
         action: 'AI_QUALIFICATION',
         description: `AI qualified lead: Score ${result.score} (${result.priority}). ${result.qualificationReason}`,

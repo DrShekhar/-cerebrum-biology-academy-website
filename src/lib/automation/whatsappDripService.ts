@@ -11,6 +11,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
+import { ensureSystemUser } from '@/lib/constants/systemUser'
 import { sendWhatsAppMessage, trackEvent } from '@/lib/interakt'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { LeadStage, Prisma } from '@/generated/prisma'
@@ -636,7 +637,7 @@ export class WhatsAppDripService {
             triggerConditions: { sequenceType } as Prisma.InputJsonValue,
             delayMinutes: 0,
             actionType: 'WHATSAPP',
-            createdById: 'system',
+            createdById: await ensureSystemUser(),
             updatedAt: new Date(),
           },
         })

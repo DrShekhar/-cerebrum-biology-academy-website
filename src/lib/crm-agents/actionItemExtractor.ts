@@ -7,6 +7,7 @@
 
 import { BaseAgent, AgentContext, AgentResponse } from './base'
 import { prisma } from '@/lib/prisma'
+import { ensureSystemUser } from '@/lib/constants/systemUser'
 import { AgentType, TaskType, TaskPriority, TaskStatus } from '@/generated/prisma'
 
 const SYSTEM_PROMPT = `You are an AI Action Item Extractor for Cerebrum Biology Academy's CRM.
@@ -287,7 +288,7 @@ If no specific actions are mentioned, identify logical next steps based on the c
     await prisma.activities.create({
       data: {
         id: `act_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-        userId: 'system',
+        userId: await ensureSystemUser(),
         leadId,
         action: 'ACTION_ITEMS_EXTRACTED',
         description: `AI extracted ${result.totalCount} action items from call (${result.urgentCount} urgent). ${result.summary}`,

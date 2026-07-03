@@ -7,6 +7,7 @@
 
 import OpenAI from 'openai'
 import { prisma } from '@/lib/prisma'
+import { ensureSystemUser } from '@/lib/constants/systemUser'
 import { AgentType } from '@/generated/prisma'
 import { AgentTaskManager } from './base'
 
@@ -146,7 +147,7 @@ export class CallTranscriptionService {
       await prisma.activities.create({
         data: {
           id: `act_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-          userId: 'system',
+          userId: await ensureSystemUser(),
           leadId: communication.leadId,
           action: 'CALL_TRANSCRIBED',
           description: `Call recording transcribed (${result.duration || 0}s, ${result.transcript.length} chars)`,

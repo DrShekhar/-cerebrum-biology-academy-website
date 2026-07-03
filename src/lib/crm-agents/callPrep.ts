@@ -7,6 +7,7 @@
 
 import { BaseAgent, AgentContext, AgentResponse, getLeadContext } from './base'
 import { prisma } from '@/lib/prisma'
+import { ensureSystemUser } from '@/lib/constants/systemUser'
 import { AgentType } from '@/generated/prisma'
 
 const SYSTEM_PROMPT = `You are an AI Call Preparation Agent for Cerebrum Biology Academy, a premier NEET biology coaching institute.
@@ -315,7 +316,7 @@ ${result.offersToMention.map((o) => `• ${o.offer} (${o.condition})`).join('\n'
         id: `note_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
         leadId,
         content: prepSummary,
-        createdById: 'system',
+        createdById: await ensureSystemUser(),
         updatedAt: new Date(),
       },
     })

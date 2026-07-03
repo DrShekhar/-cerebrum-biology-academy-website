@@ -7,6 +7,7 @@
 
 import { BaseAgent, AgentContext, AgentResponse, AgentTaskManager } from './base'
 import { prisma } from '@/lib/prisma'
+import { ensureSystemUser } from '@/lib/constants/systemUser'
 import { AgentType } from '@/generated/prisma'
 
 const SYSTEM_PROMPT = `You are an AI Call Summary Agent for Cerebrum Biology Academy.
@@ -276,7 +277,7 @@ Please analyze this conversation and provide:
     await prisma.activities.create({
       data: {
         id: `act_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-        userId: 'system',
+        userId: await ensureSystemUser(),
         leadId,
         action: 'CALL_SUMMARIZED',
         description: `Call analyzed: ${result.sentiment.overall} sentiment, ${result.sentiment.interestLevel} interest. ${result.summary}`,

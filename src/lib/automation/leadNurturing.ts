@@ -12,6 +12,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
+import { ensureSystemUser } from '@/lib/constants/systemUser'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { LeadStage as PrismaLeadStage, FollowupAction, Prisma } from '../../generated/prisma'
 import {
@@ -475,7 +476,7 @@ export class LeadNurturingService {
           triggerConditions: { stage: lead.stage } as Prisma.InputJsonValue,
           delayMinutes: 0,
           actionType: 'WHATSAPP',
-          createdById: 'system',
+          createdById: await ensureSystemUser(),
           updatedAt: new Date(),
         },
       })
@@ -791,7 +792,7 @@ export class LeadNurturingService {
           triggerConditions: {} as Prisma.InputJsonValue,
           delayMinutes: 0,
           actionType: 'WHATSAPP',
-          createdById: 'system',
+          createdById: await ensureSystemUser(),
           updatedAt: new Date(),
         },
       })
