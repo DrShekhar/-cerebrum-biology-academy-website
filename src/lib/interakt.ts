@@ -122,7 +122,7 @@ const COUNTRY_CALLING_CODES = [
 /**
  * Format phone number to Interakt format
  */
-function formatPhoneNumber(phone: string): { countryCode: string; phoneNumber: string } {
+export function formatPhoneNumber(phone: string): { countryCode: string; phoneNumber: string } {
   // Remove all non-digit characters except +
   const cleaned = phone.replace(/[^\d+]/g, '')
 

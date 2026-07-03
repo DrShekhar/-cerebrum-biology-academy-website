@@ -198,7 +198,7 @@ export default function MarketingPage() {
                 <Button
                   variant="outline"
                   className="w-full justify-start"
-                  onClick={() => (window.location.href = '/api/admin/marketing?type=campaigns')}
+                  onClick={() => router.push('/admin/marketing/campaigns')}
                 >
                   <MessageSquare className="w-4 h-4 mr-2" />
                   View All Campaigns
@@ -206,9 +206,7 @@ export default function MarketingPage() {
                 <Button
                   variant="outline"
                   className="w-full justify-start"
-                  onClick={() =>
-                    (window.location.href = '/api/admin/marketing?type=abandoned-carts')
-                  }
+                  onClick={() => router.push('/admin/marketing/abandoned-carts')}
                 >
                   <Users className="w-4 h-4 mr-2" />
                   Abandoned Carts
@@ -216,7 +214,7 @@ export default function MarketingPage() {
                 <Button
                   variant="outline"
                   className="w-full justify-start"
-                  onClick={() => (window.location.href = '/api/admin/marketing?type=automation')}
+                  onClick={() => router.push('/admin/marketing/email')}
                 >
                   <TrendingUp className="w-4 h-4 mr-2" />
                   Automation Metrics

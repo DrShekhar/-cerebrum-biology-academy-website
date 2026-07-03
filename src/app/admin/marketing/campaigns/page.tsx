@@ -20,6 +20,7 @@ import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { NewCampaignForm } from '@/components/admin/marketing/NewCampaignForm'
+import { toast } from 'sonner'
 
 interface Campaign {
   id: string
@@ -77,9 +78,15 @@ export default function CampaignsPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id, status }),
       })
-      if (res.ok) fetchCampaigns()
+      if (res.ok) {
+        toast.success(status === 'active' ? 'Campaign resumed' : 'Campaign paused')
+        fetchCampaigns()
+      } else {
+        toast.error('Failed to update campaign')
+      }
     } catch (error) {
       console.error('Failed to update campaign status:', error)
+      toast.error('Failed to update campaign')
     }
   }
 
@@ -89,9 +96,15 @@ export default function CampaignsPage() {
       const res = await fetch(`/api/admin/marketing?id=${encodeURIComponent(id)}`, {
         method: 'DELETE',
       })
-      if (res.ok) fetchCampaigns()
+      if (res.ok) {
+        toast.success('Campaign deleted')
+        fetchCampaigns()
+      } else {
+        toast.error('Failed to delete campaign')
+      }
     } catch (error) {
       console.error('Failed to delete campaign:', error)
+      toast.error('Failed to delete campaign')
     }
   }
 
@@ -105,11 +118,11 @@ export default function CampaignsPage() {
       }).then((r) => r.json())
 
       if (!preview.success) {
-        alert(preview.error || 'Could not resolve audience')
+        toast.error(preview.error || 'Could not resolve audience')
         return
       }
       if (preview.willSend === 0) {
-        alert('No recipients match this campaign audience.')
+        toast.warning('No recipients match this campaign audience.')
         return
       }
       const skippedNote = preview.skipped
@@ -130,19 +143,19 @@ export default function CampaignsPage() {
       }).then((r) => r.json())
 
       if (res.success) {
-        alert(
+        toast.success(
           `${res.accepted}/${res.attempted} accepted by WhatsApp` +
             (res.failed ? `, ${res.failed} failed` : '') +
-            (res.skipped ? `, ${res.skipped} skipped (over cap)` : '') +
-            `\n\nDelivered/read counts update as WhatsApp reports them.`
+            (res.skipped ? `, ${res.skipped} skipped (over cap)` : ''),
+          { description: 'Delivered/read counts update as WhatsApp reports them.' }
         )
         fetchCampaigns()
       } else {
-        alert(res.error || 'Send failed')
+        toast.error(res.error || 'Send failed')
       }
     } catch (error) {
       console.error('Failed to send campaign:', error)
-      alert('Send failed')
+      toast.error('Send failed')
     }
   }
 

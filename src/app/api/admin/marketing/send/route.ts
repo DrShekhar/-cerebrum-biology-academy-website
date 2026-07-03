@@ -24,6 +24,9 @@ import type { LeadStage } from '@/generated/prisma'
  */
 
 const MAX_RECIPIENTS = 500
+const SEND_DELAY_MS = 60 // ~16 msgs/sec — stays under Interakt/WhatsApp throughput limits
+
+const delay = (ms: number) => new Promise((r) => setTimeout(r, ms))
 
 const STATUS_MAP: Record<string, LeadStage[]> = {
   lead: ['NEW_LEAD'],
@@ -155,24 +158,33 @@ export async function POST(request: NextRequest) {
     let accepted = 0 // handed to Interakt successfully
     let failed = 0
 
-    for (const r of recipients) {
+    for (let i = 0; i < recipients.length; i++) {
+      const r = recipients[i]
+      const payload = {
+        phone: r.phone,
+        message: wa.message,
+        templateName: wa.templateName,
+        templateParams: wa.templateParams,
+        mediaUrl: wa.mediaUrl,
+        campaignId,
+        // Echoed back on delivery/read webhooks so we can attribute status
+        // updates to this campaign.
+        callbackData: `campaign:${campaignId}`,
+      }
       try {
-        const res = await sendWhatsAppMessage({
-          phone: r.phone,
-          message: wa.message,
-          templateName: wa.templateName,
-          templateParams: wa.templateParams,
-          mediaUrl: wa.mediaUrl,
-          campaignId,
-          // Echoed back on delivery/read webhooks so we can attribute status
-          // updates to this campaign.
-          callbackData: `campaign:${campaignId}`,
-        })
+        let res = await sendWhatsAppMessage(payload)
+        // One retry after a short backoff for transient provider failures.
+        if (!res.success) {
+          await delay(500)
+          res = await sendWhatsAppMessage(payload)
+        }
         if (res.success) accepted++
         else failed++
       } catch {
         failed++
       }
+      // Throttle to stay under provider rate limits (skip after the last one).
+      if (i < recipients.length - 1) await delay(SEND_DELAY_MS)
     }
 
     const attempted = recipients.length

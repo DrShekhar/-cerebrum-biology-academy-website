@@ -6,6 +6,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
+import { formatPhoneNumber } from '@/lib/interakt'
 
 interface WelcomeSeriesMessage {
   day: number
@@ -82,11 +83,11 @@ export async function sendWhatsAppMessage(
   }
 
   try {
-    // Clean phone number - remove all non-digits and get last 10 digits
-    const cleanPhone = phone.replace(/\D/g, '')
-    const phoneNumber = cleanPhone.slice(-10)
+    // Detect the real country code (NRI students in UAE/UK/US/etc. must NOT be
+    // forced to +91) via the shared formatter instead of a hardcoded +91.
+    const { countryCode, phoneNumber } = formatPhoneNumber(phone)
 
-    if (phoneNumber.length !== 10) {
+    if (phoneNumber.length < 7) {
       console.error('WhatsApp: Invalid phone number format:', phone)
       return { success: false, error: 'invalid_phone' }
     }
@@ -98,7 +99,7 @@ export async function sendWhatsAppMessage(
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        countryCode: '+91',
+        countryCode,
         phoneNumber: phoneNumber,
         callbackData: callbackData || `welcome_series_${Date.now()}`,
         type: 'Template',

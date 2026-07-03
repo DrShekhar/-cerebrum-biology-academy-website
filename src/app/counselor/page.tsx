@@ -177,7 +177,7 @@ function FollowUpCard({ lead }: { lead: any }) {
     <div
       className={`flex items-center gap-3 p-3 rounded-lg border ${isOverdue ? 'bg-red-50 border-red-200' : 'bg-white border-gray-200'}`}
     >
-      <div className="w-9 h-9 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+      <div className="w-9 h-9 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
         {lead.studentName?.charAt(0).toUpperCase()}
       </div>
       <div className="flex-1 min-w-0">
@@ -456,8 +456,8 @@ export default function CounselorDashboard() {
                   </p>
                   <p className="text-xs text-gray-500 mt-1">Demos Done</p>
                 </div>
-                <div className="p-3 bg-emerald-50 rounded-xl text-center">
-                  <p className="text-2xl font-bold text-emerald-700">
+                <div className="p-3 bg-green-50 rounded-xl text-center">
+                  <p className="text-2xl font-bold text-green-700">
                     ₹{((kpis.metrics.revenueGenerated || 0) / 1000).toFixed(0)}K
                   </p>
                   <p className="text-xs text-gray-500 mt-1">Revenue</p>
