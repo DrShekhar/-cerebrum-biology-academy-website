@@ -95,6 +95,56 @@ export default function CampaignsPage() {
     }
   }
 
+  const sendCampaign = async (id: string) => {
+    try {
+      // 1) Dry-run first to preview the real audience size.
+      const preview = await fetch('/api/admin/marketing/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ campaignId: id, dryRun: true }),
+      }).then((r) => r.json())
+
+      if (!preview.success) {
+        alert(preview.error || 'Could not resolve audience')
+        return
+      }
+      if (preview.willSend === 0) {
+        alert('No recipients match this campaign audience.')
+        return
+      }
+      const skippedNote = preview.skipped
+        ? `\n\n${preview.skipped} more match but are beyond the per-send cap and will NOT be sent this time.`
+        : ''
+      if (
+        !confirm(
+          `Send WhatsApp to ${preview.willSend} recipient(s)? This messages real people and uses WhatsApp quota.${skippedNote}`
+        )
+      )
+        return
+
+      // 2) Real send.
+      const res = await fetch('/api/admin/marketing/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ campaignId: id, dryRun: false }),
+      }).then((r) => r.json())
+
+      if (res.success) {
+        alert(
+          `Sent: ${res.delivered}/${res.attempted} delivered` +
+            (res.failed ? `, ${res.failed} failed` : '') +
+            (res.skipped ? `, ${res.skipped} skipped (over cap)` : '')
+        )
+        fetchCampaigns()
+      } else {
+        alert(res.error || 'Send failed')
+      }
+    } catch (error) {
+      console.error('Failed to send campaign:', error)
+      alert('Send failed')
+    }
+  }
+
   const filteredCampaigns = campaigns.filter((c) => {
     if (searchTerm && !c.name.toLowerCase().includes(searchTerm.toLowerCase())) return false
     if (typeFilter !== 'all' && c.type !== typeFilter) return false
@@ -326,6 +376,16 @@ export default function CampaignsPage() {
                               <Play className="w-4 h-4" />
                             </button>
                           ) : null}
+                          {(campaign.type === 'whatsapp' || campaign.type === 'mixed') &&
+                            campaign.status !== 'completed' && (
+                              <button
+                                className="text-green-700 hover:text-green-900"
+                                title="Send WhatsApp now"
+                                onClick={() => sendCampaign(campaign.id)}
+                              >
+                                <Send className="w-4 h-4" />
+                              </button>
+                            )}
                           {campaign.status === 'draft' && (
                             <button
                               className="text-red-600 hover:text-red-900"
