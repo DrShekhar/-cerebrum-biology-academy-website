@@ -599,7 +599,7 @@ async function handleButtonReply(data: any, originalPayload: InteraktWebhookPayl
 }
 
 async function handleStatusUpdate(data: any) {
-  const { messageId, status, timestamp } = data
+  const { messageId, status, timestamp, callbackData } = data
 
   logger.info('Message status update', {
     service: 'interakt-webhook',
@@ -608,6 +608,29 @@ async function handleStatusUpdate(data: any) {
     timestamp,
   })
 
-  // Status updates are logged but not stored in DB for now
-  // Future: Add WhatsAppMessageLog table to track message delivery status
+  // Attribute delivery/read status to a marketing campaign when the message was
+  // sent with callbackData "campaign:<id>". Increments the real WhatsApp funnel
+  // on the campaign (delivered → opened). Non-blocking; never breaks the webhook.
+  try {
+    const cb = typeof callbackData === 'string' ? callbackData : ''
+    if (!cb.startsWith('campaign:')) return
+    const campaignId = cb.slice('campaign:'.length)
+    if (!campaignId) return
+
+    const normalized = String(status || '').toLowerCase()
+    let field: 'metricsDelivered' | 'metricsOpened' | null = null
+    if (normalized === 'delivered') field = 'metricsDelivered'
+    else if (normalized === 'read' || normalized === 'opened') field = 'metricsOpened'
+    if (!field) return
+
+    await prisma.marketing_campaigns.update({
+      where: { id: campaignId },
+      data: { [field]: { increment: 1 }, updatedAt: new Date() },
+    })
+  } catch (error) {
+    logger.warn('Failed to attribute campaign status update', {
+      service: 'interakt-webhook',
+      error: error instanceof Error ? error.message : 'unknown',
+    })
+  }
 }

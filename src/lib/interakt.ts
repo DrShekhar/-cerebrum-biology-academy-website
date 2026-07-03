@@ -968,6 +968,13 @@ export function parseWebhookPayload(payload: any): WebhookEvent | null {
           messageId: payload.messageId || payload.data?.messageId,
           status: payload.status || payload.data?.status,
           timestamp: payload.timestamp,
+          // callback_data is echoed back from the value set when sending —
+          // used to attribute a status update to its marketing campaign.
+          callbackData:
+            payload.callbackData ||
+            payload.callback_data ||
+            payload.data?.callbackData ||
+            payload.data?.callback_data,
         },
       }
     }

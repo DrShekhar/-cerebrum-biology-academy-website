@@ -152,7 +152,7 @@ export async function POST(request: NextRequest) {
 
     const recipients = audience.slice(0, MAX_RECIPIENTS)
     const skipped = audience.length - recipients.length
-    let delivered = 0
+    let accepted = 0 // handed to Interakt successfully
     let failed = 0
 
     for (const r of recipients) {
@@ -164,8 +164,11 @@ export async function POST(request: NextRequest) {
           templateParams: wa.templateParams,
           mediaUrl: wa.mediaUrl,
           campaignId,
+          // Echoed back on delivery/read webhooks so we can attribute status
+          // updates to this campaign.
+          callbackData: `campaign:${campaignId}`,
         })
-        if (res.success) delivered++
+        if (res.success) accepted++
         else failed++
       } catch {
         failed++
@@ -173,12 +176,14 @@ export async function POST(request: NextRequest) {
     }
 
     const attempted = recipients.length
+    // metricsSent = accepted by the provider. metricsDelivered / metricsOpened
+    // are owned by the delivery webhook (device-delivered / read) so they reflect
+    // real WhatsApp status rather than "API accepted".
     await prisma.marketing_campaigns.update({
       where: { id: campaignId },
       data: {
         status: 'completed',
-        metricsSent: { increment: attempted },
-        metricsDelivered: { increment: delivered },
+        metricsSent: { increment: accepted },
         updatedAt: new Date(),
       },
     })
@@ -187,7 +192,7 @@ export async function POST(request: NextRequest) {
       success: true,
       dryRun: false,
       attempted,
-      delivered,
+      accepted,
       failed,
       skipped,
     })

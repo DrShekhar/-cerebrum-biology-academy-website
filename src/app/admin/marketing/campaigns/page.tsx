@@ -131,9 +131,10 @@ export default function CampaignsPage() {
 
       if (res.success) {
         alert(
-          `Sent: ${res.delivered}/${res.attempted} delivered` +
+          `${res.accepted}/${res.attempted} accepted by WhatsApp` +
             (res.failed ? `, ${res.failed} failed` : '') +
-            (res.skipped ? `, ${res.skipped} skipped (over cap)` : '')
+            (res.skipped ? `, ${res.skipped} skipped (over cap)` : '') +
+            `\n\nDelivered/read counts update as WhatsApp reports them.`
         )
         fetchCampaigns()
       } else {
