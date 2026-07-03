@@ -18,6 +18,19 @@
 import { z } from 'zod'
 import { redactObject } from '@/lib/security/logger'
 
+/**
+ * Heuristic: is an email provider error worth retrying? Timeouts, rate limits
+ * (429) and 5xx are transient; validation / auth / 4xx are permanent.
+ */
+function isTransientEmailError(error?: string): boolean {
+  if (!error) return false
+  const e = error.toLowerCase()
+  if (/\b(4\d\d)\b/.test(e) && !/\b429\b/.test(e)) return false // 4xx except 429 = permanent
+  return /timeout|timed out|econn|network|fetch failed|rate.?limit|429|\b5\d\d\b|temporar|unavailable/.test(
+    e
+  )
+}
+
 // Email validation schema
 const emailSchema = z.object({
   to: z.string().email(),
@@ -202,20 +215,30 @@ class EmailService {
       return { success: false, error: 'Invalid email options' }
     }
 
-    // Try each provider in sequence
+    // Try each provider in sequence, with a short backoff retry for TRANSIENT
+    // failures (timeouts / 429 / 5xx) before falling through to the next
+    // provider. Permanent failures (invalid address, 4xx) fall through at once.
+    let lastError = 'All email providers failed'
     for (const provider of this.providers) {
-      console.log(`📧 Attempting to send email via ${provider.name}...`)
-      const result = await provider.send(options)
-
-      if (result.success) {
-        return { ...result, provider: provider.name }
+      for (let attempt = 0; attempt < 2; attempt++) {
+        if (attempt > 0) {
+          console.log(`📧 Retrying ${provider.name} (attempt ${attempt + 1})...`)
+          await new Promise((r) => setTimeout(r, 500 * attempt))
+        } else {
+          console.log(`📧 Attempting to send email via ${provider.name}...`)
+        }
+        const result = await provider.send(options)
+        if (result.success) {
+          return { ...result, provider: provider.name }
+        }
+        lastError = result.error || lastError
+        if (!isTransientEmailError(result.error)) break // permanent → next provider
       }
-
       console.warn(`⚠️ ${provider.name} failed, trying next provider...`)
     }
 
     // All providers failed
-    return { success: false, error: 'All email providers failed' }
+    return { success: false, error: lastError }
   }
 
   /**
