@@ -639,6 +639,31 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
               Done
             </button>
           </div>
+
+          {/* Post-result mentorship CTA — the highest-intent moment in the product. */}
+          <div className="mt-6 rounded-xl bg-gray-50 p-4 text-center">
+            <p className="text-sm text-gray-700">
+              Want a mentor to review your weak areas and plan the next 30 days?
+            </p>
+            <div className="mt-3 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href={`https://wa.me/918826444334?text=${encodeURIComponent(
+                  `Hi Cerebrum! I scored ${r.score}/${r.maxScore} in the NEET Biology CBT mock. Please help me plan my preparation.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg bg-green-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-green-700"
+              >
+                Discuss my score on WhatsApp
+              </a>
+              <a
+                href="/book-free-demo"
+                className="rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-700 hover:bg-white"
+              >
+                Book a free demo class
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Solutions review */}
@@ -720,7 +745,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
           </div>
           <button
             onClick={enterFullscreen}
-            className="rounded-md p-1.5 text-gray-500 hover:bg-gray-100"
+            className="rounded-md p-2 text-gray-500 hover:bg-gray-100"
             title="Full screen"
             aria-label="Enter full screen"
           >

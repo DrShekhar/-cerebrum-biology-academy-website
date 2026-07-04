@@ -6,8 +6,9 @@
  * Pulls the due-review queue from /api/mcq/review (SM-2 scheduled + new cards),
  * shows each as a flip card (front: question, back: answer + explanation), and
  * records the self-grade via POST /api/mcq/review so the SM-2 scheduler sets
- * the next review date. Uses the same localStorage freeUserId identity as the
- * rest of the MCQ practice system.
+ * the next review date. Identity: the SERVER-created free_users id that the MCQ
+ * practice pages store under localStorage `mcq_free_user_id` — the deck and the
+ * FK on grade writes are keyed to it. No id yet = practise first.
  */
 
 import { useState, useEffect, useCallback, useRef } from 'react'
@@ -33,13 +34,8 @@ interface ReviewStats {
   newCount: number
 }
 
-function getFreeUserId(): string {
-  let id = localStorage.getItem('freeUserId')
-  if (!id) {
-    id = `free_${Date.now()}_${Math.random().toString(36).substring(7)}`
-    localStorage.setItem('freeUserId', id)
-  }
-  return id
+function getFreeUserId(): string | null {
+  return localStorage.getItem('mcq_free_user_id')
 }
 
 function letterOf(options: string[], correctAnswer: string): string {
@@ -58,6 +54,7 @@ export default function FlashcardsPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [done, setDone] = useState(false)
+  const [noIdentity, setNoIdentity] = useState(false)
   const [sessionCorrect, setSessionCorrect] = useState(0)
   const [sessionTotal, setSessionTotal] = useState(0)
   const shownAtRef = useRef<number>(Date.now())
@@ -72,9 +69,15 @@ export default function FlashcardsPage() {
     setSessionCorrect(0)
     setSessionTotal(0)
     try {
-      freeUserIdRef.current = getFreeUserId()
+      const id = getFreeUserId()
+      if (!id) {
+        setNoIdentity(true)
+        return
+      }
+      setNoIdentity(false)
+      freeUserIdRef.current = id
       const res = await fetch(
-        `/api/mcq/review?freeUserId=${encodeURIComponent(freeUserIdRef.current)}`
+        `/api/mcq/review?freeUserId=${encodeURIComponent(id)}&includeNew=true`
       )
       const data = await res.json()
       if (!res.ok || !data.success) {
@@ -145,6 +148,25 @@ export default function FlashcardsPage() {
         >
           Try again
         </button>
+      </div>
+    )
+  }
+
+  if (noIdentity) {
+    return (
+      <div className="mx-auto max-w-md p-10 text-center">
+        <Layers className="mx-auto h-12 w-12 text-green-600" />
+        <h1 className="mt-3 text-2xl font-bold text-gray-900">Build your deck first</h1>
+        <p className="mt-2 text-gray-600">
+          Flashcards are made from the MCQs you practise — every question you attempt gets scheduled
+          for smart revision. Start practising and your deck appears here.
+        </p>
+        <Link
+          href="/neet-biology-mcq"
+          className="mt-6 inline-block rounded-lg bg-green-700 px-6 py-2.5 text-sm font-semibold text-white hover:bg-green-800"
+        >
+          Practise MCQs
+        </Link>
       </div>
     )
   }

@@ -468,8 +468,8 @@ self.addEventListener('push', (event) => {
 
   const options = {
     body: 'नया Biology lesson उपलब्ध है!',
-    icon: '/icon-192x192.png',
-    badge: '/badge-72x72.png',
+    icon: '/icons/icon-192x192.png',
+    badge: '/icons/icon-192x192.png',
     tag: 'cerebrum-notification',
     data: {
       url: '/courses',

@@ -19,19 +19,42 @@ export default function DoubtSolverPage() {
   const [escalated, setEscalated] = useState(false)
   const fileRef = useRef<HTMLInputElement>(null)
 
+  // Vercel rejects request bodies over ~4.5MB and base64 inflates by ~33%, so
+  // phone-camera photos are downscaled client-side to keep the payload safe.
+  const MAX_DIM = 1600
+  const MAX_B64_CHARS = 4_000_000 // ≈3MB binary
+
   const onFile = (file: File) => {
-    if (file.size > 5 * 1024 * 1024) {
-      setError('Image too large — please use one under 5 MB.')
-      return
-    }
-    const reader = new FileReader()
-    reader.onload = () => {
-      const dataUrl = reader.result as string
+    setError(null)
+    const objectUrl = URL.createObjectURL(file)
+    const img = new Image()
+    img.onload = () => {
+      URL.revokeObjectURL(objectUrl)
+      const scale = Math.min(1, MAX_DIM / Math.max(img.width, img.height))
+      const canvas = document.createElement('canvas')
+      canvas.width = Math.max(1, Math.round(img.width * scale))
+      canvas.height = Math.max(1, Math.round(img.height * scale))
+      const ctx = canvas.getContext('2d')
+      if (!ctx) {
+        setError('Could not process the image — try a different photo.')
+        return
+      }
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
+      let dataUrl = canvas.toDataURL('image/jpeg', 0.85)
+      if (dataUrl.length > MAX_B64_CHARS) dataUrl = canvas.toDataURL('image/jpeg', 0.6)
+      if (dataUrl.length > MAX_B64_CHARS) {
+        setError('Image too large even after compression — try a closer crop of the question.')
+        return
+      }
       setImageData(dataUrl)
       setImageB64(dataUrl.split(',')[1] || null)
-      setImageType(file.type || 'image/jpeg')
+      setImageType('image/jpeg')
     }
-    reader.readAsDataURL(file)
+    img.onerror = () => {
+      URL.revokeObjectURL(objectUrl)
+      setError('Could not read that image — try a different photo.')
+    }
+    img.src = objectUrl
   }
 
   const solve = async () => {
@@ -171,9 +194,21 @@ export default function DoubtSolverPage() {
 
           <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-gray-100 pt-4">
             {escalated ? (
-              <span className="inline-flex items-center gap-1.5 text-sm font-medium text-green-700">
-                <CheckCircle2 className="h-4 w-4" /> Sent to a teacher — they’ll follow up.
-              </span>
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-green-700">
+                  <CheckCircle2 className="h-4 w-4" /> Sent to a teacher — they’ll follow up.
+                </span>
+                <a
+                  href={`https://wa.me/918826444334?text=${encodeURIComponent(
+                    'Hi Cerebrum! I asked a Biology doubt in the app and need help from a teacher.'
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700"
+                >
+                  Chat on WhatsApp instead
+                </a>
+              </div>
             ) : (
               <>
                 <span className="text-sm text-gray-600">Still not clear?</span>

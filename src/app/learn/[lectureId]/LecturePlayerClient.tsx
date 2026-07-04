@@ -176,7 +176,11 @@ export default function LecturePlayerClient({ lectureId }: { lectureId: string }
           onComplete={() =>
             saveProgress(data.video?.duration || 0, data.video?.duration || 0, true)
           }
-          checkpoints={checkpoints.map((c) => ({ id: c.id, timeSeconds: c.timeSeconds }))}
+          checkpoints={checkpoints.map((c) => ({
+            id: c.id,
+            timeSeconds: c.timeSeconds,
+            isRequired: c.isRequired,
+          }))}
           onCheckpoint={(id) => {
             const cp = checkpoints.find((c) => c.id === id)
             if (cp) setActiveCheckpoint(cp)
@@ -235,8 +239,10 @@ function CheckpointOverlay({ checkpoint, onDone }: { checkpoint: Checkpoint; onD
   }
 
   return (
-    <div className="absolute inset-0 z-30 flex items-center justify-center bg-black/80 p-4">
-      <div className="w-full max-w-lg rounded-2xl bg-white p-5 shadow-xl">
+    // Full-screen sheet on phones (the video container is only ~210px tall
+    // there — a quiz card can't fit inside it); in-player overlay from sm: up.
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 sm:absolute sm:z-30">
+      <div className="max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-5 shadow-xl">
         <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-green-700">
           <Sparkles className="h-4 w-4" /> Quick check
         </div>

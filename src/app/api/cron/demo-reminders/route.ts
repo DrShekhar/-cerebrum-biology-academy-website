@@ -34,14 +34,19 @@ async function handleCron(request: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    // Check if WhatsApp is configured
-    if (!isInteraktConfigured()) {
-      logger.warn('Interakt WhatsApp not configured, skipping demo reminders')
+    // WhatsApp config gates only the WhatsApp channel — web push still runs.
+    // Bail only when NO channel is configured at all.
+    const { isPushConfigured } = await import('@/lib/push/webPush')
+    if (!isInteraktConfigured() && !isPushConfigured()) {
+      logger.warn('Neither WhatsApp nor web push configured, skipping demo reminders')
       return NextResponse.json({
         success: true,
-        message: 'WhatsApp not configured, no reminders sent',
+        message: 'No reminder channel configured, nothing sent',
         stats: { processed: 0, sent24h: 0, sent1h: 0, sent15m: 0 },
       })
+    }
+    if (!isInteraktConfigured()) {
+      logger.warn('Interakt WhatsApp not configured — demo reminders send web push only')
     }
 
     const result = await processDemoReminders()
@@ -125,9 +130,11 @@ async function processDemoReminders() {
       }
 
       if (reminderType) {
-        const success = await sendDemoReminder(demo, reminderType)
+        // WhatsApp (skipped cleanly when Interakt is unconfigured)…
+        const waSent = isInteraktConfigured() ? await sendDemoReminder(demo, reminderType) : false
 
-        // Also web-push to the student's subscribed devices (no-op sans VAPID).
+        // …and web push, independently (no-op without VAPID keys).
+        let pushSent = false
         if (demo.userId) {
           const timeLabel =
             reminderType === '24h'
@@ -135,17 +142,23 @@ async function processDemoReminders() {
               : reminderType === '1h'
                 ? 'in 1 hour'
                 : 'in 15 minutes'
-          void import('@/lib/push/webPush')
-            .then(({ sendPushToUser }) =>
-              sendPushToUser(demo.userId!, {
-                title: 'Demo class reminder',
-                body: `Your NEET Biology demo class is ${timeLabel} (${demo.preferredTime}). See you there!`,
-                url: '/dashboard/student',
-                tag: `demo-reminder-${demo.id}`,
-              })
-            )
-            .catch(() => {})
+          try {
+            const { sendPushToUser } = await import('@/lib/push/webPush')
+            const res = await sendPushToUser(demo.userId, {
+              title: 'Demo class reminder',
+              body: `Your NEET Biology demo class is ${timeLabel} (${demo.preferredTime}). See you there!`,
+              url: '/dashboard/student',
+              tag: `demo-reminder-${demo.id}`,
+            })
+            pushSent = res.sent > 0
+          } catch {
+            /* push is best-effort */
+          }
         }
+
+        // Count the reminder as sent if either channel delivered — otherwise the
+        // cron would re-fire it every 15 minutes.
+        const success = waSent || pushSent
 
         if (success) {
           // Update remindersSent count

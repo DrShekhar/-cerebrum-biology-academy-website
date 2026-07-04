@@ -48,8 +48,9 @@ interface SecureVideoPlayerProps {
   pdfSyncData?: Array<{ timestamp: number; page: number }>
   /** Interactive-video quiz checkpoints: the player pauses when playback crosses
    *  one and calls onCheckpoint; the parent renders the quiz overlay and bumps
-   *  resumeKey to continue playback. */
-  checkpoints?: Array<{ id: string; timeSeconds: number }>
+   *  resumeKey to continue playback. Required checkpoints also fire when seeked
+   *  past; non-required ones only in a 2s live-playback window (skippable). */
+  checkpoints?: Array<{ id: string; timeSeconds: number; isRequired?: boolean }>
   onCheckpoint?: (checkpointId: string) => void
   resumeKey?: number
 }
@@ -278,20 +279,34 @@ export default function SecureVideoPlayer({
   }, [currentTime, chapters, currentChapter])
 
   // Interactive-video checkpoints: pause once when playback crosses one.
-  const firedCheckpointsRef = useRef<Set<string>>(new Set())
+  // Checkpoints at/before the resume position count as already seen — a
+  // returning student isn't re-quizzed on material they already passed.
+  const firedCheckpointsRef = useRef<Set<string> | null>(null)
+  if (firedCheckpointsRef.current === null) {
+    const seen = new Set<string>()
+    const startAt = initialProgress?.lastPosition || 0
+    for (const cp of checkpoints) {
+      if (cp.timeSeconds <= startAt) seen.add(cp.id)
+    }
+    firedCheckpointsRef.current = seen
+  }
   useEffect(() => {
     if (!onCheckpoint || checkpoints.length === 0) return
-    for (const cp of checkpoints) {
-      if (
-        currentTime >= cp.timeSeconds &&
-        currentTime < cp.timeSeconds + 2 &&
-        !firedCheckpointsRef.current.has(cp.id)
-      ) {
-        firedCheckpointsRef.current.add(cp.id)
-        videoRef.current?.pause()
-        onCheckpoint(cp.id)
-        break
-      }
+    const fired = firedCheckpointsRef.current!
+    // Earliest unfired checkpoint the playhead has reached. Required ones fire
+    // even when seeked past; optional ones only in a 2s live-playback window.
+    const due = checkpoints
+      .filter(
+        (cp) =>
+          !fired.has(cp.id) &&
+          currentTime >= cp.timeSeconds &&
+          (cp.isRequired || currentTime < cp.timeSeconds + 2)
+      )
+      .sort((a, b) => a.timeSeconds - b.timeSeconds)[0]
+    if (due) {
+      fired.add(due.id)
+      videoRef.current?.pause()
+      onCheckpoint(due.id)
     }
   }, [currentTime, checkpoints, onCheckpoint])
 

@@ -26,6 +26,40 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
   const { id } = await params
   const body = await req.json().catch(() => ({}))
 
+  // Atomic reorder: { move: 'up' | 'down' }. Re-fetches the course's chapters
+  // in order, swaps positions, and rewrites orderIndex = array position for ALL
+  // of them in one transaction — self-healing if duplicates ever crept in.
+  if (body.move === 'up' || body.move === 'down') {
+    const target = await prisma.chapters.findUnique({
+      where: { id },
+      select: { id: true, courseId: true },
+    })
+    if (!target) {
+      return NextResponse.json({ success: false, error: 'Chapter not found' }, { status: 404 })
+    }
+    const siblings = await prisma.chapters.findMany({
+      where: { courseId: target.courseId },
+      orderBy: [{ orderIndex: 'asc' }, { createdAt: 'asc' }],
+      select: { id: true },
+    })
+    const idx = siblings.findIndex((c) => c.id === id)
+    const swapWith = body.move === 'up' ? idx - 1 : idx + 1
+    if (idx < 0 || swapWith < 0 || swapWith >= siblings.length) {
+      return NextResponse.json({ success: true, moved: false })
+    }
+    const order = siblings.map((c) => c.id)
+    ;[order[idx], order[swapWith]] = [order[swapWith], order[idx]]
+    await prisma.$transaction(
+      order.map((chapterId, i) =>
+        prisma.chapters.update({
+          where: { id: chapterId },
+          data: { orderIndex: i, updatedAt: new Date() },
+        })
+      )
+    )
+    return NextResponse.json({ success: true, moved: true })
+  }
+
   const data: Record<string, unknown> = { updatedAt: new Date() }
   if (body.title !== undefined) {
     const t = body.title.toString().trim()

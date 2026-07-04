@@ -138,12 +138,9 @@ export default function CourseBuilderPage({ params }: { params: Promise<{ course
   const moveChapter = async (index: number, dir: -1 | 1) => {
     const target = index + dir
     if (target < 0 || target >= chapters.length) return
-    const a = chapters[index]
-    const b = chapters[target]
-    // Swap orderIndex on both, then reload.
-    const ok1 = await patchChapter(a.id, { orderIndex: b.orderIndex })
-    const ok2 = await patchChapter(b.id, { orderIndex: a.orderIndex })
-    if (ok1 && ok2) await load()
+    // Atomic server-side reorder (single transaction, self-healing indexes).
+    const ok = await patchChapter(chapters[index].id, { move: dir === -1 ? 'up' : 'down' })
+    if (ok) await load()
   }
 
   const addTopic = async (chapterId: string, title: string) => {
@@ -273,7 +270,7 @@ export default function CourseBuilderPage({ params }: { params: Promise<{ course
                 <button
                   onClick={() => moveChapter(i, -1)}
                   disabled={i === 0}
-                  className="text-gray-400 hover:text-gray-700 disabled:opacity-30"
+                  className="p-1.5 text-gray-400 hover:text-gray-700 disabled:opacity-30"
                   aria-label="Move chapter up"
                 >
                   <ChevronUp className="h-4 w-4" />
@@ -281,7 +278,7 @@ export default function CourseBuilderPage({ params }: { params: Promise<{ course
                 <button
                   onClick={() => moveChapter(i, 1)}
                   disabled={i === chapters.length - 1}
-                  className="text-gray-400 hover:text-gray-700 disabled:opacity-30"
+                  className="p-1.5 text-gray-400 hover:text-gray-700 disabled:opacity-30"
                   aria-label="Move chapter down"
                 >
                   <ChevronDown className="h-4 w-4" />
@@ -315,7 +312,7 @@ export default function CourseBuilderPage({ params }: { params: Promise<{ course
               </div>
               <button
                 onClick={() => setEditingId(editingId === ch.id ? null : ch.id)}
-                className="rounded-md p-1.5 text-gray-500 hover:bg-gray-100"
+                className="rounded-md p-2 text-gray-500 hover:bg-gray-100"
                 title="Edit chapter settings"
                 aria-label="Edit chapter settings"
               >
@@ -323,7 +320,7 @@ export default function CourseBuilderPage({ params }: { params: Promise<{ course
               </button>
               <button
                 onClick={() => patchChapter(ch.id, { isActive: !ch.isActive }).then(load)}
-                className="rounded-md p-1.5 text-gray-500 hover:bg-gray-100"
+                className="rounded-md p-2 text-gray-500 hover:bg-gray-100"
                 title={ch.isActive ? 'Hide from students' : 'Show to students'}
                 aria-label={ch.isActive ? 'Hide chapter' : 'Show chapter'}
               >
@@ -331,7 +328,7 @@ export default function CourseBuilderPage({ params }: { params: Promise<{ course
               </button>
               <button
                 onClick={() => deleteChapter(ch)}
-                className="rounded-md p-1.5 text-red-500 hover:bg-red-50"
+                className="rounded-md p-2 text-red-500 hover:bg-red-50"
                 title="Delete chapter"
                 aria-label="Delete chapter"
               >
@@ -372,7 +369,7 @@ export default function CourseBuilderPage({ params }: { params: Promise<{ course
                     </span>
                     <button
                       onClick={() => renameTopic(t)}
-                      className="rounded p-1 text-gray-400 hover:text-gray-700"
+                      className="rounded p-2 text-gray-400 hover:text-gray-700"
                       title="Rename topic"
                       aria-label="Rename topic"
                     >
@@ -380,7 +377,7 @@ export default function CourseBuilderPage({ params }: { params: Promise<{ course
                     </button>
                     <button
                       onClick={() => deleteTopic(t)}
-                      className="rounded p-1 text-red-400 hover:text-red-600"
+                      className="rounded p-2 text-red-400 hover:text-red-600"
                       title="Delete topic"
                       aria-label="Delete topic"
                     >
@@ -667,7 +664,7 @@ function AIOutlinePanel({
                   </div>
                   <button
                     onClick={() => removeChapter(i)}
-                    className="shrink-0 rounded p-1 text-red-400 hover:text-red-600"
+                    className="shrink-0 rounded p-2 text-red-400 hover:text-red-600"
                     title="Drop this chapter from the draft"
                     aria-label="Drop chapter"
                   >

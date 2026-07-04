@@ -230,7 +230,7 @@ export async function POST(request: NextRequest) {
       const payload = {
         title: notice.title,
         body: notice.content.slice(0, 140),
-        url: '/notices',
+        url: '/student/notices',
         tag: `notice-${notice.id}`,
       }
       if (notice.targetType === 'ALL') {
