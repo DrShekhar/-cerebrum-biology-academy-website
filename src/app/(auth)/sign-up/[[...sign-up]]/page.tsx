@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { Phone, ArrowLeft } from 'lucide-react'
 import { PhoneSignIn } from '@/components/auth/PhoneSignIn'
+import { SocialSignInButtons } from '@/components/auth/SocialSignInButtons'
 
 export default function SignUpPage() {
   const searchParams = useSearchParams()
@@ -42,6 +43,9 @@ export default function SignUpPage() {
 
           {/* Auth Content */}
           <div className="p-6">
+            <div className="mb-4">
+              <SocialSignInButtons redirectUrl={redirectUrl} dividerPosition="bottom" />
+            </div>
             <PhoneSignIn redirectUrl={redirectUrl} />
           </div>
 

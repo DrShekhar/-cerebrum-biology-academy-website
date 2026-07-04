@@ -3157,6 +3157,7 @@ model users {
   self_evaluations                                                      self_evaluations[]
   work_tracking                                                         work_tracking[]
   marketing_campaigns                                                   marketing_campaigns[]
+  accounts                                                              accounts[]
 
   @@index([coachingTier])
   @@index([emailVerified])
@@ -3164,6 +3165,33 @@ model users {
   @@index([lastActiveAt])
   @@index([role, createdAt])
   @@index([trialEndDate])
+}
+
+model accounts {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  users             users   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model verification_tokens {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@unique([identifier, token])
 }
 
 model video_chapters {
