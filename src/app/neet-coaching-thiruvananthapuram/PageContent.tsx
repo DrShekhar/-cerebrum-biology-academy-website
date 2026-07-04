@@ -68,14 +68,14 @@ export default function PageContent() {
             top score.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-16">
             <a href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
-              <Button className="w-full sm:w-auto bg-green-500 hover:bg-green-600">
+              <Button className="w-full md:w-auto bg-green-500 hover:bg-green-600">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Chat on WhatsApp
               </Button>
             </a>
-            <Button variant="outline" className="w-full sm:w-auto">
+            <Button variant="outline" className="w-full md:w-auto">
               <Play className="w-5 h-5 mr-2" />
               Watch Demo Class
             </Button>
@@ -299,14 +299,14 @@ export default function PageContent() {
             Join Kerala's premier NEET coaching center. Excellence in education tradition.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
-              <Button className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100 font-bold">
+              <Button className="w-full md:w-auto bg-white text-blue-600 hover:bg-gray-100 font-bold">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Chat Now: 918826444334
               </Button>
             </a>
-            <Button className="w-full sm:w-auto bg-blue-700 text-white hover:bg-blue-800 border-2 border-white font-bold">
+            <Button className="w-full md:w-auto bg-blue-700 text-white hover:bg-blue-800 border-2 border-white font-bold">
               Call: 8826444334
             </Button>
           </div>

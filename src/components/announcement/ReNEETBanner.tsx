@@ -93,10 +93,10 @@ export function ReNEETBanner() {
       aria-label="RE-NEET 2026 announcement"
       className="relative w-full bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white shadow-md"
     >
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:py-2.5">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 py-3 md:flex-row sm:items-center sm:justify-between sm:gap-4 sm:py-2.5">
         <div className="flex items-start gap-3 sm:items-center">
           <AlertTriangle
-            className="mt-0.5 h-5 w-5 flex-shrink-0 text-yellow-200 sm:mt-0"
+            className="mt-0.5 h-5 w-5 flex-shrink-0 text-yellow-200 md:mt-0"
             aria-hidden="true"
           />
           <div className="text-sm leading-snug">

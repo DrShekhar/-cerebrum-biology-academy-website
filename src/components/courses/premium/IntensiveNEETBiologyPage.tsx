@@ -309,7 +309,7 @@ export function IntensiveNEETBiologyPage() {
                 mentorship, and methodologies reserved for India's medical elite.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <div className="flex flex-col md:flex-row items-start sm:items-center gap-4">
                 <button
                   onClick={() => setIsApplicationFormOpen(true)}
                   className="bg-[#3d4d3d] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#4a5d4a] transition-all shadow-xl shadow-[#3d4d3d]/30 flex items-center gap-2"
@@ -751,7 +751,7 @@ export function IntensiveNEETBiologyPage() {
               when seats are filled.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6">
               <button
                 onClick={() => setIsApplicationFormOpen(true)}
                 className="bg-white text-[#3d4d3d] px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-xl flex items-center gap-2"

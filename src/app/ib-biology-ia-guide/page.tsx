@@ -233,7 +233,7 @@ export default function IABiologyIAGuidePage() {
               choice to the evaluation paragraph that separates a 5 from a 7.
             </p>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col gap-4 md:flex-row">
               <Link
                 href="/ib-biology-ia-topics"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-green-500/25 transition-all hover:bg-green-600"

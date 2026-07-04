@@ -378,7 +378,7 @@ export default function APBiologyUnitsHubPage() {
               grade your FRQs against the real rubric. Faculty trained at AIIMS (All India Institute
               of Medical Sciences, India&apos;s top medical school).
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href={`https://wa.me/918826444334?text=${encodeURIComponent(
                   'Hi Cerebrum, I have a question about the AP Biology units and your coaching.'

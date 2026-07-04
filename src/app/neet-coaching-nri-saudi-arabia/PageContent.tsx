@@ -142,7 +142,7 @@ export default function PageContent() {
                 preparation with specialized evening batches timed for IST. Many of our students
                 pursue medical degrees while maintaining their professional careers.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <SmartWhatsAppCTA
                   text="Get Free Consultation"
                   variant="default"
@@ -363,7 +363,7 @@ export default function PageContent() {
           <p className="text-lg mb-8 opacity-90">
             98% Success Rate • Expert Faculty • Timezone-Friendly • Community Support
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col md:flex-row justify-center gap-4">
             <SmartWhatsAppCTA
               text="Get Free Consultation Today"
               variant="secondary"

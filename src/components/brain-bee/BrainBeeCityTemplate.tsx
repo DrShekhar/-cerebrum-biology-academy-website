@@ -152,17 +152,16 @@ export default function BrainBeeCityTemplate({ city }: { city: BrainBeeCity }) {
             {city.region} · {city.timezone}
           </span>
           <h1 className="mt-4 max-w-4xl text-3xl font-bold leading-tight text-slate-900 md:text-5xl">
-            Brain Bee coaching for{' '}
-            <span className="text-blue-700">{city.cityName} students.</span>
+            Brain Bee coaching for <span className="text-blue-700">{city.cityName} students.</span>
           </h1>
           <p className="mt-5 max-w-4xl text-lg leading-relaxed text-slate-600">{city.heroBlurb}</p>
           <p className="mt-3 max-w-4xl text-base leading-relaxed text-slate-600">
             We coach every round &mdash; not just the free Brain Facts written exam (which is only
-            ~10% of the score) but the ~90% that decides the result: human neuroanatomy, neurohistology
-            and MRI identification, patient diagnosis, and the live two-strike oral. AIIMS-trained
-            faculty, live in {city.timezone}.
+            ~10% of the score) but the ~90% that decides the result: human neuroanatomy,
+            neurohistology and MRI identification, patient diagnosis, and the live two-strike oral.
+            AIIMS-trained faculty, live in {city.timezone}.
           </p>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 md:flex-row">
             <a
               href={waUrl}
               target="_blank"
@@ -243,8 +242,8 @@ export default function BrainBeeCityTemplate({ city }: { city: BrainBeeCity }) {
               ))}
             </div>
             <p className="mt-5 text-sm text-slate-500">
-              Weights shown are the verified 2023 USA National breakdown; the round mix varies year to
-              year.{' '}
+              Weights shown are the verified 2023 USA National breakdown; the round mix varies year
+              to year.{' '}
               <Link href="/brain-bee-coaching" className="text-blue-700 underline">
                 See the full Brain Bee programme, tracks and pricing
               </Link>
@@ -286,7 +285,7 @@ export default function BrainBeeCityTemplate({ city }: { city: BrainBeeCity }) {
               A short live session in {city.timezone} to gauge your level, map the right track, and
               show how we coach the high-weight rounds.
             </p>
-            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col justify-center gap-3 md:flex-row">
               <a
                 href={waUrl}
                 target="_blank"

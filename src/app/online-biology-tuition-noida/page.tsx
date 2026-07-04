@@ -203,7 +203,7 @@ export default function OnlineBiologyTuitionNoidaPage() {
             </div>
 
             {/* CTA Buttons - WhatsApp Priority */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col md:flex-row justify-center gap-4">
               <a
                 href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20online%20Biology%20tuition%20in%20Noida.%20Please%20share%20batch%20details%20and%20demo%20class."
                 className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"
@@ -393,7 +393,7 @@ export default function OnlineBiologyTuitionNoidaPage() {
           <h2 className="text-3xl font-bold mb-4">Start Online Biology Tuition Today!</h2>
           <p className="text-xl text-slate-300 mb-8">Join 500+ Noida students learning from home</p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+          <div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
             <a
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20join%20online%20Biology%20tuition%20in%20Noida.%20Please%20share%20demo%20class%20details."
               className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"

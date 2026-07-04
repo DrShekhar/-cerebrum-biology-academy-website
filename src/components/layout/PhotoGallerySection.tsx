@@ -425,7 +425,7 @@ export function PhotoGallerySection({
             Academy. Your NEET journey starts here!
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button
               variant="secondary"
               size="xl"

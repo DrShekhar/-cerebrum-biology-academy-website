@@ -577,7 +577,7 @@ export function SuccessStoriesSection({
             Join these successful students and transform your NEET failure into medical college
             success
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <PremiumButton
               variant="luxury"
               size="lg"

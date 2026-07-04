@@ -118,7 +118,7 @@ export default function DailyChallengePage() {
         )}
 
         {/* Links */}
-        <div className="mt-8 flex flex-col sm:flex-row gap-4">
+        <div className="mt-8 flex flex-col md:flex-row gap-4">
           <Link
             href="/neet-biology-mcq/leaderboard"
             className="flex-1 py-3 px-6 bg-white text-gray-800 rounded-xl font-medium text-center shadow-md hover:shadow-lg transition-shadow"

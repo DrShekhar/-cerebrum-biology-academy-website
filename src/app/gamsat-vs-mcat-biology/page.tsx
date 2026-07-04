@@ -452,7 +452,7 @@ export default function GAMSATvsMCATBiologyPage() {
               Tell us which countries you are applying to and your science background, and we will
               reply with which exam fits and how we would prep you. We coach both. No commitment.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
               <a
                 href={`https://wa.me/918826444334?text=${encodeURIComponent(
                   'Hi Cerebrum, I am deciding between GAMSAT and MCAT biology and have a question.'

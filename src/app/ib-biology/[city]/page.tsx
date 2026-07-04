@@ -284,7 +284,7 @@ export default async function CityPage({ params }: PageProps) {
         {config.inPersonCentre && (
           <section className="border-b border-amber-200 bg-amber-50 py-8">
             <div className="mx-auto max-w-5xl px-4 sm:px-6">
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex flex-col gap-2 md:flex-row sm:items-center sm:justify-between">
                 <div>
                   <div className="text-sm font-semibold uppercase tracking-wide text-amber-800">
                     Visit our {config.city} centre

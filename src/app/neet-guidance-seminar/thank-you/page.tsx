@@ -233,7 +233,7 @@ export default function SeminarThankYouPage() {
           {/* Contact Support */}
           <div className="bg-slate-100 rounded-2xl p-6 text-center">
             <p className="text-slate-600 mb-4">Have questions? Reach out to us anytime.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <button
                 onClick={handleWhatsAppClick}
                 className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors"

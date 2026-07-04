@@ -358,7 +358,7 @@ export function CourseFinder({
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp">
+        <div className="flex flex-col md:flex-row gap-4 animate-fadeInUp">
           <button
             onClick={() => onCourseRecommended?.(recommendedCourse)}
             className="flex-1 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"

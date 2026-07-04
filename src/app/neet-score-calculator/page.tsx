@@ -718,10 +718,10 @@ export default function NEETScoreCalculatorPage() {
                       <span>Weekly mock tests with analysis</span>
                     </li>
                   </ul>
-                  <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+                  <div className="flex flex-col gap-3 md:flex-row sm:gap-4">
                     <Link
                       href="/demo"
-                      className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-semibold text-orange-600 transition-colors hover:bg-orange-50 sm:w-auto sm:px-6 sm:text-base"
+                      className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-semibold text-orange-600 transition-colors hover:bg-orange-50 md:w-auto sm:px-6 sm:text-base"
                     >
                       <Calendar className="h-5 w-5 flex-shrink-0" />
                       <span className="truncate">Book Free Demo</span>
@@ -735,7 +735,7 @@ export default function NEETScoreCalculatorPage() {
                           campaign: 'score-calculator',
                         })
                       }
-                      className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg border-2 border-white px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10 sm:w-auto sm:px-6 sm:text-base cursor-pointer"
+                      className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg border-2 border-white px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10 md:w-auto sm:px-6 sm:text-base cursor-pointer"
                     >
                       <MessageCircle className="h-5 w-5 flex-shrink-0" />
                       <span className="truncate">Chat on WhatsApp</span>

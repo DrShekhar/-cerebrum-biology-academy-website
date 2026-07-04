@@ -2,16 +2,7 @@
 
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import Link from 'next/link'
-import {
-  MapPin,
-  GraduationCap,
-  Users,
-  Trophy,
-  Star,
-  Phone,
-  Award,
-  Play,
-} from 'lucide-react'
+import { MapPin, GraduationCap, Users, Trophy, Star, Phone, Award, Play } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
 import { getAllAreaSlugs, getAreaBySlug } from '@/data/north-delhi-areas'
@@ -270,7 +261,7 @@ export default function NEETCoachingNorthDelhiPage() {
                   Bagh, and all North Delhi localities. AIIMS faculty, small batches, 98% success
                   rate.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col md:flex-row gap-4 justify-center">
                   <Button size="lg" variant="primary" asChild>
                     <Link
                       href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20North.%20Please%20share%20available%20timings."
@@ -441,7 +432,7 @@ export default function NEETCoachingNorthDelhiPage() {
                 <p className="text-indigo-100 mb-8 max-w-2xl mx-auto">
                   Join 400+ successful students from North Delhi. Book your FREE demo class today!
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col md:flex-row gap-4 justify-center">
                   <Button size="lg" variant="secondary" asChild>
                     <Link
                       href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20North.%20Please%20share%20available%20timings."

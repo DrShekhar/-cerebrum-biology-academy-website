@@ -89,7 +89,7 @@ export default function BiologyTuitionNoidaPage() {
               half the cost.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link href="/book-free-demo">
                 <Button
                   variant="secondary"
@@ -337,7 +337,7 @@ export default function BiologyTuitionNoidaPage() {
           <p className="text-xl mb-8 opacity-90">
             Join 1,500+ students. CBSE Board + NEET dual prep at \u20B94,000/month.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
             <Link href="/book-free-demo">
               <Button
                 variant="secondary"

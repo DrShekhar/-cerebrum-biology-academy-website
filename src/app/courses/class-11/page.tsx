@@ -783,7 +783,7 @@ export default function Class11BiologyPage() {
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <button
                   onClick={() => sendContextWhatsApp('class-11-pricing-demo')}
                   className="flex-1 bg-[#25D366] hover:bg-[#20BD5A] text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 text-center inline-flex items-center justify-center gap-2"

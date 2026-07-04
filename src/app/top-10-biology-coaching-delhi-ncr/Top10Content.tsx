@@ -230,7 +230,7 @@ export function Top10BiologyCoachingDelhiNCRContent() {
                 Smallest batch sizes in NCR (15-20 students). 6 NCR centres plus online live classes
                 — at least one within 30 minutes of any NCR address.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <button
                   onClick={async () => {
                     await trackAndOpenWhatsApp({

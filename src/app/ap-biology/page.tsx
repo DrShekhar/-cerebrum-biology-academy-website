@@ -396,7 +396,7 @@ export default function APBiologyHubPage() {
               .
             </p>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col gap-4 md:flex-row">
               <Link
                 href="/book-free-demo"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-500 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:bg-blue-600"
@@ -780,7 +780,7 @@ export default function APBiologyHubPage() {
               <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-orange-800">
                 India
               </h3>
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+              <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
                 {indiaCities.map((c) => (
                   <Link
                     key={c.href}
@@ -916,7 +916,7 @@ export default function APBiologyHubPage() {
               walks through one FRQ together, identifies the top two unit weaknesses, and recommends
               the right tier — all in 30 minutes.
             </p>
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <div className="flex flex-col gap-4 md:flex-row sm:justify-center">
               <Link
                 href="/book-free-demo"
                 className="inline-flex items-center justify-center gap-3 rounded-xl bg-white px-8 py-4 text-lg font-semibold text-blue-700 shadow-lg hover:bg-blue-50"

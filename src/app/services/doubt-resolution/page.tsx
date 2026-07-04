@@ -291,7 +291,7 @@ export default function DoubtResolutionPage() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <div className="flex flex-col md:flex-row gap-3 sm:gap-4">
                 <Link
                   href="/contact"
                   className="bg-white text-red-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-red-50 transition-all hover:scale-105 inline-flex items-center justify-center text-base sm:text-lg shadow-lg min-h-[44px]"
@@ -471,11 +471,11 @@ export default function DoubtResolutionPage() {
           </div>
 
           <div className="text-center mb-8 sm:mb-10 md:mb-12">
-            <div className="flex flex-col sm:flex-row items-center justify-center mb-4 gap-3 sm:gap-4">
+            <div className="flex flex-col md:flex-row items-center justify-center mb-4 gap-3 sm:gap-4">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-indigo-500 rounded-2xl flex items-center justify-center flex-shrink-0">
                 <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center sm:text-left">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center md:text-left">
                 Plus: AI Assistant for Quick Reference
               </h2>
             </div>
@@ -548,7 +548,7 @@ export default function DoubtResolutionPage() {
                 Start with basic questions like &quot;Explain photosynthesis&quot; or &quot;What is
                 DNA structure&quot; for quick concept review
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center">
                 <Link
                   href="/claudechat"
                   className="bg-white text-blue-600 px-4 sm:px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center min-h-[44px]"

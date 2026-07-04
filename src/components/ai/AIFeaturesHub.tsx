@@ -450,7 +450,7 @@ export default function AIFeaturesHub() {
           <p className="text-xl text-blue-100 mb-8">
             Join 15,000+ students already using our AI features to ace their NEET preparation
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               href="/claudechat"
               className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"

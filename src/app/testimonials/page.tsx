@@ -332,7 +332,7 @@ export default function TestimonialsPage() {
               <p className="text-sm sm:text-base text-gray-600 mb-5 sm:mb-6">
                 Hear directly from our successful students about their journey and experience
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="flex flex-col md:flex-row gap-3 justify-center">
                 <Link href="/testimonials/sadhna-sirin-neet-2023-topper">
                   <Button>
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -355,7 +355,7 @@ export default function TestimonialsPage() {
 
           {/* Related Pages */}
           <div className="mb-12 sm:mb-14 md:mb-16 max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Link
                 href="/results"
                 className="block bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow"
@@ -398,7 +398,7 @@ export default function TestimonialsPage() {
                 Join thousands of successful students who achieved their medical dreams with our
                 expert guidance and proven methodology
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center">
                 <Link
                   href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20testimonials.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
                   target="_blank"

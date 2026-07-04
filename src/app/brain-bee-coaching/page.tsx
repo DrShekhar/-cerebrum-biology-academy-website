@@ -408,7 +408,7 @@ export default function BrainBeeCoachingPage() {
             US, NRI and international IBB aspirants.
           </p>
 
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 md:flex-row">
             <a
               href={waUrl}
               target="_blank"
@@ -699,7 +699,7 @@ export default function BrainBeeCoachingPage() {
               national, or IBB), and show how we coach the high-weight rounds. Available across all
               global time zones.
             </p>
-            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col justify-center gap-3 md:flex-row">
               <a
                 href={waUrl}
                 target="_blank"

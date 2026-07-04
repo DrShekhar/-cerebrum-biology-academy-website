@@ -54,7 +54,7 @@ export function NEETRepeatersResourceSection() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a
               href="https://wa.me/918826444334?text=Hi!%20I%20am%20a%20NEET%20repeater%20preparing%20for%20NEET%202027.%20Please%20share%20details%20about%20the%20dropper%2Frepeater%20batch%2C%20fees%2C%20and%20a%20free%20demo."
               target="_blank"

@@ -197,7 +197,7 @@ export default function NeetCoachingWhitefieldPage() {
               rate, AIIMS faculty, zero traffic commute. Join 780+ students from Inventure,
               Greenwood High, TISB!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Button
                 variant="secondary"
                 size="xl"
@@ -411,7 +411,7 @@ export default function NeetCoachingWhitefieldPage() {
               98% success rate, AIIMS faculty, premium small batches. International school
               specialists!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Button
                 variant="secondary"
                 size="xl"

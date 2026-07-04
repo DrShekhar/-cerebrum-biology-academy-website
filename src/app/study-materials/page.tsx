@@ -120,15 +120,15 @@ export default function StudyMaterialsPage() {
               Access comprehensive NEET Biology study materials, notes, practice papers, and
               resources to boost your preparation
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="w-full sm:w-auto min-h-[44px]">
+            <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center">
+              <Button size="lg" variant="secondary" className="w-full md:w-auto min-h-[44px]">
                 <Download className="w-5 h-5 sm:w-6 sm:h-6 mr-2 flex-shrink-0" />
                 Download All Materials
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto min-h-[44px] border-white text-white hover:bg-white hover:text-primary-600"
+                className="w-full md:w-auto min-h-[44px] border-white text-white hover:bg-white hover:text-primary-600"
               >
                 <Video className="w-5 h-5 sm:w-6 sm:h-6 mr-2 flex-shrink-0" />
                 Watch Study Guide
@@ -282,12 +282,12 @@ export default function StudyMaterialsPage() {
                 Join our courses to get access to exclusive study materials, personalized notes, and
                 direct faculty support
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-                <Button size="lg" className="w-full sm:w-auto min-h-[44px]">
+              <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center">
+                <Button size="lg" className="w-full md:w-auto min-h-[44px]">
                   <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 mr-2 flex-shrink-0" />
                   Explore Courses
                 </Button>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto min-h-[44px]">
+                <Button size="lg" variant="outline" className="w-full md:w-auto min-h-[44px]">
                   <Zap className="w-5 h-5 sm:w-6 sm:h-6 mr-2 flex-shrink-0" />
                   Book Free Demo
                 </Button>

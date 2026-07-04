@@ -212,7 +212,7 @@ export default function BiologyHomeTutorPage() {
               actually does.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20home%20tutor.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -328,28 +328,30 @@ export default function BiologyHomeTutorPage() {
             </h2>
           </div>
 
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-            <div className="grid grid-cols-3 bg-gray-800 text-white font-bold">
-              <div className="p-4">Feature</div>
-              <div className="p-4 text-center bg-red-700">Home Tutor</div>
-              <div className="p-4 text-center bg-green-700">Cerebrum</div>
-            </div>
-            {comparisonData.map((row, index) => (
-              <div
-                key={row.feature}
-                className={`grid grid-cols-3 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
-              >
-                <div className="p-4 font-medium text-gray-900">{row.feature}</div>
-                <div className="p-4 text-center text-red-600 flex items-center justify-center">
-                  <XCircle className="w-4 h-4 mr-2" />
-                  {row.homeTutor}
-                </div>
-                <div className="p-4 text-center text-green-600 font-semibold flex items-center justify-center">
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                  {row.cerebrum}
-                </div>
+          <div className="bg-white rounded-2xl shadow-lg overflow-x-auto">
+            <div className="min-w-[520px]">
+              <div className="grid grid-cols-3 bg-gray-800 text-white font-bold">
+                <div className="p-4">Feature</div>
+                <div className="p-4 text-center bg-red-700">Home Tutor</div>
+                <div className="p-4 text-center bg-green-700">Cerebrum</div>
               </div>
-            ))}
+              {comparisonData.map((row, index) => (
+                <div
+                  key={row.feature}
+                  className={`grid grid-cols-3 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
+                >
+                  <div className="p-4 font-medium text-gray-900">{row.feature}</div>
+                  <div className="p-4 text-center text-red-600 flex items-center justify-center">
+                    <XCircle className="w-4 h-4 mr-2" />
+                    {row.homeTutor}
+                  </div>
+                  <div className="p-4 text-center text-green-600 font-semibold flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 mr-2" />
+                    {row.cerebrum}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -407,7 +409,7 @@ export default function BiologyHomeTutorPage() {
               Book a free demo class and experience why small batch coaching beats home tuition.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20home%20tutor.%20Please%20share%20available%20timings."
                 target="_blank"

@@ -210,7 +210,7 @@ export default function NeetCoachingNorthIndiaPage() {
               preparing with us online.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <a href={getPhoneLink('primary')}>
                 <Button
                   variant="secondary"
@@ -528,7 +528,7 @@ export default function NeetCoachingNorthIndiaPage() {
               migration required!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <a href={getPhoneLink('primary')}>
                 <Button
                   variant="secondary"

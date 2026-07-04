@@ -208,7 +208,7 @@ export default function BiologyTutorsNearMePage() {
               anywhere in India, we have the perfect solution for your biology learning needs.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tutors%20near%20me.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -535,7 +535,7 @@ export default function BiologyTutorsNearMePage() {
               Whether offline in Delhi NCR or online from anywhere - start your journey to success!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tutors%20near%20me.%20Please%20share%20available%20timings."
                 target="_blank"

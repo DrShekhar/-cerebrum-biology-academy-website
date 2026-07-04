@@ -188,7 +188,7 @@ export function OptimizedHeroSection({
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 xs:gap-4 mb-8 xs:mb-12">
+          <div className="flex flex-col md:flex-row gap-3 xs:gap-4 mb-8 xs:mb-12">
             {/* Primary CTA */}
             <div className="transform hover:scale-[1.02] active:scale-[0.98] transition-transform">
               <PremiumButton
@@ -256,7 +256,7 @@ export function OptimizedHeroSection({
           </div>
 
           {/* Early Bird */}
-          <div className="mt-6 xs:mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+          <div className="mt-6 xs:mt-8 flex flex-col md:flex-row items-start sm:items-center gap-3 sm:gap-4">
             <div className="flex items-center gap-2 text-yellow-200">
               <Sparkles className="w-4 xs:w-5 h-4 xs:h-5 animate-pulse" />
               <span className="text-xs xs:text-sm sm:text-base">

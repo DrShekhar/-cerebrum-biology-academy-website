@@ -348,7 +348,7 @@ export default function USABO6MonthPrepPlanPage() {
               </Link>{' '}
               for the 6-week version.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <ContextualWhatsAppLink className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-6 py-3 rounded-lg font-semibold transition">
                 <MessageCircle className="w-5 h-5" />
                 Get a personalised plan
@@ -504,7 +504,7 @@ export default function USABO6MonthPrepPlanPage() {
               We coach the full pathway in US time zones — from Month 1 reading to USABO Finalist
               and the IBO selection camp.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <ContextualWhatsAppLink className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition">
                 <MessageCircle className="w-5 h-5" />
                 Book a free counselling call

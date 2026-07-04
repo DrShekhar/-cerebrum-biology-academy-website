@@ -263,7 +263,7 @@ export default function IsApBiologyWorthTakingPage() {
             tutoring from $2,500/yr and 1:1 from $40/hr). Live online in your US time zone
             (ET/CT/MT/PT).
           </p>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 md:flex-row">
             <a
               href="#enquiry"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-base font-semibold text-white shadow hover:bg-blue-700"
@@ -482,7 +482,7 @@ export default function IsApBiologyWorthTakingPage() {
               We will tell you honestly whether AP Biology fits your goals and target colleges, and
               help you do well the affordable way. Free first conversation, in your US time zone.
             </p>
-            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col justify-center gap-3 md:flex-row">
               <a
                 href="#enquiry"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold hover:bg-blue-700"

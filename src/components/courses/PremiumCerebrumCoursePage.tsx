@@ -347,7 +347,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-fadeInUp">
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-16 animate-fadeInUp">
               <button className="group relative bg-green-600 hover:bg-green-700 text-white px-12 py-6 rounded-2xl font-black text-xl shadow-2xl hover:shadow-green-600/50 transition-all duration-500 flex items-center gap-4 min-w-[280px] justify-center overflow-hidden animate-fadeInUp">
                 <div className="absolute inset-0 bg-green-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <Play className="h-7 w-7 group-hover:scale-125 transition-transform relative z-10" />

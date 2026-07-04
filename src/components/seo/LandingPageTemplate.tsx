@@ -79,7 +79,7 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
                   {section.subtitle || heroSubtitle}
                 </p>
               )}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <button className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
                   {primaryCTA}
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -278,7 +278,7 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Ready to Get Started?
             </h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href={getPhoneLink('primary')}
                 className="inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"

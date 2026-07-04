@@ -268,7 +268,7 @@ export function EnhancedCoursesListingPage() {
             </div>
 
             {/* Tier Headers */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               {courseTiers.map((tier) => (
                 <div
                   key={tier.series}
@@ -341,7 +341,7 @@ export function EnhancedCoursesListingPage() {
             </div>
 
             {/* Tier Features Summary */}
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
               {courseTiers.map((tier) => (
                 <div key={tier.series} className="p-4">
                   <h5
@@ -380,7 +380,7 @@ export function EnhancedCoursesListingPage() {
               Join thousands of successful students who have achieved their medical dreams with our
               expert guidance
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+            <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center px-4">
               <button
                 onClick={() => {
                   // Use a featured course or the first available course

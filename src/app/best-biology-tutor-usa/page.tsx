@@ -336,7 +336,7 @@ export default function BestBiologyTutorUSAPage() {
             and Oxford &mdash; so the depth applies to every US biology exam. Live online in your
             time zone.
           </p>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 md:flex-row">
             <a
               href="#enquiry"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-base font-semibold text-white shadow hover:bg-blue-700"
@@ -547,7 +547,7 @@ export default function BestBiologyTutorUSAPage() {
               AP · USABO · IBO · Brain Bee · IB · MCAT · USMLE · DAT — one faculty, your time zone,
               a free trial first.
             </p>
-            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col justify-center gap-3 md:flex-row">
               <a
                 href="#enquiry"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold hover:bg-blue-700"

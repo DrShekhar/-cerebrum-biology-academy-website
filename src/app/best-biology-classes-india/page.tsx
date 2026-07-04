@@ -243,7 +243,7 @@ export default function BestBiologyClassesIndiaPage() {
             USMLE Step 1, Biology Olympiads, and CBSE/ICSE Class 11-12.
           </p>
 
-          <div className="mt-7 flex flex-col sm:flex-row gap-3">
+          <div className="mt-7 flex flex-col md:flex-row gap-3">
             <a
               href={waUrl}
               target="_blank"
@@ -377,7 +377,7 @@ export default function BestBiologyClassesIndiaPage() {
               60-minute live class. Bring your child\&rsquo;s last biology exam. Slot in your time
               zone. No commitment.
             </p>
-            <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+            <div className="mt-7 flex flex-col md:flex-row justify-center gap-3">
               <a
                 href={waUrl}
                 target="_blank"

@@ -327,7 +327,7 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
 
         {/* Action Buttons */}
         <div className="text-center space-y-4">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button
               size="lg"
               className="bg-blue-600 hover:bg-blue-700"

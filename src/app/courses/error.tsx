@@ -170,7 +170,7 @@ export default function CoursesError({ error, reset }: ErrorProps) {
             Our support team is here to help you find the right course for your NEET preparation.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a
               href="tel:+918826444334"
               className="flex items-center justify-center px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors"

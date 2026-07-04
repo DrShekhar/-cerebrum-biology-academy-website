@@ -5,16 +5,7 @@
  */
 
 import Link from 'next/link'
-import {
-  Award,
-  ChevronRight,
-  Globe,
-  Home,
-  MessageCircle,
-  Phone,
-  Route,
-  Trophy,
-} from 'lucide-react'
+import { Award, ChevronRight, Globe, Home, MessageCircle, Phone, Route, Trophy } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import type { IBOCountry } from '@/data/ibo/iboCountries'
 
@@ -133,7 +124,7 @@ export default function IBOCountryTemplate({ country }: { country: IBOCountry })
           <p className="mt-5 max-w-4xl text-lg leading-relaxed text-slate-600">
             {country.heroBlurb}
           </p>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 md:flex-row">
             <a
               href={waUrl}
               target="_blank"
@@ -239,7 +230,7 @@ export default function IBOCountryTemplate({ country }: { country: IBOCountry })
               A short live session in {country.timezone} to gauge your level and map the{' '}
               {country.nationalOlympiad} &rarr; IBO route.
             </p>
-            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col justify-center gap-3 md:flex-row">
               <a
                 href={waUrl}
                 target="_blank"

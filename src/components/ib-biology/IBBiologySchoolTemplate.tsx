@@ -266,7 +266,7 @@ export default function IBBiologySchoolTemplate({ school }: IBBiologySchoolTempl
               IA mentorship (DP1 → DP2)
             </span>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <a
               href={counsellingHref}
               target="_blank"
@@ -463,7 +463,7 @@ export default function IBBiologySchoolTemplate({ school }: IBBiologySchoolTempl
             track at {school.shortName} and help you decide between the Complete Programme, 1:1
             Elite Tutoring, or the Group Batch.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a
               href={counsellingHref}
               target="_blank"

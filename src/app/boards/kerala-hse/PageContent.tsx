@@ -208,7 +208,7 @@ export default function PageContent() {
                 Leverage Kerala's strong science education tradition with expert NEET and KEAM
                 coaching. Join top NEET scorers from Kerala with HSE foundation excellence.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <Link
                   href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
                   target="_blank"
@@ -396,7 +396,7 @@ export default function PageContent() {
           <p className="text-lg sm:text-xl mb-8 text-green-100">
             Join Kerala students achieving 650+ NEET scores with HSE foundation strength
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
               target="_blank"

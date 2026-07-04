@@ -306,7 +306,7 @@ export default function FindCenterPage() {
           <p className="text-lg mb-8">
             Book a FREE demo class at your nearest Cerebrum center today!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a
               href={`tel:${CONTACT_INFO.phone.primary}`}
               className="bg-yellow-800 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-yellow-900 transition inline-block"

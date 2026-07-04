@@ -157,7 +157,7 @@ export function LeadCaptureForm({
               ? 'We have opened WhatsApp with your details ready to send. Tap send there to confirm.'
               : 'We are calling you now. If the call does not connect, we will call back within 15 minutes.'}
           </p>
-          <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:justify-center">
+          <div className="mt-6 flex flex-col gap-2 md:flex-row sm:justify-center">
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappText}`}
               target="_blank"

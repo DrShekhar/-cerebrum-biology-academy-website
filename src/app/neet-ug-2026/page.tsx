@@ -211,7 +211,7 @@ export default function NEETUG2026Page() {
               Official NTA Application Window:{' '}
               <span className="text-white font-semibold">8th Feb – 8th Mar 2026</span>
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
               <a
                 href="https://neet.nta.nic.in/"
                 target="_blank"
@@ -609,7 +609,7 @@ export default function NEETUG2026Page() {
                     </li>
                   ))}
                 </ul>
-                <div className="flex flex-col sm:flex-row items-start gap-4">
+                <div className="flex flex-col md:flex-row items-start gap-4">
                   <Link
                     href="/courses/neet-crash-course"
                     className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"

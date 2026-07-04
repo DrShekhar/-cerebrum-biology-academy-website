@@ -242,7 +242,7 @@ export default function PageContent() {
                 <strong>No more VIP Road traffic</strong> to Chandigarh. AIIMS faculty, 98% success
                 rate, starting ₹24,000/year.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}>
                   <Button
                     size="lg"
@@ -581,7 +581,7 @@ export default function PageContent() {
             Join 90+ Zirakpur students who chose quality education over daily commute stress. Book
             your free demo class now!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}>
               <Button
                 size="lg"

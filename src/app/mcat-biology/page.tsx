@@ -397,7 +397,7 @@ export default function MCATBiologyHubPage() {
               focused section rescue instead of a $5,000 generalist bundle.
             </p>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col gap-4 md:flex-row">
               <Link
                 href="/book-free-demo"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-500 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:bg-blue-600"
@@ -885,7 +885,7 @@ export default function MCATBiologyHubPage() {
               full-length data, identify the two foundational concepts costing you the most points,
               and build a 6-week recovery plan — no obligation, no upsell.
             </p>
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <div className="flex flex-col gap-4 md:flex-row sm:justify-center">
               <Link
                 href="/book-free-demo"
                 className="inline-flex items-center justify-center gap-3 rounded-xl bg-white px-8 py-4 text-lg font-semibold text-blue-700 shadow-lg hover:bg-blue-50"

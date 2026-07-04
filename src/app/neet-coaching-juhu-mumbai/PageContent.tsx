@@ -180,7 +180,7 @@ export default function PageContent() {
               and high-income households.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Mumbai.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -361,7 +361,7 @@ export default function PageContent() {
               Premium NEET coaching designed for premium families and their aspirations
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Mumbai.%20Please%20share%20available%20timings."
                 target="_blank"

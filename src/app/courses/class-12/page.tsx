@@ -790,7 +790,7 @@ export default function Class12BiologyPage() {
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
             <button
               onClick={() =>
                 trackAndOpenWhatsApp({

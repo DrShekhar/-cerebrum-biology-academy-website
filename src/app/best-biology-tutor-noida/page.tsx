@@ -214,7 +214,7 @@ export default function BestBiologyTutorNoidaPage() {
             </div>
 
             {/* CTA Buttons - WhatsApp Priority */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col md:flex-row justify-center gap-4">
               <a
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20learn%20Biology%20from%20the%20best%20tutor%20in%20Noida.%20Please%20share%20demo%20class%20details."
                 className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"
@@ -356,7 +356,7 @@ export default function BestBiologyTutorNoidaPage() {
           <h2 className="text-3xl font-bold mb-4">Learn from Noida's Best Biology Tutor</h2>
           <p className="text-xl text-slate-300 mb-8">Book your free demo class today</p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+          <div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
             <a
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20free%20demo%20class%20with%20the%20best%20Biology%20tutor%20in%20Noida."
               className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"

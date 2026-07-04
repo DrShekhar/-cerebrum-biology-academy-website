@@ -236,7 +236,7 @@ export default function Class9FoundationPage() {
                 with 4 years of strategic preparation!
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -436,7 +436,7 @@ export default function Class9FoundationPage() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
+                  <div className="flex flex-col md:flex-row gap-4 lg:gap-6">
                     <div className="text-center">
                       <div className="text-sm text-gray-600">Level</div>
                       <div className="font-bold text-green-600">{unit.difficulty}</div>
@@ -499,7 +499,7 @@ export default function Class9FoundationPage() {
               Start early, learn systematically, and set up your child for medical career success!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Button
                 variant="secondary"
                 size="xl"

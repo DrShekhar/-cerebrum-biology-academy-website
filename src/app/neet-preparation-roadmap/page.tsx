@@ -211,7 +211,7 @@ export default function NEETPreparationRoadmapPage() {
               <p className="text-lg text-slate-300 mb-10">
                 Designed by Cerebrum Biology Academy experts to help you achieve 600+ scores
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <a
                   href="https://wa.me/918826444334"
                   target="_blank"
@@ -679,7 +679,7 @@ export default function NEETPreparationRoadmapPage() {
               scores.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href="https://wa.me/918826444334"
                 target="_blank"

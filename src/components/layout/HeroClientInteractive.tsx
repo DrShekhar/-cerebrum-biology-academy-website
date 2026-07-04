@@ -178,7 +178,7 @@ export function HeroClientInteractive() {
   return (
     <>
       <div
-        className="flex flex-col sm:flex-row space-y-3 xs:space-y-4 sm:space-y-0 sm:space-x-4 mb-4 animate-fade-in-up"
+        className="flex flex-col md:flex-row space-y-3 xs:space-y-4 md:space-y-0 md:space-x-4 mb-4 animate-fade-in-up"
         style={{ animationDelay: '0.3s' }}
       >
         <button
@@ -255,7 +255,7 @@ export function HeroClientInteractive() {
       </div>
 
       <div
-        className="inline-flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-3 bg-red-500/20 border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg animate-fade-in-up"
+        className="inline-flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-3 bg-red-500/20 border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg animate-fade-in-up"
         style={{ animationDelay: '0.5s' }}
       >
         <div className="flex items-center">
@@ -269,7 +269,7 @@ export function HeroClientInteractive() {
       </div>
 
       <div
-        className="mt-6 xs:mt-8 flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 animate-fade-in-up"
+        className="mt-6 xs:mt-8 flex flex-col md:flex-row items-start sm:items-center space-y-3 md:space-y-0 md:space-x-4 animate-fade-in-up"
         style={{ animationDelay: '0.6s' }}
       >
         <div className="flex items-center space-x-2 text-yellow-200">

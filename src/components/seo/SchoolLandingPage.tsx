@@ -252,7 +252,7 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
 
               <p className="mb-8 text-xl text-blue-100 md:text-2xl">{data.heroSubtitle}</p>
 
-              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <div className="flex flex-col justify-center gap-4 md:flex-row">
                 <Link
                   href="/demo"
                   className="inline-flex items-center justify-center rounded-lg bg-yellow-500 px-8 py-4 text-lg font-semibold text-black transition hover:bg-yellow-400"
@@ -438,7 +438,7 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
                   </div>
                 </div>
 
-                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <div className="mt-6 flex flex-col gap-3 md:flex-row">
                   <Link
                     href="/demo"
                     className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
@@ -533,7 +533,7 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
               Book a free demo class and see why students from {data.schoolName} choose Cerebrum for
               their NEET preparation.
             </p>
-            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <div className="flex flex-col justify-center gap-4 md:flex-row">
               <Link
                 href="/demo"
                 className="inline-flex items-center justify-center rounded-lg bg-yellow-500 px-8 py-4 text-lg font-semibold text-black transition hover:bg-yellow-400"

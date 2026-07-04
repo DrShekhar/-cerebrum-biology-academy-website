@@ -173,7 +173,7 @@ export default function PageContent() {
               <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by Baner's elite
               families.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Pune.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -333,7 +333,7 @@ export default function PageContent() {
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Premium NEET coaching for Pune's most premium families
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Pune.%20Please%20share%20available%20timings."
                 target="_blank"

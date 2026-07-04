@@ -309,7 +309,7 @@ export default function SBOCoachingPage() {
               curriculum, experienced faculty, and personalized mentorship to represent Singapore at
               the International Biology Olympiad.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <button
                 onClick={() => handleWhatsAppClick('hero-cta')}
                 className="inline-flex items-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-all transform hover:scale-105 shadow-lg"

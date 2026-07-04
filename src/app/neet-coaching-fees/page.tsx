@@ -365,7 +365,7 @@ export default function FeesPage() {
               No hidden charges. No surprise fees. See exactly what you pay for at Cerebrum Biology
               Academy.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href={getWhatsAppLink('I want to know about your NEET coaching fees and programs.')}
                 target="_blank"
@@ -650,7 +650,7 @@ export default function FeesPage() {
               class.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href={getWhatsAppLink(
                   'I have questions about NEET coaching fees and would like more details.'

@@ -545,7 +545,7 @@ export default function APBiologyFRQRubricMasteryPage() {
               We schedule timed FRQ writes, grade against the College Board rubric, and walk through
               every point you lost — until rubric application becomes reflex.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="/ap-biology-tutor"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition"
@@ -574,7 +574,7 @@ export default function APBiologyFRQRubricMasteryPage() {
               Send us an FRQ you have written and we will reply with where it would lose rubric
               points and how to fix it. No commitment.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
               <a
                 href={`https://wa.me/918826444334?text=${encodeURIComponent(
                   'Hi Cerebrum, I have a question about AP Biology FRQ rubric scoring.'

@@ -333,7 +333,7 @@ export default function HowToQualifyForUSABOPage() {
             <p className="text-sm text-slate-400 mb-6 max-w-3xl">
               Live online in your US time zone (ET/CT/MT/PT); pricing in USD.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <Link
                 href="/usabo-coaching#free-assessment"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-6 py-3 rounded-lg font-semibold transition"
@@ -522,7 +522,7 @@ export default function HowToQualifyForUSABOPage() {
               fix first. We coach the full pathway in US time zones, from foundation reading to
               National Finals lab prep.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="/usabo-coaching#free-assessment"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition"

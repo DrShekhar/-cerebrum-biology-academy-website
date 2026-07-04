@@ -506,7 +506,7 @@ export function TestResults({
       {/* Action Buttons */}
       <div className="bg-white border-t border-gray-200 py-8">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button variant="outline" size="lg" onClick={onRetakeTest}>
               <RotateCcw className="w-5 h-5 mr-2" />
               Retake Test

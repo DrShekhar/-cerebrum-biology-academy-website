@@ -784,7 +784,7 @@ export default function InteractiveComparisonMatrix({
           <p className="text-gray-600 mb-4">
             Ready to make your choice? Get personalized guidance from our experts.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col md:flex-row gap-3 justify-center">
             <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
               📞 Talk to Counselor
             </button>

@@ -320,7 +320,7 @@ export default function CBOCityTemplate({
               Max 12 / batch
             </span>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <a
               href={counsellingHref}
               target="_blank"
@@ -472,7 +472,7 @@ export default function CBOCityTemplate({
             Book a free 30-minute counselling call. We&apos;ll review your school, current biology
             level, and target stage (Open / National / IBO camp).
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a
               href={counsellingHref}
               target="_blank"

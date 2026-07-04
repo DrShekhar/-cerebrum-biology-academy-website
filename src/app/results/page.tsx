@@ -297,7 +297,7 @@ export default function ResultsPage() {
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <Link
                   href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20results.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
                   target="_blank"
@@ -728,7 +728,7 @@ export default function ResultsPage() {
               colleges. Next batch starting this week — limited seats.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20results.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
                 target="_blank"

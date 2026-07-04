@@ -820,7 +820,7 @@ export default function FacultyCredentialsShowcase({
           Our faculty combines years of teaching experience with cutting-edge research to deliver
           unparalleled NEET preparation.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col md:flex-row gap-4 justify-center">
           <button className="bg-white text-green-600 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
             🎯 Book Faculty Interaction Session
           </button>

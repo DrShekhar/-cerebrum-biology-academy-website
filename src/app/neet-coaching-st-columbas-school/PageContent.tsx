@@ -65,7 +65,7 @@ export default function PageContent() {
             Premium NEET Biology coaching for one of Delhi&apos;s oldest and most prestigious
             boys&apos; schools. Excel in competitive NEET while maintaining school excellence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
             <Button variant="primary" className="px-8 py-3 text-lg">
               Book Free Demo Class
             </Button>
@@ -327,7 +327,7 @@ export default function PageContent() {
             Join St. Columba&apos;s students who&apos;ve achieved 98%+ success rates with Cerebrum
             Biology Academy.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button variant="light" className="px-8 py-3 text-lg font-semibold">
               Start Your Free Demo <ArrowRight className="w-5 h-5 ml-2 inline" />
             </Button>

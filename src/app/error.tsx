@@ -108,7 +108,7 @@ export default function Error({ error, reset }: ErrorProps) {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fadeInUp">
+        <div className="flex flex-col md:flex-row gap-4 justify-center mb-16 animate-fadeInUp">
           <Button size="lg" onClick={handleReset}>
             <RefreshCw className="w-5 h-5 mr-2" />
             Try Again
@@ -118,7 +118,7 @@ export default function Error({ error, reset }: ErrorProps) {
             Reload Page
           </Button>
           <Link href="/">
-            <Button size="lg" variant="outline" className="w-full sm:w-auto">
+            <Button size="lg" variant="outline" className="w-full md:w-auto">
               <Home className="w-5 h-5 mr-2" />
               Go Home
             </Button>
@@ -193,7 +193,7 @@ export default function Error({ error, reset }: ErrorProps) {
             ensure your NEET preparation isn't interrupted.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a
               href="tel:+918826444334"
               className="flex items-center justify-center px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors"

@@ -190,7 +190,7 @@ export default function NEETTestSeriesNoidaContent({ faqs }: { faqs: FAQ[] }) {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <button
                 onClick={handleWhatsApp}
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-6 py-4 rounded-xl font-bold animate-fadeInUp"
@@ -481,7 +481,7 @@ export default function NEETTestSeriesNoidaContent({ faqs }: { faqs: FAQ[] }) {
           <p className="text-xl mb-8 opacity-90">
             Start with a free mock test and see where you stand
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <button onClick={handleWhatsApp} className="animate-fadeInUp">
               <Button
                 variant="secondary"

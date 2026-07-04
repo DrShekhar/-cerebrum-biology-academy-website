@@ -266,7 +266,7 @@ export default function NeetCoachingNoidaPage() {
               &amp; all premium Noida societies.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -1104,7 +1104,7 @@ export default function NeetCoachingNoidaPage() {
               <div className="mt-6">
                 <Button
                   onClick={handleDemoBooking}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="w-full whitespace-normal h-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   Book Free Demo Class from Noida
                 </Button>
@@ -1511,7 +1511,7 @@ export default function NeetCoachingNoidaPage() {
             <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
               Start your NEET journey with expert guidance, proven methods, and personalized support
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button
                 onClick={handleDemoBooking}
                 className="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
@@ -1840,7 +1840,7 @@ export default function NeetCoachingNoidaPage() {
               Join 1,200+ successful Noida students. Book your free demo class now!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
                 target="_blank"

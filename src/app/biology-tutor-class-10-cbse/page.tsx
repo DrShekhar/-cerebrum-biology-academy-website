@@ -211,7 +211,7 @@ export default function BiologyTutorClass10CBSEPage() {
               faculty, board-aligned teaching, and an optional Class 10 → NEET foundation layer.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%2010%20CBSE%20Biology.%20Please%20share%20available%20timings%20and%20the%20board-exam%20preparation%20plan."
                 target="_blank"
@@ -466,7 +466,7 @@ export default function BiologyTutorClass10CBSEPage() {
               familiar.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%2010%20CBSE%20Biology.%20Please%20share%20available%20timings%20and%20the%20board-exam%20preparation%20plan."
                 target="_blank"

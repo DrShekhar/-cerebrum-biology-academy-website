@@ -183,7 +183,7 @@ export default function NcertBiologyCoachingNoidaPage() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col md:flex-row justify-center gap-4">
               <a
                 href="https://wa.me/918826444334?text=Hi!%20I%20need%20NCERT%20Biology%20coaching%20in%20Noida.%20Please%20share%20batch%20details."
                 className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"
@@ -374,7 +374,7 @@ export default function NcertBiologyCoachingNoidaPage() {
             Join our students who scored 650+ with our NCERT-focused approach
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+          <div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
             <a
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20join%20NCERT%20Biology%20coaching%20in%20Noida.%20Please%20share%20demo%20class%20details."
               className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"

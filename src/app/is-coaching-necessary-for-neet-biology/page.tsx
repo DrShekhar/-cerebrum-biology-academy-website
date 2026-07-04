@@ -543,7 +543,7 @@ export default function IsCoachingNecessaryForNEETBiology() {
               Experience Cerebrum Biology Academy's AIIMS-trained faculty and decide if coaching is
               right for you.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <a
                 href="https://cerebrumbiologyacademy.com/contact"
                 className="inline-block px-8 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition"

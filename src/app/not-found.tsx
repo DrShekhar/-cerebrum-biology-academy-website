@@ -191,7 +191,7 @@ export default function NotFound() {
             <p className="mb-4 text-[#4a5d4a]">
               Our support team is here to help you navigate our NEET coaching programs and courses.
             </p>
-            <div className="flex flex-col justify-center gap-3 sm:flex-row">
+            <div className="flex flex-col justify-center gap-3 md:flex-row">
               <a
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#3d4d3d] px-6 py-3 font-medium text-white transition-all hover:bg-[#4a5d4a]"

@@ -206,7 +206,10 @@ export default function RohiniLocationPage() {
                   desc: '150+ NEET selections from this center',
                 },
               ].map((item, idx) => (
-                <div key={item.title} className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
+                <div
+                  key={item.title}
+                  className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
+                >
                   <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-red-600" />
                   </div>
@@ -393,7 +396,7 @@ export default function RohiniLocationPage() {
             <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
               Cerebrum Biology Academy has 4 centers across Delhi-NCR. Visit the one nearest to you.
             </p>
-            <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
               {[
                 {
                   name: 'South Extension (Flagship)',

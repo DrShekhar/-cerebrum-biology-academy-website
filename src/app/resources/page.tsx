@@ -93,7 +93,7 @@ const FreeResourcesHub = () => {
             </p>
 
             {/* Curriculum & Grade Selection */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
               <div className="flex flex-wrap gap-2">
                 {curriculums.map((curriculum) => (
                   <button
@@ -288,7 +288,7 @@ const FreeResourcesHub = () => {
             Start your journey to academic success today!
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               href="/sign-up"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg"

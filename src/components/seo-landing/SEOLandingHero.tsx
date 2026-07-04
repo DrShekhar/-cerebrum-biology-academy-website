@@ -75,7 +75,7 @@ export function SEOLandingHero({ hero, stats }: SEOLandingHeroProps) {
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fadeInUp">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 md:flex-row animate-fadeInUp">
             <Link
               href={hero.ctaLink}
               className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-lg font-semibold text-gray-900 shadow-xl transition-all hover:bg-gray-100 hover:shadow-2xl"

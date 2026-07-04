@@ -17,15 +17,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import {
-  Award,
-  CheckCircle2,
-  ChevronRight,
-  Globe,
-  Home,
-  MessageCircle,
-  Phone,
-} from 'lucide-react'
+import { Award, CheckCircle2, ChevronRight, Globe, Home, MessageCircle, Phone } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
@@ -251,7 +243,7 @@ export default function BiologyCoachingEnglishMediumPage() {
             by design, because English is the exam\&rsquo;s language.
           </p>
 
-          <div className="mt-7 flex flex-col sm:flex-row gap-3">
+          <div className="mt-7 flex flex-col md:flex-row gap-3">
             <a
               href={waUrl}
               target="_blank"
@@ -363,7 +355,7 @@ export default function BiologyCoachingEnglishMediumPage() {
         {/* Track record bar */}
         <section className="bg-gradient-to-r from-indigo-700 to-purple-700 text-white">
           <div className="mx-auto max-w-6xl px-4 py-12">
-            <div className="grid gap-6 sm:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-3">
               <div>
                 <p className="text-3xl font-bold">30+</p>
                 <p className="mt-1 text-sm text-indigo-200">
@@ -415,7 +407,7 @@ export default function BiologyCoachingEnglishMediumPage() {
               60-minute live class. Bring your child\&rsquo;s last biology exam in whatever language
               they currently study. We show you the English-medium transition plan.
             </p>
-            <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+            <div className="mt-7 flex flex-col md:flex-row justify-center gap-3">
               <a
                 href={waUrl}
                 target="_blank"

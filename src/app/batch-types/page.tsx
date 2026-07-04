@@ -192,7 +192,7 @@ export default function BatchTypesPage() {
                 Whether you're preparing from Class 11, juggling board exams, or doing last-minute
                 revision, Cerebrum has the right batch for you.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <Link
                   href="#demo"
                   className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition"
@@ -400,7 +400,7 @@ export default function BatchTypesPage() {
               <p className="text-gray-700 mb-4">
                 Still confused? Our counselors are here to help you choose the perfect batch!
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <a
                   href="tel:+918826444334"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
@@ -460,7 +460,7 @@ export default function BatchTypesPage() {
               will help you choose the perfect batch based on your goals and schedule.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition">
                 Book Demo Class Now
               </button>

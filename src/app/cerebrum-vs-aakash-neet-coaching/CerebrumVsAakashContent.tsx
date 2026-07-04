@@ -268,7 +268,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20aakash%20neet%20coaching.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -559,7 +559,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
             <p className="text-slate-300 mb-6">
               Not sure which is right for you? Talk to our counselor for unbiased guidance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20aakash%20neet%20coaching.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -743,7 +743,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
           <p className="text-xl mb-8 opacity-90">
             Join 15,000+ students who chose specialized Biology coaching for better NEET results
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20cerebrum%20vs%20aakash%20neet%20coaching.%20Please%20share%20available%20timings."
               target="_blank"

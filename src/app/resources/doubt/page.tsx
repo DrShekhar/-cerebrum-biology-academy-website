@@ -176,18 +176,18 @@ export default function DoubtResolutionPage() {
               provides personalized doubt resolution to help you master NEET Biology.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20have%20a%20biology%20doubt"
                 target="_blank" rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BD5A] text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                className="w-full md:w-auto inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BD5A] text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Ask on WhatsApp
               </a>
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20resources.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-full font-bold text-lg transition-all border border-white/30"
+                className="w-full md:w-auto inline-flex items-center justify-center bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-full font-bold text-lg transition-all border border-white/30"
               >
                 <Video className="w-5 h-5 mr-2" />
                 Join Live Session
@@ -525,18 +525,18 @@ export default function DoubtResolutionPage() {
             Don't let doubts hold you back. Send your question now and get expert help from our
             faculty team.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <a
               href="https://wa.me/918826444334?text=Hi%2C%20I%20have%20a%20biology%20doubt"
               target="_blank" rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-white text-green-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-green-50 transition-all"
+              className="w-full md:w-auto inline-flex items-center justify-center bg-white text-green-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-green-50 transition-all"
             >
               <MessageSquare className="w-5 h-5 mr-2" />
               WhatsApp Now
             </a>
             <a
               href="tel:+918826444334"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all"
+              className="w-full md:w-auto inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all"
             >
               <Phone className="w-5 h-5 mr-2" />
               Call: +91 88264-44334

@@ -240,7 +240,7 @@ export default function BiologyScholarshipTestPage() {
             any Cerebrum online biology programme, and get a free personalised weak-area diagnostic
             report either way.
           </p>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 md:flex-row">
             <a
               href="#register"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-base font-semibold text-white shadow hover:bg-blue-700"
@@ -435,7 +435,7 @@ export default function BiologyScholarshipTestPage() {
               Free to register, online, with a real diagnostic report whatever your score. Sit the
               test that actually measures the half of NEET that decides ranks.
             </p>
-            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col justify-center gap-3 md:flex-row">
               <a
                 href="#register"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold hover:bg-blue-700"

@@ -74,7 +74,7 @@ export default function CounselorPocPage() {
       <footer className="border-t border-gray-200 bg-white mt-12">
         <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div className="flex flex-col md:flex-row items-start sm:items-center gap-4">
               <div className="flex-1">
                 <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
                   <span className="text-2xl">🎉</span>

@@ -208,7 +208,7 @@ export default function ContactPage() {
               </p>
 
               <div
-                className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
+                className="flex flex-col md:flex-row gap-4 justify-center animate-fade-in-up"
                 style={{ animationDelay: '0.4s' }}
               >
                 <Link
@@ -496,12 +496,12 @@ export default function ContactPage() {
               guidance.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center">
               <Link href="/courses">
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-white text-white hover:bg-white hover:text-[#3d4d3d] w-full sm:w-auto min-h-11 sm:min-h-12"
+                  className="border-white text-white hover:bg-white hover:text-[#3d4d3d] w-full md:w-auto min-h-11 sm:min-h-12"
                 >
                   Explore Courses
                 </Button>
@@ -509,7 +509,7 @@ export default function ContactPage() {
               <Button
                 variant="primary"
                 size="xl"
-                className="bg-white text-[#3d4d3d] hover:bg-[#e8ede8] w-full sm:w-auto min-h-11 sm:min-h-12"
+                className="bg-white text-[#3d4d3d] hover:bg-[#e8ede8] w-full md:w-auto min-h-11 sm:min-h-12"
                 onClick={() => (window.location.href = 'tel:+918826444334')}
               >
                 <Phone className="w-5 h-5 mr-2" />

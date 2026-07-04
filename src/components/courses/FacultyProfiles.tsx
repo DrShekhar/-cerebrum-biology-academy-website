@@ -312,7 +312,7 @@ export function FacultyProfiles({ course }: FacultyProfilesProps) {
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
             Ready to Learn from the Best?
           </h3>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
               <Calendar className="h-5 w-5 mr-2" />
               Book Faculty Interaction Session

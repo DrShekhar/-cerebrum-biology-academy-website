@@ -378,7 +378,7 @@ export default function AllLocationsPage() {
             <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-8">
               Book a free demo class and experience our teaching methodology firsthand
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
               <Button
                 asChild
                 size="lg"

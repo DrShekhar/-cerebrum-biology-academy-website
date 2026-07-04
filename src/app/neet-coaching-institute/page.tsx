@@ -209,7 +209,7 @@ export default function NeetCoachingInstitutePage() {
               programs.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20Biology%20Academy.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -396,7 +396,7 @@ export default function NeetCoachingInstitutePage() {
               Success rate based on 2023-2025 NEET-UG results. NEET is conducted by NTA (nta.ac.in).
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Cerebrum%20Biology%20Academy.%20Please%20share%20available%20timings."
                 target="_blank"

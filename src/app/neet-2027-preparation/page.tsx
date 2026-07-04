@@ -453,7 +453,7 @@ export default function NEET2026PreparationPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
             {neet2027Batches.map((batch, index) => (
               <div
                 key={batch.name}
@@ -609,7 +609,7 @@ export default function NEET2026PreparationPage() {
               faculty, proven methodology, and personalized attention await you.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8">
+            <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8">
               <Button
                 variant="secondary"
                 size="xl"
@@ -620,7 +620,7 @@ export default function NEET2026PreparationPage() {
                 Book FREE Demo Class
               </Button>
 
-              <a href="tel:+918826444334" className="w-full sm:w-auto">
+              <a href="tel:+918826444334" className="w-full md:w-auto">
                 <Button
                   variant="outline"
                   size="xl"

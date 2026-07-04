@@ -46,7 +46,7 @@ export function DashboardEmptyState({ userName }: DashboardEmptyStateProps) {
             Take your first practice test to unlock personalized insights, track your progress, and
             get AI-powered recommendations for NEET success.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+          <div className="flex flex-col md:flex-row justify-center space-y-3 md:space-y-0 md:space-x-4">
             <Link
               href="/neet-biology-mcq"
               className="inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:shadow-lg transition-all min-h-[48px] touch-action-manipulation active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"

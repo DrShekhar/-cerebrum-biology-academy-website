@@ -205,7 +205,7 @@ export default function VikasPuriContent() {
                 batches, and proven results. Just 15-20 minutes from Vikas Puri via metro.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <Link
                   href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20vikas%20puri.%20Please%20share%20available%20timings."
                   target="_blank"
@@ -466,7 +466,7 @@ export default function VikasPuriContent() {
                 and experience the difference!
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <Link
                   href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20vikas%20puri.%20Please%20share%20available%20timings."
                   target="_blank"
@@ -491,7 +491,7 @@ export default function VikasPuriContent() {
                 </button>
               </div>
 
-              <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-green-100">
+              <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 text-green-100">
                 <div className="flex items-center gap-2">
                   <Clock className="w-5 h-5" />
                   <span>Open 24/7</span>

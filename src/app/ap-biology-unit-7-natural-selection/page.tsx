@@ -415,7 +415,7 @@ function UnitShell(props: {
               Tell us where you are stuck in {title} and we will reply with a quick answer plus how
               we would coach it. No commitment.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
               <a
                 href={`https://wa.me/918826444334?text=${encodeURIComponent(
                   `Hi Cerebrum, I have a question about AP Biology Unit ${unitNum}: ${title}.`
@@ -452,7 +452,7 @@ function UnitShell(props: {
               rubric. Faculty trained at AIIMS (All India Institute of Medical Sciences,
               India&apos;s top medical school).
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="/ap-biology-tutor"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition"

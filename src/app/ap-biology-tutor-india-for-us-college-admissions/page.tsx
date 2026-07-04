@@ -431,7 +431,7 @@ export default function APBiologyIndiaForUSAdmissionsPage() {
               school schedules.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20am%20an%20Indian%20student%20applying%20to%20US%20colleges%20and%20want%20to%20book%20a%20FREE%20demo%20class%20for%20AP%20Biology.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -829,7 +829,7 @@ export default function APBiologyIndiaForUSAdmissionsPage() {
             the same session — no card, no commitment.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20AP%20Biology%20demo%20class%20for%20US%20college%20admissions.%20Please%20share%20available%20IST%20evening%20timings."
               target="_blank"

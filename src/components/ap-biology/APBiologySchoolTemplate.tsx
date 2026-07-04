@@ -208,7 +208,7 @@ export default function APBiologySchoolTemplate({ school }: APBiologySchoolTempl
               AP-5 + USABO Semifinal track
             </span>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <a
               href={counsellingHref}
               target="_blank"
@@ -394,7 +394,7 @@ export default function APBiologySchoolTemplate({ school }: APBiologySchoolTempl
             specific AP Bio pace and help you decide between AP-5 only or the integrated AP + USABO
             Semifinal track.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a
               href={counsellingHref}
               target="_blank"

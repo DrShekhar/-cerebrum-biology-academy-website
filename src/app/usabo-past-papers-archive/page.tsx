@@ -326,7 +326,7 @@ export default function USABOPastPapersArchivePage() {
               solutions, and walk through every error pattern until USABO question recognition
               becomes reflex.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="/usabo-coaching"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition"

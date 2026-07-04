@@ -375,7 +375,7 @@ export default async function NEETCoachingNRIUAEPage() {
                 Experience AIIMS-trained NEET Biology coaching live in GST timezone.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+            <div className="flex flex-col md:flex-row gap-3 flex-shrink-0">
               <a
                 href="tel:+918826444334"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition whitespace-nowrap"

@@ -106,7 +106,7 @@ const HeaderClientInteractions = dynamic(
 const FirebaseAuthButtons = dynamic(
   () => import('./FirebaseAuthButtons').then((mod) => mod.FirebaseAuthButtons),
   {
-    loading: () => <div className="hidden lg:block w-16 h-8" />,
+    loading: () => <div className="hidden xl:block w-16 h-8" />,
   }
 )
 
@@ -183,7 +183,7 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
 
           {/* Desktop Navigation - Server rendered */}
           <nav
-            className="hidden lg:flex items-center space-x-8"
+            className="hidden xl:flex items-center space-x-8"
             role="navigation"
             aria-label="Main navigation"
           >
@@ -273,7 +273,7 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
             </Suspense>
 
             {/* Desktop CTAs - tracked WhatsApp with desktop QR modal */}
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden xl:flex items-center gap-6">
               <Suspense fallback={null}>
                 <HeaderClientInteractions section="cta-demo" />
               </Suspense>

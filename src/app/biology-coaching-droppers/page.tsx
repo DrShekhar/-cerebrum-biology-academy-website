@@ -171,7 +171,7 @@ export default function BiologyDroppersPage() {
               mock tests. Our droppers improve by 100-150 marks on average. AIIMS faculty guidance.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Dropper%20batch.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -344,7 +344,7 @@ export default function BiologyDroppersPage() {
               Join our dropper batch and improve by 100+ marks. Book free counseling today!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Dropper%20batch.%20Please%20share%20available%20timings."
                 target="_blank"

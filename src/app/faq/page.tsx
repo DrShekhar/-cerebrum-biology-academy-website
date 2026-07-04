@@ -532,7 +532,7 @@ export default function FAQPage() {
               Can&apos;t find what you&apos;re looking for? Our team is here to help you with any
               queries about NEET preparation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <button
                 onClick={async () => {
                   await trackAndOpenWhatsApp({

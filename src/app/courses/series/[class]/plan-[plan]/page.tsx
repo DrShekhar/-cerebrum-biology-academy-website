@@ -303,7 +303,7 @@ export default function PlanDetailsPage() {
                   with our expert faculty.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col md:flex-row gap-4 justify-center">
                   <button className="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
                     <Zap className="w-5 h-5" />
                     Enroll Now - ₹{planDetails.price.toLocaleString()}

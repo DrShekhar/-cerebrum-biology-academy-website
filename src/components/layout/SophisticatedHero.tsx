@@ -166,7 +166,7 @@ export function SophisticatedHero({
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp">
+            <div className="flex flex-col md:flex-row gap-4 animate-fadeInUp">
               <PremiumButton
                 variant="medical"
                 size="lg"

@@ -373,7 +373,7 @@ export default function DropperBatchTemplate({
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <a href={counsellingHref} target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="secondary"
@@ -424,9 +424,7 @@ export default function DropperBatchTemplate({
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">
                   Why online biology coaching works for {cityName} droppers
                 </h3>
-                <p className="text-base text-slate-700 leading-relaxed">
-                  {cityData.whyOnlineHere}
-                </p>
+                <p className="text-base text-slate-700 leading-relaxed">{cityData.whyOnlineHere}</p>
               </div>
             )}
             {cityData?.notableAlumni && cityData.notableAlumni.length > 0 && (
@@ -806,7 +804,7 @@ export default function DropperBatchTemplate({
             Join NEET Dropper Batch 2027 from {cityName} — most students who follow the programme
             add 100+ marks
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a href={counsellingHref} target="_blank" rel="noopener noreferrer">
               <Button
                 variant="secondary"

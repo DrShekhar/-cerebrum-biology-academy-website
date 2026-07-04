@@ -104,7 +104,7 @@ export default function BiologyTuitionSouthDelhiPage() {
               trust us. 15 students/batch.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link href="/book-free-demo">
                 <Button
                   variant="secondary"
@@ -347,7 +347,7 @@ export default function BiologyTuitionSouthDelhiPage() {
           <p className="text-xl mb-8 opacity-90">
             Visit our South Extension center. CBSE Board + NEET dual prep. Transparent pricing.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
             <Link href="/book-free-demo">
               <Button
                 variant="secondary"

@@ -148,7 +148,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Live Stats Bar */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 sm:px-6 py-3 mb-6 sm:mb-8 animate-fadeInUp">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 md:gap-8 text-xs sm:text-sm font-semibold">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-6 md:gap-8 text-xs sm:text-sm font-semibold">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                 <span>
@@ -214,7 +214,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
               </div>
 
               {/* Quick Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <div className="flex flex-col md:flex-row gap-3 sm:gap-4">
                 <PremiumButton
                   variant="medical"
                   size="lg"

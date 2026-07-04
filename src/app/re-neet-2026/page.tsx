@@ -374,9 +374,9 @@ export default function ReNEET2026Page() {
             The National Testing Agency cancelled the NEET-UG 2026 exam (held 3 May 2026) on 12 May
             after Rajasthan Police's Special Operations Group recovered a leaked &ldquo;guess
             paper&rdquo; with around 120 matching questions (≈90 Biology + 30 Chemistry). The Centre
-            ordered a CBI probe. The reconduct — Re-NEET 2026 — was held on 21 June 2026 (admit cards
-            re-issued from 14 June); results are expected in July 2026. ~22 lakh candidates were
-            affected.
+            ordered a CBI probe. The reconduct — Re-NEET 2026 — was held on 21 June 2026 (admit
+            cards re-issued from 14 June); results are expected in July 2026. ~22 lakh candidates
+            were affected.
           </p>
 
           <div className="mt-7 grid gap-3 sm:grid-cols-2">
@@ -448,7 +448,7 @@ export default function ReNEET2026Page() {
               ))}
             </ul>
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-3 md:flex-row">
               <a
                 href={WA_CRASH_COURSE}
                 target="_blank"
@@ -551,8 +551,8 @@ export default function ReNEET2026Page() {
                   neet.nta.nic.in.
                 </li>
                 <li>
-                  <strong>MCC counselling.</strong> The June re-exam pushes the counselling calendar;
-                  dates to be notified.
+                  <strong>MCC counselling.</strong> The June re-exam pushes the counselling
+                  calendar; dates to be notified.
                 </li>
                 <li>
                   <strong>Refund SOP.</strong> Original-fee refund process not yet published.
@@ -689,7 +689,7 @@ export default function ReNEET2026Page() {
               dropper plan built around your weak chapters compounds every week. Batches are filling
               fast.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 md:flex-row">
               <a
                 href={WA_PARENT}
                 target="_blank"

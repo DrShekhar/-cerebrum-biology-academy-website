@@ -58,21 +58,21 @@ export function AdmissionsHeroStatic() {
 
             {/* CTA Buttons */}
             <div
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start animate-fade-in-up"
+              className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center lg:justify-start animate-fade-in-up"
               style={{ animationDelay: '0.4s' }}
             >
               <a
                 href={`https://wa.me/918826444334?text=${encodeURIComponent('Hi, I am interested in admissions at Cerebrum Biology Academy. Please share the brochure and admission details.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg font-medium transition-colors w-full sm:w-auto"
+                className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg font-medium transition-colors w-full md:w-auto"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Request Brochure
               </a>
               <a
                 href="#hero-form-placeholder"
-                className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition-colors w-full sm:w-auto"
+                className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition-colors w-full md:w-auto"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Full Application

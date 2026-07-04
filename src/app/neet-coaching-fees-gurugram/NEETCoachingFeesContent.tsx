@@ -457,7 +457,7 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
           <p className="text-green-100 mb-8 text-lg">
             Contact us for personalized fee calculation based on your eligibility
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20about%20NEET%20coaching%20fees%20and%20scholarship%20options."
               target="_blank"

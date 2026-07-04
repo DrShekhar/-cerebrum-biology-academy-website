@@ -159,12 +159,12 @@ export default function FacultyPage() {
               NEET, IB, AP, CBSE 11-12, and Olympiads. No rotating part-timers; the senior team
               teaches every batch.
             </p>
-            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+            <div className="flex flex-col justify-center gap-3 md:flex-row sm:gap-4">
               <Link href={WHATSAPP_FOUNDER} target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="primary"
                   size="lg"
-                  className="w-full bg-yellow-500 font-bold text-slate-900 hover:bg-yellow-400 sm:w-auto"
+                  className="w-full bg-yellow-500 font-bold text-slate-900 hover:bg-yellow-400 md:w-auto"
                 >
                   <MessageSquare className="mr-2 h-5 w-5" />
                   Talk to Dr. Shekhar
@@ -174,7 +174,7 @@ export default function FacultyPage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full border-white/30 text-white hover:bg-white/10 sm:w-auto"
+                  className="w-full border-white/30 text-white hover:bg-white/10 md:w-auto"
                 >
                   <Calendar className="mr-2 h-5 w-5" />
                   Book a demo class
@@ -223,7 +223,7 @@ export default function FacultyPage() {
                 </p>
                 <p className="mb-6 text-base text-gray-700 sm:text-lg">{FOUNDER.bio}</p>
 
-                <div className="mb-8 grid gap-4 sm:grid-cols-3">
+                <div className="mb-8 grid gap-4 md:grid-cols-3">
                   {founderResults.map((r) => (
                     <div
                       key={r.student}
@@ -253,11 +253,11 @@ export default function FacultyPage() {
                   </ul>
                 </div>
 
-                <div className="flex flex-col gap-3 sm:flex-row">
+                <div className="flex flex-col gap-3 md:flex-row">
                   <Link href={WHATSAPP_FOUNDER} target="_blank" rel="noopener noreferrer">
                     <Button
                       variant="primary"
-                      className="w-full bg-blue-600 text-white hover:bg-blue-700 sm:w-auto"
+                      className="w-full bg-blue-600 text-white hover:bg-blue-700 md:w-auto"
                     >
                       <MessageSquare className="mr-2 h-4 w-4" />
                       WhatsApp Dr. Shekhar
@@ -266,7 +266,7 @@ export default function FacultyPage() {
                   <Link href="/dr-shekhar-singh-biology-faculty-india">
                     <Button
                       variant="outline"
-                      className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white sm:w-auto"
+                      className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white md:w-auto"
                     >
                       Full faculty profile
                     </Button>
@@ -422,7 +422,7 @@ export default function FacultyPage() {
               <Link
                 key={v.label}
                 href={v.link}
-                className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 transition hover:border-blue-300 hover:shadow-sm sm:flex-row sm:items-center sm:gap-6"
+                className="group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-5 transition hover:border-blue-300 hover:shadow-sm md:flex-row sm:items-center sm:gap-6"
               >
                 {/* No `w-full`: in production CSS `.w-full` overrode `.sm:w-48`,
                     so the label took the whole row and crushed the description.
@@ -454,12 +454,12 @@ export default function FacultyPage() {
             We hire AIIMS / IIT / IISc / DU alumni with a decade-plus of senior teaching. If biology
             is your craft, we'd like to talk.
           </p>
-          <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+          <div className="flex flex-col justify-center gap-3 md:flex-row sm:gap-4">
             <Link href="/about/careers">
               <Button
                 variant="outline"
                 size="lg"
-                className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white sm:w-auto"
+                className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white md:w-auto"
               >
                 <GraduationCap className="mr-2 h-5 w-5" />
                 Faculty requirements
@@ -469,7 +469,7 @@ export default function FacultyPage() {
               <Button
                 variant="primary"
                 size="lg"
-                className="w-full bg-blue-600 text-white hover:bg-blue-700 sm:w-auto"
+                className="w-full bg-blue-600 text-white hover:bg-blue-700 md:w-auto"
               >
                 <MessageSquare className="mr-2 h-5 w-5" />
                 Apply
@@ -489,22 +489,22 @@ export default function FacultyPage() {
             Talk to Dr. Shekhar directly on WhatsApp — he answers personally for the first message,
             then routes you to the right tier.
           </p>
-          <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+          <div className="flex flex-col justify-center gap-3 md:flex-row sm:gap-4">
             <Link href={WHATSAPP_FOUNDER} target="_blank" rel="noopener noreferrer">
               <Button
                 variant="primary"
                 size="xl"
-                className="w-full bg-yellow-500 font-bold text-slate-900 hover:bg-yellow-400 sm:w-auto"
+                className="w-full bg-yellow-500 font-bold text-slate-900 hover:bg-yellow-400 md:w-auto"
               >
                 <MessageSquare className="mr-2 h-5 w-5" />
                 WhatsApp Dr. Shekhar
               </Button>
             </Link>
-            <a href="tel:+918826444334" className="w-full sm:w-auto">
+            <a href="tel:+918826444334" className="w-full md:w-auto">
               <Button
                 variant="outline"
                 size="xl"
-                className="w-full border-white/30 text-white hover:bg-white/10 sm:w-auto"
+                className="w-full border-white/30 text-white hover:bg-white/10 md:w-auto"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Call 88264-44334

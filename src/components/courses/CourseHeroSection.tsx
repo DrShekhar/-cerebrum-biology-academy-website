@@ -138,11 +138,11 @@ export function CourseHeroSection({ course }: CourseHeroSectionProps) {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <div className="flex flex-col md:flex-row gap-3 sm:gap-4">
               <Button
                 size="lg"
                 variant="secondary"
-                className="bg-white text-gray-900 hover:bg-gray-100 font-semibold min-h-[44px] w-full sm:w-auto text-sm sm:text-base"
+                className="bg-white text-gray-900 hover:bg-gray-100 font-semibold min-h-[44px] w-full md:w-auto text-sm sm:text-base"
                 onClick={() =>
                   trackAndOpenWhatsApp({
                     source: 'course-hero-demo-' + course.id,
@@ -162,7 +162,7 @@ export function CourseHeroSection({ course }: CourseHeroSectionProps) {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-gray-900 min-h-[44px] w-full sm:w-auto text-sm sm:text-base"
+                className="border-white text-white hover:bg-white hover:text-gray-900 min-h-[44px] w-full md:w-auto text-sm sm:text-base"
                 onClick={() =>
                   trackAndOpenWhatsApp({
                     source: 'course-hero-syllabus-' + course.id,
@@ -194,7 +194,7 @@ Please share the details!`,
                     campaign: 'course-page',
                   })
                 }
-                className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-2.5 px-5 rounded-lg min-h-[44px] w-full sm:w-auto text-sm sm:text-base shadow-lg hover:shadow-green-500/30 transition-all duration-300 hover:scale-[1.02]"
+                className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-2.5 px-5 rounded-lg min-h-[44px] w-full md:w-auto text-sm sm:text-base shadow-lg hover:shadow-green-500/30 transition-all duration-300 hover:scale-[1.02]"
               >
                 <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5" />
                 Chat on WhatsApp

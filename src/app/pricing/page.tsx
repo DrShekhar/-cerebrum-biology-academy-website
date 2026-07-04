@@ -336,23 +336,23 @@ export default function PricingPage() {
               <div className="text-xs sm:text-sm md:text-base font-bold truncate">
                 {classData.duration}
               </div>
-              <div className="text-[10px] sm:text-xs opacity-80 truncate">Duration</div>
+              <div className="text-xs opacity-80 truncate">Duration</div>
             </div>
             <div className="bg-white/50 rounded-md p-1 sm:p-1.5 min-w-0">
               <div className="text-xs sm:text-sm md:text-base font-bold truncate">{tier.hours}</div>
-              <div className="text-[10px] sm:text-xs opacity-80 truncate">Per Week</div>
+              <div className="text-xs opacity-80 truncate">Per Week</div>
             </div>
             <div className="bg-white/50 rounded-md p-1 sm:p-1.5 min-w-0">
               <div className="text-xs sm:text-sm md:text-base font-bold truncate">
                 {tier.batchSize}
               </div>
-              <div className="text-[10px] sm:text-xs opacity-80 truncate">Batch</div>
+              <div className="text-xs opacity-80 truncate">Batch</div>
             </div>
             <div className="bg-white/50 rounded-md p-1 sm:p-1.5 min-w-0">
               <div className="text-xs sm:text-sm md:text-base font-bold text-green-600 truncate">
                 {tier.tier === 'pinnacle' ? '55' : tier.tier === 'ascent' ? '120' : '160'}
               </div>
-              <div className="text-[10px] sm:text-xs opacity-80 truncate">Enrolled</div>
+              <div className="text-xs opacity-80 truncate">Enrolled</div>
             </div>
           </div>
         </div>
@@ -362,7 +362,7 @@ export default function PricingPage() {
             <div className="text-xl sm:text-2xl font-bold text-gray-900">
               <DualCurrencyPrice inr={price} />
             </div>
-            <div className="text-[10px] sm:text-xs text-blue-600 font-medium">
+            <div className="text-xs text-blue-600 font-medium">
               <DualCurrencyPrice inr={Math.round(price / 12)} suffix="/mo" />
             </div>
           </div>
@@ -490,9 +490,7 @@ export default function PricingPage() {
                   <div className="text-xl sm:text-2xl font-bold mb-0.5 tabular-nums">
                     {`${stat.value}${stat.suffix}`}
                   </div>
-                  <div className="text-green-100/80 text-[10px] sm:text-xs font-medium">
-                    {stat.label}
-                  </div>
+                  <div className="text-green-100/80 text-xs font-medium">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -1360,7 +1358,7 @@ export default function PricingPage() {
                 <p className="text-base sm:text-lg text-white/90 mb-8 max-w-xl mx-auto">
                   Join 5,000+ successful students. Limited seats available for the upcoming batch!
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+                <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center items-center">
                   <button
                     onClick={() =>
                       trackAndOpenWhatsApp({
@@ -1370,7 +1368,7 @@ export default function PricingPage() {
                         campaign: 'pricing-bottom',
                       })
                     }
-                    className="w-full sm:w-auto px-8 py-4 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 text-sm sm:text-base flex items-center justify-center gap-2"
+                    className="w-full md:w-auto px-8 py-4 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 text-sm sm:text-base flex items-center justify-center gap-2"
                   >
                     <MessageCircle className="w-5 h-5" />
                     Chat to Enroll Now
@@ -1384,7 +1382,7 @@ export default function PricingPage() {
                         campaign: 'pricing-bottom',
                       })
                     }
-                    className="w-full sm:w-auto px-8 py-4 bg-white/90 hover:bg-white text-gray-900 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 border-2 border-gray-900/10 text-sm sm:text-base"
+                    className="w-full md:w-auto px-8 py-4 bg-white/90 hover:bg-white text-gray-900 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 border-2 border-gray-900/10 text-sm sm:text-base"
                   >
                     Book Free Demo First
                   </button>

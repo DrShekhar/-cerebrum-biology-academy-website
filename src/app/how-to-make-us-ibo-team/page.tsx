@@ -341,7 +341,7 @@ export default function HowToMakeUsIboTeamPage() {
             each stage involves and a realistic, multi-year way to prepare for it.
           </p>
 
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 md:flex-row">
             <Link
               href="/usabo-coaching"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-purple-700 px-5 py-3 text-base font-semibold text-white shadow hover:bg-purple-800"
@@ -476,7 +476,7 @@ export default function HowToMakeUsIboTeamPage() {
               plan matched to your starting point and from interpreting your past-paper mistakes
               correctly. We coach the full USABO and IBO pathway live, in all US time zones.
             </p>
-            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col justify-center gap-3 md:flex-row">
               <Link
                 href="/usabo-coaching"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-purple-600 px-6 py-3 text-base font-semibold hover:bg-purple-700"

@@ -45,7 +45,7 @@ export function CountryHero({ country }: CountryHeroProps) {
           </div>
 
           {/* Primary CTA */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <CountryWhatsAppCTA variant="hero" country={country.code} message="booking" size="xl">
               Book Free Demo Class
             </CountryWhatsAppCTA>

@@ -215,7 +215,7 @@ export default function BiologyClass12NoidaPage() {
             </div>
 
             {/* CTA Buttons - WhatsApp Priority */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col md:flex-row justify-center gap-4">
               <a
                 href="https://wa.me/918826444334?text=Hi!%20I'm%20in%20Class%2012%20and%20looking%20for%20Biology%20coaching%20in%20Noida%20for%20NEET%20%2B%20Board.%20Please%20share%20batch%20details."
                 className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"
@@ -407,7 +407,7 @@ export default function BiologyClass12NoidaPage() {
             Join Class 12 Batch now and secure your medical seat
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+          <div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
             <a
               href="https://wa.me/918826444334?text=Hi!%20I'm%20in%20Class%2012%20from%20Noida.%20I%20want%20to%20join%20NEET%20Biology%20coaching%20urgently.%20Please%20share%20batch%20details."
               className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"

@@ -270,7 +270,7 @@ export default function CBSEAbroadContent() {
               same curriculum advantage, proven 98% success rate. Prepare from USA, UK, UAE,
               Singapore, Australia - anywhere in the world.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -569,9 +569,9 @@ export default function CBSEAbroadContent() {
             Tell us your timezone and goal. We'll design a personalized plan to help you achieve
             your medical college dreams.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
-              <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 w-full sm:w-auto">
+              <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 w-full md:w-auto">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Message on WhatsApp
               </Button>

@@ -151,7 +151,7 @@ export function LocationAwareHero({
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fadeInUp">
+        <div className="flex flex-col md:flex-row gap-4 justify-center mb-8 animate-fadeInUp">
           <Button
             size="lg"
             className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 font-semibold"

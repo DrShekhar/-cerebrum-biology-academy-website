@@ -572,7 +572,7 @@ export default function ReNEETCrashCoursePage() {
             Batches are filling on a first-come basis as the news cycle peaks. WhatsApp now to
             confirm your next available demo slot and tier preference. No payment to book the demo.
           </p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-6 flex flex-col gap-3 md:flex-row">
             <a
               href={WA_BOOK_DEMO}
               target="_blank"

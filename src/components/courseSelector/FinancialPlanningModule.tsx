@@ -1217,7 +1217,7 @@ export default function FinancialPlanningModule({
 
       {/* Action Footer */}
       <div className="bg-gray-50 border-t border-gray-200 p-6">
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col md:flex-row gap-4 justify-center">
           <button
             onClick={() =>
               onPlanSelect?.({

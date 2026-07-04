@@ -162,7 +162,7 @@ export default function GurugramLocationContent() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <button
                   onClick={handleGetDirections}
                   className="flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors"
@@ -404,7 +404,7 @@ export default function GurugramLocationContent() {
             Book a free demo class and experience our teaching methodology
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col md:flex-row justify-center gap-4">
             <a
               href={`tel:${CONTACT_INFO.phone.primary}`}
               onClick={handleCallNow}

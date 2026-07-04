@@ -180,7 +180,7 @@ export function NearMeCityTemplate({ city }: Props) {
               (or any local PCM source) and we handle the biology specialization.
             </p>
 
-            <div className="mt-7 flex flex-col sm:flex-row gap-3">
+            <div className="mt-7 flex flex-col md:flex-row gap-3">
               <a
                 href={waUrl}
                 target="_blank"
@@ -520,7 +520,7 @@ export function NearMeCityTemplate({ city }: Props) {
             <strong>NEET 2025 or 2026 score</strong>. We respond within a few hours with batch slots
             that fit your {city.displayName} schedule and a free demo class with Dr. Shekhar.
           </p>
-          <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+          <div className="mt-7 flex flex-col md:flex-row justify-center gap-3">
             <a
               href={waUrl}
               target="_blank"

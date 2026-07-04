@@ -172,7 +172,7 @@ export default function PageContent() {
               Expert ISC-to-NEET bridge coaching for La Martiniere students in Kolkata and Lucknow.
               Transform prestigious ISC foundation into 630+ NEET success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20la%20martiniere.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -338,7 +338,7 @@ export default function PageContent() {
           <p className="text-xl md:text-2xl mb-8 opacity-90">
             Join 250+ La Martiniere students achieving top NEET scores
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20la%20martiniere.%20Please%20share%20available%20timings."
               target="_blank"

@@ -348,7 +348,7 @@ export default function OnlineNEETCoachingPCBPage() {
                 tests &mdash; now shipped to your home and taught in your time zone.
               </p>
 
-              <div className="mt-7 flex flex-col sm:flex-row gap-3">
+              <div className="mt-7 flex flex-col md:flex-row gap-3">
                 <a
                   href={WA_URL}
                   target="_blank"
@@ -732,7 +732,7 @@ export default function OnlineNEETCoachingPCBPage() {
               (Class 11, Class 12, or Dropper). We respond within a few hours in your time zone with
               live batch slots that fit your schedule and a free demo class link.
             </p>
-            <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+            <div className="mt-7 flex flex-col md:flex-row justify-center gap-3">
               <a
                 href={WA_URL}
                 target="_blank"

@@ -558,7 +558,7 @@ export default function CalculatorPage() {
             students have consistently achieved top ranks in NEET.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               href="/courses"
               className="bg-white text-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-purple-50 transition-colors inline-flex items-center justify-center min-h-[44px]"

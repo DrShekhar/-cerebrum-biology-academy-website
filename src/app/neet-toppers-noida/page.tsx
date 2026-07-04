@@ -344,7 +344,7 @@ export default function NEETToppersNoidaPage() {
               Join 1,200+ Noida students who are preparing to ace NEET 2027. Book your FREE demo
               class today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href={`https://wa.me/${CONTACT_INFO.whatsapp.number}?text=Hi, I saw the Noida toppers results. I want to join for NEET 2026.`}
                 className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2"

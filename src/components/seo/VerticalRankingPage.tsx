@@ -198,7 +198,7 @@ export function VerticalRankingPage({
                 Why Cerebrum Biology Academy is Ranked #1
               </h2>
               <p className="text-blue-100 mb-6">{whyNumberOneSubtitle}</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <button
                   onClick={async () => {
                     await trackAndOpenWhatsApp({

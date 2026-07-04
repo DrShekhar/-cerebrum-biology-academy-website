@@ -216,7 +216,7 @@ export function Leaderboard({
     <div className={`bg-white rounded-xl shadow-lg overflow-hidden ${className}`}>
       {/* Header */}
       <div className="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 p-4 sm:p-6 text-white">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div className="flex flex-col md:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <h3 className="text-lg sm:text-xl font-bold flex items-center">
               <Trophy className="w-5 h-5 sm:w-6 sm:h-6 mr-2" />

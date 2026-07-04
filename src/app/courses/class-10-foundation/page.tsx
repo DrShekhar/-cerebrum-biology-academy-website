@@ -163,7 +163,7 @@ export default function Class10FoundationPage() {
                 Master advanced Biology concepts while excelling in board exams. Perfect preparation
                 for NEET foundation with comprehensive life processes understanding.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <button
                   onClick={() =>
                     trackAndOpenWhatsApp({
@@ -173,7 +173,7 @@ export default function Class10FoundationPage() {
                       campaign: 'class-10-foundation',
                     })
                   }
-                  className="w-full sm:w-auto bg-white text-green-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center min-h-[44px]"
+                  className="w-full md:w-auto bg-white text-green-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center min-h-[44px]"
                 >
                   Join Class 10 Foundation
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -187,7 +187,7 @@ export default function Class10FoundationPage() {
                       campaign: 'class-10-foundation',
                     })
                   }
-                  className="w-full sm:w-auto border border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center justify-center min-h-[44px]"
+                  className="w-full md:w-auto border border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center justify-center min-h-[44px]"
                 >
                   Book Free Demo
                 </button>

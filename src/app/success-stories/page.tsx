@@ -92,12 +92,12 @@ export default function SuccessStoriesPage() {
           </div>
 
           <div className="text-center mt-8 sm:mt-12">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="primary" size="lg" className="w-full sm:w-auto min-h-[44px]">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
+              <Button variant="primary" size="lg" className="w-full md:w-auto min-h-[44px]">
                 <Play className="w-5 h-5 mr-2" />
                 Watch All Videos
               </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto min-h-[44px]">
+              <Button variant="outline" size="lg" className="w-full md:w-auto min-h-[44px]">
                 <BarChart3 className="w-5 h-5 mr-2" />
                 View Analytics
               </Button>
@@ -187,12 +187,12 @@ export default function SuccessStoriesPage() {
             guidance. Your NEET success story could be next!
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link href="/courses">
               <Button
                 variant="outline"
                 size="xl"
-                className="border-white text-white hover:bg-white hover:text-blue-600 w-full sm:w-auto min-h-[44px]"
+                className="border-white text-white hover:bg-white hover:text-blue-600 w-full md:w-auto min-h-[44px]"
               >
                 Explore Courses
               </Button>
@@ -201,7 +201,7 @@ export default function SuccessStoriesPage() {
               <Button
                 variant="primary"
                 size="xl"
-                className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto min-h-[44px]"
+                className="bg-white text-blue-600 hover:bg-gray-100 w-full md:w-auto min-h-[44px]"
               >
                 Book Free Demo
               </Button>

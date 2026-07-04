@@ -258,7 +258,7 @@ export default function NEETCoachingPanchkulaPage() {
                 online from your Panchkula home. AIIMS faculty, 98% success rate, starting
                 ₹24,000/year.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}>
                   <Button
                     size="lg"
@@ -599,7 +599,7 @@ export default function NEETCoachingPanchkulaPage() {
             Join 150+ Panchkula students who chose smart preparation over daily Chandigarh commute.
             Book your free demo class today!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}>
               <Button
                 size="lg"

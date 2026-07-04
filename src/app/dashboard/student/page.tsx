@@ -244,8 +244,8 @@ export default function StudentDashboard() {
         <div className="min-h-screen bg-gray-50 p-3 sm:p-6">
           <div className="max-w-7xl mx-auto space-y-4 sm:space-y-6">
             {/* Header - Mobile Optimized */}
-            <div className="flex flex-col sm:flex-row justify-between items-start gap-3 sm:gap-0">
-              <div className="w-full sm:w-auto">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-3 sm:gap-0">
+              <div className="w-full md:w-auto">
                 <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
                   Welcome back, {user.name || 'Student'}!
                 </h1>
@@ -254,7 +254,7 @@ export default function StudentDashboard() {
                 </p>
               </div>
 
-              <div className="flex gap-2 w-full sm:w-auto flex-wrap sm:flex-nowrap">
+              <div className="flex gap-2 w-full md:w-auto flex-wrap sm:flex-nowrap">
                 <select
                   value={selectedPeriod}
                   onChange={(e) => setSelectedPeriod(e.target.value as any)}

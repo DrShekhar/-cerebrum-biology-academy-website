@@ -170,7 +170,7 @@ export default function InteractiveLearningPage() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center">
+        <div className="flex flex-col md:flex-row gap-6 justify-center">
           <Link
             href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20interactive%20learning.%20Please%20share%20available%20timings."
             target="_blank"
@@ -355,7 +355,7 @@ export default function InteractiveLearningPage() {
           today.
         </AcademicParagraph>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+        <div className="flex flex-col md:flex-row gap-6 justify-center mb-16">
           <Link href="/resources">
             <Button variant="secondary" size="xl">
               <BookOpen className="w-6 h-6 mr-3" />

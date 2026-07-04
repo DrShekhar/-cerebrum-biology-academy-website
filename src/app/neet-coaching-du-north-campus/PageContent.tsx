@@ -225,7 +225,7 @@ export default function PageContent() {
               college schedule.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20du%20north%20campus.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -960,7 +960,7 @@ export default function PageContent() {
                     </div>
                   </div>
 
-                  <div className="pt-4 flex flex-col sm:flex-row gap-3">
+                  <div className="pt-4 flex flex-col md:flex-row gap-3">
                     <a
                       href={`https://wa.me/91${CEREBRUM_METRICS.phone.replace(/[^0-9]/g, '')}?text=Hi%2C%20I%27m%20a%20DU%20student%20interested%20in%20NEET%20coaching.`}
                       target="_blank"
@@ -1021,7 +1021,7 @@ export default function PageContent() {
               Join 1,500+ DU students who achieved their MBBS dream with Cerebrum
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20du%20north%20campus.%20Please%20share%20available%20timings."
                 target="_blank"

@@ -577,7 +577,7 @@ export default function CerebrumVsAarambhPage() {
               Still not sure? Attend a free Biology demo class at Cerebrum. See the AIIMS-faculty
               teaching style, small batch environment, and decide for yourself.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col md:flex-row justify-center gap-4">
               <Link
                 href="/book-free-demo"
                 className="inline-flex items-center justify-center gap-2 bg-white text-green-700 px-8 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors text-lg"

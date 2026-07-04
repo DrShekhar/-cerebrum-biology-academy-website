@@ -956,12 +956,12 @@ export function NRIStudentsHubPage() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-3 justify-center mb-8">
+            <div className="flex flex-col gap-3 md:flex-row sm:flex-wrap sm:gap-3 justify-center mb-8">
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto"
+                className="w-full md:w-auto"
               >
                 <Button
                   variant="secondary"
@@ -976,7 +976,7 @@ export function NRIStudentsHubPage() {
                 href="https://wa.me/918826444334?text=Hi!%20I'm%20an%20NRI%20student%20and%20want%20to%20book%20a%20FREE%20online%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto"
+                className="w-full md:w-auto"
               >
                 <Button
                   variant="outline"
@@ -987,7 +987,7 @@ export function NRIStudentsHubPage() {
                   <span className="truncate">Book Free Demo</span>
                 </Button>
               </Link>
-              <a href="tel:+918826444334" className="w-full sm:w-auto">
+              <a href="tel:+918826444334" className="w-full md:w-auto">
                 <Button
                   variant="outline"
                   size="lg"

@@ -362,7 +362,7 @@ export function VideoLectureShowcase() {
             Join 15,000+ successful students and get unlimited access to all Cerebrum video lectures
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
             <Button
               variant="secondary"
               size="xl"

@@ -173,7 +173,7 @@ export default function IndiaOlympiadSchoolTemplate({ school }: IndiaOlympiadSch
               100% online
             </span>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <a
               href={counsellingHref}
               target="_blank"
@@ -350,7 +350,7 @@ export default function IndiaOlympiadSchoolTemplate({ school }: IndiaOlympiadSch
             at {school.shortName} and help you decide between the Complete Olympiad Year, 1:1 Elite
             Mentoring, or the Small-Batch Weekend.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a
               href={counsellingHref}
               target="_blank"

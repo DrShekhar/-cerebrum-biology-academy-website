@@ -314,7 +314,7 @@ export default function BestBiologyCoachingIndiaPage() {
             programmes serving 30+ countries.
           </p>
 
-          <div className="mt-7 flex flex-col sm:flex-row gap-3">
+          <div className="mt-7 flex flex-col md:flex-row gap-3">
             <a
               href={waUrl}
               target="_blank"
@@ -537,7 +537,7 @@ export default function BestBiologyCoachingIndiaPage() {
               60 minutes. Live. Bring your child\&rsquo;s last biology exam. No card required. Most
               families decide 1-3 days after.
             </p>
-            <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+            <div className="mt-7 flex flex-col md:flex-row justify-center gap-3">
               <a
                 href={waUrl}
                 target="_blank"

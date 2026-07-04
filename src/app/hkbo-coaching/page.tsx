@@ -354,7 +354,7 @@ export default async function HKBOCoachingPage() {
                 30-minute live demo with our IBO-funnel faculty. Bring a HKBO past paper question or
                 a topic you find difficult — we\'ll walk through the olympiad-level approach.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <a
                   href="https://wa.me/918826444334?text=Hi%20Cerebrum%2C%20I%27m%20a%20Hong%20Kong%20Form%205%2F6%20student%20interested%20in%20HKBO%20coaching%20and%20would%20like%20to%20book%20a%20free%20demo."
                   target="_blank"

@@ -72,7 +72,7 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <button
                 onClick={() =>
                   trackAndOpenWhatsApp({
@@ -310,7 +310,7 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
             Join 500+ {state.name} students already preparing with us. Book a FREE demo class today!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <button
               onClick={() =>
                 trackAndOpenWhatsApp({

@@ -281,7 +281,7 @@ export default function IBBiologyTOKEssayGuidePage() {
               how the TOK + EE matrix can move your diploma total by 3 points.
             </p>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col gap-4 md:flex-row">
               <a
                 href={whatsappUrl}
                 target="_blank"
@@ -659,7 +659,7 @@ export default function IBBiologyTOKEssayGuidePage() {
               Biology-specialist review reframes your knowledge questions, sharpens your examples,
               and stress-tests your counterclaims against the assessment instrument.
             </p>
-            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div className="flex flex-col items-center justify-center gap-3 md:flex-row">
               <a
                 href={whatsappUrl}
                 target="_blank"

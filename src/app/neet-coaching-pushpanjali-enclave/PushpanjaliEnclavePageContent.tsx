@@ -334,7 +334,7 @@ export function PushpanjaliEnclavePageContent() {
               </div>
 
               {/* Primary CTAs */}
-              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <div className="flex flex-col justify-center gap-4 md:flex-row">
                 <Link
                   href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20pushpanjali%20enclave.%20Please%20share%20available%20timings."
                   target="_blank"
@@ -726,7 +726,7 @@ export function PushpanjaliEnclavePageContent() {
               </div>
             </div>
 
-            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+            <div className="flex flex-col justify-center gap-3 md:flex-row sm:gap-4">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20pushpanjali%20enclave.%20Please%20share%20available%20timings."
                 target="_blank"

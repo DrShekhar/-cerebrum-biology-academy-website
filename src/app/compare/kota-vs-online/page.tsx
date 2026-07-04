@@ -261,7 +261,7 @@ export default function KotaVsOnlinePage() {
               Every Parent Must Read Before Choosing
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Button
                 variant="secondary"
                 size="xl"
@@ -638,7 +638,7 @@ export default function KotaVsOnlinePage() {
               who chose results over geography.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Button
                 variant="secondary"
                 size="xl"

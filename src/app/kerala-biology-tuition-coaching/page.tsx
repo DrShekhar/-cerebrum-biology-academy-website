@@ -185,7 +185,7 @@ export default function KeralaBiologyTuitionPage() {
               success!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Button
                 variant="secondary"
                 size="xl"
@@ -453,7 +453,7 @@ export default function KeralaBiologyTuitionPage() {
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Join 1,350+ Kerala students. 98% success rate. AIIMS faculty. Start today!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Button
                 variant="secondary"
                 size="xl"

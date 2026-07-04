@@ -403,7 +403,7 @@ export default function NeetCoachingGurugramPage() {
               home. Join 1,800+ Gurugram students already preparing with us.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -1010,7 +1010,7 @@ export default function NeetCoachingGurugramPage() {
               </div>
 
               <div className="mt-6">
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button className="w-full whitespace-normal h-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                   Book Free Demo Class from Gurugram
                 </Button>
               </div>
@@ -1297,7 +1297,7 @@ export default function NeetCoachingGurugramPage() {
               <div>
                 <Button
                   onClick={handleDemoBooking}
-                  className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="whitespace-normal h-auto bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   Start Your Success Story Today
                 </Button>
@@ -1420,7 +1420,7 @@ export default function NeetCoachingGurugramPage() {
             <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
               Start your NEET journey with expert guidance, proven methods, and personalized support
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button
                 onClick={handleDemoBooking}
                 className="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
@@ -1691,7 +1691,7 @@ export default function NeetCoachingGurugramPage() {
               required!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
                 target="_blank"

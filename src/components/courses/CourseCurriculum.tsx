@@ -198,7 +198,7 @@ export function CourseCurriculum({ course }: CourseCurriculumProps) {
         </div>
 
         {/* Control Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
+        <div className="flex flex-col md:flex-row gap-4 mb-8 justify-center">
           <Button onClick={toggleAllModules} variant="outline" className="flex items-center gap-2">
             {expandedModules.length === course.curriculum.modules.length ? (
               <>

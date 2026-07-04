@@ -220,7 +220,7 @@ export default function AakashAlternativeNoidaContent({ faqs }: { faqs: FAQ[] })
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -559,7 +559,7 @@ export default function AakashAlternativeNoidaContent({ faqs }: { faqs: FAQ[] })
           <p className="text-xl mb-8 opacity-90">
             Join 400+ students who switched from Aakash for better Biology coaching
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
               target="_blank"

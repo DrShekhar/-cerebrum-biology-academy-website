@@ -462,7 +462,7 @@ export function BestVerticalLanding({
                 Experience the AIIMS-trained pedagogy yourself. No obligation, no commitment.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+            <div className="flex flex-col md:flex-row gap-3 flex-shrink-0">
               <a
                 href={PHONE_TEL}
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition whitespace-nowrap"
@@ -573,29 +573,6 @@ export function BestVerticalLanding({
           </p>
         </div>
       </section>
-
-      {/* Spacer for mobile sticky CTA bar */}
-      <div className="h-20 md:hidden" aria-hidden="true" />
-
-      {/* Sticky mobile CTA bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-slate-200 shadow-lg grid grid-cols-2 gap-2 p-3">
-        <a
-          href={PHONE_TEL}
-          className="flex items-center justify-center gap-2 bg-yellow-500 text-slate-900 py-3 rounded-lg font-semibold"
-        >
-          <Phone className="w-4 h-4" />
-          Call
-        </a>
-        <Link
-          href={waLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 bg-green-600 text-white py-3 rounded-lg font-semibold"
-        >
-          <MessageCircle className="w-4 h-4" />
-          WhatsApp
-        </Link>
-      </div>
     </div>
   )
 }

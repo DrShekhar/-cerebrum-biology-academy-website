@@ -113,7 +113,7 @@ export function ComparisonLandingPage({ competitor }: ComparisonLandingPageProps
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <button
                 onClick={() =>
                   trackAndOpenWhatsApp({
@@ -355,7 +355,7 @@ export function ComparisonLandingPage({ competitor }: ComparisonLandingPageProps
             Book a FREE demo class and see why students choose Cerebrum over {competitor.name}. No
             obligation, no pressure.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <button
               onClick={() =>
                 trackAndOpenWhatsApp({

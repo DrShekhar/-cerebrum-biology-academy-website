@@ -57,7 +57,7 @@ export function ModeRadio({ selectedMode, onModeChange, reviewDueCount = 0 }: Mo
       </div>
 
       {/* Mode Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         {MODES.map((mode) => {
           const isSelected = selectedMode === mode.id
 

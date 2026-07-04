@@ -74,14 +74,14 @@ export function PipelineBoard() {
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+      <div className="flex flex-col md:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
             🎯 Lead Pipeline
           </h2>
           <p className="text-sm text-gray-600 mt-1">Drag and drop leads between stages</p>
         </div>
-        <div className="w-full sm:w-auto">
+        <div className="w-full md:w-auto">
           <div className="relative">
             <input
               type="text"

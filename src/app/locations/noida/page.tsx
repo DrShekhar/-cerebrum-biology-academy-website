@@ -413,7 +413,7 @@ export default function NoidaLocationPage() {
             Book a free demo class and experience our teaching methodology
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col md:flex-row justify-center gap-4">
             <a
               href={`tel:${CONTACT_INFO.phone.primary}`}
               onClick={handleCallNow}

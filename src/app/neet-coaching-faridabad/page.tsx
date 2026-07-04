@@ -283,7 +283,7 @@ export default function NeetCoachingFaridabadPage() {
               all premium Faridabad societies.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -953,7 +953,7 @@ export default function NeetCoachingFaridabadPage() {
               <div className="mt-6">
                 <Button
                   onClick={handleDemoBooking}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="w-full whitespace-normal h-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   Book Free Demo Class from Faridabad
                 </Button>
@@ -1416,7 +1416,7 @@ export default function NeetCoachingFaridabadPage() {
               Start your NEET journey with proven results, expert faculty, and the convenience of
               online classes from Greater Faridabad, NIT, or Ballabgarh
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
               <Button
                 onClick={handleDemoBooking}
                 className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
@@ -1769,7 +1769,7 @@ export default function NeetCoachingFaridabadPage() {
               Join 1,200+ successful Faridabad students. Book your free demo class now!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings."
                 target="_blank"

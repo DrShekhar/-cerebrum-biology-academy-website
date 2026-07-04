@@ -260,7 +260,7 @@ export default function IBBiologyHLCrashCoursePage() {
               casual revision.
             </p>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col gap-4 md:flex-row">
               <a
                 href={whatsappUrl}
                 target="_blank"
@@ -633,7 +633,7 @@ export default function IBBiologyHLCrashCoursePage() {
               Small-group cohorts cap at 6 students. Once the seat is gone, the next cohort is one
               week later — which can be too late for May candidates. Reserve via WhatsApp now.
             </p>
-            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div className="flex flex-col items-center justify-center gap-3 md:flex-row">
               <a
                 href={whatsappUrl}
                 target="_blank"

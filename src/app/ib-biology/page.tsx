@@ -340,7 +340,7 @@ export default function IBBiologyHubPage() {
               Built for students in <strong>IB World Schools</strong> around the world.
             </p>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col gap-4 md:flex-row">
               <Link
                 href="/boards/ib"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-green-500/25 transition-all hover:bg-green-600"
@@ -565,10 +565,12 @@ export default function IBBiologyHubPage() {
         <section className="bg-white py-16 sm:py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <div className="mb-10 text-center">
-              <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">IB Biology by School</h2>
+              <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+                IB Biology by School
+              </h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                School-specific IB Biology tutoring — each page maps the school&apos;s DP calendar, IA
-                timeline and mock schedule. {ibBiologySchools.length} IB World Schools covered.
+                School-specific IB Biology tutoring — each page maps the school&apos;s DP calendar,
+                IA timeline and mock schedule. {ibBiologySchools.length} IB World Schools covered.
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-2">
@@ -660,7 +662,7 @@ export default function IBBiologyHubPage() {
               Talk to a Cerebrum counsellor about your IB Biology goals — HL or SL, IA support,
               exam-year crash course, or full 2-year program.
             </p>
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <div className="flex flex-col gap-4 md:flex-row sm:justify-center">
               <a
                 href={`https://wa.me/918826444334?text=${encodeURIComponent('Hi! I want to book a free consultation for IB Biology coaching.')}`}
                 target="_blank"

@@ -353,7 +353,7 @@ export default async function IBOCoachingChinaPage() {
                 Peking / Ivy League / Oxbridge), and language preference (Mandarin-medium vs
                 English-medium pathway). Honest milestone-setting — no false promises.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <a
                   href="https://wa.me/918826444334?text=Hi%20Cerebrum%2C%20I%27m%20a%20Chinese%20student%2Fparent%20interested%20in%20IBO%20coaching%20and%20would%20like%20to%20book%20a%20free%20assessment."
                   target="_blank"

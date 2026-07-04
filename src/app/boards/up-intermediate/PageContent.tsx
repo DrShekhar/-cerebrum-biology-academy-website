@@ -66,7 +66,7 @@ export default function PageContent() {
               English medium support available. Expert guidance for large student base with NEET
               state quota focus.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button
                 href={whatsappLink}
                 target="_blank"
@@ -417,7 +417,7 @@ export default function PageContent() {
             Join 10,000+ UP students who achieved board excellence and NEET success with Cerebrum.
             Hindi and English medium available.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button
               href={whatsappLink}
               target="_blank"

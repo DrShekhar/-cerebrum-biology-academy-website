@@ -93,7 +93,7 @@ export default function BiologyTuitionGurugramPage() {
               students welcome.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link href="/book-free-demo">
                 <Button
                   variant="secondary"
@@ -313,7 +313,7 @@ export default function BiologyTuitionGurugramPage() {
           <p className="text-xl mb-8 opacity-90">
             CBSE, IB, IGCSE boards + NEET. Visit our Sector 51 center or join online.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
             <Link href="/book-free-demo">
               <Button
                 variant="secondary"

@@ -63,7 +63,7 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
       className={`relative min-h-screen bg-blue-600 overflow-hidden -mt-16 lg:-mt-20 ${className}`}
       style={{
         backgroundColor: '#2563eb',
-        minHeight: '100vh',
+        minHeight: '100dvh',
         position: 'relative',
         overflow: 'hidden',
         // PERFORMANCE: Contain layout to prevent reflows affecting LCP
@@ -82,7 +82,10 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-28 pb-20 flex items-center min-h-screen">
+      <div
+        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-28 pb-20 flex items-center min-h-screen"
+        style={{ minHeight: '100dvh' }}
+      >
         {/* PERFORMANCE: LCP-critical elements (H1, H2) rendered immediately without animation
             Non-LCP elements use staggered animations for visual appeal */}
         {/* lcp-critical class ensures content-visibility: visible for this container */}
@@ -182,7 +185,7 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
           </div>
 
           {/* PRIMARY CTAs - Book Demo + Call Now */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-4">
+          <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mb-4">
             <a
               href={`https://wa.me/918826444334?text=${encodeURIComponent(
                 'Hi! I want to book a FREE demo class for NEET Biology. Please share the schedule.'

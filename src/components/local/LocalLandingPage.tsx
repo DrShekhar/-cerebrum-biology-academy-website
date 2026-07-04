@@ -130,7 +130,7 @@ function FAQSection({ area }: { area: LocalArea }) {
           <p className="text-white/80 mb-6">
             Our counselors are here to help you make the right decision
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a
               href={getPhoneLink()}
               className="inline-flex items-center justify-center px-6 py-3 bg-yellow-500 text-slate-900 rounded-xl font-semibold hover:bg-yellow-400 transition-colors"
@@ -242,7 +242,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
               </div>
 
               {/* Primary CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <Button
                   onClick={handleBookDemo}
                   variant="secondary"
@@ -1008,7 +1008,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
             <p className="text-xl mb-8 text-slate-300">
               Book your free demo class today and experience the Cerebrum difference
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button
                 onClick={handleBookDemo}
                 variant="secondary"

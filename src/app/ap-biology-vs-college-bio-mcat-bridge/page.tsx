@@ -405,7 +405,7 @@ export default function APBiologyVsCollegeBioMCATBridgePage() {
               integrated AP-5 + USABO Semifinal track is the highest- value combination — and we run
               it.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="/ap-biology-tutor"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition"

@@ -64,7 +64,7 @@ export default function PageContent() {
               and English medium support available. Master state board curriculum with entrance exam
               strategy.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button
                 href={whatsappLink}
                 target="_blank"
@@ -409,7 +409,7 @@ export default function PageContent() {
             Join 1900+ Gujarat students who achieved board excellence and competitive exam success
             with Cerebrum. Gujarati and English medium available.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button
               href={whatsappLink}
               target="_blank"

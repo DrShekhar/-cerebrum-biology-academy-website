@@ -65,7 +65,7 @@ export default function LocalityHero({ locality }: LocalityHeroProps) {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details."
                 target="_blank"

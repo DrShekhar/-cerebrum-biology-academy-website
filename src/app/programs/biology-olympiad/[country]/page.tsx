@@ -119,7 +119,7 @@ export default async function OlympiadCountryPage({ params }: PageProps) {
         {/* India banner — soft redirect, not hard */}
         {isIndia && (
           <div className="bg-[#EDE9FF] px-4 py-3 text-sm text-[#2C2C2C]">
-            <div className="mx-auto flex max-w-5xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mx-auto flex max-w-5xl flex-col gap-2 md:flex-row sm:items-center sm:justify-between">
               <p>
                 <strong>For students in India:</strong> this page is built for international-school
                 families abroad. From India, see our{' '}

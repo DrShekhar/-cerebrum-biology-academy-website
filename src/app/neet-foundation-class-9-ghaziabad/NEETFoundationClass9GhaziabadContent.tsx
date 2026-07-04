@@ -177,7 +177,7 @@ export default function NEETFoundationClass9GhaziabadContent({ faqs }: { faqs: F
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Ghaziabad.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -459,7 +459,7 @@ export default function NEETFoundationClass9GhaziabadContent({ faqs }: { faqs: F
             Join Cerebrum Biology Academy and get a 4-year head start. Serving Indirapuram,
             Vaishali, Kaushambi, and all Ghaziabad areas.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20Biology%20(Class%209%2F10)%20in%20Ghaziabad.%20Please%20share%20available%20timings."
               target="_blank"

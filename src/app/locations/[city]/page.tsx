@@ -373,7 +373,7 @@ export default async function CityPage({ params }: CityPageProps) {
             Find the nearest Cerebrum Biology Academy location in {cityName} and enroll today
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20locations.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
               target="_blank"

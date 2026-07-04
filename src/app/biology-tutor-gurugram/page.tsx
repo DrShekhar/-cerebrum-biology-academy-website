@@ -306,11 +306,11 @@ export default function BiologyTutorGurugramPage() {
             </p>
 
             {/* Primary CTAs - Call & WhatsApp */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-6">
               <a href="tel:+918826444334">
                 <Button
                   size="xl"
-                  className="bg-green-500 hover:bg-green-600 text-white font-bold shadow-lg shadow-green-500/30 w-full sm:w-auto"
+                  className="bg-green-500 hover:bg-green-600 text-white font-bold shadow-lg shadow-green-500/30 w-full md:w-auto"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now: +91-88264-44334
@@ -320,7 +320,7 @@ export default function BiologyTutorGurugramPage() {
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="xl"
-                  className="bg-[#166534] hover:bg-[#14532d] text-white font-bold shadow-lg shadow-green-500/20 w-full sm:w-auto"
+                  className="bg-[#166534] hover:bg-[#14532d] text-white font-bold shadow-lg shadow-green-500/20 w-full md:w-auto"
                 >
                   <Image
                     src="/icons/whatsapp.svg"
@@ -335,7 +335,7 @@ export default function BiologyTutorGurugramPage() {
             </div>
 
             {/* Secondary CTAs - Book Demo */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -858,11 +858,11 @@ export default function BiologyTutorGurugramPage() {
               Quality NEET coaching from the comfort of your home
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <a href="tel:+918826444334">
                 <Button
                   size="xl"
-                  className="bg-green-500 hover:bg-green-600 text-white font-bold shadow-lg w-full sm:w-auto"
+                  className="bg-green-500 hover:bg-green-600 text-white font-bold shadow-lg w-full md:w-auto"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call: +91-88264-44334
@@ -872,7 +872,7 @@ export default function BiologyTutorGurugramPage() {
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="xl"
-                  className="bg-[#166534] hover:bg-[#14532d] text-white font-bold shadow-lg w-full sm:w-auto"
+                  className="bg-[#166534] hover:bg-[#14532d] text-white font-bold shadow-lg w-full md:w-auto"
                 >
                   <Image
                     src="/icons/whatsapp.svg"
@@ -886,7 +886,7 @@ export default function BiologyTutorGurugramPage() {
               </a>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
                 target="_blank"

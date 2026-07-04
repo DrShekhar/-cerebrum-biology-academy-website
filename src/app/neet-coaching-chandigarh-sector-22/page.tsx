@@ -130,7 +130,7 @@ export default function Sector22Page() {
               Skip Sector 34 crowd. Get <strong>premium NEET coaching</strong> online from Sector
               22. AIIMS faculty, 98% success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}>
                 <Button size="lg" className="bg-green-500 hover:bg-green-600">
                   <MessageCircle className="w-5 h-5 mr-2" />

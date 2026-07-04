@@ -164,7 +164,7 @@ export default function OnlineNEETBiologyCoachingPage() {
             <p className="text-xl md:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto">
               Learn from AIIMS Faculty, Anywhere in India — Starting Rs 2,500/month
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <TrackedCTA
                 href={getWhatsAppLink(
                   'I want to join online NEET biology coaching. Tell me more about the program.'
@@ -434,7 +434,7 @@ export default function OnlineNEETBiologyCoachingPage() {
               first demo class is free.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <TrackedCTA
                 href={getWhatsAppLink(
                   'I want to join online NEET biology coaching. Get me started with a free demo class.'

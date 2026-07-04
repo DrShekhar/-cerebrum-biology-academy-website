@@ -488,7 +488,7 @@ const NEETCompletePage = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <button
                   onClick={() =>
                     trackAndOpenWhatsApp({
@@ -954,7 +954,7 @@ const NEETCompletePage = () => {
             Join 15,000+ successful students and achieve your medical college dream
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <button
               onClick={() =>
                 trackAndOpenWhatsApp({

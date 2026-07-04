@@ -173,7 +173,7 @@ export function UpgradeModal({
                   </div>
 
                   {/* CTAs */}
-                  <div className="flex flex-col sm:flex-row gap-3">
+                  <div className="flex flex-col md:flex-row gap-3">
                     <Link href={defaultCtaLink} className="flex-1">
                       <Button
                         variant="primary"

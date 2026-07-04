@@ -206,7 +206,7 @@ export default function Class12BoardBiologyNoidaPage() {
             </div>
 
             {/* CTA Buttons - WhatsApp Priority */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col md:flex-row justify-center gap-4">
               <a
                 href="https://wa.me/918826444334?text=Hi!%20I%20need%20Class%2012%20Board%20Biology%20coaching%20in%20Noida.%20I%20want%20to%20score%2095%2B%20in%20boards.%20Please%20share%20details."
                 className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"
@@ -389,7 +389,7 @@ export default function Class12BoardBiologyNoidaPage() {
             Join Noida students who topped their schools
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+          <div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
             <a
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20join%20Class%2012%20Board%20Biology%20coaching%20in%20Noida.%20I%20want%20to%20score%2095%2B."
               className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"

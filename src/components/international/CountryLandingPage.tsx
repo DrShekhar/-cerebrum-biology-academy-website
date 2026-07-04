@@ -113,7 +113,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <button
                   onClick={() => handleEnrollClick('popular')}
                   className="bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-50 transition-colors"

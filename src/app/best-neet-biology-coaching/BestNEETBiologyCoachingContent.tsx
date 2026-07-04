@@ -17,11 +17,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import {
-  getWhatsAppLink,
-  getPhoneLink,
-  getDisplayPhone,
-} from '@/lib/constants/contactInfo'
+import { getWhatsAppLink, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
 
 interface FAQ {
@@ -218,7 +214,7 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
               more.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <a
                 href={getWhatsAppLink(
                   'Hi, I want to book a free demo class for NEET biology coaching'
@@ -557,7 +553,7 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
               Book a FREE demo class with Dr. Shekhar and see the difference yourself.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href={getWhatsAppLink(
                   'Hi, I want to book a free demo class for NEET biology coaching'

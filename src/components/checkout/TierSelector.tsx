@@ -126,7 +126,7 @@ export function TierSelector({ tiers, selectedTier, onSelect }: TierSelectorProp
       {/* Intensive Biology Program Upgrade Recommendation */}
       {selectedTier === 'pinnacle' && (
         <div className="mt-6 rounded-xl border-2 border-dashed border-[#3d4d3d]/30 bg-[#e8ede8] p-5">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div className="flex flex-col md:flex-row sm:items-center sm:justify-between gap-4">
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <Sparkles className="h-4 w-4 text-[#3d4d3d]" />

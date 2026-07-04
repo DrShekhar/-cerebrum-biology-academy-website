@@ -141,7 +141,7 @@ export default function PageContent() {
                 coaching caters to high-achieving students from business and professional families,
                 with flexible weekend batches and personalized mentoring to ensure top rankings.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <SmartWhatsAppCTA
                   text="Get Free Consultation"
                   variant="default"
@@ -353,7 +353,7 @@ export default function PageContent() {
           <p className="text-lg mb-8 opacity-90">
             98% Success Rate • Expert Faculty • Timezone-Friendly • Community Support
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col md:flex-row justify-center gap-4">
             <SmartWhatsAppCTA
               text="Get Free Consultation Today"
               variant="secondary"

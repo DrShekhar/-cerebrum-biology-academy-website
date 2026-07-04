@@ -269,7 +269,7 @@ export function TestimonialsSection() {
         <div className="text-center bg-blue-600 rounded-3xl p-12 text-white animate-fadeInUp">
           <h3 className="text-3xl font-bold mb-4">{t('readyToWriteStory')}</h3>
           <p className="text-xl mb-8 text-blue-100">{t('joinThousands')}</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button
               variant="secondary"
               size="xl"

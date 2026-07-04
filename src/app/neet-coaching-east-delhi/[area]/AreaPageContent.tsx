@@ -116,7 +116,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
 
             <p className="text-md opacity-80 mb-8 max-w-4xl mx-auto">{area.heroDescription}</p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20East.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -462,7 +462,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               your FREE demo class today!
             </p>
             <p className="text-green-200 mb-8">Online classes also available</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
                 <Link href={`/demo-booking?center=noida&area=${areaSlug}`}>
                   <Play className="w-5 h-5 mr-2" />

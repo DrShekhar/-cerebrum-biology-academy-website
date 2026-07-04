@@ -537,7 +537,7 @@ export default function NEETCoachingFAQPage() {
           <p className="text-lg text-slate-600 mb-8">
             Book a free demo class and discuss your NEET preparation directly with our faculty.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a
               href="tel:+918826444334"
               className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition"

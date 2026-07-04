@@ -678,7 +678,7 @@ export default function HowToScore340InNEETBiology() {
               500+ students to competitive scores. Our structured 12-week program is specifically
               designed to optimize for 340+ in NEET Biology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <a
                 href="https://cerebrumbiologyacademy.com/contact"
                 className="inline-block px-8 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition"

@@ -270,7 +270,7 @@ export default function BiologyOlympiadTutorIndiaPage() {
             for OCSC and USABO Finals candidates (limited slots).
           </p>
 
-          <div className="mt-7 flex flex-col sm:flex-row gap-3">
+          <div className="mt-7 flex flex-col md:flex-row gap-3">
             <a
               href={waUrl}
               target="_blank"
@@ -478,7 +478,7 @@ export default function BiologyOlympiadTutorIndiaPage() {
               Bring one olympiad-style biology question your child has struggled with. We work
               through it live. You see the tutor-style depth before committing to anything.
             </p>
-            <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+            <div className="mt-7 flex flex-col md:flex-row justify-center gap-3">
               <a
                 href={waUrl}
                 target="_blank"

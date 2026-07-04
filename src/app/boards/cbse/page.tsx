@@ -222,19 +222,19 @@ export default function CBSEBiologyPage() {
                 Master CBSE Biology with NCERT-focused teaching methodology. Expert coaching for
                 Classes 11-12 with integrated NEET preparation and guaranteed 90+ board scores.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <div className="flex flex-col md:flex-row gap-3 sm:gap-4">
                 <Link
                   href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-blue-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto"
+                  className="bg-white text-blue-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center min-h-[44px] w-full md:w-auto"
                 >
                   Enroll for CBSE
                   <ArrowRight className="w-5 h-5 ml-2 flex-shrink-0" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="border border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors min-h-[44px] w-full sm:w-auto inline-flex items-center justify-center"
+                  className="border border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors min-h-[44px] w-full md:w-auto inline-flex items-center justify-center"
                 >
                   Book Demo Class
                 </Link>

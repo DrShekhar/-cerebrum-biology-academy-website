@@ -198,7 +198,7 @@ export function Top10NEETCoachingContent() {
                 and highest student satisfaction (5.0/5 rating), Cerebrum offers the best
                 Biology-focused NEET preparation in Gurugram.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <button
                   onClick={async () => {
                     await trackAndOpenWhatsApp({

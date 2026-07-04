@@ -492,7 +492,7 @@ export default function APBiologyScore5StudyGuidePage() {
               We schedule the daily routine, grade your weekly FRQs, and run the full-length mocks
               together — same plan, with accountability. AIIMS-trained biology faculty.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="/ap-biology-tutor"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition"
@@ -519,7 +519,7 @@ export default function APBiologyScore5StudyGuidePage() {
               Tell us your exam date and where you are starting from, and we will reply with a quick
               read on how this 8-week plan fits your timeline. No commitment.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
               <a
                 href={`https://wa.me/918826444334?text=${encodeURIComponent(
                   'Hi Cerebrum, I have a question about the AP Biology score-5 study plan.'

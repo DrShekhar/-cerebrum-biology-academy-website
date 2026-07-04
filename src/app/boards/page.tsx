@@ -152,7 +152,7 @@ export default function BoardPreparationPage() {
                 ICSE, IGCSE, IB, and State Boards with board-specific teaching methodologies and
                 expert faculty.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <Link
                   href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20boards.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
                   target="_blank"

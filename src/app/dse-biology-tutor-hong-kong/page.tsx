@@ -394,7 +394,7 @@ export default async function DSEBiologyHongKongPage() {
                 syllabus topic you find difficult — we&apos;ll show you the examiner-pattern
                 approach.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <a
                   href="https://wa.me/918826444334?text=Hi%20Cerebrum%2C%20I%27m%20a%20HKDSE%20Biology%20student%20in%20Hong%20Kong%20and%20would%20like%20to%20book%20a%20free%20demo."
                   target="_blank"

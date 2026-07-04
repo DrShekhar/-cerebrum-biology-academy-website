@@ -290,7 +290,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
               </div>
 
               {/* Primary CTAs */}
-              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <div className="flex flex-col justify-center gap-4 md:flex-row">
                 <WhatsAppCTAButton
                   source={`city-hub-hero-demo-${data.slug}`}
                   message={`Hi! I want to book a FREE demo class for NEET Biology coaching in ${data.cityName}. Please share available timings.`}
@@ -382,7 +382,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
                         <Clock className="h-5 w-5 text-green-600" />
                         Offline & Online Classes Available
                       </div>
-                      <div className="flex gap-3">
+                      <div className="flex flex-wrap gap-3">
                         <Link
                           href="/demo"
                           className="rounded-lg bg-green-600 px-6 py-3 font-medium text-white transition hover:bg-green-700"
@@ -426,7 +426,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
                           </p>
                         </div>
                       )}
-                      <div className="flex gap-3">
+                      <div className="flex flex-wrap gap-3">
                         <Link
                           href="/demo"
                           className="rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition hover:bg-blue-700"
@@ -588,7 +588,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
               ))}
             </div>
 
-            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+            <div className="mt-10 flex flex-col items-center justify-center gap-3 md:flex-row sm:gap-4">
               <Link
                 href="/courses"
                 className="inline-flex items-center justify-center rounded-lg bg-[#4a5d4a] px-4 py-3 text-base font-semibold text-white transition hover:bg-[#3d4d3d] sm:px-8 sm:py-4 sm:text-lg"
@@ -884,7 +884,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
               </div>
             </div>
 
-            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+            <div className="flex flex-col justify-center gap-3 md:flex-row sm:gap-4">
               <WhatsAppCTAButton
                 source={`city-hub-cta-demo-${data.slug}`}
                 message={`Hi! I want to book a FREE demo class in ${data.cityName}. Please share available timings.`}

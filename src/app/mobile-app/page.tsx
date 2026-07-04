@@ -42,7 +42,7 @@ export default function MobileAppPage() {
           The Cerebrum Biology Academy mobile app is currently in development. In the meantime,
           access all your study materials through our web platform.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col md:flex-row gap-4 justify-center">
           <Link
             href="/courses"
             className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#4a5d4a] text-white font-semibold hover:bg-[#3d4d3d] transition-colors"

@@ -529,7 +529,7 @@ export default function APBiologyVsIBBiologyPage() {
               Tell us your school options and target universities, and we will reply with which
               programme fits your goals. We coach both live online. No commitment.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
               <a
                 href={`https://wa.me/918826444334?text=${encodeURIComponent(
                   'Hi Cerebrum, I am deciding between AP Biology and IB Biology and have a question.'

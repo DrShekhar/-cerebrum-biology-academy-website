@@ -121,7 +121,7 @@ export function WhatsAppQRModalContent({
             <p className="mb-3 text-xs text-gray-500">
               We&rsquo;ll reach out on WhatsApp + email — please include your country code.
             </p>
-            <div className="flex flex-col gap-2 sm:flex-row">
+            <div className="flex flex-col gap-2 md:flex-row">
               <input
                 type="text"
                 value={name}

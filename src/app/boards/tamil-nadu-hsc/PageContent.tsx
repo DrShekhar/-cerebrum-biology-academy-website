@@ -64,7 +64,7 @@ export default function PageContent() {
               in 12th std board exams while securing NEET qualification with our proven dual-prep
               methodology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button
                 href={whatsappLink}
                 target="_blank"
@@ -409,7 +409,7 @@ export default function PageContent() {
             Join 1800+ Tamil Nadu students who achieved board excellence and NEET success with
             Cerebrum.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button
               href={whatsappLink}
               target="_blank"

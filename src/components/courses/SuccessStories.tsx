@@ -417,7 +417,7 @@ export function SuccessStories({ course }: SuccessStoriesProps) {
               Join hundreds of successful students who achieved their NEET dreams with our proven
               methodology and expert guidance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 variant="secondary"

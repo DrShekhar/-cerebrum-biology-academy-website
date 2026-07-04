@@ -164,7 +164,8 @@ export default function NEETDropperPage() {
     {
       icon: Trophy,
       title: 'Milestone Tracking',
-      description: 'Structured approach with measurable weekly milestones and a clear improvement path',
+      description:
+        'Structured approach with measurable weekly milestones and a clear improvement path',
       color: 'bg-[#3d4d3d]',
     },
   ]
@@ -792,7 +793,7 @@ export default function NEETDropperPage() {
               Expert faculty, proven methodology, and personalized attention await you.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8">
+            <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8">
               <Button
                 variant="primary"
                 size="xl"
@@ -803,7 +804,7 @@ export default function NEETDropperPage() {
                 Book free demo class
               </Button>
 
-              <a href="tel:+918826444334" className="w-full sm:w-auto">
+              <a href="tel:+918826444334" className="w-full md:w-auto">
                 <Button
                   variant="outline"
                   size="xl"

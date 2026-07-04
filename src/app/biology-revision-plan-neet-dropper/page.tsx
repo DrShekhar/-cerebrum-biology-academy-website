@@ -391,7 +391,7 @@ export default function NEETBiologyRevisionPlanDropperPage() {
             you can\'t, that\'s what we\'re for.
           </p>
 
-          <div className="mt-7 grid gap-3 sm:grid-cols-3 text-sm">
+          <div className="mt-7 grid gap-3 md:grid-cols-3 text-sm">
             <div className="rounded-lg bg-slate-50 p-4">
               <Timer className="h-5 w-5 text-indigo-600" />
               <p className="mt-2 text-xs font-semibold uppercase text-slate-500">

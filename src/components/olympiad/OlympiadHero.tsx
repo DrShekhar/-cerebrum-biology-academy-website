@@ -97,7 +97,7 @@ export function OlympiadHero({ country }: OlympiadHeroProps) {
         )}
 
         {/* CTAs */}
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col gap-3 md:flex-row">
           <a
             href={counsellingHref}
             target="_blank"

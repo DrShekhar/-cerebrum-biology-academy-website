@@ -293,7 +293,7 @@ export default function ALevelBiologyTutorPage() {
               university places.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20about%20A-Level%20Biology%20coaching.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -633,7 +633,7 @@ export default function ALevelBiologyTutorPage() {
               results.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20about%20A-Level%20Biology%20coaching.%20Please%20share%20available%20timings."
                 target="_blank"

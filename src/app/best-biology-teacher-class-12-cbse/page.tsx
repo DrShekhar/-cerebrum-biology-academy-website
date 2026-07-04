@@ -156,7 +156,7 @@ export default function BestBiologyTeacherClass12CBSEPage() {
               Reproduction, and Biotechnology.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%2012%20Biology.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -351,7 +351,7 @@ export default function BestBiologyTeacherClass12CBSEPage() {
               Make Class 12 count. Book your free demo today!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%2012%20Biology.%20Please%20share%20available%20timings."
                 target="_blank"

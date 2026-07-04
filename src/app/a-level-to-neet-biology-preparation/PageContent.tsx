@@ -235,7 +235,7 @@ export default function ALevelToNEETContent() {
               Your A-Level foundation is elite. Accelerate to NEET success with expert coaching
               designed for advanced-level students targeting top medical colleges.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -530,9 +530,9 @@ export default function ALevelToNEETContent() {
             Our A-Level specialists will assess your strengths and design a personalized bridge
             program to achieve your medical college goals.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
-              <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 w-full sm:w-auto">
+              <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 w-full md:w-auto">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Message on WhatsApp
               </Button>

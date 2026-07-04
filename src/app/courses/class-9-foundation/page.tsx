@@ -265,7 +265,7 @@ export default function Class9FoundationPage() {
                 build deep understanding — not just memorization. 95% of our students score 85+ in
                 board exams. Starting at just ₹5,000/month.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <button
                   onClick={() =>
                     trackAndOpenWhatsApp({
@@ -275,7 +275,7 @@ export default function Class9FoundationPage() {
                       campaign: 'class-9-foundation',
                     })
                   }
-                  className="w-full sm:w-auto bg-yellow-500 text-gray-900 px-6 sm:px-8 py-3 rounded-lg font-bold hover:bg-yellow-400 transition-colors inline-flex items-center justify-center min-h-[48px]"
+                  className="w-full md:w-auto bg-yellow-500 text-gray-900 px-6 sm:px-8 py-3 rounded-lg font-bold hover:bg-yellow-400 transition-colors inline-flex items-center justify-center min-h-[48px]"
                 >
                   Enroll Now — ₹60,000/year
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -289,7 +289,7 @@ export default function Class9FoundationPage() {
                       campaign: 'class-9-foundation',
                     })
                   }
-                  className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center min-h-[48px]"
+                  className="w-full md:w-auto border-2 border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center min-h-[48px]"
                 >
                   Book Free Demo Class
                 </button>

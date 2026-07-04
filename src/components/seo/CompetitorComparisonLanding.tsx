@@ -311,7 +311,7 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
                   Experience Cerebrum&apos;s small-batch biology coaching before you decide.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+              <div className="flex flex-col md:flex-row gap-3 flex-shrink-0">
                 <Link
                   href={waLink}
                   target="_blank"
@@ -470,22 +470,6 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
           </p>
         </div>
       </section>
-
-      {/* Spacer for mobile sticky CTA bar */}
-      <div className="h-20 md:hidden" aria-hidden="true" />
-
-      {/* Sticky mobile CTA bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-slate-200 shadow-lg p-3">
-        <Link
-          href={waLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 bg-green-600 text-white py-3 rounded-lg font-semibold"
-        >
-          <MessageCircle className="w-4 h-4" />
-          Message Us on WhatsApp (free from the US)
-        </Link>
-      </div>
     </div>
   )
 }

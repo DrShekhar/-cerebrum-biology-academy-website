@@ -413,7 +413,7 @@ export default function NEETHubPage() {
               city centres, NRI batches, and faculty.
             </p>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col gap-4 md:flex-row">
               <Link
                 href="/book-free-demo"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-green-500/25 transition-all hover:bg-green-600"
@@ -506,7 +506,7 @@ export default function NEETHubPage() {
               </p>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-3">
               <div className="rounded-2xl border border-green-200 bg-white p-6 text-center shadow-sm sm:p-8">
                 <div className="mb-2 text-4xl font-bold text-green-700 sm:text-5xl">98%</div>
                 <div className="text-base font-semibold text-gray-900">
@@ -536,7 +536,7 @@ export default function NEETHubPage() {
               </div>
             </div>
 
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <div className="mt-10 flex flex-col items-center gap-4 md:flex-row sm:justify-center">
               <Link
                 href="/results"
                 className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-6 py-3 text-base font-semibold text-white hover:bg-green-700"
@@ -809,7 +809,7 @@ export default function NEETHubPage() {
                 Biology faculty across our NEET, IB, AP, and Olympiad verticals. He is supported by
                 an AIIMS-trained Biology faculty team running the day-to-day cohort delivery.
               </p>
-              <div className="flex flex-col gap-3 sm:flex-row">
+              <div className="flex flex-col gap-3 md:flex-row">
                 <Link
                   href="/dr-shekhar-singh-biology-faculty-india"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-gray-900 px-6 py-3 text-sm font-semibold text-white hover:bg-gray-800"
@@ -875,7 +875,7 @@ export default function NEETHubPage() {
               Talk to a Cerebrum counsellor about your NEET goals — Pursuit, Ascent, or Pinnacle.
               We&apos;ll match you to the right tier, batch, and faculty mentor.
             </p>
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <div className="flex flex-col gap-4 md:flex-row sm:justify-center">
               <Link
                 href="/book-free-demo"
                 className="inline-flex items-center justify-center gap-3 rounded-xl bg-white px-8 py-4 text-lg font-semibold text-green-700 shadow-lg hover:bg-green-50"

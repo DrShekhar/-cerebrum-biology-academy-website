@@ -547,7 +547,7 @@ export default function CerebrumVsAllenPage() {
               Join thousands of students who have achieved their NEET dreams with Cerebrum Biology
               Academy's specialized approach.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <Link
                 href="/book-free-demo"
                 className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"

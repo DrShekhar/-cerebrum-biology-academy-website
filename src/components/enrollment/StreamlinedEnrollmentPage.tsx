@@ -1159,10 +1159,10 @@ export function StreamlinedEnrollmentPage({
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                   <button
                     onClick={handlePrevStep}
-                    className="flex items-center text-gray-600 hover:text-gray-900 transition-colors order-2 sm:order-1"
+                    className="flex items-center text-gray-600 hover:text-gray-900 transition-colors order-2 md:order-1"
                     type="button"
                   >
                     <ArrowLeft className="w-4 h-4 mr-2" />
@@ -1173,7 +1173,7 @@ export function StreamlinedEnrollmentPage({
                     onClick={handleEnrollmentSubmit}
                     variant="medical"
                     size="lg"
-                    className="px-12 py-4 order-1 sm:order-2"
+                    className="px-12 py-4 order-1 md:order-2"
                     disabled={
                       isSubmitting ||
                       !formData.fullName ||

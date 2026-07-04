@@ -272,7 +272,7 @@ export default function AnalyticsPage() {
             to strengthen your weak areas and maintain your strong subjects.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button
               variant="outline"
               size="xl"

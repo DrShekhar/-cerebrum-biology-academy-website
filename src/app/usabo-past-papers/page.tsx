@@ -300,7 +300,7 @@ export default function USABOPastPapersPage() {
               WhatsApp rather than hosted publicly here. Reply &quot;past papers&quot; in the chat
               and we&apos;ll send the year you&apos;re asking for within an hour.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <ContextualWhatsAppLink className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-6 py-3 rounded-lg font-semibold transition">
                 <MessageCircle className="w-5 h-5" />
                 Request past papers
@@ -422,7 +422,7 @@ export default function USABOPastPapersPage() {
               Enrolled USABO programme students get all 10 years of papers, our worked solutions
               with topic tagging, and weekly office hours to discuss tricky questions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <ContextualWhatsAppLink className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition">
                 <MessageCircle className="w-5 h-5" />
                 Request a paper

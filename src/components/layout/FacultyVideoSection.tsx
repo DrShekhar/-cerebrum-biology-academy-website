@@ -208,7 +208,7 @@ export function FacultyVideoSection() {
               Join 15,000+ successful students and start your journey to medical college admission
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button
                 variant="secondary"
                 size="xl"

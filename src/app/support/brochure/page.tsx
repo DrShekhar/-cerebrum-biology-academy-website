@@ -89,7 +89,7 @@ export default function BrochurePage() {
               stories, and fee structure. Everything you need to make an informed decision.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp">
+            <div className="flex flex-col md:flex-row gap-4 justify-center animate-fadeInUp">
               <Button
                 variant="outline"
                 size="lg"
@@ -253,7 +253,7 @@ export default function BrochurePage() {
             Download our brochures and discover how we can help you achieve your medical dreams
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20support.%20Please%20share%20available%20timings."
               target="_blank"

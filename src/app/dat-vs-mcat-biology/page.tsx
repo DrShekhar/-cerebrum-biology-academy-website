@@ -432,7 +432,7 @@ export default function DATvsMCATBiologyPage() {
               Tell us whether you are pre-dental or pre-med and your timeline, and we will reply
               with how we would map the biology overlap for you. We coach both. No commitment.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
               <a
                 href={`https://wa.me/918826444334?text=${encodeURIComponent(
                   'Hi Cerebrum, I am deciding between DAT and MCAT biology prep and have a question.'

@@ -392,7 +392,7 @@ export function MobileAppPromoSection({
           </div>
 
           {/* Alternative Download Options */}
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
             {/* QR Code */}
             <div className="flex items-center space-x-3">
               <button

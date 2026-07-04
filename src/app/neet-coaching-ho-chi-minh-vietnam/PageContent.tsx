@@ -77,7 +77,7 @@ export default function NEETCoachingPageContent() {
               NEET Coaching in Ho Chi Minh City - Vietnam's emerging medical entrance destination
               with international school partnerships.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <SmartWhatsAppCTA text="Start Free Consultation" variant="light" />
               <button className="px-8 py-4 bg-white text-blue-700 font-bold rounded-lg hover:bg-blue-50 transition duration-300">
                 Download Success Stories
@@ -245,7 +245,7 @@ export default function NEETCoachingPageContent() {
           <p className="text-xl mb-8 text-blue-100">
             Contact Dr. Shekhar C Singh today for personalized NEET coaching in Ho Chi Minh City
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <SmartWhatsAppCTA text="Chat on WhatsApp Now" variant="light" />
             <a
               href="tel:+918826444334"

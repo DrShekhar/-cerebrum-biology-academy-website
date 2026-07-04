@@ -200,7 +200,7 @@ export function TrialExpiredModal({
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <div className="flex flex-col md:flex-row gap-3 sm:gap-4">
                     <button
                       onClick={onUpgrade || (() => router.push('/pricing'))}
                       className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl font-semibold hover:shadow-xl transition-all active:scale-95 min-h-[56px] focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2"

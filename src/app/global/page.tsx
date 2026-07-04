@@ -328,7 +328,7 @@ export default function GlobalHomePage() {
             </a>
           </div>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 md:flex-row">
             <a
               href={whatsappHref}
               target="_blank"

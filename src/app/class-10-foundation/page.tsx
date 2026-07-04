@@ -253,7 +253,7 @@ export default function Class10FoundationPage() {
                 NEET 2029 success.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -472,7 +472,7 @@ export default function Class10FoundationPage() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
+                  <div className="flex flex-col md:flex-row gap-4 lg:gap-6">
                     <div className="text-center">
                       <div className="text-sm text-gray-600">Level</div>
                       <div
@@ -552,7 +552,7 @@ export default function Class10FoundationPage() {
               preparation, and guaranteed success. Limited seats in early bird batches!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Button
                 variant="secondary"
                 size="xl"

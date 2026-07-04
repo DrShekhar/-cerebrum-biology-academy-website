@@ -578,7 +578,7 @@ export function DetailedPricingSection({ course }: DetailedPricingSectionProps) 
               Join thousands of successful students and take the first step towards your medical
               career.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <button
                 onClick={() =>
                   trackAndOpenWhatsApp({

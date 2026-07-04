@@ -223,7 +223,7 @@ export default function BestNeetCoachingPage() {
                 journey today!
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
                 <Link
                   href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20neet%20coaching.%20Please%20share%20available%20timings."
                   target="_blank"
@@ -311,25 +311,27 @@ export default function BestNeetCoachingPage() {
               </p>
             </div>
 
-            <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
-              <div className="grid grid-cols-3 bg-blue-600 text-white font-bold">
-                <div className="p-4">Feature</div>
-                <div className="p-4 text-center bg-blue-700">Cerebrum</div>
-                <div className="p-4 text-center">Others</div>
-              </div>
-              {comparison.map((row, index) => (
-                <div
-                  key={row.feature}
-                  className={`grid grid-cols-3 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
-                >
-                  <div className="p-4 font-medium text-gray-900">{row.feature}</div>
-                  <div className="p-4 text-center bg-blue-50 font-bold text-blue-600">
-                    {row.cerebrum}
-                    <CheckCircle className="w-4 h-4 inline ml-2 text-green-600" />
-                  </div>
-                  <div className="p-4 text-center text-gray-600">{row.others}</div>
+            <div className="bg-gray-50 rounded-2xl shadow-lg overflow-x-auto">
+              <div className="min-w-[520px]">
+                <div className="grid grid-cols-3 bg-blue-600 text-white font-bold">
+                  <div className="p-4">Feature</div>
+                  <div className="p-4 text-center bg-blue-700">Cerebrum</div>
+                  <div className="p-4 text-center">Others</div>
                 </div>
-              ))}
+                {comparison.map((row, index) => (
+                  <div
+                    key={row.feature}
+                    className={`grid grid-cols-3 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
+                  >
+                    <div className="p-4 font-medium text-gray-900">{row.feature}</div>
+                    <div className="p-4 text-center bg-blue-50 font-bold text-blue-600">
+                      {row.cerebrum}
+                      <CheckCircle className="w-4 h-4 inline ml-2 text-green-600" />
+                    </div>
+                    <div className="p-4 text-center text-gray-600">{row.others}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -393,7 +395,7 @@ export default function BestNeetCoachingPage() {
                 starts here!
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
                 <Link
                   href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20neet%20coaching.%20Please%20share%20available%20timings."
                   target="_blank"

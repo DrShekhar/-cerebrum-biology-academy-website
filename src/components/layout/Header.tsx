@@ -127,7 +127,7 @@ const Header = () => {
             {/* Enhanced Logo with Brain Design - iOS Safari fix */}
             <Link
               href="/"
-              className="flex items-center gap-2 sm:gap-3 group overflow-hidden max-w-[200px] sm:max-w-none"
+              className="flex items-center gap-2 sm:gap-3 group overflow-hidden max-w-[200px] md:max-w-none"
             >
               {/* Brain Logo */}
               <div className="relative flex-shrink-0">

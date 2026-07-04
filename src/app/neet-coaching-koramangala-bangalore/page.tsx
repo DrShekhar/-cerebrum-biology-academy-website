@@ -240,7 +240,7 @@ export default function NeetCoachingKoramangalaPage() {
               faculty, zero traffic stress. Join 680+ students from NPS, DPS, Inventure Academy.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Bangalore.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -427,7 +427,7 @@ export default function NeetCoachingKoramangalaPage() {
               98% success rate, AIIMS faculty, startup-era platform. Skip Silk Board traffic!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Bangalore.%20Please%20share%20available%20timings."
                 target="_blank"

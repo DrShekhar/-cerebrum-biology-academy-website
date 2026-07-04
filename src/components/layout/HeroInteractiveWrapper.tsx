@@ -21,7 +21,7 @@ function HeroPlaceholder() {
   return (
     <>
       {/* CTAs - Must match HeroClientInteractive exactly (3 buttons) */}
-      <div className="flex flex-col sm:flex-row gap-3 xs:gap-4 mb-4">
+      <div className="flex flex-col md:flex-row gap-3 xs:gap-4 mb-4">
         <ContextualWhatsAppLink
           target="_blank"
           rel="noopener noreferrer"
@@ -93,7 +93,7 @@ function HeroPlaceholder() {
       </div>
 
       {/* Urgency Banner with countdown placeholder - Must match HeroClientInteractive */}
-      <div className="inline-flex flex-col sm:flex-row items-center gap-3 bg-red-500/20 backdrop-blur-sm border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg">
+      <div className="inline-flex flex-col md:flex-row items-center gap-3 bg-red-500/20 backdrop-blur-sm border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg">
         <div className="flex items-center">
           <Clock className="w-4 xs:w-5 h-4 xs:h-5 mr-2 text-red-300 flex-shrink-0" />
           <span className="text-red-100 text-xs xs:text-sm sm:text-base">Next Batch Starting:</span>
@@ -123,7 +123,7 @@ function HeroPlaceholder() {
       </div>
 
       {/* Early Bird section - Must match HeroClientInteractive */}
-      <div className="mt-6 xs:mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+      <div className="mt-6 xs:mt-8 flex flex-col md:flex-row items-start sm:items-center gap-3 sm:gap-4">
         <div className="flex items-center gap-2 text-yellow-200">
           <Sparkles className="w-4 xs:w-5 h-4 xs:h-5" />
           <span className="text-xs xs:text-sm sm:text-base">

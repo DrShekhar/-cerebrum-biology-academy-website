@@ -21,7 +21,10 @@ export interface BestNeetCoachingTemplateProps {
   extraFaqs?: { question: string; answer: string }[]
 }
 
-export default function BestNeetCoachingTemplate({ city, extraFaqs = [] }: BestNeetCoachingTemplateProps) {
+export default function BestNeetCoachingTemplate({
+  city,
+  extraFaqs = [],
+}: BestNeetCoachingTemplateProps) {
   const localCoaching = city.localCoachingPresence
     .split(',')[0]
     .trim()
@@ -77,8 +80,18 @@ export default function BestNeetCoachingTemplate({ city, extraFaqs = [] }: BestN
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: `Best NEET Coaching in ${city.displayName}`, item: pageUrl },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: `Best NEET Coaching in ${city.displayName}`,
+        item: pageUrl,
+      },
     ],
   }
 
@@ -86,13 +99,17 @@ export default function BestNeetCoachingTemplate({ city, extraFaqs = [] }: BestN
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([courseSchema, faqSchema, breadcrumbSchema]) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([courseSchema, faqSchema, breadcrumbSchema]),
+        }}
       />
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-indigo-300 font-semibold mb-3">{city.displayName}, {city.state} · NEET {YEAR_LABEL}</p>
+          <p className="text-indigo-300 font-semibold mb-3">
+            {city.displayName}, {city.state} · NEET {YEAR_LABEL}
+          </p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Best NEET Coaching in {city.displayName} {YEAR_LABEL}
           </h1>
@@ -101,7 +118,7 @@ export default function BestNeetCoachingTemplate({ city, extraFaqs = [] }: BestN
             (360/720 marks) decides your rank. AIIMS-trained biology-specialist faculty, small
             batches, live online.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="mt-8 flex flex-col md:flex-row gap-3 justify-center">
             <Link
               href="/book-free-demo"
               className="bg-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-indigo-500"
@@ -109,7 +126,9 @@ export default function BestNeetCoachingTemplate({ city, extraFaqs = [] }: BestN
               Book a free demo
             </Link>
             <a
-              href={wa(`Hi! I'm in ${city.displayName} and comparing the best NEET coaching. Please share Cerebrum's biology programme details and fees.`)}
+              href={wa(
+                `Hi! I'm in ${city.displayName} and comparing the best NEET coaching. Please share Cerebrum's biology programme details and fees.`
+              )}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-slate-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-slate-100"
@@ -126,7 +145,9 @@ export default function BestNeetCoachingTemplate({ city, extraFaqs = [] }: BestN
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
             The NEET coaching landscape in {city.displayName}
           </h2>
-          <p className="text-base text-slate-700 leading-relaxed whitespace-pre-line">{city.cityContext}</p>
+          <p className="text-base text-slate-700 leading-relaxed whitespace-pre-line">
+            {city.cityContext}
+          </p>
           <p className="text-base text-slate-700 leading-relaxed">{city.whyOnlineHere}</p>
         </div>
       </section>
@@ -141,21 +162,24 @@ export default function BestNeetCoachingTemplate({ city, extraFaqs = [] }: BestN
             <div className="rounded-xl bg-white p-5 border border-slate-200">
               <p className="font-semibold text-slate-900 mb-2">Local full-package chains</p>
               <p className="text-sm text-slate-700 leading-relaxed">
-                {city.localCoachingPresence} — strong for Physics &amp; Chemistry, but biology runs in
-                150-200 student batches where individual weak-chapter attention is hard.
+                {city.localCoachingPresence} — strong for Physics &amp; Chemistry, but biology runs
+                in 150-200 student batches where individual weak-chapter attention is hard.
               </p>
             </div>
             <div className="rounded-xl bg-white p-5 border border-indigo-200">
               <p className="font-semibold text-indigo-700 mb-2">Cerebrum — biology specialist</p>
               <p className="text-sm text-slate-700 leading-relaxed">
                 Biology only (the 360/720 that decides rank): 10-40 student batches, AIIMS faculty,
-                weekly per-MCQ review, NCERT line-by-line. Pair it with your {localCoaching} for PCM.
+                weekly per-MCQ review, NCERT line-by-line. Pair it with your {localCoaching} for
+                PCM.
               </p>
             </div>
           </div>
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             <div className="rounded-xl bg-white p-5">
-              <p className="text-sm font-semibold text-indigo-700">Target colleges ({city.state} quota)</p>
+              <p className="text-sm font-semibold text-indigo-700">
+                Target colleges ({city.state} quota)
+              </p>
               <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
                 <li>• {city.stateQuotaCollege}</li>
                 {(city.otherStateMedicalColleges ?? []).map((c) => (
@@ -200,9 +224,13 @@ export default function BestNeetCoachingTemplate({ city, extraFaqs = [] }: BestN
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Compare us on biology — free demo from {city.displayName}
           </h2>
-          <p className="text-indigo-100 mb-6">60-minute live class with Dr. Shekhar. No card required.</p>
+          <p className="text-indigo-100 mb-6">
+            60-minute live class with Dr. Shekhar. No card required.
+          </p>
           <a
-            href={wa(`Hi! I want to book a free demo to compare Cerebrum's NEET biology coaching for ${city.displayName}.`)}
+            href={wa(
+              `Hi! I want to book a free demo to compare Cerebrum's NEET biology coaching for ${city.displayName}.`
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white text-indigo-700 px-8 py-4 rounded-xl font-semibold text-lg"

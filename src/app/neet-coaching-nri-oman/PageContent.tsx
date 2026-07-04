@@ -141,7 +141,7 @@ export default function PageContent() {
                 preparation. With 20 CBSE schools and a growing, supportive Indian community,
                 students find the ideal balance between work, study, and personal growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <SmartWhatsAppCTA
                   text="Get Free Consultation"
                   variant="default"
@@ -353,7 +353,7 @@ export default function PageContent() {
           <p className="text-lg mb-8 opacity-90">
             98% Success Rate • Expert Faculty • Timezone-Friendly • Community Support
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col md:flex-row justify-center gap-4">
             <SmartWhatsAppCTA
               text="Get Free Consultation Today"
               variant="secondary"

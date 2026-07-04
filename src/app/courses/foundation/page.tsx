@@ -259,7 +259,7 @@ export default function FoundationCoursePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           {/* Urgency Banner */}
           <div className="bg-[#4a5d4a] text-white rounded-xl p-3 sm:p-4 mb-6 text-center animate-fadeInUp">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-sm sm:text-base">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-2 sm:gap-4 text-sm sm:text-base">
               <span className="font-semibold flex items-center">
                 <Sparkles className="w-4 h-4 mr-2" />
                 New Batch Starting Soon!
@@ -784,7 +784,7 @@ export default function FoundationCoursePage() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <button
               onClick={() =>
                 trackAndOpenWhatsApp({

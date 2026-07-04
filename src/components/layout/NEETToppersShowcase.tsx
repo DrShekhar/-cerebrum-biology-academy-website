@@ -417,7 +417,7 @@ export function NEETToppersShowcase({
             Shekhar's proven teaching methodology at Cerebrum Biology Academy.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button
               variant="secondary"
               size="xl"

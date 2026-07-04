@@ -108,11 +108,11 @@ const AdaptiveTestingPage: React.FC = () => {
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center space-y-8 animate-fadeInUp">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-4">
               <div className="p-3 sm:p-4 bg-indigo-500 rounded-xl">
                 <Brain className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" />
               </div>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-indigo-500 bg-clip-text text-transparent text-center sm:text-left">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-indigo-500 bg-clip-text text-transparent text-center md:text-left">
                 Adaptive Testing System
               </h1>
             </div>
@@ -122,7 +122,7 @@ const AdaptiveTestingPage: React.FC = () => {
               personalized difficulty progression and detailed learning analytics.
             </p>
 
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+            <div className="flex flex-col md:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <button
                 onClick={handleStartDemo}
                 className="bg-indigo-500 text-white px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl hover:bg-indigo-600 transition-all flex items-center justify-center gap-2 sm:gap-3 text-base sm:text-lg font-medium shadow-lg"

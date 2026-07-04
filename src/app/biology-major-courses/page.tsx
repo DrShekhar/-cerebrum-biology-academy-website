@@ -364,7 +364,7 @@ export default function BiologyMajorCoursesPage() {
                 graduate-level experts. From Cell Biology to MCAT prep, we've got you covered.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -684,7 +684,7 @@ export default function BiologyMajorCoursesPage() {
               Biology to MCAT prep, we're here to help you succeed.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Button
                 variant="secondary"
                 size="xl"

@@ -249,7 +249,7 @@ export default function USABO2026ResultsPage() {
               publishes results per cycle — so we describe windows as &quot;expected&quot; and never
               invent a score threshold.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <ContextualWhatsAppLink className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-6 py-3 rounded-lg font-semibold transition">
                 <MessageCircle className="w-5 h-5" />
                 Get notified on cutoff release
@@ -442,7 +442,7 @@ export default function USABO2026ResultsPage() {
               cycle&apos;s Open cutoff and Semifinalist list — plus next-steps guidance for either
               outcome.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <ContextualWhatsAppLink className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition">
                 <MessageCircle className="w-5 h-5" />
                 Subscribe to alerts

@@ -412,7 +412,7 @@ export default function StudyPlanGeneratorPage() {
                     <p className="mb-4 text-sm text-gray-600">
                       Talk to our NEET experts to get a customized strategy for your preparation.
                     </p>
-                    <div className="flex flex-col gap-3 sm:flex-row">
+                    <div className="flex flex-col gap-3 md:flex-row">
                       <button
                         onClick={() =>
                           trackAndOpenWhatsApp({

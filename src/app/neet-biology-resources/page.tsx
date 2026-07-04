@@ -443,7 +443,7 @@ export default function NEETBiologyResourcesPage() {
           <p className="text-xl text-yellow-100 mb-8">
             Join Cerebrum Biology Academy and get personalized guidance from AIIMS-trained faculty
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               href="/book-free-demo"
               className="px-8 py-4 bg-white text-yellow-800 font-bold rounded-lg hover:bg-yellow-50 transition-colors text-lg"

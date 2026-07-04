@@ -120,7 +120,7 @@ export function VideoShowcase({
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col md:flex-row gap-3">
             {showCTA && (
               <Button variant="primary" size="lg" className="flex-1" onClick={handleCTAClick}>
                 <BookOpen className="w-5 h-5 mr-2" />

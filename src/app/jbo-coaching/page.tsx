@@ -339,7 +339,7 @@ export default function JBOCoachingPage() {
                 International Biology Olympiad (IBO). Join Japan&apos;s top biology students!
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp">
+              <div className="flex flex-col md:flex-row gap-4 justify-center animate-fadeInUp">
                 <button
                   onClick={() => handleWhatsAppClick('hero-cta')}
                   className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg"

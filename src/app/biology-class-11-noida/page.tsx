@@ -209,7 +209,7 @@ export default function BiologyClass11NoidaPage() {
             </div>
 
             {/* CTA Buttons - WhatsApp Priority */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col md:flex-row justify-center gap-4">
               <a
                 href="https://wa.me/918826444334?text=Hi!%20I'm%20looking%20for%20Class%2011%20Biology%20coaching%20in%20Noida.%20Please%20share%20batch%20details%20and%20fee%20structure."
                 className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"
@@ -403,7 +403,7 @@ export default function BiologyClass11NoidaPage() {
           <h2 className="text-3xl font-bold mb-4">Start Your NEET Journey in Class 11</h2>
           <p className="text-xl text-slate-300 mb-8">Join 15,000+ successful students from Noida</p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+          <div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
             <a
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20join%20Class%2011%20Biology%20coaching.%20I'm%20from%20Noida.%20Please%20share%20batch%20details."
               className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"

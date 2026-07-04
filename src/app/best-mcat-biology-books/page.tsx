@@ -551,7 +551,7 @@ export default function BestMCATBiologyBooksPage() {
               Bring your missed AAMC and UWorld questions. We diagnose the reasoning gaps your books
               cannot, and drill the topics holding you down — until your section climbs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href={WHATSAPP_HREF}
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition"

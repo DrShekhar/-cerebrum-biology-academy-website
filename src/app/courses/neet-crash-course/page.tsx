@@ -576,7 +576,7 @@ export default function NEETCrashCoursePage() {
               Biology score.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center">
               <Button
                 variant="secondary"
                 size="xl"
@@ -587,7 +587,7 @@ export default function NEETCrashCoursePage() {
                 Book FREE Demo
               </Button>
 
-              <a href="tel:+918826444334" className="w-full sm:w-auto">
+              <a href="tel:+918826444334" className="w-full md:w-auto">
                 <Button
                   variant="outline"
                   size="xl"

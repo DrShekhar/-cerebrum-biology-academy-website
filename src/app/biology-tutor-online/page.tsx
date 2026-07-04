@@ -250,7 +250,7 @@ export default function BiologyTutorOnlinePage() {
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-4 sm:flex-row">
+                <div className="flex flex-col gap-4 md:flex-row">
                   <Link
                     href="/demo"
                     className="rounded-lg bg-white px-8 py-4 text-center font-semibold text-blue-600 shadow-lg transition hover:bg-blue-50"
@@ -581,7 +581,7 @@ export default function BiologyTutorOnlinePage() {
               <p className="mx-auto mb-8 max-w-2xl text-lg text-blue-100">
                 Join thousands of students learning biology online with personalized attention
               </p>
-              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <div className="flex flex-col justify-center gap-4 md:flex-row">
                 <Link
                   href="/demo"
                   className="rounded-lg bg-white px-8 py-4 font-semibold text-blue-600 shadow-lg transition hover:bg-blue-50"

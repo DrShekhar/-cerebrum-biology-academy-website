@@ -283,11 +283,11 @@ export function CoursesSection() {
           <p className="text-base xs:text-lg sm:text-xl mb-6 xs:mb-8 text-green-100 px-2">
             Get personalized guidance from our expert counselors to choose the perfect program
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center max-w-2xl mx-auto px-2">
+          <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center max-w-2xl mx-auto px-2">
             <Button
               variant="secondary"
               size="lg"
-              className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100 text-sm sm:text-base px-4 sm:px-6"
+              className="w-full md:w-auto bg-white text-blue-600 hover:bg-gray-100 text-sm sm:text-base px-4 sm:px-6"
               onClick={handleCounselingClick}
               aria-label="Get free counseling to choose the right course"
             >
@@ -298,7 +298,7 @@ export function CoursesSection() {
             <Button
               variant="outline"
               size="lg"
-              className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-blue-600 text-sm sm:text-base px-4 sm:px-6"
+              className="w-full md:w-auto border-white text-white hover:bg-white hover:text-blue-600 text-sm sm:text-base px-4 sm:px-6"
               onClick={handleBrochureDownload}
             >
               <Download className="w-4 h-4 mr-2 flex-shrink-0" />

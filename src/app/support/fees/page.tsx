@@ -192,7 +192,7 @@ export default function FeesPage() {
               plans, and scholarship opportunities available.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp">
+            <div className="flex flex-col md:flex-row gap-4 justify-center animate-fadeInUp">
               <Button
                 variant="outline"
                 size="lg"
@@ -478,7 +478,7 @@ export default function FeesPage() {
             Limited seats available. Book now with just ₹5,000 advance payment.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link href="/support/admission">
               <Button
                 variant="outline"

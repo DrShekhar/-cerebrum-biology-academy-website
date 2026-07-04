@@ -311,7 +311,7 @@ export default function NEETDropperBiologySpecialistPage() {
                 with your existing PW, Allen, Aakash, Motion or Kota dropper batch, not replace it.
               </p>
 
-              <div className="mt-7 flex flex-col sm:flex-row gap-3">
+              <div className="mt-7 flex flex-col md:flex-row gap-3">
                 <a
                   href={waUrl}
                   target="_blank"
@@ -735,7 +735,7 @@ export default function NEETDropperBiologySpecialistPage() {
               First step is a free 60-minute trial class with Dr. Shekhar. Bring your 5 weakest
               biology questions. We\'ll show you the gap and the plan before you commit a rupee.
             </p>
-            <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
+            <div className="mt-6 flex flex-col md:flex-row justify-center gap-3">
               <a
                 href={waUrl}
                 target="_blank"

@@ -487,7 +487,7 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
               Join thousands of successful students who have achieved their medical dreams with our
               expert guidance
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <button
                 onClick={() => {
                   const demoCourse =

@@ -288,7 +288,7 @@ export default function NEETCoachingPage() {
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col md:flex-row gap-3">
                 <Button
                   size="lg"
                   className="bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold shadow-lg"
@@ -545,7 +545,7 @@ export default function NEETCoachingPage() {
                 </span>
                 Choose Your Focus
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 {focusOptions.map((opt) => {
                   const available = getAvailableFocusOptions(selectedClass)
                   const isDisabled = !available.includes(opt.id)
@@ -771,7 +771,7 @@ export default function NEETCoachingPage() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col md:flex-row gap-3">
                 <Button
                   size="lg"
                   className="bg-green-600 hover:bg-green-500 text-white font-bold flex-1"
@@ -900,7 +900,7 @@ export default function NEETCoachingPage() {
               academic counselors about batch timings, faculty credentials, and our track record.
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+            <div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
               <Button
                 size="lg"
                 className="bg-white text-blue-700 hover:bg-blue-50 font-bold shadow-lg"
@@ -1004,7 +1004,7 @@ export default function NEETCoachingPage() {
               now.
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+            <div className="flex flex-col md:flex-row justify-center gap-4 mb-6">
               <Button
                 size="lg"
                 className="bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold shadow-lg"

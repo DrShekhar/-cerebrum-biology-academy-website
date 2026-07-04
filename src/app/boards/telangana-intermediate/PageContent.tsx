@@ -63,7 +63,7 @@ export default function PageContent() {
               Master BIE Telangana syllabus with integrated NEET preparation. Expert coaching
               covering Botany Paper-I & Zoology Paper-II with EAMCET overlap strategy.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button
                 href={whatsappLink}
                 target="_blank"
@@ -410,7 +410,7 @@ export default function PageContent() {
             Join 2000+ successful students who achieved both board excellence and NEET success with
             Cerebrum.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button
               href={whatsappLink}
               target="_blank"

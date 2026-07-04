@@ -142,7 +142,7 @@ export default function ALevelBoardTemplate({ board }: { board: ALevelBoard }) {
           <p className="mt-3 text-sm font-medium text-slate-500">
             {board.boardFull} · {board.region}
           </p>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 md:flex-row">
             <a
               href={waUrl}
               target="_blank"
@@ -363,7 +363,7 @@ export default function ALevelBoardTemplate({ board }: { board: ALevelBoard }) {
               A short live session to gauge your level and map a paper-by-paper plan to your target
               grade.
             </p>
-            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col justify-center gap-3 md:flex-row">
               <a
                 href={waUrl}
                 target="_blank"

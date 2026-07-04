@@ -655,7 +655,7 @@ export default function TimetablePage() {
       {/* Location Filter */}
       <div className={`border-b ${colors.border} ${colors.bg}`}>
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-3 md:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-2">
               <MapPin className={`h-4 w-4 ${colors.text}`} />
               <span className="text-sm font-medium text-gray-700">Filter by Location:</span>

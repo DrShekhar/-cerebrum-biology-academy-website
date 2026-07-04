@@ -672,7 +672,7 @@ export default function ProgramPage({ params }: { params: Promise<{ slug: string
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <Link
                   href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20programs.%20Please%20share%20available%20timings."
                   target="_blank"
@@ -894,19 +894,19 @@ export default function ProgramPage({ params }: { params: Promise<{ slug: string
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Join thousands of successful students who cracked NEET with Cerebrum Biology Academy
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20programs.%20Please%20share%20available%20timings."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all"
+              className="w-full md:w-auto inline-flex items-center justify-center bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all"
             >
               Book Free Demo Class
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <a
               href="tel:+918826444334"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all"
+              className="w-full md:w-auto inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all"
             >
               <Phone className="w-5 h-5 mr-2" />
               Call: +91 88264-44334

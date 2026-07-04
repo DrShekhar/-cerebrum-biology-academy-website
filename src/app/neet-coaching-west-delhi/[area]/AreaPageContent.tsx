@@ -116,7 +116,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
 
             <p className="text-md opacity-80 mb-8 max-w-4xl mx-auto">{area.heroDescription}</p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20West.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -276,7 +276,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
             <p className="text-white text-xl md:text-2xl font-bold mb-4">
               Talk to our counselor for {area.name} students
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="flex flex-col md:flex-row gap-3 justify-center">
               <TrackedWhatsAppButton
                 source={`west-delhi-${areaSlug}-why-cerebrum`}
                 message={`Hi! I'm a student from ${area.name}, West Delhi (near your Rohini center). I want to know more about your NEET coaching programs. Please share details.`}
@@ -507,7 +507,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               demo class today!
             </p>
             <p className="text-orange-200 mb-8">Online classes also available</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
                 <Link href={`/demo-booking?center=rohini&area=${areaSlug}`}>
                   <Play className="w-5 h-5 mr-2" />

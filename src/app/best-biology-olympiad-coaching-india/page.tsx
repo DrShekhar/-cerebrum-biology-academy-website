@@ -306,7 +306,7 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
             Stage 2 + USABO Semifinal + BBO Gold qualifiers.
           </p>
 
-          <div className="mt-7 flex flex-col sm:flex-row gap-3">
+          <div className="mt-7 flex flex-col md:flex-row gap-3">
             <a
               href={waUrl}
               target="_blank"
@@ -529,7 +529,7 @@ export default function BestBiologyOlympiadCoachingIndiaPage() {
               + target olympiad (NSEB, USABO, BBO, CBO, SBO, IBO) and we&rsquo;ll schedule it in
               your time zone.
             </p>
-            <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+            <div className="mt-7 flex flex-col md:flex-row justify-center gap-3">
               <a
                 href={waUrl}
                 target="_blank"

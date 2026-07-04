@@ -609,7 +609,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                 Contact our expert counselors for personalized course recommendations
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <div className="flex flex-col md:flex-row gap-6 justify-center">
                 <button
                   onClick={async () => {
                     await trackAndOpenWhatsApp({

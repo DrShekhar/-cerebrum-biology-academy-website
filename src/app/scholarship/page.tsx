@@ -280,7 +280,7 @@ export default function ScholarshipPage() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <div className="flex flex-col md:flex-row gap-3 sm:gap-4">
                 <Link
                   href="/contact"
                   className="bg-white text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-green-50 transition-all hover:scale-105 inline-flex items-center justify-center text-base sm:text-lg shadow-lg min-h-[44px]"
@@ -605,7 +605,7 @@ export default function ScholarshipPage() {
             career. Our team is here to support you every step of the way.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6 sm:mb-8">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-6 sm:mb-8">
             <Link
               href="/contact"
               className="bg-white text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-green-50 transition-colors inline-flex items-center justify-center min-h-[44px]"

@@ -422,7 +422,7 @@ export default function ApplicationForm() {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="flex flex-col md:flex-row gap-3 justify-center">
               <a
                 href={getPhoneLink()}
                 className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"

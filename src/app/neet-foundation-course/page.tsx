@@ -338,7 +338,7 @@ export default function NeetFoundationCoursePage() {
                 success with 65% higher success rate!
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -591,7 +591,7 @@ export default function NeetFoundationCoursePage() {
               success rate!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Button
                 variant="secondary"
                 size="xl"

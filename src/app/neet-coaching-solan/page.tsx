@@ -161,7 +161,7 @@ export default function NEETCoachingSolan() {
                   college! Why travel to Chandigarh when you can become a doctor in Solan itself?
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
                   <Link
                     href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Solan%20and%20interested%20in%20NEET%20coaching.%20Please%20share%20details."
                     className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
@@ -609,7 +609,7 @@ export default function NEETCoachingSolan() {
                   into reality!
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col md:flex-row gap-4 justify-center">
                   <Link
                     href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Solan%20and%20want%20to%20join%20NEET%20coaching.%20Please%20share%20the%20admission%20process."
                     className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 text-lg"

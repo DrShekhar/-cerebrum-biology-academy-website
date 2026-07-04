@@ -79,7 +79,7 @@ export function LandingHero({
           </div>
 
           {/* CTA Buttons */}
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fadeInUp">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 md:flex-row animate-fadeInUp">
             <Link
               href="#demo-form"
               onClick={(e) => {

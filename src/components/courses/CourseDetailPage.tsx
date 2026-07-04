@@ -109,7 +109,7 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col md:flex-row gap-4">
                   <Button
                     onClick={handleEnrollNow}
                     variant="secondary"
@@ -490,7 +490,7 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
           <p className="text-xl mb-8 opacity-90">
             Join {course.title} and take the first step towards your medical career
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button
               onClick={handleEnrollNow}
               variant="secondary"

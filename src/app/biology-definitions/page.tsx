@@ -113,8 +113,8 @@ export default function BiologyDefinitionsPage() {
               Biology Definitions for NEET
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Master essential biology terms and concepts for NEET 2027. Comprehensive
-              definitions with examples, key points, and NEET relevance ratings.
+              Master essential biology terms and concepts for NEET 2027. Comprehensive definitions
+              with examples, key points, and NEET relevance ratings.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
@@ -226,7 +226,7 @@ export default function BiologyDefinitionsPage() {
             Join Cerebrum Biology Academy for complete NEET Biology preparation with live classes,
             personalized guidance, and proven strategies by Dr. Shekhar C Singh
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center">
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20definitions.%20Please%20share%20available%20timings."
               target="_blank"

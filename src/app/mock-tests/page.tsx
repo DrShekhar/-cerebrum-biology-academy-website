@@ -107,7 +107,7 @@ export default async function MockTestsPage() {
       {/* CBT exam simulator CTA */}
       <section className="py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col items-start justify-between gap-4 rounded-2xl border border-green-200 bg-gradient-to-r from-green-800 to-green-900 p-6 text-white sm:flex-row sm:items-center">
+          <div className="flex flex-col items-start justify-between gap-4 rounded-2xl border border-green-200 bg-gradient-to-r from-green-800 to-green-900 p-6 text-white md:flex-row sm:items-center">
             <div>
               <div className="inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-medium">
                 New · NEET 2027 goes computer-based

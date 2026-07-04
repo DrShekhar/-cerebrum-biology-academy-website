@@ -43,7 +43,7 @@ export function UrgencyBanner({
   }, [batchStartDate, showCountdown])
 
   return (
-    <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
+    <div className="mt-8 flex flex-col gap-4 md:flex-row sm:items-center sm:justify-center">
       {/* Seats Remaining */}
       <div className="flex items-center justify-center gap-2 rounded-full border-2 border-red-500 bg-red-50 px-4 py-2 sm:px-6 sm:py-3 animate-fadeInUp">
         <AlertCircle className="h-5 w-5 text-red-600" />

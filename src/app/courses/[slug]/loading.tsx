@@ -26,7 +26,7 @@ export default function CourseDetailLoading() {
               </div>
 
               {/* CTA skeleton */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <div className="h-14 bg-yellow-400/30 rounded-xl w-48 animate-pulse" />
                 <div className="h-14 bg-white/10 rounded-xl w-40 animate-pulse" />
               </div>

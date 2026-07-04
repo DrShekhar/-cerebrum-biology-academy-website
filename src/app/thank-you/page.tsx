@@ -230,12 +230,12 @@ function ThankYouContent() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+          <div className="flex flex-col md:flex-row justify-center gap-4 sm:gap-6">
             <PremiumButton
               onClick={handleWhatsAppContact}
               variant="medical"
               size="lg"
-              className="w-full sm:w-auto min-h-[44px]"
+              className="w-full md:w-auto min-h-[44px]"
             >
               <MessageSquare className="w-5 h-5 mr-3" />
               WhatsApp Now
@@ -245,7 +245,7 @@ function ThankYouContent() {
               onClick={handleCallNow}
               variant="secondary"
               size="lg"
-              className="w-full sm:w-auto min-h-[44px]"
+              className="w-full md:w-auto min-h-[44px]"
             >
               <Phone className="w-5 h-5 mr-3" />
               Call +91 88264 44334
@@ -255,7 +255,7 @@ function ThankYouContent() {
               onClick={handleBookCounseling}
               variant="luxury"
               size="lg"
-              className="w-full sm:w-auto min-h-[44px]"
+              className="w-full md:w-auto min-h-[44px]"
             >
               <CalendarDays className="w-5 h-5 mr-3" />
               Book Free Counseling

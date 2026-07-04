@@ -266,7 +266,7 @@ export function FacultySection() {
           <p className="text-base xs:text-lg sm:text-xl mb-6 xs:mb-8 text-green-100">
             Join thousands of students who achieved NEET success under expert guidance
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center">
             <Button
               variant="secondary"
               size="xl"

@@ -347,7 +347,7 @@ export function ParentTestimonialsSection({
             guide your child to success too.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
             <Button
               variant="secondary"
               size="xl"

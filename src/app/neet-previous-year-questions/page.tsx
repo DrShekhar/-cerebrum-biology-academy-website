@@ -812,7 +812,7 @@ export default function NEETPreviousYearQuestionsPage() {
               Get expert guidance from AIIMS-trained faculty. We analyse your weak chapters and
               create a personalised PYQ-based study plan.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
               <a
                 href={`tel:${CONTACT_INFO.phone.primary}`}
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white text-indigo-600 rounded-xl font-bold hover:bg-indigo-50 transition-colors"

@@ -441,7 +441,7 @@ export default function MCATBiologyPage() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <button
                 onClick={handleWhatsAppEnquiry}
                 className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg shadow-green-500/25 transition-colors animate-fadeInUp"

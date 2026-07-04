@@ -668,7 +668,7 @@ export default function NEETBiologyPreparation3Months() {
               preparation. Our AIIMS-trained faculty will keep you on track and optimize your
               preparation for maximum score improvement.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <a
                 href="https://cerebrumbiologyacademy.com/contact"
                 className="inline-block px-8 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition"

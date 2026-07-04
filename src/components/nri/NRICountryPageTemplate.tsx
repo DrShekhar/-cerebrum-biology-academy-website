@@ -596,11 +596,11 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
               Join {data.studentCount} students from {data.country} already preparing with us
             </p>
 
-            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-3 justify-center mb-8">
+            <div className="flex flex-col gap-3 md:flex-row sm:flex-wrap sm:gap-3 justify-center mb-8">
               <Button
                 variant="secondary"
                 size="lg"
-                className="bg-green-600 text-white hover:bg-green-600 w-full sm:w-auto min-h-[48px] text-sm sm:text-base px-4 sm:px-6 cursor-pointer"
+                className="bg-green-600 text-white hover:bg-green-600 w-full md:w-auto min-h-[48px] text-sm sm:text-base px-4 sm:px-6 cursor-pointer"
                 onClick={handleWhatsAppClick}
               >
                 <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
@@ -609,7 +609,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
               <ContextualWhatsAppLink
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto"
+                className="w-full md:w-auto"
               >
                 <Button
                   variant="outline"
@@ -620,7 +620,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   <span className="truncate">Book Demo</span>
                 </Button>
               </ContextualWhatsAppLink>
-              <a href={getPhoneLink()} className="w-full sm:w-auto">
+              <a href={getPhoneLink()} className="w-full md:w-auto">
                 <Button
                   variant="outline"
                   size="lg"

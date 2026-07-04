@@ -174,7 +174,7 @@ export default function PageContent({ faqs }: PageContentProps) {
               15-20 students.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Civil%20Lines%20Delhi%20and%20interested%20in%20NEET%20Biology%20coaching.%20Please%20share%20details%20about%20batches%20and%20fees."
                 target="_blank"
@@ -821,7 +821,7 @@ export default function PageContent({ faqs }: PageContentProps) {
                     </div>
                   </div>
 
-                  <div className="pt-4 flex flex-col sm:flex-row gap-3">
+                  <div className="pt-4 flex flex-col md:flex-row gap-3">
                     <a
                       href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Civil%20Lines%20Delhi%20and%20interested%20in%20NEET%20Biology%20coaching."
                       target="_blank"
@@ -943,7 +943,7 @@ export default function PageContent({ faqs }: PageContentProps) {
               today!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Civil%20Lines%20Delhi%20and%20want%20to%20book%20a%20FREE%20NEET%20Biology%20demo%20class."
                 target="_blank"

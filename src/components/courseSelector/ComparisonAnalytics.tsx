@@ -365,7 +365,7 @@ export default function ComparisonAnalytics({
         </div>
 
         {/* Quick Actions */}
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex flex-col md:flex-row gap-3">
           <button className="flex-1 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
             📊 Download Full Report
           </button>

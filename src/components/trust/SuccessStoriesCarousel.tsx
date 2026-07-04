@@ -613,7 +613,7 @@ export default function SuccessStoriesCarousel({
           Join thousands of students who have achieved their NEET dreams with personalized coaching
           and expert guidance.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col md:flex-row gap-4 justify-center">
           <button className="bg-white text-green-600 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
             🎯 Book FREE Demo Class
           </button>

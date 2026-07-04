@@ -106,7 +106,7 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
             </div>
 
             {/* Enhanced CTA Section */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-6">
+            <div className="flex flex-col md:flex-row gap-4 justify-center lg:justify-start items-center mb-6">
               <Button
                 onClick={handleCtaClick}
                 className={`${heroConfig.ctaColor} hover:scale-105 transition-all duration-300 text-white font-bold py-4 px-8 rounded-xl text-lg shadow-lg hover:shadow-xl group`}

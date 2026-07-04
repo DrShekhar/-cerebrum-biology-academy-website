@@ -264,7 +264,7 @@ export default function VideoLecturesPage() {
             <h2 className="text-2xl font-bold text-center mb-8">
               Why Join Live Classes After Watching?
             </h2>
-            <div className="grid sm:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
               {[
                 {
                   title: 'Live Doubt Resolution',

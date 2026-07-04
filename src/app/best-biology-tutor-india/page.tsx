@@ -231,7 +231,7 @@ export default function BestBiologyTutorIndiaPage() {
             every biology olympiad &mdash; same personalisation layer.
           </p>
 
-          <div className="mt-7 flex flex-col sm:flex-row gap-3">
+          <div className="mt-7 flex flex-col md:flex-row gap-3">
             <a
               href={waUrl}
               target="_blank"
@@ -385,7 +385,7 @@ export default function BestBiologyTutorIndiaPage() {
               60 minutes, live, with the founder. Bring one biology question your child has
               struggled with. You see the tutor-style depth before committing.
             </p>
-            <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+            <div className="mt-7 flex flex-col md:flex-row justify-center gap-3">
               <a
                 href={waUrl}
                 target="_blank"

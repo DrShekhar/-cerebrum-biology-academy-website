@@ -305,7 +305,7 @@ export default function Class9VsClass10Page() {
               Analysis to Help You Choose the Right Timeline
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link href="/class-9-foundation">
                 <Button
                   variant="secondary"
@@ -705,7 +705,7 @@ export default function Class9VsClass10Page() {
               research clearly favors early start. Choose what's best for your child's future.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link href="/class-9-foundation">
                 <Button
                   variant="secondary"

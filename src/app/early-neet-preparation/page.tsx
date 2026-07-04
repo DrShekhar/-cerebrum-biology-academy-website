@@ -261,7 +261,7 @@ export default function EarlyNeetPreparationPage() {
                 starters have 65% higher NEET success rate.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -501,7 +501,7 @@ export default function EarlyNeetPreparationPage() {
               career success begins with the right foundation at the right time.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Button
                 variant="secondary"
                 size="xl"

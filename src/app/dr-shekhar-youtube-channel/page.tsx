@@ -294,7 +294,7 @@ export default function DrShekhartYoutubeChannelPage() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href="https://www.youtube.com/@drshekharcsingh"
                 target="_blank"
@@ -525,7 +525,7 @@ export default function DrShekhartYoutubeChannelPage() {
                 With 500+ free lectures covering every NEET Biology topic, you have everything you
                 need to succeed. Subscribe to both channels and unlock your potential.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <a
                   href="https://www.youtube.com/@drshekharcsingh"
                   target="_blank"
@@ -582,7 +582,7 @@ export default function DrShekhartYoutubeChannelPage() {
         <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <p className="text-lg mb-6">Ready to ace NEET Biology?</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href="https://www.youtube.com/@drshekharcsingh"
                 target="_blank"

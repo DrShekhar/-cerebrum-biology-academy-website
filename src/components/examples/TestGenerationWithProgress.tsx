@@ -240,7 +240,7 @@ export default function TestGenerationWithProgress() {
                 Your test with {generatedTest.questions} questions is ready to download
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="flex flex-col md:flex-row gap-3 justify-center">
                 <Button onClick={handleDownload} size="lg" variant="primary">
                   <Download className="w-5 h-5 mr-2" />
                   Download Test

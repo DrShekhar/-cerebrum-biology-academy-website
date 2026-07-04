@@ -154,26 +154,26 @@ export default function LocationsPage() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+          <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center items-center">
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20locations.%20Please%20share%20available%20timings."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto"
+              className="w-full md:w-auto"
             >
               <Button
                 size="lg"
-                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-white text-blue-600 hover:bg-blue-50 shadow-lg hover:shadow-xl transition-all w-full sm:w-auto min-h-[44px]"
+                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-white text-blue-600 hover:bg-blue-50 shadow-lg hover:shadow-xl transition-all w-full md:w-auto min-h-[44px]"
               >
                 <GraduationCap className="mr-2 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
                 Book Free Demo Class
               </Button>
             </Link>
-            <Link href="/course-finder" className="w-full sm:w-auto">
+            <Link href="/course-finder" className="w-full md:w-auto">
               <Button
                 size="lg"
                 variant="outline"
-                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 transition-all w-full sm:w-auto min-h-[44px]"
+                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 transition-all w-full md:w-auto min-h-[44px]"
               >
                 <Target className="mr-2 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
                 Find Your Perfect Course
@@ -565,26 +565,26 @@ export default function LocationsPage() {
             We're expanding rapidly. Contact us to bring Cerebrum Biology Academy to your city or
             start with our online programs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center">
             <Link
               href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20locations.%20Please%20share%20available%20timings."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto"
+              className="w-full md:w-auto"
             >
               <Button
                 size="lg"
-                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto min-h-[44px]"
+                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full md:w-auto min-h-[44px]"
               >
                 <MapPin className="mr-2 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
                 Book Free Demo Class
               </Button>
             </Link>
-            <Link href="/course-finder" className="w-full sm:w-auto">
+            <Link href="/course-finder" className="w-full md:w-auto">
               <Button
                 size="lg"
                 variant="outline"
-                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto min-h-[44px]"
+                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full md:w-auto min-h-[44px]"
               >
                 <Users className="mr-2 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
                 Find My Perfect Course

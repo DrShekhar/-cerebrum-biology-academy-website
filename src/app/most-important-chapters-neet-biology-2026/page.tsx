@@ -579,7 +579,7 @@ export default function MostImportantChaptersNEETBiology() {
               current knowledge and create a customized study plan focused on YOUR priority
               chapters.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <a
                 href="https://cerebrumbiologyacademy.com/locations/rohini"
                 className="inline-block px-8 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition"

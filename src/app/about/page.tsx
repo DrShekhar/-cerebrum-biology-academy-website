@@ -340,7 +340,7 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
+                <div className="flex flex-col md:flex-row gap-4 sm:gap-6 pt-4">
                   <Link
                     href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20about.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
                     target="_blank"
@@ -349,7 +349,7 @@ export default function AboutPage() {
                     <Button
                       variant="primary"
                       size="xl"
-                      className="relative group overflow-hidden bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 min-h-11 sm:min-h-[56px] w-full sm:w-auto"
+                      className="relative group overflow-hidden bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 min-h-11 sm:min-h-[56px] w-full md:w-auto"
                     >
                       <span className="relative z-10 flex items-center gap-2 text-sm sm:text-base">
                         Book Free Consultation
@@ -361,7 +361,7 @@ export default function AboutPage() {
                     <Button
                       variant="outline"
                       size="xl"
-                      className="border-2 border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white min-h-11 sm:min-h-[56px] group w-full sm:w-auto transition-all duration-300"
+                      className="border-2 border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white min-h-11 sm:min-h-[56px] group w-full md:w-auto transition-all duration-300"
                     >
                       <span className="flex items-center gap-2 text-sm sm:text-base">
                         View Our Results
@@ -959,7 +959,7 @@ export default function AboutPage() {
                 India's most trusted NEET coaching institute.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <div className="flex flex-col md:flex-row gap-6 justify-center">
                 <Link href="/courses">
                   <Button
                     variant="outline"

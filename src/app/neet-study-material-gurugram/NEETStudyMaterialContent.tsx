@@ -252,7 +252,7 @@ export default function NEETStudyMaterialContent({ faqs }: { faqs: FAQ[] }) {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <Link href="/resources/free">
                 <Button
                   variant="secondary"
@@ -518,7 +518,7 @@ export default function NEETStudyMaterialContent({ faqs }: { faqs: FAQ[] }) {
           <p className="text-xl mb-8 opacity-90">
             Order your study material or download free sample chapters
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link href="/resources/free">
               <Button
                 variant="secondary"

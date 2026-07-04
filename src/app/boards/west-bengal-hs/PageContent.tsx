@@ -64,7 +64,7 @@ export default function PageContent() {
               coverage and NEET integration. Master unique WB topics with expert Kolkata-based
               guidance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button
                 href={whatsappLink}
                 target="_blank"
@@ -409,7 +409,7 @@ export default function PageContent() {
             Join 1600+ West Bengal students who achieved board excellence and competitive exam
             success with Cerebrum.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button
               href={whatsappLink}
               target="_blank"

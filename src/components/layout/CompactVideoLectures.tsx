@@ -125,7 +125,7 @@ export function CompactVideoLectures() {
             topics from basic concepts to advanced problem-solving techniques.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
             <Link href="/video-lectures">
               <Button variant="primary" size="xl" className="bg-green-600 hover:bg-green-700">
                 <BookOpen className="w-5 h-5 mr-2" />

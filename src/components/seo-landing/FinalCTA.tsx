@@ -40,7 +40,7 @@ export function FinalCTA({ cta, contactButtons }: FinalCTAProps) {
           <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">{cta.title}</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white/70">{cta.subtitle}</p>
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 md:flex-row sm:flex-wrap">
             <Link
               href={cta.primaryButton.link}
               className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-lg font-semibold text-gray-900 shadow-xl transition-all hover:bg-gray-100 hover:shadow-2xl"

@@ -138,7 +138,7 @@ export function AreaPageContent({
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -381,11 +381,11 @@ export function AreaPageContent({
             Live online classes for {area.name} — learn from home, no commute needed
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col md:flex-row justify-center gap-4">
             <Link href={`/demo-booking?area=${slug}`}>
               <Button
                 size="xl"
-                className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold w-full sm:w-auto"
+                className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold w-full md:w-auto"
               >
                 <Play className="w-5 h-5 mr-2" />
                 Book Free Demo
@@ -394,7 +394,7 @@ export function AreaPageContent({
             <a href={`tel:${CONTACT_INFO.phone.primary}`} onClick={handlePhoneCall}>
               <Button
                 size="xl"
-                className="bg-white text-red-600 hover:bg-gray-100 font-bold w-full sm:w-auto"
+                className="bg-white text-red-600 hover:bg-gray-100 font-bold w-full md:w-auto"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
@@ -403,7 +403,7 @@ export function AreaPageContent({
             <Button
               size="xl"
               onClick={handleWhatsApp}
-              className="bg-green-500 hover:bg-green-600 text-white font-bold w-full sm:w-auto"
+              className="bg-green-500 hover:bg-green-600 text-white font-bold w-full md:w-auto"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               WhatsApp Us

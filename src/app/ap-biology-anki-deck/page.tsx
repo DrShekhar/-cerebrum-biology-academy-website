@@ -302,7 +302,7 @@ export default function APBiologyAnkiDeckPage() {
               part of the retrieval-practice benefit. Send us a WhatsApp and we&apos;ll email the
               deck file (.apkg) along with setup instructions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col md:flex-row gap-3">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20Please%20send%20me%20the%20free%20AP%20Biology%20Anki%20starter%20deck%20(.apkg%20file)%20and%20setup%20instructions."
                 target="_blank"
@@ -368,7 +368,7 @@ export default function APBiologyAnkiDeckPage() {
               We help students build their own AP Biology Anki deck during 1:1 sessions — the act of
               building cards is itself the retrieval-practice that produces 5s.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="/ap-biology-tutor"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition"

@@ -330,7 +330,7 @@ export default function BestBiologyTutorGlobalPage() {
             Time-zone-calibrated live online across 6 continents.
           </p>
 
-          <div className="mt-7 flex flex-col sm:flex-row gap-3">
+          <div className="mt-7 flex flex-col md:flex-row gap-3">
             <a
               href={waUrl}
               target="_blank"
@@ -517,12 +517,12 @@ export default function BestBiologyTutorGlobalPage() {
           </div>
         </section>
 
-      {/* Lead form — capture path for non-WhatsApp visitors (any nationality) */}
-      <section className="bg-slate-50 py-14">
-        <div className="mx-auto max-w-xl px-4">
-          <GlobalEnquiryForm source="best-biology-tutor-global" />
-        </div>
-      </section>
+        {/* Lead form — capture path for non-WhatsApp visitors (any nationality) */}
+        <section className="bg-slate-50 py-14">
+          <div className="mx-auto max-w-xl px-4">
+            <GlobalEnquiryForm source="best-biology-tutor-global" />
+          </div>
+        </section>
 
         {/* CTA */}
         <section className="bg-slate-900 py-14 text-white">
@@ -536,7 +536,7 @@ export default function BestBiologyTutorGlobalPage() {
               struggled with. You see the tutor-style depth before committing. Available across all
               global time zones.
             </p>
-            <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+            <div className="mt-7 flex flex-col md:flex-row justify-center gap-3">
               <a
                 href={waUrl}
                 target="_blank"

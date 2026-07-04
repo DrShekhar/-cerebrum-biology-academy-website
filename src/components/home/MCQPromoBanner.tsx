@@ -130,7 +130,7 @@ export const MCQPromoBanner = memo(function MCQPromoBanner() {
 
         {/* CTA Buttons */}
         <div
-          className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mb-12 animate-fade-in-up"
+          className="flex flex-col md:flex-row flex-wrap justify-center gap-4 mb-12 animate-fade-in-up"
           style={{ animationDelay: '400ms' }}
         >
           <Link

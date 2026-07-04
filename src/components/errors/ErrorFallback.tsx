@@ -59,7 +59,7 @@ export function ErrorFallback({ error, reset, showDetails = false, context }: Er
             </div>
           )}
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+          <div className="flex flex-col md:flex-row gap-3 justify-center mb-6">
             <Button size="lg" onClick={reset}>
               <RefreshCw className="w-4 h-4 mr-2" />
               Try Again
@@ -69,7 +69,7 @@ export function ErrorFallback({ error, reset, showDetails = false, context }: Er
               Go Back
             </Button>
             <Link href="/">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full md:w-auto">
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
               </Button>

@@ -240,7 +240,7 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
           </ol>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex flex-col md:flex-row gap-3">
           <a
             href="/dashboard"
             className="flex-1 text-center bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"

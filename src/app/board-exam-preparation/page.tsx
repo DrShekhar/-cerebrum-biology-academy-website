@@ -320,7 +320,7 @@ export default function BoardExamPreparationPage() {
               achieve top results in both exams.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto">
             <div className="text-center p-6 bg-white rounded-xl shadow-md">
               <div className="flex items-center justify-center mx-auto mb-3 h-12 w-12 rounded-full bg-green-100">
                 <Star className="h-6 w-6 text-green-600" />
@@ -360,7 +360,7 @@ export default function BoardExamPreparationPage() {
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
             Join thousands of students who have achieved top marks with Cerebrum Biology Academy
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="min-h-[44px]">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Board%20Exam%20Biology%20preparation.%20Please%20share%20available%20timings."

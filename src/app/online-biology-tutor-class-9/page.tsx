@@ -168,7 +168,7 @@ export default function OnlineBiologyTutorClass9Page() {
               Class 9 that will serve as the foundation for NEET and higher studies.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%209%20Biology.%20Please%20share%20available%20timings."
                 target="_blank"
@@ -327,7 +327,7 @@ export default function OnlineBiologyTutorClass9Page() {
               Build strong foundations early. Book your free demo class!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Class%209%20Biology.%20Please%20share%20available%20timings."
                 target="_blank"

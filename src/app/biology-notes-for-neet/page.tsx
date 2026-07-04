@@ -1257,7 +1257,7 @@ export default function BiologyNotesForNEETPage() {
               Notes are a great start, but nothing beats learning directly from an AIIMS-qualified
               faculty in small batches of 15 students. Join Cerebrum Biology Academy.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
               <a
                 href={CONTACT_INFO.whatsapp.linkWithMessage(
                   'Hi! I was reading the Biology Notes on your website. I want to know more about your NEET coaching program.'

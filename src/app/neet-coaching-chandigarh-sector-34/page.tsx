@@ -317,7 +317,7 @@ export default function NEETCoachingSector34Page() {
               NEET chains at 1/4th the fees!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Button
                 variant="secondary"
                 size="xl"
@@ -733,7 +733,7 @@ export default function NEETCoachingSector34Page() {
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Join 320+ students from Sector 34 area. 98% success rate. Save Rs 1-2.5 Lakhs!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Button
                 variant="secondary"
                 size="xl"

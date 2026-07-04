@@ -984,7 +984,7 @@ export default function CeriAIShowcase() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fadeInUp">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12 animate-fadeInUp">
             <button
               onClick={() => setShowChat(true)}
               className="group relative px-8 py-4 bg-indigo-500 text-white font-bold text-lg rounded-2xl shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 hover:scale-105 flex items-center"
@@ -1230,7 +1230,7 @@ export default function CeriAIShowcase() {
             <p className="text-xl text-white/80 mb-8">
               Join thousands of students who are already learning smarter with Ceri AI
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
               <button
                 onClick={() => setShowChat(true)}
                 className="px-10 py-5 bg-white text-purple-600 font-bold text-lg rounded-2xl shadow-2xl hover:shadow-white/30 transition-all duration-300 hover:scale-105 flex items-center"

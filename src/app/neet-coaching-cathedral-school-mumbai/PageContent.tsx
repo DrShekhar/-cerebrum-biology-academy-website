@@ -65,7 +65,7 @@ export default function PageContent() {
             Specialized NEET Biology coaching for Mumbai's most prestigious ISC school. Bridge
             ICSE/ISC curriculum to NEET with expert guidance.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
             <Button variant="primary" className="px-8 py-3 text-lg">
               Book Free Demo Class
             </Button>
@@ -326,7 +326,7 @@ export default function PageContent() {
             Join Cathedral School students who've achieved 98%+ success rates with Cerebrum Biology
             Academy.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button variant="light" className="px-8 py-3 text-lg font-semibold">
               Start Your Free Demo <ArrowRight className="w-5 h-5 ml-2 inline" />
             </Button>

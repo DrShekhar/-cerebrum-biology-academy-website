@@ -323,7 +323,7 @@ export default function USABOSyllabusPage() {
             <p className="text-sm text-slate-400 mb-6 max-w-3xl">
               Live online in your US time zone (ET/CT/MT/PT); pricing in USD.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <Link
                 href="/usabo-coaching#free-assessment"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-6 py-3 rounded-lg font-semibold transition"
@@ -472,7 +472,7 @@ export default function USABOSyllabusPage() {
               A free diagnostic maps your strengths across all seven subject areas and shows where
               to spend your time first. We coach the full syllabus in US time zones.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 href="/usabo-coaching#free-assessment"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition"

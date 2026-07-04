@@ -323,7 +323,7 @@ export default function IBBiologyPage() {
                 students achieving top scores worldwide.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
                 <a
                   href={`https://wa.me/918826444334?text=${encodeURIComponent("Hi! I'm interested in IB Biology coaching. Please share program details.")}`}
                   target="_blank"
@@ -628,7 +628,7 @@ export default function IBBiologyPage() {
 
           {/* Regional currency callout — links to city pages with local pricing */}
           <div className="mt-12 max-w-4xl mx-auto rounded-2xl border border-green-200 bg-green-50 p-6 sm:p-8">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+            <div className="flex flex-col gap-4 md:flex-row sm:items-start sm:justify-between">
               <div>
                 <h3 className="mb-2 text-lg font-bold text-green-900">
                   See pricing in your local currency
@@ -736,7 +736,7 @@ export default function IBBiologyPage() {
               with a free consultation today.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <a
                 href={`https://wa.me/918826444334?text=${encodeURIComponent('Hi! I want to book a free consultation for IB Biology coaching.')}`}
                 target="_blank"

@@ -155,7 +155,7 @@ export default function IGCSEBiologyPage() {
                 Master IGCSE Biology with Cambridge curriculum expertise. International standards,
                 practical focus, and global university preparation with A*/A grade achievement.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <div className="flex flex-col md:flex-row gap-3 sm:gap-4">
                 <Link
                   href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20IGCSE%20Biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
                   target="_blank"

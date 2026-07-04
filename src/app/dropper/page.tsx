@@ -271,7 +271,7 @@ export default function DropperPage() {
                 </ul>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -370,8 +370,8 @@ export default function DropperPage() {
               <p className="mt-1 text-sm leading-snug text-slate-700">
                 NEET-UG 2026 was cancelled over a paper leak and the Re-NEET was held on 21 June
                 2026; results are expected in July. If your score isn&apos;t what you hoped, you
-                don&apos;t have to decide alone — talk to us about a biology-focused NEET 2027 dropper
-                plan built around the chapters that cost you marks. Free demo today.
+                don&apos;t have to decide alone — talk to us about a biology-focused NEET 2027
+                dropper plan built around the chapters that cost you marks. Free demo today.
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
                 <a
@@ -606,11 +606,11 @@ export default function DropperPage() {
             </h2>
             <p className="text-xl mb-8 opacity-90">
               Don&apos;t let one setback define your future. Turn your disappointment into
-              determination with a biology-focused NEET 2027 dropper plan. Your comeback story starts
-              now!
+              determination with a biology-focused NEET 2027 dropper plan. Your comeback story
+              starts now!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Button
                 variant="secondary"
                 size="xl"

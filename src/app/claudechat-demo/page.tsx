@@ -303,7 +303,7 @@ export default function ClaudeChatDemo() {
             See how AI can help you learn Biology faster and prepare for NEET
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+          <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
             <button
               onClick={() => setIsDemo(true)}
               className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2"

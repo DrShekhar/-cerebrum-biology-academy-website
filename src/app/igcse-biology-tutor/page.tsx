@@ -246,7 +246,7 @@ export default function IGCSEBiologyTutorPage() {
                 </div>
               </div>
 
-              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <div className="flex flex-col justify-center gap-4 md:flex-row">
                 <Link
                   href="/demo"
                   className="rounded-xl bg-white px-8 py-4 text-center font-semibold text-cyan-700 shadow-xl transition hover:bg-blue-50 hover:shadow-2xl"
@@ -553,7 +553,7 @@ export default function IGCSEBiologyTutorPage() {
                 Join hundreds of students achieving A*/A grades with our expert IGCSE Biology
                 tutoring
               </p>
-              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <div className="flex flex-col justify-center gap-4 md:flex-row">
                 <Link
                   href="/demo"
                   className="rounded-xl bg-white px-8 py-4 font-semibold text-cyan-700 shadow-xl transition hover:bg-blue-50"

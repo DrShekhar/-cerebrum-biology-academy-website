@@ -222,7 +222,7 @@ function ErrorFallback({
           </div>
         )}
 
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="flex flex-col md:flex-row gap-3 justify-center">
           {canRetry && (
             <Button
               variant="primary"

@@ -8,13 +8,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import {
-  ChevronRight,
-  Home,
-  MessageCircle,
-  Phone,
-  Trophy,
-} from 'lucide-react'
+import { ChevronRight, Home, MessageCircle, Phone, Trophy } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
@@ -229,7 +223,7 @@ export default function BestIBOCoachingIndiaPage() {
             bootcamp for top candidates.
           </p>
 
-          <div className="mt-7 flex flex-col sm:flex-row gap-3">
+          <div className="mt-7 flex flex-col md:flex-row gap-3">
             <a
               href={waUrl}
               target="_blank"
@@ -305,7 +299,7 @@ export default function BestIBOCoachingIndiaPage() {
               Free 60-minute trial with Dr. Shekhar. Bring one INBO / IBO past-paper question your
               child has worked on. We assess readiness and give a clear funnel-stage plan.
             </p>
-            <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+            <div className="mt-7 flex flex-col md:flex-row justify-center gap-3">
               <a
                 href={waUrl}
                 target="_blank"

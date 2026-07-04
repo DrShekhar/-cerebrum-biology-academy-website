@@ -185,7 +185,7 @@ export default function VasantViharLocationPage() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                  <div className="flex flex-col md:flex-row gap-3 pt-4">
                     <Link
                       href={nearestCenter.link}
                       className="flex items-center justify-center gap-2 flex-1 bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition-all"
@@ -250,7 +250,10 @@ export default function VasantViharLocationPage() {
                 { icon: Trophy, title: '98% Success', desc: 'Proven NEET & IB results' },
                 { icon: Award, title: 'AIIMS Faculty', desc: 'Learn from the best' },
               ].map((item, idx) => (
-                <div key={item.title} className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
+                <div
+                  key={item.title}
+                  className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
+                >
                   <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-blue-600" />
                   </div>

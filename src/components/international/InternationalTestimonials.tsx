@@ -335,7 +335,7 @@ export function InternationalTestimonials({
           Join thousands of students worldwide who achieved their medical dreams with our expert
           Biology coaching.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col md:flex-row gap-4 justify-center">
           <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Start Your Journey
           </button>

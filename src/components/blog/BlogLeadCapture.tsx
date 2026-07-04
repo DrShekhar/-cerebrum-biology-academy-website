@@ -74,7 +74,7 @@ export function BlogLeadCapture({ category }: BlogLeadCaptureProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
           {config.benefits.map((benefit, index) => (
             <div
               key={index}
@@ -86,7 +86,7 @@ export function BlogLeadCapture({ category }: BlogLeadCaptureProps) {
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex flex-col md:flex-row gap-3">
           <button
             type="button"
             onClick={() =>

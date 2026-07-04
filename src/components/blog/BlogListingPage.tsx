@@ -323,7 +323,7 @@ export function BlogListingPage({ posts, categories, stats, popularTags }: BlogL
       {/* Search and Sort — compact single row */}
       <section className="py-4 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col sm:flex-row gap-3 items-stretch">
+          <div className="flex flex-col md:flex-row gap-3 items-stretch">
             {/* Search Bar with Preview */}
             <div className="flex-1 relative" ref={searchRef}>
               <Search
@@ -855,7 +855,7 @@ export function BlogListingPage({ posts, categories, stats, popularTags }: BlogL
             Join thousands of successful students who achieved their medical dreams with expert
             guidance
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
             <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer">
               <Button
                 variant="secondary"

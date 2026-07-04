@@ -295,19 +295,19 @@ export default function InternationalProgramsPage() {
               NEET Biology coaching designed for international students and Indians abroad. Bridge
               global curricula with Indian medical entrance requirements across 47+ countries.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12">
+            <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12">
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20services.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center text-base sm:text-lg min-h-[44px] w-full sm:w-auto"
+                className="bg-white text-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center text-base sm:text-lg min-h-[44px] w-full md:w-auto"
               >
                 Start Global Journey
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
               </Link>
               <Link
                 href="#demo"
-                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-base sm:text-lg min-h-[44px] w-full sm:w-auto"
+                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-base sm:text-lg min-h-[44px] w-full md:w-auto"
               >
                 Schedule Consultation
               </Link>

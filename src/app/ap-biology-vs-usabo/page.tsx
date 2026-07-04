@@ -381,7 +381,7 @@ export default function APBiologyVsUSABOPage() {
               start, and lays out the exact 6-week plan to convert that head start into USABO
               standing.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               <ContextualWhatsAppLink className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-6 py-3 rounded-lg font-semibold transition">
                 <MessageCircle className="w-5 h-5" />
                 Talk to a USABO coach
@@ -693,7 +693,7 @@ export default function APBiologyVsUSABOPage() {
               We coach the full pathway in US time zones — Open Exam, Semifinal, and the IBO
               selection camp for Finalists.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <ContextualWhatsAppLink className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition">
                 <MessageCircle className="w-5 h-5" />
                 Book a free counselling call

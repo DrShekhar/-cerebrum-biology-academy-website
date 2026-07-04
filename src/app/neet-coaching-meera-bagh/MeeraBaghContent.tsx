@@ -424,7 +424,7 @@ export function NEETCoachingMeeraBaghContent() {
               </div>
 
               {/* Primary CTAs */}
-              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <div className="flex flex-col justify-center gap-4 md:flex-row">
                 <Link
                   href="/demo-booking?location=meera-bagh"
                   className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
@@ -875,7 +875,7 @@ export function NEETCoachingMeeraBaghContent() {
               </div>
             </div>
 
-            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+            <div className="flex flex-col justify-center gap-3 md:flex-row sm:gap-4">
               <Link
                 href="/demo-booking?location=meera-bagh"
                 className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
