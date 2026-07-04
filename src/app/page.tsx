@@ -340,13 +340,13 @@ export default function Home() {
       </section>
 
       {/* 8.6 International Programs — for NRI/A-Level/IB/IGCSE/AP students.
-          data-region="international" — gets indigo border emphasis for
+          data-region="international" — gets blue border emphasis for
           non-IN visitors via CountryClassInjector CSS. */}
       <section className="content-visibility-auto-sm" data-region="international">
-        <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-violet-50 py-16">
+        <div className="bg-gradient-to-br from-blue-50 to-purple-50 py-16">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-10">
-              <span className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <span className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 Serving Students in 14+ Countries
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
@@ -360,7 +360,7 @@ export default function Home() {
                 <GeoAwarePriceChip />
               </div>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 {
                   title: 'A-Level Biology',
@@ -390,12 +390,12 @@ export default function Home() {
                 <Link
                   key={program.href}
                   href={program.href}
-                  className="group bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:border-indigo-400 hover:shadow-lg transition-all"
+                  className="group bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all"
                 >
-                  <span className="inline-block bg-indigo-100 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-full mb-3">
+                  <span className="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full mb-3">
                     {program.badge}
                   </span>
-                  <h3 className="font-bold text-gray-900 text-lg mb-1 group-hover:text-indigo-600 transition-colors">
+                  <h3 className="font-bold text-gray-900 text-lg mb-1 group-hover:text-blue-600 transition-colors">
                     {program.title}
                   </h3>
                   <p className="text-sm text-gray-600">{program.desc}</p>
@@ -405,7 +405,7 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-3 mt-8">
               <Link
                 href="/online-biology-classes-international"
-                className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Explore International Programs
               </Link>
@@ -420,14 +420,14 @@ export default function Home() {
             </div>
 
             {/* IB Biology deep links — surface rich 2025-syllabus resources */}
-            <div className="mt-10 rounded-2xl border border-indigo-100 bg-white/70 p-6">
+            <div className="mt-10 rounded-2xl border border-blue-100 bg-white/70 p-6">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="text-base font-semibold text-gray-900">
                   Popular IB Biology resources (2025 syllabus)
                 </h3>
                 <Link
                   href="/ib-biology"
-                  className="text-sm font-semibold text-indigo-700 hover:text-indigo-900"
+                  className="text-sm font-semibold text-blue-700 hover:text-blue-900"
                 >
                   View IB hub →
                 </Link>
@@ -442,10 +442,10 @@ export default function Home() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="group flex items-center justify-between rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-700 hover:border-indigo-400 hover:text-indigo-700"
+                    className="group flex items-center justify-between rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-700 hover:border-blue-400 hover:text-blue-700"
                   >
                     <span>{link.label}</span>
-                    <span className="text-indigo-500 group-hover:translate-x-0.5 transition-transform">
+                    <span className="text-blue-500 group-hover:translate-x-0.5 transition-transform">
                       →
                     </span>
                   </Link>
@@ -463,7 +463,7 @@ export default function Home() {
           data-region="advanced-medical" — gets dark border emphasis for
           non-IN visitors via CountryClassInjector CSS. */}
       <section className="content-visibility-auto-sm" data-region="advanced-medical">
-        <div className="bg-gradient-to-br from-slate-50 via-white to-slate-100 py-16">
+        <div className="bg-gradient-to-br from-gray-50 to-white py-16">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-10">
               <span className="inline-flex items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">

@@ -152,8 +152,12 @@ export async function POST(request: NextRequest) {
       }
     }
 
+    // Anthropic rejects requests whose first message is role 'assistant' —
+    // drop any leading assistant turns (e.g. the widget's greeting) defensively.
+    const firstUserIdx = conversationHistory.findIndex((m) => m.role === 'user')
+    const usableHistory = firstUserIdx === -1 ? [] : conversationHistory.slice(firstUserIdx)
     const messages: Anthropic.MessageParam[] = [
-      ...conversationHistory.slice(-10).map((msg) => ({
+      ...usableHistory.slice(-10).map((msg) => ({
         role: msg.role as 'user' | 'assistant',
         content: msg.content,
       })),

@@ -60,9 +60,9 @@ interface HeroSectionProps {
 export function HeroSection({ className = '' }: HeroSectionProps) {
   return (
     <div
-      className={`relative min-h-screen bg-indigo-600 overflow-hidden -mt-16 lg:-mt-20 ${className}`}
+      className={`relative min-h-screen bg-blue-600 overflow-hidden -mt-16 lg:-mt-20 ${className}`}
       style={{
-        backgroundColor: '#4f46e5',
+        backgroundColor: '#2563eb',
         minHeight: '100vh',
         position: 'relative',
         overflow: 'hidden',
@@ -184,7 +184,11 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
           {/* PRIMARY CTAs - Book Demo + Call Now */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-4">
             <a
-              href="#book-demo"
+              href={`https://wa.me/918826444334?text=${encodeURIComponent(
+                'Hi! I want to book a FREE demo class for NEET Biology. Please share the schedule.'
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 text-sm xs:text-base md:text-lg border border-yellow-300 hover:scale-[1.02] active:scale-[0.98] group"
               style={{
                 backgroundColor: '#facc15',

@@ -114,7 +114,9 @@ export function ValuePropositionSection() {
                       >
                         <Icon className="w-8 h-8 text-white" />
                       </div>
-                      <div className="text-6xl font-bold text-gray-100">{step.step}</div>
+                      <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-100">
+                        {step.step}
+                      </div>
                     </div>
 
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">{step.title}</h3>

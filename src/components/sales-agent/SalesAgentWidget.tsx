@@ -207,10 +207,19 @@ What would you like to know?`,
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             message: content,
-            conversationHistory: messages.slice(-10).map((m) => ({
-              role: m.role,
-              content: m.content,
-            })),
+            // Anthropic requires the first message to be role 'user' — drop the
+            // widget's own greeting (and any leading assistant turns).
+            conversationHistory: (() => {
+              const firstUser = messages.findIndex((m) => m.role === 'user')
+              if (firstUser === -1) return []
+              return messages
+                .slice(firstUser)
+                .slice(-10)
+                .map((m) => ({
+                  role: m.role,
+                  content: m.content,
+                }))
+            })(),
             context: {
               leadStage: leadCaptureStep,
               leadData: leadData,
@@ -231,13 +240,16 @@ What would you like to know?`,
         }
 
         let accumulatedText = ''
+        let sseBuffer = ''
 
         while (true) {
           const { done, value } = await reader.read()
           if (done) break
 
-          const chunk = decoder.decode(value)
-          const lines = chunk.split('\n')
+          // Buffer across reads — an SSE frame can be split mid-line between chunks.
+          sseBuffer += decoder.decode(value, { stream: true })
+          const lines = sseBuffer.split('\n')
+          sseBuffer = lines.pop() || ''
 
           for (const line of lines) {
             if (line.startsWith('data: ')) {
@@ -360,11 +372,18 @@ For personalized guidance, our counselor team can help. In the meantime:
       let nextStep: typeof leadCaptureStep = leadCaptureStep
 
       switch (leadCaptureStep) {
-        case 'name':
-          setLeadData((prev) => ({ ...prev, name: input }))
-          responseContent = `Nice to meet you, **${input}**! 👋\n\nTo send you our course brochure and demo link, could you share your phone number?`
+        case 'name': {
+          const cleanName = input.trim()
+          if (cleanName.length < 2) {
+            responseContent = 'Could you share your full name please?'
+            nextStep = 'name'
+            break
+          }
+          setLeadData((prev) => ({ ...prev, name: cleanName }))
+          responseContent = `Nice to meet you, **${cleanName}**! 👋\n\nTo send you our course brochure and demo link, could you share your phone number?`
           nextStep = 'phone'
           break
+        }
 
         case 'phone':
           const phoneDigits = input.replace(/\D/g, '')
@@ -482,9 +501,10 @@ For personalized guidance, our counselor team can help. In the meantime:
           email: data.email || undefined,
           class: data.class,
           supportType: 'admission',
-          source: 'ARIA_Sales_Agent',
-          message: `Lead captured via ARIA chat. Score: ${data.score}\n\nConversation:\n${conversationSummary}`,
+          message: `Lead captured via ARIA chat. Class: ${data.class || 'not shared'}. Score: ${data.score}\n\nConversation:\n${conversationSummary}`,
           ...trackingData,
+          // After the spread so tracking's default source can't overwrite ARIA attribution.
+          source: 'ARIA_Sales_Agent',
         }),
       })
 

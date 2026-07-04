@@ -66,7 +66,7 @@ export function FacultySection() {
   }
 
   return (
-    <section className="py-12 xs:py-16 sm:py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+    <section className="py-12 xs:py-16 sm:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
       <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
         {/* Section Header */}
         <div
@@ -128,7 +128,7 @@ export function FacultySection() {
             >
               {/* Faculty Image */}
               <div className="w-20 xs:w-22 sm:w-24 h-20 xs:h-22 sm:h-24 mx-auto mb-4 xs:mb-5 sm:mb-6 rounded-full overflow-hidden border-4 border-blue-100 group-hover:scale-105 transition-transform shadow-lg">
-                <div className="w-full h-full bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-600 flex items-center justify-center">
+                <div className="w-full h-full bg-gradient-to-br from-blue-600 to-purple-700 flex items-center justify-center">
                   <span className="text-white font-bold text-xl xs:text-2xl sm:text-3xl">
                     {faculty.name
                       .replace(/^(Dr\.|Prof\.|Mr\.|Ms\.)\s*/i, '')
@@ -256,7 +256,7 @@ export function FacultySection() {
         {/* Call to Action */}
         <div
           ref={ctaAnim.ref}
-          className={`text-center bg-indigo-500 rounded-2xl xs:rounded-3xl p-6 xs:p-8 sm:p-12 text-white transition-all duration-600 ${
+          className={`text-center bg-blue-600 rounded-2xl xs:rounded-3xl p-6 xs:p-8 sm:p-12 text-white transition-all duration-600 ${
             ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
         >

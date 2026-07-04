@@ -195,7 +195,7 @@ export function BookingSection() {
 
             {/* Quick Stats */}
             <div
-              className="bg-indigo-500 rounded-2xl p-5 sm:p-8 text-white animate-fade-in-up"
+              className="bg-blue-600 rounded-2xl p-5 sm:p-8 text-white animate-fade-in-up"
               style={{ animationDelay: '600ms' }}
             >
               <h3 className="text-xl font-bold mb-4">{t('joinOurSuccess')}</h3>
