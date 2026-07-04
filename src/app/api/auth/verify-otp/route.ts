@@ -269,6 +269,19 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // P0 auth unification: issue a one-time bridge token so the client can
+    // establish a REAL NextAuth session via
+    // signIn('whatsapp-otp', { phone, verificationToken }).
+    // The legacy SessionManager cookies below are kept for back-compat.
+    const bridgeToken = crypto.randomBytes(32).toString('hex')
+    await prisma.users.update({
+      where: { id: user.id },
+      data: {
+        verificationToken: bridgeToken,
+        verificationTokenExpiry: new Date(Date.now() + 5 * 60 * 1000),
+      },
+    })
+
     // Create session and generate tokens
     const { accessToken, refreshToken } = await SessionManager.createSession(user)
 
@@ -310,6 +323,10 @@ export async function POST(request: NextRequest) {
         success: true,
         message: `${purpose === 'registration' ? 'Registration' : 'Login'} successful`,
         user: safeUser,
+        // Bridge credentials for establishing a real NextAuth session:
+        // signIn('whatsapp-otp', { phone, verificationToken })
+        phone: user.phone,
+        verificationToken: bridgeToken,
         expiresIn: 15 * 60, // 15 minutes in seconds
       },
       { status: 200 }

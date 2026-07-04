@@ -57,9 +57,17 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         }
 
         try {
+          // Phone formats in the DB are inconsistent (+91XXXXXXXXXX vs bare
+          // 10 digits), so match on the last 10 digits.
+          const phoneLast10 = (credentials.phone as string).replace(/\D/g, '').slice(-10)
+
+          if (!phoneLast10) {
+            throw new Error('Invalid phone number')
+          }
+
           const user = await prisma.users.findFirst({
             where: {
-              phone: credentials.phone as string,
+              phone: { endsWith: phoneLast10 },
               verificationToken: credentials.verificationToken as string,
               verificationTokenExpiry: {
                 gte: new Date(),
@@ -75,11 +83,14 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             throw new Error('Invalid or expired verification token')
           }
 
+          // One-time use: clear the bridge token; mark the phone as verified
+          // (the token is only ever issued after a successful OTP check).
           await prisma.users.update({
             where: { id: user.id },
             data: {
               verificationToken: null,
               verificationTokenExpiry: null,
+              ...(user.phoneVerified ? {} : { phoneVerified: new Date() }),
             },
           })
 

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
 import * as jwt from 'jsonwebtoken'
+import { auth } from '@/lib/auth'
+import { prisma } from '@/lib/prisma'
 
 // SECURITY: Lazy-load secrets to prevent build-time errors in CI
 // Secrets are only required at runtime when actually processing requests
@@ -59,6 +61,51 @@ export async function GET(request: NextRequest) {
   const startTime = Date.now()
 
   try {
+    // P0 auth unification: prefer the REAL NextAuth session (encrypted JWE).
+    // The legacy HS256 decode below is kept only for back-compat until the
+    // old forged/custom-JWT sessions expire.
+    try {
+      const session = await auth()
+      if (session?.user?.id) {
+        const dbUser = await prisma.users.findUnique({
+          where: { id: session.user.id },
+          select: {
+            id: true,
+            email: true,
+            name: true,
+            role: true,
+            phone: true,
+            coachingTier: true,
+            trialEndDate: true,
+          },
+        })
+
+        const trialEndDate = dbUser?.trialEndDate ?? null
+        const isTrialActive = trialEndDate ? new Date() < trialEndDate : false
+        const trialDaysRemaining = trialEndDate
+          ? Math.max(0, Math.ceil((trialEndDate.getTime() - Date.now()) / (1000 * 60 * 60 * 24)))
+          : 0
+
+        return NextResponse.json({
+          authenticated: true,
+          user: {
+            id: session.user.id,
+            email: dbUser?.email ?? session.user.email,
+            name: dbUser?.name ?? session.user.name,
+            role: (dbUser?.role ?? session.user.role ?? 'STUDENT').toUpperCase(),
+            phone: dbUser?.phone ?? session.user.profile?.phone,
+            coachingTier: dbUser?.coachingTier || 'FREE',
+            isTrialActive,
+            trialEndDate: trialEndDate?.toISOString(),
+            trialDaysRemaining,
+          },
+        })
+      }
+    } catch (nextAuthError) {
+      // Fall through to the legacy custom-JWT verification below
+      console.warn(`[Session API][${requestId}] NextAuth session check failed:`, nextAuthError)
+    }
+
     const cookieStore = await cookies()
     const allCookies = cookieStore.getAll()
 

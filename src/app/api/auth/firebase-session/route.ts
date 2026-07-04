@@ -1,64 +1,55 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import jwt from 'jsonwebtoken'
-import { randomUUID } from 'crypto'
+import { randomUUID, randomBytes } from 'crypto'
 import { AuthRateLimit, addSecurityHeaders } from '@/lib/auth/config'
-
-// SECURITY: Lazy-load secrets to prevent build-time errors
-// Secrets are only required at runtime when actually processing requests
-let _authSecret: string | null = null
-
-/**
- * Detect if we're in a build-time context (Next.js build, not actual runtime)
- */
-const isBuildTime = (): boolean => {
-  return process.env.NEXT_PHASE === 'phase-production-build'
-}
-
-const getAuthSecret = (): string => {
-  if (_authSecret) return _authSecret
-
-  const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET
-  if (!secret) {
-    // Allow builds to proceed without secrets
-    if (isBuildTime()) {
-      return 'build-time-placeholder-not-for-actual-use'
-    }
-
-    // SECURITY: In production runtime, fail hard - never use fallback secrets
-    if (process.env.NODE_ENV === 'production') {
-      throw new Error(
-        '[SECURITY CRITICAL] AUTH_SECRET/NEXTAUTH_SECRET environment variable is not configured. ' +
-          'This is required for production. Set it in your deployment environment.'
-      )
-    }
-
-    console.warn('[DEV] AUTH_SECRET not set - using development fallback')
-    _authSecret = 'dev-only-secret-not-for-production-use'
-    return _authSecret
-  }
-  _authSecret = secret
-  return _authSecret
-}
+import { requireFreshFirebaseAuth } from '@/lib/auth/firebase-verify'
 
 interface FirebaseSessionRequest {
   uid: string
   phoneNumber: string
+  idToken?: string
   firstName?: string
   lastName?: string
   role?: 'STUDENT' | 'PARENT'
   action: 'check' | 'signup' | 'login'
 }
 
+// Firebase Admin SDK credentials are required for server-side ID token
+// verification. When they are absent in local dev we fall back to trusting
+// the client-sent uid (clearly logged); production ALWAYS verifies.
+const isFirebaseAdminConfigured = (): boolean =>
+  Boolean(
+    process.env.FIREBASE_SERVICE_ACCOUNT_JSON ||
+      (process.env.FIREBASE_PROJECT_ID &&
+        process.env.FIREBASE_CLIENT_EMAIL &&
+        process.env.FIREBASE_PRIVATE_KEY)
+  )
+
+const last10Digits = (phone: string): string => phone.replace(/\D/g, '').slice(-10)
+
+// P0 auth unification: instead of minting a forged session cookie, we issue a
+// one-time bridge token. The client exchanges it for a REAL NextAuth session
+// via signIn('whatsapp-otp', { phone, verificationToken }).
+const BRIDGE_TOKEN_TTL_MS = 5 * 60 * 1000
+
+async function issueBridgeToken(userId: string): Promise<string> {
+  const token = randomBytes(32).toString('hex')
+  await prisma.users.update({
+    where: { id: userId },
+    data: {
+      verificationToken: token,
+      verificationTokenExpiry: new Date(Date.now() + BRIDGE_TOKEN_TTL_MS),
+    },
+  })
+  return token
+}
+
 export async function POST(request: NextRequest) {
   const requestId = `req_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
-  const startTime = Date.now()
 
   try {
     const body: FirebaseSessionRequest = await request.json()
-    const { uid, phoneNumber, firstName, lastName, role, action } = body
-
-    // Log request details
+    const { uid, phoneNumber, idToken, firstName, lastName, role, action } = body
 
     if (!uid || !phoneNumber) {
       console.error(`[Firebase Session][${requestId}] Missing required fields`)
@@ -100,6 +91,70 @@ export async function POST(request: NextRequest) {
     // (custom OTP system stores as 10 digits, Firebase stores as +91XXXXXXXXXX)
     const barePhone = normalizedPhone.replace(/^\+91/, '')
 
+    // SECURITY: For signup/login, verify the Firebase ID token server-side.
+    // The forged-cookie era trusted the client-sent uid with no verification.
+    let verifiedUid = uid
+    if (action === 'signup' || action === 'login') {
+      if (isFirebaseAdminConfigured() || process.env.NODE_ENV === 'production') {
+        if (!idToken) {
+          console.warn(`[Firebase Session][${requestId}] Missing Firebase ID token`)
+          return addSecurityHeaders(
+            NextResponse.json(
+              { error: 'Firebase ID token is required. Please sign in again.' },
+              { status: 401 }
+            )
+          )
+        }
+
+        const verification = await requireFreshFirebaseAuth(idToken, {
+          // Firebase ID tokens are valid for 1h; the client fetches a fresh
+          // (auto-refreshed) token right before calling this route.
+          maxAgeSeconds: 60 * 60,
+        })
+
+        if (!verification.valid) {
+          console.warn(
+            `[Firebase Session][${requestId}] ID token verification failed: ${verification.error}`
+          )
+          return addSecurityHeaders(
+            NextResponse.json(
+              { error: verification.error || 'Authentication verification failed' },
+              { status: 401 }
+            )
+          )
+        }
+
+        const phoneMatches =
+          !!verification.phoneNumber &&
+          last10Digits(verification.phoneNumber) === last10Digits(normalizedPhone)
+        const uidMatches = verification.uid === uid
+
+        if (!phoneMatches && !uidMatches) {
+          console.warn(
+            `[Firebase Session][${requestId}] Verified token does not match requested phone/uid`
+          )
+          return addSecurityHeaders(
+            NextResponse.json(
+              { error: 'Phone number does not match verified credentials' },
+              { status: 401 }
+            )
+          )
+        }
+
+        // Trust the server-verified identity over client-sent values
+        verifiedUid = verification.uid!
+      } else {
+        // DEV-ONLY fallback (NODE_ENV !== 'production' guaranteed by the branch
+        // above): firebase-admin credentials are missing, so we cannot verify
+        // the ID token. Accept the client uid as before, loudly.
+        console.warn(
+          `[Firebase Session][${requestId}] DEV-ONLY FALLBACK: firebase-admin credentials missing ` +
+            '(FIREBASE_SERVICE_ACCOUNT_JSON or FIREBASE_PROJECT_ID/CLIENT_EMAIL/PRIVATE_KEY). ' +
+            'Accepting client-sent uid WITHOUT verification. This path never runs in production.'
+        )
+      }
+    }
+
     // Action: Check if user exists
     if (action === 'check') {
       const existingUser = await prisma.users.findFirst({
@@ -130,7 +185,7 @@ export async function POST(request: NextRequest) {
       // Check if user already exists (check both phone formats for cross-system compatibility)
       const existingUser = await prisma.users.findFirst({
         where: {
-          OR: [{ phone: normalizedPhone }, { phone: barePhone }, { firebaseUid: uid }],
+          OR: [{ phone: normalizedPhone }, { phone: barePhone }, { firebaseUid: verifiedUid }],
         },
       })
 
@@ -139,14 +194,18 @@ export async function POST(request: NextRequest) {
         if (!existingUser.firebaseUid) {
           await prisma.users.update({
             where: { id: existingUser.id },
-            data: { firebaseUid: uid },
+            data: { firebaseUid: verifiedUid },
           })
         }
+
+        const verificationToken = await issueBridgeToken(existingUser.id)
 
         return addSecurityHeaders(
           NextResponse.json({
             success: true,
             userId: existingUser.id,
+            phone: existingUser.phone || normalizedPhone,
+            verificationToken,
             message: 'User already exists',
           })
         )
@@ -168,7 +227,7 @@ export async function POST(request: NextRequest) {
           email: placeholderEmail,
           name: [firstName, lastName].filter(Boolean).join(' '),
           phone: normalizedPhone,
-          firebaseUid: uid,
+          firebaseUid: verifiedUid,
           role: role === 'PARENT' ? 'PARENT' : 'STUDENT',
           coachingTier: 'FREE',
           trialStartDate: trialStartDate,
@@ -182,12 +241,16 @@ export async function POST(request: NextRequest) {
         },
       })
 
+      const verificationToken = await issueBridgeToken(newUser.id)
+
       // Reset rate limit on successful signup
       AuthRateLimit.resetRateLimit(rateLimitKey)
       return addSecurityHeaders(
         NextResponse.json({
           success: true,
           userId: newUser.id,
+          phone: newUser.phone || normalizedPhone,
+          verificationToken,
           coachingTier: newUser.coachingTier,
           trialStartDate: newUser.trialStartDate,
           trialEndDate: newUser.trialEndDate,
@@ -196,12 +259,12 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Action: Create session (login)
+    // Action: Issue bridge token for a REAL NextAuth sign-in (login)
     if (action === 'login') {
       // Find user by phone or Firebase UID (check both phone formats)
       let user = await prisma.users.findFirst({
         where: {
-          OR: [{ phone: normalizedPhone }, { phone: barePhone }, { firebaseUid: uid }],
+          OR: [{ phone: normalizedPhone }, { phone: barePhone }, { firebaseUid: verifiedUid }],
         },
       })
 
@@ -218,7 +281,7 @@ export async function POST(request: NextRequest) {
       if (!user.firebaseUid) {
         user = await prisma.users.update({
           where: { id: user.id },
-          data: { firebaseUid: uid },
+          data: { firebaseUid: verifiedUid },
         })
       }
 
@@ -238,43 +301,16 @@ export async function POST(request: NextRequest) {
           )
         : 0
 
-      // Create JWT token for NextAuth session
-      const authSecret = getAuthSecret()
-      const sessionToken = jwt.sign(
-        {
-          id: user.id,
-          email: user.email || `${normalizedPhone.replace('+', '')}@phone.local`,
-          name: user.name,
-          role: user.role.toUpperCase(),
-          phone: normalizedPhone,
-          coachingTier: user.coachingTier,
-          isTrialActive: isTrialActive,
-          trialEndDate: user.trialEndDate?.toISOString(),
-          sub: user.id,
-        },
-        authSecret,
-        { expiresIn: '7d' }
-      )
+      // P0 auth unification: NO forged cookie. Return a one-time bridge token;
+      // the client completes login with signIn('whatsapp-otp', ...) which
+      // creates a real NextAuth session.
+      const verificationToken = await issueBridgeToken(user.id)
 
-      // Set session cookie directly on the response object for maximum reliability
-      // This ensures the Set-Cookie header is definitely included in the response
-      const maxAge = 7 * 24 * 60 * 60 // 7 days in seconds
-
-      // SECURITY: Detect if request is over HTTPS to determine cookie security settings
-      // Check multiple headers that indicate HTTPS (works with reverse proxies like Vercel, Cloudflare)
-      const forwardedProto = request.headers.get('x-forwarded-proto')
-      const isHttps = forwardedProto === 'https' || request.url.startsWith('https://')
-      const isProduction = process.env.NODE_ENV === 'production'
-
-      // Only use __Secure- prefix and secure flag when actually on HTTPS
-      // This prevents cookie rejection on local HTTP development
-      const useSecureCookie = isHttps && isProduction
-      const cookieName = useSecureCookie ? '__Secure-authjs.session-token' : 'authjs.session-token'
-
-      // Create response first, then set cookie directly on it
       const response = NextResponse.json({
         success: true,
         userId: user.id,
+        phone: user.phone || normalizedPhone,
+        verificationToken,
         user: {
           id: user.id,
           name: user.name,
@@ -287,34 +323,9 @@ export async function POST(request: NextRequest) {
         },
       })
 
-      // ALWAYS set BOTH cookie variants for maximum compatibility
-      // This ensures session works regardless of HTTPS detection issues
-      // The middleware will check __Secure- first, then fall back to non-secure
-
-      // Primary secure cookie (for HTTPS production)
-      response.cookies.set('__Secure-authjs.session-token', sessionToken, {
-        httpOnly: true,
-        secure: true, // Always true for __Secure- prefix
-        sameSite: 'lax',
-        path: '/',
-        maxAge: maxAge,
-      })
-
-      // Fallback non-secure cookie (for HTTP/localhost and as backup)
-      response.cookies.set('authjs.session-token', sessionToken, {
-        httpOnly: true,
-        secure: false,
-        sameSite: 'lax',
-        path: '/',
-        maxAge: maxAge,
-      })
-
       // Reset rate limit on successful login
       AuthRateLimit.resetRateLimit(rateLimitKey)
 
-      const elapsed = Date.now() - startTime
-
-      // Log login success (minimal info for production)
       return addSecurityHeaders(response)
     }
 

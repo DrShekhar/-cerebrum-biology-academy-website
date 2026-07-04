@@ -3,6 +3,7 @@ import { addSecurityHeaders, getJWTSecret } from '@/lib/auth/config'
 import { addCSPHeaders } from '@/lib/security/csp'
 import { compressResponseMiddleware } from '@/lib/middleware/compression'
 import { jwtVerify } from 'jose'
+import { getToken } from 'next-auth/jwt'
 import { aeoCitationRedirects, cityHubBrokenLinkRedirects } from '@/config/seo-redirects.mjs'
 
 // Vercel caps next.config routes (redirects + rewrites + headers) at 2048.
@@ -214,11 +215,33 @@ interface FirebaseSessionPayload {
   exp?: number
 }
 
-// Try to get user from our custom JWT token
-// Uses jose library for Edge runtime compatibility
+// Try to get user from the session cookie.
+// P0 auth unification: REAL NextAuth (JWE) sessions are checked first; the
+// legacy HS256 custom JWT decode is kept only for back-compat until those
+// sessions expire.
 async function getUserFromToken(
   req: NextRequest
 ): Promise<{ userId: string; role: string } | null> {
+  // 1) Real NextAuth session (encrypted JWE, decoded via next-auth/jwt)
+  const nextAuthSecret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET
+  if (nextAuthSecret) {
+    for (const secureCookie of [true, false]) {
+      try {
+        const token = await getToken({ req, secret: nextAuthSecret, secureCookie })
+        const userId = (token?.id as string | undefined) || token?.sub
+        if (token && userId) {
+          return {
+            userId,
+            role: ((token.role as string) || 'STUDENT').toUpperCase(),
+          }
+        }
+      } catch {
+        // Fall through to the legacy verifier
+      }
+    }
+  }
+
+  // 2) Legacy custom HS256 JWT (forged authjs cookie / MSG91 auth-token)
   try {
     const sessionToken =
       req.cookies.get('__Secure-authjs.session-token')?.value ||

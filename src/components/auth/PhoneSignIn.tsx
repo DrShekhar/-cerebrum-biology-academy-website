@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import { signIn } from 'next-auth/react'
 import { Phone, Loader2, Check, Clock, AlertCircle, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import {
@@ -10,6 +11,7 @@ import {
   cleanupRecaptcha,
   formatPhoneNumber,
   resetPhoneAuthState,
+  getCurrentUser,
 } from '@/lib/firebase/phone-auth'
 
 interface PhoneSignInProps {
@@ -146,6 +148,18 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
     window.location.reload()
   }
 
+  // Fetch a fresh Firebase ID token for server-side verification.
+  // getIdToken() transparently refreshes the token when needed.
+  const getFreshIdToken = async (): Promise<string | null> => {
+    try {
+      const currentUser = getCurrentUser()
+      return currentUser ? await currentUser.getIdToken() : null
+    } catch (err) {
+      console.error('[PhoneSignIn] Failed to get Firebase ID token:', err)
+      return null
+    }
+  }
+
   const handleVerifyOTP = async () => {
     setError('')
     setLoading(true)
@@ -212,6 +226,7 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
 
     try {
       // Create user and session
+      const idToken = await getFreshIdToken()
       const response = await fetch('/api/auth/firebase-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -219,6 +234,7 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
         body: JSON.stringify({
           uid: firebaseUser.uid,
           phoneNumber: formatPhoneNumber(phone),
+          idToken,
           firstName,
           lastName,
           role,
@@ -288,6 +304,7 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
 
   const createSessionAndRedirect = async (user: { uid: string; phoneNumber: string | null }) => {
     try {
+      const idToken = await getFreshIdToken()
       const response = await fetch('/api/auth/firebase-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -295,6 +312,7 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
         body: JSON.stringify({
           uid: user.uid,
           phoneNumber: user.phoneNumber,
+          idToken,
           action: 'login',
         }),
       })
@@ -309,6 +327,22 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
 
       if (!response.ok) {
         throw new Error(data.error || 'Failed to create session')
+      }
+
+      if (!data.verificationToken) {
+        throw new Error('Failed to create session. Please try again.')
+      }
+
+      // Exchange the one-time bridge token for a REAL NextAuth session
+      const signInResult = await signIn('whatsapp-otp', {
+        phone: data.phone || user.phoneNumber,
+        verificationToken: data.verificationToken,
+        redirect: false,
+      })
+
+      if (!signInResult?.ok || signInResult.error) {
+        console.error('[PhoneSignIn] NextAuth signIn failed:', signInResult?.error)
+        throw new Error('Session creation failed. Please try again.')
       }
 
       // Show loading overlay during session verification
