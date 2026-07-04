@@ -280,30 +280,32 @@ export default function NEETResult2025Gurugram() {
           <h2 className="text-3xl font-bold text-center mb-12">Year-over-Year Comparison</h2>
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <table className="w-full">
-                <thead className="bg-green-600 text-white">
-                  <tr>
-                    <th className="px-6 py-3 text-left">Metric</th>
-                    <th className="px-6 py-3 text-center">2024</th>
-                    <th className="px-6 py-3 text-center">2025</th>
-                    <th className="px-6 py-3 text-center">Change</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {yearOverYear.map((item, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                      <td className="px-6 py-3 font-medium">{item.metric}</td>
-                      <td className="px-6 py-3 text-center">{item.y2024}</td>
-                      <td className="px-6 py-3 text-center font-semibold">{item.y2025}</td>
-                      <td
-                        className={`px-6 py-3 text-center font-bold ${item.change.startsWith('+') ? 'text-green-600' : 'text-red-500'}`}
-                      >
-                        {item.change}
-                      </td>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-green-600 text-white">
+                    <tr>
+                      <th className="px-6 py-3 text-left">Metric</th>
+                      <th className="px-6 py-3 text-center">2024</th>
+                      <th className="px-6 py-3 text-center">2025</th>
+                      <th className="px-6 py-3 text-center">Change</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {yearOverYear.map((item, index) => (
+                      <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                        <td className="px-6 py-3 font-medium">{item.metric}</td>
+                        <td className="px-6 py-3 text-center">{item.y2024}</td>
+                        <td className="px-6 py-3 text-center font-semibold">{item.y2025}</td>
+                        <td
+                          className={`px-6 py-3 text-center font-bold ${item.change.startsWith('+') ? 'text-green-600' : 'text-red-500'}`}
+                        >
+                          {item.change}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

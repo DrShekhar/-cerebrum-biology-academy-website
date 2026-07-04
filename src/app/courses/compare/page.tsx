@@ -375,89 +375,91 @@ export default function CourseComparePage() {
 
               {/* Comparison Table */}
               <div className="rounded-xl border border-gray-200 bg-white shadow-lg">
-                <table className="w-full">
-                  <tbody>
-                    {/* Basic Info */}
-                    <tr className="bg-gray-50">
-                      <td
-                        colSpan={selectedCourseData.length + 1}
-                        className="px-4 py-3 text-sm font-semibold text-gray-900"
-                      >
-                        Basic Information
-                      </td>
-                    </tr>
-                    <FeatureRow label="Duration" icon={Clock} getValue={(c) => c.duration} />
-                    <FeatureRow label="Mode" icon={Video} getValue={(c) => c.mode} />
-                    <FeatureRow label="Batch Size" icon={Users} getValue={(c) => c.batchSize} />
-                    <FeatureRow label="Validity" icon={Clock} getValue={(c) => c.validity} />
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody>
+                      {/* Basic Info */}
+                      <tr className="bg-gray-50">
+                        <td
+                          colSpan={selectedCourseData.length + 1}
+                          className="px-4 py-3 text-sm font-semibold text-gray-900"
+                        >
+                          Basic Information
+                        </td>
+                      </tr>
+                      <FeatureRow label="Duration" icon={Clock} getValue={(c) => c.duration} />
+                      <FeatureRow label="Mode" icon={Video} getValue={(c) => c.mode} />
+                      <FeatureRow label="Batch Size" icon={Users} getValue={(c) => c.batchSize} />
+                      <FeatureRow label="Validity" icon={Clock} getValue={(c) => c.validity} />
 
-                    {/* Features */}
-                    <tr className="bg-gray-50">
-                      <td
-                        colSpan={selectedCourseData.length + 1}
-                        className="px-4 py-3 text-sm font-semibold text-gray-900"
-                      >
-                        Features Included
-                      </td>
-                    </tr>
-                    <FeatureRow
-                      label="Live Classes"
-                      icon={Video}
-                      getValue={(c) => <BooleanCell value={c.liveClasses} />}
-                    />
-                    <FeatureRow
-                      label="Recorded Lectures"
-                      icon={Video}
-                      getValue={(c) => <BooleanCell value={c.recordedLectures} />}
-                    />
-                    <FeatureRow
-                      label="Study Material"
-                      icon={BookOpen}
-                      getValue={(c) => <BooleanCell value={c.studyMaterial} />}
-                    />
-                    <FeatureRow
-                      label="Test Series"
-                      icon={FileText}
-                      getValue={(c) => <BooleanCell value={c.testSeries} />}
-                    />
-                    <FeatureRow
-                      label="Doubt Clearing"
-                      icon={MessageCircle}
-                      getValue={(c) => <BooleanCell value={c.doubtClearing} />}
-                    />
-                    <FeatureRow
-                      label="Personal Mentorship"
-                      icon={GraduationCap}
-                      getValue={(c) => <BooleanCell value={c.mentorship} />}
-                    />
+                      {/* Features */}
+                      <tr className="bg-gray-50">
+                        <td
+                          colSpan={selectedCourseData.length + 1}
+                          className="px-4 py-3 text-sm font-semibold text-gray-900"
+                        >
+                          Features Included
+                        </td>
+                      </tr>
+                      <FeatureRow
+                        label="Live Classes"
+                        icon={Video}
+                        getValue={(c) => <BooleanCell value={c.liveClasses} />}
+                      />
+                      <FeatureRow
+                        label="Recorded Lectures"
+                        icon={Video}
+                        getValue={(c) => <BooleanCell value={c.recordedLectures} />}
+                      />
+                      <FeatureRow
+                        label="Study Material"
+                        icon={BookOpen}
+                        getValue={(c) => <BooleanCell value={c.studyMaterial} />}
+                      />
+                      <FeatureRow
+                        label="Test Series"
+                        icon={FileText}
+                        getValue={(c) => <BooleanCell value={c.testSeries} />}
+                      />
+                      <FeatureRow
+                        label="Doubt Clearing"
+                        icon={MessageCircle}
+                        getValue={(c) => <BooleanCell value={c.doubtClearing} />}
+                      />
+                      <FeatureRow
+                        label="Personal Mentorship"
+                        icon={GraduationCap}
+                        getValue={(c) => <BooleanCell value={c.mentorship} />}
+                      />
 
-                    {/* Quantity Features */}
-                    <tr className="bg-gray-50">
-                      <td
-                        colSpan={selectedCourseData.length + 1}
-                        className="px-4 py-3 text-sm font-semibold text-gray-900"
-                      >
-                        Content Volume
-                      </td>
-                    </tr>
-                    <FeatureRow
-                      label="Mock Tests"
-                      icon={Target}
-                      getValue={(c) => (
-                        <span className="font-semibold text-blue-600">{c.mockTests}</span>
-                      )}
-                    />
-                    <FeatureRow
-                      label="Practice Questions"
-                      icon={FileText}
-                      getValue={(c) => (
-                        <span className="font-semibold text-blue-600">
-                          {c.practiceQuestions.toLocaleString()}+
-                        </span>
-                      )}
-                    />
-                  </tbody>
-                </table>
+                      {/* Quantity Features */}
+                      <tr className="bg-gray-50">
+                        <td
+                          colSpan={selectedCourseData.length + 1}
+                          className="px-4 py-3 text-sm font-semibold text-gray-900"
+                        >
+                          Content Volume
+                        </td>
+                      </tr>
+                      <FeatureRow
+                        label="Mock Tests"
+                        icon={Target}
+                        getValue={(c) => (
+                          <span className="font-semibold text-blue-600">{c.mockTests}</span>
+                        )}
+                      />
+                      <FeatureRow
+                        label="Practice Questions"
+                        icon={FileText}
+                        getValue={(c) => (
+                          <span className="font-semibold text-blue-600">
+                            {c.practiceQuestions.toLocaleString()}+
+                          </span>
+                        )}
+                      />
+                    </tbody>
+                  </table>
+                </div>
 
                 {/* Highlights */}
                 <div className="border-t border-gray-200 bg-gray-50 px-4 py-3">
@@ -606,7 +608,7 @@ export default function CourseComparePage() {
             Let our Course Finder recommend the perfect course based on your specific needs and
             preferences.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <Link
               href="/courses/finder"
               className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-blue-600 transition-all hover:bg-gray-100"

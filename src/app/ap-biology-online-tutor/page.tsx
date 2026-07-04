@@ -400,7 +400,7 @@ export default function APBiologyPage() {
               Expert AP Biology tutoring aligned with Campbell Biology textbook. Master all 8 units,
               ace your labs, and score 5 on the AP exam with personalized online coaching.
             </p>
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
               <button
                 onClick={handleHeroCTA}
                 className="flex items-center gap-2 rounded-lg bg-green-500 px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:bg-green-600"

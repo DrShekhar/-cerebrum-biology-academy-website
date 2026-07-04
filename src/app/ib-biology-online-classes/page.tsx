@@ -465,7 +465,7 @@ export default function IBBiologyPage() {
                 Expert tutoring for International Baccalaureate Biology. Master all topics, ace your
                 Internal Assessment, and achieve Grade 7 with personalized coaching.
               </p>
-              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
                 <button
                   onClick={handleHeroCTA}
                   className="inline-flex items-center gap-2 rounded-lg bg-green-500 px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:bg-green-600 hover:scale-[1.02] active:scale-[0.98]"

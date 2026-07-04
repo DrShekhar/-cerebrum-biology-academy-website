@@ -466,28 +466,30 @@ export default function NEET2026CutoffPage() {
             </h2>
 
             <div className="mx-auto max-w-4xl overflow-hidden rounded-xl bg-white shadow-lg">
-              <table className="w-full">
-                <thead className="bg-green-600 text-white">
-                  <tr>
-                    <th className="px-6 py-4 text-left">State</th>
-                    <th className="px-6 py-4 text-center">General</th>
-                    <th className="px-6 py-4 text-center">OBC</th>
-                    <th className="px-6 py-4 text-center">SC/ST</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {stateCutoffs.map((state) => (
-                    <tr key={state.state} className="hover:bg-gray-50">
-                      <td className="px-6 py-4 font-medium text-gray-900">{state.state}</td>
-                      <td className="px-6 py-4 text-center font-semibold text-green-600">
-                        {state.generalCutoff}
-                      </td>
-                      <td className="px-6 py-4 text-center text-gray-700">{state.obcCutoff}</td>
-                      <td className="px-6 py-4 text-center text-gray-700">{state.scCutoff}</td>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-green-600 text-white">
+                    <tr>
+                      <th className="px-6 py-4 text-left">State</th>
+                      <th className="px-6 py-4 text-center">General</th>
+                      <th className="px-6 py-4 text-center">OBC</th>
+                      <th className="px-6 py-4 text-center">SC/ST</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    {stateCutoffs.map((state) => (
+                      <tr key={state.state} className="hover:bg-gray-50">
+                        <td className="px-6 py-4 font-medium text-gray-900">{state.state}</td>
+                        <td className="px-6 py-4 text-center font-semibold text-green-600">
+                          {state.generalCutoff}
+                        </td>
+                        <td className="px-6 py-4 text-center text-gray-700">{state.obcCutoff}</td>
+                        <td className="px-6 py-4 text-center text-gray-700">{state.scCutoff}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
               <div className="bg-gray-50 px-4 py-3 text-sm text-gray-600">
                 Note: These are expected marks for government medical college admission in state
                 quota. Actual cutoff depends on seat availability and competition.

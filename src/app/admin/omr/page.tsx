@@ -216,104 +216,109 @@ export default function OMRAdminPage() {
                 </Link>
               </div>
             ) : (
-              <table className="w-full">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      Paper
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      Subject
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      Questions
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      Answer Keys
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      Submissions
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      Status
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      Actions
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {filteredPapers.map((paper) => {
-                    const statusConfig = STATUS_CONFIG[paper.status]
-                    const StatusIcon = statusConfig?.icon || Clock
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        Paper
+                      </th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        Subject
+                      </th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        Questions
+                      </th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        Answer Keys
+                      </th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        Submissions
+                      </th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        Status
+                      </th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    {filteredPapers.map((paper) => {
+                      const statusConfig = STATUS_CONFIG[paper.status]
+                      const StatusIcon = statusConfig?.icon || Clock
 
-                    return (
-                      <tr key={paper.id} className="hover:bg-gray-50">
-                        <td className="px-4 py-3">
-                          <div>
-                            <p className="font-medium text-gray-900">{paper.paperCode}</p>
-                            <p className="text-sm text-gray-500">{paper.title}</p>
-                          </div>
-                        </td>
-                        <td className="px-4 py-3">
-                          <span className="text-sm">
-                            {SUBJECT_LABELS[paper.subjectType] || paper.subjectType}
-                          </span>
-                        </td>
-                        <td className="px-4 py-3">
-                          <span className="text-sm">{paper.totalQuestions}</span>
-                        </td>
-                        <td className="px-4 py-3">
-                          <div className="flex items-center gap-2">
+                      return (
+                        <tr key={paper.id} className="hover:bg-gray-50">
+                          <td className="px-4 py-3">
+                            <div>
+                              <p className="font-medium text-gray-900">{paper.paperCode}</p>
+                              <p className="text-sm text-gray-500">{paper.title}</p>
+                            </div>
+                          </td>
+                          <td className="px-4 py-3">
                             <span className="text-sm">
-                              {paper._count.answerKeys}/{paper.totalQuestions}
+                              {SUBJECT_LABELS[paper.subjectType] || paper.subjectType}
                             </span>
-                            {paper.hasVerifiedKey ? (
-                              <span className="px-2 py-0.5 text-xs bg-green-100 text-green-800 rounded-full">
-                                Verified
+                          </td>
+                          <td className="px-4 py-3">
+                            <span className="text-sm">{paper.totalQuestions}</span>
+                          </td>
+                          <td className="px-4 py-3">
+                            <div className="flex items-center gap-2">
+                              <span className="text-sm">
+                                {paper._count.answerKeys}/{paper.totalQuestions}
                               </span>
-                            ) : (
-                              <span className="px-2 py-0.5 text-xs bg-yellow-100 text-yellow-800 rounded-full">
-                                Unverified
-                              </span>
-                            )}
-                          </div>
-                        </td>
-                        <td className="px-4 py-3">
-                          <span className="text-sm">{paper._count.submissions}</span>
-                        </td>
-                        <td className="px-4 py-3">
-                          <span
-                            className={`inline-flex items-center gap-1 px-2 py-1 text-xs rounded-full ${statusConfig?.color || 'bg-gray-100'}`}
-                          >
-                            <StatusIcon className="w-3 h-3" />
-                            {statusConfig?.label || paper.status}
-                          </span>
-                        </td>
-                        <td className="px-4 py-3">
-                          <div className="flex items-center gap-2">
-                            <Link href={`/admin/omr/papers/${paper.id}`}>
-                              <button className="p-1 hover:bg-gray-100 rounded" title="View">
-                                <Eye className="w-4 h-4 text-gray-600" />
-                              </button>
-                            </Link>
-                            <Link href={`/admin/omr/papers/${paper.id}/answer-keys`}>
-                              <button className="p-1 hover:bg-gray-100 rounded" title="Answer Keys">
-                                <Key className="w-4 h-4 text-purple-600" />
-                              </button>
-                            </Link>
-                            <Link href={`/admin/omr/results?paperId=${paper.id}`}>
-                              <button className="p-1 hover:bg-gray-100 rounded" title="Results">
-                                <Users className="w-4 h-4 text-blue-600" />
-                              </button>
-                            </Link>
-                          </div>
-                        </td>
-                      </tr>
-                    )
-                  })}
-                </tbody>
-              </table>
+                              {paper.hasVerifiedKey ? (
+                                <span className="px-2 py-0.5 text-xs bg-green-100 text-green-800 rounded-full">
+                                  Verified
+                                </span>
+                              ) : (
+                                <span className="px-2 py-0.5 text-xs bg-yellow-100 text-yellow-800 rounded-full">
+                                  Unverified
+                                </span>
+                              )}
+                            </div>
+                          </td>
+                          <td className="px-4 py-3">
+                            <span className="text-sm">{paper._count.submissions}</span>
+                          </td>
+                          <td className="px-4 py-3">
+                            <span
+                              className={`inline-flex items-center gap-1 px-2 py-1 text-xs rounded-full ${statusConfig?.color || 'bg-gray-100'}`}
+                            >
+                              <StatusIcon className="w-3 h-3" />
+                              {statusConfig?.label || paper.status}
+                            </span>
+                          </td>
+                          <td className="px-4 py-3">
+                            <div className="flex items-center gap-2">
+                              <Link href={`/admin/omr/papers/${paper.id}`}>
+                                <button className="p-1 hover:bg-gray-100 rounded" title="View">
+                                  <Eye className="w-4 h-4 text-gray-600" />
+                                </button>
+                              </Link>
+                              <Link href={`/admin/omr/papers/${paper.id}/answer-keys`}>
+                                <button
+                                  className="p-1 hover:bg-gray-100 rounded"
+                                  title="Answer Keys"
+                                >
+                                  <Key className="w-4 h-4 text-purple-600" />
+                                </button>
+                              </Link>
+                              <Link href={`/admin/omr/results?paperId=${paper.id}`}>
+                                <button className="p-1 hover:bg-gray-100 rounded" title="Results">
+                                  <Users className="w-4 h-4 text-blue-600" />
+                                </button>
+                              </Link>
+                            </div>
+                          </td>
+                        </tr>
+                      )
+                    })}
+                  </tbody>
+                </table>
+              </div>
             )}
           </div>
         </div>

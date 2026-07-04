@@ -131,13 +131,21 @@ export default function SalesAgentWidget() {
 
   // ARIA should ONLY show on public pages (homepage, landing pages, pricing)
   // Should NOT show on authenticated pages (dashboard, tests, profile)
+  // Also hidden on demo-booking funnel pages: the floating pill sits over the
+  // form's selector chips on small screens and blocks the primary conversion.
+  const isDemoBookingPage =
+    pathname.startsWith('/book-free-demo') ||
+    pathname.startsWith('/book-demo') ||
+    pathname.startsWith('/demo-booking') ||
+    pathname.startsWith('/free-neet-demo-class')
   const shouldShowAria =
-    !isAuthenticated ||
-    (!pathname.startsWith('/dashboard') &&
-      !pathname.startsWith('/tests') &&
-      !pathname.startsWith('/ai-education-demo') &&
-      !pathname.startsWith('/profile') &&
-      !pathname.startsWith('/courses/enrolled'))
+    !isDemoBookingPage &&
+    (!isAuthenticated ||
+      (!pathname.startsWith('/dashboard') &&
+        !pathname.startsWith('/tests') &&
+        !pathname.startsWith('/ai-education-demo') &&
+        !pathname.startsWith('/profile') &&
+        !pathname.startsWith('/courses/enrolled')))
 
   // Scroll to bottom on new messages
   useEffect(() => {

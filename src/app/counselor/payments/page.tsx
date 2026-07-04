@@ -173,45 +173,49 @@ function EMICalculator({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
           <div>
             <h3 className="text-sm font-semibold text-gray-700 mb-3">Payment Schedule</h3>
             <div className="bg-gray-50 rounded-lg overflow-hidden">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500">EMI #</th>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500">
-                      Due Date
-                    </th>
-                    <th className="px-4 py-2 text-right text-xs font-medium text-gray-500">
-                      Amount
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-gray-200 bg-green-50">
-                    <td className="px-4 py-2 text-sm text-gray-700">Advance</td>
-                    <td className="px-4 py-2 text-sm text-gray-700">At Registration</td>
-                    <td className="px-4 py-2 text-sm text-gray-900 font-medium text-right">
-                      ₹{calculations.down.toLocaleString('en-IN')}
-                    </td>
-                  </tr>
-                  {calculations.schedule.map((emi) => (
-                    <tr key={emi.number} className="border-b border-gray-100">
-                      <td className="px-4 py-2 text-sm text-gray-700">EMI {emi.number}</td>
-                      <td className="px-4 py-2 text-sm text-gray-700">{emi.date}</td>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-gray-200">
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500">
+                        EMI #
+                      </th>
+                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500">
+                        Due Date
+                      </th>
+                      <th className="px-4 py-2 text-right text-xs font-medium text-gray-500">
+                        Amount
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-gray-200 bg-green-50">
+                      <td className="px-4 py-2 text-sm text-gray-700">Advance</td>
+                      <td className="px-4 py-2 text-sm text-gray-700">At Registration</td>
                       <td className="px-4 py-2 text-sm text-gray-900 font-medium text-right">
-                        ₹{emi.amount.toLocaleString('en-IN')}
+                        ₹{calculations.down.toLocaleString('en-IN')}
                       </td>
                     </tr>
-                  ))}
-                  <tr className="bg-indigo-50 font-bold">
-                    <td className="px-4 py-2 text-sm text-indigo-700" colSpan={2}>
-                      Total
-                    </td>
-                    <td className="px-4 py-2 text-sm text-indigo-700 text-right">
-                      ₹{calculations.total.toLocaleString('en-IN')}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                    {calculations.schedule.map((emi) => (
+                      <tr key={emi.number} className="border-b border-gray-100">
+                        <td className="px-4 py-2 text-sm text-gray-700">EMI {emi.number}</td>
+                        <td className="px-4 py-2 text-sm text-gray-700">{emi.date}</td>
+                        <td className="px-4 py-2 text-sm text-gray-900 font-medium text-right">
+                          ₹{emi.amount.toLocaleString('en-IN')}
+                        </td>
+                      </tr>
+                    ))}
+                    <tr className="bg-indigo-50 font-bold">
+                      <td className="px-4 py-2 text-sm text-indigo-700" colSpan={2}>
+                        Total
+                      </td>
+                      <td className="px-4 py-2 text-sm text-indigo-700 text-right">
+                        ₹{calculations.total.toLocaleString('en-IN')}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

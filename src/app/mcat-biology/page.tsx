@@ -533,26 +533,28 @@ export default function MCATBiologyHubPage() {
             </div>
 
             <div className="overflow-hidden rounded-2xl border border-gray-200">
-              <table className="w-full divide-y divide-gray-200 text-left text-sm">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-4 py-3 font-semibold text-gray-900">AAMC Concept</th>
-                    <th className="px-4 py-3 font-semibold text-gray-900">Topics</th>
-                    <th className="px-4 py-3 font-semibold text-gray-900">Campbell Chapters</th>
-                    <th className="px-4 py-3 font-semibold text-gray-900">Lehninger Chapters</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-100 bg-white">
-                  {aamcMapping.map((row) => (
-                    <tr key={row.concept}>
-                      <td className="px-4 py-3 font-semibold text-gray-900">{row.concept}</td>
-                      <td className="px-4 py-3 text-gray-700">{row.detail}</td>
-                      <td className="px-4 py-3 text-blue-700">{row.campbell}</td>
-                      <td className="px-4 py-3 text-purple-700">{row.lehninger}</td>
+              <div className="overflow-x-auto">
+                <table className="w-full divide-y divide-gray-200 text-left text-sm">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-4 py-3 font-semibold text-gray-900">AAMC Concept</th>
+                      <th className="px-4 py-3 font-semibold text-gray-900">Topics</th>
+                      <th className="px-4 py-3 font-semibold text-gray-900">Campbell Chapters</th>
+                      <th className="px-4 py-3 font-semibold text-gray-900">Lehninger Chapters</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100 bg-white">
+                    {aamcMapping.map((row) => (
+                      <tr key={row.concept}>
+                        <td className="px-4 py-3 font-semibold text-gray-900">{row.concept}</td>
+                        <td className="px-4 py-3 text-gray-700">{row.detail}</td>
+                        <td className="px-4 py-3 text-blue-700">{row.campbell}</td>
+                        <td className="px-4 py-3 text-purple-700">{row.lehninger}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
 
             <p className="mt-6 text-center text-sm text-gray-600">

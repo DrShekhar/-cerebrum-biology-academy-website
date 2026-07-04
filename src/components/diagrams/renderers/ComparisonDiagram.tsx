@@ -182,31 +182,33 @@ function ComparisonDiagramInner({
 
       {diagram.differences && diagram.differences.length > 0 && (
         <div className="mt-3 border rounded-lg overflow-hidden">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="bg-slate-100">
-                <th className="px-3 py-2 text-left font-semibold text-slate-700">
-                  {diagram.left.title}
-                </th>
-                <th className="px-3 py-2 text-left font-semibold text-slate-700">
-                  {diagram.right.title}
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {diagram.differences.map((diff, i) => (
-                <tr
-                  key={i}
-                  className={`border-t ${hoveredDiff === i ? 'bg-blue-50' : ''}`}
-                  onMouseEnter={() => setHoveredDiff(i)}
-                  onMouseLeave={() => setHoveredDiff(null)}
-                >
-                  <td className="px-3 py-2 text-slate-600">{diff.left}</td>
-                  <td className="px-3 py-2 text-slate-600">{diff.right}</td>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-slate-100">
+                  <th className="px-3 py-2 text-left font-semibold text-slate-700">
+                    {diagram.left.title}
+                  </th>
+                  <th className="px-3 py-2 text-left font-semibold text-slate-700">
+                    {diagram.right.title}
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {diagram.differences.map((diff, i) => (
+                  <tr
+                    key={i}
+                    className={`border-t ${hoveredDiff === i ? 'bg-blue-50' : ''}`}
+                    onMouseEnter={() => setHoveredDiff(i)}
+                    onMouseLeave={() => setHoveredDiff(null)}
+                  >
+                    <td className="px-3 py-2 text-slate-600">{diff.left}</td>
+                    <td className="px-3 py-2 text-slate-600">{diff.right}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 

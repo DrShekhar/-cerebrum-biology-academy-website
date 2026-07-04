@@ -282,28 +282,30 @@ export default function BiologyScholarshipTestPage() {
             programme. You know what your score is worth before you sit.
           </p>
           <div className="mt-7 overflow-hidden rounded-2xl ring-1 ring-slate-200">
-            <table className="w-full text-left text-sm">
-              <thead className="bg-slate-900 text-white">
-                <tr>
-                  <th className="px-5 py-3 font-semibold">Rank / percentile</th>
-                  <th className="px-5 py-3 font-semibold">Scholarship</th>
-                  <th className="hidden px-5 py-3 font-semibold sm:table-cell">What you get</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-200">
-                {CBST_SLABS.map((s) => (
-                  <tr key={s.band} className="bg-white">
-                    <td className="px-5 py-4 font-medium text-slate-900">{s.band}</td>
-                    <td className="px-5 py-4">
-                      <span className="rounded-full bg-blue-50 px-3 py-1 text-sm font-bold text-blue-800">
-                        {s.discount}% off
-                      </span>
-                    </td>
-                    <td className="hidden px-5 py-4 text-slate-600 sm:table-cell">{s.note}</td>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-slate-900 text-white">
+                  <tr>
+                    <th className="px-5 py-3 font-semibold">Rank / percentile</th>
+                    <th className="px-5 py-3 font-semibold">Scholarship</th>
+                    <th className="hidden px-5 py-3 font-semibold sm:table-cell">What you get</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="divide-y divide-slate-200">
+                  {CBST_SLABS.map((s) => (
+                    <tr key={s.band} className="bg-white">
+                      <td className="px-5 py-4 font-medium text-slate-900">{s.band}</td>
+                      <td className="px-5 py-4">
+                        <span className="rounded-full bg-blue-50 px-3 py-1 text-sm font-bold text-blue-800">
+                          {s.discount}% off
+                        </span>
+                      </td>
+                      <td className="hidden px-5 py-4 text-slate-600 sm:table-cell">{s.note}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
           <p className="mt-4 text-xs text-slate-500">
             Scholarships apply to Cerebrum online biology programmes. One scholarship per student

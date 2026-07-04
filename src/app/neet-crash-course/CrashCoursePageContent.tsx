@@ -231,7 +231,7 @@ export default function CrashCoursePageContent() {
             Limited seats, online batches, guaranteed results.
           </p>
 
-          <div className="mb-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mb-10 flex flex-col items-center justify-center gap-4 md:flex-row">
             <a
               href={waLink('Hi! I want to know about the Biology Crash Course 2026.')}
               className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition-colors hover:bg-green-700"
@@ -389,32 +389,36 @@ export default function CrashCoursePageContent() {
 
           {/* Desktop Table */}
           <div className="hidden overflow-hidden rounded-xl border border-slate-200 sm:block">
-            <table className="w-full">
-              <thead>
-                <tr className="bg-slate-50">
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-slate-600">
-                    Feature
-                  </th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-blue-600">
-                    Board Course
-                  </th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-purple-600">
-                    NEET Course
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonData.map((row, i) => (
-                  <tr key={row.feature} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
-                    <td className="px-6 py-3.5 text-sm font-medium text-slate-700">
-                      {row.feature}
-                    </td>
-                    <td className="px-6 py-3.5 text-center text-sm text-slate-600">{row.board}</td>
-                    <td className="px-6 py-3.5 text-center text-sm text-slate-600">{row.neet}</td>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-slate-50">
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-slate-600">
+                      Feature
+                    </th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold text-blue-600">
+                      Board Course
+                    </th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold text-purple-600">
+                      NEET Course
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {comparisonData.map((row, i) => (
+                    <tr key={row.feature} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
+                      <td className="px-6 py-3.5 text-sm font-medium text-slate-700">
+                        {row.feature}
+                      </td>
+                      <td className="px-6 py-3.5 text-center text-sm text-slate-600">
+                        {row.board}
+                      </td>
+                      <td className="px-6 py-3.5 text-center text-sm text-slate-600">{row.neet}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
           {/* Mobile Cards */}
@@ -524,7 +528,7 @@ export default function CrashCoursePageContent() {
           </p>
           <p className="mb-8 text-sm font-medium text-yellow-400">Next batch: March 10, 2026</p>
 
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <a
               href={waLink('Hi! I want to enroll in the Crash Course. Please share details.')}
               className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition-colors hover:bg-green-700"

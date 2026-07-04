@@ -647,39 +647,41 @@ export default function NEETScoreCalculatorPage() {
                 NEET Question Distribution
               </h3>
               <div className="overflow-hidden rounded-xl bg-white shadow-lg">
-                <table className="w-full">
-                  <thead className="bg-orange-600 text-white">
-                    <tr>
-                      <th className="px-6 py-4 text-left">Subject</th>
-                      <th className="px-6 py-4 text-center">Questions</th>
-                      <th className="px-6 py-4 text-center">Max Marks</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-200">
-                    <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 font-medium text-gray-900">Physics</td>
-                      <td className="px-6 py-4 text-center">45</td>
-                      <td className="px-6 py-4 text-center font-semibold text-blue-600">180</td>
-                    </tr>
-                    <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 font-medium text-gray-900">Chemistry</td>
-                      <td className="px-6 py-4 text-center">45</td>
-                      <td className="px-6 py-4 text-center font-semibold text-green-600">180</td>
-                    </tr>
-                    <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 font-medium text-gray-900">
-                        Biology (Botany + Zoology)
-                      </td>
-                      <td className="px-6 py-4 text-center">90</td>
-                      <td className="px-6 py-4 text-center font-semibold text-orange-600">360</td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="px-6 py-4 font-bold text-gray-900">Total</td>
-                      <td className="px-6 py-4 text-center font-bold">180</td>
-                      <td className="px-6 py-4 text-center font-bold text-orange-600">720</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-orange-600 text-white">
+                      <tr>
+                        <th className="px-6 py-4 text-left">Subject</th>
+                        <th className="px-6 py-4 text-center">Questions</th>
+                        <th className="px-6 py-4 text-center">Max Marks</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 font-medium text-gray-900">Physics</td>
+                        <td className="px-6 py-4 text-center">45</td>
+                        <td className="px-6 py-4 text-center font-semibold text-blue-600">180</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 font-medium text-gray-900">Chemistry</td>
+                        <td className="px-6 py-4 text-center">45</td>
+                        <td className="px-6 py-4 text-center font-semibold text-green-600">180</td>
+                      </tr>
+                      <tr className="hover:bg-gray-50">
+                        <td className="px-6 py-4 font-medium text-gray-900">
+                          Biology (Botany + Zoology)
+                        </td>
+                        <td className="px-6 py-4 text-center">90</td>
+                        <td className="px-6 py-4 text-center font-semibold text-orange-600">360</td>
+                      </tr>
+                      <tr className="bg-gray-50">
+                        <td className="px-6 py-4 font-bold text-gray-900">Total</td>
+                        <td className="px-6 py-4 text-center font-bold">180</td>
+                        <td className="px-6 py-4 text-center font-bold text-orange-600">720</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>

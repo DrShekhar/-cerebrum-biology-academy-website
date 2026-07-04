@@ -420,44 +420,46 @@ export default function NEETCoachingJalandhar() {
             </div>
 
             <div className="overflow-hidden rounded-xl border border-gray-200">
-              <table className="w-full">
-                <thead className="bg-purple-50">
-                  <tr>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                      Medical College
-                    </th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                      Distance
-                    </th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                      Seats
-                    </th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                      Quota
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {medicalColleges.map((college, index) => (
-                    <tr key={index} className="hover:bg-gray-50">
-                      <td className="px-6 py-4 font-medium text-gray-900">{college.name}</td>
-                      <td className="px-6 py-4 text-gray-600">{college.distance}</td>
-                      <td className="px-6 py-4 text-gray-600">{college.seats}</td>
-                      <td className="px-6 py-4">
-                        <span
-                          className={`rounded-full px-3 py-1 text-sm font-medium ${
-                            college.quota.includes('Punjab')
-                              ? 'bg-purple-100 text-purple-700'
-                              : 'bg-gray-100 text-gray-700'
-                          }`}
-                        >
-                          {college.quota}
-                        </span>
-                      </td>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-purple-50">
+                    <tr>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                        Medical College
+                      </th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                        Distance
+                      </th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                        Seats
+                      </th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                        Quota
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    {medicalColleges.map((college, index) => (
+                      <tr key={index} className="hover:bg-gray-50">
+                        <td className="px-6 py-4 font-medium text-gray-900">{college.name}</td>
+                        <td className="px-6 py-4 text-gray-600">{college.distance}</td>
+                        <td className="px-6 py-4 text-gray-600">{college.seats}</td>
+                        <td className="px-6 py-4">
+                          <span
+                            className={`rounded-full px-3 py-1 text-sm font-medium ${
+                              college.quota.includes('Punjab')
+                                ? 'bg-purple-100 text-purple-700'
+                                : 'bg-gray-100 text-gray-700'
+                            }`}
+                          >
+                            {college.quota}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </section>
@@ -584,7 +586,7 @@ export default function NEETCoachingJalandhar() {
                 Join 350+ successful students from Doaba region. AIIMS-level coaching at home.
               </p>
 
-              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
                 <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}>
                   <Button size="lg" className="gap-2 bg-white text-purple-600 hover:bg-purple-50">
                     <MessageCircle className="h-5 w-5" />

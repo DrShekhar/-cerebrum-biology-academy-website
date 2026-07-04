@@ -160,36 +160,38 @@ export default function CanICrackNEETWithoutCoaching() {
           <h2 className="text-3xl font-bold text-center mb-8">Self-Study Requirements</h2>
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <table className="w-full">
-                <thead className="bg-purple-600 text-white">
-                  <tr>
-                    <th className="px-4 py-3 text-left">Requirement</th>
-                    <th className="px-4 py-3 text-left">Difficulty Level</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {selfStudyRequirements.map((item, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                      <td className="px-4 py-3">{item.requirement}</td>
-                      <td className="px-4 py-3">
-                        <span
-                          className={`px-2 py-1 rounded text-xs font-semibold ${
-                            item.difficulty === 'Very High'
-                              ? 'bg-red-100 text-red-700'
-                              : item.difficulty === 'High'
-                                ? 'bg-orange-100 text-orange-700'
-                                : item.difficulty === 'Medium'
-                                  ? 'bg-yellow-100 text-yellow-700'
-                                  : 'bg-green-100 text-green-700'
-                          }`}
-                        >
-                          {item.difficulty}
-                        </span>
-                      </td>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-purple-600 text-white">
+                    <tr>
+                      <th className="px-4 py-3 text-left">Requirement</th>
+                      <th className="px-4 py-3 text-left">Difficulty Level</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {selfStudyRequirements.map((item, index) => (
+                      <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                        <td className="px-4 py-3">{item.requirement}</td>
+                        <td className="px-4 py-3">
+                          <span
+                            className={`px-2 py-1 rounded text-xs font-semibold ${
+                              item.difficulty === 'Very High'
+                                ? 'bg-red-100 text-red-700'
+                                : item.difficulty === 'High'
+                                  ? 'bg-orange-100 text-orange-700'
+                                  : item.difficulty === 'Medium'
+                                    ? 'bg-yellow-100 text-yellow-700'
+                                    : 'bg-green-100 text-green-700'
+                            }`}
+                          >
+                            {item.difficulty}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

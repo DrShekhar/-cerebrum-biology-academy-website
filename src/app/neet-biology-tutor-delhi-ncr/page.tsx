@@ -115,7 +115,7 @@ export default function NEETBiologyTutorDelhiNCRPage() {
           <p className="mb-8 text-lg text-slate-300">
             Most private tutors cannot teach NEET Biology. Here is what you actually need.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <Link
               href="/book-free-demo"
               className="rounded-lg bg-yellow-400 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg hover:bg-yellow-300"
@@ -297,7 +297,7 @@ export default function NEETBiologyTutorDelhiNCRPage() {
           <p className="mb-6 text-lg">
             WhatsApp <strong>&apos;TUTOR&apos;</strong> to {PHONE} to book your free class.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <a
               href={WA_LINK}
               target="_blank"
@@ -340,7 +340,7 @@ export default function NEETBiologyTutorDelhiNCRPage() {
         <div className="mx-auto max-w-3xl px-4">
           <h2 className="mb-4 text-3xl font-bold">Your Child Deserves an AIIMS-Level Tutor</h2>
           <p className="mb-8 text-lg text-slate-300">At a price that makes sense.</p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <a
               href={`tel:+91${PHONE.replace(/-/g, '')}`}
               className="rounded-lg bg-yellow-400 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg hover:bg-yellow-300"

@@ -383,24 +383,26 @@ export default function OnlineBiologyClassesPage() {
           </div>
 
           <div className="mx-auto max-w-4xl overflow-hidden rounded-xl shadow-lg">
-            <table className="w-full">
-              <thead className="bg-[#3d4d3d] text-white">
-                <tr>
-                  <th className="px-6 py-4 text-left">Feature</th>
-                  <th className="px-6 py-4 text-center">Our Online Classes</th>
-                  <th className="px-6 py-4 text-center">Local Coaching</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonTable.map((row, index) => (
-                  <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                    <td className="px-6 py-4 font-medium text-gray-900">{row.feature}</td>
-                    <td className="px-6 py-4 text-center text-[#4a5d4a]">{row.online}</td>
-                    <td className="px-6 py-4 text-center text-gray-500">{row.local}</td>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-[#3d4d3d] text-white">
+                  <tr>
+                    <th className="px-6 py-4 text-left">Feature</th>
+                    <th className="px-6 py-4 text-center">Our Online Classes</th>
+                    <th className="px-6 py-4 text-center">Local Coaching</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {comparisonTable.map((row, index) => (
+                    <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                      <td className="px-6 py-4 font-medium text-gray-900">{row.feature}</td>
+                      <td className="px-6 py-4 text-center text-[#4a5d4a]">{row.online}</td>
+                      <td className="px-6 py-4 text-center text-gray-500">{row.local}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>

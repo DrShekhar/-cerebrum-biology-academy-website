@@ -671,7 +671,7 @@ export default function MockTestsPage() {
             Join thousands of students who improved their NEET scores with our mock tests. Try a
             free test now!
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <Link
               href="/mock-tests"
               className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-purple-600 transition-all hover:bg-gray-100"

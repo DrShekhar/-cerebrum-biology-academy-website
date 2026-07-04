@@ -285,47 +285,49 @@ export default function TwoYearNEETCourseGhaziabad() {
           <h2 className="text-3xl font-bold text-center mb-12">2-Year vs 1-Year: Comparison</h2>
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <table className="w-full">
-                <thead className="bg-teal-700 text-white">
-                  <tr>
-                    <th className="px-6 py-4 text-left">Feature</th>
-                    <th className="px-6 py-4 text-center">2-Year Course</th>
-                    <th className="px-6 py-4 text-center">1-Year Course</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="px-6 py-4 font-medium">Success Rate</td>
-                    <td className="px-6 py-4 text-center font-bold text-teal-600">98%</td>
-                    <td className="px-6 py-4 text-center">94%</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 font-medium">Daily Study Hours</td>
-                    <td className="px-6 py-4 text-center font-bold text-teal-600">3-4 hours</td>
-                    <td className="px-6 py-4 text-center">6+ hours</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="px-6 py-4 font-medium">Revision Cycles</td>
-                    <td className="px-6 py-4 text-center font-bold text-teal-600">3 times</td>
-                    <td className="px-6 py-4 text-center">1-2 times</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 font-medium">School Balance</td>
-                    <td className="px-6 py-4 text-center font-bold text-teal-600">Comfortable</td>
-                    <td className="px-6 py-4 text-center">Challenging</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="px-6 py-4 font-medium">600+ Scorers</td>
-                    <td className="px-6 py-4 text-center font-bold text-teal-600">65%</td>
-                    <td className="px-6 py-4 text-center">50%</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 font-medium">Total Fee</td>
-                    <td className="px-6 py-4 text-center">₹1.2-1.4L (2 years)</td>
-                    <td className="px-6 py-4 text-center">₹65-85K (1 year)</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-teal-700 text-white">
+                    <tr>
+                      <th className="px-6 py-4 text-left">Feature</th>
+                      <th className="px-6 py-4 text-center">2-Year Course</th>
+                      <th className="px-6 py-4 text-center">1-Year Course</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-gray-50">
+                      <td className="px-6 py-4 font-medium">Success Rate</td>
+                      <td className="px-6 py-4 text-center font-bold text-teal-600">98%</td>
+                      <td className="px-6 py-4 text-center">94%</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 font-medium">Daily Study Hours</td>
+                      <td className="px-6 py-4 text-center font-bold text-teal-600">3-4 hours</td>
+                      <td className="px-6 py-4 text-center">6+ hours</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="px-6 py-4 font-medium">Revision Cycles</td>
+                      <td className="px-6 py-4 text-center font-bold text-teal-600">3 times</td>
+                      <td className="px-6 py-4 text-center">1-2 times</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 font-medium">School Balance</td>
+                      <td className="px-6 py-4 text-center font-bold text-teal-600">Comfortable</td>
+                      <td className="px-6 py-4 text-center">Challenging</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="px-6 py-4 font-medium">600+ Scorers</td>
+                      <td className="px-6 py-4 text-center font-bold text-teal-600">65%</td>
+                      <td className="px-6 py-4 text-center">50%</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 font-medium">Total Fee</td>
+                      <td className="px-6 py-4 text-center">₹1.2-1.4L (2 years)</td>
+                      <td className="px-6 py-4 text-center">₹65-85K (1 year)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

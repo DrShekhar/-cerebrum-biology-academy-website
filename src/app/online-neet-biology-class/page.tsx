@@ -104,7 +104,7 @@ export default function OnlineNEETBiologyClassPage() {
           <p className="mb-8 text-lg text-slate-300">
             Same online format. Radically different results.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <Link
               href="/book-free-demo"
               className="rounded-lg bg-yellow-400 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg hover:bg-yellow-300"
@@ -309,7 +309,7 @@ export default function OnlineNEETBiologyClassPage() {
             Sit in an actual class with real students. See the teacher interact, clear doubts, and
             run quizzes. Experience the difference in 90 minutes.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <Link
               href="/book-free-demo"
               className="rounded-lg bg-yellow-400 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg hover:bg-yellow-300"
@@ -356,7 +356,7 @@ export default function OnlineNEETBiologyClassPage() {
           <p className="mb-8 text-lg text-slate-300">
             15 students. 1 AIIMS teacher. Your child gets noticed.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <a
               href={`tel:+91${PHONE.replace(/-/g, '')}`}
               className="rounded-lg bg-yellow-400 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg hover:bg-yellow-300"

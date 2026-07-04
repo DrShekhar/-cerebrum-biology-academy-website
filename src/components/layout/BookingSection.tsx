@@ -98,7 +98,7 @@ export function BookingSection() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Booking Form */}
-          <div>
+          <div className="min-w-0">
             {isSubmitted ? (
               <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto text-center animate-fadeInUp">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
@@ -121,7 +121,7 @@ export function BookingSection() {
           </div>
 
           {/* Right Column - Features and Contact */}
-          <div className="space-y-8">
+          <div className="min-w-0 space-y-8">
             {/* Why Choose Us */}
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('whyChooseCerebrum')}</h3>
@@ -182,7 +182,7 @@ export function BookingSection() {
                           <p className="text-gray-500 text-xs">{method.available}</p>
                         </div>
                       </div>
-                      <div className="text-right flex-shrink-0 max-w-[120px] sm:max-w-none">
+                      <div className="text-right flex-shrink-0 max-w-[120px] md:max-w-none">
                         <p className="text-blue-600 font-medium text-xs sm:text-sm group-hover:underline">
                           {method.actionText}
                         </p>

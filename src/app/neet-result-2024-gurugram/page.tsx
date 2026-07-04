@@ -280,30 +280,32 @@ export default function NEETResult2024Gurugram() {
           <h2 className="text-3xl font-bold text-center mb-12">College Placements</h2>
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <table className="w-full">
-                <thead className="bg-amber-600 text-white">
-                  <tr>
-                    <th className="px-6 py-3 text-left">Medical College</th>
-                    <th className="px-6 py-3 text-center">Students Admitted</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {collegePlacements.map((item, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                      <td className="px-6 py-3">{item.college}</td>
-                      <td className="px-6 py-3 text-center font-bold text-amber-600">
-                        {item.count}
-                      </td>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-amber-600 text-white">
+                    <tr>
+                      <th className="px-6 py-3 text-left">Medical College</th>
+                      <th className="px-6 py-3 text-center">Students Admitted</th>
                     </tr>
-                  ))}
-                </tbody>
-                <tfoot className="bg-amber-100">
-                  <tr>
-                    <td className="px-6 py-3 font-bold">Total Admissions</td>
-                    <td className="px-6 py-3 text-center font-bold text-amber-700">124</td>
-                  </tr>
-                </tfoot>
-              </table>
+                  </thead>
+                  <tbody>
+                    {collegePlacements.map((item, index) => (
+                      <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                        <td className="px-6 py-3">{item.college}</td>
+                        <td className="px-6 py-3 text-center font-bold text-amber-600">
+                          {item.count}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                  <tfoot className="bg-amber-100">
+                    <tr>
+                      <td className="px-6 py-3 font-bold">Total Admissions</td>
+                      <td className="px-6 py-3 text-center font-bold text-amber-700">124</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
             </div>
           </div>
         </div>

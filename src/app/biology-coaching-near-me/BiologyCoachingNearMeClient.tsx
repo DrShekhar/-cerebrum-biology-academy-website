@@ -337,24 +337,26 @@ export function BiologyCoachingNearMeClient() {
           </div>
 
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <table className="w-full">
-              <thead className="bg-green-600 text-white">
-                <tr>
-                  <th className="p-4 text-left">Feature</th>
-                  <th className="p-4 text-center">Cerebrum</th>
-                  <th className="p-4 text-center">Others</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisons.map((item, index) => (
-                  <tr key={item.feature} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                    <td className="p-4 font-medium">{item.feature}</td>
-                    <td className="p-4 text-center text-green-600 font-bold">{item.cerebrum}</td>
-                    <td className="p-4 text-center text-gray-500">{item.others}</td>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-green-600 text-white">
+                  <tr>
+                    <th className="p-4 text-left">Feature</th>
+                    <th className="p-4 text-center">Cerebrum</th>
+                    <th className="p-4 text-center">Others</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {comparisons.map((item, index) => (
+                    <tr key={item.feature} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                      <td className="p-4 font-medium">{item.feature}</td>
+                      <td className="p-4 text-center text-green-600 font-bold">{item.cerebrum}</td>
+                      <td className="p-4 text-center text-gray-500">{item.others}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>

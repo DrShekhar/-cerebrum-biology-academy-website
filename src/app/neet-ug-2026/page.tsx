@@ -324,25 +324,27 @@ export default function NEETUG2026Page() {
               <h2 className="text-2xl font-bold text-gray-900">Application Fee</h2>
             </div>
             <div className="bg-white rounded-xl shadow-xl overflow-hidden">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-                    <th className="px-5 py-3 text-left text-sm font-semibold">Category</th>
-                    <th className="px-5 py-3 text-right text-sm font-semibold">Fee</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {applicationFees.map((item, i) => (
-                    <tr
-                      key={item.category}
-                      className={`border-b border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
-                    >
-                      <td className="px-5 py-3 text-gray-700">{item.category}</td>
-                      <td className="px-5 py-3 text-right font-bold text-gray-900">{item.fee}</td>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                      <th className="px-5 py-3 text-left text-sm font-semibold">Category</th>
+                      <th className="px-5 py-3 text-right text-sm font-semibold">Fee</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {applicationFees.map((item, i) => (
+                      <tr
+                        key={item.category}
+                        className={`border-b border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
+                      >
+                        <td className="px-5 py-3 text-gray-700">{item.category}</td>
+                        <td className="px-5 py-3 text-right font-bold text-gray-900">{item.fee}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
               <p className="px-5 py-3 text-xs text-gray-500 bg-gray-50">
                 Online payment only. Non-refundable. Modes: Credit/Debit Card, Net Banking, UPI.
               </p>

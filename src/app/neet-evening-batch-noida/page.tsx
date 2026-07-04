@@ -238,24 +238,26 @@ export default function NEETEveningBatchNoida() {
           <h2 className="text-3xl font-bold text-center mb-12">Evening Batch Weekly Schedule</h2>
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <table className="w-full">
-                <thead className="bg-indigo-600 text-white">
-                  <tr>
-                    <th className="px-6 py-4 text-left">Day</th>
-                    <th className="px-6 py-4 text-left">Time</th>
-                    <th className="px-6 py-4 text-left">Activity</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {schedule.map((row, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                      <td className="px-6 py-4 font-semibold">{row.day}</td>
-                      <td className="px-6 py-4">{row.time}</td>
-                      <td className="px-6 py-4">{row.activity}</td>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-indigo-600 text-white">
+                    <tr>
+                      <th className="px-6 py-4 text-left">Day</th>
+                      <th className="px-6 py-4 text-left">Time</th>
+                      <th className="px-6 py-4 text-left">Activity</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {schedule.map((row, index) => (
+                      <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                        <td className="px-6 py-4 font-semibold">{row.day}</td>
+                        <td className="px-6 py-4">{row.time}</td>
+                        <td className="px-6 py-4">{row.activity}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
             <p className="text-center text-gray-600 mt-4">
               Total: 15-18 hours per week | Complete syllabus in 10-12 months

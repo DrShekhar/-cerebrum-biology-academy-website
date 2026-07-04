@@ -115,7 +115,7 @@ export default function IBIGCSEBiologyTuitionGurugramPage() {
           <p className="mb-8 text-lg text-slate-300">
             Your child&apos;s school teaches to the class. We teach to YOUR child.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <Link
               href="/book-free-demo"
               className="rounded-lg bg-yellow-400 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg hover:bg-yellow-300"
@@ -334,7 +334,7 @@ export default function IBIGCSEBiologyTuitionGurugramPage() {
           <p className="mb-6 text-lg text-teal-100">
             10 minutes from DLF Phase 5 &bull; Free parking &bull; Near HUDA City Centre Metro
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <a
               href={`tel:+91${PHONE.replace(/-/g, '')}`}
               className="rounded-lg bg-yellow-400 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg hover:bg-yellow-300"
@@ -361,7 +361,7 @@ export default function IBIGCSEBiologyTuitionGurugramPage() {
             Discuss your child&apos;s specific syllabus, school, and goals. Get a personalized study
             plan.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <a
               href={`tel:+91${PHONE.replace(/-/g, '')}`}
               className="rounded-lg bg-yellow-400 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg hover:bg-yellow-300"

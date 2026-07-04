@@ -105,60 +105,62 @@ export default function CoursePerformancePage() {
           </div>
         ) : (
           <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                    Course
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                    Students
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                    Avg Progress
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                    Completion
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                    Avg Score
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                    Submissions
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200 bg-white">
-                {courses.map((course) => (
-                  <tr key={course.id} className="hover:bg-gray-50">
-                    <td className="whitespace-nowrap px-6 py-4">
-                      <div className="font-medium text-gray-900">{course.name}</div>
-                      <div className="text-sm text-gray-500">{course.type}</div>
-                    </td>
-                    <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-500">
-                      {course.activeStudents}/{course.enrolledStudents}
-                      <span className="ml-1 text-xs text-gray-400">active</span>
-                    </td>
-                    <td className="whitespace-nowrap px-6 py-4">
-                      <ProgressBar value={course.avgProgress} />
-                    </td>
-                    <td className="whitespace-nowrap px-6 py-4">
-                      <ProgressBar value={course.completionRate} color="green" />
-                    </td>
-                    <td className="whitespace-nowrap px-6 py-4">
-                      <span
-                        className={`text-sm font-medium ${course.avgTestScore >= 70 ? 'text-green-600' : course.avgTestScore >= 50 ? 'text-yellow-600' : 'text-red-600'}`}
-                      >
-                        {course.avgTestScore}%
-                      </span>
-                    </td>
-                    <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-500">
-                      {course.submissionRate}%
-                    </td>
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                      Course
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                      Students
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                      Avg Progress
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                      Completion
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                      Avg Score
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
+                      Submissions
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="divide-y divide-gray-200 bg-white">
+                  {courses.map((course) => (
+                    <tr key={course.id} className="hover:bg-gray-50">
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <div className="font-medium text-gray-900">{course.name}</div>
+                        <div className="text-sm text-gray-500">{course.type}</div>
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-500">
+                        {course.activeStudents}/{course.enrolledStudents}
+                        <span className="ml-1 text-xs text-gray-400">active</span>
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <ProgressBar value={course.avgProgress} />
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <ProgressBar value={course.completionRate} color="green" />
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4">
+                        <span
+                          className={`text-sm font-medium ${course.avgTestScore >= 70 ? 'text-green-600' : course.avgTestScore >= 50 ? 'text-yellow-600' : 'text-red-600'}`}
+                        >
+                          {course.avgTestScore}%
+                        </span>
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-500">
+                        {course.submissionRate}%
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         )}
       </div>

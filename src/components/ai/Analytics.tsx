@@ -912,52 +912,54 @@ const Analytics: React.FC = () => {
 
                 <div className="space-y-4">
                   <div className="overflow-hidden">
-                    <table className="w-full text-sm">
-                      <thead>
-                        <tr className="border-b">
-                          <th className="text-left py-2">Question</th>
-                          <th className="text-right py-2">Estimated</th>
-                          <th className="text-right py-2">Actual</th>
-                          <th className="text-right py-2">Variance</th>
-                        </tr>
-                      </thead>
-                      <tbody className="space-y-2">
-                        {analyticsData.timeEstimation.questionTimeBreakdown
-                          .slice(0, 10)
-                          .map((item, index) => {
-                            const variance = item.actualAverageTime - item.estimatedTime
-                            const variancePercentage = (variance / item.estimatedTime) * 100
-                            return (
-                              <tr key={index} className="border-b border-gray-100">
-                                <td className="py-2">
-                                  <div>
-                                    <div className="font-medium">{item.questionId}</div>
-                                    <div className="text-xs text-gray-500">{item.topic}</div>
-                                  </div>
-                                </td>
-                                <td className="text-right py-2">{item.estimatedTime}m</td>
-                                <td className="text-right py-2">
-                                  {item.actualAverageTime.toFixed(1)}m
-                                </td>
-                                <td className="text-right py-2">
-                                  <span
-                                    className={`font-medium ${
-                                      variance > 0
-                                        ? 'text-red-600'
-                                        : variance < 0
-                                          ? 'text-green-600'
-                                          : 'text-gray-600'
-                                    }`}
-                                  >
-                                    {variance > 0 ? '+' : ''}
-                                    {variancePercentage.toFixed(0)}%
-                                  </span>
-                                </td>
-                              </tr>
-                            )
-                          })}
-                      </tbody>
-                    </table>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm">
+                        <thead>
+                          <tr className="border-b">
+                            <th className="text-left py-2">Question</th>
+                            <th className="text-right py-2">Estimated</th>
+                            <th className="text-right py-2">Actual</th>
+                            <th className="text-right py-2">Variance</th>
+                          </tr>
+                        </thead>
+                        <tbody className="space-y-2">
+                          {analyticsData.timeEstimation.questionTimeBreakdown
+                            .slice(0, 10)
+                            .map((item, index) => {
+                              const variance = item.actualAverageTime - item.estimatedTime
+                              const variancePercentage = (variance / item.estimatedTime) * 100
+                              return (
+                                <tr key={index} className="border-b border-gray-100">
+                                  <td className="py-2">
+                                    <div>
+                                      <div className="font-medium">{item.questionId}</div>
+                                      <div className="text-xs text-gray-500">{item.topic}</div>
+                                    </div>
+                                  </td>
+                                  <td className="text-right py-2">{item.estimatedTime}m</td>
+                                  <td className="text-right py-2">
+                                    {item.actualAverageTime.toFixed(1)}m
+                                  </td>
+                                  <td className="text-right py-2">
+                                    <span
+                                      className={`font-medium ${
+                                        variance > 0
+                                          ? 'text-red-600'
+                                          : variance < 0
+                                            ? 'text-green-600'
+                                            : 'text-gray-600'
+                                      }`}
+                                    >
+                                      {variance > 0 ? '+' : ''}
+                                      {variancePercentage.toFixed(0)}%
+                                    </span>
+                                  </td>
+                                </tr>
+                              )
+                            })}
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
 
                   <div className="bg-yellow-50 p-4 rounded-lg">

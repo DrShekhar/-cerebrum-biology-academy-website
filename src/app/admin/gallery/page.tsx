@@ -450,92 +450,100 @@ export default function AdminGalleryPage() {
           ) : (
             /* List View */
             <div className="overflow-hidden rounded-xl bg-white shadow-sm">
-              <table className="w-full">
-                <thead className="border-b bg-gray-50">
-                  <tr>
-                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">Image</th>
-                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">Title</th>
-                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
-                      Category
-                    </th>
-                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">Type</th>
-                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
-                      Featured
-                    </th>
-                    <th className="px-4 py-3 text-right text-sm font-medium text-gray-500">
-                      Actions
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y">
-                  {items.map((item) => (
-                    <tr key={item.id} className="hover:bg-gray-50">
-                      <td className="px-4 py-3">
-                        <div className="relative h-12 w-12 overflow-hidden rounded-lg bg-gray-100">
-                          {item.thumbnailUrl ? (
-                            <Image
-                              src={item.thumbnailUrl}
-                              alt={item.title}
-                              fill
-                              sizes="48px"
-                              className="object-cover"
-                              unoptimized
-                            />
-                          ) : (
-                            <div className="flex h-full w-full items-center justify-center">
-                              <ImageIcon className="h-6 w-6 text-gray-400" />
-                            </div>
-                          )}
-                        </div>
-                      </td>
-                      <td className="px-4 py-3">
-                        <span className="font-medium text-gray-900">{item.title}</span>
-                      </td>
-                      <td className="px-4 py-3">
-                        <span className="rounded-full bg-gray-100 px-2 py-1 text-xs">
-                          {CATEGORIES.find((c) => c.value === item.category)?.label}
-                        </span>
-                      </td>
-                      <td className="px-4 py-3">
-                        <span
-                          className={`rounded-full px-2 py-1 text-xs ${
-                            item.type === 'VIDEO'
-                              ? 'bg-purple-100 text-purple-700'
-                              : 'bg-blue-100 text-blue-700'
-                          }`}
-                        >
-                          {item.type}
-                        </span>
-                      </td>
-                      <td className="px-4 py-3">
-                        <button onClick={() => toggleFeatured(item)}>
-                          {item.featured ? (
-                            <Star className="h-5 w-5 text-yellow-500" fill="currentColor" />
-                          ) : (
-                            <Star className="h-5 w-5 text-gray-300" />
-                          )}
-                        </button>
-                      </td>
-                      <td className="px-4 py-3">
-                        <div className="flex justify-end gap-2">
-                          <button
-                            onClick={() => setEditingItem(item)}
-                            className="rounded-lg p-1 hover:bg-gray-100"
-                          >
-                            <Edit className="h-4 w-4 text-gray-600" />
-                          </button>
-                          <button
-                            onClick={() => setDeletingItem(item)}
-                            className="rounded-lg p-1 hover:bg-red-50"
-                          >
-                            <Trash2 className="h-4 w-4 text-red-600" />
-                          </button>
-                        </div>
-                      </td>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="border-b bg-gray-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
+                        Image
+                      </th>
+                      <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
+                        Title
+                      </th>
+                      <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
+                        Category
+                      </th>
+                      <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
+                        Type
+                      </th>
+                      <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
+                        Featured
+                      </th>
+                      <th className="px-4 py-3 text-right text-sm font-medium text-gray-500">
+                        Actions
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="divide-y">
+                    {items.map((item) => (
+                      <tr key={item.id} className="hover:bg-gray-50">
+                        <td className="px-4 py-3">
+                          <div className="relative h-12 w-12 overflow-hidden rounded-lg bg-gray-100">
+                            {item.thumbnailUrl ? (
+                              <Image
+                                src={item.thumbnailUrl}
+                                alt={item.title}
+                                fill
+                                sizes="48px"
+                                className="object-cover"
+                                unoptimized
+                              />
+                            ) : (
+                              <div className="flex h-full w-full items-center justify-center">
+                                <ImageIcon className="h-6 w-6 text-gray-400" />
+                              </div>
+                            )}
+                          </div>
+                        </td>
+                        <td className="px-4 py-3">
+                          <span className="font-medium text-gray-900">{item.title}</span>
+                        </td>
+                        <td className="px-4 py-3">
+                          <span className="rounded-full bg-gray-100 px-2 py-1 text-xs">
+                            {CATEGORIES.find((c) => c.value === item.category)?.label}
+                          </span>
+                        </td>
+                        <td className="px-4 py-3">
+                          <span
+                            className={`rounded-full px-2 py-1 text-xs ${
+                              item.type === 'VIDEO'
+                                ? 'bg-purple-100 text-purple-700'
+                                : 'bg-blue-100 text-blue-700'
+                            }`}
+                          >
+                            {item.type}
+                          </span>
+                        </td>
+                        <td className="px-4 py-3">
+                          <button onClick={() => toggleFeatured(item)}>
+                            {item.featured ? (
+                              <Star className="h-5 w-5 text-yellow-500" fill="currentColor" />
+                            ) : (
+                              <Star className="h-5 w-5 text-gray-300" />
+                            )}
+                          </button>
+                        </td>
+                        <td className="px-4 py-3">
+                          <div className="flex justify-end gap-2">
+                            <button
+                              onClick={() => setEditingItem(item)}
+                              className="rounded-lg p-1 hover:bg-gray-100"
+                            >
+                              <Edit className="h-4 w-4 text-gray-600" />
+                            </button>
+                            <button
+                              onClick={() => setDeletingItem(item)}
+                              className="rounded-lg p-1 hover:bg-red-50"
+                            >
+                              <Trash2 className="h-4 w-4 text-red-600" />
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           )}
 

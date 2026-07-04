@@ -104,7 +104,7 @@ export default function CBSEBiologyBoardCoachingPage() {
             Our students average <strong className="text-white">94%</strong> in Biology boards.
             Taught by AIIMS faculty with 15+ years of board exam expertise.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <Link
               href="/book-free-demo"
               className="rounded-lg bg-yellow-400 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg hover:bg-yellow-300"
@@ -353,7 +353,7 @@ export default function CBSEBiologyBoardCoachingPage() {
         <div className="mx-auto max-w-3xl px-4">
           <h2 className="mb-4 text-3xl font-bold">Start Your 95+ Journey Today</h2>
           <p className="mb-8 text-lg text-slate-300">One call can change your board exam result.</p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <a
               href={`tel:+91${PHONE.replace(/-/g, '')}`}
               className="rounded-lg bg-yellow-400 px-8 py-4 text-lg font-bold text-slate-900 shadow-lg hover:bg-yellow-300"

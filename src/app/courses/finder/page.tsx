@@ -673,7 +673,7 @@ export default function CourseFinderPage() {
             Our academic counselors are here to guide you. Book a free consultation and get
             personalized course recommendations.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-green-600 transition-all hover:bg-gray-100"

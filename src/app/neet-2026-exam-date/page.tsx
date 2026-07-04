@@ -422,31 +422,33 @@ export default function NEET2026ExamDatePage() {
 
             <div className="mx-auto max-w-3xl">
               <div className="overflow-hidden rounded-xl bg-white shadow-lg">
-                <table className="w-full">
-                  <thead className="bg-blue-600 text-white">
-                    <tr>
-                      <th className="px-6 py-4 text-left">Subject</th>
-                      <th className="px-6 py-4 text-center">Questions</th>
-                      <th className="px-6 py-4 text-center">Marks</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-200">
-                    {examPattern.map((row) => (
-                      <tr key={row.subject} className="hover:bg-gray-50">
-                        <td className="px-6 py-4 font-medium text-gray-900">{row.subject}</td>
-                        <td className="px-6 py-4 text-center text-gray-600">{row.questions}</td>
-                        <td className="px-6 py-4 text-center font-semibold text-blue-600">
-                          {row.marks}
-                        </td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-blue-600 text-white">
+                      <tr>
+                        <th className="px-6 py-4 text-left">Subject</th>
+                        <th className="px-6 py-4 text-center">Questions</th>
+                        <th className="px-6 py-4 text-center">Marks</th>
                       </tr>
-                    ))}
-                    <tr className="bg-blue-50">
-                      <td className="px-6 py-4 font-bold text-gray-900">Total</td>
-                      <td className="px-6 py-4 text-center font-bold text-gray-900">200</td>
-                      <td className="px-6 py-4 text-center font-bold text-blue-600">720</td>
-                    </tr>
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      {examPattern.map((row) => (
+                        <tr key={row.subject} className="hover:bg-gray-50">
+                          <td className="px-6 py-4 font-medium text-gray-900">{row.subject}</td>
+                          <td className="px-6 py-4 text-center text-gray-600">{row.questions}</td>
+                          <td className="px-6 py-4 text-center font-semibold text-blue-600">
+                            {row.marks}
+                          </td>
+                        </tr>
+                      ))}
+                      <tr className="bg-blue-50">
+                        <td className="px-6 py-4 font-bold text-gray-900">Total</td>
+                        <td className="px-6 py-4 text-center font-bold text-gray-900">200</td>
+                        <td className="px-6 py-4 text-center font-bold text-blue-600">720</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
               <div className="mt-6 grid gap-4 md:grid-cols-3">

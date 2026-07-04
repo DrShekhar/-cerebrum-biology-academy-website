@@ -419,38 +419,40 @@ export default function NEETBiologySyllabusPage() {
             </h2>
 
             <div className="mx-auto max-w-4xl overflow-hidden rounded-xl bg-white shadow-lg">
-              <table className="w-full">
-                <thead className="bg-purple-600 text-white">
-                  <tr>
-                    <th className="px-4 py-4 text-left">Chapter</th>
-                    <th className="px-4 py-4 text-center">Subject</th>
-                    <th className="px-4 py-4 text-center">Expected Questions</th>
-                    <th className="px-4 py-4 text-center">Priority</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {topChapters.map((item) => (
-                    <tr key={item.chapter} className="hover:bg-gray-50">
-                      <td className="px-4 py-4 font-medium text-gray-900">{item.chapter}</td>
-                      <td className="px-4 py-4 text-center text-gray-600">{item.subject}</td>
-                      <td className="px-4 py-4 text-center font-semibold text-purple-600">
-                        {item.questions}
-                      </td>
-                      <td className="px-4 py-4 text-center">
-                        <span
-                          className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${
-                            item.priority === 'Very High'
-                              ? 'bg-red-100 text-red-800'
-                              : 'bg-yellow-100 text-yellow-800'
-                          }`}
-                        >
-                          {item.priority}
-                        </span>
-                      </td>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-purple-600 text-white">
+                    <tr>
+                      <th className="px-4 py-4 text-left">Chapter</th>
+                      <th className="px-4 py-4 text-center">Subject</th>
+                      <th className="px-4 py-4 text-center">Expected Questions</th>
+                      <th className="px-4 py-4 text-center">Priority</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    {topChapters.map((item) => (
+                      <tr key={item.chapter} className="hover:bg-gray-50">
+                        <td className="px-4 py-4 font-medium text-gray-900">{item.chapter}</td>
+                        <td className="px-4 py-4 text-center text-gray-600">{item.subject}</td>
+                        <td className="px-4 py-4 text-center font-semibold text-purple-600">
+                          {item.questions}
+                        </td>
+                        <td className="px-4 py-4 text-center">
+                          <span
+                            className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${
+                              item.priority === 'Very High'
+                                ? 'bg-red-100 text-red-800'
+                                : 'bg-yellow-100 text-yellow-800'
+                            }`}
+                          >
+                            {item.priority}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </section>

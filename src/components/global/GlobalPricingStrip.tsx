@@ -161,12 +161,12 @@ export function GlobalPricingStrip() {
       <p className="mb-5 text-sm text-gray-600">
         Starting prices per programme — exact tiers on each vertical page.
       </p>
-      <div className="grid gap-2 sm:grid-cols-2">
+      <div className="grid gap-2 md:grid-cols-2">
         {rows.map((row) => (
           <Link
             key={row.vertical}
             href={row.href}
-            className="group flex items-center justify-between rounded-xl bg-gray-50 px-4 py-3 transition-colors hover:bg-[#e8ede8]"
+            className="group flex flex-wrap items-center justify-between gap-x-3 gap-y-0.5 rounded-xl bg-gray-50 px-4 py-3 transition-colors hover:bg-[#e8ede8]"
           >
             <span className="text-sm font-medium text-gray-900 group-hover:text-[#3d4d3d]">
               {row.vertical}

@@ -2309,57 +2309,61 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
           <div className="space-y-4">
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
               <h4 className="font-semibold mb-3 text-sm">Homologous Organs vs Analogous Organs</h4>
-              <table className="w-full text-xs border-collapse">
-                <thead>
-                  <tr className="bg-blue-100">
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Feature
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Homologous Organs
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Analogous Organs
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Origin</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Same embryological origin</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Different embryological origin
-                    </td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Function</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Different functions</td>
-                    <td className="border border-gray-200 px-3 py-2">Similar/same functions</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Examples</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Human arm, whale flipper, bat wing
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Butterfly wing &amp; bird wing
-                    </td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Evolution</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Divergent evolution</td>
-                    <td className="border border-gray-200 px-3 py-2">Convergent evolution</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs border-collapse">
+                  <thead>
+                    <tr className="bg-blue-100">
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Feature
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Homologous Organs
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Analogous Organs
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Origin</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Same embryological origin
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Different embryological origin
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Function</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">Different functions</td>
+                      <td className="border border-gray-200 px-3 py-2">Similar/same functions</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Examples</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Human arm, whale flipper, bat wing
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Butterfly wing &amp; bird wing
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Evolution</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">Divergent evolution</td>
+                      <td className="border border-gray-200 px-3 py-2">Convergent evolution</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p className="text-xs text-gray-600 mt-2 italic">
                 PYQ Hint: Identify whether given organs are homologous or analogous
               </p>
@@ -2438,56 +2442,58 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             </div>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
               <h4 className="font-semibold mb-3 text-sm">Types of Natural Selection</h4>
-              <table className="w-full text-xs border-collapse">
-                <thead>
-                  <tr className="bg-blue-100">
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Type
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Description
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Effect on Population
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Stabilizing</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Average phenotype favored; extremes eliminated
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Reduces variation; maintains status quo
-                    </td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Directional</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      One extreme phenotype favored
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Shifts population in one direction
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Disruptive</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Both extremes favored; average eliminated
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Increases variation at extremes
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs border-collapse">
+                  <thead>
+                    <tr className="bg-blue-100">
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Type
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Description
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Effect on Population
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Stabilizing</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Average phenotype favored; extremes eliminated
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Reduces variation; maintains status quo
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Directional</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        One extreme phenotype favored
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Shifts population in one direction
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Disruptive</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Both extremes favored; average eliminated
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Increases variation at extremes
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
               <h4 className="font-semibold mb-3 text-sm">Industrial Melanism: Biston betularia</h4>
@@ -2554,74 +2560,76 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               <h4 className="font-semibold mb-3 text-sm">
                 5 Factors Affecting Hardy-Weinberg Equilibrium
               </h4>
-              <table className="w-full text-xs border-collapse">
-                <thead>
-                  <tr className="bg-blue-100">
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Factor
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Mechanism
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Effect
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Mutation</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Spontaneous DNA changes create new alleles
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Introduces variation</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Gene Flow</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Migration of individuals between populations
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Homogenizes populations</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Genetic Drift</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Random changes in small populations
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Reduces variation; can fix/lose alleles
-                    </td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Natural Selection</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Differential reproductive success
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Changes allele frequencies toward adaptive alleles
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Non-random Mating</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Inbreeding, assortative mating
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Changes genotype frequencies
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs border-collapse">
+                  <thead>
+                    <tr className="bg-blue-100">
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Factor
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Mechanism
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Effect
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Mutation</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Spontaneous DNA changes create new alleles
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">Introduces variation</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Gene Flow</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Migration of individuals between populations
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">Homogenizes populations</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Genetic Drift</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Random changes in small populations
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Reduces variation; can fix/lose alleles
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Natural Selection</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Differential reproductive success
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Changes allele frequencies toward adaptive alleles
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Non-random Mating</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Inbreeding, assortative mating
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Changes genotype frequencies
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
               <h4 className="font-semibold mb-3 text-sm">Genetic Drift</h4>
@@ -2652,92 +2660,94 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
           <div className="space-y-4">
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
               <h4 className="font-semibold mb-3 text-sm">Timeline of Human Evolution</h4>
-              <table className="w-full text-xs border-collapse">
-                <thead>
-                  <tr className="bg-blue-100">
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Species
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Time Period
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Brain (cc)
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Key Features
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Dryopithecus</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">25-20 MYA</td>
-                    <td className="border border-gray-200 px-3 py-2">~400</td>
-                    <td className="border border-gray-200 px-3 py-2">Ape-like; arboreal</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Ramapithecus</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">14-10 MYA</td>
-                    <td className="border border-gray-200 px-3 py-2">~400-500</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Transitional; possibly bipedal
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Australopithecus</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">4-1 MYA</td>
-                    <td className="border border-gray-200 px-3 py-2">400-500</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Bipedal; small brain; no tools
-                    </td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Homo habilis</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">2.4-1.4 MYA</td>
-                    <td className="border border-gray-200 px-3 py-2">600-700</td>
-                    <td className="border border-gray-200 px-3 py-2">Tool maker; omnivorous</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Homo erectus</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">1.8-0.4 MYA</td>
-                    <td className="border border-gray-200 px-3 py-2">900-1100</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Used fire; hand axes; migrated out of Africa
-                    </td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Homo neanderthalensis</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">250K-40K YA</td>
-                    <td className="border border-gray-200 px-3 py-2">1200-1600</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Stocky; burial of dead; ice age adapted
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Homo sapiens</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">200K-present</td>
-                    <td className="border border-gray-200 px-3 py-2">1300-1400</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Language; culture; art; agriculture
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs border-collapse">
+                  <thead>
+                    <tr className="bg-blue-100">
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Species
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Time Period
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Brain (cc)
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Key Features
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Dryopithecus</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">25-20 MYA</td>
+                      <td className="border border-gray-200 px-3 py-2">~400</td>
+                      <td className="border border-gray-200 px-3 py-2">Ape-like; arboreal</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Ramapithecus</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">14-10 MYA</td>
+                      <td className="border border-gray-200 px-3 py-2">~400-500</td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Transitional; possibly bipedal
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Australopithecus</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">4-1 MYA</td>
+                      <td className="border border-gray-200 px-3 py-2">400-500</td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Bipedal; small brain; no tools
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Homo habilis</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">2.4-1.4 MYA</td>
+                      <td className="border border-gray-200 px-3 py-2">600-700</td>
+                      <td className="border border-gray-200 px-3 py-2">Tool maker; omnivorous</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Homo erectus</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">1.8-0.4 MYA</td>
+                      <td className="border border-gray-200 px-3 py-2">900-1100</td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Used fire; hand axes; migrated out of Africa
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Homo neanderthalensis</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">250K-40K YA</td>
+                      <td className="border border-gray-200 px-3 py-2">1200-1600</td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Stocky; burial of dead; ice age adapted
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Homo sapiens</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">200K-present</td>
+                      <td className="border border-gray-200 px-3 py-2">1300-1400</td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Language; culture; art; agriculture
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p className="text-xs text-gray-600 mt-2 italic">
                 PYQ Hint: Arrange species chronologically; identify trends (bipedalism, brain size,
                 tool use)
@@ -2825,46 +2835,48 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             </div>
             <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
               <h4 className="font-semibold text-green-900 mb-3">Population Growth Models</h4>
-              <table className="w-full text-xs border-collapse">
-                <thead>
-                  <tr className="bg-green-100">
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Model
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Equation
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Curve
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Features
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Exponential</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">dN/dt = rN</td>
-                    <td className="border border-gray-200 px-3 py-2">J-shaped</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Unlimited resources; no constraints
-                    </td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Logistic</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">dN/dt = rN(K-N)/K</td>
-                    <td className="border border-gray-200 px-3 py-2">S-shaped</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Limited resources; slows at carrying capacity K
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs border-collapse">
+                  <thead>
+                    <tr className="bg-green-100">
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Model
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Equation
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Curve
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Features
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Exponential</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">dN/dt = rN</td>
+                      <td className="border border-gray-200 px-3 py-2">J-shaped</td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Unlimited resources; no constraints
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Logistic</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">dN/dt = rN(K-N)/K</td>
+                      <td className="border border-gray-200 px-3 py-2">S-shaped</td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Limited resources; slows at carrying capacity K
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <div className="bg-white p-3 rounded border border-green-200 text-sm mt-2">
                 <p>
                   <strong>r</strong> = intrinsic rate of natural increase &nbsp;|&nbsp;{' '}
@@ -2888,82 +2900,88 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               <h4 className="font-semibold text-green-900 mb-3">
                 Types of Population Interactions
               </h4>
-              <table className="w-full text-xs border-collapse">
-                <thead>
-                  <tr className="bg-green-100">
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Interaction
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">A</th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">B</th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Example
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Mutualism</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">+</td>
-                    <td className="border border-gray-200 px-3 py-2">+</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Lichen (algae + fungus), Mycorrhizae, Fig-wasp
-                    </td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Competition</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">-</td>
-                    <td className="border border-gray-200 px-3 py-2">-</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Gause&apos;s competitive exclusion (Paramecium)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Predation</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">+</td>
-                    <td className="border border-gray-200 px-3 py-2">-</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Lion-zebra; controls prey population
-                    </td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Parasitism</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">+</td>
-                    <td className="border border-gray-200 px-3 py-2">-</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Tapeworm; Cuckoo brood parasitism
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Commensalism</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">+</td>
-                    <td className="border border-gray-200 px-3 py-2">0</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Orchid on mango tree; Cattle egret
-                    </td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Amensalism</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">-</td>
-                    <td className="border border-gray-200 px-3 py-2">0</td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Penicillium inhibiting bacteria
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs border-collapse">
+                  <thead>
+                    <tr className="bg-green-100">
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Interaction
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        A
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        B
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Example
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Mutualism</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">+</td>
+                      <td className="border border-gray-200 px-3 py-2">+</td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Lichen (algae + fungus), Mycorrhizae, Fig-wasp
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Competition</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">-</td>
+                      <td className="border border-gray-200 px-3 py-2">-</td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Gause&apos;s competitive exclusion (Paramecium)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Predation</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">+</td>
+                      <td className="border border-gray-200 px-3 py-2">-</td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Lion-zebra; controls prey population
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Parasitism</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">+</td>
+                      <td className="border border-gray-200 px-3 py-2">-</td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Tapeworm; Cuckoo brood parasitism
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Commensalism</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">+</td>
+                      <td className="border border-gray-200 px-3 py-2">0</td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Orchid on mango tree; Cattle egret
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Amensalism</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">-</td>
+                      <td className="border border-gray-200 px-3 py-2">0</td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Penicillium inhibiting bacteria
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
               <h4 className="font-semibold text-green-900 mb-3">Key Details</h4>
@@ -3045,58 +3063,60 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
                 <strong>Lindeman&apos;s 10% Law:</strong> Only ~10% of energy passes to next trophic
                 level; 90% lost as heat
               </p>
-              <table className="w-full text-xs border-collapse">
-                <thead>
-                  <tr className="bg-green-100">
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Trophic Level
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Organisms
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Energy
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Example
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>T1</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Producers</td>
-                    <td className="border border-gray-200 px-3 py-2">100%</td>
-                    <td className="border border-gray-200 px-3 py-2">Grass, algae</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>T2</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Herbivores</td>
-                    <td className="border border-gray-200 px-3 py-2">10%</td>
-                    <td className="border border-gray-200 px-3 py-2">Rabbit, deer</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>T3</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Carnivores</td>
-                    <td className="border border-gray-200 px-3 py-2">1%</td>
-                    <td className="border border-gray-200 px-3 py-2">Frog, fox</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>T4</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Top carnivores</td>
-                    <td className="border border-gray-200 px-3 py-2">0.1%</td>
-                    <td className="border border-gray-200 px-3 py-2">Hawk, lion</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs border-collapse">
+                  <thead>
+                    <tr className="bg-green-100">
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Trophic Level
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Organisms
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Energy
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Example
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>T1</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">Producers</td>
+                      <td className="border border-gray-200 px-3 py-2">100%</td>
+                      <td className="border border-gray-200 px-3 py-2">Grass, algae</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>T2</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">Herbivores</td>
+                      <td className="border border-gray-200 px-3 py-2">10%</td>
+                      <td className="border border-gray-200 px-3 py-2">Rabbit, deer</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>T3</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">Carnivores</td>
+                      <td className="border border-gray-200 px-3 py-2">1%</td>
+                      <td className="border border-gray-200 px-3 py-2">Frog, fox</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>T4</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">Top carnivores</td>
+                      <td className="border border-gray-200 px-3 py-2">0.1%</td>
+                      <td className="border border-gray-200 px-3 py-2">Hawk, lion</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p className="text-xs text-gray-600 mt-2 italic">
                 PYQ Hint: Explain why food chains rarely exceed 4-5 levels
               </p>
@@ -3111,50 +3131,52 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
           <div className="space-y-4">
             <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
               <h4 className="font-semibold text-green-900 mb-3">Comparison of Three Pyramids</h4>
-              <table className="w-full text-xs border-collapse">
-                <thead>
-                  <tr className="bg-green-100">
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Feature
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Numbers
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Biomass
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Energy
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Terrestrial</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Upright</td>
-                    <td className="border border-gray-200 px-3 py-2">Upright</td>
-                    <td className="border border-gray-200 px-3 py-2">Upright</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Aquatic</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Often inverted</td>
-                    <td className="border border-gray-200 px-3 py-2">Inverted</td>
-                    <td className="border border-gray-200 px-3 py-2">Upright</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Can be inverted?</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Yes</td>
-                    <td className="border border-gray-200 px-3 py-2">Yes</td>
-                    <td className="border border-gray-200 px-3 py-2">NO (never)</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs border-collapse">
+                  <thead>
+                    <tr className="bg-green-100">
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Feature
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Numbers
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Biomass
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Energy
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Terrestrial</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">Upright</td>
+                      <td className="border border-gray-200 px-3 py-2">Upright</td>
+                      <td className="border border-gray-200 px-3 py-2">Upright</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Aquatic</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">Often inverted</td>
+                      <td className="border border-gray-200 px-3 py-2">Inverted</td>
+                      <td className="border border-gray-200 px-3 py-2">Upright</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Can be inverted?</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">Yes</td>
+                      <td className="border border-gray-200 px-3 py-2">Yes</td>
+                      <td className="border border-gray-200 px-3 py-2">NO (never)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
               <h4 className="font-semibold text-green-900 mb-3">Key Points</h4>
@@ -3186,57 +3208,61 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
           <div className="space-y-4">
             <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
               <h4 className="font-semibold text-green-900 mb-3">Carbon vs Phosphorus Cycles</h4>
-              <table className="w-full text-xs border-collapse">
-                <thead>
-                  <tr className="bg-green-100">
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Feature
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Carbon Cycle
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Phosphorus Cycle
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Type</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Gaseous cycle</td>
-                    <td className="border border-gray-200 px-3 py-2">Sedimentary cycle</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Atmosphere?</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Yes (CO₂)</td>
-                    <td className="border border-gray-200 px-3 py-2">No gaseous phase</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Reservoir</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Atmosphere &amp; oceans (71% dissolved)
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">Earth&apos;s crust (rocks)</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Key process</strong>
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Photosynthesis &amp; respiration
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Weathering &amp; sedimentation
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs border-collapse">
+                  <thead>
+                    <tr className="bg-green-100">
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Feature
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Carbon Cycle
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Phosphorus Cycle
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Type</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">Gaseous cycle</td>
+                      <td className="border border-gray-200 px-3 py-2">Sedimentary cycle</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Atmosphere?</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">Yes (CO₂)</td>
+                      <td className="border border-gray-200 px-3 py-2">No gaseous phase</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Reservoir</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Atmosphere &amp; oceans (71% dissolved)
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Earth&apos;s crust (rocks)
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Key process</strong>
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Photosynthesis &amp; respiration
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Weathering &amp; sedimentation
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
               <h4 className="font-semibold text-green-900 mb-3">Ecosystem Services</h4>
@@ -3305,45 +3331,47 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               <h4 className="font-semibold text-green-900 mb-3">
                 Conservation: In-situ vs Ex-situ
               </h4>
-              <table className="w-full text-xs border-collapse">
-                <thead>
-                  <tr className="bg-green-100">
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Approach
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Methods
-                    </th>
-                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
-                      Examples
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>In-situ</strong> (in natural habitat)
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      National parks, sanctuaries, biosphere reserves, sacred groves, hotspots
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Jim Corbett, Kaziranga, Western Ghats
-                    </td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-3 py-2">
-                      <strong>Ex-situ</strong> (outside habitat)
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      Zoos, botanical gardens, seed banks, cryopreservation
-                    </td>
-                    <td className="border border-gray-200 px-3 py-2">
-                      IARI seed bank, captive breeding programs
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs border-collapse">
+                  <thead>
+                    <tr className="bg-green-100">
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Approach
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Methods
+                      </th>
+                      <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+                        Examples
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>In-situ</strong> (in natural habitat)
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        National parks, sanctuaries, biosphere reserves, sacred groves, hotspots
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Jim Corbett, Kaziranga, Western Ghats
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-200 px-3 py-2">
+                        <strong>Ex-situ</strong> (outside habitat)
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        Zoos, botanical gardens, seed banks, cryopreservation
+                      </td>
+                      <td className="border border-gray-200 px-3 py-2">
+                        IARI seed bank, captive breeding programs
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
               <h4 className="font-semibold text-green-900 mb-3">India&apos;s Biodiversity</h4>
@@ -3383,42 +3411,46 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
                 <li>All cells arise from pre-existing cells (Virchow — Omnis cellula e cellula)</li>
               </ul>
             </div>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-sm">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Scientist</th>
-                  <th className="border border-gray-300 p-2 text-left">Contribution</th>
-                  <th className="border border-gray-300 p-2 text-left">Year</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2">Robert Hooke</td>
-                  <td className="border border-gray-300 p-2">Discovered & named "cells" (cork)</td>
-                  <td className="border border-gray-300 p-2">1665</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Leeuwenhoek</td>
-                  <td className="border border-gray-300 p-2">Observed living cells</td>
-                  <td className="border border-gray-300 p-2">1670s</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Schleiden</td>
-                  <td className="border border-gray-300 p-2">All plants made of cells</td>
-                  <td className="border border-gray-300 p-2">1838</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Schwann</td>
-                  <td className="border border-gray-300 p-2">All animals made of cells</td>
-                  <td className="border border-gray-300 p-2">1839</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Virchow</td>
-                  <td className="border border-gray-300 p-2">Cells from pre-existing cells</td>
-                  <td className="border border-gray-300 p-2">1858</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-sm">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Scientist</th>
+                    <th className="border border-gray-300 p-2 text-left">Contribution</th>
+                    <th className="border border-gray-300 p-2 text-left">Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Robert Hooke</td>
+                    <td className="border border-gray-300 p-2">
+                      Discovered & named "cells" (cork)
+                    </td>
+                    <td className="border border-gray-300 p-2">1665</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Leeuwenhoek</td>
+                    <td className="border border-gray-300 p-2">Observed living cells</td>
+                    <td className="border border-gray-300 p-2">1670s</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Schleiden</td>
+                    <td className="border border-gray-300 p-2">All plants made of cells</td>
+                    <td className="border border-gray-300 p-2">1838</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Schwann</td>
+                    <td className="border border-gray-300 p-2">All animals made of cells</td>
+                    <td className="border border-gray-300 p-2">1839</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Virchow</td>
+                    <td className="border border-gray-300 p-2">Cells from pre-existing cells</td>
+                    <td className="border border-gray-300 p-2">1858</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="font-semibold text-green-800">
               Exceptions: Viruses (non-cellular), Mycoplasma (smallest cell, no wall), Muscle fibers
               (multinucleate syncytium)
@@ -3437,52 +3469,56 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
         pyqFrequency: 'Very High' as const,
         content: (
           <div className="space-y-4">
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Feature</th>
-                  <th className="border border-gray-300 p-2 text-left">Prokaryotic</th>
-                  <th className="border border-gray-300 p-2 text-left">Eukaryotic</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Size</td>
-                  <td className="border border-gray-300 p-2">0.5–5 μm</td>
-                  <td className="border border-gray-300 p-2">10–100 μm</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Nucleus</td>
-                  <td className="border border-gray-300 p-2">Absent; nucleoid</td>
-                  <td className="border border-gray-300 p-2">Present; double membrane</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">DNA</td>
-                  <td className="border border-gray-300 p-2">Circular; no histones</td>
-                  <td className="border border-gray-300 p-2">Linear; histone-wrapped</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Membrane organelles</td>
-                  <td className="border border-gray-300 p-2">Absent</td>
-                  <td className="border border-gray-300 p-2">Present</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Ribosomes</td>
-                  <td className="border border-gray-300 p-2">70S (50S+30S)</td>
-                  <td className="border border-gray-300 p-2">80S (60S+40S)</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Cell wall</td>
-                  <td className="border border-gray-300 p-2">Peptidoglycan</td>
-                  <td className="border border-gray-300 p-2">Cellulose/Chitin/Absent</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Division</td>
-                  <td className="border border-gray-300 p-2">Binary fission</td>
-                  <td className="border border-gray-300 p-2">Mitosis/Meiosis</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Feature</th>
+                    <th className="border border-gray-300 p-2 text-left">Prokaryotic</th>
+                    <th className="border border-gray-300 p-2 text-left">Eukaryotic</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Size</td>
+                    <td className="border border-gray-300 p-2">0.5–5 μm</td>
+                    <td className="border border-gray-300 p-2">10–100 μm</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Nucleus</td>
+                    <td className="border border-gray-300 p-2">Absent; nucleoid</td>
+                    <td className="border border-gray-300 p-2">Present; double membrane</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">DNA</td>
+                    <td className="border border-gray-300 p-2">Circular; no histones</td>
+                    <td className="border border-gray-300 p-2">Linear; histone-wrapped</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">
+                      Membrane organelles
+                    </td>
+                    <td className="border border-gray-300 p-2">Absent</td>
+                    <td className="border border-gray-300 p-2">Present</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Ribosomes</td>
+                    <td className="border border-gray-300 p-2">70S (50S+30S)</td>
+                    <td className="border border-gray-300 p-2">80S (60S+40S)</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Cell wall</td>
+                    <td className="border border-gray-300 p-2">Peptidoglycan</td>
+                    <td className="border border-gray-300 p-2">Cellulose/Chitin/Absent</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Division</td>
+                    <td className="border border-gray-300 p-2">Binary fission</td>
+                    <td className="border border-gray-300 p-2">Mitosis/Meiosis</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="font-semibold text-green-800">
               Bacterial structure: Capsule → Cell wall (peptidoglycan) → Plasma membrane → Nucleoid
               (circular DNA) + Plasmids + 70S ribosomes + Pili/Fimbriae
@@ -3505,31 +3541,33 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               Nucleus: Double membrane with ~3000 pores. Chromatin (heterochromatin vs euchromatin).
               Nucleolus: rRNA synthesis.
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">ER Type</th>
-                  <th className="border border-gray-300 p-2 text-left">Structure</th>
-                  <th className="border border-gray-300 p-2 text-left">Function</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">RER</td>
-                  <td className="border border-gray-300 p-2">Ribosomes attached</td>
-                  <td className="border border-gray-300 p-2">
-                    Protein synthesis (secretory proteins)
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">SER</td>
-                  <td className="border border-gray-300 p-2">No ribosomes; tubular</td>
-                  <td className="border border-gray-300 p-2">
-                    Lipid synthesis, detoxification, Ca²⁺ storage
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">ER Type</th>
+                    <th className="border border-gray-300 p-2 text-left">Structure</th>
+                    <th className="border border-gray-300 p-2 text-left">Function</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">RER</td>
+                    <td className="border border-gray-300 p-2">Ribosomes attached</td>
+                    <td className="border border-gray-300 p-2">
+                      Protein synthesis (secretory proteins)
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">SER</td>
+                    <td className="border border-gray-300 p-2">No ribosomes; tubular</td>
+                    <td className="border border-gray-300 p-2">
+                      Lipid synthesis, detoxification, Ca²⁺ storage
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="font-semibold text-green-800">
               Golgi: cis→medial→trans cisternae. Modifies/packages proteins; forms lysosomes.
             </p>
@@ -3541,32 +3579,34 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               Mitochondria: Double membrane (cristae). Matrix: 70S ribosomes, circular mtDNA (~16.5
               kb). Semi-autonomous, maternally inherited.
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Plastid</th>
-                  <th className="border border-gray-300 p-2 text-left">Pigments</th>
-                  <th className="border border-gray-300 p-2 text-left">Function</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Chloroplasts</td>
-                  <td className="border border-gray-300 p-2">Chlorophyll a,b; carotenoids</td>
-                  <td className="border border-gray-300 p-2">Photosynthesis</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Chromoplasts</td>
-                  <td className="border border-gray-300 p-2">Carotenoids</td>
-                  <td className="border border-gray-300 p-2">Color in fruits/flowers</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Leucoplasts</td>
-                  <td className="border border-gray-300 p-2">None</td>
-                  <td className="border border-gray-300 p-2">Storage (starch, oils)</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Plastid</th>
+                    <th className="border border-gray-300 p-2 text-left">Pigments</th>
+                    <th className="border border-gray-300 p-2 text-left">Function</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Chloroplasts</td>
+                    <td className="border border-gray-300 p-2">Chlorophyll a,b; carotenoids</td>
+                    <td className="border border-gray-300 p-2">Photosynthesis</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Chromoplasts</td>
+                    <td className="border border-gray-300 p-2">Carotenoids</td>
+                    <td className="border border-gray-300 p-2">Color in fruits/flowers</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Leucoplasts</td>
+                    <td className="border border-gray-300 p-2">None</td>
+                    <td className="border border-gray-300 p-2">Storage (starch, oils)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="font-semibold text-green-800">
               Ribosomes: 70S (prokaryotes/mitochondria/plastids) vs 80S (eukaryotic cytoplasm).
               Centrioles: 9×3 microtubules; absent in higher plants.
@@ -3592,37 +3632,39 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             <div className="bg-gray-100 p-4 rounded border-l-4 border-green-600 text-sm font-semibold text-center">
               <p>NUCLEUS → RER (translation) → GOLGI (modification) → PLASMA MEMBRANE/LYSOSOMES</p>
             </div>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Component</th>
-                  <th className="border border-gray-300 p-2 text-left">Role</th>
-                  <th className="border border-gray-300 p-2 text-left">Connection</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Nuclear envelope</td>
-                  <td className="border border-gray-300 p-2">mRNA export</td>
-                  <td className="border border-gray-300 p-2">Continuous with RER</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">RER</td>
-                  <td className="border border-gray-300 p-2">Protein synthesis</td>
-                  <td className="border border-gray-300 p-2">Connected to nuclear envelope</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Golgi</td>
-                  <td className="border border-gray-300 p-2">Sorting & packaging</td>
-                  <td className="border border-gray-300 p-2">Receives from ER</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Lysosomes</td>
-                  <td className="border border-gray-300 p-2">Digestion</td>
-                  <td className="border border-gray-300 p-2">From Golgi (animals)</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Component</th>
+                    <th className="border border-gray-300 p-2 text-left">Role</th>
+                    <th className="border border-gray-300 p-2 text-left">Connection</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Nuclear envelope</td>
+                    <td className="border border-gray-300 p-2">mRNA export</td>
+                    <td className="border border-gray-300 p-2">Continuous with RER</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">RER</td>
+                    <td className="border border-gray-300 p-2">Protein synthesis</td>
+                    <td className="border border-gray-300 p-2">Connected to nuclear envelope</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Golgi</td>
+                    <td className="border border-gray-300 p-2">Sorting & packaging</td>
+                    <td className="border border-gray-300 p-2">Receives from ER</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Lysosomes</td>
+                    <td className="border border-gray-300 p-2">Digestion</td>
+                    <td className="border border-gray-300 p-2">From Golgi (animals)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3">
               <p className="font-semibold text-yellow-800 text-sm">
                 NEET TIP: "Protein from RER next moves to..." → Golgi. Know the complete pathway.
@@ -3647,48 +3689,50 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               </li>
               <li>Cholesterol modulates fluidity</li>
             </ul>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Transport</th>
-                  <th className="border border-gray-300 p-2 text-left">Energy</th>
-                  <th className="border border-gray-300 p-2 text-left">Direction</th>
-                  <th className="border border-gray-300 p-2 text-left">Mechanism</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Diffusion</td>
-                  <td className="border border-gray-300 p-2">No</td>
-                  <td className="border border-gray-300 p-2">High→Low</td>
-                  <td className="border border-gray-300 p-2">Random motion</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Osmosis</td>
-                  <td className="border border-gray-300 p-2">No</td>
-                  <td className="border border-gray-300 p-2">Hypotonic→Hypertonic</td>
-                  <td className="border border-gray-300 p-2">Water via aquaporins</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Facilitated</td>
-                  <td className="border border-gray-300 p-2">No</td>
-                  <td className="border border-gray-300 p-2">High→Low</td>
-                  <td className="border border-gray-300 p-2">Channel/carrier proteins</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Active transport</td>
-                  <td className="border border-gray-300 p-2">Yes (ATP)</td>
-                  <td className="border border-gray-300 p-2">Low→High</td>
-                  <td className="border border-gray-300 p-2">Na⁺/K⁺-ATPase (3Na⁺ out, 2K⁺ in)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Endocytosis</td>
-                  <td className="border border-gray-300 p-2">Yes</td>
-                  <td className="border border-gray-300 p-2">Bulk in</td>
-                  <td className="border border-gray-300 p-2">Phagocytosis/Pinocytosis</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Transport</th>
+                    <th className="border border-gray-300 p-2 text-left">Energy</th>
+                    <th className="border border-gray-300 p-2 text-left">Direction</th>
+                    <th className="border border-gray-300 p-2 text-left">Mechanism</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Diffusion</td>
+                    <td className="border border-gray-300 p-2">No</td>
+                    <td className="border border-gray-300 p-2">High→Low</td>
+                    <td className="border border-gray-300 p-2">Random motion</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Osmosis</td>
+                    <td className="border border-gray-300 p-2">No</td>
+                    <td className="border border-gray-300 p-2">Hypotonic→Hypertonic</td>
+                    <td className="border border-gray-300 p-2">Water via aquaporins</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Facilitated</td>
+                    <td className="border border-gray-300 p-2">No</td>
+                    <td className="border border-gray-300 p-2">High→Low</td>
+                    <td className="border border-gray-300 p-2">Channel/carrier proteins</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Active transport</td>
+                    <td className="border border-gray-300 p-2">Yes (ATP)</td>
+                    <td className="border border-gray-300 p-2">Low→High</td>
+                    <td className="border border-gray-300 p-2">Na⁺/K⁺-ATPase (3Na⁺ out, 2K⁺ in)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Endocytosis</td>
+                    <td className="border border-gray-300 p-2">Yes</td>
+                    <td className="border border-gray-300 p-2">Bulk in</td>
+                    <td className="border border-gray-300 p-2">Phagocytosis/Pinocytosis</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3">
               <p className="font-semibold text-yellow-800 text-sm">
                 NEET TIP: Transport tested every year. O₂/CO₂ cross freely; glucose/ions need
@@ -3711,74 +3755,78 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             <p className="font-semibold text-green-800">
               Organic compounds: (CH₂O)n — C:H:O = 1:2:1
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Disaccharide</th>
-                  <th className="border border-gray-300 p-2 text-left">Composition</th>
-                  <th className="border border-gray-300 p-2 text-left">Bond</th>
-                  <th className="border border-gray-300 p-2 text-left">Source</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2">Maltose</td>
-                  <td className="border border-gray-300 p-2">Glucose + Glucose</td>
-                  <td className="border border-gray-300 p-2">α(1→4)</td>
-                  <td className="border border-gray-300 p-2">Starch breakdown</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Sucrose</td>
-                  <td className="border border-gray-300 p-2">Glucose + Fructose</td>
-                  <td className="border border-gray-300 p-2">α(1→2)</td>
-                  <td className="border border-gray-300 p-2">Table sugar; plant transport</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Lactose</td>
-                  <td className="border border-gray-300 p-2">Glucose + Galactose</td>
-                  <td className="border border-gray-300 p-2">β(1→4)</td>
-                  <td className="border border-gray-300 p-2">Milk sugar</td>
-                </tr>
-              </tbody>
-            </table>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Polysaccharide</th>
-                  <th className="border border-gray-300 p-2 text-left">Bond</th>
-                  <th className="border border-gray-300 p-2 text-left">Type</th>
-                  <th className="border border-gray-300 p-2 text-left">Function</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2">Starch</td>
-                  <td className="border border-gray-300 p-2">α-glycosidic</td>
-                  <td className="border border-gray-300 p-2">Storage</td>
-                  <td className="border border-gray-300 p-2">
-                    Plant energy (amylose + amylopectin)
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Glycogen</td>
-                  <td className="border border-gray-300 p-2">α-glycosidic</td>
-                  <td className="border border-gray-300 p-2">Storage</td>
-                  <td className="border border-gray-300 p-2">Animal energy (liver, muscles)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Cellulose</td>
-                  <td className="border border-gray-300 p-2">β-glycosidic</td>
-                  <td className="border border-gray-300 p-2">Structural</td>
-                  <td className="border border-gray-300 p-2">Plant cell wall; indigestible</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Chitin</td>
-                  <td className="border border-gray-300 p-2">β(1→4)</td>
-                  <td className="border border-gray-300 p-2">Structural</td>
-                  <td className="border border-gray-300 p-2">Arthropod exoskeleton; fungi</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Disaccharide</th>
+                    <th className="border border-gray-300 p-2 text-left">Composition</th>
+                    <th className="border border-gray-300 p-2 text-left">Bond</th>
+                    <th className="border border-gray-300 p-2 text-left">Source</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Maltose</td>
+                    <td className="border border-gray-300 p-2">Glucose + Glucose</td>
+                    <td className="border border-gray-300 p-2">α(1→4)</td>
+                    <td className="border border-gray-300 p-2">Starch breakdown</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Sucrose</td>
+                    <td className="border border-gray-300 p-2">Glucose + Fructose</td>
+                    <td className="border border-gray-300 p-2">α(1→2)</td>
+                    <td className="border border-gray-300 p-2">Table sugar; plant transport</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Lactose</td>
+                    <td className="border border-gray-300 p-2">Glucose + Galactose</td>
+                    <td className="border border-gray-300 p-2">β(1→4)</td>
+                    <td className="border border-gray-300 p-2">Milk sugar</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Polysaccharide</th>
+                    <th className="border border-gray-300 p-2 text-left">Bond</th>
+                    <th className="border border-gray-300 p-2 text-left">Type</th>
+                    <th className="border border-gray-300 p-2 text-left">Function</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Starch</td>
+                    <td className="border border-gray-300 p-2">α-glycosidic</td>
+                    <td className="border border-gray-300 p-2">Storage</td>
+                    <td className="border border-gray-300 p-2">
+                      Plant energy (amylose + amylopectin)
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Glycogen</td>
+                    <td className="border border-gray-300 p-2">α-glycosidic</td>
+                    <td className="border border-gray-300 p-2">Storage</td>
+                    <td className="border border-gray-300 p-2">Animal energy (liver, muscles)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Cellulose</td>
+                    <td className="border border-gray-300 p-2">β-glycosidic</td>
+                    <td className="border border-gray-300 p-2">Structural</td>
+                    <td className="border border-gray-300 p-2">Plant cell wall; indigestible</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Chitin</td>
+                    <td className="border border-gray-300 p-2">β(1→4)</td>
+                    <td className="border border-gray-300 p-2">Structural</td>
+                    <td className="border border-gray-300 p-2">Arthropod exoskeleton; fungi</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3">
               <p className="font-semibold text-yellow-800 text-sm">
                 NEET TIP: α-glycosidic easily hydrolyzed; β-glycosidic needs cellulase (humans lack
@@ -3803,42 +3851,44 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
                 (9 total)
               </p>
             </div>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Level</th>
-                  <th className="border border-gray-300 p-2 text-left">Definition</th>
-                  <th className="border border-gray-300 p-2 text-left">Bonds</th>
-                  <th className="border border-gray-300 p-2 text-left">Example</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Primary (1°)</td>
-                  <td className="border border-gray-300 p-2">Linear AA sequence</td>
-                  <td className="border border-gray-300 p-2">Peptide bonds</td>
-                  <td className="border border-gray-300 p-2">Insulin (51 aa)</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Secondary (2°)</td>
-                  <td className="border border-gray-300 p-2">α-helix, β-sheet</td>
-                  <td className="border border-gray-300 p-2">H-bonds (backbone)</td>
-                  <td className="border border-gray-300 p-2">α-helix: 3.6 res/turn</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Tertiary (3°)</td>
-                  <td className="border border-gray-300 p-2">Overall 3D shape</td>
-                  <td className="border border-gray-300 p-2">H-bonds, ionic, S-S, hydrophobic</td>
-                  <td className="border border-gray-300 p-2">Lysozyme</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Quaternary (4°)</td>
-                  <td className="border border-gray-300 p-2">Multi-subunit</td>
-                  <td className="border border-gray-300 p-2">Non-covalent</td>
-                  <td className="border border-gray-300 p-2">Hemoglobin (2α,2β)</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Level</th>
+                    <th className="border border-gray-300 p-2 text-left">Definition</th>
+                    <th className="border border-gray-300 p-2 text-left">Bonds</th>
+                    <th className="border border-gray-300 p-2 text-left">Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Primary (1°)</td>
+                    <td className="border border-gray-300 p-2">Linear AA sequence</td>
+                    <td className="border border-gray-300 p-2">Peptide bonds</td>
+                    <td className="border border-gray-300 p-2">Insulin (51 aa)</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Secondary (2°)</td>
+                    <td className="border border-gray-300 p-2">α-helix, β-sheet</td>
+                    <td className="border border-gray-300 p-2">H-bonds (backbone)</td>
+                    <td className="border border-gray-300 p-2">α-helix: 3.6 res/turn</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Tertiary (3°)</td>
+                    <td className="border border-gray-300 p-2">Overall 3D shape</td>
+                    <td className="border border-gray-300 p-2">H-bonds, ionic, S-S, hydrophobic</td>
+                    <td className="border border-gray-300 p-2">Lysozyme</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Quaternary (4°)</td>
+                    <td className="border border-gray-300 p-2">Multi-subunit</td>
+                    <td className="border border-gray-300 p-2">Non-covalent</td>
+                    <td className="border border-gray-300 p-2">Hemoglobin (2α,2β)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="font-semibold text-green-800">
               Classification: Simple (fibrous—collagen, keratin; globular—enzymes), Conjugated
               (lipoproteins, glycoproteins), Derived (hydrolysis products)
@@ -3861,76 +3911,80 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               Biological catalysts lowering activation energy. Lock-and-key (Fischer) vs Induced fit
               (Koshland—modern).
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Class</th>
-                  <th className="border border-gray-300 p-2 text-left">Reaction</th>
-                  <th className="border border-gray-300 p-2 text-left">Example</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">
-                    EC 1: Oxidoreductases
-                  </td>
-                  <td className="border border-gray-300 p-2">Redox</td>
-                  <td className="border border-gray-300 p-2">Cytochrome oxidase</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">EC 2: Transferases</td>
-                  <td className="border border-gray-300 p-2">Group transfer</td>
-                  <td className="border border-gray-300 p-2">Hexokinase</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">EC 3: Hydrolases</td>
-                  <td className="border border-gray-300 p-2">Hydrolysis</td>
-                  <td className="border border-gray-300 p-2">Amylase, Lipase</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">EC 4: Lyases</td>
-                  <td className="border border-gray-300 p-2">Non-hydrolytic cleavage</td>
-                  <td className="border border-gray-300 p-2">Decarboxylase</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">EC 5: Isomerases</td>
-                  <td className="border border-gray-300 p-2">Isomerization</td>
-                  <td className="border border-gray-300 p-2">Glucose isomerase</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">EC 6: Ligases</td>
-                  <td className="border border-gray-300 p-2">Bond formation (ATP)</td>
-                  <td className="border border-gray-300 p-2">DNA ligase</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Class</th>
+                    <th className="border border-gray-300 p-2 text-left">Reaction</th>
+                    <th className="border border-gray-300 p-2 text-left">Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">
+                      EC 1: Oxidoreductases
+                    </td>
+                    <td className="border border-gray-300 p-2">Redox</td>
+                    <td className="border border-gray-300 p-2">Cytochrome oxidase</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">EC 2: Transferases</td>
+                    <td className="border border-gray-300 p-2">Group transfer</td>
+                    <td className="border border-gray-300 p-2">Hexokinase</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">EC 3: Hydrolases</td>
+                    <td className="border border-gray-300 p-2">Hydrolysis</td>
+                    <td className="border border-gray-300 p-2">Amylase, Lipase</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">EC 4: Lyases</td>
+                    <td className="border border-gray-300 p-2">Non-hydrolytic cleavage</td>
+                    <td className="border border-gray-300 p-2">Decarboxylase</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">EC 5: Isomerases</td>
+                    <td className="border border-gray-300 p-2">Isomerization</td>
+                    <td className="border border-gray-300 p-2">Glucose isomerase</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">EC 6: Ligases</td>
+                    <td className="border border-gray-300 p-2">Bond formation (ATP)</td>
+                    <td className="border border-gray-300 p-2">DNA ligase</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="font-semibold text-green-800">
               Cofactors (Mg²⁺, Zn²⁺, Fe²⁺) | Coenzymes (NAD⁺, FAD, CoA—vitamin-derived)
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Inhibition</th>
-                  <th className="border border-gray-300 p-2 text-left">Mechanism</th>
-                  <th className="border border-gray-300 p-2 text-left">Km</th>
-                  <th className="border border-gray-300 p-2 text-left">Vmax</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Competitive</td>
-                  <td className="border border-gray-300 p-2">Competes for active site</td>
-                  <td className="border border-gray-300 p-2">↑</td>
-                  <td className="border border-gray-300 p-2">Unchanged</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Non-competitive</td>
-                  <td className="border border-gray-300 p-2">Binds allosteric site</td>
-                  <td className="border border-gray-300 p-2">Unchanged</td>
-                  <td className="border border-gray-300 p-2">↓</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Inhibition</th>
+                    <th className="border border-gray-300 p-2 text-left">Mechanism</th>
+                    <th className="border border-gray-300 p-2 text-left">Km</th>
+                    <th className="border border-gray-300 p-2 text-left">Vmax</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Competitive</td>
+                    <td className="border border-gray-300 p-2">Competes for active site</td>
+                    <td className="border border-gray-300 p-2">↑</td>
+                    <td className="border border-gray-300 p-2">Unchanged</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Non-competitive</td>
+                    <td className="border border-gray-300 p-2">Binds allosteric site</td>
+                    <td className="border border-gray-300 p-2">Unchanged</td>
+                    <td className="border border-gray-300 p-2">↓</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3">
               <p className="font-semibold text-yellow-800 text-sm">
                 NEET: Feedback inhibition, cyanide blocks cytochrome oxidase, penicillin inhibits
@@ -3948,42 +4002,44 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             <p className="font-semibold text-green-800">
               Hydrophobic molecules; 9 kcal/g (2× carbohydrates).
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Type</th>
-                  <th className="border border-gray-300 p-2 text-left">Structure</th>
-                  <th className="border border-gray-300 p-2 text-left">Key Facts</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Saturated FA</td>
-                  <td className="border border-gray-300 p-2">Single C-C bonds</td>
-                  <td className="border border-gray-300 p-2">Solid at RT; butter, lard</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Unsaturated FA</td>
-                  <td className="border border-gray-300 p-2">C=C double bonds</td>
-                  <td className="border border-gray-300 p-2">Liquid at RT; olive oil</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Triglycerides</td>
-                  <td className="border border-gray-300 p-2">Glycerol + 3 FA</td>
-                  <td className="border border-gray-300 p-2">Primary energy storage (adipose)</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Phospholipids</td>
-                  <td className="border border-gray-300 p-2">Glycerol + 2 FA + PO₄</td>
-                  <td className="border border-gray-300 p-2">Amphipathic; cell membranes</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Steroids</td>
-                  <td className="border border-gray-300 p-2">4 fused rings</td>
-                  <td className="border border-gray-300 p-2">Cholesterol → hormones</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Type</th>
+                    <th className="border border-gray-300 p-2 text-left">Structure</th>
+                    <th className="border border-gray-300 p-2 text-left">Key Facts</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Saturated FA</td>
+                    <td className="border border-gray-300 p-2">Single C-C bonds</td>
+                    <td className="border border-gray-300 p-2">Solid at RT; butter, lard</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Unsaturated FA</td>
+                    <td className="border border-gray-300 p-2">C=C double bonds</td>
+                    <td className="border border-gray-300 p-2">Liquid at RT; olive oil</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Triglycerides</td>
+                    <td className="border border-gray-300 p-2">Glycerol + 3 FA</td>
+                    <td className="border border-gray-300 p-2">Primary energy storage (adipose)</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Phospholipids</td>
+                    <td className="border border-gray-300 p-2">Glycerol + 2 FA + PO₄</td>
+                    <td className="border border-gray-300 p-2">Amphipathic; cell membranes</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Steroids</td>
+                    <td className="border border-gray-300 p-2">4 fused rings</td>
+                    <td className="border border-gray-300 p-2">Cholesterol → hormones</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3">
               <p className="font-semibold text-yellow-800 text-sm">
                 NEET: Phospholipids are amphipathic (form bilayer). Linoleic acid = essential FA.
@@ -4001,44 +4057,46 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             <p className="font-semibold text-green-800">
               Nucleotide = Base + Sugar + Phosphate. Linked by phosphodiester bonds (3′→5′).
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Feature</th>
-                  <th className="border border-gray-300 p-2 text-left">DNA</th>
-                  <th className="border border-gray-300 p-2 text-left">RNA</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Sugar</td>
-                  <td className="border border-gray-300 p-2">Deoxyribose</td>
-                  <td className="border border-gray-300 p-2">Ribose</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Bases</td>
-                  <td className="border border-gray-300 p-2">A, G, C, T</td>
-                  <td className="border border-gray-300 p-2">A, G, C, U</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Structure</td>
-                  <td className="border border-gray-300 p-2">Double helix</td>
-                  <td className="border border-gray-300 p-2">Single strand</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Pairing</td>
-                  <td className="border border-gray-300 p-2">A-T (2 H-bonds), G-C (3)</td>
-                  <td className="border border-gray-300 p-2">A-U in hairpins</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Types</td>
-                  <td className="border border-gray-300 p-2">One type</td>
-                  <td className="border border-gray-300 p-2">
-                    mRNA (3-5%), rRNA (80-85%), tRNA (10-15%)
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Feature</th>
+                    <th className="border border-gray-300 p-2 text-left">DNA</th>
+                    <th className="border border-gray-300 p-2 text-left">RNA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Sugar</td>
+                    <td className="border border-gray-300 p-2">Deoxyribose</td>
+                    <td className="border border-gray-300 p-2">Ribose</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Bases</td>
+                    <td className="border border-gray-300 p-2">A, G, C, T</td>
+                    <td className="border border-gray-300 p-2">A, G, C, U</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Structure</td>
+                    <td className="border border-gray-300 p-2">Double helix</td>
+                    <td className="border border-gray-300 p-2">Single strand</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Pairing</td>
+                    <td className="border border-gray-300 p-2">A-T (2 H-bonds), G-C (3)</td>
+                    <td className="border border-gray-300 p-2">A-U in hairpins</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Types</td>
+                    <td className="border border-gray-300 p-2">One type</td>
+                    <td className="border border-gray-300 p-2">
+                      mRNA (3-5%), rRNA (80-85%), tRNA (10-15%)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="font-semibold text-green-800">
               Purines (2 rings): A, G | Pyrimidines (1 ring): C, T, U. Chargaff: A=T, G=C. DNA: 20Å
               diameter, 34Å pitch, 10bp/turn.
@@ -4057,32 +4115,34 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
         pyqFrequency: 'Medium' as const,
         content: (
           <div className="space-y-4">
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Feature</th>
-                  <th className="border border-gray-300 p-2 text-left">Primary Metabolites</th>
-                  <th className="border border-gray-300 p-2 text-left">Secondary Metabolites</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Examples</td>
-                  <td className="border border-gray-300 p-2">Glucose, amino acids, lipids</td>
-                  <td className="border border-gray-300 p-2">Alkaloids, antibiotics, pigments</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Presence</td>
-                  <td className="border border-gray-300 p-2">Universal</td>
-                  <td className="border border-gray-300 p-2">Species-specific</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Function</td>
-                  <td className="border border-gray-300 p-2">Essential for survival</td>
-                  <td className="border border-gray-300 p-2">Defense, signaling</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Feature</th>
+                    <th className="border border-gray-300 p-2 text-left">Primary Metabolites</th>
+                    <th className="border border-gray-300 p-2 text-left">Secondary Metabolites</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Examples</td>
+                    <td className="border border-gray-300 p-2">Glucose, amino acids, lipids</td>
+                    <td className="border border-gray-300 p-2">Alkaloids, antibiotics, pigments</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Presence</td>
+                    <td className="border border-gray-300 p-2">Universal</td>
+                    <td className="border border-gray-300 p-2">Species-specific</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Function</td>
+                    <td className="border border-gray-300 p-2">Essential for survival</td>
+                    <td className="border border-gray-300 p-2">Defense, signaling</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="font-semibold text-green-800">
               Anabolism (ATP-consuming: photosynthesis, protein synthesis) vs Catabolism
               (ATP-producing: glycolysis, respiration). Acetyl-CoA = central metabolic hub.
@@ -4105,52 +4165,54 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
         pyqFrequency: 'High' as const,
         content: (
           <div className="space-y-4">
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Phase</th>
-                  <th className="border border-gray-300 p-2 text-left">Duration</th>
-                  <th className="border border-gray-300 p-2 text-left">Events</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">G1</td>
-                  <td className="border border-gray-300 p-2">~8-10h</td>
-                  <td className="border border-gray-300 p-2">
-                    Growth, enzyme synthesis. G1/S checkpoint (p53 checks DNA damage)
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">S Phase</td>
-                  <td className="border border-gray-300 p-2">~6-8h</td>
-                  <td className="border border-gray-300 p-2">
-                    DNA replication, histone synthesis, centrosome duplication (2n→4n)
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">G2</td>
-                  <td className="border border-gray-300 p-2">~4-6h</td>
-                  <td className="border border-gray-300 p-2">
-                    Protein synthesis. G2/M checkpoint verifies replication
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">M Phase</td>
-                  <td className="border border-gray-300 p-2">~1-2h</td>
-                  <td className="border border-gray-300 p-2">
-                    Mitosis + cytokinesis → two daughter cells
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">G0</td>
-                  <td className="border border-gray-300 p-2">Variable</td>
-                  <td className="border border-gray-300 p-2">
-                    Quiescent (neurons, muscle). Can re-enter G1
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Phase</th>
+                    <th className="border border-gray-300 p-2 text-left">Duration</th>
+                    <th className="border border-gray-300 p-2 text-left">Events</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">G1</td>
+                    <td className="border border-gray-300 p-2">~8-10h</td>
+                    <td className="border border-gray-300 p-2">
+                      Growth, enzyme synthesis. G1/S checkpoint (p53 checks DNA damage)
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">S Phase</td>
+                    <td className="border border-gray-300 p-2">~6-8h</td>
+                    <td className="border border-gray-300 p-2">
+                      DNA replication, histone synthesis, centrosome duplication (2n→4n)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">G2</td>
+                    <td className="border border-gray-300 p-2">~4-6h</td>
+                    <td className="border border-gray-300 p-2">
+                      Protein synthesis. G2/M checkpoint verifies replication
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">M Phase</td>
+                    <td className="border border-gray-300 p-2">~1-2h</td>
+                    <td className="border border-gray-300 p-2">
+                      Mitosis + cytokinesis → two daughter cells
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">G0</td>
+                    <td className="border border-gray-300 p-2">Variable</td>
+                    <td className="border border-gray-300 p-2">
+                      Quiescent (neurons, muscle). Can re-enter G1
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="font-semibold text-green-800">
               Cyclin-CDK: G1/S → Cyclin E-CDK2; G2/M → Cyclin B-CDK1. p53 = "guardian of the genome"
             </p>
@@ -4171,40 +4233,42 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             <p className="text-sm">
               Equational division: 2n → two identical 2n cells. In somatic cells for growth/repair.
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Stage</th>
-                  <th className="border border-gray-300 p-2 text-left">Events</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Prophase</td>
-                  <td className="border border-gray-300 p-2">
-                    Chromatin→chromosomes. Nuclear envelope breaks down. Spindle forms
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Metaphase</td>
-                  <td className="border border-gray-300 p-2">
-                    Chromosomes align at metaphase plate. Kinetochores attach to spindle
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Anaphase</td>
-                  <td className="border border-gray-300 p-2">
-                    Sister chromatids separate at centromere → opposite poles
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Telophase</td>
-                  <td className="border border-gray-300 p-2">
-                    Chromosomes decondense. Nuclear envelopes reform. Nucleoli reappear
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Stage</th>
+                    <th className="border border-gray-300 p-2 text-left">Events</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Prophase</td>
+                    <td className="border border-gray-300 p-2">
+                      Chromatin→chromosomes. Nuclear envelope breaks down. Spindle forms
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Metaphase</td>
+                    <td className="border border-gray-300 p-2">
+                      Chromosomes align at metaphase plate. Kinetochores attach to spindle
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Anaphase</td>
+                    <td className="border border-gray-300 p-2">
+                      Sister chromatids separate at centromere → opposite poles
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Telophase</td>
+                    <td className="border border-gray-300 p-2">
+                      Chromosomes decondense. Nuclear envelopes reform. Nucleoli reappear
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="font-semibold text-green-800">
               Cytokinesis: Animal = cleavage furrow (actin-myosin); Plant = cell plate (Golgi
               vesicles)
@@ -4228,92 +4292,96 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               (equational).
             </p>
             <p className="font-semibold text-green-800">Prophase I Substages:</p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Substage</th>
-                  <th className="border border-gray-300 p-2 text-left">Events</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Leptotene</td>
-                  <td className="border border-gray-300 p-2">
-                    Chromosomes visible as thin threads
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Zygotene</td>
-                  <td className="border border-gray-300 p-2">
-                    Synapsis: bivalents form; synaptonemal complex
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Pachytene</td>
-                  <td className="border border-gray-300 p-2">
-                    CROSSING OVER → chiasmata. Longest substage
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Diplotene</td>
-                  <td className="border border-gray-300 p-2">
-                    Homologs connected only via chiasmata
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Diakinesis</td>
-                  <td className="border border-gray-300 p-2">
-                    Final condensation; nuclear envelope breaks
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Substage</th>
+                    <th className="border border-gray-300 p-2 text-left">Events</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Leptotene</td>
+                    <td className="border border-gray-300 p-2">
+                      Chromosomes visible as thin threads
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Zygotene</td>
+                    <td className="border border-gray-300 p-2">
+                      Synapsis: bivalents form; synaptonemal complex
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Pachytene</td>
+                    <td className="border border-gray-300 p-2">
+                      CROSSING OVER → chiasmata. Longest substage
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Diplotene</td>
+                    <td className="border border-gray-300 p-2">
+                      Homologs connected only via chiasmata
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Diakinesis</td>
+                    <td className="border border-gray-300 p-2">
+                      Final condensation; nuclear envelope breaks
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="text-sm">
               <span className="font-semibold">MI:</span> Bivalents align (independent assortment).
               Homologs separate (centromeres intact). <span className="font-semibold">MII:</span>{' '}
               Sister chromatids separate.
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Feature</th>
-                  <th className="border border-gray-300 p-2 text-left">Mitosis</th>
-                  <th className="border border-gray-300 p-2 text-left">Meiosis</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Location</td>
-                  <td className="border border-gray-300 p-2">Somatic</td>
-                  <td className="border border-gray-300 p-2">Germ cells</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Ploidy</td>
-                  <td className="border border-gray-300 p-2">2n→2n</td>
-                  <td className="border border-gray-300 p-2">2n→n</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Divisions</td>
-                  <td className="border border-gray-300 p-2">One</td>
-                  <td className="border border-gray-300 p-2">Two</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Crossing over</td>
-                  <td className="border border-gray-300 p-2">Absent</td>
-                  <td className="border border-gray-300 p-2">Present (pachytene)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Daughter cells</td>
-                  <td className="border border-gray-300 p-2">2 identical</td>
-                  <td className="border border-gray-300 p-2">4 unique haploid</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Purpose</td>
-                  <td className="border border-gray-300 p-2">Growth, repair</td>
-                  <td className="border border-gray-300 p-2">Gametes, variation</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Feature</th>
+                    <th className="border border-gray-300 p-2 text-left">Mitosis</th>
+                    <th className="border border-gray-300 p-2 text-left">Meiosis</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Location</td>
+                    <td className="border border-gray-300 p-2">Somatic</td>
+                    <td className="border border-gray-300 p-2">Germ cells</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Ploidy</td>
+                    <td className="border border-gray-300 p-2">2n→2n</td>
+                    <td className="border border-gray-300 p-2">2n→n</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Divisions</td>
+                    <td className="border border-gray-300 p-2">One</td>
+                    <td className="border border-gray-300 p-2">Two</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Crossing over</td>
+                    <td className="border border-gray-300 p-2">Absent</td>
+                    <td className="border border-gray-300 p-2">Present (pachytene)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Daughter cells</td>
+                    <td className="border border-gray-300 p-2">2 identical</td>
+                    <td className="border border-gray-300 p-2">4 unique haploid</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Purpose</td>
+                    <td className="border border-gray-300 p-2">Growth, repair</td>
+                    <td className="border border-gray-300 p-2">Gametes, variation</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3">
               <p className="font-semibold text-yellow-800 text-sm">
                 NEET TIP: Crossing over = PACHYTENE (not zygotene). MI has bivalents; MII has
@@ -4358,37 +4426,39 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
           <div className="space-y-4">
             <div>
               <p className="font-semibold text-green-800">Asexual vs Sexual Reproduction</p>
-              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-                <thead className="bg-green-50">
-                  <tr>
-                    <th className="border border-gray-300 p-2">Feature</th>
-                    <th className="border border-gray-300 p-2">Asexual</th>
-                    <th className="border border-gray-300 p-2">Sexual</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Number of Parents</td>
-                    <td className="border border-gray-300 p-2">One</td>
-                    <td className="border border-gray-300 p-2">Two</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Gamete Formation</td>
-                    <td className="border border-gray-300 p-2">No</td>
-                    <td className="border border-gray-300 p-2">Yes</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Genetic Variation</td>
-                    <td className="border border-gray-300 p-2">Low/None</td>
-                    <td className="border border-gray-300 p-2">High</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Mitosis/Meiosis</td>
-                    <td className="border border-gray-300 p-2">Mitosis</td>
-                    <td className="border border-gray-300 p-2">Meiosis</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                  <thead className="bg-green-50">
+                    <tr>
+                      <th className="border border-gray-300 p-2">Feature</th>
+                      <th className="border border-gray-300 p-2">Asexual</th>
+                      <th className="border border-gray-300 p-2">Sexual</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Number of Parents</td>
+                      <td className="border border-gray-300 p-2">One</td>
+                      <td className="border border-gray-300 p-2">Two</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Gamete Formation</td>
+                      <td className="border border-gray-300 p-2">No</td>
+                      <td className="border border-gray-300 p-2">Yes</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Genetic Variation</td>
+                      <td className="border border-gray-300 p-2">Low/None</td>
+                      <td className="border border-gray-300 p-2">High</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Mitosis/Meiosis</td>
+                      <td className="border border-gray-300 p-2">Mitosis</td>
+                      <td className="border border-gray-300 p-2">Meiosis</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div>
               <p className="font-semibold text-green-800">Types of Asexual Reproduction</p>
@@ -4446,34 +4516,38 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             </div>
             <div>
               <p className="font-semibold text-green-800">Mature Embryo Sac (7 cells, 8 nuclei)</p>
-              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-                <thead>
-                  <tr className="bg-green-50">
-                    <th className="border border-gray-300 p-2">Component</th>
-                    <th className="border border-gray-300 p-2">Number</th>
-                    <th className="border border-gray-300 p-2">Function</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Egg apparatus (micropylar end)</td>
-                    <td className="border border-gray-300 p-2">3 cells (1 egg + 2 synergids)</td>
-                    <td className="border border-gray-300 p-2">Gamete reception, fertilisation</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Central cell</td>
-                    <td className="border border-gray-300 p-2">2 polar nuclei</td>
-                    <td className="border border-gray-300 p-2">Triple fusion with male gamete</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Antipodal cells (chalazal end)</td>
-                    <td className="border border-gray-300 p-2">3 cells</td>
-                    <td className="border border-gray-300 p-2">
-                      Nutrition, degenerate after fertilisation
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                  <thead>
+                    <tr className="bg-green-50">
+                      <th className="border border-gray-300 p-2">Component</th>
+                      <th className="border border-gray-300 p-2">Number</th>
+                      <th className="border border-gray-300 p-2">Function</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Egg apparatus (micropylar end)</td>
+                      <td className="border border-gray-300 p-2">3 cells (1 egg + 2 synergids)</td>
+                      <td className="border border-gray-300 p-2">
+                        Gamete reception, fertilisation
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Central cell</td>
+                      <td className="border border-gray-300 p-2">2 polar nuclei</td>
+                      <td className="border border-gray-300 p-2">Triple fusion with male gamete</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Antipodal cells (chalazal end)</td>
+                      <td className="border border-gray-300 p-2">3 cells</td>
+                      <td className="border border-gray-300 p-2">
+                        Nutrition, degenerate after fertilisation
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div>
               <p className="font-semibold text-green-800">Pollination Types</p>
@@ -4524,42 +4598,44 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             </div>
             <div>
               <p className="font-semibold text-green-800">Spermatogenesis</p>
-              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-                <thead>
-                  <tr className="bg-green-50">
-                    <th className="border border-gray-300 p-2">Stage</th>
-                    <th className="border border-gray-300 p-2">Cell Type</th>
-                    <th className="border border-gray-300 p-2">Ploidy</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Mitotic multiplication</td>
-                    <td className="border border-gray-300 p-2">Spermatogonium</td>
-                    <td className="border border-gray-300 p-2">2n</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Growth phase</td>
-                    <td className="border border-gray-300 p-2">Primary spermatocyte</td>
-                    <td className="border border-gray-300 p-2">2n</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Meiosis I</td>
-                    <td className="border border-gray-300 p-2">Secondary spermatocyte</td>
-                    <td className="border border-gray-300 p-2">n</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Meiosis II</td>
-                    <td className="border border-gray-300 p-2">Spermatid</td>
-                    <td className="border border-gray-300 p-2">n</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Spermiogenesis</td>
-                    <td className="border border-gray-300 p-2">Mature sperm</td>
-                    <td className="border border-gray-300 p-2">n</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                  <thead>
+                    <tr className="bg-green-50">
+                      <th className="border border-gray-300 p-2">Stage</th>
+                      <th className="border border-gray-300 p-2">Cell Type</th>
+                      <th className="border border-gray-300 p-2">Ploidy</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Mitotic multiplication</td>
+                      <td className="border border-gray-300 p-2">Spermatogonium</td>
+                      <td className="border border-gray-300 p-2">2n</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Growth phase</td>
+                      <td className="border border-gray-300 p-2">Primary spermatocyte</td>
+                      <td className="border border-gray-300 p-2">2n</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Meiosis I</td>
+                      <td className="border border-gray-300 p-2">Secondary spermatocyte</td>
+                      <td className="border border-gray-300 p-2">n</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Meiosis II</td>
+                      <td className="border border-gray-300 p-2">Spermatid</td>
+                      <td className="border border-gray-300 p-2">n</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Spermiogenesis</td>
+                      <td className="border border-gray-300 p-2">Mature sperm</td>
+                      <td className="border border-gray-300 p-2">n</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div>
               <p className="font-semibold text-green-800">Sperm Structure</p>
@@ -4597,83 +4673,87 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
           <div className="space-y-4">
             <div>
               <p className="font-semibold text-green-800">Oogenesis</p>
-              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-                <thead>
-                  <tr className="bg-green-50">
-                    <th className="border border-gray-300 p-2">Stage</th>
-                    <th className="border border-gray-300 p-2">Cell Type</th>
-                    <th className="border border-gray-300 p-2">Ploidy</th>
-                    <th className="border border-gray-300 p-2">Arrest Point</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Before puberty</td>
-                    <td className="border border-gray-300 p-2">Oogonium</td>
-                    <td className="border border-gray-300 p-2">2n</td>
-                    <td className="border border-gray-300 p-2">Mitotic division</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Growth phase</td>
-                    <td className="border border-gray-300 p-2">Primary oocyte</td>
-                    <td className="border border-gray-300 p-2">2n</td>
-                    <td className="border border-gray-300 p-2">Prophase I (until ovulation)</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Meiosis I</td>
-                    <td className="border border-gray-300 p-2">Secondary oocyte</td>
-                    <td className="border border-gray-300 p-2">n</td>
-                    <td className="border border-gray-300 p-2">
-                      Metaphase II (until fertilisation)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Meiosis II</td>
-                    <td className="border border-gray-300 p-2">Mature ovum</td>
-                    <td className="border border-gray-300 p-2">n</td>
-                    <td className="border border-gray-300 p-2">Only if fertilised</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                  <thead>
+                    <tr className="bg-green-50">
+                      <th className="border border-gray-300 p-2">Stage</th>
+                      <th className="border border-gray-300 p-2">Cell Type</th>
+                      <th className="border border-gray-300 p-2">Ploidy</th>
+                      <th className="border border-gray-300 p-2">Arrest Point</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Before puberty</td>
+                      <td className="border border-gray-300 p-2">Oogonium</td>
+                      <td className="border border-gray-300 p-2">2n</td>
+                      <td className="border border-gray-300 p-2">Mitotic division</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Growth phase</td>
+                      <td className="border border-gray-300 p-2">Primary oocyte</td>
+                      <td className="border border-gray-300 p-2">2n</td>
+                      <td className="border border-gray-300 p-2">Prophase I (until ovulation)</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Meiosis I</td>
+                      <td className="border border-gray-300 p-2">Secondary oocyte</td>
+                      <td className="border border-gray-300 p-2">n</td>
+                      <td className="border border-gray-300 p-2">
+                        Metaphase II (until fertilisation)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Meiosis II</td>
+                      <td className="border border-gray-300 p-2">Mature ovum</td>
+                      <td className="border border-gray-300 p-2">n</td>
+                      <td className="border border-gray-300 p-2">Only if fertilised</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div>
               <p className="font-semibold text-green-800">Menstrual Cycle (28 days)</p>
-              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-                <thead>
-                  <tr className="bg-green-50">
-                    <th className="border border-gray-300 p-2">Phase</th>
-                    <th className="border border-gray-300 p-2">Days</th>
-                    <th className="border border-gray-300 p-2">Events</th>
-                    <th className="border border-gray-300 p-2">Hormones</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Menstrual</td>
-                    <td className="border border-gray-300 p-2">1-5</td>
-                    <td className="border border-gray-300 p-2">Endometrial shedding</td>
-                    <td className="border border-gray-300 p-2">Low estrogen, progesterone</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Follicular</td>
-                    <td className="border border-gray-300 p-2">5-13</td>
-                    <td className="border border-gray-300 p-2">Follicle growth</td>
-                    <td className="border border-gray-300 p-2">Rising FSH, estrogen</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Ovulatory</td>
-                    <td className="border border-gray-300 p-2">13-15</td>
-                    <td className="border border-gray-300 p-2">LH surge → ovulation (day 14)</td>
-                    <td className="border border-gray-300 p-2">Peak LH, estrogen</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Luteal</td>
-                    <td className="border border-gray-300 p-2">15-28</td>
-                    <td className="border border-gray-300 p-2">Corpus luteum → progesterone</td>
-                    <td className="border border-gray-300 p-2">High progesterone</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                  <thead>
+                    <tr className="bg-green-50">
+                      <th className="border border-gray-300 p-2">Phase</th>
+                      <th className="border border-gray-300 p-2">Days</th>
+                      <th className="border border-gray-300 p-2">Events</th>
+                      <th className="border border-gray-300 p-2">Hormones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Menstrual</td>
+                      <td className="border border-gray-300 p-2">1-5</td>
+                      <td className="border border-gray-300 p-2">Endometrial shedding</td>
+                      <td className="border border-gray-300 p-2">Low estrogen, progesterone</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Follicular</td>
+                      <td className="border border-gray-300 p-2">5-13</td>
+                      <td className="border border-gray-300 p-2">Follicle growth</td>
+                      <td className="border border-gray-300 p-2">Rising FSH, estrogen</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Ovulatory</td>
+                      <td className="border border-gray-300 p-2">13-15</td>
+                      <td className="border border-gray-300 p-2">LH surge → ovulation (day 14)</td>
+                      <td className="border border-gray-300 p-2">Peak LH, estrogen</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Luteal</td>
+                      <td className="border border-gray-300 p-2">15-28</td>
+                      <td className="border border-gray-300 p-2">Corpus luteum → progesterone</td>
+                      <td className="border border-gray-300 p-2">High progesterone</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div>
               <p className="font-semibold text-green-800">
@@ -4704,46 +4784,52 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
           <div className="space-y-4">
             <div>
               <p className="font-semibold text-green-800">Birth Control Methods</p>
-              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-                <thead>
-                  <tr className="bg-green-50">
-                    <th className="border border-gray-300 p-2">Method</th>
-                    <th className="border border-gray-300 p-2">Examples</th>
-                    <th className="border border-gray-300 p-2">Efficacy</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Natural</td>
-                    <td className="border border-gray-300 p-2">
-                      Rhythm method, coitus interruptus
-                    </td>
-                    <td className="border border-gray-300 p-2">Low (70-90%)</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Barrier</td>
-                    <td className="border border-gray-300 p-2">Condom, diaphragm, cervical cap</td>
-                    <td className="border border-gray-300 p-2">Moderate (82-95%)</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">IUD</td>
-                    <td className="border border-gray-300 p-2">Copper T, LNG-IUS</td>
-                    <td className="border border-gray-300 p-2">High (99%+)</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Hormonal</td>
-                    <td className="border border-gray-300 p-2">Oral pills, patches, injections</td>
-                    <td className="border border-gray-300 p-2">High (91-99%)</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Surgical</td>
-                    <td className="border border-gray-300 p-2">
-                      Tubectomy (female), Vasectomy (male)
-                    </td>
-                    <td className="border border-gray-300 p-2">Very high (&gt;99%)</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                  <thead>
+                    <tr className="bg-green-50">
+                      <th className="border border-gray-300 p-2">Method</th>
+                      <th className="border border-gray-300 p-2">Examples</th>
+                      <th className="border border-gray-300 p-2">Efficacy</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Natural</td>
+                      <td className="border border-gray-300 p-2">
+                        Rhythm method, coitus interruptus
+                      </td>
+                      <td className="border border-gray-300 p-2">Low (70-90%)</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Barrier</td>
+                      <td className="border border-gray-300 p-2">
+                        Condom, diaphragm, cervical cap
+                      </td>
+                      <td className="border border-gray-300 p-2">Moderate (82-95%)</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">IUD</td>
+                      <td className="border border-gray-300 p-2">Copper T, LNG-IUS</td>
+                      <td className="border border-gray-300 p-2">High (99%+)</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Hormonal</td>
+                      <td className="border border-gray-300 p-2">
+                        Oral pills, patches, injections
+                      </td>
+                      <td className="border border-gray-300 p-2">High (91-99%)</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Surgical</td>
+                      <td className="border border-gray-300 p-2">
+                        Tubectomy (female), Vasectomy (male)
+                      </td>
+                      <td className="border border-gray-300 p-2">Very high (&gt;99%)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div>
               <p className="font-semibold text-green-800">STDs (Sexually Transmitted Diseases)</p>
@@ -4797,31 +4883,33 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             </p>
             <div>
               <p className="font-semibold text-green-800">Cloning Vectors</p>
-              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-                <thead>
-                  <tr className="bg-green-50">
-                    <th className="border border-gray-300 p-2">Vector</th>
-                    <th className="border border-gray-300 p-2">Features</th>
-                    <th className="border border-gray-300 p-2">Use</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">pBR322</td>
-                    <td className="border border-gray-300 p-2">
-                      ori, amp<sup>R</sup>, tet<sup>R</sup>, restriction sites
-                    </td>
-                    <td className="border border-gray-300 p-2">E. coli cloning</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Ti plasmid</td>
-                    <td className="border border-gray-300 p-2">
-                      T-DNA integrates into plant genome
-                    </td>
-                    <td className="border border-gray-300 p-2">Plant transformation</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                  <thead>
+                    <tr className="bg-green-50">
+                      <th className="border border-gray-300 p-2">Vector</th>
+                      <th className="border border-gray-300 p-2">Features</th>
+                      <th className="border border-gray-300 p-2">Use</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">pBR322</td>
+                      <td className="border border-gray-300 p-2">
+                        ori, amp<sup>R</sup>, tet<sup>R</sup>, restriction sites
+                      </td>
+                      <td className="border border-gray-300 p-2">E. coli cloning</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Ti plasmid</td>
+                      <td className="border border-gray-300 p-2">
+                        T-DNA integrates into plant genome
+                      </td>
+                      <td className="border border-gray-300 p-2">Plant transformation</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">Tools:</span> DNA ligase (joins
@@ -4852,34 +4940,36 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             </p>
             <div>
               <p className="font-semibold text-green-800">PCR (Polymerase Chain Reaction)</p>
-              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-                <thead>
-                  <tr className="bg-green-50">
-                    <th className="border border-gray-300 p-2">Step</th>
-                    <th className="border border-gray-300 p-2">Temperature</th>
-                    <th className="border border-gray-300 p-2">Event</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Denaturation</td>
-                    <td className="border border-gray-300 p-2">94°C</td>
-                    <td className="border border-gray-300 p-2">DNA strands separate</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Annealing</td>
-                    <td className="border border-gray-300 p-2">55-65°C</td>
-                    <td className="border border-gray-300 p-2">Primers bind target</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Extension</td>
-                    <td className="border border-gray-300 p-2">72°C</td>
-                    <td className="border border-gray-300 p-2">
-                      Taq polymerase synthesizes new strand
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                  <thead>
+                    <tr className="bg-green-50">
+                      <th className="border border-gray-300 p-2">Step</th>
+                      <th className="border border-gray-300 p-2">Temperature</th>
+                      <th className="border border-gray-300 p-2">Event</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Denaturation</td>
+                      <td className="border border-gray-300 p-2">94°C</td>
+                      <td className="border border-gray-300 p-2">DNA strands separate</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Annealing</td>
+                      <td className="border border-gray-300 p-2">55-65°C</td>
+                      <td className="border border-gray-300 p-2">Primers bind target</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Extension</td>
+                      <td className="border border-gray-300 p-2">72°C</td>
+                      <td className="border border-gray-300 p-2">
+                        Taq polymerase synthesizes new strand
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">Gel Electrophoresis:</span> DNA
@@ -4905,27 +4995,29 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
           <div className="space-y-4">
             <div>
               <p className="font-semibold text-green-800">Bt Crops</p>
-              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-                <thead>
-                  <tr className="bg-green-50">
-                    <th className="border border-gray-300 p-2">Crop</th>
-                    <th className="border border-gray-300 p-2">Gene</th>
-                    <th className="border border-gray-300 p-2">Target Pest</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Bt cotton</td>
-                    <td className="border border-gray-300 p-2">cry1Ac, cry2Ab</td>
-                    <td className="border border-gray-300 p-2">Lepidopteran bollworm</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Bt corn</td>
-                    <td className="border border-gray-300 p-2">cry1Ab</td>
-                    <td className="border border-gray-300 p-2">European corn borer</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                  <thead>
+                    <tr className="bg-green-50">
+                      <th className="border border-gray-300 p-2">Crop</th>
+                      <th className="border border-gray-300 p-2">Gene</th>
+                      <th className="border border-gray-300 p-2">Target Pest</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Bt cotton</td>
+                      <td className="border border-gray-300 p-2">cry1Ac, cry2Ab</td>
+                      <td className="border border-gray-300 p-2">Lepidopteran bollworm</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Bt corn</td>
+                      <td className="border border-gray-300 p-2">cry1Ab</td>
+                      <td className="border border-gray-300 p-2">European corn borer</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">Cry Protein Mechanism:</span> Inactive
@@ -4970,32 +5062,34 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             </p>
             <div>
               <p className="font-semibold text-green-800">Molecular Diagnostics</p>
-              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-                <thead>
-                  <tr className="bg-green-50">
-                    <th className="border border-gray-300 p-2">Technique</th>
-                    <th className="border border-gray-300 p-2">Principle</th>
-                    <th className="border border-gray-300 p-2">Use</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">ELISA</td>
-                    <td className="border border-gray-300 p-2">Antigen-antibody binding</td>
-                    <td className="border border-gray-300 p-2">HIV detection, pregnancy tests</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">PCR</td>
-                    <td className="border border-gray-300 p-2">DNA amplification</td>
-                    <td className="border border-gray-300 p-2">Pathogen detection</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">DNA Probes</td>
-                    <td className="border border-gray-300 p-2">Hybridization</td>
-                    <td className="border border-gray-300 p-2">Genetic disorder screening</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                  <thead>
+                    <tr className="bg-green-50">
+                      <th className="border border-gray-300 p-2">Technique</th>
+                      <th className="border border-gray-300 p-2">Principle</th>
+                      <th className="border border-gray-300 p-2">Use</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">ELISA</td>
+                      <td className="border border-gray-300 p-2">Antigen-antibody binding</td>
+                      <td className="border border-gray-300 p-2">HIV detection, pregnancy tests</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">PCR</td>
+                      <td className="border border-gray-300 p-2">DNA amplification</td>
+                      <td className="border border-gray-300 p-2">Pathogen detection</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">DNA Probes</td>
+                      <td className="border border-gray-300 p-2">Hybridization</td>
+                      <td className="border border-gray-300 p-2">Genetic disorder screening</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">Transgenic Animals:</span> Used for
@@ -5024,32 +5118,34 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             </p>
             <div>
               <p className="font-semibold text-green-800">Indian Biopiracy Cases</p>
-              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-                <thead>
-                  <tr className="bg-green-50">
-                    <th className="border border-gray-300 p-2">Case</th>
-                    <th className="border border-gray-300 p-2">Resource</th>
-                    <th className="border border-gray-300 p-2">Outcome</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Turmeric patent</td>
-                    <td className="border border-gray-300 p-2">Curcumin (anti-inflammatory)</td>
-                    <td className="border border-gray-300 p-2">Challenged and revoked</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Neem patent</td>
-                    <td className="border border-gray-300 p-2">Pesticidal properties</td>
-                    <td className="border border-gray-300 p-2">Revoked</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 p-2">Basmati rice</td>
-                    <td className="border border-gray-300 p-2">Breeding patent by RiceTec</td>
-                    <td className="border border-gray-300 p-2">Challenged</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                  <thead>
+                    <tr className="bg-green-50">
+                      <th className="border border-gray-300 p-2">Case</th>
+                      <th className="border border-gray-300 p-2">Resource</th>
+                      <th className="border border-gray-300 p-2">Outcome</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Turmeric patent</td>
+                      <td className="border border-gray-300 p-2">Curcumin (anti-inflammatory)</td>
+                      <td className="border border-gray-300 p-2">Challenged and revoked</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">Neem patent</td>
+                      <td className="border border-gray-300 p-2">Pesticidal properties</td>
+                      <td className="border border-gray-300 p-2">Revoked</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="border border-gray-300 p-2">Basmati rice</td>
+                      <td className="border border-gray-300 p-2">Breeding patent by RiceTec</td>
+                      <td className="border border-gray-300 p-2">Challenged</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">GEAC</span> (Genetic Engineering
@@ -5087,54 +5183,56 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               </span>
               .
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Kingdom</th>
-                  <th className="border border-gray-300 p-2">Cell Type</th>
-                  <th className="border border-gray-300 p-2">Cell Wall</th>
-                  <th className="border border-gray-300 p-2">Nutrition</th>
-                  <th className="border border-gray-300 p-2">Examples</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Monera</td>
-                  <td className="border border-gray-300 p-2">Prokaryotic</td>
-                  <td className="border border-gray-300 p-2">Present</td>
-                  <td className="border border-gray-300 p-2">Autotrophic/Heterotrophic</td>
-                  <td className="border border-gray-300 p-2">Bacteria, Cyanobacteria</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Protista</td>
-                  <td className="border border-gray-300 p-2">Eukaryotic</td>
-                  <td className="border border-gray-300 p-2">Absent/Present</td>
-                  <td className="border border-gray-300 p-2">Autotrophic/Heterotrophic</td>
-                  <td className="border border-gray-300 p-2">Diatoms, Euglena, Amoeba</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Fungi</td>
-                  <td className="border border-gray-300 p-2">Eukaryotic</td>
-                  <td className="border border-gray-300 p-2">Chitin</td>
-                  <td className="border border-gray-300 p-2">Heterotrophic</td>
-                  <td className="border border-gray-300 p-2">Mushroom, Yeast, Mold</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Plantae</td>
-                  <td className="border border-gray-300 p-2">Eukaryotic</td>
-                  <td className="border border-gray-300 p-2">Cellulose</td>
-                  <td className="border border-gray-300 p-2">Autotrophic</td>
-                  <td className="border border-gray-300 p-2">Ferns, Flowering Plants</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Animalia</td>
-                  <td className="border border-gray-300 p-2">Eukaryotic</td>
-                  <td className="border border-gray-300 p-2">Absent</td>
-                  <td className="border border-gray-300 p-2">Heterotrophic</td>
-                  <td className="border border-gray-300 p-2">Insects, Mammals, Fish</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Kingdom</th>
+                    <th className="border border-gray-300 p-2">Cell Type</th>
+                    <th className="border border-gray-300 p-2">Cell Wall</th>
+                    <th className="border border-gray-300 p-2">Nutrition</th>
+                    <th className="border border-gray-300 p-2">Examples</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Monera</td>
+                    <td className="border border-gray-300 p-2">Prokaryotic</td>
+                    <td className="border border-gray-300 p-2">Present</td>
+                    <td className="border border-gray-300 p-2">Autotrophic/Heterotrophic</td>
+                    <td className="border border-gray-300 p-2">Bacteria, Cyanobacteria</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Protista</td>
+                    <td className="border border-gray-300 p-2">Eukaryotic</td>
+                    <td className="border border-gray-300 p-2">Absent/Present</td>
+                    <td className="border border-gray-300 p-2">Autotrophic/Heterotrophic</td>
+                    <td className="border border-gray-300 p-2">Diatoms, Euglena, Amoeba</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Fungi</td>
+                    <td className="border border-gray-300 p-2">Eukaryotic</td>
+                    <td className="border border-gray-300 p-2">Chitin</td>
+                    <td className="border border-gray-300 p-2">Heterotrophic</td>
+                    <td className="border border-gray-300 p-2">Mushroom, Yeast, Mold</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Plantae</td>
+                    <td className="border border-gray-300 p-2">Eukaryotic</td>
+                    <td className="border border-gray-300 p-2">Cellulose</td>
+                    <td className="border border-gray-300 p-2">Autotrophic</td>
+                    <td className="border border-gray-300 p-2">Ferns, Flowering Plants</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Animalia</td>
+                    <td className="border border-gray-300 p-2">Eukaryotic</td>
+                    <td className="border border-gray-300 p-2">Absent</td>
+                    <td className="border border-gray-300 p-2">Heterotrophic</td>
+                    <td className="border border-gray-300 p-2">Insects, Mammals, Fish</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">Two-kingdom vs Five-kingdom:</span> Old
               two-kingdom system grouped bacteria and fungi with plants. Five-kingdom separates them
@@ -5159,34 +5257,36 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               <span className="font-semibold text-green-800">Bacteria shapes:</span> Cocci
               (spherical), Bacilli (rod), Vibrio (comma), Spirillum (spiral).
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Feature</th>
-                  <th className="border border-gray-300 p-2">Gram Positive</th>
-                  <th className="border border-gray-300 p-2">Gram Negative</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Cell Wall</td>
-                  <td className="border border-gray-300 p-2">Thick peptidoglycan</td>
-                  <td className="border border-gray-300 p-2">
-                    Thin peptidoglycan + Outer membrane
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Gram Stain</td>
-                  <td className="border border-gray-300 p-2">Purple/Blue</td>
-                  <td className="border border-gray-300 p-2">Pink/Red</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Example</td>
-                  <td className="border border-gray-300 p-2">Bacillus, Streptococcus</td>
-                  <td className="border border-gray-300 p-2">E. coli, Salmonella</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Feature</th>
+                    <th className="border border-gray-300 p-2">Gram Positive</th>
+                    <th className="border border-gray-300 p-2">Gram Negative</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Cell Wall</td>
+                    <td className="border border-gray-300 p-2">Thick peptidoglycan</td>
+                    <td className="border border-gray-300 p-2">
+                      Thin peptidoglycan + Outer membrane
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Gram Stain</td>
+                    <td className="border border-gray-300 p-2">Purple/Blue</td>
+                    <td className="border border-gray-300 p-2">Pink/Red</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Example</td>
+                    <td className="border border-gray-300 p-2">Bacillus, Streptococcus</td>
+                    <td className="border border-gray-300 p-2">E. coli, Salmonella</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">Nutritional types:</span>{' '}
               Photoautotroph (light + CO<sub>2</sub>), Chemoautotroph (chemical energy),
@@ -5225,42 +5325,44 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               <span className="font-semibold text-green-800">Slime moulds:</span> Saprophytic, form
               spores.
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Protozoan Class</th>
-                  <th className="border border-gray-300 p-2">Locomotion</th>
-                  <th className="border border-gray-300 p-2">Example</th>
-                  <th className="border border-gray-300 p-2">Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Sarcodina</td>
-                  <td className="border border-gray-300 p-2">Pseudopodia</td>
-                  <td className="border border-gray-300 p-2">Amoeba</td>
-                  <td className="border border-gray-300 p-2">False feet</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Ciliata</td>
-                  <td className="border border-gray-300 p-2">Cilia</td>
-                  <td className="border border-gray-300 p-2">Paramecium</td>
-                  <td className="border border-gray-300 p-2">Hair-like structures</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Sporozoa</td>
-                  <td className="border border-gray-300 p-2">Absent</td>
-                  <td className="border border-gray-300 p-2">Plasmodium</td>
-                  <td className="border border-gray-300 p-2">Causes malaria</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Flagellata</td>
-                  <td className="border border-gray-300 p-2">Flagella</td>
-                  <td className="border border-gray-300 p-2">Trypanosoma</td>
-                  <td className="border border-gray-300 p-2">Whip-like tail</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Protozoan Class</th>
+                    <th className="border border-gray-300 p-2">Locomotion</th>
+                    <th className="border border-gray-300 p-2">Example</th>
+                    <th className="border border-gray-300 p-2">Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Sarcodina</td>
+                    <td className="border border-gray-300 p-2">Pseudopodia</td>
+                    <td className="border border-gray-300 p-2">Amoeba</td>
+                    <td className="border border-gray-300 p-2">False feet</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Ciliata</td>
+                    <td className="border border-gray-300 p-2">Cilia</td>
+                    <td className="border border-gray-300 p-2">Paramecium</td>
+                    <td className="border border-gray-300 p-2">Hair-like structures</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Sporozoa</td>
+                    <td className="border border-gray-300 p-2">Absent</td>
+                    <td className="border border-gray-300 p-2">Plasmodium</td>
+                    <td className="border border-gray-300 p-2">Causes malaria</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Flagellata</td>
+                    <td className="border border-gray-300 p-2">Flagella</td>
+                    <td className="border border-gray-300 p-2">Trypanosoma</td>
+                    <td className="border border-gray-300 p-2">Whip-like tail</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3">
               <p className="font-semibold text-yellow-800 text-sm">
                 NEET TIP: Diatoms = &quot;chief producers in oceans&quot;. Euglena = plant-animal
@@ -5279,39 +5381,41 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               <span className="font-semibold text-green-800">General features:</span> Heterotrophic,
               chitin cell wall, glycogen storage.
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Phylum</th>
-                  <th className="border border-gray-300 p-2">Spore Type</th>
-                  <th className="border border-gray-300 p-2">Examples</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Phycomycetes</td>
-                  <td className="border border-gray-300 p-2">Zoospores, Conidia</td>
-                  <td className="border border-gray-300 p-2">Mucor, Rhizopus</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Ascomycetes</td>
-                  <td className="border border-gray-300 p-2">Ascospores</td>
-                  <td className="border border-gray-300 p-2">Yeast, Aspergillus, Neurospora</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Basidiomycetes</td>
-                  <td className="border border-gray-300 p-2">Basidiospores</td>
-                  <td className="border border-gray-300 p-2">Agaricus, Ustilago, Puccinia</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Deuteromycetes</td>
-                  <td className="border border-gray-300 p-2">Conidia only</td>
-                  <td className="border border-gray-300 p-2">
-                    Alternaria, Colletotrichum, Trichoderma
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Phylum</th>
+                    <th className="border border-gray-300 p-2">Spore Type</th>
+                    <th className="border border-gray-300 p-2">Examples</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Phycomycetes</td>
+                    <td className="border border-gray-300 p-2">Zoospores, Conidia</td>
+                    <td className="border border-gray-300 p-2">Mucor, Rhizopus</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Ascomycetes</td>
+                    <td className="border border-gray-300 p-2">Ascospores</td>
+                    <td className="border border-gray-300 p-2">Yeast, Aspergillus, Neurospora</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Basidiomycetes</td>
+                    <td className="border border-gray-300 p-2">Basidiospores</td>
+                    <td className="border border-gray-300 p-2">Agaricus, Ustilago, Puccinia</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Deuteromycetes</td>
+                    <td className="border border-gray-300 p-2">Conidia only</td>
+                    <td className="border border-gray-300 p-2">
+                      Alternaria, Colletotrichum, Trichoderma
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">Asexual reproduction:</span> Zoospores,
               conidia, budding. <span className="font-semibold text-green-800">Sexual:</span>{' '}
@@ -5339,36 +5443,38 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               <span className="font-semibold text-green-800">Virus structure:</span> Nucleic acid
               (DNA/RNA) + Protein coat (capsid). Show both living and non-living characters.
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Type</th>
-                  <th className="border border-gray-300 p-2">Nucleic Acid</th>
-                  <th className="border border-gray-300 p-2">Example</th>
-                  <th className="border border-gray-300 p-2">Characteristics</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">TMV</td>
-                  <td className="border border-gray-300 p-2">ssRNA</td>
-                  <td className="border border-gray-300 p-2">Tobacco Mosaic Virus</td>
-                  <td className="border border-gray-300 p-2">Plant pathogen</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Bacteriophage</td>
-                  <td className="border border-gray-300 p-2">dsDNA</td>
-                  <td className="border border-gray-300 p-2">Lambda phage</td>
-                  <td className="border border-gray-300 p-2">Infects bacteria</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">HIV</td>
-                  <td className="border border-gray-300 p-2">ssRNA</td>
-                  <td className="border border-gray-300 p-2">Retrovirus</td>
-                  <td className="border border-gray-300 p-2">Causes AIDS</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Type</th>
+                    <th className="border border-gray-300 p-2">Nucleic Acid</th>
+                    <th className="border border-gray-300 p-2">Example</th>
+                    <th className="border border-gray-300 p-2">Characteristics</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">TMV</td>
+                    <td className="border border-gray-300 p-2">ssRNA</td>
+                    <td className="border border-gray-300 p-2">Tobacco Mosaic Virus</td>
+                    <td className="border border-gray-300 p-2">Plant pathogen</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Bacteriophage</td>
+                    <td className="border border-gray-300 p-2">dsDNA</td>
+                    <td className="border border-gray-300 p-2">Lambda phage</td>
+                    <td className="border border-gray-300 p-2">Infects bacteria</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">HIV</td>
+                    <td className="border border-gray-300 p-2">ssRNA</td>
+                    <td className="border border-gray-300 p-2">Retrovirus</td>
+                    <td className="border border-gray-300 p-2">Causes AIDS</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">Viroids:</span> Free RNA without
               protein coat (Potato Spindle Tuber Viroid).{' '}
@@ -5457,52 +5563,54 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
         pyqFrequency: 'Very High' as const,
         content: (
           <div className="space-y-4">
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Rank</th>
-                  <th className="border border-gray-300 p-2">Human Example</th>
-                  <th className="border border-gray-300 p-2">Wheat Example</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Kingdom</td>
-                  <td className="border border-gray-300 p-2">Animalia</td>
-                  <td className="border border-gray-300 p-2">Plantae</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Phylum/Division</td>
-                  <td className="border border-gray-300 p-2">Chordata</td>
-                  <td className="border border-gray-300 p-2">Angiospermae</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Class</td>
-                  <td className="border border-gray-300 p-2">Mammalia</td>
-                  <td className="border border-gray-300 p-2">Monocotyledonae</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Order</td>
-                  <td className="border border-gray-300 p-2">Primates</td>
-                  <td className="border border-gray-300 p-2">Poales</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Family</td>
-                  <td className="border border-gray-300 p-2">Hominidae</td>
-                  <td className="border border-gray-300 p-2">Poaceae</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Genus</td>
-                  <td className="border border-gray-300 p-2">Homo</td>
-                  <td className="border border-gray-300 p-2">Triticum</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Species</td>
-                  <td className="border border-gray-300 p-2">sapiens</td>
-                  <td className="border border-gray-300 p-2">aestivum</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Rank</th>
+                    <th className="border border-gray-300 p-2">Human Example</th>
+                    <th className="border border-gray-300 p-2">Wheat Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Kingdom</td>
+                    <td className="border border-gray-300 p-2">Animalia</td>
+                    <td className="border border-gray-300 p-2">Plantae</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Phylum/Division</td>
+                    <td className="border border-gray-300 p-2">Chordata</td>
+                    <td className="border border-gray-300 p-2">Angiospermae</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Class</td>
+                    <td className="border border-gray-300 p-2">Mammalia</td>
+                    <td className="border border-gray-300 p-2">Monocotyledonae</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Order</td>
+                    <td className="border border-gray-300 p-2">Primates</td>
+                    <td className="border border-gray-300 p-2">Poales</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Family</td>
+                    <td className="border border-gray-300 p-2">Hominidae</td>
+                    <td className="border border-gray-300 p-2">Poaceae</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Genus</td>
+                    <td className="border border-gray-300 p-2">Homo</td>
+                    <td className="border border-gray-300 p-2">Triticum</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Species</td>
+                    <td className="border border-gray-300 p-2">sapiens</td>
+                    <td className="border border-gray-300 p-2">aestivum</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">Species</span> is the BASIC unit of
               classification. As we go from species → kingdom: common characters DECREASE, number of
@@ -5585,50 +5693,56 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
         pyqFrequency: 'High' as const,
         content: (
           <div className="space-y-4">
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Feature</th>
-                  <th className="border border-gray-300 p-2">Chlorophyceae (Green)</th>
-                  <th className="border border-gray-300 p-2">Phaeophyceae (Brown)</th>
-                  <th className="border border-gray-300 p-2">Rhodophyceae (Red)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Examples</td>
-                  <td className="border border-gray-300 p-2">Chlamydomonas, Spirogyra, Ulva</td>
-                  <td className="border border-gray-300 p-2">Fucus, Laminaria, Sargassum</td>
-                  <td className="border border-gray-300 p-2">Polysiphonia, Porphyra, Gracilaria</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Pigments</td>
-                  <td className="border border-gray-300 p-2">Chlorophyll a &amp; b</td>
-                  <td className="border border-gray-300 p-2">Chlorophyll a &amp; c, Fucoxanthin</td>
-                  <td className="border border-gray-300 p-2">
-                    Chlorophyll a &amp; d, r-Phycoerythrin
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Storage</td>
-                  <td className="border border-gray-300 p-2">Starch</td>
-                  <td className="border border-gray-300 p-2">Mannitol &amp; Laminarin</td>
-                  <td className="border border-gray-300 p-2">Floridean Starch</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Cell Wall</td>
-                  <td className="border border-gray-300 p-2">Cellulose</td>
-                  <td className="border border-gray-300 p-2">Cellulose &amp; Algin</td>
-                  <td className="border border-gray-300 p-2">Cellulose &amp; Pectin</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Habitat</td>
-                  <td className="border border-gray-300 p-2">Mostly Freshwater</td>
-                  <td className="border border-gray-300 p-2">Marine</td>
-                  <td className="border border-gray-300 p-2">Marine (Deep Water)</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Feature</th>
+                    <th className="border border-gray-300 p-2">Chlorophyceae (Green)</th>
+                    <th className="border border-gray-300 p-2">Phaeophyceae (Brown)</th>
+                    <th className="border border-gray-300 p-2">Rhodophyceae (Red)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Examples</td>
+                    <td className="border border-gray-300 p-2">Chlamydomonas, Spirogyra, Ulva</td>
+                    <td className="border border-gray-300 p-2">Fucus, Laminaria, Sargassum</td>
+                    <td className="border border-gray-300 p-2">
+                      Polysiphonia, Porphyra, Gracilaria
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Pigments</td>
+                    <td className="border border-gray-300 p-2">Chlorophyll a &amp; b</td>
+                    <td className="border border-gray-300 p-2">
+                      Chlorophyll a &amp; c, Fucoxanthin
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Chlorophyll a &amp; d, r-Phycoerythrin
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Storage</td>
+                    <td className="border border-gray-300 p-2">Starch</td>
+                    <td className="border border-gray-300 p-2">Mannitol &amp; Laminarin</td>
+                    <td className="border border-gray-300 p-2">Floridean Starch</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Cell Wall</td>
+                    <td className="border border-gray-300 p-2">Cellulose</td>
+                    <td className="border border-gray-300 p-2">Cellulose &amp; Algin</td>
+                    <td className="border border-gray-300 p-2">Cellulose &amp; Pectin</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Habitat</td>
+                    <td className="border border-gray-300 p-2">Mostly Freshwater</td>
+                    <td className="border border-gray-300 p-2">Marine</td>
+                    <td className="border border-gray-300 p-2">Marine (Deep Water)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">Economic:</span> Agar from
               Gelidium/Gracilaria (red algae). Algin from brown algae.{' '}
@@ -5657,37 +5771,39 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               — need water for fertilisation. Dominant phase: gametophyte (n). Sporophyte dependent
               on gametophyte.
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Feature</th>
-                  <th className="border border-gray-300 p-2">Liverworts</th>
-                  <th className="border border-gray-300 p-2">Mosses</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Body</td>
-                  <td className="border border-gray-300 p-2">Thalloid (Marchantia)</td>
-                  <td className="border border-gray-300 p-2">Leafy with stem-like structure</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Protonema</td>
-                  <td className="border border-gray-300 p-2">Absent</td>
-                  <td className="border border-gray-300 p-2">Present</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Rhizoids</td>
-                  <td className="border border-gray-300 p-2">Unicellular</td>
-                  <td className="border border-gray-300 p-2">Multicellular</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Examples</td>
-                  <td className="border border-gray-300 p-2">Marchantia, Riccia</td>
-                  <td className="border border-gray-300 p-2">Funaria, Sphagnum</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Feature</th>
+                    <th className="border border-gray-300 p-2">Liverworts</th>
+                    <th className="border border-gray-300 p-2">Mosses</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Body</td>
+                    <td className="border border-gray-300 p-2">Thalloid (Marchantia)</td>
+                    <td className="border border-gray-300 p-2">Leafy with stem-like structure</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Protonema</td>
+                    <td className="border border-gray-300 p-2">Absent</td>
+                    <td className="border border-gray-300 p-2">Present</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Rhizoids</td>
+                    <td className="border border-gray-300 p-2">Unicellular</td>
+                    <td className="border border-gray-300 p-2">Multicellular</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Examples</td>
+                    <td className="border border-gray-300 p-2">Marchantia, Riccia</td>
+                    <td className="border border-gray-300 p-2">Funaria, Sphagnum</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">Alternation of generations:</span>{' '}
               Haploid gametophyte (n) → gametes → fertilisation → diploid sporophyte (2n) → spores →
@@ -5711,37 +5827,39 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               <span className="font-semibold text-green-800">First vascular plants</span> (xylem +
               phloem). Dominant phase: sporophyte (2n).
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Division</th>
-                  <th className="border border-gray-300 p-2">Example</th>
-                  <th className="border border-gray-300 p-2">Features</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Psilopsida</td>
-                  <td className="border border-gray-300 p-2">Psilotum</td>
-                  <td className="border border-gray-300 p-2">Most primitive</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Lycopsida</td>
-                  <td className="border border-gray-300 p-2">Selaginella, Lycopodium</td>
-                  <td className="border border-gray-300 p-2">Club mosses</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Sphenopsida</td>
-                  <td className="border border-gray-300 p-2">Equisetum</td>
-                  <td className="border border-gray-300 p-2">Horsetails</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Pteropsida</td>
-                  <td className="border border-gray-300 p-2">Dryopteris, Adiantum</td>
-                  <td className="border border-gray-300 p-2">True ferns</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Division</th>
+                    <th className="border border-gray-300 p-2">Example</th>
+                    <th className="border border-gray-300 p-2">Features</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Psilopsida</td>
+                    <td className="border border-gray-300 p-2">Psilotum</td>
+                    <td className="border border-gray-300 p-2">Most primitive</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Lycopsida</td>
+                    <td className="border border-gray-300 p-2">Selaginella, Lycopodium</td>
+                    <td className="border border-gray-300 p-2">Club mosses</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Sphenopsida</td>
+                    <td className="border border-gray-300 p-2">Equisetum</td>
+                    <td className="border border-gray-300 p-2">Horsetails</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Pteropsida</td>
+                    <td className="border border-gray-300 p-2">Dryopteris, Adiantum</td>
+                    <td className="border border-gray-300 p-2">True ferns</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">Heterosporous:</span> Selaginella
               produces microspores + megaspores → precursor to seed habit. Sporangia in sori on
@@ -5792,42 +5910,44 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               <span className="font-semibold text-green-800">&quot;Enclosed seeds&quot;</span> —
               ovules inside ovary → fruit. Double fertilisation unique to angiosperms.
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Feature</th>
-                  <th className="border border-gray-300 p-2">Dicots</th>
-                  <th className="border border-gray-300 p-2">Monocots</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Cotyledons</td>
-                  <td className="border border-gray-300 p-2">2</td>
-                  <td className="border border-gray-300 p-2">1</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Root</td>
-                  <td className="border border-gray-300 p-2">Tap root</td>
-                  <td className="border border-gray-300 p-2">Fibrous root</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Venation</td>
-                  <td className="border border-gray-300 p-2">Reticulate</td>
-                  <td className="border border-gray-300 p-2">Parallel</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Flower parts</td>
-                  <td className="border border-gray-300 p-2">4 or 5</td>
-                  <td className="border border-gray-300 p-2">3 or multiples</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Vascular bundles</td>
-                  <td className="border border-gray-300 p-2">Open, ring</td>
-                  <td className="border border-gray-300 p-2">Closed, scattered</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Feature</th>
+                    <th className="border border-gray-300 p-2">Dicots</th>
+                    <th className="border border-gray-300 p-2">Monocots</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Cotyledons</td>
+                    <td className="border border-gray-300 p-2">2</td>
+                    <td className="border border-gray-300 p-2">1</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Root</td>
+                    <td className="border border-gray-300 p-2">Tap root</td>
+                    <td className="border border-gray-300 p-2">Fibrous root</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Venation</td>
+                    <td className="border border-gray-300 p-2">Reticulate</td>
+                    <td className="border border-gray-300 p-2">Parallel</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Flower parts</td>
+                    <td className="border border-gray-300 p-2">4 or 5</td>
+                    <td className="border border-gray-300 p-2">3 or multiples</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Vascular bundles</td>
+                    <td className="border border-gray-300 p-2">Open, ring</td>
+                    <td className="border border-gray-300 p-2">Closed, scattered</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="text-sm">
               <span className="font-semibold text-green-800">Life cycle types:</span> Haplontic
               (dominant gametophyte, algae), Diplontic (dominant sporophyte,
@@ -5888,36 +6008,38 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               coral. <span className="font-semibold text-green-800">Ctenophora:</span> Comb plates
               (ctenes), bioluminescence. Examples: Pleurobrachia.
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Feature</th>
-                  <th className="border border-gray-300 p-2">Porifera</th>
-                  <th className="border border-gray-300 p-2">Cnidaria</th>
-                  <th className="border border-gray-300 p-2">Ctenophora</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Symmetry</td>
-                  <td className="border border-gray-300 p-2">Asymmetrical</td>
-                  <td className="border border-gray-300 p-2">Radial</td>
-                  <td className="border border-gray-300 p-2">Bilateral</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Germ Layers</td>
-                  <td className="border border-gray-300 p-2">—</td>
-                  <td className="border border-gray-300 p-2">Diploblastic</td>
-                  <td className="border border-gray-300 p-2">Diploblastic</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Special Feature</td>
-                  <td className="border border-gray-300 p-2">Choanocytes, spicules</td>
-                  <td className="border border-gray-300 p-2">Cnidocytes</td>
-                  <td className="border border-gray-300 p-2">Comb plates</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Feature</th>
+                    <th className="border border-gray-300 p-2">Porifera</th>
+                    <th className="border border-gray-300 p-2">Cnidaria</th>
+                    <th className="border border-gray-300 p-2">Ctenophora</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Symmetry</td>
+                    <td className="border border-gray-300 p-2">Asymmetrical</td>
+                    <td className="border border-gray-300 p-2">Radial</td>
+                    <td className="border border-gray-300 p-2">Bilateral</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Germ Layers</td>
+                    <td className="border border-gray-300 p-2">—</td>
+                    <td className="border border-gray-300 p-2">Diploblastic</td>
+                    <td className="border border-gray-300 p-2">Diploblastic</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Special Feature</td>
+                    <td className="border border-gray-300 p-2">Choanocytes, spicules</td>
+                    <td className="border border-gray-300 p-2">Cnidocytes</td>
+                    <td className="border border-gray-300 p-2">Comb plates</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3">
               <p className="font-semibold text-yellow-800 text-sm">
                 NEET TIP: Porifera = cellular level. Cnidaria = tissue level. Cnidocytes UNIQUE to
@@ -5932,37 +6054,39 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
         pyqFrequency: 'High' as const,
         content: (
           <div className="space-y-4">
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Feature</th>
-                  <th className="border border-gray-300 p-2">Platyhelminthes</th>
-                  <th className="border border-gray-300 p-2">Aschelminthes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Coelom</td>
-                  <td className="border border-gray-300 p-2">Acoelomate</td>
-                  <td className="border border-gray-300 p-2">Pseudocoelomate</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Digestive system</td>
-                  <td className="border border-gray-300 p-2">Incomplete (1 opening)</td>
-                  <td className="border border-gray-300 p-2">Complete (2 openings)</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Excretion</td>
-                  <td className="border border-gray-300 p-2">Flame cells</td>
-                  <td className="border border-gray-300 p-2">Excretory glands</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Examples</td>
-                  <td className="border border-gray-300 p-2">Taenia, Fasciola, Planaria</td>
-                  <td className="border border-gray-300 p-2">Ascaris, Wuchereria, Ancylostoma</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Feature</th>
+                    <th className="border border-gray-300 p-2">Platyhelminthes</th>
+                    <th className="border border-gray-300 p-2">Aschelminthes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Coelom</td>
+                    <td className="border border-gray-300 p-2">Acoelomate</td>
+                    <td className="border border-gray-300 p-2">Pseudocoelomate</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Digestive system</td>
+                    <td className="border border-gray-300 p-2">Incomplete (1 opening)</td>
+                    <td className="border border-gray-300 p-2">Complete (2 openings)</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Excretion</td>
+                    <td className="border border-gray-300 p-2">Flame cells</td>
+                    <td className="border border-gray-300 p-2">Excretory glands</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Examples</td>
+                    <td className="border border-gray-300 p-2">Taenia, Fasciola, Planaria</td>
+                    <td className="border border-gray-300 p-2">Ascaris, Wuchereria, Ancylostoma</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3">
               <p className="font-semibold text-yellow-800 text-sm">
                 NEET TIP: Flatworms = ACOELOMATE + incomplete gut. Roundworms = PSEUDOCOELOMATE +
@@ -5978,42 +6102,44 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
         pyqFrequency: 'Very High' as const,
         content: (
           <div className="space-y-4">
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Feature</th>
-                  <th className="border border-gray-300 p-2">Annelida</th>
-                  <th className="border border-gray-300 p-2">Mollusca</th>
-                  <th className="border border-gray-300 p-2">Arthropoda</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Segmentation</td>
-                  <td className="border border-gray-300 p-2">Yes (metameric)</td>
-                  <td className="border border-gray-300 p-2">No</td>
-                  <td className="border border-gray-300 p-2">Yes</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Circulatory</td>
-                  <td className="border border-gray-300 p-2">Closed</td>
-                  <td className="border border-gray-300 p-2">Open</td>
-                  <td className="border border-gray-300 p-2">Open (haemocoel)</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Excretion</td>
-                  <td className="border border-gray-300 p-2">Nephridia</td>
-                  <td className="border border-gray-300 p-2">Kidney</td>
-                  <td className="border border-gray-300 p-2">Malpighian tubules</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Examples</td>
-                  <td className="border border-gray-300 p-2">Pheretima, Hirudinaria</td>
-                  <td className="border border-gray-300 p-2">Pila, Octopus, Pinctada</td>
-                  <td className="border border-gray-300 p-2">Apis, Bombyx, Limulus</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Feature</th>
+                    <th className="border border-gray-300 p-2">Annelida</th>
+                    <th className="border border-gray-300 p-2">Mollusca</th>
+                    <th className="border border-gray-300 p-2">Arthropoda</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Segmentation</td>
+                    <td className="border border-gray-300 p-2">Yes (metameric)</td>
+                    <td className="border border-gray-300 p-2">No</td>
+                    <td className="border border-gray-300 p-2">Yes</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Circulatory</td>
+                    <td className="border border-gray-300 p-2">Closed</td>
+                    <td className="border border-gray-300 p-2">Open</td>
+                    <td className="border border-gray-300 p-2">Open (haemocoel)</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Excretion</td>
+                    <td className="border border-gray-300 p-2">Nephridia</td>
+                    <td className="border border-gray-300 p-2">Kidney</td>
+                    <td className="border border-gray-300 p-2">Malpighian tubules</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Examples</td>
+                    <td className="border border-gray-300 p-2">Pheretima, Hirudinaria</td>
+                    <td className="border border-gray-300 p-2">Pila, Octopus, Pinctada</td>
+                    <td className="border border-gray-300 p-2">Apis, Bombyx, Limulus</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3">
               <p className="font-semibold text-yellow-800 text-sm">
                 NEET TIP: Arthropoda = LARGEST phylum. Open circulation in Arthropoda &amp; Mollusca
@@ -6061,60 +6187,62 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               <span className="font-semibold text-green-800">Subphyla:</span> Urochordata (Ascidia),
               Cephalochordata (Amphioxus), Vertebrata.
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2">Class</th>
-                  <th className="border border-gray-300 p-2">Key Features</th>
-                  <th className="border border-gray-300 p-2">Heart</th>
-                  <th className="border border-gray-300 p-2">Examples</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Cyclostomata</td>
-                  <td className="border border-gray-300 p-2">Jawless, circular mouth</td>
-                  <td className="border border-gray-300 p-2">2-chambered</td>
-                  <td className="border border-gray-300 p-2">Petromyzon (lamprey)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Chondrichthyes</td>
-                  <td className="border border-gray-300 p-2">Cartilaginous, fins, gills</td>
-                  <td className="border border-gray-300 p-2">2-chambered</td>
-                  <td className="border border-gray-300 p-2">Sharks, Rays</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Osteichthyes</td>
-                  <td className="border border-gray-300 p-2">Bony, lateral line</td>
-                  <td className="border border-gray-300 p-2">2-chambered</td>
-                  <td className="border border-gray-300 p-2">Labeo, Hippocampus</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Amphibia</td>
-                  <td className="border border-gray-300 p-2">Moist skin, metamorphosis</td>
-                  <td className="border border-gray-300 p-2">3-chambered</td>
-                  <td className="border border-gray-300 p-2">Rana, Bufo, Salamandra</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Reptilia</td>
-                  <td className="border border-gray-300 p-2">Dry scaly skin, eggs</td>
-                  <td className="border border-gray-300 p-2">3 (4 in croc)</td>
-                  <td className="border border-gray-300 p-2">Chelone, Naja, Crocodilus</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Aves</td>
-                  <td className="border border-gray-300 p-2">Feathers, pneumatic bones</td>
-                  <td className="border border-gray-300 p-2">4-chambered</td>
-                  <td className="border border-gray-300 p-2">Corvus, Struthio</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Mammalia</td>
-                  <td className="border border-gray-300 p-2">Mammary glands, diaphragm</td>
-                  <td className="border border-gray-300 p-2">4-chambered</td>
-                  <td className="border border-gray-300 p-2">Macropus, Balaenoptera, Homo</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2">Class</th>
+                    <th className="border border-gray-300 p-2">Key Features</th>
+                    <th className="border border-gray-300 p-2">Heart</th>
+                    <th className="border border-gray-300 p-2">Examples</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Cyclostomata</td>
+                    <td className="border border-gray-300 p-2">Jawless, circular mouth</td>
+                    <td className="border border-gray-300 p-2">2-chambered</td>
+                    <td className="border border-gray-300 p-2">Petromyzon (lamprey)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Chondrichthyes</td>
+                    <td className="border border-gray-300 p-2">Cartilaginous, fins, gills</td>
+                    <td className="border border-gray-300 p-2">2-chambered</td>
+                    <td className="border border-gray-300 p-2">Sharks, Rays</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Osteichthyes</td>
+                    <td className="border border-gray-300 p-2">Bony, lateral line</td>
+                    <td className="border border-gray-300 p-2">2-chambered</td>
+                    <td className="border border-gray-300 p-2">Labeo, Hippocampus</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Amphibia</td>
+                    <td className="border border-gray-300 p-2">Moist skin, metamorphosis</td>
+                    <td className="border border-gray-300 p-2">3-chambered</td>
+                    <td className="border border-gray-300 p-2">Rana, Bufo, Salamandra</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Reptilia</td>
+                    <td className="border border-gray-300 p-2">Dry scaly skin, eggs</td>
+                    <td className="border border-gray-300 p-2">3 (4 in croc)</td>
+                    <td className="border border-gray-300 p-2">Chelone, Naja, Crocodilus</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Aves</td>
+                    <td className="border border-gray-300 p-2">Feathers, pneumatic bones</td>
+                    <td className="border border-gray-300 p-2">4-chambered</td>
+                    <td className="border border-gray-300 p-2">Corvus, Struthio</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Mammalia</td>
+                    <td className="border border-gray-300 p-2">Mammary glands, diaphragm</td>
+                    <td className="border border-gray-300 p-2">4-chambered</td>
+                    <td className="border border-gray-300 p-2">Macropus, Balaenoptera, Homo</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3">
               <p className="font-semibold text-yellow-800 text-sm">
                 NEET TIP: Crocodile = ONLY reptile with 4-chambered heart. Whale = mammal (NOT
@@ -6175,93 +6303,97 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             <p>
               <strong>Regions of Root (from apex to base):</strong>
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Region</th>
-                  <th className="border border-gray-300 p-2 text-left">Function</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Root cap</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Protects root apex from mechanical injury
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Meristematic zone</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Cell division and formation of new cells
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Elongation zone</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Cells elongate; root extends downward
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Maturation zone</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Root hairs develop; water &amp; nutrient absorption
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Region</th>
+                    <th className="border border-gray-300 p-2 text-left">Function</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Root cap</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Protects root apex from mechanical injury
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Meristematic zone</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Cell division and formation of new cells
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Elongation zone</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Cells elongate; root extends downward
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Maturation zone</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Root hairs develop; water &amp; nutrient absorption
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <p>
               <strong>Root Modifications Table:</strong>
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Modification Type</th>
-                  <th className="border border-gray-300 p-2 text-left">Example</th>
-                  <th className="border border-gray-300 p-2 text-left">Function</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Pneumatophore</td>
-                  <td className="border border-gray-300 p-2">Rhizophora</td>
-                  <td className="border border-gray-300 p-2">Aeration in waterlogged soil</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Prop root</td>
-                  <td className="border border-gray-300 p-2">Banyan</td>
-                  <td className="border border-gray-300 p-2">Support &amp; anchorage</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Stilt root</td>
-                  <td className="border border-gray-300 p-2">Maize, Sugarcane</td>
-                  <td className="border border-gray-300 p-2">Mechanical support</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Storage root (conical)</td>
-                  <td className="border border-gray-300 p-2">Carrot</td>
-                  <td className="border border-gray-300 p-2">Food storage</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Storage root (napiform)</td>
-                  <td className="border border-gray-300 p-2">Turnip</td>
-                  <td className="border border-gray-300 p-2">Food storage</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Storage root (tuberous)</td>
-                  <td className="border border-gray-300 p-2">Sweet potato</td>
-                  <td className="border border-gray-300 p-2">Food storage (adventitious root)</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Modification Type</th>
+                    <th className="border border-gray-300 p-2 text-left">Example</th>
+                    <th className="border border-gray-300 p-2 text-left">Function</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Pneumatophore</td>
+                    <td className="border border-gray-300 p-2">Rhizophora</td>
+                    <td className="border border-gray-300 p-2">Aeration in waterlogged soil</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Prop root</td>
+                    <td className="border border-gray-300 p-2">Banyan</td>
+                    <td className="border border-gray-300 p-2">Support &amp; anchorage</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Stilt root</td>
+                    <td className="border border-gray-300 p-2">Maize, Sugarcane</td>
+                    <td className="border border-gray-300 p-2">Mechanical support</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Storage root (conical)</td>
+                    <td className="border border-gray-300 p-2">Carrot</td>
+                    <td className="border border-gray-300 p-2">Food storage</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Storage root (napiform)</td>
+                    <td className="border border-gray-300 p-2">Turnip</td>
+                    <td className="border border-gray-300 p-2">Food storage</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Storage root (tuberous)</td>
+                    <td className="border border-gray-300 p-2">Sweet potato</td>
+                    <td className="border border-gray-300 p-2">Food storage (adventitious root)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         ),
       },
@@ -6349,56 +6481,58 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             <p>
               <strong>Stem Modifications Comparison Table:</strong>
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Type</th>
-                  <th className="border border-gray-300 p-2 text-left">Example</th>
-                  <th className="border border-gray-300 p-2 text-left">Characteristics</th>
-                  <th className="border border-gray-300 p-2 text-left">Function</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Rhizome</td>
-                  <td className="border border-gray-300 p-2">Ginger</td>
-                  <td className="border border-gray-300 p-2">Horizontal, underground, fleshy</td>
-                  <td className="border border-gray-300 p-2">
-                    Storage &amp; vegetative reproduction
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Tuber</td>
-                  <td className="border border-gray-300 p-2">Potato</td>
-                  <td className="border border-gray-300 p-2">Swollen, eyes/nodes with buds</td>
-                  <td className="border border-gray-300 p-2">
-                    Storage &amp; vegetative reproduction
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Bulb</td>
-                  <td className="border border-gray-300 p-2">Onion</td>
-                  <td className="border border-gray-300 p-2">Underground, fleshy leaf bases</td>
-                  <td className="border border-gray-300 p-2">
-                    Storage &amp; survival during dormancy
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Corm</td>
-                  <td className="border border-gray-300 p-2">Colocasia</td>
-                  <td className="border border-gray-300 p-2">Short, solid, underground stem</td>
-                  <td className="border border-gray-300 p-2">
-                    Storage &amp; vegetative reproduction
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Phylloclade</td>
-                  <td className="border border-gray-300 p-2">Opuntia</td>
-                  <td className="border border-gray-300 p-2">Flattened, green, aerial</td>
-                  <td className="border border-gray-300 p-2">Photosynthesis in xerophytes</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Type</th>
+                    <th className="border border-gray-300 p-2 text-left">Example</th>
+                    <th className="border border-gray-300 p-2 text-left">Characteristics</th>
+                    <th className="border border-gray-300 p-2 text-left">Function</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Rhizome</td>
+                    <td className="border border-gray-300 p-2">Ginger</td>
+                    <td className="border border-gray-300 p-2">Horizontal, underground, fleshy</td>
+                    <td className="border border-gray-300 p-2">
+                      Storage &amp; vegetative reproduction
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Tuber</td>
+                    <td className="border border-gray-300 p-2">Potato</td>
+                    <td className="border border-gray-300 p-2">Swollen, eyes/nodes with buds</td>
+                    <td className="border border-gray-300 p-2">
+                      Storage &amp; vegetative reproduction
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Bulb</td>
+                    <td className="border border-gray-300 p-2">Onion</td>
+                    <td className="border border-gray-300 p-2">Underground, fleshy leaf bases</td>
+                    <td className="border border-gray-300 p-2">
+                      Storage &amp; survival during dormancy
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Corm</td>
+                    <td className="border border-gray-300 p-2">Colocasia</td>
+                    <td className="border border-gray-300 p-2">Short, solid, underground stem</td>
+                    <td className="border border-gray-300 p-2">
+                      Storage &amp; vegetative reproduction
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Phylloclade</td>
+                    <td className="border border-gray-300 p-2">Opuntia</td>
+                    <td className="border border-gray-300 p-2">Flattened, green, aerial</td>
+                    <td className="border border-gray-300 p-2">Photosynthesis in xerophytes</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         ),
       },
@@ -6508,44 +6642,48 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             <p>
               <strong>Leaf Modifications Comparison Table:</strong>
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Modification</th>
-                  <th className="border border-gray-300 p-2 text-left">Example</th>
-                  <th className="border border-gray-300 p-2 text-left">Function</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Tendril</td>
-                  <td className="border border-gray-300 p-2">Pea</td>
-                  <td className="border border-gray-300 p-2">Climbing &amp; support</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Spine</td>
-                  <td className="border border-gray-300 p-2">Cactus</td>
-                  <td className="border border-gray-300 p-2">
-                    Protection &amp; reduce transpiration
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Storage leaf</td>
-                  <td className="border border-gray-300 p-2">Onion</td>
-                  <td className="border border-gray-300 p-2">Food &amp; water storage</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Phyllode</td>
-                  <td className="border border-gray-300 p-2">Australian Acacia</td>
-                  <td className="border border-gray-300 p-2">Photosynthesis (modified petiole)</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Pitcher (insectivorous)</td>
-                  <td className="border border-gray-300 p-2">Nepenthes</td>
-                  <td className="border border-gray-300 p-2">Nutrient absorption from insects</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Modification</th>
+                    <th className="border border-gray-300 p-2 text-left">Example</th>
+                    <th className="border border-gray-300 p-2 text-left">Function</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Tendril</td>
+                    <td className="border border-gray-300 p-2">Pea</td>
+                    <td className="border border-gray-300 p-2">Climbing &amp; support</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Spine</td>
+                    <td className="border border-gray-300 p-2">Cactus</td>
+                    <td className="border border-gray-300 p-2">
+                      Protection &amp; reduce transpiration
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Storage leaf</td>
+                    <td className="border border-gray-300 p-2">Onion</td>
+                    <td className="border border-gray-300 p-2">Food &amp; water storage</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Phyllode</td>
+                    <td className="border border-gray-300 p-2">Australian Acacia</td>
+                    <td className="border border-gray-300 p-2">
+                      Photosynthesis (modified petiole)
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Pitcher (insectivorous)</td>
+                    <td className="border border-gray-300 p-2">Nepenthes</td>
+                    <td className="border border-gray-300 p-2">Nutrient absorption from insects</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         ),
       },
@@ -6641,109 +6779,113 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             <p>
               <strong>Aestivation (Arrangement of Floral Parts in Bud):</strong>
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Type</th>
-                  <th className="border border-gray-300 p-2 text-left">Example</th>
-                  <th className="border border-gray-300 p-2 text-left">Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Valvate</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Calotropis</td>
-                  <td className="border border-gray-300 p-2">
-                    Parts just touch at edges, do not overlap
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Twisted</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">China rose</td>
-                  <td className="border border-gray-300 p-2">Parts overlap in spiral manner</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Imbricate</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Cassia, Gulmohar</td>
-                  <td className="border border-gray-300 p-2">Parts overlap like roof tiles</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Vexillary</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Pea (Papilionaceous)</td>
-                  <td className="border border-gray-300 p-2">
-                    One large petal overlaps two lateral petals, which overlap keel petals
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Type</th>
+                    <th className="border border-gray-300 p-2 text-left">Example</th>
+                    <th className="border border-gray-300 p-2 text-left">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Valvate</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Calotropis</td>
+                    <td className="border border-gray-300 p-2">
+                      Parts just touch at edges, do not overlap
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Twisted</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">China rose</td>
+                    <td className="border border-gray-300 p-2">Parts overlap in spiral manner</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Imbricate</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Cassia, Gulmohar</td>
+                    <td className="border border-gray-300 p-2">Parts overlap like roof tiles</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Vexillary</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Pea (Papilionaceous)</td>
+                    <td className="border border-gray-300 p-2">
+                      One large petal overlaps two lateral petals, which overlap keel petals
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <p>
               <strong>Placentation Types (Position of Ovules in Ovary):</strong>
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Type</th>
-                  <th className="border border-gray-300 p-2 text-left">Example</th>
-                  <th className="border border-gray-300 p-2 text-left">Position of Ovules</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Marginal</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Pea</td>
-                  <td className="border border-gray-300 p-2">
-                    Along margin/ventral suture of unilocular carpel
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Axile</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">China rose, Tomato, Lemon</td>
-                  <td className="border border-gray-300 p-2">
-                    On placenta along central axis in multilocular ovary
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Parietal</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Mustard</td>
-                  <td className="border border-gray-300 p-2">
-                    On inner wall of unilocular ovary; two placentae
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Free central</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Dianthus, Primrose</td>
-                  <td className="border border-gray-300 p-2">
-                    On free central placenta in center of ovary
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Basal</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Sunflower, Marigold</td>
-                  <td className="border border-gray-300 p-2">
-                    Single ovule at base of unilocular ovary
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Type</th>
+                    <th className="border border-gray-300 p-2 text-left">Example</th>
+                    <th className="border border-gray-300 p-2 text-left">Position of Ovules</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Marginal</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Pea</td>
+                    <td className="border border-gray-300 p-2">
+                      Along margin/ventral suture of unilocular carpel
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Axile</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">China rose, Tomato, Lemon</td>
+                    <td className="border border-gray-300 p-2">
+                      On placenta along central axis in multilocular ovary
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Parietal</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Mustard</td>
+                    <td className="border border-gray-300 p-2">
+                      On inner wall of unilocular ovary; two placentae
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Free central</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Dianthus, Primrose</td>
+                    <td className="border border-gray-300 p-2">
+                      On free central placenta in center of ovary
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Basal</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Sunflower, Marigold</td>
+                    <td className="border border-gray-300 p-2">
+                      Single ovule at base of unilocular ovary
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         ),
       },
@@ -6775,130 +6917,134 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             <p>
               <strong>Comprehensive Family Comparison Table:</strong>
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Character</th>
-                  <th className="border border-gray-300 p-2 text-left">Fabaceae</th>
-                  <th className="border border-gray-300 p-2 text-left">Solanaceae</th>
-                  <th className="border border-gray-300 p-2 text-left">Liliaceae</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Examples</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Pea (Pisum), Gram (Cicer)</td>
-                  <td className="border border-gray-300 p-2">
-                    Potato (Solanum), Tomato, Tobacco (Nicotiana)
-                  </td>
-                  <td className="border border-gray-300 p-2">Lily, Onion (Allium), Garlic, Aloe</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Floral Formula</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">K5 C5 A9+1 G1</td>
-                  <td className="border border-gray-300 p-2">K(5) C(5) A5 G(2)</td>
-                  <td className="border border-gray-300 p-2">P3+3 A3+3 G(3)</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Leaf Venation</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Reticulate (dicot)</td>
-                  <td className="border border-gray-300 p-2">Reticulate (dicot)</td>
-                  <td className="border border-gray-300 p-2">Parallel (monocot)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Root Type</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Tap root system</td>
-                  <td className="border border-gray-300 p-2">Tap root system</td>
-                  <td className="border border-gray-300 p-2">Fibrous root system</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Flower Symmetry</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Zygomorphic</td>
-                  <td className="border border-gray-300 p-2">Actinomorphic</td>
-                  <td className="border border-gray-300 p-2">Actinomorphic/Trimerous</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Corolla Type</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Papilionaceous (2 petals + 2 lateral + 2 keel)
-                  </td>
-                  <td className="border border-gray-300 p-2">Fused/Gamopetalous</td>
-                  <td className="border border-gray-300 p-2">
-                    Perianth (tepals 6, not differentiated into calyx &amp; corolla)
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Stamen Arrangement</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Diadelphous (9+1) - one separate, nine fused
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Epipetalous (attached to petals); free
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    6 stamens (2 whorls of 3); hypogynous
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Anther Type</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Bithecous (2 chambers)</td>
-                  <td className="border border-gray-300 p-2">Dithecous (2-lobed)</td>
-                  <td className="border border-gray-300 p-2">Dithecous</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Placentation</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Marginal - ovules along margin of carpel
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Axile - ovules on central axis (multilocular)
-                  </td>
-                  <td className="border border-gray-300 p-2">Axile - ovules on central axis</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Aestivation</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Vexillary (pea-like arrangement)</td>
-                  <td className="border border-gray-300 p-2">Valvate</td>
-                  <td className="border border-gray-300 p-2">Valvate</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Fruit Type</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Legume (pod)</td>
-                  <td className="border border-gray-300 p-2">Berry</td>
-                  <td className="border border-gray-300 p-2">Capsule</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Seed Type</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Dicotyledonous</td>
-                  <td className="border border-gray-300 p-2">Dicotyledonous</td>
-                  <td className="border border-gray-300 p-2">Monocotyledonous</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Character</th>
+                    <th className="border border-gray-300 p-2 text-left">Fabaceae</th>
+                    <th className="border border-gray-300 p-2 text-left">Solanaceae</th>
+                    <th className="border border-gray-300 p-2 text-left">Liliaceae</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Examples</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Pea (Pisum), Gram (Cicer)</td>
+                    <td className="border border-gray-300 p-2">
+                      Potato (Solanum), Tomato, Tobacco (Nicotiana)
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Lily, Onion (Allium), Garlic, Aloe
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Floral Formula</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">K5 C5 A9+1 G1</td>
+                    <td className="border border-gray-300 p-2">K(5) C(5) A5 G(2)</td>
+                    <td className="border border-gray-300 p-2">P3+3 A3+3 G(3)</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Leaf Venation</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Reticulate (dicot)</td>
+                    <td className="border border-gray-300 p-2">Reticulate (dicot)</td>
+                    <td className="border border-gray-300 p-2">Parallel (monocot)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Root Type</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Tap root system</td>
+                    <td className="border border-gray-300 p-2">Tap root system</td>
+                    <td className="border border-gray-300 p-2">Fibrous root system</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Flower Symmetry</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Zygomorphic</td>
+                    <td className="border border-gray-300 p-2">Actinomorphic</td>
+                    <td className="border border-gray-300 p-2">Actinomorphic/Trimerous</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Corolla Type</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Papilionaceous (2 petals + 2 lateral + 2 keel)
+                    </td>
+                    <td className="border border-gray-300 p-2">Fused/Gamopetalous</td>
+                    <td className="border border-gray-300 p-2">
+                      Perianth (tepals 6, not differentiated into calyx &amp; corolla)
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Stamen Arrangement</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Diadelphous (9+1) - one separate, nine fused
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Epipetalous (attached to petals); free
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      6 stamens (2 whorls of 3); hypogynous
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Anther Type</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Bithecous (2 chambers)</td>
+                    <td className="border border-gray-300 p-2">Dithecous (2-lobed)</td>
+                    <td className="border border-gray-300 p-2">Dithecous</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Placentation</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Marginal - ovules along margin of carpel
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Axile - ovules on central axis (multilocular)
+                    </td>
+                    <td className="border border-gray-300 p-2">Axile - ovules on central axis</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Aestivation</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Vexillary (pea-like arrangement)</td>
+                    <td className="border border-gray-300 p-2">Valvate</td>
+                    <td className="border border-gray-300 p-2">Valvate</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Fruit Type</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Legume (pod)</td>
+                    <td className="border border-gray-300 p-2">Berry</td>
+                    <td className="border border-gray-300 p-2">Capsule</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Seed Type</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Dicotyledonous</td>
+                    <td className="border border-gray-300 p-2">Dicotyledonous</td>
+                    <td className="border border-gray-300 p-2">Monocotyledonous</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <p>
               <strong>Economic Importance:</strong>
@@ -7005,42 +7151,44 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               </ul>
             </div>
 
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Feature</th>
-                  <th className="border border-gray-300 p-2 text-left">Parenchyma</th>
-                  <th className="border border-gray-300 p-2 text-left">Collenchyma</th>
-                  <th className="border border-gray-300 p-2 text-left">Sclerenchyma</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Cell Wall</td>
-                  <td className="border border-gray-300 p-2">Thin, cellulose</td>
-                  <td className="border border-gray-300 p-2">Corner thickening</td>
-                  <td className="border border-gray-300 p-2">Uniformly thick, lignified</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Living/Dead</td>
-                  <td className="border border-gray-300 p-2">Living</td>
-                  <td className="border border-gray-300 p-2">Living</td>
-                  <td className="border border-gray-300 p-2">Dead</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Function</td>
-                  <td className="border border-gray-300 p-2">Storage, photosynthesis</td>
-                  <td className="border border-gray-300 p-2">Support, flexibility</td>
-                  <td className="border border-gray-300 p-2">Mechanical strength</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Location</td>
-                  <td className="border border-gray-300 p-2">Ground tissue</td>
-                  <td className="border border-gray-300 p-2">Below epidermis</td>
-                  <td className="border border-gray-300 p-2">Fibres, sclereids</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Feature</th>
+                    <th className="border border-gray-300 p-2 text-left">Parenchyma</th>
+                    <th className="border border-gray-300 p-2 text-left">Collenchyma</th>
+                    <th className="border border-gray-300 p-2 text-left">Sclerenchyma</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Cell Wall</td>
+                    <td className="border border-gray-300 p-2">Thin, cellulose</td>
+                    <td className="border border-gray-300 p-2">Corner thickening</td>
+                    <td className="border border-gray-300 p-2">Uniformly thick, lignified</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Living/Dead</td>
+                    <td className="border border-gray-300 p-2">Living</td>
+                    <td className="border border-gray-300 p-2">Living</td>
+                    <td className="border border-gray-300 p-2">Dead</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Function</td>
+                    <td className="border border-gray-300 p-2">Storage, photosynthesis</td>
+                    <td className="border border-gray-300 p-2">Support, flexibility</td>
+                    <td className="border border-gray-300 p-2">Mechanical strength</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Location</td>
+                    <td className="border border-gray-300 p-2">Ground tissue</td>
+                    <td className="border border-gray-300 p-2">Below epidermis</td>
+                    <td className="border border-gray-300 p-2">Fibres, sclereids</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800 text-sm">
               <span className="font-semibold">NEET TIP:</span> Xylem = dead (except xylem
@@ -7090,37 +7238,39 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               </ul>
             </div>
 
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Feature</th>
-                  <th className="border border-gray-300 p-2 text-left">Dicot Root</th>
-                  <th className="border border-gray-300 p-2 text-left">Monocot Root</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Xylem Arms</td>
-                  <td className="border border-gray-300 p-2">2–6 (diarch-hexarch)</td>
-                  <td className="border border-gray-300 p-2">Many (polyarch)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Pith</td>
-                  <td className="border border-gray-300 p-2">Small/absent</td>
-                  <td className="border border-gray-300 p-2">Large</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Secondary Growth</td>
-                  <td className="border border-gray-300 p-2">Yes (vascular cambium)</td>
-                  <td className="border border-gray-300 p-2">No</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Endodermis</td>
-                  <td className="border border-gray-300 p-2">Casparian strips present</td>
-                  <td className="border border-gray-300 p-2">Casparian strips present</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Feature</th>
+                    <th className="border border-gray-300 p-2 text-left">Dicot Root</th>
+                    <th className="border border-gray-300 p-2 text-left">Monocot Root</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Xylem Arms</td>
+                    <td className="border border-gray-300 p-2">2–6 (diarch-hexarch)</td>
+                    <td className="border border-gray-300 p-2">Many (polyarch)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Pith</td>
+                    <td className="border border-gray-300 p-2">Small/absent</td>
+                    <td className="border border-gray-300 p-2">Large</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Secondary Growth</td>
+                    <td className="border border-gray-300 p-2">Yes (vascular cambium)</td>
+                    <td className="border border-gray-300 p-2">No</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Endodermis</td>
+                    <td className="border border-gray-300 p-2">Casparian strips present</td>
+                    <td className="border border-gray-300 p-2">Casparian strips present</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800 text-sm">
               <span className="font-semibold">NEET TIP:</span> Dicot root = 2–6 xylem arms
@@ -7157,49 +7307,51 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               </ul>
             </div>
 
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Feature</th>
-                  <th className="border border-gray-300 p-2 text-left">Dicot Stem</th>
-                  <th className="border border-gray-300 p-2 text-left">Monocot Stem</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Bundle Arrangement</td>
-                  <td className="border border-gray-300 p-2">Ring arrangement</td>
-                  <td className="border border-gray-300 p-2">Scattered throughout</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Bundle Type</td>
-                  <td className="border border-gray-300 p-2">Open (cambium present)</td>
-                  <td className="border border-gray-300 p-2">Closed (no cambium)</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Cambium</td>
-                  <td className="border border-gray-300 p-2">
-                    Present (intrafascicular &amp; interfascicular)
-                  </td>
-                  <td className="border border-gray-300 p-2">Absent</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Secondary Growth</td>
-                  <td className="border border-gray-300 p-2">Yes</td>
-                  <td className="border border-gray-300 p-2">No</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Hypodermis</td>
-                  <td className="border border-gray-300 p-2">Absent/parenchymatous</td>
-                  <td className="border border-gray-300 p-2">Sclerenchymatous (strong)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Pith</td>
-                  <td className="border border-gray-300 p-2">Central, large</td>
-                  <td className="border border-gray-300 p-2">Not distinct</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Feature</th>
+                    <th className="border border-gray-300 p-2 text-left">Dicot Stem</th>
+                    <th className="border border-gray-300 p-2 text-left">Monocot Stem</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Bundle Arrangement</td>
+                    <td className="border border-gray-300 p-2">Ring arrangement</td>
+                    <td className="border border-gray-300 p-2">Scattered throughout</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Bundle Type</td>
+                    <td className="border border-gray-300 p-2">Open (cambium present)</td>
+                    <td className="border border-gray-300 p-2">Closed (no cambium)</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Cambium</td>
+                    <td className="border border-gray-300 p-2">
+                      Present (intrafascicular &amp; interfascicular)
+                    </td>
+                    <td className="border border-gray-300 p-2">Absent</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Secondary Growth</td>
+                    <td className="border border-gray-300 p-2">Yes</td>
+                    <td className="border border-gray-300 p-2">No</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Hypodermis</td>
+                    <td className="border border-gray-300 p-2">Absent/parenchymatous</td>
+                    <td className="border border-gray-300 p-2">Sclerenchymatous (strong)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Pith</td>
+                    <td className="border border-gray-300 p-2">Central, large</td>
+                    <td className="border border-gray-300 p-2">Not distinct</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800 text-sm">
               <span className="font-semibold">NEET TIP:</span> Dicot stem = OPEN bundles (cambium) +
@@ -7267,42 +7419,44 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               </ul>
             </div>
 
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Feature</th>
-                  <th className="border border-gray-300 p-2 text-left">Heartwood</th>
-                  <th className="border border-gray-300 p-2 text-left">Sapwood</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Colour</td>
-                  <td className="border border-gray-300 p-2">Dark</td>
-                  <td className="border border-gray-300 p-2">Light</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Living/Dead</td>
-                  <td className="border border-gray-300 p-2">Dead</td>
-                  <td className="border border-gray-300 p-2">Living</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Function</td>
-                  <td className="border border-gray-300 p-2">Non-functional, support</td>
-                  <td className="border border-gray-300 p-2">Functional (water transport)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Position</td>
-                  <td className="border border-gray-300 p-2">Central</td>
-                  <td className="border border-gray-300 p-2">Peripheral</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Durability</td>
-                  <td className="border border-gray-300 p-2">Highly durable</td>
-                  <td className="border border-gray-300 p-2">Prone to decay</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Feature</th>
+                    <th className="border border-gray-300 p-2 text-left">Heartwood</th>
+                    <th className="border border-gray-300 p-2 text-left">Sapwood</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Colour</td>
+                    <td className="border border-gray-300 p-2">Dark</td>
+                    <td className="border border-gray-300 p-2">Light</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Living/Dead</td>
+                    <td className="border border-gray-300 p-2">Dead</td>
+                    <td className="border border-gray-300 p-2">Living</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Function</td>
+                    <td className="border border-gray-300 p-2">Non-functional, support</td>
+                    <td className="border border-gray-300 p-2">Functional (water transport)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Position</td>
+                    <td className="border border-gray-300 p-2">Central</td>
+                    <td className="border border-gray-300 p-2">Peripheral</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Durability</td>
+                    <td className="border border-gray-300 p-2">Highly durable</td>
+                    <td className="border border-gray-300 p-2">Prone to decay</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800 text-sm">
               <span className="font-semibold">NEET TIP:</span> Vascular cambium produces secondary
@@ -7356,44 +7510,48 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               </ul>
             </div>
 
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead>
-                <tr className="bg-green-50">
-                  <th className="border border-gray-300 p-2 text-left">Feature</th>
-                  <th className="border border-gray-300 p-2 text-left">Dorsiventral (Dicot)</th>
-                  <th className="border border-gray-300 p-2 text-left">Isobilateral (Monocot)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Stomata Distribution</td>
-                  <td className="border border-gray-300 p-2">Mainly lower surface</td>
-                  <td className="border border-gray-300 p-2">Both surfaces (amphistomatic)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Mesophyll</td>
-                  <td className="border border-gray-300 p-2">
-                    Palisade &amp; spongy (differentiated)
-                  </td>
-                  <td className="border border-gray-300 p-2">Not differentiated</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Palisade Cells</td>
-                  <td className="border border-gray-300 p-2">Elongated, ordered</td>
-                  <td className="border border-gray-300 p-2">Absent</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 font-semibold">Bulliform Cells</td>
-                  <td className="border border-gray-300 p-2">Absent</td>
-                  <td className="border border-gray-300 p-2">Present (motor function)</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2 font-semibold">Bundle Sheath</td>
-                  <td className="border border-gray-300 p-2">Parenchymatous</td>
-                  <td className="border border-gray-300 p-2">Sclerenchymatous sheath</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="border border-gray-300 p-2 text-left">Feature</th>
+                    <th className="border border-gray-300 p-2 text-left">Dorsiventral (Dicot)</th>
+                    <th className="border border-gray-300 p-2 text-left">Isobilateral (Monocot)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">
+                      Stomata Distribution
+                    </td>
+                    <td className="border border-gray-300 p-2">Mainly lower surface</td>
+                    <td className="border border-gray-300 p-2">Both surfaces (amphistomatic)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Mesophyll</td>
+                    <td className="border border-gray-300 p-2">
+                      Palisade &amp; spongy (differentiated)
+                    </td>
+                    <td className="border border-gray-300 p-2">Not differentiated</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Palisade Cells</td>
+                    <td className="border border-gray-300 p-2">Elongated, ordered</td>
+                    <td className="border border-gray-300 p-2">Absent</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 font-semibold">Bulliform Cells</td>
+                    <td className="border border-gray-300 p-2">Absent</td>
+                    <td className="border border-gray-300 p-2">Present (motor function)</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2 font-semibold">Bundle Sheath</td>
+                    <td className="border border-gray-300 p-2">Parenchymatous</td>
+                    <td className="border border-gray-300 p-2">Sclerenchymatous sheath</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800 text-sm">
               <span className="font-semibold">NEET TIP:</span> Dicot = dorsiventral (stomata mainly
@@ -7417,68 +7575,70 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               body.
             </p>
 
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead className="bg-green-50">
-                <tr>
-                  <th className="border border-gray-300 p-2 text-left">Epithelial Type</th>
-                  <th className="border border-gray-300 p-2 text-left">Location</th>
-                  <th className="border border-gray-300 p-2 text-left">Function</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Simple Squamous</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Blood vessels (endothelium), body cavities (mesothelium), alveoli
-                  </td>
-                  <td className="border border-gray-300 p-2">Diffusion, filtration</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Simple Cuboidal</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Kidney tubules, ducts</td>
-                  <td className="border border-gray-300 p-2">Secretion, absorption</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Simple Columnar</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Intestine, stomach</td>
-                  <td className="border border-gray-300 p-2">Absorption, secretion</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Ciliated Columnar</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Trachea, oviduct, bronchi</td>
-                  <td className="border border-gray-300 p-2">Movement of particles</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Pseudostratified</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Trachea, nasal cavity</td>
-                  <td className="border border-gray-300 p-2">Protection, secretion</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Stratified Squamous</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Skin, buccal cavity, oesophagus</td>
-                  <td className="border border-gray-300 p-2">Protection</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Transitional</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Urinary bladder</td>
-                  <td className="border border-gray-300 p-2">Stretching, protection</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead className="bg-green-50">
+                  <tr>
+                    <th className="border border-gray-300 p-2 text-left">Epithelial Type</th>
+                    <th className="border border-gray-300 p-2 text-left">Location</th>
+                    <th className="border border-gray-300 p-2 text-left">Function</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Simple Squamous</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Blood vessels (endothelium), body cavities (mesothelium), alveoli
+                    </td>
+                    <td className="border border-gray-300 p-2">Diffusion, filtration</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Simple Cuboidal</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Kidney tubules, ducts</td>
+                    <td className="border border-gray-300 p-2">Secretion, absorption</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Simple Columnar</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Intestine, stomach</td>
+                    <td className="border border-gray-300 p-2">Absorption, secretion</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Ciliated Columnar</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Trachea, oviduct, bronchi</td>
+                    <td className="border border-gray-300 p-2">Movement of particles</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Pseudostratified</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Trachea, nasal cavity</td>
+                    <td className="border border-gray-300 p-2">Protection, secretion</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Stratified Squamous</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Skin, buccal cavity, oesophagus</td>
+                    <td className="border border-gray-300 p-2">Protection</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Transitional</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Urinary bladder</td>
+                    <td className="border border-gray-300 p-2">Stretching, protection</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <div className="space-y-2">
               <p>
@@ -7528,86 +7688,88 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               cells embedded in a matrix of ground substance and fibres.
             </p>
 
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead className="bg-green-50">
-                <tr>
-                  <th className="border border-gray-300 p-2 text-left">Type</th>
-                  <th className="border border-gray-300 p-2 text-left">Characteristics</th>
-                  <th className="border border-gray-300 p-2 text-left">Location/Function</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Areolar (Loose)</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Loosely packed fibres, abundant ground substance
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Under skin, around organs, binding tissues
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Adipose (Loose)</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Fat cells (lipocytes) with lipid droplets
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Fat storage, insulation, heat production
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Tendons (Dense)</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Tightly packed collagen fibres, inelastic
-                  </td>
-                  <td className="border border-gray-300 p-2">Connect muscle to bone</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Ligaments (Dense)</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Dense, elastic fibres, flexible</td>
-                  <td className="border border-gray-300 p-2">
-                    Connect bone to bone, support joints
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Cartilage</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Chondrocytes in chondrin matrix, avascular
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Support, reduce friction, shape maintenance
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Bone</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Osteocytes in lacunae, Haversian system, vascular
-                  </td>
-                  <td className="border border-gray-300 p-2">Support, protection, movement</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Blood</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Plasma (55%) + RBCs, WBCs, Platelets
-                  </td>
-                  <td className="border border-gray-300 p-2">Transport, immunity, clotting</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead className="bg-green-50">
+                  <tr>
+                    <th className="border border-gray-300 p-2 text-left">Type</th>
+                    <th className="border border-gray-300 p-2 text-left">Characteristics</th>
+                    <th className="border border-gray-300 p-2 text-left">Location/Function</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Areolar (Loose)</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Loosely packed fibres, abundant ground substance
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Under skin, around organs, binding tissues
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Adipose (Loose)</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Fat cells (lipocytes) with lipid droplets
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Fat storage, insulation, heat production
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Tendons (Dense)</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Tightly packed collagen fibres, inelastic
+                    </td>
+                    <td className="border border-gray-300 p-2">Connect muscle to bone</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Ligaments (Dense)</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Dense, elastic fibres, flexible</td>
+                    <td className="border border-gray-300 p-2">
+                      Connect bone to bone, support joints
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Cartilage</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Chondrocytes in chondrin matrix, avascular
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Support, reduce friction, shape maintenance
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Bone</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Osteocytes in lacunae, Haversian system, vascular
+                    </td>
+                    <td className="border border-gray-300 p-2">Support, protection, movement</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Blood</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Plasma (55%) + RBCs, WBCs, Platelets
+                    </td>
+                    <td className="border border-gray-300 p-2">Transport, immunity, clotting</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <div className="space-y-2">
               <p>
@@ -7634,37 +7796,39 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               </ul>
             </div>
 
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead className="bg-green-50">
-                <tr>
-                  <th className="border border-gray-300 p-2 text-left">Feature</th>
-                  <th className="border border-gray-300 p-2 text-left">Cartilage</th>
-                  <th className="border border-gray-300 p-2 text-left">Bone</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Cell type</td>
-                  <td className="border border-gray-300 p-2">Chondrocytes</td>
-                  <td className="border border-gray-300 p-2">Osteocytes</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Matrix</td>
-                  <td className="border border-gray-300 p-2">Chondrin (flexible)</td>
-                  <td className="border border-gray-300 p-2">Ossein + minerals (rigid)</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Blood supply</td>
-                  <td className="border border-gray-300 p-2">Avascular</td>
-                  <td className="border border-gray-300 p-2">Vascular (Haversian canals)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Function</td>
-                  <td className="border border-gray-300 p-2">Support, flexibility</td>
-                  <td className="border border-gray-300 p-2">Support, protection, movement</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead className="bg-green-50">
+                  <tr>
+                    <th className="border border-gray-300 p-2 text-left">Feature</th>
+                    <th className="border border-gray-300 p-2 text-left">Cartilage</th>
+                    <th className="border border-gray-300 p-2 text-left">Bone</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Cell type</td>
+                    <td className="border border-gray-300 p-2">Chondrocytes</td>
+                    <td className="border border-gray-300 p-2">Osteocytes</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Matrix</td>
+                    <td className="border border-gray-300 p-2">Chondrin (flexible)</td>
+                    <td className="border border-gray-300 p-2">Ossein + minerals (rigid)</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Blood supply</td>
+                    <td className="border border-gray-300 p-2">Avascular</td>
+                    <td className="border border-gray-300 p-2">Vascular (Haversian canals)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Function</td>
+                    <td className="border border-gray-300 p-2">Support, flexibility</td>
+                    <td className="border border-gray-300 p-2">Support, protection, movement</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
               <p>
@@ -7687,54 +7851,56 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               generation.
             </p>
 
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead className="bg-green-50">
-                <tr>
-                  <th className="border border-gray-300 p-2 text-left">Feature</th>
-                  <th className="border border-gray-300 p-2 text-left">Skeletal</th>
-                  <th className="border border-gray-300 p-2 text-left">Smooth</th>
-                  <th className="border border-gray-300 p-2 text-left">Cardiac</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Appearance</td>
-                  <td className="border border-gray-300 p-2">Striated</td>
-                  <td className="border border-gray-300 p-2">Non-striated</td>
-                  <td className="border border-gray-300 p-2">Striated</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Control</td>
-                  <td className="border border-gray-300 p-2">Voluntary</td>
-                  <td className="border border-gray-300 p-2">Involuntary</td>
-                  <td className="border border-gray-300 p-2">Involuntary</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Nuclei</td>
-                  <td className="border border-gray-300 p-2">Multinucleated</td>
-                  <td className="border border-gray-300 p-2">Uninucleated</td>
-                  <td className="border border-gray-300 p-2">Uninucleated</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Shape</td>
-                  <td className="border border-gray-300 p-2">Elongated</td>
-                  <td className="border border-gray-300 p-2">Spindle-shaped (fusiform)</td>
-                  <td className="border border-gray-300 p-2">Branched with striations</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Location</td>
-                  <td className="border border-gray-300 p-2">Attached to bones</td>
-                  <td className="border border-gray-300 p-2">Viscera, blood vessels</td>
-                  <td className="border border-gray-300 p-2">Heart</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Special feature</td>
-                  <td className="border border-gray-300 p-2">—</td>
-                  <td className="border border-gray-300 p-2">—</td>
-                  <td className="border border-gray-300 p-2">Intercalated discs</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead className="bg-green-50">
+                  <tr>
+                    <th className="border border-gray-300 p-2 text-left">Feature</th>
+                    <th className="border border-gray-300 p-2 text-left">Skeletal</th>
+                    <th className="border border-gray-300 p-2 text-left">Smooth</th>
+                    <th className="border border-gray-300 p-2 text-left">Cardiac</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Appearance</td>
+                    <td className="border border-gray-300 p-2">Striated</td>
+                    <td className="border border-gray-300 p-2">Non-striated</td>
+                    <td className="border border-gray-300 p-2">Striated</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Control</td>
+                    <td className="border border-gray-300 p-2">Voluntary</td>
+                    <td className="border border-gray-300 p-2">Involuntary</td>
+                    <td className="border border-gray-300 p-2">Involuntary</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Nuclei</td>
+                    <td className="border border-gray-300 p-2">Multinucleated</td>
+                    <td className="border border-gray-300 p-2">Uninucleated</td>
+                    <td className="border border-gray-300 p-2">Uninucleated</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Shape</td>
+                    <td className="border border-gray-300 p-2">Elongated</td>
+                    <td className="border border-gray-300 p-2">Spindle-shaped (fusiform)</td>
+                    <td className="border border-gray-300 p-2">Branched with striations</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Location</td>
+                    <td className="border border-gray-300 p-2">Attached to bones</td>
+                    <td className="border border-gray-300 p-2">Viscera, blood vessels</td>
+                    <td className="border border-gray-300 p-2">Heart</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Special feature</td>
+                    <td className="border border-gray-300 p-2">—</td>
+                    <td className="border border-gray-300 p-2">—</td>
+                    <td className="border border-gray-300 p-2">Intercalated discs</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <div className="space-y-2">
               <p>
@@ -7972,72 +8138,74 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
               </ul>
             </div>
 
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead className="bg-green-50">
-                <tr>
-                  <th className="border border-gray-300 p-2 text-left">Organ System</th>
-                  <th className="border border-gray-300 p-2 text-left">
-                    Components &amp; Functions
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Digestive</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Foregut (mouth, oesophagus, crop) → Midgut (stomach) → Hindgut (rectum); Hepatic
-                    caeca (6-8, at foregut-midgut junction, absorb nutrients)
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Circulatory</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Open system, haemolymph (colourless, NO respiratory pigment like haemoglobin);
-                    13-chambered heart (dorsal, pumps haemolymph)
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Respiratory</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Tracheal system (tube network throughout body), 10 pairs spiracles (2 thoracic +
-                    8 abdominal) for air entry
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Excretory</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Malpighian tubules (blind tubes from hindgut junction, absorb water &amp;
-                    nitrogenous wastes), URICOTELIC (excretes uric acid)
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Nervous</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Supra-oesophageal ganglion (brain above oesophagus), ventral nerve cord with
-                    ganglia in each segment
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold text-green-800">Reproductive</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Males: testes with vas deferens, females: ovaries with oviducts; external
-                    genitalia dimorphic
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead className="bg-green-50">
+                  <tr>
+                    <th className="border border-gray-300 p-2 text-left">Organ System</th>
+                    <th className="border border-gray-300 p-2 text-left">
+                      Components &amp; Functions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Digestive</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Foregut (mouth, oesophagus, crop) → Midgut (stomach) → Hindgut (rectum);
+                      Hepatic caeca (6-8, at foregut-midgut junction, absorb nutrients)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Circulatory</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Open system, haemolymph (colourless, NO respiratory pigment like haemoglobin);
+                      13-chambered heart (dorsal, pumps haemolymph)
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Respiratory</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Tracheal system (tube network throughout body), 10 pairs spiracles (2 thoracic
+                      + 8 abdominal) for air entry
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Excretory</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Malpighian tubules (blind tubes from hindgut junction, absorb water &amp;
+                      nitrogenous wastes), URICOTELIC (excretes uric acid)
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Nervous</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Supra-oesophageal ganglion (brain above oesophagus), ventral nerve cord with
+                      ganglia in each segment
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold text-green-800">Reproductive</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Males: testes with vas deferens, females: ovaries with oviducts; external
+                      genitalia dimorphic
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <div className="space-y-2">
               <p>
@@ -8115,39 +8283,41 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
                 Cyclic vs Non-cyclic Photophosphorylation:
               </span>
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead className="bg-green-50">
-                <tr>
-                  <th className="border border-gray-300 p-2 text-left">Feature</th>
-                  <th className="border border-gray-300 p-2 text-left">Cyclic</th>
-                  <th className="border border-gray-300 p-2 text-left">Non-cyclic</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Photosystems involved</td>
-                  <td className="border border-gray-300 p-2">Only PS I</td>
-                  <td className="border border-gray-300 p-2">PS II + PS I</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Products</td>
-                  <td className="border border-gray-300 p-2">ATP only</td>
-                  <td className="border border-gray-300 p-2">
-                    ATP + NADPH + O<sub>2</sub>
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Water photolysis</td>
-                  <td className="border border-gray-300 p-2">No</td>
-                  <td className="border border-gray-300 p-2">Yes</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Location in stroma</td>
-                  <td className="border border-gray-300 p-2">Low light</td>
-                  <td className="border border-gray-300 p-2">High light</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead className="bg-green-50">
+                  <tr>
+                    <th className="border border-gray-300 p-2 text-left">Feature</th>
+                    <th className="border border-gray-300 p-2 text-left">Cyclic</th>
+                    <th className="border border-gray-300 p-2 text-left">Non-cyclic</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Photosystems involved</td>
+                    <td className="border border-gray-300 p-2">Only PS I</td>
+                    <td className="border border-gray-300 p-2">PS II + PS I</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Products</td>
+                    <td className="border border-gray-300 p-2">ATP only</td>
+                    <td className="border border-gray-300 p-2">
+                      ATP + NADPH + O<sub>2</sub>
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Water photolysis</td>
+                    <td className="border border-gray-300 p-2">No</td>
+                    <td className="border border-gray-300 p-2">Yes</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Location in stroma</td>
+                    <td className="border border-gray-300 p-2">Low light</td>
+                    <td className="border border-gray-300 p-2">High light</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <p>
               <span className="font-semibold text-green-800">
@@ -8230,47 +8400,49 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             <p>
               <span className="font-semibold text-green-800">C3 vs C4 Pathway Comparison:</span>
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead className="bg-green-50">
-                <tr>
-                  <th className="border border-gray-300 p-2 text-left">Feature</th>
-                  <th className="border border-gray-300 p-2 text-left">C3 Plants</th>
-                  <th className="border border-gray-300 p-2 text-left">C4 Plants</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">First stable product</td>
-                  <td className="border border-gray-300 p-2">3-PGA (3C)</td>
-                  <td className="border border-gray-300 p-2">Oxaloacetate (OAA, 4C)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Photosynthetic pathway</td>
-                  <td className="border border-gray-300 p-2">Only Calvin cycle</td>
-                  <td className="border border-gray-300 p-2">Hatch-Slack + Calvin cycle</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Photorespiration</td>
-                  <td className="border border-gray-300 p-2">High (inefficient)</td>
-                  <td className="border border-gray-300 p-2">Low (very efficient)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Leaf anatomy</td>
-                  <td className="border border-gray-300 p-2">No Kranz anatomy</td>
-                  <td className="border border-gray-300 p-2">Kranz anatomy present</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Climate adaptation</td>
-                  <td className="border border-gray-300 p-2">Temperate regions</td>
-                  <td className="border border-gray-300 p-2">Tropical/hot, dry regions</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Examples</td>
-                  <td className="border border-gray-300 p-2">Wheat, rice, pea, sunflower</td>
-                  <td className="border border-gray-300 p-2">Maize, sugarcane, sorghum</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead className="bg-green-50">
+                  <tr>
+                    <th className="border border-gray-300 p-2 text-left">Feature</th>
+                    <th className="border border-gray-300 p-2 text-left">C3 Plants</th>
+                    <th className="border border-gray-300 p-2 text-left">C4 Plants</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">First stable product</td>
+                    <td className="border border-gray-300 p-2">3-PGA (3C)</td>
+                    <td className="border border-gray-300 p-2">Oxaloacetate (OAA, 4C)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Photosynthetic pathway</td>
+                    <td className="border border-gray-300 p-2">Only Calvin cycle</td>
+                    <td className="border border-gray-300 p-2">Hatch-Slack + Calvin cycle</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Photorespiration</td>
+                    <td className="border border-gray-300 p-2">High (inefficient)</td>
+                    <td className="border border-gray-300 p-2">Low (very efficient)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Leaf anatomy</td>
+                    <td className="border border-gray-300 p-2">No Kranz anatomy</td>
+                    <td className="border border-gray-300 p-2">Kranz anatomy present</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Climate adaptation</td>
+                    <td className="border border-gray-300 p-2">Temperate regions</td>
+                    <td className="border border-gray-300 p-2">Tropical/hot, dry regions</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Examples</td>
+                    <td className="border border-gray-300 p-2">Wheat, rice, pea, sunflower</td>
+                    <td className="border border-gray-300 p-2">Maize, sugarcane, sorghum</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <p>
               <span className="font-semibold text-green-800">C4 Mechanism:</span> CO<sub>2</sub> is
@@ -8532,63 +8704,65 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
             <p>
               <span className="font-semibold text-green-800">ATP Yield Summary (UPDATED):</span>
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead className="bg-green-50">
-                <tr>
-                  <th className="border border-gray-300 p-2 text-left">Stage</th>
-                  <th className="border border-gray-300 p-2 text-left">Direct ATP</th>
-                  <th className="border border-gray-300 p-2 text-left">NADH × 2.5</th>
-                  <th className="border border-gray-300 p-2 text-left">
-                    FADH<sub>2</sub> × 1.5
-                  </th>
-                  <th className="border border-gray-300 p-2 text-left">Total</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Glycolysis</td>
-                  <td className="border border-gray-300 p-2">2</td>
-                  <td className="border border-gray-300 p-2">2 NADH = 5</td>
-                  <td className="border border-gray-300 p-2">—</td>
-                  <td className="border border-gray-300 p-2">7</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">Link (Pyruvate oxidation)</td>
-                  <td className="border border-gray-300 p-2">—</td>
-                  <td className="border border-gray-300 p-2">2 NADH = 5</td>
-                  <td className="border border-gray-300 p-2">—</td>
-                  <td className="border border-gray-300 p-2">5</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">Krebs Cycle</td>
-                  <td className="border border-gray-300 p-2">2</td>
-                  <td className="border border-gray-300 p-2">6 NADH = 15</td>
-                  <td className="border border-gray-300 p-2">
-                    2 FADH<sub>2</sub> = 3
-                  </td>
-                  <td className="border border-gray-300 p-2">20</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold">TOTAL per Glucose</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold">4</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold">10 NADH = 25</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold">
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead className="bg-green-50">
+                  <tr>
+                    <th className="border border-gray-300 p-2 text-left">Stage</th>
+                    <th className="border border-gray-300 p-2 text-left">Direct ATP</th>
+                    <th className="border border-gray-300 p-2 text-left">NADH × 2.5</th>
+                    <th className="border border-gray-300 p-2 text-left">
+                      FADH<sub>2</sub> × 1.5
+                    </th>
+                    <th className="border border-gray-300 p-2 text-left">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Glycolysis</td>
+                    <td className="border border-gray-300 p-2">2</td>
+                    <td className="border border-gray-300 p-2">2 NADH = 5</td>
+                    <td className="border border-gray-300 p-2">—</td>
+                    <td className="border border-gray-300 p-2">7</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">Link (Pyruvate oxidation)</td>
+                    <td className="border border-gray-300 p-2">—</td>
+                    <td className="border border-gray-300 p-2">2 NADH = 5</td>
+                    <td className="border border-gray-300 p-2">—</td>
+                    <td className="border border-gray-300 p-2">5</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">Krebs Cycle</td>
+                    <td className="border border-gray-300 p-2">2</td>
+                    <td className="border border-gray-300 p-2">6 NADH = 15</td>
+                    <td className="border border-gray-300 p-2">
                       2 FADH<sub>2</sub> = 3
-                    </span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold">~30-32 ATP</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                    </td>
+                    <td className="border border-gray-300 p-2">20</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold">TOTAL per Glucose</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold">4</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold">10 NADH = 25</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold">
+                        2 FADH<sub>2</sub> = 3
+                      </span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold">~30-32 ATP</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <p>
               <span className="font-semibold text-green-800">Amphibolic Pathway:</span> Krebs cycle
@@ -8665,76 +8839,80 @@ export default function ChapterNotesContent({ chapter, slug }: ChapterNotesConte
                 Plant Growth Regulators (Hormones):
               </span>
             </p>
-            <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
-              <thead className="bg-green-50">
-                <tr>
-                  <th className="border border-gray-300 p-2 text-left">Hormone</th>
-                  <th className="border border-gray-300 p-2 text-left">Source</th>
-                  <th className="border border-gray-300 p-2 text-left">Key Functions</th>
-                  <th className="border border-gray-300 p-2 text-left">Examples</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold">Auxins (IAA)</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Shoot apex, young leaves</td>
-                  <td className="border border-gray-300 p-2">
-                    Apical dominance, phototropism, cell elongation, promotes root initiation
-                  </td>
-                  <td className="border border-gray-300 p-2">Indole-3-acetic acid (IAA)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold">Gibberellins (GA)</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Shoot apex, young leaves, roots, seeds
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Stem elongation, bolting, seed germination, flower initiation
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    GA<sub>3</sub>, GA<sub>4</sub>, GA<sub>7</sub>
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold">Cytokinins</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">Root tips, seeds</td>
-                  <td className="border border-gray-300 p-2">
-                    Cell division, delay leaf senescence, apical dominance antagonism
-                  </td>
-                  <td className="border border-gray-300 p-2">Kinetin, 6-benzylaminopurine (BAP)</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold">Abscisic Acid (ABA)</span>
-                  </td>
-                  <td className="border border-gray-300 p-2">All tissues (stress-induced)</td>
-                  <td className="border border-gray-300 p-2">
-                    Stress responses, stomatal closure, seed dormancy, inhibits growth
-                  </td>
-                  <td className="border border-gray-300 p-2">Dormin</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-2">
-                    <span className="font-semibold">
-                      Ethylene (C<sub>2</sub>H<sub>4</sub>)
-                    </span>
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    All tissues (especially ripening fruit)
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    Fruit ripening, senescence, leaf abscission, triple response
-                  </td>
-                  <td className="border border-gray-300 p-2">Gaseous hormone</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+                <thead className="bg-green-50">
+                  <tr>
+                    <th className="border border-gray-300 p-2 text-left">Hormone</th>
+                    <th className="border border-gray-300 p-2 text-left">Source</th>
+                    <th className="border border-gray-300 p-2 text-left">Key Functions</th>
+                    <th className="border border-gray-300 p-2 text-left">Examples</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold">Auxins (IAA)</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Shoot apex, young leaves</td>
+                    <td className="border border-gray-300 p-2">
+                      Apical dominance, phototropism, cell elongation, promotes root initiation
+                    </td>
+                    <td className="border border-gray-300 p-2">Indole-3-acetic acid (IAA)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold">Gibberellins (GA)</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Shoot apex, young leaves, roots, seeds
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Stem elongation, bolting, seed germination, flower initiation
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      GA<sub>3</sub>, GA<sub>4</sub>, GA<sub>7</sub>
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold">Cytokinins</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">Root tips, seeds</td>
+                    <td className="border border-gray-300 p-2">
+                      Cell division, delay leaf senescence, apical dominance antagonism
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Kinetin, 6-benzylaminopurine (BAP)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold">Abscisic Acid (ABA)</span>
+                    </td>
+                    <td className="border border-gray-300 p-2">All tissues (stress-induced)</td>
+                    <td className="border border-gray-300 p-2">
+                      Stress responses, stomatal closure, seed dormancy, inhibits growth
+                    </td>
+                    <td className="border border-gray-300 p-2">Dormin</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 p-2">
+                      <span className="font-semibold">
+                        Ethylene (C<sub>2</sub>H<sub>4</sub>)
+                      </span>
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      All tissues (especially ripening fruit)
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      Fruit ripening, senescence, leaf abscission, triple response
+                    </td>
+                    <td className="border border-gray-300 p-2">Gaseous hormone</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <p>
               <span className="font-semibold text-green-800">Auxin Details:</span> Indole-3-acetic

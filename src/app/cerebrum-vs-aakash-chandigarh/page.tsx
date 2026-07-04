@@ -605,40 +605,42 @@ export default function CerebrumVsAakashChandigarhPage() {
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              <table className="w-full">
-                <thead className="bg-[#1e3a5f] text-white">
-                  <tr>
-                    <th className="px-6 py-4 text-left">Expense Item</th>
-                    <th className="px-6 py-4 text-center">Cerebrum</th>
-                    <th className="px-6 py-4 text-center">Aakash</th>
-                    <th className="px-6 py-4 text-center bg-green-600">You Save</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {savingsBreakdown.map((item, index) => (
-                    <tr key={item.item} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                      <td className="px-6 py-4 font-medium">{item.item}</td>
-                      <td className="px-6 py-4 text-center text-green-600 font-semibold">
-                        {item.cerebrum}
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-[#1e3a5f] text-white">
+                    <tr>
+                      <th className="px-6 py-4 text-left">Expense Item</th>
+                      <th className="px-6 py-4 text-center">Cerebrum</th>
+                      <th className="px-6 py-4 text-center">Aakash</th>
+                      <th className="px-6 py-4 text-center bg-green-600">You Save</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {savingsBreakdown.map((item, index) => (
+                      <tr key={item.item} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                        <td className="px-6 py-4 font-medium">{item.item}</td>
+                        <td className="px-6 py-4 text-center text-green-600 font-semibold">
+                          {item.cerebrum}
+                        </td>
+                        <td className="px-6 py-4 text-center text-red-600">{item.aakash}</td>
+                        <td className="px-6 py-4 text-center text-green-700 font-bold bg-green-50">
+                          {item.savings}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                  <tfoot className="bg-green-600 text-white">
+                    <tr>
+                      <td className="px-6 py-4 font-bold text-lg" colSpan={3}>
+                        Maximum Annual Savings (Without ANTHE)
                       </td>
-                      <td className="px-6 py-4 text-center text-red-600">{item.aakash}</td>
-                      <td className="px-6 py-4 text-center text-green-700 font-bold bg-green-50">
-                        {item.savings}
+                      <td className="px-6 py-4 text-center font-bold text-2xl">
+                        Rs {totalSavings.toLocaleString()}
                       </td>
                     </tr>
-                  ))}
-                </tbody>
-                <tfoot className="bg-green-600 text-white">
-                  <tr>
-                    <td className="px-6 py-4 font-bold text-lg" colSpan={3}>
-                      Maximum Annual Savings (Without ANTHE)
-                    </td>
-                    <td className="px-6 py-4 text-center font-bold text-2xl">
-                      Rs {totalSavings.toLocaleString()}
-                    </td>
-                  </tr>
-                </tfoot>
-              </table>
+                  </tfoot>
+                </table>
+              </div>
             </div>
 
             <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-xl p-6">

@@ -209,32 +209,34 @@ export default function OnlineNEETClassesNoidaPage() {
           </p>
           <div className="max-w-3xl mx-auto">
             <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-green-200">
-                    <th className="text-left py-3 px-4">Your Location</th>
-                    <th className="text-center py-3 px-4">Travel Time</th>
-                    <th className="text-right py-3 px-4">Mode</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {travelTimes.map((item, index) => (
-                    <tr key={index} className="border-b border-green-100 last:border-0">
-                      <td className="py-3 px-4 font-medium">{item.area}</td>
-                      <td className="py-3 px-4 text-center">
-                        <span
-                          className={
-                            item.time === '0 min' ? 'text-green-600 font-bold' : 'text-gray-600'
-                          }
-                        >
-                          {item.time}
-                        </span>
-                      </td>
-                      <td className="py-3 px-4 text-right text-sm text-gray-500">{item.mode}</td>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-green-200">
+                      <th className="text-left py-3 px-4">Your Location</th>
+                      <th className="text-center py-3 px-4">Travel Time</th>
+                      <th className="text-right py-3 px-4">Mode</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {travelTimes.map((item, index) => (
+                      <tr key={index} className="border-b border-green-100 last:border-0">
+                        <td className="py-3 px-4 font-medium">{item.area}</td>
+                        <td className="py-3 px-4 text-center">
+                          <span
+                            className={
+                              item.time === '0 min' ? 'text-green-600 font-bold' : 'text-gray-600'
+                            }
+                          >
+                            {item.time}
+                          </span>
+                        </td>
+                        <td className="py-3 px-4 text-right text-sm text-gray-500">{item.mode}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>

@@ -235,7 +235,7 @@ export default function BookFreeDemoPage() {
                         setClassLevel(c)
                         setTouchedClass(true)
                       }}
-                      className={`rounded-full px-3 py-1.5 text-xs font-medium transition sm:text-sm ${
+                      className={`min-h-[44px] touch-manipulation rounded-full px-4 py-2 text-sm font-medium transition ${
                         isSelected
                           ? 'bg-[#3d4d3d] text-white'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -266,7 +266,7 @@ export default function BookFreeDemoPage() {
                         setTrack(t)
                         setTouchedTrack(true)
                       }}
-                      className={`rounded-full px-3 py-1.5 text-xs font-medium transition sm:text-sm ${
+                      className={`min-h-[44px] touch-manipulation rounded-full px-4 py-2 text-sm font-medium transition ${
                         isSelected
                           ? 'bg-[#3d4d3d] text-white'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -297,7 +297,7 @@ export default function BookFreeDemoPage() {
                         setMode(m)
                         setTouchedMode(true)
                       }}
-                      className={`rounded-full px-3 py-1.5 text-xs font-medium transition sm:text-sm ${
+                      className={`min-h-[44px] touch-manipulation rounded-full px-4 py-2 text-sm font-medium transition ${
                         isSelected
                           ? 'bg-[#3d4d3d] text-white'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'

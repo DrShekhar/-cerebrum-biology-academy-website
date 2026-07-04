@@ -235,98 +235,100 @@ export default function OMRResultsPage() {
                 <p className="text-gray-500">No submissions found</p>
               </div>
             ) : (
-              <table className="w-full">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      Student
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      Class
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      Paper
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      Score
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      C/W/U
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      Key
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                      Submitted
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {submissions.map((submission) => (
-                    <tr key={submission.id} className="hover:bg-gray-50">
-                      <td className="px-4 py-3">
-                        <div>
-                          <p className="font-medium text-gray-900">{submission.studentName}</p>
-                          <p className="text-sm text-gray-500">{submission.studentPhone}</p>
-                        </div>
-                      </td>
-                      <td className="px-4 py-3">
-                        <span className="text-sm">{submission.studentClass}</span>
-                      </td>
-                      <td className="px-4 py-3">
-                        <div>
-                          <p className="text-sm font-medium">{submission.paper.paperCode}</p>
-                          <p className="text-xs text-gray-500">
-                            {SUBJECT_LABELS[submission.paper.subjectType] ||
-                              submission.paper.subjectType}
-                          </p>
-                        </div>
-                      </td>
-                      <td className="px-4 py-3">
-                        <div>
-                          <p className="font-semibold">
-                            {submission.marksObtained}/{submission.maxMarks}
-                          </p>
-                          <p
-                            className={`text-sm font-medium ${
-                              submission.percentage >= 80
-                                ? 'text-green-600'
-                                : submission.percentage >= 60
-                                  ? 'text-yellow-600'
-                                  : 'text-red-600'
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        Student
+                      </th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        Class
+                      </th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        Paper
+                      </th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        Score
+                      </th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        C/W/U
+                      </th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        Key
+                      </th>
+                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        Submitted
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    {submissions.map((submission) => (
+                      <tr key={submission.id} className="hover:bg-gray-50">
+                        <td className="px-4 py-3">
+                          <div>
+                            <p className="font-medium text-gray-900">{submission.studentName}</p>
+                            <p className="text-sm text-gray-500">{submission.studentPhone}</p>
+                          </div>
+                        </td>
+                        <td className="px-4 py-3">
+                          <span className="text-sm">{submission.studentClass}</span>
+                        </td>
+                        <td className="px-4 py-3">
+                          <div>
+                            <p className="text-sm font-medium">{submission.paper.paperCode}</p>
+                            <p className="text-xs text-gray-500">
+                              {SUBJECT_LABELS[submission.paper.subjectType] ||
+                                submission.paper.subjectType}
+                            </p>
+                          </div>
+                        </td>
+                        <td className="px-4 py-3">
+                          <div>
+                            <p className="font-semibold">
+                              {submission.marksObtained}/{submission.maxMarks}
+                            </p>
+                            <p
+                              className={`text-sm font-medium ${
+                                submission.percentage >= 80
+                                  ? 'text-green-600'
+                                  : submission.percentage >= 60
+                                    ? 'text-yellow-600'
+                                    : 'text-red-600'
+                              }`}
+                            >
+                              {submission.percentage}%
+                            </p>
+                          </div>
+                        </td>
+                        <td className="px-4 py-3">
+                          <span className="text-sm">
+                            <span className="text-green-600">{submission.totalCorrect}</span>/
+                            <span className="text-red-600">{submission.totalWrong}</span>/
+                            <span className="text-gray-400">{submission.totalUnattempted}</span>
+                          </span>
+                        </td>
+                        <td className="px-4 py-3">
+                          <span
+                            className={`px-2 py-0.5 text-xs rounded-full ${
+                              submission.useVerifiedKey
+                                ? 'bg-green-100 text-green-800'
+                                : 'bg-yellow-100 text-yellow-800'
                             }`}
                           >
-                            {submission.percentage}%
-                          </p>
-                        </div>
-                      </td>
-                      <td className="px-4 py-3">
-                        <span className="text-sm">
-                          <span className="text-green-600">{submission.totalCorrect}</span>/
-                          <span className="text-red-600">{submission.totalWrong}</span>/
-                          <span className="text-gray-400">{submission.totalUnattempted}</span>
-                        </span>
-                      </td>
-                      <td className="px-4 py-3">
-                        <span
-                          className={`px-2 py-0.5 text-xs rounded-full ${
-                            submission.useVerifiedKey
-                              ? 'bg-green-100 text-green-800'
-                              : 'bg-yellow-100 text-yellow-800'
-                          }`}
-                        >
-                          {submission.useVerifiedKey ? 'Verified' : 'Unverified'}
-                        </span>
-                      </td>
-                      <td className="px-4 py-3">
-                        <span className="text-sm text-gray-500">
-                          {new Date(submission.submittedAt).toLocaleString()}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+                            {submission.useVerifiedKey ? 'Verified' : 'Unverified'}
+                          </span>
+                        </td>
+                        <td className="px-4 py-3">
+                          <span className="text-sm text-gray-500">
+                            {new Date(submission.submittedAt).toLocaleString()}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             )}
           </div>
 
