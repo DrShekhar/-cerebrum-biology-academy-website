@@ -65,7 +65,7 @@ export function RealStudentTestimonials({
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div
-                  className="relative aspect-video bg-indigo-600 cursor-pointer group"
+                  className="relative aspect-video bg-blue-600 cursor-pointer group"
                   onClick={() => openVideoModal(testimonial)}
                 >
                   {testimonial.youtubeId ? (

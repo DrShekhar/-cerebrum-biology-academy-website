@@ -57,17 +57,17 @@ export function GeoAwarePriceChip() {
   // Reserve the same vertical space during loading to avoid layout shift.
   if (!price) {
     return (
-      <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-semibold text-indigo-700 ring-1 ring-indigo-200">
-        <span className="h-2 w-16 animate-pulse rounded-full bg-indigo-200" />
+      <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-semibold text-blue-700 ring-1 ring-blue-200">
+        <span className="h-2 w-16 animate-pulse rounded-full bg-blue-200" />
       </span>
     )
   }
 
   return (
-    <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-indigo-700 ring-1 ring-indigo-200 shadow-sm">
+    <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-blue-700 ring-1 ring-blue-200 shadow-sm">
       <span aria-hidden="true">💳</span>
       <span>{price}</span>
-      <span className="text-xs font-normal text-indigo-500">· geo-priced</span>
+      <span className="text-xs font-normal text-blue-500">· geo-priced</span>
     </span>
   )
 }
