@@ -1,14 +1,19 @@
 'use client'
 
+import { useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { Phone, ArrowLeft } from 'lucide-react'
+import { Phone, Mail, ArrowLeft } from 'lucide-react'
 import { PhoneSignIn } from '@/components/auth/PhoneSignIn'
+import { EmailSignIn } from '@/components/auth/EmailSignIn'
 import { SocialSignInButtons } from '@/components/auth/SocialSignInButtons'
+
+type SignInMethod = 'phone' | 'email'
 
 export default function SignInPage() {
   const searchParams = useSearchParams()
   const redirectUrl = searchParams.get('redirect_url') || '/dashboard'
+  const [method, setMethod] = useState<SignInMethod>('phone')
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
@@ -28,13 +33,45 @@ export default function SignInPage() {
           <p className="text-slate-400 mt-2">Sign in to continue your NEET preparation</p>
         </div>
 
+        {/* Sign-in Method Toggle */}
+        <div
+          className="mb-4 grid grid-cols-2 gap-1 rounded-xl bg-slate-800/60 p-1"
+          role="tablist"
+          aria-label="Sign-in method"
+        >
+          <button
+            type="button"
+            role="tab"
+            aria-selected={method === 'phone'}
+            onClick={() => setMethod('phone')}
+            className={`py-2 rounded-lg text-sm font-medium transition-colors ${
+              method === 'phone' ? 'bg-white text-slate-900' : 'text-slate-300 hover:text-white'
+            }`}
+          >
+            Phone OTP
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={method === 'email'}
+            onClick={() => setMethod('email')}
+            className={`py-2 rounded-lg text-sm font-medium transition-colors ${
+              method === 'email' ? 'bg-white text-slate-900' : 'text-slate-300 hover:text-white'
+            }`}
+          >
+            Email
+          </button>
+        </div>
+
         {/* Main Card */}
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-          {/* Phone Auth Header */}
+          {/* Auth Header */}
           <div className="p-4 bg-green-50 border-b border-green-100">
             <div className="flex items-center justify-center gap-2 text-green-700">
-              <Phone className="w-5 h-5" />
-              <span className="font-medium">Sign in with Phone OTP</span>
+              {method === 'phone' ? <Phone className="w-5 h-5" /> : <Mail className="w-5 h-5" />}
+              <span className="font-medium">
+                {method === 'phone' ? 'Sign in with Phone OTP' : 'Sign in with Email'}
+              </span>
             </div>
           </div>
 
@@ -43,7 +80,11 @@ export default function SignInPage() {
             <div className="mb-4">
               <SocialSignInButtons redirectUrl={redirectUrl} dividerPosition="bottom" />
             </div>
-            <PhoneSignIn redirectUrl={redirectUrl} />
+            {method === 'phone' ? (
+              <PhoneSignIn redirectUrl={redirectUrl} />
+            ) : (
+              <EmailSignIn redirectUrl={redirectUrl} />
+            )}
           </div>
 
           {/* Footer */}

@@ -9,7 +9,6 @@ import {
   sendOTP,
   verifyOTP,
   cleanupRecaptcha,
-  formatPhoneNumber,
   resetPhoneAuthState,
   getCurrentUser,
 } from '@/lib/firebase/phone-auth'
@@ -24,11 +23,53 @@ type Step = 'phone' | 'otp' | 'signup' | 'success'
 // Check if Firebase is configured
 const isFirebaseConfigured = Boolean(process.env.NEXT_PUBLIC_FIREBASE_API_KEY)
 
+// Country codes for phone OTP. India stays first (default); extend by adding
+// entries here — the rest of the component is dial-code agnostic.
+const COUNTRIES: ReadonlyArray<{ name: string; dialCode: string }> = [
+  { name: 'India', dialCode: '+91' },
+  { name: 'USA / Canada', dialCode: '+1' },
+  { name: 'UK', dialCode: '+44' },
+  { name: 'UAE', dialCode: '+971' },
+  { name: 'Saudi Arabia', dialCode: '+966' },
+  { name: 'Qatar', dialCode: '+974' },
+  { name: 'Kuwait', dialCode: '+965' },
+  { name: 'Oman', dialCode: '+968' },
+  { name: 'Bahrain', dialCode: '+973' },
+  { name: 'Singapore', dialCode: '+65' },
+  { name: 'Malaysia', dialCode: '+60' },
+  { name: 'Australia', dialCode: '+61' },
+  { name: 'New Zealand', dialCode: '+64' },
+  { name: 'Nepal', dialCode: '+977' },
+  { name: 'Bangladesh', dialCode: '+880' },
+  { name: 'Sri Lanka', dialCode: '+94' },
+  { name: 'Germany', dialCode: '+49' },
+  { name: 'France', dialCode: '+33' },
+]
+
+// India keeps the strict 10-digit rule (behavior unchanged); other countries
+// have national numbers between 4 and 14 digits — Firebase validates exactly.
+function isValidNationalNumber(dialCode: string, national: string): boolean {
+  if (dialCode === '+91') return national.length === 10
+  return national.length >= 4 && national.length <= 14
+}
+
+// Digits-only input, capped per country. The +91 branch is byte-identical to
+// the legacy Indian-only formatter (including the pasted 91-prefix case).
+function formatNationalNumber(dialCode: string, value: string): string {
+  const digits = value.replace(/\D/g, '')
+  if (dialCode === '+91') {
+    if (digits.length <= 10) return digits
+    if (digits.startsWith('91')) return digits.slice(0, 12)
+    return digits.slice(0, 10)
+  }
+  return digits.slice(0, 14)
+}
+
 // Get role-based dashboard redirect URL
 // IMPORTANT: Roles in the system are UPPERCASE (STUDENT, ADMIN, etc.)
 // Paths must point at existing routes — see /src/app/{admin,teacher,counselor}/page.tsx
 // for the top-level role landings, /parent/dashboard and /dashboard for the others.
-function getRoleDashboardUrl(role: string | undefined): string {
+export function getRoleDashboardUrl(role: string | undefined): string {
   const normalizedRole = (role || 'STUDENT').toUpperCase()
   switch (normalizedRole) {
     case 'ADMIN':
@@ -72,6 +113,7 @@ function PhoneSignInFallback() {
 // Main Firebase Phone Auth component
 function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: PhoneSignInProps) {
   const [step, setStep] = useState<Step>('phone')
+  const [dialCode, setDialCode] = useState('+91')
   const [phone, setPhone] = useState('')
   const [otp, setOtp] = useState('')
   const [loading, setLoading] = useState(false)
@@ -112,11 +154,15 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
     }
   }, [resendCountdown])
 
-  const formatPhone = (value: string): string => {
-    const digits = value.replace(/\D/g, '')
-    if (digits.length <= 10) return digits
-    if (digits.startsWith('91')) return digits.slice(0, 12)
-    return digits.slice(0, 10)
+  const formatPhone = (value: string): string => formatNationalNumber(dialCode, value)
+
+  // Full E.164 number sent to Firebase and the session API. The legacy Indian
+  // paste case ("91" + 10 digits) already carries its country code.
+  const getE164Phone = (): string => {
+    if (dialCode === '+91' && phone.length === 12 && phone.startsWith('91')) {
+      return `+${phone}`
+    }
+    return `${dialCode}${phone}`
   }
 
   const handleSendOTP = async () => {
@@ -126,7 +172,7 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
 
     try {
       // Send OTP using Firebase
-      const result = await sendOTP(phone, 'send-otp-button')
+      const result = await sendOTP(getE164Phone(), 'send-otp-button')
 
       if (!result.success) {
         setShowRefresh(result.shouldRefresh || false)
@@ -176,7 +222,7 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
       setFirebaseUser(result.user || null)
 
       // Check if user exists in our database
-      const formattedPhone = formatPhoneNumber(phone)
+      const formattedPhone = getE164Phone()
       const checkResponse = await fetch('/api/auth/firebase-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -233,7 +279,7 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
         credentials: 'include',
         body: JSON.stringify({
           uid: firebaseUser.uid,
-          phoneNumber: formatPhoneNumber(phone),
+          phoneNumber: getE164Phone(),
           idToken,
           firstName,
           lastName,
@@ -561,29 +607,56 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
       {step === 'phone' ? (
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+            <label
+              htmlFor="phone-number-input"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Phone Number
+            </label>
             <div className="flex">
-              <span className="inline-flex items-center px-4 rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-600 text-sm">
-                +91
-              </span>
+              <label htmlFor="phone-country-code" className="sr-only">
+                Country code
+              </label>
+              <select
+                id="phone-country-code"
+                value={dialCode}
+                onChange={(e) => {
+                  const nextDialCode = e.target.value
+                  setDialCode(nextDialCode)
+                  setPhone((current) => formatNationalNumber(nextDialCode, current))
+                }}
+                className="max-w-[8.5rem] px-2 py-3 rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-600 text-sm focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                disabled={loading}
+              >
+                {COUNTRIES.map((country) => (
+                  <option key={`${country.dialCode}-${country.name}`} value={country.dialCode}>
+                    {country.name} {country.dialCode}
+                  </option>
+                ))}
+              </select>
               <input
+                id="phone-number-input"
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(formatPhone(e.target.value))}
-                placeholder="98765 43210"
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-r-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                maxLength={10}
+                placeholder={dialCode === '+91' ? '98765 43210' : 'Mobile number'}
+                className="flex-1 min-w-0 px-4 py-3 border border-gray-300 rounded-r-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                maxLength={dialCode === '+91' ? 10 : 14}
                 disabled={loading}
               />
             </div>
-            <p className="mt-1 text-xs text-gray-500">Enter your 10-digit mobile number</p>
+            <p className="mt-1 text-xs text-gray-500">
+              {dialCode === '+91'
+                ? 'Enter your 10-digit mobile number'
+                : 'Enter your mobile number without the country code'}
+            </p>
           </div>
 
           <Button
             id="send-otp-button"
             ref={sendOtpButtonRef}
             onClick={handleSendOTP}
-            disabled={loading || phone.length !== 10}
+            disabled={loading || !isValidNationalNumber(dialCode, phone)}
             variant="primary"
             className="w-full bg-green-600 hover:bg-green-700"
           >

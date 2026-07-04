@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { adminDb as db } from '@/lib/db-admin'
+import { randomUUID } from 'crypto'
+import { prisma } from '@/lib/prisma'
 import { hashPassword } from '@/lib/auth'
 import { PasswordUtils } from '@/lib/auth/config'
 import { z } from 'zod'
@@ -16,6 +17,17 @@ const registerSchema = z.object({
   parentEmail: z.string().email().optional(),
   referralCode: z.string().optional(),
 })
+
+// Normalize to E.164 the same way the phone-OTP flow does, so the two signup
+// paths never create differently-formatted rows for the same person.
+function normalizePhone(phone: string): string {
+  const trimmed = phone.trim()
+  const digits = trimmed.replace(/\D/g, '')
+  if (trimmed.startsWith('+')) return `+${digits}`
+  if (digits.startsWith('91') && digits.length === 12) return `+${digits}`
+  if (/^[6-9]\d{9}$/.test(digits)) return `+91${digits}`
+  return `+${digits}`
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -48,30 +60,39 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Check if user already exists
-    const existingUsers = await db.query({
-      users: {
-        $: {
-          where: {
-            email: email,
-          },
-        },
-      },
-    })
-
-    if (existingUsers?.users && existingUsers.users.length > 0) {
+    // Check if user already exists (email is the credentials-provider key)
+    const existingByEmail = await prisma.users.findUnique({ where: { email } })
+    if (existingByEmail) {
       return NextResponse.json({ error: 'User with this email already exists' }, { status: 409 })
+    }
+
+    // Phone is unique in the users table — match on last 10 digits since
+    // stored formats vary (+91XXXXXXXXXX vs bare 10 digits vs other E.164).
+    const normalizedPhone = normalizePhone(phone)
+    const phoneLast10 = normalizedPhone.replace(/\D/g, '').slice(-10)
+    const existingByPhone = phoneLast10
+      ? await prisma.users.findFirst({ where: { phone: { endsWith: phoneLast10 } } })
+      : null
+    if (existingByPhone) {
+      return NextResponse.json(
+        {
+          error:
+            'An account with this phone number already exists. Please sign in with Phone OTP instead.',
+        },
+        { status: 409 }
+      )
     }
 
     // Hash password
     const hashedPassword = await hashPassword(password)
 
     // Create user profile based on role
-    const profile: any = {
-      phone,
+    const profile: Record<string, string | number | boolean | string[] | undefined> = {
+      phone: normalizedPhone,
       registrationDate: Date.now(),
       isVerified: false,
       enrolledCourses: [],
+      signupMethod: 'email_password',
     }
 
     if (role === 'STUDENT') {
@@ -87,38 +108,39 @@ export async function POST(request: NextRequest) {
     }
 
     // Generate unique user ID
-    const userId = crypto.randomUUID()
+    const userId = randomUUID()
 
-    // Create user in database
-    await db.transact([
-      db.tx.users[userId].update({
-        name,
-        email,
-        password: hashedPassword,
-        role,
-        profile,
-        createdAt: Date.now(),
-        updatedAt: Date.now(),
-      }),
-    ])
+    // Same 7-day master trial the phone-OTP signup grants
+    const trialStartDate = new Date()
+    const trialEndDate = new Date(trialStartDate)
+    trialEndDate.setDate(trialEndDate.getDate() + 7)
 
-    // Log registration event
+    let newUser
     try {
-      await db.transact([
-        db.tx.authLogs[crypto.randomUUID()].update({
-          userId,
-          event: 'registration',
-          timestamp: Date.now(),
-          metadata: {
-            role,
-            currentClass,
-            referralCode,
-          },
-        }),
-      ])
-    } catch (logError) {
-      console.error('Failed to log registration:', logError)
-      // Don't fail registration if logging fails
+      newUser = await prisma.users.create({
+        data: {
+          id: userId,
+          email,
+          name,
+          phone: normalizedPhone,
+          passwordHash: hashedPassword,
+          role,
+          coachingTier: 'FREE',
+          trialStartDate,
+          trialEndDate,
+          profile,
+          updatedAt: new Date(),
+        },
+      })
+    } catch (createError) {
+      const message = createError instanceof Error ? createError.message : ''
+      if (message.includes('Unique constraint')) {
+        return NextResponse.json(
+          { error: 'An account with this email or phone number already exists' },
+          { status: 409 }
+        )
+      }
+      throw createError
     }
 
     // Return success (without password)
@@ -126,12 +148,12 @@ export async function POST(request: NextRequest) {
       {
         message: 'Account created successfully',
         user: {
-          id: userId,
-          name,
-          email,
-          role,
+          id: newUser.id,
+          name: newUser.name,
+          email: newUser.email,
+          role: newUser.role,
           profile: {
-            phone,
+            phone: normalizedPhone,
             currentClass,
             isVerified: false,
           },
@@ -144,6 +166,3 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
-
-// Install zod for validation
-// npm install zod

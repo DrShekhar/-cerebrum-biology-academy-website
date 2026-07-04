@@ -25,7 +25,7 @@ marketing link, not a login method.
   Interakt WhatsApp OTP plumbing exists (whatsapp_otp table + templates).
 - 3 placeholder-email factories → account-fragmentation risk on email @unique.
 
-## Phases
+## Phases — STATUS (Jul 4 2026): P0-P4 SHIPPED; P5 = follow-up hygiene
 
 **P0 — one session system (prereq for everything).**
 Bridge every OTP flow into REAL NextAuth via the existing `whatsapp-otp`
@@ -54,7 +54,7 @@ MSG91 SMS as fallback channel; server-side verifyIdToken in firebase-session.
 already exists); registration via existing /api/auth/register; password reset
 already at /auth/forgot-password.
 
-**P5 — linking + hygiene.** Normalize phone formats (+91 vs bare-10 rows exist),
+**P5 — linking + hygiene (FOLLOW-UP, not blocking any login method).** Normalize phone formats (+91 vs bare-10 rows exist),
 collapse the 3 placeholder-email domains to one, email-claim flow, dedupe pass.
 
 ## Owner setup needed

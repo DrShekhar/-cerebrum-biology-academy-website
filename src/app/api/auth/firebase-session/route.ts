@@ -87,9 +87,15 @@ export async function POST(request: NextRequest) {
       ? phoneNumber
       : `+91${phoneNumber.replace(/\D/g, '').slice(-10)}`
 
-    // Also create the bare 10-digit format for cross-system compatibility
-    // (custom OTP system stores as 10 digits, Firebase stores as +91XXXXXXXXXX)
-    const barePhone = normalizedPhone.replace(/^\+91/, '')
+    // Stored phone formats are inconsistent (+91XXXXXXXXXX, bare 10 digits,
+    // other-country E.164) — match on the last 10 digits, the same rule the
+    // whatsapp-otp NextAuth provider uses. Works for any country code.
+    const phoneLast10 = last10Digits(normalizedPhone)
+    if (!phoneLast10) {
+      return addSecurityHeaders(
+        NextResponse.json({ error: 'Invalid phone number' }, { status: 400 })
+      )
+    }
 
     // SECURITY: For signup/login, verify the Firebase ID token server-side.
     // The forged-cookie era trusted the client-sent uid with no verification.
@@ -159,7 +165,7 @@ export async function POST(request: NextRequest) {
     if (action === 'check') {
       const existingUser = await prisma.users.findFirst({
         where: {
-          OR: [{ phone: normalizedPhone }, { phone: barePhone }, { firebaseUid: uid }],
+          OR: [{ phone: { endsWith: phoneLast10 } }, { firebaseUid: uid }],
         },
       })
 
@@ -182,10 +188,10 @@ export async function POST(request: NextRequest) {
         )
       }
 
-      // Check if user already exists (check both phone formats for cross-system compatibility)
+      // Check if user already exists (last-10-digit match covers all stored formats)
       const existingUser = await prisma.users.findFirst({
         where: {
-          OR: [{ phone: normalizedPhone }, { phone: barePhone }, { firebaseUid: verifiedUid }],
+          OR: [{ phone: { endsWith: phoneLast10 } }, { firebaseUid: verifiedUid }],
         },
       })
 
@@ -261,10 +267,10 @@ export async function POST(request: NextRequest) {
 
     // Action: Issue bridge token for a REAL NextAuth sign-in (login)
     if (action === 'login') {
-      // Find user by phone or Firebase UID (check both phone formats)
+      // Find user by phone or Firebase UID (last-10-digit match covers all stored formats)
       let user = await prisma.users.findFirst({
         where: {
-          OR: [{ phone: normalizedPhone }, { phone: barePhone }, { firebaseUid: verifiedUid }],
+          OR: [{ phone: { endsWith: phoneLast10 } }, { firebaseUid: verifiedUid }],
         },
       })
 

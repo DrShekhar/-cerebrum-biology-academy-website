@@ -37,7 +37,7 @@ export default function SignUpPage() {
               <span className="font-medium">Sign up with Phone OTP</span>
             </div>
             <p className="text-xs text-green-600 mt-2 text-center">
-              Works with Indian phone numbers (+91)
+              Works with phone numbers worldwide
             </p>
           </div>
 
@@ -51,6 +51,15 @@ export default function SignUpPage() {
 
           {/* Footer */}
           <div className="px-6 py-4 bg-slate-50 border-t border-slate-100">
+            <p className="text-center text-sm text-slate-600 mb-2">
+              Prefer email?{' '}
+              <Link
+                href={`/auth/register?redirect_url=${encodeURIComponent(redirectUrl)}`}
+                className="font-semibold text-[#4a5d4a] hover:text-[#3d4d3d] hover:underline"
+              >
+                Create an account with email
+              </Link>
+            </p>
             <p className="text-center text-sm text-slate-600">
               Already have an account?{' '}
               <Link
