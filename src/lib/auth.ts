@@ -397,6 +397,29 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     maxAge: 8 * 60 * 60, // 8 hours for admin sessions
     updateAge: 24 * 60 * 60, // Update only once per day to prevent frequent polling
   },
+  // Share the session cookie across the apex + www hosts. OAuth callbacks run
+  // on NEXTAUTH_URL (www) and set the cookie there; www then 308-redirects to
+  // the canonical apex, where a host-only www cookie would NOT be sent —
+  // causing a completed Google/Facebook login to land on an "Authentication
+  // Required" dashboard loop. A parent-domain cookie is sent to both hosts.
+  // Name matches Auth.js v5's default so existing sessions aren't invalidated;
+  // only the `domain` is added (the __Secure- prefix permits Domain, unlike
+  // the __Host- prefix Auth.js uses for the CSRF token, which we don't touch).
+  cookies: {
+    sessionToken: {
+      name:
+        process.env.NODE_ENV === 'production'
+          ? '__Secure-authjs.session-token'
+          : 'authjs.session-token',
+      options: {
+        httpOnly: true,
+        sameSite: 'lax',
+        path: '/',
+        secure: process.env.NODE_ENV === 'production',
+        domain: process.env.NODE_ENV === 'production' ? '.cerebrumbiologyacademy.com' : undefined,
+      },
+    },
+  },
   callbacks: {
     async signIn({ account, profile }) {
       // OAuth gate: only accept Google/Facebook sign-ins that carry a real,
