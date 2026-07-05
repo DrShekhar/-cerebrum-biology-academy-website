@@ -59,14 +59,14 @@
       "permanent": true
     },
     {
-      "source": "/:path*",
+      "source": "/:path((?!api/auth).*)",
       "has": [
         {
           "type": "host",
           "value": "www.cerebrumbiologyacademy.com"
         }
       ],
-      "destination": "https://cerebrumbiologyacademy.com/:path*",
+      "destination": "https://cerebrumbiologyacademy.com/:path",
       "permanent": true
     }
   ],

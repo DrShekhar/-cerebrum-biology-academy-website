@@ -345,7 +345,14 @@ export default async function middleware(req: NextRequest) {
   // ============================================
   // SEO: Redirect www to non-www (canonical domain)
   // ============================================
-  if (hostname.startsWith('www.')) {
+  // EXCEPTION: /api/auth/* must NOT be redirected. NEXTAUTH_URL is www, so the
+  // OAuth callback (and the whole NextAuth handshake) runs on www. A 301 here
+  // fires BEFORE NextAuth's handler and discards the Set-Cookie it would emit —
+  // so the session cookie never gets minted and Google/Facebook login lands on
+  // an "Authentication Required" loop. Let auth complete on www; the session
+  // cookie carries Domain=.cerebrumbiologyacademy.com (see auth.ts) so it's
+  // still valid once the app redirects the user to the apex host.
+  if (hostname.startsWith('www.') && !pathname.startsWith('/api/auth')) {
     const newUrl = new URL(req.url)
     newUrl.host = hostname.replace('www.', '')
     return NextResponse.redirect(newUrl, { status: 301 })
