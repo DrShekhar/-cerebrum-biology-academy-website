@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { signIn } from 'next-auth/react'
 import { Phone, Loader2, Check, Clock, AlertCircle, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { countryFlagEmoji } from '@/lib/constants/countryDialCodes'
+import { countryFlagEmoji, COUNTRY_DIAL_CODES } from '@/lib/constants/countryDialCodes'
 import {
   sendOTP,
   verifyOTP,
@@ -26,26 +26,11 @@ const isFirebaseConfigured = Boolean(process.env.NEXT_PUBLIC_FIREBASE_API_KEY)
 
 // Country codes for phone OTP. India stays first (default); extend by adding
 // entries here — the rest of the component is dial-code agnostic.
-const COUNTRIES: ReadonlyArray<{ name: string; dialCode: string; iso2: string }> = [
-  { name: 'India', dialCode: '+91', iso2: 'IN' },
-  { name: 'USA / Canada', dialCode: '+1', iso2: 'US' },
-  { name: 'UK', dialCode: '+44', iso2: 'GB' },
-  { name: 'UAE', dialCode: '+971', iso2: 'AE' },
-  { name: 'Saudi Arabia', dialCode: '+966', iso2: 'SA' },
-  { name: 'Qatar', dialCode: '+974', iso2: 'QA' },
-  { name: 'Kuwait', dialCode: '+965', iso2: 'KW' },
-  { name: 'Oman', dialCode: '+968', iso2: 'OM' },
-  { name: 'Bahrain', dialCode: '+973', iso2: 'BH' },
-  { name: 'Singapore', dialCode: '+65', iso2: 'SG' },
-  { name: 'Malaysia', dialCode: '+60', iso2: 'MY' },
-  { name: 'Australia', dialCode: '+61', iso2: 'AU' },
-  { name: 'New Zealand', dialCode: '+64', iso2: 'NZ' },
-  { name: 'Nepal', dialCode: '+977', iso2: 'NP' },
-  { name: 'Bangladesh', dialCode: '+880', iso2: 'BD' },
-  { name: 'Sri Lanka', dialCode: '+94', iso2: 'LK' },
-  { name: 'Germany', dialCode: '+49', iso2: 'DE' },
-  { name: 'France', dialCode: '+33', iso2: 'FR' },
-]
+// Full global list (97 countries) from the shared source of truth, so phone
+// login works for any country — not the old hardcoded 18. India stays first
+// (it's the default); the rest follow the curated audience order.
+const COUNTRIES: ReadonlyArray<{ name: string; dialCode: string; iso2: string }> =
+  COUNTRY_DIAL_CODES.map((c) => ({ name: c.name, dialCode: c.dialCode, iso2: c.iso2 }))
 
 // India keeps the strict 10-digit rule (behavior unchanged); other countries
 // have national numbers between 4 and 14 digits — Firebase validates exactly.
