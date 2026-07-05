@@ -244,7 +244,7 @@ export const Footer = memo(function Footer() {
     { name: 'Twitter', href: 'https://twitter.com/shekharsingh', icon: Twitter },
     {
       name: 'WhatsApp',
-      href: 'https://wa.me/918826444334',
+      href: 'https://wa.me/918826444334?text=Hi!%20I%20visited%20the%20Cerebrum%20Biology%20Academy%20website%20and%20want%20to%20know%20more%20about%20your%20courses.',
       icon: MessageCircle,
       isWhatsApp: true,
     },

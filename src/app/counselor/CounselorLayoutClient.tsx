@@ -228,7 +228,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
               </button>
 
               <a
-                href="https://wa.me/918826444334"
+                href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20Counselor%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden sm:flex items-center gap-2 px-3 py-2 bg-[#166534] hover:bg-[#14532d] text-white rounded-lg text-sm font-medium transition-colors"

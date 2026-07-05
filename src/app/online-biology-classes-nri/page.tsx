@@ -401,7 +401,7 @@ export default function OnlineBiologyClassesNRIPage() {
                 Book Free Demo Class
               </Link>
               <a
-                href="https://wa.me/918826444334"
+                href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20Online%20Biology%20Classes%20NRI%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg border-2 border-white px-8 py-3 font-semibold transition hover:bg-white/10"

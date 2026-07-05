@@ -213,7 +213,7 @@ export default function NEETPreparationRoadmapPage() {
               </p>
               <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <a
-                  href="https://wa.me/918826444334"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20NEET%20Preparation%20Roadmap%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-3 px-8 rounded-lg transition-colors inline-block"
@@ -681,7 +681,7 @@ export default function NEETPreparationRoadmapPage() {
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/918826444334"
+                href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20NEET%20Preparation%20Roadmap%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-4 px-10 rounded-lg transition-colors inline-block text-lg"

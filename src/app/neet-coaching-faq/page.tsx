@@ -354,7 +354,7 @@ export default function NEETCoachingFAQPage() {
               Call: +91-88264-44334
             </a>
             <a
-              href="https://wa.me/918826444334"
+              href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20NEET%20Coaching%20FAQ%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission."
               className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition"
             >
               <MessageCircle className="w-5 h-5" />
@@ -546,7 +546,7 @@ export default function NEETCoachingFAQPage() {
               Call +91-88264-44334
             </a>
             <a
-              href="https://wa.me/918826444334"
+              href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20NEET%20Coaching%20FAQ%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission."
               className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition"
             >
               <MessageCircle className="w-5 h-5" />

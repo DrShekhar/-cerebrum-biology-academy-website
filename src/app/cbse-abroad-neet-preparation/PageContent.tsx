@@ -271,7 +271,7 @@ export default function CBSEAbroadContent() {
               Singapore, Australia - anywhere in the world.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20CBSE%20Abroad%20NEET%20Preparation%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission." target="_blank" rel="noopener noreferrer">
                 <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Get Details on WhatsApp
@@ -525,7 +525,7 @@ export default function CBSEAbroadContent() {
             <p className="text-gray-700 mb-6">
               Custom plans available. Get personalized pricing and timezone scheduling.
             </p>
-            <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20CBSE%20Abroad%20NEET%20Preparation%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission." target="_blank" rel="noopener noreferrer">
               <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Discuss Your Timezone & Plan
@@ -570,7 +570,7 @@ export default function CBSEAbroadContent() {
             your medical college dreams.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20CBSE%20Abroad%20NEET%20Preparation%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission." target="_blank" rel="noopener noreferrer">
               <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 w-full md:w-auto">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Message on WhatsApp

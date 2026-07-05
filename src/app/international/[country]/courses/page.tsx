@@ -164,7 +164,7 @@ export default async function InternationalCoursesPage({ params }: PageProps) {
                 </p>
               </div>
               <a
-                href="https://wa.me/918826444334"
+                href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20International%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-colors"
@@ -242,7 +242,7 @@ export default async function InternationalCoursesPage({ params }: PageProps) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/918826444334"
+                href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20International%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-teal-700 font-semibold rounded-lg hover:bg-gray-100 transition-colors"

@@ -408,7 +408,7 @@ export default function BatchTypesPage() {
                   📞 Call: +91 88264 44334
                 </a>
                 <a
-                  href="https://wa.me/918826444334"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20Batch%20Types%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition"
@@ -538,7 +538,7 @@ export default function BatchTypesPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">WhatsApp</h3>
                     <a
-                      href="https://wa.me/918826444334"
+                      href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20Batch%20Types%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:underline"

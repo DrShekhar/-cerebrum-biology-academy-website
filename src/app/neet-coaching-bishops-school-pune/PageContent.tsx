@@ -178,7 +178,7 @@ export default function PageContent() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <a
-                href="https://wa.me/918826444334"
+                href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20NEET%20Coaching%20Bishops%20School%20Pune%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-amber-700 transition-colors inline-flex items-center justify-center"

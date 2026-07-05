@@ -240,7 +240,7 @@ export default function IBToNEETContent() {
               students targeting India's top medical colleges.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20IB%20to%20NEET%20Biology%20Preparation%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission." target="_blank" rel="noopener noreferrer">
                 <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Get Details on WhatsApp
@@ -495,7 +495,7 @@ export default function IBToNEETContent() {
               Prices vary based on duration and intensity. Get personalized quote matching your
               timeline.
             </p>
-            <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20IB%20to%20NEET%20Biology%20Preparation%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission." target="_blank" rel="noopener noreferrer">
               <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Ask About Pricing on WhatsApp
@@ -537,7 +537,7 @@ export default function IBToNEETContent() {
             Connect with our expert counselors to discuss your IB background and NEET goals.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20IB%20to%20NEET%20Biology%20Preparation%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission." target="_blank" rel="noopener noreferrer">
               <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 w-full md:w-auto">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Message on WhatsApp

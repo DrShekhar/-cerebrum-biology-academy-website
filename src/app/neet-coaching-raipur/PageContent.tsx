@@ -67,7 +67,7 @@ export default function PageContent() {
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 justify-center mb-16">
-            <a href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20NEET%20Coaching%20Raipur%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission." target="_blank" rel="noopener noreferrer">
               <Button className="w-full md:w-auto bg-green-500 hover:bg-green-600">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Chat on WhatsApp
@@ -293,7 +293,7 @@ export default function PageContent() {
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <a href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/918826444334?text=Hi!%20I%20am%20on%20your%20NEET%20Coaching%20Raipur%20page%20and%20want%20to%20know%20more%20about%20batches%2C%20fees%2C%20and%20admission." target="_blank" rel="noopener noreferrer">
               <Button className="w-full md:w-auto bg-white text-blue-600 hover:bg-gray-100 font-bold">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Chat Now: 918826444334
