@@ -1007,6 +1007,44 @@ model demo_bookings {
   @@index([status, createdAt])
 }
 
+/// Recurring weekly demo-class slots (group model, owner decision Jul 2026).
+/// One row = a repeating window (e.g. every Tue 17:00) with a capacity, an
+/// assigned teacher, and a shared Zoom link. Availability for a given date is
+/// capacity minus the count of active demo_bookings on that date+time.
+model demo_slots {
+  id           String   @id @default(cuid())
+  dayOfWeek    Int // 0=Sunday … 6=Saturday (IST)
+  startTime    String // "17:00" 24h IST
+  durationMins Int      @default(45)
+  teacherId    String?
+  teacherName  String? // denormalized for display without a join
+  capacity     Int      @default(15)
+  zoomJoinUrl  String? // shared join link for everyone in this slot
+  track        String? // optional focus: "NEET" | "Boards" | "Olympiad" | null = any
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([dayOfWeek, isActive])
+}
+
+/// Calendar blocks — the owner/counselor marks time as unavailable so no one
+/// can book it. A block covers a date range; optionally scoped to one slot
+/// (slotId set) or one time-of-day, otherwise it blocks the WHOLE day(s).
+/// Availability subtracts anything a block covers.
+model demo_slot_blocks {
+  id        String   @id @default(cuid())
+  startDate String // YYYY-MM-DD (IST), inclusive
+  endDate   String // YYYY-MM-DD (IST), inclusive (== startDate for one day)
+  slotId    String? // block just this recurring slot; null = any slot
+  startTime String? // block just this time "17:00"; null = whole day
+  reason    String? // e.g. "Faculty travel", "Holiday"
+  createdBy String? // users.id who created the block
+  createdAt DateTime @default(now())
+
+  @@index([startDate, endDate])
+}
+
 model diagram_assets {
   id                String              @id
   name              String
