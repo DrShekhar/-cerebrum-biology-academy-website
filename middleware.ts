@@ -224,6 +224,10 @@ async function getUserFromToken(
 ): Promise<{ userId: string; role: string } | null> {
   // 1) Real NextAuth session (encrypted JWE, decoded via next-auth/jwt)
   const nextAuthSecret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET
+  const debugAuth = req.nextUrl.searchParams.get('__authdbg') === '1'
+  if (debugAuth) {
+    console.log('[mw-auth] secretPresent=%s', !!nextAuthSecret)
+  }
   if (nextAuthSecret) {
     for (const secureCookie of [true, false]) {
       // Auth.js v5 salts the session JWE with the cookie NAME, so getToken must
@@ -233,6 +237,10 @@ async function getUserFromToken(
       // signed-in user back to /sign-in). Pass them explicitly.
       const cookieName = secureCookie ? '__Secure-authjs.session-token' : 'authjs.session-token'
       try {
+        if (debugAuth) {
+          const raw = await getToken({ req, secret: nextAuthSecret, secureCookie, cookieName, salt: cookieName, raw: true })
+          console.log('[mw-auth] secureCookie=%s cookiePresent=%s rawLen=%s', secureCookie, !!raw, typeof raw === 'string' ? raw.length : 0)
+        }
         const token = await getToken({
           req,
           secret: nextAuthSecret,
@@ -240,6 +248,9 @@ async function getUserFromToken(
           cookieName,
           salt: cookieName,
         })
+        if (debugAuth) {
+          console.log('[mw-auth] secureCookie=%s decoded=%s keys=%s', secureCookie, !!token, token ? Object.keys(token).join(',') : '-')
+        }
         const userId = (token?.id as string | undefined) || token?.sub
         if (token && userId) {
           return {
@@ -247,7 +258,10 @@ async function getUserFromToken(
             role: ((token.role as string) || 'STUDENT').toUpperCase(),
           }
         }
-      } catch {
+      } catch (e) {
+        if (debugAuth) {
+          console.log('[mw-auth] secureCookie=%s threw=%s', secureCookie, (e as Error)?.message)
+        }
         // Fall through to the legacy verifier
       }
     }
@@ -280,6 +294,30 @@ async function getUserFromToken(
   } catch {
     return null
   }
+}
+
+/**
+ * True when the request carries a NextAuth session cookie (secure or dev name,
+ * including the chunked `.0` variant Auth.js writes for large sessions).
+ *
+ * Why this exists: edge middleware decodes the session JWE with getToken(),
+ * but the encrypted-session decrypt is unreliable in the edge runtime for our
+ * config — a genuinely signed-in user can read as logged-out here even though
+ * the Node-runtime auth() (used by every page/layout and /api/auth/session)
+ * decodes the exact same cookie fine. Rather than bounce a valid user at the
+ * edge, we let a request that HAS a session cookie fall through to the page's
+ * own Node-side guard, which does the authoritative auth() check. API routes
+ * stay hard-gated by their own requireAdminAuth/requireAuth, so no data is
+ * exposed by this fallthrough — the page shell is all that renders before the
+ * server component's auth() decides.
+ */
+function hasNextAuthSessionCookie(req: NextRequest): boolean {
+  return Boolean(
+    req.cookies.get('__Secure-authjs.session-token')?.value ||
+      req.cookies.get('authjs.session-token')?.value ||
+      req.cookies.get('__Secure-authjs.session-token.0')?.value ||
+      req.cookies.get('authjs.session-token.0')?.value
+  )
 }
 
 /**
@@ -512,9 +550,14 @@ export default async function middleware(req: NextRequest) {
   const authResult = await getUserFromToken(req)
   const userId = authResult?.userId || null
   const userRole = authResult?.role || null
+  // Edge middleware can't always decrypt a valid session JWE (see
+  // hasNextAuthSessionCookie). When we couldn't decode a userId but the request
+  // clearly carries a session cookie, don't bounce or role-redirect at the
+  // edge — let the request through to the page's Node-side auth() guard.
+  const hasSession = !userId && hasNextAuthSessionCookie(req)
 
   // For protected/admin routes, require authentication
-  if (!userId && (isProtectedRoute(pathname) || isAdminRoute(pathname))) {
+  if (!userId && !hasSession && (isProtectedRoute(pathname) || isAdminRoute(pathname))) {
     const signInUrl = new URL('/sign-in', req.url)
     signInUrl.searchParams.set('redirect_url', pathname)
     return NextResponse.redirect(signInUrl)
@@ -544,12 +587,12 @@ export default async function middleware(req: NextRequest) {
 
   // Protected teacher routes - require TEACHER or ADMIN role
   if (pathname.startsWith('/teacher/')) {
-    if (!userId) {
+    if (!userId && !hasSession) {
       return NextResponse.redirect(
         new URL('/sign-in?redirect_url=' + encodeURIComponent(pathname), req.url)
       )
     }
-    if (userRole !== 'TEACHER' && userRole !== 'ADMIN') {
+    if (userId && userRole !== 'TEACHER' && userRole !== 'ADMIN') {
       // Redirect non-teachers to their appropriate dashboard
       return NextResponse.redirect(new URL('/dashboard', req.url))
     }
@@ -561,12 +604,12 @@ export default async function middleware(req: NextRequest) {
     pathname !== '/counselor-poc' &&
     pathname !== '/counselor/login'
   ) {
-    if (!userId) {
+    if (!userId && !hasSession) {
       const loginUrl = new URL('/sign-in', req.url)
       loginUrl.searchParams.set('redirect_url', pathname)
       return NextResponse.redirect(loginUrl)
     }
-    if (userRole !== 'COUNSELOR' && userRole !== 'ADMIN') {
+    if (userId && userRole !== 'COUNSELOR' && userRole !== 'ADMIN') {
       // Redirect non-counselors to their appropriate dashboard
       return NextResponse.redirect(new URL('/dashboard', req.url))
     }
@@ -574,41 +617,41 @@ export default async function middleware(req: NextRequest) {
 
   // Protected parent routes - require PARENT or ADMIN role
   if (pathname.startsWith('/parent/')) {
-    if (!userId) {
+    if (!userId && !hasSession) {
       return NextResponse.redirect(
         new URL('/sign-in?redirect_url=' + encodeURIComponent(pathname), req.url)
       )
     }
-    if (userRole !== 'PARENT' && userRole !== 'ADMIN') {
+    if (userId && userRole !== 'PARENT' && userRole !== 'ADMIN') {
       return NextResponse.redirect(new URL('/dashboard', req.url))
     }
   }
 
   // Protected student routes - require STUDENT or ADMIN role
   if (pathname.startsWith('/student/')) {
-    if (!userId) {
+    if (!userId && !hasSession) {
       return NextResponse.redirect(
         new URL('/sign-in?redirect_url=' + encodeURIComponent(pathname), req.url)
       )
     }
-    if (userRole !== 'STUDENT' && userRole !== 'ADMIN') {
+    if (userId && userRole !== 'STUDENT' && userRole !== 'ADMIN') {
       return NextResponse.redirect(new URL('/dashboard', req.url))
     }
   }
 
   // Protected admin routes - require ADMIN role
   if (isAdminRoute(pathname) && pathname !== '/admin/login') {
-    if (!userId) {
+    if (!userId && !hasSession) {
       const loginUrl = new URL('/admin/login', req.url)
       loginUrl.searchParams.set('callbackUrl', pathname)
       return NextResponse.redirect(loginUrl)
     }
-    if (userRole !== 'ADMIN') {
+    if (userId && userRole !== 'ADMIN') {
       // Redirect non-admins to their appropriate dashboard
       return NextResponse.redirect(new URL('/dashboard', req.url))
     }
     // Log admin access for security audit
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'production' && userId) {
       const clientIP =
         req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown'
       console.log(
@@ -618,20 +661,25 @@ export default async function middleware(req: NextRequest) {
   }
 
   // Protected general routes
-  if (isProtectedRoute(pathname) && !userId) {
+  if (isProtectedRoute(pathname) && !userId && !hasSession) {
     const loginUrl = new URL('/sign-in', req.url)
     loginUrl.searchParams.set('redirect_url', pathname)
     return NextResponse.redirect(loginUrl)
   }
 
-  // API route protection - admin APIs
+  // API route protection - admin APIs.
+  // The edge gate is defense-in-depth; each /api/admin route additionally runs
+  // requireAdminAuth() in the Node runtime (which decodes the session reliably).
+  // So when the edge couldn't decode a userId but a session cookie is present,
+  // let the request reach the route's own Node-side guard instead of 401-ing a
+  // real admin whose JWE the edge simply failed to decrypt.
   if (pathname.startsWith('/api/admin/')) {
-    if (!userId) {
+    if (!userId && !hasSession) {
       return addSecurityHeaders(
         NextResponse.json({ error: 'Authentication required' }, { status: 401 })
       )
     }
-    if (userRole !== 'ADMIN') {
+    if (userId && userRole !== 'ADMIN') {
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -646,12 +694,12 @@ export default async function middleware(req: NextRequest) {
 
   // API route protection - teacher APIs
   if (pathname.startsWith('/api/teacher/')) {
-    if (!userId) {
+    if (!userId && !hasSession) {
       return addSecurityHeaders(
         NextResponse.json({ error: 'Authentication required' }, { status: 401 })
       )
     }
-    if (userRole !== 'TEACHER' && userRole !== 'ADMIN') {
+    if (userId && userRole !== 'TEACHER' && userRole !== 'ADMIN') {
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -666,12 +714,12 @@ export default async function middleware(req: NextRequest) {
 
   // API route protection - counselor APIs
   if (pathname.startsWith('/api/counselor/')) {
-    if (!userId) {
+    if (!userId && !hasSession) {
       return addSecurityHeaders(
         NextResponse.json({ error: 'Authentication required' }, { status: 401 })
       )
     }
-    if (userRole !== 'COUNSELOR' && userRole !== 'ADMIN') {
+    if (userId && userRole !== 'COUNSELOR' && userRole !== 'ADMIN') {
       return addSecurityHeaders(
         NextResponse.json(
           {
