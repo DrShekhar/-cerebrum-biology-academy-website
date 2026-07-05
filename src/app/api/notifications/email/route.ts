@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { emailService } from '@/lib/email/emailService'
+import { auth } from '@/lib/auth'
+
+const STAFF_ROLES = new Set(['ADMIN', 'COUNSELOR', 'TEACHER'])
 
 // Validation schema
 const emailNotificationSchema = z.object({
@@ -18,6 +21,15 @@ type EmailNotificationRequest = z.infer<typeof emailNotificationSchema>
 
 export async function POST(request: NextRequest) {
   try {
+    // Staff-only: this endpoint resolves a student from an enumerable
+    // enrollmentId and emails them (including custom subject/body) — left
+    // open it is a phishing/spam vector from the academy's own domain.
+    const session = await auth()
+    const role = (session?.user as { role?: string } | undefined)?.role?.toUpperCase()
+    if (!role || !STAFF_ROLES.has(role)) {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
+
     const body: EmailNotificationRequest = await request.json()
 
     // Validate input

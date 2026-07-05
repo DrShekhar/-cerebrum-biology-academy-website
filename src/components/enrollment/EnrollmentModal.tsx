@@ -21,6 +21,7 @@ import {
 import FocusTrap from 'focus-trap-react'
 import { RazorpayPayment } from '@/components/payment/RazorpayPayment'
 import toast from 'react-hot-toast'
+import { PhoneInputWithCountry } from '@/components/ui/PhoneInputWithCountry'
 
 interface EnrollmentModalProps {
   isOpen: boolean
@@ -248,13 +249,11 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                         <Phone className="w-4 h-4 inline mr-2" />
                         Phone Number *
                       </label>
-                      <input
-                        type="tel"
-                        name="phone"
+                      <PhoneInputWithCountry
                         value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                        onChange={(fullNumber) => setFormData({ ...formData, phone: fullNumber })}
                         required
+                        inputClassName="w-full px-4 py-3 border border-l-0 border-gray-300 rounded-r-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                       />
                     </div>
 
@@ -332,13 +331,13 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           Parent Phone *
                         </label>
-                        <input
-                          type="tel"
-                          name="parentPhone"
+                        <PhoneInputWithCountry
                           value={formData.parentPhone}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                          onChange={(fullNumber) =>
+                            setFormData({ ...formData, parentPhone: fullNumber })
+                          }
                           required
+                          inputClassName="w-full px-4 py-3 border border-l-0 border-gray-300 rounded-r-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                         />
                       </div>
                     </div>

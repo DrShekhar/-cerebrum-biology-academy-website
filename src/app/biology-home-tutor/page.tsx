@@ -23,6 +23,7 @@ import {
   Building,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { PhoneInputWithCountry } from '@/components/ui/PhoneInputWithCountry'
 import Link from 'next/link'
 
 const homeTutorProblems = [
@@ -162,7 +163,9 @@ export default function BiologyHomeTutorPage() {
     e.preventDefault()
     // Handle form submission
     window.open(
-      `https://wa.me/918826444334?text=Hi!%20I%20am%20${formData.name}%20and%20want%20a%20home%20biology%20tutor.%20My%20phone:%20${formData.phone}`,
+      `https://wa.me/918826444334?text=${encodeURIComponent(
+        `Hi! I am ${formData.name} and want a home biology tutor. My phone: ${formData.phone}`
+      )}`,
       '_blank'
     )
   }
@@ -485,13 +488,11 @@ export default function BiologyHomeTutorPage() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                <input
-                  type="tel"
+                <PhoneInputWithCountry
                   required
                   value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  placeholder="+91 XXXXX XXXXX"
+                  onChange={(fullNumber) => setFormData({ ...formData, phone: fullNumber })}
+                  inputClassName="w-full px-4 py-3 border border-l-0 border-gray-300 rounded-r-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
               </div>
 

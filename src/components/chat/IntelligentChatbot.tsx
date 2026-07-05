@@ -749,12 +749,12 @@ export function IntelligentChatbot() {
         true
       )
     } else if (collectingContact === 'phone') {
-      const cleanPhone = message.replace(/[\s\-\+]/g, '')
-      const indianPhoneRegex = /^(91)?[6-9]\d{9}$/
+      const hasPlus = message.trim().startsWith('+')
+      const cleanPhone = message.replace(/[^\d]/g, '')
 
-      if (!indianPhoneRegex.test(cleanPhone)) {
+      if (cleanPhone.length < 8 || cleanPhone.length > 15) {
         addBotMessage(
-          'Please enter a valid Indian mobile number (e.g., 9876543210 or +91 9876543210).',
+          'Please enter a valid phone number — include your country code if you are outside India (e.g., 9876543210 or +1 555 123 4567).',
           ['Try again'],
           undefined,
           true
@@ -762,8 +762,9 @@ export function IntelligentChatbot() {
         return
       }
 
-      // Extract the 10-digit number for storage
-      const normalizedPhone = cleanPhone.slice(-10)
+      // Keep the country code for international numbers; bare 10-digit
+      // numbers are Indian (the CRM dedups by last-10-digits either way).
+      const normalizedPhone = hasPlus ? `+${cleanPhone}` : cleanPhone
 
       setChatState((prev) => ({
         ...prev,

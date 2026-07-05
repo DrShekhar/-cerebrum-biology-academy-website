@@ -10,11 +10,11 @@ import {
   Linkedin,
   Copy,
   Share2,
-  Phone,
   Sparkles,
   ArrowRight,
   CheckCircle,
 } from 'lucide-react'
+import { PhoneInputWithCountry } from '@/components/ui/PhoneInputWithCountry'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
@@ -111,11 +111,10 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
   const topicFaqs = generateTopicFAQs(meta.title, meta.category, meta.tags)
   const allFaqs = [...extractedFaqs, ...topicFaqs].slice(0, 10)
 
-  // Lead capture form validation and submission
+  // Lead capture form validation and submission. The phone input emits a full
+  // E.164-style value ("+" + dial code + national digits).
   const validatePhone = (value: string): boolean => {
-    const cleanPhone = value.replace(/[\s\-\+]/g, '')
-    const indianPhoneRegex = /^(91)?[6-9]\d{9}$/
-    return indianPhoneRegex.test(cleanPhone)
+    return /^\+\d{8,16}$/.test(value)
   }
 
   const handleLeadSubmit = async (e: React.FormEvent) => {
@@ -123,7 +122,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
     setLeadError('')
 
     if (!validatePhone(leadPhone)) {
-      setLeadError('Please enter a valid Indian mobile number (with or without +91)')
+      setLeadError('Please enter a valid mobile number')
       return
     }
 
@@ -563,18 +562,13 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                       onSubmit={handleLeadSubmit}
                       className="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto"
                     >
-                      <div className="relative flex-1">
-                        <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                        <input
-                          type="tel"
+                      <div className="flex-1">
+                        <PhoneInputWithCountry
                           value={leadPhone}
-                          onChange={(e) =>
-                            setLeadPhone(e.target.value.replace(/[^\d+\-\s]/g, '').slice(0, 15))
-                          }
+                          onChange={setLeadPhone}
                           placeholder="Mobile number"
                           required
-                          className="w-full pl-12 pr-4 py-3.5 text-base bg-white text-gray-900 rounded-xl border-2 border-transparent focus:border-green-400 focus:ring-0 focus:outline-none shadow-lg placeholder:text-gray-400"
-                          style={{ fontSize: '16px' }}
+                          inputClassName="w-full px-4 py-3.5 text-base bg-white text-gray-900 rounded-r-xl border-2 border-l-0 border-transparent focus:border-green-400 focus:ring-0 focus:outline-none shadow-lg placeholder:text-gray-400"
                         />
                       </div>
                       <button
@@ -645,18 +639,13 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                       onSubmit={handleLeadSubmit}
                       className="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto"
                     >
-                      <div className="relative flex-1">
-                        <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                        <input
-                          type="tel"
+                      <div className="flex-1">
+                        <PhoneInputWithCountry
                           value={leadPhone}
-                          onChange={(e) =>
-                            setLeadPhone(e.target.value.replace(/[^\d+\-\s]/g, '').slice(0, 15))
-                          }
+                          onChange={setLeadPhone}
                           placeholder="Mobile number"
                           required
-                          className="w-full pl-12 pr-4 py-3.5 text-base bg-white text-gray-900 rounded-xl border-2 border-transparent focus:border-yellow-400 focus:ring-0 focus:outline-none shadow-lg placeholder:text-gray-400"
-                          style={{ fontSize: '16px' }}
+                          inputClassName="w-full px-4 py-3.5 text-base bg-white text-gray-900 rounded-r-xl border-2 border-l-0 border-transparent focus:border-yellow-400 focus:ring-0 focus:outline-none shadow-lg placeholder:text-gray-400"
                         />
                       </div>
                       <button

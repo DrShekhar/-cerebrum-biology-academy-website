@@ -64,12 +64,8 @@ export function useFormValidation() {
       return { isValid: false, error: 'Phone number must be at least 10 digits' }
     }
 
-    if (cleanPhone.length > 12) {
+    if (cleanPhone.length > 15) {
       return { isValid: false, error: 'Phone number is too long' }
-    }
-
-    if (cleanPhone.startsWith('91') && cleanPhone.length !== 12) {
-      return { isValid: false, error: 'Invalid Indian phone number' }
     }
 
     return { isValid: true }

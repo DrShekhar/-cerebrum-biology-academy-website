@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { WhatsAppBusinessService } from '@/lib/integrations/whatsappBusinessService'
+import { auth } from '@/lib/auth'
+
+const STAFF_ROLES = new Set(['ADMIN', 'COUNSELOR', 'TEACHER'])
 
 // Validation schema
 const whatsappNotificationSchema = z.object({
@@ -17,6 +20,15 @@ type WhatsAppNotificationRequest = z.infer<typeof whatsappNotificationSchema>
 
 export async function POST(request: NextRequest) {
   try {
+    // Staff-only: resolves a student's number from an enumerable
+    // enrollmentId and sends WhatsApp messages (incl. custom text) —
+    // unauthenticated this is a spam vector with per-message cost.
+    const session = await auth()
+    const role = (session?.user as { role?: string } | undefined)?.role?.toUpperCase()
+    if (!role || !STAFF_ROLES.has(role)) {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
+
     const body: WhatsAppNotificationRequest = await request.json()
 
     // Validate input

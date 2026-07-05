@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/Input'
 import { Label } from '@/components/ui/Label'
 import { X, Download, FileText, CheckCircle, User, Mail, Phone } from 'lucide-react'
 import { openWhatsAppWithFormData } from '@/lib/whatsapp/formToWhatsApp'
+import { PhoneInputWithCountry } from '@/components/ui/PhoneInputWithCountry'
 
 interface SyllabusDownloadModalProps {
   course: CourseProgram
@@ -171,12 +172,13 @@ export function SyllabusDownloadModal({ course, onClose }: SyllabusDownloadModal
                 <Phone className="h-4 w-4" />
                 Phone Number *
               </Label>
-              <Input
+              <PhoneInputWithCountry
                 id="phone"
                 placeholder="Enter your phone number"
                 value={formData.phone}
-                onChange={(e) => handleInputChange('phone', e.target.value)}
+                onChange={(fullNumber) => handleInputChange('phone', fullNumber)}
                 required
+                inputClassName="flex h-12 min-h-[48px] w-full rounded-r-lg border border-l-0 border-gray-200 bg-white px-3 sm:px-4 py-2 sm:py-3 text-sm placeholder:text-gray-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 transition-all duration-200"
               />
             </div>
 

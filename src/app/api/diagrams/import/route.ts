@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { DiagramCategory, DiagramSource } from '@/generated/prisma'
+import { auth } from '@/lib/auth'
 
 interface DiagramImportData {
   name: string
@@ -24,6 +25,13 @@ interface DiagramImportData {
 
 export async function POST(request: NextRequest) {
   try {
+    // Admin-only: bulk insert/overwrite of the diagram catalog.
+    const session = await auth()
+    const role = (session?.user as { role?: string } | undefined)?.role?.toUpperCase()
+    if (role !== 'ADMIN') {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
+
     const body = await request.json()
     const { diagrams, updateExisting = false } = body as {
       diagrams: DiagramImportData[]

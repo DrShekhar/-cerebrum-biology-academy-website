@@ -7,7 +7,6 @@ import {
   X,
   Crown,
   Mail,
-  Phone,
   Sparkles,
   TrendingUp,
   Target,
@@ -19,6 +18,7 @@ import {
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { openWhatsAppWithFormData } from '@/lib/whatsapp/formToWhatsApp'
 import { TrialStatus } from '@/lib/trial/trialManager'
+import { PhoneInputWithCountry } from '@/components/ui/PhoneInputWithCountry'
 
 interface TrialExpiredModalProps {
   isOpen: boolean
@@ -286,18 +286,13 @@ export function TrialExpiredModal({
                       >
                         Phone Number *
                       </label>
-                      <div className="relative">
-                        <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                        <input
-                          type="tel"
-                          id="phone"
-                          required
-                          value={phone}
-                          onChange={(e) => setPhone(e.target.value)}
-                          className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-gray-900"
-                          placeholder="+91 98765 43210"
-                        />
-                      </div>
+                      <PhoneInputWithCountry
+                        id="phone"
+                        required
+                        value={phone}
+                        onChange={setPhone}
+                        inputClassName="w-full px-4 py-3 border border-l-0 border-gray-300 rounded-r-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-gray-900"
+                      />
                     </div>
 
                     <div>

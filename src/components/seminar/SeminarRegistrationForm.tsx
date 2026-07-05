@@ -157,6 +157,7 @@ export function SeminarRegistrationForm() {
             router.push(`/neet-guidance-seminar/thank-you?id=${orderData.registrationId}`)
           } else {
             alert('Payment verification failed. Please contact support.')
+            setIsSubmitting(false)
           }
         },
         modal: {

@@ -5,6 +5,7 @@ import { User, Mail, Phone, CreditCard, IndianRupee, CheckCircle, AlertCircle } 
 import { razorpayService } from '@/lib/payments/razorpay'
 import { useAnalytics } from '@/hooks/useAnalytics'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { PhoneInputWithCountry } from '@/components/ui/PhoneInputWithCountry'
 
 interface Course {
   id: string
@@ -323,14 +324,11 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
             <Phone className="w-4 h-4 inline mr-2" />
             Phone Number
           </label>
-          <input
-            type="tel"
-            name="phone"
+          <PhoneInputWithCountry
             value={formData.phone}
-            onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all"
-            placeholder="+91 XXXXX XXXXX"
+            onChange={(fullNumber) => setFormData((prev) => ({ ...prev, phone: fullNumber }))}
             required
+            inputClassName="w-full px-4 py-3 border border-l-0 border-gray-200 rounded-r-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all"
           />
         </div>
 

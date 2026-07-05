@@ -33,7 +33,8 @@ export const ariaTranslations: Record<Language, Record<string, string>> = {
     closedMessage: 'Chat ended. Click to start a new conversation.',
     offlineNotice: 'Our counselors are available 9 AM - 9 PM. Leave a message!',
     thankYouLead: 'Thank you! Our counselor will call you within 30 minutes.',
-    invalidPhone: 'Please enter a valid 10-digit Indian mobile number.',
+    invalidPhone:
+      'Please enter a valid phone number — include your country code if outside India (e.g., +1 555 123 4567).',
     invalidName: 'Please enter a valid name (2-50 characters, letters only).',
     invalidClass: 'Please enter a valid class: 9, 10, 11, 12, or Dropper.',
     selectTime: 'Select a convenient time:',
@@ -78,7 +79,7 @@ export const ariaTranslations: Record<Language, Record<string, string>> = {
     closedMessage: 'चैट समाप्त। नई बातचीत शुरू करने के लिए क्लिक करें।',
     offlineNotice: 'हमारे काउंसलर 9 AM - 9 PM उपलब्ध हैं। संदेश छोड़ें!',
     thankYouLead: 'धन्यवाद! हमारे काउंसलर 30 मिनट में आपको कॉल करेंगे।',
-    invalidPhone: 'कृपया सही 10 अंकों का भारतीय मोबाइल नंबर दर्ज करें।',
+    invalidPhone: 'कृपया सही मोबाइल नंबर दर्ज करें (भारत के बाहर से हैं तो कंट्री कोड के साथ)।',
     invalidName: 'कृपया सही नाम दर्ज करें (2-50 अक्षर, केवल अक्षर)।',
     invalidClass: 'कृपया सही क्लास दर्ज करें: 9, 10, 11, 12, या ड्रॉपर।',
     selectTime: 'सुविधाजनक समय चुनें:',

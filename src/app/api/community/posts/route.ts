@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { auth } from '@/lib/auth'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -91,10 +92,18 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
-    const { userId, title, content, type, topic } = body
+    // The author must be the signed-in user — accepting userId from the
+    // body lets anyone impersonate any user.
+    const session = await auth()
+    const userId = (session?.user as { id?: string } | undefined)?.id
+    if (!userId) {
+      return NextResponse.json({ error: 'Sign in required' }, { status: 401 })
+    }
 
-    if (!userId || !content) {
+    const body = await request.json()
+    const { title, content, type, topic } = body
+
+    if (!content) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 

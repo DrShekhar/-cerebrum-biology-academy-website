@@ -5,6 +5,7 @@
 import { useState, useRef } from 'react'
 import Image from 'next/image'
 import { Phone, MessageCircle, Star, Clock, Stethoscope } from 'lucide-react'
+import { PhoneInputWithCountry } from '@/components/ui/PhoneInputWithCountry'
 
 const COURSES = [
   'Class 9 (Foundation)',
@@ -76,8 +77,7 @@ export function LeadCaptureForm({
 
   const validate = (): string | null => {
     if (!name.trim()) return 'Please enter your name.'
-    const digits = phone.replace(/[^\d]/g, '')
-    if (digits.length < 10) return 'Please enter a 10-digit mobile number.'
+    if (!/^\+\d{8,16}$/.test(phone)) return 'Please enter a valid mobile number.'
     if (honeypot) return 'Submission blocked.'
     return null
   }
@@ -246,16 +246,12 @@ export function LeadCaptureForm({
           <label htmlFor="lead-phone" className="mb-1 block text-xs font-medium text-slate-700">
             Mobile (WhatsApp)
           </label>
-          <input
+          <PhoneInputWithCountry
             id="lead-phone"
-            type="tel"
             value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={setPhone}
             required
-            inputMode="tel"
-            autoComplete="tel"
-            placeholder="98XXX XXXXX"
-            className="w-full rounded-lg border border-slate-300 px-3 py-3 sm:py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20"
+            inputClassName="w-full rounded-r-lg border border-l-0 border-slate-300 px-3 py-3 sm:py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20"
           />
           <p className="mt-1.5 text-xs text-slate-500">
             We never share your number. One message, one call max before you say stop.

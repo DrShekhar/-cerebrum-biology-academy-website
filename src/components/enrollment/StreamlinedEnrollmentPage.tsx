@@ -22,6 +22,7 @@ import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/Pre
 import { EnrollmentProgress } from '@/components/ui/ProgressIndicators'
 import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
 import { useFormValidation } from '@/hooks/useFormValidation'
+import { PhoneInputWithCountry } from '@/components/ui/PhoneInputWithCountry'
 import { addDays, format, startOfTomorrow } from 'date-fns'
 import { razorpayService } from '@/lib/payments/razorpay'
 
@@ -106,7 +107,7 @@ export function StreamlinedEnrollmentPage({
   })
 
   // Form validation hook
-  const { validationStates, validateField, formatPhone, capitalizeName } = useFormValidation()
+  const { validationStates, validateField, capitalizeName } = useFormValidation()
 
   const steps = [
     { id: 0, title: 'Assessment', icon: GraduationCap, iconSolid: GraduationCap },
@@ -934,26 +935,21 @@ export function StreamlinedEnrollmentPage({
                     >
                       Mobile Number <span className="text-red-500">*</span>
                     </label>
-                    <input
+                    <PhoneInputWithCountry
                       id="mobile"
-                      type="tel"
                       value={formData.mobile}
-                      onChange={(e) => {
-                        const formatted = formatPhone(e.target.value)
-                        setFormData({ ...formData, mobile: formatted })
+                      onChange={(fullNumber) => {
+                        setFormData({ ...formData, mobile: fullNumber })
+                        validateField('mobile', fullNumber, 'phone')
                       }}
-                      onBlur={() => validateField('mobile', formData.mobile, 'phone')}
-                      className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                      placeholder="Enter mobile number"
+                      inputClassName={`w-full px-4 py-3 border border-l-0 rounded-r-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
                         validationStates.mobile?.error
                           ? 'border-red-300 bg-red-50'
                           : validationStates.mobile?.isValid
                             ? 'border-green-300 bg-green-50'
                             : 'border-gray-300'
                       }`}
-                      placeholder="Enter mobile number"
-                      aria-required="true"
-                      aria-invalid={!!validationStates.mobile?.error}
-                      aria-describedby={validationStates.mobile?.error ? 'mobile-error' : undefined}
                     />
                     {validationStates.mobile?.error && (
                       <p id="mobile-error" className="mt-1 text-xs text-red-600">
@@ -1103,28 +1099,21 @@ export function StreamlinedEnrollmentPage({
                     >
                       Parent Mobile Number <span className="text-red-500">*</span>
                     </label>
-                    <input
+                    <PhoneInputWithCountry
                       id="parentMobile"
-                      type="tel"
                       value={formData.parentMobile}
-                      onChange={(e) => {
-                        const formatted = formatPhone(e.target.value)
-                        setFormData({ ...formData, parentMobile: formatted })
+                      onChange={(fullNumber) => {
+                        setFormData({ ...formData, parentMobile: fullNumber })
+                        validateField('parentMobile', fullNumber, 'phone')
                       }}
-                      onBlur={() => validateField('parentMobile', formData.parentMobile, 'phone')}
-                      className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                      placeholder="Enter parent mobile number"
+                      inputClassName={`w-full px-4 py-3 border border-l-0 rounded-r-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
                         validationStates.parentMobile?.error
                           ? 'border-red-300 bg-red-50'
                           : validationStates.parentMobile?.isValid
                             ? 'border-green-300 bg-green-50'
                             : 'border-gray-300'
                       }`}
-                      placeholder="Enter parent mobile number"
-                      aria-required="true"
-                      aria-invalid={!!validationStates.parentMobile?.error}
-                      aria-describedby={
-                        validationStates.parentMobile?.error ? 'parentMobile-error' : undefined
-                      }
                     />
                     {validationStates.parentMobile?.error && (
                       <p id="parentMobile-error" className="mt-1 text-xs text-red-600">

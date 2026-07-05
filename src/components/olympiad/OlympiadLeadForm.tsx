@@ -11,6 +11,7 @@
 import { useCallback, useState } from 'react'
 import { CheckCircle2, Loader2, MessageCircle } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { PhoneInputWithCountry } from '@/components/ui/PhoneInputWithCountry'
 
 interface OlympiadLeadFormProps {
   /** Source tag — "olympiad-{country-slug}" or "olympiad-hub". */
@@ -64,8 +65,7 @@ export function OlympiadLeadForm({ source, countryLabel, heading }: OlympiadLead
       setError('Please enter your name.')
       return
     }
-    const digits = phone.replace(/[^\d]/g, '')
-    if (digits.length < 8) {
+    if (!/^\+\d{8,16}$/.test(phone)) {
       setError('Please enter a valid phone number.')
       return
     }
@@ -184,15 +184,12 @@ export function OlympiadLeadForm({ source, countryLabel, heading }: OlympiadLead
           <label htmlFor="oly-phone" className="mb-1 block text-xs font-medium text-slate-700">
             Phone (with country code) <span className="text-red-500">*</span>
           </label>
-          <input
+          <PhoneInputWithCountry
             id="oly-phone"
-            type="tel"
             value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            autoComplete="tel"
-            placeholder="+1 555 123 4567"
+            onChange={setPhone}
             required
-            className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-[#6B5DC6] focus:outline-none focus:ring-2 focus:ring-[#6B5DC6]/30"
+            inputClassName="w-full rounded-r-lg border border-l-0 border-slate-300 px-3 py-2 text-sm text-slate-900 focus:border-[#6B5DC6] focus:outline-none focus:ring-2 focus:ring-[#6B5DC6]/30"
           />
         </div>
 

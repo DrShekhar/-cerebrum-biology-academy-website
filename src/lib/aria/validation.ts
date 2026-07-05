@@ -62,15 +62,17 @@ const CLASS_ALIASES: Record<string, ValidClass> = {
 }
 
 /**
- * Validates and sanitizes phone number
- * Indian mobile numbers: 10 digits starting with 6-9
+ * Validates and sanitizes phone number.
+ * Accepts Indian 10-digit mobiles AND international numbers with country
+ * code (8-15 digits, leading + preserved) — ARIA is mounted on global
+ * pages, so an India-only gate loses overseas leads. The CRM dedups by
+ * last-10-digits, so both formats are safe downstream.
  */
 export function validatePhone(value: string): ValidationResult {
+  const hasPlus = value.trim().startsWith('+')
   const cleaned = value.replace(/\D/g, '')
 
-  // Indian mobile: 10 digits, starts with 6-9
-  const phoneRegex = /^[6-9]\d{9}$/
-  if (!phoneRegex.test(cleaned)) {
+  if (cleaned.length < 8 || cleaned.length > 15) {
     return {
       isValid: false,
       sanitizedValue: cleaned,
@@ -80,7 +82,7 @@ export function validatePhone(value: string): ValidationResult {
 
   return {
     isValid: true,
-    sanitizedValue: cleaned,
+    sanitizedValue: hasPlus ? `+${cleaned}` : cleaned,
   }
 }
 

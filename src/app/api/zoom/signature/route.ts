@@ -12,11 +12,24 @@ import {
   isZoomSDKConfigured,
   getZoomSDKEnvConfig,
 } from '@/lib/zoom/zoomSDKService'
+import { auth } from '@/lib/auth'
+
+const HOST_ROLES = new Set(['ADMIN', 'TEACHER'])
 
 export async function POST(request: NextRequest) {
   try {
+    // Signatures gate entry to live classes: require a signed-in user, and
+    // only staff may mint a host (role=1) signature — an open endpoint here
+    // lets anyone hijack any meeting as host.
+    const session = await auth()
+    const userRole = (session?.user as { role?: string } | undefined)?.role?.toUpperCase()
+    if (!session?.user) {
+      return NextResponse.json({ success: false, error: 'Sign in required' }, { status: 401 })
+    }
+
     const body = await request.json()
-    const { meetingNumber, role = 0 } = body
+    const { meetingNumber } = body
+    const role = HOST_ROLES.has(userRole ?? '') && body.role === 1 ? 1 : 0
 
     if (!meetingNumber) {
       return NextResponse.json(

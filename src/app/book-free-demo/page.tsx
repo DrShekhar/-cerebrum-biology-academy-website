@@ -24,6 +24,7 @@ import {
 } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { PhoneInputWithCountry } from '@/components/ui/PhoneInputWithCountry'
 
 type Track = 'NEET' | 'Boards' | 'Olympiad' | 'All-round'
 type Mode = 'Online' | 'Offline' | 'Either'
@@ -328,7 +329,7 @@ export default function BookFreeDemoPage() {
               handleWhatsApp()
             }}
           >
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <div className="mt-6 grid gap-3 md:grid-cols-2">
               <div>
                 <label
                   htmlFor="demo-name"
@@ -355,16 +356,7 @@ export default function BookFreeDemoPage() {
                   <Phone className="h-3.5 w-3.5 text-[#3d4d3d]" />
                   <span>WhatsApp number</span>
                 </label>
-                <input
-                  id="demo-phone"
-                  type="tel"
-                  inputMode="tel"
-                  autoComplete="tel"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  placeholder="98XXXXXXXX or +1 555 123 4567"
-                  className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm focus:border-[#3d4d3d] focus:outline-none focus:ring-2 focus:ring-[#3d4d3d]/20 sm:text-base"
-                />
+                <PhoneInputWithCountry id="demo-phone" value={phone} onChange={setPhone} />
               </div>
             </div>
 

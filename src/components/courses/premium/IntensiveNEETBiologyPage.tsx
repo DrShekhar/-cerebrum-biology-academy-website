@@ -26,9 +26,11 @@ import {
   Calendar,
 } from 'lucide-react'
 import { getDisplayPhone } from '@/lib/constants/contactInfo'
+import { PhoneInputWithCountry } from '@/components/ui/PhoneInputWithCountry'
 
 export function IntensiveNEETBiologyPage() {
   const [isApplicationFormOpen, setIsApplicationFormOpen] = useState(false)
+  const [applicationPhone, setApplicationPhone] = useState('')
 
   const exclusiveFeatures = [
     {
@@ -813,10 +815,10 @@ export function IntensiveNEETBiologyPage() {
                   <label className="block text-gray-700 text-sm font-semibold mb-2">
                     Phone Number
                   </label>
-                  <input
-                    type="tel"
-                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#3d4d3d] focus:border-transparent"
-                    placeholder="+91 XXXXX XXXXX"
+                  <PhoneInputWithCountry
+                    value={applicationPhone}
+                    onChange={setApplicationPhone}
+                    inputClassName="w-full bg-gray-50 border border-l-0 border-gray-200 rounded-r-xl px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#3d4d3d] focus:border-transparent"
                   />
                 </div>
               </div>

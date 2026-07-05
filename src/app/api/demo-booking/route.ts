@@ -423,22 +423,31 @@ export async function POST(request: NextRequest) {
             })
           } else {
             // CREATE NEW LEAD - This was missing before!
-            updatedLead = await tx.leads.create({
-              data: {
-                id: `lead_${Date.now()}_${Math.random().toString(36).substring(7)}`,
-                studentName: data.name,
-                email: data.email || null,
-                phone: normalizedPhoneValue,
-                courseInterest: data.courseInterest?.join(', ') || 'NEET Biology',
-                stage: 'DEMO_SCHEDULED',
-                priority: 'WARM',
-                source: utmSource ? 'ADVERTISEMENT' : 'WEBSITE',
-                demoBookingId: booking.id,
-                // Auto-assign to first available counselor or leave unassigned
-                assignedToId: await getDefaultCounselorId(tx),
-                updatedAt: new Date(),
-              },
-            })
+            // leads.assignedToId is a required column: with no COUNSELOR/ADMIN
+            // row the create would throw and roll back the booking itself, so
+            // skip CRM lead creation rather than lose the demo booking.
+            const assigneeId = await getDefaultCounselorId(tx)
+            if (assigneeId) {
+              updatedLead = await tx.leads.create({
+                data: {
+                  id: `lead_${Date.now()}_${Math.random().toString(36).substring(7)}`,
+                  studentName: data.name,
+                  email: data.email || null,
+                  phone: normalizedPhoneValue,
+                  courseInterest: data.courseInterest?.join(', ') || 'NEET Biology',
+                  stage: 'DEMO_SCHEDULED',
+                  priority: 'WARM',
+                  source: utmSource ? 'ADVERTISEMENT' : 'WEBSITE',
+                  demoBookingId: booking.id,
+                  assignedToId: assigneeId,
+                  updatedAt: new Date(),
+                },
+              })
+            } else {
+              console.error(
+                '[demo-booking] No COUNSELOR/ADMIN user — booking saved without CRM lead'
+              )
+            }
           }
 
           // If referral code was used successfully, increment usage count and create redemption record

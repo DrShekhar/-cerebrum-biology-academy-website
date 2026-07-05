@@ -49,32 +49,42 @@ describe('validatePhone', () => {
       expect(result.sanitizedValue).toBe('9876543210')
     })
 
-    it('should strip country code prefix', () => {
+    it('should accept Indian numbers with +91 country code and preserve the +', () => {
       const result = validatePhone('+91 9876543210')
-      expect(result.sanitizedValue).toBe('919876543210')
-      // Note: With country code it becomes 12 digits, so invalid
-      expect(result.isValid).toBe(false)
+      expect(result.isValid).toBe(true)
+      expect(result.sanitizedValue).toBe('+919876543210')
+    })
+  })
+
+  describe('international numbers (ARIA is mounted on global pages)', () => {
+    it('should accept a US number with country code', () => {
+      const result = validatePhone('+1 555 123 4567')
+      expect(result.isValid).toBe(true)
+      expect(result.sanitizedValue).toBe('+15551234567')
+    })
+
+    it('should accept a UAE number with country code', () => {
+      const result = validatePhone('+971 50 123 4567')
+      expect(result.isValid).toBe(true)
+      expect(result.sanitizedValue).toBe('+971501234567')
+    })
+
+    it('should accept short international numbers without +', () => {
+      const result = validatePhone('65123456')
+      expect(result.isValid).toBe(true)
+      expect(result.sanitizedValue).toBe('65123456')
     })
   })
 
   describe('invalid phone numbers', () => {
-    it('should reject numbers starting with 0-5', () => {
-      expect(validatePhone('0123456789').isValid).toBe(false)
-      expect(validatePhone('1234567890').isValid).toBe(false)
-      expect(validatePhone('2345678901').isValid).toBe(false)
-      expect(validatePhone('3456789012').isValid).toBe(false)
-      expect(validatePhone('4567890123').isValid).toBe(false)
-      expect(validatePhone('5678901234').isValid).toBe(false)
-    })
-
     it('should reject too short numbers', () => {
-      const result = validatePhone('987654321')
+      const result = validatePhone('9876543')
       expect(result.isValid).toBe(false)
       expect(result.errorKey).toBe('invalidPhone')
     })
 
     it('should reject too long numbers', () => {
-      const result = validatePhone('98765432101')
+      const result = validatePhone('9876543210123456')
       expect(result.isValid).toBe(false)
     })
 
