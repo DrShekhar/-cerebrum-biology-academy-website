@@ -18,6 +18,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { LanguageSwitcher } from '@/components/i18n/LanguageSwitcher'
 import { useI18n } from '@/contexts/I18nContext'
+import { useVisitorCountry } from '@/hooks/useVisitorCountry'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
@@ -85,6 +86,10 @@ export const Footer = memo(function Footer() {
   const [subscribeMessage, setSubscribeMessage] = useState('')
   const [openSection, setOpenSection] = useState<string | null>(null)
   const { t } = useI18n()
+  // Owner rule: global/US programmes are for international visitors + NRIs
+  // abroad, not visitors browsing from inside India. Hide the "International
+  // & US Exams" section and the two international Programs entries for IN.
+  const { isIndia } = useVisitorCountry()
 
   const toggleSection = (title: string) => {
     const willOpen = openSection !== title
@@ -147,10 +152,14 @@ export const Footer = memo(function Footer() {
     { name: 'IB Biology Coaching', href: '/ib-biology' },
     { name: 'Biology Olympiads', href: '/biology-olympiads' },
     { name: 'Board Exam Preparation', href: '/board-exam-preparation' },
-    { name: 'International Curriculum', href: '/international' },
-    { name: 'Global Programs — 75+ Countries', href: '/global' },
+    // International-only Programs entries — filtered out for India below.
+    { name: 'International Curriculum', href: '/international', intl: true },
+    { name: 'Global Programs — 75+ Countries', href: '/global', intl: true },
     { name: 'Pricing & Fee Structure', href: '/pricing' },
   ]
+  const visibleProgramLinks = programLinks.filter(
+    (l) => !(isIndia && (l as { intl?: boolean }).intl)
+  )
 
   const examLinks = [
     { name: 'USA — All Biology Exams', href: '/best-biology-tutor-usa' },
@@ -284,16 +293,18 @@ export const Footer = memo(function Footer() {
           <div className="grid grid-cols-1 lg:grid-cols-6 gap-0 lg:gap-8 divide-y divide-gray-800 lg:divide-y-0">
             <FooterSection
               title="Programs"
-              links={programLinks}
+              links={visibleProgramLinks}
               isOpen={openSection === 'Programs'}
               onToggle={() => toggleSection('Programs')}
             />
-            <FooterSection
-              title="International & US Exams"
-              links={examLinks}
-              isOpen={openSection === 'Exams'}
-              onToggle={() => toggleSection('Exams')}
-            />
+            {!isIndia && (
+              <FooterSection
+                title="International & US Exams"
+                links={examLinks}
+                isOpen={openSection === 'Exams'}
+                onToggle={() => toggleSection('Exams')}
+              />
+            )}
             <FooterSection
               title="Centers & Locations"
               links={centerLinks}

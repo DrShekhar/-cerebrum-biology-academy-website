@@ -62,7 +62,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
   const [mounted, setMounted] = useState(false)
   const [isSigningOut, setIsSigningOut] = useState(false)
   const { user, isAuthenticated } = useAuth()
-  const { isIndia } = useVisitorCountry()
+  const { isIndia, resolved: geoResolved } = useVisitorCountry()
   const router = useRouter()
 
   // Focus trap for accessibility - keeps focus within modal when open
@@ -323,7 +323,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
               programmes target international students and NRIs abroad. */}
           <div className="p-6 space-y-4 relative z-0 bg-white">
             {navigationConfig
-              .filter((section) => !(isIndia && section.id === 'international'))
+              .filter((section) => section.id !== 'international' || (geoResolved && !isIndia))
               .map((section) => {
                 const Icon = iconMap[section.icon as keyof typeof iconMap]
                 const isExpanded = expandedSection === section.id
