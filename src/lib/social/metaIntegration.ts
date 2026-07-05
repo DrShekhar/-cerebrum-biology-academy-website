@@ -424,7 +424,7 @@ export class MetaIntegration {
   ): Promise<boolean> {
     try {
       const response = await fetch(
-        `https://graph.facebook.com/v18.0/${this.whatsappConfig.phoneNumberId}/messages`,
+        `https://graph.facebook.com/v24.0/${this.whatsappConfig.phoneNumberId}/messages`,
         {
           method: 'POST',
           headers: {
@@ -520,7 +520,7 @@ export class MetaIntegration {
   // Conversion API Implementation
   private async sendConversionAPI(eventName: string, eventData: any): Promise<void> {
     try {
-      await fetch(`https://graph.facebook.com/v18.0/${this.pixelConfig.pixelId}/events`, {
+      await fetch(`https://graph.facebook.com/v24.0/${this.pixelConfig.pixelId}/events`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

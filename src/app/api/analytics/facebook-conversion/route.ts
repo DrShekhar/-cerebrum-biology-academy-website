@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Send to Facebook Conversion API
-    const fbResponse = await fetch(`https://graph.facebook.com/v18.0/${FB_PIXEL_ID}/events`, {
+    const fbResponse = await fetch(`https://graph.facebook.com/v24.0/${FB_PIXEL_ID}/events`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

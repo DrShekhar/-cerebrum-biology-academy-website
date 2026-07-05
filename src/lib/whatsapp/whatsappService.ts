@@ -21,7 +21,7 @@ export class WhatsAppService {
   private accessToken: string
 
   constructor() {
-    this.apiUrl = process.env.WHATSAPP_API_URL || 'https://graph.facebook.com/v17.0'
+    this.apiUrl = process.env.WHATSAPP_API_URL || 'https://graph.facebook.com/v24.0'
     this.accessToken = process.env.WHATSAPP_ACCESS_TOKEN || ''
   }
 

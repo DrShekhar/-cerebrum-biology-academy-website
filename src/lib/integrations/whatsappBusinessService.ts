@@ -48,7 +48,9 @@ interface URLButton {
 }
 
 export class WhatsAppBusinessService {
-  private static readonly baseUrl = 'https://graph.facebook.com/v18.0'
+  // Graph API version: keep within Meta's ~2-year support window
+  // (v18 expired; v25 is latest as of Jul 2026 — v24 = stable, long runway).
+  private static readonly baseUrl = 'https://graph.facebook.com/v24.0'
   private static readonly phoneNumberId = process.env.WHATSAPP_PHONE_NUMBER_ID
   private static readonly accessToken = process.env.WHATSAPP_ACCESS_TOKEN
 

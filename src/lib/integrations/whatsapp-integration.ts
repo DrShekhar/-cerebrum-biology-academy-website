@@ -98,7 +98,7 @@ export interface WhatsAppAutomationAction {
 
 // WhatsApp Business API Implementation
 export class WhatsAppBusinessAPI {
-  private baseUrl = 'https://graph.facebook.com/v17.0'
+  private baseUrl = 'https://graph.facebook.com/v24.0'
   private phoneNumberId: string
   private accessToken: string
   private webhookSecret: string
