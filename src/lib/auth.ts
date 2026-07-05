@@ -397,29 +397,53 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     maxAge: 8 * 60 * 60, // 8 hours for admin sessions
     updateAge: 24 * 60 * 60, // Update only once per day to prevent frequent polling
   },
-  // Share the session cookie across the apex + www hosts. OAuth callbacks run
-  // on NEXTAUTH_URL (www) and set the cookie there; www then 308-redirects to
-  // the canonical apex, where a host-only www cookie would NOT be sent —
-  // causing a completed Google/Facebook login to land on an "Authentication
-  // Required" dashboard loop. A parent-domain cookie is sent to both hosts.
-  // Name matches Auth.js v5's default so existing sessions aren't invalidated;
-  // only the `domain` is added (the __Secure- prefix permits Domain, unlike
-  // the __Host- prefix Auth.js uses for the CSRF token, which we don't touch).
-  cookies: {
-    sessionToken: {
-      name:
-        process.env.NODE_ENV === 'production'
-          ? '__Secure-authjs.session-token'
-          : 'authjs.session-token',
-      options: {
-        httpOnly: true,
-        sameSite: 'lax',
-        path: '/',
-        secure: process.env.NODE_ENV === 'production',
-        domain: process.env.NODE_ENV === 'production' ? '.cerebrumbiologyacademy.com' : undefined,
+  // Share ALL auth cookies across the apex + www hosts. NEXTAUTH_URL is www,
+  // so the OAuth handshake runs on www while the app's canonical host is apex
+  // (www 308-redirects everything to apex). Without a parent-domain, the OAuth
+  // state/PKCE cookies set on one host aren't readable on the other → the
+  // handshake fails or the session cookie never reaches apex → completed
+  // Google/Facebook login lands on an "Authentication Required" loop.
+  //
+  // Setting Domain=.cerebrumbiologyacademy.com on every auth cookie makes the
+  // whole flow work regardless of which host each leg runs on. The CSRF token
+  // must drop Auth.js's default __Host- prefix (which forbids a Domain) and use
+  // __Secure- instead so it too can carry the shared domain. Names otherwise
+  // match Auth.js v5 defaults, so existing sessions aren't invalidated.
+  ...(() => {
+    const prod = process.env.NODE_ENV === 'production'
+    const domain = prod ? '.cerebrumbiologyacademy.com' : undefined
+    const base = { path: '/', sameSite: 'lax' as const, secure: prod, domain }
+    const p = (secureName: string, devName: string) => (prod ? secureName : devName)
+    return {
+      cookies: {
+        sessionToken: {
+          name: p('__Secure-authjs.session-token', 'authjs.session-token'),
+          options: { ...base, httpOnly: true },
+        },
+        callbackUrl: {
+          name: p('__Secure-authjs.callback-url', 'authjs.callback-url'),
+          options: { ...base },
+        },
+        csrfToken: {
+          // Off __Host- (which forbids Domain) → __Secure- so it can be shared.
+          name: p('__Secure-authjs.csrf-token', 'authjs.csrf-token'),
+          options: { ...base, httpOnly: true },
+        },
+        pkceCodeVerifier: {
+          name: p('__Secure-authjs.pkce.code_verifier', 'authjs.pkce.code_verifier'),
+          options: { ...base, httpOnly: true, maxAge: 900 },
+        },
+        state: {
+          name: p('__Secure-authjs.state', 'authjs.state'),
+          options: { ...base, httpOnly: true, maxAge: 900 },
+        },
+        nonce: {
+          name: p('__Secure-authjs.nonce', 'authjs.nonce'),
+          options: { ...base, httpOnly: true },
+        },
       },
-    },
-  },
+    }
+  })(),
   callbacks: {
     async signIn({ account, profile }) {
       // OAuth gate: only accept Google/Facebook sign-ins that carry a real,
