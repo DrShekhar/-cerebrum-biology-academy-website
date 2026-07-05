@@ -7,6 +7,8 @@ import { PrismaAdapter } from '@auth/prisma-adapter'
 import type { Adapter, AdapterAccount, AdapterUser } from 'next-auth/adapters'
 import { randomUUID } from 'crypto'
 import bcrypt from 'bcryptjs'
+import { TRIAL_DAYS } from '@/lib/constants/trial'
+import { notifySignupToCrm } from '@/lib/leads/notifySignup'
 import { z } from 'zod'
 import { prisma } from './prisma'
 import { logLogin } from './security/auditLogger'
@@ -106,6 +108,10 @@ function createAuthAdapter(): Adapter {
     ...base,
     async createUser(user) {
       const now = new Date()
+      // OAuth signups get the same FREE tier + master trial as phone/email
+      // signups (previously they got neither, so trial banners never showed).
+      const trialEndDate = new Date(now)
+      trialEndDate.setDate(trialEndDate.getDate() + TRIAL_DAYS)
       const created = await prisma.users.create({
         data: {
           id: randomUUID(),
@@ -113,10 +119,18 @@ function createAuthAdapter(): Adapter {
           name: user.name || user.email.split('@')[0],
           emailVerified: user.emailVerified ?? null,
           role: 'STUDENT',
+          coachingTier: 'FREE',
+          trialStartDate: now,
+          trialEndDate,
           profile: user.image ? { image: user.image } : undefined,
           updatedAt: now,
         },
         select: ADAPTER_USER_SELECT,
+      })
+      notifySignupToCrm({
+        name: created.name,
+        email: created.email,
+        source: 'oauth-signup',
       })
       return mapUser(created)
     },

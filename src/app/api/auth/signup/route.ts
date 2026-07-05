@@ -13,6 +13,8 @@ import { z } from 'zod'
 import crypto from 'crypto'
 import { emailService } from '@/lib/email/emailService'
 import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
+import { TRIAL_DAYS } from '@/lib/constants/trial'
+import { notifySignupToCrm } from '@/lib/leads/notifySignup'
 
 // Request validation schema
 const SignUpSchema = z.object({
@@ -149,7 +151,11 @@ export async function POST(request: NextRequest) {
       },
     }
 
-    // Create new user
+    // Create new user — same FREE tier + master trial as every other signup
+    // path (this route previously granted neither).
+    const trialStartDate = new Date()
+    const trialEndDate = new Date(trialStartDate)
+    trialEndDate.setDate(trialEndDate.getDate() + TRIAL_DAYS)
     const user = await prisma.users.create({
       data: {
         id: `usr_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
@@ -160,10 +166,16 @@ export async function POST(request: NextRequest) {
         role: role as UserRole,
         passwordHash,
         profile,
+        coachingTier: 'FREE',
+        trialStartDate,
+        trialEndDate,
         emailVerified: null, // Will be set after email verification
         phoneVerified: null,
       },
     })
+
+    // New signup → CRM: round-robin counselor assignment + follow-up task
+    notifySignupToCrm({ name, email, phone, source: 'email-signup' })
 
     // Create initial session
     const { accessToken, refreshToken, sessionId } = await SessionManager.createSession(user)

@@ -3,6 +3,7 @@ import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/prisma'
 import { hashPassword } from '@/lib/auth'
 import { PasswordUtils } from '@/lib/auth/config'
+import { TRIAL_DAYS } from '@/lib/constants/trial'
 import { z } from 'zod'
 
 // Validation schema for registration
@@ -116,10 +117,10 @@ export async function POST(request: NextRequest) {
     // Generate unique user ID
     const userId = randomUUID()
 
-    // Same 7-day master trial the phone-OTP signup grants
+    // Same master trial the phone-OTP signup grants (length: TRIAL_DAYS)
     const trialStartDate = new Date()
     const trialEndDate = new Date(trialStartDate)
-    trialEndDate.setDate(trialEndDate.getDate() + 7)
+    trialEndDate.setDate(trialEndDate.getDate() + TRIAL_DAYS)
 
     let newUser
     try {

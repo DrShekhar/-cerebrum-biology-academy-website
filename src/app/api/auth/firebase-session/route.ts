@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { randomUUID, randomBytes } from 'crypto'
 import { AuthRateLimit, addSecurityHeaders } from '@/lib/auth/config'
+import { TRIAL_DAYS } from '@/lib/constants/trial'
+import { notifySignupToCrm } from '@/lib/leads/notifySignup'
 import { requireFreshFirebaseAuth } from '@/lib/auth/firebase-verify'
 
 interface FirebaseSessionRequest {
@@ -240,10 +242,10 @@ export async function POST(request: NextRequest) {
       const userId = randomUUID()
       const placeholderEmail = `${normalizedPhone.replace('+', '')}@phone.cerebrum.local`
 
-      // Set up 7-day master trial for new users
+      // Set up the master trial for new users (length: TRIAL_DAYS)
       const trialStartDate = new Date()
       const trialEndDate = new Date(trialStartDate)
-      trialEndDate.setDate(trialEndDate.getDate() + 7)
+      trialEndDate.setDate(trialEndDate.getDate() + TRIAL_DAYS)
 
       const newUser = await prisma.users.create({
         data: {
@@ -267,6 +269,13 @@ export async function POST(request: NextRequest) {
       })
 
       const verificationToken = await issueBridgeToken(newUser.id)
+
+      // New signup → CRM: round-robin counselor assignment + follow-up task
+      notifySignupToCrm({
+        name: newUser.name,
+        phone: newUser.phone,
+        source: 'phone-otp-signup',
+      })
 
       // Reset rate limit on successful signup
       AuthRateLimit.resetRateLimit(rateLimitKey)

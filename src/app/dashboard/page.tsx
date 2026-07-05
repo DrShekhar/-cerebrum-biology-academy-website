@@ -13,6 +13,7 @@ const OWNER_PHONE = CONTACT_INFO.phone.owner
 
 // Directly import the dashboard component (no dynamic import issues)
 import { PersonalizedStudentDashboard } from '@/components/dashboard/PersonalizedStudentDashboard'
+import { CoachingTrialBanner, useCoachingTrialStatus } from '@/components/trial/CoachingTrialBanner'
 
 // Error Boundary for catching dashboard render errors
 interface ErrorBoundaryProps {
@@ -146,6 +147,10 @@ export default function DashboardPage() {
   const { user, isAuthenticated, isLoading } = useAuth()
   const router = useRouter()
   const [mounted, setMounted] = useState(false)
+  // Trial banner for authenticated FREE-tier users (same banner as
+  // /student/dashboard — previously missing from this, the canonical,
+  // student landing page).
+  const { trialStatus: coachingTrialStatus } = useCoachingTrialStatus()
 
   // Ensure we're mounted before checking auth (prevent hydration issues)
   useEffect(() => {
@@ -197,6 +202,12 @@ export default function DashboardPage() {
   // User is authenticated - show the dashboard
   return (
     <main className="min-h-screen">
+      {coachingTrialStatus && (
+        <CoachingTrialBanner
+          trialStatus={coachingTrialStatus}
+          onUpgradeClick={() => router.push('/pricing')}
+        />
+      )}
       <DashboardErrorBoundary
         fallback={(error, reset) => <ErrorFallback error={error} reset={reset} />}
       >

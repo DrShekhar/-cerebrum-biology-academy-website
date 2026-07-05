@@ -128,7 +128,7 @@ export function CoachingTrialBanner({
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
                       <h3 className="text-base sm:text-lg font-bold truncate">
-                        Start Your Free 7-Day Trial!
+                        Start Your Free 15-Day Trial!
                       </h3>
                       <span className="flex items-center gap-1 text-xs bg-yellow-400/30 px-2 py-0.5 rounded-full text-yellow-100">
                         <Crown className="w-3 h-3" />
@@ -137,7 +137,7 @@ export function CoachingTrialBanner({
                     </div>
                     <p className="text-xs sm:text-sm text-white/90 line-clamp-2 sm:line-clamp-1">
                       Experience ALL premium features including AI Tutor, unlimited tests, and
-                      personalized study plans - absolutely free for 7 days!
+                      personalized study plans - absolutely free for 15 days!
                     </p>
                   </div>
                 </div>
@@ -182,7 +182,7 @@ export function CoachingTrialBanner({
         icon: AlertTriangle,
         iconColor: 'text-red-100',
         title: 'Trial Expired',
-        message: `Your 7-day Pinnacle trial has ended. Upgrade now to continue enjoying premium features.`,
+        message: `Your 15-day Pinnacle trial has ended. Upgrade now to continue enjoying premium features.`,
         buttonText: 'Upgrade Now',
         buttonStyle: 'bg-white text-red-600 hover:bg-red-50',
         showDismiss: false,
@@ -309,7 +309,7 @@ export function CoachingTrialBanner({
                 <div className="flex items-center justify-between text-xs mb-1.5">
                   <span className="text-white/80">Trial Progress</span>
                   <span className="text-white/80">
-                    {Math.round(((7 - trialStatus.daysRemaining) / 7) * 100)}% complete
+                    {Math.round(((15 - trialStatus.daysRemaining) / 15) * 100)}% complete
                   </span>
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-2 overflow-hidden">

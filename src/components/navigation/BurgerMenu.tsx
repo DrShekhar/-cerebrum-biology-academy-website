@@ -30,6 +30,7 @@ import { useRouter } from 'next/navigation'
 import { navigationConfig } from '@/data/navigationConfig'
 import { useAuth } from '@/contexts/AuthContext'
 import { useFocusTrap } from '@/hooks/useFocusTrap'
+import { useVisitorCountry } from '@/hooks/useVisitorCountry'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { throttle } from '@/lib/performance'
 const getFirebaseSignOut = () => import('@/lib/firebase/phone-auth').then((mod) => mod.signOut)
@@ -61,6 +62,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
   const [mounted, setMounted] = useState(false)
   const [isSigningOut, setIsSigningOut] = useState(false)
   const { user, isAuthenticated } = useAuth()
+  const { isIndia } = useVisitorCountry()
   const router = useRouter()
 
   // Focus trap for accessibility - keeps focus within modal when open
@@ -316,74 +318,81 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             </div>
           </div>
 
-          {/* Navigation Sections */}
+          {/* Navigation Sections — the Global Programs section is hidden for
+              visitors browsing from inside India (owner rule): global
+              programmes target international students and NRIs abroad. */}
           <div className="p-6 space-y-4 relative z-0 bg-white">
-            {navigationConfig.map((section) => {
-              const Icon = iconMap[section.icon as keyof typeof iconMap]
-              const isExpanded = expandedSection === section.id
+            {navigationConfig
+              .filter((section) => !(isIndia && section.id === 'international'))
+              .map((section) => {
+                const Icon = iconMap[section.icon as keyof typeof iconMap]
+                const isExpanded = expandedSection === section.id
 
-              return (
-                <div key={section.id} className="border border-gray-200 rounded-xl overflow-hidden">
-                  <button
-                    onClick={() => handleSectionToggle(section.id)}
-                    className="w-full p-4 flex items-center justify-between bg-gray-50 hover:bg-indigo-50 transition-all duration-300 group relative overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
-                    aria-expanded={isExpanded}
+                return (
+                  <div
+                    key={section.id}
+                    className="border border-gray-200 rounded-xl overflow-hidden"
                   >
-                    <div className="flex items-center space-x-3 relative z-10">
-                      {Icon && (
-                        <Icon className="w-5 h-5 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
-                      )}
-                      <span className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                        {section.title}
-                      </span>
-                    </div>
-                    <div className="relative z-10 animate-fadeInUp">
-                      <ChevronDown className="w-5 h-5 text-gray-500 group-hover:text-blue-600 transition-colors duration-300" />
-                    </div>
-                  </button>
-                  {isExpanded && (
-                    <div className="overflow-hidden animate-fadeInUp">
-                      <div className="p-4 space-y-2 bg-white">
-                        {section.items.map((item) => (
-                          <Link
-                            key={item.id}
-                            href={item.href}
-                            onClick={handleLinkClick}
-                            className="group relative flex items-center justify-between p-3 rounded-lg hover:bg-indigo-50 transition-all duration-300 overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
-                          >
-                            <div className="flex-1 relative z-10">
-                              <div className="flex items-center space-x-2">
-                                <span className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                                  {item.title}
-                                </span>
-                                {item.isNew && (
-                                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-600">
-                                    <Sparkles className="w-3 h-3 mr-1" />
-                                    New
+                    <button
+                      onClick={() => handleSectionToggle(section.id)}
+                      className="w-full p-4 flex items-center justify-between bg-gray-50 hover:bg-indigo-50 transition-all duration-300 group relative overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
+                      aria-expanded={isExpanded}
+                    >
+                      <div className="flex items-center space-x-3 relative z-10">
+                        {Icon && (
+                          <Icon className="w-5 h-5 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
+                        )}
+                        <span className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                          {section.title}
+                        </span>
+                      </div>
+                      <div className="relative z-10 animate-fadeInUp">
+                        <ChevronDown className="w-5 h-5 text-gray-500 group-hover:text-blue-600 transition-colors duration-300" />
+                      </div>
+                    </button>
+                    {isExpanded && (
+                      <div className="overflow-hidden animate-fadeInUp">
+                        <div className="p-4 space-y-2 bg-white">
+                          {section.items.map((item) => (
+                            <Link
+                              key={item.id}
+                              href={item.href}
+                              onClick={handleLinkClick}
+                              className="group relative flex items-center justify-between p-3 rounded-lg hover:bg-indigo-50 transition-all duration-300 overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
+                            >
+                              <div className="flex-1 relative z-10">
+                                <div className="flex items-center space-x-2">
+                                  <span className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                                    {item.title}
                                   </span>
-                                )}
-                                {item.isPopular && (
-                                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-600">
-                                    <Star className="w-3 h-3 mr-1" />
-                                    Popular
-                                  </span>
+                                  {item.isNew && (
+                                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-600">
+                                      <Sparkles className="w-3 h-3 mr-1" />
+                                      New
+                                    </span>
+                                  )}
+                                  {item.isPopular && (
+                                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-600">
+                                      <Star className="w-3 h-3 mr-1" />
+                                      Popular
+                                    </span>
+                                  )}
+                                </div>
+                                {item.description && (
+                                  <p className="text-sm text-gray-500 mt-1 group-hover:text-gray-700 transition-colors duration-300">
+                                    {item.description}
+                                  </p>
                                 )}
                               </div>
-                              {item.description && (
-                                <p className="text-sm text-gray-500 mt-1 group-hover:text-gray-700 transition-colors duration-300">
-                                  {item.description}
-                                </p>
-                              )}
-                            </div>
-                            <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transform group-hover:translate-x-1 transition-all duration-300 relative z-10" />
-                          </Link>
-                        ))}
+                              <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transform group-hover:translate-x-1 transition-all duration-300 relative z-10" />
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-              )
-            })}
+                    )}
+                  </div>
+                )
+              })}
           </div>
 
           {/* Footer - Non-sticky to avoid blocking clicks */}

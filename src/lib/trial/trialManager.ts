@@ -48,7 +48,7 @@ export interface CreateTrialOptions {
 
 const TRIAL_DURATION_DAYS = 15
 const MAX_TRIAL_TESTS = 50
-const MASTER_TRIAL_DURATION_DAYS = 7
+const MASTER_TRIAL_DURATION_DAYS = 15
 
 export async function generateDeviceId(): Promise<string> {
   const crypto = require('crypto')
