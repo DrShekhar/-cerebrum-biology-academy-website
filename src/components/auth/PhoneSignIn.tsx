@@ -124,11 +124,29 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
 
   // Ref for reCAPTCHA button
   const sendOtpButtonRef = useRef<HTMLButtonElement>(null)
+  // Tracks the OTP value we've already fired a verify for, so the auto-submit
+  // effect never re-fires the same code (which would loop after a wrong-code
+  // error keeps otp.length at 6).
+  const lastAttemptedOtp = useRef('')
 
   // Cleanup reCAPTCHA on unmount
   useEffect(() => {
     return () => {
       cleanupRecaptcha()
+    }
+  }, [])
+
+  // Remember the last country code the visitor picked, so international users
+  // don't re-scan the 97-country list every visit. India stays the default
+  // when nothing is stored. localStorage can throw (private mode) — guard it.
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('cba.dialCode')
+      if (saved && COUNTRIES.some((c) => c.dialCode === saved)) {
+        setDialCode(saved)
+      }
+    } catch {
+      /* ignore storage errors */
     }
   }, [])
 
@@ -139,6 +157,18 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
       return () => clearTimeout(timer)
     }
   }, [resendCountdown])
+
+  // Auto-submit once the full 6-digit code is present (typed or SMS-autofilled)
+  // so the user doesn't have to reach for the button. Guarded by
+  // lastAttemptedOtp so a wrong code isn't retried in a loop.
+  useEffect(() => {
+    if (step === 'otp' && otp.length === 6 && !loading && lastAttemptedOtp.current !== otp) {
+      handleVerifyOTP()
+    }
+    // handleVerifyOTP is intentionally omitted; it's stable enough for this
+    // guarded one-shot and including it would re-run on every render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [otp, step, loading])
 
   const formatPhone = (value: string): string => formatNationalNumber(dialCode, value)
 
@@ -193,6 +223,9 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
   }
 
   const handleVerifyOTP = async () => {
+    // Mark this code as attempted so the auto-submit effect won't re-fire it
+    // (covers both the manual button press and SMS-autofill paths).
+    lastAttemptedOtp.current = otp
     setError('')
     setLoading(true)
 
@@ -610,6 +643,11 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
                   const nextDialCode = e.target.value
                   setDialCode(nextDialCode)
                   setPhone((current) => formatNationalNumber(nextDialCode, current))
+                  try {
+                    localStorage.setItem('cba.dialCode', nextDialCode)
+                  } catch {
+                    /* ignore storage errors */
+                  }
                 }}
                 className="max-w-[8.5rem] px-2 py-3 rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-600 text-sm focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 disabled={loading}
@@ -623,12 +661,20 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
               <input
                 id="phone-number-input"
                 type="tel"
+                inputMode="numeric"
+                autoComplete="tel-national"
                 value={phone}
                 onChange={(e) => setPhone(formatPhone(e.target.value))}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && !loading && isValidNationalNumber(dialCode, phone)) {
+                    handleSendOTP()
+                  }
+                }}
                 placeholder={dialCode === '+91' ? '98765 43210' : 'Mobile number'}
                 className="flex-1 min-w-0 px-4 py-3 border border-gray-300 rounded-r-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 maxLength={dialCode === '+91' ? 10 : 14}
                 disabled={loading}
+                autoFocus
               />
             </div>
             <p className="mt-1 text-xs text-gray-500">
@@ -671,6 +717,8 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
             </label>
             <input
               type="text"
+              inputMode="numeric"
+              autoComplete="one-time-code"
               value={otp}
               onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
               placeholder="000000"

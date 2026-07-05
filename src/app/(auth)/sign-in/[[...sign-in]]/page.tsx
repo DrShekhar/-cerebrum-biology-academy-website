@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { Phone, Mail, ArrowLeft } from 'lucide-react'
@@ -14,6 +14,25 @@ export default function SignInPage() {
   const searchParams = useSearchParams()
   const redirectUrl = searchParams.get('redirect_url') || '/dashboard'
   const [method, setMethod] = useState<SignInMethod>('phone')
+
+  // Return visitors land on whichever method they used last (phone/email).
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('cba.loginMethod')
+      if (saved === 'phone' || saved === 'email') setMethod(saved)
+    } catch {
+      /* ignore storage errors */
+    }
+  }, [])
+
+  const selectMethod = (next: SignInMethod) => {
+    setMethod(next)
+    try {
+      localStorage.setItem('cba.loginMethod', next)
+    } catch {
+      /* ignore storage errors */
+    }
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
@@ -43,7 +62,7 @@ export default function SignInPage() {
             type="button"
             role="tab"
             aria-selected={method === 'phone'}
-            onClick={() => setMethod('phone')}
+            onClick={() => selectMethod('phone')}
             className={`py-2 rounded-lg text-sm font-medium transition-colors ${
               method === 'phone' ? 'bg-white text-slate-900' : 'text-slate-300 hover:text-white'
             }`}
@@ -54,7 +73,7 @@ export default function SignInPage() {
             type="button"
             role="tab"
             aria-selected={method === 'email'}
-            onClick={() => setMethod('email')}
+            onClick={() => selectMethod('email')}
             className={`py-2 rounded-lg text-sm font-medium transition-colors ${
               method === 'email' ? 'bg-white text-slate-900' : 'text-slate-300 hover:text-white'
             }`}
