@@ -62,7 +62,7 @@ const HeaderClientInteractions = dynamic(
 const FirebaseAuthButtons = dynamic(
   () => import('./FirebaseAuthButtons').then((mod) => mod.FirebaseAuthButtons),
   {
-    loading: () => <div className="hidden xl:block w-16 h-8" />,
+    loading: () => <div className="hidden lg:block w-16 h-8" />,
   }
 )
 
@@ -137,9 +137,15 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
             </Link>
           </div>
 
-          {/* Desktop Navigation - Server rendered */}
+          {/* Desktop Navigation - Server rendered.
+              Revealed at lg (1024px). NOTE: must stay `lg:flex`, not
+              `xl:flex` — in the production CSS the xl: variant does not
+              override `.hidden` (layer-ordering quirk), so xl:flex left the
+              entire desktop nav invisible. Tightened spacing so all items
+              fit at 1024px without the overflow the xl bump was meant to fix
+              (Indian visitors also have By Exam/Global geo-hidden). */}
           <nav
-            className="hidden xl:flex items-center space-x-8"
+            className="hidden lg:flex items-center gap-4 xl:gap-6"
             role="navigation"
             aria-label="Main navigation"
           >
@@ -203,8 +209,9 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
               <HeaderClientInteractions section="search" />
             </Suspense>
 
-            {/* Desktop CTAs - tracked WhatsApp with desktop QR modal */}
-            <div className="hidden xl:flex items-center gap-6">
+            {/* Desktop CTAs - tracked WhatsApp with desktop QR modal.
+                lg:flex (not xl) — see nav note above. */}
+            <div className="hidden lg:flex items-center gap-3 xl:gap-6">
               <Suspense fallback={null}>
                 <HeaderClientInteractions section="cta-demo" />
               </Suspense>
