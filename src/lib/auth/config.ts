@@ -381,6 +381,7 @@ export async function validateUserSession(request: NextRequest): Promise<UserSes
           if (decoded && decoded.email) {
             const user = await prisma.users.findUnique({
               where: { email: decoded.email },
+              select: { id: true, email: true, name: true, role: true },
             })
 
             if (user) {

@@ -80,6 +80,19 @@ function mapUser(user: {
   } as AdapterUser
 }
 
+// Explicit column list for every users query in the auth path: Prisma's
+// default select-all references columns that may not exist yet in the
+// production DB (schema drift — users.subscriptionTier broke every phone
+// login this way), so auth must only ever select what it consumes.
+const ADAPTER_USER_SELECT = {
+  id: true,
+  email: true,
+  name: true,
+  emailVerified: true,
+  role: true,
+  profile: true,
+} as const
+
 function createAuthAdapter(): Adapter {
   const base = PrismaAdapter({
     user: prisma.users,
@@ -103,21 +116,22 @@ function createAuthAdapter(): Adapter {
           profile: user.image ? { image: user.image } : undefined,
           updatedAt: now,
         },
+        select: ADAPTER_USER_SELECT,
       })
       return mapUser(created)
     },
     async getUser(id) {
-      const user = await prisma.users.findUnique({ where: { id } })
+      const user = await prisma.users.findUnique({ where: { id }, select: ADAPTER_USER_SELECT })
       return user ? mapUser(user) : null
     },
     async getUserByEmail(email) {
-      const user = await prisma.users.findUnique({ where: { email } })
+      const user = await prisma.users.findUnique({ where: { email }, select: ADAPTER_USER_SELECT })
       return user ? mapUser(user) : null
     },
     async getUserByAccount(provider_providerAccountId) {
       const account = await prisma.accounts.findUnique({
         where: { provider_providerAccountId },
-        include: { users: true },
+        include: { users: { select: ADAPTER_USER_SELECT } },
       })
       return account?.users ? mapUser(account.users) : null
     },
@@ -130,6 +144,7 @@ function createAuthAdapter(): Adapter {
           ...(data.emailVerified !== undefined ? { emailVerified: data.emailVerified } : {}),
           updatedAt: new Date(),
         },
+        select: ADAPTER_USER_SELECT,
       })
       return mapUser(user)
     },
@@ -198,6 +213,15 @@ const providers: NextAuthConfig['providers'] = [
               gte: new Date(),
             },
           },
+          select: {
+            id: true,
+            email: true,
+            name: true,
+            phone: true,
+            role: true,
+            profile: true,
+            phoneVerified: true,
+          },
         })
 
         if (!user) {
@@ -217,6 +241,7 @@ const providers: NextAuthConfig['providers'] = [
             verificationTokenExpiry: null,
             ...(user.phoneVerified ? {} : { phoneVerified: new Date() }),
           },
+          select: { id: true },
         })
 
         logger.authentication(user.id, 'whatsapp_otp_login', true, {
@@ -270,6 +295,14 @@ const providers: NextAuthConfig['providers'] = [
         // This ensures proper audit trail and password policy enforcement
         const user = await prisma.users.findUnique({
           where: { email: validatedData.email },
+          select: {
+            id: true,
+            email: true,
+            name: true,
+            role: true,
+            profile: true,
+            passwordHash: true,
+          },
         })
 
         if (!user || !user.passwordHash) {

@@ -61,7 +61,10 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if user already exists (email is the credentials-provider key)
-    const existingByEmail = await prisma.users.findUnique({ where: { email } })
+    const existingByEmail = await prisma.users.findUnique({
+      where: { email },
+      select: { id: true },
+    })
     if (existingByEmail) {
       return NextResponse.json({ error: 'User with this email already exists' }, { status: 409 })
     }
@@ -71,7 +74,10 @@ export async function POST(request: NextRequest) {
     const normalizedPhone = normalizePhone(phone)
     const phoneLast10 = normalizedPhone.replace(/\D/g, '').slice(-10)
     const existingByPhone = phoneLast10
-      ? await prisma.users.findFirst({ where: { phone: { endsWith: phoneLast10 } } })
+      ? await prisma.users.findFirst({
+          where: { phone: { endsWith: phoneLast10 } },
+          select: { id: true },
+        })
       : null
     if (existingByPhone) {
       return NextResponse.json(
@@ -131,6 +137,7 @@ export async function POST(request: NextRequest) {
           profile,
           updatedAt: new Date(),
         },
+        select: { id: true, name: true, email: true, role: true },
       })
     } catch (createError) {
       const message = createError instanceof Error ? createError.message : ''

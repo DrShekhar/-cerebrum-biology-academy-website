@@ -32,6 +32,20 @@ const last10Digits = (phone: string): string => phone.replace(/\D/g, '').slice(-
 // via signIn('whatsapp-otp', { phone, verificationToken }).
 const BRIDGE_TOKEN_TTL_MS = 5 * 60 * 1000
 
+// All prisma.users calls in this route use explicit `select` so the query
+// never references columns the production DB may not have yet (schema drift
+// like users.subscriptionTier previously 500'd every phone login here).
+const AUTH_USER_SELECT = {
+  id: true,
+  phone: true,
+  firebaseUid: true,
+  name: true,
+  role: true,
+  coachingTier: true,
+  trialStartDate: true,
+  trialEndDate: true,
+} as const
+
 async function issueBridgeToken(userId: string): Promise<string> {
   const token = randomBytes(32).toString('hex')
   await prisma.users.update({
@@ -40,6 +54,7 @@ async function issueBridgeToken(userId: string): Promise<string> {
       verificationToken: token,
       verificationTokenExpiry: new Date(Date.now() + BRIDGE_TOKEN_TTL_MS),
     },
+    select: { id: true },
   })
   return token
 }
@@ -167,6 +182,7 @@ export async function POST(request: NextRequest) {
         where: {
           OR: [{ phone: { endsWith: phoneLast10 } }, { firebaseUid: uid }],
         },
+        select: { id: true },
       })
 
       // Reset rate limit on successful check
@@ -193,6 +209,7 @@ export async function POST(request: NextRequest) {
         where: {
           OR: [{ phone: { endsWith: phoneLast10 } }, { firebaseUid: verifiedUid }],
         },
+        select: AUTH_USER_SELECT,
       })
 
       if (existingUser) {
@@ -201,6 +218,7 @@ export async function POST(request: NextRequest) {
           await prisma.users.update({
             where: { id: existingUser.id },
             data: { firebaseUid: verifiedUid },
+            select: { id: true },
           })
         }
 
@@ -245,6 +263,7 @@ export async function POST(request: NextRequest) {
             signupMethod: 'firebase_phone',
           },
         },
+        select: AUTH_USER_SELECT,
       })
 
       const verificationToken = await issueBridgeToken(newUser.id)
@@ -272,6 +291,7 @@ export async function POST(request: NextRequest) {
         where: {
           OR: [{ phone: { endsWith: phoneLast10 } }, { firebaseUid: verifiedUid }],
         },
+        select: AUTH_USER_SELECT,
       })
 
       if (!user) {
@@ -288,6 +308,7 @@ export async function POST(request: NextRequest) {
         user = await prisma.users.update({
           where: { id: user.id },
           data: { firebaseUid: verifiedUid },
+          select: AUTH_USER_SELECT,
         })
       }
 
@@ -295,6 +316,7 @@ export async function POST(request: NextRequest) {
       await prisma.users.update({
         where: { id: user.id },
         data: { lastActiveAt: new Date() },
+        select: { id: true },
       })
 
       // Check if trial is still active
