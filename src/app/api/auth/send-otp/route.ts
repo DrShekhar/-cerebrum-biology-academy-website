@@ -336,6 +336,23 @@ export async function POST(request: NextRequest) {
       whatsappSuccess = await sendWhatsAppOTP(whatsapp, otp)
     }
 
+    // Honesty gate: if NO channel actually delivered (e.g. MSG91 keys unset),
+    // do NOT report success — that silently strands the user on the OTP screen
+    // waiting for a code that was never sent. Surface a real error instead.
+    if (!smsSuccess && !whatsappSuccess) {
+      console.error('[send-otp] No channel delivered — check MSG91_AUTH_KEY / templates')
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error:
+              'We could not send your OTP right now. Please try WhatsApp login or contact support.',
+            code: 'OTP_DELIVERY_UNAVAILABLE',
+          },
+          { status: 502 }
+        )
+      )
+    }
+
     return addSecurityHeaders(
       NextResponse.json(
         {
