@@ -226,8 +226,20 @@ async function getUserFromToken(
   const nextAuthSecret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET
   if (nextAuthSecret) {
     for (const secureCookie of [true, false]) {
+      // Auth.js v5 salts the session JWE with the cookie NAME, so getToken must
+      // be told both the cookie name and the matching salt — otherwise the
+      // decrypt silently fails and a valid session reads as logged-out (which
+      // made every /admin, /teacher, /counselor, /parent route bounce a
+      // signed-in user back to /sign-in). Pass them explicitly.
+      const cookieName = secureCookie ? '__Secure-authjs.session-token' : 'authjs.session-token'
       try {
-        const token = await getToken({ req, secret: nextAuthSecret, secureCookie })
+        const token = await getToken({
+          req,
+          secret: nextAuthSecret,
+          secureCookie,
+          cookieName,
+          salt: cookieName,
+        })
         const userId = (token?.id as string | undefined) || token?.sub
         if (token && userId) {
           return {
