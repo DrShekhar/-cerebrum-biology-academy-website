@@ -11,6 +11,8 @@ const HIDDEN_ROUTES = [
   '/sso-callback',
   '/study-with-me/obs',
   '/study-with-me',
+  '/cbt/neet-full',
+  '/cbt-mock',
 ]
 
 // Context to share hide state across all ConditionalHeaderFooter instances

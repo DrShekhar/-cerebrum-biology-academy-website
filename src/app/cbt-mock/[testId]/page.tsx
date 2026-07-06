@@ -2,6 +2,7 @@
 
 import { use } from 'react'
 import { useRouter } from 'next/navigation'
+import { useAuth } from '@/contexts/AuthContext'
 import { CBTExam } from '@/components/cbt/CBTExam'
 import { getTestById } from '@/data/mockTests'
 
@@ -13,6 +14,7 @@ import { getTestById } from '@/data/mockTests'
 export default function CBTMockPage({ params }: { params: Promise<{ testId: string }> }) {
   const { testId } = use(params)
   const router = useRouter()
+  const { user } = useAuth()
   const test = getTestById(testId)
 
   if (!test) {
@@ -30,5 +32,11 @@ export default function CBTMockPage({ params }: { params: Promise<{ testId: stri
     )
   }
 
-  return <CBTExam test={test} onExit={() => router.push('/mock-tests')} />
+  return (
+    <CBTExam
+      test={test}
+      candidateName={user?.fullName || user?.name || undefined}
+      onExit={() => router.push('/mock-tests')}
+    />
+  )
 }

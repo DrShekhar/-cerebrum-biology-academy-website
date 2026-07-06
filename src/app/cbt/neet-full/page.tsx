@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
+import { useAuth } from '@/contexts/AuthContext'
 import {
   CBTExam,
   type CBTAttemptState,
@@ -17,6 +18,7 @@ import type { MockTest } from '@/types/mockTest'
  */
 export default function NeetFullCBTPage() {
   const router = useRouter()
+  const { user } = useAuth()
   const [test, setTest] = useState<MockTest | null>(null)
   const [server, setServer] = useState<Parameters<typeof CBTExam>[0]['server'] | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -153,5 +155,12 @@ export default function NeetFullCBTPage() {
 
   if (!test || !server) return null
 
-  return <CBTExam test={test} server={server} onExit={() => router.push('/mock-tests')} />
+  return (
+    <CBTExam
+      test={test}
+      candidateName={user?.fullName || user?.name || undefined}
+      server={server}
+      onExit={() => router.push('/mock-tests')}
+    />
+  )
 }
