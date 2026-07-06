@@ -20,6 +20,14 @@ import {
 // ============================================
 
 const INTERAKT_API_URL = 'https://api.interakt.ai/v1'
+import {
+  isMetaWhatsAppConfigured,
+  toMetaRecipient,
+  sendMetaText,
+  sendMetaMedia,
+  sendMetaTemplate,
+} from '@/lib/whatsapp/metaSender'
+
 const INTERAKT_API_KEY = process.env.INTERAKT_API_KEY
 
 if (!INTERAKT_API_KEY) {
@@ -194,11 +202,37 @@ async function makeInteraktRequest(
  * Send a WhatsApp message via Interakt (template or text)
  */
 export async function sendWhatsAppMessage(params: SendMessageParams): Promise<InteraktResponse> {
+  // W5 migration: when the direct Meta Cloud API is configured, ALL sends
+  // route there — Interakt becomes the fallback until its retirement.
+  if (isMetaWhatsAppConfigured()) {
+    const { countryCode, phoneNumber } = formatPhoneNumber(params.phone)
+    const to = toMetaRecipient(countryCode, phoneNumber)
+    if (params.templateName) {
+      return sendMetaTemplate({
+        to,
+        templateName: params.templateName,
+        bodyValues: params.templateParams ? Object.values(params.templateParams) : [],
+        headerValues: params.headerValues,
+        buttonValues: params.buttonValues,
+      })
+    }
+    if (params.mediaUrl) {
+      return sendMetaMedia(
+        to,
+        params.mediaType || 'image',
+        params.mediaUrl,
+        params.caption || params.message
+      )
+    }
+    return sendMetaText(to, params.message || '')
+  }
+
   // Early return if not configured
   if (!isInteraktConfigured()) {
     return {
       success: false,
-      error: 'WhatsApp not configured. Please set INTERAKT_API_KEY environment variable.',
+      error:
+        'WhatsApp not configured. Set WHATSAPP_ACCESS_TOKEN + WHATSAPP_PHONE_NUMBER_ID (Meta) or INTERAKT_API_KEY.',
     }
   }
 
@@ -303,11 +337,24 @@ export async function sendWhatsAppMessage(params: SendMessageParams): Promise<In
  * Send a template message with typed parameters
  */
 export async function sendTemplateMessage(params: SendTemplateParams): Promise<InteraktResponse> {
+  // W5 migration: prefer the direct Meta Cloud API when configured.
+  if (isMetaWhatsAppConfigured()) {
+    const { countryCode, phoneNumber } = formatPhoneNumber(params.phone)
+    return sendMetaTemplate({
+      to: toMetaRecipient(countryCode, phoneNumber),
+      templateName: params.templateName,
+      bodyValues: params.bodyValues,
+      headerValues: params.headerValues,
+      buttonValues: params.buttonValues,
+    })
+  }
+
   // Early return if not configured
   if (!isInteraktConfigured()) {
     return {
       success: false,
-      error: 'WhatsApp not configured. Please set INTERAKT_API_KEY environment variable.',
+      error:
+        'WhatsApp not configured. Set WHATSAPP_ACCESS_TOKEN + WHATSAPP_PHONE_NUMBER_ID (Meta) or INTERAKT_API_KEY.',
     }
   }
 
@@ -908,6 +955,11 @@ export function isOTPValid(expiresAt: Date): boolean {
  */
 export function isInteraktConfigured(): boolean {
   return !!INTERAKT_API_KEY
+}
+
+/** True when ANY WhatsApp send path (Meta direct or Interakt) is configured. */
+export function isWhatsAppSendConfigured(): boolean {
+  return isMetaWhatsAppConfigured() || !!INTERAKT_API_KEY
 }
 
 /**
