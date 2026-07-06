@@ -382,16 +382,17 @@ export default function NotificationsPage() {
   async function fetchNotifications() {
     try {
       setLoading((prev) => prev) // Only show loading on first load
+      // Real route (synthesizes from live leads/tasks). NEVER fall back to the
+      // demo generator — fabricated alerts rendered as real misled counselors.
       const res = await fetch('/api/counselor/notifications', { credentials: 'include' })
       if (res.ok) {
         const data = await res.json()
-        setNotifications(data.data || generateDemoNotifications())
+        setNotifications(data.data || [])
       } else {
-        // Use demo data if API doesn't exist yet
-        setNotifications(generateDemoNotifications())
+        setNotifications([])
       }
     } catch {
-      setNotifications(generateDemoNotifications())
+      setNotifications([])
     } finally {
       setLoading(false)
     }
@@ -563,113 +564,4 @@ export default function NotificationsPage() {
       <NotificationPreferences isOpen={showPrefs} onClose={() => setShowPrefs(false)} />
     </div>
   )
-}
-
-// ─── Demo Notifications Generator ────────────────────────────────────────────
-
-function generateDemoNotifications(): Notification[] {
-  const now = new Date()
-  return [
-    {
-      id: 'n1',
-      type: 'BUYING_SIGNAL',
-      priority: 'URGENT',
-      title: '🔥 Fee document opened!',
-      message:
-        "Priya Sharma's parent just opened the fee structure PDF (3rd time today). High purchase intent detected.",
-      leadId: 'demo_lead_1',
-      leadName: 'Priya Sharma',
-      actionLabel: 'Call Now',
-      isRead: false,
-      createdAt: new Date(now.getTime() - 5 * 60000).toISOString(),
-      metadata: { phone: '9876543210' },
-    },
-    {
-      id: 'n2',
-      type: 'OVERDUE_FOLLOWUP',
-      priority: 'HIGH',
-      title: '⚠️ 3 follow-ups overdue',
-      message:
-        'Rahul Verma, Ankit Patel, and Sneha Gupta have overdue follow-ups. Last contact was 5+ days ago.',
-      actionUrl: '/counselor/tasks',
-      actionLabel: 'View Tasks',
-      isRead: false,
-      createdAt: new Date(now.getTime() - 30 * 60000).toISOString(),
-    },
-    {
-      id: 'n3',
-      type: 'PAYMENT_STARTED',
-      priority: 'HIGH',
-      title: '💳 Payment link clicked!',
-      message:
-        'Amit Kumar clicked the payment link for ₹45,000 (EMI #1) but did not complete. Follow up immediately.',
-      leadId: 'demo_lead_3',
-      leadName: 'Amit Kumar',
-      actionLabel: 'Send Reminder',
-      isRead: false,
-      createdAt: new Date(now.getTime() - 45 * 60000).toISOString(),
-      metadata: { phone: '9988776655' },
-    },
-    {
-      id: 'n4',
-      type: 'HOT_LEAD_NEW',
-      priority: 'HIGH',
-      title: '🚀 New hot lead! Score: 85',
-      message:
-        'Kavya Reddy — Class 12, Biology weak, dropper from Allen. Demo attended + scholarship test registered. Auto-assigned to you.',
-      leadId: 'demo_lead_4',
-      leadName: 'Kavya Reddy',
-      isRead: false,
-      createdAt: new Date(now.getTime() - 2 * 3600000).toISOString(),
-    },
-    {
-      id: 'n5',
-      type: 'DEMO_BOOKED',
-      priority: 'MEDIUM',
-      title: '📅 Demo booked for tomorrow',
-      message:
-        'Riya Singh booked a demo class for tomorrow at 4:00 PM. Course: NEET Regular Batch 2027.',
-      leadId: 'demo_lead_5',
-      leadName: 'Riya Singh',
-      isRead: false,
-      createdAt: new Date(now.getTime() - 3 * 3600000).toISOString(),
-    },
-    {
-      id: 'n6',
-      type: 'REPLY_RECEIVED',
-      priority: 'MEDIUM',
-      title: '💬 WhatsApp reply received',
-      message:
-        'Neha Joshi replied: "What are the batch timings for the dropper course?" — respond within 5 minutes for best conversion.',
-      leadId: 'demo_lead_6',
-      leadName: 'Neha Joshi',
-      actionLabel: 'Reply on WhatsApp',
-      isRead: true,
-      createdAt: new Date(now.getTime() - 4 * 3600000).toISOString(),
-    },
-    {
-      id: 'n7',
-      type: 'PAYMENT_COMPLETED',
-      priority: 'LOW',
-      title: '✅ Payment received!',
-      message:
-        'Vikram Singh completed ₹90,000 payment (Full fee). Enrollment confirmed for Regular Batch 2026.',
-      leadId: 'demo_lead_7',
-      leadName: 'Vikram Singh',
-      isRead: true,
-      createdAt: new Date(now.getTime() - 6 * 3600000).toISOString(),
-    },
-    {
-      id: 'n8',
-      type: 'LEAD_UNTOUCHED',
-      priority: 'MEDIUM',
-      title: '⏰ 5 leads untouched for 4+ hours',
-      message:
-        "New leads from Google Ads haven't been contacted yet. First-response time affects conversion by 3x.",
-      actionUrl: '/counselor/leads',
-      actionLabel: 'View Pipeline',
-      isRead: true,
-      createdAt: new Date(now.getTime() - 8 * 3600000).toISOString(),
-    },
-  ]
 }
