@@ -76,7 +76,7 @@ After parity: redirect `/student/dashboard` → `/dashboard`.
 
 ## D. DB CHANGES (additive only; owner-run script pattern)
 - `ALTER TABLE study_materials ADD COLUMN IF NOT EXISTS "requiredClass" "StudentClass";`
-- (P3, optional) `ALTER TABLE class_sessions ADD COLUMN IF NOT EXISTS "videoLectureId" TEXT;`
+- (P3, optional) `ALTER TABLE class_sessions ADD COLUMN IF NOT EXISTS "videoLectureId" TEXT;` — **BUILT Jul 7**: `scripts/sql/2026-07-07-session-recording-link.sql` + `scripts/apply-session-recording-link.sh` (owner-run). Full pipeline (webhook, match strategy, env `ZOOM_WEBHOOK_SECRET_TOKEN`, activation checklist): see `RECORDINGS_PIPELINE.md`.
 - Nothing else — avatar lives in profile Json.
 
 ## E. KEY FILES

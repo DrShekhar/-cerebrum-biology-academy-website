@@ -111,11 +111,46 @@ export async function GET(req: NextRequest) {
       },
     })
 
-    const sessionsResponse = sessions.map(({ courses, student_attendance, ...rest }) => ({
-      ...rest,
-      course: courses,
-      attendance: student_attendance,
-    }))
+    // Recording pipeline status for linked sessions (Zoom -> Cloudflare).
+    const linkedLectureIds = sessions
+      .map((s) => s.videoLectureId)
+      .filter((id): id is string => !!id)
+    const lectures = linkedLectureIds.length
+      ? await prisma.video_lectures.findMany({
+          where: { id: { in: linkedLectureIds } },
+          select: { id: true, uploadStatus: true },
+        })
+      : []
+    const lectureStatusById = new Map(lectures.map((l) => [l.id, l.uploadStatus]))
+
+    const getRecording = (s: (typeof sessions)[number]) => {
+      if (s.videoLectureId) {
+        const uploadStatus = lectureStatusById.get(s.videoLectureId)
+        if (uploadStatus === 'READY') {
+          return { state: 'READY' as const, url: `/learn/${s.videoLectureId}` }
+        }
+        if (uploadStatus === 'FAILED') {
+          return { state: 'FAILED' as const, url: null }
+        }
+        return { state: 'PROCESSING' as const, url: null }
+      }
+      if (s.recordingUrl) {
+        // Raw Zoom fallback URL written by the pipeline's fail-soft path,
+        // or a manually pasted link.
+        return { state: 'RAW' as const, url: s.recordingUrl }
+      }
+      return { state: 'NONE' as const, url: null }
+    }
+
+    const sessionsResponse = sessions.map((s) => {
+      const { courses, student_attendance, ...rest } = s
+      return {
+        ...rest,
+        course: courses,
+        attendance: student_attendance,
+        recording: getRecording(s),
+      }
+    })
 
     const statistics = {
       total: sessions.length,

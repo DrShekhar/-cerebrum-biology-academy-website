@@ -493,6 +493,8 @@ model class_sessions {
   absentCount        Int                  @default(0)
   lateCount          Int                  @default(0)
   recordingUrl       String?
+  // Processed Zoom recording (video_lectures.id); loose ref, no FK constraint
+  videoLectureId     String?
   notesUrl           String?
   materialsUrl       Json?
   homeworkAssigned   String?
@@ -507,6 +509,7 @@ model class_sessions {
   student_attendance student_attendance[]
 
   @@index([groupId])
+  @@index([videoLectureId])
   @@index([courseId, scheduledDate])
   @@index([enrollmentId, scheduledDate])
   @@index([scheduledDate])
