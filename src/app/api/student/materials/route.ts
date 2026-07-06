@@ -159,6 +159,8 @@ export async function GET(request: NextRequest) {
           fileUrl: tierLocked ? null : m.fileUrl, // no URL for tier-locked content
           requiredTier: m.requiredTier,
           tierLocked,
+          // Personally assigned via material_access (vs course/free access)
+          personallyAssigned: accessibleMaterialIds.includes(m.id),
           materialType: m.materialType,
           category: m.category,
           tags: m.tags ? JSON.parse(m.tags as string) : [],

@@ -248,6 +248,23 @@ function WorksheetCard({ worksheet, onClick }: WorksheetCardProps) {
           {worksheet.submission.grade}/{worksheet.maxMarks}
         </div>
       )}
+
+      {/* Teacher feedback if graded */}
+      {worksheet.submission?.status === 'GRADED' && worksheet.submission.feedback && (
+        <div className="mt-3 p-3 bg-blue-50 border border-blue-100 rounded-lg">
+          <div className="flex items-center justify-between gap-2 mb-1">
+            <span className="text-xs font-semibold text-blue-700">💬 Teacher Feedback</span>
+            {worksheet.submission.gradedAt && (
+              <span className="text-xs text-gray-400">
+                Graded {formatDate(worksheet.submission.gradedAt)}
+              </span>
+            )}
+          </div>
+          <p className="text-sm text-gray-700 whitespace-pre-wrap">
+            {worksheet.submission.feedback}
+          </p>
+        </div>
+      )}
     </div>
   )
 }

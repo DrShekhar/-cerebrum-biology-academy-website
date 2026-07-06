@@ -5,7 +5,15 @@ import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Assignment, SubmissionStatus } from '@/types/assignment'
-import { Clock, Calendar, FileText, CheckCircle, AlertCircle, XCircle } from 'lucide-react'
+import {
+  Clock,
+  Calendar,
+  FileText,
+  CheckCircle,
+  AlertCircle,
+  XCircle,
+  MessageSquare,
+} from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { format, formatDistanceToNow, isPast, isFuture } from 'date-fns'
 
@@ -16,6 +24,8 @@ interface AssignmentCardProps {
       status: SubmissionStatus
       submittedAt?: Date | string | null
       grade?: number | null
+      feedback?: string | null
+      gradedAt?: Date | string | null
       isLate: boolean
     } | null
     isOverdue?: boolean
@@ -134,6 +144,23 @@ export function AssignmentCard({ assignment }: AssignmentCardProps) {
         {assignment.submission?.submittedAt && (
           <div className="text-xs text-gray-500 mb-3">
             Submitted: {format(new Date(assignment.submission.submittedAt), 'MMM dd, yyyy hh:mm a')}
+          </div>
+        )}
+
+        {assignment.submission?.status === 'GRADED' && assignment.submission.feedback && (
+          <div className="mb-4 p-3 bg-blue-50 border border-blue-100 rounded-lg">
+            <div className="flex items-center gap-1.5 mb-1">
+              <MessageSquare className="w-3.5 h-3.5 text-blue-600 flex-shrink-0" />
+              <span className="text-xs font-semibold text-blue-700">Teacher Feedback</span>
+              {assignment.submission.gradedAt && (
+                <span className="text-xs text-gray-400 ml-auto">
+                  {format(new Date(assignment.submission.gradedAt), 'MMM dd, yyyy')}
+                </span>
+              )}
+            </div>
+            <p className="text-sm text-gray-700 whitespace-pre-wrap">
+              {assignment.submission.feedback}
+            </p>
           </div>
         )}
 

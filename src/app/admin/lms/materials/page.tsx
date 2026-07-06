@@ -9,6 +9,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { showToast } from '@/lib/toast'
+import { AssignMaterialModal } from '@/components/admin/AssignMaterialModal'
 
 interface Material {
   id: string
@@ -43,6 +44,7 @@ export default function MaterialsListPage() {
   const [publishedFilter, setPublishedFilter] = useState('')
   const [deleteId, setDeleteId] = useState<string | null>(null)
   const [deleting, setDeleting] = useState(false)
+  const [assignTarget, setAssignTarget] = useState<Material | null>(null)
 
   useEffect(() => {
     fetchMaterials()
@@ -249,13 +251,21 @@ export default function MaterialsListPage() {
                         </span>
                       </td>
                       <td className="px-6 py-4 text-sm">
-                        <button
-                          onClick={() => handleDelete(material.id)}
-                          disabled={deleting}
-                          className="text-red-600 hover:text-red-800 disabled:opacity-50"
-                        >
-                          {deleting && deleteId === material.id ? 'Deleting...' : 'Delete'}
-                        </button>
+                        <div className="flex items-center gap-3">
+                          <button
+                            onClick={() => setAssignTarget(material)}
+                            className="text-blue-600 hover:text-blue-800 font-medium"
+                          >
+                            Assign
+                          </button>
+                          <button
+                            onClick={() => handleDelete(material.id)}
+                            disabled={deleting}
+                            className="text-red-600 hover:text-red-800 disabled:opacity-50"
+                          >
+                            {deleting && deleteId === material.id ? 'Deleting...' : 'Delete'}
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   ))}
@@ -290,6 +300,15 @@ export default function MaterialsListPage() {
           </div>
         </div>
       </div>
+
+      {/* Assign-to-students modal */}
+      {assignTarget && (
+        <AssignMaterialModal
+          materialId={assignTarget.id}
+          materialTitle={assignTarget.title}
+          onClose={() => setAssignTarget(null)}
+        />
+      )}
     </div>
   )
 }
