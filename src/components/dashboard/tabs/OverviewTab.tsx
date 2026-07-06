@@ -10,6 +10,7 @@ import { NTAAnnouncementWidget } from '../NTAAnnouncementWidget'
 import { SpacedReviewWidget } from '../SpacedReviewWidget'
 import { NEETReadinessMeter } from '../NEETReadinessMeter'
 import { DailyChallengeCard } from '../DailyChallengeCard'
+import { UpcomingSessionsWidget } from '@/components/student/UpcomingSessionsWidget'
 import { WeakAreaItem } from './WeakAreaItem'
 
 interface StudySession {
@@ -172,6 +173,10 @@ export function OverviewTab({
           </div>
         </div>
       </div>
+
+      {/* Next live classes — real /api/student/sessions data (replaces the
+          old hardcoded next-class countdown) */}
+      <UpcomingSessionsWidget />
 
       {/* NEET Readiness Meter */}
       <NEETReadinessMeter />

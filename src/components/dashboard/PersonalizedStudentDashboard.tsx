@@ -11,6 +11,10 @@ import {
   Wrench,
   RefreshCw,
   XCircle,
+  ClipboardList,
+  BookOpenCheck,
+  FolderOpen,
+  Trophy,
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useSwipeGesture, usePullToRefresh } from '@/hooks/useSwipeGesture'
@@ -30,6 +34,10 @@ import {
   WeakAreasTab,
   PracticeTab,
   ScheduleTab,
+  MockTestsTab,
+  HomeworkTab,
+  MaterialsTab,
+  GoalsTab,
   WeakAreaBottomSheet,
   DashboardHeader,
   DashboardTabs,
@@ -68,6 +76,10 @@ export function PersonalizedStudentDashboard() {
     { id: 'tools', label: 'NEET Tools', icon: Wrench },
     { id: 'weak-areas', label: 'Weak Areas', icon: AlertTriangle },
     { id: 'practice', label: 'Practice Tests', icon: Target },
+    { id: 'mock-tests', label: 'Mock Tests', icon: ClipboardList },
+    { id: 'homework', label: 'Homework', icon: BookOpenCheck },
+    { id: 'materials', label: 'Materials', icon: FolderOpen },
+    { id: 'goals', label: 'Goals', icon: Trophy },
     { id: 'schedule', label: 'Study Schedule', icon: Calendar },
   ]
 
@@ -382,8 +394,10 @@ export function PersonalizedStudentDashboard() {
     return <DashboardLoadingState />
   }
 
-  // Empty state
-  if (recentSessions.length === 0 && !isLoading) {
+  // Empty state — guests only. Authenticated students keep the full tab
+  // shell even with zero test attempts (Homework / Materials / Mock Tests /
+  // Goals have their own data sources and empty states).
+  if (recentSessions.length === 0 && !isLoading && !isAuthenticated) {
     return <DashboardEmptyState userName={user?.name} />
   }
 
@@ -493,6 +507,14 @@ export function PersonalizedStudentDashboard() {
         )}
 
         {activeTab === 'practice' && <PracticeTab />}
+
+        {activeTab === 'mock-tests' && <MockTestsTab />}
+
+        {activeTab === 'homework' && <HomeworkTab />}
+
+        {activeTab === 'materials' && <MaterialsTab />}
+
+        {activeTab === 'goals' && <GoalsTab />}
 
         {activeTab === 'schedule' && (
           <ScheduleTab

@@ -33,7 +33,13 @@ export function UpcomingSessionsWidget({
   const fetchUpcomingSessions = async () => {
     try {
       setIsLoading(true)
-      const response = await fetch('/api/student/sessions?type=upcoming')
+      const response = await fetch('/api/student/sessions?type=upcoming', {
+        credentials: 'include',
+      })
+      if (response.status === 401 || response.status === 403) {
+        // Not signed in as a student — degrade to the empty state silently.
+        return
+      }
       const data = await response.json()
 
       if (data.success) {
