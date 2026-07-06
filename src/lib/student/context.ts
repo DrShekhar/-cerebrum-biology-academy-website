@@ -84,7 +84,11 @@ export async function getStudentContext(userId: string): Promise<StudentContext 
   // Canonical grade = highest-priority class among active enrollments
   let grade: StudentGrade =
     grades.length > 0
-      ? (grades.slice().sort((a, b) => (GRADE_ORDER[b || ''] || 0) - (GRADE_ORDER[a || ''] || 0))[0] as StudentGrade)
+      ? (grades
+          .slice()
+          .sort(
+            (a, b) => (GRADE_ORDER[b || ''] || 0) - (GRADE_ORDER[a || ''] || 0)
+          )[0] as StudentGrade)
       : null
 
   const profile = (user.profile as Record<string, unknown> | null) || {}

@@ -65,7 +65,7 @@ export async function GET() {
         }),
       ])
 
-    const val = <T,>(r: PromiseSettledResult<T>, fallback: T): T =>
+    const val = <T>(r: PromiseSettledResult<T>, fallback: T): T =>
       r.status === 'fulfilled' ? r.value : fallback
 
     const xpData = val(xp, null as Awaited<ReturnType<typeof getXpBreakdown>> | null)

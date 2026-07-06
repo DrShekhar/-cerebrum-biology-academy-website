@@ -13,6 +13,7 @@ const OWNER_PHONE = CONTACT_INFO.phone.owner
 
 // Directly import the dashboard component (no dynamic import issues)
 import { PersonalizedStudentDashboard } from '@/components/dashboard/PersonalizedStudentDashboard'
+import { StudentHeaderBand } from '@/components/dashboard/StudentHeaderBand'
 import { CoachingTrialBanner, useCoachingTrialStatus } from '@/components/trial/CoachingTrialBanner'
 
 // Error Boundary for catching dashboard render errors
@@ -211,6 +212,9 @@ export default function DashboardPage() {
       <DashboardErrorBoundary
         fallback={(error, reset) => <ErrorFallback error={error} reset={reset} />}
       >
+        {/* Profile header band: avatar/grade/courses/streak/XP + live actions
+            (join class, resume mock, due homework) — roadmap P1 */}
+        <StudentHeaderBand />
         <PersonalizedStudentDashboard />
       </DashboardErrorBoundary>
     </main>

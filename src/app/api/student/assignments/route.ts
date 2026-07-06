@@ -126,6 +126,10 @@ export async function GET(request: NextRequest) {
               status: true,
               submittedAt: true,
               grade: true,
+              // Teacher comments were graded+written but never surfaced in the
+              // list — students only saw feedback by opening each assignment.
+              feedback: true,
+              gradedAt: true,
               isLate: true,
             },
           },
