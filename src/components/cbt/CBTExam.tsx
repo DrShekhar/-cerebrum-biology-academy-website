@@ -146,6 +146,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
   const storageKey = `cbt_attempt_${test.id}`
   const [serverResult, setServerResult] = useState<CBTResult | null>(null)
   const [submitting, setSubmitting] = useState(false)
+  const submitGuardRef = useRef(false)
   const [reviewItems, setReviewItems] = useState<CBTReviewItem[] | null>(null)
   const [loadingReview, setLoadingReview] = useState(false)
 
@@ -463,6 +464,10 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
   }, [orderedQuestions, states])
 
   const handleSubmit = async (auto = false) => {
+    // Re-entrancy guard: the countdown reaching 0 and a YES click can race —
+    // a ref (unlike async setState) blocks the second entry synchronously.
+    if (submitGuardRef.current) return
+    submitGuardRef.current = true
     setShowSubmitConfirm(false)
     if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {})
     if (server) {
