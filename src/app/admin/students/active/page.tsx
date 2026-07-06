@@ -6,6 +6,7 @@
 // with no fetch at all.
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { Users, Search, Calendar, Mail, Phone, Activity, Loader2 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 
@@ -184,7 +185,12 @@ export default function ActiveStudentsPage() {
                   {filtered.map((s) => (
                     <tr key={s.id} className="hover:bg-gray-50">
                       <td className="px-5 py-3.5">
-                        <div className="font-medium text-gray-900">{s.name}</div>
+                        <Link
+                          href={`/admin/students/${s.id}`}
+                          className="font-medium text-gray-900 hover:text-blue-600"
+                        >
+                          {s.name}
+                        </Link>
                         <div className="flex items-center gap-3 text-xs text-gray-400 mt-0.5">
                           {s.email && (
                             <span className="inline-flex items-center gap-1">

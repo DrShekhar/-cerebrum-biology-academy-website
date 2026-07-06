@@ -71,17 +71,55 @@ export async function GET(request: NextRequest) {
       },
     })
 
+    const childIds = rawRelationships.map(
+      (rel) => rel.users_parent_child_relationships_childIdTousers.id
+    )
+
+    // Test attempts + practice streaks live outside the users relation graph:
+    // test_attempts is keyed by freeUserId (which holds the user id for
+    // logged-in students — see /api/student/gradebook) and streaks live in
+    // mcq_user_stats. Fetch both for all children in two queries.
+    const [allAttempts, streakRows] = await Promise.all([
+      prisma.test_attempts.findMany({
+        where: { freeUserId: { in: childIds }, status: 'COMPLETED' },
+        orderBy: { startedAt: 'desc' },
+        take: Math.max(1, 20 * childIds.length),
+        select: {
+          id: true,
+          freeUserId: true,
+          title: true,
+          score: true,
+          totalMarks: true,
+          percentage: true,
+          startedAt: true,
+          submittedAt: true,
+        },
+      }),
+      prisma.mcq_user_stats.findMany({
+        where: { userId: { in: childIds } },
+        select: { userId: true, currentStreak: true, lastPracticeDate: true },
+      }),
+    ])
+
+    const attemptsByChild = new Map<string, (typeof allAttempts)[number][]>()
+    for (const a of allAttempts) {
+      const list = attemptsByChild.get(a.freeUserId) || []
+      if (list.length < 10) {
+        list.push(a)
+        attemptsByChild.set(a.freeUserId, list)
+      }
+    }
+    const streakByChild = new Map(streakRows.map((s) => [s.userId, s]))
+
     // Normalize the verbose relation names back to the legacy shape the rest of
-    // this handler expects. NOTE: a child `users` row has no test_attempts
-    // relation (MCQ attempts belong to free_users), so test data is unavailable
-    // here — exposed as an empty list rather than fabricated.
+    // this handler expects.
     const childRelationships = rawRelationships.map((rel) => {
       const u = rel.users_parent_child_relationships_childIdTousers
       return {
         ...rel,
         child: {
           ...u,
-          test_attempts: [] as any[],
+          test_attempts: attemptsByChild.get(u.id) || [],
           student_attendance: u.student_attendance_student_attendance_studentIdTousers.map((a) => ({
             ...a,
             session: a.class_sessions,
@@ -106,14 +144,23 @@ export async function GET(request: NextRequest) {
       const overallProgress =
         totalEnrollments > 0 ? Math.round(completedLessons / totalEnrollments) : 0
 
-      // Calculate test performance
-      const completedTests = child.test_attempts.filter((t) => t.submittedAt)
+      // Calculate test performance (percentage, not raw marks)
+      const completedTests = child.test_attempts.filter((t) => t.submittedAt || t.startedAt)
       const avgScore =
         completedTests.length > 0
           ? Math.round(
-              completedTests.reduce((acc, t) => acc + (t.score || 0), 0) / completedTests.length
+              completedTests.reduce(
+                (acc, t) =>
+                  acc +
+                  (t.percentage ?? (t.totalMarks > 0 ? ((t.score || 0) / t.totalMarks) * 100 : 0)),
+                0
+              ) / completedTests.length
             )
           : 0
+
+      // Practice streak (mcq_user_stats)
+      const streakRow = streakByChild.get(child.id)
+      const streak = streakRow?.currentStreak || 0
 
       // Calculate attendance
       const totalAttendance = child.student_attendance.length
@@ -143,6 +190,7 @@ export async function GET(request: NextRequest) {
         overallProgress,
         avgTestScore: avgScore,
         attendanceRate,
+        streak,
         lastActive: lastActiveText,
         pendingHomework,
         completedHomework,
@@ -158,8 +206,13 @@ export async function GET(request: NextRequest) {
           date: attempt.submittedAt?.toISOString() || attempt.startedAt.toISOString(),
           score: attempt.score,
           totalMarks: attempt.totalMarks,
-          percentage: attempt.percentage,
-          status: attempt.submittedAt ? 'completed' : 'in_progress',
+          percentage:
+            Math.round(
+              (attempt.percentage ??
+                (attempt.totalMarks > 0 ? ((attempt.score || 0) / attempt.totalMarks) * 100 : 0)) *
+                10
+            ) / 10,
+          status: 'completed',
         })),
         recentAttendance: child.student_attendance.slice(0, 7).map((att) => ({
           id: att.id,
@@ -203,6 +256,27 @@ export async function GET(request: NextRequest) {
       rel.child.enrollments.map((e) => e.courseId)
     )
 
+    // Upcoming live classes across enrolled courses
+    const upcomingClasses = enrolledCourseIds.length
+      ? await prisma.class_sessions.findMany({
+          where: {
+            courseId: { in: enrolledCourseIds },
+            scheduledDate: { gte: new Date() },
+            status: { not: 'CANCELLED' },
+          },
+          orderBy: { scheduledDate: 'asc' },
+          take: 5,
+          select: {
+            id: true,
+            title: true,
+            scheduledDate: true,
+            startTime: true,
+            duration: true,
+            courses: { select: { name: true } },
+          },
+        })
+      : []
+
     const upcomingTests = await prisma.test_assignments.findMany({
       where: {
         courseId: { in: enrolledCourseIds },
@@ -245,6 +319,14 @@ export async function GET(request: NextRequest) {
         },
         children: childrenWithStats,
         recentPayments: allPayments.slice(0, 10),
+        upcomingClasses: upcomingClasses.map((cls) => ({
+          id: cls.id,
+          title: cls.title,
+          courseName: cls.courses?.name || null,
+          date: cls.scheduledDate.toISOString(),
+          startTime: cls.startTime.toISOString(),
+          duration: cls.duration,
+        })),
         upcomingTests: upcomingTests.map((test) => ({
           id: test.id,
           title: test.title,
