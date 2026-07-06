@@ -129,7 +129,7 @@ export async function GET(request: NextRequest) {
         ncertClass: q.ncertClass || null,
         subject: q.subject || 'biology',
         date: latest.answeredAt,
-        testTitle: latest.test_sessions?.test_templates?.title || 'CBT Mock Test',
+        testTitle: latest.test_sessions?.test_templates?.title || 'Practice attempt',
         testSessionId: latest.test_sessions?.id || null,
         timesWrong,
       }
