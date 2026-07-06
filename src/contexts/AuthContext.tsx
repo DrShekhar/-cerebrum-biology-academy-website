@@ -137,7 +137,13 @@ interface AuthProviderProps {
 
 export function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
+  // isLoading MUST start true ("auth state not yet determined"). React runs
+  // CHILD effects before PARENT effects, so route guards like AdminAuthWrapper
+  // fire before this provider's initializeAuth() effect. With an initial
+  // false, a guard saw isLoading=false + isAuthenticated=false on first paint
+  // and bounced a genuinely signed-in admin to /sign-in before the session
+  // was ever fetched. Guards already treat isLoading=true as "wait".
+  const [isLoading, setIsLoading] = useState(true)
   const [isLoggingOut, setIsLoggingOut] = useState(false)
   const [sessionExpired, setSessionExpired] = useState(false)
   const [permissions, setPermissions] = useState<string[]>([])
