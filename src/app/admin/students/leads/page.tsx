@@ -142,6 +142,89 @@ export default function LeadsPage() {
   const [isAddLeadModalOpen, setIsAddLeadModalOpen] = useState(false)
   const [isEditLeadModalOpen, setIsEditLeadModalOpen] = useState(false)
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null)
+  const [toolRunning, setToolRunning] = useState<'merge' | 'backfill' | null>(null)
+
+  // ── CRM maintenance tools (endpoints existed since June with no UI) ──
+
+  const handleExport = () => {
+    // Plain navigation carries the session cookie; server streams a CSV.
+    window.location.href = '/api/admin/leads/export?format=csv'
+  }
+
+  const handleMergeDuplicates = async () => {
+    try {
+      setToolRunning('merge')
+      // Pass 1: dry run — show what would merge before touching anything
+      const preview = await fetch('/api/admin/leads/merge-duplicates', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ dryRun: true }),
+      }).then((r) => r.json())
+      if (!preview.success) throw new Error(preview.error || 'Preview failed')
+      if (!preview.groupsWithDuplicates) {
+        toast.success('No duplicate leads found — CRM is clean')
+        return
+      }
+      if (
+        !confirm(
+          `Found ${preview.groupsWithDuplicates} duplicate group(s) — ${preview.duplicateLeadsToRemove} duplicate lead(s) will be merged into their canonical rows (activities/notes/tasks are moved, nothing is lost). Proceed?`
+        )
+      )
+        return
+      const result = await fetch('/api/admin/leads/merge-duplicates', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ dryRun: false }),
+      }).then((r) => r.json())
+      if (!result.success) throw new Error(result.error || 'Merge failed')
+      toast.success(
+        `Merged ${result.mergedGroups} group(s), removed ${result.removedLeads} duplicate(s)`
+      )
+      fetchLeads()
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : 'Merge failed')
+    } finally {
+      setToolRunning(null)
+    }
+  }
+
+  const handleBackfill = async () => {
+    try {
+      setToolRunning('backfill')
+      const preview = await fetch('/api/admin/leads/backfill', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ dryRun: true }),
+      }).then((r) => r.json())
+      if (!preview.success) throw new Error(preview.error || 'Preview failed')
+      if (!preview.eligibleWithPhone) {
+        toast.success('No stranded content leads to backfill')
+        return
+      }
+      if (
+        !confirm(
+          `${preview.eligibleWithPhone} content-form lead(s) with phone numbers never reached the CRM. Import them now? (Existing leads are matched by phone, not duplicated.)`
+        )
+      )
+        return
+      const result = await fetch('/api/admin/leads/backfill', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ dryRun: false }),
+      }).then((r) => r.json())
+      if (!result.success) throw new Error(result.error || 'Backfill failed')
+      toast.success(result.message || 'Backfill complete')
+      fetchLeads()
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : 'Backfill failed')
+    } finally {
+      setToolRunning(null)
+    }
+  }
 
   // Fetch leads from API
   const fetchLeads = useCallback(async () => {
@@ -330,10 +413,40 @@ export default function LeadsPage() {
               Track and convert potential students into enrollments
             </p>
           </div>
-          <div className="flex space-x-3">
-            <Button variant="outline" className="text-gray-700 border-gray-300">
-              <Filter className="w-4 h-4 mr-2" />
-              Advanced Filter
+          <div className="flex flex-wrap gap-3">
+            <Button
+              variant="outline"
+              className="text-gray-700 border-gray-300"
+              onClick={handleExport}
+            >
+              <Send className="w-4 h-4 mr-2" />
+              Export CSV
+            </Button>
+            <Button
+              variant="outline"
+              className="text-gray-700 border-gray-300"
+              onClick={handleBackfill}
+              disabled={toolRunning !== null}
+            >
+              {toolRunning === 'backfill' ? (
+                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              ) : (
+                <ArrowRight className="w-4 h-4 mr-2" />
+              )}
+              Import Missed Leads
+            </Button>
+            <Button
+              variant="outline"
+              className="text-gray-700 border-gray-300"
+              onClick={handleMergeDuplicates}
+              disabled={toolRunning !== null}
+            >
+              {toolRunning === 'merge' ? (
+                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              ) : (
+                <Filter className="w-4 h-4 mr-2" />
+              )}
+              Merge Duplicates
             </Button>
             <Button
               className="bg-blue-600 hover:bg-blue-700 text-white"
