@@ -234,6 +234,15 @@ export async function GET(
 
     const studentId = testSession.userId || testSession.freeUserId || ''
 
+    // SECURITY (ownership): results were readable by any logged-in user with
+    // a session id (IDOR). Owner or staff only.
+    const viewerIsStaff = ['ADMIN', 'TEACHER', 'COUNSELOR'].includes(
+      (authSession.user?.role as string) || ''
+    )
+    if (!viewerIsStaff && studentId !== authSession.user?.id) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
+
     // Calculate performance metrics
     const totalQuestions = testSession.user_question_responses.length
     const correctAnswers = testSession.user_question_responses.filter((r) => r.isCorrect).length

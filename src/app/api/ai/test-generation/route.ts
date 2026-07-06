@@ -521,6 +521,11 @@ export async function POST(request: NextRequest) {
     if (!session) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
+    // SECURITY: generation calls a paid LLM per request — was open to every
+    // logged-in user (token-burn vector). Staff only.
+    if (!['ADMIN', 'TEACHER'].includes((session.user?.role as string) || '')) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
 
     const config: TestConfiguration = await request.json()
 

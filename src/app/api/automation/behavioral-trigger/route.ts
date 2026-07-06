@@ -11,6 +11,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { verifyCronAuth } from '@/lib/auth/cron-auth'
 import { whatsappDripService } from '@/lib/automation/whatsappDripService'
 
 interface BehavioralTriggerRequest {
@@ -20,6 +21,14 @@ interface BehavioralTriggerRequest {
 }
 
 export async function POST(request: NextRequest) {
+  // SECURITY: internal/service endpoint — was completely unauthenticated,
+  // letting anyone who found the URL trigger sends/writes. Same fail-closed
+  // CRON_SECRET Bearer guard the cron routes use.
+  const cronAuth = verifyCronAuth(request)
+  if (!cronAuth.authorized) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
   try {
     const body = (await request.json()) as BehavioralTriggerRequest
 

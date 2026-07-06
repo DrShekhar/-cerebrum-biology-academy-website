@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { requireAdminAuth } from '@/lib/auth'
 import { getBlogFeaturedImage, getBlogImages } from '@/lib/images/blogImageService'
 
 /**
@@ -6,6 +7,13 @@ import { getBlogFeaturedImage, getBlogImages } from '@/lib/images/blogImageServi
  * Generate or fetch images for a blog post
  */
 export async function POST(request: NextRequest) {
+  // SECURITY: can trigger PAID AI image generation — was completely open.
+  try {
+    await requireAdminAuth()
+  } catch {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
   try {
     const body = await request.json()
 
@@ -55,6 +63,13 @@ export async function POST(request: NextRequest) {
  * Quick image fetch for simple requests
  */
 export async function GET(request: NextRequest) {
+  // SECURITY: can trigger PAID AI image generation — was completely open.
+  try {
+    await requireAdminAuth()
+  } catch {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
   try {
     const searchParams = request.nextUrl.searchParams
     const title = searchParams.get('title')

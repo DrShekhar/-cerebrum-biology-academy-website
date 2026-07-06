@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { requireAdminAuth } from '@/lib/auth'
+import { verifyCronAuth } from '@/lib/auth/cron-auth'
 import { prisma } from '@/lib/prisma'
 import { rateLimit } from '@/lib/rateLimit'
 import {
@@ -10,6 +12,18 @@ import {
 
 export async function POST(request: NextRequest) {
   try {
+    // SECURITY: screening writes to community_questions AND spends LLM tokens —
+    // was open to anyone (rate limit only). Allow admins (manual screening from
+    // the moderation queue) or the internal CRON_SECRET (auto-screen pipeline).
+    const cronOk = verifyCronAuth(request).authorized
+    if (!cronOk) {
+      try {
+        await requireAdminAuth()
+      } catch {
+        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      }
+    }
+
     const rateLimitResult = await rateLimit(request, { maxRequests: 5, windowMs: 60 * 60 * 1000 })
     if (!rateLimitResult.success) {
       return NextResponse.json(

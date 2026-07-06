@@ -297,6 +297,12 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // SECURITY (ownership): bind submissions to the authenticated user —
+    // previously any logged-in user could submit for any studentId.
+    if (studentId !== session.user.id) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
+
     // Calculate score
     const { score, totalMarks, results, topicWise } = await calculateScore(testId, answers)
 

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { verifyCronAuth } from '@/lib/auth/cron-auth'
 
 interface SMSPayload {
   phone: string
@@ -16,6 +17,14 @@ interface SMSPayload {
  * API Docs: https://docs.interakt.ai/
  */
 export async function POST(request: NextRequest) {
+  // SECURITY: internal/service endpoint — was completely unauthenticated,
+  // letting anyone who found the URL trigger sends/writes. Same fail-closed
+  // CRON_SECRET Bearer guard the cron routes use.
+  const cronAuth = verifyCronAuth(request)
+  if (!cronAuth.authorized) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
   try {
     const { phone, name, date, time, zoomUrl, demoType, bookingId }: SMSPayload =
       await request.json()
@@ -126,6 +135,14 @@ export async function POST(request: NextRequest) {
  * Get message status from Interakt
  */
 export async function GET(request: NextRequest) {
+  // SECURITY: internal/service endpoint — was completely unauthenticated,
+  // letting anyone who found the URL trigger sends/writes. Same fail-closed
+  // CRON_SECRET Bearer guard the cron routes use.
+  const cronAuth = verifyCronAuth(request)
+  if (!cronAuth.authorized) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
   const { searchParams } = new URL(request.url)
   const messageId = searchParams.get('messageId')
 

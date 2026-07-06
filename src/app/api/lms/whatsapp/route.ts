@@ -6,6 +6,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { verifyCronAuth } from '@/lib/auth/cron-auth'
 import { prisma } from '@/lib/prisma'
 import { whatsappLmsBot } from '@/lib/lms/whatsappLmsBot'
 
@@ -18,6 +19,14 @@ interface IncomingMessage {
 }
 
 export async function POST(request: NextRequest) {
+  // SECURITY: internal/service endpoint — was completely unauthenticated,
+  // letting anyone who found the URL trigger sends/writes. Same fail-closed
+  // CRON_SECRET Bearer guard the cron routes use.
+  const cronAuth = verifyCronAuth(request)
+  if (!cronAuth.authorized) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
   try {
     const body = await request.json()
     const { action, ...data } = body

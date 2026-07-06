@@ -60,6 +60,16 @@ export async function GET(
       return NextResponse.json({ error: 'Test not found' }, { status: 404 })
     }
 
+    // SECURITY (ownership): any logged-in user could read any session by id
+    // (IDOR). Owner or staff only.
+    const ownerId = testSession.userId || testSession.freeUserId
+    const isStaff = ['ADMIN', 'TEACHER', 'COUNSELOR'].includes(
+      (authSession.user?.role as string) || ''
+    )
+    if (!isStaff && ownerId !== authSession.user?.id) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
+
     // Format response
     const testDetails = {
       testId: testSession.id,
@@ -118,6 +128,15 @@ export async function PATCH(
       tabSwitchCount,
       fullscreenExits,
     } = body
+
+    // SECURITY (ownership): progress updates were a blind update by id.
+    const owned = await prisma.test_sessions.findUnique({
+      where: { id: testId },
+      select: { userId: true, freeUserId: true },
+    })
+    if (!owned || (owned.userId || owned.freeUserId) !== authSession.user?.id) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
 
     const updatedSession = await prisma.test_sessions.update({
       where: { id: testId },

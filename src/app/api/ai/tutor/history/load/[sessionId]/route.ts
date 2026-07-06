@@ -25,9 +25,12 @@ export async function GET(request: NextRequest, context: RouteContext) {
     }
 
     // Fetch all messages for this session, ordered by creation time
+    // SECURITY (ownership): sessionId alone was enough to read anyone's
+    // tutor chat. Scope to the authenticated user's rows.
     const messages = await prisma.chat_history.findMany({
       where: {
         sessionId: sessionId,
+        OR: [{ userId: session.user.id }, { freeUserId: session.user.id }],
       },
       orderBy: {
         createdAt: 'asc',

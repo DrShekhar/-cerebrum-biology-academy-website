@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { verifyCronAuth } from '@/lib/auth/cron-auth'
 import {
   startWelcomeSeries,
   sendWelcomeSeriesMessage,
@@ -10,6 +11,14 @@ import {
  * Start welcome series for a lead or send specific message
  */
 export async function POST(request: NextRequest) {
+  // SECURITY: internal/service endpoint — was completely unauthenticated,
+  // letting anyone who found the URL trigger sends/writes. Same fail-closed
+  // CRON_SECRET Bearer guard the cron routes use.
+  const cronAuth = verifyCronAuth(request)
+  if (!cronAuth.authorized) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
   try {
     const body = await request.json()
     const { action, leadId, day } = body
@@ -53,6 +62,14 @@ export async function POST(request: NextRequest) {
  * Get welcome series status for a lead
  */
 export async function GET(request: NextRequest) {
+  // SECURITY: internal/service endpoint — was completely unauthenticated,
+  // letting anyone who found the URL trigger sends/writes. Same fail-closed
+  // CRON_SECRET Bearer guard the cron routes use.
+  const cronAuth = verifyCronAuth(request)
+  if (!cronAuth.authorized) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
   try {
     const { searchParams } = new URL(request.url)
     const leadId = searchParams.get('leadId')

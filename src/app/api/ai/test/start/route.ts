@@ -29,6 +29,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // SECURITY (ownership): callers previously controlled studentId freely —
+    // any logged-in user could act on any student's session. Bind to the
+    // authenticated user.
+    if (studentId !== authSession.user.id) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
+
     // Update test session to started
     const testSession = await prisma.test_sessions.update({
       where: { id: testId },
