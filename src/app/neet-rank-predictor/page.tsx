@@ -16,69 +16,11 @@ import {
   BarChart3,
 } from 'lucide-react'
 
-const marksToRankData = [
-  { marks: 720, rank: 1 },
-  { marks: 715, rank: 10 },
-  { marks: 710, rank: 50 },
-  { marks: 705, rank: 100 },
-  { marks: 700, rank: 200 },
-  { marks: 690, rank: 500 },
-  { marks: 680, rank: 1000 },
-  { marks: 670, rank: 2000 },
-  { marks: 660, rank: 4000 },
-  { marks: 650, rank: 6000 },
-  { marks: 640, rank: 10000 },
-  { marks: 630, rank: 15000 },
-  { marks: 620, rank: 20000 },
-  { marks: 610, rank: 28000 },
-  { marks: 600, rank: 35000 },
-  { marks: 590, rank: 45000 },
-  { marks: 580, rank: 55000 },
-  { marks: 570, rank: 68000 },
-  { marks: 560, rank: 82000 },
-  { marks: 550, rank: 100000 },
-  { marks: 540, rank: 120000 },
-  { marks: 530, rank: 145000 },
-  { marks: 520, rank: 170000 },
-  { marks: 510, rank: 200000 },
-  { marks: 500, rank: 235000 },
-  { marks: 490, rank: 275000 },
-  { marks: 480, rank: 320000 },
-  { marks: 470, rank: 370000 },
-  { marks: 460, rank: 425000 },
-  { marks: 450, rank: 485000 },
-  { marks: 440, rank: 550000 },
-  { marks: 430, rank: 620000 },
-  { marks: 420, rank: 695000 },
-  { marks: 410, rank: 775000 },
-  { marks: 400, rank: 860000 },
-  { marks: 350, rank: 1200000 },
-  { marks: 300, rank: 1500000 },
-  { marks: 250, rank: 1750000 },
-  { marks: 200, rank: 1900000 },
-  { marks: 150, rank: 2000000 },
-]
-
-function predictRank(marks: number): { rank: number; percentile: number } {
-  if (marks >= 720) return { rank: 1, percentile: 100 }
-  if (marks < 150) return { rank: 2100000, percentile: 0 }
-
-  for (let i = 0; i < marksToRankData.length - 1; i++) {
-    if (marks <= marksToRankData[i].marks && marks > marksToRankData[i + 1].marks) {
-      const upperMarks = marksToRankData[i].marks
-      const lowerMarks = marksToRankData[i + 1].marks
-      const upperRank = marksToRankData[i].rank
-      const lowerRank = marksToRankData[i + 1].rank
-
-      const ratio = (upperMarks - marks) / (upperMarks - lowerMarks)
-      const predictedRank = Math.round(upperRank + ratio * (lowerRank - upperRank))
-      const percentile = Math.round((1 - predictedRank / 2400000) * 10000) / 100
-
-      return { rank: predictedRank, percentile: Math.min(100, Math.max(0, percentile)) }
-    }
-  }
-
-  return { rank: 1500000, percentile: 37.5 }
+interface RankResult {
+  air: number
+  airLow: number
+  airHigh: number
+  percentile: number
 }
 
 function getCollegeChances(rank: number): {
@@ -149,30 +91,44 @@ function getCollegeChances(rank: number): {
 
 export default function NEETRankPredictorPage() {
   const [marks, setMarks] = useState<string>('')
-  const [result, setResult] = useState<{
-    rank: number
-    percentile: number
-    chances: ReturnType<typeof getCollegeChances>
-  } | null>(null)
+  const [result, setResult] = useState<
+    (RankResult & { chances: ReturnType<typeof getCollegeChances> }) | null
+  >(null)
   const [showResult, setShowResult] = useState(false)
+  const [predicting, setPredicting] = useState(false)
+  const [predictError, setPredictError] = useState<string | null>(null)
 
-  const handlePredict = () => {
+  const handlePredict = async () => {
     const marksNum = parseInt(marks)
     if (isNaN(marksNum) || marksNum < 0 || marksNum > 720) {
-      alert('Please enter valid marks between 0 and 720')
+      setPredictError('Please enter valid marks between 0 and 720')
       return
     }
 
-    const prediction = predictRank(marksNum)
-    const chances = getCollegeChances(prediction.rank)
-    setResult({ ...prediction, chances })
-    setShowResult(true)
+    setPredicting(true)
+    setPredictError(null)
+    try {
+      const res = await fetch(`/api/tools/rank-predictor?marks=${marksNum}`)
+      const json = await res.json()
+      if (!res.ok || !json.success) {
+        throw new Error(json.error || 'Prediction failed. Please try again.')
+      }
+      const prediction: RankResult = json.data
+      const chances = getCollegeChances(prediction.air)
+      setResult({ ...prediction, chances })
+      setShowResult(true)
+    } catch (err) {
+      setPredictError(err instanceof Error ? err.message : 'Prediction failed. Please try again.')
+    } finally {
+      setPredicting(false)
+    }
   }
 
   const handleReset = () => {
     setMarks('')
     setResult(null)
     setShowResult(false)
+    setPredictError(null)
   }
 
   return (
@@ -303,16 +259,24 @@ export default function NEETRankPredictorPage() {
 
                     <button
                       onClick={handlePredict}
-                      className="w-full rounded-lg bg-orange-600 px-6 py-4 text-lg font-semibold text-white transition-all hover:bg-orange-700"
+                      disabled={predicting}
+                      className="w-full rounded-lg bg-orange-600 px-6 py-4 text-lg font-semibold text-white transition-all hover:bg-orange-700 disabled:opacity-60"
                     >
-                      Predict My Rank
+                      {predicting ? 'Predicting…' : 'Predict My Rank'}
                     </button>
+
+                    {predictError && (
+                      <p className="rounded-lg bg-red-50 p-3 text-sm text-red-700">
+                        {predictError}
+                      </p>
+                    )}
 
                     <div className="flex items-start gap-2 rounded-lg bg-blue-50 p-4">
                       <Info className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-600" />
                       <p className="text-sm text-blue-800">
-                        This prediction is based on NEET 2024 data and historical trends. Actual
-                        ranks may vary based on paper difficulty and number of candidates.
+                        Estimates are based on published NEET-UG 2024/2025 marks-vs-rank data and
+                        historical trends. Actual ranks vary with paper difficulty, your category
+                        and the year&apos;s candidate pool.
                       </p>
                     </div>
                   </div>
@@ -320,9 +284,15 @@ export default function NEETRankPredictorPage() {
                   result && (
                     <div className="space-y-6">
                       <div className="rounded-xl bg-orange-600 p-6 text-center text-white">
-                        <p className="mb-2 text-orange-100">Your Predicted NEET Rank</p>
-                        <p className="text-5xl font-bold">{result.rank.toLocaleString('en-IN')}</p>
-                        <p className="mt-2 text-orange-100">Percentile: {result.percentile}%</p>
+                        <p className="mb-2 text-orange-100">Your Predicted AIR Range</p>
+                        <p className="text-4xl font-bold sm:text-5xl">
+                          {result.airLow.toLocaleString('en-IN')} –{' '}
+                          {result.airHigh.toLocaleString('en-IN')}
+                        </p>
+                        <p className="mt-2 text-orange-100">
+                          Most likely around {result.air.toLocaleString('en-IN')} · Percentile:{' '}
+                          {result.percentile}%
+                        </p>
                       </div>
 
                       <div className="grid gap-4 md:grid-cols-2">
@@ -335,6 +305,12 @@ export default function NEETRankPredictorPage() {
                           <p className="text-2xl font-bold text-orange-600">{result.percentile}%</p>
                         </div>
                       </div>
+
+                      <p className="rounded-lg bg-blue-50 p-3 text-xs text-blue-800">
+                        Estimates based on previous-year (NEET-UG 2024/2025) data for all categories
+                        combined. Category-wise ranks and cutoffs differ — use this as a directional
+                        guide, not a guarantee.
+                      </p>
 
                       <div>
                         <h3 className="mb-4 text-lg font-semibold text-gray-900">
@@ -385,6 +361,22 @@ export default function NEETRankPredictorPage() {
                           <ArrowRight className="h-5 w-5" />
                         </Link>
                       </div>
+
+                      <Link
+                        href="/cbt"
+                        className="flex items-center justify-between gap-3 rounded-lg border border-blue-200 bg-blue-50 p-4 transition-colors hover:bg-blue-100"
+                      >
+                        <div>
+                          <p className="font-semibold text-blue-900">
+                            Not sure about your marks yet?
+                          </p>
+                          <p className="text-sm text-blue-700">
+                            Take a free full-length NEET-pattern mock on our CBT platform and
+                            predict from a real score.
+                          </p>
+                        </div>
+                        <ArrowRight className="h-5 w-5 flex-shrink-0 text-blue-600" />
+                      </Link>
                     </div>
                   )
                 )}
@@ -563,17 +555,17 @@ export default function NEETRankPredictorPage() {
                   </ul>
                   <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                     <Link
-                      href="/demo"
+                      href="/book-free-demo"
                       className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 sm:px-6 py-3 font-semibold text-orange-600 transition-colors hover:bg-orange-50 w-full sm:w-auto min-h-[48px] text-sm sm:text-base"
                     >
-                      <span className="truncate">Book Demo</span>
+                      <span className="truncate">Book Free Demo</span>
                       <ArrowRight className="h-5 w-5 flex-shrink-0" />
                     </Link>
                     <Link
-                      href="/courses"
+                      href="/cbt"
                       className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white px-4 sm:px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10 w-full sm:w-auto min-h-[48px] text-sm sm:text-base"
                     >
-                      <span className="truncate">View Courses</span>
+                      <span className="truncate">Take a Free Mock Test</span>
                     </Link>
                   </div>
                 </div>
