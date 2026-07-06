@@ -25,6 +25,8 @@ import {
   FileText,
   RefreshCw,
   ShieldX,
+  Flame,
+  Video,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -38,6 +40,7 @@ interface Child {
   overallProgress: number
   avgTestScore: number
   attendanceRate: number
+  streak: number
   lastActive: string
   pendingHomework: number
   completedHomework: number
@@ -92,6 +95,15 @@ interface UpcomingTest {
   duration?: number
 }
 
+interface UpcomingClass {
+  id: string
+  title: string
+  courseName: string | null
+  date: string
+  startTime: string
+  duration: number
+}
+
 interface PendingAssignment {
   id: string
   title: string
@@ -117,6 +129,7 @@ interface DashboardData {
   parent: { id: string; name: string; email: string; phone?: string }
   children: Child[]
   recentPayments: Payment[]
+  upcomingClasses: UpcomingClass[]
   upcomingTests: UpcomingTest[]
   pendingAssignments: PendingAssignment[]
   alerts: Alert[]
@@ -284,8 +297,16 @@ export default function ParentDashboard() {
 
   if (!dashboardData) return null
 
-  const { parent, children, recentPayments, upcomingTests, pendingAssignments, alerts, summary } =
-    dashboardData
+  const {
+    parent,
+    children,
+    recentPayments,
+    upcomingClasses = [],
+    upcomingTests,
+    pendingAssignments,
+    alerts,
+    summary,
+  } = dashboardData
   const currentChild = children.find((c) => c.id === selectedChild) || children[0]
   const highPriorityAlerts = alerts.filter((a) => a.priority === 'high')
 
@@ -429,6 +450,12 @@ export default function ParentDashboard() {
                     <Clock className="w-3 h-3" />
                     Last active: {currentChild.lastActive}
                   </p>
+                  {currentChild.streak > 0 && (
+                    <p className="text-sm text-orange-600 flex items-center gap-1 mt-1 font-medium">
+                      <Flame className="w-3.5 h-3.5" />
+                      {currentChild.streak}-day practice streak
+                    </p>
+                  )}
                 </div>
               </div>
               <Link
@@ -525,6 +552,11 @@ export default function ParentDashboard() {
                             : 'Pending'}
                       </span>
                     </div>
+                    {hw.status === 'GRADED' && hw.feedback && (
+                      <p className="text-xs text-gray-600 italic mt-2 border-l-2 border-blue-300 pl-2 line-clamp-2">
+                        &ldquo;{hw.feedback}&rdquo;
+                      </p>
+                    )}
                   </div>
                 ))
               ) : (
@@ -540,6 +572,113 @@ export default function ParentDashboard() {
           </div>
         </div>
       )}
+
+      {/* Recent Test Scores + Upcoming Classes */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        {/* Recent Test Scores */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
+              <Trophy className="w-5 h-5 text-purple-700" />
+              Recent Test Scores
+            </h3>
+            {currentChild && (
+              <Link
+                href={`/parent/children/${currentChild.id}/tests`}
+                className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+              >
+                View All
+              </Link>
+            )}
+          </div>
+          <div className="space-y-3">
+            {currentChild && currentChild.recentTests.length > 0 ? (
+              currentChild.recentTests.slice(0, 5).map((test) => (
+                <div
+                  key={test.id}
+                  className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                >
+                  <div className="min-w-0 flex-1">
+                    <p className="font-medium text-gray-900 text-sm truncate">{test.title}</p>
+                    <p className="text-xs text-gray-500">
+                      {new Date(test.date).toLocaleDateString('en-IN', {
+                        day: 'numeric',
+                        month: 'short',
+                      })}
+                    </p>
+                  </div>
+                  <div className="text-right ml-3">
+                    <p
+                      className={cn(
+                        'font-semibold',
+                        test.percentage >= 70
+                          ? 'text-green-600'
+                          : test.percentage >= 40
+                            ? 'text-yellow-600'
+                            : 'text-red-500'
+                      )}
+                    >
+                      {test.percentage}%
+                    </p>
+                    <p className="text-xs text-gray-400">
+                      {test.score}/{test.totalMarks}
+                    </p>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p className="text-gray-500 text-sm">No tests completed yet</p>
+            )}
+          </div>
+        </div>
+
+        {/* Upcoming Classes */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
+              <Video className="w-5 h-5 text-green-600" />
+              Upcoming Classes
+            </h3>
+            <Link
+              href="/parent/schedule"
+              className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+            >
+              Full Schedule
+            </Link>
+          </div>
+          <div className="space-y-3">
+            {upcomingClasses.length > 0 ? (
+              upcomingClasses.map((cls) => (
+                <div
+                  key={cls.id}
+                  className="flex items-center justify-between p-3 bg-green-50 rounded-lg"
+                >
+                  <div className="min-w-0 flex-1">
+                    <p className="font-medium text-gray-900 text-sm truncate">{cls.title}</p>
+                    {cls.courseName && <p className="text-xs text-gray-500">{cls.courseName}</p>}
+                  </div>
+                  <div className="text-right ml-3">
+                    <p className="text-sm font-medium text-gray-900">
+                      {new Date(cls.startTime).toLocaleDateString('en-IN', {
+                        day: 'numeric',
+                        month: 'short',
+                      })}
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      {new Date(cls.startTime).toLocaleTimeString('en-IN', {
+                        hour: 'numeric',
+                        minute: '2-digit',
+                      })}
+                    </p>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p className="text-gray-500 text-sm">No classes scheduled</p>
+            )}
+          </div>
+        </div>
+      </div>
 
       {/* Bottom Section: Tests, Payments, Quick Actions */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
