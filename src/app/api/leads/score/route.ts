@@ -15,12 +15,12 @@ import { prisma } from '@/lib/prisma'
  */
 export async function GET(request: NextRequest) {
   try {
-  // SECURITY: lead scores include student names/phones/emails — was
-  // completely open. Counselor/admin only.
-  const session = await auth()
-  if (!session?.user || !['COUNSELOR', 'ADMIN'].includes(session.user.role as string)) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
+    // SECURITY: lead scores include student names/phones/emails — was
+    // completely open. Counselor/admin only.
+    const session = await auth()
+    if (!session?.user || !['COUNSELOR', 'ADMIN'].includes(session.user.role as string)) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
 
     const { searchParams } = new URL(request.url)
     const leadId = searchParams.get('leadId')
@@ -103,12 +103,12 @@ export async function GET(request: NextRequest) {
  */
 export async function POST(request: NextRequest) {
   try {
-  // SECURITY: lead scores include student names/phones/emails — was
-  // completely open. Counselor/admin only.
-  const session = await auth()
-  if (!session?.user || !['COUNSELOR', 'ADMIN'].includes(session.user.role as string)) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
+    // SECURITY: lead scores include student names/phones/emails — was
+    // completely open. Counselor/admin only.
+    const session = await auth()
+    if (!session?.user || !['COUNSELOR', 'ADMIN'].includes(session.user.role as string)) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
 
     const body = await request.json()
     const { action, leadId } = body
