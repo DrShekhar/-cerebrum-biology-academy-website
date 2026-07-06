@@ -20,6 +20,12 @@ interface CourseRow {
   name: string
 }
 
+interface GroupRow {
+  id: string
+  name: string
+  memberCount: number
+}
+
 interface AssignResult {
   targeted: number
   granted: number
@@ -47,6 +53,8 @@ export function AssignMaterialModal({
   const [courses, setCourses] = useState<CourseRow[]>([])
   const [courseId, setCourseId] = useState('')
   const [groupId, setGroupId] = useState('')
+  const [groups, setGroups] = useState<GroupRow[] | null>(null)
+  const [groupsUnavailable, setGroupsUnavailable] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [result, setResult] = useState<AssignResult | null>(null)
 
@@ -84,6 +92,23 @@ export function AssignMaterialModal({
       })
       .catch(() => {})
   }, [mode, courses.length])
+
+  // Groups for the group mode. Falls back to a manual ID input when the
+  // groups tables aren't provisioned yet (endpoint returns 400) or the
+  // fetch fails.
+  useEffect(() => {
+    if (mode !== 'group' || groups !== null || groupsUnavailable) return
+    fetch('/api/admin/groups', { credentials: 'include' })
+      .then((r) => r.json().then((d) => ({ ok: r.ok, d })))
+      .then(({ ok, d }) => {
+        if (ok && d?.success && Array.isArray(d.groups)) {
+          setGroups(d.groups)
+        } else {
+          setGroupsUnavailable(true)
+        }
+      })
+      .catch(() => setGroupsUnavailable(true))
+  }, [mode, groups, groupsUnavailable])
 
   const toggleStudent = (student: StudentRow) => {
     setSelected((prev) => {
@@ -276,14 +301,47 @@ export function AssignMaterialModal({
 
           {mode === 'group' && (
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">Group ID</label>
-              <input
-                type="text"
-                value={groupId}
-                onChange={(e) => setGroupId(e.target.value)}
-                placeholder="Paste a student group ID"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
-              />
+              {groupsUnavailable ? (
+                <>
+                  <label className="block text-sm font-medium text-gray-700 mb-1.5">Group ID</label>
+                  <input
+                    type="text"
+                    value={groupId}
+                    onChange={(e) => setGroupId(e.target.value)}
+                    placeholder="Paste a student group ID"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                  />
+                  <p className="text-xs text-gray-400 mt-1.5">
+                    Could not load the group list (groups may not be provisioned yet) — paste a
+                    group ID manually.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                    Grant to all members of
+                  </label>
+                  <select
+                    value={groupId}
+                    onChange={(e) => setGroupId(e.target.value)}
+                    disabled={groups === null}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm disabled:opacity-60"
+                  >
+                    <option value="">
+                      {groups === null
+                        ? 'Loading groups...'
+                        : groups.length === 0
+                          ? 'No groups yet — create one at /admin/groups'
+                          : 'Select a group...'}
+                    </option>
+                    {(groups ?? []).map((g) => (
+                      <option key={g.id} value={g.id}>
+                        {g.name} ({g.memberCount} member{g.memberCount === 1 ? '' : 's'})
+                      </option>
+                    ))}
+                  </select>
+                </>
+              )}
               <p className="text-xs text-gray-400 mt-1.5">
                 All members of the group will receive access to this material.
               </p>
