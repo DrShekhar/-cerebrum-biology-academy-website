@@ -16,8 +16,11 @@ export async function PATCH(
 ) {
   try {
     const session = await auth()
-    if (!session || (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN')) {
-      return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
+    if (!session) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+    if (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN') {
+      return NextResponse.json({ error: 'Forbidden. Teacher access required.' }, { status: 403 })
     }
 
     const { id, submissionId } = await params
