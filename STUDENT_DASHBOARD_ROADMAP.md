@@ -71,6 +71,7 @@ After parity: redirect `/student/dashboard` → `/dashboard`.
   6. **Activate /api/referral** (S/M) — WA share + coupon; endpoint already built, near-zero effort in a referral-dominated market.
   - Skipped with reasons in audit doc: webcam proctoring, plagiarism checks, B2B white-label (later; §F groups is the seed), Hindi dubbing, a11y-as-project (enforce in new UI instead; CF transcripts = biggest a11y win).
 - **P3 Staff+recordings**: counselor academics endpoint+tab; admin drill-down; Zoom recording webhook → CF pipeline; optional Zoom auto-create.
+  - **Concurrent Zoom classes (user addition Jul 6)**: today `zoomService.ts:70` hosts ALL meetings under one Zoom user (`ZOOM_USER_ID` env) → only 1 concurrent meeting account-wide; a second teacher's simultaneous class can't start. Fix (M): per-teacher `zoomUserId` (users.profile JSON, admin-set) → `createMeeting()` takes hostUserId param, falls back to env default; requires one PAID Zoom host license per simultaneously-teaching teacher under the same Zoom account (licensing, owner-side) — Server-to-Server OAuth app already covers account users. Recording webhook (same phase) must then map `host_id` → teacher → course when filing recordings.
 - **P4 Polish**: redirects, mobile pass, empty states, demo-content cleanup script.
 
 ## D. DB CHANGES (additive only; owner-run script pattern)
