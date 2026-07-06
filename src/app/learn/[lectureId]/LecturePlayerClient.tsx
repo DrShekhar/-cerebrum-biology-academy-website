@@ -13,6 +13,10 @@
  * (Also fixes a response-shape mismatch: the API nests playback fields under
  * `video`, but this client previously read them from the top level — so the
  * player could never load.)
+ *
+ * YouTube fallback: when the API returns video.youtubeId (lecture has
+ * metadata.youtubeId), a privacy-enhanced youtube-nocookie iframe replaces
+ * the Cloudflare player. Progress/checkpoints are skipped for those.
  */
 
 import { useEffect, useRef, useState } from 'react'
@@ -31,7 +35,9 @@ interface Checkpoint {
 interface PlaybackResponse {
   success: boolean
   video?: {
-    url: string
+    url?: string
+    /** YouTube-embed lecture (demo/external): render an iframe, not the CF player. */
+    youtubeId?: string
     thumbnail?: string
     duration?: number
     chapters?: Array<{ title: string; startTime: number }>
@@ -133,7 +139,7 @@ export default function LecturePlayerClient({ lectureId }: { lectureId: string }
     )
   }
 
-  if (error || !data?.video?.url) {
+  if (error || !data?.video || (!data.video.url && !data.video.youtubeId)) {
     return (
       <div className="mx-auto max-w-md px-4 py-20 text-center">
         <AlertTriangle className="mx-auto h-10 w-10 text-amber-500" />
@@ -161,42 +167,60 @@ export default function LecturePlayerClient({ lectureId }: { lectureId: string }
       >
         <ArrowLeft className="h-4 w-4" /> My courses
       </Link>
-      <div className="relative">
-        <SecureVideoPlayer
-          videoId={lectureId}
-          videoUrl={data.video.url}
-          title="Lecture"
-          thumbnail={data.video.thumbnail}
-          duration={data.video.duration || 0}
-          chapters={data.video.chapters as never}
-          initialProgress={data.progress as never}
-          userId={user?.id || ''}
-          userName={user?.name || 'Student'}
-          onProgress={(position, watched) => saveProgress(position, watched, false)}
-          onComplete={() =>
-            saveProgress(data.video?.duration || 0, data.video?.duration || 0, true)
-          }
-          checkpoints={checkpoints.map((c) => ({
-            id: c.id,
-            timeSeconds: c.timeSeconds,
-            isRequired: c.isRequired,
-          }))}
-          onCheckpoint={(id) => {
-            const cp = checkpoints.find((c) => c.id === id)
-            if (cp) setActiveCheckpoint(cp)
-          }}
-          resumeKey={resumeKey}
-        />
-        {activeCheckpoint && (
-          <CheckpointOverlay
-            checkpoint={activeCheckpoint}
-            onDone={() => {
-              setActiveCheckpoint(null)
-              setResumeKey((k) => k + 1)
-            }}
+      {data.video.youtubeId ? (
+        // YouTube-embed lecture (demo/external fallback). Entitlements were
+        // already enforced server-side by /api/lms/videos; only the player
+        // surface differs. Progress tracking and quiz checkpoints are
+        // intentionally skipped — the YouTube iframe isn't instrumented.
+        <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black">
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${encodeURIComponent(
+              data.video.youtubeId
+            )}?rel=0&modestbranding=1`}
+            title="Lecture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="absolute inset-0 h-full w-full border-0"
           />
-        )}
-      </div>
+        </div>
+      ) : (
+        <div className="relative">
+          <SecureVideoPlayer
+            videoId={lectureId}
+            videoUrl={data.video.url || ''}
+            title="Lecture"
+            thumbnail={data.video.thumbnail}
+            duration={data.video.duration || 0}
+            chapters={data.video.chapters as never}
+            initialProgress={data.progress as never}
+            userId={user?.id || ''}
+            userName={user?.name || 'Student'}
+            onProgress={(position, watched) => saveProgress(position, watched, false)}
+            onComplete={() =>
+              saveProgress(data.video?.duration || 0, data.video?.duration || 0, true)
+            }
+            checkpoints={checkpoints.map((c) => ({
+              id: c.id,
+              timeSeconds: c.timeSeconds,
+              isRequired: c.isRequired,
+            }))}
+            onCheckpoint={(id) => {
+              const cp = checkpoints.find((c) => c.id === id)
+              if (cp) setActiveCheckpoint(cp)
+            }}
+            resumeKey={resumeKey}
+          />
+          {activeCheckpoint && (
+            <CheckpointOverlay
+              checkpoint={activeCheckpoint}
+              onDone={() => {
+                setActiveCheckpoint(null)
+                setResumeKey((k) => k + 1)
+              }}
+            />
+          )}
+        </div>
+      )}
     </div>
   )
 }
