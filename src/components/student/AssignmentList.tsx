@@ -16,6 +16,8 @@ interface AssignmentListProps {
         status: SubmissionStatus
         submittedAt?: Date | string | null
         grade?: number | null
+        feedback?: string | null
+        gradedAt?: Date | string | null
         isLate: boolean
       } | null
       isOverdue?: boolean
