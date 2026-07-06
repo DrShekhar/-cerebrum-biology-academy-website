@@ -237,6 +237,13 @@ export default function TeacherDashboardPage() {
                   href="/teacher/courses"
                   color="from-teal-500 to-teal-600"
                 />
+                <QuickActionCard
+                  icon={CheckCircle}
+                  title="Grade Worksheets"
+                  description="Review & send feedback"
+                  href="/teacher/worksheets"
+                  color="from-green-500 to-green-600"
+                />
               </div>
             </section>
 
