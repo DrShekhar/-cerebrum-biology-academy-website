@@ -1,30 +1,33 @@
 'use client'
 
 /**
- * CBTExam — NTA-style Computer-Based Test exam-day simulator.
+ * CBTExam — authentic replica of the NTA (TCS iON) NEET Computer-Based Test
+ * interface.
  *
- * Replicates the real JEE/NEET-CBT interface: instructions gate, section tabs,
- * colour-coded question palette (not-visited / not-answered / answered / marked /
- * answered+marked), Save & Next / Mark for Review / Clear Response controls,
- * whole-paper countdown with auto-submit, basic anti-cheat (fullscreen + tab-switch
- * counter + copy/right-click block), and a submit summary → confirm → result flow.
+ * Faithfully reproduces the real exam software: instructions gate with the
+ * official palette legend, blue header bars, section tabs, "Time Left" clock,
+ * right-hand question palette with the five NTA status shapes (square /
+ * red down-bevel / green up-bevel / purple circle / purple circle + green tick),
+ * the exact four-button action bar (SAVE & NEXT · CLEAR · SAVE & MARK FOR
+ * REVIEW · MARK FOR REVIEW & NEXT) plus << BACK / NEXT >>, SUBMIT under the
+ * palette, and the per-section submit summary table.
  *
- * Self-contained: takes a MockTest + Question[] and manages its own state. Answers
- * are persisted to localStorage per test so a refresh resumes the attempt. (Server-
- * side persistence is a follow-up stage.)
+ * Authentic NTA behaviour: an option selection is NOT saved until a save
+ * button is pressed — navigating away via the palette or BACK/NEXT discards
+ * the unsaved selection, exactly like the real exam.
+ *
+ * Deliberate deviations from the real (desktop-only) software:
+ *  - the palette becomes a slide-in drawer on small screens
+ *  - anti-cheat hooks (fullscreen, tab-switch logging) are kept
+ *  - a scorecard is shown after submit (the real exam just says goodbye)
+ *
+ * Self-contained: takes a MockTest + Question[] and manages its own state.
+ * Answers persist to localStorage per test (or via the `server` callbacks) so
+ * a refresh resumes the attempt.
  */
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
-import {
-  Clock,
-  Flag,
-  ChevronLeft,
-  ChevronRight,
-  AlertTriangle,
-  Maximize,
-  X,
-  CheckCircle2,
-} from 'lucide-react'
+import { AlertTriangle, CheckCircle2, User, X } from 'lucide-react'
 import type { MockTest, Question } from '@/types/mockTest'
 
 type Phase = 'instructions' | 'exam' | 'result'
@@ -98,8 +101,29 @@ interface QuestionState {
   visited: boolean
 }
 
+type PaletteStatus = 'notVisited' | 'notAnswered' | 'answered' | 'marked' | 'answeredMarked'
+
 const CORRECT_MARKS = 4
 const NEGATIVE_MARKS = 1
+
+/* ── NTA visual constants — sampled from the live official NTA mock
+      (nta.ac.in/Quiz): icon PNG fills, Bootstrap-3 button colors, timer pill. */
+const NTA_FONT = { fontFamily: 'Roboto, Helvetica, Arial, sans-serif' } as const
+const TITLE_BLUE = '#286090' // top title bar (official NTA mock header blue)
+const NTA_BLUE = '#4E85C5' // active section tab / palette header
+const NTA_PANEL_BLUE = '#E5F6FD' // palette panel background
+const GREEN = '#2DBA00' // answered icon fill (official Logo3.png)
+const RED = '#E24401' // not-answered icon fill (official Logo2.png)
+const PURPLE = '#50209C' // marked-for-review sphere core (official Logo4.png)
+const TIMER_BLUE = '#0098DA' // "Remaining Time" pill
+const BTN_GREEN = '#5CB85C' // SAVE & NEXT / SUBMIT (border #4CAE4C)
+const BTN_ORANGE = '#F0AD4E' // SAVE & MARK FOR REVIEW (border #EEA236)
+const BTN_BLUE = '#337AB7' // MARK FOR REVIEW & NEXT (border #2E6DA4)
+
+/** Official NTA "Answered" trapezoid — right edge shorter, left edge full. */
+const CLIP_ANSWERED = 'polygon(0% 0%, 100% 15%, 100% 85%, 0% 100%)'
+/** Official NTA "Not Answered" trapezoid — exact horizontal mirror. */
+const CLIP_NOT_ANSWERED = 'polygon(0% 15%, 100% 0%, 100% 100%, 0% 85%)'
 
 function sectionLabel(subject: string): string {
   const s = (subject || 'biology').toLowerCase()
@@ -149,17 +173,24 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
   const [phase, setPhase] = useState<Phase>('instructions')
   const [agreed, setAgreed] = useState(false)
   const [states, setStates] = useState<Record<string, QuestionState>>({})
+  /** Selected-but-not-yet-saved option for the current question (NTA rule). */
+  const [pending, setPending] = useState<string | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [activeSection, setActiveSection] = useState(sections[0] || 'Biology')
   const [timeRemaining, setTimeRemaining] = useState(test.duration * 60)
   const [tabSwitches, setTabSwitches] = useState(0)
   const [showWarning, setShowWarning] = useState<string | null>(null)
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false)
-  const [showPalette, setShowPalette] = useState(true)
+  const [paletteCollapsed, setPaletteCollapsed] = useState(false)
+  const [mobilePaletteOpen, setMobilePaletteOpen] = useState(false)
+  const [showInstructionsModal, setShowInstructionsModal] = useState(false)
+  const [showPaperModal, setShowPaperModal] = useState(false)
   const [resumeAvailable, setResumeAvailable] = useState(false)
   const [fullscreenExits, setFullscreenExits] = useState(0)
   const examRef = useRef<HTMLDivElement>(null)
   const proctorRef = useRef<CBTProctorEvent[]>([])
+  const statesRef = useRef(states)
+  statesRef.current = states
 
   const logProctorEvent = useCallback((type: CBTProctorEvent['type']) => {
     if (proctorRef.current.length < 500) {
@@ -289,7 +320,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
     examRef.current?.requestFullscreen?.().catch(() => {})
   }
 
-  // ── State mutators ────────────────────────────────────────────────────────
+  // ── State mutators (NTA rules) ────────────────────────────────────────────
   const ensureVisited = useCallback((qid: string) => {
     setStates((prev) => {
       const cur = prev[qid] || { answer: null, marked: false, visited: false }
@@ -302,83 +333,109 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
     if (phase === 'exam' && currentQ) ensureVisited(currentQ.id)
   }, [phase, currentQ, ensureVisited])
 
-  const selectOption = (optionId: string) => {
-    if (!currentQ) return
-    setStates((prev) => {
-      const cur = prev[currentQ.id] || { answer: null, marked: false, visited: true }
-      return { ...prev, [currentQ.id]: { ...cur, answer: optionId, visited: true } }
-    })
+  /**
+   * Navigate to a question WITHOUT saving — exactly like the real exam,
+   * any unsaved selection on the current question is discarded.
+   */
+  const goTo = useCallback(
+    (index: number) => {
+      if (index < 0 || index >= orderedQuestions.length) return
+      const target = orderedQuestions[index]
+      setCurrentIndex(index)
+      setActiveSection(sectionLabel(target.subject))
+      // Show the previously SAVED answer of the target question (if any).
+      setPending(statesRef.current[target.id]?.answer ?? null)
+      setMobilePaletteOpen(false)
+      persist({ currentIndex: index })
+    },
+    [orderedQuestions, persist]
+  )
+
+  const commit = useCallback(
+    (qid: string, patch: Partial<QuestionState>) => {
+      setStates((prev) => {
+        const cur = prev[qid] || { answer: null, marked: false, visited: true }
+        return { ...prev, [qid]: { ...cur, visited: true, ...patch } }
+      })
+    },
+    [setStates]
+  )
+
+  const advance = () => {
+    if (currentIndex < orderedQuestions.length - 1) goTo(currentIndex + 1)
   }
 
+  /** SAVE & NEXT — saves the selection (or records Not Answered) and moves on. */
+  const saveAndNext = () => {
+    if (!currentQ) return
+    commit(currentQ.id, { answer: pending, marked: false })
+    advance()
+  }
+
+  /** CLEAR — deselects on screen AND clears any saved answer (status → red). */
   const clearResponse = () => {
     if (!currentQ) return
-    setStates((prev) => {
-      const cur = prev[currentQ.id] || { answer: null, marked: false, visited: true }
-      return { ...prev, [currentQ.id]: { ...cur, answer: null } }
-    })
+    setPending(null)
+    commit(currentQ.id, { answer: null })
   }
 
-  const goTo = (index: number) => {
-    if (index < 0 || index >= orderedQuestions.length) return
-    setCurrentIndex(index)
-    setActiveSection(sectionLabel(orderedQuestions[index].subject))
-    persist({ currentIndex: index })
+  /** SAVE & MARK FOR REVIEW — saves + flags; answered+marked IS evaluated. */
+  const saveAndMarkForReview = () => {
+    if (!currentQ) return
+    commit(currentQ.id, { answer: pending, marked: true })
+    advance()
   }
 
-  const saveAndNext = () => {
-    goTo(Math.min(currentIndex + 1, orderedQuestions.length - 1))
-  }
-
-  const markAndNext = () => {
-    if (currentQ) {
-      setStates((prev) => {
-        const cur = prev[currentQ.id] || { answer: null, marked: false, visited: true }
-        return { ...prev, [currentQ.id]: { ...cur, marked: true, visited: true } }
-      })
-    }
-    goTo(Math.min(currentIndex + 1, orderedQuestions.length - 1))
+  /** MARK FOR REVIEW & NEXT — flags the question; a selected answer is kept
+   *  (NTA rule: an answer on a marked question is considered for evaluation). */
+  const markForReviewAndNext = () => {
+    if (!currentQ) return
+    commit(currentQ.id, { answer: pending, marked: true })
+    advance()
   }
 
   // ── Palette status ────────────────────────────────────────────────────────
-  const statusOf = (
-    qid: string
-  ): 'notVisited' | 'notAnswered' | 'answered' | 'marked' | 'answeredMarked' => {
-    const st = states[qid]
-    if (!st || !st.visited) return 'notVisited'
-    if (st.answer && st.marked) return 'answeredMarked'
-    if (st.marked) return 'marked'
-    if (st.answer) return 'answered'
-    return 'notAnswered'
-  }
+  const statusOf = useCallback(
+    (qid: string): PaletteStatus => {
+      const st = states[qid]
+      if (!st || !st.visited) return 'notVisited'
+      if (st.answer && st.marked) return 'answeredMarked'
+      if (st.marked) return 'marked'
+      if (st.answer) return 'answered'
+      return 'notAnswered'
+    },
+    [states]
+  )
 
-  const paletteColor: Record<string, string> = {
-    notVisited: 'bg-gray-200 text-gray-700 border-gray-300',
-    notAnswered: 'bg-red-500 text-white border-red-600',
-    answered: 'bg-green-600 text-white border-green-700',
-    marked: 'bg-purple-600 text-white border-purple-700',
-    answeredMarked: 'bg-purple-600 text-white border-purple-700 ring-2 ring-green-400',
-  }
-
-  // ── Counts ────────────────────────────────────────────────────────────────
+  // ── Counts (5 NTA states, total + per-section) ────────────────────────────
   const counts = useMemo(() => {
-    let answered = 0,
-      marked = 0,
-      notAnswered = 0,
-      notVisited = 0
+    const zero = () => ({
+      total: 0,
+      answered: 0,
+      notAnswered: 0,
+      marked: 0,
+      answeredMarked: 0,
+      notVisited: 0,
+    })
+    const total = zero()
+    const perSection: Record<string, ReturnType<typeof zero>> = {}
     for (const q of orderedQuestions) {
+      const sec = sectionLabel(q.subject)
+      perSection[sec] = perSection[sec] || zero()
       const s = statusOf(q.id)
-      if (s === 'answered') answered++
-      else if (s === 'answeredMarked') {
-        answered++
-        marked++
-      } else if (s === 'marked') marked++
-      else if (s === 'notAnswered') notAnswered++
-      else notVisited++
+      for (const bucket of [total, perSection[sec]]) {
+        bucket.total++
+        if (s === 'answered') bucket.answered++
+        else if (s === 'answeredMarked') bucket.answeredMarked++
+        else if (s === 'marked') bucket.marked++
+        else if (s === 'notAnswered') bucket.notAnswered++
+        else bucket.notVisited++
+      }
     }
-    return { answered, marked, notAnswered, notVisited }
-  }, [orderedQuestions, states])
+    return { total, perSection }
+  }, [orderedQuestions, statusOf])
 
-  // ── Result ────────────────────────────────────────────────────────────────
+  // ── Result (local fallback when no server) ───────────────────────────────
   const result = useMemo(() => {
     let correct = 0,
       incorrect = 0,
@@ -429,12 +486,13 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
   }
 
   const startExam = (resume: boolean) => {
+    let hydrated: Record<string, QuestionState> = {}
+    let startIndex = 0
     if (server) {
       if (resume && server.initialState) {
         const { answers, marked, visited } = server.initialState
         const markedSet = new Set(marked)
         const visitedSet = new Set(visited)
-        const hydrated: Record<string, QuestionState> = {}
         for (const q of orderedQuestions) {
           const a = answers[q.id]
           if (a || markedSet.has(q.id) || visitedSet.has(q.id)) {
@@ -446,100 +504,264 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
           }
         }
         setStates(hydrated)
-        if (typeof server.initialIndex === 'number') setCurrentIndex(server.initialIndex)
+        if (typeof server.initialIndex === 'number') {
+          startIndex = server.initialIndex
+          setCurrentIndex(server.initialIndex)
+        }
       }
       if (typeof server.initialRemaining === 'number') setTimeRemaining(server.initialRemaining)
     } else if (resume) {
       try {
         const saved = JSON.parse(localStorage.getItem(storageKey) || '{}')
-        if (saved.states) setStates(saved.states)
-        if (typeof saved.currentIndex === 'number') setCurrentIndex(saved.currentIndex)
+        if (saved.states) {
+          hydrated = saved.states
+          setStates(saved.states)
+        }
+        if (typeof saved.currentIndex === 'number') {
+          startIndex = saved.currentIndex
+          setCurrentIndex(saved.currentIndex)
+        }
         if (typeof saved.timeRemaining === 'number') setTimeRemaining(saved.timeRemaining)
       } catch {
         /* ignore */
       }
     }
+    const startQ = orderedQuestions[startIndex]
+    if (startQ) {
+      setActiveSection(sectionLabel(startQ.subject))
+      setPending(hydrated[startQ.id]?.answer ?? null)
+    }
     setPhase('exam')
     setTimeout(enterFullscreen, 100)
   }
 
+  /* ── Shared building blocks ─────────────────────────────────────────────── */
+
+  const candidatePanel = (
+    <div className="flex items-center gap-2 border-b border-gray-300 bg-white p-2">
+      <div className="flex h-14 w-12 shrink-0 items-center justify-center border border-gray-300 bg-gray-100">
+        <User className="h-8 w-8 text-gray-400" />
+      </div>
+      <div className="min-w-0 text-[12px] leading-tight text-gray-800">
+        <p className="truncate font-bold">{candidateName || 'Candidate'}</p>
+        <p className="mt-0.5 truncate text-gray-500">{test.title}</p>
+      </div>
+    </div>
+  )
+
+  const legend = (
+    <div className="m-2 space-y-1 border border-dashed border-gray-400 p-2 text-[11px] text-gray-800">
+      <div className="grid grid-cols-2 gap-x-1 gap-y-1.5">
+        <LegendItem status="answered" count={counts.total.answered} label="Answered" />
+        <LegendItem status="notAnswered" count={counts.total.notAnswered} label="Not Answered" />
+        <LegendItem status="notVisited" count={counts.total.notVisited} label="Not Visited" />
+        <LegendItem status="marked" count={counts.total.marked} label="Marked for Review" />
+      </div>
+      <div className="pt-0.5">
+        <LegendItem
+          status="answeredMarked"
+          count={counts.total.answeredMarked}
+          label="Answered & Marked for Review (will be considered for evaluation)"
+        />
+      </div>
+    </div>
+  )
+
+  const paletteGrid = (
+    <div className="grid grid-cols-6 gap-x-1 gap-y-2 p-2 sm:grid-cols-8">
+      {orderedQuestions.map((q, idx) => {
+        if (sectionLabel(q.subject) !== activeSection) return null
+        return (
+          <PaletteButton
+            key={q.id}
+            num={idx + 1}
+            status={statusOf(q.id)}
+            current={idx === currentIndex}
+            onClick={() => goTo(idx)}
+          />
+        )
+      })}
+    </div>
+  )
+
+  const paletteColumn = (
+    <div
+      className="flex h-full w-full flex-col border-l border-gray-300"
+      style={{ backgroundColor: NTA_PANEL_BLUE }}
+    >
+      {candidatePanel}
+      {legend}
+      <div
+        className="px-2 py-1 text-[12px] font-bold text-white"
+        style={{ backgroundColor: NTA_BLUE }}
+      >
+        {activeSection} — Choose a Question
+      </div>
+      <div className="min-h-0 flex-1 overflow-y-auto">{paletteGrid}</div>
+      <div className="border-t border-gray-300 p-2">
+        <button
+          onClick={() => setShowSubmitConfirm(true)}
+          className="w-full px-4 py-2 text-[13px] font-bold text-white hover:opacity-90"
+          style={{ backgroundColor: BTN_GREEN }}
+        >
+          SUBMIT
+        </button>
+      </div>
+    </div>
+  )
+
+  const instructionsBody = (
+    <ol className="list-decimal space-y-2 pl-6 text-[13px] leading-relaxed text-gray-900">
+      <li>
+        Total duration of the examination is <b>{test.duration} minutes</b>.
+      </li>
+      <li>
+        The clock will be set at the server. The countdown timer in the top right corner of screen
+        will display the remaining time available for you to complete the examination. When the
+        timer reaches zero, the examination will end by itself — you will not be required to end or
+        submit your examination.
+      </li>
+      <li>
+        The Questions Palette displayed on the right side of screen will show the status of each
+        question using one of the following symbols:
+        <div className="mt-2 space-y-1.5 rounded border border-gray-200 bg-gray-50 p-3">
+          <LegendItem status="notVisited" label="You have not visited the question yet." />
+          <LegendItem status="notAnswered" label="You have not answered the question." />
+          <LegendItem status="answered" label="You have answered the question." />
+          <LegendItem
+            status="marked"
+            label="You have NOT answered the question, but have marked the question for review."
+          />
+          <LegendItem
+            status="answeredMarked"
+            label="You have answered the question, but marked it for review."
+          />
+        </div>
+        <p className="mt-2">
+          The <b>Marked for Review</b> status for a question simply indicates that you would like to
+          look at that question again. If a question is answered and Marked for Review, your answer
+          for that question <b>will be considered</b> in the evaluation.
+        </p>
+      </li>
+      <li>
+        You can click on the arrow beside the question palette to collapse it and maximise the
+        question window; click it again to reopen the palette.
+      </li>
+      <li>
+        <b>Navigating to a Question:</b>
+        <ol className="mt-1 list-[lower-alpha] space-y-1 pl-5">
+          <li>
+            Click on the question number in the Question Palette to go to that question directly.{' '}
+            <b>Note that using this option does NOT save your answer to the current question.</b>
+          </li>
+          <li>
+            Click on <b>Save &amp; Next</b> to save your answer for the current question and then go
+            to the next question.
+          </li>
+          <li>
+            Click on <b>Mark for Review &amp; Next</b> to save your answer for the current question,
+            mark it for review, and then go to the next question.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <b>Answering a Question:</b>
+        <ol className="mt-1 list-[lower-alpha] space-y-1 pl-5">
+          <li>Choose one answer by clicking on the button of one of the options.</li>
+          <li>
+            To deselect your chosen answer, click on the button of the chosen option again or click
+            on the <b>Clear Response</b> button.
+          </li>
+          <li>To change your chosen answer, click on the button of another option.</li>
+          <li>To save your answer, you MUST click on the Save &amp; Next button.</li>
+        </ol>
+      </li>
+      <li>
+        <b>Marking scheme:</b> each correct answer is awarded <b>+{CORRECT_MARKS} marks</b>; each
+        incorrect answer is awarded <b>−{NEGATIVE_MARKS} mark</b>; unanswered questions are given no
+        marks.
+      </li>
+      <li>
+        Sections in this question paper are displayed on the top bar of the screen. Questions in a
+        section can be viewed by clicking on the section name.
+      </li>
+      <li>
+        Do not switch tabs, minimise the window or exit full-screen during the test — such events
+        are recorded with the attempt.
+      </li>
+      {(test.instructions || []).map((ins, i) => (
+        <li key={i}>{ins}</li>
+      ))}
+    </ol>
+  )
+
   // ── RENDER: Instructions ──────────────────────────────────────────────────
   if (phase === 'instructions') {
     return (
-      <div className="mx-auto max-w-3xl p-6">
-        <div className="rounded-2xl border border-gray-200 bg-white p-6 md:p-8">
-          <h1 className="text-2xl font-bold text-gray-900">{test.title}</h1>
-          <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            <Stat label="Duration" value={`${test.duration} min`} />
-            <Stat label="Questions" value={String(test.totalQuestions)} />
-            <Stat label="Max Marks" value={String(test.totalMarks)} />
-            <Stat label="Marking" value="+4 / −1" />
-          </div>
+      <div className="min-h-screen bg-white" style={NTA_FONT}>
+        <div
+          className="px-4 py-2 text-center text-sm font-bold text-white"
+          style={{ backgroundColor: TITLE_BLUE }}
+        >
+          {test.title}
+        </div>
+        <div className="border-b border-gray-300 bg-gray-100 px-4 py-2 text-center">
+          <h1 className="text-base font-bold text-gray-900 underline">
+            Please read the instructions carefully
+          </h1>
+          <p className="mt-0.5 text-xs font-semibold text-gray-700">General Instructions:</p>
+        </div>
 
-          <div className="mt-6 rounded-xl bg-yellow-50 border border-yellow-200 p-4 text-sm text-yellow-900">
-            <p className="font-semibold">General Instructions</p>
-            <ul className="mt-2 list-disc space-y-1 pl-5">
-              <li>
-                The countdown timer at the top shows time remaining; the test auto-submits at zero.
-              </li>
-              <li>
-                Question palette colours: green = answered, red = not answered, purple = marked for
-                review, grey = not visited.
-              </li>
-              <li>
-                Use <b>Save &amp; Next</b> to save, <b>Mark for Review</b> to flag,{' '}
-                <b>Clear Response</b> to unselect.
-              </li>
-              <li>A marked question is evaluated only if an answer is also selected.</li>
-              <li>
-                Leaving the exam tab/window is recorded. Do not switch tabs or exit full-screen.
-              </li>
-              <li>Each correct answer is +4; each wrong answer is −1; unattempted is 0.</li>
-              {(test.instructions || []).map((ins, i) => (
-                <li key={i}>{ins}</li>
-              ))}
-            </ul>
-          </div>
+        <div className="mx-auto max-w-4xl p-4 md:p-6">
+          {instructionsBody}
 
           {candidateName && (
-            <p className="mt-4 text-sm text-gray-600">
-              Candidate: <span className="font-medium text-gray-900">{candidateName}</span>
+            <p className="mt-5 text-[13px] text-gray-700">
+              Candidate Name: <b className="text-gray-900">{candidateName}</b>
             </p>
           )}
 
-          <label className="mt-6 flex items-start gap-2 text-sm text-gray-700">
-            <input
-              type="checkbox"
-              className="mt-0.5"
-              checked={agreed}
-              onChange={(e) => setAgreed(e.target.checked)}
-            />
-            I have read and understood the instructions. I will not use any unfair means.
-          </label>
+          <div className="mt-5 border-t border-gray-300 pt-4">
+            <label className="flex items-start gap-2 text-[13px] text-gray-800">
+              <input
+                type="checkbox"
+                className="mt-0.5 h-4 w-4"
+                checked={agreed}
+                onChange={(e) => setAgreed(e.target.checked)}
+              />
+              <span>
+                I have read and understood the instructions. I agree that I am not in possession of
+                any prohibited material and will not use any unfair means during this test. In case
+                of not adhering to the instructions, I shall be liable for disciplinary action.
+              </span>
+            </label>
 
-          <div className="mt-6 flex flex-wrap gap-3">
-            <button
-              onClick={onExit}
-              className="rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
-            >
-              Exit
-            </button>
-            {resumeAvailable && (
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+              <button
+                onClick={onExit}
+                className="border border-gray-400 bg-white px-6 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50"
+              >
+                EXIT
+              </button>
+              {resumeAvailable && (
+                <button
+                  disabled={!agreed}
+                  onClick={() => startExam(true)}
+                  className="px-6 py-2 text-sm font-bold text-white hover:opacity-90 disabled:opacity-50"
+                  style={{ backgroundColor: BTN_ORANGE }}
+                >
+                  RESUME ATTEMPT
+                </button>
+              )}
               <button
                 disabled={!agreed}
-                onClick={() => startExam(true)}
-                className="rounded-lg bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-amber-700 disabled:opacity-50"
+                onClick={() => startExam(false)}
+                className="px-8 py-2 text-sm font-bold text-white hover:opacity-90 disabled:opacity-50"
+                style={{ backgroundColor: BTN_GREEN }}
               >
-                Resume attempt
+                PROCEED
               </button>
-            )}
-            <button
-              disabled={!agreed}
-              onClick={() => startExam(false)}
-              className="rounded-lg bg-green-700 px-6 py-2.5 text-sm font-semibold text-white hover:bg-green-800 disabled:opacity-50"
-            >
-              Start Test
-            </button>
+            </div>
           </div>
         </div>
       </div>
@@ -552,7 +774,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
     const pct = r.maxScore > 0 ? Math.round((Math.max(0, r.score) / r.maxScore) * 100) : 0
     return (
       <div className="mx-auto max-w-3xl p-6">
-        <div className="rounded-2xl border border-gray-200 bg-white p-6 md:p-8 text-center">
+        <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center md:p-8">
           <CheckCircle2 className="mx-auto h-12 w-12 text-green-600" />
           <h1 className="mt-3 text-2xl font-bold text-gray-900">Test Submitted</h1>
           <div className="mt-6 text-5xl font-bold text-gray-900">
@@ -727,104 +949,138 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
   }
 
   // ── RENDER: Exam ──────────────────────────────────────────────────────────
-  const sectionQuestions = orderedQuestions.filter((q) => sectionLabel(q.subject) === activeSection)
-
   return (
-    <div ref={examRef} className="min-h-screen select-none bg-gray-100">
-      {/* Top bar */}
-      <div className="flex items-center justify-between border-b border-gray-200 bg-white px-4 py-2">
-        <div className="truncate text-sm font-semibold text-gray-900">{test.title}</div>
-        <div className="flex items-center gap-3">
-          <div
-            className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 font-mono text-sm ${
-              timeRemaining < 300 ? 'bg-red-100 text-red-700' : 'bg-gray-100 text-gray-800'
-            }`}
-          >
-            <Clock className="h-4 w-4" />
-            {formatTime(timeRemaining)}
-          </div>
+    <div ref={examRef} className="flex h-dvh select-none flex-col bg-white" style={NTA_FONT}>
+      {/* Brand strip */}
+      <div className="flex items-center justify-between border-b border-gray-300 bg-white px-3 py-1">
+        <span className="text-[13px] font-bold tracking-wide text-gray-800">
+          CEREBRUM BIOLOGY ACADEMY
+        </span>
+        <span className="hidden text-[11px] text-gray-500 sm:block">Computer Based Test</span>
+      </div>
+
+      {/* Paper title bar */}
+      <div
+        className="flex items-center justify-between gap-2 px-3 py-1.5 text-white"
+        style={{ backgroundColor: TITLE_BLUE }}
+      >
+        <span className="truncate text-[13px] font-bold">{test.title}</span>
+        <div className="flex shrink-0 items-center gap-3 text-[12px]">
           <button
-            onClick={enterFullscreen}
-            className="rounded-md p-2 text-gray-500 hover:bg-gray-100"
-            title="Full screen"
-            aria-label="Enter full screen"
+            onClick={() => setShowPaperModal(true)}
+            className="underline underline-offset-2 hover:opacity-80"
           >
-            <Maximize className="h-4 w-4" />
+            Question Paper
           </button>
           <button
-            onClick={() => setShowSubmitConfirm(true)}
-            className="rounded-md bg-green-700 px-4 py-1.5 text-sm font-semibold text-white hover:bg-green-800"
+            onClick={() => setShowInstructionsModal(true)}
+            className="underline underline-offset-2 hover:opacity-80"
           >
-            Submit
+            View Instructions
           </button>
         </div>
       </div>
 
-      {/* Section tabs */}
-      {sections.length > 1 && (
-        <div className="flex gap-1 border-b border-gray-200 bg-white px-4">
-          {sections.map((sec) => (
-            <button
-              key={sec}
-              onClick={() => {
-                const first = orderedQuestions.findIndex((q) => sectionLabel(q.subject) === sec)
-                if (first >= 0) goTo(first)
-              }}
-              className={`border-b-2 px-4 py-2 text-sm font-medium ${
-                activeSection === sec
-                  ? 'border-green-600 text-green-700'
-                  : 'border-transparent text-gray-500 hover:text-gray-800'
-              }`}
-            >
-              {sec}
-            </button>
-          ))}
-        </div>
-      )}
-
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 p-4 lg:flex-row">
-        {/* Question panel */}
-        <div className="flex-1">
-          <div className="rounded-xl border border-gray-200 bg-white p-5">
-            <div className="mb-3 flex items-center justify-between">
-              <span className="text-sm font-semibold text-gray-500">
-                Question {currentIndex + 1} of {orderedQuestions.length}
-              </span>
-              <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600">
-                {sectionLabel(currentQ?.subject || '')} · +{CORRECT_MARKS} / −{NEGATIVE_MARKS}
+      {/* Body */}
+      <div className="flex min-h-0 flex-1">
+        {/* Question column */}
+        <div className="flex min-w-0 flex-1 flex-col">
+          {/* Section strip + timer */}
+          <div className="flex items-center justify-between gap-2 border-b border-gray-300 bg-white px-2 py-1">
+            <div className="flex min-w-0 items-center gap-1 overflow-x-auto">
+              {sections.map((sec) => {
+                const active = activeSection === sec
+                return (
+                  <button
+                    key={sec}
+                    onClick={() => {
+                      const first = orderedQuestions.findIndex(
+                        (q) => sectionLabel(q.subject) === sec
+                      )
+                      if (first >= 0) goTo(first)
+                    }}
+                    className="shrink-0 border px-3 py-1 text-[12px] font-semibold"
+                    style={
+                      active
+                        ? { backgroundColor: NTA_BLUE, borderColor: NTA_BLUE, color: '#fff' }
+                        : { backgroundColor: '#fff', borderColor: '#C3C3C1', color: '#36ACE9' }
+                    }
+                  >
+                    {sec}
+                  </button>
+                )
+              })}
+            </div>
+            <div className="shrink-0 text-[12px] font-semibold text-gray-800">
+              Remaining Time :{' '}
+              <span
+                className="inline-block rounded-full px-3 py-0.5 font-mono text-[13px] font-bold text-white"
+                style={{ backgroundColor: timeRemaining < 300 ? '#D9534F' : TIMER_BLUE }}
+              >
+                {formatTime(timeRemaining)}
               </span>
             </div>
+          </div>
 
+          {/* Question header */}
+          <div className="flex items-center justify-between gap-2 border-b border-gray-300 bg-gray-100 px-3 py-1.5">
+            <span className="text-[13px] font-bold text-gray-900">
+              Question No. {currentIndex + 1}
+            </span>
+            <div className="flex items-center gap-3 text-[11px] text-gray-700">
+              {/* NOTE: this app's critical CSS redefines `.hidden` late in the
+                  cascade, so responsive reveals must use the !important
+                  utilities it ships (md:block / lg:flex / lg:block). */}
+              <span className="hidden md:block">
+                Marks for correct answer: <b className="text-green-700">{CORRECT_MARKS}</b> |
+                Negative Marks: <b className="text-red-600">{NEGATIVE_MARKS}</b>
+              </span>
+              <span className="hidden md:block">
+                View in :
+                <select
+                  className="border border-gray-300 bg-white px-1 py-0.5 text-[11px]"
+                  defaultValue="English"
+                  aria-label="View question in language"
+                >
+                  <option>English</option>
+                </select>
+              </span>
+            </div>
+          </div>
+
+          {/* Question body */}
+          <div className="min-h-0 flex-1 overflow-y-auto bg-white p-4">
             {currentQ && (
               <>
-                <p className="text-gray-900">{currentQ.questionText}</p>
+                <p className="text-[14px] leading-relaxed text-gray-900">{currentQ.questionText}</p>
                 {currentQ.questionImage && (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={currentQ.questionImage} alt="" className="mt-3 max-h-64 rounded-lg" />
+                  <img src={currentQ.questionImage} alt="" className="mt-3 max-h-64" />
                 )}
-                <div className="mt-4 space-y-2">
+                <div className="mt-5 space-y-1">
                   {currentQ.options.map((opt, i) => {
-                    const selected = states[currentQ.id]?.answer === opt.id
+                    const selected = pending === opt.id
                     return (
                       <label
                         key={opt.id}
-                        className={`flex cursor-pointer items-start gap-3 rounded-lg border p-3 text-sm ${
-                          selected
-                            ? 'border-green-500 bg-green-50'
-                            : 'border-gray-200 hover:border-gray-300'
+                        className={`flex cursor-pointer items-start gap-2.5 px-2 py-2 text-[14px] ${
+                          selected ? 'bg-blue-50' : 'hover:bg-gray-50'
                         }`}
                       >
                         <input
                           type="radio"
                           name={`q_${currentQ.id}`}
-                          className="mt-0.5"
+                          className="mt-1 h-4 w-4"
                           checked={selected}
-                          onChange={() => selectOption(opt.id)}
+                          onClick={() => {
+                            // NTA: clicking the selected option again deselects it.
+                            if (selected) setPending(null)
+                          }}
+                          onChange={() => setPending(opt.id)}
                         />
-                        <span className="font-medium text-gray-500">
-                          {String.fromCharCode(65 + i)}.
+                        <span className="text-gray-800">
+                          {i + 1}) {opt.text}
                         </span>
-                        <span className="text-gray-800">{opt.text}</span>
                       </label>
                     )
                   })}
@@ -833,116 +1089,391 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
             )}
           </div>
 
-          {/* Controls */}
-          <div className="mt-3 flex flex-wrap items-center gap-2">
-            <button
-              onClick={() => goTo(currentIndex - 1)}
-              disabled={currentIndex === 0}
-              className="inline-flex items-center gap-1 rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 disabled:opacity-40"
-            >
-              <ChevronLeft className="h-4 w-4" /> Previous
-            </button>
-            <button
-              onClick={clearResponse}
-              className="rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-700 hover:bg-gray-50"
-            >
-              Clear Response
-            </button>
-            <button
-              onClick={markAndNext}
-              className="inline-flex items-center gap-1 rounded-lg border border-purple-300 px-3 py-2 text-sm text-purple-700 hover:bg-purple-50"
-            >
-              <Flag className="h-4 w-4" /> Mark for Review &amp; Next
-            </button>
-            <button
-              onClick={saveAndNext}
-              className="ml-auto inline-flex items-center gap-1 rounded-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white hover:bg-green-800"
-            >
-              Save &amp; Next <ChevronRight className="h-4 w-4" />
-            </button>
+          {/* Bottom action bar */}
+          <div className="border-t border-gray-300 bg-gray-100 px-2 py-2">
+            <div className="flex flex-wrap items-center gap-1.5">
+              <button
+                onClick={saveAndNext}
+                className="border px-3 py-1.5 text-[12px] font-bold text-white hover:opacity-90"
+                style={{ backgroundColor: BTN_GREEN, borderColor: '#4CAE4C' }}
+              >
+                SAVE &amp; NEXT
+              </button>
+              <button
+                onClick={clearResponse}
+                className="border border-[#CCC] bg-white px-3 py-1.5 text-[12px] font-bold text-[#333] hover:bg-gray-50"
+              >
+                CLEAR
+              </button>
+              <button
+                onClick={saveAndMarkForReview}
+                className="border px-3 py-1.5 text-[12px] font-bold text-white hover:opacity-90"
+                style={{ backgroundColor: BTN_ORANGE, borderColor: '#EEA236' }}
+              >
+                SAVE &amp; MARK FOR REVIEW
+              </button>
+              <button
+                onClick={markForReviewAndNext}
+                className="border px-3 py-1.5 text-[12px] font-bold text-white hover:opacity-90"
+                style={{ backgroundColor: BTN_BLUE, borderColor: '#2E6DA4' }}
+              >
+                MARK FOR REVIEW &amp; NEXT
+              </button>
+              <span className="ml-auto flex items-center gap-1.5">
+                <button
+                  onClick={() => goTo(currentIndex - 1)}
+                  disabled={currentIndex === 0}
+                  className="border border-[#CCC] bg-white px-3 py-1.5 text-[12px] font-bold text-[#333] hover:bg-gray-50 disabled:opacity-40"
+                >
+                  &lt;&lt; BACK
+                </button>
+                <button
+                  onClick={() => goTo(currentIndex + 1)}
+                  disabled={currentIndex === orderedQuestions.length - 1}
+                  className="border border-[#CCC] bg-white px-3 py-1.5 text-[12px] font-bold text-[#333] hover:bg-gray-50 disabled:opacity-40"
+                >
+                  NEXT &gt;&gt;
+                </button>
+                <button
+                  onClick={() => setShowSubmitConfirm(true)}
+                  className="px-4 py-1.5 text-[12px] font-bold text-white hover:opacity-90 lg:hidden"
+                  style={{ backgroundColor: BTN_GREEN }}
+                >
+                  SUBMIT
+                </button>
+              </span>
+            </div>
           </div>
         </div>
 
-        {/* Palette */}
-        {showPalette && (
-          <div className="w-full lg:w-72">
-            <div className="rounded-xl border border-gray-200 bg-white p-4">
-              <div className="mb-3 grid grid-cols-2 gap-1.5 text-xs text-gray-600">
-                <Legend color="bg-green-600" label={`Answered (${counts.answered})`} />
-                <Legend color="bg-red-500" label={`Not answered (${counts.notAnswered})`} />
-                <Legend color="bg-purple-600" label={`Marked (${counts.marked})`} />
-                <Legend color="bg-gray-200" label={`Not visited (${counts.notVisited})`} />
-              </div>
-              <div className="mb-1 text-xs font-semibold text-gray-500">{activeSection}</div>
-              <div className="grid grid-cols-5 gap-1.5">
-                {sectionQuestions.map((q) => {
-                  const globalIdx = orderedQuestions.findIndex((x) => x.id === q.id)
-                  const status = statusOf(q.id)
-                  return (
-                    <button
-                      key={q.id}
-                      onClick={() => goTo(globalIdx)}
-                      className={`h-9 rounded border text-xs font-semibold ${paletteColor[status]} ${
-                        globalIdx === currentIndex ? 'ring-2 ring-blue-500' : ''
-                      }`}
-                    >
-                      {globalIdx + 1}
-                    </button>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
+        {/* Palette collapse handle (desktop) */}
+        <button
+          onClick={() => setPaletteCollapsed((c) => !c)}
+          className="hidden w-4 shrink-0 items-center justify-center text-[10px] text-white hover:opacity-90 lg:flex"
+          style={{ backgroundColor: '#4A4A4A' }}
+          aria-label={paletteCollapsed ? 'Open question palette' : 'Collapse question palette'}
+          title={paletteCollapsed ? 'Open question palette' : 'Collapse question palette'}
+        >
+          {paletteCollapsed ? '<' : '>'}
+        </button>
+
+        {/* Palette (desktop column) */}
+        {!paletteCollapsed && (
+          <aside className="hidden w-72 shrink-0 lg:block xl:w-80">{paletteColumn}</aside>
         )}
       </div>
 
+      {/* Mobile palette toggle tab */}
+      <button
+        onClick={() => setMobilePaletteOpen(true)}
+        className="fixed right-0 top-1/2 z-40 -translate-y-1/2 rounded-l px-1.5 py-3 text-[11px] font-bold text-white lg:hidden"
+        style={{ backgroundColor: NTA_BLUE }}
+        aria-label="Open question palette"
+      >
+        ◄
+      </button>
+
+      {/* Mobile palette drawer */}
+      {mobilePaletteOpen && (
+        <div className="fixed inset-0 z-50 flex justify-end bg-black/40 lg:hidden">
+          <button
+            className="h-full flex-1"
+            aria-label="Close question palette"
+            onClick={() => setMobilePaletteOpen(false)}
+          />
+          <div className="relative h-full w-72 max-w-[85vw]">
+            <button
+              onClick={() => setMobilePaletteOpen(false)}
+              className="absolute -left-4 top-1/2 z-10 -translate-y-1/2 rounded-l px-1.5 py-3 text-[11px] font-bold text-white"
+              style={{ backgroundColor: NTA_BLUE }}
+              aria-label="Close question palette"
+            >
+              ►
+            </button>
+            {paletteColumn}
+          </div>
+        </div>
+      )}
+
       {/* Tab-switch warning */}
       {showWarning && (
-        <div className="fixed bottom-4 left-1/2 z-50 -translate-x-1/2 rounded-lg bg-red-600 px-4 py-2 text-sm text-white shadow-lg">
+        <div className="fixed bottom-4 left-1/2 z-50 -translate-x-1/2 rounded bg-red-600 px-4 py-2 text-sm text-white shadow-lg">
           <div className="flex items-center gap-2">
             <AlertTriangle className="h-4 w-4" />
             {showWarning}
-            <button onClick={() => setShowWarning(null)} className="ml-2">
+            <button onClick={() => setShowWarning(null)} className="ml-2" aria-label="Dismiss">
               <X className="h-4 w-4" />
             </button>
           </div>
         </div>
       )}
 
-      {/* Submit confirm */}
+      {/* Instructions modal (in-exam) */}
+      {showInstructionsModal && (
+        <ExamModal title="Instructions" onClose={() => setShowInstructionsModal(false)}>
+          {instructionsBody}
+        </ExamModal>
+      )}
+
+      {/* Question paper modal */}
+      {showPaperModal && (
+        <ExamModal title="Question Paper" onClose={() => setShowPaperModal(false)}>
+          <div className="space-y-4">
+            {orderedQuestions.map((q, i) => (
+              <div key={q.id} className="border-b border-gray-100 pb-3 text-[13px]">
+                <p className="text-gray-900">
+                  <b>Q.{i + 1}</b>{' '}
+                  <span className="text-[11px] text-gray-500">[{sectionLabel(q.subject)}]</span>{' '}
+                  {q.questionText}
+                </p>
+                <ol className="mt-1 space-y-0.5 pl-6 text-gray-700">
+                  {q.options.map((opt, j) => (
+                    <li key={opt.id}>
+                      {j + 1}. {opt.text}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            ))}
+          </div>
+        </ExamModal>
+      )}
+
+      {/* Submit confirm — NTA exam summary */}
       {showSubmitConfirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
-          <div className="w-full max-w-md rounded-2xl bg-white p-6">
-            <h2 className="text-lg font-bold text-gray-900">Submit test?</h2>
-            <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
-              <Stat label="Answered" value={String(counts.answered)} tone="green" />
-              <Stat label="Not answered" value={String(counts.notAnswered)} tone="red" />
-              <Stat label="Marked" value={String(counts.marked)} />
-              <Stat label="Not visited" value={String(counts.notVisited)} />
+          <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto bg-white" style={NTA_FONT}>
+            <div
+              className="px-4 py-2 text-center text-sm font-bold text-white"
+              style={{ backgroundColor: TITLE_BLUE }}
+            >
+              Exam Summary
             </div>
-            <p className="mt-3 text-sm text-gray-600">
-              You cannot change answers after submitting. Marked questions are scored only if
-              answered.
-            </p>
-            <div className="mt-5 flex justify-end gap-3">
-              <button
-                onClick={() => setShowSubmitConfirm(false)}
-                className="rounded-lg border border-gray-300 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
-              >
-                Continue test
-              </button>
-              <button
-                onClick={() => handleSubmit(false)}
-                disabled={submitting}
-                className="rounded-lg bg-green-700 px-5 py-2 text-sm font-semibold text-white hover:bg-green-800 disabled:opacity-60"
-              >
-                {submitting ? 'Submitting…' : 'Submit'}
-              </button>
+            <div className="p-4">
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse text-center text-[11px] sm:text-[12px]">
+                  <thead>
+                    <tr className="bg-gray-100 text-gray-800">
+                      <Th>Section Name</Th>
+                      <Th>No. of Questions</Th>
+                      <Th>Answered</Th>
+                      <Th>Not Answered</Th>
+                      <Th>Marked for Review</Th>
+                      <Th>
+                        Answered &amp; Marked for Review
+                        <br />
+                        (will be considered for evaluation)
+                      </Th>
+                      <Th>Not Visited</Th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {sections.map((sec) => {
+                      const c = counts.perSection[sec]
+                      if (!c) return null
+                      return (
+                        <tr key={sec}>
+                          <Td strong>{sec}</Td>
+                          <Td>{c.total}</Td>
+                          <Td>{c.answered}</Td>
+                          <Td>{c.notAnswered}</Td>
+                          <Td>{c.marked}</Td>
+                          <Td>{c.answeredMarked}</Td>
+                          <Td>{c.notVisited}</Td>
+                        </tr>
+                      )
+                    })}
+                    {sections.length > 1 && (
+                      <tr className="bg-gray-50">
+                        <Td strong>Total</Td>
+                        <Td>{counts.total.total}</Td>
+                        <Td>{counts.total.answered}</Td>
+                        <Td>{counts.total.notAnswered}</Td>
+                        <Td>{counts.total.marked}</Td>
+                        <Td>{counts.total.answeredMarked}</Td>
+                        <Td>{counts.total.notVisited}</Td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+
+              <p className="mt-4 text-center text-[13px] font-semibold text-gray-900">
+                Are you sure you want to submit for final marking?
+                <br />
+                No changes will be allowed after submission.
+              </p>
+
+              {/* NTA renders YES / NO as plain default buttons. */}
+              <div className="mt-4 flex justify-center gap-3">
+                <button
+                  onClick={() => handleSubmit(false)}
+                  disabled={submitting}
+                  className="border border-[#CCC] bg-white px-8 py-2 text-sm font-bold text-[#333] hover:bg-gray-50 disabled:opacity-60"
+                >
+                  {submitting ? 'SUBMITTING…' : 'YES'}
+                </button>
+                <button
+                  onClick={() => setShowSubmitConfirm(false)}
+                  disabled={submitting}
+                  className="border border-[#CCC] bg-white px-8 py-2 text-sm font-bold text-[#333] hover:bg-gray-50"
+                >
+                  NO
+                </button>
+              </div>
             </div>
           </div>
         </div>
       )}
     </div>
+  )
+}
+
+/* ── Palette shapes ─────────────────────────────────────────────────────── */
+
+function paletteShapeStyle(status: PaletteStatus): React.CSSProperties {
+  switch (status) {
+    case 'answered':
+      return { backgroundColor: GREEN, color: '#fff', clipPath: CLIP_ANSWERED }
+    case 'notAnswered':
+      return { backgroundColor: RED, color: '#fff', clipPath: CLIP_NOT_ANSWERED }
+    case 'marked':
+    case 'answeredMarked':
+      // Official icon is a violet sphere with a top-left highlight.
+      return {
+        background: `radial-gradient(circle at 32% 28%, #7F5BB9, ${PURPLE} 60%, #38166D)`,
+        color: '#fff',
+        borderRadius: '9999px',
+      }
+    default:
+      return {
+        backgroundColor: '#E6E6E6',
+        color: '#303030',
+        border: '1px solid #ADADAD',
+        borderRadius: '3px',
+      }
+  }
+}
+
+function PaletteButton({
+  num,
+  status,
+  current,
+  onClick,
+}: {
+  num: number
+  status: PaletteStatus
+  current: boolean
+  onClick: () => void
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`relative mx-auto flex h-[30px] w-[30px] items-center justify-center text-[11px] font-bold ${
+        current ? 'outline outline-2 outline-offset-1 outline-blue-700' : ''
+      }`}
+      style={paletteShapeStyle(status)}
+      aria-label={`Question ${num}: ${
+        status === 'notVisited'
+          ? 'not visited'
+          : status === 'notAnswered'
+            ? 'not answered'
+            : status === 'answered'
+              ? 'answered'
+              : status === 'marked'
+                ? 'marked for review'
+                : 'answered and marked for review'
+      }`}
+    >
+      {String(num).padStart(2, '0')}
+      {status === 'answeredMarked' && (
+        <span
+          className="absolute -bottom-0.5 -right-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full text-[8px] font-bold text-white"
+          style={{ backgroundColor: GREEN }}
+        >
+          ✓
+        </span>
+      )}
+    </button>
+  )
+}
+
+function LegendItem({
+  status,
+  count,
+  label,
+}: {
+  status: PaletteStatus
+  count?: number
+  label: string
+}) {
+  return (
+    <div className="flex items-center gap-1.5">
+      <span
+        className="relative flex h-6 w-6 shrink-0 items-center justify-center text-[10px] font-bold"
+        style={paletteShapeStyle(status)}
+      >
+        {typeof count === 'number' ? count : ''}
+        {status === 'answeredMarked' && (
+          <span
+            className="absolute -bottom-0.5 -right-0.5 flex h-2.5 w-2.5 items-center justify-center rounded-full text-[6px] font-bold text-white"
+            style={{ backgroundColor: GREEN }}
+          >
+            ✓
+          </span>
+        )}
+      </span>
+      <span className="leading-tight">{label}</span>
+    </div>
+  )
+}
+
+/* ── Small helpers ──────────────────────────────────────────────────────── */
+
+function ExamModal({
+  title,
+  onClose,
+  children,
+}: {
+  title: string
+  onClose: () => void
+  children: React.ReactNode
+}) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
+      <div className="flex max-h-[90vh] w-full max-w-3xl flex-col bg-white" style={NTA_FONT}>
+        <div
+          className="flex items-center justify-between px-4 py-2 text-white"
+          style={{ backgroundColor: TITLE_BLUE }}
+        >
+          <span className="text-sm font-bold">{title}</span>
+          <button onClick={onClose} aria-label="Close">
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+        <div className="min-h-0 flex-1 overflow-y-auto p-4">{children}</div>
+        <div className="border-t border-gray-200 p-2 text-center">
+          <button
+            onClick={onClose}
+            className="border border-gray-400 bg-white px-6 py-1.5 text-[12px] font-bold text-gray-800 hover:bg-gray-50"
+          >
+            CLOSE
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function Th({ children }: { children: React.ReactNode }) {
+  return <th className="border border-gray-300 px-2 py-1.5 font-semibold">{children}</th>
+}
+
+function Td({ children, strong }: { children: React.ReactNode; strong?: boolean }) {
+  return (
+    <td className={`border border-gray-300 px-2 py-1.5 ${strong ? 'font-semibold' : ''}`}>
+      {children}
+    </td>
   )
 }
 
@@ -953,15 +1484,6 @@ function Stat({ label, value, tone }: { label: string; value: string; tone?: 'gr
     <div className="rounded-lg bg-gray-50 p-3 text-center">
       <div className={`text-xl font-bold ${color}`}>{value}</div>
       <div className="text-xs text-gray-500">{label}</div>
-    </div>
-  )
-}
-
-function Legend({ color, label }: { color: string; label: string }) {
-  return (
-    <div className="flex items-center gap-1.5">
-      <span className={`inline-block h-3 w-3 rounded ${color}`} />
-      {label}
     </div>
   )
 }
