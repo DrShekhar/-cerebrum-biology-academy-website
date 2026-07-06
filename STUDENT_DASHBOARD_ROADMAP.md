@@ -45,6 +45,15 @@ After parity: redirect `/student/dashboard` → `/dashboard`.
 - **P0 Foundations**: (a) grade resolver lib; (b) /api/student/summary; (c) avatar upload+header; (d) demo seed. → header + Overview real.
 - **P1 Wire sections**: mount UpcomingSessionsWidget (kill hardcoded countdown); CBT tab (cbt/attempts); Homework tab + fix feedback in list API + cards; Practice deep-links via resolver; Progress tab (fold analytics/performance + progress/[userId]); Materials tab; Goals tab.
 - **P2 Pipelines**: student videos endpoint+tab; PDF assignment (assign endpoint + requiredClass SQL + admin uploader fixes incl. CSRF); unified feedback feed + teacher worksheet/test feedback routes.
+- **P2.5 Market-parity features** (user-approved Jul 6 from `LMS_BEST_FEATURES_RESEARCH.md` recs 1–8):
+  1. **Mistake Notebook** (S/M) — auto-compile wrong CBT/MCQ answers into a per-student notebook; feed SpacedReviewWidget until mastered. Data already in test_attempts/test_sessions.
+  2. **Weekly parent WhatsApp report** (M) — attendance/scores/streak/homework composer cron → §F broadcast-list sender. Blocked on Meta WA env keys (owner).
+  3. **Post-mock analysis v2** (S) — extend CBT AI Coach: silly-error vs concept-gap classification + time-per-question breakdown.
+  4. **Streak freeze + weekly Biology League** (S/M) — on existing XP/streak tables (Duolingo-verified mechanics).
+  5. **NEET rank predictor** (S/M) — static NTA marks→AIR table from mock scores; fixes advertised-but-missing neet-tools-registry route.
+  6. **Adaptive Daily Challenge** (M) — daily 10-Q set picked from weak topics via analytics/performance.
+  7. **At-risk inactivity alerts** (M) — no-login/no-practice threshold → counselor CRM task + parent WA nudge (reuses fixed task subsystem).
+  8. **Recordings pipeline + video library** — already P2/P3 build items; confirmed table stakes vs Allen/PW.
 - **P3 Staff+recordings**: counselor academics endpoint+tab; admin drill-down; Zoom recording webhook → CF pipeline; optional Zoom auto-create.
 - **P4 Polish**: redirects, mobile pass, empty states, demo-content cleanup script.
 
