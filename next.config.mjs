@@ -1739,8 +1739,17 @@ const nextConfig = {
       // With 2400+ pages, 2h edge cache = ~28,800 origin hits/day → 24h = ~2,400/day
       // stale-while-revalidate=86400 means users always get instant response from edge
       // while revalidation happens in background (no visible staleness)
+      //
+      // CRITICAL: this catch-all MUST NOT match /api/*. Next.js applies header
+      // rules last-match-wins, so a bare `/:path*` here overrode the `no-store`
+      // set on `/api/:path*` above — publicly CDN-caching EVERY api route,
+      // including /api/auth/session. A logged-out session response then got
+      // cached and served (Vary lacks Cookie) to freshly-authenticated users,
+      // who read {authenticated:false} and were bounced to /sign-in (the whole
+      // "Authentication Required" loop). The negative lookahead excludes /api so
+      // the API no-store rule stands. (Same pattern used in vercel.json.)
       {
-        source: '/:path*',
+        source: '/:path((?!api/).*)',
         headers: [
           {
             key: 'Cache-Control',

@@ -4,6 +4,14 @@ import * as jwt from 'jsonwebtoken'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 
+// This endpoint reads the per-request session cookie — it must NEVER be cached
+// or statically optimized. Without this, a logged-out response could be reused
+// for authenticated users (Vary does not include Cookie at the CDN), which
+// reads as logged-out and bounces them to /sign-in.
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+export const fetchCache = 'force-no-store'
+
 // SECURITY: Lazy-load secrets to prevent build-time errors in CI
 // Secrets are only required at runtime when actually processing requests
 let _authSecret: string | null = null
