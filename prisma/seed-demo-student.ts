@@ -152,7 +152,7 @@ async function main() {
       id: D('mat_personal'),
       title: 'Personal Improvement Plan — Aarav (Demo)',
       course: null,
-      access: 'RESTRICTED',
+      access: 'SPECIFIC_COURSE',
     },
   ]
   for (const m of mats) {
@@ -162,7 +162,7 @@ async function main() {
       create: {
         id: m.id,
         title: m.title,
-        materialType: 'PDF',
+        materialType: 'PDF_NOTES',
         fileUrl: 'https://example.com/demo.pdf',
         fileName: 'demo.pdf',
         fileSize: 245_000,
