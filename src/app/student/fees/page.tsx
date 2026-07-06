@@ -159,11 +159,14 @@ export default function StudentFeesPage() {
 
     setIsSubmitting(true)
     try {
-      const response = await fetch('/api/feedback', {
+      // Dedicated persistent endpoint (contact_inquiries + CRM + owner alert).
+      // The old /api/feedback target had a mismatched contract (it 400'd) and
+      // in-memory storage — fee enquiries never reached anyone.
+      const response = await fetch('/api/student/fee-enquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
         body: JSON.stringify({
-          type: 'FEE_ENQUIRY',
           category: enquiryCategory,
           subject: enquirySubject.trim(),
           message: enquiryMessage.trim(),
