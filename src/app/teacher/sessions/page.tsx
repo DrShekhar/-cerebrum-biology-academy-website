@@ -229,6 +229,60 @@ export default function TeacherSessionsPage() {
     return sessionDate > now && session.status === 'SCHEDULED'
   }
 
+  const isPastSession = (session: ClassSession) => {
+    return new Date(session.endTime) < new Date() || session.status === 'COMPLETED'
+  }
+
+  // Recording pipeline chip: shown on past sessions only (Zoom -> Cloudflare).
+  const renderRecordingChip = (session: ClassSession) => {
+    if (!isPastSession(session) || session.status === 'CANCELLED') return null
+    const recording = session.recording || {
+      state: session.recordingUrl ? ('RAW' as const) : ('NONE' as const),
+      url: session.recordingUrl,
+    }
+    switch (recording.state) {
+      case 'READY':
+        return (
+          <a href={recording.url || '#'} target="_blank" rel="noopener noreferrer">
+            <Badge className="bg-green-100 text-green-800 border-green-200 cursor-pointer hover:bg-green-200">
+              <Video className="w-3 h-3 mr-1" />
+              Recording Ready
+            </Badge>
+          </a>
+        )
+      case 'PROCESSING':
+        return (
+          <Badge className="bg-yellow-100 text-yellow-800 border-yellow-200">
+            <Clock className="w-3 h-3 mr-1" />
+            Recording Processing
+          </Badge>
+        )
+      case 'FAILED':
+        return (
+          <Badge className="bg-red-100 text-red-800 border-red-200">
+            <AlertCircle className="w-3 h-3 mr-1" />
+            Recording Failed
+          </Badge>
+        )
+      case 'RAW':
+        return (
+          <a href={recording.url || '#'} target="_blank" rel="noopener noreferrer">
+            <Badge className="bg-blue-100 text-blue-800 border-blue-200 cursor-pointer hover:bg-blue-200">
+              <Video className="w-3 h-3 mr-1" />
+              Recording (Zoom link)
+            </Badge>
+          </a>
+        )
+      default:
+        return (
+          <Badge className="bg-gray-100 text-gray-600 border-gray-200">
+            <Video className="w-3 h-3 mr-1" />
+            No Recording
+          </Badge>
+        )
+    }
+  }
+
   const upcomingSessions = filteredSessions.filter(isUpcoming).slice(0, 3)
 
   if (showCreateForm) {
@@ -494,6 +548,7 @@ export default function TeacherSessionsPage() {
                               {statusConfig.label}
                             </Badge>
                             <Badge variant="outline">{session.sessionType.replace('_', ' ')}</Badge>
+                            {renderRecordingChip(session)}
                           </div>
 
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-600 mb-3">

@@ -45,6 +45,12 @@ export interface ClassSession {
   absentCount: number
   lateCount: number
   recordingUrl?: string | null
+  videoLectureId?: string | null
+  /** Zoom -> Cloudflare recordings pipeline status (teacher sessions API). */
+  recording?: {
+    state: 'NONE' | 'PROCESSING' | 'READY' | 'FAILED' | 'RAW'
+    url?: string | null
+  }
   notesUrl?: string | null
   materialsUrl?: any
   homeworkAssigned?: string | null
