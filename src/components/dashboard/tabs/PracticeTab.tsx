@@ -14,6 +14,7 @@ import {
   Target,
   Bookmark,
   RotateCcw,
+  BookX,
 } from 'lucide-react'
 
 const quickPracticeItems = [
@@ -89,10 +90,28 @@ interface BookmarkData {
   latestQuestion?: string
 }
 
+interface MistakeSummary {
+  totalMistakes: number
+  topTopics: { topic: string; count: number }[]
+}
+
 export function PracticeTab() {
   const [bookmarkData, setBookmarkData] = useState<BookmarkData>({ total: 0 })
   const [reviewDueCount, setReviewDueCount] = useState(0)
   const [ncertClass, setNcertClass] = useState<11 | 12 | null>(null)
+  const [mistakeSummary, setMistakeSummary] = useState<MistakeSummary | null>(null)
+
+  // Mistake Notebook count (P2.5 #1): wrong CBT answers compiled per student
+  useEffect(() => {
+    fetch('/api/student/mistakes?summary=1', { credentials: 'include' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (d?.success && d.summary?.totalMistakes > 0) {
+          setMistakeSummary(d.summary)
+        }
+      })
+      .catch(() => {})
+  }, [])
 
   // Grade-aware MCQ deep-links (roadmap P1): the student's canonical grade
   // from /api/student/summary → ?ncertClass=11|12 on the MCQ hub links.
@@ -153,6 +172,38 @@ export function PracticeTab() {
 
   return (
     <div className="space-y-4 sm:space-y-6">
+      {/* Mistake Notebook (P2.5 #1) */}
+      {mistakeSummary && (
+        <Link
+          href="/student/mistakes"
+          className="block bg-white rounded-xl shadow-lg border border-red-200 p-4 sm:p-6 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 group"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+              <BookX className="w-6 h-6 text-red-600" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center justify-between gap-2">
+                <h3 className="text-base sm:text-lg font-bold text-gray-900 group-hover:text-red-600 transition-colors">
+                  Mistake Notebook
+                </h3>
+                <ArrowRight className="w-4 h-4 text-red-600 group-hover:translate-x-0.5 transition-transform flex-shrink-0" />
+              </div>
+              <p className="text-xs sm:text-sm text-gray-600">
+                {mistakeSummary.totalMistakes} question
+                {mistakeSummary.totalMistakes === 1 ? '' : 's'} to review from your mock tests
+                {mistakeSummary.topTopics.length > 0 && (
+                  <span className="text-gray-500">
+                    {' '}
+                    · mostly {mistakeSummary.topTopics.map((t) => t.topic).join(', ')}
+                  </span>
+                )}
+              </p>
+            </div>
+          </div>
+        </Link>
+      )}
+
       {/* Your Review Queue */}
       {(bookmarkData.total > 0 || reviewDueCount > 0) && (
         <div className="bg-white rounded-xl shadow-lg border border-slate-200 p-4 sm:p-6">
