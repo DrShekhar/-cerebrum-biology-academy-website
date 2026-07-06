@@ -15,6 +15,7 @@ import {
   BookOpenCheck,
   FolderOpen,
   Trophy,
+  Video,
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useSwipeGesture, usePullToRefresh } from '@/hooks/useSwipeGesture'
@@ -35,6 +36,7 @@ import {
   PracticeTab,
   ScheduleTab,
   MockTestsTab,
+  VideosTab,
   HomeworkTab,
   MaterialsTab,
   GoalsTab,
@@ -77,6 +79,7 @@ export function PersonalizedStudentDashboard() {
     { id: 'weak-areas', label: 'Weak Areas', icon: AlertTriangle },
     { id: 'practice', label: 'Practice Tests', icon: Target },
     { id: 'mock-tests', label: 'Mock Tests', icon: ClipboardList },
+    { id: 'videos', label: 'Videos', icon: Video },
     { id: 'homework', label: 'Homework', icon: BookOpenCheck },
     { id: 'materials', label: 'Materials', icon: FolderOpen },
     { id: 'goals', label: 'Goals', icon: Trophy },
@@ -509,6 +512,8 @@ export function PersonalizedStudentDashboard() {
         {activeTab === 'practice' && <PracticeTab />}
 
         {activeTab === 'mock-tests' && <MockTestsTab />}
+
+        {activeTab === 'videos' && <VideosTab />}
 
         {activeTab === 'homework' && <HomeworkTab />}
 

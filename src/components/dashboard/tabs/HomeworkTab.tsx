@@ -8,6 +8,7 @@ import { BookOpenCheck, FileText, LogIn } from 'lucide-react'
 import Link from 'next/link'
 import { AssignmentList } from '@/components/student/AssignmentList'
 import WorksheetList from '@/components/worksheets/WorksheetList'
+import { TeacherFeedbackFeed } from '@/components/student/TeacherFeedbackFeed'
 
 type AssignmentItem = React.ComponentProps<typeof AssignmentList>['assignments'][number]
 
@@ -89,6 +90,10 @@ export function HomeworkTab() {
           </div>
         </div>
       )}
+
+      {/* Unified teacher feedback across assignments/worksheets/tests
+          (renders nothing when there's no feedback yet) */}
+      <TeacherFeedbackFeed />
 
       {/* Assignments */}
       <div>

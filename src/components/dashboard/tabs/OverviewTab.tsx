@@ -11,6 +11,7 @@ import { SpacedReviewWidget } from '../SpacedReviewWidget'
 import { NEETReadinessMeter } from '../NEETReadinessMeter'
 import { DailyChallengeCard } from '../DailyChallengeCard'
 import { UpcomingSessionsWidget } from '@/components/student/UpcomingSessionsWidget'
+import { TeacherFeedbackFeed } from '@/components/student/TeacherFeedbackFeed'
 import { WeakAreaItem } from './WeakAreaItem'
 
 interface StudySession {
@@ -177,6 +178,9 @@ export function OverviewTab({
       {/* Next live classes — real /api/student/sessions data (replaces the
           old hardcoded next-class countdown) */}
       <UpcomingSessionsWidget />
+
+      {/* Latest teacher comments (renders nothing when there's no feedback) */}
+      <TeacherFeedbackFeed maxItems={3} />
 
       {/* NEET Readiness Meter */}
       <NEETReadinessMeter />
