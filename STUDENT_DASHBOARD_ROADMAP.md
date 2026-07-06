@@ -62,6 +62,14 @@ After parity: redirect `/student/dashboard` → `/dashboard`.
   5. **AI quiz-from-content drafts** (M) — Anthropic API generates draft MCQs from lecture/PDF content into a teacher review queue (never auto-publish).
   6. **Web push via PWA** (M/L, post-P2.5) — completion-rate lever; students get push, parents stay on WhatsApp.
   - Skipped deliberately: branching video, SCORM/LTI, AI course creator, site-builder parity, native app builder (PWA first), NL analytics chat.
+- **P2.7 Advanced picks** (user-directed Jul 6, from `KAJABI_THINKIFIC_FEATURE_AUDIT.md` §5):
+  1. **Zoom attendance auto-tracking** (M) — auto-mark from Zoom participant reports; feeds parent WA report (P2.5 #2), batch progress report (§F), at-risk alerts (P2.5 #7). Manual marking is the current weak link.
+  2. **Lightweight CBT anti-cheat** (S/M) — option shuffle + tab-blur detection + answer-speed flags. Explicitly NO webcam proctoring.
+  3. **NCERT chapter taxonomy table** (M) — canonical chapter/topic tree keyed to NCERT; multiplies mastery map (P2.5), builder pickers (§G), content-gap detection. Taxonomy-first (Khan pattern) beats course-first.
+  4. **Instructor-endorsed Q&A** (M) — on existing forum; teacher-verified answers pinned.
+  5. **Owner revenue/LTV dashboard** (M) — payments/enrollments tables all exist.
+  6. **Activate /api/referral** (S/M) — WA share + coupon; endpoint already built, near-zero effort in a referral-dominated market.
+  - Skipped with reasons in audit doc: webcam proctoring, plagiarism checks, B2B white-label (later; §F groups is the seed), Hindi dubbing, a11y-as-project (enforce in new UI instead; CF transcripts = biggest a11y win).
 - **P3 Staff+recordings**: counselor academics endpoint+tab; admin drill-down; Zoom recording webhook → CF pipeline; optional Zoom auto-create.
 - **P4 Polish**: redirects, mobile pass, empty states, demo-content cleanup script.
 
@@ -81,4 +89,6 @@ Dashboard: `app/dashboard/page.tsx`, `components/dashboard/PersonalizedStudentDa
 - **Learning-event automations → CRM** (M, later): mock-completion/score-jump triggers → parent WA congrats + counselor note; extends P2.5 #7 at-risk cron into positive+negative triggers (Kajabi flow pattern on our rails).
 - Student materials/videos gates add one OR-branch: `group_content JOIN student_group_members ON userId`. Admin UI: /admin/groups (create, member picker, assign-content).
 - This SUPERSEDES the `requiredClass` column idea in §A.3 — groups are more flexible (a group CAN be a class).
+**§G ADMIN COURSE BUILDER (Jul 6, from audit §4 — build after P2)**: ONE additive table `course_items(id, courseId, sectionTitle, sortOrder, itemType, refId, isDraft, releaseAt?, dayOffset?)` arranging EXISTING study_materials/video_lectures/test-templates into an ordered curriculum tree — no CMS migration; content tables already are the media library (Kajabi pattern); access gates unchanged. Drip semantics SHARED with group_content (one mechanism; group assignment overrides course default). Feature order: course CRUD UI (S) → curriculum tree editor + attach-existing pickers (M/L, core) → clone course (S — shared refs give LearnWorlds Clone-&-Sync free) → bulk multi-file add auto-creating items (M, Thinkific pattern) → XLS question import to teacher review queue (M, LearnWorlds pattern) → preview-as-student via demo seed (S/M).
+
 **Parent comms — design decision (WhatsApp-groups replacement)**: use the **Broadcast List model, NOT groups**: parents are members of a group in OUR DB; every outbound message is an INDIVIDUAL WhatsApp template send via the Meta Cloud API sender (W5, built) — parents can never see each other's numbers (privacy by design; this is exactly how WhatsApp Business API works — there is NO group API, which is a feature here). Components: admin/counselor "Message group" composer → fan-out individual sends (rate-limited, logged in crm_communications) + in-app NoticeBoard mirror (notices system already real) + parent dashboard already exists. Two-way: replies land in the existing /api/whatsapp/webhook inbound → counselor Messages inbox. Staff comms: same mechanism with a staff group + role gate.
