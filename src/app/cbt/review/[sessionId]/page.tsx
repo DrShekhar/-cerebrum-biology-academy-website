@@ -2,7 +2,17 @@
 
 import { use, useEffect, useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
-import { Loader2, ArrowLeft, Sparkles, TrendingUp, TrendingDown, ListChecks } from 'lucide-react'
+import {
+  Loader2,
+  ArrowLeft,
+  Sparkles,
+  TrendingUp,
+  TrendingDown,
+  ListChecks,
+  Zap,
+  Brain,
+  Clock,
+} from 'lucide-react'
 import type { CBTReviewItem } from '@/components/cbt/CBTExam'
 
 interface AiFeedback {
@@ -10,6 +20,12 @@ interface AiFeedback {
   weaknesses: string[]
   recommendations: string[]
   motivationalMessage: string
+  // v2 sections — absent on feedback cached in the old format
+  errorAnalysis?: {
+    sillyErrors: string[]
+    conceptGaps: string[]
+    timeManagement: string
+  }
 }
 
 /**
@@ -139,6 +155,50 @@ export default function CBTReviewPage({ params }: { params: Promise<{ sessionId:
                     </ul>
                   </div>
                 </div>
+                {aiFeedback.errorAnalysis && (
+                  <>
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      <div>
+                        <div className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-orange-700">
+                          <Zap className="h-3.5 w-3.5" /> Silly errors
+                        </div>
+                        {aiFeedback.errorAnalysis.sillyErrors.length > 0 ? (
+                          <ul className="space-y-1 text-sm text-gray-700">
+                            {aiFeedback.errorAnalysis.sillyErrors.map((s, i) => (
+                              <li key={i}>• {s}</li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p className="text-sm text-gray-500">No careless slips spotted.</p>
+                        )}
+                      </div>
+                      <div>
+                        <div className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-purple-700">
+                          <Brain className="h-3.5 w-3.5" /> Concept gaps
+                        </div>
+                        {aiFeedback.errorAnalysis.conceptGaps.length > 0 ? (
+                          <ul className="space-y-1 text-sm text-gray-700">
+                            {aiFeedback.errorAnalysis.conceptGaps.map((s, i) => (
+                              <li key={i}>• {s}</li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p className="text-sm text-gray-500">No concept gaps detected.</p>
+                        )}
+                      </div>
+                    </div>
+                    {aiFeedback.errorAnalysis.timeManagement && (
+                      <div>
+                        <div className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-blue-700">
+                          <Clock className="h-3.5 w-3.5" /> Time management
+                        </div>
+                        <p className="text-sm text-gray-700">
+                          {aiFeedback.errorAnalysis.timeManagement}
+                        </p>
+                      </div>
+                    )}
+                  </>
+                )}
                 <div>
                   <div className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-indigo-700">
                     <ListChecks className="h-3.5 w-3.5" /> Study plan

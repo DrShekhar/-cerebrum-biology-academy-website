@@ -20,6 +20,13 @@ interface AiFeedback {
   weaknesses: string[]
   recommendations: string[]
   motivationalMessage: string
+  // v2 (P2.5 #3): silly-error vs concept-gap classification + time note.
+  // Optional so feedback cached in the old format keeps working unchanged.
+  errorAnalysis?: {
+    sillyErrors: string[]
+    conceptGaps: string[]
+    timeManagement: string
+  }
 }
 
 export async function POST(_request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
@@ -39,6 +46,7 @@ export async function POST(_request: NextRequest, { params }: { params: Promise<
         status: true,
         totalScore: true,
         percentage: true,
+        timeSpent: true,
         answerState: true,
         test_analytics: { select: { id: true, answerPattern: true } },
       },
@@ -78,16 +86,37 @@ export async function POST(_request: NextRequest, { params }: { params: Promise<
 
     const questions = await prisma.questions.findMany({
       where: { id: { in: questionIds } },
-      select: { id: true, topic: true, subject: true, correctAnswer: true, options: true },
+      select: {
+        id: true,
+        question: true,
+        topic: true,
+        subject: true,
+        correctAnswer: true,
+        options: true,
+      },
     })
 
     const topicWise: Record<string, { correct: number; total: number }> = {}
+    const wrongDetails: { topic: string; question: string; chose: string; correct: string }[] = []
+    let unattempted = 0
     for (const q of questions) {
       const key = q.topic || q.subject || 'General'
       if (!topicWise[key]) topicWise[key] = { correct: 0, total: 0 }
       topicWise[key].total++
       const your = (answers[q.id] || '').toUpperCase()
-      if (your && your === correctLetter(q as never)) topicWise[key].correct++
+      const correct = correctLetter(q as never)
+      if (your && your === correct) {
+        topicWise[key].correct++
+      } else if (your) {
+        wrongDetails.push({
+          topic: key,
+          question: (q.question || '').slice(0, 120),
+          chose: your,
+          correct,
+        })
+      } else {
+        unattempted++
+      }
     }
 
     const perf = Object.entries(topicWise).map(([topic, d]) => ({
@@ -99,19 +128,38 @@ export async function POST(_request: NextRequest, { params }: { params: Promise<
     const strong = perf.filter((t) => t.accuracy >= 70 && t.total >= 2)
     const weak = perf.filter((t) => t.accuracy < 60)
 
+    // Per-question timing is NOT captured by the CBT engine (answerState only
+    // stores questionIds/answers/marked/visited, and submit writes no
+    // per-response timeSpent) — so error classification works from answer
+    // patterns, and time management from overall session pace only.
+    const totalSeconds = test.timeSpent ?? 0
+    const avgSecPerQ = questionIds.length > 0 ? Math.round(totalSeconds / questionIds.length) : 0
+
+    const wrongList = wrongDetails
+      .slice(0, 30)
+      .map((w) => `- [${w.topic}] "${w.question}" — chose ${w.chose}, correct ${w.correct}`)
+      .join('\n')
+
     const prompt = `Analyze this NEET Biology mock-test performance and provide personalized coaching feedback:
 
 Test Performance:
 - Score: ${test.totalScore ?? 0} (${(test.percentage ?? 0).toFixed(1)}%)
 - Strong topics: ${strong.map((t) => `${t.topic} (${t.accuracy.toFixed(0)}%, ${t.correct}/${t.total})`).join(', ') || 'None yet'}
 - Weak topics: ${weak.map((t) => `${t.topic} (${t.accuracy.toFixed(0)}%, ${t.correct}/${t.total})`).join(', ') || 'None'}
+- Unattempted questions: ${unattempted} of ${questionIds.length}
+- Overall pace: ${totalSeconds > 0 ? `${avgSecPerQ}s/question average over ${Math.round(totalSeconds / 60)} min` : 'not recorded'} (NEET allows ~63s/question; per-question timing was not recorded, so judge time management from pace + unattempted count only)
+
+Wrong answers (topic, question, chosen vs correct):
+${wrongList || '- None'}
+
+Classify each wrong answer as a SILLY ERROR (the student's strong-topic accuracy or the nature of the miss — adjacent option, misread qualifier like "incorrect/except", basic NCERT line they otherwise know — suggests a slip) or a CONCEPT GAP (weak-topic pattern or a fundamental misunderstanding). Never invent timing data.
 
 Respond with JSON only:
-{"strengths": [2-3 specific strengths], "weaknesses": [2-3 areas to improve], "recommendations": [3-4 specific actionable NCERT-based study actions], "motivationalMessage": "2-3 encouraging sentences"}`
+{"strengths": [2-3 specific strengths], "weaknesses": [2-3 areas to improve], "recommendations": [3-4 specific actionable NCERT-based study actions], "motivationalMessage": "2-3 encouraging sentences", "errorAnalysis": {"sillyErrors": [short bullets, each naming the topic + what slipped; [] if none], "conceptGaps": [short bullets, each naming the topic + the misunderstood concept; [] if none], "timeManagement": "1-2 sentences on pace and attempt strategy based only on the data above"}}`
 
     const response = await anthropic().messages.create({
       model: 'claude-sonnet-4-20250514',
-      max_tokens: 1024,
+      max_tokens: 1600,
       messages: [{ role: 'user', content: prompt }],
     })
 
@@ -121,6 +169,18 @@ Respond with JSON only:
       feedback = JSON.parse(text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1))
     } catch {
       return NextResponse.json({ error: 'AI feedback could not be generated' }, { status: 502 })
+    }
+
+    // Normalize the v2 section so the client can trust its shape.
+    if (feedback.errorAnalysis && typeof feedback.errorAnalysis === 'object') {
+      const ea = feedback.errorAnalysis as Partial<NonNullable<AiFeedback['errorAnalysis']>>
+      feedback.errorAnalysis = {
+        sillyErrors: Array.isArray(ea.sillyErrors) ? ea.sillyErrors.map(String) : [],
+        conceptGaps: Array.isArray(ea.conceptGaps) ? ea.conceptGaps.map(String) : [],
+        timeManagement: typeof ea.timeManagement === 'string' ? ea.timeManagement : '',
+      }
+    } else {
+      delete feedback.errorAnalysis
     }
 
     // Cache (merge into existing analytics row, or skip caching if none)
