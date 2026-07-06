@@ -13,8 +13,11 @@ import { auth } from '@/lib/auth'
 export async function GET(request: NextRequest) {
   try {
     const session = await auth()
-    if (!session || session.user.role?.toUpperCase() !== 'ADMIN') {
-      return NextResponse.json({ error: 'Unauthorized. Admin access required.' }, { status: 401 })
+    if (!session) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+    if (session.user.role?.toUpperCase() !== 'ADMIN') {
+      return NextResponse.json({ error: 'Forbidden. Admin access required.' }, { status: 403 })
     }
 
     const { searchParams } = new URL(request.url)
