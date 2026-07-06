@@ -212,20 +212,37 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
       updateData.convertedAt = new Date()
     }
 
-    // Detect ENROLLED transition: only emit if stage is actually changing,
-    // not on idempotent re-PATCHes of an already-enrolled lead.
-    const enrolling =
-      body.stage === 'ENROLLED' &&
-      (await prisma.leads.findUnique({
-        where: { id: params.id },
-        select: { stage: true, courseInterest: true, assignedToId: true },
-      }))
+    // Fetch the current stage whenever a stage change is requested — used both
+    // to detect the ENROLLED transition and to log the change on the lead's
+    // activity timeline (Kanban drags previously left no timeline trace).
+    const prior = body.stage
+      ? await prisma.leads.findUnique({
+          where: { id: params.id },
+          select: { stage: true, courseInterest: true, assignedToId: true },
+        })
+      : null
 
     const updated = await prisma.leads.update({
       where: { id: params.id },
       data: updateData,
     })
 
+    if (prior && body.stage && prior.stage !== body.stage) {
+      prisma.activities
+        .create({
+          data: {
+            id: crypto.randomUUID(),
+            action: 'stage_changed',
+            description: `Stage: ${String(prior.stage).replace(/_/g, ' ')} → ${String(body.stage).replace(/_/g, ' ')}`,
+            leadId: params.id,
+            userId: session.user.id,
+            createdAt: new Date(),
+          },
+        })
+        .catch(() => {})
+    }
+
+    const enrolling = body.stage === 'ENROLLED' ? prior : null
     if (enrolling && enrolling.stage !== 'ENROLLED') {
       await inngest.send({
         name: 'lead/enrolled',

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import Link from 'next/link'
 import {
   Users,
   Calendar,
@@ -364,9 +365,12 @@ export default function AdminDashboard() {
               {data.demos.pendingBookings}
             </div>
             <p className="text-sm text-gray-600">Require immediate attention</p>
-            <button className="mt-4 text-orange-600 hover:text-orange-700 font-medium text-sm">
+            <Link
+              href="/admin/demo-bookings"
+              className="inline-block mt-4 text-orange-600 hover:text-orange-700 font-medium text-sm"
+            >
               View Details →
-            </button>
+            </Link>
           </div>
 
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp">
@@ -380,9 +384,12 @@ export default function AdminDashboard() {
               {data.demos.completedToday}
             </div>
             <p className="text-sm text-gray-600">Average rating: {data.demos.averageRating}★</p>
-            <button className="mt-4 text-green-600 hover:text-green-700 font-medium text-sm">
+            <Link
+              href="/admin/demo-bookings"
+              className="inline-block mt-4 text-green-600 hover:text-green-700 font-medium text-sm"
+            >
               View Feedback →
-            </button>
+            </Link>
           </div>
 
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp">
@@ -396,9 +403,12 @@ export default function AdminDashboard() {
               {data.demos.conversionRate}%
             </div>
             <p className="text-sm text-gray-600">Conversion rate this month</p>
-            <button className="mt-4 text-blue-600 hover:text-blue-700 font-medium text-sm">
+            <Link
+              href="/admin/analytics/conversion"
+              className="inline-block mt-4 text-blue-600 hover:text-blue-700 font-medium text-sm"
+            >
               Improve Rate →
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -408,9 +418,12 @@ export default function AdminDashboard() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-lg font-semibold text-gray-900">Recent Activity</h3>
-              <button className="text-primary-600 hover:text-primary-700 text-sm font-medium">
+              <Link
+                href="/admin/analytics"
+                className="text-primary-600 hover:text-primary-700 text-sm font-medium"
+              >
                 View All
-              </button>
+              </Link>
             </div>
 
             <div className="space-y-4">
@@ -437,9 +450,12 @@ export default function AdminDashboard() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-lg font-semibold text-gray-900">Popular Courses</h3>
-              <button className="text-primary-600 hover:text-primary-700 text-sm font-medium">
+              <Link
+                href="/admin/courses/performance"
+                className="text-primary-600 hover:text-primary-700 text-sm font-medium"
+              >
                 View Analytics
-              </button>
+              </Link>
             </div>
 
             <div className="space-y-4">
@@ -484,33 +500,45 @@ export default function AdminDashboard() {
           <h3 className="text-lg font-semibold text-gray-900 mb-6">Quick Actions</h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <button className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-primary-300 hover:bg-primary-50 transition-colors group">
+            <Link
+              href="/admin/students"
+              className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-primary-300 hover:bg-primary-50 transition-colors group"
+            >
               <UserPlus className="w-5 h-5 text-gray-400 group-hover:text-primary-600" />
               <span className="text-sm font-medium text-gray-600 group-hover:text-primary-700">
                 Add Student
               </span>
-            </button>
+            </Link>
 
-            <button className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-green-400 hover:bg-green-50 transition-colors group">
+            <Link
+              href="/admin/demo-slots"
+              className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-green-400 hover:bg-green-50 transition-colors group"
+            >
               <Calendar className="w-5 h-5 text-gray-400 group-hover:text-green-600" />
               <span className="text-sm font-medium text-gray-600 group-hover:text-green-700">
                 Schedule Demo
               </span>
-            </button>
+            </Link>
 
-            <button className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors group">
+            <Link
+              href="/admin/marketing/campaigns"
+              className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors group"
+            >
               <MessageSquare className="w-5 h-5 text-gray-400 group-hover:text-purple-600" />
               <span className="text-sm font-medium text-gray-600 group-hover:text-purple-700">
                 Send Campaign
               </span>
-            </button>
+            </Link>
 
-            <button className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-colors group">
+            <Link
+              href="/admin/analytics"
+              className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-colors group"
+            >
               <BarChart3 className="w-5 h-5 text-gray-400 group-hover:text-orange-600" />
               <span className="text-sm font-medium text-gray-600 group-hover:text-orange-700">
                 View Reports
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

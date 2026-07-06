@@ -150,16 +150,28 @@ export async function GET(request: NextRequest) {
       .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
       .slice(0, 10)
 
-    // Format upcoming classes
+    // Format upcoming classes with REAL per-course enrollment counts
+    // (previously hardcoded batch:'All Students' + studentsCount:0 — teachers
+    // saw fake zeros on every class).
+    const courseIds = [...new Set(upcomingSessions.map((s) => s.courseId))]
+    const enrollmentCounts = courseIds.length
+      ? await prisma.enrollments.groupBy({
+          by: ['courseId'],
+          where: { courseId: { in: courseIds }, status: 'ACTIVE' },
+          _count: true,
+        })
+      : []
+    const countByCourse = Object.fromEntries(enrollmentCounts.map((e) => [e.courseId, e._count]))
+
     const upcomingClasses = upcomingSessions.map((session) => ({
       id: session.id,
       title: session.title || session.courses.name,
-      batch: 'All Students',
+      batch: session.courses.name,
       time: new Date(session.scheduledDate).toLocaleTimeString('en-US', {
         hour: '2-digit',
         minute: '2-digit',
       }),
-      studentsCount: 0,
+      studentsCount: countByCourse[session.courseId] || 0,
     }))
 
     // Calculate stats

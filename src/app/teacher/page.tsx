@@ -15,7 +15,6 @@ import {
   BookOpen,
   TrendingUp,
   Play,
-  Bell,
 } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
@@ -155,10 +154,8 @@ export default function TeacherDashboardPage() {
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <Button variant="outline" size="sm">
-                <Bell className="w-4 h-4 mr-2" />
-                Notifications
-              </Button>
+              {/* Notifications button removed — it had no handler and no
+                  backing feature; a dead control erodes trust in the rest. */}
               <Link href="/teacher/assignments/create">
                 <Button variant="primary" size="sm">
                   <FileText className="w-4 h-4 mr-2" />

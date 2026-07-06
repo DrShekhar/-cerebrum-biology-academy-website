@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   Bell,
   Mail,
@@ -136,13 +136,61 @@ export default function NotificationsSettingsPage() {
     setEvents(events.map((ev) => (ev.id === eventId ? { ...ev, [channel]: !ev[channel] } : ev)))
   }
 
+  // Load persisted settings (profile.notificationSettings) and merge into the
+  // default matrix — previously this page reset to defaults on every visit and
+  // its Save button was a setTimeout that wrote nothing.
+  useEffect(() => {
+    fetch('/api/admin/settings/notifications', { credentials: 'include' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        const saved = data?.settings
+        if (!saved) return
+        if (Array.isArray(saved.channels)) {
+          setChannels((prev) =>
+            prev.map((ch) => {
+              const s = saved.channels.find((c: { id: string }) => c.id === ch.id)
+              return s ? { ...ch, enabled: s.enabled } : ch
+            })
+          )
+        }
+        if (Array.isArray(saved.events)) {
+          setEvents((prev) =>
+            prev.map((ev) => {
+              const s = saved.events.find((e: { id: string }) => e.id === ev.id)
+              return s ? { ...ev, email: s.email, sms: s.sms, whatsapp: s.whatsapp } : ev
+            })
+          )
+        }
+      })
+      .catch(() => {})
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   const handleSave = async () => {
     setIsSaving(true)
-    // Simulate save
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setIsSaving(false)
-    setShowSuccess(true)
-    setTimeout(() => setShowSuccess(false), 3000)
+    try {
+      const res = await fetch('/api/admin/settings/notifications', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({
+          channels: channels.map((c) => ({ id: c.id, enabled: c.enabled })),
+          events: events.map((e) => ({
+            id: e.id,
+            email: e.email,
+            sms: e.sms,
+            whatsapp: e.whatsapp,
+          })),
+        }),
+      })
+      if (!res.ok) throw new Error('save failed')
+      setShowSuccess(true)
+      setTimeout(() => setShowSuccess(false), 3000)
+    } catch {
+      showToast.error('Failed to save notification settings')
+    } finally {
+      setIsSaving(false)
+    }
   }
 
   return (

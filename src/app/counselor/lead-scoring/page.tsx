@@ -396,10 +396,11 @@ export default function LeadScoringPage() {
         credentials: 'include',
         body: JSON.stringify({ rules, hotThreshold, warmThreshold }),
       })
-      if (!res.ok) throw new Error()
+      const data = await res.json().catch(() => null)
+      if (!res.ok) throw new Error(data?.error || 'Failed to save rules')
       showToast.success('Scoring rules saved!')
-    } catch {
-      showToast.error('Failed to save rules')
+    } catch (err) {
+      showToast.error(err instanceof Error ? err.message : 'Failed to save rules')
     } finally {
       setSaving(false)
     }
