@@ -103,10 +103,12 @@ export function StudentAcademicsSection({
   leadId,
   userId,
   defaultExpanded = true,
+  showPayments = false,
 }: {
   leadId?: string
   userId?: string
   defaultExpanded?: boolean
+  showPayments?: boolean
 }) {
   const [data, setData] = useState<AcademicsData | null>(null)
   const [loading, setLoading] = useState(true)
@@ -343,6 +345,60 @@ export function StudentAcademicsSection({
                       </div>
                     ))}
                   </div>
+                </div>
+              )}
+
+              {/* Payments (admin drill-down) */}
+              {showPayments && data?.payments && (
+                <div>
+                  <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                    Payments
+                  </h4>
+                  <div className="flex items-center gap-4 text-sm mb-2">
+                    <span className="text-green-700 font-medium">
+                      Paid {inr(data.payments.totalPaid)}
+                    </span>
+                    {data.payments.totalPending > 0 && (
+                      <span className="text-red-600 font-medium">
+                        Pending {inr(data.payments.totalPending)}
+                      </span>
+                    )}
+                  </div>
+                  {data.payments.recent.length > 0 ? (
+                    <div className="space-y-1.5">
+                      {data.payments.recent.map((p) => (
+                        <div
+                          key={p.id}
+                          className="flex items-center justify-between text-sm bg-gray-50 rounded-lg px-3 py-2"
+                        >
+                          <div className="min-w-0 flex-1">
+                            <p className="text-gray-900 truncate">
+                              {p.courseName || 'Course payment'}
+                            </p>
+                            <p className="text-xs text-gray-400">
+                              {format(new Date(p.date), 'MMM d, yyyy')}
+                            </p>
+                          </div>
+                          <div className="text-right ml-3">
+                            <p className="font-semibold text-gray-900">{inr(p.amount)}</p>
+                            <span
+                              className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                                p.status === 'COMPLETED'
+                                  ? 'bg-green-100 text-green-700'
+                                  : p.status === 'PENDING' || p.status === 'PROCESSING'
+                                    ? 'bg-yellow-100 text-yellow-700'
+                                    : 'bg-red-100 text-red-700'
+                              }`}
+                            >
+                              {p.status}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-sm text-gray-400">No payment records</p>
+                  )}
                 </div>
               )}
             </div>
