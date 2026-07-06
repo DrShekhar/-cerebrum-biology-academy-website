@@ -1,7 +1,18 @@
 'use client'
 
-import React, { useState, useMemo } from 'react'
-import { Trophy, Flame, Target, Users, Crown, Sparkles, Star, Zap } from 'lucide-react'
+import React, { useState, useMemo, useEffect } from 'react'
+import {
+  Trophy,
+  Flame,
+  Target,
+  Users,
+  Crown,
+  Sparkles,
+  Star,
+  Zap,
+  History,
+  Loader2,
+} from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
@@ -29,9 +40,9 @@ type LeaderboardType = 'CLASS' | 'BATCH' | 'GLOBAL'
 
 export default function GamificationDashboard() {
   const { user, isAuthenticated, isLoading: authLoading } = useAuth()
-  const [activeTab, setActiveTab] = useState<'overview' | 'badges' | 'leaderboard' | 'goals'>(
-    'overview'
-  )
+  const [activeTab, setActiveTab] = useState<
+    'overview' | 'badges' | 'leaderboard' | 'goals' | 'history'
+  >('overview')
 
   const {
     gamification,
@@ -119,6 +130,7 @@ export default function GamificationDashboard() {
     { id: 'badges', label: 'Badges', icon: <Trophy className="w-4 h-4" /> },
     { id: 'leaderboard', label: 'Leaderboard', icon: <Users className="w-4 h-4" /> },
     { id: 'goals', label: 'Goals', icon: <Target className="w-4 h-4" /> },
+    { id: 'history', label: 'XP History', icon: <History className="w-4 h-4" /> },
   ]
 
   return (
@@ -252,6 +264,7 @@ export default function GamificationDashboard() {
             goalSummary={goalSummary}
           />
         )}
+        {activeTab === 'history' && <XpHistoryTab />}
       </div>
     </div>
   )
@@ -588,6 +601,70 @@ function LoadingSkeleton() {
           ))}
         </div>
       </div>
+    </div>
+  )
+}
+
+// XP History — wires the previously orphaned /api/gamification/xp?view=history
+// endpoint: every XP transaction with what earned it and when.
+function XpHistoryTab() {
+  const [events, setEvents] = useState<
+    { id: string; eventType: string; xpAmount: number; description: string; createdAt: string }[]
+  >([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
+
+  useEffect(() => {
+    fetch('/api/gamification/xp?view=history&limit=50', { credentials: 'include' })
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((d) => setEvents(d.data?.events || []))
+      .catch(() => setError(true))
+      .finally(() => setLoading(false))
+  }, [])
+
+  if (loading) {
+    return (
+      <div className="flex justify-center py-16">
+        <Loader2 className="w-8 h-8 animate-spin text-indigo-400" />
+      </div>
+    )
+  }
+  if (error) {
+    return <div className="text-center py-16 text-gray-500">Could not load XP history.</div>
+  }
+  if (events.length === 0) {
+    return (
+      <div className="text-center py-16 text-gray-400">
+        <Zap className="w-10 h-10 mx-auto mb-3 text-gray-300" />
+        No XP earned yet — take a test or keep your streak alive to start earning!
+      </div>
+    )
+  }
+
+  return (
+    <div className="bg-white rounded-2xl border border-gray-200 divide-y divide-gray-100">
+      {events.map((e) => (
+        <div key={e.id} className="flex items-center justify-between px-5 py-3.5">
+          <div className="min-w-0">
+            <div className="text-sm font-medium text-gray-900 truncate">{e.description}</div>
+            <div className="text-xs text-gray-400 mt-0.5">
+              {e.eventType.replace(/_/g, ' ').toLowerCase()} ·{' '}
+              {new Date(e.createdAt).toLocaleDateString('en-IN', {
+                day: 'numeric',
+                month: 'short',
+                hour: '2-digit',
+                minute: '2-digit',
+              })}
+            </div>
+          </div>
+          <span
+            className={`ml-4 flex-shrink-0 text-sm font-bold ${e.xpAmount >= 0 ? 'text-green-600' : 'text-red-500'}`}
+          >
+            {e.xpAmount >= 0 ? '+' : ''}
+            {e.xpAmount} XP
+          </span>
+        </div>
+      ))}
     </div>
   )
 }

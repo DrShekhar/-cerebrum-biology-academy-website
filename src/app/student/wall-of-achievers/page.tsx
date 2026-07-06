@@ -2,7 +2,17 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-import { Trophy, Star, TrendingUp, Award, GraduationCap, ChevronRight } from 'lucide-react'
+import {
+  Trophy,
+  Star,
+  TrendingUp,
+  Award,
+  GraduationCap,
+  ChevronRight,
+  ThumbsUp,
+  Loader2,
+} from 'lucide-react'
+import { showToast } from '@/lib/toast'
 import { successStoriesData } from '@/data/successStories'
 
 const galleryImages = [
@@ -151,6 +161,37 @@ function AchieverCard({ story }: { story: (typeof successStoriesData)[0] }) {
 export default function StudentWallOfAchieversPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [apiAchievers, setApiAchievers] = useState<any[]>([])
+  const [endorsing, setEndorsing] = useState<string | null>(null)
+  const [endorsed, setEndorsed] = useState<Set<string>>(new Set())
+
+  // Peer endorsement — wires the previously orphaned nominate endpoint.
+  async function endorse(achieverId: string) {
+    if (endorsing || endorsed.has(achieverId)) return
+    try {
+      setEndorsing(achieverId)
+      const res = await fetch('/api/wall-of-achievers/nominate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ achieverId }),
+      })
+      const data = await res.json()
+      if (!res.ok || !data.success) throw new Error(data.error || 'Could not endorse')
+      setEndorsed((prev) => new Set(prev).add(achieverId))
+      setApiAchievers((prev) =>
+        prev.map((a) =>
+          a.id === achieverId
+            ? { ...a, _count: { nominations: (a._count?.nominations || 0) + 1 } }
+            : a
+        )
+      )
+      showToast.success('Endorsed! 🎉')
+    } catch (err) {
+      showToast.error(err instanceof Error ? err.message : 'Could not endorse')
+    } finally {
+      setEndorsing(null)
+    }
+  }
 
   useEffect(() => {
     fetch('/api/wall-of-achievers?limit=50')
@@ -249,6 +290,53 @@ export default function StudentWallOfAchieversPage() {
           </div>
         </div>
       </section>
+
+      {/* Community Achievers (live DB rows; previously fetched but never rendered) */}
+      {apiAchievers.length > 0 && (
+        <section className="pb-4">
+          <div className="max-w-5xl mx-auto px-4">
+            <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <Star className="w-5 h-5 text-yellow-500" /> This period&apos;s achievers
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {apiAchievers.map((a) => (
+                <div
+                  key={a.id}
+                  className="bg-white rounded-2xl border border-gray-200 p-5 flex items-start justify-between gap-4"
+                >
+                  <div>
+                    <div className="font-semibold text-gray-900">{a.studentName}</div>
+                    <div className="text-sm text-gray-600 mt-0.5">{a.achievement}</div>
+                    {a.score != null && (
+                      <div className="text-xs text-gray-400 mt-1">
+                        Score: {a.score}
+                        {a.rank != null ? ` · Rank ${a.rank}` : ''}
+                      </div>
+                    )}
+                  </div>
+                  <button
+                    onClick={() => endorse(a.id)}
+                    disabled={endorsing !== null || endorsed.has(a.id)}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
+                      endorsed.has(a.id)
+                        ? 'bg-green-100 text-green-700'
+                        : 'bg-gray-100 text-gray-600 hover:bg-yellow-100 hover:text-yellow-700'
+                    } disabled:opacity-60`}
+                    title="Endorse this achiever"
+                  >
+                    {endorsing === a.id ? (
+                      <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                    ) : (
+                      <ThumbsUp className="w-3.5 h-3.5" />
+                    )}
+                    {a._count?.nominations || 0}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Achiever Cards */}
       <section className="pb-16">

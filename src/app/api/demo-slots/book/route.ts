@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
-import { randomUUID } from 'crypto'
+import { randomUUID, randomBytes } from 'crypto'
 import { prisma } from '@/lib/prisma'
 import { resolveBookableSlot } from '@/lib/demo/slots'
 import { upsertLead } from '@/lib/leads/upsertLead'
@@ -101,6 +101,29 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Self-service cancel/reschedule token (one per booking; consumed on use).
+    // Nothing minted these before, so the /demo-booking/reschedule and
+    // /demo-booking/cancel flows were unreachable — every change request had
+    // to go through a human. Links returned so the widget / WhatsApp Flow
+    // confirmation can include them.
+    let manageToken: string | null = null
+    try {
+      manageToken = randomBytes(32).toString('hex')
+      const demoDay = new Date(`${created.booking.preferredDate}T23:59:59+05:30`)
+      await prisma.reschedule_tokens.upsert({
+        where: { bookingId: created.booking.id },
+        create: {
+          id: randomUUID(),
+          bookingId: created.booking.id,
+          token: manageToken,
+          expiresAt: new Date(demoDay.getTime() + 24 * 60 * 60 * 1000),
+        },
+        update: {},
+      })
+    } catch {
+      manageToken = null // booking still succeeds without self-service links
+    }
+
     // CRM: dedup by phone, round-robin counselor assignment, follow-up task.
     // Fire-and-forget — never block the booking confirmation on it.
     void upsertLead({
@@ -122,6 +145,12 @@ export async function POST(request: NextRequest) {
         time: created.booking.preferredTime,
         joinUrl: created.slot.zoomJoinUrl,
         teacher: created.slot.teacherName,
+        cancelUrl: manageToken
+          ? `/demo-booking/cancel?id=${created.booking.id}&token=${manageToken}`
+          : null,
+        rescheduleUrl: manageToken
+          ? `/demo-booking/reschedule?id=${created.booking.id}&token=${manageToken}`
+          : null,
       },
     })
   } catch (error) {
