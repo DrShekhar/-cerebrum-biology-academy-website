@@ -236,14 +236,15 @@ async function main() {
         freeUserId: student.id,
         title: a.t,
         topics: ['demo-seed'],
+        topicWiseScore: { 'demo-seed': a.pct },
         questionCount: 25,
         score: a.score,
         totalMarks: a.total,
         percentage: a.pct,
         timeSpent: 1800,
         status: 'COMPLETED',
-        createdAt: a.at,
-        updatedAt: a.at,
+        startedAt: a.at,
+        submittedAt: a.at,
       } as never,
     })
   }
