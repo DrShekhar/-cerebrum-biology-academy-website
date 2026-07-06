@@ -6,7 +6,7 @@
  * Drag-and-drop PDF uploader with metadata form
  */
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 
 interface MaterialUploaderProps {
   onUploadSuccess?: () => void
@@ -18,7 +18,14 @@ interface UploadMetadata {
   materialType: string
   category: string
   tags: string
+  accessLevel: string
+  courseId: string
   isPublished: boolean
+}
+
+interface CourseOption {
+  id: string
+  name: string
 }
 
 export function MaterialUploader({ onUploadSuccess }: MaterialUploaderProps) {
@@ -35,8 +42,30 @@ export function MaterialUploader({ onUploadSuccess }: MaterialUploaderProps) {
     materialType: 'PDF_NOTES',
     category: 'Class Notes',
     tags: '',
+    accessLevel: 'ENROLLED',
+    courseId: '',
     isPublished: false,
   })
+  const [courses, setCourses] = useState<CourseOption[]>([])
+
+  // Course options so uploads can be scoped at upload time
+  useEffect(() => {
+    let cancelled = false
+    fetch('/api/admin/courses?status=active&limit=100')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (cancelled || !data?.data?.courses) return
+        setCourses(
+          data.data.courses.map((c: { id: string; name: string }) => ({ id: c.id, name: c.name }))
+        )
+      })
+      .catch(() => {
+        // Course list is optional — uploads still work unscoped
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [])
 
   // Handle drag events
   const handleDragOver = useCallback((e: React.DragEvent) => {
@@ -125,9 +154,18 @@ export function MaterialUploader({ onUploadSuccess }: MaterialUploaderProps) {
           materialType: metadata.materialType,
           category: metadata.category || undefined,
           tags: tagsArray.length > 0 ? tagsArray : undefined,
+          accessLevel: metadata.accessLevel,
+          courseId: metadata.courseId || undefined,
           isPublished: metadata.isPublished,
         })
       )
+
+      // The upload route requires an x-csrf-token header (403 without it)
+      const csrfResponse = await fetch('/api/auth/csrf-token')
+      const csrfData = await csrfResponse.json().catch(() => null)
+      if (!csrfResponse.ok || !csrfData?.csrfToken) {
+        throw new Error('Could not get a security token. Please try again.')
+      }
 
       // Simulate progress (since fetch doesn't support progress)
       const progressInterval = setInterval(() => {
@@ -137,6 +175,7 @@ export function MaterialUploader({ onUploadSuccess }: MaterialUploaderProps) {
       // Upload
       const response = await fetch('/api/admin/lms/upload', {
         method: 'POST',
+        headers: { 'x-csrf-token': csrfData.csrfToken },
         body: formData,
       })
 
@@ -157,6 +196,8 @@ export function MaterialUploader({ onUploadSuccess }: MaterialUploaderProps) {
         materialType: 'PDF_NOTES',
         category: 'Class Notes',
         tags: '',
+        accessLevel: 'ENROLLED',
+        courseId: '',
         isPublished: false,
       })
       setUploadProgress(0)
@@ -290,6 +331,41 @@ export function MaterialUploader({ onUploadSuccess }: MaterialUploaderProps) {
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="e.g., Class 11, NEET 2027"
               />
+            </div>
+          </div>
+
+          {/* Access Level & Course */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Access Level</label>
+              <select
+                value={metadata.accessLevel}
+                onChange={(e) => setMetadata((prev) => ({ ...prev, accessLevel: e.target.value }))}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                <option value="FREE">Free (everyone)</option>
+                <option value="ENROLLED">Enrolled students</option>
+                <option value="SPECIFIC_COURSE">Specific course only</option>
+                <option value="PREMIUM">Premium</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Course (optional)
+              </label>
+              <select
+                value={metadata.courseId}
+                onChange={(e) => setMetadata((prev) => ({ ...prev, courseId: e.target.value }))}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                <option value="">No specific course</option>
+                {courses.map((course) => (
+                  <option key={course.id} value={course.id}>
+                    {course.name}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
 

@@ -383,23 +383,23 @@ model chapter_notes {
 }
 
 model chapters {
-  id              String            @id
-  courseId        String
-  title           String
-  description     String?
-  orderIndex      Int
+  id               String            @id
+  courseId         String
+  title            String
+  description      String?
+  orderIndex       Int
   // Drip scheduling: chapter stays locked for students until this date (null = immediate).
-  releaseAt       DateTime?
+  releaseAt        DateTime?
   // Prerequisite progression: locked until the previous chapter's materials are completed.
-  requiresPrevious Boolean          @default(false)
-  isActive        Boolean           @default(true)
-  createdAt       DateTime          @default(now())
-  updatedAt       DateTime
-  assignments     assignments[]
-  courses         courses           @relation(fields: [courseId], references: [id], onDelete: Cascade)
-  doubt_tickets   doubt_tickets[]
-  study_materials study_materials[]
-  topics          topics[]
+  requiresPrevious Boolean           @default(false)
+  isActive         Boolean           @default(true)
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime
+  assignments      assignments[]
+  courses          courses           @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  doubt_tickets    doubt_tickets[]
+  study_materials  study_materials[]
+  topics           topics[]
 
   @@index([courseId, orderIndex])
 }
@@ -496,6 +496,8 @@ model class_sessions {
   notesUrl           String?
   materialsUrl       Json?
   homeworkAssigned   String?
+  // Optional cohort scoping (student_groups.id); loose ref, no FK constraint
+  groupId            String?
   metadata           Json?
   createdAt          DateTime             @default(now())
   updatedAt          DateTime
@@ -504,6 +506,7 @@ model class_sessions {
   users              users                @relation(fields: [teacherId], references: [id], onDelete: Cascade)
   student_attendance student_attendance[]
 
+  @@index([groupId])
   @@index([courseId, scheduledDate])
   @@index([enrollmentId, scheduledDate])
   @@index([scheduledDate])
@@ -2684,6 +2687,7 @@ model study_materials {
   updatedAt         DateTime
   material_access   material_access[]
   material_progress material_progress[]
+  group_content     group_content[]
   chapters          chapters?           @relation(fields: [chapterId], references: [id])
   courses           courses?            @relation(fields: [courseId], references: [id])
   topics            topics?             @relation(fields: [topicId], references: [id])
@@ -3007,6 +3011,7 @@ model test_templates {
   test_assignments        test_assignments[]
   test_attempts           test_attempts[]
   test_sessions           test_sessions[]
+  group_content           group_content[]
 
   @@index([curriculum, grade])
   @@index([isActive, isPublished])
@@ -3103,22 +3108,22 @@ model user_question_responses {
 }
 
 model users {
-  id                                                                    String                        @id
-  email                                                                 String                        @unique
-  phone                                                                 String?                       @unique
+  id                                                                    String                           @id
+  email                                                                 String                           @unique
+  phone                                                                 String?                          @unique
   name                                                                  String
-  role                                                                  UserRole                      @default(STUDENT)
+  role                                                                  UserRole                         @default(STUDENT)
   passwordHash                                                          String?
   emailVerified                                                         DateTime?
   phoneVerified                                                         DateTime?
   profile                                                               Json?
-  createdAt                                                             DateTime                      @default(now())
+  createdAt                                                             DateTime                         @default(now())
   updatedAt                                                             DateTime
   lastActiveAt                                                          DateTime?
   verificationToken                                                     String?
   verificationTokenExpiry                                               DateTime?
-  firebaseUid                                                           String?                       @unique
-  coachingTier                                                          CoachingTier?                 @default(FREE)
+  firebaseUid                                                           String?                          @unique
+  coachingTier                                                          CoachingTier?                    @default(FREE)
   trialStartDate                                                        DateTime?
   trialEndDate                                                          DateTime?
   activities                                                            activities[]
@@ -3134,14 +3139,14 @@ model users {
   crm_communications                                                    crm_communications[]
   demo_bookings                                                         demo_bookings[]
   doubt_messages                                                        doubt_messages[]
-  doubt_tickets_doubt_tickets_instructorIdTousers                       doubt_tickets[]               @relation("doubt_tickets_instructorIdTousers")
-  doubt_tickets_doubt_tickets_studentIdTousers                          doubt_tickets[]               @relation("doubt_tickets_studentIdTousers")
+  doubt_tickets_doubt_tickets_instructorIdTousers                       doubt_tickets[]                  @relation("doubt_tickets_instructorIdTousers")
+  doubt_tickets_doubt_tickets_studentIdTousers                          doubt_tickets[]                  @relation("doubt_tickets_studentIdTousers")
   enrollments                                                           enrollments[]
   error_reports                                                         error_reports[]
   fee_plans                                                             fee_plans[]
   followup_history                                                      followup_history[]
-  followup_rules_followup_rules_createdByIdTousers                      followup_rules[]              @relation("followup_rules_createdByIdTousers")
-  followup_rules_followup_rules_updatedByIdTousers                      followup_rules[]              @relation("followup_rules_updatedByIdTousers")
+  followup_rules_followup_rules_createdByIdTousers                      followup_rules[]                 @relation("followup_rules_createdByIdTousers")
+  followup_rules_followup_rules_updatedByIdTousers                      followup_rules[]                 @relation("followup_rules_updatedByIdTousers")
   followup_templates                                                    followup_templates[]
   gallery_items                                                         gallery_items[]
   leads                                                                 leads[]
@@ -3154,18 +3159,18 @@ model users {
   message_templates                                                     message_templates[]
   notes                                                                 notes[]
   offers                                                                offers[]
-  parent_child_relationships_parent_child_relationships_childIdTousers  parent_child_relationships[]  @relation("parent_child_relationships_childIdTousers")
-  parent_child_relationships_parent_child_relationships_parentIdTousers parent_child_relationships[]  @relation("parent_child_relationships_parentIdTousers")
+  parent_child_relationships_parent_child_relationships_childIdTousers  parent_child_relationships[]     @relation("parent_child_relationships_childIdTousers")
+  parent_child_relationships_parent_child_relationships_parentIdTousers parent_child_relationships[]     @relation("parent_child_relationships_parentIdTousers")
   payment_links                                                         payment_links[]
   payments                                                              payments[]
   performance_reports                                                   performance_reports[]
   product_recommendations                                               product_recommendations[]
   security_audit_logs                                                   security_audit_logs[]
   sessions                                                              sessions[]
-  student_attendance_student_attendance_markedByTousers                 student_attendance[]          @relation("student_attendance_markedByTousers")
-  student_attendance_student_attendance_studentIdTousers                student_attendance[]          @relation("student_attendance_studentIdTousers")
-  tasks_tasks_assignedToIdTousers                                       tasks[]                       @relation("tasks_assignedToIdTousers")
-  tasks_tasks_createdByIdTousers                                        tasks[]                       @relation("tasks_createdByIdTousers")
+  student_attendance_student_attendance_markedByTousers                 student_attendance[]             @relation("student_attendance_markedByTousers")
+  student_attendance_student_attendance_studentIdTousers                student_attendance[]             @relation("student_attendance_studentIdTousers")
+  tasks_tasks_assignedToIdTousers                                       tasks[]                          @relation("tasks_assignedToIdTousers")
+  tasks_tasks_createdByIdTousers                                        tasks[]                          @relation("tasks_createdByIdTousers")
   test_assignment_submissions                                           test_assignment_submissions[]
   test_assignments                                                      test_assignments[]
   test_sessions                                                         test_sessions[]
@@ -3191,6 +3196,7 @@ model users {
   notice_reads                                                          notice_reads[]
   worksheet_submissions                                                 worksheet_submissions[]
   wall_of_achievers                                                     wall_of_achievers[]
+  student_group_members                                                 student_group_members[]
   achiever_nominations                                                  achiever_nominations[]
   self_evaluations                                                      self_evaluations[]
   work_tracking                                                         work_tracking[]
@@ -3286,6 +3292,7 @@ model video_lectures {
   video_notes         video_notes[]
   video_progress      video_progress[]
   video_checkpoints   video_checkpoints[]
+  group_content       group_content[]
 
   @@index([avgRating])
   @@index([cloudflareVideoId])
@@ -4665,6 +4672,8 @@ model notices {
   targetCourseIds String[]       @default([])
   targetBatchIds  String[]       @default([])
   targetUserIds   String[]       @default([])
+  // Optional cohort scoping (student_groups.id); loose ref, no FK constraint
+  groupId         String?
   priority        Int            @default(0)
   isPinned        Boolean        @default(false)
   isActive        Boolean        @default(true)
@@ -4682,6 +4691,7 @@ model notices {
   @@index([isActive, publishedAt])
   @@index([targetType])
   @@index([createdById])
+  @@index([groupId])
   @@index([isPinned, priority, publishedAt])
 }
 
@@ -4900,10 +4910,10 @@ model whatsapp_message_events {
 // (leadId, day) was sent — the @@unique makes concurrent cron runs race-safe
 // (the loser gets a P2002 and skips instead of double-sending).
 model welcome_series_events {
-  id       String   @id
-  leadId   String
-  day      Int
-  sentAt   DateTime @default(now())
+  id     String   @id
+  leadId String
+  day    Int
+  sentAt DateTime @default(now())
 
   @@unique([leadId, day])
   @@index([leadId])
@@ -4952,4 +4962,57 @@ model email_suppressions {
   createdAt DateTime @default(now())
 
   @@index([reason])
+}
+
+// Student groups (batches/cohorts) — admin-curated sets of students that can
+// receive materials/videos/tests as a unit, with optional drip scheduling
+// (releaseAt absolute, or dayOffset days after the group's startDate).
+// DB tables created by scripts/sql/2026-07-06-student-groups.sql (owner-run).
+model student_groups {
+  id                    String                  @id @default(cuid())
+  name                  String
+  description           String?
+  classLevel            StudentClass?
+  startDate             DateTime?
+  endDate               DateTime?
+  createdBy             String
+  createdAt             DateTime                @default(now())
+  student_group_members student_group_members[]
+  group_content         group_content[]
+
+  @@index([classLevel])
+}
+
+model student_group_members {
+  id             String         @id @default(cuid())
+  groupId        String
+  userId         String
+  addedBy        String
+  addedAt        DateTime       @default(now())
+  student_groups student_groups @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  users          users          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([groupId, userId])
+  @@index([userId])
+}
+
+model group_content {
+  id              String           @id @default(cuid())
+  groupId         String
+  materialId      String?
+  videoLectureId  String?
+  testTemplateId  String?
+  releaseAt       DateTime?
+  dayOffset       Int?
+  assignedBy      String
+  assignedAt      DateTime         @default(now())
+  student_groups  student_groups   @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  study_materials study_materials? @relation(fields: [materialId], references: [id], onDelete: Cascade)
+  video_lectures  video_lectures?  @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
+  test_templates  test_templates?  @relation(fields: [testTemplateId], references: [id], onDelete: Cascade)
+
+  @@index([groupId])
+  @@index([materialId])
+  @@index([videoLectureId])
+  @@index([testTemplateId])
 }

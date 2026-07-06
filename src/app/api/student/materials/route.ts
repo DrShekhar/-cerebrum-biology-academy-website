@@ -8,6 +8,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { hasTierAccess, getUserTier } from '@/lib/access/tierAccess'
+import { getGroupGrantedContent } from '@/lib/student/groupContent'
 
 /**
  * GET - Fetch published materials for student
@@ -33,8 +34,8 @@ export async function GET(request: NextRequest) {
     // Implement access control based on student's enrollment
     const userId = session.user.id
 
-    // Get student's active enrollments and material access
-    const [enrollments, materialAccess] = await Promise.all([
+    // Get student's active enrollments, material access and group grants
+    const [enrollments, materialAccess, groupContent] = await Promise.all([
       prisma.enrollments.findMany({
         where: {
           userId,
@@ -52,10 +53,14 @@ export async function GET(request: NextRequest) {
           materialId: true,
         },
       }),
+      getGroupGrantedContent(userId),
     ])
 
     const enrolledCourseIds = enrollments.map((e) => e.courseId)
-    const accessibleMaterialIds = materialAccess.map((m) => m.materialId)
+    // Direct grants + group (batch) assignments whose release gate has passed
+    const accessibleMaterialIds = materialAccess
+      .map((m) => m.materialId)
+      .concat(groupContent.materialIds)
 
     // Build where clause with access control
     const where: any = {
