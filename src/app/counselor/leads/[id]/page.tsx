@@ -26,6 +26,7 @@ import {
 import { format, formatDistanceToNow } from 'date-fns'
 import { showToast } from '@/lib/toast'
 import { PaymentLinksSection } from './PaymentLinksSection'
+import { AICopilotPanel } from '@/components/counselor/AICopilotPanel'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -720,6 +721,9 @@ export default function LeadDetailPage() {
 
         {/* Right Column: Sidebar */}
         <div className="space-y-6">
+          {/* AI Copilot — wires the June-built /api/agents/* suite */}
+          <AICopilotPanel leadId={lead.id} communications={lead.communications || []} />
+
           {/* Quick Stats */}
           <div className="bg-white rounded-xl border border-gray-200 p-5">
             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
