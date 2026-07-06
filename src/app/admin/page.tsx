@@ -230,7 +230,7 @@ export default function AdminDashboard() {
   if (isLoading) {
     return (
       <AdminLayout>
-        <div className="flex items-center justify-center h-full">
+        <div className="flex items-center justify-center min-h-[60vh]">
           <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-600"></div>
         </div>
       </AdminLayout>
@@ -240,8 +240,8 @@ export default function AdminDashboard() {
   if (error) {
     return (
       <AdminLayout>
-        <div className="flex flex-col items-center justify-center h-full">
-          <AlertCircle className="w-16 h-16 text-red-500 mb-4" />
+        <div className="flex flex-col items-center justify-center min-h-[60vh] p-6 text-center">
+          <AlertCircle className="w-12 h-12 sm:w-16 sm:h-16 text-red-500 mb-4" />
           <h2 className="text-xl font-semibold text-gray-900 mb-2">Error Loading Dashboard</h2>
           <p className="text-gray-600 mb-4">{error}</p>
           <button
@@ -258,10 +258,10 @@ export default function AdminDashboard() {
 
   return (
     <AdminLayout>
-      <div className="p-6 max-w-7xl mx-auto">
+      <div className="p-4 sm:p-6 max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
               <p className="text-gray-600 mt-2">
@@ -293,8 +293,8 @@ export default function AdminDashboard() {
           </div>
 
           {/* Live indicators */}
-          <div className="flex items-center justify-between mt-4 p-4 bg-white rounded-lg shadow-sm border">
-            <div className="flex items-center space-x-6">
+          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 mt-4 p-4 bg-white rounded-lg shadow-sm border">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse"></div>
                 <span className="text-sm font-medium">System Online</span>

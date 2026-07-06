@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, ReactNode } from 'react'
+import { useState, useEffect, ReactNode } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 const getFirebaseSignOut = () => import('@/lib/firebase/phone-auth').then((mod) => mod.signOut)
@@ -51,6 +51,18 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const router = useRouter()
   const { isLoading, isAuthenticated, user } = useAuth()
   const { isOwner, isCheckingOwner } = useOwnerAccess()
+
+  // Lock body scroll while the mobile drawer is open
+  useEffect(() => {
+    if (sidebarOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [sidebarOpen])
 
   // Check if user has admin role
   // Note: OWNER is not a role - owner status is checked via useOwnerAccess hook
@@ -329,7 +341,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
             <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
           </button>
         ) : (
-          <Link href={item.href}>
+          <Link href={item.href} onClick={() => setSidebarOpen(false)}>
             <div
               className={`w-full flex items-center justify-between px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                 depth === 0 ? 'mb-1' : 'mb-0.5 ml-4'
@@ -356,7 +368,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           <div className="overflow-hidden animate-fadeInUp">
             <div className="py-2">
               {item.children!.map((child) => (
-                <Link key={child.id} href={child.href}>
+                <Link key={child.id} href={child.href} onClick={() => setSidebarOpen(false)}>
                   <div
                     className={`flex items-center px-8 py-2 text-sm transition-colors ${
                       isActive(child.href)
@@ -393,7 +405,11 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           />
         )}
         {/* Sidebar */}
-        <aside className="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-xl lg:relative lg:translate-x-0 lg:shadow-lg animate-fadeInUp">
+        <aside
+          className={`fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-xl transform transition-transform duration-200 ease-in-out lg:relative lg:translate-x-0 lg:shadow-lg ${
+            sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
+        >
           <div className="flex h-full flex-col">
             {/* Logo */}
             <div className="flex items-center justify-between h-16 px-6 border-b border-gray-200">
@@ -471,8 +487,8 @@ export function AdminLayout({ children }: AdminLayoutProps) {
         {/* Main content */}
         <div className="flex-1 flex flex-col min-h-screen">
           {/* Top bar */}
-          <header className="bg-white shadow-sm border-b border-gray-200 h-16 flex items-center justify-between px-6">
-            <div className="flex items-center space-x-4">
+          <header className="bg-white shadow-sm border-b border-gray-200 h-16 flex items-center justify-between px-4 sm:px-6">
+            <div className="flex items-center space-x-2 sm:space-x-4 min-w-0 flex-1">
               <button
                 onClick={() => setSidebarOpen(true)}
                 className="lg:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-gray-100 rounded-lg touch-manipulation"
@@ -481,17 +497,17 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                 <Menu className="w-5 h-5" />
               </button>
 
-              <div className="relative">
+              <div className="relative flex-1 min-w-0 max-w-xs lg:max-w-none">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <input
                   type="text"
                   placeholder="Search students, bookings, payments..."
-                  className="pl-10 pr-4 py-2 w-80 border border-gray-200 rounded-lg focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none"
+                  className="pl-10 pr-4 py-2 w-full lg:w-80 border border-gray-200 rounded-lg focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none"
                 />
               </div>
             </div>
 
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4 shrink-0">
               {/* Notifications */}
               <button
                 className="relative p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-gray-100 rounded-lg touch-manipulation"
@@ -504,7 +520,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
               </button>
 
               {/* Real-time indicators */}
-              <div className="flex items-center space-x-2 text-sm">
+              <div className="hidden md:flex items-center space-x-2 text-sm">
                 <div className="flex items-center space-x-1">
                   <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
                   <span className="text-gray-600">Live</span>
