@@ -61,3 +61,13 @@ CREATE UNIQUE INDEX IF NOT EXISTS "worksheet_submissions_worksheetId_studentId_k
 CREATE INDEX IF NOT EXISTS "worksheet_submissions_studentId_idx" ON "worksheet_submissions"("studentId");
 CREATE INDEX IF NOT EXISTS "worksheet_submissions_worksheetId_idx" ON "worksheet_submissions"("worksheetId");
 CREATE INDEX IF NOT EXISTS "worksheet_submissions_status_idx" ON "worksheet_submissions"("status");
+
+-- 3) leads is missing metadata + phoneNormalized (the never-applied June
+--    migration): counselor lead-DETAIL 500s (Kanban list works), and
+--    upsertLead's dedup query references phoneNormalized.
+ALTER TABLE "leads" ADD COLUMN IF NOT EXISTS "metadata" JSONB;
+ALTER TABLE "leads" ADD COLUMN IF NOT EXISTS "phoneNormalized" TEXT;
+CREATE INDEX IF NOT EXISTS "leads_phoneNormalized_idx" ON "leads"("phoneNormalized");
+-- Backfill normalized phones for existing rows (Indian last-10 convention)
+UPDATE "leads" SET "phoneNormalized" = RIGHT(REGEXP_REPLACE("phone", '\D', '', 'g'), 10)
+WHERE "phoneNormalized" IS NULL AND "phone" IS NOT NULL;
