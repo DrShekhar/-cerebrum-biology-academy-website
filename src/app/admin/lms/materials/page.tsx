@@ -128,6 +128,12 @@ export default function MaterialsListPage() {
 
           <div className="flex gap-3">
             <Link
+              href="/admin/groups"
+              className="px-6 py-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 transition-colors"
+            >
+              👥 Groups
+            </Link>
+            <Link
               href="/admin/lms/questions/review"
               className="px-6 py-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 transition-colors"
             >

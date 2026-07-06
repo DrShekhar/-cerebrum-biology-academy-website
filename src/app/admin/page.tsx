@@ -15,6 +15,7 @@ import {
   Activity,
   BarChart3,
   UserPlus,
+  UsersRound,
   RefreshCw,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
@@ -517,6 +518,16 @@ export default function AdminDashboard() {
               <Calendar className="w-5 h-5 text-gray-400 group-hover:text-green-600" />
               <span className="text-sm font-medium text-gray-600 group-hover:text-green-700">
                 Schedule Demo
+              </span>
+            </Link>
+
+            <Link
+              href="/admin/groups"
+              className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-colors group"
+            >
+              <UsersRound className="w-5 h-5 text-gray-400 group-hover:text-blue-600" />
+              <span className="text-sm font-medium text-gray-600 group-hover:text-blue-700">
+                Manage Groups
               </span>
             </Link>
 
