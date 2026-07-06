@@ -37,6 +37,15 @@ export async function GET(
     let userId = rawId
     let leadInfo: { id: string; studentName: string } | null = null
 
+    // Direct-userId mode is the admin drill-down's path; counselors must come
+    // via ?from=lead, which binds the lookup to their own assigned leads.
+    if (!fromLead && session.role !== 'ADMIN') {
+      return NextResponse.json(
+        { success: false, error: 'Forbidden. Counselors must access academics via a lead.' },
+        { status: 403 }
+      )
+    }
+
     if (fromLead) {
       // Same tenant isolation as /api/counselor/leads/[id]
       const lead = await prisma.leads.findFirst({
