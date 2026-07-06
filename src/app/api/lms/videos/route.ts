@@ -118,6 +118,9 @@ export async function GET(request: NextRequest) {
       success: true,
       video: {
         url: result.videoUrl,
+        // Present only for YouTube-embed lectures (metadata.youtubeId) — the
+        // client renders a youtube-nocookie iframe instead of the CF player.
+        youtubeId: result.youtubeId,
         thumbnail: result.thumbnail,
         duration: result.duration,
         chapters: result.chapters,

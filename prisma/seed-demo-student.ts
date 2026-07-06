@@ -176,6 +176,51 @@ async function main() {
       } as never,
     })
   }
+  // ── Demo video lecture (YouTube-embed playback path) ──
+  // metadata.youtubeId makes /learn/<id> render a youtube-nocookie iframe
+  // instead of the Cloudflare player (see getVideoForPlayback). The
+  // cloudflareVideoId is a sentinel — never signed for YouTube lectures.
+  await prisma.study_materials.upsert({
+    where: { id: D('mat_video') },
+    update: {},
+    create: {
+      id: D('mat_video'),
+      title: 'Cell Biology Masterclass — Demo Lecture',
+      description: 'Demo lecture (YouTube embed) — replace with real recording',
+      materialType: 'VIDEO',
+      fileUrl: 'https://youtu.be/WqcWDy0K4lU',
+      fileName: 'cell-biology-masterclass-demo',
+      fileSize: 0,
+      mimeType: 'video/mp4',
+      uploadedBy: teacher.id,
+      courseId: c12.id,
+      accessLevel: 'ENROLLED',
+      isPublished: true,
+      publishedAt: now,
+      tags: ['demo-seed'],
+      updatedAt: now,
+    } as never,
+  })
+  await prisma.video_lectures.upsert({
+    where: { id: D('lect_yt') },
+    update: {},
+    create: {
+      id: D('lect_yt'),
+      studyMaterialId: D('mat_video'),
+      cloudflareVideoId: 'demo-youtube',
+      cloudflareThumbUrl: 'https://i.ytimg.com/vi/WqcWDy0K4lU/hqdefault.jpg',
+      playbackPolicy: 'PUBLIC',
+      title: 'Cell Biology Masterclass — Demo Lecture',
+      description: 'Demo lecture played via privacy-enhanced YouTube embed.',
+      duration: 2700,
+      uploadStatus: 'READY',
+      processedAt: now,
+      requiresEnrollment: true,
+      metadata: { youtubeId: 'WqcWDy0K4lU', demoSeed: true },
+      updatedAt: now,
+    } as never,
+  })
+
   await prisma.material_access.upsert({
     where: { id: D('ma_personal') },
     update: {},
@@ -252,6 +297,7 @@ async function main() {
   console.log('✅ Demo student seeded:')
   console.log('   student:', student.email, `(id ${student.id})`)
   console.log('   2 courses, 2 enrollments, 3 classes (1 recorded), 2 PDFs (1 personal),')
+  console.log('   1 YouTube demo lecture (/learn/demo_lect_yt),')
   console.log('   1 graded assignment w/ teacher feedback, 3 test attempts.')
   console.log('   All rows prefixed demo_ / tagged demo-seed for later cleanup.')
 }

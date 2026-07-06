@@ -453,6 +453,8 @@ export async function getVideoForPlayback(
   success: boolean
   title?: string
   videoUrl?: string
+  /** Set when the lecture plays via a YouTube embed instead of Cloudflare. */
+  youtubeId?: string
   thumbnail?: string
   duration?: number
   chapters?: Array<{ title: string; startTime: number }>
@@ -506,6 +508,38 @@ export async function getVideoForPlayback(
 
   if (videoLecture.uploadStatus !== 'READY') {
     return { success: false, error: 'Video is still processing' }
+  }
+
+  // YouTube fallback (demo/external lectures): metadata.youtubeId marks a
+  // lecture that plays via a YouTube iframe embed instead of Cloudflare
+  // Stream. Every entitlement gate above (enrollment / material_access /
+  // group grant — plus the tier gate in the API route) applies identically;
+  // this branch only skips Cloudflare URL signing. Watch-progress tracking
+  // is a deliberate no-op for these lectures (the YouTube iframe isn't
+  // instrumented), so no video_progress row is created here.
+  const meta = videoLecture.metadata as { youtubeId?: unknown } | null
+  const youtubeId = typeof meta?.youtubeId === 'string' ? meta.youtubeId : undefined
+  if (youtubeId) {
+    await prisma.video_lectures.update({
+      where: { id: videoLectureId },
+      data: { totalViews: { increment: 1 } },
+    })
+    const existing = videoLecture.video_progress[0]
+    return {
+      success: true,
+      title: videoLecture.title,
+      youtubeId,
+      thumbnail: videoLecture.cloudflareThumbUrl || undefined,
+      duration: videoLecture.duration,
+      chapters: videoLecture.video_chapters.map((c) => ({
+        title: c.title,
+        startTime: c.startTime,
+      })),
+      progress: {
+        lastPosition: existing?.lastPosition ?? 0,
+        completionPercent: existing ? Number(existing.completionPercent) : 0,
+      },
+    }
   }
 
   // Generate signed URL

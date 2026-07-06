@@ -12,7 +12,10 @@ interface StudentVideo {
   id: string
   title: string
   duration: number | null
-  thumbnail: string | null
+  // GET /api/student/videos returns `thumbnailUrl`; accept `thumbnail` too
+  // so any older payload shape still renders.
+  thumbnailUrl?: string | null
+  thumbnail?: string | null
   courseName: string | null
   watchUrl: string
   progressPercent: number
@@ -91,6 +94,7 @@ export function VideosTab() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
       {videos.map((v) => {
         const duration = fmtDuration(v.duration)
+        const thumbnail = v.thumbnailUrl || v.thumbnail || null
         const resume = !v.isCompleted && v.lastPosition ? fmtDuration(v.lastPosition) : null
         const card = (
           <div
@@ -100,10 +104,10 @@ export function VideosTab() {
           >
             {/* Thumbnail */}
             <div className="relative aspect-video bg-slate-800">
-              {v.thumbnail ? (
+              {thumbnail ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={v.thumbnail}
+                  src={thumbnail}
                   alt={v.title}
                   className="w-full h-full object-cover"
                   loading="lazy"
