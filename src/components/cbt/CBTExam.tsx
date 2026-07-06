@@ -106,21 +106,24 @@ type PaletteStatus = 'notVisited' | 'notAnswered' | 'answered' | 'marked' | 'ans
 const CORRECT_MARKS = 4
 const NEGATIVE_MARKS = 1
 
-/* ── NTA visual constants (TCS iON palette) ─────────────────────────────── */
-const NTA_FONT = { fontFamily: 'Verdana, Arial, Helvetica, sans-serif' } as const
-const NTA_BLUE = '#4E85C5' // header / section bars
+/* ── NTA visual constants — sampled from the live official NTA mock
+      (nta.ac.in/Quiz): icon PNG fills, Bootstrap-3 button colors, timer pill. */
+const NTA_FONT = { fontFamily: 'Roboto, Helvetica, Arial, sans-serif' } as const
+const TITLE_BLUE = '#286090' // top title bar (official NTA mock header blue)
+const NTA_BLUE = '#4E85C5' // active section tab / palette header
 const NTA_PANEL_BLUE = '#E5F6FD' // palette panel background
-const GREEN = '#4CAF50' // answered
-const RED = '#E4534D' // not answered
-const PURPLE = '#9354BC' // marked for review
-const BTN_GREEN = '#0F9D58' // SAVE & NEXT / SUBMIT
-const BTN_ORANGE = '#FF9800' // SAVE & MARK FOR REVIEW
-const BTN_BLUE = '#3B82C4' // MARK FOR REVIEW & NEXT
+const GREEN = '#2DBA00' // answered icon fill (official Logo3.png)
+const RED = '#E24401' // not-answered icon fill (official Logo2.png)
+const PURPLE = '#50209C' // marked-for-review sphere core (official Logo4.png)
+const TIMER_BLUE = '#0098DA' // "Remaining Time" pill
+const BTN_GREEN = '#5CB85C' // SAVE & NEXT / SUBMIT (border #4CAE4C)
+const BTN_ORANGE = '#F0AD4E' // SAVE & MARK FOR REVIEW (border #EEA236)
+const BTN_BLUE = '#337AB7' // MARK FOR REVIEW & NEXT (border #2E6DA4)
 
-/** Beveled-top pentagon — NTA "Answered". */
-const CLIP_ANSWERED = 'polygon(15% 0%, 85% 0%, 100% 28%, 100% 100%, 0% 100%, 0% 28%)'
-/** Beveled-bottom pentagon — NTA "Not Answered". */
-const CLIP_NOT_ANSWERED = 'polygon(0% 0%, 100% 0%, 100% 72%, 85% 100%, 15% 100%, 0% 72%)'
+/** Official NTA "Answered" trapezoid — right edge shorter, left edge full. */
+const CLIP_ANSWERED = 'polygon(0% 0%, 100% 15%, 100% 85%, 0% 100%)'
+/** Official NTA "Not Answered" trapezoid — exact horizontal mirror. */
+const CLIP_NOT_ANSWERED = 'polygon(0% 15%, 100% 0%, 100% 100%, 0% 85%)'
 
 function sectionLabel(subject: string): string {
   const s = (subject || 'biology').toLowerCase()
@@ -547,7 +550,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
   )
 
   const legend = (
-    <div className="space-y-1 p-2 text-[11px] text-gray-800">
+    <div className="m-2 space-y-1 border border-dashed border-gray-400 p-2 text-[11px] text-gray-800">
       <div className="grid grid-cols-2 gap-x-1 gap-y-1.5">
         <LegendItem status="answered" count={counts.total.answered} label="Answered" />
         <LegendItem status="notAnswered" count={counts.total.notAnswered} label="Not Answered" />
@@ -565,7 +568,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
   )
 
   const paletteGrid = (
-    <div className="grid grid-cols-5 gap-x-1 gap-y-2 p-2">
+    <div className="grid grid-cols-6 gap-x-1 gap-y-2 p-2 sm:grid-cols-8">
       {orderedQuestions.map((q, idx) => {
         if (sectionLabel(q.subject) !== activeSection) return null
         return (
@@ -698,7 +701,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
       <div className="min-h-screen bg-white" style={NTA_FONT}>
         <div
           className="px-4 py-2 text-center text-sm font-bold text-white"
-          style={{ backgroundColor: NTA_BLUE }}
+          style={{ backgroundColor: TITLE_BLUE }}
         >
           {test.title}
         </div>
@@ -959,7 +962,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
       {/* Paper title bar */}
       <div
         className="flex items-center justify-between gap-2 px-3 py-1.5 text-white"
-        style={{ backgroundColor: NTA_BLUE }}
+        style={{ backgroundColor: TITLE_BLUE }}
       >
         <span className="truncate text-[13px] font-bold">{test.title}</span>
         <div className="flex shrink-0 items-center gap-3 text-[12px]">
@@ -1000,11 +1003,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
                     style={
                       active
                         ? { backgroundColor: NTA_BLUE, borderColor: NTA_BLUE, color: '#fff' }
-                        : {
-                            backgroundColor: NTA_PANEL_BLUE,
-                            borderColor: '#b7d9ee',
-                            color: '#1a5a96',
-                          }
+                        : { backgroundColor: '#fff', borderColor: '#C3C3C1', color: '#36ACE9' }
                     }
                   >
                     {sec}
@@ -1013,11 +1012,10 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
               })}
             </div>
             <div className="shrink-0 text-[12px] font-semibold text-gray-800">
-              Time Left :{' '}
+              Remaining Time :{' '}
               <span
-                className={`inline-block border border-gray-300 px-1.5 py-0.5 font-mono text-[13px] font-bold ${
-                  timeRemaining < 300 ? 'bg-red-600 text-white' : 'bg-gray-100 text-gray-900'
-                }`}
+                className="inline-block rounded-full px-3 py-0.5 font-mono text-[13px] font-bold text-white"
+                style={{ backgroundColor: timeRemaining < 300 ? '#D9534F' : TIMER_BLUE }}
               >
                 {formatTime(timeRemaining)}
               </span>
@@ -1081,7 +1079,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
                           onChange={() => setPending(opt.id)}
                         />
                         <span className="text-gray-800">
-                          {i + 1}. {opt.text}
+                          {i + 1}) {opt.text}
                         </span>
                       </label>
                     )
@@ -1096,28 +1094,28 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
             <div className="flex flex-wrap items-center gap-1.5">
               <button
                 onClick={saveAndNext}
-                className="px-3 py-1.5 text-[12px] font-bold text-white hover:opacity-90"
-                style={{ backgroundColor: BTN_GREEN }}
+                className="border px-3 py-1.5 text-[12px] font-bold text-white hover:opacity-90"
+                style={{ backgroundColor: BTN_GREEN, borderColor: '#4CAE4C' }}
               >
                 SAVE &amp; NEXT
               </button>
               <button
                 onClick={clearResponse}
-                className="border border-gray-400 bg-white px-3 py-1.5 text-[12px] font-bold text-gray-800 hover:bg-gray-50"
+                className="border border-[#CCC] bg-white px-3 py-1.5 text-[12px] font-bold text-[#333] hover:bg-gray-50"
               >
                 CLEAR
               </button>
               <button
                 onClick={saveAndMarkForReview}
-                className="px-3 py-1.5 text-[12px] font-bold text-white hover:opacity-90"
-                style={{ backgroundColor: BTN_ORANGE }}
+                className="border px-3 py-1.5 text-[12px] font-bold text-white hover:opacity-90"
+                style={{ backgroundColor: BTN_ORANGE, borderColor: '#EEA236' }}
               >
                 SAVE &amp; MARK FOR REVIEW
               </button>
               <button
                 onClick={markForReviewAndNext}
-                className="px-3 py-1.5 text-[12px] font-bold text-white hover:opacity-90"
-                style={{ backgroundColor: BTN_BLUE }}
+                className="border px-3 py-1.5 text-[12px] font-bold text-white hover:opacity-90"
+                style={{ backgroundColor: BTN_BLUE, borderColor: '#2E6DA4' }}
               >
                 MARK FOR REVIEW &amp; NEXT
               </button>
@@ -1125,14 +1123,14 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
                 <button
                   onClick={() => goTo(currentIndex - 1)}
                   disabled={currentIndex === 0}
-                  className="border border-gray-400 bg-white px-3 py-1.5 text-[12px] font-bold text-gray-800 hover:bg-gray-50 disabled:opacity-40"
+                  className="border border-[#CCC] bg-white px-3 py-1.5 text-[12px] font-bold text-[#333] hover:bg-gray-50 disabled:opacity-40"
                 >
                   &lt;&lt; BACK
                 </button>
                 <button
                   onClick={() => goTo(currentIndex + 1)}
                   disabled={currentIndex === orderedQuestions.length - 1}
-                  className="border border-gray-400 bg-white px-3 py-1.5 text-[12px] font-bold text-gray-800 hover:bg-gray-50 disabled:opacity-40"
+                  className="border border-[#CCC] bg-white px-3 py-1.5 text-[12px] font-bold text-[#333] hover:bg-gray-50 disabled:opacity-40"
                 >
                   NEXT &gt;&gt;
                 </button>
@@ -1152,16 +1150,16 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
         <button
           onClick={() => setPaletteCollapsed((c) => !c)}
           className="hidden w-4 shrink-0 items-center justify-center text-[10px] text-white hover:opacity-90 lg:flex"
-          style={{ backgroundColor: NTA_BLUE }}
+          style={{ backgroundColor: '#4A4A4A' }}
           aria-label={paletteCollapsed ? 'Open question palette' : 'Collapse question palette'}
           title={paletteCollapsed ? 'Open question palette' : 'Collapse question palette'}
         >
-          {paletteCollapsed ? '◄' : '►'}
+          {paletteCollapsed ? '<' : '>'}
         </button>
 
         {/* Palette (desktop column) */}
         {!paletteCollapsed && (
-          <aside className="hidden w-64 shrink-0 lg:block xl:w-72">{paletteColumn}</aside>
+          <aside className="hidden w-72 shrink-0 lg:block xl:w-80">{paletteColumn}</aside>
         )}
       </div>
 
@@ -1247,7 +1245,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
           <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto bg-white" style={NTA_FONT}>
             <div
               className="px-4 py-2 text-center text-sm font-bold text-white"
-              style={{ backgroundColor: NTA_BLUE }}
+              style={{ backgroundColor: TITLE_BLUE }}
             >
               Exam Summary
             </div>
@@ -1306,19 +1304,19 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
                 No changes will be allowed after submission.
               </p>
 
+              {/* NTA renders YES / NO as plain default buttons. */}
               <div className="mt-4 flex justify-center gap-3">
                 <button
                   onClick={() => handleSubmit(false)}
                   disabled={submitting}
-                  className="px-8 py-2 text-sm font-bold text-white hover:opacity-90 disabled:opacity-60"
-                  style={{ backgroundColor: BTN_GREEN }}
+                  className="border border-[#CCC] bg-white px-8 py-2 text-sm font-bold text-[#333] hover:bg-gray-50 disabled:opacity-60"
                 >
                   {submitting ? 'SUBMITTING…' : 'YES'}
                 </button>
                 <button
                   onClick={() => setShowSubmitConfirm(false)}
                   disabled={submitting}
-                  className="border border-gray-400 bg-white px-8 py-2 text-sm font-bold text-gray-800 hover:bg-gray-50"
+                  className="border border-[#CCC] bg-white px-8 py-2 text-sm font-bold text-[#333] hover:bg-gray-50"
                 >
                   NO
                 </button>
@@ -1341,12 +1339,18 @@ function paletteShapeStyle(status: PaletteStatus): React.CSSProperties {
       return { backgroundColor: RED, color: '#fff', clipPath: CLIP_NOT_ANSWERED }
     case 'marked':
     case 'answeredMarked':
-      return { backgroundColor: PURPLE, color: '#fff', borderRadius: '9999px' }
+      // Official icon is a violet sphere with a top-left highlight.
+      return {
+        background: `radial-gradient(circle at 32% 28%, #7F5BB9, ${PURPLE} 60%, #38166D)`,
+        color: '#fff',
+        borderRadius: '9999px',
+      }
     default:
       return {
-        backgroundColor: '#f3f4f6',
-        color: '#1f2937',
-        border: '1px solid #9ca3af',
+        backgroundColor: '#E6E6E6',
+        color: '#303030',
+        border: '1px solid #ADADAD',
+        borderRadius: '3px',
       }
   }
 }
@@ -1365,7 +1369,7 @@ function PaletteButton({
   return (
     <button
       onClick={onClick}
-      className={`relative mx-auto flex h-9 w-9 items-center justify-center text-[12px] font-bold ${
+      className={`relative mx-auto flex h-[30px] w-[30px] items-center justify-center text-[11px] font-bold ${
         current ? 'outline outline-2 outline-offset-1 outline-blue-700' : ''
       }`}
       style={paletteShapeStyle(status)}
@@ -1381,7 +1385,7 @@ function PaletteButton({
                 : 'answered and marked for review'
       }`}
     >
-      {num}
+      {String(num).padStart(2, '0')}
       {status === 'answeredMarked' && (
         <span
           className="absolute -bottom-0.5 -right-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full text-[8px] font-bold text-white"
@@ -1440,7 +1444,7 @@ function ExamModal({
       <div className="flex max-h-[90vh] w-full max-w-3xl flex-col bg-white" style={NTA_FONT}>
         <div
           className="flex items-center justify-between px-4 py-2 text-white"
-          style={{ backgroundColor: NTA_BLUE }}
+          style={{ backgroundColor: TITLE_BLUE }}
         >
           <span className="text-sm font-bold">{title}</span>
           <button onClick={onClose} aria-label="Close">
