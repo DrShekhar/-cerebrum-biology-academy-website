@@ -54,6 +54,14 @@ After parity: redirect `/student/dashboard` → `/dashboard`.
   6. **Adaptive Daily Challenge** (M) — daily 10-Q set picked from weak topics via analytics/performance.
   7. **At-risk inactivity alerts** (M) — no-login/no-practice threshold → counselor CRM task + parent WA nudge (reuses fixed task subsystem).
   8. **Recordings pipeline + video library** — already P2/P3 build items; confirmed table stakes vs Allen/PW.
+- **P2.6 LearnWorlds-inspired** (user-approved Jul 6 from `LEARNWORLDS_FEATURE_AUDIT.md`):
+  1. **Video transcripts + chapter TOC** (S/M) — surface Cloudflare Stream auto-captions + chapter markers in `/learn/[lectureId]`.
+  2. **Auto completion certificates** (S/M) — on course/mock milestones; reuse existing certificate blob pattern; parent-visible + shareable.
+  3. **Teacher video drop-off analytics** (M) — from existing video_progress rows; pairs with P3 recordings pipeline.
+  4. **Sequential-unlock / drip content** (M) — unlock-order option on course items; enables self-paced recorded-course revenue line (dropper revision packs).
+  5. **AI quiz-from-content drafts** (M) — Anthropic API generates draft MCQs from lecture/PDF content into a teacher review queue (never auto-publish).
+  6. **Web push via PWA** (M/L, post-P2.5) — completion-rate lever; students get push, parents stay on WhatsApp.
+  - Skipped deliberately: branching video, SCORM/LTI, AI course creator, site-builder parity, native app builder (PWA first), NL analytics chat.
 - **P3 Staff+recordings**: counselor academics endpoint+tab; admin drill-down; Zoom recording webhook → CF pipeline; optional Zoom auto-create.
 - **P4 Polish**: redirects, mobile pass, empty states, demo-content cleanup script.
 
