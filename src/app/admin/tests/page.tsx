@@ -96,19 +96,12 @@ export default function AdminTestsPage() {
           setTestTemplates(data.tests || [])
           setStats(data.stats || stats)
         } else {
-          setTestTemplates(getMockData())
-          setStats({
-            totalTemplates: 12,
-            activeTests: 5,
-            totalAttempts: 1250,
-            avgPassRate: 72,
-            testsThisMonth: 8,
-            studentsTestedThisWeek: 156,
-          })
+          // Never render fabricated data — an honest empty state beats fake tests
+          setTestTemplates([])
         }
       } catch (error) {
         console.error('Error fetching tests:', error)
-        setTestTemplates(getMockData())
+        setTestTemplates([])
       } finally {
         setLoading(false)
       }
@@ -118,60 +111,6 @@ export default function AdminTestsPage() {
       fetchTests()
     }
   }, [isAuthenticated, user, searchQuery, categoryFilter])
-
-  const getMockData = (): TestTemplate[] => [
-    {
-      id: '1',
-      title: 'NEET Biology Full Mock Test 2024',
-      description: 'Complete NEET pattern test with 90 questions covering both Botany and Zoology',
-      status: 'TEMPLATE',
-      totalQuestions: 90,
-      duration: 180,
-      totalMarks: 360,
-      difficulty: 'hard',
-      category: 'NEET_PATTERN',
-      createdAt: new Date().toISOString(),
-      createdBy: 'Admin',
-      timesUsed: 45,
-      avgScore: 68,
-      totalAttempts: 890,
-      passRate: 72,
-    },
-    {
-      id: '2',
-      title: 'Cell Biology Comprehensive Test',
-      description: 'Deep dive into cell structure, functions, and molecular biology',
-      status: 'ACTIVE',
-      totalQuestions: 50,
-      duration: 60,
-      totalMarks: 200,
-      difficulty: 'medium',
-      category: 'CHAPTER_TEST',
-      createdAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
-      createdBy: 'Admin',
-      timesUsed: 28,
-      avgScore: 74,
-      totalAttempts: 320,
-      passRate: 78,
-    },
-    {
-      id: '3',
-      title: 'Genetics Quick Quiz',
-      description: 'Short assessment on Mendelian genetics and inheritance',
-      status: 'TEMPLATE',
-      totalQuestions: 20,
-      duration: 25,
-      totalMarks: 80,
-      difficulty: 'easy',
-      category: 'PRACTICE',
-      createdAt: new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString(),
-      createdBy: 'Admin',
-      timesUsed: 112,
-      avgScore: 82,
-      totalAttempts: 450,
-      passRate: 85,
-    },
-  ]
 
   const handleDuplicate = async (testId: string) => {
     try {
