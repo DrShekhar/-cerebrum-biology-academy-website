@@ -8,6 +8,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { hasTierAccess, getUserTier, tierLabel } from '@/lib/access/tierAccess'
+import { getGroupGrantedContent } from '@/lib/student/groupContent'
 
 /**
  * POST - Track material download and update progress
@@ -63,6 +64,11 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
           select: { id: true },
         })
         allowed = !!enrollment
+      }
+      if (!allowed) {
+        // Group (batch) assignment via group_content (release gate applied)
+        const groupGrants = await getGroupGrantedContent(userId)
+        allowed = groupGrants.materialIds.includes(materialId)
       }
       if (!allowed) {
         return NextResponse.json(

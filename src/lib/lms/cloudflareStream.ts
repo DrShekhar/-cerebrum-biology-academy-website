@@ -13,6 +13,7 @@
 
 import { prisma } from '@/lib/prisma'
 import { VideoUploadStatus } from '@/generated/prisma'
+import { getGroupGrantedContent } from '@/lib/student/groupContent'
 
 // Cloudflare API configuration
 const CF_ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID
@@ -490,6 +491,13 @@ export async function getVideoForPlayback(
         select: { id: true },
       })
       allowed = !!enrollment
+    }
+    if (!allowed) {
+      // Group (batch) assignment: video or its material granted via group_content
+      const groupGrants = await getGroupGrantedContent(userId)
+      allowed =
+        groupGrants.videoLectureIds.includes(videoLectureId) ||
+        (material ? groupGrants.materialIds.includes(material.id) : false)
     }
     if (!allowed) {
       return { success: false, error: 'You need to be enrolled to watch this lecture.' }
