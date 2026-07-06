@@ -92,6 +92,27 @@ interface BookmarkData {
 export function PracticeTab() {
   const [bookmarkData, setBookmarkData] = useState<BookmarkData>({ total: 0 })
   const [reviewDueCount, setReviewDueCount] = useState(0)
+  const [ncertClass, setNcertClass] = useState<11 | 12 | null>(null)
+
+  // Grade-aware MCQ deep-links (roadmap P1): the student's canonical grade
+  // from /api/student/summary → ?ncertClass=11|12 on the MCQ hub links.
+  useEffect(() => {
+    fetch('/api/student/summary', { credentials: 'include' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (d?.success && (d.student?.ncertClass === 11 || d.student?.ncertClass === 12)) {
+          setNcertClass(d.student.ncertClass)
+        }
+      })
+      .catch(() => {})
+  }, [])
+
+  // Append ncertClass only to MCQ-hub URLs (not topic subpages)
+  const gradeAwareHref = (href: string) => {
+    if (!ncertClass) return href
+    if (href !== '/neet-biology-mcq' && !href.startsWith('/neet-biology-mcq?')) return href
+    return `${href}${href.includes('?') ? '&' : '?'}ncertClass=${ncertClass}`
+  }
 
   useEffect(() => {
     const freeUserId = localStorage.getItem('freeUserId')
@@ -218,7 +239,7 @@ export function PracticeTab() {
           {quickPracticeItems.map((item) => (
             <Link
               key={item.title}
-              href={item.href}
+              href={gradeAwareHref(item.href)}
               className="group bg-white rounded-xl shadow-lg border border-slate-200 p-4 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 min-h-[48px]"
             >
               <div
