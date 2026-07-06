@@ -1,16 +1,84 @@
 'use client'
 
 /**
- * Admin LMS - Analytics Dashboard
+ * Admin LMS — Analytics Dashboard
  *
- * Track material downloads, views, and student engagement
+ * Real numbers from study_materials counters + material_progress activity.
+ * (Previously rendered hardcoded zeros with a "coming soon" notice.)
  */
 
+import { useState, useEffect } from 'react'
+import { Loader2 } from 'lucide-react'
+
+interface LmsStats {
+  totalMaterials: number
+  totalDownloads: number
+  totalViews: number
+  activeStudents: number
+}
+
+interface TopMaterial {
+  id: string
+  title: string
+  materialType: string
+  category: string | null
+  totalViews: number
+  totalDownloads: number
+  publishedAt: string | null
+}
+
 export default function AnalyticsPage() {
+  const [stats, setStats] = useState<LmsStats | null>(null)
+  const [topMaterials, setTopMaterials] = useState<TopMaterial[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetch('/api/admin/lms/analytics', { credentials: 'include' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (data?.success) {
+          setStats(data.stats)
+          setTopMaterials(data.topMaterials || [])
+        }
+      })
+      .catch(() => {})
+      .finally(() => setLoading(false))
+  }, [])
+
+  const tiles = [
+    {
+      label: 'Total Materials',
+      value: stats?.totalMaterials,
+      sub: 'All uploaded materials',
+      color: 'text-gray-900',
+      emoji: '📚',
+    },
+    {
+      label: 'Total Downloads',
+      value: stats?.totalDownloads,
+      sub: 'By all students',
+      color: 'text-blue-600',
+      emoji: '⬇️',
+    },
+    {
+      label: 'Total Views',
+      value: stats?.totalViews,
+      sub: 'Material opens',
+      color: 'text-green-600',
+      emoji: '👁️',
+    },
+    {
+      label: 'Active Students',
+      value: stats?.activeStudents,
+      sub: 'Opened materials, last 7 days',
+      color: 'text-purple-600',
+      emoji: '👨‍🎓',
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">LMS Analytics</h1>
           <p className="text-gray-600">
@@ -20,95 +88,68 @@ export default function AnalyticsPage() {
 
         {/* Stats Overview */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-gray-600 mb-1">Total Materials</p>
-                <p className="text-3xl font-bold text-gray-900">0</p>
+          {tiles.map((t) => (
+            <div key={t.label} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm text-gray-600 mb-1">{t.label}</p>
+                  <div className={`text-3xl font-bold ${t.color}`}>
+                    {loading ? (
+                      <Loader2 className="w-6 h-6 animate-spin text-gray-300" />
+                    ) : (
+                      (t.value ?? 0)
+                    )}
+                  </div>
+                </div>
+                <div className="text-4xl">{t.emoji}</div>
               </div>
-              <div className="text-4xl">📚</div>
+              <p className="text-xs text-gray-500 mt-2">{t.sub}</p>
             </div>
-            <p className="text-xs text-gray-500 mt-2">All uploaded PDFs</p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-gray-600 mb-1">Total Downloads</p>
-                <p className="text-3xl font-bold text-blue-600">0</p>
-              </div>
-              <div className="text-4xl">⬇️</div>
-            </div>
-            <p className="text-xs text-gray-500 mt-2">By all students</p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-gray-600 mb-1">Total Views</p>
-                <p className="text-3xl font-bold text-green-600">0</p>
-              </div>
-              <div className="text-4xl">👁️</div>
-            </div>
-            <p className="text-xs text-gray-500 mt-2">Material opens</p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-gray-600 mb-1">Active Students</p>
-                <p className="text-3xl font-bold text-purple-600">0</p>
-              </div>
-              <div className="text-4xl">👨‍🎓</div>
-            </div>
-            <p className="text-xs text-gray-500 mt-2">Last 7 days</p>
-          </div>
+          ))}
         </div>
 
-        {/* Coming Soon Notice */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-12 text-center">
-          <div className="max-w-md mx-auto">
-            <div className="text-6xl mb-4">📊</div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Detailed Analytics Dashboard</h2>
-            <p className="text-gray-600 mb-6">
-              Track material performance, student engagement, popular content, and download trends
-              with beautiful charts and reports.
-            </p>
-            <p className="text-sm text-gray-500 bg-blue-50 border border-blue-200 rounded-lg p-4">
-              💡 Analytics features will be available in <strong>Session 7</strong> of the LMS
-              implementation.
-              <br />
-              Once materials are uploaded and students start downloading, you'll see:
-            </p>
-            <div className="mt-6 text-left">
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-center">
-                  <span className="mr-2">📈</span>
-                  Download trends over time
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2">🏆</span>
-                  Most popular materials
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2">👥</span>
-                  Student engagement reports
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2">📅</span>
-                  Daily/weekly/monthly summaries
-                </li>
-                <li className="flex items-center">
-                  <span className="mr-2">💾</span>
-                  Export reports to CSV/Excel
-                </li>
-              </ul>
-            </div>
+        {/* Most-viewed materials */}
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden mb-8">
+          <div className="px-6 py-4 border-b border-gray-100">
+            <h2 className="font-semibold text-gray-900">Most-viewed materials</h2>
           </div>
+          {topMaterials.length === 0 ? (
+            <div className="p-10 text-center text-gray-400 text-sm">
+              {loading
+                ? 'Loading…'
+                : 'No published materials yet — analytics fill in as students open them.'}
+            </div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead className="bg-gray-50 text-left text-xs uppercase text-gray-500">
+                  <tr>
+                    <th className="px-6 py-3">Material</th>
+                    <th className="px-6 py-3">Type</th>
+                    <th className="px-6 py-3">Views</th>
+                    <th className="px-6 py-3">Downloads</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {topMaterials.map((m) => (
+                    <tr key={m.id} className="hover:bg-gray-50">
+                      <td className="px-6 py-3">
+                        <div className="font-medium text-gray-900">{m.title}</div>
+                        {m.category && <div className="text-xs text-gray-400">{m.category}</div>}
+                      </td>
+                      <td className="px-6 py-3 text-gray-600">{m.materialType}</td>
+                      <td className="px-6 py-3 font-medium text-green-600">{m.totalViews}</td>
+                      <td className="px-6 py-3 font-medium text-blue-600">{m.totalDownloads}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </div>
 
         {/* Quick Actions */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <a
             href="/admin/lms/materials/upload"
             className="block p-6 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
@@ -116,7 +157,6 @@ export default function AnalyticsPage() {
             <h3 className="font-semibold text-gray-900 mb-2">📤 Upload Materials</h3>
             <p className="text-sm text-gray-600">Add new study materials</p>
           </a>
-
           <a
             href="/admin/lms/materials"
             className="block p-6 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
@@ -124,7 +164,6 @@ export default function AnalyticsPage() {
             <h3 className="font-semibold text-gray-900 mb-2">📚 View Materials</h3>
             <p className="text-sm text-gray-600">Browse all materials</p>
           </a>
-
           <a
             href="/admin/students"
             className="block p-6 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
