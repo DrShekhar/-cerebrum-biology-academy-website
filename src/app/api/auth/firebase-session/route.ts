@@ -83,7 +83,14 @@ export async function POST(request: NextRequest) {
       ? forwardedFor.split(',')[0].trim()
       : request.headers.get('x-real-ip') || 'unknown'
 
-    const rateLimitKey = `firebase-session:${clientIP}:${phoneNumber}`
+    // Normalize phone number to E.164 format BEFORE rate limiting, so
+    // +919876543210 / 919876543210 / 9876543210 share ONE rate bucket
+    // (keying on the raw input let each format multiply the allowance).
+    const normalizedPhone = phoneNumber.startsWith('+')
+      ? phoneNumber
+      : `+91${phoneNumber.replace(/\D/g, '').slice(-10)}`
+
+    const rateLimitKey = `firebase-session:${clientIP}:${normalizedPhone}`
     const rateLimitCheck = await AuthRateLimit.checkRateLimit(rateLimitKey)
     if (!rateLimitCheck.allowed) {
       console.warn(`[Firebase Session] Rate limit exceeded for IP: ${clientIP}`)
@@ -99,20 +106,27 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Normalize phone number to E.164 format
-    const normalizedPhone = phoneNumber.startsWith('+')
-      ? phoneNumber
-      : `+91${phoneNumber.replace(/\D/g, '').slice(-10)}`
-
-    // Stored phone formats are inconsistent (+91XXXXXXXXXX, bare 10 digits,
-    // other-country E.164) — match on the last 10 digits, the same rule the
-    // whatsapp-otp NextAuth provider uses. Works for any country code.
     const phoneLast10 = last10Digits(normalizedPhone)
     if (!phoneLast10) {
       return addSecurityHeaders(
         NextResponse.json({ error: 'Invalid phone number' }, { status: 400 })
       )
     }
+
+    // Country-aware phone matchers. Indian numbers historically exist in
+    // exactly three stored formats (bare 10-digit, 91-prefixed, +91 E.164) —
+    // match those EXACTLY. Non-Indian numbers were only ever stored as full
+    // E.164 — exact match only. The previous blanket endsWith(last10) let
+    // +1 987-654-3210 (US) resolve the +91 98765 43210 (India) row: the US
+    // login would bind its firebaseUid to the Indian account and receive the
+    // Indian user's session. Exact-format matching closes that.
+    const phoneMatchers = normalizedPhone.startsWith('+91')
+      ? [
+          { phone: normalizedPhone }, // +91XXXXXXXXXX
+          { phone: normalizedPhone.slice(1) }, // 91XXXXXXXXXX
+          { phone: phoneLast10 }, // XXXXXXXXXX (legacy bare)
+        ]
+      : [{ phone: normalizedPhone }]
 
     // SECURITY: For signup/login, verify the Firebase ID token server-side.
     // The forged-cookie era trusted the client-sent uid with no verification.
@@ -182,7 +196,7 @@ export async function POST(request: NextRequest) {
     if (action === 'check') {
       const existingUser = await prisma.users.findFirst({
         where: {
-          OR: [{ phone: { endsWith: phoneLast10 } }, { firebaseUid: uid }],
+          OR: [...phoneMatchers, { firebaseUid: uid }],
         },
         select: { id: true },
       })
@@ -206,10 +220,10 @@ export async function POST(request: NextRequest) {
         )
       }
 
-      // Check if user already exists (last-10-digit match covers all stored formats)
+      // Check if user already exists (country-aware exact-format matching)
       const existingUser = await prisma.users.findFirst({
         where: {
-          OR: [{ phone: { endsWith: phoneLast10 } }, { firebaseUid: verifiedUid }],
+          OR: [...phoneMatchers, { firebaseUid: verifiedUid }],
         },
         select: AUTH_USER_SELECT,
       })
@@ -295,10 +309,10 @@ export async function POST(request: NextRequest) {
 
     // Action: Issue bridge token for a REAL NextAuth sign-in (login)
     if (action === 'login') {
-      // Find user by phone or Firebase UID (last-10-digit match covers all stored formats)
+      // Find user by phone or Firebase UID (country-aware exact-format matching)
       let user = await prisma.users.findFirst({
         where: {
-          OR: [{ phone: { endsWith: phoneLast10 } }, { firebaseUid: verifiedUid }],
+          OR: [...phoneMatchers, { firebaseUid: verifiedUid }],
         },
         select: AUTH_USER_SELECT,
       })

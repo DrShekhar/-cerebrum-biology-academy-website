@@ -70,13 +70,19 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'User with this email already exists' }, { status: 409 })
     }
 
-    // Phone is unique in the users table — match on last 10 digits since
-    // stored formats vary (+91XXXXXXXXXX vs bare 10 digits vs other E.164).
+    // Phone is unique in the users table. Country-aware duplicate check
+    // (mirrors firebase-session): Indian numbers exist in three legacy stored
+    // formats — match those exactly; other countries only as full E.164. A
+    // blanket endsWith(last10) wrongly blocked e.g. a US +1 number from
+    // registering because an Indian +91 number shared its trailing 10 digits.
     const normalizedPhone = normalizePhone(phone)
     const phoneLast10 = normalizedPhone.replace(/\D/g, '').slice(-10)
+    const phoneMatchers = normalizedPhone.startsWith('+91')
+      ? [{ phone: normalizedPhone }, { phone: normalizedPhone.slice(1) }, { phone: phoneLast10 }]
+      : [{ phone: normalizedPhone }]
     const existingByPhone = phoneLast10
       ? await prisma.users.findFirst({
-          where: { phone: { endsWith: phoneLast10 } },
+          where: { OR: phoneMatchers },
           select: { id: true },
         })
       : null

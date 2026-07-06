@@ -65,9 +65,39 @@ export function initRecaptcha(buttonId: string): RecaptchaVerifier | null {
   // Always clean up existing verifier first
   resetRecaptchaVerifier()
 
-  console.log('[reCAPTCHA] Initializing verifier for button:', buttonId)
+  // The anchor element may not be in the DOM: "Resend OTP" fires from the OTP
+  // step, but the #send-otp-button anchor only renders on the phone step.
+  // RecaptchaVerifier throws auth/argument-error on a missing container —
+  // which broke Resend for EVERY user (any country). Fall back to a
+  // persistent, offscreen container appended to <body>. (Not display:none —
+  // invisible reCAPTCHA can fail to execute inside a display:none node.)
+  let containerId = buttonId
+  if (typeof document !== 'undefined' && !document.getElementById(buttonId)) {
+    const FALLBACK_ID = 'recaptcha-fallback-anchor'
+    let fallback = document.getElementById(FALLBACK_ID)
+    if (!fallback) {
+      fallback = document.createElement('div')
+      fallback.id = FALLBACK_ID
+      fallback.setAttribute('aria-hidden', 'true')
+      fallback.style.position = 'fixed'
+      fallback.style.bottom = '0'
+      fallback.style.right = '0'
+      fallback.style.width = '0'
+      fallback.style.height = '0'
+      fallback.style.overflow = 'hidden'
+      document.body.appendChild(fallback)
+    } else {
+      // A previous verifier may have rendered into it; reCAPTCHA requires an
+      // empty container on re-init.
+      fallback.innerHTML = ''
+    }
+    console.log('[reCAPTCHA] Anchor #%s not mounted — using fallback container', buttonId)
+    containerId = FALLBACK_ID
+  }
 
-  recaptchaVerifier = new RecaptchaVerifier(auth, buttonId, {
+  console.log('[reCAPTCHA] Initializing verifier for container:', containerId)
+
+  recaptchaVerifier = new RecaptchaVerifier(auth, containerId, {
     size: 'invisible',
     callback: () => {
       console.log('[reCAPTCHA] Verification successful - proceeding with OTP')
@@ -200,6 +230,14 @@ export async function sendOTP(
 
         case 'auth/operation-not-allowed':
           errorMessage = 'Phone authentication is not enabled. Please contact support.'
+          break
+
+        case 'auth/billing-not-enabled':
+          // SMS to this region requires the Firebase Blaze plan — an account
+          // configuration issue, not a user error. Surface a helpful path
+          // instead of the raw code (international users hit this on Spark).
+          errorMessage =
+            'SMS to your region is temporarily unavailable. Please use Google login or email login instead — or contact us on WhatsApp and we will help you sign in.'
           break
 
         case 'auth/network-request-failed':

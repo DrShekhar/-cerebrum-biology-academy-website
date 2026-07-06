@@ -3,16 +3,40 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { Phone, Mail, ArrowLeft } from 'lucide-react'
+import { Phone, Mail, ArrowLeft, AlertCircle } from 'lucide-react'
 import { PhoneSignIn } from '@/components/auth/PhoneSignIn'
 import { EmailSignIn } from '@/components/auth/EmailSignIn'
 import { SocialSignInButtons } from '@/components/auth/SocialSignInButtons'
 
 type SignInMethod = 'phone' | 'email'
 
+// Friendly copy for Auth.js ?error= codes. Previously these were silently
+// discarded (pages.error pointed at /admin/login which dropped the param) —
+// a failed Google/Facebook login looked like the button "did nothing".
+const AUTH_ERROR_MESSAGES: Record<string, string> = {
+  OAuthAccountNotLinked:
+    'This email is already registered with a different sign-in method. Try the method you used originally (e.g. phone or email).',
+  AccessDenied:
+    'Sign-in was not completed. If you used Facebook, make sure your account has a verified email address, or try Google / phone OTP instead.',
+  OAuthCallbackError: 'The sign-in was cancelled or timed out. Please try again.',
+  OAuthSignInError: 'We could not start the sign-in. Please try again.',
+  Configuration: 'Sign-in is temporarily unavailable. Please try again in a few minutes.',
+  Verification: 'That sign-in link has expired. Please request a new one.',
+  CredentialsSignin: 'Incorrect email or password. Please try again.',
+  Default: 'Something went wrong during sign-in. Please try again.',
+}
+
 export default function SignInPage() {
   const searchParams = useSearchParams()
   const redirectUrl = searchParams.get('redirect_url') || '/dashboard'
+  // Auth.js appends ?error=<code> on OAuth/credentials failures (pages.error
+  // points here). Render it; dismissible so it doesn't nag past the retry.
+  const authErrorCode = searchParams.get('error')
+  const [dismissedError, setDismissedError] = useState(false)
+  const authErrorMessage =
+    authErrorCode && !dismissedError
+      ? AUTH_ERROR_MESSAGES[authErrorCode] || AUTH_ERROR_MESSAGES.Default
+      : null
   const [method, setMethod] = useState<SignInMethod>('phone')
 
   // Return visitors land on whichever method they used last (phone/email).
@@ -51,6 +75,25 @@ export default function SignInPage() {
           <h1 className="text-3xl font-bold text-white">Welcome Back</h1>
           <p className="text-slate-400 mt-2">Sign in to continue your NEET preparation</p>
         </div>
+
+        {/* Auth error from a failed OAuth/credentials attempt (?error=) */}
+        {authErrorMessage && (
+          <div
+            role="alert"
+            className="mb-4 flex items-start gap-3 rounded-xl border border-red-400/40 bg-red-500/15 px-4 py-3 text-sm text-red-200"
+          >
+            <AlertCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-red-300" />
+            <div className="flex-1">{authErrorMessage}</div>
+            <button
+              type="button"
+              onClick={() => setDismissedError(true)}
+              aria-label="Dismiss error"
+              className="text-red-300 hover:text-red-100"
+            >
+              ×
+            </button>
+          </div>
+        )}
 
         {/* Sign-in Method Toggle */}
         <div

@@ -211,17 +211,28 @@ const providers: NextAuthConfig['providers'] = [
       }
 
       try {
-        // Phone formats in the DB are inconsistent (+91XXXXXXXXXX vs bare
-        // 10 digits), so match on the last 10 digits.
-        const phoneLast10 = (credentials.phone as string).replace(/\D/g, '').slice(-10)
+        // Country-aware phone matching (mirrors firebase-session). Indian
+        // numbers exist in three legacy stored formats — match those exactly;
+        // other countries were only ever stored as full E.164. A blanket
+        // endsWith(last10) could cross-match different country codes sharing
+        // the same trailing 10 digits. (The one-time verificationToken is the
+        // primary key here; this narrows the row selection to be safe.)
+        const rawPhone = credentials.phone as string
+        const digits = rawPhone.replace(/\D/g, '')
+        const phoneLast10 = digits.slice(-10)
 
         if (!phoneLast10) {
           throw new Error('Invalid phone number')
         }
 
+        const normalized = rawPhone.startsWith('+') ? rawPhone : `+91${phoneLast10}`
+        const phoneMatchers = normalized.startsWith('+91')
+          ? [{ phone: normalized }, { phone: normalized.slice(1) }, { phone: phoneLast10 }]
+          : [{ phone: normalized }]
+
         const user = await prisma.users.findFirst({
           where: {
-            phone: { endsWith: phoneLast10 },
+            OR: phoneMatchers,
             verificationToken: credentials.verificationToken as string,
             verificationTokenExpiry: {
               gte: new Date(),
@@ -388,9 +399,15 @@ if (isFacebookAuthConfigured) {
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: createAuthAdapter(),
   providers,
+  // Public sign-in page for BOTH the sign-in redirect and auth errors.
+  // These previously pointed at /admin/login — a shim that discards ?error=
+  // and rewrites redirect_url to /admin — so every OAuth failure (denied
+  // consent, unverified email, adapter error) silently dumped students on
+  // /sign-in with no message and the wrong destination. /sign-in now renders
+  // the ?error= code with friendly copy.
   pages: {
-    signIn: '/admin/login',
-    error: '/admin/login',
+    signIn: '/sign-in',
+    error: '/sign-in',
   },
   session: {
     strategy: 'jwt',
