@@ -27,6 +27,7 @@ import { format, formatDistanceToNow } from 'date-fns'
 import { showToast } from '@/lib/toast'
 import { PaymentLinksSection } from './PaymentLinksSection'
 import { AICopilotPanel } from '@/components/counselor/AICopilotPanel'
+import { StudentAcademicsSection } from '@/components/counselor/StudentAcademicsSection'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -712,6 +713,9 @@ export default function LeadDetailPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left Column: Main Content */}
         <div className="lg:col-span-2 space-y-6">
+          {/* Academics — linked student account (P3 staff visibility) */}
+          <StudentAcademicsSection leadId={lead.id} />
+
           {/* Session Notes */}
           <SessionNotesSection leadId={lead.id} initialNotes={lead.notes || []} />
 
