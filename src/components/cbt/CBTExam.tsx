@@ -1030,11 +1030,14 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
               Question No. {currentIndex + 1}
             </span>
             <div className="flex items-center gap-3 text-[11px] text-gray-700">
-              <span className="hidden sm:inline">
+              {/* NOTE: this app's critical CSS redefines `.hidden` late in the
+                  cascade, so responsive reveals must use the !important
+                  utilities it ships (md:block / lg:flex / lg:block). */}
+              <span className="hidden md:block">
                 Marks for correct answer: <b className="text-green-700">{CORRECT_MARKS}</b> |
                 Negative Marks: <b className="text-red-600">{NEGATIVE_MARKS}</b>
               </span>
-              <span className="hidden items-center gap-1 md:flex">
+              <span className="hidden md:block">
                 View in :
                 <select
                   className="border border-gray-300 bg-white px-1 py-0.5 text-[11px]"
