@@ -37,7 +37,7 @@ these. The kit lives in `src/components/admin/kit`; the fetch hook in
 | /admin/payments (all statuses)                       | ✅ kit (Stage 7)                                                  |
 | /admin/settings/\*                                   | ✅ built to spec (Stage 1/7)                                      |
 | /admin (home)                                        | ✅ Stage 8                                                        |
-| /admin/students/leads                                | ✅ Stage 8 (skeleton, color-tag rings; DataTable rebuild pending) |
+| /admin/students/leads                                | ✅ Stage 8 (skeleton, color-tag rings, unified LeadForm)          |
 | /admin/demo-bookings                                 | ✅ Stage 8                                                        |
-| /counselor home, Kanban, detail                      | mostly compliant (rebuilt Jun–Jul 2026); polish opportunistically |
+| /counselor home, Kanban, detail                      | ✅ home skeleton (Stage 8); Kanban/detail rebuilt Jun–Jul 2026    |
 | long tail (gallery, groups, timetable, marketing/\*) | boy-scout rule — migrate on touch                                 |

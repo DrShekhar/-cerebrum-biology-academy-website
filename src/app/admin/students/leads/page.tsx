@@ -25,8 +25,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
-import { AddLeadForm } from '@/components/admin/AddLeadForm'
-import { EditLeadForm } from '@/components/admin/EditLeadForm'
+import { LeadForm } from '@/components/leads/LeadForm'
 import { toast } from 'sonner'
 import { LeadColorLegend, useLeadColorTags } from '@/components/staff/LeadColorLegend'
 
@@ -779,12 +778,13 @@ export default function LeadsPage() {
         description="Capture details of a prospective student interested in our courses."
         size="lg"
       >
-        <AddLeadForm
+        <LeadForm
+          surface="admin"
+          mode="add"
           counselors={counselors.map((c) => ({ id: c.id, name: c.name }))}
           onSuccess={() => {
             setIsAddLeadModalOpen(false)
             fetchLeads()
-            toast.success('Lead added successfully')
           }}
           onCancel={() => setIsAddLeadModalOpen(false)}
         />
@@ -798,26 +798,27 @@ export default function LeadsPage() {
           description="Update lead information and status."
           size="xl"
         >
-          <EditLeadForm
-            lead={{
+          <LeadForm
+            surface="admin"
+            mode="edit"
+            counselors={counselors.map((c) => ({ id: c.id, name: c.name }))}
+            initialValues={{
               id: selectedLead.id,
               studentName: selectedLead.name,
               email: selectedLead.email,
               phone: selectedLead.phone,
               courseInterest: selectedLead.courseInterest.join(', '),
               source: selectedLead.leadSource.toUpperCase().replace(' ', '_'),
-              stage: selectedLead.leadStage.toUpperCase().replace('_', '_'),
-              priority: selectedLead.priority.toUpperCase(),
+              stage: selectedLead.leadStage.toUpperCase(),
+              priority: selectedLead.priority.toUpperCase() as 'HOT' | 'WARM' | 'COLD',
               assignedToId: selectedLead.assignedToId || counselors[0]?.id || '',
               nextFollowUpAt: selectedLead.nextFollowUp,
               lostReason: selectedLead.lostReason,
             }}
-            counselors={counselors.map((c) => ({ id: c.id, name: c.name }))}
             onSuccess={() => {
               setIsEditLeadModalOpen(false)
               setSelectedLead(null)
               fetchLeads()
-              toast.success('Lead updated successfully')
             }}
             onCancel={() => {
               setIsEditLeadModalOpen(false)

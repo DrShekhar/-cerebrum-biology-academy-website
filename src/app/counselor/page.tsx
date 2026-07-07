@@ -301,10 +301,17 @@ export default function CounselorDashboard() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center py-20">
-        <div className="text-center">
-          <Loader2 className="w-10 h-10 text-indigo-600 animate-spin mx-auto mb-3" />
-          <p className="text-gray-500">Loading your dashboard...</p>
+      <div className="space-y-6 animate-pulse">
+        <div className="h-24 bg-white rounded-xl border border-gray-200" />
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="h-28 bg-white rounded-xl border border-gray-200" />
+          ))}
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className="h-72 bg-white rounded-xl border border-gray-200" />
+          ))}
         </div>
       </div>
     )

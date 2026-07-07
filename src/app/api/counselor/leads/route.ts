@@ -11,7 +11,7 @@ import { WebhookService } from '@/lib/webhooks/webhookService'
 
 const createLeadSchema = z.object({
   studentName: z.string().min(1, 'Student name is required'),
-  email: z.string().email('Valid email is required'),
+  email: z.string().email('Valid email is required').optional().or(z.literal('')),
   phone: z.string().min(10, 'Valid phone number is required'),
   courseInterest: z.string().min(1, 'Course interest is required'),
   source: z
@@ -157,7 +157,7 @@ export async function POST(request: NextRequest) {
     const result = await upsertLeadCore(prisma, {
       name: validatedData.studentName,
       phone: validatedData.phone,
-      email: validatedData.email,
+      email: validatedData.email || null,
       courseInterest: validatedData.courseInterest,
       source: 'counselor-panel',
       sourceEnum: validatedData.source ? (validatedData.source as LeadSource) : 'MANUAL_ENTRY',
