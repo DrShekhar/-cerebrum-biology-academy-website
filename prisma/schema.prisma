@@ -5019,6 +5019,36 @@ model site_settings {
   updatedBy String?
 }
 
+// Counselor-authored WhatsApp drip sequences. Definitions only for now —
+// the nurturing processor reading steps from here is a separate, owner-
+// approved change (touches prospect communication). isActive defaults false.
+model drip_sequences {
+  id                String                @id @default(cuid())
+  name              String
+  description       String?
+  triggerStage      String
+  stopOnStageChange Boolean               @default(true)
+  isActive          Boolean               @default(false)
+  createdById       String
+  createdAt         DateTime              @default(now())
+  updatedAt         DateTime              @updatedAt
+  steps             drip_sequence_steps[]
+
+  @@index([triggerStage, isActive])
+}
+
+model drip_sequence_steps {
+  id         String         @id @default(cuid())
+  sequenceId String
+  order      Int
+  delayHours Int
+  channel    String         @default("WHATSAPP")
+  body       String
+  sequence   drip_sequences @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
+
+  @@unique([sequenceId, order])
+}
+
 enum StaffChannelType {
   TEAM
   DIRECT

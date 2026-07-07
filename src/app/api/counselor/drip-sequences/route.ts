@@ -1,93 +1,186 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { auth } from '@/lib/auth'
+import { authenticateCounselor } from '@/lib/auth/counselor-auth'
+import { z } from 'zod'
 
 export const dynamic = 'force-dynamic'
 
-// GET - List all drip sequences
-export async function GET(req: NextRequest) {
+// Real drip-sequence CRUD (previously POST/PATCH/DELETE fabricated ids and
+// persisted nothing — saved sequences vanished on reload). Definitions are
+// stored in drip_sequences/drip_sequence_steps; the nurturing processor
+// reading steps from here is a separate owner-approved change, so sequences
+// save inactive and sending stays on the existing hardcoded series.
+
+const stepSchema = z.object({
+  order: z.number().int().min(0).max(50),
+  delayHours: z
+    .number()
+    .int()
+    .min(0)
+    .max(24 * 60),
+  channel: z.literal('WHATSAPP').default('WHATSAPP'),
+  body: z.string().min(1).max(2000),
+})
+
+const createSchema = z.object({
+  name: z.string().min(1).max(120),
+  description: z.string().max(500).optional(),
+  triggerStage: z.string().min(1).max(60),
+  stopOnStageChange: z.boolean().default(true),
+  steps: z.array(stepSchema).min(1).max(20),
+})
+
+function rand(prefix: string): string {
+  return `${prefix}_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`
+}
+
+interface NurturingStat {
+  triggerStage: string
+  totalEnrolled: number
+  active: number
+  completed: number
+  stopped: number
+}
+
+// GET - List sequences with live enrollment stats from whatsapp_nurturing
+export async function GET() {
+  const authResult = await authenticateCounselor()
+  if ('error' in authResult) return authResult.error
+
   try {
-    const session = await auth()
-    if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    const [sequences, nurturingStats] = await Promise.all([
+      prisma.drip_sequences.findMany({
+        include: { steps: { orderBy: { order: 'asc' } } },
+        orderBy: { createdAt: 'desc' },
+      }),
+      prisma.$queryRaw`
+        SELECT source as "triggerStage",
+          COUNT(*)::int as "totalEnrolled",
+          COUNT(CASE WHEN status = 'ACTIVE' THEN 1 END)::int as active,
+          COUNT(CASE WHEN status = 'COMPLETED' THEN 1 END)::int as completed,
+          COUNT(CASE WHEN status = 'STOPPED' THEN 1 END)::int as stopped
+        FROM whatsapp_nurturing
+        GROUP BY source
+      ` as Promise<NurturingStat[]>,
+    ])
 
-    // For now, store sequences as JSON in a settings table or return from whatsapp_nurturing
-    // This is a simplified implementation using local storage pattern
-    const sequences = (await prisma.$queryRaw`
-      SELECT DISTINCT source as triggerStage,
-        COUNT(*) as totalEnrolled,
-        COUNT(CASE WHEN status = 'ACTIVE' THEN 1 END) as active,
-        COUNT(CASE WHEN status = 'COMPLETED' THEN 1 END) as completed,
-        COUNT(CASE WHEN status = 'STOPPED' THEN 1 END) as stopped
-      FROM whatsapp_nurturing
-      GROUP BY source
-    `) as any[]
+    const statsByStage = new Map(nurturingStats.map((s) => [s.triggerStage, s]))
 
-    return NextResponse.json({ data: sequences || [] })
+    return NextResponse.json({
+      data: sequences.map((seq) => ({
+        ...seq,
+        stats: statsByStage.get(seq.triggerStage) || {
+          totalEnrolled: 0,
+          active: 0,
+          completed: 0,
+          stopped: 0,
+        },
+      })),
+    })
   } catch (error) {
     console.error('Error fetching sequences:', error)
-    return NextResponse.json({ data: [] })
+    return NextResponse.json({ error: 'Failed to load sequences' }, { status: 500 })
   }
 }
 
-// POST - Create new drip sequence
+// POST - Create a sequence (saved INACTIVE; activation is the toggle below)
 export async function POST(req: NextRequest) {
+  const authResult = await authenticateCounselor()
+  if ('error' in authResult) return authResult.error
+  const { session } = authResult
+
   try {
-    const session = await auth()
-    if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    const parsed = createSchema.safeParse(await req.json())
+    if (!parsed.success) {
+      return NextResponse.json(
+        { error: 'Invalid sequence', details: parsed.error.issues },
+        { status: 400 }
+      )
+    }
 
-    const body = await req.json()
-    const { name, description, triggerStage, stopOnStageChange, steps } = body
-
-    // Store sequence config (in production, create a drip_sequences table)
-    // For now, we'll acknowledge the creation and use whatsapp_nurturing for execution
-    const id = `seq_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-
-    return NextResponse.json({
+    const sequence = await prisma.drip_sequences.create({
       data: {
-        id,
-        name,
-        description,
-        triggerStage,
-        stopOnStageChange,
+        id: rand('seq'),
+        name: parsed.data.name,
+        description: parsed.data.description || null,
+        triggerStage: parsed.data.triggerStage,
+        stopOnStageChange: parsed.data.stopOnStageChange,
         isActive: false,
-        steps,
-        stats: { totalEnrolled: 0, active: 0, completed: 0, stopped: 0, replyRate: 0 },
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        createdById: session.userId,
+        steps: {
+          create: parsed.data.steps.map((s, i) => ({
+            id: rand('step'),
+            order: s.order ?? i,
+            delayHours: s.delayHours,
+            channel: s.channel,
+            body: s.body,
+          })),
+        },
       },
+      include: { steps: { orderBy: { order: 'asc' } } },
     })
+
+    return NextResponse.json(
+      {
+        data: {
+          ...sequence,
+          stats: { totalEnrolled: 0, active: 0, completed: 0, stopped: 0 },
+        },
+      },
+      { status: 201 }
+    )
   } catch (error) {
     console.error('Error creating sequence:', error)
     return NextResponse.json({ error: 'Failed to create sequence' }, { status: 500 })
   }
 }
 
-// PATCH - Toggle sequence active/inactive
+// PATCH - Toggle active / edit metadata
 export async function PATCH(req: NextRequest) {
+  const authResult = await authenticateCounselor()
+  if ('error' in authResult) return authResult.error
+
   try {
-    const session = await auth()
-    if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-
     const body = await req.json()
-    const { id, isActive } = body
+    const { id, isActive, name, description } = body
+    if (!id) {
+      return NextResponse.json({ error: 'id required' }, { status: 400 })
+    }
 
-    return NextResponse.json({ data: { id, isActive } })
+    const sequence = await prisma.drip_sequences.update({
+      where: { id },
+      data: {
+        ...(typeof isActive === 'boolean' ? { isActive } : {}),
+        ...(typeof name === 'string' && name.trim() ? { name: name.trim() } : {}),
+        ...(typeof description === 'string' ? { description } : {}),
+      },
+      include: { steps: { orderBy: { order: 'asc' } } },
+    })
+
+    return NextResponse.json({ data: sequence })
   } catch (error) {
+    console.error('Error updating sequence:', error)
     return NextResponse.json({ error: 'Failed to update' }, { status: 500 })
   }
 }
 
-// DELETE - Remove a sequence
+// DELETE - Remove a sequence (steps cascade)
 export async function DELETE(req: NextRequest) {
-  try {
-    const session = await auth()
-    if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  const authResult = await authenticateCounselor()
+  if ('error' in authResult) return authResult.error
 
+  try {
     const { searchParams } = new URL(req.url)
     const id = searchParams.get('id')
+    if (!id) {
+      return NextResponse.json({ error: 'id required' }, { status: 400 })
+    }
+
+    await prisma.drip_sequences.delete({ where: { id } })
 
     return NextResponse.json({ data: { deleted: true, id } })
   } catch (error) {
+    console.error('Error deleting sequence:', error)
     return NextResponse.json({ error: 'Failed to delete' }, { status: 500 })
   }
 }

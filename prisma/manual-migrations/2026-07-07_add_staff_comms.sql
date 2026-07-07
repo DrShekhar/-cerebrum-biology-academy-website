@@ -85,6 +85,37 @@ CREATE INDEX IF NOT EXISTS "staff_notifications_userId_isRead_idx"
 CREATE INDEX IF NOT EXISTS "staff_notifications_userId_createdAt_idx"
   ON "staff_notifications" ("userId", "createdAt");
 
+-- drip sequences: counselor-authored WhatsApp sequences (definitions only;
+-- the nurturing processor reading these is a separate owner-approved change)
+CREATE TABLE IF NOT EXISTS "drip_sequences" (
+  "id" TEXT NOT NULL,
+  "name" TEXT NOT NULL,
+  "description" TEXT,
+  "triggerStage" TEXT NOT NULL,
+  "stopOnStageChange" BOOLEAN NOT NULL DEFAULT true,
+  "isActive" BOOLEAN NOT NULL DEFAULT false,
+  "createdById" TEXT NOT NULL,
+  "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  "updatedAt" TIMESTAMP(3) NOT NULL,
+  CONSTRAINT "drip_sequences_pkey" PRIMARY KEY ("id")
+);
+CREATE INDEX IF NOT EXISTS "drip_sequences_triggerStage_isActive_idx"
+  ON "drip_sequences" ("triggerStage", "isActive");
+
+CREATE TABLE IF NOT EXISTS "drip_sequence_steps" (
+  "id" TEXT NOT NULL,
+  "sequenceId" TEXT NOT NULL,
+  "order" INTEGER NOT NULL,
+  "delayHours" INTEGER NOT NULL,
+  "channel" TEXT NOT NULL DEFAULT 'WHATSAPP',
+  "body" TEXT NOT NULL,
+  CONSTRAINT "drip_sequence_steps_pkey" PRIMARY KEY ("id"),
+  CONSTRAINT "drip_sequence_steps_sequenceId_fkey" FOREIGN KEY ("sequenceId")
+    REFERENCES "drip_sequences"("id") ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE UNIQUE INDEX IF NOT EXISTS "drip_sequence_steps_sequenceId_order_key"
+  ON "drip_sequence_steps" ("sequenceId", "order");
+
 -- notices: role-targeted staff announcements (targetType 'ROLES')
 ALTER TABLE "notices" ADD COLUMN IF NOT EXISTS "targetRoles" TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[];
 
