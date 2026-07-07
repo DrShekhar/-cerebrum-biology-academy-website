@@ -1,7 +1,11 @@
 /**
- * Student Material Download Tracking API
+ * Student Material Delivery + Download Tracking API
  *
- * POST /api/student/materials/[id]/download - Track material download
+ * GET  /api/student/materials/[id]/download — entitlement-gated delivery:
+ *      tracks the download, then redirects to the stored fileUrl. This is
+ *      what the course-page "Open" links hit (they are plain <a href> GETs —
+ *      the old POST-only route returned 405 and never served the file).
+ * POST /api/student/materials/[id]/download — track only (legacy callers).
  */
 
 import { NextRequest, NextResponse } from 'next/server'
@@ -13,7 +17,11 @@ import { getGroupGrantedContent } from '@/lib/student/groupContent'
 /**
  * POST - Track material download and update progress
  */
-export async function POST(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+async function handleDownload(
+  request: NextRequest,
+  params: Promise<{ id: string }>,
+  deliver: boolean
+) {
   try {
     // Authentication check
     const session = await auth()
@@ -34,6 +42,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
         accessLevel: true,
         requiredTier: true,
         courseId: true,
+        fileUrl: true,
       },
     })
 
@@ -132,6 +141,17 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       console.error('Progress tracking failed:', progressError)
     }
 
+    if (deliver) {
+      if (!material.fileUrl) {
+        return NextResponse.json(
+          { success: false, error: 'This material has no downloadable file.' },
+          { status: 404 }
+        )
+      }
+      // Entitlement verified above — hand the browser the stored file.
+      return NextResponse.redirect(material.fileUrl)
+    }
+
     return NextResponse.json({
       success: true,
       message: 'Download tracked successfully',
@@ -151,4 +171,12 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       { status: 500 }
     )
   }
+}
+
+export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  return handleDownload(request, params, true)
+}
+
+export async function POST(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  return handleDownload(request, params, false)
 }

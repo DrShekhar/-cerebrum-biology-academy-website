@@ -429,6 +429,37 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
         },
       })
 
+      // Quiz-as-lesson completion: TEST study_materials pointing at this
+      // template count toward course progress + certificate eligibility the
+      // moment the student submits (they can never be "downloaded").
+      if (testSession.testTemplateId) {
+        const lessonMaterials = await tx.study_materials.findMany({
+          where: { testTemplateId: testSession.testTemplateId, materialType: 'TEST' },
+          select: { id: true },
+        })
+        const progressUserId = testSession.userId || testSession.freeUserId
+        if (progressUserId) {
+          for (const material of lessonMaterials) {
+            await tx.material_progress.upsert({
+              where: {
+                materialId_userId: { materialId: material.id, userId: progressUserId },
+              },
+              update: { status: 'COMPLETED', completedAt: submissionTime, updatedAt: new Date() },
+              create: {
+                id: `matprog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+                materialId: material.id,
+                userId: progressUserId,
+                status: 'COMPLETED',
+                completedAt: submissionTime,
+                firstViewedAt: submissionTime,
+                lastViewedAt: submissionTime,
+                updatedAt: new Date(),
+              },
+            })
+          }
+        }
+      }
+
       // Create analytics record if we have data
       let analytics = null
       if (analyticsData) {

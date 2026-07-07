@@ -51,6 +51,16 @@ export async function GET() {
       ]),
       report('Interakt (WhatsApp/OTP)', 'Messaging', ['INTERAKT_API_KEY']),
       report('Zoom', 'Classes', ['ZOOM_ACCOUNT_ID', 'ZOOM_CLIENT_ID', 'ZOOM_CLIENT_SECRET']),
+      report('Cloudflare Stream (course videos)', 'LMS', [
+        'CLOUDFLARE_ACCOUNT_ID',
+        'CLOUDFLARE_API_TOKEN',
+      ]),
+      report('Vercel Blob (PDF storage)', 'LMS', ['BLOB_READ_WRITE_TOKEN']),
+      report('Meta Conversions API (ads feedback)', 'Marketing', [
+        'META_CAPI_ACCESS_TOKEN',
+        'META_PIXEL_ID',
+      ]),
+      report('OpenAI (call transcription)', 'AI', ['OPENAI_API_KEY']),
       report('Upstash Redis', 'Infrastructure', [
         'UPSTASH_REDIS_REST_URL',
         'UPSTASH_REDIS_REST_TOKEN',

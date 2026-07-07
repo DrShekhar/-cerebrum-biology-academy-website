@@ -40,8 +40,14 @@ export async function POST(request: NextRequest) {
   try {
     // Authentication check - SECURITY (2026-01-28): Case-insensitive role check
     const session = await auth()
-    if (!session || session.user.role?.toUpperCase() !== 'ADMIN') {
-      return NextResponse.json({ error: 'Unauthorized. Admin access required.' }, { status: 401 })
+    const role = session?.user?.role?.toUpperCase()
+    // TEACHER included: the shared course-builder BulkUploader is
+    // teacher-facing and its video path already allows teachers.
+    if (!session || (role !== 'ADMIN' && role !== 'TEACHER')) {
+      return NextResponse.json(
+        { error: 'Unauthorized. Admin or teacher access required.' },
+        { status: 401 }
+      )
     }
 
     // CSRF validation - SECURITY (2026-01-28): Protect file uploads from CSRF

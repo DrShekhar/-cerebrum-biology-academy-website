@@ -538,7 +538,7 @@ function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExp
       const json = await res.json()
       const sessionId = json?.data?.testSession?.id || json?.testSession?.id || json?.sessionId
       if (!res.ok || !sessionId) throw new Error(json?.error || 'Could not start the test')
-      router.push(`/test/${sessionId}`)
+      router.push(`/test/session/${sessionId}`)
     } catch (err) {
       showToast.error(err instanceof Error ? err.message : 'Could not start the test')
       setStartingTest(false)
