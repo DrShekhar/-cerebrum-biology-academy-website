@@ -116,6 +116,56 @@ CREATE TABLE IF NOT EXISTS "drip_sequence_steps" (
 CREATE UNIQUE INDEX IF NOT EXISTS "drip_sequence_steps_sequenceId_order_key"
   ON "drip_sequence_steps" ("sequenceId", "order");
 
+-- notices + notice_reads: discovered ABSENT in prod (Jul 7 2026) — the
+-- student noticeboard feature was silently broken. Created here so both the
+-- existing student flows and the new role-targeted announcements work.
+CREATE TABLE IF NOT EXISTS "notices" (
+  "id" TEXT NOT NULL,
+  "title" TEXT NOT NULL,
+  "content" TEXT NOT NULL,
+  "category" TEXT NOT NULL DEFAULT 'ANNOUNCEMENT',
+  "targetType" TEXT NOT NULL DEFAULT 'ALL',
+  "targetCourseIds" TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[],
+  "targetBatchIds" TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[],
+  "targetUserIds" TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[],
+  "groupId" TEXT,
+  "priority" INTEGER NOT NULL DEFAULT 0,
+  "isPinned" BOOLEAN NOT NULL DEFAULT false,
+  "isActive" BOOLEAN NOT NULL DEFAULT true,
+  "attachments" JSONB,
+  "viewCount" INTEGER NOT NULL DEFAULT 0,
+  "publishedAt" TIMESTAMP(3),
+  "expiresAt" TIMESTAMP(3),
+  "createdById" TEXT NOT NULL,
+  "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  "updatedAt" TIMESTAMP(3) NOT NULL,
+  CONSTRAINT "notices_pkey" PRIMARY KEY ("id"),
+  CONSTRAINT "notices_createdById_fkey" FOREIGN KEY ("createdById")
+    REFERENCES "users"("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
+CREATE INDEX IF NOT EXISTS "notices_category_idx" ON "notices" ("category");
+CREATE INDEX IF NOT EXISTS "notices_isActive_publishedAt_idx" ON "notices" ("isActive", "publishedAt");
+CREATE INDEX IF NOT EXISTS "notices_targetType_idx" ON "notices" ("targetType");
+CREATE INDEX IF NOT EXISTS "notices_createdById_idx" ON "notices" ("createdById");
+CREATE INDEX IF NOT EXISTS "notices_groupId_idx" ON "notices" ("groupId");
+
+CREATE TABLE IF NOT EXISTS "notice_reads" (
+  "id" TEXT NOT NULL,
+  "noticeId" TEXT NOT NULL,
+  "userId" TEXT NOT NULL,
+  "readAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT "notice_reads_pkey" PRIMARY KEY ("id"),
+  CONSTRAINT "notice_reads_noticeId_fkey" FOREIGN KEY ("noticeId")
+    REFERENCES "notices"("id") ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT "notice_reads_userId_fkey" FOREIGN KEY ("userId")
+    REFERENCES "users"("id") ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE UNIQUE INDEX IF NOT EXISTS "notice_reads_noticeId_userId_key"
+  ON "notice_reads" ("noticeId", "userId");
+CREATE INDEX IF NOT EXISTS "notice_reads_userId_idx" ON "notice_reads" ("userId");
+CREATE INDEX IF NOT EXISTS "notice_reads_noticeId_idx" ON "notice_reads" ("noticeId");
+
 -- notices: role-targeted staff announcements (targetType 'ROLES')
 ALTER TABLE "notices" ADD COLUMN IF NOT EXISTS "targetRoles" TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[];
 
