@@ -357,11 +357,12 @@ export default function DemoBookingsPage() {
           </div>
         )}
 
-        {/* Loading State */}
+        {/* Loading State (skeleton matching the table) */}
         {loading && (
-          <div className="flex items-center justify-center py-12">
-            <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
-            <span className="ml-2 text-gray-600">Loading bookings...</span>
+          <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4 animate-pulse">
+            {[...Array(6)].map((_, i) => (
+              <div key={i} className="h-14 bg-gray-100 rounded" />
+            ))}
           </div>
         )}
 

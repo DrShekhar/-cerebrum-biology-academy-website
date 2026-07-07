@@ -228,11 +228,24 @@ export default function AdminDashboard() {
 
   if (isLoading) {
     return (
-      <>
-        <div className="flex items-center justify-center min-h-[60vh]">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-600"></div>
+      <div className="p-4 sm:p-6 max-w-7xl mx-auto animate-pulse">
+        <div className="h-9 w-56 bg-gray-200 rounded mb-2" />
+        <div className="h-5 w-96 bg-gray-100 rounded mb-8" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="bg-white rounded-xl border border-gray-200 p-6">
+              <div className="h-4 w-28 bg-gray-200 rounded mb-3" />
+              <div className="h-8 w-20 bg-gray-200 rounded mb-3" />
+              <div className="h-4 w-32 bg-gray-100 rounded" />
+            </div>
+          ))}
         </div>
-      </>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className="bg-white rounded-xl border border-gray-200 p-6 h-64" />
+          ))}
+        </div>
+      </div>
     )
   }
 
@@ -291,26 +304,27 @@ export default function AdminDashboard() {
             </div>
           </div>
 
-          {/* Live indicators */}
+          {/* Today at a glance — real counts only (the old "users online" /
+              "active sessions" figures were derived estimates, not
+              measurements, and are gone). */}
           <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 mt-4 p-4 bg-white rounded-lg shadow-sm border">
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium">System Online</span>
+              <div className="text-sm text-gray-600">
+                <span className="font-semibold text-gray-900">
+                  {data.liveMetrics.demoBookingsToday}
+                </span>{' '}
+                demos completed today
               </div>
-              <div className="text-sm text-gray-500">
-                {data.liveMetrics.usersOnline} users online
-              </div>
-              <div className="text-sm text-gray-500">
-                {data.liveMetrics.activeSessions} active sessions
-              </div>
-              <div className="text-sm text-gray-500">
-                {data.liveMetrics.demoBookingsToday} demos today
+              <div className="text-sm text-gray-600">
+                <span className="font-semibold text-gray-900">
+                  {data.liveMetrics.currentPageViews}
+                </span>{' '}
+                page views today
               </div>
             </div>
             {lastUpdated && (
               <div className="text-xs text-gray-400">
-                Last updated: {lastUpdated.toLocaleTimeString()}
+                Last updated: {lastUpdated.toLocaleTimeString()} · refreshes every 30s
               </div>
             )}
           </div>
@@ -427,22 +441,28 @@ export default function AdminDashboard() {
             </div>
 
             <div className="space-y-4">
-              {data.recentActivities.map((activity) => (
-                <div key={activity.id} className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                    <ActivityIcon type={activity.type} />
+              {data.recentActivities.length === 0 ? (
+                <p className="text-sm text-gray-500 text-center py-6">
+                  No recent activity in this timeframe.
+                </p>
+              ) : (
+                data.recentActivities.map((activity) => (
+                  <div key={activity.id} className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+                      <ActivityIcon type={activity.type} />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm">
+                        <span className="font-medium text-gray-900">{activity.user}</span>{' '}
+                        <span className="text-gray-600">{activity.description}</span>
+                      </p>
+                      <p className="text-xs text-gray-500 mt-1">
+                        {formatTimeAgo(activity.timestamp)}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <p className="text-sm">
-                      <span className="font-medium text-gray-900">{activity.user}</span>{' '}
-                      <span className="text-gray-600">{activity.description}</span>
-                    </p>
-                    <p className="text-xs text-gray-500 mt-1">
-                      {formatTimeAgo(activity.timestamp)}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                ))
+              )}
             </div>
           </div>
 
@@ -459,6 +479,11 @@ export default function AdminDashboard() {
             </div>
 
             <div className="space-y-4">
+              {data.courses.popularCourses.length === 0 && (
+                <p className="text-sm text-gray-500 text-center py-6">
+                  No enrollments recorded in this timeframe.
+                </p>
+              )}
               {data.courses.popularCourses.map((course, index) => (
                 <div key={course.courseId} className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">

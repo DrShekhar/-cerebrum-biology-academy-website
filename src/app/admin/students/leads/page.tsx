@@ -48,6 +48,7 @@ interface APILead {
   createdAt: string
   updatedAt: string
   users?: { id: string; name: string; email: string } | null
+  metadata?: { colorTag?: string | null } | null
   _count?: { activities: number; notes: number; crm_communications: number }
 }
 
@@ -70,6 +71,7 @@ interface Lead {
   score?: number
   activitiesCount?: number
   notesCount?: number
+  colorTag?: string | null
   class?: string
   school?: string
   city?: string
@@ -118,6 +120,7 @@ function transformLead(apiLead: APILead): Lead {
     score: apiLead.score || undefined,
     activitiesCount: apiLead._count?.activities,
     notesCount: apiLead._count?.notes,
+    colorTag: apiLead.metadata?.colorTag || null,
   }
 }
 
@@ -378,15 +381,25 @@ export default function LeadsPage() {
     },
   ]
 
-  // Show loading state
+  // Show loading state (skeleton matching the final layout)
   if (loading && leads.length === 0) {
     return (
-      <>
-        <div className="flex items-center justify-center h-96">
-          <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
-          <span className="ml-2 text-gray-600">Loading leads...</span>
+      <div className="p-6 space-y-8 animate-pulse">
+        <div className="h-9 w-64 bg-gray-200 rounded" />
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="bg-white p-6 rounded-xl border border-gray-200">
+              <div className="h-4 w-24 bg-gray-200 rounded mb-3" />
+              <div className="h-7 w-14 bg-gray-200 rounded" />
+            </div>
+          ))}
         </div>
-      </>
+        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="h-14 bg-gray-100 rounded" />
+          ))}
+        </div>
+      </div>
     )
   }
 
@@ -573,7 +586,19 @@ export default function LeadsPage() {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-10 w-10">
-                          <div className="h-10 w-10 rounded-full bg-yellow-100 flex items-center justify-center">
+                          <div
+                            className="h-10 w-10 rounded-full bg-yellow-100 flex items-center justify-center"
+                            style={
+                              lead.colorTag && colorTags.find((t) => t.id === lead.colorTag)
+                                ? {
+                                    boxShadow: `0 0 0 3px ${colorTags.find((t) => t.id === lead.colorTag)!.color}`,
+                                  }
+                                : undefined
+                            }
+                            title={
+                              colorTags.find((t) => t.id === lead.colorTag)?.label || undefined
+                            }
+                          >
                             <UserPlus className="h-5 w-5 text-yellow-600" />
                           </div>
                         </div>
