@@ -18,6 +18,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import { LeadTimeline } from '@/components/staff/LeadTimeline'
 import { LeadCommentThread } from '@/components/staff/LeadCommentThread'
+import { LeadColorTagPicker, useLeadColorTags } from '@/components/staff/LeadColorLegend'
 
 interface TimelineActivity {
   id: string
@@ -43,6 +44,7 @@ interface LeadDetail {
   nextFollowUpAt: string | null
   convertedAt: string | null
   lostReason: string | null
+  metadata?: { colorTag?: string | null } | null
   demoBooking: {
     status: string
     preferredDate: string
@@ -93,6 +95,8 @@ export default function AdminLeadDetailPage() {
   const [lead, setLead] = useState<LeadDetail | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [colorTag, setColorTag] = useState<string | null>(null)
+  const { tags: colorTags } = useLeadColorTags()
 
   const load = useCallback(async () => {
     try {
@@ -102,6 +106,7 @@ export default function AdminLeadDetailPage() {
       const data = await res.json()
       if (!res.ok || !data.success) throw new Error(data.error || 'Failed to load lead')
       setLead(data.data)
+      setColorTag(data.data?.metadata?.colorTag || null)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Failed to load lead')
     } finally {
@@ -158,11 +163,20 @@ export default function AdminLeadDetailPage() {
                   </div>
                 </div>
                 <div className="flex flex-col items-end gap-2">
-                  <span
-                    className={`rounded-full px-3 py-1 text-xs font-semibold ${stageColor(lead.stage)}`}
-                  >
-                    {lead.stage.replace(/_/g, ' ')}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <LeadColorTagPicker
+                      leadId={lead.id}
+                      current={colorTag}
+                      tags={colorTags}
+                      onChanged={setColorTag}
+                      size="md"
+                    />
+                    <span
+                      className={`rounded-full px-3 py-1 text-xs font-semibold ${stageColor(lead.stage)}`}
+                    >
+                      {lead.stage.replace(/_/g, ' ')}
+                    </span>
+                  </div>
                   {typeof lead.score === 'number' && (
                     <span className="inline-flex items-center gap-1 text-sm font-medium text-gray-700">
                       <Star className="w-4 h-4 text-yellow-500" /> Score {lead.score}

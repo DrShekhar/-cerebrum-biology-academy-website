@@ -89,6 +89,7 @@ export async function GET(request: NextRequest) {
           scoreBreakdown: true,
           nextFollowUpAt: true,
           lostReason: true,
+          metadata: true,
           createdAt: true,
           updatedAt: true,
           assignedToId: true,

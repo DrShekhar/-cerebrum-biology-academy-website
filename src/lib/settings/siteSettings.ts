@@ -19,6 +19,21 @@ export const generalSettingsSchema = z.object({
   autoAssignLeads: z.boolean(),
 })
 
+export const leadBoardSettingsSchema = z.object({
+  // Team-wide color-tag vocabulary: counselors pick a color on a lead; the
+  // legend shows everyone what each color means. Labels are editable.
+  colorTags: z
+    .array(
+      z.object({
+        id: z.string().min(1),
+        color: z.string().regex(/^#[0-9a-fA-F]{6}$/),
+        label: z.string().min(1).max(60),
+      })
+    )
+    .min(1)
+    .max(12),
+})
+
 export const notificationSettingsSchema = z.object({
   channels: z.array(z.object({ id: z.string(), enabled: z.boolean() })),
   events: z.array(
@@ -34,11 +49,13 @@ export const notificationSettingsSchema = z.object({
 const SECTION_SCHEMAS = {
   general: generalSettingsSchema,
   notifications: notificationSettingsSchema,
+  leadBoard: leadBoardSettingsSchema,
 } as const
 
 export type SettingsSection = keyof typeof SECTION_SCHEMAS
 export type GeneralSettings = z.infer<typeof generalSettingsSchema>
 export type NotificationSettings = z.infer<typeof notificationSettingsSchema>
+export type LeadBoardSettings = z.infer<typeof leadBoardSettingsSchema>
 
 export const SETTINGS_DEFAULTS: { [K in SettingsSection]: z.infer<(typeof SECTION_SCHEMAS)[K]> } = {
   general: {
@@ -53,6 +70,16 @@ export const SETTINGS_DEFAULTS: { [K in SettingsSection]: z.infer<(typeof SECTIO
   notifications: {
     channels: [],
     events: [],
+  },
+  leadBoard: {
+    colorTags: [
+      { id: 'red', color: '#ef4444', label: 'Urgent — decision pending' },
+      { id: 'orange', color: '#f97316', label: 'Fee negotiation' },
+      { id: 'yellow', color: '#eab308', label: 'Needs parent discussion' },
+      { id: 'green', color: '#22c55e', label: 'Ready to enroll' },
+      { id: 'blue', color: '#3b82f6', label: 'Long-term nurture' },
+      { id: 'purple', color: '#a855f7', label: 'VIP / high value' },
+    ],
   },
 }
 

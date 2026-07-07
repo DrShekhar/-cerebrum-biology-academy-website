@@ -59,6 +59,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
         nextFollowUpAt: lead.nextFollowUpAt,
         convertedAt: lead.convertedAt,
         lostReason: lead.lostReason,
+        metadata: lead.metadata,
         demoBooking: lead.demo_bookings
           ? {
               id: lead.demo_bookings.id,

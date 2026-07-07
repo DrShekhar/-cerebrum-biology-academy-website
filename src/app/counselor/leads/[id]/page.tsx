@@ -30,6 +30,7 @@ import { AICopilotPanel } from '@/components/counselor/AICopilotPanel'
 import { StudentAcademicsSection } from '@/components/counselor/StudentAcademicsSection'
 import { LeadTimeline } from '@/components/staff/LeadTimeline'
 import { LeadCommentThread } from '@/components/staff/LeadCommentThread'
+import { LeadColorTagPicker, useLeadColorTags } from '@/components/staff/LeadColorLegend'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -50,6 +51,7 @@ interface LeadDetail {
   updatedAt: string
   lostReason: string | null
   demoBookingId: string | null
+  metadata?: { colorTag?: string | null } | null
   assignedTo?: { name: string; email: string }
   notes: Note[]
   tasks: Task[]
@@ -196,6 +198,8 @@ export default function LeadDetailPage() {
   const [error, setError] = useState<string | null>(null)
   const [editingStage, setEditingStage] = useState(false)
   const [newStage, setNewStage] = useState('')
+  const [colorTag, setColorTag] = useState<string | null>(null)
+  const { tags: colorTags } = useLeadColorTags()
 
   const fetchLead = useCallback(async () => {
     try {
@@ -203,7 +207,9 @@ export default function LeadDetailPage() {
       const res = await fetch(`/api/counselor/leads/${id}`, { credentials: 'include' })
       if (!res.ok) throw new Error('Lead not found')
       const data = await res.json()
-      setLead(data.data || data)
+      const leadData = data.data || data
+      setLead(leadData)
+      setColorTag((leadData?.metadata as { colorTag?: string | null } | null)?.colorTag || null)
       setError(null)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load lead')
@@ -309,6 +315,13 @@ export default function LeadDetailPage() {
                 <h1 className="text-2xl font-bold text-gray-900">{lead.studentName}</h1>
                 <StageBadge stage={lead.stage} />
                 <PriorityBadge priority={lead.priority} />
+                <LeadColorTagPicker
+                  leadId={lead.id}
+                  current={colorTag}
+                  tags={colorTags}
+                  onChanged={setColorTag}
+                  size="md"
+                />
               </div>
               <div className="flex items-center gap-4 text-sm text-gray-600 flex-wrap">
                 {lead.phone && (

@@ -3,9 +3,11 @@
 import Link from 'next/link'
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
+import { useState } from 'react'
 import { Phone, Mail, MessageSquare, Clock, GripVertical, ExternalLink } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 import type { Lead, Priority } from '@/app/counselor/leads/page'
+import { LeadColorTagPicker, useLeadColorTags } from '@/components/staff/LeadColorLegend'
 
 interface LeadCardProps {
   lead: Lead
@@ -48,11 +50,18 @@ export function LeadCard({ lead, isDragging, onRefresh }: LeadCardProps) {
 
   const priority = priorityConfig[lead.priority] || priorityConfig.WARM
   const hasOverdueFollowUp = lead.nextFollowUpAt && new Date(lead.nextFollowUpAt) < new Date()
+  const { tags } = useLeadColorTags()
+  const [colorTag, setColorTag] = useState<string | null>(lead.metadata?.colorTag || null)
+  const activeTag = tags.find((t) => t.id === colorTag) || null
 
   return (
     <div
       ref={setNodeRef}
-      style={style}
+      style={{
+        ...style,
+        // Counselor-set color tag = a strong left edge (meaning in the legend).
+        ...(activeTag ? { borderLeft: `4px solid ${activeTag.color}` } : {}),
+      }}
       className={`group bg-white rounded-lg border transition-all ${
         isDragging || isSortableDragging
           ? 'shadow-lg border-indigo-300 ring-2 ring-indigo-200 opacity-90'
@@ -75,7 +84,15 @@ export function LeadCard({ lead, isDragging, onRefresh }: LeadCardProps) {
               {priority.emoji} {priority.label}
             </span>
           </div>
-          <ScoreDot score={lead.score} />
+          <div className="flex items-center gap-2">
+            <LeadColorTagPicker
+              leadId={lead.id}
+              current={colorTag}
+              tags={tags}
+              onChanged={setColorTag}
+            />
+            <ScoreDot score={lead.score} />
+          </div>
         </div>
 
         {/* Student Name — clickable link to detail page */}

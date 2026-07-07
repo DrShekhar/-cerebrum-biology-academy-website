@@ -12,6 +12,7 @@ import { LeadPipelineColumn } from '@/components/counselor/LeadPipelineColumn'
 import { LeadCard } from '@/components/counselor/LeadCard'
 import { StatsBar } from '@/components/counselor/StatsBar'
 import { CreateLeadModal } from '@/components/counselor/CreateLeadModal'
+import { LeadColorLegend, useLeadColorTags } from '@/components/staff/LeadColorLegend'
 
 export type LeadStage =
   | 'NEW_LEAD'
@@ -41,6 +42,7 @@ export interface Lead {
   lastContactedAt?: Date | null
   nextFollowUpAt?: Date | null
   createdAt: Date
+  metadata?: { colorTag?: string | null } | null
   _count?: {
     communications: number
     tasks: number
@@ -66,7 +68,9 @@ export default function LeadsPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [filterPriority, setFilterPriority] = useState<Priority | 'ALL'>('ALL')
   const [filterSource, setFilterSource] = useState<string>('ALL')
+  const [filterColor, setFilterColor] = useState<string>('ALL')
   const [showCreateModal, setShowCreateModal] = useState(false)
+  const { tags: colorTags, refresh: refreshColorTags } = useLeadColorTags()
 
   useEffect(() => {
     fetchLeads()
@@ -174,8 +178,9 @@ export default function LeadsPage() {
 
     const matchesPriority = filterPriority === 'ALL' || lead.priority === filterPriority
     const matchesSource = filterSource === 'ALL' || lead.source === filterSource
+    const matchesColor = filterColor === 'ALL' || lead.metadata?.colorTag === filterColor
 
-    return matchesSearch && matchesPriority && matchesSource
+    return matchesSearch && matchesPriority && matchesSource && matchesColor
   })
 
   const activeLead = leads.find((lead) => lead.id === activeId)
@@ -262,6 +267,8 @@ export default function LeadsPage() {
     <div className="space-y-6">
       <StatsBar leads={leads} />
 
+      <LeadColorLegend tags={colorTags} onTagsChanged={() => void refreshColorTags()} />
+
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
         <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
           <div className="flex-1 w-full sm:w-auto">
@@ -315,6 +322,20 @@ export default function LeadsPage() {
               <option value="SOCIAL_MEDIA">📱 Social Media</option>
               <option value="EMAIL_CAMPAIGN">📧 Email</option>
               <option value="OTHER">📋 Other</option>
+            </select>
+
+            <select
+              value={filterColor}
+              onChange={(e) => setFilterColor(e.target.value)}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+              title="Filter by color tag"
+            >
+              <option value="ALL">All Colors</option>
+              {colorTags.map((t) => (
+                <option key={t.id} value={t.id}>
+                  ● {t.label}
+                </option>
+              ))}
             </select>
 
             <button
