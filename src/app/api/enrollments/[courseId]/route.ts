@@ -92,16 +92,20 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
       console.error('progress recompute failed', e)
     }
 
-    // Which of this course's materials has the student marked complete?
-    const completedRows = await prisma.material_progress.findMany({
+    // Completion + the student's own ratings, one query.
+    const progressRows = await prisma.material_progress.findMany({
       where: {
         userId,
-        status: 'COMPLETED',
         study_materials: { courseId },
       },
-      select: { materialId: true },
+      select: { materialId: true, status: true, rating: true },
     })
-    const completedIds = new Set(completedRows.map((r) => r.materialId))
+    const completedIds = new Set(
+      progressRows.filter((r) => r.status === 'COMPLETED').map((r) => r.materialId)
+    )
+    const myRatings = new Map(
+      progressRows.filter((r) => r.rating != null).map((r) => [r.materialId, r.rating as number])
+    )
 
     // Drip + prerequisite locking (set in the course builder). A chapter is
     // locked if its releaseAt is in the future, or if it requires the previous
@@ -177,6 +181,7 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
                     }
                   : null,
                 completed: completedIds.has(m.id),
+                myRating: myRatings.get(m.id) ?? null,
               })),
       }
     })

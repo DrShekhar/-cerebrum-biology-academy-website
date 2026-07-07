@@ -61,6 +61,8 @@ export default function LecturePlayerClient({ lectureId }: { lectureId: string }
   // increments server-side. Track the last cumulative value we sent and post
   // only the delta, so watchedSeconds/totalWatchTime don't balloon.
   const lastWatchedRef = useRef(0)
+  // Live playhead for "add note at current time".
+  const positionRef = useRef(0)
 
   useEffect(() => {
     if (authLoading) return
@@ -195,7 +197,10 @@ export default function LecturePlayerClient({ lectureId }: { lectureId: string }
             initialProgress={data.progress as never}
             userId={user?.id || ''}
             userName={user?.name || 'Student'}
-            onProgress={(position, watched) => saveProgress(position, watched, false)}
+            onProgress={(position, watched) => {
+              positionRef.current = position
+              saveProgress(position, watched, false)
+            }}
             onComplete={() =>
               saveProgress(data.video?.duration || 0, data.video?.duration || 0, true)
             }
@@ -220,6 +225,118 @@ export default function LecturePlayerClient({ lectureId }: { lectureId: string }
             />
           )}
         </div>
+      )}
+
+      {/* Timestamped personal notes (only for instrumented CF lectures) */}
+      {!data.video.youtubeId && (
+        <NotesPanel lectureId={lectureId} getPosition={() => positionRef.current} />
+      )}
+    </div>
+  )
+}
+
+interface VideoNote {
+  id: string
+  timestamp: number
+  content: string
+  createdAt: string
+}
+
+const fmtTime = (s: number) => {
+  const m = Math.floor(s / 60)
+  const sec = Math.floor(s % 60)
+  return `${m}:${sec.toString().padStart(2, '0')}`
+}
+
+/** My notes on this lecture — timestamped at the playhead when added. */
+function NotesPanel({ lectureId, getPosition }: { lectureId: string; getPosition: () => number }) {
+  const [notes, setNotes] = useState<VideoNote[]>([])
+  const [content, setContent] = useState('')
+  const [saving, setSaving] = useState(false)
+
+  useEffect(() => {
+    fetch(`/api/lms/videos/notes?videoLectureId=${encodeURIComponent(lectureId)}`)
+      .then((r) => r.json())
+      .then((j) => {
+        if (j.success) setNotes(j.data.notes || [])
+      })
+      .catch(() => {})
+  }, [lectureId])
+
+  const add = async () => {
+    const text = content.trim()
+    if (!text || saving) return
+    setSaving(true)
+    try {
+      const res = await fetch('/api/lms/videos/notes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          videoLectureId: lectureId,
+          timestamp: Math.round(getPosition()),
+          content: text,
+        }),
+      })
+      const json = await res.json()
+      if (res.ok && json.success) {
+        setNotes((ns) =>
+          [...ns, json.data.note as VideoNote].sort((a, b) => a.timestamp - b.timestamp)
+        )
+        setContent('')
+      }
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  const remove = async (id: string) => {
+    setNotes((ns) => ns.filter((n) => n.id !== id)) // optimistic
+    await fetch(`/api/lms/videos/notes?id=${encodeURIComponent(id)}`, { method: 'DELETE' }).catch(
+      () => {}
+    )
+  }
+
+  return (
+    <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-4">
+      <h2 className="text-sm font-semibold text-slate-800">My notes</h2>
+      <div className="mt-2 flex gap-2">
+        <input
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && add()}
+          placeholder="Note at the current moment…"
+          aria-label="New note"
+          className="flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+        />
+        <button
+          onClick={add}
+          disabled={saving || !content.trim()}
+          className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 disabled:opacity-50"
+        >
+          Add at {fmtTime(getPosition())}
+        </button>
+      </div>
+      {notes.length > 0 && (
+        <ul className="mt-3 space-y-1.5">
+          {notes.map((n) => (
+            <li
+              key={n.id}
+              className="flex items-start gap-2 rounded-lg bg-slate-50 px-3 py-2 text-sm"
+            >
+              <span className="shrink-0 rounded bg-blue-100 px-1.5 py-0.5 font-mono text-xs text-blue-700">
+                {fmtTime(n.timestamp)}
+              </span>
+              <span className="min-w-0 flex-1 whitespace-pre-wrap text-slate-800">{n.content}</span>
+              <button
+                onClick={() => remove(n.id)}
+                className="shrink-0 text-xs text-slate-400 hover:text-red-600"
+                aria-label="Delete note"
+              >
+                delete
+              </button>
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   )

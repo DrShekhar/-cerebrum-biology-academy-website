@@ -18,6 +18,7 @@ import {
   Lock,
   Award,
   ClipboardList,
+  Star,
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
@@ -60,6 +61,7 @@ interface CourseMaterial {
     subject: string
   } | null
   completed?: boolean
+  myRating?: number | null
 }
 
 interface CourseModule {
@@ -494,6 +496,23 @@ function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExp
   const [done, setDone] = useState(!!material.completed)
   const [saving, setSaving] = useState(false)
   const [startingTest, setStartingTest] = useState(false)
+  const [myRating, setMyRating] = useState<number | null>(material.myRating ?? null)
+
+  async function rate(stars: number) {
+    const prev = myRating
+    setMyRating(stars) // optimistic
+    try {
+      const res = await fetch(`/api/student/materials/${material.id}/rate`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ rating: stars }),
+      })
+      if (!res.ok) throw new Error()
+    } catch {
+      setMyRating(prev)
+      showToast.error('Could not save your rating')
+    }
+  }
 
   // TEST lessons start a CBT session on the existing engine and open the
   // secure test player. Completion is marked when the session is submitted.
@@ -568,7 +587,31 @@ function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExp
         <div className="w-8 h-8 rounded-full flex items-center justify-center bg-gray-100 text-gray-600">
           {isExpired ? <Lock className="w-4 h-4" /> : icon}
         </div>
-        <p className="font-medium text-gray-900 text-sm">{material.title}</p>
+        <div>
+          <p className="font-medium text-gray-900 text-sm">{material.title}</p>
+          {!isExpired && (
+            <div className="mt-0.5 flex items-center gap-0.5" aria-label="Rate this lesson">
+              {[1, 2, 3, 4, 5].map((s) => (
+                <button
+                  key={s}
+                  onClick={() => rate(s)}
+                  title={`Rate ${s} star${s > 1 ? 's' : ''}`}
+                  aria-label={`Rate ${s} star${s > 1 ? 's' : ''}`}
+                  className="p-0.5"
+                >
+                  <Star
+                    className={cn(
+                      'w-3 h-3 transition-colors',
+                      myRating && s <= myRating
+                        ? 'fill-yellow-400 text-yellow-400'
+                        : 'text-gray-200 hover:text-yellow-300'
+                    )}
+                  />
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="flex items-center gap-1">
