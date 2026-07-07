@@ -191,28 +191,50 @@ export async function upsertLeadCore(
   }
 
   const leadId = rand('lead')
-  await db.leads.create({
-    data: {
-      id: leadId,
-      studentName: name || 'Website Lead',
-      phone,
-      phoneNormalized: last10,
-      email,
-      courseInterest: input.courseInterest?.trim() || 'Biology coaching (website enquiry)',
-      stage: input.stage || 'NEW_LEAD',
-      priority: input.priority || 'WARM',
-      source: input.sourceEnum || mapLeadSource(input.source),
-      sourceDetail,
-      assignedToId: assigneeId,
-      demoBookingId: input.demoBookingId || null,
-      // NOTE: leads model has no utmSource/utmCampaign columns; UTM data is
-      // preserved in the activities.metadata block below.
-      gclid: input.gclid,
-      nextFollowUpAt: new Date(Date.now() + 30 * 60 * 1000),
-      lastContactedAt: new Date(),
-      updatedAt: new Date(),
-    },
-  })
+  try {
+    await db.leads.create({
+      data: {
+        id: leadId,
+        studentName: name || 'Website Lead',
+        phone,
+        phoneNormalized: last10,
+        email,
+        courseInterest: input.courseInterest?.trim() || 'Biology coaching (website enquiry)',
+        stage: input.stage || 'NEW_LEAD',
+        priority: input.priority || 'WARM',
+        source: input.sourceEnum || mapLeadSource(input.source),
+        sourceDetail,
+        assignedToId: assigneeId,
+        demoBookingId: input.demoBookingId || null,
+        // NOTE: leads model has no utmSource/utmCampaign columns; UTM data is
+        // preserved in the activities.metadata block below.
+        gclid: input.gclid,
+        nextFollowUpAt: new Date(Date.now() + 30 * 60 * 1000),
+        lastContactedAt: new Date(),
+        updatedAt: new Date(),
+      },
+    })
+  } catch (createError) {
+    // P2002 on phoneNormalized = a concurrent request created this lead
+    // between our findFirst and create (the unique index closes the race at
+    // the DB level). Re-run dedup and convert to a touchpoint.
+    const isUniqueViolation =
+      typeof createError === 'object' &&
+      createError !== null &&
+      (createError as { code?: string }).code === 'P2002'
+    if (!isUniqueViolation) throw createError
+
+    const racedLead = await db.leads.findFirst({
+      where: { phoneNormalized: last10 },
+      select: { id: true, assignedToId: true },
+    })
+    if (!racedLead) throw createError
+    await db.leads.update({
+      where: { id: racedLead.id },
+      data: { lastContactedAt: new Date(), updatedAt: new Date() },
+    })
+    return { leadId: racedLead.id, created: false, assignedToId: racedLead.assignedToId }
+  }
 
   await db.activities.create({
     data: {
