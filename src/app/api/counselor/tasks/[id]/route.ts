@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { withCounselor } from '@/lib/auth/middleware'
+import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 
@@ -177,9 +177,20 @@ async function handleDELETE(
   }
 }
 
-export const PATCH = withCounselor((req: NextRequest, session: any) =>
-  handlePATCH(req, session, { params: Promise.resolve({ id: req.url.split('/').pop() || '' }) })
-)
-export const DELETE = withCounselor((req: NextRequest, session: any) =>
-  handleDELETE(req, session, { params: Promise.resolve({ id: req.url.split('/').pop() || '' }) })
-)
+export async function PATCH(
+  request: NextRequest,
+  context: { params: Promise<{ id: string }> }
+) {
+  const authResult = await authenticateCounselor()
+  if ('error' in authResult) return authResult.error
+  return handlePATCH(request, authResult.session, context)
+}
+
+export async function DELETE(
+  request: NextRequest,
+  context: { params: Promise<{ id: string }> }
+) {
+  const authResult = await authenticateCounselor()
+  if ('error' in authResult) return authResult.error
+  return handleDELETE(request, authResult.session, context)
+}

@@ -681,11 +681,6 @@ async function getAdminDashboardMetrics(): Promise<AdminAnalytics> {
   const totalQuestions = await db.questions.count()
   const totalTests = await db.test_templates.count()
 
-  // Performance metrics (mock data for now)
-  const systemUptime = 99.9
-  const averageResponseTime = 250
-  const errorRate = 0.1
-
   return {
     systemMetrics: {
       totalUsers,
@@ -697,14 +692,7 @@ async function getAdminDashboardMetrics(): Promise<AdminAnalytics> {
     contentMetrics: {
       totalQuestions,
       totalTests,
-      averageRating: 4.5, // Implement rating system
       contentGaps: [], // Implement gap analysis
-    },
-    performanceMetrics: {
-      systemUptime,
-      averageResponseTime,
-      errorRate,
-      serverLoad: 65, // Mock data
     },
     businessMetrics: {
       revenue: 0, // Implement revenue tracking

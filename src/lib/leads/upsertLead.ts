@@ -51,7 +51,7 @@ function normalizePhone(raw: string): string {
 }
 
 /** Map a free-text source string to the LeadSource enum; raw kept in sourceDetail. */
-function mapLeadSource(source?: string | null): LeadSource {
+export function mapLeadSource(source?: string | null): LeadSource {
   const s = (source || '').toLowerCase()
   if (s.includes('whatsapp') || s.includes('wa-')) return 'WHATSAPP'
   if (s.includes('referral') || s.includes('refer')) return 'REFERRAL'

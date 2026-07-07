@@ -208,6 +208,39 @@ export async function updateAllLeadScores(counselorId?: string): Promise<number>
   return leads.length
 }
 
+export function getLeadPriority(score: number): 'HOT' | 'WARM' | 'COLD' {
+  if (score >= 70) return 'HOT'
+  if (score >= 40) return 'WARM'
+  return 'COLD'
+}
+
+/**
+ * Get recommended action based on lead score and stage
+ */
+export function getRecommendedAction(
+  score: number,
+  stage: string,
+  hasDemo: boolean
+): { action: string; urgency: 'high' | 'medium' | 'low' } {
+  if (score >= 80 && !hasDemo) {
+    return { action: 'Book demo class immediately', urgency: 'high' }
+  }
+
+  if (score >= 70 && hasDemo) {
+    return { action: 'Follow up with enrollment offer', urgency: 'high' }
+  }
+
+  if (score >= 50) {
+    return { action: 'Send personalized course info', urgency: 'medium' }
+  }
+
+  if (score >= 30) {
+    return { action: 'Add to nurture campaign', urgency: 'low' }
+  }
+
+  return { action: 'Monitor for engagement', urgency: 'low' }
+}
+
 export function getScoreCategory(score: number): string {
   if (score >= 80) return 'Hot'
   if (score >= 60) return 'Warm'

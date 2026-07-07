@@ -14,7 +14,6 @@ import {
   BarChart3,
   Settings,
   Bell,
-  Search,
   Menu,
   X,
   LogOut,
@@ -129,7 +128,6 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       name: 'Demo Bookings',
       icon: Calendar,
       href: '/admin/demo-bookings',
-      badge: 3, // Live count of pending bookings
     },
     {
       id: 'students',
@@ -187,7 +185,6 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           name: 'Pending',
           icon: CreditCard,
           href: '/admin/payments/pending',
-          badge: 2,
         },
         { id: 'failed', name: 'Failed', icon: CreditCard, href: '/admin/payments/failed' },
         { id: 'refunds', name: 'Refunds', icon: CreditCard, href: '/admin/payments/refunds' },
@@ -219,7 +216,6 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           name: 'Abandoned Carts',
           icon: MessageSquare,
           href: '/admin/marketing/abandoned-carts',
-          badge: 8,
         },
         { id: 'alerts', name: 'Alerts', icon: Bell, href: '/admin/alerts' },
       ],
@@ -497,37 +493,16 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                 <Menu className="w-5 h-5" />
               </button>
 
-              <div className="relative flex-1 min-w-0 max-w-xs lg:max-w-none">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search students, bookings, payments..."
-                  className="pl-10 pr-4 py-2 w-full lg:w-80 border border-gray-200 rounded-lg focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none"
-                />
-              </div>
             </div>
 
             <div className="flex items-center space-x-2 sm:space-x-4 shrink-0">
-              {/* Notifications */}
+              {/* badge: staff comms Stage 4 */}
               <button
                 className="relative p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-gray-100 rounded-lg touch-manipulation"
                 aria-label="View notifications"
               >
                 <Bell className="w-5 h-5" />
-                <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
-                  3
-                </span>
               </button>
-
-              {/* Real-time indicators */}
-              <div className="hidden md:flex items-center space-x-2 text-sm">
-                <div className="flex items-center space-x-1">
-                  <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
-                  <span className="text-gray-600">Live</span>
-                </div>
-                <span className="text-gray-400">|</span>
-                <span className="text-gray-600">12 online</span>
-              </div>
             </div>
           </header>
 

@@ -227,6 +227,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
           data: {
             id: `act_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
             userId: session.userId,
+            leadId: queueItem.leadId,
             action: 'FOLLOWUP_SKIPPED',
             description: `Skipped follow-up: ${queueItem.followup_rules.name} for lead ${queueItem.leads.studentName}. Reason: ${skipReason}`,
           },

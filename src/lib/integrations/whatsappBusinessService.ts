@@ -53,11 +53,35 @@ export class WhatsAppBusinessService {
   private static readonly baseUrl = 'https://graph.facebook.com/v24.0'
   private static readonly phoneNumberId = process.env.WHATSAPP_PHONE_NUMBER_ID
   private static readonly accessToken = process.env.WHATSAPP_ACCESS_TOKEN
+  private static warnedNotConfigured = false
+
+  /** False when env keys are missing/placeholder — sends become no-ops instead of doomed fetches */
+  static isConfigured(): boolean {
+    return Boolean(
+      this.phoneNumberId &&
+        this.accessToken &&
+        !this.phoneNumberId.includes('placeholder') &&
+        !this.accessToken.includes('placeholder')
+    )
+  }
+
+  private static skipUnconfigured(): { success: false; skipped: true } | null {
+    if (this.isConfigured()) return null
+    if (!this.warnedNotConfigured) {
+      this.warnedNotConfigured = true
+      console.warn(
+        'WhatsApp Business API not configured (WHATSAPP_ACCESS_TOKEN / WHATSAPP_PHONE_NUMBER_ID missing) — messages will be skipped'
+      )
+    }
+    return { success: false, skipped: true }
+  }
 
   /**
    * Send a simple text message
    */
   static async sendTextMessage(to: string, message: string): Promise<any> {
+    const skipped = this.skipUnconfigured()
+    if (skipped) return skipped
     try {
       const response = await fetch(`${this.baseUrl}/${this.phoneNumberId}/messages`, {
         method: 'POST',
@@ -99,6 +123,8 @@ export class WhatsAppBusinessService {
     languageCode: string = 'en',
     components: TemplateComponent[] = []
   ): Promise<any> {
+    const skipped = this.skipUnconfigured()
+    if (skipped) return skipped
     try {
       const response = await fetch(`${this.baseUrl}/${this.phoneNumberId}/messages`, {
         method: 'POST',
@@ -141,6 +167,8 @@ export class WhatsAppBusinessService {
     footerText: string,
     buttons: (QuickReplyButton | URLButton)[]
   ): Promise<any> {
+    const skipped = this.skipUnconfigured()
+    if (skipped) return skipped
     try {
       const response = await fetch(`${this.baseUrl}/${this.phoneNumberId}/messages`, {
         method: 'POST',
@@ -194,6 +222,8 @@ export class WhatsAppBusinessService {
     filename: string,
     caption?: string
   ): Promise<any> {
+    const skipped = this.skipUnconfigured()
+    if (skipped) return skipped
     try {
       const response = await fetch(`${this.baseUrl}/${this.phoneNumberId}/messages`, {
         method: 'POST',

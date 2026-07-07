@@ -13,6 +13,7 @@
 
 import { prisma } from '@/lib/prisma'
 import { ensureSystemUser } from '@/lib/constants/systemUser'
+import { mapLeadSource } from '@/lib/leads/upsertLead'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { LeadStage as PrismaLeadStage, FollowupAction, Prisma } from '../../generated/prisma'
 import {
@@ -351,8 +352,9 @@ export class LeadNurturingService {
         phone: leadData.phone,
         courseInterest: leadData.courseInterest,
         stage: 'NEW_LEAD',
-        source: (leadData.source || 'WEBSITE') as any,
-        assignedToId: leadData.assignedToId || 'system',
+        source: mapLeadSource(leadData.source),
+        sourceDetail: leadData.source || null,
+        assignedToId: leadData.assignedToId || (await ensureSystemUser()),
         updatedAt: new Date(),
       },
     })

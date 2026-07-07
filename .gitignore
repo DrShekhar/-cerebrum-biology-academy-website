@@ -89,3 +89,4 @@ lighthouse*.html
 
 # MCP server build artifacts
 mcp-servers/*/dist/
+.claude/worktrees/

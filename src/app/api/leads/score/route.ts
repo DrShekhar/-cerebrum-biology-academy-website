@@ -6,7 +6,7 @@ import {
   calculateLeadScore,
   getLeadPriority,
   getRecommendedAction,
-} from '@/lib/leads/leadScoring'
+} from '@/lib/leadScoring'
 import { prisma } from '@/lib/prisma'
 
 /**
@@ -118,22 +118,22 @@ export async function POST(request: NextRequest) {
         if (!leadId) {
           return NextResponse.json({ error: 'leadId required' }, { status: 400 })
         }
-        const score = await updateLeadScore(leadId)
+        await updateLeadScore(leadId)
         const breakdown = await calculateLeadScore(leadId)
         return NextResponse.json({
           success: true,
           leadId,
-          score,
-          priority: getLeadPriority(score),
+          score: breakdown.total,
+          priority: getLeadPriority(breakdown.total),
           breakdown,
         })
 
       case 'update_all':
-        const result = await updateAllLeadScores()
+        const updated = await updateAllLeadScores()
         return NextResponse.json({
           success: true,
-          ...result,
-          message: `Updated ${result.updated} leads, ${result.errors} errors`,
+          updated,
+          message: `Updated ${updated} leads`,
         })
 
       default:

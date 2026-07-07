@@ -425,14 +425,7 @@ export interface AdminAnalytics {
   contentMetrics: {
     totalQuestions: number
     totalTests: number
-    averageRating: number
     contentGaps: string[]
-  }
-  performanceMetrics: {
-    systemUptime: number
-    averageResponseTime: number
-    errorRate: number
-    serverLoad: number
   }
   businessMetrics: {
     revenue: number

@@ -189,19 +189,19 @@ export default function AdminDashboard() {
               status="good"
             />
             <MetricCard
-              title="System Uptime"
-              value={analytics.performanceMetrics.systemUptime}
-              icon={<Server className="w-6 h-6 text-green-600" />}
+              title="Total Students"
+              value={analytics.systemMetrics.totalStudents}
+              icon={<BookOpen className="w-6 h-6 text-green-600" />}
               trend={0}
-              format="percentage"
-              status="excellent"
+              format="number"
+              status="good"
             />
             <MetricCard
-              title="Response Time"
-              value={analytics.performanceMetrics.averageResponseTime}
-              icon={<Zap className="w-6 h-6 text-yellow-600" />}
+              title="Total Teachers"
+              value={analytics.systemMetrics.totalTeachers}
+              icon={<Server className="w-6 h-6 text-yellow-600" />}
               trend={0}
-              format="time"
+              format="number"
               status="good"
             />
             <MetricCard
@@ -217,11 +217,10 @@ export default function AdminDashboard() {
 
         {/* Main Dashboard Tabs */}
         <Tabs defaultValue="overview" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="users">Users</TabsTrigger>
             <TabsTrigger value="content">Content</TabsTrigger>
-            <TabsTrigger value="performance">Performance</TabsTrigger>
             <TabsTrigger value="business">Business</TabsTrigger>
           </TabsList>
 
@@ -396,12 +395,6 @@ export default function AdminDashboard() {
                         <span className="text-gray-600">Total Tests</span>
                         <span className="font-semibold">{analytics.contentMetrics.totalTests}</span>
                       </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-gray-600">Average Rating</span>
-                        <span className="font-semibold">
-                          {analytics.contentMetrics.averageRating}/5
-                        </span>
-                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -426,55 +419,6 @@ export default function AdminDashboard() {
                           <span className="text-sm text-green-800">No content gaps identified</span>
                         </div>
                       )}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            )}
-          </TabsContent>
-
-          <TabsContent value="performance" className="space-y-6">
-            {analytics && (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Performance Metrics</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      <PerformanceMetric
-                        name="System Uptime"
-                        value={`${analytics.performanceMetrics.systemUptime}%`}
-                        status="excellent"
-                      />
-                      <PerformanceMetric
-                        name="Avg Response Time"
-                        value={`${analytics.performanceMetrics.averageResponseTime}ms`}
-                        status="good"
-                      />
-                      <PerformanceMetric
-                        name="Error Rate"
-                        value={`${analytics.performanceMetrics.errorRate}%`}
-                        status="good"
-                      />
-                      <PerformanceMetric
-                        name="Server Load"
-                        value={`${analytics.performanceMetrics.serverLoad}%`}
-                        status="warning"
-                      />
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Performance Trends</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="h-48 flex items-center justify-center bg-gray-50 rounded-lg">
-                      <p className="text-gray-500">
-                        Performance trends chart will be displayed here
-                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -640,40 +584,6 @@ function SystemHealthItem({
         </div>
       </div>
       <span className="font-semibold text-gray-900">{value}</span>
-    </div>
-  )
-}
-
-function PerformanceMetric({
-  name,
-  value,
-  status,
-}: {
-  name: string
-  value: string
-  status: 'excellent' | 'good' | 'warning' | 'critical'
-}) {
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'excellent':
-        return 'text-green-600 bg-green-100'
-      case 'good':
-        return 'text-blue-600 bg-blue-100'
-      case 'warning':
-        return 'text-yellow-600 bg-yellow-100'
-      case 'critical':
-        return 'text-red-600 bg-red-100'
-      default:
-        return 'text-gray-600 bg-gray-100'
-    }
-  }
-
-  return (
-    <div className="flex items-center justify-between">
-      <span className="text-gray-700">{name}</span>
-      <span className={`px-2 py-1 rounded text-sm font-medium ${getStatusColor(status)}`}>
-        {value}
-      </span>
     </div>
   )
 }
