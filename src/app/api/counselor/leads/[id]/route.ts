@@ -1,81 +1,36 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
-import { inngest } from '@/inngest/client'
+import { getLeadDetail, updateLeadFields, type LeadViewer } from '@/lib/leads/leadService'
+import type { LeadStage, Priority } from '@/generated/prisma'
 
 export const dynamic = 'force-dynamic'
+
+// Thin wrapper over leadService — the same implementation serves the admin
+// namespace. Response shape unchanged.
+
+async function viewerFromSession(): Promise<LeadViewer | NextResponse> {
+  const session = await auth()
+  if (!session?.user) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+  if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+  }
+  return { userId: session.user.id, role: session.user.role }
+}
 
 // GET /api/counselor/leads/[id] - Get full lead detail
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const session = await auth()
-    if (!session?.user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
-    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
-    }
+    const viewer = await viewerFromSession()
+    if (viewer instanceof NextResponse) return viewer
 
-    // Tenant isolation: counselors can only see leads assigned to them.
-    // ADMINs see everything for support / oversight.
-    const isAdmin = session.user.role === 'ADMIN'
-    const lead = await prisma.leads.findFirst({
-      where: {
-        id: params.id,
-        ...(isAdmin ? {} : { assignedToId: session.user.id }),
-      },
-      include: {
-        users: {
-          select: { name: true, email: true },
-        },
-        notes: {
-          orderBy: { createdAt: 'desc' },
-          take: 50,
-          include: {
-            users: {
-              select: { name: true },
-            },
-          },
-        },
-        tasks: {
-          orderBy: { createdAt: 'desc' },
-          take: 20,
-        },
-        crm_communications: {
-          orderBy: { sentAt: 'desc' },
-          take: 30,
-        },
-        activities: {
-          orderBy: { createdAt: 'desc' },
-          take: 50,
-          include: { users: { select: { name: true } } },
-        },
-        fee_plans: {
-          include: {
-            installments: {
-              orderBy: { dueDate: 'asc' },
-            },
-          },
-        },
-        offers: {
-          orderBy: { createdAt: 'desc' },
-          take: 10,
-        },
-        _count: {
-          select: {
-            crm_communications: true,
-            tasks: true,
-            notes: true,
-          },
-        },
-      },
-    })
-
+    const lead = await getLeadDetail(viewer, params.id)
     if (!lead) {
       return NextResponse.json({ error: 'Lead not found' }, { status: 404 })
     }
 
-    // Format response
+    // Format response (shape identical to the pre-service route)
     const response = {
       id: lead.id,
       studentName: lead.studentName,
@@ -93,6 +48,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
       updatedAt: lead.updatedAt,
       lostReason: lead.lostReason,
       demoBookingId: lead.demoBookingId,
+      metadata: lead.metadata,
       assignedTo: lead.users ? { name: lead.users.name, email: lead.users.email } : null,
       notes: lead.notes.map((n) => ({
         id: n.id,
@@ -116,8 +72,6 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         status: c.status,
         sentAt: c.sentAt,
       })),
-      // Real event timeline (lead created, touchpoints, stage changes, demo
-      // feedback) — was previously not surfaced despite being written by capture.
       activities: lead.activities.map((a) => ({
         id: a.id,
         action: a.action,
@@ -165,95 +119,22 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 // PATCH /api/counselor/leads/[id] - Update lead fields
 export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const session = await auth()
-    if (!session?.user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
-    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
-    }
-
-    // Tenant isolation: counselors can only update leads assigned to them.
-    const isAdmin = session.user.role === 'ADMIN'
-    const owned = await prisma.leads.findFirst({
-      where: {
-        id: params.id,
-        ...(isAdmin ? {} : { assignedToId: session.user.id }),
-      },
-      select: { id: true },
-    })
-    if (!owned) {
-      return NextResponse.json({ error: 'Lead not found' }, { status: 404 })
-    }
+    const viewer = await viewerFromSession()
+    if (viewer instanceof NextResponse) return viewer
 
     const body = await request.json()
-    const allowedFields = [
-      'stage',
-      'priority',
-      'courseInterest',
-      'nextFollowUpAt',
-      'lastContactedAt',
-      'lostReason',
-    ]
 
-    const updateData: Record<string, any> = { updatedAt: new Date() }
-    for (const field of allowedFields) {
-      if (body[field] !== undefined) {
-        updateData[field] = body[field]
-      }
-    }
-
-    // If stage changed to LOST, record the timestamp
-    if (body.stage === 'LOST') {
-      updateData.lostAt = new Date()
-    }
-    // If stage changed to ENROLLED, record conversion
-    if (body.stage === 'ENROLLED') {
-      updateData.convertedAt = new Date()
-    }
-
-    // Fetch the current stage whenever a stage change is requested — used both
-    // to detect the ENROLLED transition and to log the change on the lead's
-    // activity timeline (Kanban drags previously left no timeline trace).
-    const prior = body.stage
-      ? await prisma.leads.findUnique({
-          where: { id: params.id },
-          select: { stage: true, courseInterest: true, assignedToId: true },
-        })
-      : null
-
-    const updated = await prisma.leads.update({
-      where: { id: params.id },
-      data: updateData,
+    const updated = await updateLeadFields(viewer, params.id, {
+      ...(body.stage !== undefined ? { stage: body.stage as LeadStage } : {}),
+      ...(body.priority !== undefined ? { priority: body.priority as Priority } : {}),
+      ...(body.courseInterest !== undefined ? { courseInterest: body.courseInterest } : {}),
+      ...(body.nextFollowUpAt !== undefined ? { nextFollowUpAt: body.nextFollowUpAt } : {}),
+      ...(body.lastContactedAt !== undefined ? { lastContactedAt: body.lastContactedAt } : {}),
+      ...(body.lostReason !== undefined ? { lostReason: body.lostReason } : {}),
     })
 
-    if (prior && body.stage && prior.stage !== body.stage) {
-      prisma.activities
-        .create({
-          data: {
-            id: crypto.randomUUID(),
-            action: 'stage_changed',
-            description: `Stage: ${String(prior.stage).replace(/_/g, ' ')} → ${String(body.stage).replace(/_/g, ' ')}`,
-            leadId: params.id,
-            userId: session.user.id,
-            createdAt: new Date(),
-          },
-        })
-        .catch(() => {})
-    }
-
-    const enrolling = body.stage === 'ENROLLED' ? prior : null
-    if (enrolling && enrolling.stage !== 'ENROLLED') {
-      await inngest.send({
-        name: 'lead/enrolled',
-        data: {
-          leadId: updated.id,
-          counselorId: enrolling.assignedToId,
-          courseInterest: enrolling.courseInterest,
-          amountPaid: 0, // manual ENROLLED via UI — payment may not be associated; onboarding still fires
-          currency: 'INR',
-        },
-      })
+    if (!updated) {
+      return NextResponse.json({ error: 'Lead not found' }, { status: 404 })
     }
 
     return NextResponse.json({ data: updated })

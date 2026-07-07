@@ -3,6 +3,8 @@ import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { requireAdminAuth } from '@/lib/auth'
 import { upsertLeadCore } from '@/lib/leads/upsertLead'
+import { buildLeadListWhere, updateLeadFields } from '@/lib/leads/leadService'
+import { auth } from '@/lib/auth'
 import { v4 as uuidv4 } from 'uuid'
 import type { LeadSource, Priority, LeadStage } from '@/generated/prisma'
 
@@ -29,30 +31,22 @@ export async function GET(request: NextRequest) {
     const dateFrom = searchParams.get('dateFrom')
     const dateTo = searchParams.get('dateTo')
 
-    // Build where clause
-    const where: Record<string, unknown> = {}
-
-    if (stage) where.stage = stage
-    if (priority) where.priority = priority
-    if (source) where.source = source
-    if (assignedToId) where.assignedToId = assignedToId
-
-    // Multi-field search
-    if (search) {
-      where.OR = [
-        { studentName: { contains: search, mode: 'insensitive' } },
-        { phone: { contains: search } },
-        { email: { contains: search, mode: 'insensitive' } },
-        { courseInterest: { contains: search, mode: 'insensitive' } },
-      ]
-    }
-
-    // Date range filter
-    if (dateFrom || dateTo) {
-      where.createdAt = {}
-      if (dateFrom) (where.createdAt as Record<string, Date>).gte = new Date(dateFrom)
-      if (dateTo) (where.createdAt as Record<string, Date>).lte = new Date(dateTo)
-    }
+    // Shared where-builder (leadService) — same filter semantics as the
+    // counselor namespace, plus courseInterest in search and assignee filter.
+    const session = await auth()
+    const where = buildLeadListWhere(
+      { userId: session?.user?.id || '', role: 'ADMIN' },
+      {
+        stage,
+        priority,
+        source,
+        assignedToId,
+        search,
+        dateFrom,
+        dateTo,
+        searchCourseInterest: true,
+      }
+    )
 
     // Parallel queries for data + count
     const [leads, total] = await Promise.all([
@@ -291,9 +285,15 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 })
     }
 
-    const updatedLead = await prisma.leads.update({
-      where: { id: validatedData.id },
-      data: {
+    // Shared update path (leadService): admin edits now get the same
+    // stage-transition side effects as the counselor board (lostAt /
+    // convertedAt stamps, stage_changed timeline entry, lead/enrolled
+    // onboarding event) — previously missing from this route.
+    const adminSession = await auth()
+    const updatedLead = await updateLeadFields(
+      { userId: adminSession?.user?.id || validatedData.assignedToId, role: 'ADMIN' },
+      validatedData.id,
+      {
         studentName: validatedData.studentName,
         email: validatedData.email || null,
         phone: validatedData.phone,
@@ -302,13 +302,14 @@ export async function PUT(request: NextRequest) {
         stage: validatedData.stage as LeadStage,
         priority: validatedData.priority as Priority,
         assignedToId: validatedData.assignedToId,
-        nextFollowUpAt: validatedData.nextFollowUpAt
-          ? new Date(validatedData.nextFollowUpAt)
-          : null,
+        nextFollowUpAt: validatedData.nextFollowUpAt || null,
         lostReason: validatedData.lostReason || null,
-        updatedAt: new Date(),
-      },
-    })
+      }
+    )
+
+    if (!updatedLead) {
+      return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 })
+    }
 
     if (validatedData.notes) {
       await prisma.notes.create({

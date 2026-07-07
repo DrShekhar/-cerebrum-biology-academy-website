@@ -1,38 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
 import { requireAdminAuth } from '@/lib/auth'
+import { auth } from '@/lib/auth'
+import { getLeadDetail } from '@/lib/leads/leadService'
 
 /**
  * GET /api/admin/leads/[id]
- * Full lead detail for the admin lead-detail page: profile + the real event
- * timeline (activities), tasks, notes, communications, fee plans and offers.
+ * Thin wrapper over leadService.getLeadDetail — the same implementation
+ * serves the counselor namespace. Response shape unchanged.
  */
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     await requireAdminAuth()
+    const session = await auth()
     const { id } = await params
 
-    const lead = await prisma.leads.findUnique({
-      where: { id },
-      include: {
-        users: { select: { id: true, name: true, email: true } },
-        activities: {
-          orderBy: { createdAt: 'desc' },
-          take: 100,
-          include: { users: { select: { name: true } } },
-        },
-        notes: {
-          orderBy: { createdAt: 'desc' },
-          take: 50,
-          include: { users: { select: { name: true } } },
-        },
-        tasks: { orderBy: { createdAt: 'desc' }, take: 50 },
-        crm_communications: { orderBy: { sentAt: 'desc' }, take: 50 },
-        offers: { orderBy: { createdAt: 'desc' }, take: 20 },
-        fee_plans: { include: { installments: { orderBy: { dueDate: 'asc' } } } },
-        demo_bookings: true,
-      },
-    })
+    const lead = await getLeadDetail({ userId: session?.user?.id || '', role: 'ADMIN' }, id)
 
     if (!lead) {
       return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 })

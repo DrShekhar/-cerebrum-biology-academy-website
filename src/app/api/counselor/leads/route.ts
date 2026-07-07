@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 import { upsertLeadCore } from '@/lib/leads/upsertLead'
+import { buildLeadListWhere } from '@/lib/leads/leadService'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import type { LeadStage, Priority, LeadSource } from '@/generated/prisma'
@@ -50,26 +51,12 @@ export async function GET(request: NextRequest) {
     const limit = Math.min(100, Math.max(1, parseInt(searchParams.get('limit') || '50')))
     const skip = (page - 1) * limit
 
-    // Tenant isolation: counselors see only their own leads.
-    // ADMINs see all leads for oversight / support reassignment.
-    const where: Record<string, unknown> =
-      session.role.toUpperCase() === 'ADMIN' ? {} : { assignedToId: session.userId }
-
-    if (stage) {
-      where.stage = stage
-    }
-
-    if (priority) {
-      where.priority = priority
-    }
-
-    if (search) {
-      where.OR = [
-        { studentName: { contains: search, mode: 'insensitive' } },
-        { email: { contains: search, mode: 'insensitive' } },
-        { phone: { contains: search, mode: 'insensitive' } },
-      ]
-    }
+    // Shared where-builder (leadService): counselors see only their own
+    // leads; ADMINs see all for oversight / support reassignment.
+    const where = buildLeadListWhere(
+      { userId: session.userId, role: session.role.toUpperCase() },
+      { stage, priority, search }
+    )
 
     // Fetch leads with pagination and get total count
     const [leads, totalCount] = await Promise.all([
