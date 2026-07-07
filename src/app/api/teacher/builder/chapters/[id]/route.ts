@@ -69,6 +69,19 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
   if (body.description !== undefined) data.description = body.description?.toString().trim() || null
   if (body.releaseAt !== undefined)
     data.releaseAt = body.releaseAt ? new Date(body.releaseAt) : null
+  if (body.dripDaysAfterEnroll !== undefined) {
+    const days =
+      body.dripDaysAfterEnroll === null || body.dripDaysAfterEnroll === ''
+        ? null
+        : parseInt(String(body.dripDaysAfterEnroll), 10)
+    if (days !== null && (!Number.isFinite(days) || days < 0 || days > 3650)) {
+      return NextResponse.json(
+        { success: false, error: 'Drip days must be between 0 and 3650' },
+        { status: 400 }
+      )
+    }
+    data.dripDaysAfterEnroll = days
+  }
   if (body.requiresPrevious !== undefined) data.requiresPrevious = Boolean(body.requiresPrevious)
   if (body.isActive !== undefined) data.isActive = Boolean(body.isActive)
   if (typeof body.orderIndex === 'number') data.orderIndex = body.orderIndex

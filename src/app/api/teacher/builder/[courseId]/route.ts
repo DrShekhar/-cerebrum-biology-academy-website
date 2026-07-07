@@ -46,6 +46,7 @@ export async function GET(
       orderIndex: true,
       isActive: true,
       releaseAt: true,
+      dripDaysAfterEnroll: true,
       requiresPrevious: true,
       topics: {
         orderBy: { orderIndex: 'asc' },
@@ -71,6 +72,7 @@ export async function GET(
       orderIndex: c.orderIndex,
       isActive: c.isActive,
       releaseAt: c.releaseAt,
+      dripDaysAfterEnroll: c.dripDaysAfterEnroll,
       requiresPrevious: c.requiresPrevious,
       materialCount: c._count.study_materials,
       topics: c.topics.map((t) => ({

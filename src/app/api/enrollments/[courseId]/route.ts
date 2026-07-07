@@ -52,6 +52,20 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
                 materialType: true,
                 chapterId: true,
                 topicId: true,
+                // Quiz-as-lesson: the CBT template this TEST material renders.
+                test_template: {
+                  select: {
+                    id: true,
+                    title: true,
+                    timeLimit: true,
+                    totalQuestions: true,
+                    topics: true,
+                    difficulty: true,
+                    curriculum: true,
+                    grade: true,
+                    subject: true,
+                  },
+                },
                 // For video materials, surface the linked video lecture so the
                 // syllabus can deep-link to the /learn player (videoId = video_lectures.id).
                 video_lectures: {
@@ -99,12 +113,31 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
       return mats.every((m) => completedIds.has(m.id))
     }
 
+    // Enrollment-relative drip anchor: when the student joined the course.
+    const enrolledAt = enrollment.enrollmentDate || enrollment.createdAt
+
     const orderedChapters = enrollment.courses.chapters
     const modules = orderedChapters.map((chapter, idx) => {
-      const dripLocked = Boolean(chapter.releaseAt && chapter.releaseAt > now)
+      const dateLocked = Boolean(chapter.releaseAt && chapter.releaseAt > now)
+      const dripUnlockAt =
+        chapter.dripDaysAfterEnroll != null
+          ? new Date(enrolledAt.getTime() + chapter.dripDaysAfterEnroll * 24 * 60 * 60 * 1000)
+          : null
+      const enrollDripLocked = Boolean(dripUnlockAt && dripUnlockAt > now)
+      const dripLocked = dateLocked || enrollDripLocked
       const prev = idx > 0 ? orderedChapters[idx - 1] : null
       const prereqLocked = Boolean(chapter.requiresPrevious && prev && !chapterCompleted(prev.id))
       const locked = dripLocked || prereqLocked
+
+      // When both drip gates apply, report the later one — that's when it opens.
+      const dripDate =
+        dateLocked && enrollDripLocked
+          ? chapter.releaseAt! > dripUnlockAt!
+            ? chapter.releaseAt!
+            : dripUnlockAt!
+          : dateLocked
+            ? chapter.releaseAt!
+            : dripUnlockAt
 
       return {
         id: chapter.id,
@@ -112,7 +145,7 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
         sortOrder: chapter.orderIndex,
         locked,
         lockReason: dripLocked
-          ? (`Unlocks on ${chapter.releaseAt!.toLocaleDateString('en-IN')}` as string)
+          ? (`Unlocks on ${dripDate!.toLocaleDateString('en-IN')}` as string)
           : prereqLocked
             ? `Complete “${prev!.title}” first`
             : null,
@@ -130,6 +163,19 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
                 // videoLectureId present + READY → syllabus links to /learn/[id].
                 videoLectureId: m.video_lectures?.id ?? null,
                 videoReady: m.video_lectures?.uploadStatus === 'READY',
+                // TEST lessons: what the client posts to /api/test/create.
+                test: m.test_template
+                  ? {
+                      templateId: m.test_template.id,
+                      timeLimit: m.test_template.timeLimit,
+                      questionCount: m.test_template.totalQuestions,
+                      topics: m.test_template.topics,
+                      difficulty: m.test_template.difficulty,
+                      curriculum: m.test_template.curriculum,
+                      grade: m.test_template.grade,
+                      subject: m.test_template.subject,
+                    }
+                  : null,
                 completed: completedIds.has(m.id),
               })),
       }

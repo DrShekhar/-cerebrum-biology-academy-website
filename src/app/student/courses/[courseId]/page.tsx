@@ -17,6 +17,7 @@ import {
   Brain,
   Lock,
   Award,
+  ClipboardList,
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
@@ -48,6 +49,16 @@ interface CourseMaterial {
   materialType: string
   videoLectureId?: string | null
   videoReady?: boolean
+  test?: {
+    templateId: string
+    timeLimit: number
+    questionCount: number
+    topics: unknown
+    difficulty: string
+    curriculum: string
+    grade: string
+    subject: string
+  } | null
   completed?: boolean
 }
 
@@ -470,10 +481,50 @@ export default function CourseDetailPage() {
 }
 
 function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExpired: boolean }) {
+  const router = useRouter()
   const isVideo = material.materialType?.toUpperCase().includes('VIDEO')
-  const icon = isVideo ? <Video className="w-4 h-4" /> : <FileText className="w-4 h-4" />
+  const isTest = material.materialType === 'TEST' && !!material.test
+  const icon = isTest ? (
+    <ClipboardList className="w-4 h-4" />
+  ) : isVideo ? (
+    <Video className="w-4 h-4" />
+  ) : (
+    <FileText className="w-4 h-4" />
+  )
   const [done, setDone] = useState(!!material.completed)
   const [saving, setSaving] = useState(false)
+  const [startingTest, setStartingTest] = useState(false)
+
+  // TEST lessons start a CBT session on the existing engine and open the
+  // secure test player. Completion is marked when the session is submitted.
+  async function startTest() {
+    if (!material.test || startingTest) return
+    setStartingTest(true)
+    try {
+      const t = material.test
+      const res = await fetch('/api/test/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          testTemplateId: t.templateId,
+          topics: Array.isArray(t.topics) && t.topics.length ? t.topics : ['General'],
+          difficulty: t.difficulty || 'MEDIUM',
+          questionCount: t.questionCount || 30,
+          timeLimit: t.timeLimit || 60,
+          curriculum: t.curriculum || 'NEET',
+          grade: t.grade || 'CLASS_12',
+          subject: t.subject || 'biology',
+        }),
+      })
+      const json = await res.json()
+      const sessionId = json?.data?.testSession?.id || json?.testSession?.id || json?.sessionId
+      if (!res.ok || !sessionId) throw new Error(json?.error || 'Could not start the test')
+      router.push(`/test/${sessionId}`)
+    } catch (err) {
+      showToast.error(err instanceof Error ? err.message : 'Could not start the test')
+      setStartingTest(false)
+    }
+  }
 
   // Video lessons open in the secure /learn player (videoId = video_lectures.id);
   // documents stream via the entitlement-gated delivery endpoint. A video whose
@@ -535,7 +586,17 @@ function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExp
           </button>
         )}
         {!isExpired &&
-          (videoProcessing ? (
+          (isTest ? (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-blue-600"
+              onClick={startTest}
+              disabled={startingTest}
+            >
+              {startingTest ? 'Starting…' : 'Start test'}
+            </Button>
+          ) : videoProcessing ? (
             <span className="text-xs text-gray-400 px-3">Processing…</span>
           ) : isInternal ? (
             <Link href={href}>

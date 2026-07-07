@@ -390,6 +390,9 @@ model chapters {
   orderIndex       Int
   // Drip scheduling: chapter stays locked for students until this date (null = immediate).
   releaseAt        DateTime?
+  // Evergreen drip: unlocks N days after the student's enrollment (null = off).
+  // Combines with releaseAt — locked while EITHER gate is in the future.
+  dripDaysAfterEnroll Int?
   // Prerequisite progression: locked until the previous chapter's materials are completed.
   requiresPrevious Boolean           @default(false)
   isActive         Boolean           @default(true)
@@ -2692,6 +2695,8 @@ model study_materials {
   // material and any video lecture hanging off it (video_lectures.studyMaterialId).
   requiredTier      CoachingTier?
   requiredCourseId  String?
+  // Quiz-as-lesson: TEST materials point at the test template they render.
+  testTemplateId    String?
   sortOrder         Int                 @default(0)
   category          String?
   uploadedBy        String
@@ -2705,6 +2710,7 @@ model study_materials {
   updatedAt         DateTime
   material_access   material_access[]
   material_progress material_progress[]
+  test_template     test_templates?     @relation("MaterialTest", fields: [testTemplateId], references: [id])
   group_content     group_content[]
   chapters          chapters?           @relation(fields: [chapterId], references: [id])
   courses           courses?            @relation(fields: [courseId], references: [id])
@@ -3035,6 +3041,7 @@ model test_templates {
   @@index([isActive, isPublished])
   @@index([popularityScore])
   @@index([type, category])
+  lesson_materials        study_materials[]         @relation("MaterialTest")
 }
 
 model topics {
@@ -3999,6 +4006,7 @@ enum MaterialType {
   PDF_EBOOK
   VIDEO
   LINK
+  TEST
 }
 
 enum MessageDirection {
