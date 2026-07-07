@@ -1,21 +1,25 @@
 /**
  * Inbound WhatsApp → CRM lead engine (Wave 1 of the smart-CRM plan).
  *
- * Every inbound WhatsApp message now:
- *  1. upserts a CRM lead by phone (canonical dedup path — a known lead is
- *     touched, an unknown phone becomes a fresh WHATSAPP-source lead with
- *     round-robin counselor assignment),
- *  2. upserts the whatsapp_conversations thread (leadId + counselor +
- *     lastMessageAt) and appends the whatsapp_messages row (idempotent on
- *     provider message id),
- *  3. rings the assigned counselor's staff bell (WHATSAPP_INBOUND).
+ * First message from an unknown phone creates a CRM lead (canonical dedup,
+ * round-robin assignment, follow-up task, initial score) and a conversation
+ * thread. EVERY message threads into whatsapp_conversations/whatsapp_messages
+ * and bells the owning counselor.
+ *
+ * Deliberately NOT the upsertLead wrapper: an inbound message must not stamp
+ * lastContactedAt (that means WE reached out — SLA/KPIs depend on it), must
+ * not fire the welcome series (the webhook auto-reply already answers), must
+ * not ping the admin per message, and must not emit a CAPI Lead for organic
+ * chat. Subsequent messages skip the lead write entirely — no per-message
+ * timeline spam or rescoring.
  *
  * Never throws — the webhook's auto-reply path must survive any CRM failure.
  */
 
 import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/prisma'
-import { upsertLead } from '@/lib/leads/upsertLead'
+import { upsertLeadCore } from '@/lib/leads/upsertLead'
+import { updateLeadScore } from '@/lib/leadScoring'
 import { notifyStaff } from '@/lib/staff/notify'
 import { logger } from '@/lib/utils/logger'
 
@@ -43,63 +47,74 @@ export async function captureInboundWhatsAppLead(
     const digits = last10(input.phone)
     if (digits.length < 10) return empty
 
-    // 1. Canonical lead write: dedup by phone; new phones become real leads
-    //    with counselor assignment, scoring, and the FOLLOW_UP_CALL task.
-    const lead = await upsertLead({
-      name: input.profileName?.trim() || `WhatsApp Lead ${digits.slice(-4)}`,
-      phone: input.phone,
-      email: null,
-      courseInterest: 'WhatsApp Enquiry',
-      source: 'whatsapp-inbound',
-      message: input.message.slice(0, 500),
-    })
-    if (!lead?.leadId) return empty
-
-    const leadRow = await prisma.leads.findUnique({
-      where: { id: lead.leadId },
-      select: { id: true, studentName: true, assignedToId: true },
-    })
-    if (!leadRow) return empty
-
-    // 2. Conversation thread upsert (by phone last-10) + message append.
+    // Existing thread? (oldest first, so concurrent creates converge on one.)
     let conversation = await prisma.whatsapp_conversations.findFirst({
       where: { phone: { endsWith: digits } },
-      select: { id: true, assignedCounselorId: true },
+      orderBy: { createdAt: 'asc' },
+      select: { id: true, leadId: true, assignedCounselorId: true },
     })
+
+    let leadId = conversation?.leadId || null
+    let counselorId = conversation?.assignedCounselorId || null
+    let createdLead = false
+    let leadName: string | null = null
+
+    if (!conversation || !leadId) {
+      // First contact (or legacy thread without a lead): one canonical lead
+      // write. upsertLeadCore dedups by phone; a known lead is touched once.
+      const result = await upsertLeadCore(prisma, {
+        name: input.profileName?.trim() || `WhatsApp Lead ${digits.slice(-4)}`,
+        phone: input.phone,
+        email: null,
+        courseInterest: 'WhatsApp Enquiry',
+        source: 'whatsapp-inbound',
+        message: input.message.slice(0, 500),
+      })
+      leadId = result.leadId
+      createdLead = result.created
+      counselorId = counselorId || result.assignedToId
+      if (result.created) void updateLeadScore(result.leadId).catch(() => {})
+    }
+
     if (!conversation) {
-      conversation = await prisma.whatsapp_conversations.create({
+      await prisma.whatsapp_conversations.create({
         data: {
           id: randomUUID(),
           phone: input.phone,
-          leadId: leadRow.id,
-          assignedCounselorId: leadRow.assignedToId,
+          leadId,
+          assignedCounselorId: counselorId,
           lastMessageAt: new Date(),
           updatedAt: new Date(),
         },
-        select: { id: true, assignedCounselorId: true },
       })
-    } else {
-      await prisma.whatsapp_conversations.update({
-        where: { id: conversation.id },
-        data: {
-          leadId: leadRow.id,
-          assignedCounselorId: conversation.assignedCounselorId || leadRow.assignedToId,
-          lastMessageAt: new Date(),
-          status: 'ACTIVE',
-          updatedAt: new Date(),
-        },
+      // Re-read oldest-first: if a concurrent webhook created a sibling
+      // thread, everyone converges on the same (oldest) conversation.
+      conversation = await prisma.whatsapp_conversations.findFirst({
+        where: { phone: { endsWith: digits } },
+        orderBy: { createdAt: 'asc' },
+        select: { id: true, leadId: true, assignedCounselorId: true },
       })
+      if (!conversation) return empty
     }
 
-    // Idempotent append (messageId is unique; webhook retries are no-ops).
+    await prisma.whatsapp_conversations.update({
+      where: { id: conversation.id },
+      data: {
+        leadId: conversation.leadId || leadId,
+        assignedCounselorId: conversation.assignedCounselorId || counselorId,
+        lastMessageAt: new Date(),
+        status: 'ACTIVE',
+        updatedAt: new Date(),
+      },
+    })
+
+    // Idempotent append (messageId unique; webhook retries are no-ops).
     if (input.providerMessageId) {
       const dupe = await prisma.whatsapp_messages.findUnique({
         where: { messageId: input.providerMessageId },
         select: { id: true },
       })
-      if (dupe) {
-        return { leadId: leadRow.id, conversationId: conversation.id, createdLead: false }
-      }
+      if (dupe) return { leadId, conversationId: conversation.id, createdLead: false }
     }
     await prisma.whatsapp_messages.create({
       data: {
@@ -114,20 +129,26 @@ export async function captureInboundWhatsAppLead(
       },
     })
 
-    // 3. Bell the counselor who owns the thread (fall back to lead assignee).
-    const counselorId = conversation.assignedCounselorId || leadRow.assignedToId
-    if (counselorId) {
+    const bellTo = conversation.assignedCounselorId || counselorId
+    if (bellTo) {
+      if (!leadName && leadId) {
+        const row = await prisma.leads.findUnique({
+          where: { id: leadId },
+          select: { studentName: true },
+        })
+        leadName = row?.studentName || null
+      }
       await notifyStaff({
-        userIds: [counselorId],
+        userIds: [bellTo],
         type: 'WHATSAPP_INBOUND',
-        title: `WhatsApp from ${leadRow.studentName}`,
+        title: `WhatsApp from ${leadName || input.phone}`,
         body: input.message.slice(0, 140),
         href: `/counselor/whatsapp-inbox?conversation=${conversation.id}`,
-        leadId: leadRow.id,
+        leadId,
       })
     }
 
-    return { leadId: leadRow.id, conversationId: conversation.id, createdLead: !!lead.created }
+    return { leadId, conversationId: conversation.id, createdLead }
   } catch (error) {
     logger.error('inbound WhatsApp lead capture failed', {
       service: 'inbound-lead-capture',

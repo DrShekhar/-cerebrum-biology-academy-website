@@ -557,6 +557,18 @@ export async function POST(request: NextRequest) {
     }
 
     // Log successful booking and lead creation
+    // Ad-platform feedback: a booked demo is the mid-funnel conversion Meta
+    // should optimize on. eventId dedupes with any manual stage edit.
+    {
+      const { sendCapiEvent } = await import('@/lib/marketing/metaCapi')
+      void sendCapiEvent({
+        eventName: 'Schedule',
+        phone: body.phone,
+        email: body.email || null,
+        eventId: `${lead.id}:DEMO_SCHEDULED`,
+      })
+    }
+
     logger.businessEvent('demo_booking_created', {
       demoBookingId: demoBooking.id,
       leadId: lead.id,

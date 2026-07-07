@@ -94,6 +94,8 @@ async function resolveAudience(
   return out
 }
 
+export const maxDuration = 300 // sequential provider sends; default 30s kills mid-loop
+
 export async function POST(request: NextRequest) {
   try {
     await requireAdminAuth()
@@ -143,12 +145,16 @@ export async function POST(request: NextRequest) {
     const audience = await resolveAudience(campaign.targetAudience)
 
     if (dryRun) {
+      const sendable = isEmailCampaign
+        ? audience.filter((a) => a.email && !a.email.endsWith('@placeholder.cerebrum.app'))
+        : audience
       return NextResponse.json({
         success: true,
         dryRun: true,
-        audienceSize: audience.length,
-        willSend: Math.min(audience.length, MAX_RECIPIENTS),
-        skipped: Math.max(0, audience.length - MAX_RECIPIENTS),
+        channel: isEmailCampaign ? 'email' : 'whatsapp',
+        audienceSize: sendable.length,
+        willSend: Math.min(sendable.length, MAX_RECIPIENTS),
+        skipped: Math.max(0, sendable.length - MAX_RECIPIENTS),
         sample: audience.slice(0, 5).map((a) => ({
           name: a.studentName,
           phone: `••••${a.phone.replace(/\D/g, '').slice(-4)}`,
@@ -164,7 +170,11 @@ export async function POST(request: NextRequest) {
         )
       }
       const { emailService } = await import('@/lib/email/emailService')
-      const emailable = audience.filter((a) => a.email)
+      // Placeholder addresses (phone@placeholder.cerebrum.app from lead
+      // convert) hard-bounce and poison sender reputation — exclude them.
+      const emailable = audience.filter(
+        (a) => a.email && !a.email.endsWith('@placeholder.cerebrum.app')
+      )
       const recipients = emailable.slice(0, MAX_RECIPIENTS)
       let accepted = 0
       let failed = 0

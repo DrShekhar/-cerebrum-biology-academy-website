@@ -7,8 +7,7 @@ export const dynamic = 'force-dynamic'
 export const maxDuration = 60
 
 const startOfDay = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate())
-const endOfDay = (d: Date) =>
-  new Date(d.getFullYear(), d.getMonth(), d.getDate(), 23, 59, 59, 999)
+const endOfDay = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate(), 23, 59, 59, 999)
 
 /**
  * Hourly counselor-KPI compute (the leaderboard was previously only updated
@@ -67,6 +66,7 @@ export async function GET(request: NextRequest) {
           prisma.crm_communications.findMany({
             where: {
               leadId: { in: assignedLeadIds },
+              direction: 'OUTBOUND',
               sentAt: { gte: dayStart, lte: dayEnd },
             },
             select: { type: true },
@@ -81,18 +81,19 @@ export async function GET(request: NextRequest) {
           prisma.tasks.count({
             where: { assignedToId: counselor.id, status: { in: ['PENDING', 'IN_PROGRESS'] } },
           }),
-          // Revenue attributed via fee plans on this counselor's leads.
-          prisma.fee_plans.aggregate({
+          // Revenue = payments actually RECEIVED today on this counselor's
+          // leads (fee_payments.paidAt), never the cumulative plan total —
+          // summing amountPaid per day double-counts across days.
+          prisma.fee_payments.aggregate({
             where: {
-              leads: { assignedToId: counselor.id },
-              updatedAt: { gte: dayStart, lte: dayEnd },
+              fee_plans: { leads: { assignedToId: counselor.id } },
+              paidAt: { gte: dayStart, lte: dayEnd },
             },
-            _sum: { amountPaid: true },
+            _sum: { amount: true },
           }),
         ])
 
-      const byStage = (stage: string) =>
-        stageCounts.find((s) => s.stage === stage)?._count.id || 0
+      const byStage = (stage: string) => stageCounts.find((s) => s.stage === stage)?._count.id || 0
       const byComm = (type: string) => comms.filter((row) => row.type === type).length
       const byDemo = (status: string) => demos.find((d) => d.status === status)?._count.id || 0
 
@@ -126,7 +127,7 @@ export async function GET(request: NextRequest) {
         conversionRate,
         tasksCompleted: tasksDone,
         tasksPending,
-        revenueGenerated: Number(payments._sum.amountPaid || 0),
+        revenueGenerated: Number(payments._sum.amount || 0),
         enrollmentsGenerated: converted,
         newLeads: byStage('NEW_LEAD'),
         demoScheduledLeads: byStage('DEMO_SCHEDULED'),

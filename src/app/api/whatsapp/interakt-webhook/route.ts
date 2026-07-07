@@ -231,10 +231,11 @@ async function handleIncomingMessage(data: any, originalPayload: InteraktWebhook
     providerMessageId,
   })
 
-  // CRM lead engine (additive, non-blocking): dedup-upsert the lead, thread
-  // the message into whatsapp_conversations, and bell the counselor. The
-  // wa.me prefilled-context message is stored verbatim on the lead timeline.
-  void captureInboundWhatsAppLead({
+  // CRM lead engine (additive): dedup-upsert the lead, thread the message
+  // into whatsapp_conversations, and bell the counselor. AWAITED — a void
+  // promise can be dropped when the serverless instance freezes after the
+  // response; captureInboundWhatsAppLead never throws, so awaiting is safe.
+  await captureInboundWhatsAppLead({
     phone,
     message: previewBody,
     messageType,

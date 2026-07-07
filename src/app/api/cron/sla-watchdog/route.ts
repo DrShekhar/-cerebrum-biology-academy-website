@@ -33,7 +33,7 @@ export async function GET(request: NextRequest) {
         stage: 'NEW_LEAD',
         createdAt: { lte: cutoff, gte: floor },
         lastContactedAt: null,
-        crm_communications: { none: {} },
+        crm_communications: { none: { direction: 'OUTBOUND' } },
         activities: { none: { action: 'sla_escalated' } },
       },
       select: {

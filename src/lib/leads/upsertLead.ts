@@ -164,7 +164,6 @@ export async function upsertLeadCore(
     await db.leads.update({
       where: { id: existing.id },
       data: {
-        lastContactedAt: new Date(),
         updatedAt: new Date(),
         phoneNormalized: last10, // backfill legacy rows on first touch
         ...(name && !existing.studentName ? { studentName: name } : {}),
@@ -271,16 +270,21 @@ export async function upsertLeadCore(
         sourceDetail,
         assignedToId: assigneeId,
         demoBookingId: input.demoBookingId || null,
-        utmSource: input.utmSource || null,
-        utmMedium: input.utmMedium || null,
-        utmCampaign: input.utmCampaign || null,
-        utmTerm: input.utmTerm || null,
-        utmContent: input.utmContent || null,
-        referrerUrl: input.referrerUrl || null,
+        // UTM columns spread conditionally so the INSERT never references
+        // them unless a value exists — deploy stays safe even if the
+        // add_leads_utm migration lags behind the code.
+        ...(input.utmSource ? { utmSource: input.utmSource } : {}),
+        ...(input.utmMedium ? { utmMedium: input.utmMedium } : {}),
+        ...(input.utmCampaign ? { utmCampaign: input.utmCampaign } : {}),
+        ...(input.utmTerm ? { utmTerm: input.utmTerm } : {}),
+        ...(input.utmContent ? { utmContent: input.utmContent } : {}),
+        ...(input.referrerUrl ? { referrerUrl: input.referrerUrl } : {}),
         gclid: input.gclid,
-        fbclid: input.fbclid || null,
+        ...(input.fbclid ? { fbclid: input.fbclid } : {}),
         nextFollowUpAt: new Date(Date.now() + 30 * 60 * 1000),
-        lastContactedAt: new Date(),
+        // lastContactedAt intentionally NOT set: it means "we reached out"
+        // (outbound). Creation/inbound touches must not look like contact —
+        // the SLA watchdog and response-time KPIs depend on this.
         updatedAt: new Date(),
       },
     })

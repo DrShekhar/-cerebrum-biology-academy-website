@@ -135,15 +135,23 @@ export interface LeadUpdatePatch {
  * Buckets the lead's activity timestamps (form submits, replies, touchpoints)
  * into IST day-parts and returns the modal window once there are >=3 signals.
  */
+// Only signals the LEAD generated — staff edits/crons would otherwise make
+// the badge report office hours instead of prospect engagement.
+const LEAD_ENGAGEMENT_ACTIONS = new Set(['LEAD_TOUCHPOINT', 'lead_created'])
+
 export function bestCallWindow(
-  activities: Array<{ createdAt: Date | string }>
+  activities: Array<{ createdAt: Date | string; action?: string }>
 ): { window: string; label: string; confidence: number } | null {
-  if (!activities || activities.length < 3) return null
+  const engagement = (activities || []).filter(
+    (a) => !a.action || LEAD_ENGAGEMENT_ACTIONS.has(a.action)
+  )
+  if (engagement.length < 3) return null
   const buckets: Record<string, number> = { morning: 0, afternoon: 0, evening: 0, night: 0 }
-  for (const a of activities) {
+  for (const a of engagement) {
     const d = new Date(a.createdAt)
-    // IST = UTC+5:30
-    const hour = (d.getUTCHours() + 5.5 + 24) % 24
+    // IST = UTC+5:30 — minutes matter (a plain getUTCHours()+5.5 misbuckets
+    // everything in the last 30 minutes of each hour).
+    const hour = ((d.getUTCHours() * 60 + d.getUTCMinutes() + 330) / 60) % 24
     if (hour >= 8 && hour < 12) buckets.morning++
     else if (hour >= 12 && hour < 16) buckets.afternoon++
     else if (hour >= 16 && hour < 21) buckets.evening++
@@ -156,7 +164,7 @@ export function bestCallWindow(
     night: 'after 9 PM',
   }
   const [top, count] = Object.entries(buckets).sort((a, b) => b[1] - a[1])[0]
-  const total = activities.length
+  const total = engagement.length
   return { window: top, label: LABELS[top], confidence: Math.round((count / total) * 100) }
 }
 

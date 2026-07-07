@@ -389,6 +389,22 @@ async function handlePaymentLinkPaid(event: any) {
     // Payment is the strongest scoring signal — rescore in the background.
     const { updateLeadScore } = await import('@/lib/leadScoring')
     void updateLeadScore(updatedLink.leads.id).catch(() => {})
+    // Ad-platform feedback: THE conversion. eventId dedupes with any later
+    // manual stage edit firing the same leadId:ENROLLED.
+    const { sendCapiEvent } = await import('@/lib/marketing/metaCapi')
+    const leadContact = await prisma.leads.findUnique({
+      where: { id: updatedLink.leads.id },
+      select: { phone: true, email: true },
+    })
+    if (leadContact) {
+      void sendCapiEvent({
+        eventName: 'Purchase',
+        phone: leadContact.phone,
+        email: leadContact.email,
+        value: Number(updatedLink.paidAmount ?? updatedLink.amount),
+        eventId: `${updatedLink.leads.id}:ENROLLED`,
+      })
+    }
   }
 }
 
