@@ -213,13 +213,34 @@ export async function upsertLeadCore(
     } catch {
       // settings unavailable — keep auto-assign on
     }
-    const counselor = autoAssign
-      ? await db.users.findFirst({
-          where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
-          orderBy: { leads: { _count: 'asc' } },
-          select: { id: true },
+    // HOT leads route to the best recent converter (last 30 days of KPI
+    // rows); everyone else round-robins to the least-loaded counselor.
+    // Falls through to round-robin when no KPI data exists yet.
+    let counselor: { id: string } | null = null
+    if (autoAssign && input.priority === 'HOT') {
+      try {
+        const since = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
+        const top = await db.counselor_kpis.groupBy({
+          by: ['counselorId'],
+          where: { date: { gte: since }, users: { role: 'COUNSELOR' } },
+          _avg: { conversionRate: true },
+          orderBy: { _avg: { conversionRate: 'desc' } },
+          take: 1,
         })
-      : null
+        if (top[0]?._avg.conversionRate && Number(top[0]._avg.conversionRate) > 0) {
+          counselor = { id: top[0].counselorId }
+        }
+      } catch {
+        // KPI data unavailable — fall through to round-robin
+      }
+    }
+    if (autoAssign && !counselor) {
+      counselor = await db.users.findFirst({
+        where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
+        orderBy: { leads: { _count: 'asc' } },
+        select: { id: true },
+      })
+    }
     const admin =
       counselor || (await db.users.findFirst({ where: { role: 'ADMIN' }, select: { id: true } }))
     assigneeId = admin?.id || null
