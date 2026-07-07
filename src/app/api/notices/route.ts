@@ -24,6 +24,7 @@ interface CreateNoticeData {
   targetCourseIds?: string[]
   targetBatchIds?: string[]
   targetUserIds?: string[]
+  targetRoles?: string[]
   priority?: number
   isPinned?: boolean
   attachments?: Array<{ name: string; url: string; type: string }>
@@ -87,6 +88,8 @@ export async function GET(request: NextRequest) {
       // enrollments carry no batch FK in the schema; batch-targeted notices are unmatched.
       const userBatchIds: string[] = []
 
+      const userRole = (session.user.role || '').toUpperCase()
+
       // Filter notices that target this user
       whereClause = {
         ...whereClause,
@@ -95,6 +98,8 @@ export async function GET(request: NextRequest) {
           { targetType: 'ALL' },
           // Notices for specific user
           { targetType: 'SPECIFIC_USERS', targetUserIds: { has: userId } },
+          // Staff announcements targeted at the user's role
+          ...(userRole ? [{ targetType: 'ROLES', targetRoles: { has: userRole } }] : []),
           // Notices for user's courses
           ...(userCourseIds.length > 0
             ? [{ targetType: 'COURSE', targetCourseIds: { hasSome: userCourseIds } }]
@@ -123,6 +128,7 @@ export async function GET(request: NextRequest) {
           content: true,
           category: true,
           targetType: true,
+          targetRoles: true,
           priority: true,
           isPinned: true,
           attachments: true,
@@ -203,6 +209,24 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Role-targeted staff announcements: ADMIN-only authoring, valid roles only.
+    const targetRoles = (body.targetRoles || []).map((r) => r.toUpperCase())
+    if (body.targetType === 'ROLES') {
+      if (userRole !== 'ADMIN') {
+        return NextResponse.json(
+          { success: false, error: 'Only admins can publish role-targeted announcements' },
+          { status: 403 }
+        )
+      }
+      const valid = ['ADMIN', 'TEACHER', 'COUNSELOR', 'STUDENT', 'PARENT']
+      if (targetRoles.length === 0 || targetRoles.some((r) => !valid.includes(r))) {
+        return NextResponse.json(
+          { success: false, error: 'targetRoles must be a non-empty list of valid roles' },
+          { status: 400 }
+        )
+      }
+    }
+
     // Create the notice
     const notice = await prisma.notices.create({
       data: {
@@ -213,6 +237,7 @@ export async function POST(request: NextRequest) {
         targetCourseIds: body.targetCourseIds || [],
         targetBatchIds: body.targetBatchIds || [],
         targetUserIds: body.targetUserIds || [],
+        targetRoles: body.targetType === 'ROLES' ? targetRoles : [],
         priority: body.priority || 0,
         isPinned: body.isPinned || false,
         attachments: body.attachments || null,
@@ -243,6 +268,32 @@ export async function POST(request: NextRequest) {
             Promise.allSettled(notice.targetUserIds.map((uid) => sendPushToUser(uid, payload)))
           )
           .catch(() => {})
+      } else if (notice.targetType === 'ROLES' && notice.targetRoles.length > 0) {
+        // Staff announcements land in the notification bell (staff_notifications)
+        // so they reuse the same unread badge + read tracking as mentions.
+        const staffRoles = notice.targetRoles.filter((r) =>
+          ['ADMIN', 'TEACHER', 'COUNSELOR'].includes(r)
+        )
+        if (staffRoles.length > 0) {
+          void (async () => {
+            const [{ prisma: db }, { notifyStaff }] = await Promise.all([
+              import('@/lib/prisma'),
+              import('@/lib/staff/notify'),
+            ])
+            const recipients = await db.users.findMany({
+              where: { role: { in: staffRoles as ('ADMIN' | 'TEACHER' | 'COUNSELOR')[] } },
+              select: { id: true },
+            })
+            await notifyStaff({
+              userIds: recipients.map((r) => r.id),
+              type: 'ANNOUNCEMENT',
+              title: `📢 ${notice.title}`,
+              body: notice.content.slice(0, 300),
+              href: '/admin/notices',
+              actorId: session.user.id,
+            })
+          })().catch(() => {})
+        }
       }
     }
 

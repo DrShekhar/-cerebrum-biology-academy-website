@@ -85,6 +85,9 @@ CREATE INDEX IF NOT EXISTS "staff_notifications_userId_isRead_idx"
 CREATE INDEX IF NOT EXISTS "staff_notifications_userId_createdAt_idx"
   ON "staff_notifications" ("userId", "createdAt");
 
+-- notices: role-targeted staff announcements (targetType 'ROLES')
+ALTER TABLE "notices" ADD COLUMN IF NOT EXISTS "targetRoles" TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[];
+
 -- notes: threaded replies + mentions (lead comments)
 ALTER TABLE "notes" ADD COLUMN IF NOT EXISTS "parentId" TEXT;
 ALTER TABLE "notes" ADD COLUMN IF NOT EXISTS "mentionedUserIds" TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[];

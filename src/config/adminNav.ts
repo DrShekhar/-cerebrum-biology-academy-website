@@ -17,6 +17,8 @@ import {
   GraduationCap,
   CreditCard,
   MessageSquare,
+  MessagesSquare,
+  Megaphone,
   BarChart3,
   Settings,
   Bell,
@@ -48,6 +50,7 @@ export interface AdminNavItem {
 
 export const ADMIN_NAV: AdminNavItem[] = [
   { id: 'dashboard', name: 'Dashboard', icon: LayoutDashboard, href: '/admin' },
+  { id: 'team-chat', name: 'Team Chat', icon: MessagesSquare, href: '/admin/team-chat' },
   {
     id: 'demo-bookings',
     name: 'Demo Bookings',
@@ -241,6 +244,7 @@ export const ADMIN_NAV: AdminNavItem[] = [
       },
       { id: 'ab-testing', name: 'A/B Testing', icon: FlaskConical, href: '/admin/ab-testing' },
       { id: 'alerts', name: 'Alerts', icon: Bell, href: '/admin/alerts' },
+      { id: 'notices', name: 'Announcements', icon: Megaphone, href: '/admin/notices' },
     ],
   },
   {

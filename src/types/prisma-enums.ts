@@ -50,6 +50,8 @@ export type NoticeTargetType =
   | 'CLASS'
   | 'COURSE'
   | 'BATCH'
+  | 'SPECIFIC_USERS'
+  | 'ROLES'
 
 export type NoteType = 'TEXT' | 'DRAWING' | 'MIXED'
 

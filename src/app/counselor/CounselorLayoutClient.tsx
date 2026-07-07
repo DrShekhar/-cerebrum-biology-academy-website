@@ -12,6 +12,7 @@ import {
   Users,
   ListTodo,
   MessageSquare,
+  MessagesSquare,
   CreditCard,
   BarChart3,
   Calendar,
@@ -31,6 +32,7 @@ const navItems = [
   { href: '/counselor/schedule', label: 'Schedule', icon: Calendar, shortcut: 'gs' },
   { href: '/counselor/tasks', label: 'Tasks', icon: ListTodo, shortcut: 'gt' },
   { href: '/counselor/messages', label: 'Messages', icon: MessageSquare, shortcut: 'gm' },
+  { href: '/counselor/team-chat', label: 'Team Chat', icon: MessagesSquare, shortcut: 'gc' },
   { href: '/counselor/bulk-whatsapp', label: 'Bulk WA', icon: Send, shortcut: 'gb' },
   { href: '/counselor/payments', label: 'Payments', icon: CreditCard, shortcut: 'gp' },
   { href: '/counselor/analytics', label: 'Analytics', icon: BarChart3, shortcut: 'ga' },
@@ -134,6 +136,9 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
               break
             case 'm':
               router.push('/counselor/messages')
+              break
+            case 'c':
+              router.push('/counselor/team-chat')
               break
             case 'b':
               router.push('/counselor/bulk-whatsapp')

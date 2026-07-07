@@ -4686,6 +4686,8 @@ model notices {
   targetCourseIds String[]       @default([])
   targetBatchIds  String[]       @default([])
   targetUserIds   String[]       @default([])
+  // Staff announcements: targetType "ROLES" + role names (ADMIN/TEACHER/COUNSELOR)
+  targetRoles     String[]       @default([])
   // Optional cohort scoping (student_groups.id); loose ref, no FK constraint
   groupId         String?
   priority        Int            @default(0)
