@@ -35,9 +35,7 @@ function rand(): string {
  */
 export async function notifyStaff(input: StaffNotificationInput): Promise<void> {
   try {
-    const recipients = Array.from(new Set(input.userIds)).filter(
-      (id) => id && id !== input.actorId
-    )
+    const recipients = Array.from(new Set(input.userIds)).filter((id) => id && id !== input.actorId)
     if (recipients.length === 0) return
 
     // Only staff receive staff notifications, whatever the caller passed.

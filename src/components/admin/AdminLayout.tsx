@@ -29,6 +29,8 @@ import {
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Toaster } from '@/components/ui/Toaster'
+import { StaffInboxProvider } from '@/hooks/staff/useStaffInbox'
+import { StaffNotificationBell } from '@/components/staff/StaffNotificationBell'
 
 interface AdminLayoutProps {
   children: ReactNode
@@ -358,7 +360,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   }
 
   return (
-    <>
+    <StaffInboxProvider>
       <Toaster />
       <div className="min-h-screen bg-gray-50 flex">
         {/* Mobile sidebar backdrop */}
@@ -464,13 +466,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
             </div>
 
             <div className="flex items-center space-x-2 sm:space-x-4 shrink-0">
-              {/* badge: staff comms Stage 4 */}
-              <button
-                className="relative p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-gray-100 rounded-lg touch-manipulation"
-                aria-label="View notifications"
-              >
-                <Bell className="w-5 h-5" />
-              </button>
+              <StaffNotificationBell surface="admin" />
             </div>
           </header>
 
@@ -478,6 +474,6 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           <main className="flex-1 overflow-hidden">{children}</main>
         </div>
       </div>
-    </>
+    </StaffInboxProvider>
   )
 }

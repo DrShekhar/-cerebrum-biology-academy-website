@@ -22,6 +22,8 @@ import {
 import Link from 'next/link'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 import { useAuth } from '@/contexts/AuthContext'
+import { StaffInboxProvider } from '@/hooks/staff/useStaffInbox'
+import { StaffNotificationBell } from '@/components/staff/StaffNotificationBell'
 
 const navItems = [
   { href: '/counselor', label: 'Dashboard', icon: LayoutDashboard, shortcut: 'gd', exact: true },
@@ -239,9 +241,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
                 WhatsApp
               </a>
 
-              <button className="relative p-2 hover:bg-gray-100 rounded-lg transition-colors">
-                <Bell className="w-5 h-5 text-gray-500" />
-              </button>
+              <StaffNotificationBell surface="counselor" />
 
               <button className="flex items-center gap-2 p-1.5 hover:bg-gray-100 rounded-lg transition-colors">
                 <div className="w-8 h-8 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
@@ -295,5 +295,9 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
 }
 
 export default function CounselorLayoutClient({ children }: { children: React.ReactNode }) {
-  return <CounselorAuthWrapper>{children}</CounselorAuthWrapper>
+  return (
+    <StaffInboxProvider>
+      <CounselorAuthWrapper>{children}</CounselorAuthWrapper>
+    </StaffInboxProvider>
+  )
 }

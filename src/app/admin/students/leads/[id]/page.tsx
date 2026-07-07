@@ -17,6 +17,8 @@ import {
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
+import { LeadTimeline } from '@/components/staff/LeadTimeline'
+import { LeadCommentThread } from '@/components/staff/LeadCommentThread'
 
 interface TimelineActivity {
   id: string
@@ -191,32 +193,13 @@ export default function AdminLeadDetailPage() {
             </div>
 
             <div className="grid gap-6 lg:grid-cols-3">
-              {/* Timeline */}
-              <div className="lg:col-span-2 rounded-2xl border border-gray-200 bg-white p-6">
-                <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-gray-900">
-                  <Activity className="w-5 h-5 text-green-600" /> Activity Timeline
-                </h2>
-                {lead.activities.length === 0 ? (
-                  <p className="text-sm text-gray-500">No activity recorded yet.</p>
-                ) : (
-                  <ol className="relative space-y-5 border-l border-gray-200 pl-6">
-                    {lead.activities.map((a) => (
-                      <li key={a.id} className="relative">
-                        <span className="absolute -left-[27px] mt-1 h-3 w-3 rounded-full border-2 border-white bg-green-500" />
-                        <div className="text-sm font-medium text-gray-900">
-                          {a.action.replace(/_/g, ' ')}
-                        </div>
-                        <div className="text-sm text-gray-600">{a.description}</div>
-                        <div className="mt-0.5 text-xs text-gray-400">
-                          {fmt(a.createdAt)} · {a.by}
-                        </div>
-                      </li>
-                    ))}
-                  </ol>
-                )}
+              {/* Full history: every interaction, note, task and event + Log interaction */}
+              <div className="lg:col-span-2 space-y-6">
+                <LeadTimeline leadId={lead.id} />
+                <LeadCommentThread leadId={lead.id} />
               </div>
 
-              {/* Side column: tasks, comms, notes */}
+              {/* Side column: tasks at a glance */}
               <div className="space-y-6">
                 <Panel icon={<CheckSquare className="w-5 h-5 text-blue-600" />} title="Tasks">
                   {lead.tasks.length === 0 ? (
@@ -227,40 +210,6 @@ export default function AdminLeadDetailPage() {
                         <div className="text-sm font-medium text-gray-900">{t.title}</div>
                         <div className="text-xs text-gray-500">
                           {t.status} · {t.priority} · due {fmt(t.dueDate)}
-                        </div>
-                      </div>
-                    ))
-                  )}
-                </Panel>
-
-                <Panel
-                  icon={<MessageSquare className="w-5 h-5 text-purple-600" />}
-                  title="Communications"
-                >
-                  {lead.communications.length === 0 ? (
-                    <Empty text="No messages logged." />
-                  ) : (
-                    lead.communications.map((c) => (
-                      <div key={c.id} className="border-b border-gray-100 py-2 last:border-0">
-                        <div className="text-xs font-medium uppercase text-gray-500">
-                          {c.type} · {c.status}
-                        </div>
-                        <div className="text-sm text-gray-700 line-clamp-2">{c.content}</div>
-                        <div className="text-xs text-gray-400">{fmt(c.sentAt)}</div>
-                      </div>
-                    ))
-                  )}
-                </Panel>
-
-                <Panel icon={<StickyNote className="w-5 h-5 text-amber-600" />} title="Notes">
-                  {lead.notes.length === 0 ? (
-                    <Empty text="No notes." />
-                  ) : (
-                    lead.notes.map((n) => (
-                      <div key={n.id} className="border-b border-gray-100 py-2 last:border-0">
-                        <div className="text-sm text-gray-700">{n.content}</div>
-                        <div className="text-xs text-gray-400">
-                          {fmt(n.createdAt)} · {n.by}
                         </div>
                       </div>
                     ))
