@@ -4999,6 +4999,13 @@ model student_group_members {
   @@index([userId])
 }
 
+model site_settings {
+  key       String   @id
+  value     Json
+  updatedAt DateTime @updatedAt
+  updatedBy String?
+}
+
 model group_content {
   id              String           @id @default(cuid())
   groupId         String

@@ -19,6 +19,7 @@ import { logger } from '@/lib/utils/logger'
 import { sendAdminLeadNotification } from '@/lib/notifications/adminLeadNotification'
 import { updateLeadScore } from '@/lib/leadScoring'
 import { startWelcomeSeries } from '@/lib/whatsapp/welcomeSeries'
+import { getSettings } from '@/lib/settings/siteSettings'
 import type { LeadSource, Priority } from '@/generated/prisma'
 
 export interface UpsertLeadInput {
@@ -129,11 +130,22 @@ export async function upsertLead(
 
     // Resolve assignee: round-robin to the COUNSELOR/ADMIN with the fewest
     // leads; fall back to any ADMIN. Null-safe — if no staff exist, skip.
-    const counselor = await prisma.users.findFirst({
-      where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
-      orderBy: { leads: { _count: 'asc' } },
-      select: { id: true },
-    })
+    // With autoAssignLeads off (site settings), leads park on an ADMIN for
+    // manual triage instead — assignedToId is a required FK, so "unassigned"
+    // is represented as admin-held.
+    let autoAssign = true
+    try {
+      autoAssign = (await getSettings('general')).autoAssignLeads
+    } catch {
+      // settings unavailable — keep auto-assign on
+    }
+    const counselor = autoAssign
+      ? await prisma.users.findFirst({
+          where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
+          orderBy: { leads: { _count: 'asc' } },
+          select: { id: true },
+        })
+      : null
     const assignee =
       counselor ||
       (await prisma.users.findFirst({ where: { role: 'ADMIN' }, select: { id: true } }))

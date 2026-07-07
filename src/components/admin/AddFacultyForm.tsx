@@ -1,13 +1,13 @@
 'use client'
 
-import { useForm } from 'react-hook-form'
+import { useForm, type Resolver } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Button } from '@/components/ui/Button'
 import { Loader2 } from 'lucide-react'
 import toast from 'react-hot-toast'
 
-const addFacultySchema = z.object({
+const baseFacultySchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters').max(100),
   email: z.string().email('Invalid email address'),
   phone: z
@@ -18,46 +18,94 @@ const addFacultySchema = z.object({
   experience: z.number().min(0, 'Experience cannot be negative').max(50),
   qualification: z.string().min(2, 'Qualification is required'),
   availability: z.string().min(2, 'Availability schedule is required'),
-  password: z.string().min(8, 'Password must be at least 8 characters'),
   bio: z.string().optional(),
 })
 
-type AddFacultyFormData = z.infer<typeof addFacultySchema>
+const addFacultySchema = baseFacultySchema.extend({
+  password: z.string().min(8, 'Password must be at least 8 characters'),
+})
+
+const editFacultySchema = baseFacultySchema.extend({
+  password: z.string().optional(),
+})
+
+// Password optional at the type level; the add-mode schema enforces it at runtime.
+type AddFacultyFormData = z.infer<typeof editFacultySchema>
+
+export interface FacultyFormInitialValues {
+  id: string
+  name: string
+  email: string
+  phone: string
+  specialization: string
+  experience: number
+  qualification: string
+  availability: string
+  bio?: string
+}
 
 interface AddFacultyFormProps {
   onSuccess: () => void
   onCancel: () => void
+  mode?: 'add' | 'edit'
+  initialValues?: FacultyFormInitialValues
 }
 
-export function AddFacultyForm({ onSuccess, onCancel }: AddFacultyFormProps) {
+export function AddFacultyForm({
+  onSuccess,
+  onCancel,
+  mode = 'add',
+  initialValues,
+}: AddFacultyFormProps) {
+  const isEdit = mode === 'edit' && initialValues
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
   } = useForm<AddFacultyFormData>({
-    resolver: zodResolver(addFacultySchema),
+    resolver: zodResolver(
+      isEdit ? editFacultySchema : addFacultySchema
+    ) as Resolver<AddFacultyFormData>,
+    defaultValues: isEdit
+      ? {
+          name: initialValues.name,
+          email: initialValues.email,
+          phone: initialValues.phone,
+          specialization: initialValues.specialization,
+          experience: initialValues.experience,
+          qualification: initialValues.qualification,
+          availability: initialValues.availability,
+          bio: initialValues.bio || '',
+        }
+      : undefined,
   })
 
   const onSubmit = async (data: AddFacultyFormData) => {
     try {
-      const response = await fetch('/api/admin/faculty', {
-        method: 'POST',
+      const url = isEdit ? `/api/admin/faculty/${initialValues.id}` : '/api/admin/faculty'
+      const payload: Record<string, unknown> = { ...data }
+      if (isEdit) delete payload.password
+
+      const response = await fetch(url, {
+        method: isEdit ? 'PUT' : 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       })
 
       const result = await response.json()
 
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to add faculty')
+        throw new Error(result.error || `Failed to ${isEdit ? 'update' : 'add'} faculty`)
       }
 
-      toast.success('Faculty member added successfully!')
+      toast.success(`Faculty member ${isEdit ? 'updated' : 'added'} successfully!`)
       reset()
       onSuccess()
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : 'Failed to add faculty')
+      toast.error(
+        error instanceof Error ? error.message : `Failed to ${isEdit ? 'update' : 'add'} faculty`
+      )
     }
   }
 
@@ -106,20 +154,22 @@ export function AddFacultyForm({ onSuccess, onCancel }: AddFacultyFormProps) {
             {errors.phone && <p className="text-sm text-red-600 mt-1">{errors.phone.message}</p>}
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Password <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="password"
-              {...register('password')}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Minimum 8 characters"
-            />
-            {errors.password && (
-              <p className="text-sm text-red-600 mt-1">{errors.password.message}</p>
-            )}
-          </div>
+          {!isEdit && (
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Password <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="password"
+                {...register('password')}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Minimum 8 characters"
+              />
+              {errors.password && (
+                <p className="text-sm text-red-600 mt-1">{errors.password.message}</p>
+              )}
+            </div>
+          )}
         </div>
       </div>
 
@@ -215,8 +265,10 @@ export function AddFacultyForm({ onSuccess, onCancel }: AddFacultyFormProps) {
           {isSubmitting ? (
             <>
               <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-              Adding...
+              {isEdit ? 'Saving...' : 'Adding...'}
             </>
+          ) : isEdit ? (
+            'Save Changes'
           ) : (
             'Add Faculty'
           )}

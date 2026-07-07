@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback } from 'react'
 import {
   UserCog,
   UserPlus,
-  Calendar,
   BookOpen,
   Award,
   Star,
@@ -15,7 +14,6 @@ import {
   Phone,
   Clock,
   Users,
-  TrendingUp,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
@@ -38,69 +36,26 @@ interface Faculty {
   availability: string
 }
 
-const mockFaculty: Faculty[] = [
-  {
-    id: '1',
-    name: 'Dr. Priya Sharma',
-    email: 'priya@cerebrumbiologyacademy.com',
-    phone: '+91 98765 43211',
-    specialization: 'Human Physiology, Genetics',
-    experience: 12,
-    qualification: 'PhD in Biology, M.Sc.',
-    joinedDate: '2020-01-15',
-    coursesAssigned: ['NEET Biology Class 12', 'NEET Dropper Batch'],
-    activeStudents: 245,
-    rating: 4.8,
-    status: 'active',
-    availability: 'Mon-Sat, 9 AM - 6 PM',
-  },
-  {
-    id: '2',
-    name: 'Dr. Rajesh Kumar',
-    email: 'rajesh@cerebrumbiologyacademy.com',
-    phone: '+91 98765 43212',
-    specialization: 'Plant Physiology, Ecology',
-    experience: 10,
-    qualification: 'PhD in Botany, M.Sc.',
-    joinedDate: '2021-03-10',
-    coursesAssigned: ['NEET Biology Class 11', 'Foundation Biology'],
-    activeStudents: 189,
-    rating: 4.7,
-    status: 'active',
-    availability: 'Tue-Sun, 10 AM - 5 PM',
-  },
-  {
-    id: '3',
-    name: 'Dr. Anjali Verma',
-    email: 'anjali@cerebrumbiologyacademy.com',
-    phone: '+91 98765 43213',
-    specialization: 'Cell Biology, Molecular Biology',
-    experience: 8,
-    qualification: 'PhD in Molecular Biology',
-    joinedDate: '2022-06-01',
-    coursesAssigned: ['Foundation Biology'],
-    activeStudents: 98,
-    rating: 5.0,
-    status: 'active',
-    availability: 'Mon-Fri, 2 PM - 7 PM',
-  },
-]
-
 export default function FacultySettingsPage() {
-  const [faculty, setFaculty] = useState<Faculty[]>(mockFaculty)
+  const [faculty, setFaculty] = useState<Faculty[]>([])
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState<string>('all')
   const [isAddFacultyModalOpen, setIsAddFacultyModalOpen] = useState(false)
+  const [editingFaculty, setEditingFaculty] = useState<Faculty | null>(null)
+  const [deletingFaculty, setDeletingFaculty] = useState<Faculty | null>(null)
+  const [isDeleting, setIsDeleting] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
   const fetchFaculty = useCallback(async () => {
     try {
       setLoading(true)
+      setError(null)
       const params = new URLSearchParams()
       if (searchTerm) params.set('search', searchTerm)
       const res = await fetch(`/api/admin/faculty?${params}`)
       const json = await res.json()
-      if (json.success && json.data.faculty.length > 0) {
+      if (json.success) {
         setFaculty(
           json.data.faculty.map((f: Record<string, unknown>) => {
             const profile = (f.profile || {}) as Record<string, unknown>
@@ -123,13 +78,32 @@ export default function FacultySettingsPage() {
             }
           })
         )
+      } else {
+        setError(json.error || 'Failed to load faculty')
       }
     } catch {
-      // Keep mock data on error
+      setError('Failed to load faculty')
     } finally {
       setLoading(false)
     }
   }, [searchTerm])
+
+  const handleDeactivate = async () => {
+    if (!deletingFaculty) return
+    setIsDeleting(true)
+    try {
+      const res = await fetch(`/api/admin/faculty/${deletingFaculty.id}`, { method: 'DELETE' })
+      const json = await res.json()
+      if (!json.success) throw new Error(json.error)
+      setDeletingFaculty(null)
+      fetchFaculty()
+    } catch {
+      setError('Failed to deactivate faculty member')
+      setDeletingFaculty(null)
+    } finally {
+      setIsDeleting(false)
+    }
+  }
 
   useEffect(() => {
     fetchFaculty()
@@ -157,8 +131,12 @@ export default function FacultySettingsPage() {
   })
 
   const totalStudents = faculty.reduce((sum, f) => sum + f.activeStudents, 0)
-  const avgRating = faculty.reduce((sum, f) => sum + f.rating, 0) / faculty.length
-  const avgExperience = faculty.reduce((sum, f) => sum + f.experience, 0) / faculty.length
+  const avgRating = faculty.length
+    ? faculty.reduce((sum, f) => sum + f.rating, 0) / faculty.length
+    : 0
+  const avgExperience = faculty.length
+    ? faculty.reduce((sum, f) => sum + f.experience, 0) / faculty.length
+    : 0
 
   return (
     <AdminLayout>
@@ -249,128 +227,172 @@ export default function FacultySettingsPage() {
           </div>
         </div>
 
+        {/* Loading skeleton */}
+        {loading && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="bg-white p-6 rounded-xl border border-gray-200 animate-pulse">
+                <div className="flex items-start space-x-4 mb-4">
+                  <div className="w-16 h-16 bg-gray-200 rounded-full" />
+                  <div className="flex-1">
+                    <div className="h-5 w-40 bg-gray-200 rounded mb-2" />
+                    <div className="h-4 w-56 bg-gray-100 rounded" />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="h-4 w-full bg-gray-100 rounded" />
+                  <div className="h-4 w-2/3 bg-gray-100 rounded" />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Error state */}
+        {!loading && error && (
+          <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
+            <UserCog className="mx-auto h-12 w-12 text-red-300" />
+            <h3 className="mt-2 text-sm font-medium text-gray-900">Could not load faculty</h3>
+            <p className="mt-1 text-sm text-gray-500">{error}</p>
+            <Button variant="outline" className="mt-4" onClick={fetchFaculty}>
+              Retry
+            </Button>
+          </div>
+        )}
+
         {/* Faculty Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {filteredFaculty.map((member, index) => (
-            <div
-              key={member.id}
-              className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow animate-fadeInUp"
-            >
-              {/* Faculty Header */}
-              <div className="flex justify-between items-start mb-4">
-                <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    {member.name
-                      .split(' ')
-                      .map((n) => n[0])
-                      .join('')}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-                    <p className="text-sm text-gray-600">{member.qualification}</p>
-                    <div className="flex items-center mt-1">
-                      <span
-                        className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(
-                          member.status
-                        )}`}
-                      >
-                        {member.status.charAt(0).toUpperCase() + member.status.slice(1)}
-                      </span>
-                      <div className="flex items-center ml-2">
-                        <Star className="w-4 h-4 text-yellow-500 mr-1" />
-                        <span className="text-sm font-semibold text-gray-900">{member.rating}</span>
+          {!loading &&
+            !error &&
+            filteredFaculty.map((member, index) => (
+              <div
+                key={member.id}
+                className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow animate-fadeInUp"
+              >
+                {/* Faculty Header */}
+                <div className="flex justify-between items-start mb-4">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                      {member.name
+                        .split(' ')
+                        .map((n) => n[0])
+                        .join('')}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
+                      <p className="text-sm text-gray-600">{member.qualification}</p>
+                      <div className="flex items-center mt-1">
+                        <span
+                          className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(
+                            member.status
+                          )}`}
+                        >
+                          {member.status.charAt(0).toUpperCase() + member.status.slice(1)}
+                        </span>
+                        <div className="flex items-center ml-2">
+                          <Star className="w-4 h-4 text-yellow-500 mr-1" />
+                          <span className="text-sm font-semibold text-gray-900">
+                            {member.rating}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="flex space-x-2">
-                  <button className="text-blue-600 hover:text-blue-900">
-                    <Edit className="w-4 h-4" />
-                  </button>
-                  <button className="text-red-600 hover:text-red-900">
-                    <Trash2 className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Contact Info */}
-              <div className="space-y-2 mb-4">
-                <div className="flex items-center text-sm text-gray-600">
-                  <Mail className="w-4 h-4 mr-2" />
-                  {member.email}
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Phone className="w-4 h-4 mr-2" />
-                  {member.phone}
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <BookOpen className="w-4 h-4 mr-2" />
-                  {member.specialization}
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Clock className="w-4 h-4 mr-2" />
-                  {member.availability}
-                </div>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 mb-4 pb-4 border-b border-gray-200">
-                <div className="text-center">
-                  <p className="text-lg font-bold text-gray-900">{member.experience}y</p>
-                  <p className="text-xs text-gray-600">Experience</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-lg font-bold text-gray-900">{member.coursesAssigned.length}</p>
-                  <p className="text-xs text-gray-600">Courses</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-lg font-bold text-gray-900">{member.activeStudents}</p>
-                  <p className="text-xs text-gray-600">Students</p>
-                </div>
-              </div>
-
-              {/* Courses Assigned */}
-              <div>
-                <p className="text-xs font-medium text-gray-600 mb-2">Courses Assigned:</p>
-                <div className="flex flex-wrap gap-2">
-                  {member.coursesAssigned.map((course) => (
-                    <span
-                      key={course}
-                      className="inline-block px-3 py-1 text-xs bg-blue-50 text-blue-600 rounded-full"
+                  <div className="flex space-x-2">
+                    <button
+                      className="text-blue-600 hover:text-blue-900"
+                      aria-label={`Edit ${member.name}`}
+                      onClick={() => setEditingFaculty(member)}
                     >
-                      {course}
-                    </span>
-                  ))}
+                      <Edit className="w-4 h-4" />
+                    </button>
+                    <button
+                      className="text-red-600 hover:text-red-900"
+                      aria-label={`Deactivate ${member.name}`}
+                      onClick={() => setDeletingFaculty(member)}
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Contact Info */}
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Mail className="w-4 h-4 mr-2" />
+                    {member.email}
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Phone className="w-4 h-4 mr-2" />
+                    {member.phone}
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    {member.specialization}
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Clock className="w-4 h-4 mr-2" />
+                    {member.availability}
+                  </div>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-3 gap-4 mb-4 pb-4 border-b border-gray-200">
+                  <div className="text-center">
+                    <p className="text-lg font-bold text-gray-900">{member.experience}y</p>
+                    <p className="text-xs text-gray-600">Experience</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-lg font-bold text-gray-900">
+                      {member.coursesAssigned.length}
+                    </p>
+                    <p className="text-xs text-gray-600">Courses</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-lg font-bold text-gray-900">{member.activeStudents}</p>
+                    <p className="text-xs text-gray-600">Students</p>
+                  </div>
+                </div>
+
+                {/* Courses Assigned */}
+                <div>
+                  <p className="text-xs font-medium text-gray-600 mb-2">Courses Assigned:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {member.coursesAssigned.map((course) => (
+                      <span
+                        key={course}
+                        className="inline-block px-3 py-1 text-xs bg-blue-50 text-blue-600 rounded-full"
+                      >
+                        {course}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-
-              {/* Action Buttons */}
-              <div className="flex space-x-2 mt-4 pt-4 border-t border-gray-200">
-                <Button variant="outline" size="sm" className="flex-1">
-                  <Calendar className="w-3 h-3 mr-1" />
-                  Schedule
-                </Button>
-                <Button variant="outline" size="sm" className="flex-1">
-                  <Users className="w-3 h-3 mr-1" />
-                  Students
-                </Button>
-                <Button variant="outline" size="sm" className="flex-1">
-                  <TrendingUp className="w-3 h-3 mr-1" />
-                  Analytics
-                </Button>
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
 
         {/* Empty State */}
-        {filteredFaculty.length === 0 && (
+        {!loading && !error && filteredFaculty.length === 0 && (
           <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
             <UserCog className="mx-auto h-12 w-12 text-gray-400" />
-            <h3 className="mt-2 text-sm font-medium text-gray-900">No faculty found</h3>
+            <h3 className="mt-2 text-sm font-medium text-gray-900">
+              {faculty.length === 0 ? 'No faculty yet' : 'No faculty found'}
+            </h3>
             <p className="mt-1 text-sm text-gray-500">
-              No faculty members match your current filters.
+              {faculty.length === 0
+                ? 'Add your first faculty member to get started.'
+                : 'No faculty members match your current filters.'}
             </p>
+            {faculty.length === 0 && (
+              <Button
+                className="mt-4 bg-blue-600 hover:bg-blue-700 text-white"
+                onClick={() => setIsAddFacultyModalOpen(true)}
+              >
+                <UserPlus className="w-4 h-4 mr-2" />
+                Add Faculty
+              </Button>
+            )}
           </div>
         )}
       </div>
@@ -389,6 +411,67 @@ export default function FacultySettingsPage() {
           }}
           onCancel={() => setIsAddFacultyModalOpen(false)}
         />
+      </Modal>
+
+      <Modal
+        open={!!editingFaculty}
+        onOpenChange={(open) => !open && setEditingFaculty(null)}
+        title="Edit Faculty Member"
+        description="Update profile and professional details."
+        size="lg"
+      >
+        {editingFaculty && (
+          <AddFacultyForm
+            mode="edit"
+            initialValues={{
+              id: editingFaculty.id,
+              name: editingFaculty.name,
+              email: editingFaculty.email,
+              phone: editingFaculty.phone,
+              specialization: editingFaculty.specialization,
+              experience: editingFaculty.experience,
+              qualification: editingFaculty.qualification,
+              availability: editingFaculty.availability,
+            }}
+            onSuccess={() => {
+              setEditingFaculty(null)
+              fetchFaculty()
+            }}
+            onCancel={() => setEditingFaculty(null)}
+          />
+        )}
+      </Modal>
+
+      <Modal
+        open={!!deletingFaculty}
+        onOpenChange={(open) => !open && setDeletingFaculty(null)}
+        title="Deactivate Faculty Member"
+        description="The account is kept (enrollment history stays intact) but marked inactive."
+      >
+        {deletingFaculty && (
+          <div>
+            <p className="text-sm text-gray-700 mb-6">
+              Deactivate <span className="font-semibold">{deletingFaculty.name}</span>? They will no
+              longer appear as active faculty.
+            </p>
+            <div className="flex items-center justify-end space-x-3">
+              <Button
+                variant="outline"
+                onClick={() => setDeletingFaculty(null)}
+                disabled={isDeleting}
+              >
+                Cancel
+              </Button>
+              <Button
+                className="bg-red-600 hover:bg-red-700 text-white"
+                onClick={handleDeactivate}
+                disabled={isDeleting}
+              >
+                {isDeleting ? 'Deactivating...' : 'Deactivate'}
+              </Button>
+            </div>
+          </div>
+        )}
       </Modal>
     </AdminLayout>
   )
