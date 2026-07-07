@@ -21,14 +21,15 @@ export interface TimelineEntry {
  * (calls/WhatsApp/email with what was discussed), and every task (what was
  * planned, and what's due next).
  */
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   try {
+    const params = await context.params
     const session = await auth()
     if (!session?.user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
     if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+      return NextResponse.json({ success: false, error: 'Forbidden' }, { status: 403 })
     }
 
     // Tenant isolation matches the notes route.
@@ -49,7 +50,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
       },
     })
     if (!lead) {
-      return NextResponse.json({ error: 'Lead not found' }, { status: 404 })
+      return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 })
     }
 
     const [activities, notes, communications, tasks] = await Promise.all([
@@ -162,6 +163,6 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     })
   } catch (error) {
     console.error('Error building lead timeline:', error)
-    return NextResponse.json({ error: 'Failed to load timeline' }, { status: 500 })
+    return NextResponse.json({ success: false, error: 'Failed to load timeline' }, { status: 500 })
   }
 }

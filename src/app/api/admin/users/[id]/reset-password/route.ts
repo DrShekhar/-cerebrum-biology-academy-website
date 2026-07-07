@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { requireAdminAuth } from '@/lib/auth'
-import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import bcrypt from 'bcryptjs'
 import crypto from 'crypto'
@@ -16,8 +15,7 @@ export const dynamic = 'force-dynamic'
  */
 export async function POST(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    await requireAdminAuth()
-    const session = await auth()
+    const adminSession = await requireAdminAuth()
     const { id } = await params
 
     const user = await prisma.users.findUnique({
@@ -52,7 +50,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
         userId: id,
         action: 'password_reset_by_admin',
         description: `Password reset for ${user.name || user.email} by an admin`,
-        metadata: { resetBy: session?.user?.id || null },
+        metadata: { resetBy: adminSession?.user?.id || null },
       },
     })
 

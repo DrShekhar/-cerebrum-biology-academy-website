@@ -28,6 +28,7 @@ import { Modal } from '@/components/ui/Modal'
 import { LeadForm } from '@/components/leads/LeadForm'
 import { toast } from 'sonner'
 import { LeadColorLegend, useLeadColorTags } from '@/components/staff/LeadColorLegend'
+import { stageBadgeClass } from '@/lib/leads/stageColors'
 
 // API Lead type (matches database schema)
 interface APILead {
@@ -300,28 +301,7 @@ export default function LeadsPage() {
     setFilteredLeads(filtered)
   }, [leads, sourceFilter])
 
-  const getStageColor = (stage: string) => {
-    switch (stage) {
-      case 'new':
-        return 'bg-blue-100 text-blue-800'
-      case 'contacted':
-        return 'bg-indigo-100 text-indigo-800'
-      case 'qualified':
-        return 'bg-purple-100 text-purple-800'
-      case 'demo_scheduled':
-        return 'bg-orange-100 text-orange-800'
-      case 'demo_completed':
-        return 'bg-yellow-100 text-yellow-800'
-      case 'negotiation':
-        return 'bg-pink-100 text-pink-800'
-      case 'converted':
-        return 'bg-green-100 text-green-800'
-      case 'lost':
-        return 'bg-red-100 text-red-800'
-      default:
-        return 'bg-gray-100 text-gray-800'
-    }
-  }
+  const getStageColor = (stage: string) => stageBadgeClass(stage)
 
   const getPriorityColor = (priority: string) => {
     switch (priority) {
@@ -518,13 +498,14 @@ export default function LeadsPage() {
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="all">All Stages</option>
-                <option value="new">New</option>
-                <option value="contacted">Contacted</option>
-                <option value="qualified">Qualified</option>
+                <option value="new_lead">New Lead</option>
                 <option value="demo_scheduled">Demo Scheduled</option>
                 <option value="demo_completed">Demo Completed</option>
-                <option value="negotiation">Negotiation</option>
-                <option value="converted">Converted</option>
+                <option value="offer_sent">Offer Sent</option>
+                <option value="negotiating">Negotiating</option>
+                <option value="payment_plan_created">Payment Plan</option>
+                <option value="enrolled">Enrolled</option>
+                <option value="active_student">Active Student</option>
                 <option value="lost">Lost</option>
               </select>
               <select

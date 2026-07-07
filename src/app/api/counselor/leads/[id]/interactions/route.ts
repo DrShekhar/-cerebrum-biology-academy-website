@@ -47,20 +47,21 @@ function rand(prefix: string): string {
  * stage / requirement. Every staff member can add one after each call or
  * conversation.
  */
-export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   try {
+    const params = await context.params
     const session = await auth()
     if (!session?.user?.id) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
     if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+      return NextResponse.json({ success: false, error: 'Forbidden' }, { status: 403 })
     }
 
     const parsed = interactionSchema.safeParse(await request.json())
     if (!parsed.success) {
       return NextResponse.json(
-        { error: 'Validation failed', details: parsed.error.issues },
+        { success: false, error: 'Validation failed', details: parsed.error.issues },
         { status: 400 }
       )
     }
@@ -73,7 +74,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       select: { id: true, studentName: true, stage: true },
     })
     if (!lead) {
-      return NextResponse.json({ error: 'Lead not found' }, { status: 404 })
+      return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 })
     }
 
     const commType: CommType = data.channel === 'MEETING' ? 'CALL' : data.channel
@@ -141,6 +142,9 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     return NextResponse.json({ success: true, data: { communicationId: communication.id } })
   } catch (error) {
     console.error('Error logging interaction:', error)
-    return NextResponse.json({ error: 'Failed to log interaction' }, { status: 500 })
+    return NextResponse.json(
+      { success: false, error: 'Failed to log interaction' },
+      { status: 500 }
+    )
   }
 }

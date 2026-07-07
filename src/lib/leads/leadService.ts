@@ -152,9 +152,11 @@ export async function updateLeadFields(viewer: LeadViewer, id: string, patch: Le
   }
   if (patch.lostReason !== undefined) data.lostReason = patch.lostReason
 
+  // Timestamps stamp on the TRANSITION, not the value — re-saving an already
+  // ENROLLED/LOST lead must not overwrite the original conversion/lost date.
   const stageChanged = patch.stage !== undefined && patch.stage !== prior.stage
-  if (patch.stage === 'LOST') data.lostAt = new Date()
-  if (patch.stage === 'ENROLLED') data.convertedAt = new Date()
+  if (stageChanged && patch.stage === 'LOST') data.lostAt = new Date()
+  if (stageChanged && patch.stage === 'ENROLLED') data.convertedAt = new Date()
 
   const updated = await prisma.leads.update({ where: { id }, data })
 

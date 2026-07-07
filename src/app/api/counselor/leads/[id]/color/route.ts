@@ -11,14 +11,15 @@ export const dynamic = 'force-dynamic'
  * (visual triage). Stored in leads.metadata.colorTag; the tag's meaning
  * comes from the team-wide legend (site_settings 'leadBoard').
  */
-export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   try {
+    const params = await context.params
     const session = await auth()
     if (!session?.user?.id) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
     if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+      return NextResponse.json({ success: false, error: 'Forbidden' }, { status: 403 })
     }
 
     const body = await request.json()
@@ -27,7 +28,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     if (colorTag) {
       const config = await getSettings('leadBoard')
       if (!config.colorTags.some((t) => t.id === colorTag)) {
-        return NextResponse.json({ error: 'Unknown color tag' }, { status: 400 })
+        return NextResponse.json({ success: false, error: 'Unknown color tag' }, { status: 400 })
       }
     }
 
@@ -38,7 +39,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       select: { id: true, metadata: true },
     })
     if (!lead) {
-      return NextResponse.json({ error: 'Lead not found' }, { status: 404 })
+      return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 })
     }
 
     const metadata = (lead.metadata as Record<string, unknown> | null) || {}
@@ -56,6 +57,6 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     return NextResponse.json({ success: true, data: { colorTag } })
   } catch (error) {
     console.error('Error setting lead color:', error)
-    return NextResponse.json({ error: 'Failed to set color' }, { status: 500 })
+    return NextResponse.json({ success: false, error: 'Failed to set color' }, { status: 500 })
   }
 }

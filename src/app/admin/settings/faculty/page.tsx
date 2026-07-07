@@ -33,6 +33,7 @@ interface Faculty {
   rating: number
   status: 'active' | 'onLeave' | 'inactive'
   availability: string
+  bio?: string
 }
 
 export default function FacultySettingsPage() {
@@ -74,6 +75,7 @@ export default function FacultySettingsPage() {
               rating: (profile.rating as number) || 0,
               status: ((profile.status as string) || 'active') as 'active' | 'onLeave' | 'inactive',
               availability: (profile.availability as string) || '',
+              bio: (profile.bio as string) || '',
             }
           })
         )
@@ -431,6 +433,7 @@ export default function FacultySettingsPage() {
               experience: editingFaculty.experience,
               qualification: editingFaculty.qualification,
               availability: editingFaculty.availability,
+              bio: editingFaculty.bio,
             }}
             onSuccess={() => {
               setEditingFaculty(null)

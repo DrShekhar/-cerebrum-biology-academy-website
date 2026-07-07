@@ -383,6 +383,14 @@ export class WhatsAppAutomationService {
           break
       }
 
+      // Unconfigured credentials return {skipped:true} instead of throwing —
+      // that is not a delivery. Do NOT mark sent or score engagement.
+      if (result?.skipped) {
+        message.status = 'failed'
+        console.warn('Scheduled message skipped — WhatsApp not configured')
+        return
+      }
+
       message.status = 'sent'
       this.updateEngagementScore(message.userId, 1)
 

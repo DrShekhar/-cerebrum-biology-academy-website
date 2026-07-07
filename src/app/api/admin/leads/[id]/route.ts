@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { requireAdminAuth } from '@/lib/auth'
-import { auth } from '@/lib/auth'
 import { getLeadDetail } from '@/lib/leads/leadService'
 
 /**
@@ -10,11 +9,10 @@ import { getLeadDetail } from '@/lib/leads/leadService'
  */
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    await requireAdminAuth()
-    const session = await auth()
+    const adminSession = await requireAdminAuth()
     const { id } = await params
 
-    const lead = await getLeadDetail({ userId: session?.user?.id || '', role: 'ADMIN' }, id)
+    const lead = await getLeadDetail({ userId: adminSession?.user?.id || '', role: 'ADMIN' }, id)
 
     if (!lead) {
       return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 })

@@ -20,7 +20,7 @@ function timeAgo(iso: string): string {
  * StaffInboxProvider) + dropdown feed with mark-read and deep links.
  * surface controls where lead links point (admin vs counselor lead detail).
  */
-export function StaffNotificationBell({ surface }: { surface: 'admin' | 'counselor' }) {
+export function StaffNotificationBell({ surface }: { surface: 'admin' | 'counselor' | 'teacher' }) {
   const { counts, fetchNotifications, markNotificationsRead } = useStaffInbox()
   const [open, setOpen] = useState(false)
   const [items, setItems] = useState<StaffNotification[]>([])
@@ -61,16 +61,27 @@ export function StaffNotificationBell({ surface }: { surface: 'admin' | 'counsel
     return () => document.removeEventListener('mousedown', onClickOutside)
   }, [open])
 
-  const hrefFor = (n: StaffNotification): string => {
-    if (n.leadId && surface === 'admin') return `/admin/students/leads/${n.leadId}`
-    if (n.leadId) return `/counselor/leads/${n.leadId}`
-    return n.href
+  const hrefFor = (n: StaffNotification): string | null => {
+    if (n.leadId) {
+      if (surface === 'admin') return `/admin/students/leads/${n.leadId}`
+      if (surface === 'counselor') return `/counselor/leads/${n.leadId}`
+      // Teachers have no lead-detail surface — show the notification body
+      // in the dropdown, don't navigate somewhere they'd be bounced from.
+      return null
+    }
+    if (n.channelId) return `/${surface}/team-chat`
+    // Announcements: only the admin surface has a notices page.
+    if (surface === 'admin') return n.href
+    return null
   }
 
   const handleClick = (n: StaffNotification) => {
     if (!n.isRead) void markNotificationsRead([n.id])
-    setOpen(false)
-    router.push(hrefFor(n))
+    const href = hrefFor(n)
+    if (href) {
+      setOpen(false)
+      router.push(href)
+    }
   }
 
   return (

@@ -226,15 +226,11 @@ function StepEditor({
               <span className="text-xs text-amber-600">hours</span>
             </div>
 
-            <select
-              value={step.channel}
-              onChange={(e) => onUpdate({ ...step, channel: e.target.value as any })}
-              className="px-3 py-1.5 border border-gray-200 rounded-lg text-sm bg-white"
-            >
-              <option value="WHATSAPP">📱 WhatsApp</option>
-              <option value="EMAIL">📧 Email</option>
-              <option value="SMS">💬 SMS</option>
-            </select>
+            {/* Only WhatsApp sending exists — offering Email/SMS here would
+                save steps the backend can't execute. */}
+            <span className="px-3 py-1.5 border border-gray-200 rounded-lg text-sm bg-gray-50 text-gray-600">
+              📱 WhatsApp
+            </span>
 
             <label className="flex items-center gap-1.5 text-xs text-gray-600 ml-auto">
               <input
@@ -748,7 +744,30 @@ export default function DripSequencesPage() {
       const res = await fetch('/api/counselor/drip-sequences', { credentials: 'include' })
       if (res.ok) {
         const data = await res.json()
-        setSequences(data.data || [])
+        // API vocabulary (order/delayHours/body) → page vocabulary
+        setSequences(
+          (data.data || []).map((seq: any) => ({
+            ...seq,
+            description: seq.description || '',
+            steps: (seq.steps || []).map((st: any, i: number) => ({
+              id: st.id,
+              stepNumber: (st.order ?? i) + 1,
+              delayDays: Math.round((st.delayHours ?? 0) / 24),
+              delayHours: st.delayHours ?? 0,
+              messageTemplate: st.body || '',
+              channel: st.channel || 'WHATSAPP',
+              stopOnReply: true,
+            })),
+            stats: {
+              totalEnrolled: seq.stats?.totalEnrolled ?? 0,
+              active: seq.stats?.active ?? 0,
+              completed: seq.stats?.completed ?? 0,
+              stopped: seq.stats?.stopped ?? 0,
+              // Reply tracking doesn't exist yet — 0 means "none recorded".
+              replyRate: 0,
+            },
+          }))
+        )
       }
     } catch {
       console.error('Failed to fetch sequences')
@@ -758,12 +777,26 @@ export default function DripSequencesPage() {
   }
 
   async function handleSave(seqData: any) {
-    const method = seqData.id ? 'PUT' : 'POST'
+    // Page vocabulary → API vocabulary (order/delayHours/body); edits go
+    // through PATCH (the route has no PUT).
+    const payload = {
+      ...(seqData.id ? { id: seqData.id } : {}),
+      name: seqData.name,
+      description: seqData.description || undefined,
+      triggerStage: seqData.triggerStage,
+      stopOnStageChange: seqData.stopOnStageChange,
+      steps: (seqData.steps || []).map((s: any, i: number) => ({
+        order: i,
+        delayHours: Math.max(0, Math.round((s.delayDays ?? 0) * 24)),
+        channel: 'WHATSAPP' as const,
+        body: s.messageTemplate,
+      })),
+    }
     const res = await fetch('/api/counselor/drip-sequences', {
-      method,
+      method: seqData.id ? 'PATCH' : 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
-      body: JSON.stringify(seqData),
+      body: JSON.stringify(payload),
     })
     if (!res.ok) throw new Error('Failed to save')
     showToast.success(seqData.id ? 'Sequence updated!' : 'Sequence created!')

@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 import type { Lead, LeadStage } from '@/app/counselor/leads/page'
+import { stageSolidClass, stageLabel } from '@/lib/leads/stageColors'
 
 interface MobileLeadViewProps {
   leads: Lead[]
@@ -22,30 +23,6 @@ interface MobileLeadViewProps {
   onWhatsAppClick: (lead: Lead) => void
   onCallClick: (lead: Lead) => void
   onEmailClick: (lead: Lead) => void
-}
-
-const stageColors: Record<LeadStage, string> = {
-  NEW_LEAD: 'bg-blue-500',
-  DEMO_SCHEDULED: 'bg-purple-500',
-  DEMO_COMPLETED: 'bg-indigo-500',
-  OFFER_SENT: 'bg-orange-500',
-  NEGOTIATING: 'bg-yellow-500',
-  PAYMENT_PLAN_CREATED: 'bg-green-600',
-  ENROLLED: 'bg-green-600',
-  ACTIVE_STUDENT: 'bg-green-600',
-  LOST: 'bg-gray-500',
-}
-
-const stageLabels: Record<LeadStage, string> = {
-  NEW_LEAD: 'New',
-  DEMO_SCHEDULED: 'Demo Scheduled',
-  DEMO_COMPLETED: 'Demo Done',
-  OFFER_SENT: 'Offer Sent',
-  NEGOTIATING: 'Negotiating',
-  PAYMENT_PLAN_CREATED: 'Payment Plan',
-  ENROLLED: 'Enrolled',
-  ACTIVE_STUDENT: 'Active',
-  LOST: 'Lost',
 }
 
 const priorityConfig = {
@@ -109,9 +86,9 @@ function SwipeableLeadCard({
 
             <div className="flex items-center gap-2 flex-wrap">
               <span
-                className={`${stageColors[lead.stage]} text-white text-xs font-medium px-2 py-0.5 rounded-full`}
+                className={`${stageSolidClass(lead.stage)} text-white text-xs font-medium px-2 py-0.5 rounded-full`}
               >
-                {stageLabels[lead.stage]}
+                {stageLabel(lead.stage)}
               </span>
               <span className="text-xs text-gray-500">{lead.courseInterest}</span>
             </div>
@@ -132,7 +109,7 @@ function SwipeableLeadCard({
               <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">
                 <span className="flex items-center gap-1">
                   <MessageSquare className="w-3 h-3" />
-                  {lead._count.communications}
+                  {lead._count.crm_communications}
                 </span>
                 <span className="flex items-center gap-1">
                   <CheckCircle2 className="w-3 h-3" />
@@ -218,7 +195,7 @@ export function MobileLeadView({
             <div className="sticky top-0 bg-gray-50 px-4 py-2 border-b border-gray-200">
               <div className="flex items-center justify-between">
                 <h3 className="font-semibold text-gray-900">
-                  {groupBy === 'stage' ? stageLabels[group as LeadStage] : group}
+                  {groupBy === 'stage' ? stageLabel(group) : group}
                 </h3>
                 <span className="text-sm text-gray-500">{groupLeads.length}</span>
               </div>

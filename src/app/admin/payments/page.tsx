@@ -297,6 +297,9 @@ function PaymentsPageInner() {
               value={formatCurrency(stats.totalRevenue || 0)}
               icon={TrendingUp}
               color="bg-green-100 text-green-600"
+              sub={
+                stats.totalRefunded ? `${formatCurrency(stats.totalRefunded)} refunded` : undefined
+              }
             />
             <StatCard
               label="Pending Payments"

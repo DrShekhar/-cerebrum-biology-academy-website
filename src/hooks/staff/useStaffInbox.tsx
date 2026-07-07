@@ -70,7 +70,11 @@ export function StaffInboxProvider({ children }: { children: React.ReactNode }) 
     try {
       const res = await fetch('/api/staff/inbox')
       if (res.status === 401 || res.status === 403) {
+        // Pause (a JWT refresh or edge blip can 401 transiently) — the next
+        // focus/visibility event clears the pause and retries, so one bad
+        // response never kills the bell for the whole session.
         stoppedRef.current = true
+        backoffRef.current = MAX_BACKOFF_MS
         return
       }
       const json = await res.json()
@@ -94,8 +98,10 @@ export function StaffInboxProvider({ children }: { children: React.ReactNode }) 
   useEffect(() => {
     let cancelled = false
 
+    // The timer chain keeps running even while paused — fetchInbox itself
+    // gates on stoppedRef, and focus/visibility can un-pause at any time.
     const schedule = () => {
-      if (cancelled || stoppedRef.current) return
+      if (cancelled) return
       timerRef.current = setTimeout(async () => {
         if (document.visibilityState === 'visible') {
           await fetchInbox()
@@ -105,7 +111,8 @@ export function StaffInboxProvider({ children }: { children: React.ReactNode }) 
     }
 
     const onVisibleOrFocus = () => {
-      if (document.visibilityState === 'visible' && !stoppedRef.current) {
+      if (document.visibilityState === 'visible') {
+        stoppedRef.current = false
         void fetchInbox()
       }
     }

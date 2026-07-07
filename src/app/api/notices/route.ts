@@ -90,25 +90,30 @@ export async function GET(request: NextRequest) {
 
       const userRole = (session.user.role || '').toUpperCase()
 
-      // Filter notices that target this user
-      whereClause = {
-        ...whereClause,
-        OR: [
-          // Notices for all users
-          { targetType: 'ALL' },
-          // Notices for specific user
-          { targetType: 'SPECIFIC_USERS', targetUserIds: { has: userId } },
-          // Staff announcements targeted at the user's role
-          ...(userRole ? [{ targetType: 'ROLES', targetRoles: { has: userRole } }] : []),
-          // Notices for user's courses
-          ...(userCourseIds.length > 0
-            ? [{ targetType: 'COURSE', targetCourseIds: { hasSome: userCourseIds } }]
-            : []),
-          // Notices for user's batches
-          ...(userBatchIds.length > 0
-            ? [{ targetType: 'BATCH', targetBatchIds: { hasSome: userBatchIds as string[] } }]
-            : []),
-        ],
+      // ADMINs manage all notices (the /admin/notices authoring page) — no
+      // target narrowing, or an admin couldn't see a notice they published
+      // to other roles.
+      if (userRole !== 'ADMIN') {
+        // Filter notices that target this user
+        whereClause = {
+          ...whereClause,
+          OR: [
+            // Notices for all users
+            { targetType: 'ALL' },
+            // Notices for specific user
+            { targetType: 'SPECIFIC_USERS', targetUserIds: { has: userId } },
+            // Staff announcements targeted at the user's role
+            ...(userRole ? [{ targetType: 'ROLES', targetRoles: { has: userRole } }] : []),
+            // Notices for user's courses
+            ...(userCourseIds.length > 0
+              ? [{ targetType: 'COURSE', targetCourseIds: { hasSome: userCourseIds } }]
+              : []),
+            // Notices for user's batches
+            ...(userBatchIds.length > 0
+              ? [{ targetType: 'BATCH', targetBatchIds: { hasSome: userBatchIds as string[] } }]
+              : []),
+          ],
+        }
       }
     } else {
       // For unauthenticated users, only show public notices

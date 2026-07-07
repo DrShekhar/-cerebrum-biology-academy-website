@@ -167,6 +167,46 @@ export async function POST(request: NextRequest) {
       skipTask: true,
     })
 
+    // Tenant isolation on dedup hits: if the phone matched a lead assigned to
+    // ANOTHER counselor, do not return that lead's record (PII) — report the
+    // conflict without exposing whose lead it is.
+    if (!result.created) {
+      const isAdmin = session.role.toUpperCase() === 'ADMIN'
+      if (!isAdmin && result.assignedToId !== session.userId) {
+        return NextResponse.json(
+          {
+            success: false,
+            isExisting: true,
+            error:
+              'A lead with this phone number already exists in the CRM and is assigned to another counselor. Ask an admin if it should be reassigned.',
+          },
+          { status: 409 }
+        )
+      }
+
+      const existingLead = await prisma.leads.findUniqueOrThrow({
+        where: { id: result.leadId },
+        include: {
+          users: {
+            select: {
+              id: true,
+              name: true,
+              email: true,
+            },
+          },
+        },
+      })
+      return NextResponse.json(
+        {
+          success: true,
+          data: existingLead,
+          isExisting: true,
+          message: 'A lead with this phone already exists — showing the existing lead',
+        },
+        { status: 200 }
+      )
+    }
+
     const lead = await prisma.leads.findUniqueOrThrow({
       where: { id: result.leadId },
       include: {
@@ -179,18 +219,6 @@ export async function POST(request: NextRequest) {
         },
       },
     })
-
-    if (!result.created) {
-      return NextResponse.json(
-        {
-          success: true,
-          data: lead,
-          isExisting: true,
-          message: 'A lead with this phone already exists — showing the existing lead',
-        },
-        { status: 200 }
-      )
-    }
 
     // Queue AI Lead Qualifier Agent (automatic trigger)
     try {

@@ -28,9 +28,8 @@ export default function CreateTestPage() {
   useEffect(() => {
     fetch('/api/admin/tests')
       .then((r) => r.json())
-      .then((json) => {
-        if (json.success) setTemplates(json.data?.templates || [])
-      })
+      // /api/admin/tests returns { tests, stats } (no envelope)
+      .then((json) => setTemplates(json.tests || []))
       .catch(() => {})
       .finally(() => setLoading(false))
   }, [])

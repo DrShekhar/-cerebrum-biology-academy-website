@@ -67,6 +67,7 @@ export async function GET() {
     const statsByStage = new Map(nurturingStats.map((s) => [s.triggerStage, s]))
 
     return NextResponse.json({
+      success: true,
       data: sequences.map((seq) => ({
         ...seq,
         stats: statsByStage.get(seq.triggerStage) || {
@@ -79,7 +80,7 @@ export async function GET() {
     })
   } catch (error) {
     console.error('Error fetching sequences:', error)
-    return NextResponse.json({ error: 'Failed to load sequences' }, { status: 500 })
+    return NextResponse.json({ success: false, error: 'Failed to load sequences' }, { status: 500 })
   }
 }
 
@@ -93,7 +94,7 @@ export async function POST(req: NextRequest) {
     const parsed = createSchema.safeParse(await req.json())
     if (!parsed.success) {
       return NextResponse.json(
-        { error: 'Invalid sequence', details: parsed.error.issues },
+        { success: false, error: 'Invalid sequence', details: parsed.error.issues },
         { status: 400 }
       )
     }
@@ -122,6 +123,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(
       {
+        success: true,
         data: {
           ...sequence,
           stats: { totalEnrolled: 0, active: 0, completed: 0, stopped: 0 },
@@ -131,36 +133,73 @@ export async function POST(req: NextRequest) {
     )
   } catch (error) {
     console.error('Error creating sequence:', error)
-    return NextResponse.json({ error: 'Failed to create sequence' }, { status: 500 })
+    return NextResponse.json(
+      { success: false, error: 'Failed to create sequence' },
+      { status: 500 }
+    )
   }
 }
 
-// PATCH - Toggle active / edit metadata
+// PATCH - Toggle active / edit metadata / replace steps
 export async function PATCH(req: NextRequest) {
   const authResult = await authenticateCounselor()
   if ('error' in authResult) return authResult.error
 
   try {
     const body = await req.json()
-    const { id, isActive, name, description } = body
+    const { id, isActive, name, description, triggerStage, stopOnStageChange, steps } = body
     if (!id) {
-      return NextResponse.json({ error: 'id required' }, { status: 400 })
+      return NextResponse.json({ success: false, error: 'id required' }, { status: 400 })
     }
 
-    const sequence = await prisma.drip_sequences.update({
-      where: { id },
-      data: {
-        ...(typeof isActive === 'boolean' ? { isActive } : {}),
-        ...(typeof name === 'string' && name.trim() ? { name: name.trim() } : {}),
-        ...(typeof description === 'string' ? { description } : {}),
-      },
-      include: { steps: { orderBy: { order: 'asc' } } },
+    let validatedSteps: z.infer<typeof stepSchema>[] | null = null
+    if (steps !== undefined) {
+      const parsed = z.array(stepSchema).min(1).max(20).safeParse(steps)
+      if (!parsed.success) {
+        return NextResponse.json(
+          { success: false, error: 'Invalid steps', details: parsed.error.issues },
+          { status: 400 }
+        )
+      }
+      validatedSteps = parsed.data
+    }
+
+    const sequence = await prisma.$transaction(async (tx) => {
+      await tx.drip_sequences.update({
+        where: { id },
+        data: {
+          ...(typeof isActive === 'boolean' ? { isActive } : {}),
+          ...(typeof name === 'string' && name.trim() ? { name: name.trim() } : {}),
+          ...(typeof description === 'string' ? { description } : {}),
+          ...(typeof triggerStage === 'string' && triggerStage.trim()
+            ? { triggerStage: triggerStage.trim() }
+            : {}),
+          ...(typeof stopOnStageChange === 'boolean' ? { stopOnStageChange } : {}),
+        },
+      })
+      if (validatedSteps) {
+        await tx.drip_sequence_steps.deleteMany({ where: { sequenceId: id } })
+        await tx.drip_sequence_steps.createMany({
+          data: validatedSteps.map((s, i) => ({
+            id: rand('step'),
+            sequenceId: id,
+            order: s.order ?? i,
+            delayHours: s.delayHours,
+            channel: s.channel,
+            body: s.body,
+          })),
+        })
+      }
+      return tx.drip_sequences.findUniqueOrThrow({
+        where: { id },
+        include: { steps: { orderBy: { order: 'asc' } } },
+      })
     })
 
-    return NextResponse.json({ data: sequence })
+    return NextResponse.json({ success: true, data: sequence })
   } catch (error) {
     console.error('Error updating sequence:', error)
-    return NextResponse.json({ error: 'Failed to update' }, { status: 500 })
+    return NextResponse.json({ success: false, error: 'Failed to update' }, { status: 500 })
   }
 }
 
@@ -173,14 +212,14 @@ export async function DELETE(req: NextRequest) {
     const { searchParams } = new URL(req.url)
     const id = searchParams.get('id')
     if (!id) {
-      return NextResponse.json({ error: 'id required' }, { status: 400 })
+      return NextResponse.json({ success: false, error: 'id required' }, { status: 400 })
     }
 
     await prisma.drip_sequences.delete({ where: { id } })
 
-    return NextResponse.json({ data: { deleted: true, id } })
+    return NextResponse.json({ success: true, data: { deleted: true, id } })
   } catch (error) {
     console.error('Error deleting sequence:', error)
-    return NextResponse.json({ error: 'Failed to delete' }, { status: 500 })
+    return NextResponse.json({ success: false, error: 'Failed to delete' }, { status: 500 })
   }
 }

@@ -15,8 +15,11 @@ import {
   BookOpen,
   TrendingUp,
   Play,
+  MessageSquare,
 } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/Card'
+import { StaffInboxProvider } from '@/hooks/staff/useStaffInbox'
+import { StaffNotificationBell } from '@/components/staff/StaffNotificationBell'
 import { Button } from '@/components/ui/Button'
 
 interface DashboardStats {
@@ -135,225 +138,234 @@ export default function TeacherDashboardPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                Welcome, {user?.name || 'Teacher'}!
-              </h1>
-              <p className="text-gray-600 mt-1">
-                {new Date().toLocaleDateString('en-US', {
-                  weekday: 'long',
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              {/* Notifications button removed — it had no handler and no
-                  backing feature; a dead control erodes trust in the rest. */}
-              <Link href="/teacher/assignments/create">
-                <Button variant="primary" size="sm">
-                  <FileText className="w-4 h-4 mr-2" />
-                  New Assignment
-                </Button>
-              </Link>
+    <StaffInboxProvider>
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <div className="bg-white shadow-sm border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                  Welcome, {user?.name || 'Teacher'}!
+                </h1>
+                <p className="text-gray-600 mt-1">
+                  {new Date().toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </p>
+              </div>
+              <div className="flex items-center gap-3">
+                {/* Real staff notification bell — teachers receive @mentions,
+                  chat messages and role-targeted announcements. */}
+                <StaffNotificationBell surface="teacher" />
+                <Link href="/teacher/team-chat">
+                  <Button variant="outline" size="sm">
+                    <MessageSquare className="w-4 h-4 mr-2" />
+                    Team Chat
+                  </Button>
+                </Link>
+                <Link href="/teacher/assignments/create">
+                  <Button variant="primary" size="sm">
+                    <FileText className="w-4 h-4 mr-2" />
+                    New Assignment
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="space-y-8">
-          {/* Quick Stats */}
-          <section>
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Overview</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {quickStats.map((stat, index) => (
-                <div key={stat.label} className="animate-fadeInUp">
-                  <Link href={stat.href}>
-                    <Card className="hover:shadow-lg transition-shadow cursor-pointer">
-                      <CardContent className="p-6">
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <p className="text-sm text-gray-600 mb-1">{stat.label}</p>
-                            <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                          </div>
-                          <div className={`p-3 rounded-lg ${stat.color}`}>
-                            <stat.icon className="w-5 h-5" />
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Quick Actions & Upcoming Classes */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Quick Actions */}
+        {/* Main Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="space-y-8">
+            {/* Quick Stats */}
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Quick Actions</h2>
-              <div className="grid grid-cols-2 gap-4">
-                <QuickActionCard
-                  icon={FileText}
-                  title="Create Assignment"
-                  description="New homework or test"
-                  href="/teacher/assignments/create"
-                  color="from-blue-500 to-blue-600"
-                />
-                <QuickActionCard
-                  icon={Users}
-                  title="Take Attendance"
-                  description="Mark today's attendance"
-                  href="/teacher/attendance"
-                  color="bg-green-600"
-                />
-                <QuickActionCard
-                  icon={MessageCircle}
-                  title="Answer Doubts"
-                  description={`${stats.studentDoubts} pending`}
-                  href="/teacher/doubts"
-                  color="from-purple-500 to-purple-600"
-                />
-                <QuickActionCard
-                  icon={BookOpen}
-                  title="Question Bank"
-                  description="Manage questions"
-                  href="/teacher/questions"
-                  color="from-orange-500 to-orange-600"
-                />
-                <QuickActionCard
-                  icon={FileText}
-                  title="Course Builder"
-                  description="Chapters, topics, drip & prerequisites"
-                  href="/teacher/courses"
-                  color="from-teal-500 to-teal-600"
-                />
-                <QuickActionCard
-                  icon={CheckCircle}
-                  title="Grade Worksheets"
-                  description="Review & send feedback"
-                  href="/teacher/worksheets"
-                  color="from-green-500 to-green-600"
-                />
+              <h2 className="text-xl font-bold text-gray-900 mb-4">Overview</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {quickStats.map((stat, index) => (
+                  <div key={stat.label} className="animate-fadeInUp">
+                    <Link href={stat.href}>
+                      <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+                        <CardContent className="p-6">
+                          <div className="flex items-start justify-between">
+                            <div className="flex-1">
+                              <p className="text-sm text-gray-600 mb-1">{stat.label}</p>
+                              <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
+                            </div>
+                            <div className={`p-3 rounded-lg ${stat.color}`}>
+                              <stat.icon className="w-5 h-5" />
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </div>
+                ))}
               </div>
             </section>
 
-            {/* Upcoming Classes */}
+            {/* Quick Actions & Upcoming Classes */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Quick Actions */}
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-4">Quick Actions</h2>
+                <div className="grid grid-cols-2 gap-4">
+                  <QuickActionCard
+                    icon={FileText}
+                    title="Create Assignment"
+                    description="New homework or test"
+                    href="/teacher/assignments/create"
+                    color="from-blue-500 to-blue-600"
+                  />
+                  <QuickActionCard
+                    icon={Users}
+                    title="Take Attendance"
+                    description="Mark today's attendance"
+                    href="/teacher/attendance"
+                    color="bg-green-600"
+                  />
+                  <QuickActionCard
+                    icon={MessageCircle}
+                    title="Answer Doubts"
+                    description={`${stats.studentDoubts} pending`}
+                    href="/teacher/doubts"
+                    color="from-purple-500 to-purple-600"
+                  />
+                  <QuickActionCard
+                    icon={BookOpen}
+                    title="Question Bank"
+                    description="Manage questions"
+                    href="/teacher/questions"
+                    color="from-orange-500 to-orange-600"
+                  />
+                  <QuickActionCard
+                    icon={FileText}
+                    title="Course Builder"
+                    description="Chapters, topics, drip & prerequisites"
+                    href="/teacher/courses"
+                    color="from-teal-500 to-teal-600"
+                  />
+                  <QuickActionCard
+                    icon={CheckCircle}
+                    title="Grade Worksheets"
+                    description="Review & send feedback"
+                    href="/teacher/worksheets"
+                    color="from-green-500 to-green-600"
+                  />
+                </div>
+              </section>
+
+              {/* Upcoming Classes */}
+              <section>
+                <h2 className="text-xl font-bold text-gray-900 mb-4">Today's Schedule</h2>
+                <Card>
+                  <CardContent className="p-6">
+                    {upcomingClasses.length > 0 ? (
+                      <div className="space-y-4">
+                        {upcomingClasses.map((cls) => (
+                          <div
+                            key={cls.id}
+                            className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <Play className="w-5 h-5 text-blue-600" />
+                              </div>
+                              <div>
+                                <p className="font-medium text-gray-900">{cls.title}</p>
+                                <p className="text-sm text-gray-600">
+                                  {cls.batch} • {cls.studentsCount} students
+                                </p>
+                              </div>
+                            </div>
+                            <div className="text-right">
+                              <p className="font-semibold text-blue-600">{cls.time}</p>
+                              <Link href={`/teacher/sessions/${cls.id}`}>
+                                <Button variant="ghost" size="sm">
+                                  Start →
+                                </Button>
+                              </Link>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="text-center py-8">
+                        <Calendar className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+                        <p className="text-gray-600">No classes scheduled for today</p>
+                        <Link href="/teacher/sessions">
+                          <Button variant="outline" size="sm" className="mt-3">
+                            View Schedule
+                          </Button>
+                        </Link>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              </section>
+            </div>
+
+            {/* Recent Activity */}
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Today's Schedule</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-4">Recent Activity</h2>
               <Card>
                 <CardContent className="p-6">
-                  {upcomingClasses.length > 0 ? (
+                  {recentActivities.length > 0 ? (
                     <div className="space-y-4">
-                      {upcomingClasses.map((cls) => (
-                        <div
-                          key={cls.id}
-                          className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
-                        >
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                              <Play className="w-5 h-5 text-blue-600" />
-                            </div>
-                            <div>
-                              <p className="font-medium text-gray-900">{cls.title}</p>
-                              <p className="text-sm text-gray-600">
-                                {cls.batch} • {cls.studentsCount} students
-                              </p>
-                            </div>
-                          </div>
-                          <div className="text-right">
-                            <p className="font-semibold text-blue-600">{cls.time}</p>
-                            <Link href={`/teacher/sessions/${cls.id}`}>
-                              <Button variant="ghost" size="sm">
-                                Start →
-                              </Button>
-                            </Link>
-                          </div>
-                        </div>
+                      {recentActivities.map((activity) => (
+                        <ActivityItem key={activity.id} activity={activity} />
                       ))}
                     </div>
                   ) : (
                     <div className="text-center py-8">
-                      <Calendar className="w-12 h-12 text-gray-300 mx-auto mb-3" />
-                      <p className="text-gray-600">No classes scheduled for today</p>
-                      <Link href="/teacher/sessions">
-                        <Button variant="outline" size="sm" className="mt-3">
-                          View Schedule
-                        </Button>
-                      </Link>
+                      <Clock className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+                      <p className="text-gray-600">No recent activity</p>
                     </div>
                   )}
                 </CardContent>
               </Card>
             </section>
+
+            {/* Performance Summary */}
+            <section>
+              <h2 className="text-xl font-bold text-gray-900 mb-4">This Week's Summary</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <Card>
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <CheckCircle className="w-6 h-6 text-green-600" />
+                    </div>
+                    <p className="text-2xl font-bold text-gray-900">{stats.totalAssignments}</p>
+                    <p className="text-sm text-gray-600">Assignments Created</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Users className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <p className="text-2xl font-bold text-gray-900">{stats.activeStudents}</p>
+                    <p className="text-sm text-gray-600">Students Taught</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <MessageCircle className="w-6 h-6 text-purple-600" />
+                    </div>
+                    <p className="text-2xl font-bold text-gray-900">{stats.studentDoubts}</p>
+                    <p className="text-sm text-gray-600">Doubts Resolved</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
           </div>
-
-          {/* Recent Activity */}
-          <section>
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Recent Activity</h2>
-            <Card>
-              <CardContent className="p-6">
-                {recentActivities.length > 0 ? (
-                  <div className="space-y-4">
-                    {recentActivities.map((activity) => (
-                      <ActivityItem key={activity.id} activity={activity} />
-                    ))}
-                  </div>
-                ) : (
-                  <div className="text-center py-8">
-                    <Clock className="w-12 h-12 text-gray-300 mx-auto mb-3" />
-                    <p className="text-gray-600">No recent activity</p>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* Performance Summary */}
-          <section>
-            <h2 className="text-xl font-bold text-gray-900 mb-4">This Week's Summary</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <CheckCircle className="w-6 h-6 text-green-600" />
-                  </div>
-                  <p className="text-2xl font-bold text-gray-900">{stats.totalAssignments}</p>
-                  <p className="text-sm text-gray-600">Assignments Created</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Users className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <p className="text-2xl font-bold text-gray-900">{stats.activeStudents}</p>
-                  <p className="text-sm text-gray-600">Students Taught</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <MessageCircle className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <p className="text-2xl font-bold text-gray-900">{stats.studentDoubts}</p>
-                  <p className="text-sm text-gray-600">Doubts Resolved</p>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
         </div>
       </div>
-    </div>
+    </StaffInboxProvider>
   )
 }
 

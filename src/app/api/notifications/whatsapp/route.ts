@@ -126,14 +126,10 @@ Happy Learning! 📚`
         message = 'Notification from Cerebrum Biology Academy'
     }
 
-    // Integrate with WhatsApp Business API using WhatsAppBusinessService
-    const whatsappPhoneId = process.env.WHATSAPP_PHONE_NUMBER_ID
-    const whatsappToken = process.env.WHATSAPP_ACCESS_TOKEN
-
-    if (!whatsappPhoneId || !whatsappToken) {
-      // Log notification but don't fail if WhatsApp is not configured
-
-      // Create communication log
+    // Integrate with WhatsApp Business API using WhatsAppBusinessService.
+    // isConfigured() also treats placeholder values as unconfigured.
+    if (!WhatsAppBusinessService.isConfigured()) {
+      // Log the attempt HONESTLY — this message was not sent.
       await prisma.communication_logs.create({
         data: {
           id: `comlog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
@@ -141,14 +137,14 @@ Happy Learning! 📚`
           type: 'ENROLLMENT_CONFIRMATION',
           channel: 'WHATSAPP',
           content: message,
-          status: 'SENT',
+          status: 'FAILED',
           sentAt: new Date(),
         },
       })
 
       return NextResponse.json({
-        success: true,
-        message: 'WhatsApp notification logged (API not configured)',
+        success: false,
+        message: 'WhatsApp notification NOT sent — API not configured',
         logged: true,
       })
     }
@@ -159,6 +155,10 @@ Happy Learning! 📚`
         enrollment.users.phone,
         message
       )
+
+      if (whatsappResponse?.skipped || !whatsappResponse?.messages?.[0]?.id) {
+        throw new Error('WhatsApp send returned no message id')
+      }
 
       // Create communication log
       await prisma.communication_logs.create({

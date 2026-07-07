@@ -4,7 +4,6 @@ import { prisma } from '@/lib/prisma'
 import { requireAdminAuth } from '@/lib/auth'
 import { upsertLeadCore } from '@/lib/leads/upsertLead'
 import { buildLeadListWhere, updateLeadFields } from '@/lib/leads/leadService'
-import { auth } from '@/lib/auth'
 import { v4 as uuidv4 } from 'uuid'
 import type { LeadSource, Priority, LeadStage } from '@/generated/prisma'
 
@@ -14,7 +13,7 @@ import type { LeadSource, Priority, LeadStage } from '@/generated/prisma'
  */
 export async function GET(request: NextRequest) {
   try {
-    await requireAdminAuth()
+    const adminSession = await requireAdminAuth()
 
     const { searchParams } = new URL(request.url)
 
@@ -33,9 +32,8 @@ export async function GET(request: NextRequest) {
 
     // Shared where-builder (leadService) — same filter semantics as the
     // counselor namespace, plus courseInterest in search and assignee filter.
-    const session = await auth()
     const where = buildLeadListWhere(
-      { userId: session?.user?.id || '', role: 'ADMIN' },
+      { userId: adminSession?.user?.id || '', role: 'ADMIN' },
       {
         stage,
         priority,
@@ -166,7 +164,10 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    if (validatedData.notes) {
+    // Note only lands on a lead this create actually made — on a dedup hit it
+    // would otherwise attach to a pre-existing lead owned by someone else,
+    // attributed to an assignee who never wrote it.
+    if (result.created && validatedData.notes) {
       await prisma.notes.create({
         data: {
           id: uuidv4(),
@@ -272,7 +273,7 @@ const updateLeadSchema = z.object({
 
 export async function PUT(request: NextRequest) {
   try {
-    await requireAdminAuth()
+    const adminSession = await requireAdminAuth()
 
     const body = await request.json()
     const validatedData = updateLeadSchema.parse(body)
@@ -289,7 +290,6 @@ export async function PUT(request: NextRequest) {
     // stage-transition side effects as the counselor board (lostAt /
     // convertedAt stamps, stage_changed timeline entry, lead/enrolled
     // onboarding event) — previously missing from this route.
-    const adminSession = await auth()
     const updatedLead = await updateLeadFields(
       { userId: adminSession?.user?.id || validatedData.assignedToId, role: 'ADMIN' },
       validatedData.id,

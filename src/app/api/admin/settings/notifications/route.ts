@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { requireAdminAuth } from '@/lib/auth'
-import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { getSettings, saveSettings } from '@/lib/settings/siteSettings'
 
@@ -25,9 +24,8 @@ const saveSchema = z.object({
 
 export async function GET() {
   try {
-    await requireAdminAuth()
-    const session = await auth()
-    if (!session?.user?.id) {
+    const adminSession = await requireAdminAuth()
+    if (!adminSession?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -38,7 +36,7 @@ export async function GET() {
 
     // Lazy migration: fall back to this admin's legacy profile copy.
     const user = await prisma.users.findUnique({
-      where: { id: session.user.id },
+      where: { id: adminSession.user.id },
       select: { profile: true },
     })
     const profile = (user?.profile as Record<string, unknown> | null) || {}
@@ -54,9 +52,8 @@ export async function GET() {
 
 export async function PUT(request: NextRequest) {
   try {
-    await requireAdminAuth()
-    const session = await auth()
-    if (!session?.user?.id) {
+    const adminSession = await requireAdminAuth()
+    if (!adminSession?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -65,7 +62,7 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid settings payload' }, { status: 400 })
     }
 
-    await saveSettings('notifications', parsed.data, session.user.id)
+    await saveSettings('notifications', parsed.data, adminSession.user.id)
 
     return NextResponse.json({ success: true })
   } catch (error) {

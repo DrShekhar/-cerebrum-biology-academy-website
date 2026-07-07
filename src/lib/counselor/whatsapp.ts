@@ -43,6 +43,16 @@ export class CounselorWhatsAppService {
       // Send via WhatsApp Business API
       const result = await WhatsAppBusinessService.sendTextMessage(phone, message)
 
+      // Unconfigured credentials return {skipped:true} instead of throwing —
+      // that is NOT a send. Surface it as a failure, never log SENT.
+      if (result?.skipped || !result?.messages?.[0]?.id) {
+        throw new Error(
+          result?.skipped
+            ? 'WhatsApp is not configured (WHATSAPP_ACCESS_TOKEN / WHATSAPP_PHONE_NUMBER_ID)'
+            : 'WhatsApp API returned no message id'
+        )
+      }
+
       // Track communication in database
       await prisma.crm_communications.create({
         data: {

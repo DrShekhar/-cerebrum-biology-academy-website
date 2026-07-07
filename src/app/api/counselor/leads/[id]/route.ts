@@ -1,7 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
+import { z } from 'zod'
 import { getLeadDetail, updateLeadFields, type LeadViewer } from '@/lib/leads/leadService'
 import type { LeadStage, Priority } from '@/generated/prisma'
+
+// Same enum whitelists as the admin PUT — invalid input is a 400 here, not a
+// Prisma throw surfaced as 500.
+const patchSchema = z.object({
+  stage: z
+    .enum([
+      'NEW_LEAD',
+      'DEMO_SCHEDULED',
+      'DEMO_COMPLETED',
+      'OFFER_SENT',
+      'NEGOTIATING',
+      'PAYMENT_PLAN_CREATED',
+      'ENROLLED',
+      'ACTIVE_STUDENT',
+      'LOST',
+    ])
+    .optional(),
+  priority: z.enum(['HOT', 'WARM', 'COLD']).optional(),
+  courseInterest: z.string().min(1).max(300).optional(),
+  nextFollowUpAt: z.string().nullable().optional(),
+  lastContactedAt: z.string().nullable().optional(),
+  lostReason: z.string().max(500).nullable().optional(),
+})
 
 export const dynamic = 'force-dynamic'
 
@@ -122,7 +146,14 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
     const viewer = await viewerFromSession()
     if (viewer instanceof NextResponse) return viewer
 
-    const body = await request.json()
+    const parsed = patchSchema.safeParse(await request.json())
+    if (!parsed.success) {
+      return NextResponse.json(
+        { error: 'Validation failed', details: parsed.error.issues },
+        { status: 400 }
+      )
+    }
+    const body = parsed.data
 
     const updated = await updateLeadFields(viewer, params.id, {
       ...(body.stage !== undefined ? { stage: body.stage as LeadStage } : {}),

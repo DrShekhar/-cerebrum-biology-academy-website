@@ -13,6 +13,7 @@ import { LeadCard } from '@/components/counselor/LeadCard'
 import { StatsBar } from '@/components/counselor/StatsBar'
 import { CreateLeadModal } from '@/components/counselor/CreateLeadModal'
 import { LeadColorLegend, useLeadColorTags } from '@/components/staff/LeadColorLegend'
+import { stageSolidClass } from '@/lib/leads/stageColors'
 
 export type LeadStage =
   | 'NEW_LEAD'
@@ -44,20 +45,24 @@ export interface Lead {
   createdAt: Date
   metadata?: { colorTag?: string | null } | null
   _count?: {
-    communications: number
+    crm_communications: number
     tasks: number
     notes: number
   }
 }
 
 const stages = [
-  { id: 'NEW_LEAD', title: 'New Leads', color: 'bg-blue-500' },
-  { id: 'DEMO_SCHEDULED', title: 'Demo Scheduled', color: 'bg-purple-500' },
-  { id: 'DEMO_COMPLETED', title: 'Demo Done', color: 'bg-indigo-500' },
-  { id: 'OFFER_SENT', title: 'Offer Sent', color: 'bg-orange-500' },
-  { id: 'NEGOTIATING', title: 'Negotiating', color: 'bg-yellow-500' },
-  { id: 'PAYMENT_PLAN_CREATED', title: 'Payment Plan', color: 'bg-green-600' },
-  { id: 'ENROLLED', title: 'Enrolled', color: 'bg-green-600' },
+  { id: 'NEW_LEAD', title: 'New Leads', color: stageSolidClass('NEW_LEAD') },
+  { id: 'DEMO_SCHEDULED', title: 'Demo Scheduled', color: stageSolidClass('DEMO_SCHEDULED') },
+  { id: 'DEMO_COMPLETED', title: 'Demo Done', color: stageSolidClass('DEMO_COMPLETED') },
+  { id: 'OFFER_SENT', title: 'Offer Sent', color: stageSolidClass('OFFER_SENT') },
+  { id: 'NEGOTIATING', title: 'Negotiating', color: stageSolidClass('NEGOTIATING') },
+  {
+    id: 'PAYMENT_PLAN_CREATED',
+    title: 'Payment Plan',
+    color: stageSolidClass('PAYMENT_PLAN_CREATED'),
+  },
+  { id: 'ENROLLED', title: 'Enrolled', color: stageSolidClass('ENROLLED') },
 ]
 
 export default function LeadsPage() {
@@ -213,7 +218,7 @@ export default function LeadsPage() {
       new Date(lead.createdAt).toLocaleDateString(),
       lead.lastContactedAt ? new Date(lead.lastContactedAt).toLocaleDateString() : '',
       lead.nextFollowUpAt ? new Date(lead.nextFollowUpAt).toLocaleDateString() : '',
-      lead._count?.communications?.toString() || '0',
+      lead._count?.crm_communications?.toString() || '0',
       lead._count?.tasks?.toString() || '0',
       lead._count?.notes?.toString() || '0',
     ])

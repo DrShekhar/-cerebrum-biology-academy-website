@@ -78,6 +78,19 @@ export async function POST(request: NextRequest) {
         )
     }
 
+    // Unconfigured credentials return {skipped:true} instead of throwing —
+    // report honestly and never write a false 'sent' audit entry.
+    if (result?.skipped) {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            'WhatsApp is not configured — set WHATSAPP_ACCESS_TOKEN and WHATSAPP_PHONE_NUMBER_ID',
+        },
+        { status: 503 }
+      )
+    }
+
     // Log WhatsApp message send to audit trail
     logAdminAction(
       'admin_data_export', // Using export as closest match for outbound communication

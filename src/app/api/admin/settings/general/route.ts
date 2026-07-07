@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { requireAdminAuth } from '@/lib/auth'
-import { auth } from '@/lib/auth'
 import { getSettings, saveSettings, generalSettingsSchema } from '@/lib/settings/siteSettings'
 
 export const dynamic = 'force-dynamic'
@@ -22,8 +21,7 @@ export async function GET() {
 
 export async function PUT(request: NextRequest) {
   try {
-    await requireAdminAuth()
-    const session = await auth()
+    const adminSession = await requireAdminAuth()
 
     const body = await request.json()
     const parsed = generalSettingsSchema.safeParse(body)
@@ -34,7 +32,7 @@ export async function PUT(request: NextRequest) {
       )
     }
 
-    const saved = await saveSettings('general', parsed.data, session?.user?.id)
+    const saved = await saveSettings('general', parsed.data, adminSession?.user?.id)
     return NextResponse.json({ success: true, data: saved })
   } catch (error) {
     if (error instanceof Error && error.message === 'Admin authentication required') {

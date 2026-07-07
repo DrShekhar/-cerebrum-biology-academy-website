@@ -398,11 +398,14 @@ export async function POST(request: NextRequest) {
 
         let leadRecord
         if (existingLead) {
-          // Update existing lead with new demo booking
+          // Update existing lead with new demo booking. Stage may only move
+          // FORWARD (or reopen LOST) — a repeat booking must not drag an
+          // advanced lead back to DEMO_SCHEDULED.
+          const advanceStage = existingLead.stage === 'NEW_LEAD' || existingLead.stage === 'LOST'
           leadRecord = await tx.leads.update({
             where: { id: existingLead.id },
             data: {
-              stage: 'DEMO_SCHEDULED',
+              ...(advanceStage ? { stage: 'DEMO_SCHEDULED' } : {}),
               demoBookingId: booking.id,
               phoneNormalized: normalizedPhoneValue.replace(/\D/g, '').slice(-10),
               // Update if name is different

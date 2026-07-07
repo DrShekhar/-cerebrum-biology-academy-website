@@ -8,14 +8,15 @@ export const dynamic = 'force-dynamic'
 
 // GET /api/counselor/leads/[id]/notes - Get all notes/comments for a lead
 // (flat list, oldest first; parentId lets the client group one level of replies)
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   try {
+    const params = await context.params
     const session = await auth()
     if (!session?.user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
     if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+      return NextResponse.json({ success: false, error: 'Forbidden' }, { status: 403 })
     }
 
     // Tenant isolation: counselor can only read notes for leads assigned to them.
@@ -25,7 +26,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
       select: { id: true },
     })
     if (!owned) {
-      return NextResponse.json({ error: 'Lead not found' }, { status: 404 })
+      return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 })
     }
 
     const notes = await prisma.notes.findMany({
@@ -47,30 +48,31 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
       createdBy: { id: note.users.id, name: note.users.name },
     }))
 
-    return NextResponse.json({ data: formatted })
+    return NextResponse.json({ success: true, data: formatted })
   } catch (error) {
     console.error('Error fetching notes:', error)
-    return NextResponse.json({ error: 'Failed to fetch notes' }, { status: 500 })
+    return NextResponse.json({ success: false, error: 'Failed to fetch notes' }, { status: 500 })
   }
 }
 
 // POST /api/counselor/leads/[id]/notes - Create a note, a reply (parentId),
 // with optional @[Name](userId) mentions → staff notification fanout.
-export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   try {
+    const params = await context.params
     const session = await auth()
     if (!session?.user?.id) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
     if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+      return NextResponse.json({ success: false, error: 'Forbidden' }, { status: 403 })
     }
 
     const body = await request.json()
     const { content, type, mood, nextSteps, parentId } = body
 
     if (!content || !content.trim()) {
-      return NextResponse.json({ error: 'Content is required' }, { status: 400 })
+      return NextResponse.json({ success: false, error: 'Content is required' }, { status: 400 })
     }
 
     // Tenant isolation: counselor can only add notes to leads assigned to them.
@@ -81,7 +83,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     })
 
     if (!lead) {
-      return NextResponse.json({ error: 'Lead not found' }, { status: 404 })
+      return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 })
     }
 
     // Replies attach to a ROOT note of the same lead (one level deep).
@@ -92,7 +94,10 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
         select: { id: true, createdById: true },
       })
       if (!parentNote) {
-        return NextResponse.json({ error: 'Parent note not found' }, { status: 400 })
+        return NextResponse.json(
+          { success: false, error: 'Parent note not found' },
+          { status: 400 }
+        )
       }
     }
 
@@ -161,6 +166,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     }
 
     return NextResponse.json({
+      success: true,
       data: {
         id: note.id,
         content: note.content,
@@ -172,6 +178,6 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     })
   } catch (error) {
     console.error('Error creating note:', error)
-    return NextResponse.json({ error: 'Failed to create note' }, { status: 500 })
+    return NextResponse.json({ success: false, error: 'Failed to create note' }, { status: 500 })
   }
 }

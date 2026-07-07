@@ -195,8 +195,15 @@ export async function sendAdminLeadNotification(data: LeadNotificationData): Pro
       adminNumber: formattedAdminNumber.slice(0, 5) + '***',
     })
 
-    // Use WhatsApp Business API to send the message
-    await WhatsAppBusinessService.sendTextMessage(formattedAdminNumber, message)
+    // Use WhatsApp Business API to send the message. Unconfigured creds
+    // return {skipped:true} — that is not a send; report it honestly.
+    const sendResult = await WhatsAppBusinessService.sendTextMessage(formattedAdminNumber, message)
+    if (sendResult?.skipped) {
+      logger.warn('Admin lead notification skipped — WhatsApp not configured', {
+        leadId: data.leadId,
+      })
+      return false
+    }
 
     logger.businessEvent('admin_lead_notification_sent', {
       leadId: data.leadId,
@@ -316,7 +323,14 @@ export async function notifyAdminFormSubmission(
 
     message += `\n⏰ ${timestamp.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}`
 
-    await WhatsAppBusinessService.sendTextMessage(formattedAdminNumber, message)
+    const formSendResult = await WhatsAppBusinessService.sendTextMessage(
+      formattedAdminNumber,
+      message
+    )
+    if (formSendResult?.skipped) {
+      logger.warn('Admin form notification skipped — WhatsApp not configured', { formName })
+      return false
+    }
 
     logger.businessEvent('admin_form_notification_sent', { formName })
     return true

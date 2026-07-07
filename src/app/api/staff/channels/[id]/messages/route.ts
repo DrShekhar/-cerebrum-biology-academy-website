@@ -51,7 +51,10 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     const messages = await prisma.staff_messages.findMany({
       where: {
         channelId: id,
-        ...(isIncremental ? { createdAt: { gt: afterDate! } } : {}),
+        // gte, not gt: two messages can share a millisecond; the client
+        // dedupes by id, so re-including the boundary message is safe while
+        // gt would permanently skip its same-ms sibling.
+        ...(isIncremental ? { createdAt: { gte: afterDate! } } : {}),
         ...(beforeDate && !isNaN(beforeDate.getTime()) ? { createdAt: { lt: beforeDate } } : {}),
       },
       orderBy: { createdAt: isIncremental ? 'asc' : 'desc' },

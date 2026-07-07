@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { Palette, ChevronDown, ChevronUp, Pencil, X } from 'lucide-react'
+import { STAGE_META } from '@/lib/leads/stageColors'
 
 export interface ColorTag {
   id: string
@@ -9,13 +10,16 @@ export interface ColorTag {
   label: string
 }
 
+// Derived from the canonical stage table so the legend can never drift
+// from what the board actually renders. Green stages collapse to one row.
 const STAGE_LEGEND = [
-  { label: 'New Leads', color: 'bg-blue-500' },
-  { label: 'Demo Scheduled', color: 'bg-purple-500' },
-  { label: 'Demo Done', color: 'bg-indigo-500' },
-  { label: 'Offer Sent', color: 'bg-orange-500' },
-  { label: 'Negotiating', color: 'bg-yellow-500' },
-  { label: 'Payment Plan / Enrolled', color: 'bg-green-600' },
+  { label: 'New Leads', color: STAGE_META.NEW_LEAD.solid },
+  { label: 'Demo Scheduled', color: STAGE_META.DEMO_SCHEDULED.solid },
+  { label: 'Demo Done', color: STAGE_META.DEMO_COMPLETED.solid },
+  { label: 'Offer Sent', color: STAGE_META.OFFER_SENT.solid },
+  { label: 'Negotiating', color: STAGE_META.NEGOTIATING.solid },
+  { label: 'Payment Plan / Enrolled', color: STAGE_META.ENROLLED.solid },
+  { label: 'Lost', color: STAGE_META.LOST.solid },
 ]
 
 const PRIORITY_LEGEND = [

@@ -93,6 +93,23 @@ function rand(prefix: string): string {
   return `${prefix}_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`
 }
 
+// Pipeline order — touchpoints may only advance a lead (LOST reopens).
+const STAGE_RANK: Record<LeadStage, number> = {
+  NEW_LEAD: 0,
+  DEMO_SCHEDULED: 1,
+  DEMO_COMPLETED: 2,
+  OFFER_SENT: 3,
+  NEGOTIATING: 4,
+  PAYMENT_PLAN_CREATED: 5,
+  ENROLLED: 6,
+  ACTIVE_STUDENT: 7,
+  LOST: -1,
+}
+
+function stageRank(stage: LeadStage): number {
+  return STAGE_RANK[stage] ?? 0
+}
+
 /**
  * The canonical lead write: dedup by phone → create-or-touch (always stamping
  * phoneNormalized) → activity → optional follow-up task. THROWS on failure.
@@ -121,13 +138,24 @@ export async function upsertLeadCore(
   // legacy phone endsWith for rows not yet backfilled.
   const existing = await db.leads.findFirst({
     where: { OR: [{ phoneNormalized: last10 }, { phone: { endsWith: last10 } }] },
-    select: { id: true, studentName: true, email: true, assignedToId: true },
+    select: { id: true, studentName: true, email: true, assignedToId: true, stage: true },
   })
 
   if (existing) {
     // Touchpoint: bump contact time + fill blanks only (never overwrite
     // counselor edits), and log an activity. Do NOT create a duplicate lead
     // or a new task.
+    //
+    // Stage on a touchpoint may only move the lead FORWARD (or reopen a LOST
+    // lead) — a repeat demo submission must never drag an ENROLLED/NEGOTIATING
+    // lead back to DEMO_SCHEDULED.
+    const newStage =
+      input.stage &&
+      input.stage !== existing.stage &&
+      (existing.stage === 'LOST' || stageRank(input.stage) > stageRank(existing.stage))
+        ? input.stage
+        : null
+
     await db.leads.update({
       where: { id: existing.id },
       data: {
@@ -137,7 +165,7 @@ export async function upsertLeadCore(
         ...(name && !existing.studentName ? { studentName: name } : {}),
         ...(email && !existing.email ? { email } : {}),
         ...(input.demoBookingId ? { demoBookingId: input.demoBookingId } : {}),
-        ...(input.stage ? { stage: input.stage } : {}),
+        ...(newStage ? { stage: newStage } : {}),
         ...(input.priority ? { priority: input.priority } : {}),
       },
     })
@@ -159,6 +187,17 @@ export async function upsertLeadCore(
         },
       },
     })
+    if (newStage) {
+      await db.activities.create({
+        data: {
+          id: rand('act'),
+          leadId: existing.id,
+          userId: existing.assignedToId,
+          action: 'stage_changed',
+          description: `Stage: ${String(existing.stage).replace(/_/g, ' ')} → ${String(newStage).replace(/_/g, ' ')} (via ${sourceDetail || 'form touchpoint'})`,
+        },
+      })
+    }
     return { leadId: existing.id, created: false, assignedToId: existing.assignedToId }
   }
 

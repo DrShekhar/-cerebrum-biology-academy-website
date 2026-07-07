@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { requireAdminAuth } from '@/lib/auth'
-import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 
 export const dynamic = 'force-dynamic'
@@ -15,9 +14,8 @@ const testSchema = z.object({ channel: z.enum(['email', 'whatsapp']) })
  */
 export async function POST(request: NextRequest) {
   try {
-    await requireAdminAuth()
-    const session = await auth()
-    if (!session?.user?.id) {
+    const adminSession = await requireAdminAuth()
+    if (!adminSession?.user?.id) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -27,7 +25,7 @@ export async function POST(request: NextRequest) {
     }
 
     const admin = await prisma.users.findUnique({
-      where: { id: session.user.id },
+      where: { id: adminSession.user.id },
       select: { email: true, phone: true, name: true },
     })
 

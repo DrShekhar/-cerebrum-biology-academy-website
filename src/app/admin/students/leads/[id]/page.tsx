@@ -19,6 +19,7 @@ import { Button } from '@/components/ui/Button'
 import { LeadTimeline } from '@/components/staff/LeadTimeline'
 import { LeadCommentThread } from '@/components/staff/LeadCommentThread'
 import { LeadColorTagPicker, useLeadColorTags } from '@/components/staff/LeadColorLegend'
+import { stageBadgeClass, stageLabel } from '@/lib/leads/stageColors'
 
 interface TimelineActivity {
   id: string
@@ -71,19 +72,7 @@ interface LeadDetail {
   }[]
 }
 
-const stageColor = (s: string) => {
-  const map: Record<string, string> = {
-    NEW_LEAD: 'bg-blue-100 text-blue-800',
-    DEMO_SCHEDULED: 'bg-orange-100 text-orange-800',
-    DEMO_COMPLETED: 'bg-yellow-100 text-yellow-800',
-    OFFER_SENT: 'bg-purple-100 text-purple-800',
-    NEGOTIATING: 'bg-pink-100 text-pink-800',
-    ENROLLED: 'bg-green-100 text-green-800',
-    ACTIVE_STUDENT: 'bg-green-100 text-green-800',
-    LOST: 'bg-red-100 text-red-800',
-  }
-  return map[s] || 'bg-gray-100 text-gray-800'
-}
+const stageColor = (s: string) => stageBadgeClass(s)
 
 const fmt = (d: string | null) =>
   d ? new Date(d).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) : '—'
@@ -174,7 +163,7 @@ export default function AdminLeadDetailPage() {
                     <span
                       className={`rounded-full px-3 py-1 text-xs font-semibold ${stageColor(lead.stage)}`}
                     >
-                      {lead.stage.replace(/_/g, ' ')}
+                      {stageLabel(lead.stage)}
                     </span>
                   </div>
                   {typeof lead.score === 'number' && (

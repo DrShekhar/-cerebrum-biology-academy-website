@@ -170,7 +170,7 @@ export function LeadCard({ lead, isDragging, onRefresh }: LeadCardProps) {
         {/* Activity counts */}
         {lead._count && (
           <div className="flex items-center gap-3 mt-2 pt-2 border-t border-gray-100 text-[10px] text-gray-400">
-            <span>{lead._count.communications || 0} msgs</span>
+            <span>{lead._count.crm_communications || 0} msgs</span>
             <span>{lead._count.tasks || 0} tasks</span>
             <span>{lead._count.notes || 0} notes</span>
           </div>

@@ -30,6 +30,7 @@ import { AICopilotPanel } from '@/components/counselor/AICopilotPanel'
 import { StudentAcademicsSection } from '@/components/counselor/StudentAcademicsSection'
 import { LeadTimeline } from '@/components/staff/LeadTimeline'
 import { LeadCommentThread } from '@/components/staff/LeadCommentThread'
+import { stageBadgeClass, stageLabel } from '@/lib/leads/stageColors'
 import { LeadColorTagPicker, useLeadColorTags } from '@/components/staff/LeadColorLegend'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -125,23 +126,11 @@ interface SessionNote {
 // ─── Sub-Components ──────────────────────────────────────────────────────────
 
 function StageBadge({ stage }: { stage: string }) {
-  const config: Record<string, { bg: string; text: string; label: string }> = {
-    NEW_LEAD: { bg: 'bg-blue-100', text: 'text-blue-700', label: 'New Lead' },
-    DEMO_SCHEDULED: { bg: 'bg-purple-100', text: 'text-purple-700', label: 'Demo Scheduled' },
-    DEMO_COMPLETED: { bg: 'bg-indigo-100', text: 'text-indigo-700', label: 'Demo Completed' },
-    OFFER_SENT: { bg: 'bg-orange-100', text: 'text-orange-700', label: 'Offer Sent' },
-    NEGOTIATING: { bg: 'bg-yellow-100', text: 'text-yellow-700', label: 'Negotiating' },
-    PAYMENT_PLAN_CREATED: { bg: 'bg-emerald-100', text: 'text-emerald-700', label: 'Payment Plan' },
-    ENROLLED: { bg: 'bg-green-100', text: 'text-green-700', label: 'Enrolled ✓' },
-    ACTIVE_STUDENT: { bg: 'bg-green-100', text: 'text-green-700', label: 'Active Student' },
-    LOST: { bg: 'bg-red-100', text: 'text-red-700', label: 'Lost' },
-  }
-  const c = config[stage] || { bg: 'bg-gray-100', text: 'text-gray-700', label: stage }
   return (
     <span
-      className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${c.bg} ${c.text}`}
+      className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${stageBadgeClass(stage)}`}
     >
-      {c.label}
+      {stageLabel(stage)}
     </span>
   )
 }
