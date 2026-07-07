@@ -44,7 +44,7 @@ type WhatsappContent = {
 
 async function resolveAudience(
   targetAudience: unknown
-): Promise<{ id: string; phone: string; studentName: string }[]> {
+): Promise<{ id: string; phone: string; studentName: string; email: string | null }[]> {
   const criteria =
     (targetAudience as {
       behavior?: { enrollment_status?: string[]; last_activity_days?: number }
@@ -77,14 +77,14 @@ async function resolveAudience(
 
   const leads = await prisma.leads.findMany({
     where: where as never,
-    select: { id: true, phone: true, studentName: true },
+    select: { id: true, phone: true, studentName: true, email: true },
     orderBy: { createdAt: 'desc' },
     take: 5000,
   })
 
   // De-dupe by last-10 phone digits.
   const seen = new Set<string>()
-  const out: { id: string; phone: string; studentName: string }[] = []
+  const out: { id: string; phone: string; studentName: string; email: string | null }[] = []
   for (const l of leads) {
     const key = l.phone.replace(/\D/g, '').slice(-10)
     if (key.length < 10 || seen.has(key)) continue
@@ -109,12 +109,13 @@ export async function POST(request: NextRequest) {
     if (!campaign) {
       return NextResponse.json({ success: false, error: 'Campaign not found' }, { status: 404 })
     }
-    if (campaign.type !== 'whatsapp' && campaign.type !== 'mixed') {
+    if (!['whatsapp', 'mixed', 'email'].includes(campaign.type)) {
       return NextResponse.json(
-        { success: false, error: 'This endpoint only sends WhatsApp campaigns' },
+        { success: false, error: 'Unsupported campaign type' },
         { status: 400 }
       )
     }
+    const isEmailCampaign = campaign.type === 'email'
     if (campaign.status === 'completed') {
       return NextResponse.json(
         { success: false, error: 'Campaign already sent (completed)' },
@@ -123,7 +124,16 @@ export async function POST(request: NextRequest) {
     }
 
     const wa = (campaign.contentWhatsapp as WhatsappContent | null) || null
-    if (!wa || (!wa.message && !wa.templateName)) {
+    const emailContent =
+      (campaign.contentEmail as { subject?: string; body?: string; html?: string } | null) || null
+    if (isEmailCampaign) {
+      if (!emailContent?.subject || !(emailContent.body || emailContent.html)) {
+        return NextResponse.json(
+          { success: false, error: 'Campaign has no email subject/body (contentEmail)' },
+          { status: 400 }
+        )
+      }
+    } else if (!wa || (!wa.message && !wa.templateName)) {
       return NextResponse.json(
         { success: false, error: 'Campaign has no WhatsApp message or template' },
         { status: 400 }
@@ -143,6 +153,51 @@ export async function POST(request: NextRequest) {
           name: a.studentName,
           phone: `••••${a.phone.replace(/\D/g, '').slice(-4)}`,
         })),
+      })
+    }
+
+    if (isEmailCampaign) {
+      if (!process.env.RESEND_API_KEY) {
+        return NextResponse.json(
+          { success: false, error: 'Email is not configured — set RESEND_API_KEY' },
+          { status: 503 }
+        )
+      }
+      const { emailService } = await import('@/lib/email/emailService')
+      const emailable = audience.filter((a) => a.email)
+      const recipients = emailable.slice(0, MAX_RECIPIENTS)
+      let accepted = 0
+      let failed = 0
+      for (let i = 0; i < recipients.length; i++) {
+        const r = recipients[i]
+        try {
+          const html =
+            emailContent!.html ||
+            `<p>${(emailContent!.body || '').replace(/\{\{\s*name\s*\}\}/gi, r.studentName.split(' ')[0]).replace(/\n/g, '<br/>')}</p>`
+          const res = await emailService.send({
+            to: r.email!,
+            subject: emailContent!.subject!,
+            html,
+          })
+          if (res.success) accepted++
+          else failed++
+        } catch {
+          failed++
+        }
+        if (i < recipients.length - 1) await delay(150)
+      }
+      await prisma.marketing_campaigns.update({
+        where: { id: campaignId },
+        data: { status: 'completed', metricsSent: { increment: accepted }, updatedAt: new Date() },
+      })
+      return NextResponse.json({
+        success: true,
+        dryRun: false,
+        channel: 'email',
+        attempted: recipients.length,
+        accepted,
+        failed,
+        skipped: audience.length - recipients.length,
       })
     }
 
