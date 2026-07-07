@@ -839,6 +839,12 @@ model courses {
   features                Json?
   isActive                Boolean                   @default(true)
   sortOrder               Int                       @default(0)
+  status                  String                    @default("PUBLISHED") // DRAFT | PUBLISHED | ARCHIVED
+  thumbnailUrl            String?
+  instructorId            String?
+  startDate               DateTime?
+  scheduleInfo            String?
+  maxCapacity             Int?
   createdAt               DateTime                  @default(now())
   updatedAt               DateTime
   assignments             assignments[]
@@ -852,10 +858,12 @@ model courses {
   product_recommendations product_recommendations[]
   study_materials         study_materials[]
   course_pricing          course_pricing[]
+  instructor              users?                    @relation("CourseInstructor", fields: [instructorId], references: [id])
 
   @@index([class, isActive])
   @@index([isActive, sortOrder])
   @@index([type, isActive])
+  @@index([status])
 }
 
 model course_pricing {
@@ -3123,6 +3131,7 @@ model users {
   phone                                                                 String?                          @unique
   name                                                                  String
   role                                                                  UserRole                         @default(STUDENT)
+  courses_instructed                                                    courses[]                        @relation("CourseInstructor")
   passwordHash                                                          String?
   emailVerified                                                         DateTime?
   phoneVerified                                                         DateTime?

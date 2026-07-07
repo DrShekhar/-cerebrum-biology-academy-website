@@ -26,6 +26,8 @@ export async function GET(request: NextRequest) {
       where.isActive = true
     } else if (status === 'inactive') {
       where.isActive = false
+    } else if (status && ['draft', 'published', 'archived'].includes(status)) {
+      where.status = status.toUpperCase()
     }
 
     if (search) {
@@ -40,6 +42,7 @@ export async function GET(request: NextRequest) {
         where,
         include: {
           _count: { select: { enrollments: true, chapters: true } },
+          instructor: { select: { id: true, name: true } },
         },
         orderBy: { sortOrder: 'asc' },
         skip: offset,
@@ -84,10 +87,11 @@ const createCourseSchema = z.object({
   class: z.enum(['CLASS_9', 'CLASS_10', 'CLASS_11', 'CLASS_12', 'DROPPER', 'FOUNDATION']),
   duration: z.number().min(1, 'Duration must be at least 1 month').max(36),
   totalFees: z.number().min(1000, 'Fees must be at least 1000'),
-  instructor: z.string().min(2, 'Instructor name is required'),
-  maxCapacity: z.number().min(1, 'Capacity must be at least 1').max(500),
-  startDate: z.string().min(1, 'Start date is required'),
-  schedule: z.string().min(5, 'Schedule details are required'),
+  instructorId: z.string().nullable().optional(),
+  maxCapacity: z.number().min(1).max(2000).nullable().optional(),
+  startDate: z.string().nullable().optional(),
+  scheduleInfo: z.string().nullable().optional(),
+  status: z.enum(['DRAFT', 'PUBLISHED', 'ARCHIVED']).default('DRAFT'),
   syllabus: z.array(z.string()).nullable().optional(),
   features: z.array(z.string()).nullable().optional(),
 })
@@ -111,7 +115,13 @@ export async function POST(request: NextRequest) {
         totalFees: Math.round(validatedData.totalFees * 100),
         syllabus: validatedData.syllabus || null,
         features: validatedData.features || null,
-        isActive: true,
+        instructorId: validatedData.instructorId || null,
+        maxCapacity: validatedData.maxCapacity ?? null,
+        startDate: validatedData.startDate ? new Date(validatedData.startDate) : null,
+        scheduleInfo: validatedData.scheduleInfo || null,
+        status: validatedData.status,
+        // Draft courses stay out of public catalogs until published.
+        isActive: validatedData.status === 'PUBLISHED',
         sortOrder: 0,
         updatedAt: new Date(),
       },
@@ -151,10 +161,11 @@ const updateCourseSchema = z.object({
   class: z.enum(['CLASS_9', 'CLASS_10', 'CLASS_11', 'CLASS_12', 'DROPPER', 'FOUNDATION']),
   duration: z.number().min(1, 'Duration must be at least 1 month').max(36),
   totalFees: z.number().min(1000, 'Fees must be at least 1000'),
-  instructor: z.string().min(2, 'Instructor name is required'),
-  maxCapacity: z.number().min(1, 'Capacity must be at least 1').max(500),
-  startDate: z.string().min(1, 'Start date is required'),
-  schedule: z.string().min(5, 'Schedule details are required'),
+  instructorId: z.string().nullable().optional(),
+  maxCapacity: z.number().min(1).max(2000).nullable().optional(),
+  startDate: z.string().nullable().optional(),
+  scheduleInfo: z.string().nullable().optional(),
+  status: z.enum(['DRAFT', 'PUBLISHED', 'ARCHIVED']).optional(),
   isActive: z.boolean(),
   syllabus: z.array(z.string()).nullable().optional(),
   features: z.array(z.string()).nullable().optional(),
@@ -187,7 +198,13 @@ export async function PUT(request: NextRequest) {
         totalFees: Math.round(validatedData.totalFees * 100),
         syllabus: validatedData.syllabus || null,
         features: validatedData.features || null,
-        isActive: validatedData.isActive,
+        instructorId: validatedData.instructorId || null,
+        maxCapacity: validatedData.maxCapacity ?? null,
+        startDate: validatedData.startDate ? new Date(validatedData.startDate) : null,
+        scheduleInfo: validatedData.scheduleInfo || null,
+        ...(validatedData.status
+          ? { status: validatedData.status, isActive: validatedData.status === 'PUBLISHED' }
+          : { isActive: validatedData.isActive }),
         updatedAt: new Date(),
       },
     })

@@ -6,7 +6,7 @@ import { z } from 'zod'
 import { Button } from '@/components/ui/Button'
 import { Loader2, Plus, X } from 'lucide-react'
 import toast from 'react-hot-toast'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const createCourseSchema = z.object({
   name: z.string().min(5, 'Course name must be at least 5 characters').max(200),
@@ -15,10 +15,10 @@ const createCourseSchema = z.object({
   class: z.enum(['CLASS_9', 'CLASS_10', 'CLASS_11', 'CLASS_12', 'DROPPER', 'FOUNDATION']),
   duration: z.number().min(1, 'Duration must be at least 1 month').max(36),
   totalFees: z.number().min(1000, 'Fees must be at least 1000'),
-  instructor: z.string().min(2, 'Instructor name is required'),
-  maxCapacity: z.number().min(1, 'Capacity must be at least 1').max(500),
-  startDate: z.string().min(1, 'Start date is required'),
-  schedule: z.string().min(5, 'Schedule details are required'),
+  instructorId: z.string().optional(),
+  maxCapacity: z.number().min(1, 'Capacity must be at least 1').max(2000).optional(),
+  startDate: z.string().optional(),
+  scheduleInfo: z.string().optional(),
 })
 
 type CreateCourseFormData = z.infer<typeof createCourseSchema>
@@ -47,6 +47,7 @@ const STUDENT_CLASSES = [
 ]
 
 export function CreateCourseForm({ onSuccess, onCancel }: CreateCourseFormProps) {
+  const [teachers, setTeachers] = useState<{ id: string; name: string }[]>([])
   const [features, setFeatures] = useState<string[]>([])
   const [currentFeature, setCurrentFeature] = useState('')
   const [topics, setTopics] = useState<string[]>([])
@@ -60,6 +61,22 @@ export function CreateCourseForm({ onSuccess, onCancel }: CreateCourseFormProps)
   } = useForm<CreateCourseFormData>({
     resolver: zodResolver(createCourseSchema),
   })
+
+  useEffect(() => {
+    fetch('/api/admin/faculty')
+      .then((r) => r.json())
+      .then((j) => {
+        if (j.success) {
+          setTeachers(
+            (j.data.faculty || []).map((f: { id: string; name: string }) => ({
+              id: f.id,
+              name: f.name,
+            }))
+          )
+        }
+      })
+      .catch(() => {})
+  }, [])
 
   const addFeature = () => {
     if (currentFeature.trim() && !features.includes(currentFeature.trim())) {
@@ -87,6 +104,12 @@ export function CreateCourseForm({ onSuccess, onCancel }: CreateCourseFormProps)
     try {
       const payload = {
         ...data,
+        instructorId: data.instructorId || null,
+        maxCapacity: data.maxCapacity ?? null,
+        startDate: data.startDate || null,
+        scheduleInfo: data.scheduleInfo || null,
+        // New courses start as drafts — publish from the course workspace.
+        status: 'DRAFT',
         syllabus: topics.length > 0 ? topics : null,
         features: features.length > 0 ? features : null,
       }
@@ -103,7 +126,7 @@ export function CreateCourseForm({ onSuccess, onCancel }: CreateCourseFormProps)
         throw new Error(result.error || 'Failed to create course')
       }
 
-      toast.success('Course created successfully!')
+      toast.success('Draft course created — open it to build the curriculum and publish')
       reset()
       setFeatures([])
       setTopics([])
@@ -219,31 +242,31 @@ export function CreateCourseForm({ onSuccess, onCancel }: CreateCourseFormProps)
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Instructor <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              {...register('instructor')}
+            <label className="block text-sm font-medium text-gray-700 mb-1">Instructor</label>
+            <select
+              {...register('instructorId')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Dr. Priya Sharma"
-            />
-            {errors.instructor && (
-              <p className="text-sm text-red-600 mt-1">{errors.instructor.message}</p>
-            )}
+            >
+              <option value="">— assign later —</option>
+              {teachers.map((t) => (
+                <option key={t.id} value={t.id}>
+                  {t.name}
+                </option>
+              ))}
+            </select>
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Max Capacity <span className="text-red-500">*</span>
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Max Capacity</label>
             <input
               type="number"
-              {...register('maxCapacity', { valueAsNumber: true })}
+              {...register('maxCapacity', {
+                setValueAs: (v) => (v === '' || v === null ? undefined : Number(v)),
+              })}
               min="1"
-              max="500"
+              max="2000"
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="300"
+              placeholder="unlimited"
             />
             {errors.maxCapacity && (
               <p className="text-sm text-red-600 mt-1">{errors.maxCapacity.message}</p>
@@ -251,33 +274,23 @@ export function CreateCourseForm({ onSuccess, onCancel }: CreateCourseFormProps)
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Start Date <span className="text-red-500">*</span>
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Start Date</label>
             <input
               type="date"
               {...register('startDate')}
               min={today}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
-            {errors.startDate && (
-              <p className="text-sm text-red-600 mt-1">{errors.startDate.message}</p>
-            )}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Schedule <span className="text-red-500">*</span>
-            </label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Schedule</label>
             <input
               type="text"
-              {...register('schedule')}
+              {...register('scheduleInfo')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Mon, Wed, Fri - 4:00 PM to 6:00 PM"
             />
-            {errors.schedule && (
-              <p className="text-sm text-red-600 mt-1">{errors.schedule.message}</p>
-            )}
           </div>
         </div>
       </div>

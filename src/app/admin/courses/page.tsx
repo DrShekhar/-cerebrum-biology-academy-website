@@ -1,95 +1,116 @@
 'use client'
 
+/**
+ * Course Management — honest list over real DB fields. Every card opens the
+ * course workspace (/admin/courses/[id]) where curriculum, pricing, settings,
+ * students and analytics live. No fabricated ratings/capacity/trends.
+ */
+
 import { useState, useEffect, useCallback } from 'react'
+import Link from 'next/link'
 import {
   BookOpen,
   Users,
   Clock,
-  Calendar,
   Star,
   TrendingUp,
-  Edit,
-  Eye,
   Plus,
-  Filter,
   Search,
-  Play,
-  Pause,
-  Settings,
   BarChart3,
-  Target,
+  Globe,
+  FileEdit,
 } from 'lucide-react'
 import { paiseToRupees, formatPaiseToINR } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { CreateCourseForm } from '@/components/admin/CreateCourseForm'
-import { EditCourseForm } from '@/components/admin/EditCourseForm'
 import { showToast } from '@/lib/toast'
 
 interface Course {
   id: string
   name: string
-  type: 'class-11' | 'class-12' | 'foundation' | 'dropper'
-  duration: string
-  totalLessons: number
-  enrolledStudents: number
-  maxCapacity: number
-  startDate: string
-  endDate: string
-  instructor: string
-  status: 'active' | 'upcoming' | 'completed' | 'draft'
-  price: number
-  rating: number
-  completionRate: number
+  type: string
+  class: string
+  duration: number
+  chapters: number
+  enrollments: number
+  instructor: string | null
+  status: string // DRAFT | PUBLISHED | ARCHIVED
+  price: number // paise
   description: string
   topics: string[]
-  schedule: string
+  scheduleInfo: string | null
+  startDate: string | null
+}
+
+const STATUS_STYLE: Record<string, string> = {
+  PUBLISHED: 'bg-green-100 text-green-800',
+  DRAFT: 'bg-yellow-100 text-yellow-800',
+  ARCHIVED: 'bg-gray-200 text-gray-600',
+}
+
+const TYPE_STYLE: Record<string, string> = {
+  CLASS_11: 'bg-blue-100 text-blue-800',
+  CLASS_12: 'bg-purple-100 text-purple-800',
+  DROPPER: 'bg-red-100 text-red-800',
+  FOUNDATION: 'bg-green-100 text-green-800',
+  NEET_COMPLETE: 'bg-teal-100 text-teal-800',
+  CRASH_COURSE: 'bg-orange-100 text-orange-800',
 }
 
 export default function CoursesPage() {
   const [courses, setCourses] = useState<Course[]>([])
-  const [filteredCourses, setFilteredCourses] = useState<Course[]>([])
+  const [loading, setLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState('')
-  const [typeFilter, setTypeFilter] = useState<string>('all')
-  const [statusFilter, setStatusFilter] = useState<string>('all')
-  const [isCreateCourseModalOpen, setIsCreateCourseModalOpen] = useState(false)
-  const [isEditCourseModalOpen, setIsEditCourseModalOpen] = useState(false)
-  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null)
+  const [typeFilter, setTypeFilter] = useState('all')
+  const [statusFilter, setStatusFilter] = useState('all')
+  const [isCreateOpen, setIsCreateOpen] = useState(false)
 
   const fetchCourses = useCallback(async () => {
     try {
       const res = await fetch('/api/admin/courses?limit=100')
       const data = await res.json()
       if (data.success && data.data?.courses) {
-        const mapped: Course[] = data.data.courses.map((c: any) => ({
-          id: c.id,
-          name: c.name,
-          type: c.type?.toLowerCase().includes('11')
-            ? 'class-11'
-            : c.type?.toLowerCase().includes('12')
-              ? 'class-12'
-              : c.type?.toLowerCase().includes('dropper')
-                ? 'dropper'
-                : 'foundation',
-          duration: `${c.duration} months`,
-          totalLessons: c._count?.chapters || 0,
-          enrolledStudents: c._count?.enrollments || 0,
-          maxCapacity: 300,
-          startDate: c.createdAt || '',
-          endDate: '',
-          instructor: '',
-          status: c.isActive ? 'active' : 'draft',
-          price: c.totalFees || 0,
-          rating: 0,
-          completionRate: 0,
-          description: c.description || '',
-          topics: Array.isArray(c.syllabus) ? c.syllabus : [],
-          schedule: '',
-        }))
-        setCourses(mapped)
+        setCourses(
+          data.data.courses.map(
+            (c: {
+              id: string
+              name: string
+              type: string
+              class: string
+              duration: number
+              totalFees: number
+              status?: string
+              isActive: boolean
+              description: string | null
+              syllabus: unknown
+              scheduleInfo?: string | null
+              startDate?: string | null
+              instructor?: { name: string } | null
+              _count?: { chapters: number; enrollments: number }
+            }) => ({
+              id: c.id,
+              name: c.name,
+              type: c.type,
+              class: c.class,
+              duration: c.duration,
+              chapters: c._count?.chapters || 0,
+              enrollments: c._count?.enrollments || 0,
+              instructor: c.instructor?.name || null,
+              status: c.status || (c.isActive ? 'PUBLISHED' : 'DRAFT'),
+              price: c.totalFees || 0,
+              description: c.description || '',
+              topics: Array.isArray(c.syllabus) ? (c.syllabus as string[]) : [],
+              scheduleInfo: c.scheduleInfo || null,
+              startDate: c.startDate || null,
+            })
+          )
+        )
       }
     } catch {
-      console.error('Failed to fetch courses')
+      showToast.error('Failed to load courses')
+    } finally {
+      setLoading(false)
     }
   }, [])
 
@@ -97,129 +118,90 @@ export default function CoursesPage() {
     fetchCourses()
   }, [fetchCourses])
 
-  useEffect(() => {
-    let filtered = courses
-
-    if (searchTerm) {
-      filtered = filtered.filter(
-        (course) =>
-          course.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          course.instructor.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          course.topics.some((t) => t.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
-    }
-
-    if (typeFilter !== 'all') {
-      filtered = filtered.filter((course) => course.type === typeFilter)
-    }
-
-    if (statusFilter !== 'all') {
-      filtered = filtered.filter((course) => course.status === statusFilter)
-    }
-
-    setFilteredCourses(filtered)
-  }, [courses, searchTerm, typeFilter, statusFilter])
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'active':
-        return 'bg-green-100 text-green-800'
-      case 'upcoming':
-        return 'bg-blue-100 text-blue-800'
-      case 'completed':
-        return 'bg-gray-100 text-gray-800'
-      case 'draft':
-        return 'bg-yellow-100 text-yellow-800'
-      default:
-        return 'bg-gray-100 text-gray-800'
+  const setStatus = async (course: Course, status: 'PUBLISHED' | 'DRAFT') => {
+    const res = await fetch(`/api/admin/courses/${course.id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status }),
+    })
+    const json = await res.json()
+    if (res.ok && json.success) {
+      showToast.success(status === 'PUBLISHED' ? 'Course published' : 'Course unpublished')
+      fetchCourses()
+    } else {
+      showToast.error(json.error || 'Status change failed')
     }
   }
 
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'class-11':
-        return 'bg-blue-100 text-blue-800'
-      case 'class-12':
-        return 'bg-purple-100 text-purple-800'
-      case 'dropper':
-        return 'bg-red-100 text-red-800'
-      case 'foundation':
-        return 'bg-green-100 text-green-800'
-      default:
-        return 'bg-gray-100 text-gray-800'
-    }
-  }
+  const filtered = courses.filter((c) => {
+    if (
+      searchTerm &&
+      !c.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+      !(c.instructor || '').toLowerCase().includes(searchTerm.toLowerCase()) &&
+      !c.topics.some((t) => t.toLowerCase().includes(searchTerm.toLowerCase()))
+    )
+      return false
+    if (typeFilter !== 'all' && c.type !== typeFilter) return false
+    if (statusFilter !== 'all' && c.status !== statusFilter) return false
+    return true
+  })
 
-  const statsData = [
-    {
-      label: 'Total Courses',
-      value: courses.length,
-      icon: BookOpen,
-      color: 'bg-blue-100 text-blue-600',
-      trend: '+2 this month',
-    },
-    {
-      label: 'Active Students',
-      value: courses.reduce((acc, course) => acc + course.enrolledStudents, 0),
-      icon: Users,
-      color: 'bg-green-100 text-green-600',
-      trend: '+15% enrollment',
-    },
-    {
-      label: 'Avg Completion Rate',
-      value: `${Math.round(courses.reduce((acc, course) => acc + course.completionRate, 0) / courses.length)}%`,
-      icon: Target,
-      color: 'bg-purple-100 text-purple-600',
-      trend: '+3% this month',
-    },
-    {
-      label: 'Total Revenue',
-      value: `₹${(paiseToRupees(courses.reduce((acc, course) => acc + course.price * course.enrolledStudents, 0)) / 100000).toFixed(1)}L`,
-      icon: TrendingUp,
-      color: 'bg-orange-100 text-orange-600',
-      trend: '+18% growth',
-    },
-  ]
+  const published = courses.filter((c) => c.status === 'PUBLISHED').length
+  const totalStudents = courses.reduce((acc, c) => acc + c.enrollments, 0)
+  const revenuePotential = courses.reduce((acc, c) => acc + c.price * c.enrollments, 0)
 
   return (
     <>
       <div className="p-6 space-y-8">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-wrap justify-between items-center gap-4">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Course Management</h1>
-            <p className="text-gray-600 mt-2">Manage courses, curriculum, and student enrollment</p>
+            <p className="text-gray-600 mt-2">
+              Curriculum, pricing, students and analytics — open a course to manage everything.
+            </p>
           </div>
-          <div className="flex space-x-3">
-            <Button
-              variant="outline"
-              className="text-gray-700 border-gray-300"
-              onClick={() => showToast.info('Advanced filtering coming soon!')}
-            >
-              <Filter className="w-4 h-4 mr-2" />
-              Advanced Filter
-            </Button>
-            <Button
-              className="bg-blue-600 hover:bg-blue-700 text-white"
-              onClick={() => setIsCreateCourseModalOpen(true)}
-            >
-              <Plus className="w-4 h-4 mr-2" />
-              Create Course
-            </Button>
-          </div>
+          <Button
+            className="bg-blue-600 hover:bg-blue-700 text-white"
+            onClick={() => setIsCreateOpen(true)}
+          >
+            <Plus className="w-4 h-4 mr-2" />
+            Create Course
+          </Button>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {statsData.map((stat, index) => (
-            <div
-              key={stat.label}
-              className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
-            >
+        {/* Stats — real fields only */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {[
+            {
+              label: 'Total Courses',
+              value: courses.length,
+              icon: BookOpen,
+              color: 'bg-blue-100 text-blue-600',
+            },
+            {
+              label: 'Published',
+              value: published,
+              icon: Globe,
+              color: 'bg-green-100 text-green-600',
+            },
+            {
+              label: 'Enrollments',
+              value: totalStudents,
+              icon: Users,
+              color: 'bg-purple-100 text-purple-600',
+            },
+            {
+              label: 'Enrolled value',
+              value: `₹${(paiseToRupees(revenuePotential) / 100000).toFixed(1)}L`,
+              icon: TrendingUp,
+              color: 'bg-orange-100 text-orange-600',
+            },
+          ].map((stat) => (
+            <div key={stat.label} className="bg-white p-6 rounded-xl border border-gray-200">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-600">{stat.label}</p>
                   <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                  <p className="text-xs text-green-600 mt-1">{stat.trend}</p>
                 </div>
                 <div
                   className={`h-12 w-12 rounded-lg flex items-center justify-center ${stat.color}`}
@@ -239,7 +221,7 @@ export default function CoursesPage() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                 <input
                   type="text"
-                  placeholder="Search courses by name, instructor, or topics..."
+                  placeholder="Search by name, instructor, or syllabus topic…"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -251,221 +233,183 @@ export default function CoursesPage() {
                 value={typeFilter}
                 onChange={(e) => setTypeFilter(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                aria-label="Filter by type"
               >
                 <option value="all">All Types</option>
-                <option value="class-11">Class 11</option>
-                <option value="class-12">Class 12</option>
-                <option value="dropper">Dropper</option>
-                <option value="foundation">Foundation</option>
+                <option value="NEET_COMPLETE">NEET Complete</option>
+                <option value="CLASS_11">Class 11</option>
+                <option value="CLASS_12">Class 12</option>
+                <option value="DROPPER">Dropper</option>
+                <option value="FOUNDATION">Foundation</option>
+                <option value="CRASH_COURSE">Crash Course</option>
               </select>
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                aria-label="Filter by status"
               >
                 <option value="all">All Status</option>
-                <option value="active">Active</option>
-                <option value="upcoming">Upcoming</option>
-                <option value="completed">Completed</option>
-                <option value="draft">Draft</option>
+                <option value="PUBLISHED">Published</option>
+                <option value="DRAFT">Draft</option>
+                <option value="ARCHIVED">Archived</option>
               </select>
             </div>
           </div>
         </div>
 
         {/* Courses Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {filteredCourses.map((course, index) => (
-            <div
-              key={course.id}
-              className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow animate-fadeInUp"
-            >
-              {/* Course Header */}
-              <div className="flex justify-between items-start mb-4">
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{course.name}</h3>
-                  <div className="flex gap-2 mb-3">
-                    <span
-                      className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getTypeColor(course.type)}`}
+        {loading ? (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {[0, 1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="h-56 animate-pulse rounded-xl border border-gray-200 bg-gray-50"
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {filtered.map((course) => (
+              <div
+                key={course.id}
+                className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
+              >
+                <div className="flex justify-between items-start mb-4">
+                  <div className="flex-1 min-w-0">
+                    <Link
+                      href={`/admin/courses/${course.id}`}
+                      className="text-lg font-semibold text-gray-900 hover:text-blue-700"
                     >
-                      {course.type.replace('-', ' ').toUpperCase()}
-                    </span>
-                    <span
-                      className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(course.status)}`}
-                    >
-                      {course.status.toUpperCase()}
-                    </span>
+                      {course.name}
+                    </Link>
+                    <div className="flex gap-2 mt-2 mb-1 flex-wrap">
+                      <span
+                        className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${TYPE_STYLE[course.type] || 'bg-gray-100 text-gray-800'}`}
+                      >
+                        {course.type.replace(/_/g, ' ')}
+                      </span>
+                      <span
+                        className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${STATUS_STYLE[course.status] || 'bg-gray-100 text-gray-800'}`}
+                      >
+                        {course.status}
+                      </span>
+                    </div>
                   </div>
                 </div>
-                <div className="flex space-x-2">
-                  <button className="text-blue-600 hover:text-blue-900">
-                    <Eye className="w-4 h-4" />
-                  </button>
-                  <button
-                    className="text-gray-600 hover:text-gray-900"
-                    onClick={() => {
-                      setSelectedCourse(course)
-                      setIsEditCourseModalOpen(true)
-                    }}
-                  >
-                    <Edit className="w-4 h-4" />
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-900">
-                    <Settings className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
 
-              {/* Course Stats */}
-              <div className="grid grid-cols-3 gap-4 mb-4">
-                <div className="text-center">
-                  <div className="text-lg font-bold text-gray-900">{course.enrolledStudents}</div>
-                  <div className="text-xs text-gray-600">Enrolled</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-gray-900">{course.totalLessons}</div>
-                  <div className="text-xs text-gray-600">Lessons</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-gray-900">{course.rating}</div>
-                  <div className="text-xs text-gray-600 flex items-center justify-center">
-                    <Star className="w-3 h-3 mr-1 text-yellow-500" />
-                    Rating
+                <div className="grid grid-cols-3 gap-4 mb-4">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-gray-900">{course.enrollments}</div>
+                    <div className="text-xs text-gray-600">Enrolled</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-gray-900">{course.chapters}</div>
+                    <div className="text-xs text-gray-600">Chapters</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-gray-900">
+                      {formatPaiseToINR(course.price)}
+                    </div>
+                    <div className="text-xs text-gray-600">Fee</div>
                   </div>
                 </div>
-              </div>
 
-              {/* Course Details */}
-              <div className="space-y-2 mb-4">
-                <div className="flex items-center text-sm text-gray-600">
-                  <Users className="w-4 h-4 mr-2" />
-                  Instructor: {course.instructor}
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Clock className="w-4 h-4 mr-2" />
-                  Duration: {course.duration}
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  Schedule: {course.schedule}
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <TrendingUp className="w-4 h-4 mr-2" />
-                  Price: {formatPaiseToINR(course.price)}
-                </div>
-              </div>
-
-              {/* Progress Bar */}
-              <div className="mb-4">
-                <div className="flex justify-between text-sm text-gray-600 mb-1">
-                  <span>Completion Rate</span>
-                  <span>{course.completionRate}%</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div
-                    className="bg-blue-600 h-2 rounded-full"
-                    style={{ width: `${course.completionRate}%` }}
-                  ></div>
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex space-x-2 pt-4 border-t border-gray-200">
-                <Button variant="outline" size="sm" className="flex-1">
-                  <BarChart3 className="w-3 h-3 mr-1" />
-                  Analytics
-                </Button>
-                <Button variant="outline" size="sm" className="flex-1">
-                  <Users className="w-3 h-3 mr-1" />
-                  Students
-                </Button>
-                <Button size="sm" className="flex-1">
-                  {course.status === 'active' ? (
-                    <>
-                      <Pause className="w-3 h-3 mr-1" />
-                      Pause
-                    </>
-                  ) : (
-                    <>
-                      <Play className="w-3 h-3 mr-1" />
-                      Start
-                    </>
+                <div className="space-y-1.5 mb-4 text-sm text-gray-600">
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-2" />
+                    {course.duration} months
+                    {course.startDate
+                      ? ` · starts ${new Date(course.startDate).toLocaleDateString('en-IN')}`
+                      : ''}
+                  </div>
+                  {course.instructor && (
+                    <div className="flex items-center">
+                      <Star className="w-4 h-4 mr-2" />
+                      {course.instructor}
+                    </div>
                   )}
-                </Button>
-              </div>
-            </div>
-          ))}
-        </div>
+                  {course.scheduleInfo && (
+                    <div className="flex items-center">
+                      <Users className="w-4 h-4 mr-2" />
+                      {course.scheduleInfo}
+                    </div>
+                  )}
+                </div>
 
-        {filteredCourses.length === 0 && (
+                <div className="flex space-x-2 pt-4 border-t border-gray-200">
+                  <Link href={`/admin/courses/${course.id}`} className="flex-1">
+                    <Button variant="outline" size="sm" className="w-full">
+                      <BookOpen className="w-3 h-3 mr-1" />
+                      Curriculum
+                    </Button>
+                  </Link>
+                  <Link href={`/admin/courses/${course.id}?tab=students`} className="flex-1">
+                    <Button variant="outline" size="sm" className="w-full">
+                      <Users className="w-3 h-3 mr-1" />
+                      Students
+                    </Button>
+                  </Link>
+                  <Link href={`/admin/courses/${course.id}?tab=analytics`} className="flex-1">
+                    <Button variant="outline" size="sm" className="w-full">
+                      <BarChart3 className="w-3 h-3 mr-1" />
+                      Analytics
+                    </Button>
+                  </Link>
+                  {course.status === 'DRAFT' ? (
+                    <Button
+                      size="sm"
+                      className="flex-1"
+                      onClick={() => setStatus(course, 'PUBLISHED')}
+                    >
+                      <Globe className="w-3 h-3 mr-1" />
+                      Publish
+                    </Button>
+                  ) : course.status === 'PUBLISHED' ? (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="flex-1"
+                      onClick={() => setStatus(course, 'DRAFT')}
+                    >
+                      <FileEdit className="w-3 h-3 mr-1" />
+                      Unpublish
+                    </Button>
+                  ) : null}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {!loading && filtered.length === 0 && (
           <div className="text-center py-12">
             <BookOpen className="mx-auto h-12 w-12 text-gray-400" />
             <h3 className="mt-2 text-sm font-medium text-gray-900">No courses found</h3>
-            <p className="mt-1 text-sm text-gray-500">No courses match your current filters.</p>
+            <p className="mt-1 text-sm text-gray-500">
+              {courses.length === 0
+                ? 'Create your first course to get started.'
+                : 'No courses match your current filters.'}
+            </p>
           </div>
         )}
       </div>
 
       <Modal
-        open={isCreateCourseModalOpen}
-        onOpenChange={setIsCreateCourseModalOpen}
+        open={isCreateOpen}
+        onOpenChange={setIsCreateOpen}
         title="Create New Course"
-        description="Fill in the details below to create a new course with curriculum and pricing."
+        description="Basics first — curriculum, pricing and publishing happen in the course workspace."
         size="xl"
       >
         <CreateCourseForm
           onSuccess={() => {
-            setIsCreateCourseModalOpen(false)
-            window.location.reload()
+            setIsCreateOpen(false)
+            fetchCourses()
           }}
-          onCancel={() => setIsCreateCourseModalOpen(false)}
+          onCancel={() => setIsCreateOpen(false)}
         />
       </Modal>
-
-      {selectedCourse && (
-        <Modal
-          open={isEditCourseModalOpen}
-          onOpenChange={setIsEditCourseModalOpen}
-          title="Edit Course"
-          description="Update course details, pricing, and curriculum information."
-          size="xl"
-        >
-          <EditCourseForm
-            course={{
-              id: selectedCourse.id,
-              name: selectedCourse.name,
-              description: selectedCourse.description,
-              type: selectedCourse.type.toUpperCase().replace('-', '_') as any,
-              class:
-                selectedCourse.type === 'class-11'
-                  ? 'CLASS_11'
-                  : selectedCourse.type === 'class-12'
-                    ? 'CLASS_12'
-                    : selectedCourse.type === 'dropper'
-                      ? 'DROPPER'
-                      : ('FOUNDATION' as any),
-              duration: parseInt(selectedCourse.duration.split(' ')[0]),
-              totalFees: selectedCourse.price,
-              instructor: selectedCourse.instructor,
-              maxCapacity: selectedCourse.maxCapacity,
-              startDate: selectedCourse.startDate,
-              schedule: selectedCourse.schedule,
-              isActive: selectedCourse.status === 'active',
-              syllabus: selectedCourse.topics,
-              features: ['Live Classes', 'Recorded Lectures', 'Study Material', 'Mock Tests'],
-            }}
-            onSuccess={() => {
-              setIsEditCourseModalOpen(false)
-              setSelectedCourse(null)
-              window.location.reload()
-            }}
-            onCancel={() => {
-              setIsEditCourseModalOpen(false)
-              setSelectedCourse(null)
-            }}
-          />
-        </Modal>
-      )}
     </>
   )
 }
