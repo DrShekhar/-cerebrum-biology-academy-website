@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { requireAdminAuth } from '@/lib/auth'
-import { getLeadDetail } from '@/lib/leads/leadService'
+import { getLeadDetail, bestCallWindow } from '@/lib/leads/leadService'
 
 /**
  * GET /api/admin/leads/[id]
@@ -50,6 +50,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
               demoRating: lead.demo_bookings.demoRating,
             }
           : null,
+        bestCallWindow: bestCallWindow(lead.activities),
         activities: lead.activities.map((a) => ({
           id: a.id,
           action: a.action,

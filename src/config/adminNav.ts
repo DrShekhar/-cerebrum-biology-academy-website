@@ -284,6 +284,12 @@ export const ADMIN_NAV: AdminNavItem[] = [
     children: [
       { id: 'analytics-overview', name: 'Overview', icon: BarChart3, href: '/admin/analytics' },
       {
+        id: 'analytics-source-roi',
+        name: 'Source ROI',
+        icon: BarChart3,
+        href: '/admin/analytics/source-roi',
+      },
+      {
         id: 'analytics-behavior',
         name: 'Behavior',
         icon: Activity,

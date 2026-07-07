@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { z } from 'zod'
-import { getLeadDetail, updateLeadFields, type LeadViewer } from '@/lib/leads/leadService'
+import {
+  getLeadDetail,
+  updateLeadFields,
+  bestCallWindow,
+  type LeadViewer,
+} from '@/lib/leads/leadService'
 import type { LeadStage, Priority } from '@/generated/prisma'
 
 // Same enum whitelists as the admin PUT — invalid input is a 400 here, not a
@@ -96,6 +101,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         status: c.status,
         sentAt: c.sentAt,
       })),
+      bestCallWindow: bestCallWindow(lead.activities),
       activities: lead.activities.map((a) => ({
         id: a.id,
         action: a.action,

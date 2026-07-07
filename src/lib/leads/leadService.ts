@@ -9,6 +9,7 @@
 
 import { prisma } from '@/lib/prisma'
 import { inngest } from '@/inngest/client'
+import { sendCapiEvent } from '@/lib/marketing/metaCapi'
 import type { LeadSource, LeadStage, Priority, Prisma } from '@/generated/prisma'
 
 export interface LeadViewer {
@@ -128,6 +129,37 @@ export interface LeadUpdatePatch {
  * event, and every stage change lands on the lead's activity timeline.
  * Returns null when the lead is outside the viewer's scope.
  */
+
+/**
+ * Best-time-to-call heuristic: when this prospect actually engages.
+ * Buckets the lead's activity timestamps (form submits, replies, touchpoints)
+ * into IST day-parts and returns the modal window once there are >=3 signals.
+ */
+export function bestCallWindow(
+  activities: Array<{ createdAt: Date | string }>
+): { window: string; label: string; confidence: number } | null {
+  if (!activities || activities.length < 3) return null
+  const buckets: Record<string, number> = { morning: 0, afternoon: 0, evening: 0, night: 0 }
+  for (const a of activities) {
+    const d = new Date(a.createdAt)
+    // IST = UTC+5:30
+    const hour = (d.getUTCHours() + 5.5 + 24) % 24
+    if (hour >= 8 && hour < 12) buckets.morning++
+    else if (hour >= 12 && hour < 16) buckets.afternoon++
+    else if (hour >= 16 && hour < 21) buckets.evening++
+    else buckets.night++
+  }
+  const LABELS: Record<string, string> = {
+    morning: '8 AM – 12 PM',
+    afternoon: '12 – 4 PM',
+    evening: '4 – 9 PM',
+    night: 'after 9 PM',
+  }
+  const [top, count] = Object.entries(buckets).sort((a, b) => b[1] - a[1])[0]
+  const total = activities.length
+  return { window: top, label: LABELS[top], confidence: Math.round((count / total) * 100) }
+}
+
 export async function updateLeadFields(viewer: LeadViewer, id: string, patch: LeadUpdatePatch) {
   const prior = await prisma.leads.findFirst({
     where: { id, ...leadScopeFor(viewer) },
@@ -173,6 +205,18 @@ export async function updateLeadFields(viewer: LeadViewer, id: string, patch: Le
         },
       })
       .catch(() => {})
+
+    // Ad-platform conversion feedback (no-op until META_CAPI keys are set):
+    // demos and enrollments flow back to Meta so campaigns optimize on what
+    // actually makes money, not on raw lead volume.
+    if (patch.stage === 'DEMO_SCHEDULED' || patch.stage === 'ENROLLED') {
+      void sendCapiEvent({
+        eventName: patch.stage === 'ENROLLED' ? 'Purchase' : 'Schedule',
+        phone: updated.phone,
+        email: updated.email,
+        eventId: `${updated.id}:${patch.stage}`,
+      })
+    }
   }
 
   if (patch.stage === 'ENROLLED' && prior.stage !== 'ENROLLED') {

@@ -1584,8 +1584,14 @@ model leads {
   demoBookingId           String?                   @unique
   source                  LeadSource                @default(MANUAL_ENTRY)
   sourceDetail            String?
+  utmSource               String?
+  utmMedium               String?
+  utmCampaign             String?
+  utmTerm                 String?
   utmContent              String?
+  referrerUrl             String?
   gclid                   String?
+  fbclid                  String?
   score                   Int?
   scoreBreakdown          Json?
   scoreUpdatedAt          DateTime?
@@ -1618,6 +1624,7 @@ model leads {
   @@index([phone])
   @@index([phoneNormalized])
   @@index([score])
+  @@index([utmSource, utmCampaign])
 }
 
 model lms_device_sessions {

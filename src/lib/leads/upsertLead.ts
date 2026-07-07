@@ -26,6 +26,7 @@ import { logger } from '@/lib/utils/logger'
 import { sendAdminLeadNotification } from '@/lib/notifications/adminLeadNotification'
 import { updateLeadScore } from '@/lib/leadScoring'
 import { startWelcomeSeries } from '@/lib/whatsapp/welcomeSeries'
+import { sendCapiEvent } from '@/lib/marketing/metaCapi'
 import { getSettings } from '@/lib/settings/siteSettings'
 import { normalizePhone } from '@/lib/leads/phone'
 import type { LeadSource, LeadStage, Priority, Prisma, PrismaClient } from '@/generated/prisma'
@@ -47,7 +48,11 @@ export interface UpsertLeadInput {
   utmSource?: string | null
   utmMedium?: string | null
   utmCampaign?: string | null
+  utmTerm?: string | null
+  utmContent?: string | null
+  referrerUrl?: string | null
   gclid?: string | null
+  fbclid?: string | null
   /** Lead priority (HOT/WARM/COLD). Defaults to WARM. */
   priority?: Priority
 }
@@ -266,9 +271,14 @@ export async function upsertLeadCore(
         sourceDetail,
         assignedToId: assigneeId,
         demoBookingId: input.demoBookingId || null,
-        // NOTE: leads model has no utmSource/utmCampaign columns; UTM data is
-        // preserved in the activities.metadata block below.
+        utmSource: input.utmSource || null,
+        utmMedium: input.utmMedium || null,
+        utmCampaign: input.utmCampaign || null,
+        utmTerm: input.utmTerm || null,
+        utmContent: input.utmContent || null,
+        referrerUrl: input.referrerUrl || null,
         gclid: input.gclid,
+        fbclid: input.fbclid || null,
         nextFollowUpAt: new Date(Date.now() + 30 * 60 * 1000),
         lastContactedAt: new Date(),
         updatedAt: new Date(),
@@ -377,6 +387,13 @@ export async function upsertLead(
       // WhatsApp welcome series (day 0 now, day 1/3/7 via nurturing cron).
       // No-ops until INTERAKT_API_KEY is configured, so owner controls activation.
       void startWelcomeSeries(leadId).catch(() => {})
+      // Ad-platform feedback: a real CRM lead (deduped) — not a raw click.
+      void sendCapiEvent({
+        eventName: 'Lead',
+        phone: input.phone,
+        email: input.email,
+        eventId: `${leadId}:created`,
+      })
     }
 
     // New leads get an initial score; touchpoints change engagement signals.

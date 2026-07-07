@@ -36,6 +36,7 @@ import { LeadColorTagPicker, useLeadColorTags } from '@/components/staff/LeadCol
 // ─── Types ───────────────────────────────────────────────────────────────────
 
 interface LeadDetail {
+  bestCallWindow?: { window: string; label: string; confidence: number } | null
   id: string
   studentName: string
   email: string | null
@@ -304,6 +305,14 @@ export default function LeadDetailPage() {
                 <h1 className="text-2xl font-bold text-gray-900">{lead.studentName}</h1>
                 <StageBadge stage={lead.stage} />
                 <PriorityBadge priority={lead.priority} />
+                {lead.bestCallWindow && (
+                  <span
+                    className="inline-flex items-center gap-1 rounded-full bg-teal-50 px-2.5 py-1 text-xs font-medium text-teal-700"
+                    title={`Based on when this lead engages (${lead.bestCallWindow.confidence}% of their activity)`}
+                  >
+                    📞 Best time: {lead.bestCallWindow.label}
+                  </span>
+                )}
                 <LeadColorTagPicker
                   leadId={lead.id}
                   current={colorTag}
