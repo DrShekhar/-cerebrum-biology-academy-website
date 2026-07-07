@@ -3,9 +3,14 @@
 import { useRouter, usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
+import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 
+// SINGLE admin guard. Access = ADMIN role OR owner (phone-match via
+// useOwnerAccess). AdminLayout (chrome) no longer guards — this wrapper runs
+// for every /admin route via the route layout.
 function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
   const { isLoading, isAuthenticated, user } = useAuth()
+  const { isOwner, isCheckingOwner } = useOwnerAccess()
   const router = useRouter()
   const pathname = usePathname()
   const [isAdmin, setIsAdmin] = useState(false)
@@ -25,7 +30,7 @@ function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
       setIsCheckingRole(false)
       return
     }
-    if (isLoading) return
+    if (isLoading || isCheckingOwner) return
 
     if (!isAuthenticated) {
       // Go straight to the real sign-in (the /admin/login page just bounces here
@@ -35,17 +40,14 @@ function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
       return
     }
 
-    // Check if user has admin role
-    // Note: OWNER is not a valid role - it's checked via phone number matching
-    const userRole = user?.role
-    const hasAdminAccess = userRole === 'ADMIN'
+    const hasAdminAccess = user?.role === 'ADMIN' || isOwner
     setIsAdmin(hasAdminAccess)
     setIsCheckingRole(false)
 
     if (!hasAdminAccess) {
       router.replace('/dashboard?error=admin_required')
     }
-  }, [isLoading, isAuthenticated, user, router, pathname, isLoginRoute])
+  }, [isLoading, isAuthenticated, user, router, pathname, isLoginRoute, isOwner, isCheckingOwner])
 
   // The login route renders without the admin gate.
   if (isLoginRoute) {

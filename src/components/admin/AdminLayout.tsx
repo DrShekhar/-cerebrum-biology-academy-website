@@ -27,7 +27,7 @@ import {
   Send,
 } from 'lucide-react'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { Toaster } from '@/components/ui/Toaster'
 
 interface AdminLayoutProps {
@@ -47,9 +47,8 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [userMenuOpen, setUserMenuOpen] = useState(false)
   const pathname = usePathname()
-  const router = useRouter()
-  const { isLoading, isAuthenticated, user } = useAuth()
-  const { isOwner, isCheckingOwner } = useOwnerAccess()
+  const { user } = useAuth()
+  const { isOwner } = useOwnerAccess()
 
   // Lock body scroll while the mobile drawer is open
   useEffect(() => {
@@ -63,40 +62,9 @@ export function AdminLayout({ children }: AdminLayoutProps) {
     }
   }, [sidebarOpen])
 
-  // Check if user has admin role
-  // Note: OWNER is not a role - owner status is checked via useOwnerAccess hook
-  const userRole = user?.role
-  const isAdmin = userRole === 'ADMIN' || isOwner
-
-  // Show loading state while checking auth
-  if (isLoading || isCheckingOwner) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-r from-primary-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <BookOpen className="w-8 h-8 text-white" />
-          </div>
-          <div className="text-lg font-semibold text-gray-700 mb-2">Loading...</div>
-          <div className="w-6 h-6 border-2 border-primary-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
-        </div>
-      </div>
-    )
-  }
-
-  // Allow access if owner OR admin role
-  const hasAdminAccess = isOwner || isAdmin
-
-  // Redirect to login if not authenticated
-  if (!isAuthenticated) {
-    router.push('/admin/login')
-    return null
-  }
-
-  // Redirect if no admin access
-  if (!hasAdminAccess) {
-    router.push('/dashboard?error=admin_required')
-    return null
-  }
+  // NOTE: no auth guard here — AdminLayoutClient (mounted by the /admin route
+  // layout) is the single admin guard (ADMIN role OR owner). This component is
+  // pure chrome: sidebar, topbar, user menu.
 
   const handleLogout = async () => {
     try {
