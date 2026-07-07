@@ -28,6 +28,7 @@ import { Modal } from '@/components/ui/Modal'
 import { AddLeadForm } from '@/components/admin/AddLeadForm'
 import { EditLeadForm } from '@/components/admin/EditLeadForm'
 import { toast } from 'sonner'
+import { LeadColorLegend, useLeadColorTags } from '@/components/staff/LeadColorLegend'
 
 // API Lead type (matches database schema)
 interface APILead {
@@ -122,6 +123,7 @@ function transformLead(apiLead: APILead): Lead {
 
 export default function LeadsPage() {
   const router = useRouter()
+  const { tags: colorTags, refresh: refreshColorTags } = useLeadColorTags()
   const [leads, setLeads] = useState<Lead[]>([])
   const [filteredLeads, setFilteredLeads] = useState<Lead[]>([])
   const [counselors, setCounselors] = useState<Counselor[]>([])
@@ -405,6 +407,7 @@ export default function LeadsPage() {
   return (
     <>
       <div className="p-6 space-y-8">
+        <LeadColorLegend tags={colorTags} onTagsChanged={() => void refreshColorTags()} />
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Lead Management</h1>
