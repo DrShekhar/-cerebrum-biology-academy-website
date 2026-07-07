@@ -14,7 +14,6 @@ import {
   RefreshCw,
   ExternalLink,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 
 interface BehaviorData {
@@ -79,7 +78,7 @@ export default function UserBehaviorPage() {
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-6">
         <div className="flex justify-between items-center">
           <div>
@@ -317,6 +316,6 @@ export default function UserBehaviorPage() {
           </div>
         )}
       </div>
-    </AdminLayout>
+    </>
   )
 }

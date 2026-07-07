@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { FileText, BarChart3, Search, Zap, TrendingUp, FileDown } from 'lucide-react'
 
 const contentModules = [
@@ -48,7 +47,7 @@ const quickActions = [
 
 export default function ContentPage() {
   return (
-    <AdminLayout>
+    <>
       <div className="p-4 md:p-6 lg:p-8">
         {/* Header */}
         <div className="mb-8">
@@ -134,6 +133,6 @@ export default function ContentPage() {
           </ol>
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }

@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { Search, Download, TrendingUp, Users, Award, BarChart3 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 
 interface Submission {
@@ -116,7 +115,7 @@ export default function OMRResultsPage() {
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6">
         <div className="flex justify-between items-center mb-6">
           <div>
@@ -355,6 +354,6 @@ export default function OMRResultsPage() {
           )}
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }

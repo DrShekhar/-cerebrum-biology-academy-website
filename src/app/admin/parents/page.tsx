@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { Users, Search, UserPlus, Mail, Phone, Link2, Unlink } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { CreateParentForm } from '@/components/admin/CreateParentForm'
@@ -98,7 +97,7 @@ export default function ParentsPage() {
   ]
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-8">
         <div className="flex justify-between items-center">
           <div>
@@ -268,6 +267,6 @@ export default function ParentsPage() {
           onCancel={() => setIsCreateModalOpen(false)}
         />
       </Modal>
-    </AdminLayout>
+    </>
   )
 }

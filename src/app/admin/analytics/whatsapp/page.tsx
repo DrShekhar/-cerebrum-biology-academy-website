@@ -17,7 +17,6 @@ import {
   BarChart3,
   Target,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 
 interface WhatsAppClickData {
@@ -156,7 +155,7 @@ export default function WhatsAppAnalyticsPage() {
   ]
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-6">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
@@ -437,6 +436,6 @@ export default function WhatsAppAnalyticsPage() {
           </>
         )}
       </div>
-    </AdminLayout>
+    </>
   )
 }

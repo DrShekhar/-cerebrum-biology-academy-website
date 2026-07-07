@@ -23,7 +23,6 @@ import {
   ArrowRightLeft,
   RefreshCw,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { AddStudentForm } from '@/components/admin/AddStudentForm'
@@ -233,7 +232,7 @@ export default function StudentsPage() {
   ]
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-8">
         {/* Header */}
         <div className="flex justify-between items-center">
@@ -739,6 +738,6 @@ export default function StudentsPage() {
           />
         </Modal>
       )}
-    </AdminLayout>
+    </>
   )
 }

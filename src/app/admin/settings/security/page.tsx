@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { Lock, ArrowLeft, RefreshCw, ShieldCheck, Users } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
@@ -53,7 +52,7 @@ export default function SecuritySettingsPage() {
   }, [])
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 max-w-4xl mx-auto">
         <div className="mb-8">
           <Link
@@ -179,6 +178,6 @@ export default function SecuritySettingsPage() {
           </div>
         )}
       </div>
-    </AdminLayout>
+    </>
   )
 }

@@ -15,7 +15,6 @@ import {
   Clock,
   Users,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { AddFacultyForm } from '@/components/admin/AddFacultyForm'
@@ -139,7 +138,7 @@ export default function FacultySettingsPage() {
     : 0
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8 flex justify-between items-center">
@@ -473,6 +472,6 @@ export default function FacultySettingsPage() {
           </div>
         )}
       </Modal>
-    </AdminLayout>
+    </>
   )
 }

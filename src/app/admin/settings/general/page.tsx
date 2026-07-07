@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { Settings as SettingsIcon, Save, RefreshCw, ArrowLeft } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { showToast } from '@/lib/toast'
@@ -80,7 +79,7 @@ export default function GeneralSettingsPage() {
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 max-w-3xl mx-auto">
         <div className="mb-8">
           <Link
@@ -248,6 +247,6 @@ export default function GeneralSettingsPage() {
           </div>
         )}
       </div>
-    </AdminLayout>
+    </>
   )
 }

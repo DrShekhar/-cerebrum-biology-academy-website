@@ -18,7 +18,6 @@ import {
   UsersRound,
   RefreshCw,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { IntegrationHealthWidget } from '@/components/admin/IntegrationHealthWidget'
 
 interface DashboardData {
@@ -229,17 +228,17 @@ export default function AdminDashboard() {
 
   if (isLoading) {
     return (
-      <AdminLayout>
+      <>
         <div className="flex items-center justify-center min-h-[60vh]">
           <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-600"></div>
         </div>
-      </AdminLayout>
+      </>
     )
   }
 
   if (error) {
     return (
-      <AdminLayout>
+      <>
         <div className="flex flex-col items-center justify-center min-h-[60vh] p-6 text-center">
           <AlertCircle className="w-12 h-12 sm:w-16 sm:h-16 text-red-500 mb-4" />
           <h2 className="text-xl font-semibold text-gray-900 mb-2">Error Loading Dashboard</h2>
@@ -252,12 +251,12 @@ export default function AdminDashboard() {
             Try Again
           </button>
         </div>
-      </AdminLayout>
+      </>
     )
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-4 sm:p-6 max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
@@ -553,6 +552,6 @@ export default function AdminDashboard() {
           </div>
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }

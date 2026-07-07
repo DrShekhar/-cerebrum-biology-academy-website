@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { CreditCard, Search, Plus, AlertTriangle, Clock, DollarSign } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { FeePlanForm } from '@/components/admin/FeePlanForm'
@@ -136,7 +135,7 @@ export default function FeePlansPage() {
   ]
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-8">
         <div className="flex justify-between items-center">
           <div>
@@ -292,6 +291,6 @@ export default function FeePlansPage() {
           onCancel={() => setIsCreateModalOpen(false)}
         />
       </Modal>
-    </AdminLayout>
+    </>
   )
 }

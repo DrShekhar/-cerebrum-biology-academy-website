@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { BarChart3, TrendingUp, Users, BookOpen, Target } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 
 interface CoursePerformance {
   id: string
@@ -55,7 +54,7 @@ export default function CoursePerformancePage() {
       : 0
 
   return (
-    <AdminLayout>
+    <>
       <div className="space-y-6">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Course Performance</h1>
@@ -164,7 +163,7 @@ export default function CoursePerformancePage() {
           </div>
         )}
       </div>
-    </AdminLayout>
+    </>
   )
 }
 

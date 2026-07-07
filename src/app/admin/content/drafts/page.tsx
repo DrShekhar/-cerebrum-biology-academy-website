@@ -16,7 +16,6 @@ import {
   ExternalLink,
   Tag,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 
 type DraftStatus = 'draft' | 'in_review' | 'approved' | 'rejected' | 'published' | 'archived'
 type ContentType = 'BLOG_POST' | 'NEWS_ARTICLE' | 'SEO_LANDING_PAGE' | 'SOCIAL_POST' | 'LEAD_MAGNET'
@@ -121,7 +120,7 @@ export default function ContentDraftsPage() {
   )
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-4 md:p-6 lg:p-8">
         {/* Header */}
         <div className="mb-6 md:mb-8">
@@ -368,6 +367,6 @@ export default function ContentDraftsPage() {
           </div>
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }

@@ -15,7 +15,6 @@ import {
   Loader2,
   Calendar,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { LeadTimeline } from '@/components/staff/LeadTimeline'
 import { LeadCommentThread } from '@/components/staff/LeadCommentThread'
@@ -115,7 +114,7 @@ export default function AdminLeadDetailPage() {
   }, [id, load])
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 max-w-6xl mx-auto">
         <button
           onClick={() => router.push('/admin/students/leads')}
@@ -220,7 +219,7 @@ export default function AdminLeadDetailPage() {
           </div>
         )}
       </div>
-    </AdminLayout>
+    </>
   )
 }
 

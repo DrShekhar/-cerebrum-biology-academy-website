@@ -4,6 +4,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
+import { AdminChrome } from '@/components/admin/AdminChrome'
 
 // SINGLE admin guard. Access = ADMIN role OR owner (phone-match via
 // useOwnerAccess). AdminLayout (chrome) no longer guards — this wrapper runs
@@ -72,7 +73,13 @@ function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
     return null
   }
 
-  return <div className="admin-layout">{children}</div>
+  // Chrome (sidebar/topbar/bell) mounts here ONCE for every /admin page —
+  // pages must not wrap themselves in AdminLayout/AdminChrome.
+  return (
+    <div className="admin-layout">
+      <AdminChrome>{children}</AdminChrome>
+    </div>
+  )
 }
 
 export default function AdminLayoutClient({ children }: { children: React.ReactNode }) {

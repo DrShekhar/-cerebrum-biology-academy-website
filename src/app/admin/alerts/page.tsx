@@ -11,7 +11,6 @@ import {
   Smartphone,
   Search,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { ComposeAlertForm } from '@/components/admin/ComposeAlertForm'
@@ -164,7 +163,7 @@ export default function AlertsPage() {
   ]
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-8">
         <div className="flex justify-between items-center">
           <div>
@@ -343,6 +342,6 @@ export default function AlertsPage() {
           onCancel={() => setIsComposeOpen(false)}
         />
       </Modal>
-    </AdminLayout>
+    </>
   )
 }

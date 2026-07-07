@@ -11,7 +11,6 @@ import {
   Ticket,
   TrendingDown,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { CouponForm } from '@/components/admin/CouponForm'
@@ -138,7 +137,7 @@ export default function CouponsPage() {
   ]
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-8">
         <div className="flex justify-between items-center">
           <div>
@@ -325,6 +324,6 @@ export default function CouponsPage() {
           onCancel={() => setIsCreateModalOpen(false)}
         />
       </Modal>
-    </AdminLayout>
+    </>
   )
 }

@@ -23,7 +23,6 @@ import {
   ArrowRight,
   Loader2,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { AddLeadForm } from '@/components/admin/AddLeadForm'
@@ -380,31 +379,31 @@ export default function LeadsPage() {
   // Show loading state
   if (loading && leads.length === 0) {
     return (
-      <AdminLayout>
+      <>
         <div className="flex items-center justify-center h-96">
           <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
           <span className="ml-2 text-gray-600">Loading leads...</span>
         </div>
-      </AdminLayout>
+      </>
     )
   }
 
   // Show error state
   if (error && leads.length === 0) {
     return (
-      <AdminLayout>
+      <>
         <div className="flex flex-col items-center justify-center h-96">
           <AlertCircle className="w-12 h-12 text-red-500 mb-4" />
           <h2 className="text-xl font-semibold text-gray-900 mb-2">Failed to load leads</h2>
           <p className="text-gray-600 mb-4">{error}</p>
           <Button onClick={() => fetchLeads()}>Try Again</Button>
         </div>
-      </AdminLayout>
+      </>
     )
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-8">
         <div className="flex justify-between items-center">
           <div>
@@ -799,6 +798,6 @@ export default function LeadsPage() {
           />
         </Modal>
       )}
-    </AdminLayout>
+    </>
   )
 }

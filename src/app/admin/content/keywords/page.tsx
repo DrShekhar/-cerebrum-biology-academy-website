@@ -5,7 +5,6 @@
 // data. Real rankings require the Google Search Console API (not connected);
 // until then we link straight to GSC instead of inventing numbers.
 
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Search, ExternalLink, BarChart3, FileText } from 'lucide-react'
 
 const GSC_PROPERTY =
@@ -39,7 +38,7 @@ const SHORTCUTS = [
 
 export default function KeywordsPage() {
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 max-w-4xl mx-auto space-y-6">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Keyword Rankings</h1>
@@ -82,6 +81,6 @@ export default function KeywordsPage() {
           ))}
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }

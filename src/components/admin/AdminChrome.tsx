@@ -4,50 +4,24 @@ import { useState, useEffect, ReactNode } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 const getFirebaseSignOut = () => import('@/lib/firebase/phone-auth').then((mod) => mod.signOut)
-import {
-  LayoutDashboard,
-  Calendar,
-  Users,
-  BookOpen,
-  CreditCard,
-  MessageSquare,
-  BarChart3,
-  Settings,
-  Bell,
-  Menu,
-  X,
-  LogOut,
-  User,
-  ChevronDown,
-  FileText,
-  Upload,
-  FolderOpen,
-  ClipboardCheck,
-  PenTool,
-  Send,
-} from 'lucide-react'
+import { BookOpen, Menu, X, LogOut, User, ChevronDown, Settings } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Toaster } from '@/components/ui/Toaster'
 import { StaffInboxProvider } from '@/hooks/staff/useStaffInbox'
 import { StaffNotificationBell } from '@/components/staff/StaffNotificationBell'
+import { ADMIN_NAV, type AdminNavItem, type NavBadgeKey } from '@/config/adminNav'
 
-interface AdminLayoutProps {
+interface AdminChromeProps {
   children: ReactNode
 }
 
-interface NavItem {
-  id: string
-  name: string
-  icon: any
-  href: string
-  badge?: number
-  children?: NavItem[]
-}
+const NAV_COUNTS_POLL_MS = 60_000
 
-export function AdminLayout({ children }: AdminLayoutProps) {
+export function AdminChrome({ children }: AdminChromeProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [userMenuOpen, setUserMenuOpen] = useState(false)
+  const [navCounts, setNavCounts] = useState<Partial<Record<NavBadgeKey, number>>>({})
   const pathname = usePathname()
   const { user } = useAuth()
   const { isOwner } = useOwnerAccess()
@@ -63,6 +37,33 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       document.body.style.overflow = ''
     }
   }, [sidebarOpen])
+
+  // Live sidebar badge counts (replaces the old hardcoded literals).
+  useEffect(() => {
+    let cancelled = false
+    const fetchCounts = async () => {
+      try {
+        const res = await fetch('/api/admin/nav-counts')
+        const json = await res.json()
+        if (!cancelled && json.success) setNavCounts(json.data)
+      } catch {
+        // keep previous counts
+      }
+    }
+    void fetchCounts()
+    const timer = setInterval(() => {
+      if (document.visibilityState === 'visible') void fetchCounts()
+    }, NAV_COUNTS_POLL_MS)
+    return () => {
+      cancelled = true
+      clearInterval(timer)
+    }
+  }, [])
+
+  const badgeFor = (item: AdminNavItem): number | undefined => {
+    const count = item.badgeKey ? navCounts[item.badgeKey] : undefined
+    return count && count > 0 ? count : undefined
+  }
 
   // NOTE: no auth guard here — AdminLayoutClient (mounted by the /admin route
   // layout) is the single admin guard (ADMIN role OR owner). This component is
@@ -86,198 +87,13 @@ export function AdminLayout({ children }: AdminLayoutProps) {
     user?.fullName || user?.name || (isOwner ? 'Dr. Shekhar (Owner)' : 'Admin User')
   const displayEmail = user?.email || (isOwner ? 'Owner Access' : '')
 
-  const navigation: NavItem[] = [
-    {
-      id: 'dashboard',
-      name: 'Dashboard',
-      icon: LayoutDashboard,
-      href: '/admin',
-    },
-    {
-      id: 'demo-bookings',
-      name: 'Demo Bookings',
-      icon: Calendar,
-      href: '/admin/demo-bookings',
-    },
-    {
-      id: 'students',
-      name: 'Students',
-      icon: Users,
-      href: '/admin/students',
-      children: [
-        { id: 'all-students', name: 'All Students', icon: Users, href: '/admin/students' },
-        {
-          id: 'active-students',
-          name: 'Active Students',
-          icon: Users,
-          href: '/admin/students/active',
-        },
-        { id: 'leads', name: 'Leads', icon: Users, href: '/admin/students/leads' },
-        { id: 'inquiries', name: 'Inquiries', icon: Users, href: '/admin/inquiries' },
-        { id: 'parents', name: 'Parents', icon: Users, href: '/admin/parents' },
-      ],
-    },
-    {
-      id: 'courses',
-      name: 'Courses',
-      icon: BookOpen,
-      href: '/admin/courses',
-      children: [
-        {
-          id: 'course-management',
-          name: 'Course Management',
-          icon: BookOpen,
-          href: '/admin/courses',
-        },
-        {
-          id: 'enrollments',
-          name: 'Enrollments',
-          icon: BookOpen,
-          href: '/admin/courses/enrollments',
-        },
-        {
-          id: 'performance',
-          name: 'Performance',
-          icon: BarChart3,
-          href: '/admin/courses/performance',
-        },
-      ],
-    },
-    {
-      id: 'payments',
-      name: 'Payments',
-      icon: CreditCard,
-      href: '/admin/payments',
-      children: [
-        { id: 'all-payments', name: 'All Payments', icon: CreditCard, href: '/admin/payments' },
-        {
-          id: 'pending',
-          name: 'Pending',
-          icon: CreditCard,
-          href: '/admin/payments/pending',
-        },
-        { id: 'failed', name: 'Failed', icon: CreditCard, href: '/admin/payments/failed' },
-        { id: 'refunds', name: 'Refunds', icon: CreditCard, href: '/admin/payments/refunds' },
-        { id: 'coupons', name: 'Coupons', icon: CreditCard, href: '/admin/coupons' },
-        { id: 'fee-plans', name: 'Fee Plans', icon: CreditCard, href: '/admin/fee-plans' },
-      ],
-    },
-    {
-      id: 'marketing',
-      name: 'Marketing',
-      icon: MessageSquare,
-      href: '/admin/marketing',
-      children: [
-        {
-          id: 'campaigns',
-          name: 'Campaigns',
-          icon: MessageSquare,
-          href: '/admin/marketing/campaigns',
-        },
-        {
-          id: 'whatsapp',
-          name: 'WhatsApp',
-          icon: MessageSquare,
-          href: '/admin/marketing/whatsapp',
-        },
-        { id: 'email', name: 'Email', icon: MessageSquare, href: '/admin/marketing/email' },
-        {
-          id: 'abandoned-carts',
-          name: 'Abandoned Carts',
-          icon: MessageSquare,
-          href: '/admin/marketing/abandoned-carts',
-        },
-        { id: 'alerts', name: 'Alerts', icon: Bell, href: '/admin/alerts' },
-      ],
-    },
-    {
-      id: 'content',
-      name: 'Content',
-      icon: PenTool,
-      href: '/admin/content',
-      children: [
-        {
-          id: 'content-drafts',
-          name: 'Drafts Queue',
-          icon: FileText,
-          href: '/admin/content/drafts',
-        },
-        {
-          id: 'content-published',
-          name: 'Published',
-          icon: Send,
-          href: '/admin/content',
-        },
-      ],
-    },
-    {
-      id: 'analytics',
-      name: 'Analytics',
-      icon: BarChart3,
-      href: '/admin/analytics',
-      children: [
-        { id: 'overview', name: 'Overview', icon: BarChart3, href: '/admin/analytics' },
-        {
-          id: 'user-behavior',
-          name: 'User Behavior',
-          icon: BarChart3,
-          href: '/admin/analytics/behavior',
-        },
-        {
-          id: 'conversion',
-          name: 'Conversion',
-          icon: BarChart3,
-          href: '/admin/analytics/conversion',
-        },
-        { id: 'reports', name: 'Reports', icon: BarChart3, href: '/admin/analytics/reports' },
-      ],
-    },
-    {
-      id: 'lms',
-      name: 'LMS',
-      icon: FileText,
-      href: '/admin/lms/materials',
-      children: [
-        { id: 'lms-materials', name: 'Materials', icon: FolderOpen, href: '/admin/lms/materials' },
-        { id: 'lms-upload', name: 'Upload', icon: Upload, href: '/admin/lms/materials/upload' },
-        { id: 'lms-chapters', name: 'Chapters', icon: BookOpen, href: '/admin/lms/chapters' },
-        { id: 'lms-analytics', name: 'Analytics', icon: BarChart3, href: '/admin/lms/analytics' },
-      ],
-    },
-    {
-      id: 'omr',
-      name: 'OMR Evaluation',
-      icon: ClipboardCheck,
-      href: '/admin/omr',
-      children: [
-        { id: 'omr-papers', name: 'Papers', icon: FileText, href: '/admin/omr' },
-        { id: 'omr-results', name: 'Results', icon: BarChart3, href: '/admin/omr/results' },
-      ],
-    },
-    {
-      id: 'settings',
-      name: 'Settings',
-      icon: Settings,
-      href: '/admin/settings',
-      children: [
-        { id: 'general', name: 'General', icon: Settings, href: '/admin/settings' },
-        { id: 'users', name: 'Admin Users', icon: User, href: '/admin/settings/users' },
-        { id: 'faculty', name: 'Faculty', icon: Users, href: '/admin/settings/faculty' },
-        {
-          id: 'notifications',
-          name: 'Notifications',
-          icon: Bell,
-          href: '/admin/settings/notifications',
-        },
-      ],
-    },
-  ]
+  const navigation = ADMIN_NAV
 
   const isActive = (href: string) => {
     return pathname === href || (href !== '/admin' && pathname?.startsWith(href))
   }
 
-  const NavItem = ({ item, depth = 0 }: { item: NavItem; depth?: number }) => {
+  const NavItem = ({ item, depth = 0 }: { item: AdminNavItem; depth?: number }) => {
     const [isOpen, setIsOpen] = useState(isActive(item.href))
     const hasChildren = item.children && item.children.length > 0
     const Icon = item.icon
@@ -298,9 +114,9 @@ export function AdminLayout({ children }: AdminLayoutProps) {
             <div className="flex items-center">
               <Icon className={`${depth === 0 ? 'w-5 h-5' : 'w-4 h-4'} mr-3`} />
               <span>{item.name}</span>
-              {item.badge && (
+              {badgeFor(item) && (
                 <span className="ml-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
-                  {item.badge}
+                  {badgeFor(item)}
                 </span>
               )}
             </div>
@@ -320,9 +136,9 @@ export function AdminLayout({ children }: AdminLayoutProps) {
               <div className="flex items-center">
                 <Icon className={`${depth === 0 ? 'w-5 h-5' : 'w-4 h-4'} mr-3`} />
                 <span>{item.name}</span>
-                {item.badge && (
+                {badgeFor(item) && (
                   <span className="ml-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
-                    {item.badge}
+                    {badgeFor(item)}
                   </span>
                 )}
               </div>
@@ -344,9 +160,9 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                   >
                     <child.icon className="w-4 h-4 mr-3" />
                     <span>{child.name}</span>
-                    {child.badge && (
+                    {badgeFor(child) && (
                       <span className="ml-auto bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
-                        {child.badge}
+                        {badgeFor(child)}
                       </span>
                     )}
                   </div>
@@ -462,7 +278,6 @@ export function AdminLayout({ children }: AdminLayoutProps) {
               >
                 <Menu className="w-5 h-5" />
               </button>
-
             </div>
 
             <div className="flex items-center space-x-2 sm:space-x-4 shrink-0">

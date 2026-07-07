@@ -16,7 +16,6 @@ import {
   TrendingUp,
   Users,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { NewCampaignForm } from '@/components/admin/marketing/NewCampaignForm'
@@ -194,7 +193,7 @@ export default function CampaignsPage() {
   const activeCampaigns = campaigns.filter((c) => c.status === 'active').length
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-6">
         <div className="flex justify-between items-center">
           <div>
@@ -450,6 +449,6 @@ export default function CampaignsPage() {
           onCancel={() => setIsNewOpen(false)}
         />
       </Modal>
-    </AdminLayout>
+    </>
   )
 }

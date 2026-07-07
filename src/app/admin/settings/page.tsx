@@ -9,7 +9,6 @@ import {
   Zap,
   ChevronRight,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import Link from 'next/link'
 
 interface SettingsCard {
@@ -76,7 +75,7 @@ const settingsCards: SettingsCard[] = [
 
 export default function SettingsPage() {
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
@@ -131,6 +130,6 @@ export default function SettingsPage() {
           </div>
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }

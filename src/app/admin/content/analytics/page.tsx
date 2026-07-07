@@ -9,7 +9,6 @@
 // rate would need GA4 and are intentionally NOT shown rather than fabricated.
 
 import { useState, useEffect } from 'react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { BarChart3, Eye, FileText, TrendingUp, Loader2, ExternalLink } from 'lucide-react'
 
 interface Overview {
@@ -72,7 +71,7 @@ export default function ContentAnalyticsPage() {
   ]
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-6 max-w-6xl mx-auto">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Content Analytics</h1>
@@ -174,6 +173,6 @@ export default function ContentAnalyticsPage() {
           )}
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }

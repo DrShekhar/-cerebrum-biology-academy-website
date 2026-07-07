@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import type { ErrorReportRecord } from '@/lib/mcq/types'
 import { showToast } from '@/lib/toast'
 
@@ -108,7 +107,7 @@ export default function ErrorReportsPage() {
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
@@ -368,6 +367,6 @@ export default function ErrorReportsPage() {
           </div>
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }

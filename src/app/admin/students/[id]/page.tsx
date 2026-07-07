@@ -3,7 +3,6 @@
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { StudentAcademicsSection } from '@/components/counselor/StudentAcademicsSection'
 
 /**
@@ -18,7 +17,7 @@ export default function AdminStudentDetailPage() {
   const router = useRouter()
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-6 max-w-5xl mx-auto">
         <div className="flex items-center gap-2 text-sm text-gray-500">
           <button
@@ -44,6 +43,6 @@ export default function AdminStudentDetailPage() {
 
         {id && <StudentAcademicsSection userId={id} showPayments />}
       </div>
-    </AdminLayout>
+    </>
   )
 }

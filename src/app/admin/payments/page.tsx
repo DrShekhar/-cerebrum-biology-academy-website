@@ -16,7 +16,6 @@ import {
   Send,
   FileText,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { AddPaymentForm } from '@/components/admin/AddPaymentForm'
@@ -149,7 +148,7 @@ export default function PaymentsPage() {
   ]
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-8">
         <div className="flex justify-between items-center">
           <div>
@@ -378,6 +377,6 @@ export default function PaymentsPage() {
           onCancel={() => setIsAddPaymentModalOpen(false)}
         />
       </Modal>
-    </AdminLayout>
+    </>
   )
 }

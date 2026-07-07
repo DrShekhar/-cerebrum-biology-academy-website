@@ -14,7 +14,6 @@ import {
   Download,
   Loader2,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { ScheduleDemoForm } from '@/components/admin/ScheduleDemoForm'
@@ -237,7 +236,7 @@ export default function DemoBookingsPage() {
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8 flex justify-between items-center">
@@ -485,6 +484,6 @@ export default function DemoBookingsPage() {
           onCancel={() => setIsScheduleDemoModalOpen(false)}
         />
       </Modal>
-    </AdminLayout>
+    </>
   )
 }

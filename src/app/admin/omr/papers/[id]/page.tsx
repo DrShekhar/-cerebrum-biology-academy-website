@@ -12,7 +12,6 @@ import {
   CheckCircle,
   AlertCircle,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
@@ -127,29 +126,29 @@ export default function PaperDetailPage({ params }: { params: Promise<{ id: stri
 
   if (loading) {
     return (
-      <AdminLayout>
+      <>
         <div className="p-6 flex items-center justify-center min-h-[400px]">
           <div className="text-center">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600 mx-auto"></div>
             <p className="mt-2 text-gray-500">Loading paper...</p>
           </div>
         </div>
-      </AdminLayout>
+      </>
     )
   }
 
   if (!paper) {
     return (
-      <AdminLayout>
+      <>
         <div className="p-6">
           <p>Paper not found</p>
         </div>
-      </AdminLayout>
+      </>
     )
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-4">
@@ -318,6 +317,6 @@ export default function PaperDetailPage({ params }: { params: Promise<{ id: stri
           </div>
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }

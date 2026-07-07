@@ -13,7 +13,6 @@ import {
   Phone,
   Target,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 
 interface MarketingOverview {
@@ -65,7 +64,7 @@ export default function MarketingPage() {
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
@@ -240,6 +239,6 @@ export default function MarketingPage() {
           </div>
         )}
       </div>
-    </AdminLayout>
+    </>
   )
 }

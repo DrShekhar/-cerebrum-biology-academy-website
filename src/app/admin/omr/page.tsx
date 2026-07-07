@@ -13,7 +13,6 @@ import {
   Key,
   Users,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
@@ -96,7 +95,7 @@ export default function OMRAdminPage() {
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6">
         <div className="flex justify-between items-center mb-6">
           <div>
@@ -323,6 +322,6 @@ export default function OMRAdminPage() {
           </div>
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }

@@ -19,7 +19,6 @@ import {
   BarChart3,
   Target,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { paiseToRupees, formatPaiseToINR } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
@@ -183,7 +182,7 @@ export default function CoursesPage() {
   ]
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-8">
         <div className="flex justify-between items-center">
           <div>
@@ -467,6 +466,6 @@ export default function CoursesPage() {
           />
         </Modal>
       )}
-    </AdminLayout>
+    </>
   )
 }

@@ -14,7 +14,6 @@ import {
   TrendingDown,
   Clock,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 
 interface Payment {
@@ -85,7 +84,7 @@ export default function RefundsPage() {
     }).format(amount)
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-6">
         <div className="flex justify-between items-center">
           <div>
@@ -255,6 +254,6 @@ export default function RefundsPage() {
           )}
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }

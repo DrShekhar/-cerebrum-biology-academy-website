@@ -12,7 +12,6 @@ import {
   AlertCircle,
   Settings,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { showToast } from '@/lib/toast'
 
@@ -194,7 +193,7 @@ export default function NotificationsSettingsPage() {
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
@@ -469,6 +468,6 @@ export default function NotificationsSettingsPage() {
           </Button>
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }

@@ -19,7 +19,6 @@ import {
   AlertCircle,
 } from 'lucide-react'
 import Image from 'next/image'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 
@@ -162,7 +161,7 @@ export default function AdminGalleryPage() {
   }
 
   return (
-    <AdminLayout>
+    <>
       {/* Page Header */}
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-gray-900">Gallery Management</h1>
@@ -643,7 +642,7 @@ export default function AdminGalleryPage() {
           />
         )}
       </Modal>
-    </AdminLayout>
+    </>
   )
 }
 

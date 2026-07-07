@@ -13,7 +13,6 @@ import {
   CheckCircle,
   AlertCircle,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { FetchErrorState } from '@/components/admin/FetchErrorState'
 import { Button } from '@/components/ui/Button'
 
@@ -74,7 +73,7 @@ export default function EmailCampaignsPage() {
   const avgClickRate = totalOpened > 0 ? ((totalClicked / totalOpened) * 100).toFixed(1) : '0'
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-6">
         <div className="flex justify-between items-center">
           <div>
@@ -266,6 +265,6 @@ export default function EmailCampaignsPage() {
           </div>
         )}
       </div>
-    </AdminLayout>
+    </>
   )
 }

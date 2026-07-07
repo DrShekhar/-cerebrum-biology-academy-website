@@ -12,7 +12,6 @@ import {
   BarChart3,
   Loader2,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 
 interface ReportConfig {
@@ -181,7 +180,7 @@ export default function ReportsPage() {
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-6">
         <div className="flex justify-between items-center">
           <div>
@@ -252,6 +251,6 @@ export default function ReportsPage() {
           ))}
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }

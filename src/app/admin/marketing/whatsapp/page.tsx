@@ -13,7 +13,6 @@ import {
   RefreshCw,
   ExternalLink,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { FetchErrorState } from '@/components/admin/FetchErrorState'
 import { Button } from '@/components/ui/Button'
 
@@ -72,7 +71,7 @@ export default function WhatsAppAnalyticsPage() {
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-6">
         <div className="flex justify-between items-center">
           <div>
@@ -289,6 +288,6 @@ export default function WhatsAppAnalyticsPage() {
           </div>
         )}
       </div>
-    </AdminLayout>
+    </>
   )
 }

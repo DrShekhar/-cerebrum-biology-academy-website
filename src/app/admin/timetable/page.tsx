@@ -12,7 +12,6 @@ import {
   Wifi,
   Building2,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { showToast } from '@/lib/toast'
@@ -264,7 +263,7 @@ export default function TimetableAdminPage() {
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-8">
         {/* Header */}
         <div className="flex justify-between items-center">
@@ -697,6 +696,6 @@ export default function TimetableAdminPage() {
           </div>
         </div>
       </Modal>
-    </AdminLayout>
+    </>
   )
 }

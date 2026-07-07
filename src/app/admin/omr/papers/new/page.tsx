@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { ArrowLeft, Save, Loader2 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
@@ -73,7 +72,7 @@ export default function CreatePaperPage() {
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 max-w-3xl mx-auto">
         <div className="flex items-center gap-4 mb-6">
           <Link href="/admin/omr">
@@ -273,6 +272,6 @@ export default function CreatePaperPage() {
           </div>
         </form>
       </div>
-    </AdminLayout>
+    </>
   )
 }

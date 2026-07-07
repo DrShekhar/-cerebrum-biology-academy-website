@@ -18,7 +18,6 @@ import {
   Target,
   MousePointer,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { AnalyticsDashboard, RealTimeMetrics } from '@/lib/types/analytics'
 
@@ -90,16 +89,16 @@ export default function AnalyticsPage() {
 
   if (loading || !dashboardData) {
     return (
-      <AdminLayout>
+      <>
         <div className="flex items-center justify-center h-64">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
         </div>
-      </AdminLayout>
+      </>
     )
   }
 
   return (
-    <AdminLayout>
+    <>
       <div className="space-y-8">
         {/* Header */}
         <div className="flex items-center justify-between">
@@ -635,6 +634,6 @@ export default function AnalyticsPage() {
           </div>
         )}
       </div>
-    </AdminLayout>
+    </>
   )
 }

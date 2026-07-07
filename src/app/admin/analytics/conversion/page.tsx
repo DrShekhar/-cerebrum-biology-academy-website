@@ -10,7 +10,6 @@ import {
   Clock,
   RefreshCw,
 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 
 interface ConversionData {
@@ -72,7 +71,7 @@ export default function ConversionPage() {
     }).format(amount)
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-6">
         <div className="flex justify-between items-center">
           <div>
@@ -305,6 +304,6 @@ export default function ConversionPage() {
           </div>
         )}
       </div>
-    </AdminLayout>
+    </>
   )
 }

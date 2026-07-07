@@ -8,7 +8,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Users, Search, Calendar, Mail, Phone, Activity, Loader2 } from 'lucide-react'
-import { AdminLayout } from '@/components/admin/AdminLayout'
 
 interface ActiveStudent {
   id: string
@@ -99,7 +98,7 @@ export default function ActiveStudentsPage() {
   ]
 
   return (
-    <AdminLayout>
+    <>
       <div className="p-6 space-y-6">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Active Students</h1>
@@ -263,6 +262,6 @@ export default function ActiveStudentsPage() {
           )}
         </div>
       </div>
-    </AdminLayout>
+    </>
   )
 }
