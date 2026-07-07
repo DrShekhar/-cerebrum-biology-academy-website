@@ -1,10 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
+import { mentionedUserIds, stripMentionMarkup } from '@/lib/staff/mentions'
+import { notifyStaff } from '@/lib/staff/notify'
 
 export const dynamic = 'force-dynamic'
 
-// GET /api/counselor/leads/[id]/notes - Get all notes for a lead
+// GET /api/counselor/leads/[id]/notes - Get all notes/comments for a lead
+// (flat list, oldest first; parentId lets the client group one level of replies)
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth()
@@ -27,10 +30,10 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 
     const notes = await prisma.notes.findMany({
       where: { leadId: params.id },
-      orderBy: { createdAt: 'desc' },
+      orderBy: { createdAt: 'asc' },
       include: {
         users: {
-          select: { name: true, email: true },
+          select: { id: true, name: true },
         },
       },
     })
@@ -38,8 +41,10 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const formatted = notes.map((note) => ({
       id: note.id,
       content: note.content,
+      parentId: note.parentId,
+      mentionedUserIds: note.mentionedUserIds,
       createdAt: note.createdAt,
-      createdBy: { name: note.users.name },
+      createdBy: { id: note.users.id, name: note.users.name },
     }))
 
     return NextResponse.json({ data: formatted })
@@ -49,7 +54,8 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
   }
 }
 
-// POST /api/counselor/leads/[id]/notes - Create a new note
+// POST /api/counselor/leads/[id]/notes - Create a note, a reply (parentId),
+// with optional @[Name](userId) mentions → staff notification fanout.
 export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth()
@@ -61,7 +67,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     }
 
     const body = await request.json()
-    const { content, type, mood, nextSteps } = body
+    const { content, type, mood, nextSteps, parentId } = body
 
     if (!content || !content.trim()) {
       return NextResponse.json({ error: 'Content is required' }, { status: 400 })
@@ -71,10 +77,23 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     const isAdmin = session.user.role === 'ADMIN'
     const lead = await prisma.leads.findFirst({
       where: { id: params.id, ...(isAdmin ? {} : { assignedToId: session.user.id }) },
+      select: { id: true, studentName: true },
     })
 
     if (!lead) {
       return NextResponse.json({ error: 'Lead not found' }, { status: 404 })
+    }
+
+    // Replies attach to a ROOT note of the same lead (one level deep).
+    let parentNote: { id: string; createdById: string } | null = null
+    if (parentId) {
+      parentNote = await prisma.notes.findFirst({
+        where: { id: parentId, leadId: params.id, parentId: null },
+        select: { id: true, createdById: true },
+      })
+      if (!parentNote) {
+        return NextResponse.json({ error: 'Parent note not found' }, { status: 400 })
+      }
     }
 
     // Build content with metadata
@@ -89,17 +108,21 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       fullContent += `\n\nNext steps: ${nextSteps}`
     }
 
+    const mentions = mentionedUserIds(fullContent)
+
     const note = await prisma.notes.create({
       data: {
         id: `note_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
         leadId: params.id,
         content: fullContent,
+        parentId: parentNote?.id || null,
+        mentionedUserIds: mentions,
         createdById: session.user.id,
         updatedAt: new Date(),
       },
       include: {
         users: {
-          select: { name: true, email: true },
+          select: { id: true, name: true },
         },
       },
     })
@@ -110,12 +133,41 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       data: { lastContactedAt: new Date(), updatedAt: new Date() },
     })
 
+    // Notification fanout — never fails the note write.
+    const actorName = note.users.name || 'A teammate'
+    const preview = stripMentionMarkup(fullContent).slice(0, 200)
+    const leadHref = `/counselor/leads/${params.id}`
+    if (mentions.length > 0) {
+      void notifyStaff({
+        userIds: mentions,
+        type: 'MENTION_LEAD',
+        title: `${actorName} mentioned you on ${lead.studentName}`,
+        body: preview,
+        href: leadHref,
+        actorId: session.user.id,
+        leadId: params.id,
+      })
+    }
+    if (parentNote && parentNote.createdById !== session.user.id) {
+      void notifyStaff({
+        userIds: [parentNote.createdById].filter((id) => !mentions.includes(id)),
+        type: 'LEAD_COMMENT_REPLY',
+        title: `${actorName} replied to your note on ${lead.studentName}`,
+        body: preview,
+        href: leadHref,
+        actorId: session.user.id,
+        leadId: params.id,
+      })
+    }
+
     return NextResponse.json({
       data: {
         id: note.id,
         content: note.content,
+        parentId: note.parentId,
+        mentionedUserIds: note.mentionedUserIds,
         createdAt: note.createdAt,
-        createdBy: { name: note.users.name },
+        createdBy: { id: note.users.id, name: note.users.name },
       },
     })
   } catch (error) {

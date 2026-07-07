@@ -1926,16 +1926,23 @@ model newsletterSubscriber {
 }
 
 model notes {
-  id          String   @id
-  leadId      String
-  content     String
-  createdById String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime
-  users       users    @relation(fields: [createdById], references: [id])
-  leads       leads    @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  id               String   @id
+  leadId           String
+  content          String
+  createdById      String
+  // Threaded lead comments: one level of replies under a root note.
+  parentId         String?
+  // Staff userIds parsed from @[Name](userId) markup at write time.
+  mentionedUserIds String[] @default([])
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime
+  users            users    @relation(fields: [createdById], references: [id])
+  leads            leads    @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  parent           notes?   @relation("note_replies", fields: [parentId], references: [id], onDelete: Cascade)
+  replies          notes[]  @relation("note_replies")
 
   @@index([leadId, createdAt])
+  @@index([parentId])
 }
 
 model offers {
@@ -3170,6 +3177,10 @@ model users {
   product_recommendations                                               product_recommendations[]
   security_audit_logs                                                   security_audit_logs[]
   sessions                                                              sessions[]
+  staff_channels_created                                                staff_channels[]                 @relation("staff_channels_createdBy")
+  staff_channel_members                                                 staff_channel_members[]
+  staff_messages                                                        staff_messages[]
+  staff_notifications                                                   staff_notifications[]
   student_attendance_student_attendance_markedByTousers                 student_attendance[]             @relation("student_attendance_markedByTousers")
   student_attendance_student_attendance_studentIdTousers                student_attendance[]             @relation("student_attendance_studentIdTousers")
   tasks_tasks_assignedToIdTousers                                       tasks[]                          @relation("tasks_assignedToIdTousers")
@@ -5004,6 +5015,81 @@ model site_settings {
   value     Json
   updatedAt DateTime @updatedAt
   updatedBy String?
+}
+
+enum StaffChannelType {
+  TEAM
+  DIRECT
+}
+
+model staff_channels {
+  id            String                  @id @default(cuid())
+  name          String
+  description   String?
+  type          StaffChannelType        @default(TEAM)
+  isArchived    Boolean                 @default(false)
+  // Denormalized on every post — lets the inbox poll skip channels with
+  // nothing new without touching staff_messages.
+  lastMessageAt DateTime?
+  createdById   String
+  createdAt     DateTime                @default(now())
+  updatedAt     DateTime                @updatedAt
+  createdBy     users                   @relation("staff_channels_createdBy", fields: [createdById], references: [id])
+  members       staff_channel_members[]
+  messages      staff_messages[]
+
+  @@index([isArchived, lastMessageAt])
+}
+
+model staff_channel_members {
+  id         String         @id @default(cuid())
+  channelId  String
+  userId     String
+  role       String         @default("MEMBER")
+  // Read-state watermark: unread = messages newer than this.
+  lastReadAt DateTime       @default(now())
+  joinedAt   DateTime       @default(now())
+  channel    staff_channels @relation(fields: [channelId], references: [id], onDelete: Cascade)
+  user       users          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([channelId, userId])
+  @@index([userId])
+}
+
+model staff_messages {
+  id               String         @id @default(cuid())
+  channelId        String
+  senderId         String
+  content          String
+  mentionedUserIds String[]       @default([])
+  attachments      String[]       @default([])
+  editedAt         DateTime?
+  deletedAt        DateTime?
+  createdAt        DateTime       @default(now())
+  channel          staff_channels @relation(fields: [channelId], references: [id], onDelete: Cascade)
+  sender           users          @relation(fields: [senderId], references: [id], onDelete: Cascade)
+
+  @@index([channelId, createdAt])
+  @@index([senderId])
+}
+
+model staff_notifications {
+  id        String    @id @default(cuid())
+  userId    String
+  type      String
+  title     String
+  body      String
+  actorId   String?
+  href      String
+  leadId    String?
+  channelId String?
+  isRead    Boolean   @default(false)
+  readAt    DateTime?
+  createdAt DateTime  @default(now())
+  user      users     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, isRead])
+  @@index([userId, createdAt])
 }
 
 model group_content {
