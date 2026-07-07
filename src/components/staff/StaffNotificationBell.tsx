@@ -62,6 +62,12 @@ export function StaffNotificationBell({ surface }: { surface: 'admin' | 'counsel
   }, [open])
 
   const hrefFor = (n: StaffNotification): string | null => {
+    // WhatsApp inbound → open the inbox thread directly (admin/counselor only).
+    if (n.type === 'WHATSAPP_INBOUND' && surface !== 'teacher') {
+      return n.href.startsWith('/counselor/whatsapp-inbox') && surface === 'admin'
+        ? n.href.replace('/counselor/', '/admin/')
+        : n.href
+    }
     if (n.leadId) {
       if (surface === 'admin') return `/admin/students/leads/${n.leadId}`
       if (surface === 'counselor') return `/counselor/leads/${n.leadId}`

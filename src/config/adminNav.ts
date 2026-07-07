@@ -52,6 +52,12 @@ export const ADMIN_NAV: AdminNavItem[] = [
   { id: 'dashboard', name: 'Dashboard', icon: LayoutDashboard, href: '/admin' },
   { id: 'team-chat', name: 'Team Chat', icon: MessagesSquare, href: '/admin/team-chat' },
   {
+    id: 'whatsapp-inbox',
+    name: 'WhatsApp Inbox',
+    icon: MessagesSquare,
+    href: '/admin/whatsapp-inbox',
+  },
+  {
     id: 'demo-bookings',
     name: 'Demo Bookings',
     icon: Calendar,

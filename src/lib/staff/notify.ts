@@ -13,6 +13,8 @@ export type StaffNotificationType =
   | 'LEAD_COMMENT_REPLY'
   | 'ANNOUNCEMENT'
   | 'SYSTEM'
+  | 'WHATSAPP_INBOUND'
+  | 'SLA_BREACH'
 
 export interface StaffNotificationInput {
   userIds: string[]

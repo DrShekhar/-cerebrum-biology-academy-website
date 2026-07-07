@@ -3,7 +3,9 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "framework": "nextjs",
-  "regions": ["bom1"],
+  "regions": [
+    "bom1"
+  ],
   "env": {
     "NODE_ENV": "production",
     "NEXT_TELEMETRY_DISABLED": "1",
@@ -126,6 +128,10 @@
     {
       "path": "/api/cron/webhook-retries",
       "schedule": "10,40 * * * *"
+    },
+    {
+      "path": "/api/cron/sla-watchdog",
+      "schedule": "*/10 * * * *"
     }
   ]
 }

@@ -13,6 +13,7 @@ import { prisma } from '@/lib/prisma'
 import crypto from 'crypto'
 import { isFromOwner, processApprovalResponse } from '@/lib/seo-marketing/approvalService'
 import { logInboundWhatsAppMessage } from '@/lib/whatsapp/inboundLogger'
+import { captureInboundWhatsAppLead } from '@/lib/whatsapp/inboundLeadCapture'
 
 const INTERAKT_WEBHOOK_SECRET = process.env.INTERAKT_WEBHOOK_SECRET
 
@@ -228,6 +229,20 @@ async function handleIncomingMessage(data: any, originalPayload: InteraktWebhook
     fromPhone: phone,
     message: previewBody,
     providerMessageId,
+  })
+
+  // CRM lead engine (additive, non-blocking): dedup-upsert the lead, thread
+  // the message into whatsapp_conversations, and bell the counselor. The
+  // wa.me prefilled-context message is stored verbatim on the lead timeline.
+  void captureInboundWhatsAppLead({
+    phone,
+    message: previewBody,
+    messageType,
+    providerMessageId,
+    profileName:
+      originalPayload.data?.customer?.traits?.name ||
+      (originalPayload.data?.customer as { name?: string } | undefined)?.name ||
+      null,
   })
 
   if (messageType === 'text' && messageText) {

@@ -33,6 +33,12 @@ const navItems = [
   { href: '/counselor/tasks', label: 'Tasks', icon: ListTodo, shortcut: 'gt' },
   { href: '/counselor/messages', label: 'Messages', icon: MessageSquare, shortcut: 'gm' },
   { href: '/counselor/team-chat', label: 'Team Chat', icon: MessagesSquare, shortcut: 'gc' },
+  {
+    href: '/counselor/whatsapp-inbox',
+    label: 'WhatsApp Inbox',
+    icon: MessagesSquare,
+    shortcut: 'gw',
+  },
   { href: '/counselor/bulk-whatsapp', label: 'Bulk WA', icon: Send, shortcut: 'gb' },
   { href: '/counselor/payments', label: 'Payments', icon: CreditCard, shortcut: 'gp' },
   { href: '/counselor/analytics', label: 'Analytics', icon: BarChart3, shortcut: 'ga' },
