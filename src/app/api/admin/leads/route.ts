@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { requireAdminAuth } from '@/lib/auth'
+import { upsertLeadCore } from '@/lib/leads/upsertLead'
 import { v4 as uuidv4 } from 'uuid'
 import type { LeadSource, Priority, LeadStage } from '@/generated/prisma'
 
@@ -149,29 +150,33 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const validatedData = createLeadSchema.parse(body)
 
-    const lead = await prisma.leads.create({
-      data: {
-        id: uuidv4(),
-        studentName: validatedData.studentName,
-        email: validatedData.email || null,
-        phone: validatedData.phone,
-        courseInterest: validatedData.courseInterest,
-        source: validatedData.source as LeadSource,
-        priority: validatedData.priority as Priority,
-        stage: 'NEW_LEAD',
-        assignedToId: validatedData.assignedToId,
-        nextFollowUpAt: validatedData.nextFollowUpAt
-          ? new Date(validatedData.nextFollowUpAt)
-          : null,
-        updatedAt: new Date(),
-      },
+    // Canonical CRM write: dedup by phone. The operator-chosen assignee wins
+    // over round-robin; a duplicate surfaces as a conflict flag instead of a
+    // silent second lead.
+    const result = await upsertLeadCore(prisma, {
+      name: validatedData.studentName,
+      phone: validatedData.phone,
+      email: validatedData.email || null,
+      courseInterest: validatedData.courseInterest,
+      source: 'admin-panel',
+      sourceEnum: validatedData.source as LeadSource,
+      priority: validatedData.priority as Priority,
+      assignedToId: validatedData.assignedToId,
+      skipTask: true,
     })
+
+    if (result.created && validatedData.nextFollowUpAt) {
+      await prisma.leads.update({
+        where: { id: result.leadId },
+        data: { nextFollowUpAt: new Date(validatedData.nextFollowUpAt) },
+      })
+    }
 
     if (validatedData.notes) {
       await prisma.notes.create({
         data: {
           id: uuidv4(),
-          leadId: lead.id,
+          leadId: result.leadId,
           content: validatedData.notes,
           createdById: validatedData.assignedToId,
           updatedAt: new Date(),
@@ -179,23 +184,34 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    await prisma.activities.create({
-      data: {
-        id: uuidv4(),
-        userId: validatedData.assignedToId,
-        leadId: lead.id,
-        action: 'lead_created',
-        description: `New lead "${validatedData.studentName}" added to CRM`,
-        metadata: {
-          source: validatedData.source,
-          priority: validatedData.priority,
-          courseInterest: validatedData.courseInterest,
+    if (result.created) {
+      await prisma.activities.create({
+        data: {
+          id: uuidv4(),
+          userId: validatedData.assignedToId,
+          leadId: result.leadId,
+          action: 'lead_created',
+          description: `New lead "${validatedData.studentName}" added to CRM`,
+          metadata: {
+            source: validatedData.source,
+            priority: validatedData.priority,
+            courseInterest: validatedData.courseInterest,
+          },
         },
-      },
-    })
+      })
+    }
+
+    const lead = await prisma.leads.findUnique({ where: { id: result.leadId } })
 
     return NextResponse.json(
-      { success: true, message: 'Lead added successfully', data: lead },
+      {
+        success: true,
+        message: result.created
+          ? 'Lead added successfully'
+          : 'A lead with this phone already exists — showing the existing lead',
+        data: lead,
+        isExisting: !result.created,
+      },
       { status: 201 }
     )
   } catch (error) {

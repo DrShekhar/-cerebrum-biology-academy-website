@@ -10,6 +10,7 @@ import { trackDemoBookingConversion } from '@/lib/integrations/googleAdsConversi
 import { logger } from '@/lib/utils/logger'
 import { Prisma } from '@/generated/prisma'
 import { normalizePhone, validatePhone } from '@/lib/utils/phone'
+import { upsertLeadCore } from '@/lib/leads/upsertLead'
 
 /**
  * @deprecated This endpoint is deprecated. Use /api/demo-booking instead.
@@ -403,6 +404,7 @@ export async function POST(request: NextRequest) {
             data: {
               stage: 'DEMO_SCHEDULED',
               demoBookingId: booking.id,
+              phoneNormalized: normalizedPhoneValue.replace(/\D/g, '').slice(-10),
               // Update if name is different
               ...(body.studentName !== existingLead.studentName && {
                 studentName: body.studentName,
@@ -410,23 +412,30 @@ export async function POST(request: NextRequest) {
             },
           })
         } else {
-          // Step 3: Create new Lead from DemoBooking with proper tracking
-          leadRecord = await tx.leads.create({
+          // Step 3: canonical CRM write inside the booking transaction —
+          // upsertLeadCore(tx, …) is atomic with the booking and stamps
+          // phoneNormalized. Bespoke 2-hour task below, so skipTask.
+          const result = await upsertLeadCore(tx, {
+            name: body.studentName,
+            phone: normalizedPhoneValue,
+            email: normalizedEmail,
+            courseInterest: body.courseInterest,
+            source: sourceDetail,
+            sourceEnum: leadSource,
+            priority: 'HOT',
+            stage: 'DEMO_SCHEDULED',
+            demoBookingId: booking.id,
+            assignedToId: assignedCounselor.id,
+            gclid: body.gclid,
+            utmSource: body.utmSource,
+            utmMedium: body.utmMedium,
+            utmCampaign: body.utmCampaign,
+            skipTask: true,
+          })
+          leadRecord = await tx.leads.update({
+            where: { id: result.leadId },
             data: {
-              id: `lead_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
-              updatedAt: new Date(),
-              studentName: body.studentName,
-              email: normalizedEmail,
-              phone: normalizedPhoneValue,
-              courseInterest: body.courseInterest,
-              stage: 'DEMO_SCHEDULED',
-              priority: 'HOT',
-              source: leadSource,
-              sourceDetail: sourceDetail,
               utmContent: body.utmContent,
-              gclid: body.gclid,
-              assignedToId: assignedCounselor.id,
-              demoBookingId: booking.id,
               nextFollowUpAt: new Date(Date.now() + 24 * 60 * 60 * 1000), // Tomorrow
             },
           })

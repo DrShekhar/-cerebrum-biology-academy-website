@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { normalizePhone } from '@/lib/utils/phone'
 import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
+import { upsertLeadCore } from '@/lib/leads/upsertLead'
 
 /**
  * Simplified demo booking endpoint for Google Ads landing pages.
@@ -82,22 +83,23 @@ export async function POST(request: NextRequest) {
         },
       })
 
-      const lead = await tx.leads.create({
-        data: {
-          id: `lead_${Date.now()}_${Math.random().toString(36).substring(7)}`,
-          studentName: name,
-          phone: normalizedPhone,
-          courseInterest: course,
-          stage: 'DEMO_SCHEDULED',
-          priority: 'HOT',
-          // Valid LeadSource enum (was 'PAID_ADS'/'WEBSITE_FORM' — not in enum,
-          // threw and rolled back the booking).
-          source: body.utm_source ? 'ADVERTISEMENT' : 'WEBSITE',
-          sourceDetail: source,
-          assignedToId: assignee.id,
-          demoBookingId: booking.id,
-          updatedAt: new Date(),
-        },
+      // Canonical CRM write, atomic with the booking. Dedup by phone (a repeat
+      // visitor updates their existing lead instead of duplicating) and
+      // phoneNormalized is stamped.
+      const lead = await upsertLeadCore(tx, {
+        name,
+        phone: normalizedPhone,
+        courseInterest: course,
+        source,
+        sourceEnum: body.utm_source ? 'ADVERTISEMENT' : 'WEBSITE',
+        priority: 'HOT',
+        stage: 'DEMO_SCHEDULED',
+        demoBookingId: booking.id,
+        assignedToId: assignee.id,
+        utmSource: body.utm_source || null,
+        utmMedium: body.utm_medium || null,
+        utmCampaign: body.utm_campaign || null,
+        skipTask: true,
       })
 
       return { booking, lead }

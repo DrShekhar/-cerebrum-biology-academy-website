@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { authenticateCounselor } from '@/lib/auth/counselor-auth'
+import { upsertLeadCore } from '@/lib/leads/upsertLead'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import type { LeadStage, Priority, LeadSource } from '@/generated/prisma'
@@ -163,16 +164,23 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const validatedData = createLeadSchema.parse(body)
 
-    const lead = await prisma.leads.create({
-      data: {
-        id: `lead_${Date.now()}_${Math.floor(Math.random() * 1000)}`,
-        ...validatedData,
-        source: validatedData.source ? (validatedData.source as LeadSource) : undefined,
-        assignedToId: session.userId,
-        stage: 'NEW_LEAD',
-        priority: validatedData.priority || 'WARM',
-        updatedAt: new Date(),
-      },
+    // Canonical CRM write: dedup by phone, creating counselor keeps the lead
+    // (assignedToId wins over round-robin); duplicates surface as isExisting.
+    const result = await upsertLeadCore(prisma, {
+      name: validatedData.studentName,
+      phone: validatedData.phone,
+      email: validatedData.email,
+      courseInterest: validatedData.courseInterest,
+      source: 'counselor-panel',
+      sourceEnum: validatedData.source ? (validatedData.source as LeadSource) : 'MANUAL_ENTRY',
+      priority: validatedData.priority || 'WARM',
+      assignedToId: session.userId,
+      demoBookingId: validatedData.demoBookingId || null,
+      skipTask: true,
+    })
+
+    const lead = await prisma.leads.findUniqueOrThrow({
+      where: { id: result.leadId },
       include: {
         users: {
           select: {
@@ -184,15 +192,17 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    await prisma.activities.create({
-      data: {
-        id: `act_${Date.now()}_${Math.random().toString(36).substring(7)}`,
-        userId: session.userId,
-        leadId: lead.id,
-        action: 'LEAD_CREATED',
-        description: `Created new lead: ${lead.studentName}`,
-      },
-    })
+    if (!result.created) {
+      return NextResponse.json(
+        {
+          success: true,
+          data: lead,
+          isExisting: true,
+          message: 'A lead with this phone already exists — showing the existing lead',
+        },
+        { status: 200 }
+      )
+    }
 
     // Queue AI Lead Qualifier Agent (automatic trigger)
     try {

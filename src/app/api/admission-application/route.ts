@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import { sendTemplateMessage, notifyCounselorOfNewLead } from '@/lib/interakt'
 import { logger } from '@/lib/utils/logger'
+import { upsertLeadCore } from '@/lib/leads/upsertLead'
 
 const AdmissionApplicationSchema = z.object({
   personalInfo: z.object({
@@ -84,43 +85,27 @@ export async function POST(request: NextRequest) {
     // Create lead for counselor follow-up — real leads schema (the previous
     // name/status/course/preferredDate/notes field set does not exist on the
     // model and threw, 500-ing every admission submission).
-    const admissionAssignee =
-      (await prisma.users.findFirst({
-        where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
-        orderBy: { leads: { _count: 'asc' } },
-        select: { id: true },
-      })) || (await prisma.users.findFirst({ where: { role: 'ADMIN' }, select: { id: true } }))
+    // Canonical CRM write (dedup by phone, phoneNormalized stamped). Failure
+    // never blocks the admission submission itself.
+    let lead: { id: string; assignedToId: string } | null = null
+    try {
+      const result = await upsertLeadCore(prisma, {
+        name: `${personalInfo.firstName} ${personalInfo.lastName}`,
+        phone: formattedPhone,
+        email: personalInfo.email,
+        courseInterest: `Admission — ${courseSelection.selectedBatch}`,
+        source: 'admission-form',
+        priority: 'HOT',
+        skipTask: true,
+      })
+      lead = { id: result.leadId, assignedToId: result.assignedToId }
+    } catch (leadError) {
+      logger.warn('Admission CRM lead upsert failed (non-blocking)', {
+        error: leadError instanceof Error ? leadError.message : 'Unknown error',
+      })
+    }
 
-    const admissionLast10 = formattedPhone.replace(/\D/g, '').slice(-10)
-    const existingAdmissionLead = admissionLast10
-      ? await prisma.leads.findFirst({
-          where: { phone: { endsWith: admissionLast10 } },
-          select: { id: true },
-        })
-      : null
-
-    const lead =
-      existingAdmissionLead ||
-      (admissionAssignee
-        ? await prisma.leads.create({
-            data: {
-              id: `lead_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
-              studentName: `${personalInfo.firstName} ${personalInfo.lastName}`,
-              email: personalInfo.email,
-              phone: formattedPhone,
-              courseInterest: `Admission — ${courseSelection.selectedBatch}`,
-              stage: 'NEW_LEAD',
-              priority: 'HOT',
-              source: 'WEBSITE',
-              sourceDetail: 'admission-form',
-              assignedToId: admissionAssignee.id,
-              nextFollowUpAt: new Date(Date.now() + 60 * 60 * 1000),
-              updatedAt: new Date(),
-            },
-          })
-        : null)
-
-    if (lead && admissionAssignee) {
+    if (lead) {
       await prisma.notes.create({
         data: {
           id: `note_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
@@ -140,7 +125,7 @@ export async function POST(request: NextRequest) {
             null,
             2
           )}`,
-          createdById: admissionAssignee.id,
+          createdById: lead.assignedToId,
           updatedAt: new Date(),
         },
       })

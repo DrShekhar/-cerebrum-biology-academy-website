@@ -53,6 +53,11 @@ export interface UpsertLeadInput {
 }
 
 export interface UpsertLeadCoreInput extends UpsertLeadInput {
+  /**
+   * Explicit LeadSource enum (staff-chosen). Wins over mapLeadSource(source)
+   * free-text inference.
+   */
+  sourceEnum?: LeadSource
   /** Initial stage for a newly created lead (default NEW_LEAD). */
   stage?: LeadStage
   /** Link the lead to a demo booking (unique FK on leads.demoBookingId). */
@@ -196,7 +201,7 @@ export async function upsertLeadCore(
       courseInterest: input.courseInterest?.trim() || 'Biology coaching (website enquiry)',
       stage: input.stage || 'NEW_LEAD',
       priority: input.priority || 'WARM',
-      source: mapLeadSource(input.source),
+      source: input.sourceEnum || mapLeadSource(input.source),
       sourceDetail,
       assignedToId: assigneeId,
       demoBookingId: input.demoBookingId || null,

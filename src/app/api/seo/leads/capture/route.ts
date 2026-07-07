@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import { whatsappDripService } from '@/lib/automation/whatsappDripService'
+import { upsertLead } from '@/lib/leads/upsertLead'
 
 const leadCaptureSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -94,51 +95,21 @@ export async function POST(request: NextRequest) {
       }),
     ])
 
-    // If WhatsApp number is provided, create a lead and trigger drip sequence
+    // If WhatsApp number is provided, upsert a CRM lead (canonical dedup path)
+    // and trigger the drip sequence.
     if (validatedData.whatsappNumber) {
       try {
-        const cleanPhone = validatedData.whatsappNumber.replace(/\D/g, '').slice(-10)
-
-        // Check if lead already exists
-        let lead = await prisma.leads.findFirst({
-          where: {
-            OR: [{ phone: { contains: cleanPhone } }, { email: validatedData.email || undefined }],
-          },
+        const result = await upsertLead({
+          name: validatedData.name,
+          phone: validatedData.whatsappNumber,
+          email: validatedData.email || null,
+          courseInterest: validatedData.topicSlug || 'Biology coaching (topic page)',
+          source: validatedData.source,
         })
 
-        if (!lead) {
-          // Resolve a real assignee — 'system' was a magic string with no
-          // matching users row, so this create FK-crashed and the CRM lead was
-          // silently lost. source must also be a valid LeadSource enum.
-          const assignee =
-            (await prisma.users.findFirst({
-              where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
-              orderBy: { leads: { _count: 'asc' } },
-              select: { id: true },
-            })) ||
-            (await prisma.users.findFirst({ where: { role: 'ADMIN' }, select: { id: true } }))
-
-          if (assignee) {
-            lead = await prisma.leads.create({
-              data: {
-                id: `lead_${Date.now()}_${Math.random().toString(36).slice(2)}`,
-                studentName: validatedData.name,
-                email: validatedData.email || null,
-                phone: cleanPhone,
-                courseInterest: validatedData.topicSlug || 'Biology coaching (topic page)',
-                stage: 'NEW_LEAD',
-                source: 'WEBSITE',
-                sourceDetail: validatedData.source,
-                assignedToId: assignee.id,
-                updatedAt: new Date(),
-              },
-            })
-          }
-        }
-
         // Trigger form_submit behavioral action (starts welcome sequence)
-        if (lead) {
-          await whatsappDripService.handleBehavioralTrigger(lead.id, 'form_submit', {
+        if (result) {
+          await whatsappDripService.handleBehavioralTrigger(result.leadId, 'form_submit', {
             source: validatedData.source,
             topicSlug: validatedData.topicSlug,
             leadMagnetId: validatedData.leadMagnetId,

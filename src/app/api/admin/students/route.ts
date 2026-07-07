@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import prisma from '@/lib/prisma'
 import { requireAdminAuth } from '@/lib/auth'
+import { upsertLeadCore } from '@/lib/leads/upsertLead'
 import type { LeadStage, Priority } from '@/generated/prisma'
 
 export async function GET(request: NextRequest) {
@@ -166,43 +167,21 @@ export async function POST(request: NextRequest) {
     // Validate request body
     const validatedData = addStudentSchema.parse(body)
 
-    // Resolve assignee — round-robin to the least-loaded counselor/admin.
-    const assignee = (await prisma.users.findFirst({
-      where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
-      orderBy: { leads: { _count: 'asc' } },
-      select: { id: true },
-    })) || { id: session.user.id }
-
-    // Create the lead with the REAL leads schema (the previous field set —
-    // name/class/school/parentName/status/createdBy — does not exist on the
-    // model and threw on every submission). Rich details that have no column
-    // are folded into a linked note + courseInterest context.
-    const phone = validatedData.phone.replace(/\D/g, '').slice(-10) || validatedData.phone
-    const last10 = phone.replace(/\D/g, '').slice(-10)
-    const existing = last10
-      ? await prisma.leads.findFirst({
-          where: { phone: { endsWith: last10 } },
-          select: { id: true },
-        })
-      : null
-
-    const student =
-      existing ||
-      (await prisma.leads.create({
-        data: {
-          id: `lead_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
-          studentName: validatedData.studentName,
-          email: validatedData.email,
-          phone,
-          courseInterest: `${validatedData.courseInterest}${validatedData.class ? ` — Class ${validatedData.class}` : ''}`,
-          stage: 'NEW_LEAD',
-          priority: validatedData.priority,
-          source: LEAD_SOURCE_MAP[validatedData.leadSource] || 'MANUAL_ENTRY',
-          sourceDetail: 'admin-panel',
-          assignedToId: assignee.id,
-          updatedAt: new Date(),
-        },
-      }))
+    // Canonical CRM write: dedup by phone (phoneNormalized stamped), staff
+    // create keeps its own note/activity, so skipTask. Rich details that have
+    // no column are folded into a linked note + courseInterest context.
+    const result = await upsertLeadCore(prisma, {
+      name: validatedData.studentName,
+      phone: validatedData.phone,
+      email: validatedData.email,
+      courseInterest: `${validatedData.courseInterest}${validatedData.class ? ` — Class ${validatedData.class}` : ''}`,
+      source: 'admin-panel',
+      sourceEnum: LEAD_SOURCE_MAP[validatedData.leadSource] || 'MANUAL_ENTRY',
+      priority: validatedData.priority,
+      skipTask: true,
+    })
+    const existing = !result.created
+    const student = await prisma.leads.findUnique({ where: { id: result.leadId } })
 
     // Capture the extra detail (school/city/state/parent/DOB/notes) as a note.
     const noteLines = [
@@ -219,7 +198,7 @@ export async function POST(request: NextRequest) {
       await prisma.notes.create({
         data: {
           id: `note_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
-          leadId: student.id,
+          leadId: result.leadId,
           content: noteLines.join('\n'),
           createdById: session.user.id,
           updatedAt: new Date(),
@@ -232,7 +211,7 @@ export async function POST(request: NextRequest) {
       data: {
         id: `act_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
         userId: session.user.id,
-        leadId: student.id,
+        leadId: result.leadId,
         action: 'LEAD_CREATED',
         description: `Lead ${validatedData.studentName} added via admin panel`,
         metadata: { source: 'admin_panel', email: validatedData.email },

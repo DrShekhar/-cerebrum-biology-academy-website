@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
 import { prisma } from '@/lib/prisma'
+import { upsertLead } from '@/lib/leads/upsertLead'
 import { processContentLead } from '@/lib/whatsapp/contentLeadFollowup'
 
 interface CatalogDownloadRequest {
@@ -74,51 +75,18 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    // Also create a CRM lead for follow-up
-    try {
-      // Find a default counselor
-      // NB: users has no `isActive` column — filtering on it threw and skipped
-      // the CRM lead. Round-robin to the least-loaded counselor/admin instead.
-      const counselor = await prisma.users.findFirst({
-        where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
-        orderBy: { leads: { _count: 'asc' } },
-        select: { id: true },
-      })
-
-      if (counselor) {
-        // Check if CRM lead already exists — match last 10 phone digits so a
-        // bare-10 number matches legacy "+91…" rows.
-        const existingCrmLead = await prisma.leads.findFirst({
-          where: {
-            OR: [
-              { email: body.email },
-              { phone: { endsWith: normalizedPhone.replace(/\D/g, '').slice(-10) } },
-            ],
-          },
-        })
-
-        if (!existingCrmLead) {
-          await prisma.leads.create({
-            data: {
-              id: `lead_${Date.now()}_${Math.random().toString(36).substring(7)}`,
-              studentName: body.name || body.email.split('@')[0],
-              email: body.email,
-              phone: normalizedPhone,
-              courseInterest: 'NEET Biology - Catalog Download',
-              stage: 'NEW_LEAD',
-              priority: 'WARM',
-              source: body.utm_source ? 'ADVERTISEMENT' : 'WEBSITE',
-              sourceDetail: body.utm_source || 'catalog-download',
-              assignedToId: counselor.id,
-              updatedAt: new Date(),
-            },
-          })
-        }
-      }
-    } catch (crmError) {
-      // Log but don't fail - content lead was already created
-      console.error('Failed to create CRM lead (non-blocking):', crmError)
-    }
+    // Also upsert a CRM lead for follow-up (canonical dedup path; the
+    // content_leads capture-log row above is untouched).
+    void upsertLead({
+      name: body.name || body.email.split('@')[0],
+      phone: normalizedPhone,
+      email: body.email,
+      courseInterest: 'NEET Biology - Catalog Download',
+      source: body.utm_source || 'catalog-download',
+      utmSource: body.utm_source || null,
+      utmMedium: body.utm_medium || null,
+      utmCampaign: body.utm_campaign || null,
+    }).catch(() => {})
 
     // Generate catalog download data
     const catalogData = {

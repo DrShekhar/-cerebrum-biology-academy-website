@@ -13,6 +13,7 @@ import { z } from 'zod'
 import crypto from 'crypto'
 import { emailService } from '@/lib/email/emailService'
 import { emailTemplates } from '@/lib/email/templates'
+import { normalizePhone } from '@/lib/leads/phone'
 
 // Generic lead schema - flexible to accommodate different sources
 const genericLeadSchema = z.object({
@@ -398,11 +399,19 @@ async function checkDuplicate(
   phone: string,
   email?: string
 ): Promise<{ isDuplicate: boolean; existingLead?: ExistingLeadRecord }> {
+  // Match on the canonical dedup key (last-10 digits) so ad-platform numbers
+  // in +91 form match legacy rows and vice versa.
+  const last10 = normalizePhone(phone).slice(-10)
   const existingLead = await prisma.leads.findFirst({
     where: {
       // Only match on identifiers we actually have — an empty `{}` inside an
       // OR matches every row and misclassifies email-less leads as duplicates.
-      OR: [{ phone }, ...(email ? [{ email }] : [])],
+      OR: [
+        ...(last10.length >= 8
+          ? [{ phoneNormalized: last10 }, { phone: { endsWith: last10 } }]
+          : [{ phone }]),
+        ...(email ? [{ email }] : []),
+      ],
     },
     include: {
       users: {
@@ -500,6 +509,7 @@ export async function POST(request: NextRequest) {
         where: { id: existingLead.id },
         data: {
           lastContactedAt: new Date(),
+          phoneNormalized: normalizePhone(existingLead.phone).slice(-10),
           // Update other fields if they're empty
           email: existingLead.email || leadData.email,
           courseInterest: existingLead.courseInterest || leadData.courseInterest,
@@ -539,6 +549,7 @@ export async function POST(request: NextRequest) {
         studentName: leadData.studentName,
         email: leadData.email,
         phone: leadData.phone,
+        phoneNormalized: normalizePhone(leadData.phone).slice(-10),
         courseInterest: leadData.courseInterest || 'Biology Coaching',
         stage: 'NEW_LEAD',
         priority: isPaid ? 'HOT' : 'WARM',
