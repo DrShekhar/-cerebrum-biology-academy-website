@@ -3,12 +3,13 @@ import { z } from 'zod'
 import { requireAdminAuth } from '@/lib/auth'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { getSettings, saveSettings } from '@/lib/settings/siteSettings'
 
 // Persists the admin notification matrix (channels on/off + per-event
-// email/sms/whatsapp toggles). The settings page previously "saved" via a
-// setTimeout and success toast — nothing was written anywhere. Stored under
-// the admin user's profile JSON (profile.notificationSettings), so no schema
-// migration is required.
+// email/sms/whatsapp toggles). SYSTEM-WIDE via site_settings — previously the
+// matrix lived in the saving admin's users.profile, so admin A's changes were
+// invisible to admin B. Reads fall back to the caller's legacy profile copy
+// once, so nothing is lost before the first system-wide save.
 
 const saveSchema = z.object({
   channels: z.array(z.object({ id: z.string(), enabled: z.boolean() })),
@@ -29,6 +30,13 @@ export async function GET() {
     if (!session?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
+
+    const stored = await getSettings('notifications')
+    if (stored.channels.length > 0 || stored.events.length > 0) {
+      return NextResponse.json({ success: true, settings: stored })
+    }
+
+    // Lazy migration: fall back to this admin's legacy profile copy.
     const user = await prisma.users.findUnique({
       where: { id: session.user.id },
       select: { profile: true },
@@ -57,26 +65,7 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid settings payload' }, { status: 400 })
     }
 
-    const user = await prisma.users.findUnique({
-      where: { id: session.user.id },
-      select: { profile: true },
-    })
-    const profile = (user?.profile as Record<string, unknown> | null) || {}
-
-    await prisma.users.update({
-      where: { id: session.user.id },
-      data: {
-        profile: {
-          ...profile,
-          notificationSettings: {
-            ...parsed.data,
-            updatedAt: new Date().toISOString(),
-          },
-        },
-        updatedAt: new Date(),
-      },
-      select: { id: true },
-    })
+    await saveSettings('notifications', parsed.data, session.user.id)
 
     return NextResponse.json({ success: true })
   } catch (error) {

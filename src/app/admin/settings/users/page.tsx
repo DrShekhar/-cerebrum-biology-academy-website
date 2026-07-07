@@ -46,6 +46,31 @@ export default function UsersSettingsPage() {
   const [isDeleteConfirmOpen, setIsDeleteConfirmOpen] = useState(false)
   const [selectedUser, setSelectedUser] = useState<User | null>(null)
   const [deleting, setDeleting] = useState(false)
+  const [resetUser, setResetUser] = useState<User | null>(null)
+  const [resetting, setResetting] = useState(false)
+  const [tempPassword, setTempPassword] = useState<string | null>(null)
+
+  const handleResetPassword = async () => {
+    if (!resetUser) return
+    setResetting(true)
+    try {
+      const res = await fetch(`/api/admin/users/${resetUser.id}/reset-password`, {
+        method: 'POST',
+      })
+      const json = await res.json()
+      if (json.success) {
+        setTempPassword(json.data.tempPassword)
+      } else {
+        setResetUser(null)
+        setError(json.error || 'Failed to reset password')
+      }
+    } catch {
+      setResetUser(null)
+      setError('Failed to reset password')
+    } finally {
+      setResetting(false)
+    }
+  }
 
   const fetchUsers = useCallback(async () => {
     setLoading(true)
@@ -373,6 +398,10 @@ export default function UsersSettingsPage() {
                           <button
                             className="text-gray-600 hover:text-gray-900 p-1"
                             title="Reset password"
+                            onClick={() => {
+                              setTempPassword(null)
+                              setResetUser(user)
+                            }}
                           >
                             <Lock className="w-4 h-4" />
                           </button>
@@ -495,6 +524,81 @@ export default function UsersSettingsPage() {
             </Button>
           </div>
         </div>
+      </Modal>
+
+      <Modal
+        open={!!resetUser}
+        onOpenChange={(open) => {
+          if (!open) {
+            setResetUser(null)
+            setTempPassword(null)
+          }
+        }}
+        title="Reset Password"
+        description={
+          tempPassword
+            ? 'Copy the temporary password now — it will not be shown again.'
+            : `Generate a new temporary password for ${resetUser?.name || 'this user'}.`
+        }
+      >
+        {tempPassword ? (
+          <div>
+            <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 mb-4">
+              <code className="flex-1 text-lg font-mono font-semibold text-gray-900 tracking-wide">
+                {tempPassword}
+              </code>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  void navigator.clipboard.writeText(tempPassword)
+                }}
+              >
+                Copy
+              </Button>
+            </div>
+            <p className="text-xs text-gray-500 mb-4">
+              Share it with {resetUser?.name} securely (in person or by phone). They should change
+              it after signing in.
+            </p>
+            <div className="flex justify-end">
+              <Button
+                onClick={() => {
+                  setResetUser(null)
+                  setTempPassword(null)
+                }}
+              >
+                Done
+              </Button>
+            </div>
+          </div>
+        ) : (
+          <div>
+            <p className="text-sm text-gray-700 mb-6">
+              This immediately replaces {resetUser?.name || 'the user'}&apos;s current password with
+              a random temporary one. They will not be able to sign in with the old password.
+            </p>
+            <div className="flex items-center justify-end space-x-3">
+              <Button variant="outline" onClick={() => setResetUser(null)} disabled={resetting}>
+                Cancel
+              </Button>
+              <Button
+                className="bg-blue-600 hover:bg-blue-700 text-white"
+                onClick={() => void handleResetPassword()}
+                disabled={resetting}
+              >
+                {resetting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    Resetting...
+                  </>
+                ) : (
+                  'Generate temporary password'
+                )}
+              </Button>
+            </div>
+          </div>
+        )}
       </Modal>
     </>
   )

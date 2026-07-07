@@ -357,6 +357,7 @@ export default function LeadScoringPage() {
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
   const [rescoring, setRescoring] = useState(false)
+  const [editable, setEditable] = useState(true)
   const [activeTab, setActiveTab] = useState<'rules' | 'preview'>('rules')
   const [previewLeads, setPreviewLeads] = useState<LeadScorePreview[]>([])
 
@@ -378,6 +379,9 @@ export default function LeadScoringPage() {
           setRules(data.data.rules)
           setHotThreshold(data.data.hotThreshold || 70)
           setWarmThreshold(data.data.warmThreshold || 40)
+        }
+        if (data.data?.editable === false) {
+          setEditable(false)
         }
       }
     } catch {
@@ -508,16 +512,25 @@ export default function LeadScoringPage() {
             )}
             Rescore All Leads
           </button>
-          <button
-            onClick={handleSave}
-            disabled={saving}
-            className="flex items-center gap-2 px-5 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors disabled:opacity-50"
-          >
-            {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
-            Save Rules
-          </button>
+          {editable && (
+            <button
+              onClick={handleSave}
+              disabled={saving}
+              className="flex items-center gap-2 px-5 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors disabled:opacity-50"
+            >
+              {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
+              Save Rules
+            </button>
+          )}
         </div>
       </div>
+
+      {!editable && (
+        <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-900">
+          Scoring rules are defined in the scoring engine and shown here for reference — the weights
+          below aren&apos;t editable yet. &quot;Rescore All Leads&quot; still works.
+        </div>
+      )}
 
       {/* Tabs */}
       <div className="flex gap-2 bg-gray-100 rounded-lg p-1 w-fit">

@@ -32,100 +32,104 @@ interface NotificationEvent {
   whatsapp: boolean
 }
 
+const DEFAULT_CHANNELS: NotificationChannel[] = [
+  {
+    id: 'email',
+    name: 'Email',
+    icon: Mail,
+    enabled: true,
+    description: 'Send notifications via email',
+  },
+  {
+    id: 'sms',
+    name: 'SMS',
+    icon: MessageSquare,
+    enabled: true,
+    description: 'Send notifications via SMS',
+  },
+  {
+    id: 'whatsapp',
+    name: 'WhatsApp',
+    icon: Send,
+    enabled: true,
+    description: 'Send notifications via WhatsApp',
+  },
+]
+
+const DEFAULT_EVENTS: NotificationEvent[] = [
+  {
+    id: 'demo_booking',
+    name: 'Demo Booking Received',
+    description: 'When a student books a demo class',
+    email: true,
+    sms: false,
+    whatsapp: true,
+  },
+  {
+    id: 'demo_reminder',
+    name: 'Demo Class Reminder',
+    description: '1 hour before scheduled demo class',
+    email: true,
+    sms: true,
+    whatsapp: true,
+  },
+  {
+    id: 'lead_assigned',
+    name: 'Lead Assigned',
+    description: 'When a lead is assigned to a counselor',
+    email: true,
+    sms: false,
+    whatsapp: false,
+  },
+  {
+    id: 'enrollment_complete',
+    name: 'Enrollment Completed',
+    description: 'When a student completes enrollment',
+    email: true,
+    sms: true,
+    whatsapp: true,
+  },
+  {
+    id: 'payment_received',
+    name: 'Payment Received',
+    description: 'When payment is successfully processed',
+    email: true,
+    sms: false,
+    whatsapp: true,
+  },
+  {
+    id: 'payment_reminder',
+    name: 'Payment Reminder',
+    description: '3 days before payment due date',
+    email: true,
+    sms: true,
+    whatsapp: true,
+  },
+  {
+    id: 'course_start',
+    name: 'Course Starting Soon',
+    description: '1 day before course starts',
+    email: true,
+    sms: false,
+    whatsapp: true,
+  },
+  {
+    id: 'attendance_alert',
+    name: 'Low Attendance Alert',
+    description: 'When student attendance falls below 75%',
+    email: true,
+    sms: false,
+    whatsapp: true,
+  },
+]
+
 export default function NotificationsSettingsPage() {
   const [isSaving, setIsSaving] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
 
-  const [channels, setChannels] = useState<NotificationChannel[]>([
-    {
-      id: 'email',
-      name: 'Email',
-      icon: Mail,
-      enabled: true,
-      description: 'Send notifications via email',
-    },
-    {
-      id: 'sms',
-      name: 'SMS',
-      icon: MessageSquare,
-      enabled: true,
-      description: 'Send notifications via SMS',
-    },
-    {
-      id: 'whatsapp',
-      name: 'WhatsApp',
-      icon: Send,
-      enabled: true,
-      description: 'Send notifications via WhatsApp',
-    },
-  ])
+  const [channels, setChannels] = useState<NotificationChannel[]>(DEFAULT_CHANNELS)
 
-  const [events, setEvents] = useState<NotificationEvent[]>([
-    {
-      id: 'demo_booking',
-      name: 'Demo Booking Received',
-      description: 'When a student books a demo class',
-      email: true,
-      sms: false,
-      whatsapp: true,
-    },
-    {
-      id: 'demo_reminder',
-      name: 'Demo Class Reminder',
-      description: '1 hour before scheduled demo class',
-      email: true,
-      sms: true,
-      whatsapp: true,
-    },
-    {
-      id: 'lead_assigned',
-      name: 'Lead Assigned',
-      description: 'When a lead is assigned to a counselor',
-      email: true,
-      sms: false,
-      whatsapp: false,
-    },
-    {
-      id: 'enrollment_complete',
-      name: 'Enrollment Completed',
-      description: 'When a student completes enrollment',
-      email: true,
-      sms: true,
-      whatsapp: true,
-    },
-    {
-      id: 'payment_received',
-      name: 'Payment Received',
-      description: 'When payment is successfully processed',
-      email: true,
-      sms: false,
-      whatsapp: true,
-    },
-    {
-      id: 'payment_reminder',
-      name: 'Payment Reminder',
-      description: '3 days before payment due date',
-      email: true,
-      sms: true,
-      whatsapp: true,
-    },
-    {
-      id: 'course_start',
-      name: 'Course Starting Soon',
-      description: '1 day before course starts',
-      email: true,
-      sms: false,
-      whatsapp: true,
-    },
-    {
-      id: 'attendance_alert',
-      name: 'Low Attendance Alert',
-      description: 'When student attendance falls below 75%',
-      email: true,
-      sms: false,
-      whatsapp: true,
-    },
-  ])
+  const [events, setEvents] = useState<NotificationEvent[]>(DEFAULT_EVENTS)
 
   const toggleChannel = (channelId: string) => {
     setChannels(channels.map((ch) => (ch.id === channelId ? { ...ch, enabled: !ch.enabled } : ch)))
@@ -133,6 +137,34 @@ export default function NotificationsSettingsPage() {
 
   const toggleEvent = (eventId: string, channel: 'email' | 'sms' | 'whatsapp') => {
     setEvents(events.map((ev) => (ev.id === eventId ? { ...ev, [channel]: !ev[channel] } : ev)))
+  }
+
+  const handleReset = () => {
+    setChannels(DEFAULT_CHANNELS.map((c) => ({ ...c })))
+    setEvents(DEFAULT_EVENTS.map((e) => ({ ...e })))
+    showToast.success('Defaults restored — press Save to keep them')
+  }
+
+  const [testing, setTesting] = useState<string | null>(null)
+  const sendTest = async (channel: 'email' | 'whatsapp') => {
+    setTesting(channel)
+    try {
+      const res = await fetch('/api/admin/settings/notifications/test', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ channel }),
+      })
+      const json = await res.json()
+      if (json.success) {
+        showToast.success(json.message || 'Test sent')
+      } else {
+        showToast.error(json.error || 'Test failed')
+      }
+    } catch {
+      showToast.error('Test failed')
+    } finally {
+      setTesting(null)
+    }
   }
 
   // Load persisted settings (profile.notificationSettings) and merge into the
@@ -254,100 +286,16 @@ export default function NotificationsSettingsPage() {
           </div>
         </div>
 
-        {/* Channel Configuration */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Channel Configuration</h2>
-
-          <div className="space-y-6">
-            {/* Email Configuration */}
-            <div className="border border-gray-200 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
-                Email Settings
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Sender Name
-                  </label>
-                  <input
-                    type="text"
-                    defaultValue="Cerebrum Biology Academy"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Sender Email
-                  </label>
-                  <input
-                    type="email"
-                    defaultValue="noreply@cerebrumbiologyacademy.com"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* SMS Configuration */}
-            <div className="border border-gray-200 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
-                <MessageSquare className="w-4 h-4 mr-2" />
-                SMS Settings
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Sender ID</label>
-                  <input
-                    type="text"
-                    defaultValue="CEREBIO"
-                    maxLength={6}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    SMS Provider
-                  </label>
-                  <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                    <option>Twilio</option>
-                    <option>MSG91</option>
-                    <option>Gupshup</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            {/* WhatsApp Configuration */}
-            <div className="border border-gray-200 rounded-lg p-4">
-              <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
-                <Send className="w-4 h-4 mr-2" />
-                WhatsApp Settings
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Business Number
-                  </label>
-                  <input
-                    type="tel"
-                    defaultValue="+91 98765 43210"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    WhatsApp Provider
-                  </label>
-                  <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                    <option>Twilio</option>
-                    <option>Gupshup</option>
-                    <option>WATI</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* Sender identity / provider credentials are environment-driven — see the
+            Integrations page for live status. Persisting them here would be a
+            second layer of config nothing reads. */}
+        <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 text-sm text-blue-900">
+          Sender identities and provider credentials (Resend, WhatsApp, Interakt) are configured via
+          environment variables — check their status on the{' '}
+          <a href="/admin/settings/integrations" className="font-medium underline">
+            Integrations page
+          </a>
+          .
         </div>
 
         {/* Event Notifications */}
@@ -454,17 +402,27 @@ export default function NotificationsSettingsPage() {
               </>
             )}
           </Button>
-          <Button variant="outline" className="text-gray-700 border-gray-300">
+          <Button variant="outline" className="text-gray-700 border-gray-300" onClick={handleReset}>
             <RefreshCw className="w-4 h-4 mr-2" />
             Reset to Defaults
           </Button>
           <Button
             variant="outline"
             className="text-blue-700 border-blue-300"
-            onClick={() => showToast.success('Test notification sent to admin email!')}
+            onClick={() => void sendTest('email')}
+            disabled={testing !== null}
           >
             <Bell className="w-4 h-4 mr-2" />
-            Send Test Notification
+            {testing === 'email' ? 'Sending…' : 'Test Email (to me)'}
+          </Button>
+          <Button
+            variant="outline"
+            className="text-green-700 border-green-300"
+            onClick={() => void sendTest('whatsapp')}
+            disabled={testing !== null}
+          >
+            <Send className="w-4 h-4 mr-2" />
+            {testing === 'whatsapp' ? 'Sending…' : 'Test WhatsApp (to me)'}
           </Button>
         </div>
       </div>
