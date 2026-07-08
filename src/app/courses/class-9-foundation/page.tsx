@@ -364,12 +364,12 @@ export default function Class9FoundationPage() {
               </h3>
               <p className="text-blue-600 font-medium mb-3">Founder & Lead Biology Faculty</p>
               <p className="text-gray-700 mb-3">
-                M.Sc Biology, Ph.D Botany | 8+ years teaching experience | Specialist in
-                foundation-level teaching that builds conceptual clarity from day one.
+                AIIMS New Delhi alumnus | 15+ years teaching NEET Biology | Builds conceptual
+                clarity from day one — the foundation that carries students to top medical colleges.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
-                  100+ NEET Qualifiers
+                  680+ Medical Selections
                 </span>
                 <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">
                   Cell Biology Specialist

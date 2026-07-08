@@ -55,7 +55,7 @@ const credentials = [
   { label: 'Education', value: 'AIIMS New Delhi Alumnus', icon: GraduationCap },
   { label: 'Experience', value: '15+ Years NEET Coaching', icon: Calendar },
   { label: 'Students Mentored', value: '10,000+', icon: Users },
-  { label: 'AIIMS/Top College Selections', value: '500+', icon: Trophy },
+  { label: 'Medical College Selections', value: '680+', icon: Trophy },
 ]
 
 const achievements = [

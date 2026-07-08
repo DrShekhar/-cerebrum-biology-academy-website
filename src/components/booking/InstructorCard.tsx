@@ -18,7 +18,7 @@ export const instructors: Record<string, InstructorProfile> = {
     name: 'Dr. Priya',
     fullName: 'Dr. Priya Sharma',
     qualification: 'MBBS, MD (AIIMS Delhi)',
-    experience: '8+ years teaching NEET Biology',
+    experience: '15+ years teaching NEET Biology',
     rating: 5.0,
     reviews: 234,
     specialization: ['Human Physiology', 'Genetics', 'Cell Biology'],

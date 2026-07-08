@@ -97,7 +97,7 @@ export default function Class9FoundationLayout({ children }: { children: React.R
                 name: 'Dr. Shekhar C Singh',
                 jobTitle: 'Founder & Biology Faculty',
                 description:
-                  'M.Sc Biology, Ph.D Botany, 8+ years teaching experience, 100+ NEET qualifiers',
+                  'AIIMS New Delhi alumnus, 15+ years teaching experience, 680+ medical-college selections',
               },
               location: {
                 '@type': 'Place',
@@ -170,7 +170,7 @@ export default function Class9FoundationLayout({ children }: { children: React.R
                 name: 'Who teaches Class 9 Biology at Cerebrum Academy?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Dr. Shekhar C Singh, AIIMS alumnus with 8+ years of teaching experience and 100+ NEET qualifiers. He personally teaches all foundation batches with interactive, age-appropriate methods including lab sessions and 3D model demonstrations.',
+                  text: 'Dr. Shekhar C Singh, AIIMS New Delhi alumnus with 15+ years of teaching experience and 680+ medical-college selections. He personally teaches all foundation batches with interactive, age-appropriate methods including lab sessions and 3D model demonstrations.',
                 },
               },
               {
