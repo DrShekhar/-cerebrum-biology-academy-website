@@ -134,6 +134,10 @@
     {
       "path": "/api/cron/counselor-kpis",
       "schedule": "50 * * * *"
+    },
+    {
+      "path": "/api/cron/payment-reminders",
+      "schedule": "30 3 * * *"
     }
   ]
 }

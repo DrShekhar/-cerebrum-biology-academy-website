@@ -26,6 +26,7 @@ import { CoachingTrialBanner, useCoachingTrialStatus } from '@/components/trial/
 import { Card, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
+import { PaymentReminderCard } from '@/components/payments/PaymentReminderCard'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 
@@ -351,6 +352,8 @@ export default function StudentDashboard() {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="space-y-8">
+          {/* Payment reminder — surfaces next/overdue installment */}
+          <PaymentReminderCard mode="student" />
           {/* Quick Stats */}
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-4">Quick Stats</h2>

@@ -29,6 +29,7 @@ import {
   Video,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { PaymentReminderCard } from '@/components/payments/PaymentReminderCard'
 
 interface Child {
   id: string
@@ -374,6 +375,9 @@ export default function ParentDashboard() {
       )}
 
       {/* Summary Cards */}
+      <div className="mb-8">
+        <PaymentReminderCard mode="parent" />
+      </div>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
           <Users className="w-6 h-6 text-blue-600 mb-2" />
