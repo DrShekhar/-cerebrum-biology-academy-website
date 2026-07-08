@@ -29,6 +29,7 @@ import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 import { VideoSchema } from '@/components/seo/StructuredData'
 import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
 import { getAllAreaSlugs, getAreaBySlug } from '@/data/south-delhi-areas'
+import { CityLeadForm } from '@/components/seo/CityLeadForm'
 
 const areasForAccordion: AreaCardData[] = getAllAreaSlugs().map((slug) => {
   const area = getAreaBySlug(slug)
@@ -293,6 +294,23 @@ export default function PageContent() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Lead capture — attributes every South Delhi enquiry to this page */}
+      <section className="bg-indigo-50 px-4 py-12">
+        <div className="mx-auto grid max-w-5xl items-center gap-8 md:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900">
+              Get a free NEET Biology demo in South Delhi
+            </h2>
+            <p className="mt-3 text-gray-600">
+              Serving South Extension, Green Park, Saket, Hauz Khas, Defence Colony, GK, Lajpat
+              Nagar and Vasant Kunj from our flagship South Extension centre. Leave your number —
+              our counsellor calls you the same day.
+            </p>
+          </div>
+          <CityLeadForm city="South Delhi" citySlug="south-delhi" accent="indigo" />
         </div>
       </section>
 
