@@ -35,6 +35,7 @@ import {
   HelpCircle,
   ListChecks,
   Inbox,
+  Contact2,
 } from 'lucide-react'
 
 export type NavBadgeKey = 'newLeads' | 'pendingDemoBookings' | 'unreadInquiries' | 'pendingPayments'
@@ -50,6 +51,45 @@ export interface AdminNavItem {
 
 export const ADMIN_NAV: AdminNavItem[] = [
   { id: 'dashboard', name: 'Dashboard', icon: LayoutDashboard, href: '/admin' },
+  {
+    // Top-level CRM so it's findable — was previously buried 3 levels deep
+    // under "Students & Leads → Leads". Admin sidebar only (adminNav.ts is
+    // not consumed by the counselor layout — counselor login flow untouched).
+    id: 'crm',
+    name: 'CRM',
+    icon: Contact2,
+    href: '/admin/crm',
+    badgeKey: 'newLeads',
+    children: [
+      { id: 'crm-overview', name: 'Overview', icon: BarChart3, href: '/admin/crm' },
+      {
+        id: 'crm-leads',
+        name: 'Leads (list)',
+        icon: Contact2,
+        href: '/admin/students/leads',
+        badgeKey: 'newLeads',
+      },
+      {
+        id: 'crm-pipeline',
+        name: 'Lead Pipeline (board)',
+        icon: Layers,
+        href: '/counselor/leads',
+      },
+      {
+        id: 'crm-inquiries',
+        name: 'Inquiries',
+        icon: Inbox,
+        href: '/admin/inquiries',
+        badgeKey: 'unreadInquiries',
+      },
+      {
+        id: 'crm-whatsapp',
+        name: 'WhatsApp Inbox',
+        icon: MessagesSquare,
+        href: '/admin/whatsapp-inbox',
+      },
+    ],
+  },
   { id: 'team-chat', name: 'Team Chat', icon: MessagesSquare, href: '/admin/team-chat' },
   {
     id: 'whatsapp-inbox',

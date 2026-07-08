@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import {
   Users,
   Search,
@@ -140,6 +140,9 @@ export default function LeadsPage() {
   })
   const [stats, setStats] = useState<Stats>({ total: 0, byStage: {} })
   const [searchTerm, setSearchTerm] = useState('')
+  const searchParams = useSearchParams()
+  // Drill-down from the CRM overview: /admin/students/leads?assignedToId=<id>
+  const assignedToId = searchParams.get('assignedToId') || ''
   const [stageFilter, setStageFilter] = useState<string>('all')
   const [priorityFilter, setPriorityFilter] = useState<string>('all')
   const [sourceFilter, setSourceFilter] = useState<string>('all')
@@ -242,6 +245,7 @@ export default function LeadsPage() {
       if (stageFilter !== 'all') params.set('stage', stageFilter.toUpperCase().replace(' ', '_'))
       if (priorityFilter !== 'all') params.set('priority', priorityFilter.toUpperCase())
       if (searchTerm) params.set('search', searchTerm)
+      if (assignedToId) params.set('assignedToId', assignedToId)
 
       const response = await fetch(`/api/admin/leads?${params.toString()}`)
       if (!response.ok) {
@@ -265,7 +269,7 @@ export default function LeadsPage() {
     } finally {
       setLoading(false)
     }
-  }, [pagination.page, pagination.limit, stageFilter, priorityFilter, searchTerm])
+  }, [pagination.page, pagination.limit, stageFilter, priorityFilter, searchTerm, assignedToId])
 
   // Fetch counselors from API
   const fetchCounselors = useCallback(async () => {
