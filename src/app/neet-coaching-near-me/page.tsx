@@ -63,7 +63,7 @@ const centers = [
   },
   {
     name: 'Gurugram - Sector 51',
-    address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram 122003',
+    address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram 122018',
     areas: 'DLF Phase 1-5, Golf Course Road, Sohna Road, Sushant Lok, MG Road',
     metro: '5 min walk from Sector 55-56 Rapid Metro',
     href: '/locations/gurugram',

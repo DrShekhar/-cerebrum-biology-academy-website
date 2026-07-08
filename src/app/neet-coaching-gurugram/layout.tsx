@@ -37,7 +37,7 @@ export default function GurugramCoachingLayout({ children }: { children: React.R
       <NearMeKeywordInjector
         location="Gurugram"
         parentLocation="Delhi NCR"
-        centerAddress="M2K Corporate Park, Sector 51, Gurugram - 122003"
+        centerAddress="M2K Corporate Park, Sector 51, Gurugram - 122018"
         centerPhone="+91-8826-444-334"
         nearbyAreas={[
           'DLF Phase 1',

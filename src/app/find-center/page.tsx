@@ -58,7 +58,7 @@ const centers = [
     nearbyAreas: ['DLF Phase 1', 'Golf Course Road', 'Sushant Lok'],
     distance: '35 km from Delhi Center',
     students: '620+',
-    mapsUrl: 'https://maps.google.com/?q=28.4153,77.0499',
+    mapsUrl: 'https://maps.google.com/?q=28.4295,77.0426',
     googleBusinessUrl: CONTACT_INFO.centers.gurugram.googleBusinessUrl,
   },
   {

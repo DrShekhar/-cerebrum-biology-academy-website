@@ -130,7 +130,7 @@ export default function NEETCoachingHUDACityCentreMetroPage() {
       streetAddress: 'Unit 17, M2K Corporate Park, Sector 51',
       addressLocality: 'Gurugram',
       addressRegion: 'Haryana',
-      postalCode: '122003',
+      postalCode: '122018',
       addressCountry: 'IN',
     },
     geo: {

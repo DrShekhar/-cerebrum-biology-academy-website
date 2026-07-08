@@ -267,7 +267,7 @@ export default function BiologyTuitionGurugramPage() {
             <Building className="w-10 h-10 text-green-600 mx-auto mb-3" />
             <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Gurugram Center</h3>
             <p className="text-gray-700 mb-4">
-              M2K Corporate Park, Sector 51, Gurugram, Haryana 122003
+              M2K Corporate Park, Sector 51, Gurugram, Haryana 122018
             </p>
             <a
               href="https://maps.google.com/?q=M2K+Corporate+Park+Sector+51+Gurugram"
@@ -397,7 +397,7 @@ export default function BiologyTuitionGurugramPage() {
                 streetAddress: 'M2K Corporate Park',
                 addressLocality: 'Sector 51, Gurugram',
                 addressRegion: 'Haryana',
-                postalCode: '122003',
+                postalCode: '122018',
                 addressCountry: 'IN',
               },
               areaServed: {

@@ -30,7 +30,7 @@ const GOOGLE_MAPS_EMBEDS: Record<CenterKey, string> = {
     'https://www.google.com/maps?q=Vikas+Surya+Tower,+DC+Chowk,+Sector+9,+Rohini,+New+Delhi+110085&output=embed',
   greenPark: 'https://www.google.com/maps?q=Green+Park,+New+Delhi+110016&output=embed',
   gurugram:
-    'https://www.google.com/maps?q=M2K+Corporate+Park,+Sector+51,+Gurugram+122003&output=embed',
+    'https://www.google.com/maps?q=M2K+Corporate+Park,+Sector+51,+Gurugram+122018&output=embed',
   // Address-query embed (renders a real pin at the exact street address; the
   // old pb= embed carried a fabricated place-id that wouldn't resolve). Swap
   // to a real place-id embed once the GBP listing is verified.

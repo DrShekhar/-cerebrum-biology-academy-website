@@ -92,7 +92,7 @@ const centers = [
     areas: ['Sector 51', 'Sector 56', 'Golf Course Road', 'Sohna Road', 'DLF Phase 4-5'],
     metro: 'HUDA City Centre Metro (Yellow Line)',
     timings: 'Open 24/7',
-    mapUrl: 'https://maps.google.com/?q=28.4153,77.0499',
+    mapUrl: 'https://maps.google.com/?q=28.4295,77.0426',
     image: '/locations/gurugram-center.jpg',
   },
 ]

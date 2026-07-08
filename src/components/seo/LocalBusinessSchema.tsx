@@ -89,7 +89,7 @@ const locationData = {
     studentCount: '620',
     googleBusinessUrl: CONTACT_INFO.centers.gurugram.googleBusinessUrl,
     googleMapsUrl:
-      'https://maps.google.com/?q=Cerebrum+Biology+Academy+Gurugram,+Haryana&ll=28.4153,77.0499&z=15',
+      'https://maps.google.com/?q=Cerebrum+Biology+Academy+Gurugram,+Haryana&ll=28.4295,77.0426&z=15',
     areaServed: [
       'Gurugram',
       'DLF Phase 1',
