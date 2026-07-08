@@ -27,6 +27,7 @@ import { format, formatDistanceToNow } from 'date-fns'
 import { showToast } from '@/lib/toast'
 import { PaymentLinksSection } from './PaymentLinksSection'
 import { AICopilotPanel } from '@/components/counselor/AICopilotPanel'
+import { CallPanel } from '@/components/counselor/CallPanel'
 import { StudentAcademicsSection } from '@/components/counselor/StudentAcademicsSection'
 import { LeadTimeline } from '@/components/staff/LeadTimeline'
 import { LeadCommentThread } from '@/components/staff/LeadCommentThread'
@@ -455,6 +456,9 @@ export default function LeadDetailPage() {
 
         {/* Right Column: Sidebar */}
         <div className="space-y-6">
+          {/* Click-to-call with recording playback (Exotel bridge) */}
+          <CallPanel leadId={lead.id} />
+
           {/* AI Copilot — wires the June-built /api/agents/* suite */}
           <AICopilotPanel leadId={lead.id} communications={lead.communications || []} />
 

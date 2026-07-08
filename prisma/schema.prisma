@@ -383,26 +383,26 @@ model chapter_notes {
 }
 
 model chapters {
-  id               String            @id
-  courseId         String
-  title            String
-  description      String?
-  orderIndex       Int
+  id                  String            @id
+  courseId            String
+  title               String
+  description         String?
+  orderIndex          Int
   // Drip scheduling: chapter stays locked for students until this date (null = immediate).
-  releaseAt        DateTime?
+  releaseAt           DateTime?
   // Evergreen drip: unlocks N days after the student's enrollment (null = off).
   // Combines with releaseAt — locked while EITHER gate is in the future.
   dripDaysAfterEnroll Int?
   // Prerequisite progression: locked until the previous chapter's materials are completed.
-  requiresPrevious Boolean           @default(false)
-  isActive         Boolean           @default(true)
-  createdAt        DateTime          @default(now())
-  updatedAt        DateTime
-  assignments      assignments[]
-  courses          courses           @relation(fields: [courseId], references: [id], onDelete: Cascade)
-  doubt_tickets    doubt_tickets[]
-  study_materials  study_materials[]
-  topics           topics[]
+  requiresPrevious    Boolean           @default(false)
+  isActive            Boolean           @default(true)
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime
+  assignments         assignments[]
+  courses             courses           @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  doubt_tickets       doubt_tickets[]
+  study_materials     study_materials[]
+  topics              topics[]
 
   @@index([courseId, orderIndex])
 }
@@ -1601,6 +1601,7 @@ model leads {
   // then back an atomic upsert to fully close the concurrent-duplicate race).
   phoneNormalized         String?
   activities              activities[]
+  call_logs               call_logs[]
   agent_tasks             agent_tasks[]
   crm_communications      crm_communications[]
   fee_plans               fee_plans[]
@@ -3043,12 +3044,12 @@ model test_templates {
   test_attempts           test_attempts[]
   test_sessions           test_sessions[]
   group_content           group_content[]
+  lesson_materials        study_materials[]         @relation("MaterialTest")
 
   @@index([curriculum, grade])
   @@index([isActive, isPublished])
   @@index([popularityScore])
   @@index([type, category])
-  lesson_materials        study_materials[]         @relation("MaterialTest")
 }
 
 model topics {
@@ -3261,8 +3262,9 @@ model users {
   work_tracking                                                         work_tracking[]
   marketing_campaigns                                                   marketing_campaigns[]
   accounts                                                              accounts[]
-  permission_overrides                                                  user_permission_overrides[]     @relation("permission_overrides_user")
-  permission_overrides_granted                                          user_permission_overrides[]     @relation("permission_overrides_grantedBy")
+  call_logs_made                                                        call_logs[]                      @relation("call_logs_counselor")
+  permission_overrides                                                  user_permission_overrides[]      @relation("permission_overrides_user")
+  permission_overrides_granted                                          user_permission_overrides[]      @relation("permission_overrides_grantedBy")
 
   @@index([coachingTier])
   @@index([emailVerified])
@@ -5072,17 +5074,17 @@ model site_settings {
 // editable); public registrations take the CBT exam by token (no account
 // needed) and every taker becomes a scored lead with a fee-waiver hook.
 model scholarship_tests {
-  id              String    @id @default(cuid())
-  slug            String    @unique
-  name            String
-  isActive        Boolean   @default(true)
-  questionCount   Int       @default(45)
-  durationMin     Int       @default(60)
-  windowStartAt   DateTime?
-  windowEndAt     DateTime?
-  waiverBands     Json // [{minPercent, waiverPercent}] sorted desc
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  id            String    @id @default(cuid())
+  slug          String    @unique
+  name          String
+  isActive      Boolean   @default(true)
+  questionCount Int       @default(45)
+  durationMin   Int       @default(60)
+  windowStartAt DateTime?
+  windowEndAt   DateTime?
+  waiverBands   Json // [{minPercent, waiverPercent}] sorted desc
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
 
   registrations scholarship_registrations[]
 }
@@ -5118,20 +5120,47 @@ model scholarship_registrations {
   @@index([phone])
 }
 
+// Click-to-call logs (PLATFORM_VISION §4.2 Phase 1 — Exotel bridge calls).
+// One row per outbound counselor→prospect call: provider sid, status,
+// duration, recording URL. The status webhook completes the row and posts an
+// activity on the lead so calls appear in the existing timeline.
+model call_logs {
+  id              String    @id @default(cuid())
+  leadId          String
+  counselorId     String
+  provider        String    @default("exotel")
+  providerCallSid String?   @unique
+  fromNumber      String
+  toNumber        String
+  status          String    @default("initiated") // initiated|completed|failed|busy|no-answer
+  durationSec     Int?
+  recordingUrl    String?
+  startedAt       DateTime  @default(now())
+  endedAt         DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  lead      leads @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  counselor users @relation("call_logs_counselor", fields: [counselorId], references: [id])
+
+  @@index([leadId, createdAt])
+  @@index([counselorId, createdAt])
+}
+
 // Per-user permission overrides on top of the role default (ROLE_PERMISSIONS).
 // effect GRANT adds a capability the role lacks; effect DENY withdraws one the
 // role has (e.g. revoke a paying student's AI access on misuse). DENY wins over
 // GRANT. Optional expiresAt for time-boxed grants/suspensions.
 model user_permission_overrides {
-  id          String   @id @default(cuid())
+  id          String    @id @default(cuid())
   userId      String
   permission  String
   effect      String // 'GRANT' | 'DENY'
   reason      String?
   grantedById String?
   expiresAt   DateTime?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 
   user      users  @relation("permission_overrides_user", fields: [userId], references: [id], onDelete: Cascade)
   grantedBy users? @relation("permission_overrides_grantedBy", fields: [grantedById], references: [id])
