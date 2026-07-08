@@ -7,6 +7,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { withCounselor } from '@/lib/auth/middleware'
 import { FeePlanService } from '@/lib/counselor/feePlanService'
+import { counselorCanAccessLead } from '@/lib/leads/access'
 
 const createFeePlanSchema = z.object({
   leadId: z.string(),
@@ -28,6 +29,14 @@ async function handlePOST(req: NextRequest, session: any) {
     const counselorId = session.userId
 
     const validatedData = createFeePlanSchema.parse(body)
+
+    // Ownership gate: only create a fee plan on your own lead (ADMIN bypasses).
+    if (!(await counselorCanAccessLead(validatedData.leadId, session.userId, session.role))) {
+      return NextResponse.json(
+        { success: false, error: 'This lead is not assigned to you' },
+        { status: 403 }
+      )
+    }
 
     // Create fee plan with explicitly typed parameters
     const result = await FeePlanService.createFeePlan({

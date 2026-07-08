@@ -172,6 +172,22 @@ class PaymentReminderService {
       channels: config.channels,
     })
 
+    // Mark OVERDUE and create the counselor follow-up task UNCONDITIONALLY —
+    // these are the collections safety net and must not depend on an external
+    // channel actually delivering (WhatsApp/email are no-op without keys, so
+    // `reminderSent` is false in that state). Channel delivery is best-effort.
+    if (installment.status !== 'OVERDUE') {
+      await prisma.installments.update({
+        where: { id: installment.id },
+        data: { status: 'OVERDUE' },
+      })
+    }
+
+    if (config.createTasksForOverdue) {
+      const created = await this.createFollowUpTask(lead, installment, 'OVERDUE')
+      if (created) result.tasksCreated++
+    }
+
     if (reminderSent) {
       await prisma.installments.update({
         where: { id: installment.id },
@@ -182,20 +198,7 @@ class PaymentReminderService {
           },
         },
       })
-
-      if (remindersSent.overdue === undefined) {
-        await prisma.installments.update({
-          where: { id: installment.id },
-          data: { status: 'OVERDUE' },
-        })
-      }
-
       result.remindersSent++
-
-      if (config.createTasksForOverdue) {
-        await this.createFollowUpTask(lead, installment, 'OVERDUE')
-        result.tasksCreated++
-      }
     }
   }
 
@@ -240,6 +243,13 @@ class PaymentReminderService {
       channels: config.channels,
     })
 
+    // Due-tomorrow: create the counselor task unconditionally (safety net);
+    // channel delivery is best-effort and only stamps remindersSent when sent.
+    if (daysUntilDue === 1) {
+      const created = await this.createFollowUpTask(lead, installment, 'DUE_TOMORROW')
+      if (created) result.tasksCreated++
+    }
+
     if (reminderSent) {
       await prisma.installments.update({
         where: { id: installment.id },
@@ -250,13 +260,7 @@ class PaymentReminderService {
           },
         },
       })
-
       result.remindersSent++
-
-      if (daysUntilDue === 1) {
-        await this.createFollowUpTask(lead, installment, 'DUE_TOMORROW')
-        result.tasksCreated++
-      }
     }
   }
 
@@ -267,7 +271,7 @@ class PaymentReminderService {
     lead: any,
     installment: any,
     urgency: 'OVERDUE' | 'DUE_TOMORROW'
-  ) {
+  ): Promise<boolean> {
     const existingTask = await prisma.tasks.findFirst({
       where: {
         leadId: lead.id,
@@ -281,7 +285,7 @@ class PaymentReminderService {
 
     if (existingTask) {
       console.log(`⏭️  Task already exists for installment ${installment.installmentNumber}`)
-      return
+      return false
     }
 
     const title =
@@ -334,6 +338,7 @@ Action Required:
     })
 
     console.log(`✅ Created ${urgency} task for ${lead.studentName}`)
+    return true
   }
 
   /**

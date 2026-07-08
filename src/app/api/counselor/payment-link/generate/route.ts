@@ -7,6 +7,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { withCounselor } from '@/lib/auth/middleware'
 import { FeePlanService } from '@/lib/counselor/feePlanService'
+import { counselorCanAccessInstallment } from '@/lib/leads/access'
 
 const generatePaymentLinkSchema = z.object({
   installmentId: z.string(),
@@ -20,6 +21,21 @@ async function handlePOST(req: NextRequest, session: any) {
     const body = await req.json()
 
     const validatedData = generatePaymentLinkSchema.parse(body)
+
+    // Ownership gate: only generate a link for an installment on your own lead
+    // (ADMIN bypasses). Also blocks directing the link to an arbitrary contact.
+    if (
+      !(await counselorCanAccessInstallment(
+        validatedData.installmentId,
+        session.userId,
+        session.role
+      ))
+    ) {
+      return NextResponse.json(
+        { success: false, error: 'This installment is not on a lead assigned to you' },
+        { status: 403 }
+      )
+    }
 
     // Generate payment link with explicitly typed parameters
     const result = await FeePlanService.generateInstallmentPaymentLink({

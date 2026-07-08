@@ -75,6 +75,7 @@ export default function TeacherTestAssignmentPage() {
     avgCompletion: 0,
   })
   const [loading, setLoading] = useState(true)
+  const [loadError, setLoadError] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [statusFilter, setStatusFilter] = useState<string>('all')
 
@@ -89,6 +90,7 @@ export default function TeacherTestAssignmentPage() {
     async function fetchTestAssignments() {
       try {
         setLoading(true)
+        setLoadError(false)
         const params = new URLSearchParams()
         if (searchQuery) params.append('search', searchQuery)
         if (statusFilter !== 'all') params.append('status', statusFilter)
@@ -150,18 +152,21 @@ export default function TeacherTestAssignmentPage() {
                 : 0,
           })
         } else {
-          setTestAssignments(getMockData())
+          // Never fabricate tests/scores over a failure — show a real error.
+          setLoadError(true)
+          setTestAssignments([])
           setStats({
-            totalTests: 5,
-            draftTests: 1,
-            activeTests: 2,
-            completedTests: 2,
-            avgCompletion: 78,
+            totalTests: 0,
+            draftTests: 0,
+            activeTests: 0,
+            completedTests: 0,
+            avgCompletion: 0,
           })
         }
       } catch (error) {
         console.error('Error fetching test assignments:', error)
-        setTestAssignments(getMockData())
+        setLoadError(true)
+        setTestAssignments([])
       } finally {
         setLoading(false)
       }
@@ -171,75 +176,6 @@ export default function TeacherTestAssignmentPage() {
       fetchTestAssignments()
     }
   }, [isAuthenticated, user, searchQuery, statusFilter])
-
-  const getMockData = (): TestAssignment[] => [
-    {
-      id: '1',
-      title: 'Cell Biology Mid-Term Test',
-      description: 'Comprehensive test covering cell structure, organelles, and cell division',
-      status: 'ACTIVE',
-      totalQuestions: 30,
-      duration: 45,
-      totalMarks: 120,
-      difficulty: 'medium',
-      dueDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
-      createdAt: new Date().toISOString(),
-      assignedTo: {
-        type: 'CLASS',
-        classId: 'class-11',
-        className: 'Class 11 - A',
-        studentCount: 45,
-      },
-      submissionStats: {
-        total: 45,
-        submitted: 32,
-        graded: 28,
-        pending: 4,
-        averageScore: 76,
-      },
-    },
-    {
-      id: '2',
-      title: 'Genetics Weekly Quiz',
-      description: 'Quick quiz on Mendelian genetics and inheritance patterns',
-      status: 'COMPLETED',
-      totalQuestions: 15,
-      duration: 20,
-      totalMarks: 60,
-      difficulty: 'easy',
-      dueDate: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
-      createdAt: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000).toISOString(),
-      assignedTo: {
-        type: 'CLASS',
-        classId: 'class-12',
-        className: 'Class 12 - B',
-        studentCount: 38,
-      },
-      submissionStats: {
-        total: 38,
-        submitted: 38,
-        graded: 38,
-        pending: 0,
-        averageScore: 82,
-      },
-    },
-    {
-      id: '3',
-      title: 'NEET Practice Test - Botany',
-      description: 'NEET-style questions covering plant anatomy and physiology',
-      status: 'DRAFT',
-      totalQuestions: 45,
-      duration: 60,
-      totalMarks: 180,
-      difficulty: 'hard',
-      dueDate: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toISOString(),
-      createdAt: new Date().toISOString(),
-      assignedTo: {
-        type: 'ALL',
-        studentCount: 120,
-      },
-    },
-  ]
 
   const handleDelete = async (testId: string) => {
     if (!confirm('Are you sure you want to delete this test assignment?')) return
@@ -368,7 +304,25 @@ export default function TeacherTestAssignmentPage() {
           </div>
 
           <div className="space-y-4">
-            {testAssignments.length === 0 ? (
+            {loadError ? (
+              <Card>
+                <CardContent className="p-12 text-center">
+                  <Brain className="w-16 h-16 text-red-300 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Couldn&apos;t load your test assignments
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    Something went wrong fetching your tests. Please try again.
+                  </p>
+                  <Button
+                    onClick={() => window.location.reload()}
+                    className="bg-indigo-500 hover:bg-indigo-600 text-white"
+                  >
+                    Retry
+                  </Button>
+                </CardContent>
+              </Card>
+            ) : testAssignments.length === 0 ? (
               <Card>
                 <CardContent className="p-12 text-center">
                   <Brain className="w-16 h-16 text-gray-400 mx-auto mb-4" />

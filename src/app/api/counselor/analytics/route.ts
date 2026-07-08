@@ -39,24 +39,39 @@ export async function GET(req: NextRequest) {
         },
       }),
 
+      // Active = still in the pipeline (not yet converted or lost)
       prisma.leads.count({
         where: {
           assignedToId: counselorId,
           createdAt: { gte: startDate },
+          stage: {
+            in: [
+              'NEW_LEAD',
+              'DEMO_SCHEDULED',
+              'DEMO_COMPLETED',
+              'OFFER_SENT',
+              'NEGOTIATING',
+              'PAYMENT_PLAN_CREATED',
+            ],
+          },
         },
       }),
 
+      // Converted = enrolled / active student
       prisma.leads.count({
         where: {
           assignedToId: counselorId,
           createdAt: { gte: startDate },
+          stage: { in: ['ENROLLED', 'ACTIVE_STUDENT'] },
         },
       }),
 
+      // Lost
       prisma.leads.count({
         where: {
           assignedToId: counselorId,
           createdAt: { gte: startDate },
+          stage: 'LOST',
         },
       }),
 
@@ -87,6 +102,8 @@ export async function GET(req: NextRequest) {
       prisma.fee_payments.findMany({
         where: {
           createdAt: { gte: startDate },
+          // Scope to THIS counselor's leads (was aggregating the whole org)
+          fee_plans: { leads: { assignedToId: counselorId } },
         },
         select: {
           amount: true,
@@ -136,15 +153,16 @@ export async function GET(req: NextRequest) {
     )
 
     const totalRevenue = feePlans.reduce((sum, fp) => sum + Number(fp.totalFee), 0)
+    // Paid rows are written as 'COMPLETED' (mark-paid) or 'SUCCESS' (gateway)
     const paidRevenue = payments
-      .filter((p) => p.status === 'SUCCESS')
+      .filter((p) => p.status === 'COMPLETED' || p.status === 'SUCCESS')
       .reduce((sum, p) => sum + Number(p.amount), 0)
     const pendingRevenue = totalRevenue - paidRevenue
     const averageDealSize = feePlans.length > 0 ? Math.round(totalRevenue / feePlans.length) : 0
 
     const weekNew = leadsThisWeek.length
     const weekContacted = leadsThisWeek.filter((l) =>
-      ['CONTACTED', 'DEMO_SCHEDULED', 'DEMO_COMPLETED'].includes(l.stage)
+      ['DEMO_SCHEDULED', 'DEMO_COMPLETED', 'OFFER_SENT', 'NEGOTIATING'].includes(l.stage)
     ).length
     const weekConverted = leadsThisWeek.filter((l) =>
       ['ENROLLED', 'ACTIVE_STUDENT'].includes(l.stage)

@@ -25,3 +25,27 @@ export async function counselorCanAccessLead(
     return false
   }
 }
+
+/**
+ * Same gate, resolved from an installment. Walks installment → fee_plan → lead
+ * and checks the lead is assigned to the counselor (ADMIN bypasses). Closes the
+ * IDOR on the FeePlanService-backed payment routes that take an installmentId
+ * from the request. Never throws.
+ */
+export async function counselorCanAccessInstallment(
+  installmentId: string | null | undefined,
+  userId: string | null | undefined,
+  role: string | null | undefined
+): Promise<boolean> {
+  if ((role || '').toUpperCase() === 'ADMIN') return true
+  if (!installmentId || !userId) return false
+  try {
+    const installment = await prisma.installments.findFirst({
+      where: { id: installmentId, fee_plans: { is: { leads: { is: { assignedToId: userId } } } } },
+      select: { id: true },
+    })
+    return !!installment
+  } catch {
+    return false
+  }
+}

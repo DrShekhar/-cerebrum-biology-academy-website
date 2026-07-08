@@ -16,6 +16,7 @@ import { withAdmin, UserSession } from '@/lib/auth/middleware'
 import { WebhookService } from '@/lib/webhooks/webhookService'
 import { withRateLimit, checkSpamPattern } from '@/lib/middleware/rateLimit'
 import { normalizePhone, validatePhone as validatePhoneUtil } from '@/lib/utils/phone'
+import { normalizePhone as canonicalNormalizePhone } from '@/lib/leads/phone'
 
 // HTML escape function to prevent XSS in email templates
 function escapeHtml(str: string | null | undefined): string {
@@ -390,15 +391,20 @@ export async function POST(request: NextRequest) {
             },
           })
 
-          // 2. Find existing lead by email (case-insensitive) or phone
+          // 2. Find existing lead by email (case-insensitive) or phone.
+          // Dedup on the canonical last-10 (phoneNormalized + phone endsWith),
+          // matching upsertLeadCore — a bare-10 number must still match a legacy
+          // +91… row, else this route creates a duplicate CRM lead.
           const normalizedPhoneValue = normalizePhone(data.phone)
+          const last10 = canonicalNormalizePhone(data.phone).slice(-10)
           const normalizedEmail = data.email.toLowerCase().trim()
           const existingLead = await tx.leads.findFirst({
             where: {
               OR: [
                 // Case-insensitive email comparison
                 { email: { equals: normalizedEmail, mode: 'insensitive' } },
-                { phone: normalizedPhoneValue },
+                { phoneNormalized: last10 },
+                { phone: { endsWith: last10 } },
               ],
             },
           })
@@ -412,6 +418,8 @@ export async function POST(request: NextRequest) {
               data: {
                 demoBookingId: booking.id,
                 stage: 'DEMO_SCHEDULED',
+                // Backfill the normalized phone on legacy rows so future dedup hits
+                ...(existingLead.phoneNormalized ? {} : { phoneNormalized: last10 }),
                 // Update name if provided and different
                 ...(data.name &&
                   data.name !== existingLead.studentName && { studentName: data.name }),
@@ -434,6 +442,7 @@ export async function POST(request: NextRequest) {
                   studentName: data.name,
                   email: data.email || null,
                   phone: normalizedPhoneValue,
+                  phoneNormalized: last10,
                   courseInterest: data.courseInterest?.join(', ') || 'NEET Biology',
                   stage: 'DEMO_SCHEDULED',
                   priority: 'WARM',

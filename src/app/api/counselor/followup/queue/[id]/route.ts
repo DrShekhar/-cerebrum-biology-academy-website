@@ -7,6 +7,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
   try {
     const authResult = await authenticateCounselor()
     if ('error' in authResult) return authResult.error
+    const { session } = authResult
 
     const queueItem = await prisma.followup_queue.findUnique({
       where: { id: params.id },
@@ -41,6 +42,15 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
           error: 'Queue item not found',
         },
         { status: 404 }
+      )
+    }
+
+    // Ownership gate: a counselor may only read their own lead's queue item PII
+    // (ADMIN bypasses). Mirrors the POST handler on this route.
+    if (session.role !== 'ADMIN' && queueItem.leads.assignedToId !== session.userId) {
+      return NextResponse.json(
+        { success: false, error: 'Unauthorized: This lead is not assigned to you' },
+        { status: 403 }
       )
     }
 

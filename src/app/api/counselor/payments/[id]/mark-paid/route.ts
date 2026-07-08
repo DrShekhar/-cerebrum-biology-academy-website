@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { withCounselor } from '@/lib/auth/middleware'
 import type { UserSession } from '@/lib/auth/config'
 import { WebhookService } from '@/lib/webhooks/webhookService'
+import { counselorCanAccessInstallment } from '@/lib/leads/access'
 
 interface RouteParams {
   params: {
@@ -19,6 +20,15 @@ async function handlePOST(request: NextRequest, session: UserSession, { params }
 
     if (!paidAmount || !paymentMethod) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+    }
+
+    // Ownership gate: a counselor may only settle installments on their own
+    // leads (ADMIN bypasses). Prevents cross-counselor payment + force-enroll.
+    if (!(await counselorCanAccessInstallment(installmentId, session.userId, session.role))) {
+      return NextResponse.json(
+        { error: 'This installment is not on a lead assigned to you' },
+        { status: 403 }
+      )
     }
 
     const result = await prisma.$transaction(async (tx) => {

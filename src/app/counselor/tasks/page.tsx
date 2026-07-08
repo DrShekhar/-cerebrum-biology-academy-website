@@ -77,7 +77,12 @@ export default function TasksPage() {
         throw new Error(data.error || 'Failed to fetch tasks')
       }
 
-      let filteredTasks = data.data || []
+      // The API stores/returns the canonical enum 'PENDING'; the whole client
+      // UI speaks 'TODO' (and the API maps TODO->PENDING on the way back in).
+      // Normalize inbound so grouping + status colours + the dropdown all match.
+      let filteredTasks = (data.data || []).map((t: Task) =>
+        (t.status as string) === 'PENDING' ? { ...t, status: 'TODO' as TaskStatus } : t
+      )
 
       if (viewFilter === 'today') {
         const today = new Date()
