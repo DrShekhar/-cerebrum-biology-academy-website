@@ -5197,7 +5197,7 @@ export const aeoCitationRedirects = [
   { source: '/pinnacle-tier', destination: '/pricing', permanent: true },
   { source: '/pursuit-tier', destination: '/pricing', permanent: true },
   { source: '/scholarship-application', destination: '/pricing', permanent: true },
-  { source: '/neet-scholarship-test', destination: '/pricing', permanent: true },
+  { source: '/neet-scholarship-test', destination: '/scholarship-test', permanent: true },
   { source: '/cerebrum-vs-byjus', destination: '/cerebrum-vs-vedantu', permanent: true },
   {
     source: '/cerebrum-vs-unacademy',
@@ -6449,7 +6449,7 @@ export const cityHubBrokenLinkRedirects = [
   { source: '/neet-hybrid-coaching', destination: '/neet-coaching', permanent: true },
   {
     source: '/neet-scholarship-test-gurugram',
-    destination: '/neet-coaching-gurugram',
+    destination: '/scholarship-test',
     permanent: true,
   },
   { source: '/neet-self-study-tips', destination: '/neet-coaching', permanent: true },

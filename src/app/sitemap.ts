@@ -5178,6 +5178,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
+    // Scholarship test funnel (lead machine — PLATFORM_VISION §3.1)
+    {
+      url: `${baseUrl}/scholarship-test`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
     // Gurugram foundation pages (live routes previously missing from sitemap)
     {
       url: `${baseUrl}/foundation-neet-coaching-gurugram`,

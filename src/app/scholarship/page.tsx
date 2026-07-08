@@ -282,10 +282,10 @@ export default function ScholarshipPage() {
 
               <div className="flex flex-col md:flex-row gap-3 sm:gap-4">
                 <Link
-                  href="/contact"
+                  href="/scholarship-test"
                   className="bg-white text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-green-50 transition-all hover:scale-105 inline-flex items-center justify-center text-base sm:text-lg shadow-lg min-h-[44px]"
                 >
-                  Apply for Scholarship
+                  Take the Free Scholarship Test
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                 </Link>
                 <Link

@@ -289,6 +289,12 @@ export const ADMIN_NAV: AdminNavItem[] = [
         icon: MessageSquare,
         href: '/admin/marketing/abandoned-carts',
       },
+      {
+        id: 'scholarship',
+        name: 'Scholarship Test',
+        icon: GraduationCap,
+        href: '/admin/scholarship',
+      },
       { id: 'ab-testing', name: 'A/B Testing', icon: FlaskConical, href: '/admin/ab-testing' },
       { id: 'alerts', name: 'Alerts', icon: Bell, href: '/admin/alerts' },
       { id: 'notices', name: 'Announcements', icon: Megaphone, href: '/admin/notices' },

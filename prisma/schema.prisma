@@ -5067,6 +5067,57 @@ model site_settings {
   updatedBy String?
 }
 
+// Scholarship test funnel (PLATFORM_VISION §3.1 — the ANTHE/NSAT-style lead
+// machine). A config row defines the test (bands/duration/window, admin-
+// editable); public registrations take the CBT exam by token (no account
+// needed) and every taker becomes a scored lead with a fee-waiver hook.
+model scholarship_tests {
+  id              String    @id @default(cuid())
+  slug            String    @unique
+  name            String
+  isActive        Boolean   @default(true)
+  questionCount   Int       @default(45)
+  durationMin     Int       @default(60)
+  windowStartAt   DateTime?
+  windowEndAt     DateTime?
+  waiverBands     Json // [{minPercent, waiverPercent}] sorted desc
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  registrations scholarship_registrations[]
+}
+
+model scholarship_registrations {
+  id             String    @id @default(cuid())
+  testId         String
+  token          String    @unique
+  studentName    String
+  phone          String
+  email          String?
+  classLevel     String // CLASS_11 | CLASS_12 | DROPPER (String: no enum migration risk)
+  city           String?
+  status         String    @default("REGISTERED") // REGISTERED | STARTED | COMPLETED
+  paper          Json? // ordered question ids, fixed at start (resume-stable)
+  answerState    Json?
+  score          Int?
+  maxScore       Int?
+  correctCount   Int?
+  incorrectCount Int?
+  percent        Float?
+  waiverPercent  Int?
+  suspicious     Json?
+  leadId         String?
+  startedAt      DateTime?
+  completedAt    DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  test scholarship_tests @relation(fields: [testId], references: [id], onDelete: Cascade)
+
+  @@index([testId, createdAt])
+  @@index([phone])
+}
+
 // Per-user permission overrides on top of the role default (ROLE_PERMISSIONS).
 // effect GRANT adds a capability the role lacks; effect DENY withdraws one the
 // role has (e.g. revoke a paying student's AI access on misuse). DENY wins over
