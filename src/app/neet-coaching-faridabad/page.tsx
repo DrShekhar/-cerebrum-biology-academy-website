@@ -38,6 +38,7 @@ import {
 } from '@/data/faridabad-areas'
 import { faridabadMetroStations } from '@/data/faridabad-metros'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
+import { CityLeadForm } from '@/components/seo/CityLeadForm'
 
 const areasForAccordion: AreaCardData[] = getAllFaridabadAreaSlugs().map((slug) => {
   const area = getFaridabadAreaBySlug(slug)
@@ -325,6 +326,23 @@ export default function NeetCoachingFaridabadPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Lead capture — attributes every Faridabad enquiry to this page */}
+      <section className="bg-orange-50 px-4 py-12">
+        <div className="mx-auto grid max-w-5xl items-center gap-8 md:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900">
+              Get a free NEET Biology demo in Faridabad
+            </h2>
+            <p className="mt-3 text-gray-600">
+              Serving Sector 15–21, NIT, Greater Faridabad, Ballabgarh and Surajkund from our
+              SCF-130, Sector 17 (HUDA Market) centre. Leave your number — our Faridabad counsellor
+              calls you the same day.
+            </p>
+          </div>
+          <CityLeadForm city="Faridabad" citySlug="faridabad" accent="green" />
         </div>
       </section>
 

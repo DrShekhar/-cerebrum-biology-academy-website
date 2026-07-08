@@ -44,6 +44,7 @@ import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSe
 import { getAllGurugramAreaSlugs, getGurugramAreaBySlug } from '@/data/gurugram-areas'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
+import { CityLeadForm } from '@/components/seo/CityLeadForm'
 
 const areasForAccordion: AreaCardData[] = getAllGurugramAreaSlugs().map((slug) => {
   const area = getGurugramAreaBySlug(slug)
@@ -453,6 +454,23 @@ export default function NeetCoachingGurugramPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Lead capture — attributes every Gurugram enquiry to this page */}
+      <section className="bg-green-50 px-4 py-12">
+        <div className="mx-auto grid max-w-5xl items-center gap-8 md:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900">
+              Get a free NEET Biology demo in Gurugram
+            </h2>
+            <p className="mt-3 text-gray-600">
+              Serving Sectors 14–57, Sohna Road, Golf Course Road, DLF, South City and New Gurugram
+              from our M2K Corporate Park, Sector 51 centre. Leave your number — our Gurugram
+              counsellor calls you the same day.
+            </p>
+          </div>
+          <CityLeadForm city="Gurugram" citySlug="gurugram" accent="green" />
         </div>
       </section>
 

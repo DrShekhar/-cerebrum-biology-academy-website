@@ -24,6 +24,7 @@ import { Button } from '@/components/ui/Button'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { UrgencyBanner } from '@/components/landing-pages/UrgencyBanner'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { CityLeadForm } from '@/components/seo/CityLeadForm'
 
 interface FAQ {
   question: string
@@ -254,6 +255,22 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
               showCountdown={true}
             />
           </div>
+        </div>
+      </section>
+
+      {/* Lead capture — attributes every Faridabad enquiry to this page */}
+      <section className="bg-slate-50 px-4 py-12">
+        <div className="mx-auto grid max-w-5xl items-center gap-8 md:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900">
+              Talk to the best NEET Biology faculty in Faridabad
+            </h2>
+            <p className="mt-3 text-gray-600">
+              Leave your number and our Faridabad counsellor calls you the same day to book a free
+              trial class with AIIMS-trained faculty.
+            </p>
+          </div>
+          <CityLeadForm city="Faridabad" citySlug="faridabad" accent="indigo" />
         </div>
       </section>
 
