@@ -2409,6 +2409,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/online-biology-tuition`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/online-biology-tutor-class-9`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -5462,6 +5468,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/biology-olympiad-tutor-india`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-global`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.93,
