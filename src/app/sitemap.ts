@@ -5172,6 +5172,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
+    // Gurugram foundation pages (live routes previously missing from sitemap)
+    {
+      url: `${baseUrl}/foundation-neet-coaching-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-foundation-class-9-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/neet-foundation-class-10-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
     {
       url: `${baseUrl}/molecular-biology-tuition`,
       lastModified: lastUpdated,

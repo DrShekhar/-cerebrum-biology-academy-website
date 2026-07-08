@@ -1,0 +1,475 @@
+'use client'
+
+import { useState } from 'react'
+import Link from 'next/link'
+import {
+  BookOpen,
+  CheckCircle,
+  Clock,
+  ChevronRight,
+  ChevronDown,
+  MapPin,
+  Phone,
+  Play,
+  Home,
+  Award,
+  Users,
+  Target,
+  GraduationCap,
+  TrendingUp,
+  ArrowRight,
+} from 'lucide-react'
+import { Button } from '@/components/ui/Button'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
+interface FAQ {
+  question: string
+  answer: string
+}
+
+const gurugram = CONTACT_INFO.location.gurugram
+
+const DEMO_WA =
+  'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20Foundation%20NEET%20Biology%20(Class%209%2F10)%20in%20Gurugram.%20Please%20share%20available%20timings.'
+
+const classPrograms = [
+  {
+    title: 'Foundation Class 9',
+    tag: '4-year head start',
+    href: '/neet-foundation-class-9-gurugram',
+    description:
+      'The longest runway. Build fundamentals early, cover the syllabus without rushing, and enter Class 11 already ahead.',
+    points: ['Cell & Tissues', 'Diversity of life', 'Life processes basics', 'Scientific thinking'],
+    accent: 'from-green-600 to-teal-600',
+  },
+  {
+    title: 'Foundation Class 10',
+    tag: '3-year plan · most popular',
+    href: '/neet-foundation-class-10-gurugram',
+    description:
+      'The most popular entry point. Master board biology while quietly building the NEET base — ideal balance of time and focus.',
+    points: [
+      'Control & coordination',
+      'Life processes (deep)',
+      'Heredity & evolution',
+      'Board + NEET prep',
+    ],
+    accent: 'from-teal-600 to-blue-600',
+  },
+]
+
+const benefits = [
+  {
+    title: '3-4 Year Head Start',
+    description: 'More time to build concepts, far less stress in Class 11-12',
+    icon: Clock,
+  },
+  {
+    title: 'Strong NCERT Base',
+    description: 'Deep understanding of the fundamentals NEET is built upon',
+    icon: BookOpen,
+  },
+  {
+    title: 'Board + NEET Dual Prep',
+    description: 'Excel in school exams while preparing for NEET simultaneously',
+    icon: Target,
+  },
+  {
+    title: 'Expert Faculty',
+    description: 'Teachers who understand both board and competitive exams',
+    icon: Users,
+  },
+  {
+    title: 'Small Batches',
+    description: 'Personalised attention with tier-based batch sizes',
+    icon: GraduationCap,
+  },
+  {
+    title: 'Score Improvement',
+    description: 'Students who start early consistently score 50-100 marks higher',
+    icon: TrendingUp,
+  },
+]
+
+const premiumSchools = [
+  'DPS Gurugram',
+  'Scottish High',
+  'The Shri Ram School',
+  'Heritage School',
+  'Pathways World School',
+  'GD Goenka',
+  'Amity International',
+  'Suncity School',
+]
+
+export default function FoundationNeetGurugramContent({ faqs }: { faqs: FAQ[] }) {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
+
+  const handleWhatsApp = () => {
+    trackAndOpenWhatsApp({
+      source: 'foundation-neet-gurugram',
+      message:
+        'Hi! I am interested in Foundation NEET coaching (Class 9/10) in Gurugram. Please share details.',
+      campaign: 'foundation-neet-gurugram',
+    })
+  }
+
+  return (
+    <main className="min-h-screen bg-white">
+      <nav className="bg-gray-100 py-3 px-4">
+        <div className="max-w-7xl mx-auto">
+          <ol className="flex items-center flex-wrap gap-1 text-sm">
+            <li>
+              <Link href="/" className="text-gray-600 hover:text-teal-600">
+                <Home className="w-4 h-4" />
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <Link href="/neet-coaching-gurugram" className="text-gray-600 hover:text-teal-600">
+                NEET Coaching Gurugram
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <span className="text-teal-700 font-medium">Foundation NEET Coaching</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="relative py-20 md:py-28 bg-gradient-to-br from-green-900 to-teal-800 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-teal-500 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4">
+          <div className="max-w-4xl animate-fadeInUp">
+            <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Award className="w-4 h-4" />
+              Early NEET Preparation · Class 9 &amp; 10
+            </div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Foundation NEET Coaching
+              <span className="block text-green-400 mt-2">in Gurugram</span>
+            </h1>
+
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl">
+              Give your child a head start on the medical dream. Foundation programs for Class 9 and
+              Class 10 build a rock-solid NCERT biology base — board marks and NEET readiness
+              together — at our Sector 51, Gurugram center.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-4 mb-8">
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
+                <Clock className="w-5 h-5 text-green-400" />
+                <span>3-4 Year Head Start</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
+                <Target className="w-5 h-5 text-yellow-400" />
+                <span>Board + NEET Prep</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
+                <TrendingUp className="w-5 h-5 text-orange-400" />
+                <span>+50-100 Marks Boost</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row gap-4">
+              <Link href={DEMO_WA} target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="secondary"
+                  size="xl"
+                  className="bg-green-500 text-white hover:bg-green-400 font-bold"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  Book Free Demo Class
+                </Button>
+              </Link>
+              <button
+                onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30"
+              >
+                <Phone className="w-5 h-5" />
+                WhatsApp: +91-88264-44334
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Choose your class */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Choose Your Foundation Program
+            </h2>
+            <p className="text-xl text-slate-600">
+              Start with the class your child is in now — each has its own age-appropriate batch
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {classPrograms.map((prog) => (
+              <Link
+                key={prog.title}
+                href={prog.href}
+                className="group block rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+              >
+                <div className={`bg-gradient-to-br ${prog.accent} p-6 text-white`}>
+                  <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm font-medium mb-3">
+                    {prog.tag}
+                  </span>
+                  <h3 className="text-2xl font-bold">{prog.title}</h3>
+                </div>
+                <div className="p-6">
+                  <p className="text-slate-600 mb-4">{prog.description}</p>
+                  <ul className="grid grid-cols-2 gap-2 mb-4">
+                    {prog.points.map((pt) => (
+                      <li key={pt} className="flex items-center gap-2 text-sm text-slate-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        {pt}
+                      </li>
+                    ))}
+                  </ul>
+                  <span className="inline-flex items-center gap-1 font-semibold text-teal-600 group-hover:gap-2 transition-all">
+                    Explore {prog.title}
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why start early */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Why a Foundation Head Start Works
+            </h2>
+            <p className="text-xl text-slate-600">
+              Students who start in Class 9-10 consistently outperform those who begin in Class 11
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit) => (
+              <div key={benefit.title} className="bg-white rounded-2xl p-6 shadow-lg">
+                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                  <benefit.icon className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{benefit.title}</h3>
+                <p className="text-slate-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Premium schools */}
+      <section className="py-16 bg-gradient-to-br from-green-600 to-teal-600 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-8 animate-fadeInUp">
+            <h2 className="text-3xl font-bold mb-4">Students from Premium Gurugram Schools</h2>
+            <p className="text-green-100">
+              Foundation students join us from every major school in Gurugram
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {premiumSchools.map((school) => (
+              <span
+                key={school}
+                className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium"
+              >
+                {school}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Center */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">Foundation Program Details</h2>
+              <div className="space-y-4">
+                <div className="flex justify-between py-3 border-b">
+                  <span className="text-slate-600">Programs</span>
+                  <span className="font-semibold">Class 9 &amp; Class 10 Foundation</span>
+                </div>
+                <div className="flex justify-between py-3 border-b">
+                  <span className="text-slate-600">Fee Range</span>
+                  <span className="font-semibold text-green-600">₹45,000 - ₹90,000/year</span>
+                </div>
+                <div className="flex justify-between py-3 border-b">
+                  <span className="text-slate-600">Tiers</span>
+                  <span className="font-semibold">Pursuit | Ascent | Pinnacle</span>
+                </div>
+                <div className="flex justify-between py-3 border-b">
+                  <span className="text-slate-600">Batch Size</span>
+                  <span className="font-semibold">10-40 students (by tier)</span>
+                </div>
+                <div className="flex justify-between py-3">
+                  <span className="text-slate-600">Mode</span>
+                  <span className="font-semibold">Offline + Online Support</span>
+                </div>
+              </div>
+              <Link href={DEMO_WA} target="_blank" rel="noopener noreferrer" className="block mt-6">
+                <Button className="w-full bg-green-600 hover:bg-green-700">Book Free Demo</Button>
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8">
+              <div className="flex items-center mb-6">
+                <MapPin className="w-8 h-8 text-green-600 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">Our Gurugram Center</h2>
+              </div>
+              <p className="text-gray-700 mb-4">
+                <strong>Address:</strong> {gurugram.streetAddress}, {gurugram.addressLocality} –{' '}
+                {gurugram.postalCode}
+              </p>
+              <p className="text-gray-700 mb-4">
+                <strong>Metro:</strong> Near HUDA City Centre Metro (Yellow Line)
+              </p>
+              <p className="text-gray-700 mb-6">
+                <strong>Landmark:</strong> Mayfield Garden, Sector 51 Market
+              </p>
+              <div className="flex gap-4">
+                <a href={`tel:${CONTACT_INFO.phone.primary}`}>
+                  <Button variant="outline">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call Now
+                  </Button>
+                </a>
+                <a href={gurugram.mapUrl} target="_blank" rel="noopener">
+                  <Button>
+                    <MapPin className="w-4 h-4 mr-2" />
+                    Directions
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <VideoTestimonialsSection />
+      <NEETToolsWidget
+        title="Free NEET Preparation Tools"
+        subtitle="Start using our AI-powered tools for your NEET journey"
+      />
+
+      {/* FAQs */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full flex items-center justify-between p-6 text-left"
+                >
+                  <span className="font-semibold text-slate-900 pr-4">{faq.question}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-slate-500 transition-transform ${openFaq === index ? 'rotate-180' : ''}`}
+                  />
+                </button>
+                {openFaq === index && (
+                  <div className="px-6 pb-6">
+                    <p className="text-slate-600">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
+          <div className="grid md:grid-cols-4 gap-4">
+            <Link
+              href="/neet-foundation-class-9-gurugram"
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
+            >
+              <h3 className="font-semibold text-teal-600">Foundation Class 9</h3>
+              <p className="text-sm text-gray-600">4-year head start</p>
+            </Link>
+            <Link
+              href="/neet-foundation-class-10-gurugram"
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
+            >
+              <h3 className="font-semibold text-teal-600">Foundation Class 10</h3>
+              <p className="text-sm text-gray-600">3-year plan</p>
+            </Link>
+            <Link
+              href="/neet-coaching-gurugram"
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
+            >
+              <h3 className="font-semibold text-teal-600">NEET Coaching Gurugram</h3>
+              <p className="text-sm text-gray-600">Full NEET program</p>
+            </Link>
+            <Link
+              href="/biology-olympiad-coaching-gurugram"
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
+            >
+              <h3 className="font-semibold text-teal-600">Biology Olympiad</h3>
+              <p className="text-sm text-gray-600">Competitive exams</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Start Your Child&apos;s NEET Journey Early
+          </h2>
+          <p className="text-xl mb-8 opacity-90">
+            Join Cerebrum Biology Academy Gurugram and turn a head start into an advantage
+          </p>
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <Link href={DEMO_WA} target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="secondary"
+                size="xl"
+                className="bg-white text-green-600 hover:bg-gray-100 font-bold"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Book Free Demo
+              </Button>
+            </Link>
+            <a href={`tel:${CONTACT_INFO.phone.primary}`}>
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-white text-white hover:bg-white hover:text-green-600"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
