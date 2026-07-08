@@ -124,7 +124,7 @@ export default function ErrorReportsPage() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-4 gap-4 mb-6">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 mb-6">
           <div className="bg-white rounded-xl shadow-md p-4">
             <p className="text-3xl font-bold text-yellow-600">{stats.PENDING || 0}</p>
             <p className="text-sm text-gray-500">Pending</p>
@@ -161,7 +161,7 @@ export default function ErrorReportsPage() {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           {/* Reports List */}
           <div className="bg-white rounded-xl shadow-md overflow-hidden">
             <div className="p-4 border-b bg-gray-50">

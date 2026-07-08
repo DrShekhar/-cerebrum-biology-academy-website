@@ -235,12 +235,12 @@ export default function StudentsPage() {
     <>
       <div className="p-6 space-y-8">
         {/* Header */}
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Student Management</h1>
             <p className="text-gray-600 mt-2">Manage students, leads, and customer relationships</p>
           </div>
-          <div className="flex space-x-3">
+          <div className="flex flex-wrap gap-3">
             <Button
               variant="outline"
               className="text-gray-700 border-gray-300"

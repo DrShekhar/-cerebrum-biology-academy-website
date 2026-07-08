@@ -404,7 +404,7 @@ export default function LeadsPage() {
     <>
       <div className="p-6 space-y-8">
         <LeadColorLegend tags={colorTags} onTagsChanged={() => void refreshColorTags()} />
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Lead Management</h1>
             <p className="text-gray-600 mt-2">
@@ -495,7 +495,7 @@ export default function LeadsPage() {
                 />
               </div>
             </div>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <select
                 value={stageFilter}
                 onChange={(e) => setStageFilter(e.target.value)}

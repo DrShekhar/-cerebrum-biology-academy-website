@@ -260,14 +260,14 @@ function PaymentsPageInner() {
   return (
     <>
       <div className="p-6 space-y-8">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Payment Management</h1>
             <p className="text-gray-600 mt-2">
               Track payments, refunds, and financial transactions
             </p>
           </div>
-          <div className="flex space-x-3">
+          <div className="flex flex-wrap gap-3">
             <Button variant="outline" className="text-gray-700 border-gray-300" onClick={exportCSV}>
               <Download className="w-4 h-4 mr-2" />
               Export
