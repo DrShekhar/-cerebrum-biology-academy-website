@@ -354,6 +354,26 @@ export default function StudentDashboard() {
         <div className="space-y-8">
           {/* Payment reminder — surfaces next/overdue installment */}
           <PaymentReminderCard mode="student" />
+          {/* Need help? — raise a support/fees/tech/feature request */}
+          <Link
+            href="/student/requests"
+            className="flex items-center justify-between gap-3 rounded-2xl border border-gray-200 bg-white p-4 hover:border-blue-300 hover:shadow-sm transition-colors"
+          >
+            <span className="flex items-center gap-3">
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-blue-100 text-blue-600 text-lg">
+                🎫
+              </span>
+              <span>
+                <span className="block text-sm font-semibold text-gray-900">
+                  Need help or have an idea?
+                </span>
+                <span className="block text-xs text-gray-500">
+                  Raise a request — support, fees, a bug, or a feature
+                </span>
+              </span>
+            </span>
+            <span className="text-sm font-semibold text-blue-600">Raise a request →</span>
+          </Link>
           {/* Quick Stats */}
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-4">Quick Stats</h2>
