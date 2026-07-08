@@ -217,14 +217,14 @@ export function PersonalizedStudentDashboard() {
             const transformedSessions = attempts.slice(0, 10).map((attempt: AttemptData) => ({
               id: attempt.id,
               subject: 'Biology',
-              chapter: attempt.testTemplate.title,
+              chapter: attempt.testTemplate?.title || 'Practice Test',
               duration: Math.round(attempt.timeSpent / 60),
               score: attempt.percentage,
               date: attempt.createdAt,
               type:
-                attempt.testTemplate.type === 'PRACTICE_TEST'
+                attempt.testTemplate?.type === 'PRACTICE_TEST'
                   ? 'practice'
-                  : attempt.testTemplate.type === 'MOCK_TEST'
+                  : attempt.testTemplate?.type === 'MOCK_TEST'
                     ? 'test'
                     : 'study',
             })) as StudySession[]

@@ -207,7 +207,7 @@ export async function GET(request: NextRequest) {
       data: {
         attempts: attempts.map((attempt) => ({
           id: attempt.id,
-          testTemplate: attempt.test_templates,
+          testTemplate: attempt.test_templates || { title: 'Practice Test', type: 'PRACTICE' },
           score: attempt.score,
           percentage: attempt.percentage,
           rank: attempt.rank,

@@ -254,7 +254,7 @@ export async function GET(request: NextRequest) {
       totalStudents: registrationGrowth,
       newRegistrations: registrationGrowth,
       totalRevenue: revenueGrowth,
-      conversionRate: demoConversionRate - 42.5, // Compare to baseline
+      conversionRate: 0, // no prior-period baseline tracked yet — show 0 delta, not a fabricated one
       demoBookings: demoGrowth,
     }
 

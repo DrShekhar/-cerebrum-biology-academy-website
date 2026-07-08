@@ -37,6 +37,7 @@ const daysUntil = (d: string) => Math.ceil((new Date(d).getTime() - Date.now()) 
 export function PaymentReminderCard({ mode = 'student' }: { mode?: 'student' | 'parent' }) {
   const [data, setData] = useState<Data | null>(null)
   const [loading, setLoading] = useState(true)
+  const [failed, setFailed] = useState(false)
 
   useEffect(() => {
     const url =
@@ -45,8 +46,9 @@ export function PaymentReminderCard({ mode = 'student' }: { mode?: 'student' | '
       .then((r) => r.json())
       .then((j) => {
         if (j.success) setData(j.data)
+        else setFailed(true)
       })
-      .catch(() => {})
+      .catch(() => setFailed(true))
       .finally(() => setLoading(false))
   }, [mode])
 
@@ -56,6 +58,24 @@ export function PaymentReminderCard({ mode = 'student' }: { mode?: 'student' | '
         <div className="flex items-center gap-2 text-sm text-gray-400">
           <Loader2 className="h-4 w-4 animate-spin" /> Loading payments…
         </div>
+      </div>
+    )
+  }
+
+  // Distinguish a load FAILURE from a genuinely-clear account — never show a
+  // false "up to date" over an error (an overdue student could miss it).
+  if (failed) {
+    return (
+      <div className="rounded-2xl border border-gray-200 bg-white p-5">
+        <p className="text-sm text-gray-500">
+          Couldn&apos;t load your payment status.{' '}
+          <Link
+            href={mode === 'parent' ? '/parent/payments' : '/student/payments'}
+            className="font-semibold text-blue-600 underline"
+          >
+            View payments
+          </Link>
+        </p>
       </div>
     )
   }

@@ -397,7 +397,6 @@ export default function AdminDashboard() {
             <div className="text-3xl font-bold text-green-600 mb-2">
               {data.demos.completedToday}
             </div>
-            <p className="text-sm text-gray-600">Average rating: {data.demos.averageRating}★</p>
             <Link
               href="/admin/demo-bookings"
               className="inline-block mt-4 text-green-600 hover:text-green-700 font-medium text-sm"

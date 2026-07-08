@@ -50,6 +50,7 @@ export default function AdminTasksPage() {
   const [tasks, setTasks] = useState<SharedTask[]>([])
   const [openCount, setOpenCount] = useState(0)
   const [loading, setLoading] = useState(true)
+  const [failed, setFailed] = useState(false)
   const [statusFilter, setStatusFilter] = useState('OPEN')
   const [categoryFilter, setCategoryFilter] = useState('all')
   const [adding, setAdding] = useState(false)
@@ -59,13 +60,18 @@ export default function AdminTasksPage() {
     const params = new URLSearchParams()
     if (statusFilter !== 'all') params.set('status', statusFilter)
     if (categoryFilter !== 'all') params.set('category', categoryFilter)
+    setFailed(false)
     try {
       const res = await fetch(`/api/tasks/shared?${params.toString()}`)
       const json = await res.json()
       if (json.success) {
         setTasks(json.data.tasks)
         setOpenCount(json.data.openCount)
+      } else {
+        setFailed(true)
       }
+    } catch {
+      setFailed(true)
     } finally {
       setLoading(false)
     }
@@ -99,7 +105,14 @@ export default function AdminTasksPage() {
         }
       />
 
-      {adding && <NewTaskForm onCreated={() => { setAdding(false); load() }} />}
+      {adding && (
+        <NewTaskForm
+          onCreated={() => {
+            setAdding(false)
+            load()
+          }}
+        />
+      )}
 
       <div className="mb-5 flex flex-wrap items-center gap-3">
         <div className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm">
@@ -137,6 +150,16 @@ export default function AdminTasksPage() {
         <div className="flex items-center gap-2 py-16 text-gray-500 justify-center">
           <Loader2 className="h-5 w-5 animate-spin" /> Loading…
         </div>
+      ) : failed ? (
+        <div className="rounded-2xl border border-red-200 bg-red-50 p-8 text-center">
+          <p className="text-red-700">Couldn&apos;t load tasks.</p>
+          <button
+            onClick={load}
+            className="mt-3 rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white"
+          >
+            Try again
+          </button>
+        </div>
       ) : tasks.length === 0 ? (
         <div className="rounded-2xl border border-gray-200 bg-white p-12 text-center text-gray-500">
           <CheckCircle2 className="mx-auto mb-3 h-10 w-10 text-green-500" />
@@ -151,11 +174,17 @@ export default function AdminTasksPage() {
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${CAT_CLS[t.category] || CAT_CLS.OTHER}`}>
+                      <span
+                        className={`rounded-full px-2 py-0.5 text-xs font-semibold ${CAT_CLS[t.category] || CAT_CLS.OTHER}`}
+                      >
                         {t.category.toLowerCase()}
                       </span>
                       <span className={`text-xs font-bold ${PRIORITY_CLS[t.priority]}`}>
-                        {t.priority === 'HIGH' ? '● High' : t.priority === 'MEDIUM' ? '● Medium' : '● Low'}
+                        {t.priority === 'HIGH'
+                          ? '● High'
+                          : t.priority === 'MEDIUM'
+                            ? '● Medium'
+                            : '● Low'}
                       </span>
                       <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${sm.cls}`}>
                         {sm.label}
@@ -165,7 +194,10 @@ export default function AdminTasksPage() {
                     {t.detail && <p className="mt-1 text-sm text-gray-600">{t.detail}</p>}
                     <p className="mt-2 text-xs text-gray-400">
                       by {t.createdByName || 'Unknown'} ({t.createdByRole.toLowerCase()}) ·{' '}
-                      {new Date(t.createdAt).toLocaleDateString('en-IN', { day: '2-digit', month: 'short' })}
+                      {new Date(t.createdAt).toLocaleDateString('en-IN', {
+                        day: '2-digit',
+                        month: 'short',
+                      })}
                       {t.resolutionNote ? ` · resolution: ${t.resolutionNote}` : ''}
                     </p>
                   </div>
@@ -243,14 +275,22 @@ function NewTaskForm({ onCreated }: { onCreated: () => void }) {
         className="mt-2 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
       />
       <div className="mt-2 flex flex-wrap items-center gap-2">
-        <select value={category} onChange={(e) => setCategory(e.target.value)} className="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className="rounded-lg border border-gray-300 px-3 py-2 text-sm"
+        >
           {CATEGORIES.map((c) => (
             <option key={c} value={c}>
               {c.charAt(0) + c.slice(1).toLowerCase()}
             </option>
           ))}
         </select>
-        <select value={priority} onChange={(e) => setPriority(e.target.value)} className="rounded-lg border border-gray-300 px-3 py-2 text-sm">
+        <select
+          value={priority}
+          onChange={(e) => setPriority(e.target.value)}
+          className="rounded-lg border border-gray-300 px-3 py-2 text-sm"
+        >
           <option value="HIGH">High</option>
           <option value="MEDIUM">Medium</option>
           <option value="LOW">Low</option>

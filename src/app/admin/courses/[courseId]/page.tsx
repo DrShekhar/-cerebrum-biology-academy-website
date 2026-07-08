@@ -104,7 +104,9 @@ export default function AdminCourseWorkspace({
     const json = await res.json()
     if (res.ok && json.success) {
       toast.success(
-        status === 'PUBLISHED' ? 'Course published — visible in catalogs' : `Course ${status.toLowerCase()}`
+        status === 'PUBLISHED'
+          ? 'Course published — visible in catalogs'
+          : `Course ${status.toLowerCase()}`
       )
       await load()
     } else {
@@ -450,7 +452,12 @@ function SettingsTab({ course, onSaved }: { course: CourseDetail; onSaved: () =>
           <label className={label} htmlFor="cs-name">
             Course name
           </label>
-          <input id="cs-name" value={form.name} onChange={(e) => set('name', e.target.value)} className={input} />
+          <input
+            id="cs-name"
+            value={form.name}
+            onChange={(e) => set('name', e.target.value)}
+            className={input}
+          />
         </div>
         <div>
           <label className={label} htmlFor="cs-desc">
@@ -469,14 +476,24 @@ function SettingsTab({ course, onSaved }: { course: CourseDetail; onSaved: () =>
             <label className={label} htmlFor="cs-type">
               Type
             </label>
-            <select id="cs-type" value={form.type} onChange={(e) => set('type', e.target.value)} className={input}>
-              {['NEET_COMPLETE', 'CLASS_11', 'CLASS_12', 'DROPPER', 'FOUNDATION', 'CRASH_COURSE'].map(
-                (t) => (
-                  <option key={t} value={t}>
-                    {t.replace(/_/g, ' ')}
-                  </option>
-                )
-              )}
+            <select
+              id="cs-type"
+              value={form.type}
+              onChange={(e) => set('type', e.target.value)}
+              className={input}
+            >
+              {[
+                'NEET_COMPLETE',
+                'CLASS_11',
+                'CLASS_12',
+                'DROPPER',
+                'FOUNDATION',
+                'CRASH_COURSE',
+              ].map((t) => (
+                <option key={t} value={t}>
+                  {t.replace(/_/g, ' ')}
+                </option>
+              ))}
             </select>
           </div>
           <div>
@@ -705,8 +722,8 @@ function StudentsTab({ courseId }: { courseId: string }) {
 interface PerfRow {
   id: string
   name: string
-  totalEnrolled: number
-  activeEnrolled: number
+  enrolledStudents: number
+  activeStudents: number
   avgProgress: number
   completionRate: number
   avgTestScore?: number
@@ -762,7 +779,7 @@ function AnalyticsTab({ courseId, course }: { courseId: string; course: CourseDe
         </div>
       ) : perf ? (
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          <StatCard label="Active students" value={perf.activeEnrolled} icon={Users} />
+          <StatCard label="Active students" value={perf.activeStudents} icon={Users} />
           <StatCard
             label="Avg progress"
             value={`${perf.avgProgress}%`}

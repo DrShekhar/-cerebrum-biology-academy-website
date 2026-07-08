@@ -36,7 +36,12 @@ interface Task {
 
 const CATEGORIES = [
   { key: 'SUPPORT', label: 'Support', icon: LifeBuoy, hint: 'Account, access, general help' },
-  { key: 'FEES', label: 'Fees & payment', icon: CreditCard, hint: 'Invoices, installments, receipts' },
+  {
+    key: 'FEES',
+    label: 'Fees & payment',
+    icon: CreditCard,
+    hint: 'Invoices, installments, receipts',
+  },
   { key: 'TECH', label: 'Technical issue', icon: Wrench, hint: 'App bugs, video, login' },
   { key: 'ACADEMIC', label: 'Academic', icon: BookOpen, hint: 'Classes, materials, doubts' },
   { key: 'FEATURE', label: 'Feature request', icon: Lightbulb, hint: 'Ideas to improve the app' },
@@ -58,6 +63,7 @@ export default function StudentRequestsPage() {
   const [detail, setDetail] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [justSent, setJustSent] = useState(false)
+  const [sendError, setSendError] = useState(false)
 
   const load = useCallback(async () => {
     try {
@@ -76,6 +82,7 @@ export default function StudentRequestsPage() {
   const submit = async () => {
     if (title.trim().length < 3 || submitting) return
     setSubmitting(true)
+    setSendError(false)
     try {
       const res = await fetch('/api/tasks/shared', {
         method: 'POST',
@@ -88,7 +95,11 @@ export default function StudentRequestsPage() {
         setJustSent(true)
         setTimeout(() => setJustSent(false), 3500)
         load()
+      } else {
+        setSendError(true)
       }
+    } catch {
+      setSendError(true)
     } finally {
       setSubmitting(false)
     }
@@ -122,12 +133,12 @@ export default function StudentRequestsPage() {
                   key={c.key}
                   onClick={() => setCategory(c.key)}
                   className={`flex items-start gap-2 rounded-xl border p-3 text-left transition-colors ${
-                    on
-                      ? 'border-blue-500 bg-blue-50'
-                      : 'border-gray-200 hover:border-blue-300'
+                    on ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:border-blue-300'
                   }`}
                 >
-                  <c.icon className={`mt-0.5 h-4 w-4 shrink-0 ${on ? 'text-blue-600' : 'text-gray-400'}`} />
+                  <c.icon
+                    className={`mt-0.5 h-4 w-4 shrink-0 ${on ? 'text-blue-600' : 'text-gray-400'}`}
+                  />
                   <span>
                     <span className="block text-sm font-medium text-gray-900">{c.label}</span>
                     {c.hint && <span className="block text-[11px] text-gray-400">{c.hint}</span>}
@@ -156,12 +167,21 @@ export default function StudentRequestsPage() {
               disabled={submitting || title.trim().length < 3}
               className="inline-flex items-center gap-1.5 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 disabled:opacity-50"
             >
-              {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <LifeBuoy className="h-4 w-4" />}
+              {submitting ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <LifeBuoy className="h-4 w-4" />
+              )}
               Submit request
             </button>
             {justSent && (
               <span className="inline-flex items-center gap-1.5 text-sm font-medium text-green-600">
                 <CheckCircle2 className="h-4 w-4" /> Sent — we&apos;ll get on it
+              </span>
+            )}
+            {sendError && (
+              <span className="inline-flex items-center gap-1.5 text-sm font-medium text-red-600">
+                <XCircle className="h-4 w-4" /> Couldn&apos;t send — please try again
               </span>
             )}
           </div>
@@ -195,7 +215,9 @@ export default function StudentRequestsPage() {
                         })}
                       </p>
                     </div>
-                    <span className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-semibold ${sm.cls}`}>
+                    <span
+                      className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-semibold ${sm.cls}`}
+                    >
                       {sm.label}
                     </span>
                   </div>

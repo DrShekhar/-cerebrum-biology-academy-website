@@ -215,7 +215,7 @@ export default function StudentDashboard() {
           const activities: RecentActivity[] = attempts.slice(0, 5).map((attempt: TestAttempt) => ({
             id: attempt.id,
             type: 'test',
-            title: attempt.testTemplate.title,
+            title: attempt.testTemplate?.title || 'Practice Test',
             timestamp: attempt.createdAt,
             score: attempt.percentage,
             duration: Math.round(attempt.timeSpent / 60),
