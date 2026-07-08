@@ -80,7 +80,7 @@ const centers = [
     address: 'SCF-130, Huda Market, Sector 17, 121002',
     metro: 'Bata Chowk Metro (Violet Line)',
     areas: 'NIT, Sector 15-21, Ballabhgarh, Greater Faridabad',
-    mapUrl: 'https://maps.google.com/?q=SCF+124+Huda+Market+Sector+17+Faridabad',
+    mapUrl: 'https://maps.google.com/maps?q=SCF-130+Huda+Market+Sector+17+Faridabad+121002',
     cityPage: '/neet-coaching-faridabad',
   },
 ]

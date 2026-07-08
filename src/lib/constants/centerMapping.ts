@@ -32,8 +32,11 @@ const GOOGLE_MAPS_EMBEDS: Record<CenterKey, string> = {
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8!2d77.2089!3d28.5597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2a4e0000001%3A0xgreen_park!2sGulmohar%20Park%2C%20Green%20Park%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1710000000000',
   gurugram:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.5!2d77.0426!3d28.4295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19c4e0000001%3A0xm2k_corporate_park!2sM2K%20Corporate%20Park%2C%20Sector%2051%2C%20Gurugram!5e0!3m2!1sen!2sin!4v1710000000000',
+  // Address-query embed (renders a real pin at the exact street address; the
+  // old pb= embed carried a fabricated place-id that wouldn't resolve). Swap
+  // to a real place-id embed once the GBP listing is verified.
   faridabad:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.8!2d77.3178!3d28.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdd7ae0000001%3A0xhuda_market_sector17!2sHuda%20Market%2C%20Sector%2017%2C%20Faridabad!5e0!3m2!1sen!2sin!4v1710000000000',
+    'https://www.google.com/maps?q=SCF-130,+Above+Union+Bank,+Huda+Market,+Sector+17,+Faridabad,+Haryana+121002&output=embed',
   // ONLINE-ONLY area (no walk-in center). Kept only to satisfy the CenterKey
   // Record; no city routes to it now — online cities map to South Extension.
   // Points at the real South Extension flagship, NOT a fake Sector 62 pin.

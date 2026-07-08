@@ -263,7 +263,7 @@ export default function BiologyTuitionFaridabadPage() {
             <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Faridabad Center</h3>
             <p className="text-gray-700 mb-4">Sector 17, Faridabad, Haryana 121002</p>
             <a
-              href="https://maps.google.com/?q=Sector+17+Faridabad+Haryana"
+              href="https://maps.google.com/maps?q=SCF-130+Huda+Market+Sector+17+Faridabad+121002"
               target="_blank"
               rel="noopener noreferrer"
             >

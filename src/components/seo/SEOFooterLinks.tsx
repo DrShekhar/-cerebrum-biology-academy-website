@@ -34,7 +34,7 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
   {
     heading: 'Top Coaching Guides',
     links: [
-      { label: 'Top 10 Faridabad', href: '/top-10-neet-coaching-faridabad' },
+      { label: 'Top 10 Faridabad', href: '/best-neet-coaching-faridabad' },
       { label: 'Top 10 Gurugram', href: '/top-10-neet-coaching-gurugram' },
       { label: 'Top 10 Noida', href: '/top-10-neet-coaching-noida' },
       { label: 'Top 10 Ghaziabad', href: '/top-10-neet-coaching-ghaziabad' },
@@ -45,7 +45,7 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
   {
     heading: 'Which Coaching Is Best',
     links: [
-      { label: 'Best in Faridabad?', href: '/which-neet-coaching-is-best-in-faridabad' },
+      { label: 'Best in Faridabad?', href: '/best-neet-coaching-faridabad' },
       { label: 'Best in Gurugram?', href: '/which-neet-coaching-is-best-in-gurugram' },
       { label: 'Best in Noida?', href: '/which-neet-coaching-is-best-in-noida' },
       { label: 'Best in Ghaziabad?', href: '/which-neet-coaching-is-best-in-ghaziabad' },
@@ -60,7 +60,7 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
       { label: 'South Delhi', href: '/biology-classes-south-delhi' },
       { label: 'Gurgaon', href: '/biology-classes-gurgaon' },
       { label: 'Noida', href: '/biology-classes-noida' },
-      { label: 'Faridabad', href: '/biology-classes-faridabad' },
+      { label: 'Faridabad', href: '/neet-coaching-faridabad' },
       { label: 'Ghaziabad', href: '/biology-classes-ghaziabad' },
       { label: 'Greater Noida', href: '/biology-classes-greater-noida' },
     ],

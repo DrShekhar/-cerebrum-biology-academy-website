@@ -1659,7 +1659,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'neet-coaching-near-me-faridabad',
       'neet-test-series-faridabad',
       'neet-crash-course-faridabad',
-      'neet-dropper-batch-faridabad',
       'neet-foundation-class-9-faridabad',
       'neet-foundation-class-10-faridabad',
       'neet-evening-batch-faridabad',
@@ -5482,6 +5481,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.95,
+    },
+    // Campbell Biology summer program (global + India siblings)
+    {
+      url: `${baseUrl}/campbell-biology-summer-program`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/campbell-biology-summer-program-india`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
     },
     // Global hub — international audience anchor (Phase 3 of global repositioning)
     {

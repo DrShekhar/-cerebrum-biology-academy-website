@@ -225,18 +225,20 @@ const locationData = {
     addressLocality: 'Faridabad',
     addressRegion: 'Haryana',
     postalCode: '121002',
-    geo: { lat: '28.3870', lng: '77.3070' },
+    // geo comes from centerGeo('faridabad') → contactInfo.ts (28.4089,77.3178);
+    // keep this in sync — a second pin here caused a 2.5km GEO contradiction.
+    geo: { lat: '28.4089', lng: '77.3178' },
     phone: CONTACT_INFO.phone.primary,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad',
     image: 'https://cerebrumbiologyacademy.com/locations/faridabad-center.jpg',
     priceRange: '₹40,000 - ₹1,80,000',
     paymentMethods: ['Cash', 'UPI', 'Bank Transfer', 'EMI'],
     openingHours: { opens: '09:00', closes: '20:00' },
-    nearbyLandmarks: ['Sector 17 Market', 'NHPC Chowk', 'Faridabad Railway Station'],
+    nearbyLandmarks: ['HUDA Complex', 'Sector 17 Market', 'Mini Secretariat', 'Bata Chowk'],
     studentCount: '550',
     googleBusinessUrl: CONTACT_INFO.centers.faridabad.googleBusinessUrl,
     googleMapsUrl:
-      'https://maps.google.com/?q=Cerebrum+Biology+Academy+Faridabad,+Haryana&ll=28.3870,77.3070&z=15',
+      'https://maps.google.com/?q=Cerebrum+Biology+Academy+Faridabad,+Haryana&ll=28.4089,77.3178&z=15',
     areaServed: [
       'Faridabad',
       'Sector 15',

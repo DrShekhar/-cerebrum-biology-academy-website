@@ -2738,15 +2738,14 @@ export const noidaConsolidationRedirects = [
 ]
 
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
-export const faridabadConsolidationRedirects = [
-  // 3A. Alternatives → /best-neet-coaching-faridabad (8)
-  // 3B. Complements → /neet-coaching-faridabad (2)
-  // 3C. Course/batch → /neet-coaching-faridabad (9)
-  // 3D. School-specific → /neet-coaching-faridabad (10)
-  // 3E. FAQ/specialty → /neet-coaching-faridabad (5)
-  // 3F. Online → /neet-coaching-faridabad (2)
-  // 3G. Fee duplicate → /neet-coaching-fees-faridabad (1)
-]
+// DECISION (Jul 2026 audit): intentionally EMPTY. The planned 3A-3G merges
+// were superseded — competitor-alternative/comparison pages stay indexed
+// ("X vs Y" formats trigger AI Overviews ~95% and target distinct queries);
+// school pages were redirected in the school batch; course/batch satellites
+// stay pending GSC impression data (same Tier-B rule as the doorway pass).
+// If a future merge is decided, populate here — the sitemap redirect filter
+// picks entries up automatically.
+export const faridabadConsolidationRedirects = []
 
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const ghaziabadConsolidationRedirects = [

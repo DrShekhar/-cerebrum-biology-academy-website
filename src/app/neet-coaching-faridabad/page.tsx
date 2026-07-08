@@ -25,7 +25,7 @@ import {
   MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { LocalBusinessSchema, FAQSchema, VideoSchema } from '@/components/seo/StructuredData'
+import { LocalBusinessSchema, VideoSchema } from '@/components/seo/StructuredData'
 import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { LocalityCues } from '@/components/seo/LocalityCues'
@@ -336,7 +336,7 @@ export default function NeetCoachingFaridabadPage() {
           name: 'Cerebrum Biology Academy - Faridabad',
           address: 'SCF-130, 2nd Floor, Above Union Bank, Huda Market, Sector 17, Faridabad',
           phone: '+918826444334',
-          mapUrl: 'https://maps.google.com/maps?q=Sector+17+Faridabad',
+          mapUrl: 'https://maps.google.com/maps?q=SCF-130+Huda+Market+Sector+17+Faridabad+121002',
           nearbyLandmark: 'Bata Chowk Metro (Violet Line) — 5 min walk',
         }}
       />
@@ -1978,7 +1978,20 @@ export default function NeetCoachingFaridabadPage() {
 
       {/* Schema Markup for SEO */}
       <LocalBusinessSchema />
-      <FAQSchema />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((f) => ({
+              '@type': 'Question',
+              name: f.question,
+              acceptedAnswer: { '@type': 'Answer', text: f.answer },
+            })),
+          }),
+        }}
+      />
       <VideoSchema
         name="Sadhna Sirin - 695/720 NEET 2023 Delhi-NCR Topper Testimonial"
         description="Sadhna Sirin shares her journey to scoring 695/720 in NEET 2023 with 100 Percentile in Biology. Learn how Cerebrum Biology Academy's teaching methods helped her achieve this exceptional result."

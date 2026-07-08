@@ -94,7 +94,7 @@ const centers = [
     nearbyAreas: ['NHPC Chowk', 'Old Faridabad', 'Ballabgarh'],
     distance: '50 km from Delhi',
     students: '550+',
-    mapsUrl: 'https://maps.google.com/?q=28.3870,77.3070',
+    mapsUrl: 'https://maps.google.com/maps?q=SCF-130+Huda+Market+Sector+17+Faridabad+121002',
     googleBusinessUrl: CONTACT_INFO.centers.faridabad.googleBusinessUrl,
   },
 ]

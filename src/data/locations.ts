@@ -70,13 +70,13 @@ export const offlineLocations: Location[] = [
   {
     id: 'faridabad',
     name: 'Faridabad Center',
-    address: 'Sector 17, Faridabad',
+    address: 'SCF-130, 2nd Floor, Above Union Bank, Huda Market, Sector 17, Faridabad',
     city: 'Faridabad',
     pincode: '121002',
     phone: ['+918826444334', '+919311946297'],
-    googleMapsUrl: 'https://maps.google.com/?q=Sector+17+Faridabad+121002',
+    googleMapsUrl: 'https://maps.google.com/maps?q=SCF-130+Huda+Market+Sector+17+Faridabad+121002',
     googleMapsEmbed:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.123!2d77.310!3d28.380!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDIyJzQ4LjAiTiA3N8KwMTgnMzYuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
+      'https://www.google.com/maps?q=SCF-130,+Above+Union+Bank,+Huda+Market,+Sector+17,+Faridabad,+Haryana+121002&output=embed',
     features: ['Spacious Classrooms', 'Study Material Library', 'Mock Test Center'],
     timing: 'Offline & Online Classes Available',
     type: 'offline',
