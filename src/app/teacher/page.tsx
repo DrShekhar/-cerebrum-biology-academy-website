@@ -255,6 +255,13 @@ export default function TeacherDashboardPage() {
                     href="/teacher/worksheets"
                     color="from-green-500 to-green-600"
                   />
+                  <QuickActionCard
+                    icon={Play}
+                    title="Video Lectures"
+                    description="Add in-video quiz checkpoints"
+                    href="/teacher/videos"
+                    color="from-indigo-500 to-indigo-600"
+                  />
                 </div>
               </section>
 

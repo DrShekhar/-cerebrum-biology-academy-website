@@ -438,7 +438,7 @@ export default function TeacherTestAssignmentPage() {
                         </Button>
                       )}
                       {test.status === 'ACTIVE' && (
-                        <Link href={`/teacher/test-assignment/${test.id}/results`}>
+                        <Link href={`/teacher/test-assignment/${test.id}`}>
                           <Button size="sm" variant="outline">
                             <BarChart3 className="w-4 h-4 mr-1" />
                             View Results

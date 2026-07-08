@@ -354,26 +354,9 @@ export default function TeacherDashboard() {
                   <CardTitle>Score Distribution</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
-                    {[
-                      { range: '90-100%', count: 5, color: 'bg-green-600' },
-                      { range: '80-89%', count: 12, color: 'bg-blue-500' },
-                      { range: '70-79%', count: 8, color: 'bg-yellow-500' },
-                      { range: '60-69%', count: 4, color: 'bg-orange-500' },
-                      { range: '0-59%', count: 2, color: 'bg-red-500' },
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-3">
-                        <div className="w-16 text-sm text-gray-600">{item.range}</div>
-                        <div className="flex-1 bg-gray-200 rounded-full h-3">
-                          <div
-                            className={`h-3 rounded-full ${item.color}`}
-                            style={{ width: `${(item.count / 31) * 100}%` }}
-                          />
-                        </div>
-                        <div className="w-8 text-sm text-gray-600">{item.count}</div>
-                      </div>
-                    ))}
-                  </div>
+                  <p className="py-8 text-center text-sm text-gray-500">
+                    Score distribution will appear here once students complete graded tests.
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -385,116 +368,26 @@ export default function TeacherDashboard() {
                 <CardTitle>Topic-wise Class Performance</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
-                  {[
-                    { topic: 'Cell Biology', average: 85, struggling: 3 },
-                    { topic: 'Genetics', average: 78, struggling: 6 },
-                    { topic: 'Ecology', average: 82, struggling: 4 },
-                    { topic: 'Plant Physiology', average: 75, struggling: 8 },
-                    { topic: 'Human Physiology', average: 80, struggling: 5 },
-                  ].map((topic, idx) => (
-                    <div key={idx} className="p-4 border border-gray-200 rounded-lg">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-medium text-gray-900">{topic.topic}</h4>
-                        <div className="flex items-center gap-4">
-                          <span className="text-lg font-bold text-gray-900">{topic.average}%</span>
-                          <span className="text-sm text-red-600">
-                            {topic.struggling} students struggling
-                          </span>
-                        </div>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div
-                          className={`h-2 rounded-full ${
-                            topic.average >= 80
-                              ? 'bg-green-600'
-                              : topic.average >= 70
-                                ? 'bg-yellow-500'
-                                : 'bg-red-500'
-                          }`}
-                          style={{ width: `${topic.average}%` }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <p className="py-8 text-center text-sm text-gray-500">
+                  Topic-wise performance will appear here once students complete tests mapped to
+                  topics.
+                </p>
               </CardContent>
             </Card>
           </TabsContent>
 
           <TabsContent value="insights" className="space-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Insights */}
-              <Card>
-                <CardHeader>
-                  <CardTitle>Key Insights</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
-                      <div className="flex items-center gap-2 mb-2">
-                        <CheckCircle className="w-4 h-4 text-green-600" />
-                        <span className="font-medium text-green-800">Strong Performance</span>
-                      </div>
-                      <p className="text-sm text-green-700">
-                        85% of students are performing above class average in Cell Biology
-                      </p>
-                    </div>
-
-                    <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-                      <div className="flex items-center gap-2 mb-2">
-                        <AlertTriangle className="w-4 h-4 text-yellow-600" />
-                        <span className="font-medium text-yellow-800">Needs Attention</span>
-                      </div>
-                      <p className="text-sm text-yellow-700">
-                        Plant Physiology has the highest number of struggling students
-                      </p>
-                    </div>
-
-                    <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                      <div className="flex items-center gap-2 mb-2">
-                        <TrendingUp className="w-4 h-4 text-blue-600" />
-                        <span className="font-medium text-blue-800">Improving Trend</span>
-                      </div>
-                      <p className="text-sm text-blue-700">
-                        Overall class average improved by 3.2% this month
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Recommendations */}
-              <Card>
-                <CardHeader>
-                  <CardTitle>Recommendations</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    <div className="p-3 bg-gray-50 rounded-lg">
-                      <h5 className="font-medium text-gray-900 mb-1">Focus on Plant Physiology</h5>
-                      <p className="text-sm text-gray-600">
-                        Consider extra practice sessions for photosynthesis and respiration
-                      </p>
-                    </div>
-
-                    <div className="p-3 bg-gray-50 rounded-lg">
-                      <h5 className="font-medium text-gray-900 mb-1">Increase Test Frequency</h5>
-                      <p className="text-sm text-gray-600">
-                        Weekly mini-tests can help identify struggling areas earlier
-                      </p>
-                    </div>
-
-                    <div className="p-3 bg-gray-50 rounded-lg">
-                      <h5 className="font-medium text-gray-900 mb-1">Peer Learning</h5>
-                      <p className="text-sm text-gray-600">
-                        Pair strong performers with struggling students for peer tutoring
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            <Card>
+              <CardHeader>
+                <CardTitle>Insights &amp; Recommendations</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="py-8 text-center text-sm text-gray-500">
+                  Insights are generated from real student performance. They&apos;ll appear here
+                  once there are enough graded tests to analyse.
+                </p>
+              </CardContent>
+            </Card>
           </TabsContent>
         </Tabs>
       </div>

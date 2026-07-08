@@ -113,11 +113,14 @@ export default function CreateTestAssignmentPage() {
   const [selectedStudents, setSelectedStudents] = useState<{ id: string; name: string }[]>([])
 
   useEffect(() => {
-    fetch('/api/admin/courses?limit=200')
+    // Use the TEACHER courses endpoint (the admin one is ADMIN-only → 401 for
+    // teachers, which silently left the course dropdown empty and, with no
+    // courseId, assigned the test to zero students).
+    fetch('/api/teacher/courses')
       .then((r) => r.json())
       .then((j) => {
-        if (j?.success && j.data?.courses) {
-          setCourses(j.data.courses.map((c: any) => ({ id: c.id, name: c.name })))
+        if (j?.success && j.courses) {
+          setCourses(j.courses.map((c: any) => ({ id: c.id, name: c.name })))
         }
       })
       .catch(() => {})
@@ -724,8 +727,8 @@ export default function CreateTestAssignmentPage() {
 
                 {config.assignTo.type === 'BATCH' && (
                   <p className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-700">
-                    Batch targeting isn’t available yet (batches have no student roster). Use Course,
-                    Class Level, or Individual.
+                    Batch targeting isn’t available yet (batches have no student roster). Use
+                    Course, Class Level, or Individual.
                   </p>
                 )}
 

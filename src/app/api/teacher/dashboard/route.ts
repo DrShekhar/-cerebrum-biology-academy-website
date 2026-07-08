@@ -11,7 +11,9 @@ import { auth } from '@/lib/auth'
 export async function GET(request: NextRequest) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'TEACHER') {
+    // Allow ADMIN/owner too — the /teacher page grants them access, so a
+    // TEACHER-only API left them staring at a silent all-zeros dashboard.
+    if (!session || (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN')) {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 
