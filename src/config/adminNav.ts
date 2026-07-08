@@ -91,6 +91,7 @@ export const ADMIN_NAV: AdminNavItem[] = [
     ],
   },
   { id: 'team-chat', name: 'Team Chat', icon: MessagesSquare, href: '/admin/team-chat' },
+  { id: 'tasks', name: 'Tasks & Requests', icon: ListChecks, href: '/admin/tasks' },
   {
     id: 'whatsapp-inbox',
     name: 'WhatsApp Inbox',

@@ -3139,6 +3139,28 @@ model user_question_responses {
   @@index([userId, answeredAt])
 }
 
+model shared_tasks {
+  id             String    @id
+  title          String
+  detail         String?
+  category       String    @default("OTHER")
+  priority       String    @default("MEDIUM")
+  status         String    @default("OPEN")
+  createdById    String
+  createdByRole  String
+  createdByName  String?
+  assignedToId   String?
+  resolvedById   String?
+  resolvedAt     DateTime?
+  resolutionNote String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  @@index([status, createdAt(sort: Desc)])
+  @@index([createdById])
+  @@index([assignedToId])
+}
+
 model users {
   id                                                                    String                           @id
   email                                                                 String                           @unique
