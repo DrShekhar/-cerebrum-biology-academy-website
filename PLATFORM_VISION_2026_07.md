@@ -90,10 +90,10 @@ The five highest-leverage vendor patterns to copy (from WATI/AiSensy/Interakt/Do
 
 **Phase 1 (day-1, recommended): Exotel click-to-call for normal phone calls.**
 
-- "Call" button on lead detail → our API route → Exotel bridge API (counselor's phone rings, then prospect; virtual number as caller ID).
-- `Recording` flag on; Exotel's `StatusCallback` webhook returns duration + `RecordingUrl` → stored in a new `call_logs` table → rendered in the lead timeline with an audio player.
-- **Compliance (India):** effectively one-party consent — a participant may record — but **DPDP Act 2023** requires notice: play/say "this call may be recorded for quality and training" up front, log the disclosure, set a retention window. No DLT for agent-to-prospect calls; prefer calling inbound leads (which is our model).
-- Cost ballpark ₹5k–15k/mo at 500–1,500 calls (quote needed). **Glue effort: S (1–2 days).**
+- "Call" button on lead detail → our API route → `POST api.in.exotel.com/v1/Accounts/<sid>/Calls/connect` (Basic auth, form-encoded: `From`=counselor phone rings first, `To`=prospect, `CallerId`=our Exophone, `CallType=trans`). No SDK, no agent toolbar — one Next.js route.
+- Recording is on by default at the account level; the `StatusCallback` webhook returns status + duration + `RecordingUrl` (mp3) → stored in a new `call_logs` table → rendered in the lead timeline with an audio player. ⚠️ Exotel retains recordings only **6 months** — add a small cron that copies each mp3 to our own storage for permanence.
+- **Compliance (India):** effectively one-party consent — a participant may record — but **DPDP Act 2023** requires notice: prepend a "this call may be recorded for quality and training" announcement on the customer leg, log the disclosure + consent timestamp on the lead, set a retention window. Calling back our own inbound leads (form-fills/WA enquiries) is the consent lane — no 140-series/DND-scrub burden; that applies only to cold purchased lists, which we don't use. Provider KYC (GST/PAN) takes a few days.
+- Cost: entry bundle ≈₹10k prepaid; bridged calls bill BOTH legs per-pulse (~₹0.60–1.7/min effective — get the exact rate card at signup). **Backup vendor: Acefone** (comparable REST docs, `custom_identifier` webhook echo for lead tagging — get both quotes). **Twilio is ruled out for India** (no domestic outbound numbers; foreign caller ID = terrible pickup + TRAI exposure). **Glue effort: S (1–2 days).**
 
 **Phase 2: WhatsApp Business Calling API** (verified GA in India):
 
@@ -116,14 +116,18 @@ Meta's India Payments: `order_details` message → prospect pays via UPI **insid
 
 ## 5. Smart Onboarding Machine (payment → thriving student, zero manual steps)
 
+**Why it matters:** Indian edtech loses 30–40% of new sign-ups by Day 7 (vendor-claimed benchmark) — and no major coaching brand runs a well-automated WhatsApp onboarding; the field is acquisition-obsessed and weakest post-payment. This is differentiation, not catch-up.
+
+**Cost engineering (the trick that makes it nearly free):** WhatsApp UTILITY templates cost ~₹0.115 vs MARKETING ~₹0.86, and utility messages are **FREE inside an open 24-hour service window**. So message 1 asks the student to **"Reply START to activate"** — their reply opens the window and the entire day-0 flow rides free. Rules: keep every onboarding template strictly factual and promo-free (one "exclusive offer" line → Meta silently auto-reclassifies it to marketing at 7.5× the price); a magic-link login button qualifies as UTILITY (auth templates are OTP-only); inactivity nudges count as MARKETING — budget those separately.
+
 State machine (`onboarding_steps` table + existing cron + existing senders), triggered by the Razorpay webhook:
 
-1. **T+0** (utility template, ~₹0.12/msg): payment received + receipt + what-happens-next.
-2. **T+5 min**: login magic-link (never raw passwords over WA).
-3. **T+1 h** (WhatsApp Flow): profile completion — class, target year, **parent name + phone** captured in-chat straight into Prisma.
-4. **T+1 day**: orientation slot booking + counselor→mentor handoff intro.
-5. **Parent track**: welcome to the captured parent number; **fortnightly WA progress digest** (PW Parent App's exact stat list: attendance, lecture %, DPP %, test scores vs batch) + PTM booking.
-6. **Week 1–2**: study-plan nudges; **inactivity triggers** ("no video watched in 5 days" → nudge; day-12 of trial → offer).
+1. **T+0** (UTILITY): payment received + receipt + what-happens-next + "Reply START".
+2. **T+5 min** (UTILITY): login **magic-link** button (short-expiry, single-use; never raw passwords over WA).
+3. **T+1 h** (WhatsApp Flow on a utility template): profile completion — class, target year, **parent name + phone** captured in-chat straight into Prisma.
+4. **T+1 day** (UTILITY): orientation slot booking Flow + counselor→mentor handoff intro. **Quick win <48h**: "take the 12-min diagnostic" — one clear first action (the Kajabi pattern).
+5. **Parent track**: welcome to the captured parent number; **fortnightly WA progress digest** (PW Parent App's exact stat list: attendance, lecture %, DPP %, test scores vs batch) + PTM booking Flow. Research found NO brand doing this over WhatsApp — genuine white space; result/attendance reports tied to enrollment qualify as UTILITY.
+6. **Week 1–2**: progress-based (not calendar-based) study nudges; **inactivity triggers** ("no video watched in 5 days" → nudge [MARKETING rate]; day-12 of trial → offer).
 7. Student dashboard shows an onboarding checklist (profile ✓ orientation ✓ first test ✓ parent linked ✓).
 
 Step 6 generalizes into the **behavioral lifecycle automations engine** (Kajabi's core): an events table + when/then rules + action executors (WA/email/task/flag) covering the whole student lifecycle — demo-no-enroll 48h → nudge; failed 2 quizzes in a chapter → doubt-solver prompt + counselor flag; absent from class → recording link + parent alert. **Effort: onboarding S–M; full rules engine M–L.**
