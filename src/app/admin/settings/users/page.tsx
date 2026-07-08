@@ -405,6 +405,13 @@ export default function UsersSettingsPage() {
                           >
                             <Lock className="w-4 h-4" />
                           </button>
+                          <a
+                            href={`/admin/settings/users/${user.id}/permissions`}
+                            className="text-gray-600 hover:text-purple-700 p-1"
+                            title="Permissions"
+                          >
+                            <Shield className="w-4 h-4" />
+                          </a>
                           {user.role !== 'ADMIN' && (
                             <button
                               className="text-red-600 hover:text-red-900 p-1"

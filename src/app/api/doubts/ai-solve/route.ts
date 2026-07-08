@@ -4,6 +4,8 @@ import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { SONNET } from '@/lib/ai/models'
 import { ensureSystemUser } from '@/lib/constants/systemUser'
+import { userHasPermission } from '@/lib/auth/permissions'
+import type { UserRole } from '@/lib/auth/config'
 
 /**
  * POST /api/doubts/ai-solve — instant AI doubt solver.
@@ -29,6 +31,17 @@ export async function POST(request: NextRequest) {
     const userId = (session?.user as { id?: string } | undefined)?.id
     if (!userId) {
       return NextResponse.json({ success: false, error: 'Sign in required' }, { status: 401 })
+    }
+
+    // Per-user entitlement: an admin can WITHDRAW AI access from a specific
+    // user (e.g. on misuse) via the permission editor. DENY here blocks them
+    // while the feature stays on for everyone else.
+    const role = ((session?.user as { role?: string } | undefined)?.role || 'STUDENT') as UserRole
+    if (!(await userHasPermission(userId, role, 'ai:doubt-solver'))) {
+      return NextResponse.json(
+        { success: false, error: 'AI doubt solver access has been disabled for your account.' },
+        { status: 403 }
+      )
     }
 
     const apiKey = process.env.ANTHROPIC_API_KEY

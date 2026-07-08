@@ -3261,6 +3261,8 @@ model users {
   work_tracking                                                         work_tracking[]
   marketing_campaigns                                                   marketing_campaigns[]
   accounts                                                              accounts[]
+  permission_overrides                                                  user_permission_overrides[]     @relation("permission_overrides_user")
+  permission_overrides_granted                                          user_permission_overrides[]     @relation("permission_overrides_grantedBy")
 
   @@index([coachingTier])
   @@index([emailVerified])
@@ -5063,6 +5065,28 @@ model site_settings {
   value     Json
   updatedAt DateTime @updatedAt
   updatedBy String?
+}
+
+// Per-user permission overrides on top of the role default (ROLE_PERMISSIONS).
+// effect GRANT adds a capability the role lacks; effect DENY withdraws one the
+// role has (e.g. revoke a paying student's AI access on misuse). DENY wins over
+// GRANT. Optional expiresAt for time-boxed grants/suspensions.
+model user_permission_overrides {
+  id          String   @id @default(cuid())
+  userId      String
+  permission  String
+  effect      String // 'GRANT' | 'DENY'
+  reason      String?
+  grantedById String?
+  expiresAt   DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user      users  @relation("permission_overrides_user", fields: [userId], references: [id], onDelete: Cascade)
+  grantedBy users? @relation("permission_overrides_grantedBy", fields: [grantedById], references: [id])
+
+  @@unique([userId, permission])
+  @@index([userId])
 }
 
 // Counselor-authored WhatsApp drip sequences. Definitions only for now —

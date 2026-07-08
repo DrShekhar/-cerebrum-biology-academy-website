@@ -389,18 +389,22 @@ export default function LeadsPage() {
         onDragEnd={handleDragEnd}
         collisionDetection={closestCorners}
       >
-        <div className="flex gap-4 overflow-x-auto pb-4">
-          {stages.map((stage) => {
-            const stageLeads = filteredLeads.filter((lead) => lead.stage === stage.id)
-            return (
-              <LeadPipelineColumn
-                key={stage.id}
-                stage={stage}
-                leads={stageLeads}
-                onRefresh={fetchLeads}
-              />
-            )
-          })}
+        {/* Bounded scroll region + a w-max inner track so the fixed-width
+            columns overflow and scroll horizontally instead of being clipped. */}
+        <div className="w-full overflow-x-auto overscroll-x-contain pb-4">
+          <div className="flex w-max gap-4">
+            {stages.map((stage) => {
+              const stageLeads = filteredLeads.filter((lead) => lead.stage === stage.id)
+              return (
+                <LeadPipelineColumn
+                  key={stage.id}
+                  stage={stage}
+                  leads={stageLeads}
+                  onRefresh={fetchLeads}
+                />
+              )
+            })}
+          </div>
         </div>
 
         <DragOverlay>
