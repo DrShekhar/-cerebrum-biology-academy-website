@@ -39,11 +39,7 @@ interface SessionData {
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'] as const
 
-export default function TestSessionPage({
-  params,
-}: {
-  params: Promise<{ sessionId: string }>
-}) {
+export default function TestSessionPage({ params }: { params: Promise<{ sessionId: string }> }) {
   const { sessionId } = use(params)
   const router = useRouter()
   const [data, setData] = useState<SessionData | null>(null)
@@ -119,6 +115,8 @@ export default function TestSessionPage({
   }, [secondsLeft === null, data?.testSession.status])
 
   const answer = async (q: SessionQuestion, letter: string) => {
+    if (submitting || data?.testSession.status === 'COMPLETED') return
+    const prev = q.userResponse?.selectedAnswer ?? null
     // Optimistic local mark
     setData((d) =>
       d
@@ -130,18 +128,32 @@ export default function TestSessionPage({
           }
         : d
     )
+    const revert = () =>
+      setData((d) =>
+        d
+          ? {
+              ...d,
+              questions: d.questions.map((x) =>
+                x.id === q.id ? { ...x, userResponse: prev ? { selectedAnswer: prev } : null } : x
+              ),
+            }
+          : d
+      )
     try {
+      // The answer route is PUT (auto-starts the session on first answer).
       const res = await fetch(`/api/test/${sessionId}/answer`, {
-        method: 'POST',
+        method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ questionId: q.id, selectedAnswer: letter }),
       })
       if (!res.ok) {
         const json = await res.json().catch(() => ({}))
-        showToast.error(json.error || 'Could not save answer')
+        revert() // never leave the UI showing an answer the server rejected
+        showToast.error(json.error || 'Could not save answer — please retry')
       }
     } catch {
-      showToast.error('Network error saving answer')
+      revert()
+      showToast.error('Network error — your answer was not saved, please retry')
     }
   }
 
@@ -178,9 +190,7 @@ export default function TestSessionPage({
     <div className="mx-auto max-w-3xl px-4 py-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="text-lg font-bold text-gray-900">
-            {data.testTemplate?.title || 'Test'}
-          </h1>
+          <h1 className="text-lg font-bold text-gray-900">{data.testTemplate?.title || 'Test'}</h1>
           <p className="text-xs text-gray-500">
             {answered}/{questions.length} answered
             {done && data.testSession.percentage != null
@@ -243,7 +253,7 @@ export default function TestSessionPage({
               return (
                 <button
                   key={oi}
-                  disabled={done}
+                  disabled={done || submitting}
                   onClick={() => answer(q, letter)}
                   className={`block w-full rounded-xl border px-4 py-3 text-left text-sm transition-colors ${
                     isCorrect

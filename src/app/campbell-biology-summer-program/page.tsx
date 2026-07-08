@@ -53,14 +53,16 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: PAGE_URL,
+    // Reciprocal cluster with the India sibling — signals deliberate
+    // localization (global vs India), not duplicate/doorway content.
     languages: {
-      en: PAGE_URL,
       'en-US': PAGE_URL,
       'en-GB': PAGE_URL,
       'en-CA': PAGE_URL,
       'en-AU': PAGE_URL,
       'en-SG': PAGE_URL,
       'en-AE': PAGE_URL,
+      'en-IN': `${SITE_URL}/campbell-biology-summer-program-india`,
       'x-default': PAGE_URL,
     },
   },
@@ -82,14 +84,54 @@ export const metadata: Metadata = {
 }
 
 const UNITS = [
-  { n: '1', title: 'The Chemistry of Life', ch: 'Ch 1–5', focus: 'Atoms, water, carbon, macromolecules' },
-  { n: '2', title: 'The Cell', ch: 'Ch 6–12', focus: 'Membranes, respiration, photosynthesis, cell cycle' },
-  { n: '3', title: 'Genetics', ch: 'Ch 13–21', focus: 'Meiosis, Mendel, molecular genetics, genomics' },
-  { n: '4', title: 'Mechanisms of Evolution', ch: 'Ch 22–25', focus: 'Selection, speciation, phylogeny' },
-  { n: '5', title: 'Biological Diversity', ch: 'Ch 26–34', focus: 'Bacteria to vertebrates, systematics' },
-  { n: '6', title: 'Plant Form & Function', ch: 'Ch 35–39', focus: 'Transport, nutrition, reproduction, signaling' },
-  { n: '7', title: 'Animal Form & Function', ch: 'Ch 40–51', focus: 'Homeostasis, systems, immunity, endocrine' },
-  { n: '8', title: 'Ecology', ch: 'Ch 52–56', focus: 'Populations, communities, ecosystems, conservation' },
+  {
+    n: '1',
+    title: 'The Chemistry of Life',
+    ch: 'Ch 1–5',
+    focus: 'Atoms, water, carbon, macromolecules',
+  },
+  {
+    n: '2',
+    title: 'The Cell',
+    ch: 'Ch 6–12',
+    focus: 'Membranes, respiration, photosynthesis, cell cycle',
+  },
+  {
+    n: '3',
+    title: 'Genetics',
+    ch: 'Ch 13–21',
+    focus: 'Meiosis, Mendel, molecular genetics, genomics',
+  },
+  {
+    n: '4',
+    title: 'Mechanisms of Evolution',
+    ch: 'Ch 22–25',
+    focus: 'Selection, speciation, phylogeny',
+  },
+  {
+    n: '5',
+    title: 'Biological Diversity',
+    ch: 'Ch 26–34',
+    focus: 'Bacteria to vertebrates, systematics',
+  },
+  {
+    n: '6',
+    title: 'Plant Form & Function',
+    ch: 'Ch 35–39',
+    focus: 'Transport, nutrition, reproduction, signaling',
+  },
+  {
+    n: '7',
+    title: 'Animal Form & Function',
+    ch: 'Ch 40–51',
+    focus: 'Homeostasis, systems, immunity, endocrine',
+  },
+  {
+    n: '8',
+    title: 'Ecology',
+    ch: 'Ch 52–56',
+    focus: 'Populations, communities, ecosystems, conservation',
+  },
 ]
 
 const TRACKS = [
@@ -209,9 +251,9 @@ export default function CampbellBiologySummerProgramPage() {
             Campbell Biology Summer Program
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-green-50">
-            Master the standard university biology text — chapter by chapter, over the summer —
-            with AIIMS-trained faculty. Built for AP Biology, IB HL, pre-med, and USABO/IBO
-            olympiad students in any country. Live, time-zone-calibrated online classes.
+            Master the standard university biology text — chapter by chapter, over the summer — with
+            AIIMS-trained faculty. Built for AP Biology, IB HL, pre-med, and USABO/IBO olympiad
+            students in any country. Live, time-zone-calibrated online classes.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link
@@ -309,7 +351,10 @@ export default function CampbellBiologySummerProgramPage() {
               '1:1 doubt-clearing and progress tracking',
               'Certificate of completion for the summer intensive',
             ].map((item) => (
-              <div key={item} className="flex items-start gap-2 rounded-xl border border-gray-100 bg-gray-50 p-4">
+              <div
+                key={item}
+                className="flex items-start gap-2 rounded-xl border border-gray-100 bg-gray-50 p-4"
+              >
                 <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-green-600" />
                 <span className="text-sm text-gray-700">{item}</span>
               </div>
@@ -331,7 +376,8 @@ export default function CampbellBiologySummerProgramPage() {
                 <p className="mt-2 text-gray-600">
                   AIIMS Delhi-trained, 15+ years teaching biology to students preparing for the
                   world&apos;s toughest medical and biology exams. Every session is live with a
-                  biology specialist — the depth Campbell deserves, taught for genuine understanding.
+                  biology specialist — the depth Campbell deserves, taught for genuine
+                  understanding.
                 </p>
                 <Link
                   href="/dr-shekhar-singh-biology-faculty-india"

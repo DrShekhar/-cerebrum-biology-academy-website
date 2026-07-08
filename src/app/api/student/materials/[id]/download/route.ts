@@ -103,6 +103,30 @@ async function handleDownload(
       }
     }
 
+    // For delivery, resolve + validate the file target BEFORE counting or
+    // redirecting: only http(s) absolute URLs are allowed (guards against a
+    // relative/garbage fileUrl throwing in redirect(), and against turning
+    // this entitlement endpoint into an arbitrary open redirect). Counters
+    // must not inflate for a material that can't actually be delivered.
+    let deliverUrl: string | null = null
+    if (deliver) {
+      const raw = (material.fileUrl || '').trim()
+      if (!raw) {
+        return NextResponse.json(
+          { success: false, error: 'This material has no downloadable file.' },
+          { status: 404 }
+        )
+      }
+      if (!/^https:\/\//i.test(raw)) {
+        console.error('[materials/download] non-absolute-https fileUrl:', materialId)
+        return NextResponse.json(
+          { success: false, error: 'This material is not available for download.' },
+          { status: 404 }
+        )
+      }
+      deliverUrl = raw
+    }
+
     // Update material download count
     await prisma.study_materials.update({
       where: { id: materialId },
@@ -141,15 +165,9 @@ async function handleDownload(
       console.error('Progress tracking failed:', progressError)
     }
 
-    if (deliver) {
-      if (!material.fileUrl) {
-        return NextResponse.json(
-          { success: false, error: 'This material has no downloadable file.' },
-          { status: 404 }
-        )
-      }
-      // Entitlement verified above — hand the browser the stored file.
-      return NextResponse.redirect(material.fileUrl)
+    if (deliverUrl) {
+      // Entitlement + URL validated above — hand the browser the stored file.
+      return NextResponse.redirect(deliverUrl)
     }
 
     return NextResponse.json({

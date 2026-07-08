@@ -243,7 +243,11 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       },
     })
 
-    const isCorrect = validatedData.selectedAnswer === question.correctAnswer
+    // Case/space-insensitive compare: correctAnswer is stored as a letter but
+    // casing varies across seed batches (e.g. 'a' vs 'A'); the player posts
+    // uppercase letters. Normalizing avoids false negatives.
+    const norm = (v: string) => (v ?? '').toString().trim().toUpperCase()
+    const isCorrect = norm(validatedData.selectedAnswer) === norm(question.correctAnswer)
     const marksAwarded = calculateMarks(
       isCorrect,
       question.marks,

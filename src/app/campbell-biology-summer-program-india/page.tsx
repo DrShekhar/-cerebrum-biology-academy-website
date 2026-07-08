@@ -51,10 +51,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: PAGE_URL,
+    // Reciprocal with the global sibling: en-IN here, x-default points at the
+    // global page so non-India queries resolve there (not to this page).
     languages: {
       'en-IN': PAGE_URL,
-      en: PAGE_URL,
-      'x-default': PAGE_URL,
+      'x-default': `${SITE_URL}/campbell-biology-summer-program`,
     },
   },
   openGraph: {
@@ -166,7 +167,13 @@ export default function CampbellBiologySummerProgramIndiaPage() {
     },
     inLanguage: 'en-IN',
     url: PAGE_URL,
-    about: ['Campbell Biology', 'NEET Biology', 'Class 11 Biology', 'Class 12 Biology', 'Biology Olympiad'],
+    about: [
+      'Campbell Biology',
+      'NEET Biology',
+      'Class 11 Biology',
+      'Class 12 Biology',
+      'Biology Olympiad',
+    ],
   }
 
   return (
@@ -308,7 +315,10 @@ export default function CampbellBiologySummerProgramIndiaPage() {
               '1:1 doubt-clearing and progress tracking',
               'Certificate of completion for the summer intensive',
             ].map((item) => (
-              <div key={item} className="flex items-start gap-2 rounded-xl border border-gray-100 bg-gray-50 p-4">
+              <div
+                key={item}
+                className="flex items-start gap-2 rounded-xl border border-gray-100 bg-gray-50 p-4"
+              >
                 <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue-600" />
                 <span className="text-sm text-gray-700">{item}</span>
               </div>

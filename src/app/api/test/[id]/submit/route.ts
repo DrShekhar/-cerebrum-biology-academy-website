@@ -437,7 +437,10 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
           where: { testTemplateId: testSession.testTemplateId, materialType: 'TEST' },
           select: { id: true },
         })
-        const progressUserId = testSession.userId || testSession.freeUserId
+        // material_progress.userId FKs to users(id) — only a real signed-in
+        // student can earn lesson completion. Free-user sessions (freeUserId)
+        // are skipped so the upsert can never FK-violate and roll back submit.
+        const progressUserId = testSession.userId
         if (progressUserId) {
           for (const material of lessonMaterials) {
             await tx.material_progress.upsert({

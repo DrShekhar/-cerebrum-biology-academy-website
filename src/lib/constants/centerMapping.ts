@@ -25,13 +25,12 @@ export interface CenterInfo {
 
 const GOOGLE_MAPS_EMBEDS: Record<CenterKey, string> = {
   southExtension:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5351350896896!2d77.22066!3d28.5678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c16e000001%3A0x5027e47c24e3e43e!2sSouth%20Extension%20Part%202%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1710000000000',
+    'https://www.google.com/maps?q=South+Extension+Part+2,+New+Delhi+110049&output=embed',
   rohini:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.123!2d77.1025!3d28.7041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0147e0000001%3A0xdc_chowk_rohini!2sVikas%20Surya%20Tower%2C%20DC%20Chowk%2C%20Rohini%20Sector%209!5e0!3m2!1sen!2sin!4v1710000000000',
-  greenPark:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8!2d77.2089!3d28.5597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2a4e0000001%3A0xgreen_park!2sGulmohar%20Park%2C%20Green%20Park%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1710000000000',
+    'https://www.google.com/maps?q=Vikas+Surya+Tower,+DC+Chowk,+Sector+9,+Rohini,+New+Delhi+110085&output=embed',
+  greenPark: 'https://www.google.com/maps?q=Green+Park,+New+Delhi+110016&output=embed',
   gurugram:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.5!2d77.0426!3d28.4295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19c4e0000001%3A0xm2k_corporate_park!2sM2K%20Corporate%20Park%2C%20Sector%2051%2C%20Gurugram!5e0!3m2!1sen!2sin!4v1710000000000',
+    'https://www.google.com/maps?q=M2K+Corporate+Park,+Sector+51,+Gurugram+122003&output=embed',
   // Address-query embed (renders a real pin at the exact street address; the
   // old pb= embed carried a fabricated place-id that wouldn't resolve). Swap
   // to a real place-id embed once the GBP listing is verified.
@@ -40,8 +39,7 @@ const GOOGLE_MAPS_EMBEDS: Record<CenterKey, string> = {
   // ONLINE-ONLY area (no walk-in center). Kept only to satisfy the CenterKey
   // Record; no city routes to it now — online cities map to South Extension.
   // Points at the real South Extension flagship, NOT a fake Sector 62 pin.
-  noida:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5351350896896!2d77.22066!3d28.5678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c16e000001%3A0x5027e47c24e3e43e!2sSouth%20Extension%20Part%202%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1710000000000',
+  noida: 'https://www.google.com/maps?q=South+Extension+Part+2,+New+Delhi+110049&output=embed',
 }
 
 /**
