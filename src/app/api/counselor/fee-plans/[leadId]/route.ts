@@ -4,6 +4,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { counselorCanAccessLead } from '@/lib/leads/access'
 import { withCounselor } from '@/lib/auth/middleware'
 import { FeePlanService } from '@/lib/counselor/feePlanService'
 
@@ -23,6 +24,9 @@ async function handleGET(req: NextRequest, session: any) {
       )
     }
 
+    if (!(await counselorCanAccessLead(leadId, session.userId, session.role))) {
+      return NextResponse.json({ error: 'Lead not found or not assigned to you' }, { status: 403 })
+    }
     const feePlans = await FeePlanService.getLeadFeePlans(leadId)
 
     return NextResponse.json({

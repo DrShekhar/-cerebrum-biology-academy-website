@@ -15,10 +15,14 @@ async function handleGET(request: NextRequest, session: UserSession) {
       whereClause.status = status
     }
 
-    if (leadId) {
-      whereClause.fee_plans = {
-        leadId,
-      }
+    // Ownership scoping: a COUNSELOR only sees installments for leads assigned
+    // to them; ADMIN sees all. Without this, any counselor could read every
+    // lead's payment PII (name/phone/email/amounts) across the whole org.
+    const isAdmin = (session.role || '').toUpperCase() === 'ADMIN'
+    const leadWhere: any = isAdmin ? {} : { assignedToId: session.userId }
+    if (leadId) leadWhere.id = leadId
+    if (Object.keys(leadWhere).length > 0) {
+      whereClause.fee_plans = { leads: leadWhere }
     }
 
     const installments = await prisma.installments.findMany({

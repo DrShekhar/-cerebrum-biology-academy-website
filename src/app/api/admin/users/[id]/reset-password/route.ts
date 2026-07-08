@@ -20,10 +20,22 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
 
     const user = await prisma.users.findUnique({
       where: { id },
-      select: { id: true, name: true, email: true, profile: true },
+      select: { id: true, name: true, email: true, profile: true, role: true },
     })
     if (!user) {
       return NextResponse.json({ success: false, error: 'User not found' }, { status: 404 })
+    }
+
+    // An admin must not reset another ADMIN's password (admin-to-admin account
+    // takeover via the once-shown temp password). Resetting your own is fine.
+    if (user.role === 'ADMIN' && user.id !== adminSession?.user?.id) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Cannot reset another admin account. Ask that admin to reset it.',
+        },
+        { status: 403 }
+      )
     }
 
     // 12 chars from an unambiguous alphabet (no 0/O/1/l).

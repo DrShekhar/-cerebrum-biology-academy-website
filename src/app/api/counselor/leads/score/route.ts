@@ -5,6 +5,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { counselorCanAccessLead } from '@/lib/leads/access'
 import { auth } from '@/lib/auth'
 import {
   calculateLeadScore,
@@ -42,6 +43,9 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Lead ID is required' }, { status: 400 })
     }
 
+    if (!(await counselorCanAccessLead(leadId, session.user.id, session.user.role))) {
+      return NextResponse.json({ error: 'Lead not assigned to you' }, { status: 403 })
+    }
     const scoreBreakdown = await calculateLeadScore(leadId)
 
     return NextResponse.json({
@@ -94,9 +98,25 @@ export async function POST(req: NextRequest) {
     }
 
     if (validatedData.leadId) {
+      if (
+        !(await counselorCanAccessLead(validatedData.leadId, session.user.id, session.user.role))
+      ) {
+        return NextResponse.json({ error: 'Lead not assigned to you' }, { status: 403 })
+      }
       await updateLeadScore(validatedData.leadId)
       updatedCount = 1
     } else if (validatedData.leadIds && validatedData.leadIds.length > 0) {
+      const checks = await Promise.all(
+        validatedData.leadIds.map((id) =>
+          counselorCanAccessLead(id, session.user.id, session.user.role)
+        )
+      )
+      if (checks.some((ok) => !ok)) {
+        return NextResponse.json(
+          { error: 'One or more leads are not assigned to you' },
+          { status: 403 }
+        )
+      }
       await bulkUpdateLeadScores(validatedData.leadIds)
       updatedCount = validatedData.leadIds.length
     } else {

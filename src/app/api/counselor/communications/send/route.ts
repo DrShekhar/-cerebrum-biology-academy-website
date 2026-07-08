@@ -4,6 +4,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { prisma } from '@/lib/prisma'
+import { counselorCanAccessLead } from '@/lib/leads/access'
 import { withCounselor, ValidatedSession } from '@/lib/auth/middleware'
 import { notificationService, NotificationRequest } from '@/lib/notifications/notificationService'
 import { z } from 'zod'
@@ -30,9 +32,30 @@ async function handlePOST(req: NextRequest, session: ValidatedSession) {
     const body = await req.json()
     const validatedData = sendMessageSchema.parse(body)
 
+    // Ownership + trusted recipient: verify the lead is assigned to this
+    // counselor (ADMIN bypasses) and send to the lead's STORED phone/email —
+    // never a request-body recipient. Prevents sending from company channels
+    // to arbitrary numbers and cross-counselor messaging.
+    if (!(await counselorCanAccessLead(validatedData.leadId, session.userId, session.role))) {
+      return NextResponse.json(
+        { success: false, error: 'Lead not assigned to you' },
+        { status: 403 }
+      )
+    }
+    const lead = await prisma.leads.findUnique({
+      where: { id: validatedData.leadId },
+      select: { studentName: true, phone: true, email: true },
+    })
+    if (!lead) {
+      return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 })
+    }
+    const recipientPhone = lead.phone
+    const recipientEmail = lead.email
+    const recipientName = lead.studentName
+
     // Validate: email channel requires email address and subject
     if (validatedData.channels.email) {
-      if (!validatedData.email) {
+      if (!recipientEmail) {
         return NextResponse.json(
           {
             success: false,
@@ -68,14 +91,14 @@ async function handlePOST(req: NextRequest, session: ValidatedSession) {
     // Prepare notification data with proper typing
     const notificationData: NotificationRequest = {
       leadId: validatedData.leadId,
-      studentName: validatedData.studentName,
-      email: validatedData.email,
-      phone: validatedData.phone,
+      studentName: recipientName,
+      email: recipientEmail ?? undefined,
+      phone: recipientPhone,
       type: 'GENERAL',
       priority: validatedData.priority,
       customChannels: validatedData.channels,
       emailData:
-        validatedData.channels.email && validatedData.email && validatedData.subject
+        validatedData.channels.email && recipientEmail && validatedData.subject
           ? { subject: validatedData.subject, html: convertMessageToHTML(validatedData.message) }
           : undefined,
       whatsappData: validatedData.channels.whatsapp

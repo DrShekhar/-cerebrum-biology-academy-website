@@ -4,6 +4,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { counselorCanAccessLead } from '@/lib/leads/access'
 import { z } from 'zod'
 import { withCounselor } from '@/lib/auth/middleware'
 import { FeePlanService } from '@/lib/counselor/feePlanService'
@@ -27,6 +28,13 @@ async function handlePOST(req: NextRequest, session: any) {
     const counselorId = session.userId
 
     const validatedData = createOfferSchema.parse(body)
+
+    if (!(await counselorCanAccessLead(validatedData.leadId, counselorId, session.role))) {
+      return NextResponse.json(
+        { success: false, error: 'Lead not assigned to you' },
+        { status: 403 }
+      )
+    }
 
     // Create offer with explicitly typed parameters
     const offer = await FeePlanService.createOffer({

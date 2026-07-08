@@ -32,8 +32,18 @@ async function verifyAdminAuth(request: NextRequest): Promise<boolean> {
 
     const token = authHeader.split('Bearer ')[1]
     const admin = await getFirebaseAdmin()
-    await admin.auth().verifyIdToken(token)
-    return true
+    const decoded = await admin.auth().verifyIdToken(token)
+    // A valid Firebase token is NOT authorization — any signed-in student holds
+    // one. Require an ADMIN account (matched by uid, then email) in our DB.
+    const { prisma } = await import('@/lib/prisma')
+    const user = await prisma.users.findFirst({
+      where: {
+        OR: [{ id: decoded.uid }, ...(decoded.email ? [{ email: decoded.email }] : [])],
+        role: 'ADMIN',
+      },
+      select: { id: true },
+    })
+    return !!user
   } catch {
     return false
   }

@@ -4,6 +4,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { prisma } from '@/lib/prisma'
+import { counselorCanAccessLead } from '@/lib/leads/access'
 import { z } from 'zod'
 import { withCounselor } from '@/lib/auth/middleware'
 import { CounselorWhatsAppService } from '@/lib/counselor/whatsapp'
@@ -52,6 +54,22 @@ async function handlePOST(req: NextRequest, session: any) {
   try {
     const body = await req.json()
     const counselorId = session.userId
+
+    // Ownership + trusted recipient (covers every branch below): the lead must
+    // be assigned to this counselor (ADMIN bypasses), and we send to the lead's
+    // STORED phone, never a request-body number — blocking arbitrary-recipient
+    // sends and cross-counselor messaging.
+    if (!(await counselorCanAccessLead(body.leadId, counselorId, session.role))) {
+      return NextResponse.json(
+        { success: false, error: 'Lead not assigned to you' },
+        { status: 403 }
+      )
+    }
+    const ownLead = await prisma.leads.findUnique({
+      where: { id: body.leadId },
+      select: { phone: true },
+    })
+    if (ownLead?.phone) body.phone = ownLead.phone
 
     // Determine which type of message to send
     if (body.templateKey) {
