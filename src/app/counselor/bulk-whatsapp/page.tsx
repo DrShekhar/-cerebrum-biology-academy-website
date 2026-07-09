@@ -2,15 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
-import {
-  Search,
-  Send,
-  CheckCircle2,
-  Loader2,
-  FileText,
-  Check,
-  Minus,
-} from 'lucide-react'
+import { Search, Send, CheckCircle2, Loader2, FileText, Check, Minus } from 'lucide-react'
 import { format } from 'date-fns'
 import { showToast } from '@/lib/toast'
 
@@ -192,6 +184,7 @@ export default function BulkWhatsAppPage() {
     try {
       setSending(true)
       let successCount = 0
+      let firstError: string | null = null
 
       // Send to each lead individually
       const selectedLeads = leads.filter((l) => selectedLeadIds.has(l.id))
@@ -215,15 +208,33 @@ export default function BulkWhatsAppPage() {
               templateId: selectedTemplate?.id || null,
             }),
           })
-          if (res.ok) successCount++
+          if (res.ok) {
+            successCount++
+          } else if (!firstError) {
+            const err = await res.json().catch(() => null)
+            firstError = err?.error || err?.message || `Send failed (${res.status})`
+          }
         } catch {
           // Continue sending to others even if one fails
+          if (!firstError) firstError = 'Network error'
         }
       }
 
       setSentCount(successCount)
       setSent(true)
-      showToast.success(`Sent to ${successCount}/${selectedLeadIds.size} students`)
+      if (successCount === 0 && selectedLeads.length > 0) {
+        // Never report a total failure as success — the usual cause is that
+        // WhatsApp sending isn't configured yet (provider keys missing).
+        showToast.error(
+          `0 of ${selectedLeads.length} sent — ${firstError || 'WhatsApp sending may not be configured yet'}`
+        )
+      } else if (successCount < selectedLeads.length) {
+        showToast.error(
+          `Sent to ${successCount}/${selectedLeads.length} — some failed${firstError ? ` (${firstError})` : ''}`
+        )
+      } else {
+        showToast.success(`Sent to ${successCount}/${selectedLeads.length} students`)
+      }
     } catch {
       showToast.error('Failed to send messages')
     } finally {

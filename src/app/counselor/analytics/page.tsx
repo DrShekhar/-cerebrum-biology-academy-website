@@ -421,7 +421,14 @@ export default function AnalyticsPageV2() {
         />
         <StatCard
           title="Avg Response"
-          value={`${Math.round(data.overview.averageResponseTime / 60)}m`}
+          value={(() => {
+            // Humanize: 1092m reads terribly — show hours/days past 90 min.
+            const mins = Math.round(data.overview.averageResponseTime / 60)
+            if (mins <= 90) return `${mins}m`
+            const hours = mins / 60
+            if (hours <= 48) return `${hours.toFixed(1)}h`
+            return `${(hours / 24).toFixed(1)}d`
+          })()}
           subValue="First contact time"
           icon={Clock}
           iconBg="bg-amber-100"

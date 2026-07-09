@@ -345,11 +345,17 @@ export default function LeaderboardPage() {
 
       if (lbRes.status === 'fulfilled' && lbRes.value.ok) {
         const data = await lbRes.value.json()
-        setLeaderboard(data.data || [])
+        // API nests the array: data.data = { leaderboard, statistics, ... }.
+        // Setting the envelope object into state made leaderboard.map throw
+        // (the "Something went wrong" crash). Accept both shapes defensively.
+        const rows = Array.isArray(data.data) ? data.data : data.data?.leaderboard
+        setLeaderboard(Array.isArray(rows) ? rows : [])
       }
       if (goalsRes.status === 'fulfilled' && goalsRes.value.ok) {
         const data = await goalsRes.value.json()
-        setGoals(data.data || [])
+        // Same nesting: data.data = { goals, statistics }.
+        const rows = Array.isArray(data.data) ? data.data : data.data?.goals
+        setGoals(Array.isArray(rows) ? rows : [])
       }
     } catch {
       console.error('Failed to load data')

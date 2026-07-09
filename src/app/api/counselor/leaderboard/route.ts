@@ -174,12 +174,15 @@ export async function GET(req: NextRequest) {
         currentUser: currentUserRank,
         statistics: {
           totalCounselors: rankedData.length,
-          topPerformer: rankedData[0],
-          avgConversionRate: parseFloat(
-            (rankedData.reduce((sum, r) => sum + r.conversionRate, 0) / rankedData.length).toFixed(
-              2
-            )
-          ),
+          topPerformer: rankedData[0] || null,
+          // Guard the division — with zero counselors this was NaN.
+          avgConversionRate: rankedData.length
+            ? parseFloat(
+                (
+                  rankedData.reduce((sum, r) => sum + r.conversionRate, 0) / rankedData.length
+                ).toFixed(2)
+              )
+            : 0,
           totalRevenue: rankedData.reduce((sum, r) => sum + r.revenue, 0),
         },
       },
