@@ -5,7 +5,10 @@ import { auth } from '@/lib/auth'
 /**
  * Interactive-video checkpoints — teacher management (TEACHER/ADMIN).
  * GET    — list checkpoints for a lecture (with question preview).
- * POST   — add { timeSeconds, questionId } (question from the bank).
+ * POST   — add a checkpoint at { timeSeconds }, EITHER:
+ *          { questionId }                       (attach a bank question), OR
+ *          { newQuestion: { text, options[], correctAnswer, difficulty? } }
+ *          (author a fresh in-video question; a questions row is created).
  * DELETE — remove ?checkpointId=…
  */
 
@@ -55,24 +58,86 @@ export async function POST(
     return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
   }
   const { videoLectureId } = await params
+  const session = await requireTeacher()
   const body = await req.json().catch(() => ({}))
   const timeSeconds = Number(body.timeSeconds)
-  const questionId = (body.questionId || '').toString()
+  const isRequired = body.isRequired === undefined ? true : Boolean(body.isRequired)
 
-  if (!Number.isFinite(timeSeconds) || timeSeconds < 0 || !questionId) {
+  if (!Number.isFinite(timeSeconds) || timeSeconds < 0) {
+    return NextResponse.json({ success: false, error: 'timeSeconds is required' }, { status: 400 })
+  }
+
+  const lecture = await prisma.video_lectures.findUnique({
+    where: { id: videoLectureId },
+    select: { id: true, title: true },
+  })
+  if (!lecture) {
+    return NextResponse.json({ success: false, error: 'Video lecture not found' }, { status: 404 })
+  }
+
+  // Resolve the questionId — either an existing bank question, or author a new
+  // one inline from { newQuestion: { text, options[], correctAnswer, difficulty } }.
+  let questionId = (body.questionId || '').toString()
+
+  if (!questionId && body.newQuestion) {
+    const nq = body.newQuestion as {
+      text?: string
+      options?: string[]
+      correctAnswer?: string
+      difficulty?: string
+    }
+    const text = (nq.text || '').trim()
+    const options = Array.isArray(nq.options) ? nq.options.map((o) => String(o).trim()) : []
+    const answer = (nq.correctAnswer || '').trim().toUpperCase()
+    const difficulty = ['EASY', 'MEDIUM', 'HARD'].includes((nq.difficulty || '').toUpperCase())
+      ? (nq.difficulty as string).toUpperCase()
+      : 'MEDIUM'
+    if (text.length < 3 || options.length < 2 || options.some((o) => !o)) {
+      return NextResponse.json(
+        { success: false, error: 'A question and at least two non-empty options are required' },
+        { status: 400 }
+      )
+    }
+    if (!['A', 'B', 'C', 'D'].includes(answer) || 'ABCD'.indexOf(answer) >= options.length) {
+      return NextResponse.json(
+        { success: false, error: 'Pick which option is correct' },
+        { status: 400 }
+      )
+    }
+    const created = await prisma.questions.create({
+      data: {
+        id: `vcpq_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        topic: `In-video: ${lecture.title}`.slice(0, 190),
+        subtopic: 'video checkpoint',
+        curriculum: 'NEET',
+        grade: 'all',
+        type: 'MCQ',
+        question: text,
+        options,
+        correctAnswer: answer,
+        source: 'video-checkpoint',
+        difficulty: difficulty as never,
+        isActive: true,
+        isVerified: true,
+        verifiedBy: session?.user?.id,
+        updatedAt: new Date(),
+      },
+      select: { id: true },
+    })
+    questionId = created.id
+  }
+
+  if (!questionId) {
     return NextResponse.json(
-      { success: false, error: 'timeSeconds and questionId are required' },
+      { success: false, error: 'Provide a question (from the bank or a new one)' },
       { status: 400 }
     )
   }
 
-  const [lecture, question] = await Promise.all([
-    prisma.video_lectures.findUnique({ where: { id: videoLectureId }, select: { id: true } }),
-    prisma.questions.findUnique({ where: { id: questionId }, select: { id: true } }),
-  ])
-  if (!lecture) {
-    return NextResponse.json({ success: false, error: 'Video lecture not found' }, { status: 404 })
-  }
+  const question = await prisma.questions.findUnique({
+    where: { id: questionId },
+    select: { id: true },
+  })
   if (!question) {
     return NextResponse.json({ success: false, error: 'Question not found' }, { status: 404 })
   }
@@ -84,7 +149,7 @@ export async function POST(
         videoLectureId,
         questionId,
         timeSeconds: Math.round(timeSeconds),
-        isRequired: body.isRequired === undefined ? true : Boolean(body.isRequired),
+        isRequired,
       },
     })
     return NextResponse.json({ success: true, checkpoint }, { status: 201 })

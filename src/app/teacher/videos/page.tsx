@@ -119,7 +119,7 @@ export default function TeacherVideosPage() {
               </div>
               <Link
                 href={`/teacher/videos/${l.id}/checkpoints`}
-                className="inline-flex items-center gap-1.5 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white transition-transform hover:bg-green-800 active:scale-[0.98]"
               >
                 <Sparkles className="h-4 w-4" /> Manage checkpoints
               </Link>

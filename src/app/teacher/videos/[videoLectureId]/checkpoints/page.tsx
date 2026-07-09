@@ -2,8 +2,9 @@
 
 /**
  * Interactive-video checkpoint editor (teacher). Add in-video quiz checkpoints
- * to a lecture: pick a timestamp + a question from the bank; students get a
- * pause-and-answer overlay at that moment in /learn/[lectureId].
+ * to a lecture: pick a timestamp, then EITHER write a fresh question inline OR
+ * pull one from the bank. Students get a pause-and-answer overlay at that
+ * moment in /learn/[lectureId].
  */
 
 import { use, useEffect, useState, useCallback } from 'react'
@@ -45,11 +46,18 @@ export default function CheckpointEditorPage({
   // Add form
   const [minutes, setMinutes] = useState('')
   const [seconds, setSeconds] = useState('')
+  const [isRequired, setIsRequired] = useState(true)
+  const [mode, setMode] = useState<'write' | 'bank'>('write')
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<BankQuestion[]>([])
   const [searching, setSearching] = useState(false)
   const [picked, setPicked] = useState<BankQuestion | null>(null)
   const [adding, setAdding] = useState(false)
+  // Author-a-new-question form
+  const [qText, setQText] = useState('')
+  const [qOptions, setQOptions] = useState(['', '', '', ''])
+  const [qCorrect, setQCorrect] = useState(0)
+  const [qDifficulty, setQDifficulty] = useState('MEDIUM')
 
   const load = useCallback(async () => {
     setLoading(true)
@@ -98,20 +106,53 @@ export default function CheckpointEditorPage({
 
   const add = async () => {
     const t = (parseInt(minutes || '0', 10) || 0) * 60 + (parseInt(seconds || '0', 10) || 0)
-    if (!picked) {
-      toast.error('Pick a question first')
-      return
-    }
     if (t <= 0) {
       toast.error('Set the timestamp (minutes/seconds)')
       return
+    }
+    let payload: Record<string, unknown>
+    if (mode === 'bank') {
+      if (!picked) {
+        toast.error('Pick a question first')
+        return
+      }
+      payload = { timeSeconds: t, isRequired, questionId: picked.id }
+    } else {
+      const opts = qOptions.map((o) => o.trim())
+      if (qText.trim().length < 3 || opts.filter(Boolean).length < 2) {
+        toast.error('Write the question and at least two options')
+        return
+      }
+      if (!opts[qCorrect]) {
+        toast.error('The option marked correct is empty')
+        return
+      }
+      // Drop empty options while keeping the correct answer aligned.
+      const kept: string[] = []
+      let correctIdx = 0
+      opts.forEach((o, i) => {
+        if (o) {
+          if (i === qCorrect) correctIdx = kept.length
+          kept.push(o)
+        }
+      })
+      payload = {
+        timeSeconds: t,
+        isRequired,
+        newQuestion: {
+          text: qText.trim(),
+          options: kept,
+          correctAnswer: 'ABCD'[correctIdx],
+          difficulty: qDifficulty,
+        },
+      }
     }
     setAdding(true)
     try {
       const res = await fetch(`/api/teacher/videos/${videoLectureId}/checkpoints`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ timeSeconds: t, questionId: picked.id }),
+        body: JSON.stringify(payload),
       })
       const data = await res.json()
       if (res.ok && data.success) {
@@ -121,6 +162,9 @@ export default function CheckpointEditorPage({
         setResults([])
         setMinutes('')
         setSeconds('')
+        setQText('')
+        setQOptions(['', '', '', ''])
+        setQCorrect(0)
         await load()
       } else {
         toast.error(data.error || 'Could not add checkpoint')
@@ -156,8 +200,8 @@ export default function CheckpointEditorPage({
         <Sparkles className="h-6 w-6 text-green-600" /> Video checkpoints
       </h1>
       <p className="mt-1 text-sm text-gray-600">
-        Add in-video quick-check questions. The video pauses at each timestamp until the student
-        answers.
+        Add in-video quick-check questions — write one on the spot or pull it from the bank. The
+        video pauses at each timestamp until the student answers.
       </p>
 
       {/* Add checkpoint */}
@@ -190,36 +234,109 @@ export default function CheckpointEditorPage({
               className="w-20 rounded-lg border border-gray-300 px-3 py-2 text-sm"
             />
           </div>
-          <div className="min-w-0 flex-1">
-            <label className="mb-1 block text-xs font-medium text-gray-600" htmlFor="cp-q">
-              Find a question
-            </label>
-            <div className="flex gap-2">
-              <input
-                id="cp-q"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && search()}
-                placeholder="Search the question bank…"
-                className="min-w-0 flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm"
-              />
-              <button
-                onClick={search}
-                disabled={searching || !query.trim()}
-                className="inline-flex items-center gap-1 rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 disabled:opacity-50"
-              >
-                {searching ? (
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                ) : (
-                  <Search className="h-4 w-4" />
-                )}
-              </button>
-            </div>
-          </div>
+          <label className="ml-auto inline-flex items-center gap-2 text-xs font-medium text-gray-600">
+            <input
+              type="checkbox"
+              checked={isRequired}
+              onChange={(e) => setIsRequired(e.target.checked)}
+              className="h-4 w-4"
+            />
+            Must answer to continue
+          </label>
         </div>
 
+        {/* Mode toggle: write a fresh question, or pull one from the bank */}
+        <div className="mt-4 inline-flex overflow-hidden rounded-lg border border-gray-300 text-xs font-semibold">
+          <button
+            onClick={() => setMode('write')}
+            className={`px-3 py-1.5 transition-colors ${mode === 'write' ? 'bg-green-700 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+          >
+            Write a question
+          </button>
+          <button
+            onClick={() => setMode('bank')}
+            className={`px-3 py-1.5 transition-colors ${mode === 'bank' ? 'bg-green-700 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+          >
+            From question bank
+          </button>
+        </div>
+
+        {/* Author a new in-video question */}
+        {mode === 'write' && (
+          <div className="mt-3 space-y-2">
+            <textarea
+              value={qText}
+              onChange={(e) => setQText(e.target.value)}
+              rows={2}
+              placeholder="Question to show at this timestamp…"
+              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+            />
+            {qOptions.map((opt, i) => (
+              <label key={i} className="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="cp-correct"
+                  checked={qCorrect === i}
+                  onChange={() => setQCorrect(i)}
+                  title="Mark correct"
+                  className="h-4 w-4 shrink-0"
+                />
+                <span className="w-5 shrink-0 text-sm font-semibold text-gray-400">
+                  {'ABCD'[i]}
+                </span>
+                <input
+                  value={opt}
+                  onChange={(e) =>
+                    setQOptions((o) => o.map((v, j) => (j === i ? e.target.value : v)))
+                  }
+                  placeholder={i < 2 ? `Option ${'ABCD'[i]} (required)` : `Option ${'ABCD'[i]}`}
+                  className="min-w-0 flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm"
+                />
+              </label>
+            ))}
+            <div className="flex items-center gap-2 text-xs text-gray-500">
+              <span>Select the radio next to the correct option.</span>
+              <select
+                value={qDifficulty}
+                onChange={(e) => setQDifficulty(e.target.value)}
+                className="ml-auto rounded-lg border border-gray-300 px-2 py-1 text-xs"
+                aria-label="Difficulty"
+              >
+                <option value="EASY">Easy</option>
+                <option value="MEDIUM">Medium</option>
+                <option value="HARD">Hard</option>
+              </select>
+            </div>
+          </div>
+        )}
+
+        {/* Search the question bank */}
+        {mode === 'bank' && (
+          <div className="mt-3 flex gap-2">
+            <input
+              id="cp-q"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && search()}
+              placeholder="Search the question bank…"
+              className="min-w-0 flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm"
+            />
+            <button
+              onClick={search}
+              disabled={searching || !query.trim()}
+              className="inline-flex items-center gap-1 rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 disabled:opacity-50"
+            >
+              {searching ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <Search className="h-4 w-4" />
+              )}
+            </button>
+          </div>
+        )}
+
         {/* Search results */}
-        {results.length > 0 && !picked && (
+        {mode === 'bank' && results.length > 0 && !picked && (
           <div className="mt-3 max-h-56 space-y-1.5 overflow-y-auto">
             {results.map((q) => (
               <button
@@ -236,7 +353,7 @@ export default function CheckpointEditorPage({
           </div>
         )}
 
-        {picked && (
+        {mode === 'bank' && picked && (
           <div className="mt-3 rounded-lg border border-green-300 bg-green-50 p-3 text-sm">
             <div className="flex items-start justify-between gap-2">
               <span className="line-clamp-2 text-gray-800">{picked.question}</span>
@@ -252,8 +369,8 @@ export default function CheckpointEditorPage({
 
         <button
           onClick={add}
-          disabled={adding || !picked}
-          className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white hover:bg-green-800 disabled:opacity-50"
+          disabled={adding || (mode === 'bank' && !picked)}
+          className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white transition-transform hover:bg-green-800 active:scale-[0.98] disabled:opacity-50"
         >
           <Plus className="h-4 w-4" /> {adding ? 'Adding…' : 'Add checkpoint'}
         </button>
