@@ -16,6 +16,7 @@ import {
   TrendingUp,
   Play,
   MessageSquare,
+  LogOut,
 } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/Card'
 import { StaffInboxProvider } from '@/hooks/staff/useStaffInbox'
@@ -48,7 +49,7 @@ interface UpcomingClass {
 }
 
 export default function TeacherDashboardPage() {
-  const { user, isAuthenticated, isLoading: authLoading } = useAuth()
+  const { user, isAuthenticated, isLoading: authLoading, logout } = useAuth()
   const { isOwner, isCheckingOwner } = useOwnerAccess()
   const [stats, setStats] = useState<DashboardStats>({
     totalAssignments: 0,
@@ -179,6 +180,14 @@ export default function TeacherDashboardPage() {
                     New Assignment
                   </Button>
                 </Link>
+                <button
+                  onClick={() => void logout()}
+                  title="Sign out"
+                  aria-label="Sign out"
+                  className="rounded-lg p-2 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900"
+                >
+                  <LogOut className="h-4 w-4" />
+                </button>
               </div>
             </div>
           </div>

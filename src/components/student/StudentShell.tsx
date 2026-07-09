@@ -10,6 +10,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useAuth } from '@/contexts/AuthContext'
 import {
   LayoutDashboard,
   GraduationCap,
@@ -21,6 +22,8 @@ import {
   FolderOpen,
   Award,
   Bell,
+  LogOut,
+  LogIn,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -53,6 +56,7 @@ function isActive(pathname: string, href: string) {
 
 export function StudentShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname() || ''
+  const { isAuthenticated, logout } = useAuth()
 
   return (
     <div className="pb-16 md:pb-0">
@@ -94,6 +98,23 @@ export function StudentShell({ children }: { children: React.ReactNode }) {
           >
             <Bell className="h-5 w-5" />
           </Link>
+          {isAuthenticated ? (
+            <button
+              onClick={() => void logout()}
+              aria-label="Sign out"
+              title="Sign out"
+              className="shrink-0 rounded-lg p-2 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900"
+            >
+              <LogOut className="h-5 w-5" />
+            </button>
+          ) : (
+            <Link
+              href="/sign-in"
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-green-700 px-3 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-green-800"
+            >
+              <LogIn className="h-4 w-4" /> Sign in
+            </Link>
+          )}
         </div>
       </header>
 

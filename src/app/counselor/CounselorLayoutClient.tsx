@@ -16,9 +16,9 @@ import {
   CreditCard,
   BarChart3,
   Calendar,
-  Bell,
   Trophy,
   Send,
+  LogOut,
 } from 'lucide-react'
 import Link from 'next/link'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
@@ -46,7 +46,7 @@ const navItems = [
 ]
 
 function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
-  const { isLoading, isAuthenticated, user } = useAuth()
+  const { isLoading, isAuthenticated, user, logout } = useAuth()
   const router = useRouter()
   const pathname = usePathname()
   const [showShortcuts, setShowShortcuts] = useState(false)
@@ -254,10 +254,16 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
 
               <StaffNotificationBell surface="counselor" />
 
-              <button className="flex items-center gap-2 p-1.5 hover:bg-gray-100 rounded-lg transition-colors">
-                <div className="w-8 h-8 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
-                  {userInitial}
-                </div>
+              <div className="w-8 h-8 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                {userInitial}
+              </div>
+              <button
+                onClick={() => void logout()}
+                title="Sign out"
+                aria-label="Sign out"
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              >
+                <LogOut className="w-4 h-4 text-gray-500" />
               </button>
 
               {/* Mobile Menu Toggle */}

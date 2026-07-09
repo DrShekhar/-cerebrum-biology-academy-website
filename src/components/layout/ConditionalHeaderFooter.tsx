@@ -13,6 +13,15 @@ const HIDDEN_ROUTES = [
   '/study-with-me',
   '/cbt/neet-full',
   '/cbt-mock',
+  // Portal surfaces bring their own chrome (sidebar/shell with sign-out).
+  // The marketing header, floating CTAs, chatbot and exit-intent are
+  // prospect tools — they were rendering on top of the admin panel and
+  // stacking a second sticky header over the student shell.
+  '/admin',
+  '/counselor',
+  '/teacher',
+  '/student',
+  '/learn',
 ]
 
 // Context to share hide state across all ConditionalHeaderFooter instances
