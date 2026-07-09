@@ -526,7 +526,7 @@ export default function AdminDashboard() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <Link
               href="/admin/students"
-              className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-primary-300 hover:bg-primary-50 transition-colors group"
+              className="flex items-center justify-center space-x-2 p-4 border border-gray-200 bg-white shadow-sm hover:shadow-md rounded-xl hover:border-primary-300 hover:bg-primary-50 transition-colors group"
             >
               <UserPlus className="w-5 h-5 text-gray-400 group-hover:text-primary-600" />
               <span className="text-sm font-medium text-gray-600 group-hover:text-primary-700">
@@ -536,7 +536,7 @@ export default function AdminDashboard() {
 
             <Link
               href="/admin/demo-slots"
-              className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-green-400 hover:bg-green-50 transition-colors group"
+              className="flex items-center justify-center space-x-2 p-4 border border-gray-200 bg-white shadow-sm hover:shadow-md rounded-xl hover:border-green-400 hover:bg-green-50 transition-colors group"
             >
               <Calendar className="w-5 h-5 text-gray-400 group-hover:text-green-600" />
               <span className="text-sm font-medium text-gray-600 group-hover:text-green-700">
@@ -546,7 +546,7 @@ export default function AdminDashboard() {
 
             <Link
               href="/admin/groups"
-              className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-colors group"
+              className="flex items-center justify-center space-x-2 p-4 border border-gray-200 bg-white shadow-sm hover:shadow-md rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-colors group"
             >
               <UsersRound className="w-5 h-5 text-gray-400 group-hover:text-blue-600" />
               <span className="text-sm font-medium text-gray-600 group-hover:text-blue-700">
@@ -556,7 +556,7 @@ export default function AdminDashboard() {
 
             <Link
               href="/admin/marketing/campaigns"
-              className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors group"
+              className="flex items-center justify-center space-x-2 p-4 border border-gray-200 bg-white shadow-sm hover:shadow-md rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors group"
             >
               <MessageSquare className="w-5 h-5 text-gray-400 group-hover:text-purple-600" />
               <span className="text-sm font-medium text-gray-600 group-hover:text-purple-700">
@@ -566,7 +566,7 @@ export default function AdminDashboard() {
 
             <Link
               href="/admin/analytics"
-              className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-colors group"
+              className="flex items-center justify-center space-x-2 p-4 border border-gray-200 bg-white shadow-sm hover:shadow-md rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-colors group"
             >
               <BarChart3 className="w-5 h-5 text-gray-400 group-hover:text-orange-600" />
               <span className="text-sm font-medium text-gray-600 group-hover:text-orange-700">

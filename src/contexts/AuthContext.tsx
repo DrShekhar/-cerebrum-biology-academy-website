@@ -494,99 +494,105 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     setIsLoggingOut(true)
 
-    // Clear refresh timeout first to prevent any pending refreshes during logout
-    if (refreshTimeoutRef.current) {
-      clearTimeout(refreshTimeoutRef.current)
-      refreshTimeoutRef.current = null
-    }
-
-    // Clear token tracking immediately to prevent refresh attempts during logout
-    tokenExpiryRef.current = 0
-    lastRefreshRef.current = 0
-
-    let serverLogoutSuccess = false
-    let serverLogoutError: string | null = null
-
-    // Step 1: Call server logout API and WAIT for response
     try {
-      const controller = new AbortController()
-      const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
-
-      const response = await fetch('/api/auth/logout', {
-        method: 'POST',
-        credentials: 'include',
-        signal: controller.signal,
-      })
-
-      clearTimeout(timeoutId)
-
-      if (response.ok) {
-        const data = await response.json()
-        serverLogoutSuccess = data.success === true
-        if (!serverLogoutSuccess) {
-          serverLogoutError = data.error || 'Server reported logout failure'
-          console.warn('[Auth] Server logout incomplete:', serverLogoutError)
-        } else {
-          console.log('[Auth] Server logout successful')
-        }
-      } else {
-        serverLogoutError = `Server returned ${response.status}`
-        console.warn('[Auth] Server logout failed:', serverLogoutError)
+      // Clear refresh timeout first to prevent any pending refreshes during logout
+      if (refreshTimeoutRef.current) {
+        clearTimeout(refreshTimeoutRef.current)
+        refreshTimeoutRef.current = null
       }
-    } catch (fetchError) {
-      if (fetchError instanceof Error && fetchError.name === 'AbortError') {
-        serverLogoutError = 'Logout request timed out'
-      } else {
-        serverLogoutError = fetchError instanceof Error ? fetchError.message : 'Network error'
-      }
-      console.warn('[Auth] Logout API call failed:', serverLogoutError)
-    }
 
-    // Step 2: Attempt Firebase signout (lazy-loaded to defer Firebase SDK)
-    try {
-      const firebaseSignOut = await getFirebaseSignOut()
-      await firebaseSignOut()
-      console.log('[Auth] Firebase signout successful')
-    } catch (firebaseError) {
-      // Don't block logout for Firebase errors - it may not be in use
-      console.warn('[Auth] Firebase signout failed (may not be in use):', firebaseError)
-    }
+      // Clear token tracking immediately to prevent refresh attempts during logout
+      tokenExpiryRef.current = 0
+      lastRefreshRef.current = 0
 
-    // Step 3: Clear client state
-    // We clear client state even if server logout failed for security
-    // (better to have user re-login than leave them in a bad state)
-    setUser(null)
-    setPermissions([])
+      let serverLogoutSuccess = false
+      let serverLogoutError: string | null = null
 
-    // Step 4: Clear any localStorage auth-related data
-    if (typeof window !== 'undefined') {
+      // Step 1: Call server logout API and WAIT for response
       try {
-        localStorage.removeItem('freeUserId')
-        localStorage.removeItem('user-session')
-        localStorage.removeItem('admin-state')
-        localStorage.removeItem('auth-redirect')
-        // Clear session storage too
-        sessionStorage.removeItem('auth-state')
-        sessionStorage.removeItem('login-redirect')
-      } catch (storageError) {
-        console.warn('[Auth] Failed to clear storage:', storageError)
+        const controller = new AbortController()
+        const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+
+        const response = await fetch('/api/auth/logout', {
+          method: 'POST',
+          credentials: 'include',
+          signal: controller.signal,
+        })
+
+        clearTimeout(timeoutId)
+
+        if (response.ok) {
+          const data = await response.json()
+          serverLogoutSuccess = data.success === true
+          if (!serverLogoutSuccess) {
+            serverLogoutError = data.error || 'Server reported logout failure'
+            console.warn('[Auth] Server logout incomplete:', serverLogoutError)
+          } else {
+            console.log('[Auth] Server logout successful')
+          }
+        } else {
+          serverLogoutError = `Server returned ${response.status}`
+          console.warn('[Auth] Server logout failed:', serverLogoutError)
+        }
+      } catch (fetchError) {
+        if (fetchError instanceof Error && fetchError.name === 'AbortError') {
+          serverLogoutError = 'Logout request timed out'
+        } else {
+          serverLogoutError = fetchError instanceof Error ? fetchError.message : 'Network error'
+        }
+        console.warn('[Auth] Logout API call failed:', serverLogoutError)
       }
+
+      // Step 2: Attempt Firebase signout (lazy-loaded to defer Firebase SDK)
+      try {
+        const firebaseSignOut = await getFirebaseSignOut()
+        await firebaseSignOut()
+        console.log('[Auth] Firebase signout successful')
+      } catch (firebaseError) {
+        // Don't block logout for Firebase errors - it may not be in use
+        console.warn('[Auth] Firebase signout failed (may not be in use):', firebaseError)
+      }
+
+      // Step 3: Clear client state
+      // We clear client state even if server logout failed for security
+      // (better to have user re-login than leave them in a bad state)
+      setUser(null)
+      setPermissions([])
+
+      // Step 4: Clear any localStorage auth-related data
+      if (typeof window !== 'undefined') {
+        try {
+          localStorage.removeItem('freeUserId')
+          localStorage.removeItem('user-session')
+          localStorage.removeItem('admin-state')
+          localStorage.removeItem('auth-redirect')
+          // Clear session storage too
+          sessionStorage.removeItem('auth-state')
+          sessionStorage.removeItem('login-redirect')
+        } catch (storageError) {
+          console.warn('[Auth] Failed to clear storage:', storageError)
+        }
+      }
+
+      // Step 5: Navigate to home
+      // Use replace to prevent back button returning to protected page
+      router.replace('/')
+
+      // Log final status
+      if (serverLogoutSuccess) {
+        console.log('[Auth] Logout completed successfully')
+      } else {
+        console.warn('[Auth] Logout completed with server-side issues:', serverLogoutError)
+        // Note: Cookies should still be cleared by the server response
+        // If not, middleware will reject next request and force re-login
+      }
+    } catch (logoutError) {
+      // Never leave the header stuck on "Signing Out…" — any unexpected throw
+      // above previously left isLoggingOut true forever.
+      console.error('[Auth] Logout failed unexpectedly:', logoutError)
+    } finally {
+      setIsLoggingOut(false)
     }
-
-    // Step 5: Navigate to home
-    // Use replace to prevent back button returning to protected page
-    router.replace('/')
-
-    // Log final status
-    if (serverLogoutSuccess) {
-      console.log('[Auth] Logout completed successfully')
-    } else {
-      console.warn('[Auth] Logout completed with server-side issues:', serverLogoutError)
-      // Note: Cookies should still be cleared by the server response
-      // If not, middleware will reject next request and force re-login
-    }
-
-    setIsLoggingOut(false)
   }
 
   // Public refresh function (delegates to internal)

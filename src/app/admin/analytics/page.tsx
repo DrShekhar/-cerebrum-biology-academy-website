@@ -158,10 +158,11 @@ export default function AnalyticsPage() {
         {/* Tab Navigation */}
         <div className="border-b border-gray-200">
           <nav className="flex space-x-8">
+            {/* Users/Behavior tabs removed: they were defined but had NO render
+                branch — clicking them showed a blank page. Re-add only with a
+                real data source behind them. */}
             {[
               { id: 'overview', label: 'Overview', icon: BarChart3 },
-              { id: 'users', label: 'Users', icon: Users },
-              { id: 'behavior', label: 'Behavior', icon: Activity },
               { id: 'conversions', label: 'Conversions', icon: Target },
               { id: 'realtime', label: 'Real-time', icon: Zap },
             ].map((tab) => {
