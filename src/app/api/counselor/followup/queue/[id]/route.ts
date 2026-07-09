@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 import { prisma } from '@/lib/prisma'
-import { executeFollowup, cancelQueueItem, skipQueueItem } from '@/lib/followupProcessor'
+import {
+  executeFollowup,
+  cancelQueueItem,
+  skipQueueItem,
+  syncLeadAfterFollowup,
+} from '@/lib/followupProcessor'
 
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   try {
@@ -47,7 +52,11 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 
     // Ownership gate: a counselor may only read their own lead's queue item PII
     // (ADMIN bypasses). Mirrors the POST handler on this route.
-    if (session.role !== 'ADMIN' && queueItem.leads.assignedToId !== session.userId) {
+    if (
+      session.role !== 'ADMIN' &&
+      queueItem.leads.assignedToId !== session.userId &&
+      session.role !== 'ADMIN'
+    ) {
       return NextResponse.json(
         { success: false, error: 'Unauthorized: This lead is not assigned to you' },
         { status: 403 }
@@ -120,7 +129,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       )
     }
 
-    if (queueItem.leads.assignedToId !== session.userId) {
+    if (queueItem.leads.assignedToId !== session.userId && session.role !== 'ADMIN') {
       return NextResponse.json(
         {
           success: false,
@@ -183,6 +192,10 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
               description: `Manually executed follow-up: ${queueItem.followup_rules.name} for lead ${queueItem.leads.studentName}`,
             },
           })
+
+          // Reflect the completed touch on the lead itself (best-effort;
+          // syncLeadAfterFollowup swallows its own errors).
+          await syncLeadAfterFollowup(queueItem.leadId)
 
           return NextResponse.json({
             success: true,

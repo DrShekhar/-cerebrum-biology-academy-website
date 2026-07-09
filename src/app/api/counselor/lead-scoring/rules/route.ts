@@ -40,6 +40,10 @@ export async function GET(_req: NextRequest) {
   try {
     const session = await auth()
     if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    const role = (session.user.role || '').toUpperCase()
+    if (role !== 'COUNSELOR' && role !== 'ADMIN') {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
 
     return NextResponse.json({
       data: {

@@ -14,6 +14,7 @@ export async function GET(request: NextRequest) {
     const status = searchParams.get('status') as QueueStatus | null
     const ruleId = searchParams.get('ruleId')
     const leadId = searchParams.get('leadId')
+    const search = searchParams.get('search')
     const page = parsePositiveInt(searchParams.get('page'), 1, { min: 1 })
     const limit = parsePositiveInt(searchParams.get('limit'), 50, { min: 1, max: 100 })
 
@@ -27,11 +28,25 @@ export async function GET(request: NextRequest) {
       where.ruleId = ruleId
     }
 
+    // Ownership scope ALWAYS applies (leadId only narrows, never widens) —
+    // passing ?leadId= must not expose another counselor's items. ADMIN sees all.
+    if (session.role !== 'ADMIN') {
+      where.leads = { assignedToId: session.userId }
+    }
     if (leadId) {
       where.leadId = leadId
-    } else {
+    }
+
+    // Free-text search on the related lead. Merge into where.leads so the
+    // ownership scope above still applies (AND semantics, never widened).
+    if (search) {
       where.leads = {
-        assignedToId: session.userId,
+        ...(where.leads ?? {}),
+        OR: [
+          { studentName: { contains: search, mode: 'insensitive' } },
+          { email: { contains: search, mode: 'insensitive' } },
+          { phone: { contains: search } },
+        ],
       }
     }
 
@@ -88,6 +103,13 @@ export async function GET(request: NextRequest) {
       success: true,
       data: queueItems.map(({ leads, followup_rules, ...rest }) => ({
         ...rest,
+        // Aliases matching the queue page's expected field names (kept in
+        // addition to the raw Prisma fields above).
+        retryCount: rest.attempt,
+        maxRetries: rest.maxAttempts,
+        error: rest.errorMessage,
+        processedAt: rest.completedAt,
+        nextRetryAt: rest.lastAttemptAt,
         lead: leads,
         rule: followup_rules,
       })),

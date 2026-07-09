@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { withRateLimit } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import { whatsappDripService } from '@/lib/automation/whatsappDripService'
@@ -18,7 +19,7 @@ const leadCaptureSchema = z.object({
   userAgent: z.string().optional(),
 })
 
-export async function POST(request: NextRequest) {
+async function handlePOST(request: NextRequest) {
   try {
     const body = await request.json()
 
@@ -149,3 +150,5 @@ export async function POST(request: NextRequest) {
     )
   }
 }
+
+export const POST = withRateLimit(20, 60000, handlePOST)

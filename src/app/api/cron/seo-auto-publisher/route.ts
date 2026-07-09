@@ -42,6 +42,12 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   // Verify cron secret
   const authHeader = request.headers.get('authorization')
+  if (!CRON_SECRET && process.env.NODE_ENV === 'production') {
+    return NextResponse.json(
+      { success: false, error: 'CRON_SECRET not configured' },
+      { status: 503 }
+    )
+  }
   if (CRON_SECRET && authHeader !== `Bearer ${CRON_SECRET}`) {
     logger.warn('Unauthorized cron request', { service: 'seo-auto-publisher' })
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })

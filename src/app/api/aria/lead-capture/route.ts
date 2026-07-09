@@ -4,6 +4,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { withRateLimit } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { processContentLead } from '@/lib/whatsapp/contentLeadFollowup'
 import { sendTemplateMessage } from '@/lib/interakt'
@@ -24,7 +25,7 @@ interface AriaLeadRequest {
   currentPage?: string
 }
 
-export async function POST(request: NextRequest) {
+async function handlePOST(request: NextRequest) {
   try {
     const body: AriaLeadRequest = await request.json()
     const { name, phone, studentClass, sessionId, conversationSummary, source, currentPage } = body
@@ -185,3 +186,5 @@ async function notifyAdminAriaLead(params: {
     return { success: false }
   }
 }
+
+export const POST = withRateLimit(10, 60000, handlePOST)

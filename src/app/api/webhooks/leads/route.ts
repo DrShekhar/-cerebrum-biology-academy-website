@@ -385,10 +385,28 @@ function verifySignature(
         }
       }
 
-      return true
+      // No configured secret / no signature: fail CLOSED in production —
+      // the old `return true` let anyone mass-inject leads unauthenticated.
+      return process.env.NODE_ENV === 'development'
 
     default:
-      return true
+      // Unknown / 'other' / 'manual' sources have no verifiable signature.
+      // A shared fallback secret (WEBHOOK_SECRET_DEFAULT) must be configured
+      // and matched; otherwise reject outside development.
+      const defaultSecret = process.env.WEBHOOK_SECRET_DEFAULT
+      if (defaultSecret && signature) {
+        try {
+          const expected = crypto
+            .createHmac('sha256', defaultSecret)
+            .update(JSON.stringify(payload))
+            .digest('hex')
+          return crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected))
+        } catch (error) {
+          console.error('Default webhook signature verification error:', error)
+          return false
+        }
+      }
+      return process.env.NODE_ENV === 'development'
   }
 }
 
@@ -438,9 +456,9 @@ async function checkDuplicate(
  * Assign lead to counselor (round-robin)
  */
 async function assignCounselor() {
-  // Get all counselors
+  // Only ACTIVE counselors — a deactivated account must never win round-robin.
   const counselors = await prisma.users.findMany({
-    where: { role: 'COUNSELOR' },
+    where: { role: 'COUNSELOR', isActive: true },
     include: {
       _count: {
         select: {
@@ -458,17 +476,14 @@ async function assignCounselor() {
   })
 
   if (counselors.length === 0) {
-    // Create default counselor if none exists
-    return await prisma.users.create({
-      data: {
-        id: `user_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
-        updatedAt: new Date(),
-        email: 'counselor@cerebrumbiologyacademy.com',
-        name: 'Default Counselor',
-        role: 'COUNSELOR',
-        phone: '+918826444334',
-      },
+    // No active counselor: fall back to an active admin. Never mint a phantom
+    // user from a webhook (the old behavior silently created one in prod).
+    const admin = await prisma.users.findFirst({
+      where: { role: 'ADMIN', isActive: true },
+      orderBy: { createdAt: 'asc' },
     })
+    if (admin) return admin
+    throw new Error('No active counselor or admin available for lead assignment')
   }
 
   // Round-robin: assign to counselor with fewest active leads
@@ -543,23 +558,47 @@ export async function POST(request: NextRequest) {
     // must be a valid LeadSource enum (was free text → threw). Paid sources →
     // ADVERTISEMENT, everything else → OTHER; raw source kept in sourceDetail.
     const isPaid = source === 'google_ads' || source === 'meta_ads'
-    const lead = await prisma.leads.create({
-      data: {
-        id: `lead_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
-        studentName: leadData.studentName,
-        email: leadData.email,
-        phone: leadData.phone,
-        phoneNormalized: normalizePhone(leadData.phone).slice(-10),
-        courseInterest: leadData.courseInterest || 'Biology Coaching',
-        stage: 'NEW_LEAD',
-        priority: isPaid ? 'HOT' : 'WARM',
-        source: isPaid ? 'ADVERTISEMENT' : 'OTHER',
-        sourceDetail: `${source}${leadData.metadata?.campaignName ? ` - ${leadData.metadata.campaignName}` : ''}`,
-        assignedToId: counselor.id,
-        nextFollowUpAt: new Date(Date.now() + 2 * 60 * 60 * 1000), // 2 hours
-        updatedAt: new Date(),
-      },
-    })
+    let lead
+    try {
+      lead = await prisma.leads.create({
+        data: {
+          id: `lead_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
+          studentName: leadData.studentName,
+          email: leadData.email,
+          phone: leadData.phone,
+          phoneNormalized: normalizePhone(leadData.phone).slice(-10),
+          courseInterest: leadData.courseInterest || 'Biology Coaching',
+          stage: 'NEW_LEAD',
+          priority: isPaid ? 'HOT' : 'WARM',
+          source: isPaid ? 'ADVERTISEMENT' : 'OTHER',
+          sourceDetail: `${source}${leadData.metadata?.campaignName ? ` - ${leadData.metadata.campaignName}` : ''}`,
+          assignedToId: counselor.id,
+          nextFollowUpAt: new Date(Date.now() + 2 * 60 * 60 * 1000), // 2 hours
+          updatedAt: new Date(),
+        },
+      })
+    } catch (createError) {
+      // Concurrent identical webhooks: the partial unique index on
+      // phoneNormalized rejects the loser — resolve it as a duplicate touch
+      // instead of 500ing away paid ad leads.
+      const isUniqueViolation =
+        createError instanceof Prisma.PrismaClientKnownRequestError && createError.code === 'P2002'
+      if (!isUniqueViolation) throw createError
+      const winner = await prisma.leads.findFirst({
+        where: { phoneNormalized: normalizePhone(leadData.phone).slice(-10) },
+      })
+      if (!winner) throw createError
+      await prisma.leads.update({
+        where: { id: winner.id },
+        data: { lastContactedAt: new Date() },
+      })
+      return NextResponse.json({
+        success: true,
+        message: 'Duplicate lead detected and updated',
+        leadId: winner.id,
+        isDuplicate: true,
+      })
+    }
 
     // Create follow-up task
     const task = await prisma.tasks.create({

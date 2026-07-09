@@ -21,12 +21,13 @@ export async function GET(request: NextRequest) {
 
     const where: any = {}
 
+    // Ownership scope ALWAYS applies (leadId only narrows, never widens) —
+    // passing ?leadId= must not expose another counselor's items. ADMIN sees all.
+    if (session.role !== 'ADMIN') {
+      where.leads = { assignedToId: session.userId }
+    }
     if (leadId) {
       where.leadId = leadId
-    } else {
-      where.leads = {
-        assignedToId: session.userId,
-      }
     }
 
     if (ruleId) {
