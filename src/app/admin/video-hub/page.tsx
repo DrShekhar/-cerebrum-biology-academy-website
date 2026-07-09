@@ -10,6 +10,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { Loader2, Plus, Trash2, PlaySquare, Youtube, Eye } from 'lucide-react'
 import { PageHeader } from '@/components/admin/kit'
+import { ConfirmDialog } from '@/components/ui/ConfirmDialog'
 
 interface Item {
   id: string
@@ -34,6 +35,11 @@ export default function AdminVideoHubPage() {
   const [loading, setLoading] = useState(true)
   const [newTitle, setNewTitle] = useState('')
   const [busy, setBusy] = useState(false)
+  const [confirmTarget, setConfirmTarget] = useState<{
+    kind: 'playlist' | 'item'
+    id: string
+  } | null>(null)
+  const [confirmBusy, setConfirmBusy] = useState(false)
 
   const load = useCallback(async () => {
     try {
@@ -68,14 +74,25 @@ export default function AdminVideoHubPage() {
     }
   }
 
-  const remove = async (kind: 'playlist' | 'item', id: string) => {
-    if (
-      !confirm(kind === 'playlist' ? 'Delete this playlist and its videos?' : 'Remove this video?')
-    )
-      return
-    const res = await fetch(`/api/admin/video-hub?kind=${kind}&id=${id}`, { method: 'DELETE' })
-    if (res.ok) load()
-    else toast.error('Delete failed')
+  const remove = (kind: 'playlist' | 'item', id: string) => setConfirmTarget({ kind, id })
+
+  const runRemove = async () => {
+    if (!confirmTarget || confirmBusy) return
+    setConfirmBusy(true)
+    try {
+      const res = await fetch(
+        `/api/admin/video-hub?kind=${confirmTarget.kind}&id=${confirmTarget.id}`,
+        {
+          method: 'DELETE',
+        }
+      )
+      if (res.ok) {
+        setConfirmTarget(null)
+        load()
+      } else toast.error('Delete failed')
+    } finally {
+      setConfirmBusy(false)
+    }
   }
 
   return (
@@ -123,6 +140,20 @@ export default function AdminVideoHubPage() {
           ))}
         </div>
       )}
+
+      <ConfirmDialog
+        open={!!confirmTarget}
+        busy={confirmBusy}
+        title={confirmTarget?.kind === 'playlist' ? 'Delete this playlist?' : 'Remove this video?'}
+        description={
+          confirmTarget?.kind === 'playlist'
+            ? 'The playlist and all its videos are removed from the student hub.'
+            : 'Students will no longer see this video in the hub.'
+        }
+        confirmLabel={confirmTarget?.kind === 'playlist' ? 'Delete playlist' : 'Remove video'}
+        onConfirm={() => void runRemove()}
+        onCancel={() => setConfirmTarget(null)}
+      />
     </div>
   )
 }

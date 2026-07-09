@@ -11,6 +11,8 @@
 import { useEffect, useState, useCallback, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
 import { toast } from 'sonner'
+import ReactMarkdown from 'react-markdown'
+import { ConfirmDialog } from '@/components/ui/ConfirmDialog'
 import {
   DndContext,
   closestCenter,
@@ -96,6 +98,14 @@ export function CourseBuilder({
   const [assessmentChapterId, setAssessmentChapterId] = useState<string | null>(null)
   const [articleChapterId, setArticleChapterId] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
+  const [confirmTarget, setConfirmTarget] = useState<{
+    kind: 'chapter' | 'topic'
+    id: string
+    title: string
+  } | null>(null)
+  const [confirmBusy, setConfirmBusy] = useState(false)
+  const [renamingTopicId, setRenamingTopicId] = useState<string | null>(null)
+  const [renameDraft, setRenameDraft] = useState('')
   const [showAI, setShowAI] = useState(false)
 
   const load = useCallback(async () => {
@@ -154,18 +164,26 @@ export function CourseBuilder({
     }
   }
 
-  const deleteChapter = async (ch: ChapterNode) => {
-    if (
-      !confirm(
-        `Delete chapter “${ch.title}”? Its topics and material links are removed. This cannot be undone.`
-      )
-    )
-      return
-    const res = await fetch(`/api/teacher/builder/chapters/${ch.id}`, { method: 'DELETE' })
-    if (res.ok) {
-      toast.success('Chapter deleted')
-      await load()
-    } else toast.error('Delete failed')
+  const deleteChapter = (ch: ChapterNode) =>
+    setConfirmTarget({ kind: 'chapter', id: ch.id, title: ch.title })
+
+  const runConfirmedDelete = async () => {
+    if (!confirmTarget || confirmBusy) return
+    setConfirmBusy(true)
+    try {
+      const url =
+        confirmTarget.kind === 'chapter'
+          ? `/api/teacher/builder/chapters/${confirmTarget.id}`
+          : `/api/teacher/builder/topics/${confirmTarget.id}`
+      const res = await fetch(url, { method: 'DELETE' })
+      if (res.ok) {
+        toast.success(confirmTarget.kind === 'chapter' ? 'Chapter deleted' : 'Topic deleted')
+        setConfirmTarget(null)
+        await load()
+      } else toast.error('Delete failed')
+    } finally {
+      setConfirmBusy(false)
+    }
   }
 
   // Drag-and-drop reorder: optimistic local move, then one-shot server write.
@@ -223,22 +241,22 @@ export function CourseBuilder({
     } else toast.error('Could not add topic')
   }
 
-  const deleteTopic = async (t: TopicNode) => {
-    if (!confirm(`Delete topic “${t.title}”?`)) return
-    const res = await fetch(`/api/teacher/builder/topics/${t.id}`, { method: 'DELETE' })
-    if (res.ok) {
-      toast.success('Topic deleted')
-      await load()
-    } else toast.error('Delete failed')
+  const deleteTopic = (t: TopicNode) =>
+    setConfirmTarget({ kind: 'topic', id: t.id, title: t.title })
+
+  const startRenameTopic = (t: TopicNode) => {
+    setRenamingTopicId(t.id)
+    setRenameDraft(t.title)
   }
 
-  const renameTopic = async (t: TopicNode) => {
-    const title = prompt('Topic title', t.title)
-    if (!title || title.trim() === t.title) return
+  const commitRenameTopic = async (t: TopicNode) => {
+    const title = renameDraft.trim()
+    setRenamingTopicId(null)
+    if (!title || title === t.title) return
     const res = await fetch(`/api/teacher/builder/topics/${t.id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title: title.trim() }),
+      body: JSON.stringify({ title }),
     })
     if (res.ok) await load()
     else toast.error('Rename failed')
@@ -320,7 +338,8 @@ export function CourseBuilder({
           disabled={busy || !newChapter.trim()}
           className="inline-flex items-center gap-1.5 rounded-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white hover:bg-green-800 disabled:opacity-50"
         >
-          <Plus className="h-4 w-4" /> Add chapter
+          {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Plus className="h-4 w-4" />}
+          {busy ? 'Adding…' : 'Add chapter'}
         </button>
       </div>
 
@@ -516,12 +535,26 @@ export function CourseBuilder({
                                     <span className="text-gray-400">
                                       {i + 1}.{ti + 1}
                                     </span>
-                                    <span className="flex-1 text-gray-800">{t.title}</span>
+                                    {renamingTopicId === t.id ? (
+                                      <input
+                                        value={renameDraft}
+                                        onChange={(e) => setRenameDraft(e.target.value)}
+                                        onKeyDown={(e) => {
+                                          if (e.key === 'Enter') void commitRenameTopic(t)
+                                          if (e.key === 'Escape') setRenamingTopicId(null)
+                                        }}
+                                        onBlur={() => void commitRenameTopic(t)}
+                                        autoFocus
+                                        className="flex-1 rounded border border-green-500 px-2 py-1 text-sm text-gray-800 outline-none"
+                                      />
+                                    ) : (
+                                      <span className="flex-1 text-gray-800">{t.title}</span>
+                                    )}
                                     <span className="inline-flex items-center gap-1 text-xs text-gray-400">
                                       <FileText className="h-3 w-3" /> {t.materialCount}
                                     </span>
                                     <button
-                                      onClick={() => renameTopic(t)}
+                                      onClick={() => startRenameTopic(t)}
                                       className="rounded p-2 text-gray-400 hover:text-gray-700"
                                       title="Rename topic"
                                       aria-label="Rename topic"
@@ -552,6 +585,23 @@ export function CourseBuilder({
           </div>
         </SortableContext>
       </DndContext>
+
+      <ConfirmDialog
+        open={!!confirmTarget}
+        busy={confirmBusy}
+        title={
+          confirmTarget?.kind === 'chapter'
+            ? `Delete chapter “${confirmTarget.title}”?`
+            : `Delete topic “${confirmTarget?.title}”?`
+        }
+        description={
+          confirmTarget?.kind === 'chapter'
+            ? 'Its topics and material links are removed. This cannot be undone.'
+            : 'This cannot be undone.'
+        }
+        onConfirm={() => void runConfirmedDelete()}
+        onCancel={() => setConfirmTarget(null)}
+      />
     </div>
   )
 }
@@ -1247,6 +1297,11 @@ function ArticleComposer({
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const [saving, setSaving] = useState(false)
+  const [showPreview, setShowPreview] = useState(false)
+
+  const insertSnippet = (snippet: string) => {
+    setBody((b) => (b ? `${b}\n${snippet}` : snippet))
+  }
 
   const save = async () => {
     if (saving || title.trim().length < 2 || !body.trim()) return
@@ -1285,17 +1340,54 @@ function ArticleComposer({
         placeholder="Lesson title (e.g. Welcome to the course, Chapter summary, FAQ)"
         className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
       />
-      <textarea
-        value={body}
-        onChange={(e) => setBody(e.target.value)}
-        rows={8}
-        placeholder={
-          'Write in Markdown — it renders beautifully for students.\n\n# Heading\n**bold**, *italic*, lists:\n- point one\n- point two'
-        }
-        className="mt-2 w-full rounded-lg border border-gray-300 px-3 py-2 font-mono text-sm"
-      />
+      {/* Mini toolbar + write/preview toggle */}
+      <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
+        <div className="flex items-center gap-1">
+          <ToolbarButton label="H2" onClick={() => insertSnippet('## Heading')} />
+          <ToolbarButton label="B" mono onClick={() => insertSnippet('**bold text**')} />
+          <ToolbarButton label="List" onClick={() => insertSnippet('- point one\n- point two')} />
+          <ToolbarButton label="Link" onClick={() => insertSnippet('[link text](https://…)')} />
+        </div>
+        <div className="flex overflow-hidden rounded-lg border border-gray-300 text-xs font-semibold">
+          <button
+            onClick={() => setShowPreview(false)}
+            className={`px-3 py-1.5 transition-colors ${!showPreview ? 'bg-green-700 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+          >
+            Write
+          </button>
+          <button
+            onClick={() => setShowPreview(true)}
+            className={`px-3 py-1.5 transition-colors ${showPreview ? 'bg-green-700 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+          >
+            Preview
+          </button>
+        </div>
+      </div>
+      {showPreview ? (
+        <div className="mt-2 min-h-[12rem] rounded-lg border border-gray-200 bg-white px-4 py-3">
+          {body.trim() ? (
+            <article className="prose prose-sm prose-gray max-w-none prose-headings:font-bold prose-a:text-green-700">
+              <ReactMarkdown>{body}</ReactMarkdown>
+            </article>
+          ) : (
+            <p className="text-sm text-gray-400">Nothing to preview yet — write some Markdown.</p>
+          )}
+        </div>
+      ) : (
+        <textarea
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+          rows={8}
+          placeholder={
+            'Write in Markdown — it renders beautifully for students.\n\n# Heading\n**bold**, *italic*, lists:\n- point one\n- point two'
+          }
+          className="mt-2 w-full rounded-lg border border-gray-300 px-3 py-2 font-mono text-sm"
+        />
+      )}
       <div className="mt-2 flex items-center justify-between">
-        <p className="text-xs text-gray-400">Markdown supported: headings, bold, lists, links.</p>
+        <p className="text-xs text-gray-400">
+          Preview shows exactly what students see in the article reader.
+        </p>
         <button
           onClick={save}
           disabled={saving || title.trim().length < 2 || !body.trim()}
@@ -1305,5 +1397,25 @@ function ArticleComposer({
         </button>
       </div>
     </div>
+  )
+}
+
+function ToolbarButton({
+  label,
+  onClick,
+  mono,
+}: {
+  label: string
+  onClick: () => void
+  mono?: boolean
+}) {
+  return (
+    <button
+      onClick={onClick}
+      type="button"
+      className={`rounded-md border border-gray-300 bg-white px-2 py-1 text-xs text-gray-600 transition-colors hover:bg-gray-100 ${mono ? 'font-black' : 'font-semibold'}`}
+    >
+      {label}
+    </button>
   )
 }
