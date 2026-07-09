@@ -24,6 +24,8 @@ import {
 } from 'lucide-react'
 import { CourseBuilder } from '@/components/courses/builder/CourseBuilder'
 import { StatCard } from '@/components/admin/kit'
+import { CouponsPanel } from '@/components/admin/CouponsPanel'
+import AICourseInsights from '@/components/admin/AICourseInsights'
 
 type TabKey = 'curriculum' | 'pricing' | 'settings' | 'students' | 'analytics'
 
@@ -389,6 +391,12 @@ function PricingTab({ courseId }: { courseId: string }) {
         >
           {saving ? 'Saving…' : 'Save pricing'}
         </button>
+      </div>
+
+      {/* Coupons */}
+      <div className="pt-2">
+        <h2 className="mb-3 text-lg font-semibold text-gray-900">Coupons</h2>
+        <CouponsPanel courseId={courseId} />
       </div>
     </div>
   )
@@ -829,6 +837,7 @@ function AnalyticsTab({ courseId, course }: { courseId: string; course: CourseDe
 
   return (
     <div className="space-y-6">
+      <AICourseInsights courseId={courseId} />
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
         <StatCard label="Enrollments" value={course._count.enrollments} icon={Users} />
         <StatCard

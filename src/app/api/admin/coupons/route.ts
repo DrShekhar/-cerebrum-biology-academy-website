@@ -3,19 +3,30 @@ import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { requireAdminAuth } from '@/lib/auth'
 
-const createCouponSchema = z.object({
-  code: z.string().min(3).max(50).toUpperCase(),
-  description: z.string().optional(),
-  discountPercent: z.number().min(0).max(100).default(0),
-  discountAmount: z.number().min(0).optional(),
-  isActive: z.boolean().default(true),
-  startsAt: z.string().optional(),
-  expiresAt: z.string().optional(),
-  maxUses: z.number().min(1).optional(),
-  maxUsesPerUser: z.number().min(1).optional(),
-  minOrderAmount: z.number().min(0).optional(),
-  applicableCourseIds: z.array(z.string()).default([]),
-})
+const createCouponSchema = z
+  .object({
+    code: z
+      .string()
+      .trim()
+      .min(3, 'Code must be at least 3 characters')
+      .max(30, 'Code must be at most 30 characters')
+      .regex(/^[A-Z0-9_-]+$/, 'Code may only contain letters, numbers, - and _')
+      .toUpperCase(),
+    description: z.string().optional(),
+    discountPercent: z.number().int().min(1).max(100).optional(),
+    discountAmount: z.number().int().positive().optional(),
+    isActive: z.boolean().default(true),
+    startsAt: z.string().optional(),
+    expiresAt: z.string().optional(),
+    maxUses: z.number().int().min(1).optional(),
+    maxUsesPerUser: z.number().int().min(1).optional(),
+    minOrderAmount: z.number().int().min(0).optional(),
+    applicableCourseIds: z.array(z.string()).default([]),
+  })
+  .refine((d) => (d.discountPercent != null) !== (d.discountAmount != null), {
+    message: 'Provide exactly one of discountPercent or discountAmount',
+    path: ['discountPercent'],
+  })
 
 export async function GET(request: NextRequest) {
   try {
@@ -100,8 +111,8 @@ export async function POST(request: NextRequest) {
       data: {
         code: validatedData.code,
         description: validatedData.description || null,
-        discountPercent: validatedData.discountPercent,
-        discountAmount: validatedData.discountAmount || null,
+        discountPercent: validatedData.discountPercent ?? 0,
+        discountAmount: validatedData.discountAmount ?? null,
         isActive: validatedData.isActive,
         startsAt: validatedData.startsAt ? new Date(validatedData.startsAt) : null,
         expiresAt: validatedData.expiresAt ? new Date(validatedData.expiresAt) : null,
