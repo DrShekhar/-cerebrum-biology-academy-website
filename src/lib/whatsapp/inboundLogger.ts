@@ -104,12 +104,9 @@ export async function logInboundWhatsAppMessage(input: InboundLogInput): Promise
       select: { id: true },
     })
 
-    // Bump lead.lastContactedAt so the counselor sees this lead at the
-    // top of their queue next time.
-    await prisma.leads.update({
-      where: { id: lead.id },
-      data: { lastContactedAt: new Date() },
-    })
+    // Deliberately NOT touching lead.lastContactedAt here: that field means
+    // "WE reached out" — bumping it on INBOUND messages made the SLA watchdog
+    // treat un-replied hot leads as already contacted (never escalated).
 
     return { outcome: 'logged', leadId: lead.id, communicationId: created.id }
   } catch (error) {

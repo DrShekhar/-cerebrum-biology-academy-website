@@ -15,6 +15,7 @@ export type StaffNotificationType =
   | 'SYSTEM'
   | 'WHATSAPP_INBOUND'
   | 'SLA_BREACH'
+  | 'LEAD_ASSIGNED'
 
 export interface StaffNotificationInput {
   userIds: string[]

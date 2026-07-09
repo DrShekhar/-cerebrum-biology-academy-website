@@ -24,6 +24,7 @@
 import { prisma } from '@/lib/prisma'
 import { logger } from '@/lib/utils/logger'
 import { sendAdminLeadNotification } from '@/lib/notifications/adminLeadNotification'
+import { notifyStaff } from '@/lib/staff/notify'
 import { updateLeadScore } from '@/lib/leadScoring'
 import { startWelcomeSeries } from '@/lib/whatsapp/welcomeSeries'
 import { sendCapiEvent } from '@/lib/marketing/metaCapi'
@@ -226,7 +227,7 @@ export async function upsertLeadCore(
         const since = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
         const top = await db.counselor_kpis.groupBy({
           by: ['counselorId'],
-          where: { date: { gte: since }, users: { role: 'COUNSELOR' } },
+          where: { date: { gte: since }, users: { role: 'COUNSELOR', isActive: true } },
           _avg: { conversionRate: true },
           orderBy: { _avg: { conversionRate: 'desc' } },
           take: 1,
@@ -240,13 +241,14 @@ export async function upsertLeadCore(
     }
     if (autoAssign && !counselor) {
       counselor = await db.users.findFirst({
-        where: { role: { in: ['COUNSELOR', 'ADMIN'] } },
+        where: { role: { in: ['COUNSELOR', 'ADMIN'] }, isActive: true },
         orderBy: { leads: { _count: 'asc' } },
         select: { id: true },
       })
     }
     const admin =
-      counselor || (await db.users.findFirst({ where: { role: 'ADMIN' }, select: { id: true } }))
+      counselor ||
+      (await db.users.findFirst({ where: { role: 'ADMIN', isActive: true }, select: { id: true } }))
     assigneeId = admin?.id || null
   }
 
@@ -388,6 +390,18 @@ export async function upsertLead(
         utmMedium: input.utmMedium || undefined,
         leadId,
       }).catch(() => {})
+      // Bell notification to the assigned counselor — speed-to-lead depends
+      // on them seeing the assignment without refreshing the board.
+      if (result.assignedToId) {
+        void notifyStaff({
+          userIds: [result.assignedToId],
+          type: 'LEAD_ASSIGNED',
+          title: 'New lead assigned to you',
+          body: `${input.name?.trim() || 'Website lead'} · ${input.courseInterest?.trim() || 'Biology coaching'}`,
+          href: `/counselor/leads/${leadId}`,
+          leadId,
+        }).catch(() => {})
+      }
       // WhatsApp welcome series (day 0 now, day 1/3/7 via nurturing cron).
       // No-ops until INTERAKT_API_KEY is configured, so owner controls activation.
       void startWelcomeSeries(leadId).catch(() => {})

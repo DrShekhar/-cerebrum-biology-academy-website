@@ -13,7 +13,7 @@
 
 import { prisma } from '@/lib/prisma'
 import { ensureSystemUser } from '@/lib/constants/systemUser'
-import { mapLeadSource } from '@/lib/leads/upsertLead'
+import { mapLeadSource, upsertLeadCore } from '@/lib/leads/upsertLead'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { LeadStage as PrismaLeadStage, FollowupAction, Prisma } from '../../generated/prisma'
 import {
@@ -343,21 +343,19 @@ export class LeadNurturingService {
    * Process a new lead and start nurturing workflow
    */
   async processNewLead(leadData: Omit<Lead, 'id' | 'createdAt' | 'stage'>): Promise<Lead> {
-    // Create lead in database
-    const lead = await prisma.leads.create({
-      data: {
-        id: `lead_${Date.now()}_${Math.random().toString(36).slice(2)}`,
-        studentName: leadData.name,
-        email: leadData.email || null,
-        phone: leadData.phone,
-        courseInterest: leadData.courseInterest,
-        stage: 'NEW_LEAD',
-        source: mapLeadSource(leadData.source),
-        sourceDetail: leadData.source || null,
-        assignedToId: leadData.assignedToId || (await ensureSystemUser()),
-        updatedAt: new Date(),
-      },
+    // Canonical write path: dedupes by phone (phoneNormalized), sets score +
+    // follow-up side effects, and is P2002-race-safe — the old raw create
+    // forked duplicate leads with a NULL phoneNormalized.
+    const upserted = await upsertLeadCore(prisma, {
+      name: leadData.name,
+      phone: leadData.phone,
+      email: leadData.email || null,
+      courseInterest: leadData.courseInterest,
+      source: leadData.source || null,
+      sourceEnum: mapLeadSource(leadData.source),
+      assignedToId: leadData.assignedToId || (await ensureSystemUser()),
     })
+    const lead = await prisma.leads.findUniqueOrThrow({ where: { id: upserted.leadId } })
 
     // Track lead in Interakt CRM
     await trackUser({

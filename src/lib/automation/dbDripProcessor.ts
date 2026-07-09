@@ -82,6 +82,9 @@ export async function processDbDripSequences(): Promise<{ sent: number; skipped:
         })
 
         for (const lead of leads) {
+          // activities.userId is a required FK — an unassigned lead would send
+          // then crash on the dedup marker and re-send every cron run.
+          if (!lead.assignedToId) continue
           if (sent >= MAX_SENDS_PER_RUN) return { sent, skipped }
 
           // Anchor: when the lead entered the trigger stage.

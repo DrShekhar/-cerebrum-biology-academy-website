@@ -136,7 +136,7 @@ async function handlePOST(request: NextRequest, session: any) {
         discountType: validatedData.discountType === 'FLAT' ? 'FIXED_AMOUNT' : 'PERCENTAGE',
         validUntil: new Date(validatedData.validUntil),
         termsConditions: validatedData.terms,
-        status: 'SENT',
+        status: 'DRAFT',
         createdById: session.userId,
       },
       include: {
