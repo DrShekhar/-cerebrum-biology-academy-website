@@ -15,6 +15,10 @@ interface ExportLead {
   stage: string
   priority: string
   source: string
+  sourceDetail: string | null
+  utmSource: string | null
+  utmMedium: string | null
+  utmCampaign: string | null
   counselorName: string | null
   counselorEmail: string | null
   score: number | null
@@ -90,6 +94,10 @@ async function handleGET(request: NextRequest, _session: ValidatedSession): Prom
       stage: lead.stage,
       priority: lead.priority,
       source: lead.source,
+      sourceDetail: lead.sourceDetail,
+      utmSource: lead.utmSource,
+      utmMedium: lead.utmMedium,
+      utmCampaign: lead.utmCampaign,
       counselorName: lead.users?.name || null,
       counselorEmail: lead.users?.email || null,
       score: lead.score,
@@ -173,6 +181,10 @@ async function handleGET(request: NextRequest, _session: ValidatedSession): Prom
       'Stage',
       'Priority',
       'Source',
+      'Source Detail',
+      'UTM Source',
+      'UTM Medium',
+      'UTM Campaign',
       'Counselor Name',
       'Counselor Email',
       'Score',
@@ -200,6 +212,10 @@ async function handleGET(request: NextRequest, _session: ValidatedSession): Prom
         escapeCSV(lead.stage),
         escapeCSV(lead.priority),
         escapeCSV(lead.source),
+        escapeCSV(lead.sourceDetail || ''),
+        escapeCSV(lead.utmSource || ''),
+        escapeCSV(lead.utmMedium || ''),
+        escapeCSV(lead.utmCampaign || ''),
         escapeCSV(lead.counselorName || ''),
         escapeCSV(lead.counselorEmail || ''),
         lead.score?.toString() || '',

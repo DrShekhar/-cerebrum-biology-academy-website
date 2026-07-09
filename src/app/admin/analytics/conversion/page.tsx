@@ -1,23 +1,12 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import {
-  Target,
-  TrendingUp,
-  ArrowDown,
-  Calendar,
-  CheckCircle,
-  Clock,
-  RefreshCw,
-} from 'lucide-react'
+import { Target, TrendingUp, ArrowDown, Calendar, CheckCircle, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 interface ConversionData {
   funnel: Array<{ stage: string; count: number; dropoff: number }>
-  demoToEnrollment: { total: number; converted: number; rate: number; avgDays: number }
-  leadConversion: { total: number; qualified: number; won: number; lost: number }
-  revenueBySource: Array<{ source: string; revenue: number; count: number }>
-  monthlyTrend: Array<{ month: string; demos: number; enrollments: number; rate: number }>
+  demoToEnrollment: { total: number; converted: number; rate: number }
 }
 
 export default function ConversionPage() {
@@ -37,8 +26,8 @@ export default function ConversionPage() {
       if (json.success) {
         const d = json.data
         setData({
-          funnel: d.conversion?.funnel || [
-            { stage: 'Website Visitors', count: d.traffic?.pageViews || 0, dropoff: 0 },
+          funnel: [
+            { stage: 'Website Visitors', count: d.traffic?.totalPageViews || 0, dropoff: 0 },
             { stage: 'Demo Bookings', count: d.demos?.totalBookings || 0, dropoff: 0 },
             { stage: 'Demo Completed', count: d.demos?.completed || 0, dropoff: 0 },
             { stage: 'Enrollments', count: d.courses?.totalEnrollments || 0, dropoff: 0 },
@@ -49,11 +38,7 @@ export default function ConversionPage() {
               ? Math.round(((d.demos?.conversionRate || 0) / 100) * (d.demos?.totalBookings || 0))
               : 0,
             rate: d.demos?.conversionRate || 0,
-            avgDays: d.demos?.avgDaysToConversion || 0,
           },
-          leadConversion: d.leads || { total: 0, qualified: 0, won: 0, lost: 0 },
-          revenueBySource: d.revenue?.bySource || [],
-          monthlyTrend: d.conversion?.monthlyTrend || [],
         })
       }
     } catch (error) {
@@ -62,13 +47,6 @@ export default function ConversionPage() {
       setLoading(false)
     }
   }
-
-  const formatCurrency = (amount: number) =>
-    new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR',
-      maximumFractionDigits: 0,
-    }).format(amount)
 
   return (
     <>
@@ -103,7 +81,7 @@ export default function ConversionPage() {
           </div>
         ) : data ? (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-xl border border-gray-200">
                 <div className="flex items-center justify-between">
                   <div>
@@ -140,19 +118,6 @@ export default function ConversionPage() {
                   </div>
                   <div className="h-12 w-12 rounded-lg flex items-center justify-center bg-purple-100 text-purple-600">
                     <CheckCircle className="h-6 w-6" />
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white p-6 rounded-xl border border-gray-200">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-medium text-gray-600">Avg Days to Convert</p>
-                    <p className="text-2xl font-bold text-gray-900">
-                      {data.demoToEnrollment.avgDays.toFixed(0)}
-                    </p>
-                  </div>
-                  <div className="h-12 w-12 rounded-lg flex items-center justify-center bg-orange-100 text-orange-600">
-                    <Clock className="h-6 w-6" />
                   </div>
                 </div>
               </div>
@@ -199,100 +164,6 @@ export default function ConversionPage() {
                 })}
               </div>
             </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-xl border border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Lead Pipeline</h3>
-                <div className="space-y-4">
-                  {[
-                    {
-                      label: 'Total Leads',
-                      value: data.leadConversion.total,
-                      color: 'bg-blue-500',
-                    },
-                    {
-                      label: 'Qualified',
-                      value: data.leadConversion.qualified,
-                      color: 'bg-yellow-500',
-                    },
-                    { label: 'Won', value: data.leadConversion.won, color: 'bg-green-500' },
-                    { label: 'Lost', value: data.leadConversion.lost, color: 'bg-red-500' },
-                  ].map((item) => (
-                    <div key={item.label} className="flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
-                        <div className={`w-3 h-3 rounded-full ${item.color}`} />
-                        <span className="text-sm text-gray-700">{item.label}</span>
-                      </div>
-                      <span className="text-sm font-bold text-gray-900">{item.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl border border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Revenue by Source</h3>
-                <div className="space-y-3">
-                  {(data.revenueBySource || []).slice(0, 6).map((source) => (
-                    <div key={source.source} className="flex items-center justify-between">
-                      <div>
-                        <span className="text-sm text-gray-700 capitalize">{source.source}</span>
-                        <span className="text-xs text-gray-500 ml-2">
-                          ({source.count} enrollments)
-                        </span>
-                      </div>
-                      <span className="text-sm font-bold text-gray-900">
-                        {formatCurrency(source.revenue)}
-                      </span>
-                    </div>
-                  ))}
-                  {(!data.revenueBySource || data.revenueBySource.length === 0) && (
-                    <p className="text-sm text-gray-500">No source data available</p>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {data.monthlyTrend && data.monthlyTrend.length > 0 && (
-              <div className="bg-white p-6 rounded-xl border border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Monthly Trend</h3>
-                <div className="overflow-x-auto">
-                  <table className="min-w-full divide-y divide-gray-200">
-                    <thead className="bg-gray-50">
-                      <tr>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                          Month
-                        </th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                          Demos
-                        </th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                          Enrollments
-                        </th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                          Conversion Rate
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg-white divide-y divide-gray-200">
-                      {data.monthlyTrend.map((month) => (
-                        <tr key={month.month} className="hover:bg-gray-50">
-                          <td className="px-6 py-3 text-sm text-gray-900">{month.month}</td>
-                          <td className="px-6 py-3 text-sm text-gray-900">{month.demos}</td>
-                          <td className="px-6 py-3 text-sm text-gray-900">{month.enrollments}</td>
-                          <td className="px-6 py-3">
-                            <span
-                              className={`text-sm font-medium ${month.rate >= 20 ? 'text-green-600' : month.rate >= 10 ? 'text-yellow-600' : 'text-red-600'}`}
-                            >
-                              {month.rate.toFixed(1)}%
-                            </span>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            )}
           </>
         ) : (
           <div className="text-center py-12">

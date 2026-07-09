@@ -20,7 +20,7 @@ interface BehaviorData {
   overview: {
     totalSessions: number
     avgSessionDuration: number
-    bounceRate: number
+    bounceRate: number | null
     pagesPerSession: number
   }
   topPages: Array<{ path: string; views: number; avgTime: number; bounceRate: number }>
@@ -49,7 +49,7 @@ export default function UserBehaviorPage() {
           overview: {
             totalSessions: d.traffic?.visitors || 0,
             avgSessionDuration: d.traffic?.avgSessionDuration || 0,
-            bounceRate: d.traffic?.bounceRate || 0,
+            bounceRate: d.traffic?.bounceRate ?? null,
             pagesPerSession: d.traffic?.pagesPerSession || 0,
           },
           topPages: d.traffic?.topPages || [],
@@ -139,19 +139,21 @@ export default function UserBehaviorPage() {
                   </div>
                 </div>
               </div>
-              <div className="bg-white p-6 rounded-xl border border-gray-200">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-medium text-gray-600">Bounce Rate</p>
-                    <p className="text-2xl font-bold text-gray-900">
-                      {data.overview.bounceRate.toFixed(1)}%
-                    </p>
-                  </div>
-                  <div className="h-12 w-12 rounded-lg flex items-center justify-center bg-red-100 text-red-600">
-                    <MousePointer className="h-6 w-6" />
+              {data.overview.bounceRate !== null && (
+                <div className="bg-white p-6 rounded-xl border border-gray-200">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-sm font-medium text-gray-600">Bounce Rate</p>
+                      <p className="text-2xl font-bold text-gray-900">
+                        {data.overview.bounceRate.toFixed(1)}%
+                      </p>
+                    </div>
+                    <div className="h-12 w-12 rounded-lg flex items-center justify-center bg-red-100 text-red-600">
+                      <MousePointer className="h-6 w-6" />
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
               <div className="bg-white p-6 rounded-xl border border-gray-200">
                 <div className="flex items-center justify-between">
                   <div>

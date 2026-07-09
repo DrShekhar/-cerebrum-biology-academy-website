@@ -150,7 +150,7 @@ export default function DemoBookingsPage() {
       const response = await fetch(`/api/demo-booking`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: bookingId, status: newStatus.toUpperCase() }),
+        body: JSON.stringify({ bookingId, updates: { status: newStatus.toUpperCase() } }),
       })
 
       if (!response.ok) {

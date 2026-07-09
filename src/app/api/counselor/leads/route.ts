@@ -48,7 +48,9 @@ export async function GET(request: NextRequest) {
 
     // Pagination parameters with validation
     const page = Math.max(1, parseInt(searchParams.get('page') || '1'))
-    const limit = Math.min(100, Math.max(1, parseInt(searchParams.get('limit') || '50')))
+    // Cap 500: the Kanban board loads the counselor's whole working book in
+    // one call (rows are already scoped to the signed-in counselor).
+    const limit = Math.min(500, Math.max(1, parseInt(searchParams.get('limit') || '50')))
     const skip = (page - 1) * limit
 
     // Shared where-builder (leadService): counselors see only their own

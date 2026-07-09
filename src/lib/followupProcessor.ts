@@ -44,6 +44,36 @@ function toTaskPriority(rulePriority: string): 'HIGH' | 'MEDIUM' | 'LOW' {
 }
 
 /**
+ * Sync the lead row after a follow-up completes: stamp lastContactedAt and
+ * point nextFollowUpAt at the next PENDING queue item for the lead (or clear
+ * it when none remains). Best-effort — a failure here must never fail the
+ * completion itself, so errors are logged and swallowed.
+ */
+export async function syncLeadAfterFollowup(leadId: string): Promise<void> {
+  try {
+    const nextPending = await prisma.followup_queue.findFirst({
+      where: { leadId, status: 'PENDING' },
+      orderBy: { scheduledFor: 'asc' },
+      select: { scheduledFor: true },
+    })
+
+    await prisma.leads.update({
+      where: { id: leadId },
+      data: {
+        lastContactedAt: new Date(),
+        nextFollowUpAt: nextPending?.scheduledFor ?? null,
+        updatedAt: new Date(),
+      },
+    })
+  } catch (error) {
+    logWarning('syncLeadAfterFollowup', 'Failed to update lead after follow-up completion', {
+      leadId,
+      error: error instanceof Error ? error.message : 'Unknown error',
+    })
+  }
+}
+
+/**
  * Process all pending queue items that are due for execution
  * Should be run periodically via cron job (every 5 minutes)
  */
@@ -189,6 +219,9 @@ async function processQueueItem(queueItemId: string): Promise<void> {
           },
         },
       })
+
+      // Reflect the completed touch on the lead itself (best-effort).
+      await syncLeadAfterFollowup(queueItem.leadId)
 
       logInfo('processQueueItem', `Successfully completed queue item ${queueItemId}`, {
         queueItemId,

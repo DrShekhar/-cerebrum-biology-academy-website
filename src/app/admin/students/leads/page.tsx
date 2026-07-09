@@ -76,8 +76,6 @@ interface Lead {
   school?: string
   city?: string
   state?: string
-  conversionProbability?: number
-  expectedValue?: number
 }
 
 interface Counselor {
@@ -143,7 +141,7 @@ export default function LeadsPage() {
   const searchParams = useSearchParams()
   // Drill-down from the CRM overview: /admin/students/leads?assignedToId=<id>
   const assignedToId = searchParams.get('assignedToId') || ''
-  const [stageFilter, setStageFilter] = useState<string>('all')
+  const [stageFilter, setStageFilter] = useState<string>(() => searchParams.get('stage') || 'all')
   const [priorityFilter, setPriorityFilter] = useState<string>('all')
   const [sourceFilter, setSourceFilter] = useState<string>('all')
   const [isAddLeadModalOpen, setIsAddLeadModalOpen] = useState(false)
@@ -557,9 +555,6 @@ export default function LeadsPage() {
                     Source & Interest
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Conversion
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Actions
                   </th>
                 </tr>
@@ -642,16 +637,6 @@ export default function LeadsPage() {
                         </div>
                         <div className="text-xs text-gray-500">
                           {lead.courseInterest.join(', ')}
-                        </div>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="space-y-1">
-                        <div className="text-sm font-medium text-gray-900">
-                          {lead.conversionProbability ?? 0}%
-                        </div>
-                        <div className="text-xs text-gray-500">
-                          ₹{(lead.expectedValue ?? 0).toLocaleString()}
                         </div>
                         {lead.nextFollowUp && (
                           <div className="text-xs text-blue-600 flex items-center">

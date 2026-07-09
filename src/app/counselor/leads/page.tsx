@@ -35,7 +35,7 @@ export type Priority = 'HOT' | 'WARM' | 'COLD'
 export interface Lead {
   id: string
   studentName: string
-  email: string
+  email: string | null
   phone: string
   courseInterest: string
   stage: LeadStage
@@ -120,7 +120,9 @@ export default function LeadsPage() {
   async function fetchLeads() {
     try {
       setLoading(true)
-      const response = await fetch('/api/counselor/leads', {
+      // Board needs the counselor's whole book, not the API's default 50 —
+      // leads 51+ were invisible and unsearchable.
+      const response = await fetch('/api/counselor/leads?limit=500', {
         credentials: 'include',
       })
 
@@ -256,7 +258,7 @@ export default function LeadsPage() {
   const filteredLeads = leads.filter((lead) => {
     const matchesSearch =
       lead.studentName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      lead.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (lead.email ?? '').toLowerCase().includes(searchTerm.toLowerCase()) ||
       lead.phone.includes(searchTerm)
 
     const matchesPriority = filterPriority === 'ALL' || lead.priority === filterPriority

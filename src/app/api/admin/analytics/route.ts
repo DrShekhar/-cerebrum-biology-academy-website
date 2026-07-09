@@ -13,6 +13,8 @@ export async function GET(request: NextRequest) {
 
     // Calculate date ranges
     const now = new Date()
+    const dayStart = new Date(now)
+    dayStart.setHours(0, 0, 0, 0)
     const startDate = getStartDate(timeframe)
     const previousStartDate = getPreviousStartDate(timeframe)
 
@@ -25,6 +27,7 @@ export async function GET(request: NextRequest) {
       totalDemoBookings,
       pendingDemos,
       completedDemosToday,
+      completedDemosInPeriod,
       convertedDemos,
       previousDemoBookings,
       totalEnrollments,
@@ -33,6 +36,7 @@ export async function GET(request: NextRequest) {
       previousRevenue,
       recentActivities,
       todayPageViews,
+      periodPageViews,
       uniqueVisitors,
       topCities,
     ] = await Promise.all([
@@ -83,8 +87,16 @@ export async function GET(request: NextRequest) {
         where: {
           demoCompleted: true,
           updatedAt: {
-            gte: new Date(now.setHours(0, 0, 0, 0)),
+            gte: dayStart,
           },
+        },
+      }),
+
+      // Demos completed in timeframe
+      prisma.demo_bookings.count({
+        where: {
+          demoCompleted: true,
+          updatedAt: { gte: startDate },
         },
       }),
 
@@ -159,7 +171,15 @@ export async function GET(request: NextRequest) {
       prisma.analytics_events.count({
         where: {
           eventType: 'PAGE_VIEW',
-          createdAt: { gte: new Date(new Date().setHours(0, 0, 0, 0)) },
+          createdAt: { gte: dayStart },
+        },
+      }),
+
+      // Page views in timeframe
+      prisma.analytics_events.count({
+        where: {
+          eventType: 'PAGE_VIEW',
+          createdAt: { gte: startDate },
         },
       }),
 
@@ -240,10 +260,9 @@ export async function GET(request: NextRequest) {
       timestamp: activity.createdAt,
     }))
 
-    // Live metrics (real-time approximations)
+    // Live metrics (real counts only — derived estimates like "users online"
+    // and "active sessions" were removed because they were not measurements)
     const liveMetrics = {
-      usersOnline: activeStudents > 0 ? Math.min(Math.floor(activeStudents * 0.1), 150) : 0,
-      activeSessions: Math.floor(todayPageViews / 10),
       currentPageViews: todayPageViews,
       demoBookingsToday: completedDemosToday,
       realTimeRevenue: currentRevenue,
@@ -270,14 +289,13 @@ export async function GET(request: NextRequest) {
           newRegistrations,
           totalRevenue: currentRevenue,
           conversionRate: demoConversionRate,
-          averageSessionTime: 12.5, // Would need session tracking to calculate
         },
         demos: {
           totalBookings: totalDemoBookings,
           pendingBookings: pendingDemos,
           completedToday: completedDemosToday,
+          completed: completedDemosInPeriod,
           conversionRate: demoConversionRate,
-          averageRating: 4.8, // Would need rating data
         },
         courses: {
           totalEnrollments,
@@ -290,14 +308,13 @@ export async function GET(request: NextRequest) {
           revenueGrowth,
         },
         traffic: {
-          totalPageViews: todayPageViews * 7, // Approximate weekly
+          totalPageViews: periodPageViews,
+          todayPageViews,
           uniqueVisitors: uniqueVisitors.length,
-          bounceRate: 35.2, // Would need proper bounce tracking
-          averageSessionDuration: 185,
+          bounceRate: null, // Not tracked yet — consumers hide the tile when null
         },
         geography: {
           topCities: formattedTopCities,
-          internationalStudents: 0, // Would need country data
         },
         recentActivities: formattedActivities,
         changePercentages,

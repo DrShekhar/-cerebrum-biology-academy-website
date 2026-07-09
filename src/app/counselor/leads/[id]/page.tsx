@@ -213,6 +213,22 @@ export default function LeadDetailPage() {
     if (id) fetchLead()
   }, [id, fetchLead])
 
+  // Best-effort trace for the header quick-action links: log an interaction
+  // so lastContactedAt/timeline reflect the touch. Must never block the
+  // wa.me/tel: navigation, so fire-and-forget and swallow failures.
+  function logQuickAction(channel: 'WHATSAPP' | 'CALL') {
+    void fetch(`/api/counselor/leads/${id}/interactions`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify({
+        channel,
+        direction: 'OUTBOUND',
+        discussed: 'Quick action from lead header',
+      }),
+    }).catch(() => {})
+  }
+
   async function handleStageUpdate() {
     if (!newStage || !lead) return
     try {
@@ -366,12 +382,14 @@ export default function LeadDetailPage() {
                 href={`https://wa.me/91${lead.phone.replace(/\D/g, '')}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => logQuickAction('WHATSAPP')}
                 className="flex items-center gap-2 px-4 py-2 bg-[#166534] hover:bg-[#14532d] text-white rounded-lg text-sm font-medium transition-colors"
               >
                 <MessageSquare className="w-4 h-4" /> WhatsApp
               </a>
               <a
                 href={`tel:${lead.phone}`}
+                onClick={() => logQuickAction('CALL')}
                 className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
               >
                 <Phone className="w-4 h-4" /> Call

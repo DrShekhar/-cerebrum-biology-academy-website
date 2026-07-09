@@ -27,14 +27,12 @@ interface DashboardData {
     newRegistrations: number
     totalRevenue: number
     conversionRate: number
-    averageSessionTime: number
   }
   demos: {
     totalBookings: number
     pendingBookings: number
     completedToday: number
     conversionRate: number
-    averageRating: number
   }
   courses: {
     totalEnrollments: number
@@ -53,8 +51,6 @@ interface DashboardData {
     timestamp: Date
   }>
   liveMetrics: {
-    usersOnline: number
-    activeSessions: number
     currentPageViews: number
     demoBookingsToday: number
   }
@@ -75,14 +71,12 @@ const defaultDashboardData: DashboardData = {
     newRegistrations: 0,
     totalRevenue: 0,
     conversionRate: 0,
-    averageSessionTime: 0,
   },
   demos: {
     totalBookings: 0,
     pendingBookings: 0,
     completedToday: 0,
     conversionRate: 0,
-    averageRating: 0,
   },
   courses: {
     totalEnrollments: 0,
@@ -90,8 +84,6 @@ const defaultDashboardData: DashboardData = {
   },
   recentActivities: [],
   liveMetrics: {
-    usersOnline: 0,
-    activeSessions: 0,
     currentPageViews: 0,
     demoBookingsToday: 0,
   },
