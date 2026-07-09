@@ -875,7 +875,7 @@ export default function DripSequencesPage() {
 
       {/* Summary Stats */}
       <div className="grid grid-cols-3 gap-4">
-        <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl p-5 text-white">
+        <div className="bg-gradient-to-br from-green-500 to-green-700 rounded-xl p-5 text-white">
           <div className="flex items-center gap-2 mb-1">
             <Play className="w-4 h-4 text-green-200" />
             <span className="text-green-100 text-xs font-medium">Active Sequences</span>
@@ -889,7 +889,7 @@ export default function DripSequencesPage() {
           </div>
           <p className="text-3xl font-bold">{totalLeadsInSequences}</p>
         </div>
-        <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl p-5 text-white">
+        <div className="bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl p-5 text-white">
           <div className="flex items-center gap-2 mb-1">
             <TrendingUp className="w-4 h-4 text-purple-200" />
             <span className="text-purple-100 text-xs font-medium">Avg Reply Rate</span>

@@ -330,43 +330,7 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        {/* Key Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
-          <MetricCard
-            title="Total Students"
-            value={data.overview.totalStudents}
-            change={data.changePercentages?.totalStudents || 0}
-            changeLabel="vs previous period"
-            icon={Users}
-            color="blue"
-          />
-          <MetricCard
-            title="Demo Bookings"
-            value={data.demos.totalBookings}
-            change={data.changePercentages?.demoBookings || 0}
-            changeLabel="vs previous period"
-            icon={Calendar}
-            color="green"
-          />
-          <MetricCard
-            title="Total Revenue"
-            value={`₹${(data.overview.totalRevenue / 100000).toFixed(1)}L`}
-            change={data.changePercentages?.totalRevenue || 0}
-            changeLabel="vs previous period"
-            icon={DollarSign}
-            color="purple"
-          />
-          <MetricCard
-            title="Conversion Rate"
-            value={`${data.overview.conversionRate.toFixed(1)}%`}
-            change={data.changePercentages?.conversionRate || 0}
-            changeLabel="vs previous period"
-            icon={TrendingUp}
-            color="orange"
-          />
-        </div>
-
-        {/* Demo Booking Quick Stats */}
+        {/* Needs attention now — actionable queue stays above trend metrics */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp">
             <div className="flex items-center justify-between mb-4">
@@ -423,6 +387,42 @@ export default function AdminDashboard() {
               Improve Rate →
             </Link>
           </div>
+        </div>
+
+        {/* Key Metrics */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+          <MetricCard
+            title="Total Students"
+            value={data.overview.totalStudents}
+            change={data.changePercentages?.totalStudents || 0}
+            changeLabel="vs previous period"
+            icon={Users}
+            color="blue"
+          />
+          <MetricCard
+            title="Demo Bookings"
+            value={data.demos.totalBookings}
+            change={data.changePercentages?.demoBookings || 0}
+            changeLabel="vs previous period"
+            icon={Calendar}
+            color="green"
+          />
+          <MetricCard
+            title="Total Revenue"
+            value={`₹${(data.overview.totalRevenue / 100000).toFixed(1)}L`}
+            change={data.changePercentages?.totalRevenue || 0}
+            changeLabel="vs previous period"
+            icon={DollarSign}
+            color="purple"
+          />
+          <MetricCard
+            title="Conversion Rate"
+            value={`${data.overview.conversionRate.toFixed(1)}%`}
+            change={data.changePercentages?.conversionRate || 0}
+            changeLabel="vs previous period"
+            icon={TrendingUp}
+            color="orange"
+          />
         </div>
 
         {/* Recent Activity & Popular Courses */}

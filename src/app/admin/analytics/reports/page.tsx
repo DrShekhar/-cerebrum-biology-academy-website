@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { showToast } from '@/lib/toast'
 import {
   FileText,
   Download,
@@ -98,7 +99,7 @@ export default function ReportsPage() {
       const json = await res.json()
 
       if (!json.success) {
-        alert('Failed to generate report')
+        showToast.error('Failed to generate report')
         return
       }
 
@@ -173,7 +174,7 @@ export default function ReportsPage() {
       URL.revokeObjectURL(url)
     } catch (error) {
       console.error('Report generation failed:', error)
-      alert('Failed to generate report. Please try again.')
+      showToast.error('Failed to generate report. Please try again.')
     } finally {
       setGenerating(null)
     }

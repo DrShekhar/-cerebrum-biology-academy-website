@@ -93,7 +93,7 @@ function GoalCard({ goal }: { goal: Goal }) {
     REVENUE: {
       label: 'Revenue',
       icon: <DollarSign className="w-4 h-4" />,
-      color: 'text-emerald-600',
+      color: 'text-green-600',
     },
     DEMOS_SCHEDULED: {
       label: 'Demos Scheduled',

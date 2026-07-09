@@ -340,6 +340,34 @@ export default function CounselorDashboard() {
             </div>
           </div>
         </div>
+        {/* Hero CTA — one obvious next action instead of just counts */}
+        {(() => {
+          const nextLead =
+            overdueFollowUps.sort(
+              (a: any, b: any) =>
+                new Date(a.nextFollowUpAt).getTime() - new Date(b.nextFollowUpAt).getTime()
+            )[0] ||
+            hotLeads[0] ||
+            newLeadsToday[0]
+          if (!nextLead) return null
+          const label =
+            overdueFollowUps.length > 0
+              ? `Start calling — ${overdueFollowUps.length} overdue follow-up${overdueFollowUps.length > 1 ? 's' : ''}`
+              : hotLeads.length > 0
+                ? 'Call your hottest lead now'
+                : "Call today's newest lead"
+          return (
+            <Link
+              href={`/counselor/leads/${nextLead.id}`}
+              className="mt-4 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-gray-900 shadow-sm transition-transform hover:shadow active:scale-[0.98]"
+            >
+              <Phone className="h-4 w-4 text-green-600" />
+              {label}
+              <span className="text-gray-400">·</span>
+              <span className="max-w-[180px] truncate text-gray-600">{nextLead.studentName}</span>
+            </Link>
+          )
+        })()}
       </div>
 
       {/* ─── Quick Stats ─── */}

@@ -36,20 +36,6 @@ export function LeadPipelineColumn({ stage, leads, onRefresh }: LeadPipelineColu
                 {leads.length}
               </span>
             </div>
-            <button
-              onClick={() => {}}
-              className="opacity-0 hover:opacity-100 transition-opacity bg-white/20 hover:bg-white/30 p-1.5 rounded-lg backdrop-blur-sm"
-              title="Quick add lead"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                />
-              </svg>
-            </button>
           </div>
         </div>
 

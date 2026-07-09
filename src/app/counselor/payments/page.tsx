@@ -423,7 +423,7 @@ export default function PaymentsPageV2() {
         </div>
         <div className="w-full bg-gray-200 rounded-full h-3">
           <div
-            className="bg-gradient-to-r from-green-500 to-emerald-500 h-3 rounded-full transition-all duration-700"
+            className="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full transition-all duration-700"
             style={{ width: `${stats.total > 0 ? (stats.paid / stats.total) * 100 : 0}%` }}
           />
         </div>

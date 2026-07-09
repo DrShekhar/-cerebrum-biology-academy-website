@@ -216,7 +216,7 @@ export default function AdminTestsPage() {
               icon={<TrendingUp className="w-5 h-5" />}
               label="This Week"
               value={stats.studentsTestedThisWeek}
-              color="text-indigo-600 bg-pink-50"
+              color="text-purple-600 bg-purple-50"
             />
           </div>
 

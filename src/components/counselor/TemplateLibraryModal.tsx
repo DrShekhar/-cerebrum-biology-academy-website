@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { showToast } from '@/lib/toast'
 
 type CommType = 'WHATSAPP' | 'EMAIL' | 'CALL' | 'SMS'
 
@@ -95,7 +96,7 @@ export function TemplateLibraryModal({
 
       fetchTemplates()
     } catch (err) {
-      alert(err instanceof Error ? err.message : 'Failed to delete template')
+      showToast.error(err instanceof Error ? err.message : 'Failed to delete template')
     }
   }
 
@@ -111,7 +112,7 @@ export function TemplateLibraryModal({
 
       fetchTemplates()
     } catch (err) {
-      alert(err instanceof Error ? err.message : 'Failed to update template')
+      showToast.error(err instanceof Error ? err.message : 'Failed to update template')
     }
   }
 
@@ -119,12 +120,12 @@ export function TemplateLibraryModal({
     e.preventDefault()
 
     if (!formData.name.trim() || !formData.message.trim()) {
-      alert('Please fill in all required fields')
+      showToast.error('Please fill in all required fields')
       return
     }
 
     if (formData.type === 'EMAIL' && !formData.subject.trim()) {
-      alert('Email templates require a subject')
+      showToast.error('Email templates require a subject')
       return
     }
 
@@ -166,7 +167,7 @@ export function TemplateLibraryModal({
       setEditingTemplate(null)
       fetchTemplates()
     } catch (err) {
-      alert(err instanceof Error ? err.message : 'Failed to save template')
+      showToast.error(err instanceof Error ? err.message : 'Failed to save template')
     } finally {
       setSaving(false)
     }

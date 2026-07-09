@@ -124,7 +124,7 @@ function ConversionFunnel({
     'from-indigo-500 to-indigo-400',
     'from-orange-500 to-orange-400',
     'from-yellow-500 to-yellow-400',
-    'from-emerald-500 to-emerald-400',
+    'from-green-500 to-green-400',
     'from-green-500 to-green-400',
   ]
 
@@ -218,7 +218,7 @@ function RevenueSection({ metrics }: { metrics: AnalyticsData['revenueMetrics'] 
         <div className="flex items-center gap-2 mt-3">
           <div className="flex-1 bg-gray-700 rounded-full h-2">
             <div
-              className="bg-gradient-to-r from-green-400 to-emerald-500 h-2 rounded-full transition-all duration-700"
+              className="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full transition-all duration-700"
               style={{ width: `${paidPercentage}%` }}
             />
           </div>
@@ -416,8 +416,8 @@ export default function AnalyticsPageV2() {
           value={`₹${(data.revenueMetrics.totalRevenue / 1000).toFixed(0)}K`}
           subValue={`₹${(data.revenueMetrics.averageDealSize / 1000).toFixed(0)}K avg`}
           icon={DollarSign}
-          iconBg="bg-emerald-100"
-          iconColor="text-emerald-600"
+          iconBg="bg-green-100"
+          iconColor="text-green-600"
         />
         <StatCard
           title="Avg Response"
