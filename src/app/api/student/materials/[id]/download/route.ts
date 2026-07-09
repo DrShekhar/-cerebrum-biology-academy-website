@@ -42,6 +42,7 @@ async function handleDownload(
         accessLevel: true,
         requiredTier: true,
         courseId: true,
+        chapters: { select: { isFreePreview: true } },
         fileUrl: true,
       },
     })
@@ -61,7 +62,8 @@ async function handleDownload(
     // user with a material id could track/obtain a non-entitled material). Allow only
     // FREE materials, an explicit material_access grant, or an ACTIVE enrollment in
     // the material's course.
-    if (material.accessLevel !== 'FREE') {
+    const inFreePreviewChapter = !!material.chapters?.isFreePreview
+    if (material.accessLevel !== 'FREE' && !inFreePreviewChapter) {
       const grant = await prisma.material_access.findUnique({
         where: { materialId_userId: { materialId, userId } },
         select: { id: true },

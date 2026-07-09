@@ -66,6 +66,7 @@ interface ChapterNode {
   releaseAt: string | null
   dripDaysAfterEnroll: number | null
   requiresPrevious: boolean
+  isFreePreview?: boolean
   materialCount: number
   topics: TopicNode[]
 }
@@ -912,6 +913,7 @@ function ChapterEditor({
     chapter.dripDaysAfterEnroll != null ? String(chapter.dripDaysAfterEnroll) : ''
   )
   const [requiresPrevious, setRequiresPrevious] = useState(chapter.requiresPrevious)
+  const [isFreePreview, setIsFreePreview] = useState(!!chapter.isFreePreview)
 
   return (
     <div className="space-y-3 border-b border-gray-100 bg-gray-50 p-4">
@@ -980,6 +982,14 @@ function ChapterEditor({
           />
           Require previous chapter first
         </label>
+        <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-gray-700">
+          <input
+            type="checkbox"
+            checked={isFreePreview}
+            onChange={(e) => setIsFreePreview(e.target.checked)}
+          />
+          Free preview (accessible without enrollment — try-before-buy)
+        </label>
       </div>
       <div className="flex justify-end gap-2">
         <button
@@ -996,6 +1006,7 @@ function ChapterEditor({
               releaseAt: releaseAt ? new Date(releaseAt).toISOString() : null,
               dripDaysAfterEnroll: dripDays === '' ? null : parseInt(dripDays, 10),
               requiresPrevious,
+              isFreePreview,
             })
           }
           className="inline-flex items-center gap-1 rounded-lg bg-green-700 px-4 py-1.5 text-sm font-semibold text-white hover:bg-green-800"

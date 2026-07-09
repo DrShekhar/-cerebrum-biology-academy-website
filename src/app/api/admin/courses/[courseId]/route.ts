@@ -54,6 +54,8 @@ const patchSchema = z.object({
   maxCapacity: z.number().min(1).max(2000).nullable().optional(),
   startDate: z.string().nullable().optional(),
   scheduleInfo: z.string().nullable().optional(),
+  nextCourseId: z.string().nullable().optional(),
+  nextCourseOfferText: z.string().max(300).nullable().optional(),
   thumbnailUrl: z.string().url().nullable().optional(),
   status: z.enum(['DRAFT', 'PUBLISHED', 'ARCHIVED']).optional(),
   syllabus: z.array(z.string()).nullable().optional(),
@@ -99,6 +101,8 @@ export async function PATCH(
     if (p.maxCapacity !== undefined) data.maxCapacity = p.maxCapacity
     if (p.startDate !== undefined) data.startDate = p.startDate ? new Date(p.startDate) : null
     if (p.scheduleInfo !== undefined) data.scheduleInfo = p.scheduleInfo
+    if (p.nextCourseId !== undefined) data.nextCourseId = p.nextCourseId
+    if (p.nextCourseOfferText !== undefined) data.nextCourseOfferText = p.nextCourseOfferText
     if (p.thumbnailUrl !== undefined) data.thumbnailUrl = p.thumbnailUrl
     if (p.syllabus !== undefined) data.syllabus = p.syllabus
     if (p.features !== undefined) data.features = p.features

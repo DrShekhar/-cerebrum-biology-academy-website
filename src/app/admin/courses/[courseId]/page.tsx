@@ -49,6 +49,8 @@ interface CourseDetail {
   instructor: { id: string; name: string } | null
   startDate: string | null
   scheduleInfo: string | null
+  nextCourseId: string | null
+  nextCourseOfferText: string | null
   maxCapacity: number | null
   syllabus: string[] | null
   features: string[] | null
@@ -176,6 +178,31 @@ export default function AdminCourseWorkspace({
               <FileEdit className="h-4 w-4" /> Unpublish
             </button>
           )}
+          <button
+            onClick={async () => {
+              if (
+                !confirm(
+                  'Duplicate this course? Structure and lessons are copied into a new DRAFT course (videos must be re-linked).'
+                )
+              )
+                return
+              const res = await fetch(`/api/admin/courses/${courseId}/duplicate`, {
+                method: 'POST',
+              })
+              const json = await res.json()
+              if (res.ok && json.success) {
+                toast.success(
+                  `Duplicated: ${json.data.chapters} chapters, ${json.data.materials} lessons${json.data.videosSkipped ? ` (${json.data.videosSkipped} videos to re-link)` : ''}`
+                )
+                window.location.href = `/admin/courses/${json.data.newCourseId}`
+              } else {
+                toast.error(json.error || 'Duplicate failed')
+              }
+            }}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+          >
+            Duplicate
+          </button>
           {course.status !== 'ARCHIVED' && (
             <button
               onClick={() => {
@@ -380,10 +407,13 @@ function SettingsTab({ course, onSaved }: { course: CourseDetail; onSaved: () =>
     maxCapacity: course.maxCapacity ? String(course.maxCapacity) : '',
     startDate: course.startDate ? course.startDate.slice(0, 10) : '',
     scheduleInfo: course.scheduleInfo || '',
+    nextCourseId: course.nextCourseId || '',
+    nextCourseOfferText: course.nextCourseOfferText || '',
     syllabus: (course.syllabus || []).join('\n'),
     features: (course.features || []).join('\n'),
   })
   const [teachers, setTeachers] = useState<{ id: string; name: string }[]>([])
+  const [allCourses, setAllCourses] = useState<{ id: string; name: string }[]>([])
   const [saving, setSaving] = useState(false)
 
   useEffect(() => {
@@ -400,7 +430,19 @@ function SettingsTab({ course, onSaved }: { course: CourseDetail; onSaved: () =>
         }
       })
       .catch(() => {})
-  }, [])
+    fetch('/api/admin/courses?limit=200')
+      .then((r) => r.json())
+      .then((j) => {
+        if (j?.success && j.data?.courses) {
+          setAllCourses(
+            j.data.courses
+              .filter((x: { id: string }) => x.id !== course.id)
+              .map((x: { id: string; name: string }) => ({ id: x.id, name: x.name }))
+          )
+        }
+      })
+      .catch(() => {})
+  }, [course.id])
 
   const set = (k: keyof typeof form, v: string) => setForm((f) => ({ ...f, [k]: v }))
 
@@ -420,6 +462,8 @@ function SettingsTab({ course, onSaved }: { course: CourseDetail; onSaved: () =>
           maxCapacity: form.maxCapacity ? parseInt(form.maxCapacity, 10) : null,
           startDate: form.startDate || null,
           scheduleInfo: form.scheduleInfo || null,
+          nextCourseId: form.nextCourseId || null,
+          nextCourseOfferText: form.nextCourseOfferText || null,
           syllabus: form.syllabus
             .split('\n')
             .map((s) => s.trim())
@@ -582,6 +626,40 @@ function SettingsTab({ course, onSaved }: { course: CourseDetail; onSaved: () =>
             onChange={(e) => set('scheduleInfo', e.target.value)}
             className={input}
           />
+        </div>
+
+        {/* Completion offer: promoted on the student course page at 100% */}
+        <div className="grid gap-4 md:grid-cols-2">
+          <div>
+            <label className={label} htmlFor="cs-nextcourse">
+              Next-course offer (shown on completion)
+            </label>
+            <select
+              id="cs-nextcourse"
+              value={form.nextCourseId}
+              onChange={(e) => set('nextCourseId', e.target.value)}
+              className={input}
+            >
+              <option value="">None</option>
+              {allCourses.map((x) => (
+                <option key={x.id} value={x.id}>
+                  {x.name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className={label} htmlFor="cs-nextoffer">
+              Offer text (optional)
+            </label>
+            <input
+              id="cs-nextoffer"
+              value={form.nextCourseOfferText}
+              onChange={(e) => set('nextCourseOfferText', e.target.value)}
+              placeholder="e.g. Complete alumni get 20% off the next course"
+              className={input}
+            />
+          </div>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           <div>

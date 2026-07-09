@@ -186,6 +186,28 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
       }
     })
 
+    // Completion offer: at 100% the student sees a congratulations card with
+    // the admin-configured next course (courses.nextCourseId, no FK — resolve
+    // the name here so the client needs no extra call).
+    let nextCourseOffer: { courseId: string; name: string; text: string | null } | null = null
+    if (currentProgress >= 100 && enrollment.courses.nextCourseId) {
+      try {
+        const next = await prisma.courses.findFirst({
+          where: { id: enrollment.courses.nextCourseId, status: 'PUBLISHED' },
+          select: { id: true, name: true },
+        })
+        if (next) {
+          nextCourseOffer = {
+            courseId: next.id,
+            name: next.name,
+            text: enrollment.courses.nextCourseOfferText,
+          }
+        }
+      } catch {
+        /* offer is optional — never fail the course load */
+      }
+    }
+
     return NextResponse.json({
       success: true,
       course: {
@@ -200,6 +222,7 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
         lastAccessDate: enrollment.lastAccessDate,
         modules,
         features: enrollment.courses.features,
+        nextCourseOffer,
       },
     })
   } catch (error) {

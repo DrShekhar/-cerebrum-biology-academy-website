@@ -395,6 +395,7 @@ model chapters {
   dripDaysAfterEnroll Int?
   // Prerequisite progression: locked until the previous chapter's materials are completed.
   requiresPrevious    Boolean           @default(false)
+  isFreePreview       Boolean           @default(false) // try-before-buy: accessible without enrollment
   isActive            Boolean           @default(true)
   createdAt           DateTime          @default(now())
   updatedAt           DateTime
@@ -847,6 +848,8 @@ model courses {
   instructorId            String?
   startDate               DateTime?
   scheduleInfo            String?
+  nextCourseId            String? // completion-offer: course to promote at 100%
+  nextCourseOfferText     String?
   maxCapacity             Int?
   createdAt               DateTime                  @default(now())
   updatedAt               DateTime

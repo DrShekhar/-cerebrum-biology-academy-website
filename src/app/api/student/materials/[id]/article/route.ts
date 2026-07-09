@@ -32,6 +32,7 @@ export async function GET(_request: NextRequest, context: { params: Promise<{ id
         accessLevel: true,
         requiredTier: true,
         courseId: true,
+        chapters: { select: { isFreePreview: true } },
         courses: { select: { name: true } },
       },
     })
@@ -42,7 +43,8 @@ export async function GET(_request: NextRequest, context: { params: Promise<{ id
       return NextResponse.json({ success: false, error: 'Not available' }, { status: 403 })
     }
 
-    if (material.accessLevel !== 'FREE') {
+    const inFreePreviewChapter = !!material.chapters?.isFreePreview
+    if (material.accessLevel !== 'FREE' && !inFreePreviewChapter) {
       const grant = await prisma.material_access.findUnique({
         where: { materialId_userId: { materialId, userId } },
         select: { id: true },

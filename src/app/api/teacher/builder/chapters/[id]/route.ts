@@ -83,6 +83,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     data.dripDaysAfterEnroll = days
   }
   if (body.requiresPrevious !== undefined) data.requiresPrevious = Boolean(body.requiresPrevious)
+  if (body.isFreePreview !== undefined) data.isFreePreview = Boolean(body.isFreePreview)
   if (body.isActive !== undefined) data.isActive = Boolean(body.isActive)
   if (typeof body.orderIndex === 'number') data.orderIndex = body.orderIndex
 

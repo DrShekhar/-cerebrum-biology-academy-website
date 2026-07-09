@@ -39,6 +39,7 @@ interface CourseDetails {
   endDate: string | null
   status: 'ACTIVE' | 'EXPIRED' | 'CANCELLED'
   currentProgress: number
+  nextCourseOffer?: { courseId: string; name: string; text: string | null } | null
   modules: CourseModule[]
   features: string[]
 }
@@ -271,6 +272,45 @@ export default function CourseDetailPage() {
               />
             </div>
           </div>
+
+          {/* Completion celebration + next-course offer */}
+          {(course.currentProgress || 0) >= 100 && (
+            <div className="mt-6 rounded-2xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-yellow-50 p-6">
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                <div>
+                  <p className="text-lg font-bold text-amber-900">
+                    🎉 Congratulations — you completed this course!
+                  </p>
+                  <p className="mt-1 text-sm text-amber-800">
+                    Claim your certificate, and keep the momentum going.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <Link
+                    href="/student/certificates"
+                    className="rounded-xl bg-amber-500 px-4 py-2.5 text-sm font-bold text-white hover:bg-amber-600"
+                  >
+                    Claim certificate
+                  </Link>
+                  {course.nextCourseOffer && (
+                    <a
+                      href={`https://wa.me/918826444334?text=${encodeURIComponent(`Hi! I just completed ${course.name} and I'm interested in ${course.nextCourseOffer.name}.`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-xl bg-green-600 px-4 py-2.5 text-sm font-bold text-white hover:bg-green-700"
+                    >
+                      Next: {course.nextCourseOffer.name} →
+                    </a>
+                  )}
+                </div>
+              </div>
+              {course.nextCourseOffer?.text && (
+                <p className="mt-3 text-sm font-medium text-green-800">
+                  {course.nextCourseOffer.text}
+                </p>
+              )}
+            </div>
+          )}
 
           {/* Course Meta */}
           <div className="flex flex-wrap gap-4 mt-4 text-sm text-gray-600">
