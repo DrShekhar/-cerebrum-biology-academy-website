@@ -42,6 +42,10 @@ export interface CBTResult {
   rank?: number
   percentile?: number
   totalCandidates?: number
+  /** Per-topic tallies for the evaluation report (server mode). */
+  topics?: { topic: string; section: string; correct: number; incorrect: number; total: number }[]
+  /** Seconds the candidate actually spent (duration − remaining). */
+  timeTakenSec?: number
 }
 
 export interface CBTReviewItem {
@@ -105,6 +109,93 @@ type PaletteStatus = 'notVisited' | 'notAnswered' | 'answered' | 'marked' | 'ans
 
 const CORRECT_MARKS = 4
 const NEGATIVE_MARKS = 1
+
+const acc = (correct: number, attempted: number) =>
+  attempted > 0 ? Math.round((correct / attempted) * 100) : 0
+
+/** Section marks/accuracy derived from a perSection tally. */
+function sectionStat(row: { correct: number; incorrect: number; unattempted: number }) {
+  const attempted = row.correct + row.incorrect
+  const total = attempted + row.unattempted
+  return {
+    marks: row.correct * CORRECT_MARKS - row.incorrect * NEGATIVE_MARKS,
+    maxMarks: total * CORRECT_MARKS,
+    accuracy: acc(row.correct, attempted),
+    attempted,
+    total,
+  }
+}
+
+/**
+ * Turn a finished attempt into a personalised improvement plan — concrete,
+ * data-driven suggestions a student can act on (not generic advice).
+ */
+function buildInsights(r: CBTResult): string[] {
+  const out: string[] = []
+  const attempted = r.correct + r.incorrect
+  const accuracy = acc(r.correct, attempted)
+  const pct = r.maxScore > 0 ? Math.round((Math.max(0, r.score) / r.maxScore) * 100) : 0
+
+  if (r.unattempted > 0) {
+    out.push(
+      `You left ${r.unattempted} question${r.unattempted > 1 ? 's' : ''} unattempted — that's ${r.unattempted * CORRECT_MARKS} marks on the table. Practise timed section-wise sets to raise your attempt rate.`
+    )
+  }
+  if (r.incorrect > 0) {
+    out.push(
+      `${r.incorrect} wrong answer${r.incorrect > 1 ? 's' : ''} cost you ${r.incorrect * NEGATIVE_MARKS} marks to negative marking. Your accuracy on attempted questions was ${accuracy}% — only commit to an option when you can rule out at least two others.`
+    )
+  }
+
+  // Weakest / strongest section by accuracy (needs ≥1 attempt in the section).
+  const sections = Object.entries(r.perSection)
+    .map(([sec, row]) => ({ sec, ...sectionStat(row) }))
+    .filter((s) => s.attempted > 0)
+  if (sections.length) {
+    const weakest = [...sections].sort((a, b) => a.accuracy - b.accuracy)[0]
+    const strongest = [...sections].sort((a, b) => b.accuracy - a.accuracy)[0]
+    if (weakest.accuracy < 75) {
+      out.push(
+        `Your weakest section is ${capitalize(weakest.sec)} (${weakest.accuracy}% accuracy). Make it the focus of your next revision cycle — re-read the NCERT lines and redo those chapter MCQs.`
+      )
+    }
+    if (strongest.accuracy >= 75 && strongest.sec !== weakest.sec) {
+      out.push(
+        `Strong performance in ${capitalize(strongest.sec)} (${strongest.accuracy}%) — keep it sharp with a weekly timed set so it stays a scoring section.`
+      )
+    }
+  }
+
+  // Weak topics: attempted-heavy topics with the lowest accuracy.
+  const weakTopics = (r.topics || [])
+    .map((t) => ({ ...t, attempted: t.correct + t.incorrect }))
+    .filter((t) => t.attempted >= 2 && acc(t.correct, t.attempted) < 60)
+    .sort((a, b) => acc(a.correct, a.attempted) - acc(b.correct, b.attempted))
+    .slice(0, 5)
+  if (weakTopics.length) {
+    out.push(`Revise these first: ${weakTopics.map((t) => t.topic).join(', ')}.`)
+  }
+
+  // Overall benchmark against a rough NEET reference.
+  if (pct < 50) {
+    out.push(
+      'Priority: cross 50% by locking down the high-weightage NCERT chapters (Human Physiology, Genetics, Ecology, Organic basics) before attempting more full mocks.'
+    )
+  } else if (pct < 75) {
+    out.push(
+      'Solid base. The gap to a top score is accuracy — most of your lost marks are avoidable errors, not unknown topics. Slow down on the questions you attempt.'
+    )
+  } else {
+    out.push(
+      'Excellent score. Maintain with one full-length timed mock every week and targeted revision of any topic below 80%.'
+    )
+  }
+  return out
+}
+
+function capitalize(s: string): string {
+  return s ? s.charAt(0).toUpperCase() + s.slice(1) : s
+}
 
 /* ── NTA visual constants — sampled from the live official NTA mock
       (nta.ac.in/Quiz): icon PNG fills, Bootstrap-3 button colors, timer pill. */
@@ -879,36 +970,80 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
             </div>
           )}
 
-          <div className="mt-6 grid grid-cols-3 gap-4">
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
             <Stat label="Correct" value={String(r.correct)} tone="green" />
             <Stat label="Incorrect" value={String(r.incorrect)} tone="red" />
             <Stat label="Unattempted" value={String(r.unattempted)} />
+            <Stat label="Accuracy" value={`${acc(r.correct, r.correct + r.incorrect)}%`} />
+            <Stat
+              label="Attempted"
+              value={`${r.correct + r.incorrect} / ${r.correct + r.incorrect + r.unattempted}`}
+            />
+            {typeof r.timeTakenSec === 'number' && (
+              <Stat label="Time taken" value={formatTime(r.timeTakenSec)} />
+            )}
           </div>
 
+          {/* Section performance — marks + accuracy bar per subject */}
           <div className="mt-6 text-left">
-            <h2 className="mb-2 text-sm font-semibold text-gray-700">Section breakdown</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="text-left text-gray-500">
-                    <th className="py-1">Section</th>
-                    <th className="py-1">Correct</th>
-                    <th className="py-1">Incorrect</th>
-                    <th className="py-1">Unattempted</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {Object.entries(r.perSection).map(([sec, row]) => (
-                    <tr key={sec} className="border-t border-gray-100">
-                      <td className="py-1.5 font-medium text-gray-900">{sec}</td>
-                      <td className="py-1.5 text-green-700">{row.correct}</td>
-                      <td className="py-1.5 text-red-600">{row.incorrect}</td>
-                      <td className="py-1.5 text-gray-500">{row.unattempted}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <h2 className="mb-3 text-sm font-semibold text-gray-700">Section performance</h2>
+            <div className="space-y-3">
+              {Object.entries(r.perSection).map(([sec, row]) => {
+                const s = sectionStat(row)
+                return (
+                  <div key={sec}>
+                    <div className="flex items-baseline justify-between text-sm">
+                      <span className="font-medium text-gray-900">{capitalize(sec)}</span>
+                      <span className="tabular-nums text-gray-600">
+                        <b className="text-gray-900">{s.marks}</b>
+                        <span className="text-gray-400"> / {s.maxMarks}</span>
+                        <span className="ml-2 text-xs text-gray-500">{s.accuracy}% acc</span>
+                      </span>
+                    </div>
+                    <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-gray-100">
+                      <div
+                        className="h-full rounded-full"
+                        style={{
+                          width: `${s.accuracy}%`,
+                          backgroundColor:
+                            s.accuracy >= 75 ? '#17924f' : s.accuracy >= 50 ? '#f59e0b' : '#ef4444',
+                        }}
+                      />
+                    </div>
+                    <div className="mt-0.5 flex gap-3 text-[11px] text-gray-400">
+                      <span className="text-green-700">{row.correct} correct</span>
+                      <span className="text-red-600">{row.incorrect} wrong</span>
+                      <span>{row.unattempted} skipped</span>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
+          </div>
+
+          {/* Strengths & focus areas from per-topic accuracy */}
+          {r.topics && r.topics.length > 0 && (
+            <div className="mt-6 grid gap-4 text-left sm:grid-cols-2">
+              <TopicList
+                title="Your strengths"
+                tone="green"
+                topics={topTopics(r.topics, 'strong')}
+              />
+              <TopicList title="Focus areas" tone="red" topics={topTopics(r.topics, 'weak')} />
+            </div>
+          )}
+
+          {/* Personalised improvement plan */}
+          <div className="mt-6 rounded-xl border border-emerald-200 bg-emerald-50/60 p-4 text-left">
+            <h2 className="mb-2 text-sm font-bold text-emerald-900">Your improvement plan</h2>
+            <ul className="space-y-2">
+              {buildInsights(r).map((tip, i) => (
+                <li key={i} className="flex gap-2 text-[13px] leading-relaxed text-gray-700">
+                  <span className="mt-0.5 select-none text-emerald-600">→</span>
+                  <span>{tip}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {(tabSwitches > 0 || fullscreenExits > 0) && (
@@ -953,7 +1088,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
             <div className="mt-3 flex flex-wrap items-center justify-center gap-3">
               <a
                 href={`https://wa.me/918826444334?text=${encodeURIComponent(
-                  `Hi Cerebrum! I scored ${r.score}/${r.maxScore} in the NEET Biology CBT mock. Please help me plan my preparation.`
+                  `Hi Cerebrum! I scored ${r.score}/${r.maxScore} in the NEET CBT full mock. Please help me plan my preparation.`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1577,6 +1712,54 @@ function LegendItem({
 }
 
 /* ── Small helpers ──────────────────────────────────────────────────────── */
+
+type TopicTally = {
+  topic: string
+  section: string
+  correct: number
+  incorrect: number
+  total: number
+}
+
+/** Best (strong) or worst (weak) topics by accuracy, among attempted-enough topics. */
+function topTopics(topics: TopicTally[], kind: 'strong' | 'weak') {
+  const rated = topics
+    .map((t) => ({ ...t, attempted: t.correct + t.incorrect }))
+    .filter((t) => t.attempted >= 1)
+    .map((t) => ({ ...t, accuracy: acc(t.correct, t.attempted) }))
+  rated.sort((a, b) =>
+    kind === 'strong' ? b.accuracy - a.accuracy || b.correct - a.correct : a.accuracy - b.accuracy
+  )
+  return rated.slice(0, 4)
+}
+
+function TopicList({
+  title,
+  tone,
+  topics,
+}: {
+  title: string
+  tone: 'green' | 'red'
+  topics: { topic: string; accuracy: number; correct: number; attempted: number }[]
+}) {
+  if (topics.length === 0) return null
+  const color = tone === 'green' ? 'text-green-700' : 'text-red-600'
+  return (
+    <div className="rounded-xl border border-gray-200 p-4">
+      <h3 className={`mb-2 text-sm font-bold ${color}`}>{title}</h3>
+      <ul className="space-y-1.5">
+        {topics.map((t) => (
+          <li key={t.topic} className="flex items-baseline justify-between gap-2 text-[13px]">
+            <span className="min-w-0 truncate text-gray-800">{t.topic}</span>
+            <span className="shrink-0 tabular-nums text-gray-500">
+              {t.correct}/{t.attempted} · {t.accuracy}%
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
 
 function ExamModal({
   title,

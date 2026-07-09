@@ -43,11 +43,11 @@ export default function NeetFullCBTPage() {
 
       const mockTest: MockTest = {
         id: `cbt_${data.sessionId}`,
-        title: 'NEET Biology Full Mock (CBT)',
+        title: 'NEET Full Mock (CBT)',
         description: '',
-        slug: 'neet-biology-full-mock',
+        slug: 'neet-full-mock',
         category: 'full-test',
-        subject: 'biology',
+        subject: 'mixed',
         duration: data.durationMin,
         totalQuestions: data.questions.length,
         totalMarks: data.questions.length * 4,

@@ -1,7 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
-import { correctLetter, resolveSection, CORRECT_MARKS, NEGATIVE_MARKS } from '@/lib/cbt/paper'
+import {
+  correctLetter,
+  resolveSection,
+  CORRECT_MARKS,
+  NEGATIVE_MARKS,
+  DURATION_MIN,
+} from '@/lib/cbt/paper'
 
 /**
  * POST /api/cbt/session/[id]/submit — server-side scoring + finalize.
@@ -55,6 +61,10 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     let unattempted = 0
     const perSection: Record<string, { correct: number; incorrect: number; unattempted: number }> =
       {}
+    const perTopic: Record<
+      string,
+      { topic: string; section: string; correct: number; incorrect: number; total: number }
+    > = {}
     const responseRows: {
       id: string
       userId: string
@@ -73,6 +83,15 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       // Zoology breakdown matches the tabs the student actually saw.
       const sec = resolveSection(q.id, q.topic || '', q.subject || '')
       perSection[sec] = perSection[sec] || { correct: 0, incorrect: 0, unattempted: 0 }
+      const topicKey = (q.topic || 'General').trim() || 'General'
+      const tp = (perTopic[topicKey] = perTopic[topicKey] || {
+        topic: topicKey,
+        section: sec,
+        correct: 0,
+        incorrect: 0,
+        total: 0,
+      })
+      tp.total++
       const sel = answers[qid] || null
       let isCorrect = false
       let marks = 0
@@ -84,10 +103,12 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
         marks = CORRECT_MARKS
         correct++
         perSection[sec].correct++
+        tp.correct++
       } else {
         marks = -NEGATIVE_MARKS
         incorrect++
         perSection[sec].incorrect++
+        tp.incorrect++
       }
       responseRows.push({
         id: `uqr_${row.id}_${qid}`.slice(0, 190),
@@ -161,6 +182,10 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       })
       .catch(() => {})
 
+    // Time actually spent = full duration − time left on the clock at submit.
+    const remainingAtSubmit = typeof body.remainingTime === 'number' ? body.remainingTime : 0
+    const timeTakenSec = Math.max(0, DURATION_MIN * 60 - remainingAtSubmit)
+
     return NextResponse.json({
       success: true,
       result: {
@@ -173,6 +198,8 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
         rank,
         percentile: Math.round(percentile * 100) / 100,
         totalCandidates,
+        topics: Object.values(perTopic),
+        timeTakenSec,
       },
     })
   } catch (error) {

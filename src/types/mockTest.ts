@@ -13,7 +13,7 @@ export interface Question {
   difficulty: 'easy' | 'medium' | 'hard'
   topic: string
   subtopic: string
-  subject: 'biology' | 'botany' | 'zoology'
+  subject: 'physics' | 'chemistry' | 'biology' | 'botany' | 'zoology'
   examYear?: string
   source?: string
   marks: number
@@ -28,7 +28,7 @@ export interface MockTest {
   description: string
   slug: string
   category: 'full-test' | 'topic-test' | 'previous-year' | 'custom'
-  subject: 'biology' | 'botany' | 'zoology' | 'mixed'
+  subject: 'physics' | 'chemistry' | 'biology' | 'botany' | 'zoology' | 'mixed'
   duration: number // in minutes
   totalQuestions: number
   totalMarks: number
