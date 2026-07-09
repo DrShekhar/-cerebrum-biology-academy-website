@@ -64,6 +64,27 @@ function PhoneActions({ phone }: { phone: string | null }) {
   )
 }
 
+/** Clamped message that expands on click — full inquiry text without leaving the table. */
+function ExpandableMessage({ text }: { text: string | null }) {
+  const [expanded, setExpanded] = useState(false)
+  if (!text) return <span className="text-gray-400">—</span>
+  return (
+    <button
+      type="button"
+      onClick={() => setExpanded((v) => !v)}
+      className="block w-full text-left"
+      title={expanded ? 'Click to collapse' : 'Click to read the full message'}
+    >
+      <div className={`text-gray-700 ${expanded ? 'whitespace-pre-wrap' : 'line-clamp-3'}`}>
+        {text}
+      </div>
+      <span className="mt-0.5 inline-block text-xs font-medium text-blue-600">
+        {expanded ? 'Show less' : 'Show more'}
+      </span>
+    </button>
+  )
+}
+
 export default function AdminInquiriesPage() {
   const [inquiries, setInquiries] = useState<ContactInquiry[]>([])
   const [leads, setLeads] = useState<ContentLead[]>([])
@@ -176,7 +197,7 @@ export default function AdminInquiriesPage() {
                   </td>
                   <td className="px-4 py-3 text-gray-600">{q.source}</td>
                   <td className="px-4 py-3 max-w-md">
-                    <div className="line-clamp-3 text-gray-700">{q.message}</div>
+                    <ExpandableMessage text={q.message} />
                   </td>
                 </tr>
               ))}
