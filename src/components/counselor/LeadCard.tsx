@@ -57,12 +57,17 @@ export function LeadCard({ lead, isDragging, onRefresh }: LeadCardProps) {
   return (
     <div
       ref={setNodeRef}
+      // Whole-card drag: with the page's 8px PointerSensor activation
+      // constraint, plain clicks (links, pickers) still work — only an actual
+      // 8px+ drag starts a move. Previously only the tiny grip icon dragged.
+      {...attributes}
+      {...listeners}
       style={{
         ...style,
         // Counselor-set color tag = a strong left edge (meaning in the legend).
         ...(activeTag ? { borderLeft: `4px solid ${activeTag.color}` } : {}),
       }}
-      className={`group bg-white rounded-lg border transition-all ${
+      className={`group bg-white rounded-lg border transition-all cursor-grab active:cursor-grabbing ${
         isDragging || isSortableDragging
           ? 'shadow-lg border-indigo-300 ring-2 ring-indigo-200 opacity-90'
           : `border-gray-200 hover:border-indigo-200 hover:shadow-sm ${priority.bg}`
@@ -73,13 +78,9 @@ export function LeadCard({ lead, isDragging, onRefresh }: LeadCardProps) {
         {/* Top row: Drag handle + Priority + Score */}
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <button
-              {...attributes}
-              {...listeners}
-              className="cursor-grab active:cursor-grabbing p-0.5 -ml-1 opacity-0 group-hover:opacity-100 transition-opacity touch-none"
-            >
+            <span className="p-0.5 -ml-1 opacity-0 group-hover:opacity-100 transition-opacity">
               <GripVertical className="w-4 h-4 text-gray-300" />
-            </button>
+            </span>
             <span className="text-xs font-medium">
               {priority.emoji} {priority.label}
             </span>

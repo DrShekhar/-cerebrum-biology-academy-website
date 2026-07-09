@@ -1,13 +1,17 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   DndContext,
   DragEndEvent,
   DragOverlay,
   closestCorners,
   DragStartEvent,
+  PointerSensor,
+  useSensor,
+  useSensors,
 } from '@dnd-kit/core'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { LeadPipelineColumn } from '@/components/counselor/LeadPipelineColumn'
 import { LeadCard } from '@/components/counselor/LeadCard'
 import { StatsBar } from '@/components/counselor/StatsBar'
@@ -74,8 +78,15 @@ export default function LeadsPage() {
   const [filterPriority, setFilterPriority] = useState<Priority | 'ALL'>('ALL')
   const [filterSource, setFilterSource] = useState<string>('ALL')
   const [filterColor, setFilterColor] = useState<string>('ALL')
+  // Quick filter driven by the stat tiles (This Week / Due Today / Overdue / Enrolled)
+  const [quickFilter, setQuickFilter] = useState<{ type: string; value: string } | null>(null)
   const [showCreateModal, setShowCreateModal] = useState(false)
   const { tags: colorTags, refresh: refreshColorTags } = useLeadColorTags()
+  const boardRef = useRef<HTMLDivElement | null>(null)
+
+  // Require 8px of movement before a drag starts — plain clicks still open the
+  // lead, and the whole card body becomes draggable (not just the grip icon).
+  const sensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 8 } }))
 
   useEffect(() => {
     fetchLeads()
@@ -168,11 +179,78 @@ export default function LeadsPage() {
     const activeLead = leads.find((lead) => lead.id === activeId)
     if (!activeLead) return
 
-    const newStage = overId as LeadStage
+    // `over` can be a COLUMN (stage id) or another CARD (lead id) — cards are
+    // sortable droppables, so dropping onto a non-empty column usually lands
+    // on a card. Resolve a card drop to that card's stage; previously the raw
+    // card id was sent as the stage → zod 400 → the move silently reverted.
+    const isStage = stages.some((s) => s.id === overId)
+    const newStage = isStage
+      ? (overId as LeadStage)
+      : (leads.find((lead) => lead.id === overId)?.stage ?? null)
+    if (!newStage) return
 
     if (activeLead.stage === newStage) return
 
     updateLeadStage(activeId, newStage)
+  }
+
+  const matchesQuickFilter = (lead: Lead): boolean => {
+    if (!quickFilter) return true
+    const now = new Date()
+    switch (quickFilter.type) {
+      case 'thisWeek':
+        return new Date(lead.createdAt) >= new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000)
+      case 'dueToday':
+        return (
+          !!lead.nextFollowUpAt &&
+          new Date(lead.nextFollowUpAt).toDateString() === now.toDateString()
+        )
+      case 'overdue':
+        return (
+          !!lead.nextFollowUpAt &&
+          new Date(lead.nextFollowUpAt) < now &&
+          lead.stage !== 'ENROLLED' &&
+          lead.stage !== 'ACTIVE_STUDENT' &&
+          lead.stage !== 'LOST'
+        )
+      case 'stage':
+        return quickFilter.value.split(',').includes(lead.stage)
+      default:
+        return true
+    }
+  }
+
+  const handleStatFilter = (filterType: string, value: string) => {
+    if (filterType === 'all') {
+      setQuickFilter(null)
+      setFilterPriority('ALL')
+      setFilterSource('ALL')
+      setFilterColor('ALL')
+      setSearchTerm('')
+      return
+    }
+    if (filterType === 'priority') {
+      // Toggle: clicking Hot Leads again clears it.
+      setFilterPriority((prev) => (prev === value ? 'ALL' : (value as Priority)))
+      return
+    }
+    if (filterType === 'conversion') {
+      // Conversion is a ratio — show the enrolled set behind it.
+      setQuickFilter((prev) =>
+        prev?.type === 'stage' ? null : { type: 'stage', value: 'ENROLLED,ACTIVE_STUDENT' }
+      )
+      return
+    }
+    setQuickFilter((prev) =>
+      prev?.type === filterType && prev.value === value ? null : { type: filterType, value }
+    )
+  }
+
+  const QUICK_FILTER_LABEL: Record<string, string> = {
+    thisWeek: 'Added this week',
+    dueToday: 'Follow-up due today',
+    overdue: 'Overdue follow-ups',
+    stage: 'Enrolled students',
   }
 
   const filteredLeads = leads.filter((lead) => {
@@ -185,7 +263,9 @@ export default function LeadsPage() {
     const matchesSource = filterSource === 'ALL' || lead.source === filterSource
     const matchesColor = filterColor === 'ALL' || lead.metadata?.colorTag === filterColor
 
-    return matchesSearch && matchesPriority && matchesSource && matchesColor
+    return (
+      matchesSearch && matchesPriority && matchesSource && matchesColor && matchesQuickFilter(lead)
+    )
   })
 
   const activeLead = leads.find((lead) => lead.id === activeId)
@@ -270,7 +350,41 @@ export default function LeadsPage() {
 
   return (
     <div className="space-y-6">
-      <StatsBar leads={leads} />
+      <StatsBar leads={leads} onFilterClick={handleStatFilter} />
+
+      {(quickFilter || filterPriority !== 'ALL') && (
+        <div className="flex flex-wrap items-center gap-2 text-sm">
+          <span className="text-gray-500">Filtering:</span>
+          {quickFilter && (
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-100 px-3 py-1 font-medium text-indigo-700">
+              {QUICK_FILTER_LABEL[quickFilter.type] || quickFilter.type}
+              <button
+                onClick={() => setQuickFilter(null)}
+                className="font-bold hover:text-indigo-900"
+              >
+                ×
+              </button>
+            </span>
+          )}
+          {filterPriority !== 'ALL' && (
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-red-100 px-3 py-1 font-medium text-red-700">
+              {filterPriority} priority
+              <button
+                onClick={() => setFilterPriority('ALL')}
+                className="font-bold hover:text-red-900"
+              >
+                ×
+              </button>
+            </span>
+          )}
+          <button
+            onClick={() => handleStatFilter('all', '')}
+            className="text-gray-500 underline hover:text-gray-700"
+          >
+            Clear all
+          </button>
+        </div>
+      )}
 
       <LeadColorLegend tags={colorTags} onTagsChanged={() => void refreshColorTags()} />
 
@@ -385,25 +499,44 @@ export default function LeadsPage() {
       </div>
 
       <DndContext
+        sensors={sensors}
         onDragStart={handleDragStart}
         onDragEnd={handleDragEnd}
         collisionDetection={closestCorners}
       >
         {/* Bounded scroll region + a w-max inner track so the fixed-width
-            columns overflow and scroll horizontally instead of being clipped. */}
-        <div className="w-full overflow-x-auto overscroll-x-contain pb-4">
-          <div className="flex w-max gap-4">
-            {stages.map((stage) => {
-              const stageLeads = filteredLeads.filter((lead) => lead.stage === stage.id)
-              return (
-                <LeadPipelineColumn
-                  key={stage.id}
-                  stage={stage}
-                  leads={stageLeads}
-                  onRefresh={fetchLeads}
-                />
-              )
-            })}
+            columns overflow and scroll horizontally instead of being clipped.
+            Arrow buttons give mouse users (no horizontal wheel, hidden macOS
+            scrollbars) a way to reach the later stages. */}
+        <div className="relative">
+          <button
+            aria-label="Scroll pipeline left"
+            onClick={() => boardRef.current?.scrollBy({ left: -360, behavior: 'smooth' })}
+            className="absolute -left-3 top-24 z-10 hidden h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white shadow-md hover:bg-gray-50 lg:flex"
+          >
+            <ChevronLeft className="h-5 w-5 text-gray-600" />
+          </button>
+          <button
+            aria-label="Scroll pipeline right"
+            onClick={() => boardRef.current?.scrollBy({ left: 360, behavior: 'smooth' })}
+            className="absolute -right-3 top-24 z-10 hidden h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white shadow-md hover:bg-gray-50 lg:flex"
+          >
+            <ChevronRight className="h-5 w-5 text-gray-600" />
+          </button>
+          <div ref={boardRef} className="w-full overflow-x-auto overscroll-x-contain pb-4">
+            <div className="flex w-max gap-4">
+              {stages.map((stage) => {
+                const stageLeads = filteredLeads.filter((lead) => lead.stage === stage.id)
+                return (
+                  <LeadPipelineColumn
+                    key={stage.id}
+                    stage={stage}
+                    leads={stageLeads}
+                    onRefresh={fetchLeads}
+                  />
+                )
+              })}
+            </div>
           </div>
         </div>
 
