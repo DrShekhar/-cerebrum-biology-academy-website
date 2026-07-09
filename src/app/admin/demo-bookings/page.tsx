@@ -16,6 +16,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
+import { PageHeader } from '@/components/admin/kit'
 import { ScheduleDemoForm } from '@/components/admin/ScheduleDemoForm'
 import { showToast } from '@/lib/toast'
 
@@ -238,20 +239,19 @@ export default function DemoBookingsPage() {
   return (
     <>
       <div className="p-6 max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="mb-8 flex justify-between items-center">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Demo Bookings</h1>
-            <p className="text-gray-600">Manage and track demo class bookings</p>
-          </div>
-          <Button
-            className="bg-blue-600 hover:bg-blue-700 text-white"
-            onClick={() => setIsScheduleDemoModalOpen(true)}
-          >
-            <Calendar className="w-4 h-4 mr-2" />
-            Schedule Demo
-          </Button>
-        </div>
+        <PageHeader
+          title="Demo Bookings"
+          subtitle="Manage and track demo class bookings"
+          actions={
+            <Button
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+              onClick={() => setIsScheduleDemoModalOpen(true)}
+            >
+              <Calendar className="w-4 h-4 mr-2" />
+              Schedule Demo
+            </Button>
+          }
+        />
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

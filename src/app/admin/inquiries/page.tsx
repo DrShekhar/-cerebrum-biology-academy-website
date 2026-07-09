@@ -8,6 +8,7 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import { MessageCircle, Phone, RefreshCw } from 'lucide-react'
+import { PageHeader } from '@/components/admin/kit'
 
 interface ContactInquiry {
   id: string
@@ -120,35 +121,32 @@ export default function AdminInquiriesPage() {
 
   return (
     <div className="p-6 max-w-7xl mx-auto">
-      <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
-        <div>
-          <h1 className="text-2xl font-bold text-gray-900">Inquiries &amp; Enquiry Leads</h1>
-          <p className="text-sm text-gray-600 mt-1">
-            Contact inquiries (ARIA, chatbot, contact form, olympiad form) and enquiry leads (city
-            pages, demo landing, lead magnets)
-          </p>
-        </div>
-        <div className="flex items-center gap-2">
-          <select
-            value={days}
-            onChange={(e) => setDays(Number(e.target.value))}
-            className="rounded-lg border border-gray-300 px-3 py-2 text-sm"
-          >
-            <option value={7}>Last 7 days</option>
-            <option value={30}>Last 30 days</option>
-            <option value={90}>Last 90 days</option>
-            <option value={365}>Last year</option>
-          </select>
-          <button
-            type="button"
-            onClick={() => void load()}
-            className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-          >
-            <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
-            Refresh
-          </button>
-        </div>
-      </div>
+      <PageHeader
+        title="Inquiries & Enquiry Leads"
+        subtitle="Contact inquiries (ARIA, chatbot, contact form, olympiad form) and enquiry leads (city pages, demo landing, lead magnets)"
+        actions={
+          <div className="flex items-center gap-2">
+            <select
+              value={days}
+              onChange={(e) => setDays(Number(e.target.value))}
+              className="rounded-lg border border-gray-300 px-3 py-2 text-sm"
+            >
+              <option value={7}>Last 7 days</option>
+              <option value={30}>Last 30 days</option>
+              <option value={90}>Last 90 days</option>
+              <option value={365}>Last year</option>
+            </select>
+            <button
+              type="button"
+              onClick={() => void load()}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            >
+              <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
+              Refresh
+            </button>
+          </div>
+        }
+      />
 
       {error && (
         <div className="mb-6 rounded-lg bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">

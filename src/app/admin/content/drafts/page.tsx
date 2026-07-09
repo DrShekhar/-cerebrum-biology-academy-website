@@ -16,6 +16,7 @@ import {
   ExternalLink,
   Tag,
 } from 'lucide-react'
+import { showToast } from '@/lib/toast'
 
 type DraftStatus = 'draft' | 'in_review' | 'approved' | 'rejected' | 'published' | 'archived'
 type ContentType = 'BLOG_POST' | 'NEWS_ARTICLE' | 'SEO_LANDING_PAGE' | 'SOCIAL_POST' | 'LEAD_MAGNET'
@@ -101,8 +102,16 @@ export default function ContentDraftsPage() {
       })
       if (!response.ok) throw new Error('Action failed')
       await fetchDrafts()
+      showToast.success(
+        action === 'approve'
+          ? 'Draft approved'
+          : action === 'reject'
+            ? 'Draft rejected'
+            : 'Draft published'
+      )
     } catch (err) {
       console.error(err)
+      showToast.error(`Could not ${action} draft`)
     } finally {
       setActionLoading(null)
     }

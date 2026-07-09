@@ -197,6 +197,19 @@ export default function CounselorKPIsPage() {
           </div>
         </div>
 
+        {!kpiData && !trendsData && goals.length === 0 && (
+          <Card>
+            <CardContent className="py-12 text-center">
+              <Target className="w-10 h-10 text-gray-300 mx-auto mb-3" />
+              <p className="font-semibold text-gray-900">No performance data for this period</p>
+              <p className="text-sm text-gray-500 mt-1">
+                KPIs appear here automatically as you work leads — calls, follow-ups, demos, and
+                conversions are all tracked.
+              </p>
+            </CardContent>
+          </Card>
+        )}
+
         {kpiData && (
           <KPIStatisticsWidget
             metrics={kpiData.metrics}

@@ -9,6 +9,7 @@
 import { use, useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { ArrowLeft, Loader2, ShieldCheck, ShieldX, Shield } from 'lucide-react'
+import { showToast } from '@/lib/toast'
 
 type OverrideState = 'GRANT' | 'DENY' | null
 
@@ -78,7 +79,16 @@ export default function UserPermissionsPage({ params }: { params: Promise<{ id: 
             return { ...p, override, effective }
           })
         )
+        showToast.success(
+          effect === 'INHERIT'
+            ? 'Override removed — role default applies'
+            : `Permission ${effect === 'GRANT' ? 'granted' : 'denied'}`
+        )
+      } else {
+        showToast.error(json.error || 'Failed to update permission')
       }
+    } catch {
+      showToast.error('Failed to update permission')
     } finally {
       setSaving(null)
     }

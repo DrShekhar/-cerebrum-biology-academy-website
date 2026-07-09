@@ -8,6 +8,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Users, Search, Calendar, Mail, Phone, Activity, Loader2 } from 'lucide-react'
+import { PageHeader } from '@/components/admin/kit'
 
 interface ActiveStudent {
   id: string
@@ -100,12 +101,10 @@ export default function ActiveStudentsPage() {
   return (
     <>
       <div className="p-6 space-y-6">
-        <div>
-          <h1 className="text-3xl font-bold text-gray-900">Active Students</h1>
-          <p className="text-gray-600 mt-1">
-            Students with an ACTIVE enrollment — scores, attendance, and payments are live data
-          </p>
-        </div>
+        <PageHeader
+          title="Active Students"
+          subtitle="Students with an ACTIVE enrollment — scores, attendance, and payments are live data"
+        />
 
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

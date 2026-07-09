@@ -23,6 +23,7 @@ import {
 import { paiseToRupees, formatPaiseToINR } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
+import { PageHeader } from '@/components/admin/kit'
 import { CreateCourseForm } from '@/components/admin/CreateCourseForm'
 import { showToast } from '@/lib/toast'
 
@@ -153,21 +154,19 @@ export default function CoursesPage() {
   return (
     <>
       <div className="p-6 space-y-8">
-        <div className="flex flex-wrap justify-between items-center gap-4">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">Course Management</h1>
-            <p className="text-gray-600 mt-2">
-              Curriculum, pricing, students and analytics — open a course to manage everything.
-            </p>
-          </div>
-          <Button
-            className="bg-blue-600 hover:bg-blue-700 text-white"
-            onClick={() => setIsCreateOpen(true)}
-          >
-            <Plus className="w-4 h-4 mr-2" />
-            Create Course
-          </Button>
-        </div>
+        <PageHeader
+          title="Course Management"
+          subtitle="Curriculum, pricing, students and analytics — open a course to manage everything."
+          actions={
+            <Button
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+              onClick={() => setIsCreateOpen(true)}
+            >
+              <Plus className="w-4 h-4 mr-2" />
+              Create Course
+            </Button>
+          }
+        />
 
         {/* Stats — real fields only */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

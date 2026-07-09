@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
+import { showToast } from '@/lib/toast'
 
 interface Slot {
   id: string
@@ -91,17 +92,34 @@ export default function DemoSlotsAdminPage() {
   }
 
   const toggleSlot = async (s: Slot) => {
-    await fetch('/api/admin/demo-slots', {
-      method: 'PATCH',
-      credentials: 'include',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: s.id, isActive: !s.isActive }),
-    })
+    try {
+      const res = await fetch('/api/admin/demo-slots', {
+        method: 'PATCH',
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: s.id, isActive: !s.isActive }),
+      })
+      const data = await res.json()
+      if (data.success) showToast.success(s.isActive ? 'Slot paused' : 'Slot activated')
+      else showToast.error(data.error || 'Could not update slot')
+    } catch {
+      showToast.error('Could not update slot')
+    }
     load()
   }
 
   const deleteSlot = async (id: string) => {
-    await fetch(`/api/admin/demo-slots?id=${id}`, { method: 'DELETE', credentials: 'include' })
+    try {
+      const res = await fetch(`/api/admin/demo-slots?id=${id}`, {
+        method: 'DELETE',
+        credentials: 'include',
+      })
+      const data = await res.json()
+      if (data.success) showToast.success('Slot deleted')
+      else showToast.error(data.error || 'Could not delete slot')
+    } catch {
+      showToast.error('Could not delete slot')
+    }
     load()
   }
 
@@ -128,10 +146,17 @@ export default function DemoSlotsAdminPage() {
   }
 
   const removeBlock = async (id: string) => {
-    await fetch(`/api/admin/demo-slots/blocks?id=${id}`, {
-      method: 'DELETE',
-      credentials: 'include',
-    })
+    try {
+      const res = await fetch(`/api/admin/demo-slots/blocks?id=${id}`, {
+        method: 'DELETE',
+        credentials: 'include',
+      })
+      const data = await res.json()
+      if (data.success) showToast.success('Block removed')
+      else showToast.error(data.error || 'Could not remove block')
+    } catch {
+      showToast.error('Could not remove block')
+    }
     load()
   }
 
