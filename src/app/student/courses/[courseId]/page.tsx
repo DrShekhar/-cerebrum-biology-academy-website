@@ -61,6 +61,7 @@ interface CourseMaterial {
     grade: string
     subject: string
   } | null
+  assignmentId?: string | null
   completed?: boolean
   myRating?: number | null
 }
@@ -575,6 +576,7 @@ function MaterialItem({
   const isVideo = material.materialType?.toUpperCase().includes('VIDEO')
   const isTest = material.materialType === 'TEST' && !!material.test
   const isArticle = material.materialType === 'ARTICLE'
+  const isAssignment = material.materialType === 'ASSIGNMENT' && !!material.assignmentId
   const icon = isTest ? (
     <ClipboardList className="w-4 h-4" />
   ) : isVideo ? (
@@ -643,9 +645,20 @@ function MaterialItem({
     ? `/learn/${material.videoLectureId}`
     : isArticle
       ? `/student/article/${material.id}`
-      : `/api/student/materials/${material.id}/download`
-  const isInternal = isVideoLesson || isArticle
-  const label = isVideo ? 'Watch' : isArticle ? 'Read' : 'Open'
+      : isAssignment
+        ? `/student/assignments/${material.assignmentId}`
+        : `/api/student/materials/${material.id}/download`
+  const isAudio = material.materialType === 'AUDIO'
+  const isInternal = isVideoLesson || isArticle || isAssignment
+  const label = isVideo
+    ? 'Watch'
+    : isArticle
+      ? 'Read'
+      : isAssignment
+        ? 'Submit'
+        : isAudio
+          ? 'Listen'
+          : 'Open'
 
   const [justCompleted, setJustCompleted] = useState(false)
 

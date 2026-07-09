@@ -48,6 +48,7 @@ import {
   UploadCloud,
   ClipboardList,
   BookOpen,
+  ClipboardCheck,
 } from 'lucide-react'
 import { BulkUploader } from './BulkUploader'
 
@@ -97,6 +98,7 @@ export function CourseBuilder({
   const [uploadChapterId, setUploadChapterId] = useState<string | null>(null)
   const [assessmentChapterId, setAssessmentChapterId] = useState<string | null>(null)
   const [articleChapterId, setArticleChapterId] = useState<string | null>(null)
+  const [assignmentChapterId, setAssignmentChapterId] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
   const [confirmTarget, setConfirmTarget] = useState<{
     kind: 'chapter' | 'topic'
@@ -428,6 +430,16 @@ export function CourseBuilder({
                         <BookOpen className="h-4 w-4" />
                       </button>
                       <button
+                        onClick={() =>
+                          setAssignmentChapterId(assignmentChapterId === ch.id ? null : ch.id)
+                        }
+                        className="rounded-md p-2 text-amber-600 hover:bg-amber-50"
+                        title="Add a graded assignment (students submit work, you grade it)"
+                        aria-label="Add assignment lesson"
+                      >
+                        <ClipboardCheck className="h-4 w-4" />
+                      </button>
+                      <button
                         onClick={() => setEditingId(editingId === ch.id ? null : ch.id)}
                         className="rounded-md p-2 text-gray-500 hover:bg-gray-100"
                         title="Edit chapter settings"
@@ -504,6 +516,19 @@ export function CourseBuilder({
                           void load()
                         }}
                         onClose={() => setAssessmentChapterId(null)}
+                      />
+                    )}
+
+                    {/* Assignment composer */}
+                    {assignmentChapterId === ch.id && (
+                      <AssignmentComposer
+                        chapterTitle={ch.title}
+                        chapterId={ch.id}
+                        onDone={() => {
+                          setAssignmentChapterId(null)
+                          void load()
+                        }}
+                        onClose={() => setAssignmentChapterId(null)}
                       />
                     )}
 
@@ -1417,5 +1442,111 @@ function ToolbarButton({
     >
       {label}
     </button>
+  )
+}
+
+/** Create a graded assignment lesson — students submit, the teacher grades. */
+function AssignmentComposer({
+  chapterId,
+  chapterTitle,
+  onDone,
+  onClose,
+}: {
+  chapterId: string
+  chapterTitle: string
+  onDone: () => void
+  onClose: () => void
+}) {
+  const [title, setTitle] = useState('')
+  const [instructions, setInstructions] = useState('')
+  const [maxMarks, setMaxMarks] = useState('20')
+  const [dueDate, setDueDate] = useState('')
+  const [saving, setSaving] = useState(false)
+
+  const save = async () => {
+    if (saving || title.trim().length < 2 || !dueDate) return
+    setSaving(true)
+    try {
+      const res = await fetch('/api/teacher/builder/assignments', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chapterId,
+          title: title.trim(),
+          instructions: instructions.trim() || undefined,
+          maxMarks: Number(maxMarks) || 20,
+          dueDate,
+        }),
+      })
+      const json = await res.json()
+      if (res.ok && json.success) {
+        toast.success('Assignment added')
+        onDone()
+      } else {
+        toast.error(json.error || 'Could not add the assignment')
+      }
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  return (
+    <div className="mt-3 rounded-xl border border-amber-200 bg-amber-50/40 p-4">
+      <div className="mb-2 flex items-center justify-between">
+        <p className="text-sm font-semibold text-gray-800">New assignment in “{chapterTitle}”</p>
+        <button onClick={onClose} className="rounded p-1 text-gray-400 hover:bg-gray-100">
+          <X className="h-4 w-4" />
+        </button>
+      </div>
+      <input
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        placeholder="Assignment title (e.g. Genetics problem set)"
+        className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+      />
+      <textarea
+        value={instructions}
+        onChange={(e) => setInstructions(e.target.value)}
+        rows={4}
+        placeholder="Instructions for students — what to do, what to submit."
+        className="mt-2 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+      />
+      <div className="mt-2 flex flex-wrap items-end gap-3">
+        <label className="text-xs font-medium text-gray-600">
+          Max marks
+          <input
+            type="number"
+            min={1}
+            value={maxMarks}
+            onChange={(e) => setMaxMarks(e.target.value)}
+            className="mt-1 block w-24 rounded-lg border border-gray-300 px-3 py-2 text-sm"
+          />
+        </label>
+        <label className="text-xs font-medium text-gray-600">
+          Due date
+          <input
+            type="date"
+            value={dueDate}
+            onChange={(e) => setDueDate(e.target.value)}
+            className="mt-1 block rounded-lg border border-gray-300 px-3 py-2 text-sm"
+          />
+        </label>
+        <button
+          onClick={save}
+          disabled={saving || title.trim().length < 2 || !dueDate}
+          className="ml-auto inline-flex items-center gap-1.5 rounded-lg bg-amber-600 px-4 py-2 text-sm font-semibold text-white transition-transform hover:bg-amber-700 active:scale-[0.98] disabled:opacity-50"
+        >
+          {saving ? (
+            <Loader2 className="h-4 w-4 animate-spin" />
+          ) : (
+            <ClipboardCheck className="h-4 w-4" />
+          )}
+          {saving ? 'Adding…' : 'Add assignment'}
+        </button>
+      </div>
+      <p className="mt-2 text-xs text-gray-400">
+        Students submit from the lesson; grade their work under Teacher → Assignments.
+      </p>
+    </div>
   )
 }

@@ -17,7 +17,7 @@ type ItemStatus = 'queued' | 'uploading' | 'done' | 'error'
 
 interface QueueItem {
   file: File
-  kind: 'video' | 'pdf'
+  kind: 'video' | 'pdf' | 'audio'
   status: ItemStatus
   progress: number
   error?: string
@@ -54,8 +54,10 @@ export function BulkUploader({
         items.push({ file, kind: 'video', status: 'queued', progress: 0 })
       } else if (file.type === 'application/pdf') {
         items.push({ file, kind: 'pdf', status: 'queued', progress: 0 })
+      } else if (file.type.startsWith('audio/')) {
+        items.push({ file, kind: 'audio', status: 'queued', progress: 0 })
       } else {
-        toast.error(`${file.name}: only video and PDF files are supported`)
+        toast.error(`${file.name}: only video, PDF and audio files are supported`)
       }
     }
     setQueue((q) => [...q, ...items])
@@ -92,7 +94,7 @@ export function BulkUploader({
     })
   }
 
-  const uploadPdf = async (item: QueueItem, index: number) => {
+  const uploadDoc = async (item: QueueItem, index: number, materialType: string) => {
     const csrfResponse = await fetch('/api/auth/csrf-token')
     const csrfData = await csrfResponse.json().catch(() => null)
     if (!csrfResponse.ok || !csrfData?.csrfToken) {
@@ -105,7 +107,7 @@ export function BulkUploader({
       'metadata',
       JSON.stringify({
         title: titleFromFilename(item.file.name),
-        materialType: 'PDF_NOTES',
+        materialType,
         courseId,
         chapterId,
         accessLevel: 'ENROLLED',
@@ -131,7 +133,8 @@ export function BulkUploader({
       update(i, { status: 'uploading', progress: 0, error: undefined })
       try {
         if (queue[i].kind === 'video') await uploadVideo(queue[i], i)
-        else await uploadPdf(queue[i], i)
+        else if (queue[i].kind === 'audio') await uploadDoc(queue[i], i, 'AUDIO')
+        else await uploadDoc(queue[i], i, 'PDF_NOTES')
         update(i, { status: 'done', progress: 100 })
         ok++
       } catch (err) {
@@ -186,7 +189,7 @@ export function BulkUploader({
         ref={inputRef}
         type="file"
         multiple
-        accept="video/*,application/pdf"
+        accept="video/*,application/pdf,audio/*"
         className="hidden"
         onChange={(e) => {
           addFiles(e.target.files)

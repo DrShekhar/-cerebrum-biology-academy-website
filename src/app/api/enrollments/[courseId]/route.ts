@@ -52,6 +52,7 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
                 materialType: true,
                 chapterId: true,
                 topicId: true,
+                assignmentId: true,
                 // Quiz-as-lesson: the CBT template this TEST material renders.
                 test_template: {
                   select: {
@@ -167,6 +168,8 @@ export async function GET(request: NextRequest, { params }: { params: { courseId
                 // videoLectureId present + READY → syllabus links to /learn/[id].
                 videoLectureId: m.video_lectures?.id ?? null,
                 videoReady: m.video_lectures?.uploadStatus === 'READY',
+                // ASSIGNMENT lessons deep-link to /student/assignments/[assignmentId].
+                assignmentId: m.assignmentId ?? null,
                 // TEST lessons: what the client posts to /api/test/create.
                 test: m.test_template
                   ? {
