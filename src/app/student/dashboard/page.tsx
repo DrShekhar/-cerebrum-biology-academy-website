@@ -1,10 +1,8 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
 import {
   BookOpen,
-  TrendingUp,
   Target,
   Brain,
   BarChart3,
@@ -13,12 +11,8 @@ import {
   GraduationCap,
   MonitorCheck,
   Layers,
-  ArrowUp,
-  ArrowDown,
   FileText,
-  Trophy,
   Activity,
-  Flame,
   Lock,
   Crown,
 } from 'lucide-react'
@@ -29,16 +23,9 @@ import { Card, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { PaymentReminderCard } from '@/components/payments/PaymentReminderCard'
+import { DashboardHero, MasteryGrid } from '@/components/student/DashboardHero'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
-
-interface QuickStat {
-  label: string
-  value: string | number
-  icon: React.ReactNode
-  trend?: number
-  color: string
-}
 
 interface TestAttempt {
   id: string
@@ -54,13 +41,6 @@ interface TestAttempt {
   weaknessAreas?: string[] | null
 }
 
-interface PerformanceSnapshot {
-  trend: { label: string; score: number }[]
-  changePct: number | null
-  strongAreas: string[]
-  focusAreas: string[]
-}
-
 interface RecentActivity {
   id: string
   type: 'test' | 'study' | 'material' | 'class'
@@ -71,7 +51,6 @@ interface RecentActivity {
 }
 
 export default function StudentDashboard() {
-  const router = useRouter()
   const {
     user,
     isAuthenticated,
@@ -83,10 +62,9 @@ export default function StudentDashboard() {
   const { trialStatus: coachingTrialStatus, isLoading: trialLoading } = useCoachingTrialStatus()
   const [isLoading, setIsLoading] = useState(true)
   const [freeUserId, setFreeUserId] = useState<string | null>(null)
-  const [testAttempts, setTestAttempts] = useState<TestAttempt[]>([])
-  const [quickStats, setQuickStats] = useState<QuickStat[]>([])
+  const [allAttempts, setAllAttempts] = useState<TestAttempt[]>([])
+  const [streak, setStreak] = useState(0)
   const [recentActivities, setRecentActivities] = useState<RecentActivity[]>([])
-  const [performance, setPerformance] = useState<PerformanceSnapshot | null>(null)
   const [currentDate, setCurrentDate] = useState(new Date())
   const [showUpgradeModal, setShowUpgradeModal] = useState(false)
   const [loadError, setLoadError] = useState(false)
@@ -136,14 +114,7 @@ export default function StudentDashboard() {
 
           // Limit data for guest users (only last 5 tests)
           const displayAttempts = isGuestUser ? attempts.slice(0, 5) : attempts
-          setTestAttempts(displayAttempts.slice(0, 5))
-
-          // Calculate statistics
-          const totalTests = attempts.length
-          const scores = attempts.map((a: TestAttempt) => a.percentage)
-          const avgScore = Math.round(
-            scores.reduce((a: number, b: number) => a + b, 0) / scores.length
-          )
+          setAllAttempts(displayAttempts)
 
           // Study streak = consecutive days with at least one attempt, counted
           // back from today (or yesterday, so a streak isn't "broken" before
@@ -158,75 +129,7 @@ export default function StudentDashboard() {
             studyStreak++
             cursor.setDate(cursor.getDate() - 1)
           }
-
-          // Best score across all attempts — real, useful, replaces the old
-          // hardcoded "Next Class" countdown (there is no schedule data source
-          // on this page, so showing a fabricated time was misleading).
-          const bestScore = Math.round(Math.max(...scores))
-
-          // Build quick stats
-          const stats: QuickStat[] = [
-            {
-              label: 'Tests Completed',
-              value: totalTests,
-              icon: <Target className="w-5 h-5" />,
-              color: 'text-blue-600 bg-blue-50',
-            },
-            {
-              label: 'Average Score',
-              value: `${avgScore}%`,
-              icon: <Trophy className="w-5 h-5" />,
-              color: 'text-green-600 bg-green-50',
-            },
-            {
-              label: 'Study Streak',
-              value: `${studyStreak} ${studyStreak === 1 ? 'day' : 'days'}`,
-              icon: <Flame className="w-5 h-5" />,
-              color: 'text-orange-600 bg-orange-50',
-            },
-            {
-              label: 'Best Score',
-              value: `${bestScore}%`,
-              icon: <Crown className="w-5 h-5" />,
-              color: 'text-purple-600 bg-purple-50',
-            },
-          ]
-          setQuickStats(stats)
-
-          // Performance snapshot — computed from the real attempts (was a
-          // hardcoded [85,72,90,...] chart + fixed "Genetics, Cell Biology").
-          // Chronological order: API returns newest-first, so reverse.
-          const chrono = [...attempts].reverse()
-          const recent = chrono.slice(-7)
-          const trend = recent.map((a: TestAttempt) => ({
-            label: new Date(a.createdAt).toLocaleDateString('en-IN', {
-              day: 'numeric',
-              month: 'short',
-            }),
-            score: Math.round(a.percentage),
-          }))
-          // Change = newest attempt vs the one ~a week of activity earlier.
-          let changePct: number | null = null
-          if (trend.length >= 2) {
-            changePct = trend[trend.length - 1].score - trend[0].score
-          }
-          // Strong/focus areas: tally topic names across attempts, most-frequent first.
-          const tally = (key: 'strengthAreas' | 'weaknessAreas') => {
-            const counts = new Map<string, number>()
-            for (const a of attempts as TestAttempt[]) {
-              for (const t of a[key] ?? []) counts.set(t, (counts.get(t) ?? 0) + 1)
-            }
-            return [...counts.entries()]
-              .sort((a, b) => b[1] - a[1])
-              .slice(0, 3)
-              .map(([t]) => t)
-          }
-          setPerformance({
-            trend,
-            changePct,
-            strongAreas: tally('strengthAreas'),
-            focusAreas: tally('weaknessAreas'),
-          })
+          setStreak(studyStreak)
 
           // Build recent activities
           const activities: RecentActivity[] = attempts.slice(0, 5).map((attempt: TestAttempt) => ({
@@ -396,193 +299,27 @@ export default function StudentDashboard() {
             </span>
             <span className="text-sm font-semibold text-blue-600">Raise a request →</span>
           </Link>
-          {/* Quick Stats */}
-          <section>
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Quick Stats</h2>
-            {quickStats.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {quickStats.map((stat, index) => (
-                  <div key={stat.label} className="animate-fadeInUp">
-                    <Card className="hover:shadow-lg transition-shadow">
-                      <CardContent className="p-6">
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <p className="text-sm text-gray-600 mb-1">{stat.label}</p>
-                            <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                            {stat.trend !== undefined && (
-                              <div
-                                className={cn(
-                                  'flex items-center text-sm mt-2',
-                                  stat.trend >= 0 ? 'text-green-600' : 'text-red-600'
-                                )}
-                              >
-                                {stat.trend >= 0 ? (
-                                  <ArrowUp className="w-3 h-3 mr-1" />
-                                ) : (
-                                  <ArrowDown className="w-3 h-3 mr-1" />
-                                )}
-                                <span>{Math.abs(stat.trend)}% from last week</span>
-                              </div>
-                            )}
-                          </div>
-                          <div className={cn('p-3 rounded-lg', stat.color)}>{stat.icon}</div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <Card>
-                <CardContent className="p-6">
-                  <EmptyState
-                    icon={TrendingUp}
-                    title="Your learning journey begins here"
-                    description="Start taking tests and studying to track your progress. We'll show you detailed statistics and insights about your performance."
-                    primaryAction={{
-                      label: 'Start Learning',
-                      href: '/mock-tests',
-                    }}
-                    size="md"
-                    variant="info"
-                  />
-                </CardContent>
-              </Card>
-            )}
-          </section>
+          {/* P1 hero — score ring, trajectory, today's plan (all real data) */}
+          <DashboardHero
+            attempts={allAttempts}
+            streak={streak}
+            userId={user?.id || freeUserId}
+            isGuest={isGuestUser}
+          />
 
-          {/* Today's Focus & Performance */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Today's Focus */}
-            <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Today's Focus</h2>
-              <div className="space-y-3">
-                <FocusCard
-                  icon={<BookOpen className="w-5 h-5 text-blue-600" />}
-                  title="Study Materials"
-                  description="Open the PDFs & resources for your courses"
-                  action="Start Learning"
-                  href="/student/materials"
-                  color="bg-blue-50"
-                />
-                <FocusCard
-                  icon={<Target className="w-5 h-5 text-green-600" />}
-                  title="Practice Tests"
-                  description="Take a NEET biology mock test"
-                  action="Take Test"
-                  href="/mock-tests"
-                  color="bg-green-50"
-                />
-                <FocusCard
-                  icon={<Brain className="w-5 h-5 text-purple-600" />}
-                  title="Question Bank"
-                  description="Practice NEET biology MCQs"
-                  action="Practice Now"
-                  href="/tests"
-                  color="bg-purple-50"
-                />
-              </div>
-            </section>
+          {/* Chapter mastery from real strengths/weak areas */}
+          <MasteryGrid attempts={allAttempts} />
 
-            {/* Performance Snapshot — computed from real test attempts */}
-            <section>
-              <div className="mb-4 flex items-center justify-between">
-                <h2 className="text-xl font-bold text-gray-900">Performance Snapshot</h2>
-                <Link
-                  href="/student/gradebook"
-                  className="text-sm font-semibold text-blue-600 hover:text-blue-700"
-                >
-                  View full gradebook →
-                </Link>
-              </div>
-              <Card>
-                <CardContent className="p-6">
-                  {!performance || performance.trend.length === 0 ? (
-                    <div className="py-6 text-center">
-                      <p className="text-sm text-gray-600">
-                        Take a practice test to see your performance trend and your strong vs focus
-                        areas here.
-                      </p>
-                      <Button
-                        onClick={() => router.push('/mock-tests')}
-                        variant="secondary"
-                        className="mt-4"
-                      >
-                        Take a Test
-                      </Button>
-                    </div>
-                  ) : (
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-600">
-                          Recent Progress ({performance.trend.length}{' '}
-                          {performance.trend.length === 1 ? 'test' : 'tests'})
-                        </span>
-                        {performance.changePct !== null && (
-                          <span
-                            className={cn(
-                              'text-sm font-medium',
-                              performance.changePct >= 0 ? 'text-green-600' : 'text-orange-600'
-                            )}
-                          >
-                            {performance.changePct >= 0 ? '+' : ''}
-                            {performance.changePct}%
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Bar chart — real per-attempt percentages */}
-                      <div className="space-y-2">
-                        {performance.trend.map((point, index) => (
-                          <div key={index} className="flex items-center gap-2">
-                            <span className="text-xs text-gray-500 w-12">{point.label}</span>
-                            <div className="flex-1 bg-gray-100 rounded-full h-2">
-                              <div
-                                className={cn(
-                                  'h-2 rounded-full',
-                                  point.score >= 90
-                                    ? 'bg-green-600'
-                                    : point.score >= 75
-                                      ? 'bg-blue-500'
-                                      : 'bg-orange-500'
-                                )}
-                                style={{ width: `${Math.max(point.score, 2)}%` }}
-                              />
-                            </div>
-                            <span className="text-xs font-medium text-gray-700 w-10">
-                              {point.score}%
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-
-                      {(performance.strongAreas.length > 0 ||
-                        performance.focusAreas.length > 0) && (
-                        <div className="pt-4 border-t space-y-2">
-                          {performance.strongAreas.length > 0 && (
-                            <div className="flex items-center justify-between text-sm gap-3">
-                              <span className="text-gray-600 flex-shrink-0">Strong Areas:</span>
-                              <span className="font-medium text-gray-900 text-right">
-                                {performance.strongAreas.join(', ')}
-                              </span>
-                            </div>
-                          )}
-                          {performance.focusAreas.length > 0 && (
-                            <div className="flex items-center justify-between text-sm gap-3">
-                              <span className="text-gray-600 flex-shrink-0">Focus Areas:</span>
-                              <span className="font-medium text-orange-600 text-right">
-                                {performance.focusAreas.join(', ')}
-                              </span>
-                            </div>
-                          )}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-            </section>
-          </div>
+          {allAttempts.length > 0 && (
+            <div className="-mt-4 text-right">
+              <Link
+                href="/student/gradebook"
+                className="text-sm font-semibold text-green-700 hover:text-green-800"
+              >
+                View full gradebook →
+              </Link>
+            </div>
+          )}
 
           {/* Quick Actions */}
           <section>
@@ -712,43 +449,6 @@ export default function StudentDashboard() {
 }
 
 // Helper Components
-
-function FocusCard({
-  icon,
-  title,
-  description,
-  action,
-  href,
-  color,
-}: {
-  icon: React.ReactNode
-  title: string
-  description: string
-  action: string
-  href: string
-  color: string
-}) {
-  return (
-    <Card className="hover:shadow-md transition-shadow">
-      <CardContent className="p-4">
-        <div className="flex items-start justify-between">
-          <div className="flex items-start gap-3 flex-1">
-            <div className={cn('p-2 rounded-lg', color)}>{icon}</div>
-            <div className="flex-1">
-              <h3 className="font-semibold text-gray-900 text-sm">{title}</h3>
-              <p className="text-sm text-gray-600 mt-0.5">{description}</p>
-            </div>
-          </div>
-          <Link href={href}>
-            <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-700">
-              {action} →
-            </Button>
-          </Link>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
 
 function ActionButton({
   icon,
