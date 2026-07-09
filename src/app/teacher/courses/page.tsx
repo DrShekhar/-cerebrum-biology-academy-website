@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Loader2, BookOpen, Wrench } from 'lucide-react'
+import { Loader2, BookOpen, Wrench, LayoutGrid } from 'lucide-react'
 
 interface Course {
   id: string
@@ -77,12 +77,20 @@ export default function TeacherCoursesPage() {
               {c.description && (
                 <p className="mt-1 line-clamp-2 text-sm text-gray-600">{c.description}</p>
               )}
-              <Link
-                href={`/teacher/courses/${c.id}/builder`}
-                className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white hover:bg-green-800"
-              >
-                <Wrench className="h-4 w-4" /> Open builder
-              </Link>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <Link
+                  href={`/teacher/courses/${c.id}/builder`}
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white hover:bg-green-800"
+                >
+                  <Wrench className="h-4 w-4" /> Open builder
+                </Link>
+                <Link
+                  href={`/teacher/courses/${c.id}/activity`}
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50"
+                >
+                  <LayoutGrid className="h-4 w-4" /> Activity
+                </Link>
+              </div>
             </div>
           ))}
         </div>
