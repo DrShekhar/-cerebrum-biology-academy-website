@@ -75,6 +75,7 @@ type DbQuestion = {
   marks: number
   difficulty: string
   explanationImage: string | null
+  questionImage: string | null
 }
 
 /** Server-side: which option LETTER is correct for this question. */
@@ -93,7 +94,7 @@ export function toClientQuestion(q: DbQuestion): ClientQuestion {
   return {
     id: q.id,
     questionText: q.question,
-    questionImage: q.explanationImage || undefined,
+    questionImage: q.questionImage || q.explanationImage || undefined,
     options: opts.map((text, i) => ({ id: letter(i), text })),
     correctAnswer: '',
     difficulty: (['easy', 'medium', 'hard'].includes(q.difficulty?.toLowerCase())
@@ -186,6 +187,7 @@ export async function selectPaperQuestions(): Promise<DbQuestion[]> {
     marks: true,
     difficulty: true,
     explanationImage: true,
+    questionImage: true,
   }
 
   const rows = (await prisma.questions.findMany({

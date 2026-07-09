@@ -27,6 +27,7 @@ interface AuthoredQuestion {
   ncertClass?: number
   ncertChapter?: string
   type?: string
+  image?: string // SVG data-URI for diagram questions
 }
 
 const SECTIONS: { key: 'physics' | 'chemistry' | 'botany' | 'zoology'; file: string }[] = [
@@ -100,6 +101,7 @@ async function main() {
           source: NEET_MOCK_SOURCE,
           ncertClass: q.ncertClass ?? null,
           ncertChapterName: q.ncertChapter || null,
+          questionImage: q.image || null,
           isActive: true,
           isVerified: true,
           isNeetImportant: true,
@@ -124,6 +126,7 @@ async function main() {
           marks: 4,
           ncertClass: q.ncertClass ?? null,
           ncertChapterName: q.ncertChapter || null,
+          questionImage: q.image || null,
           isActive: true,
           isVerified: true,
           isNeetImportant: true,

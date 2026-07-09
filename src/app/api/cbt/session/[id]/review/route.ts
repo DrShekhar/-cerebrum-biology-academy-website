@@ -41,6 +41,7 @@ export async function GET(_request: NextRequest, { params }: { params: Promise<{
         difficulty: true,
         explanation: true,
         explanationImage: true,
+        questionImage: true,
       },
     })
     const byId = new Map(questions.map((q) => [q.id, q]))

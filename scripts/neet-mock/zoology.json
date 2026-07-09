@@ -3,7 +3,12 @@
     "topic": "Animal Kingdom",
     "subtopic": "Excretory structures in phyla",
     "question": "Flame cells (protonephridia) serving in osmoregulation and excretion are a characteristic feature of which phylum?",
-    "options": ["Annelida", "Arthropoda", "Echinodermata", "Platyhelminthes"],
+    "options": [
+      "Annelida",
+      "Arthropoda",
+      "Echinodermata",
+      "Platyhelminthes"
+    ],
     "answer": "D",
     "explanation": "In Platyhelminthes (flatworms), specialised flame cells help in osmoregulation and removal of excretory wastes, as noted in the NCERT Animal Kingdom chapter.",
     "difficulty": "EASY",
@@ -15,7 +20,12 @@
     "topic": "Animal Kingdom",
     "subtopic": "Animal-phylum matching",
     "question": "Match the animals in Column I with their phylum in Column II. Column I: A. Physalia, B. Pleurobrachia, C. Taenia, D. Wuchereria. Column II: i. Coelenterata, ii. Ctenophora, iii. Platyhelminthes, iv. Aschelminthes.",
-    "options": ["A-i, B-ii, C-iii, D-iv", "A-ii, B-i, C-iv, D-iii", "A-i, B-ii, C-iv, D-iii", "A-ii, B-i, C-iii, D-iv"],
+    "options": [
+      "A-i, B-ii, C-iii, D-iv",
+      "A-ii, B-i, C-iv, D-iii",
+      "A-i, B-ii, C-iv, D-iii",
+      "A-ii, B-i, C-iii, D-iv"
+    ],
     "answer": "A",
     "explanation": "Physalia is a coelenterate, Pleurobrachia a ctenophore, Taenia a flatworm (Platyhelminthes) and Wuchereria a roundworm (Aschelminthes) as per NCERT examples.",
     "difficulty": "MEDIUM",
@@ -27,7 +37,12 @@
     "topic": "Animal Kingdom",
     "subtopic": "Echinodermata features",
     "question": "The water vascular system is a distinctive characteristic of which phylum?",
-    "options": ["Mollusca", "Annelida", "Arthropoda", "Echinodermata"],
+    "options": [
+      "Mollusca",
+      "Annelida",
+      "Arthropoda",
+      "Echinodermata"
+    ],
     "answer": "D",
     "explanation": "Echinoderms possess a unique water vascular system used in locomotion, capture and transport of food, and respiration (NCERT Animal Kingdom).",
     "difficulty": "EASY",
@@ -39,7 +54,12 @@
     "topic": "Animal Kingdom",
     "subtopic": "Class Mammalia",
     "question": "Assertion (A): Whales are classified under class Mammalia. Reason (R): Whales breathe through lungs, are viviparous and nourish their young with milk from mammary glands.",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "The presence of lungs, viviparity and mammary glands are defining mammalian features that justify placing whales in class Mammalia.",
     "difficulty": "MEDIUM",
@@ -51,7 +71,12 @@
     "topic": "Structural Organisation in Animals",
     "subtopic": "Muscular tissue",
     "question": "Intercalated discs are a distinguishing feature of which type of muscle?",
-    "options": ["Skeletal muscle", "Smooth muscle", "Cardiac muscle", "Visceral muscle"],
+    "options": [
+      "Skeletal muscle",
+      "Smooth muscle",
+      "Cardiac muscle",
+      "Visceral muscle"
+    ],
     "answer": "C",
     "explanation": "Cardiac muscle fibres are joined end to end by intercalated discs, enabling rapid and coordinated contraction of the heart (NCERT Structural Organisation in Animals).",
     "difficulty": "MEDIUM",
@@ -63,7 +88,12 @@
     "topic": "Structural Organisation in Animals",
     "subtopic": "Epithelial tissue",
     "question": "Match the epithelial type in Column I with its location in Column II. Column I: A. Simple squamous, B. Ciliated columnar, C. Cuboidal, D. Compound (stratified) epithelium. Column II: i. Inner lining of blood vessels, ii. Fallopian tube and bronchioles, iii. Ducts of glands and renal tubules, iv. Moist lining of the buccal cavity.",
-    "options": ["A-i, B-ii, C-iii, D-iv", "A-ii, B-i, C-iv, D-iii", "A-iii, B-ii, C-i, D-iv", "A-i, B-iii, C-ii, D-iv"],
+    "options": [
+      "A-i, B-ii, C-iii, D-iv",
+      "A-ii, B-i, C-iv, D-iii",
+      "A-iii, B-ii, C-i, D-iv",
+      "A-i, B-iii, C-ii, D-iv"
+    ],
     "answer": "A",
     "explanation": "Simple squamous forms the endothelium of vessels, ciliated columnar occurs in fallopian tubes and bronchioles, cuboidal lines gland ducts and renal tubules, and compound epithelium lines the buccal cavity.",
     "difficulty": "MEDIUM",
@@ -75,7 +105,12 @@
     "topic": "Biomolecules",
     "subtopic": "Proteins",
     "question": "Which of the following is the most abundant protein in the animal world?",
-    "options": ["RuBisCO", "Trypsin", "Insulin", "Collagen"],
+    "options": [
+      "RuBisCO",
+      "Trypsin",
+      "Insulin",
+      "Collagen"
+    ],
     "answer": "D",
     "explanation": "NCERT states that collagen is the most abundant protein in the animal world, whereas RuBisCO is the most abundant protein in the whole biosphere.",
     "difficulty": "EASY",
@@ -87,7 +122,12 @@
     "topic": "Biomolecules",
     "subtopic": "Nucleic acids",
     "question": "Which of the following is a nucleotide, i.e. contains a nitrogen base, a sugar and a phosphate group?",
-    "options": ["Adenine", "Adenosine", "Adenylic acid", "Ribose"],
+    "options": [
+      "Adenine",
+      "Adenosine",
+      "Adenylic acid",
+      "Ribose"
+    ],
     "answer": "C",
     "explanation": "Adenylic acid (AMP) is adenine + ribose + phosphate, a complete nucleotide; adenosine is only a nucleoside (base + sugar) without phosphate.",
     "difficulty": "MEDIUM",
@@ -99,7 +139,12 @@
     "topic": "Digestion and Absorption",
     "subtopic": "Salivary digestion",
     "question": "The enzyme present in human saliva that begins the digestion of starch in the mouth is:",
-    "options": ["Pepsin", "Salivary amylase", "Trypsin", "Lipase"],
+    "options": [
+      "Pepsin",
+      "Salivary amylase",
+      "Trypsin",
+      "Lipase"
+    ],
     "answer": "B",
     "explanation": "Salivary amylase (ptyalin) hydrolyses about 30% of starch into maltose in the buccal cavity (NCERT Digestion and Absorption).",
     "difficulty": "EASY",
@@ -111,7 +156,12 @@
     "topic": "Digestion and Absorption",
     "subtopic": "Enzyme activation",
     "question": "Enterokinase secreted by the intestinal mucosa activates:",
-    "options": ["Pepsinogen to pepsin", "Trypsinogen to trypsin", "Prorennin to rennin", "Zymogen to lipase"],
+    "options": [
+      "Pepsinogen to pepsin",
+      "Trypsinogen to trypsin",
+      "Prorennin to rennin",
+      "Zymogen to lipase"
+    ],
     "answer": "B",
     "explanation": "Enterokinase converts inactive trypsinogen into active trypsin, which then activates other pancreatic proenzymes (NCERT Digestion and Absorption).",
     "difficulty": "MEDIUM",
@@ -123,7 +173,12 @@
     "topic": "Digestion and Absorption",
     "subtopic": "Gastric secretion",
     "question": "Consider the following statements about gastric glands: (I) Parietal (oxyntic) cells secrete hydrochloric acid. (II) Chief (peptic) cells secrete pepsinogen. (III) Mucus neck cells secrete pepsin directly. (IV) HCl provides the acidic pH required for pepsin activity. Which statements are correct?",
-    "options": ["I, II and III", "II, III and IV", "I, II and IV", "I and III only"],
+    "options": [
+      "I, II and III",
+      "II, III and IV",
+      "I, II and IV",
+      "I and III only"
+    ],
     "answer": "C",
     "explanation": "Parietal cells secrete HCl, chief cells secrete pepsinogen (not active pepsin), and the acidic pH activates pepsin; mucus neck cells secrete mucus, so III is wrong.",
     "difficulty": "MEDIUM",
@@ -135,7 +190,12 @@
     "topic": "Breathing and Exchange of Gases",
     "subtopic": "Transport of carbon dioxide",
     "question": "The largest fraction of carbon dioxide in human blood is transported as:",
-    "options": ["Dissolved in plasma", "Carbaminohaemoglobin", "Bicarbonate ions", "Carbonic acid"],
+    "options": [
+      "Dissolved in plasma",
+      "Carbaminohaemoglobin",
+      "Bicarbonate ions",
+      "Carbonic acid"
+    ],
     "answer": "C",
     "explanation": "About 70% of CO2 is carried as bicarbonate ions, around 20-25% as carbaminohaemoglobin and about 7% dissolved in plasma (NCERT Breathing and Exchange of Gases).",
     "difficulty": "MEDIUM",
@@ -147,7 +207,12 @@
     "topic": "Breathing and Exchange of Gases",
     "subtopic": "Partial pressure of gases",
     "question": "The partial pressure of oxygen (pO2) in the alveoli is approximately:",
-    "options": ["40 mm Hg", "95 mm Hg", "104 mm Hg", "159 mm Hg"],
+    "options": [
+      "40 mm Hg",
+      "95 mm Hg",
+      "104 mm Hg",
+      "159 mm Hg"
+    ],
     "answer": "C",
     "explanation": "Alveolar pO2 is about 104 mm Hg, which favours diffusion of oxygen into deoxygenated blood having a pO2 of nearly 40 mm Hg (NCERT).",
     "difficulty": "EASY",
@@ -159,7 +224,12 @@
     "topic": "Body Fluids and Circulation",
     "subtopic": "Cardiac conduction",
     "question": "The pacemaker of the human heart is the:",
-    "options": ["AV node", "SA node", "Bundle of His", "Purkinje fibres"],
+    "options": [
+      "AV node",
+      "SA node",
+      "Bundle of His",
+      "Purkinje fibres"
+    ],
     "answer": "B",
     "explanation": "The sino-atrial (SA) node generates the fastest impulses and sets the rhythm of the heartbeat, hence it is called the pacemaker (NCERT Body Fluids and Circulation).",
     "difficulty": "EASY",
@@ -171,7 +241,12 @@
     "topic": "Body Fluids and Circulation",
     "subtopic": "Heart structure",
     "question": "Assertion (A): The wall of the left ventricle is thicker than that of the right ventricle. Reason (R): The left ventricle receives oxygenated blood coming from the lungs.",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "B",
     "explanation": "Both statements are true, but the thickness of the left ventricular wall is due to the high pressure needed to pump blood into the systemic circulation, not because it receives oxygenated blood.",
     "difficulty": "MEDIUM",
@@ -183,7 +258,12 @@
     "topic": "Body Fluids and Circulation",
     "subtopic": "Cardiac output",
     "question": "If the stroke volume of a person is 70 mL and the heart rate is 72 beats per minute, the cardiac output is approximately:",
-    "options": ["1000 mL/min", "720 mL/min", "7200 mL/min", "5000 mL/min"],
+    "options": [
+      "1000 mL/min",
+      "720 mL/min",
+      "7200 mL/min",
+      "5000 mL/min"
+    ],
     "answer": "D",
     "explanation": "Cardiac output = stroke volume x heart rate = 70 x 72 = about 5040 mL, i.e. roughly 5 litres per minute (NCERT Body Fluids and Circulation).",
     "difficulty": "HARD",
@@ -195,7 +275,12 @@
     "topic": "Excretory Products and their Elimination",
     "subtopic": "Kidney structure",
     "question": "The structural and functional unit of the kidney is the:",
-    "options": ["Neuron", "Nephridium", "Malpighian tubule", "Nephron"],
+    "options": [
+      "Neuron",
+      "Nephridium",
+      "Malpighian tubule",
+      "Nephron"
+    ],
     "answer": "D",
     "explanation": "Each human kidney has about one million nephrons, which are the units that carry out filtration and formation of urine (NCERT Excretory Products and their Elimination).",
     "difficulty": "EASY",
@@ -207,7 +292,12 @@
     "topic": "Excretory Products and their Elimination",
     "subtopic": "Tubular reabsorption",
     "question": "Glucose present in the glomerular filtrate is normally reabsorbed almost completely in the:",
-    "options": ["Proximal convoluted tubule", "Loop of Henle", "Distal convoluted tubule", "Collecting duct"],
+    "options": [
+      "Proximal convoluted tubule",
+      "Loop of Henle",
+      "Distal convoluted tubule",
+      "Collecting duct"
+    ],
     "answer": "A",
     "explanation": "Nearly 100% of the essential nutrients such as glucose and amino acids are reabsorbed in the proximal convoluted tubule (NCERT).",
     "difficulty": "EASY",
@@ -219,7 +309,12 @@
     "topic": "Locomotion and Movement",
     "subtopic": "Muscle proteins",
     "question": "The thick filament of a skeletal muscle fibre is made up of the protein:",
-    "options": ["Actin", "Troponin", "Myosin", "Tropomyosin"],
+    "options": [
+      "Actin",
+      "Troponin",
+      "Myosin",
+      "Tropomyosin"
+    ],
     "answer": "C",
     "explanation": "Thick filaments are composed of myosin, whereas the thin filaments consist of actin together with the regulatory proteins troponin and tropomyosin (NCERT Locomotion and Movement).",
     "difficulty": "EASY",
@@ -231,7 +326,12 @@
     "topic": "Locomotion and Movement",
     "subtopic": "Sliding filament theory",
     "question": "During muscle contraction (sliding filament theory), which of the following changes occur? (I) The A-band remains constant in length. (II) The I-band shortens. (III) The H-zone shortens or disappears. (IV) The length of the actin filaments decreases.",
-    "options": ["I, II and IV", "I, II and III", "II, III and IV", "I and IV only"],
+    "options": [
+      "I, II and IV",
+      "I, II and III",
+      "II, III and IV",
+      "I and IV only"
+    ],
     "answer": "B",
     "explanation": "During contraction the actin filaments slide over myosin, so the A-band is unchanged while the I-band and H-zone reduce; the filament lengths themselves do not change.",
     "difficulty": "HARD",
@@ -243,7 +343,12 @@
     "topic": "Neural Control and Coordination",
     "subtopic": "Nervous tissue",
     "question": "The structural and functional unit of the nervous system is the:",
-    "options": ["Nephron", "Neuron", "Neuroglia", "Nissl body"],
+    "options": [
+      "Nephron",
+      "Neuron",
+      "Neuroglia",
+      "Nissl body"
+    ],
     "answer": "B",
     "explanation": "The neuron is the basic excitable cell that receives, conducts and transmits nerve impulses (NCERT Neural Control and Coordination).",
     "difficulty": "EASY",
@@ -255,7 +360,12 @@
     "topic": "Neural Control and Coordination",
     "subtopic": "Nerve impulse conduction",
     "question": "Assertion (A): Conduction of a nerve impulse along a myelinated axon is faster than along a non-myelinated axon. Reason (R): In myelinated fibres the impulse jumps from one node of Ranvier to the next by saltatory conduction.",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "Myelin insulates the axon and depolarisation occurs only at the nodes of Ranvier, so the impulse leaps node to node (saltatory conduction) and travels faster.",
     "difficulty": "MEDIUM",
@@ -267,7 +377,12 @@
     "topic": "Chemical Coordination and Integration",
     "subtopic": "Thyroid hormones",
     "question": "Which hormone secreted by the thyroid gland requires iodine for its synthesis?",
-    "options": ["Calcitonin", "Parathormone", "Insulin", "Thyroxine"],
+    "options": [
+      "Calcitonin",
+      "Parathormone",
+      "Insulin",
+      "Thyroxine"
+    ],
     "answer": "D",
     "explanation": "Thyroxine (T4/T3) requires iodine for its synthesis, and iodine deficiency leads to goitre and hypothyroidism (NCERT Chemical Coordination and Integration).",
     "difficulty": "EASY",
@@ -279,7 +394,12 @@
     "topic": "Chemical Coordination and Integration",
     "subtopic": "Pancreatic hormones",
     "question": "Insulin, the hormone that lowers blood glucose level, is secreted by:",
-    "options": ["Alpha cells of the islets of Langerhans", "Beta cells of the islets of Langerhans", "Acinar cells of the pancreas", "Chromaffin cells of the adrenal medulla"],
+    "options": [
+      "Alpha cells of the islets of Langerhans",
+      "Beta cells of the islets of Langerhans",
+      "Acinar cells of the pancreas",
+      "Chromaffin cells of the adrenal medulla"
+    ],
     "answer": "B",
     "explanation": "Beta cells of the islets of Langerhans secrete insulin, which promotes cellular uptake of glucose and glycogenesis, lowering blood sugar (NCERT).",
     "difficulty": "EASY",
@@ -291,7 +411,12 @@
     "topic": "Human Reproduction",
     "subtopic": "Spermatogenesis",
     "question": "In the human male, sperms are produced in the:",
-    "options": ["Epididymis", "Vas deferens", "Seminiferous tubules", "Prostate gland"],
+    "options": [
+      "Epididymis",
+      "Vas deferens",
+      "Seminiferous tubules",
+      "Prostate gland"
+    ],
     "answer": "C",
     "explanation": "Spermatogenesis occurs in the seminiferous tubules of the testis; the epididymis and vas deferens only store and transport sperm (NCERT Human Reproduction).",
     "difficulty": "EASY",
@@ -303,7 +428,12 @@
     "topic": "Human Reproduction",
     "subtopic": "Site of fertilisation",
     "question": "In humans, fertilisation normally occurs in the:",
-    "options": ["Ovary", "Uterus", "Ampulla of the fallopian tube", "Cervix"],
+    "options": [
+      "Ovary",
+      "Uterus",
+      "Ampulla of the fallopian tube",
+      "Cervix"
+    ],
     "answer": "C",
     "explanation": "Fusion of the sperm and ovum takes place at the ampullary-isthmic junction (ampulla) of the fallopian tube (NCERT Human Reproduction).",
     "difficulty": "MEDIUM",
@@ -315,7 +445,12 @@
     "topic": "Human Reproduction",
     "subtopic": "Corpus luteum",
     "question": "After ovulation, the corpus luteum secretes large amounts of:",
-    "options": ["Oestrogen", "Progesterone", "FSH", "LH"],
+    "options": [
+      "Oestrogen",
+      "Progesterone",
+      "FSH",
+      "LH"
+    ],
     "answer": "B",
     "explanation": "The corpus luteum secretes progesterone, which is essential for maintenance of the endometrium required for implantation of the embryo (NCERT Human Reproduction).",
     "difficulty": "MEDIUM",
@@ -327,7 +462,12 @@
     "topic": "Human Reproduction",
     "subtopic": "Oogenesis and ovulation",
     "question": "Assertion (A): The human ovum is released from the ovary at the secondary oocyte stage. Reason (R): The second meiotic division of the oocyte is completed only after the entry of a sperm.",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "The secondary oocyte is arrested in metaphase of meiosis-II and completes the division only when a sperm penetrates it, so the ovulated cell is a secondary oocyte.",
     "difficulty": "HARD",
@@ -339,7 +479,12 @@
     "topic": "Reproductive Health",
     "subtopic": "Surgical contraception",
     "question": "Vasectomy, a surgical method of contraception in males, involves cutting or tying of the:",
-    "options": ["Fallopian tube", "Urethra", "Epididymis", "Vas deferens"],
+    "options": [
+      "Fallopian tube",
+      "Urethra",
+      "Epididymis",
+      "Vas deferens"
+    ],
     "answer": "D",
     "explanation": "In vasectomy a small part of the vas deferens is removed or tied, preventing sperm from reaching the semen (NCERT Reproductive Health).",
     "difficulty": "EASY",
@@ -351,7 +496,12 @@
     "topic": "Reproductive Health",
     "subtopic": "Intra-uterine devices",
     "question": "Copper-releasing intra-uterine devices such as Cu-T act as contraceptives mainly by:",
-    "options": ["Suppressing ovulation through hormones", "Increasing phagocytosis of sperms and suppressing sperm motility", "Permanently blocking the fallopian tubes", "Preventing entry of sperm into the vagina"],
+    "options": [
+      "Suppressing ovulation through hormones",
+      "Increasing phagocytosis of sperms and suppressing sperm motility",
+      "Permanently blocking the fallopian tubes",
+      "Preventing entry of sperm into the vagina"
+    ],
     "answer": "B",
     "explanation": "Copper ions released by Cu-IUDs suppress sperm motility and their fertilising capacity and increase phagocytosis of sperms within the uterus (NCERT Reproductive Health).",
     "difficulty": "MEDIUM",
@@ -363,7 +513,12 @@
     "topic": "Reproductive Health",
     "subtopic": "MTP and contraception",
     "question": "Regarding Medical Termination of Pregnancy (MTP) and contraception, consider: (I) MTPs are considered relatively safe up to the first trimester (12 weeks). (II) Amniocentesis can be misused for illegal sex determination and is banned for that purpose. (III) Lactational amenorrhoea is a natural method of contraception. (IV) Tubectomy is a sterilisation method in females. Which statements are correct?",
-    "options": ["I, II and IV only", "I, III and IV only", "II and III only", "All of the above"],
+    "options": [
+      "I, II and IV only",
+      "I, III and IV only",
+      "II and III only",
+      "All of the above"
+    ],
     "answer": "D",
     "explanation": "All four statements are correct as per NCERT Reproductive Health: MTP is safe up to 12 weeks, amniocentesis misuse is banned, lactational amenorrhoea is a natural method, and tubectomy is female sterilisation.",
     "difficulty": "HARD",
@@ -375,7 +530,12 @@
     "topic": "Principles of Inheritance and Variation",
     "subtopic": "Chromosomal disorders",
     "question": "Down's syndrome in humans is caused by:",
-    "options": ["Trisomy of chromosome 21", "Monosomy of the X chromosome", "An extra Y chromosome", "Trisomy of chromosome 18"],
+    "options": [
+      "Trisomy of chromosome 21",
+      "Monosomy of the X chromosome",
+      "An extra Y chromosome",
+      "Trisomy of chromosome 18"
+    ],
     "answer": "A",
     "explanation": "Down's syndrome results from an additional copy of chromosome 21 (trisomy 21), giving a total of 47 chromosomes (NCERT Principles of Inheritance and Variation).",
     "difficulty": "EASY",
@@ -387,7 +547,12 @@
     "topic": "Principles of Inheritance and Variation",
     "subtopic": "Sex-linked inheritance",
     "question": "Colour blindness and haemophilia in humans are inherited as:",
-    "options": ["Autosomal dominant traits", "Y-linked traits", "X-linked recessive traits", "Autosomal recessive traits"],
+    "options": [
+      "Autosomal dominant traits",
+      "Y-linked traits",
+      "X-linked recessive traits",
+      "Autosomal recessive traits"
+    ],
     "answer": "C",
     "explanation": "Both are X-linked recessive disorders and are therefore more common in males, who carry only a single X chromosome (NCERT).",
     "difficulty": "MEDIUM",
@@ -399,7 +564,12 @@
     "topic": "Principles of Inheritance and Variation",
     "subtopic": "Genetic disorders",
     "question": "Match the disorder in Column I with its genetic/chromosomal basis in Column II. Column I: A. Turner's syndrome, B. Klinefelter's syndrome, C. Down's syndrome, D. Sickle-cell anaemia. Column II: i. 45, XO, ii. 47, XXY, iii. Trisomy 21, iv. Point mutation in the beta-globin gene.",
-    "options": ["A-i, B-ii, C-iii, D-iv", "A-ii, B-i, C-iii, D-iv", "A-i, B-ii, C-iv, D-iii", "A-iii, B-ii, C-i, D-iv"],
+    "options": [
+      "A-i, B-ii, C-iii, D-iv",
+      "A-ii, B-i, C-iii, D-iv",
+      "A-i, B-ii, C-iv, D-iii",
+      "A-iii, B-ii, C-i, D-iv"
+    ],
     "answer": "A",
     "explanation": "Turner's syndrome is 45,XO; Klinefelter's syndrome is 47,XXY; Down's syndrome is trisomy 21; and sickle-cell anaemia arises from a point mutation in the beta-globin gene.",
     "difficulty": "MEDIUM",
@@ -411,7 +581,12 @@
     "topic": "Principles of Inheritance and Variation",
     "subtopic": "Sickle-cell anaemia",
     "question": "In sickle-cell anaemia, glutamic acid is replaced by valine at the sixth position of the beta-globin chain due to a change in the mRNA codon from:",
-    "options": ["GAG to GUG", "GUG to GAG", "GAA to GGA", "CUC to CAC"],
+    "options": [
+      "GAG to GUG",
+      "GUG to GAG",
+      "GAA to GGA",
+      "CUC to CAC"
+    ],
     "answer": "A",
     "explanation": "A single base substitution changes the mRNA codon GAG (glutamic acid) to GUG (valine) at the sixth codon of the beta chain, producing HbS (NCERT).",
     "difficulty": "HARD",
@@ -423,7 +598,12 @@
     "topic": "Human Health and Disease",
     "subtopic": "Protozoan diseases",
     "question": "Malaria in humans is caused by:",
-    "options": ["A bacterium", "A virus", "Plasmodium, a protozoan", "A helminth"],
+    "options": [
+      "A bacterium",
+      "A virus",
+      "Plasmodium, a protozoan",
+      "A helminth"
+    ],
     "answer": "C",
     "explanation": "Malaria is caused by the protozoan parasite Plasmodium, which is transmitted by the bite of female Anopheles mosquitoes (NCERT Human Health and Disease).",
     "difficulty": "EASY",
@@ -435,7 +615,12 @@
     "topic": "Human Health and Disease",
     "subtopic": "AIDS",
     "question": "Regarding AIDS, consider: (I) It is caused by the Human Immunodeficiency Virus (HIV). (II) HIV is a retrovirus. (III) HIV primarily attacks and destroys helper T-lymphocytes. (IV) It commonly spreads through casual contact such as hugging. Which statements are correct?",
-    "options": ["I, II and III only", "I and IV only", "II, III and IV only", "All of the above"],
+    "options": [
+      "I, II and III only",
+      "I and IV only",
+      "II, III and IV only",
+      "All of the above"
+    ],
     "answer": "A",
     "explanation": "HIV is a retrovirus that destroys helper T-cells; it spreads through blood, sexual contact and from infected mother to child, but not by casual contact, so statement IV is wrong (NCERT).",
     "difficulty": "MEDIUM",
@@ -447,7 +632,12 @@
     "topic": "Human Health and Disease",
     "subtopic": "Helminth parasites",
     "question": "Assertion (A): Ascaris is a monogenetic parasite. Reason (R): Ascaris completes its life cycle within a single host, namely the human.",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "A parasite that completes its life cycle in only one host is monogenetic; Ascaris lumbricoides infects only humans, so it is a monogenetic parasite.",
     "difficulty": "MEDIUM",
@@ -459,7 +649,12 @@
     "topic": "Human Health and Disease",
     "subtopic": "Immunological memory",
     "question": "Assertion (A): The secondary immune response is faster and stronger than the primary immune response. Reason (R): Memory B and T cells are not generated during the primary (first) response.",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "C",
     "explanation": "The secondary response is indeed faster and stronger, but this is because memory cells ARE generated during the primary response; hence the reason statement is false.",
     "difficulty": "HARD",
@@ -471,7 +666,12 @@
     "topic": "Evolution",
     "subtopic": "Homology and analogy",
     "question": "Consider the following statements on evolutionary evidence: (I) Homologous organs indicate divergent evolution. (II) Analogous organs indicate convergent evolution. (III) The forelimbs of humans, whales and bats are homologous. (IV) The wings of a butterfly and a bird are homologous. Which statements are correct?",
-    "options": ["I, II and III only", "I and IV only", "II and IV only", "All of the above"],
+    "options": [
+      "I, II and III only",
+      "I and IV only",
+      "II and IV only",
+      "All of the above"
+    ],
     "answer": "A",
     "explanation": "Homologous organs (same structure, different function) show divergent evolution, while analogous organs like butterfly and bird wings (different structure, same function) show convergent evolution, so statement IV is wrong.",
     "difficulty": "EASY",
@@ -483,7 +683,12 @@
     "topic": "Evolution",
     "subtopic": "Analogous organs",
     "question": "Assertion (A): The wings of a butterfly and the wings of a bird are analogous organs. Reason (R): All flying animals have evolved from a single common winged ancestor.",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "C",
     "explanation": "Butterfly and bird wings are analogous (different structure, same function of flight) reflecting convergent evolution; they did not arise from a single common winged ancestor, so the reason is false.",
     "difficulty": "MEDIUM",
@@ -495,7 +700,12 @@
     "topic": "Evolution",
     "subtopic": "Human evolution",
     "question": "The correct sequence of human evolution from the earliest to the most recent form is:",
-    "options": ["Australopithecus to Homo habilis to Homo erectus to Homo sapiens", "Homo habilis to Australopithecus to Homo erectus to Homo sapiens", "Homo erectus to Homo habilis to Australopithecus to Homo sapiens", "Australopithecus to Homo erectus to Homo habilis to Homo sapiens"],
+    "options": [
+      "Australopithecus to Homo habilis to Homo erectus to Homo sapiens",
+      "Homo habilis to Australopithecus to Homo erectus to Homo sapiens",
+      "Homo erectus to Homo habilis to Australopithecus to Homo sapiens",
+      "Australopithecus to Homo erectus to Homo habilis to Homo sapiens"
+    ],
     "answer": "A",
     "explanation": "NCERT places the sequence as Australopithecus, then Homo habilis, then Homo erectus, and finally Homo sapiens (modern human).",
     "difficulty": "HARD",
@@ -504,39 +714,60 @@
     "type": "MCQ"
   },
   {
-    "topic": "Biotechnology and its Applications",
-    "subtopic": "Genetically engineered insulin",
-    "question": "The first clinically used genetically engineered human insulin (Humulin) is produced by:",
-    "options": ["Extracting it directly from the cattle pancreas", "Producing its A and B polypeptide chains in E. coli and then joining them", "Culturing human pancreatic beta cells in vitro", "Chemically synthesising proinsulin in yeast"],
-    "answer": "B",
-    "explanation": "The company Eli Lilly produced the A and B chains of human insulin separately in E. coli and then combined them by disulphide bonds to form Humulin (NCERT Biotechnology and its Applications).",
-    "difficulty": "MEDIUM",
-    "ncertClass": 12,
-    "ncertChapter": "Biotechnology and its Applications",
-    "type": "MCQ"
-  },
-  {
-    "topic": "Biotechnology and its Applications",
-    "subtopic": "Gene therapy",
-    "question": "The first clinical gene therapy (1990) was given to a girl suffering from:",
-    "options": ["Cystic fibrosis", "Adenosine deaminase (ADA) deficiency", "Haemophilia", "Phenylketonuria"],
-    "answer": "B",
-    "explanation": "The first gene therapy was used to treat adenosine deaminase (ADA) deficiency, a disorder that causes severe combined immunodeficiency (NCERT Biotechnology and its Applications).",
-    "difficulty": "HARD",
-    "ncertClass": 12,
-    "ncertChapter": "Biotechnology and its Applications",
-    "type": "MCQ"
-  },
-  {
-    "topic": "Microbes in Human Welfare",
-    "subtopic": "Antibiotics",
-    "question": "The antibiotic penicillin, discovered by Alexander Fleming, is obtained from the:",
-    "options": ["Bacterium Bacillus", "Alga Chlorella", "Virus bacteriophage", "Fungus Penicillium notatum"],
-    "answer": "D",
-    "explanation": "Penicillin is produced by the mould (fungus) Penicillium notatum/chrysogenum, and was the first antibiotic to be discovered (NCERT Microbes in Human Welfare).",
+    "topic": "Neural Control and Coordination",
+    "subtopic": "Neuron structure",
+    "question": "In the neuron shown, the long process labelled X carries impulses away from the cell body. X is the:",
+    "options": [
+      "axon",
+      "dendrite",
+      "cell body (soma)",
+      "synapse"
+    ],
+    "answer": "A",
+    "explanation": "The axon is the single long process that conducts nerve impulses away from the cell body toward the axon terminals.",
     "difficulty": "EASY",
-    "ncertClass": 12,
-    "ncertChapter": "Microbes in Human Welfare",
-    "type": "MCQ"
+    "ncertClass": 11,
+    "ncertChapter": "Neural Control and Coordination",
+    "type": "MCQ",
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiPjxyZWN0IHdpZHRoPSI0MjAiIGhlaWdodD0iMjYwIiBmaWxsPSIjZmZmZmZmIi8+PGNpcmNsZSBjeD0iMTEwIiBjeT0iMTMwIiByPSIzNCIgZmlsbD0iI2ZmZTBiMiIgc3Ryb2tlPSIjZTY1MTAwIiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSIxMTAiIGN5PSIxMzAiIHI9IjEyIiBmaWxsPSIjZTY1MTAwIi8+PGxpbmUgeDE9Ijg2IiB5MT0iMTA2IiB4Mj0iNTUiIHkyPSI4MCIgc3Ryb2tlPSIjZTY1MTAwIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iODAiIHkxPSIxMzAiIHgyPSI0NSIgeTI9IjEzMCIgc3Ryb2tlPSIjZTY1MTAwIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iODYiIHkxPSIxNTQiIHgyPSI1NSIgeTI9IjE4MCIgc3Ryb2tlPSIjZTY1MTAwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI0MCIgeT0iNzAiIGZvbnQtc2l6ZT0iMTEiPmRlbmRyaXRlczwvdGV4dD48bGluZSB4MT0iMTQ0IiB5MT0iMTMwIiB4Mj0iMzYwIiB5Mj0iMTMwIiBzdHJva2U9IiNlNjUxMDAiIHN0cm9rZS13aWR0aD0iNCIvPjxyZWN0IHg9IjE4MCIgeT0iMTIyIiB3aWR0aD0iMzAiIGhlaWdodD0iMTYiIGZpbGw9IiNmZmYzZTAiIHN0cm9rZT0iI2U2NTEwMCIvPjxyZWN0IHg9IjI0MCIgeT0iMTIyIiB3aWR0aD0iMzAiIGhlaWdodD0iMTYiIGZpbGw9IiNmZmYzZTAiIHN0cm9rZT0iI2U2NTEwMCIvPjxyZWN0IHg9IjMwMCIgeT0iMTIyIiB3aWR0aD0iMzAiIGhlaWdodD0iMTYiIGZpbGw9IiNmZmYzZTAiIHN0cm9rZT0iI2U2NTEwMCIvPjx0ZXh0IHg9IjI1MCIgeT0iMTEyIiBmb250LXNpemU9IjEzIiBmaWxsPSIjYzAzOTJiIj5YPC90ZXh0PjxsaW5lIHgxPSIyNTAiIHkxPSIxNDAiIHgyPSIyNTAiIHkyPSIxNzAiIHN0cm9rZT0iIzMzMyIvPjx0ZXh0IHg9IjIzNSIgeT0iMTg1IiBmb250LXNpemU9IjExIj5YID0gPzwvdGV4dD48L3N2Zz4=",
+    "_diagram": true
+  },
+  {
+    "topic": "Breathing and Exchange of Gases",
+    "subtopic": "Oxygen dissociation curve",
+    "question": "The sigmoid oxygen-haemoglobin dissociation curve shown shifts to the RIGHT when:",
+    "options": [
+      "pCO₂ falls and pH rises",
+      "pCO₂ rises / pH falls (Bohr effect)",
+      "temperature decreases",
+      "pO₂ in the lungs increases"
+    ],
+    "answer": "B",
+    "explanation": "Higher CO₂, higher H⁺ (lower pH) and higher temperature shift the curve right, favouring O₂ unloading in tissues — the Bohr effect.",
+    "difficulty": "MEDIUM",
+    "ncertClass": 11,
+    "ncertChapter": "Breathing and Exchange of Gases",
+    "type": "MCQ",
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiPjxyZWN0IHdpZHRoPSI0MjAiIGhlaWdodD0iMjYwIiBmaWxsPSIjZmZmZmZmIi8+PGxpbmUgeDE9IjYwIiB5MT0iMjEwIiB4Mj0iMzg1IiB5Mj0iMjEwIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMS41Ii8+PGxpbmUgeDE9IjYwIiB5MT0iMjEwIiB4Mj0iNjAiIHkyPSIzMCIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxwYXRoIGQ9Ik02MCAyMDAgQyAxMjAgMTkwIDE1MCAxMjAgMjAwIDkwIEMgMjUwIDYwIDMyMCA1MiAzNzAgNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2MwMzkyYiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48dGV4dCB4PSIyMzAiIHk9IjIyNSIgZm9udC1zaXplPSIxMiI+UGFydGlhbCBwcmVzc3VyZSBvZiBP4oKCIOKGkjwvdGV4dD48dGV4dCB4PSIxMiIgeT0iMTMwIiBmb250LXNpemU9IjExIiB0cmFuc2Zvcm09InJvdGF0ZSgtOTAgMTIgMTMwKSI+JSBzYXR1cmF0aW9uIG9mIEhiPC90ZXh0Pjwvc3ZnPg==",
+    "_diagram": true
+  },
+  {
+    "topic": "Body Fluids and Circulation",
+    "subtopic": "Heart chambers",
+    "question": "In the schematic of the human heart, chamber X is thick-walled and pumps blood into the aorta. X is the:",
+    "options": [
+      "right ventricle",
+      "left atrium",
+      "left ventricle",
+      "right atrium"
+    ],
+    "answer": "C",
+    "explanation": "The left ventricle has the thickest muscular wall as it pumps oxygenated blood into the aorta and around the whole body.",
+    "difficulty": "EASY",
+    "ncertClass": 11,
+    "ncertChapter": "Body Fluids and Circulation",
+    "type": "MCQ",
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiPjxyZWN0IHdpZHRoPSI0MjAiIGhlaWdodD0iMjYwIiBmaWxsPSIjZmZmZmZmIi8+PHJlY3QgeD0iMTIwIiB5PSI1MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjcwIiBmaWxsPSIjY2ZlOGZmIiBzdHJva2U9IiMyNTYzZWIiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjEzMCIgeT0iOTAiIGZvbnQtc2l6ZT0iMTIiPlJBPC90ZXh0PjxyZWN0IHg9IjIyMCIgeT0iNTAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2ZmZDZkNiIgc3Ryb2tlPSIjYzAzOTJiIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIyMzAiIHk9IjkwIiBmb250LXNpemU9IjEyIj5MQTwvdGV4dD48cmVjdCB4PSIxMjAiIHk9IjEyMCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjkwIiBmaWxsPSIjY2ZlOGZmIiBzdHJva2U9IiMyNTYzZWIiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjEzMCIgeT0iMTcwIiBmb250LXNpemU9IjEyIj5SVjwvdGV4dD48cmVjdCB4PSIyMjAiIHk9IjEyMCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjkwIiBmaWxsPSIjZmZkNmQ2IiBzdHJva2U9IiNjMDM5MmIiIHN0cm9rZS13aWR0aD0iNCIvPjx0ZXh0IHg9IjI0OCIgeT0iMTcwIiBmb250LXNpemU9IjEzIiBmaWxsPSIjYzAzOTJiIj5YPC90ZXh0Pjx0ZXh0IHg9IjEyMCIgeT0iMjM1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjNTU1Ij5YOiB0aGljay13YWxsZWQsIHB1bXBzIGJsb29kIGludG8gdGhlIGFvcnRhPC90ZXh0Pjwvc3ZnPg==",
+    "_diagram": true
   }
 ]

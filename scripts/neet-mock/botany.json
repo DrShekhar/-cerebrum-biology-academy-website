@@ -3,7 +3,12 @@
     "topic": "The Living World",
     "subtopic": "Taxonomic categories",
     "question": "Which of the following is the correct sequence of taxonomic categories arranged in an ascending order (from lower to higher)?",
-    "options": ["Species - Genus - Family - Order", "Genus - Species - Family - Order", "Species - Family - Genus - Order", "Order - Family - Genus - Species"],
+    "options": [
+      "Species - Genus - Family - Order",
+      "Genus - Species - Family - Order",
+      "Species - Family - Genus - Order",
+      "Order - Family - Genus - Species"
+    ],
     "answer": "A",
     "explanation": "The taxonomic hierarchy in ascending order is Species, Genus, Family, Order, Class, Phylum/Division, Kingdom.",
     "difficulty": "EASY",
@@ -15,7 +20,12 @@
     "topic": "Biological Classification",
     "subtopic": "Kingdom Monera",
     "question": "Which group of organisms obtains energy by oxidising inorganic substances such as nitrates, nitrites and ammonia, and uses this energy for ATP production?",
-    "options": ["Chemosynthetic autotrophic bacteria", "Photosynthetic autotrophic bacteria", "Heterotrophic bacteria", "Cyanobacteria"],
+    "options": [
+      "Chemosynthetic autotrophic bacteria",
+      "Photosynthetic autotrophic bacteria",
+      "Heterotrophic bacteria",
+      "Cyanobacteria"
+    ],
     "answer": "A",
     "explanation": "Chemosynthetic autotrophic bacteria oxidise inorganic substances (nitrates, nitrites, ammonia) and use the released energy to synthesise ATP, aiding nutrient recycling.",
     "difficulty": "EASY",
@@ -27,7 +37,12 @@
     "topic": "Biological Classification",
     "subtopic": "Kingdom Fungi",
     "question": "The vegetative mycelium of which class of fungi is aseptate and coenocytic, and the class includes members commonly known as bread moulds?",
-    "options": ["Phycomycetes", "Ascomycetes", "Basidiomycetes", "Deuteromycetes"],
+    "options": [
+      "Phycomycetes",
+      "Ascomycetes",
+      "Basidiomycetes",
+      "Deuteromycetes"
+    ],
     "answer": "A",
     "explanation": "In Phycomycetes the mycelium is aseptate and coenocytic; examples include Mucor, Rhizopus (bread mould) and Albugo.",
     "difficulty": "MEDIUM",
@@ -39,7 +54,12 @@
     "topic": "Plant Kingdom",
     "subtopic": "Bryophytes",
     "question": "In the life cycle of a moss, the main plant body that is photosynthetic and predominant is the:",
-    "options": ["Haploid gametophyte", "Diploid sporophyte", "Diploid gametophyte", "Haploid sporophyte"],
+    "options": [
+      "Haploid gametophyte",
+      "Diploid sporophyte",
+      "Diploid gametophyte",
+      "Haploid sporophyte"
+    ],
     "answer": "A",
     "explanation": "In bryophytes the dominant, photosynthetic, free-living plant body is the haploid gametophyte, while the sporophyte is largely dependent on it.",
     "difficulty": "EASY",
@@ -51,7 +71,12 @@
     "topic": "Plant Kingdom",
     "subtopic": "Gymnosperms",
     "question": "Which of the following features is characteristic of gymnosperms?",
-    "options": ["Ovules are not enclosed by an ovary wall and seeds are naked", "Ovules are enclosed within ovary and seeds are covered by fruit", "Presence of vessels in all members of xylem", "Presence of double fertilisation and triploid endosperm"],
+    "options": [
+      "Ovules are not enclosed by an ovary wall and seeds are naked",
+      "Ovules are enclosed within ovary and seeds are covered by fruit",
+      "Presence of vessels in all members of xylem",
+      "Presence of double fertilisation and triploid endosperm"
+    ],
     "answer": "A",
     "explanation": "Gymnosperms bear naked seeds because the ovules are not enclosed by any ovary wall, and hence the seeds remain uncovered.",
     "difficulty": "EASY",
@@ -63,7 +88,12 @@
     "topic": "Plant Kingdom",
     "subtopic": "Algae classification",
     "question": "Match the algal class with its stored food and answer with the correct combination.\nA. Chlorophyceae   i. Laminarin\nB. Phaeophyceae    ii. Floridean starch\nC. Rhodophyceae    iii. Starch",
-    "options": ["A-iii, B-i, C-ii", "A-i, B-ii, C-iii", "A-ii, B-iii, C-i", "A-iii, B-ii, C-i"],
+    "options": [
+      "A-iii, B-i, C-ii",
+      "A-i, B-ii, C-iii",
+      "A-ii, B-iii, C-i",
+      "A-iii, B-ii, C-i"
+    ],
     "answer": "A",
     "explanation": "Chlorophyceae store starch, Phaeophyceae store laminarin (and mannitol), and Rhodophyceae store floridean starch.",
     "difficulty": "MEDIUM",
@@ -75,7 +105,12 @@
     "topic": "Morphology of Flowering Plants",
     "subtopic": "Aestivation",
     "question": "In the flowers of pea (Pisum sativum), the type of aestivation of the corolla in which one standard petal overlaps two lateral wing petals which in turn overlap the two anterior keel petals is called:",
-    "options": ["Vexillary", "Twisted", "Valvate", "Imbricate"],
+    "options": [
+      "Vexillary",
+      "Twisted",
+      "Valvate",
+      "Imbricate"
+    ],
     "answer": "A",
     "explanation": "The papilionaceous corolla of pea shows vexillary (descending imbricate) aestivation, where the standard overlaps the wings which overlap the keel.",
     "difficulty": "MEDIUM",
@@ -87,7 +122,12 @@
     "topic": "Anatomy of Flowering Plants",
     "subtopic": "Monocot vs dicot root",
     "question": "Which of the following features distinguishes a monocotyledonous root from a dicotyledonous root?",
-    "options": ["Monocot root has polyarch xylem (many xylem bundles) and generally lacks secondary growth", "Monocot root has tetrarch xylem and undergoes secondary growth", "Monocot root has open vascular bundles arranged in a ring", "Monocot root lacks pith and pericycle"],
+    "options": [
+      "Monocot root has polyarch xylem (many xylem bundles) and generally lacks secondary growth",
+      "Monocot root has tetrarch xylem and undergoes secondary growth",
+      "Monocot root has open vascular bundles arranged in a ring",
+      "Monocot root lacks pith and pericycle"
+    ],
     "answer": "A",
     "explanation": "Monocot roots typically have polyarch (more than six) xylem bundles, a large pith, and usually lack secondary growth, unlike dicot roots.",
     "difficulty": "MEDIUM",
@@ -99,7 +139,12 @@
     "topic": "Morphology of Flowering Plants",
     "subtopic": "Modifications of root",
     "question": "The pneumatophores that grow vertically upward for gaseous exchange in plants growing in swampy/marshy areas (e.g., Rhizophora) are modifications of:",
-    "options": ["Roots", "Stem", "Leaf", "Petiole"],
+    "options": [
+      "Roots",
+      "Stem",
+      "Leaf",
+      "Petiole"
+    ],
     "answer": "A",
     "explanation": "Pneumatophores are specialised negatively geotropic roots that come out of the ground to help in respiration in mangrove plants like Rhizophora.",
     "difficulty": "EASY",
@@ -111,7 +156,12 @@
     "topic": "Morphology of Flowering Plants",
     "subtopic": "Family Solanaceae",
     "question": "Consider the following characters and count how many correctly describe the floral features of the family Solanaceae:\n(i) Flowers actinomorphic and bisexual\n(ii) Stamens five, epipetalous\n(iii) Ovary superior, bicarpellary and syncarpous\n(iv) Placentation axile with swollen placenta\n(v) Aestivation of corolla vexillary\nHow many of the above statements are correct?",
-    "options": ["Four", "Three", "Five", "Two"],
+    "options": [
+      "Four",
+      "Three",
+      "Five",
+      "Two"
+    ],
     "answer": "A",
     "explanation": "Statements (i)-(iv) are correct for Solanaceae; the corolla shows valvate aestivation, not vexillary, so (v) is wrong, giving four correct statements.",
     "difficulty": "HARD",
@@ -123,7 +173,12 @@
     "topic": "Anatomy of Flowering Plants",
     "subtopic": "Meristematic tissues",
     "question": "The meristem responsible for the increase in girth (secondary growth) of dicot stems, present between the primary xylem and primary phloem, is the:",
-    "options": ["Vascular cambium (lateral meristem)", "Apical meristem", "Intercalary meristem", "Ground meristem"],
+    "options": [
+      "Vascular cambium (lateral meristem)",
+      "Apical meristem",
+      "Intercalary meristem",
+      "Ground meristem"
+    ],
     "answer": "A",
     "explanation": "Vascular cambium is a lateral meristem located between primary xylem and phloem, and its activity produces secondary tissues that increase girth.",
     "difficulty": "EASY",
@@ -135,7 +190,12 @@
     "topic": "Anatomy of Flowering Plants",
     "subtopic": "Secondary growth",
     "question": "Assertion (A): Lenticels permit the exchange of gases between the outer atmosphere and the internal tissues of the stem.\nReason (R): Lenticels are lens-shaped openings in the periderm through which loosely arranged complementary cells are exposed.\nSelect the correct option:",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "Lenticels are lens-shaped openings in the periderm with loosely arranged complementary cells that facilitate gaseous exchange, so R correctly explains A.",
     "difficulty": "MEDIUM",
@@ -147,7 +207,12 @@
     "topic": "Cell: The Unit of Life",
     "subtopic": "Cell organelles",
     "question": "Which of the following cell organelles is the site of the light-independent reactions and also contains its own DNA and 70S ribosomes?",
-    "options": ["Chloroplast", "Mitochondrion", "Golgi apparatus", "Peroxisome"],
+    "options": [
+      "Chloroplast",
+      "Mitochondrion",
+      "Golgi apparatus",
+      "Peroxisome"
+    ],
     "answer": "A",
     "explanation": "The chloroplast stroma is the site of the dark (Calvin) reactions and chloroplasts are semi-autonomous, containing their own DNA and 70S ribosomes.",
     "difficulty": "EASY",
@@ -159,7 +224,12 @@
     "topic": "Cell: The Unit of Life",
     "subtopic": "Prokaryotic cell",
     "question": "Assertion (A): Mesosomes help in cell wall formation, DNA replication and its distribution to daughter cells in bacteria.\nReason (R): Mesosomes are extensions of the plasma membrane into the cytoplasm in the form of vesicles, tubules and lamellae.\nSelect the correct option:",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "Mesosomes, formed by infoldings of the plasma membrane as vesicles, tubules and lamellae, help in wall formation, DNA replication and its segregation, so R explains A.",
     "difficulty": "MEDIUM",
@@ -171,7 +241,12 @@
     "topic": "Cell Cycle and Cell Division",
     "subtopic": "Meiosis",
     "question": "The exchange of genetic material between non-sister chromatids of homologous chromosomes during meiosis, which occurs at the pachytene stage, is called:",
-    "options": ["Crossing over", "Synapsis", "Disjunction", "Terminalisation"],
+    "options": [
+      "Crossing over",
+      "Synapsis",
+      "Disjunction",
+      "Terminalisation"
+    ],
     "answer": "A",
     "explanation": "Crossing over is the exchange of segments between non-sister chromatids of homologous chromosomes and occurs during the pachytene of prophase I.",
     "difficulty": "MEDIUM",
@@ -183,7 +258,12 @@
     "topic": "Cell Cycle and Cell Division",
     "subtopic": "Interphase",
     "question": "Count the number of correct statements regarding the S phase of the cell cycle:\n(i) DNA replication takes place\n(ii) The amount of DNA per cell doubles\n(iii) The number of chromosomes doubles\n(iv) In animal cells, centriole duplication occurs in the cytoplasm\nHow many of the above statements are correct?",
-    "options": ["Three", "Two", "Four", "One"],
+    "options": [
+      "Three",
+      "Two",
+      "Four",
+      "One"
+    ],
     "answer": "A",
     "explanation": "During S phase DNA doubles and centrioles duplicate, but the chromosome number does not change (each becomes two chromatids); so (i), (ii) and (iv) are correct.",
     "difficulty": "HARD",
@@ -195,7 +275,12 @@
     "topic": "Transport in Plants",
     "subtopic": "Water potential",
     "question": "The water potential of pure water at standard temperature and pressure is taken as:",
-    "options": ["Zero", "One", "Greater than one", "Less than zero"],
+    "options": [
+      "Zero",
+      "One",
+      "Greater than one",
+      "Less than zero"
+    ],
     "answer": "A",
     "explanation": "By convention the water potential of pure water at standard temperature and pressure is zero; addition of solute makes it negative.",
     "difficulty": "EASY",
@@ -207,7 +292,12 @@
     "topic": "Transport in Plants",
     "subtopic": "Transpiration",
     "question": "Assertion (A): Guard cells become turgid and the stomatal pore opens when water flows into them.\nReason (R): The radial orientation of cellulose microfibrils and the thicker inner walls of guard cells cause the outer walls to bulge out on turgidity.\nSelect the correct option:",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "When guard cells become turgid, the inner thick wall and radial microfibrils cause the outer wall to bulge and open the pore; hence R explains A.",
     "difficulty": "MEDIUM",
@@ -219,7 +309,12 @@
     "topic": "Photosynthesis in Higher Plants",
     "subtopic": "Light reaction",
     "question": "The splitting of water molecules (photolysis) during photosynthesis is associated with which photosystem?",
-    "options": ["Photosystem II", "Photosystem I", "Both PS I and PS II equally", "Neither photosystem"],
+    "options": [
+      "Photosystem II",
+      "Photosystem I",
+      "Both PS I and PS II equally",
+      "Neither photosystem"
+    ],
     "answer": "A",
     "explanation": "Photolysis of water occurs on the inner side of the thylakoid membrane and is associated with Photosystem II (P680), releasing O2, protons and electrons.",
     "difficulty": "MEDIUM",
@@ -231,7 +326,12 @@
     "topic": "Photosynthesis in Higher Plants",
     "subtopic": "C4 pathway",
     "question": "In C4 plants, the primary CO2 acceptor and the first stable product formed in the mesophyll cells are respectively:",
-    "options": ["Phosphoenolpyruvate (PEP) and oxaloacetic acid (OAA)", "Ribulose bisphosphate (RuBP) and 3-phosphoglyceric acid (PGA)", "Phosphoenolpyruvate (PEP) and 3-phosphoglyceric acid (PGA)", "Ribulose bisphosphate (RuBP) and oxaloacetic acid (OAA)"],
+    "options": [
+      "Phosphoenolpyruvate (PEP) and oxaloacetic acid (OAA)",
+      "Ribulose bisphosphate (RuBP) and 3-phosphoglyceric acid (PGA)",
+      "Phosphoenolpyruvate (PEP) and 3-phosphoglyceric acid (PGA)",
+      "Ribulose bisphosphate (RuBP) and oxaloacetic acid (OAA)"
+    ],
     "answer": "A",
     "explanation": "In C4 plants PEP is the primary CO2 acceptor in mesophyll cells and PEP carboxylase fixes CO2 to form the 4-carbon oxaloacetic acid (OAA).",
     "difficulty": "MEDIUM",
@@ -243,7 +343,12 @@
     "topic": "Photosynthesis in Higher Plants",
     "subtopic": "Calvin cycle",
     "question": "For the synthesis of one molecule of glucose through the Calvin cycle, how many molecules of ATP and NADPH are required respectively?",
-    "options": ["18 ATP and 12 NADPH", "12 ATP and 18 NADPH", "18 ATP and 18 NADPH", "12 ATP and 12 NADPH"],
+    "options": [
+      "18 ATP and 12 NADPH",
+      "12 ATP and 18 NADPH",
+      "18 ATP and 18 NADPH",
+      "12 ATP and 12 NADPH"
+    ],
     "answer": "A",
     "explanation": "To fix six CO2 into one glucose, the Calvin cycle turns six times and needs 18 ATP and 12 NADPH.",
     "difficulty": "HARD",
@@ -255,7 +360,12 @@
     "topic": "Respiration in Plants",
     "subtopic": "Glycolysis",
     "question": "Glycolysis, the partial oxidation of glucose to pyruvate, occurs in which part of the cell?",
-    "options": ["Cytoplasm", "Mitochondrial matrix", "Inner mitochondrial membrane", "Chloroplast stroma"],
+    "options": [
+      "Cytoplasm",
+      "Mitochondrial matrix",
+      "Inner mitochondrial membrane",
+      "Chloroplast stroma"
+    ],
     "answer": "A",
     "explanation": "Glycolysis takes place in the cytoplasm and is common to both aerobic and anaerobic respiration, producing pyruvate.",
     "difficulty": "EASY",
@@ -267,7 +377,12 @@
     "topic": "Plant Growth and Development",
     "subtopic": "Plant hormones",
     "question": "Which plant growth regulator is used to break the dormancy of buds and seeds, and can substitute for the cold treatment (vernalisation) requirement in some plants?",
-    "options": ["Gibberellin", "Abscisic acid", "Ethylene", "Cytokinin"],
+    "options": [
+      "Gibberellin",
+      "Abscisic acid",
+      "Ethylene",
+      "Cytokinin"
+    ],
     "answer": "A",
     "explanation": "Gibberellins break bud and seed dormancy and can replace the low-temperature (vernalisation) requirement to induce flowering in certain plants.",
     "difficulty": "MEDIUM",
@@ -279,7 +394,12 @@
     "topic": "Plant Growth and Development",
     "subtopic": "Hormone functions",
     "question": "Match the plant hormone with its physiological role and choose the correct combination.\nA. Abscisic acid  i. Cell division and delay of senescence\nB. Cytokinin      ii. Fruit ripening\nC. Ethylene       iii. Stomatal closure and stress hormone\nD. Auxin          iv. Apical dominance",
-    "options": ["A-iii, B-i, C-ii, D-iv", "A-i, B-iii, C-iv, D-ii", "A-ii, B-iv, C-i, D-iii", "A-iv, B-ii, C-iii, D-i"],
+    "options": [
+      "A-iii, B-i, C-ii, D-iv",
+      "A-i, B-iii, C-iv, D-ii",
+      "A-ii, B-iv, C-i, D-iii",
+      "A-iv, B-ii, C-iii, D-i"
+    ],
     "answer": "A",
     "explanation": "ABA closes stomata and acts as a stress hormone, cytokinin promotes cell division and delays senescence, ethylene ripens fruits, and auxin controls apical dominance.",
     "difficulty": "MEDIUM",
@@ -291,7 +411,12 @@
     "topic": "Mineral Nutrition",
     "subtopic": "Essential elements",
     "question": "Which one of the following is a micronutrient (trace element) required by plants in very small quantities?",
-    "options": ["Molybdenum", "Calcium", "Magnesium", "Sulphur"],
+    "options": [
+      "Molybdenum",
+      "Calcium",
+      "Magnesium",
+      "Sulphur"
+    ],
     "answer": "A",
     "explanation": "Molybdenum is a micronutrient needed in trace amounts, whereas calcium, magnesium and sulphur are macronutrients.",
     "difficulty": "EASY",
@@ -303,7 +428,12 @@
     "topic": "Mineral Nutrition",
     "subtopic": "Biological nitrogen fixation",
     "question": "Assertion (A): Leghaemoglobin is present in the root nodules of leguminous plants.\nReason (R): Leghaemoglobin acts as an oxygen scavenger and protects the enzyme nitrogenase from oxygen.\nSelect the correct option:",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "Nitrogenase is oxygen-sensitive; leghaemoglobin in root nodules scavenges oxygen to create anaerobic conditions protecting the enzyme, so R explains A.",
     "difficulty": "MEDIUM",
@@ -315,7 +445,12 @@
     "topic": "Mineral Nutrition",
     "subtopic": "Deficiency symptoms",
     "question": "The deficiency of which element causes chlorosis to appear first in the mature (older) leaves because it is a mobile element that is remobilised from old to young tissues?",
-    "options": ["Magnesium", "Sulphur", "Calcium", "Iron"],
+    "options": [
+      "Magnesium",
+      "Sulphur",
+      "Calcium",
+      "Iron"
+    ],
     "answer": "A",
     "explanation": "Magnesium is a mobile element, so its deficiency symptoms such as chlorosis appear first in older leaves as it is withdrawn and transported to younger parts.",
     "difficulty": "HARD",
@@ -327,7 +462,12 @@
     "topic": "Sexual Reproduction in Flowering Plants",
     "subtopic": "Microsporangium",
     "question": "The innermost wall layer of the anther that nourishes the developing pollen grains is the:",
-    "options": ["Tapetum", "Endothecium", "Middle layer", "Epidermis"],
+    "options": [
+      "Tapetum",
+      "Endothecium",
+      "Middle layer",
+      "Epidermis"
+    ],
     "answer": "A",
     "explanation": "The tapetum is the innermost layer of the anther wall and provides nourishment to the developing pollen grains.",
     "difficulty": "EASY",
@@ -339,7 +479,12 @@
     "topic": "Sexual Reproduction in Flowering Plants",
     "subtopic": "Embryo sac ploidy",
     "question": "In a mature angiosperm embryo sac, the ploidy of the synergids, the primary endosperm nucleus and the antipodal cells is respectively:",
-    "options": ["n, 3n, n", "n, 2n, n", "2n, 3n, 2n", "n, 3n, 2n"],
+    "options": [
+      "n, 3n, n",
+      "n, 2n, n",
+      "2n, 3n, 2n",
+      "n, 3n, 2n"
+    ],
     "answer": "A",
     "explanation": "Synergids and antipodals are haploid (n) cells of the embryo sac, while the primary endosperm nucleus is triploid (3n) formed after triple fusion.",
     "difficulty": "HARD",
@@ -351,7 +496,12 @@
     "topic": "Sexual Reproduction in Flowering Plants",
     "subtopic": "Post-fertilisation events",
     "question": "Count how many of the following post-fertilisation changes are correctly matched:\n(i) Ovule to seed\n(ii) Ovary to fruit\n(iii) Ovary wall to pericarp\n(iv) Outer integument to tegmen\n(v) Zygote to embryo\nHow many are correct?",
-    "options": ["Four", "Five", "Three", "Two"],
+    "options": [
+      "Four",
+      "Five",
+      "Three",
+      "Two"
+    ],
     "answer": "A",
     "explanation": "Statements (i), (ii), (iii) and (v) are correct; the outer integument becomes the testa (not tegmen), so four are correct.",
     "difficulty": "HARD",
@@ -363,7 +513,12 @@
     "topic": "Principles of Inheritance and Variation",
     "subtopic": "Mendel's laws",
     "question": "In a dihybrid cross between two heterozygous plants (RrYy x RrYy), the phenotypic ratio obtained in the F2 generation is:",
-    "options": ["9:3:3:1", "3:1", "1:2:1", "9:7"],
+    "options": [
+      "9:3:3:1",
+      "3:1",
+      "1:2:1",
+      "9:7"
+    ],
     "answer": "A",
     "explanation": "A dihybrid cross following the law of independent assortment gives the classic 9:3:3:1 phenotypic ratio in the F2 generation.",
     "difficulty": "EASY",
@@ -375,7 +530,12 @@
     "topic": "Principles of Inheritance and Variation",
     "subtopic": "Incomplete dominance",
     "question": "In snapdragon (Antirrhinum), a cross between a red-flowered (RR) and a white-flowered (rr) plant gives pink-flowered F1 plants. This is an example of:",
-    "options": ["Incomplete dominance", "Complete dominance", "Co-dominance", "Multiple allelism"],
+    "options": [
+      "Incomplete dominance",
+      "Complete dominance",
+      "Co-dominance",
+      "Multiple allelism"
+    ],
     "answer": "A",
     "explanation": "The F1 pink phenotype is intermediate between the two parents, illustrating incomplete dominance where neither allele is completely dominant.",
     "difficulty": "EASY",
@@ -387,7 +547,12 @@
     "topic": "Principles of Inheritance and Variation",
     "subtopic": "Linkage",
     "question": "Assertion (A): Two genes located close together on the same chromosome tend to be inherited together.\nReason (R): The frequency of recombination between two genes decreases as the distance between them on the chromosome decreases.\nSelect the correct option:",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "Closely located genes show tight linkage because fewer crossovers occur between them, lowering recombination frequency; hence R correctly explains A.",
     "difficulty": "HARD",
@@ -399,7 +564,12 @@
     "topic": "Molecular Basis of Inheritance",
     "subtopic": "DNA structure",
     "question": "According to the Watson and Crick double-helix model of DNA, the two strands of the helix are:",
-    "options": ["Antiparallel with one strand running 5' to 3' and the other 3' to 5'", "Parallel with both strands running 5' to 3'", "Antiparallel with both strands running 3' to 5'", "Parallel with both strands running 3' to 5'"],
+    "options": [
+      "Antiparallel with one strand running 5' to 3' and the other 3' to 5'",
+      "Parallel with both strands running 5' to 3'",
+      "Antiparallel with both strands running 3' to 5'",
+      "Parallel with both strands running 3' to 5'"
+    ],
     "answer": "A",
     "explanation": "In the Watson-Crick model the two polynucleotide chains are antiparallel, one running 5' to 3' and the complementary strand 3' to 5'.",
     "difficulty": "EASY",
@@ -411,7 +581,12 @@
     "topic": "Molecular Basis of Inheritance",
     "subtopic": "lac operon",
     "question": "In the lac operon of E. coli, the repressor protein that binds to the operator region is synthesised by the:",
-    "options": ["i gene (regulatory gene)", "z gene", "y gene", "a gene"],
+    "options": [
+      "i gene (regulatory gene)",
+      "z gene",
+      "y gene",
+      "a gene"
+    ],
     "answer": "A",
     "explanation": "The regulatory i gene of the lac operon codes for the repressor protein that binds to the operator to block transcription in the absence of inducer.",
     "difficulty": "HARD",
@@ -423,7 +598,12 @@
     "topic": "Microbes in Human Welfare",
     "subtopic": "Microbes in industry",
     "question": "Which of the following microorganisms is used for the large-scale production of the antibiotic penicillin?",
-    "options": ["Penicillium notatum", "Streptococcus", "Saccharomyces cerevisiae", "Aspergillus niger"],
+    "options": [
+      "Penicillium notatum",
+      "Streptococcus",
+      "Saccharomyces cerevisiae",
+      "Aspergillus niger"
+    ],
     "answer": "A",
     "explanation": "Penicillin, the first antibiotic discovered by Alexander Fleming, is produced by the mould Penicillium notatum (chrysogenum).",
     "difficulty": "EASY",
@@ -435,7 +615,12 @@
     "topic": "Microbes in Human Welfare",
     "subtopic": "Microbial products",
     "question": "Match the microbe with the organic acid it produces and choose the correct combination.\nA. Aspergillus niger    i. Citric acid\nB. Acetobacter aceti    ii. Acetic acid\nC. Clostridium butylicum iii. Butyric acid\nD. Lactobacillus        iv. Lactic acid",
-    "options": ["A-i, B-ii, C-iii, D-iv", "A-ii, B-i, C-iv, D-iii", "A-iv, B-iii, C-ii, D-i", "A-i, B-iii, C-ii, D-iv"],
+    "options": [
+      "A-i, B-ii, C-iii, D-iv",
+      "A-ii, B-i, C-iv, D-iii",
+      "A-iv, B-iii, C-ii, D-i",
+      "A-i, B-iii, C-ii, D-iv"
+    ],
     "answer": "A",
     "explanation": "As per NCERT, Aspergillus niger produces citric acid, Acetobacter aceti acetic acid, Clostridium butylicum butyric acid and Lactobacillus lactic acid.",
     "difficulty": "MEDIUM",
@@ -447,7 +632,12 @@
     "topic": "Microbes in Human Welfare",
     "subtopic": "Biofertilisers and biocontrol",
     "question": "Count how many of the following are correctly used as biofertilisers:\n(i) Rhizobium\n(ii) Azospirillum\n(iii) Anabaena (a cyanobacterium)\n(iv) Glomus (a mycorrhizal fungus)\n(v) Bacillus thuringiensis\nHow many are correct?",
-    "options": ["Four", "Five", "Three", "Two"],
+    "options": [
+      "Four",
+      "Five",
+      "Three",
+      "Two"
+    ],
     "answer": "A",
     "explanation": "Rhizobium, Azospirillum, Anabaena and Glomus are biofertilisers; Bacillus thuringiensis is a biopesticide, so four are correct.",
     "difficulty": "MEDIUM",
@@ -459,7 +649,12 @@
     "topic": "Biotechnology: Principles and Processes",
     "subtopic": "Restriction enzymes",
     "question": "Restriction endonucleases used in recombinant DNA technology recognise and cut the DNA at specific sites which are usually:",
-    "options": ["Palindromic sequences", "Poly-A sequences", "TATA box sequences", "Telomeric repeats"],
+    "options": [
+      "Palindromic sequences",
+      "Poly-A sequences",
+      "TATA box sequences",
+      "Telomeric repeats"
+    ],
     "answer": "A",
     "explanation": "Restriction enzymes recognise specific palindromic sequences and cut the two strands at defined positions, often producing sticky ends.",
     "difficulty": "MEDIUM",
@@ -471,7 +666,12 @@
     "topic": "Biotechnology: Principles and Processes",
     "subtopic": "PCR",
     "question": "Assertion (A): A thermostable DNA polymerase (Taq polymerase) is used in the polymerase chain reaction.\nReason (R): During PCR, the reaction mixture is repeatedly heated to high temperatures to denature the DNA, which would inactivate ordinary polymerases.\nSelect the correct option:",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "Taq polymerase, isolated from Thermus aquaticus, remains active at the high denaturation temperatures of PCR that would destroy ordinary enzymes, so R explains A.",
     "difficulty": "MEDIUM",
@@ -483,7 +683,12 @@
     "topic": "Organisms and Populations",
     "subtopic": "Population interactions",
     "question": "The relationship in which an orchid grows as an epiphyte on the branch of a mango tree merely for support without harming it is an example of:",
-    "options": ["Commensalism", "Mutualism", "Parasitism", "Amensalism"],
+    "options": [
+      "Commensalism",
+      "Mutualism",
+      "Parasitism",
+      "Amensalism"
+    ],
     "answer": "A",
     "explanation": "An epiphytic orchid on a mango tree gains support and benefits while the tree is unaffected, which is commensalism (+ / 0).",
     "difficulty": "EASY",
@@ -495,7 +700,12 @@
     "topic": "Ecosystem",
     "subtopic": "Energy flow",
     "question": "According to the ten per cent law of energy transfer given by Lindeman, only about 10% of the energy is transferred:",
-    "options": ["From one trophic level to the next higher trophic level", "Back to the producers from decomposers", "From the sun to the producers", "From herbivores to producers"],
+    "options": [
+      "From one trophic level to the next higher trophic level",
+      "Back to the producers from decomposers",
+      "From the sun to the producers",
+      "From herbivores to producers"
+    ],
     "answer": "A",
     "explanation": "Lindeman's ten per cent law states that only about 10% of the energy at one trophic level is available to the next higher trophic level.",
     "difficulty": "EASY",
@@ -504,39 +714,60 @@
     "type": "MCQ"
   },
   {
-    "topic": "Biodiversity and Conservation",
-    "subtopic": "Conservation strategies",
-    "question": "Assertion (A): Cryopreservation of gametes and seed banks are examples of ex situ conservation.\nReason (R): In ex situ conservation, threatened plants and animals are taken out from their natural habitat and placed in special settings where they can be protected.\nSelect the correct option:",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "topic": "Anatomy of Flowering Plants",
+    "subtopic": "Stomata",
+    "question": "The structure shown, formed by two guard cells surrounding a pore, mainly regulates:",
+    "options": [
+      "gaseous exchange and transpiration",
+      "absorption of water from soil",
+      "translocation of sugars",
+      "secondary growth of the stem"
+    ],
     "answer": "A",
-    "explanation": "Ex situ conservation protects organisms outside their natural habitats, including seed banks and cryopreservation of gametes, so R correctly explains A.",
-    "difficulty": "MEDIUM",
-    "ncertClass": 12,
-    "ncertChapter": "Biodiversity and Conservation",
-    "type": "AssertionReason"
-  },
-  {
-    "topic": "Environmental Issues",
-    "subtopic": "Eutrophication",
-    "question": "The accelerated nutrient enrichment of water bodies caused by the discharge of sewage and fertilisers, leading to excessive algal growth, is called:",
-    "options": ["Eutrophication", "Biomagnification", "Biological oxygen demand", "Thermal pollution"],
-    "answer": "A",
-    "explanation": "Eutrophication is the natural or accelerated nutrient enrichment of a water body causing algal blooms and oxygen depletion.",
+    "explanation": "Stomata, bounded by two guard cells, open and close to control gas exchange (CO₂/O₂) and loss of water vapour (transpiration).",
     "difficulty": "EASY",
-    "ncertClass": 12,
-    "ncertChapter": "Environmental Issues",
-    "type": "MCQ"
+    "ncertClass": 11,
+    "ncertChapter": "Anatomy of Flowering Plants",
+    "type": "MCQ",
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiPjxyZWN0IHdpZHRoPSI0MjAiIGhlaWdodD0iMjYwIiBmaWxsPSIjZmZmZmZmIi8+PHBhdGggZD0iTTE1MCA4MCBDIDExMCA5MCAxMTAgMTcwIDE1MCAxODAgQyAxODAgMTY1IDE4MCA5NSAxNTAgODAgWiIgZmlsbD0iI2NkZWNjZCIgc3Ryb2tlPSIjMmU3ZDMyIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMjcwIDgwIEMgMzEwIDkwIDMxMCAxNzAgMjcwIDE4MCBDIDI0MCAxNjUgMjQwIDk1IDI3MCA4MCBaIiBmaWxsPSIjY2RlY2NkIiBzdHJva2U9IiMyZTdkMzIiIHN0cm9rZS13aWR0aD0iMiIvPjxlbGxpcHNlIGN4PSIyMTAiIGN5PSIxMzAiIHJ4PSIyNCIgcnk9IjQ2IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5OTkiIHN0cm9rZS1kYXNoYXJyYXk9IjMiLz48dGV4dCB4PSI5MCIgeT0iMjE1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjMmU3ZDMyIj5HdWFyZCBjZWxsczwvdGV4dD48bGluZSB4MT0iMTUwIiB5MT0iMjA1IiB4Mj0iMTUwIiB5Mj0iMTg1IiBzdHJva2U9IiMyZTdkMzIiLz48bGluZSB4MT0iMjcwIiB5MT0iMjA1IiB4Mj0iMjcwIiB5Mj0iMTg1IiBzdHJva2U9IiMyZTdkMzIiLz48dGV4dCB4PSIxODUiIHk9IjEzMCIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzY2NiI+cG9yZTwvdGV4dD48L3N2Zz4=",
+    "_diagram": true
   },
   {
-    "topic": "Environmental Issues",
-    "subtopic": "Ozone depletion",
-    "question": "Count how many of the following statements about ozone and its depletion are correct:\n(i) UV radiation splits chlorofluorocarbons releasing chlorine atoms\n(ii) Cl atoms degrade ozone releasing molecular oxygen\n(iii) Ozone in the stratosphere absorbs harmful UV radiation\n(iv) The thickness of the ozone column is measured in Dobson units\nHow many statements are correct?",
-    "options": ["Four", "Three", "Two", "One"],
-    "answer": "A",
-    "explanation": "All four statements correctly describe ozone depletion by CFC-derived chlorine and the role and measurement of the ozone layer.",
+    "topic": "Cell: The Unit of Life",
+    "subtopic": "Cell organelles",
+    "question": "In the plant cell shown, the green organelle labelled X carries out photosynthesis. X is the:",
+    "options": [
+      "mitochondrion",
+      "chloroplast",
+      "nucleus",
+      "vacuole"
+    ],
+    "answer": "B",
+    "explanation": "Chloroplasts contain chlorophyll and are the site of photosynthesis in plant cells.",
+    "difficulty": "EASY",
+    "ncertClass": 11,
+    "ncertChapter": "Cell: The Unit of Life",
+    "type": "MCQ",
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiPjxyZWN0IHdpZHRoPSI0MjAiIGhlaWdodD0iMjYwIiBmaWxsPSIjZmZmZmZmIi8+PHJlY3QgeD0iNjAiIHk9IjUwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjE2MCIgZmlsbD0iI2Y0ZmJmNCIgc3Ryb2tlPSIjMmU3ZDMyIiBzdHJva2Utd2lkdGg9IjQiLz48cmVjdCB4PSI3MiIgeT0iNjIiIHdpZHRoPSIyNzYiIGhlaWdodD0iMTM2IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNhNWQ2YTUiIHN0cm9rZS13aWR0aD0iMSIvPjxjaXJjbGUgY3g9IjE1MCIgY3k9IjEzMCIgcj0iMjYiIGZpbGw9IiNlNmQzZjAiIHN0cm9rZT0iIzdiM2ZhMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTMyIiB5PSIxNzUiIGZvbnQtc2l6ZT0iMTEiPm51Y2xldXM8L3RleHQ+PGVsbGlwc2UgY3g9IjI2MCIgY3k9IjExMCIgcng9IjMwIiByeT0iMTYiIGZpbGw9IiM0Y2FmNTAiIHN0cm9rZT0iIzJlN2QzMiIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMjUwIiB5PSIxMTQiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiNmZmYiPlg8L3RleHQ+PGxpbmUgeDE9IjI2MCIgeTE9IjEyNiIgeDI9IjI4NSIgeTI9IjE2MCIgc3Ryb2tlPSIjMzMzIi8+PHRleHQgeD0iMjcwIiB5PSIxNzUiIGZvbnQtc2l6ZT0iMTEiPlggPSA/PC90ZXh0Pjx0ZXh0IHg9IjEyMCIgeT0iMjM1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjNTU1Ij5YIGlzIGdyZWVuICZhbXA7IGNhcnJpZXMgb3V0IHBob3Rvc3ludGhlc2lzPC90ZXh0Pjwvc3ZnPg==",
+    "_diagram": true
+  },
+  {
+    "topic": "Photosynthesis in Higher Plants",
+    "subtopic": "Limiting factors",
+    "question": "In the graph of photosynthesis rate versus light intensity, beyond point P the rate no longer rises with light. This is because:",
+    "options": [
+      "light has become the sole limiting factor",
+      "chlorophyll is destroyed at high light",
+      "a factor other than light (e.g. CO₂ or temperature) has become limiting",
+      "photorespiration completely stops"
+    ],
+    "answer": "C",
+    "explanation": "At the plateau, light is no longer limiting; the rate is now capped by another factor such as CO₂ concentration or temperature (Blackman’s law of limiting factors).",
     "difficulty": "MEDIUM",
-    "ncertClass": 12,
-    "ncertChapter": "Environmental Issues",
-    "type": "Statement"
+    "ncertClass": 11,
+    "ncertChapter": "Photosynthesis in Higher Plants",
+    "type": "MCQ",
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiPjxyZWN0IHdpZHRoPSI0MjAiIGhlaWdodD0iMjYwIiBmaWxsPSIjZmZmZmZmIi8+PGxpbmUgeDE9IjYwIiB5MT0iMjEwIiB4Mj0iMzg1IiB5Mj0iMjEwIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMS41Ii8+PGxpbmUgeDE9IjYwIiB5MT0iMjEwIiB4Mj0iNjAiIHkyPSIzMCIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxwYXRoIGQ9Ik02MCAyMTAgQyAxMjAgMTIwIDE4MCA4MCAyMzAgNzggTCAzNzAgNzgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJlN2QzMiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48Y2lyY2xlIGN4PSIyMzAiIGN5PSI3OCIgcj0iNCIgZmlsbD0iI2MwMzkyYiIvPjx0ZXh0IHg9IjIyMiIgeT0iNzAiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiNjMDM5MmIiPlA8L3RleHQ+PHRleHQgeD0iMjUwIiB5PSIyMjUiIGZvbnQtc2l6ZT0iMTIiPkxpZ2h0IGludGVuc2l0eSDihpI8L3RleHQ+PHRleHQgeD0iMTIiIHk9IjEyMCIgZm9udC1zaXplPSIxMSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDEyIDEyMCkiPlJhdGUgb2YgcGhvdG9zeW50aGVzaXM8L3RleHQ+PC9zdmc+",
+    "_diagram": true
   }
 ]

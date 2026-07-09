@@ -3,7 +3,12 @@
     "topic": "Units and Measurements",
     "subtopic": "Dimensional Analysis",
     "question": "The dimensional formula of Planck's constant (h) is identical to that of which of the following physical quantities?",
-    "options": ["Linear momentum", "Energy", "Force", "Angular momentum"],
+    "options": [
+      "Linear momentum",
+      "Energy",
+      "Force",
+      "Angular momentum"
+    ],
     "answer": "D",
     "explanation": "Planck's constant has dimensions [ML^2 T^-1], which is exactly the dimensional formula of angular momentum.",
     "difficulty": "EASY",
@@ -15,7 +20,12 @@
     "topic": "Units and Measurements",
     "subtopic": "Significant Figures",
     "question": "The number of significant figures in the measured value 0.00680 m is:",
-    "options": ["2", "3", "5", "6"],
+    "options": [
+      "2",
+      "3",
+      "5",
+      "6"
+    ],
     "answer": "B",
     "explanation": "Leading zeros are not significant; the digits 6, 8 and the trailing 0 (after the decimal) are significant, giving 3 significant figures.",
     "difficulty": "EASY",
@@ -27,7 +37,12 @@
     "topic": "Kinematics",
     "subtopic": "Motion under Gravity",
     "question": "A ball is thrown vertically upward with an initial speed of 30 m/s. Taking g = 10 m/s^2, the time taken by it to reach the highest point is:",
-    "options": ["2 s", "3 s", "4 s", "6 s"],
+    "options": [
+      "2 s",
+      "3 s",
+      "4 s",
+      "6 s"
+    ],
     "answer": "B",
     "explanation": "At the highest point velocity is zero, so t = u/g = 30/10 = 3 s.",
     "difficulty": "EASY",
@@ -39,7 +54,12 @@
     "topic": "Kinematics",
     "subtopic": "Projectile Motion",
     "question": "For a projectile launched with a fixed speed, the horizontal range is maximum when the angle of projection with the horizontal is:",
-    "options": ["30 degrees", "45 degrees", "60 degrees", "90 degrees"],
+    "options": [
+      "30 degrees",
+      "45 degrees",
+      "60 degrees",
+      "90 degrees"
+    ],
     "answer": "B",
     "explanation": "Range R = (u^2 sin2A)/g is maximum when sin2A = 1, i.e. 2A = 90 degrees, so A = 45 degrees.",
     "difficulty": "EASY",
@@ -51,7 +71,12 @@
     "topic": "Kinematics",
     "subtopic": "Free Fall",
     "question": "A body falls freely from rest with constant g. The ratio of the distances covered by it during the 1st, 2nd and 3rd seconds of its fall is:",
-    "options": ["1 : 2 : 3", "1 : 3 : 5", "1 : 4 : 9", "1 : 5 : 9"],
+    "options": [
+      "1 : 2 : 3",
+      "1 : 3 : 5",
+      "1 : 4 : 9",
+      "1 : 5 : 9"
+    ],
     "answer": "B",
     "explanation": "Distance in the nth second is proportional to (2n - 1), giving the ratio 1 : 3 : 5.",
     "difficulty": "MEDIUM",
@@ -63,7 +88,12 @@
     "topic": "Laws of Motion",
     "subtopic": "Impulse",
     "question": "A constant force changes the velocity of a 2 kg body from 4 m/s to 10 m/s along a straight line. The impulse delivered to the body is:",
-    "options": ["8 N s", "12 N s", "20 N s", "28 N s"],
+    "options": [
+      "8 N s",
+      "12 N s",
+      "20 N s",
+      "28 N s"
+    ],
     "answer": "B",
     "explanation": "Impulse equals change in momentum = m(v - u) = 2 x (10 - 4) = 12 N s.",
     "difficulty": "EASY",
@@ -75,7 +105,12 @@
     "topic": "Laws of Motion",
     "subtopic": "Friction",
     "question": "A block placed on an inclined plane just begins to slide when the inclination is 45 degrees. The coefficient of static friction between the block and the surface is:",
-    "options": ["0.50", "0.71", "1.00", "1.73"],
+    "options": [
+      "0.50",
+      "0.71",
+      "1.00",
+      "1.73"
+    ],
     "answer": "C",
     "explanation": "At the angle of repose, mu = tan(angle) = tan 45 degrees = 1.00.",
     "difficulty": "MEDIUM",
@@ -87,7 +122,12 @@
     "topic": "Work, Energy and Power",
     "subtopic": "Work by a Force",
     "question": "Assertion (A): When a body moves in a circle with constant speed, the work done by the centripetal force is zero. Reason (R): The centripetal force always acts perpendicular to the velocity of the body.",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "The centripetal force is perpendicular to displacement, so work = F d cos90 = 0; R correctly explains A.",
     "difficulty": "EASY",
@@ -99,7 +139,12 @@
     "topic": "Work, Energy and Power",
     "subtopic": "Elastic Potential Energy",
     "question": "A spring of force constant 400 N/m is stretched by 10 cm from its natural length. The elastic potential energy stored in it is:",
-    "options": ["1 J", "2 J", "4 J", "20 J"],
+    "options": [
+      "1 J",
+      "2 J",
+      "4 J",
+      "20 J"
+    ],
     "answer": "B",
     "explanation": "PE = (1/2) k x^2 = (1/2)(400)(0.1)^2 = (1/2)(400)(0.01) = 2 J.",
     "difficulty": "MEDIUM",
@@ -111,7 +156,12 @@
     "topic": "Work, Energy and Power",
     "subtopic": "Power",
     "question": "A pump raises 200 kg of water through a height of 10 m in 20 s. Taking g = 10 m/s^2, the power of the pump is:",
-    "options": ["500 W", "1000 W", "2000 W", "4000 W"],
+    "options": [
+      "500 W",
+      "1000 W",
+      "2000 W",
+      "4000 W"
+    ],
     "answer": "B",
     "explanation": "Power = mgh/t = (200 x 10 x 10)/20 = 20000/20 = 1000 W.",
     "difficulty": "MEDIUM",
@@ -123,7 +173,12 @@
     "topic": "System of Particles and Rotational Motion",
     "subtopic": "Moment of Inertia",
     "question": "The moment of inertia of a uniform solid sphere of mass M and radius R about an axis passing through its centre (a diameter) is:",
-    "options": ["(2/3) M R^2", "(1/2) M R^2", "M R^2", "(2/5) M R^2"],
+    "options": [
+      "(2/3) M R^2",
+      "(1/2) M R^2",
+      "M R^2",
+      "(2/5) M R^2"
+    ],
     "answer": "D",
     "explanation": "For a solid sphere about a diameter, I = (2/5) M R^2.",
     "difficulty": "EASY",
@@ -135,7 +190,12 @@
     "topic": "System of Particles and Rotational Motion",
     "subtopic": "Conservation of Angular Momentum",
     "question": "Assertion (A): A ballet dancer spins faster when she folds her arms close to her body. Reason (R): The angular momentum of the dancer is conserved as no external torque acts about the axis of rotation.",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "Folding the arms reduces the moment of inertia; with angular momentum L = I x omega conserved, omega increases. R correctly explains A.",
     "difficulty": "MEDIUM",
@@ -147,7 +207,12 @@
     "topic": "System of Particles and Rotational Motion",
     "subtopic": "Rolling Motion",
     "question": "A solid cylinder and a hollow cylinder of the same mass and same radius are released from rest from the top of the same inclined plane and roll down without slipping. Which one reaches the bottom first?",
-    "options": ["The solid cylinder", "The hollow cylinder", "Both reach at the same time", "It depends on their lengths"],
+    "options": [
+      "The solid cylinder",
+      "The hollow cylinder",
+      "Both reach at the same time",
+      "It depends on their lengths"
+    ],
     "answer": "A",
     "explanation": "The solid cylinder has a smaller moment of inertia ((1/2)MR^2 vs MR^2), giving it a larger acceleration down the incline, so it reaches first.",
     "difficulty": "HARD",
@@ -159,7 +224,12 @@
     "topic": "Gravitation",
     "subtopic": "Escape Velocity",
     "question": "The escape velocity from the surface of the Earth is approximately:",
-    "options": ["7.9 km/s", "9.8 km/s", "11.2 km/s", "22.4 km/s"],
+    "options": [
+      "7.9 km/s",
+      "9.8 km/s",
+      "11.2 km/s",
+      "22.4 km/s"
+    ],
     "answer": "C",
     "explanation": "Escape velocity from Earth's surface is about 11.2 km/s.",
     "difficulty": "EASY",
@@ -171,7 +241,12 @@
     "topic": "Gravitation",
     "subtopic": "Kepler's Third Law",
     "question": "If the orbital radius of a satellite around the Earth is increased to four times its original value, its period of revolution becomes:",
-    "options": ["2 times", "4 times", "8 times", "16 times"],
+    "options": [
+      "2 times",
+      "4 times",
+      "8 times",
+      "16 times"
+    ],
     "answer": "C",
     "explanation": "By Kepler's third law T^2 is proportional to r^3, so T is proportional to r^1.5; (4)^1.5 = 8 times.",
     "difficulty": "HARD",
@@ -183,7 +258,12 @@
     "topic": "Gravitation",
     "subtopic": "Variation of g with Depth",
     "question": "The acceleration due to gravity at a depth equal to half the radius of the Earth, expressed in terms of its value g at the surface, is:",
-    "options": ["g", "g/2", "g/4", "2g"],
+    "options": [
+      "g",
+      "g/2",
+      "g/4",
+      "2g"
+    ],
     "answer": "B",
     "explanation": "At depth d, g' = g(1 - d/R). With d = R/2, g' = g(1 - 1/2) = g/2.",
     "difficulty": "HARD",
@@ -195,7 +275,12 @@
     "topic": "Mechanical Properties of Solids",
     "subtopic": "Elasticity",
     "question": "Assertion (A): Steel is more elastic than rubber. Reason (R): For the same applied stress, the strain produced in steel is smaller than that in rubber.",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "Smaller strain for the same stress means a larger Young's modulus, so steel is more elastic; R correctly explains A.",
     "difficulty": "MEDIUM",
@@ -207,7 +292,12 @@
     "topic": "Mechanical Properties of Fluids",
     "subtopic": "Floatation",
     "question": "A piece of ice of density 900 kg/m^3 floats in water of density 1000 kg/m^3. The fraction of the volume of the ice that remains submerged is:",
-    "options": ["0.10", "0.50", "0.90", "1.00"],
+    "options": [
+      "0.10",
+      "0.50",
+      "0.90",
+      "1.00"
+    ],
     "answer": "C",
     "explanation": "For a floating body the submerged fraction = density of body / density of liquid = 900/1000 = 0.90.",
     "difficulty": "MEDIUM",
@@ -219,7 +309,12 @@
     "topic": "Thermal Properties of Matter",
     "subtopic": "Thermal Expansion",
     "question": "If alpha is the coefficient of linear expansion of a solid, its coefficient of area (superficial) expansion is:",
-    "options": ["alpha", "3 alpha", "alpha/2", "2 alpha"],
+    "options": [
+      "alpha",
+      "3 alpha",
+      "alpha/2",
+      "2 alpha"
+    ],
     "answer": "D",
     "explanation": "The coefficient of area expansion is 2 alpha (and volume expansion is 3 alpha).",
     "difficulty": "EASY",
@@ -231,7 +326,12 @@
     "topic": "Thermodynamics",
     "subtopic": "Carnot Engine",
     "question": "A Carnot engine works between a source at 500 K and a sink at 300 K. The efficiency of the engine is:",
-    "options": ["20%", "30%", "40%", "60%"],
+    "options": [
+      "20%",
+      "30%",
+      "40%",
+      "60%"
+    ],
     "answer": "C",
     "explanation": "Efficiency = 1 - T_sink/T_source = 1 - 300/500 = 0.40 = 40%.",
     "difficulty": "MEDIUM",
@@ -243,7 +343,12 @@
     "topic": "Thermodynamics",
     "subtopic": "Adiabatic Process",
     "question": "An ideal gas with gamma = 1.5 is compressed adiabatically to half its initial volume. The pressure becomes approximately how many times its initial value? (Take 2^1.5 = 2.83)",
-    "options": ["1.41", "2.0", "2.83", "4.0"],
+    "options": [
+      "1.41",
+      "2.0",
+      "2.83",
+      "4.0"
+    ],
     "answer": "C",
     "explanation": "For an adiabatic process PV^gamma is constant, so P2/P1 = (V1/V2)^gamma = 2^1.5 = 2.83.",
     "difficulty": "HARD",
@@ -255,7 +360,12 @@
     "topic": "Kinetic Theory",
     "subtopic": "Molar Specific Heats",
     "question": "Which of the following statements about one mole of an ideal gas is correct?",
-    "options": ["Cp - Cv = R", "Cv - Cp = R", "Cp + Cv = R", "Cp = Cv"],
+    "options": [
+      "Cp - Cv = R",
+      "Cv - Cp = R",
+      "Cp + Cv = R",
+      "Cp = Cv"
+    ],
     "answer": "A",
     "explanation": "Mayer's relation for one mole of an ideal gas is Cp - Cv = R, where R is the universal gas constant.",
     "difficulty": "MEDIUM",
@@ -267,7 +377,12 @@
     "topic": "Oscillations",
     "subtopic": "Energy in SHM",
     "question": "A particle executes simple harmonic motion with total energy E. When its displacement from the mean position is half the amplitude, its kinetic energy is:",
-    "options": ["E/4", "E/2", "3E/4", "E"],
+    "options": [
+      "E/4",
+      "E/2",
+      "3E/4",
+      "E"
+    ],
     "answer": "C",
     "explanation": "KE = E(1 - x^2/A^2). With x = A/2, KE = E(1 - 1/4) = 3E/4.",
     "difficulty": "HARD",
@@ -279,7 +394,12 @@
     "topic": "Waves",
     "subtopic": "Beats",
     "question": "Two tuning forks of frequencies 256 Hz and 260 Hz are sounded together. The number of beats produced per second is:",
-    "options": ["2", "4", "6", "8"],
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
     "answer": "B",
     "explanation": "Beat frequency equals the difference of the two frequencies = 260 - 256 = 4 Hz.",
     "difficulty": "EASY",
@@ -291,7 +411,12 @@
     "topic": "Waves",
     "subtopic": "Organ Pipes",
     "question": "Which of the following statements about a closed organ pipe (closed at one end) is correct?",
-    "options": ["It produces only odd harmonics of the fundamental frequency", "It produces only even harmonics of the fundamental frequency", "It produces all harmonics of the fundamental frequency", "Its fundamental wavelength equals its length"],
+    "options": [
+      "It produces only odd harmonics of the fundamental frequency",
+      "It produces only even harmonics of the fundamental frequency",
+      "It produces all harmonics of the fundamental frequency",
+      "Its fundamental wavelength equals its length"
+    ],
     "answer": "A",
     "explanation": "A closed pipe has a node at the closed end and an antinode at the open end, so only odd harmonics (1, 3, 5, ...) are present.",
     "difficulty": "MEDIUM",
@@ -303,7 +428,12 @@
     "topic": "Electrostatics",
     "subtopic": "Coulomb's Law",
     "question": "The electrostatic force between two fixed point charges is F when they are separated by a distance r. If the separation is doubled while the charges remain unchanged, the force becomes:",
-    "options": ["F/2", "F/4", "2F", "4F"],
+    "options": [
+      "F/2",
+      "F/4",
+      "2F",
+      "4F"
+    ],
     "answer": "B",
     "explanation": "Coulomb force varies as 1/r^2; doubling r reduces the force to F/4.",
     "difficulty": "MEDIUM",
@@ -315,7 +445,12 @@
     "topic": "Electrostatics",
     "subtopic": "Conductors",
     "question": "Assertion (A): The electric field at every point inside a charged conductor in electrostatic equilibrium is zero. Reason (R): In electrostatic equilibrium, the excess charge on a conductor resides entirely on its outer surface.",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "Because the excess charge distributes on the surface, the net field inside a conductor in equilibrium is zero; R correctly explains A.",
     "difficulty": "EASY",
@@ -327,7 +462,12 @@
     "topic": "Current Electricity",
     "subtopic": "Resistors in Parallel",
     "question": "Two resistors, each of resistance 6 ohm, are connected in parallel. Their equivalent resistance is:",
-    "options": ["3 ohm", "6 ohm", "12 ohm", "2 ohm"],
+    "options": [
+      "3 ohm",
+      "6 ohm",
+      "12 ohm",
+      "2 ohm"
+    ],
     "answer": "A",
     "explanation": "For two equal resistors in parallel, R_eq = R/2 = 6/2 = 3 ohm.",
     "difficulty": "EASY",
@@ -339,7 +479,12 @@
     "topic": "Current Electricity",
     "subtopic": "Resistance and Dimensions",
     "question": "A wire of resistance R is stretched uniformly (at constant volume) so that its length becomes twice the original. Its new resistance is:",
-    "options": ["R/2", "2R", "4R", "R/4"],
+    "options": [
+      "R/2",
+      "2R",
+      "4R",
+      "R/4"
+    ],
     "answer": "C",
     "explanation": "At constant volume, R is proportional to (length)^2, so doubling the length gives a resistance of 4R.",
     "difficulty": "HARD",
@@ -351,7 +496,12 @@
     "topic": "Moving Charges and Magnetism",
     "subtopic": "Magnetic Force on a Charge",
     "question": "A charge q moving with velocity v enters a uniform magnetic field B directed perpendicular to its velocity. The magnitude of the magnetic force acting on it is:",
-    "options": ["zero", "qvB", "qv/B", "qB/v"],
+    "options": [
+      "zero",
+      "qvB",
+      "qv/B",
+      "qB/v"
+    ],
     "answer": "B",
     "explanation": "The magnetic force is F = qvB sin(theta); with theta = 90 degrees, F = qvB.",
     "difficulty": "EASY",
@@ -363,7 +513,12 @@
     "topic": "Moving Charges and Magnetism",
     "subtopic": "Magnetic Field of a Loop",
     "question": "The magnetic field at the centre of a circular coil of radius R carrying a steady current I is:",
-    "options": ["mu0 I / (2 pi R)", "mu0 I / (4 pi R)", "mu0 I / R", "mu0 I / (2R)"],
+    "options": [
+      "mu0 I / (2 pi R)",
+      "mu0 I / (4 pi R)",
+      "mu0 I / R",
+      "mu0 I / (2R)"
+    ],
     "answer": "D",
     "explanation": "The field at the centre of a single circular current loop is B = mu0 I / (2R).",
     "difficulty": "MEDIUM",
@@ -375,7 +530,12 @@
     "topic": "Magnetism and Matter",
     "subtopic": "Magnetic Susceptibility",
     "question": "The magnetic susceptibility of a diamagnetic material is:",
-    "options": ["small and positive", "small and negative", "large and positive", "zero"],
+    "options": [
+      "small and positive",
+      "small and negative",
+      "large and positive",
+      "zero"
+    ],
     "answer": "B",
     "explanation": "Diamagnetic materials are weakly repelled by a magnetic field and have a small negative susceptibility.",
     "difficulty": "MEDIUM",
@@ -387,7 +547,12 @@
     "topic": "Electromagnetic Induction",
     "subtopic": "Lenz's Law",
     "question": "Assertion (A): The direction of an induced current is always such that it opposes the change in magnetic flux that produces it. Reason (R): Lenz's law is a consequence of the law of conservation of energy.",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "A",
     "explanation": "Lenz's law states the induced current opposes the flux change, and this opposition is required by energy conservation; R correctly explains A.",
     "difficulty": "EASY",
@@ -399,7 +564,12 @@
     "topic": "Electromagnetic Induction",
     "subtopic": "Faraday's Law",
     "question": "A coil of 100 turns and cross-sectional area 0.01 m^2 is placed perpendicular to a magnetic field that changes steadily from 0.2 T to 0.6 T in 0.1 s. The magnitude of the induced emf is:",
-    "options": ["0.4 V", "4 V", "40 V", "400 V"],
+    "options": [
+      "0.4 V",
+      "4 V",
+      "40 V",
+      "400 V"
+    ],
     "answer": "B",
     "explanation": "emf = N A (dB/dt) = 100 x 0.01 x (0.4/0.1) = 100 x 0.01 x 4 = 4 V.",
     "difficulty": "MEDIUM",
@@ -411,7 +581,12 @@
     "topic": "Alternating Current",
     "subtopic": "RMS Value",
     "question": "The peak (maximum) value of an alternating current is 10 A. Its root-mean-square (rms) value is approximately:",
-    "options": ["5 A", "7.07 A", "10 A", "14.1 A"],
+    "options": [
+      "5 A",
+      "7.07 A",
+      "10 A",
+      "14.1 A"
+    ],
     "answer": "B",
     "explanation": "For a sinusoidal current, I_rms = I_peak / sqrt(2) = 10/1.414 = 7.07 A.",
     "difficulty": "MEDIUM",
@@ -423,7 +598,12 @@
     "topic": "Alternating Current",
     "subtopic": "Resonance",
     "question": "In a series LCR circuit, the resonant angular frequency is given by:",
-    "options": ["1 / sqrt(LC)", "sqrt(LC)", "1 / (LC)", "LC"],
+    "options": [
+      "1 / sqrt(LC)",
+      "sqrt(LC)",
+      "1 / (LC)",
+      "LC"
+    ],
     "answer": "A",
     "explanation": "At resonance the inductive and capacitive reactances are equal, giving angular frequency omega = 1/sqrt(LC).",
     "difficulty": "MEDIUM",
@@ -435,7 +615,12 @@
     "topic": "Electromagnetic Waves",
     "subtopic": "EM Spectrum",
     "question": "Which of the following lists electromagnetic waves in order of increasing frequency?",
-    "options": ["Radio waves < Infrared < Visible light < X-rays", "X-rays < Visible light < Infrared < Radio waves", "Visible light < Radio waves < Infrared < X-rays", "Infrared < Radio waves < X-rays < Visible light"],
+    "options": [
+      "Radio waves < Infrared < Visible light < X-rays",
+      "X-rays < Visible light < Infrared < Radio waves",
+      "Visible light < Radio waves < Infrared < X-rays",
+      "Infrared < Radio waves < X-rays < Visible light"
+    ],
     "answer": "A",
     "explanation": "Frequency increases (wavelength decreases) in the order radio, infrared, visible, X-rays.",
     "difficulty": "EASY",
@@ -447,7 +632,12 @@
     "topic": "Ray Optics",
     "subtopic": "Power of a Lens",
     "question": "The power of a thin convex lens of focal length 50 cm is:",
-    "options": ["+0.5 D", "+2 D", "+5 D", "-2 D"],
+    "options": [
+      "+0.5 D",
+      "+2 D",
+      "+5 D",
+      "-2 D"
+    ],
     "answer": "B",
     "explanation": "Power P = 1/f (in metres) = 1/0.50 = +2 dioptre; positive because the lens is convex.",
     "difficulty": "MEDIUM",
@@ -459,7 +649,12 @@
     "topic": "Ray Optics",
     "subtopic": "Total Internal Reflection",
     "question": "Total internal reflection of light can take place only when light travels from:",
-    "options": ["a rarer medium to a denser medium at any angle", "a denser medium to a rarer medium at an angle of incidence greater than the critical angle", "a denser medium to a rarer medium at any angle", "a rarer medium to a denser medium beyond the critical angle"],
+    "options": [
+      "a rarer medium to a denser medium at any angle",
+      "a denser medium to a rarer medium at an angle of incidence greater than the critical angle",
+      "a denser medium to a rarer medium at any angle",
+      "a rarer medium to a denser medium beyond the critical angle"
+    ],
     "answer": "B",
     "explanation": "TIR requires light to go from a denser to a rarer medium with the angle of incidence exceeding the critical angle.",
     "difficulty": "MEDIUM",
@@ -471,7 +666,12 @@
     "topic": "Wave Optics",
     "subtopic": "Young's Double Slit",
     "question": "In Young's double-slit experiment the fringe width is 0.6 mm. If the separation between the slits is halved while keeping every other quantity the same, the new fringe width becomes:",
-    "options": ["0.3 mm", "0.6 mm", "1.2 mm", "2.4 mm"],
+    "options": [
+      "0.3 mm",
+      "0.6 mm",
+      "1.2 mm",
+      "2.4 mm"
+    ],
     "answer": "C",
     "explanation": "Fringe width beta = (lambda D)/d is inversely proportional to slit separation d; halving d doubles it to 1.2 mm.",
     "difficulty": "MEDIUM",
@@ -483,7 +683,12 @@
     "topic": "Dual Nature of Radiation and Matter",
     "subtopic": "Photoelectric Effect",
     "question": "Assertion (A): For a given metal, photoelectrons are emitted only if the frequency of the incident light exceeds a certain minimum value. Reason (R): The maximum kinetic energy of the emitted photoelectrons increases with the intensity of the incident light.",
-    "options": ["Both A and R are true and R is the correct explanation of A", "Both A and R are true but R is not the correct explanation of A", "A is true but R is false", "A is false but R is true"],
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
     "answer": "C",
     "explanation": "A is true (threshold frequency). R is false: the maximum kinetic energy depends on frequency, not intensity; intensity only changes the number of emitted electrons.",
     "difficulty": "EASY",
@@ -492,51 +697,79 @@
     "type": "Assertion-Reason"
   },
   {
-    "topic": "Dual Nature of Radiation and Matter",
-    "subtopic": "de Broglie Wavelength",
-    "question": "The de Broglie wavelength lambda associated with a particle of momentum p is (h = Planck's constant):",
-    "options": ["hp", "p/h", "h/p^2", "h/p"],
-    "answer": "D",
-    "explanation": "The de Broglie relation is lambda = h/p.",
-    "difficulty": "EASY",
-    "ncertClass": 12,
-    "ncertChapter": "Dual Nature of Radiation and Matter",
-    "type": "MCQ"
-  },
-  {
-    "topic": "Atoms",
-    "subtopic": "Bohr Model Energy Levels",
-    "question": "In a hydrogen atom the energy of the electron in the ground state (n = 1) is -13.6 eV. The energy of the electron in the second orbit (n = 2) is:",
-    "options": ["-13.6 eV", "-6.8 eV", "-3.4 eV", "-1.51 eV"],
-    "answer": "C",
-    "explanation": "Energy of the nth level is E_n = -13.6/n^2 eV; for n = 2, E = -13.6/4 = -3.4 eV.",
-    "difficulty": "HARD",
-    "ncertClass": 12,
-    "ncertChapter": "Atoms",
-    "type": "MCQ"
-  },
-  {
-    "topic": "Nuclei",
-    "subtopic": "Radioactive Decay",
-    "question": "A radioactive nuclide has a half-life of 10 days. Starting with a given number of nuclei, the fraction that remains undecayed after 30 days is:",
-    "options": ["1/2", "1/4", "1/8", "1/16"],
-    "answer": "C",
-    "explanation": "30 days is 3 half-lives, so the remaining fraction is (1/2)^3 = 1/8.",
-    "difficulty": "HARD",
-    "ncertClass": 12,
-    "ncertChapter": "Nuclei",
-    "type": "MCQ"
-  },
-  {
-    "topic": "Semiconductor Electronics",
-    "subtopic": "Doping",
-    "question": "Which of the following statements about a doped semiconductor is correct?",
-    "options": ["A silicon crystal doped with a pentavalent impurity becomes an n-type semiconductor", "A silicon crystal doped with a trivalent impurity becomes an n-type semiconductor", "In an n-type semiconductor, holes are the majority charge carriers", "Doping always decreases the conductivity of a semiconductor"],
+    "topic": "Ray Optics",
+    "subtopic": "Convex lens image",
+    "question": "In the ray diagram shown, an object is placed beyond 2F of a convex lens. The image formed is:",
+    "options": [
+      "real, inverted and diminished (between F and 2F)",
+      "real, inverted and magnified (beyond 2F)",
+      "virtual, erect and magnified",
+      "real, inverted and of the same size"
+    ],
     "answer": "A",
-    "explanation": "A pentavalent (donor) impurity such as phosphorus supplies free electrons, producing an n-type semiconductor.",
-    "difficulty": "EASY",
+    "explanation": "For a convex lens with the object beyond 2F, the image is real, inverted, diminished and lies between F and 2F on the other side.",
+    "difficulty": "MEDIUM",
     "ncertClass": 12,
-    "ncertChapter": "Semiconductor Electronics",
-    "type": "Statement-Based"
+    "ncertChapter": "Ray Optics and Optical Instruments",
+    "type": "MCQ",
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiPjxyZWN0IHdpZHRoPSI0MjAiIGhlaWdodD0iMjYwIiBmaWxsPSIjZmZmZmZmIi8+PGxpbmUgeDE9IjIwIiB5MT0iMTUwIiB4Mj0iNDAwIiB5Mj0iMTUwIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMSIvPjxlbGxpcHNlIGN4PSIyMTAiIGN5PSIxNTAiIHJ4PSIxNCIgcnk9IjcwIiBmaWxsPSIjYmZlM2ZmIiBzdHJva2U9IiMyNTYzZWIiIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSI3MCIgeTE9IjE1MCIgeDI9IjcwIiB5Mj0iOTUiIHN0cm9rZT0iI2MwMzkyYiIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBvbHlnb24gcG9pbnRzPSI3MCw4OCA2NSwxMDAgNzUsMTAwIiBmaWxsPSIjYzAzOTJiIi8+PGNpcmNsZSBjeD0iMTUwIiBjeT0iMTUwIiByPSIzIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iMTQzIiB5PSIxNzAiIGZvbnQtc2l6ZT0iMTIiPkY8L3RleHQ+PGNpcmNsZSBjeD0iOTAiIGN5PSIxNTAiIHI9IjMiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSI4MCIgeT0iMTcwIiBmb250LXNpemU9IjEyIj4yRjwvdGV4dD48Y2lyY2xlIGN4PSIyNzAiIGN5PSIxNTAiIHI9IjMiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSIyNjMiIHk9IjE3MCIgZm9udC1zaXplPSIxMiI+RjwvdGV4dD48Y2lyY2xlIGN4PSIzMzAiIGN5PSIxNTAiIHI9IjMiIGZpbGw9IiMzMzMiLz48dGV4dCB4PSIzMjAiIHk9IjE3MCIgZm9udC1zaXplPSIxMiI+MkY8L3RleHQ+PHRleHQgeD0iNTUiIHk9Ijg1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjYzAzOTJiIj5PYmplY3Q8L3RleHQ+PHRleHQgeD0iMjAwIiB5PSIyMzUiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMyNTYzZWIiPkNvbnZleCBsZW5zPC90ZXh0Pjwvc3ZnPg==",
+    "_diagram": true
+  },
+  {
+    "topic": "Current Electricity",
+    "subtopic": "Equivalent resistance",
+    "question": "In the circuit shown, each resistor has resistance R = 6 Ω. The equivalent resistance between A and B is:",
+    "options": [
+      "3 Ω",
+      "9 Ω",
+      "18 Ω",
+      "4 Ω"
+    ],
+    "answer": "B",
+    "explanation": "The two 6 Ω resistors in parallel give 3 Ω; in series with the third 6 Ω gives 3 + 6 = 9 Ω.",
+    "difficulty": "MEDIUM",
+    "ncertClass": 12,
+    "ncertChapter": "Current Electricity",
+    "type": "MCQ",
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiPjxyZWN0IHdpZHRoPSI0MjAiIGhlaWdodD0iMjYwIiBmaWxsPSIjZmZmZmZmIi8+PHRleHQgeD0iMTgiIHk9IjYwIiBmb250LXNpemU9IjEzIj5BPC90ZXh0PjxsaW5lIHgxPSIzMCIgeTE9IjcwIiB4Mj0iOTAiIHkyPSI3MCIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iOTAiIHkxPSI3MCIgeDI9IjkwIiB5Mj0iNDAiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjkwIiB5MT0iNzAiIHgyPSI5MCIgeTI9IjExMCIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjIiLz48cmVjdCB4PSIxMjAiIHk9IjMwIiB3aWR0aD0iNjAiIGhlaWdodD0iMjAiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTMyIiB5PSIyNCIgZm9udC1zaXplPSIxMiI+UjwvdGV4dD48cmVjdCB4PSIxMjAiIHk9IjEwMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjEzMiIgeT0iMTM1IiBmb250LXNpemU9IjEyIj5SPC90ZXh0PjxsaW5lIHgxPSI5MCIgeTE9IjQwIiB4Mj0iMTIwIiB5Mj0iNDAiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjE4MCIgeTE9IjQwIiB4Mj0iMjEwIiB5Mj0iNDAiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjkwIiB5MT0iMTEwIiB4Mj0iMTIwIiB5Mj0iMTEwIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIxODAiIHkxPSIxMTAiIHgyPSIyMTAiIHkyPSIxMTAiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjIxMCIgeTE9IjQwIiB4Mj0iMjEwIiB5Mj0iMTEwIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyMTAiIHkxPSI3MCIgeDI9IjI2MCIgeTI9IjcwIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIvPjxyZWN0IHg9IjI2MCIgeT0iNjAiIHdpZHRoPSI2MCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIyODUiIHk9IjU0IiBmb250LXNpemU9IjEyIj5SPC90ZXh0PjxsaW5lIHgxPSIzMjAiIHkxPSI3MCIgeDI9IjM4MCIgeTI9IjcwIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjM4NCIgeT0iNjAiIGZvbnQtc2l6ZT0iMTMiPkI8L3RleHQ+PHRleHQgeD0iMTUwIiB5PSIyMzAiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM1NTUiPkVhY2ggcmVzaXN0b3IgPSA2IM6pPC90ZXh0Pjwvc3ZnPg==",
+    "_diagram": true
+  },
+  {
+    "topic": "Motion in a Straight Line",
+    "subtopic": "v-t graph",
+    "question": "The velocity-time graph shown is a straight line from the origin reaching 20 m/s at t = 4 s. The displacement in these 4 s is:",
+    "options": [
+      "80 m",
+      "20 m",
+      "40 m",
+      "10 m"
+    ],
+    "answer": "C",
+    "explanation": "Displacement = area under the v-t graph = ½ × base × height = ½ × 4 × 20 = 40 m.",
+    "difficulty": "EASY",
+    "ncertClass": 11,
+    "ncertChapter": "Motion in a Straight Line",
+    "type": "MCQ",
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiPjxyZWN0IHdpZHRoPSI0MjAiIGhlaWdodD0iMjYwIiBmaWxsPSIjZmZmZmZmIi8+PGxpbmUgeDE9IjYwIiB5MT0iMjEwIiB4Mj0iMzgwIiB5Mj0iMjEwIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMS41Ii8+PGxpbmUgeDE9IjYwIiB5MT0iMjEwIiB4Mj0iNjAiIHkyPSIzMCIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxsaW5lIHgxPSI2MCIgeTE9IjIxMCIgeDI9IjM0MCIgeTI9IjYwIiBzdHJva2U9IiNjMDM5MmIiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHRleHQgeD0iMzUwIiB5PSIyMjUiIGZvbnQtc2l6ZT0iMTIiPnQgKHMpPC90ZXh0Pjx0ZXh0IHg9IjIwIiB5PSI0MCIgZm9udC1zaXplPSIxMiI+diAobS9zKTwvdGV4dD48dGV4dCB4PSIzMzUiIHk9IjU1IiBmb250LXNpemU9IjExIiBmaWxsPSIjYzAzOTJiIj4oNCwgMjApPC90ZXh0PjxsaW5lIHgxPSIzNDAiIHkxPSI2MCIgeDI9IjM0MCIgeTI9IjIxMCIgc3Ryb2tlPSIjOTk5IiBzdHJva2UtZGFzaGFycmF5PSIzIiBzdHJva2Utd2lkdGg9IjEiLz48dGV4dCB4PSIzMzAiIHk9IjIyNSIgZm9udC1zaXplPSIxMSI+NDwvdGV4dD48L3N2Zz4=",
+    "_diagram": true
+  },
+  {
+    "topic": "Waves",
+    "subtopic": "Wave equation",
+    "question": "The snapshot of a transverse wave shows a wavelength of 0.5 m, and the wave travels at 2 m/s. Its frequency is:",
+    "options": [
+      "2 Hz",
+      "1 Hz",
+      "8 Hz",
+      "4 Hz"
+    ],
+    "answer": "D",
+    "explanation": "f = v / λ = 2 / 0.5 = 4 Hz.",
+    "difficulty": "EASY",
+    "ncertClass": 11,
+    "ncertChapter": "Waves",
+    "type": "MCQ",
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MjAgMjYwIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiPjxyZWN0IHdpZHRoPSI0MjAiIGhlaWdodD0iMjYwIiBmaWxsPSIjZmZmZmZmIi8+PGxpbmUgeDE9IjIwIiB5MT0iMTMwIiB4Mj0iNDAwIiB5Mj0iMTMwIiBzdHJva2U9IiM5OTkiIHN0cm9rZS13aWR0aD0iMSIvPjxwYXRoIGQ9Ik00MCAxMzAgUSA4MCA1MCAxMjAgMTMwIFQgMjAwIDEzMCBUIDI4MCAxMzAgVCAzNjAgMTMwIiBmaWxsPSJub25lIiBzdHJva2U9IiMyNTYzZWIiIHN0cm9rZS13aWR0aD0iMi41Ii8+PGxpbmUgeDE9IjEyMCIgeTE9IjEzMCIgeDI9IjIwMCIgeTI9IjEzMCIgc3Ryb2tlPSIjYzAzOTJiIiBzdHJva2Utd2lkdGg9IjEiLz48bGluZSB4MT0iMTIwIiB5MT0iMTI1IiB4Mj0iMTIwIiB5Mj0iMTUwIiBzdHJva2U9IiNjMDM5MmIiLz48bGluZSB4MT0iMjAwIiB5MT0iMTI1IiB4Mj0iMjAwIiB5Mj0iMTUwIiBzdHJva2U9IiNjMDM5MmIiLz48dGV4dCB4PSIxNDAiIHk9IjE2OCIgZm9udC1zaXplPSIxMiIgZmlsbD0iI2MwMzkyYiI+zrsgPSAwLjUgbTwvdGV4dD48dGV4dCB4PSIxNTAiIHk9IjIzNSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzU1NSI+V2F2ZSBzcGVlZCA9IDIgbS9zPC90ZXh0Pjwvc3ZnPg==",
+    "_diagram": true
   }
 ]

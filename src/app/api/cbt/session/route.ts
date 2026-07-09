@@ -51,6 +51,7 @@ export async function POST(_request: NextRequest) {
           marks: true,
           difficulty: true,
           explanationImage: true,
+          questionImage: true,
         },
       })
       const byId = new Map(rows.map((r) => [r.id, r]))
