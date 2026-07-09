@@ -45,6 +45,7 @@ import {
   Sparkles,
   UploadCloud,
   ClipboardList,
+  BookOpen,
 } from 'lucide-react'
 import { BulkUploader } from './BulkUploader'
 
@@ -92,6 +93,7 @@ export function CourseBuilder({
   const [editingId, setEditingId] = useState<string | null>(null)
   const [uploadChapterId, setUploadChapterId] = useState<string | null>(null)
   const [assessmentChapterId, setAssessmentChapterId] = useState<string | null>(null)
+  const [articleChapterId, setArticleChapterId] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
   const [showAI, setShowAI] = useState(false)
 
@@ -396,6 +398,16 @@ export function CourseBuilder({
                         <ClipboardList className="h-4 w-4" />
                       </button>
                       <button
+                        onClick={() =>
+                          setArticleChapterId(articleChapterId === ch.id ? null : ch.id)
+                        }
+                        className="rounded-md p-2 text-green-700 hover:bg-green-50"
+                        title="Add an article (rich-text lesson: welcome page, overview, FAQ, summary)"
+                        aria-label="Add article lesson"
+                      >
+                        <BookOpen className="h-4 w-4" />
+                      </button>
+                      <button
                         onClick={() => setEditingId(editingId === ch.id ? null : ch.id)}
                         className="rounded-md p-2 text-gray-500 hover:bg-gray-100"
                         title="Edit chapter settings"
@@ -445,6 +457,19 @@ export function CourseBuilder({
                         chapterTitle={ch.title}
                         onDone={() => void load()}
                         onClose={() => setUploadChapterId(null)}
+                      />
+                    )}
+
+                    {/* Article composer */}
+                    {articleChapterId === ch.id && (
+                      <ArticleComposer
+                        chapterId={ch.id}
+                        chapterTitle={ch.title}
+                        onDone={() => {
+                          setArticleChapterId(null)
+                          void load()
+                        }}
+                        onClose={() => setArticleChapterId(null)}
                       />
                     )}
 
@@ -1188,6 +1213,86 @@ function AIOutlinePanel({
           </div>
         </div>
       )}
+    </div>
+  )
+}
+
+/**
+ * Article composer — the "Ebook" lesson category as a simple markdown lesson
+ * (welcome page, course overview, FAQ, summary). Markdown in, rendered with
+ * reading typography on the student side.
+ */
+function ArticleComposer({
+  chapterId,
+  chapterTitle,
+  onDone,
+  onClose,
+}: {
+  chapterId: string
+  chapterTitle: string
+  onDone: () => void
+  onClose: () => void
+}) {
+  const [title, setTitle] = useState('')
+  const [body, setBody] = useState('')
+  const [saving, setSaving] = useState(false)
+
+  const save = async () => {
+    if (saving || title.trim().length < 2 || !body.trim()) return
+    setSaving(true)
+    try {
+      const res = await fetch('/api/teacher/builder/articles', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chapterId, title: title.trim(), contentBody: body }),
+      })
+      const json = await res.json()
+      if (res.ok && json.success) {
+        toast.success('Article lesson added')
+        onDone()
+      } else {
+        toast.error(json.error || 'Could not add the article')
+      }
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  return (
+    <div className="mt-3 rounded-xl border border-green-200 bg-green-50/40 p-4">
+      <div className="mb-2 flex items-center justify-between">
+        <p className="text-sm font-semibold text-gray-800">
+          New article lesson in “{chapterTitle}”
+        </p>
+        <button onClick={onClose} className="rounded p-1 text-gray-400 hover:bg-gray-100">
+          <X className="h-4 w-4" />
+        </button>
+      </div>
+      <input
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        placeholder="Lesson title (e.g. Welcome to the course, Chapter summary, FAQ)"
+        className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+      />
+      <textarea
+        value={body}
+        onChange={(e) => setBody(e.target.value)}
+        rows={8}
+        placeholder={
+          'Write in Markdown — it renders beautifully for students.\n\n# Heading\n**bold**, *italic*, lists:\n- point one\n- point two'
+        }
+        className="mt-2 w-full rounded-lg border border-gray-300 px-3 py-2 font-mono text-sm"
+      />
+      <div className="mt-2 flex items-center justify-between">
+        <p className="text-xs text-gray-400">Markdown supported: headings, bold, lists, links.</p>
+        <button
+          onClick={save}
+          disabled={saving || title.trim().length < 2 || !body.trim()}
+          className="rounded-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white hover:bg-green-800 disabled:opacity-50"
+        >
+          {saving ? 'Adding…' : 'Add article'}
+        </button>
+      </div>
     </div>
   )
 }

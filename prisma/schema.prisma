@@ -2705,6 +2705,7 @@ model study_materials {
   requiredCourseId  String?
   // Quiz-as-lesson: TEST materials point at the test template they render.
   testTemplateId    String?
+  contentBody       String? // markdown body for ARTICLE lessons
   sortOrder         Int                 @default(0)
   category          String?
   uploadedBy        String
@@ -4040,6 +4041,7 @@ enum MaterialType {
   VIDEO
   LINK
   TEST
+  ARTICLE
 }
 
 enum MessageDirection {

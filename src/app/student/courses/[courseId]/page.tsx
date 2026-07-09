@@ -486,6 +486,7 @@ function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExp
   const router = useRouter()
   const isVideo = material.materialType?.toUpperCase().includes('VIDEO')
   const isTest = material.materialType === 'TEST' && !!material.test
+  const isArticle = material.materialType === 'ARTICLE'
   const icon = isTest ? (
     <ClipboardList className="w-4 h-4" />
   ) : isVideo ? (
@@ -552,9 +553,11 @@ function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExp
   const videoProcessing = isVideo && material.videoLectureId && !material.videoReady
   const href = isVideoLesson
     ? `/learn/${material.videoLectureId}`
-    : `/api/student/materials/${material.id}/download`
-  const isInternal = isVideoLesson
-  const label = isVideo ? 'Watch' : 'Open'
+    : isArticle
+      ? `/student/article/${material.id}`
+      : `/api/student/materials/${material.id}/download`
+  const isInternal = isVideoLesson || isArticle
+  const label = isVideo ? 'Watch' : isArticle ? 'Read' : 'Open'
 
   async function toggleComplete() {
     if (saving) return
