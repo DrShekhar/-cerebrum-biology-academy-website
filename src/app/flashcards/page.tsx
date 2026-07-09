@@ -219,6 +219,12 @@ export default function FlashcardsPage() {
 
   return (
     <div className="mx-auto max-w-2xl p-6">
+      <Link
+        href="/student/dashboard"
+        className="mb-4 inline-flex items-center gap-1 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+      >
+        ← Dashboard
+      </Link>
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">

@@ -107,6 +107,12 @@ export default function DoubtSolverPage() {
 
   return (
     <div className="mx-auto max-w-3xl p-6">
+      <a
+        href="/student/dashboard"
+        className="mb-4 inline-flex items-center gap-1 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+      >
+        ← Dashboard
+      </a>
       <div className="flex items-center gap-2">
         <Sparkles className="h-6 w-6 text-green-600" />
         <h1 className="text-2xl font-bold text-gray-900">AI Doubt Solver</h1>

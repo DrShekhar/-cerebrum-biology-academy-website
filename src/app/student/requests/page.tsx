@@ -133,11 +133,11 @@ export default function StudentRequestsPage() {
                   key={c.key}
                   onClick={() => setCategory(c.key)}
                   className={`flex items-start gap-2 rounded-xl border p-3 text-left transition-colors ${
-                    on ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:border-blue-300'
+                    on ? 'border-green-600 bg-green-50' : 'border-gray-200 hover:border-green-400'
                   }`}
                 >
                   <c.icon
-                    className={`mt-0.5 h-4 w-4 shrink-0 ${on ? 'text-blue-600' : 'text-gray-400'}`}
+                    className={`mt-0.5 h-4 w-4 shrink-0 ${on ? 'text-green-700' : 'text-gray-400'}`}
                   />
                   <span>
                     <span className="block text-sm font-medium text-gray-900">{c.label}</span>
@@ -152,20 +152,20 @@ export default function StudentRequestsPage() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Short summary (e.g. Can't open the Genetics recording)"
-            className="mt-4 w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="mt-4 w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600"
           />
           <textarea
             value={detail}
             onChange={(e) => setDetail(e.target.value)}
             placeholder="Any details that help us fix it faster (optional)"
             rows={3}
-            className="mt-2 w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="mt-2 w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600"
           />
           <div className="mt-3 flex items-center gap-3">
             <button
               onClick={submit}
               disabled={submitting || title.trim().length < 3}
-              className="inline-flex items-center gap-1.5 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 disabled:opacity-50"
+              className="inline-flex items-center gap-1.5 rounded-xl bg-green-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-green-800 active:scale-[0.98] transition-transform disabled:opacity-50"
             >
               {submitting ? (
                 <Loader2 className="h-4 w-4 animate-spin" />

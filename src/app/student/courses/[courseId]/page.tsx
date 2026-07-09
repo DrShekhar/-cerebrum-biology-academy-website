@@ -94,8 +94,12 @@ export default function CourseDetailPage() {
 
         if (data.success) {
           setCourse(data.course)
-          if (data.course.modules?.length > 0) {
-            setActiveModule(data.course.modules[0].id)
+          const modules: CourseModule[] = data.course.modules || []
+          if (modules.length > 0) {
+            // Open the module holding the next incomplete lesson, not just the first.
+            const nextModule =
+              modules.find((m) => m.materials.some((mat) => !mat.completed)) || modules[0]
+            setActiveModule(nextModule.id)
           }
         } else {
           setError(data.error || 'Failed to fetch course details')
@@ -211,6 +215,34 @@ export default function CourseDetailPage() {
   const displayModules: CourseModule[] = course.modules ?? []
   const totalLessons = displayModules.reduce((acc, m) => acc + m.materials.length, 0)
 
+  // The next incomplete lesson — powers "Continue Learning" and the Up-next chip.
+  const nextUp = (() => {
+    for (const m of displayModules) {
+      const mat = m.materials.find((x) => !x.completed)
+      if (mat) return { moduleId: m.id, material: mat }
+    }
+    return null
+  })()
+
+  function continueLearning() {
+    if (!nextUp) return
+    const mat = nextUp.material
+    if (mat.materialType?.toUpperCase().includes('VIDEO') && mat.videoLectureId && mat.videoReady) {
+      router.push(`/learn/${mat.videoLectureId}`)
+      return
+    }
+    if (mat.materialType === 'ARTICLE') {
+      router.push(`/student/article/${mat.id}`)
+      return
+    }
+    setActiveModule(nextUp.moduleId)
+    setTimeout(() => {
+      document
+        .getElementById(`lesson-${mat.id}`)
+        ?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }, 100)
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -242,8 +274,12 @@ export default function CourseDetailPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              {!isExpired && (
-                <Button variant="primary" className="bg-green-600 hover:bg-green-700">
+              {!isExpired && nextUp && (
+                <Button
+                  variant="primary"
+                  className="bg-green-600 hover:bg-green-700 active:scale-[0.98]"
+                  onClick={continueLearning}
+                >
                   <Play className="w-4 h-4 mr-2" />
                   Continue Learning
                 </Button>
@@ -422,6 +458,7 @@ export default function CourseDetailPage() {
                               key={material.id}
                               material={material}
                               isExpired={isExpired}
+                              isNext={nextUp?.material.id === material.id}
                             />
                           ))}
                         </div>
@@ -435,26 +472,29 @@ export default function CourseDetailPage() {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            {/* Quick Stats */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Your Progress</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Course Progress</span>
-                  <span className="font-semibold">{course.currentProgress || 0}%</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Modules</span>
-                  <span className="font-semibold">{displayModules.length}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Total Lessons</span>
-                  <span className="font-semibold">{totalLessons}</span>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Quick Stats — suppressed while the curriculum is empty so the
+                page doesn't double-signal "0%/0/0" next to the empty state */}
+            {displayModules.length > 0 && (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Your Progress</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-600">Course Progress</span>
+                    <span className="font-semibold">{course.currentProgress || 0}%</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-600">Modules</span>
+                    <span className="font-semibold">{displayModules.length}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-600">Total Lessons</span>
+                    <span className="font-semibold">{totalLessons}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
 
             {/* Quick Actions */}
             <Card>
@@ -522,7 +562,15 @@ export default function CourseDetailPage() {
   )
 }
 
-function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExpired: boolean }) {
+function MaterialItem({
+  material,
+  isExpired,
+  isNext,
+}: {
+  material: CourseMaterial
+  isExpired: boolean
+  isNext?: boolean
+}) {
   const router = useRouter()
   const isVideo = material.materialType?.toUpperCase().includes('VIDEO')
   const isTest = material.materialType === 'TEST' && !!material.test
@@ -599,11 +647,17 @@ function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExp
   const isInternal = isVideoLesson || isArticle
   const label = isVideo ? 'Watch' : isArticle ? 'Read' : 'Open'
 
+  const [justCompleted, setJustCompleted] = useState(false)
+
   async function toggleComplete() {
     if (saving) return
     const next = !done
     setSaving(true)
     setDone(next) // optimistic
+    if (next) {
+      setJustCompleted(true)
+      setTimeout(() => setJustCompleted(false), 600)
+    }
     try {
       const res = await fetch(`/api/student/materials/${material.id}/complete`, {
         method: 'POST',
@@ -611,6 +665,7 @@ function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExp
         body: JSON.stringify({ completed: next }),
       })
       if (!res.ok) throw new Error()
+      if (next) showToast.success('Lesson complete — great work! 🎉')
     } catch {
       setDone(!next) // revert
       showToast.error('Could not update progress')
@@ -621,17 +676,31 @@ function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExp
 
   return (
     <div
+      id={`lesson-${material.id}`}
       className={cn(
-        'flex items-center justify-between p-3 rounded-lg bg-white',
-        isExpired && 'opacity-60'
+        'flex items-center justify-between p-3 rounded-lg bg-white transition-shadow',
+        isExpired && 'opacity-60',
+        isNext && !isExpired && 'ring-2 ring-green-500/60 shadow-sm'
       )}
     >
       <div className="flex items-center gap-3">
-        <div className="w-8 h-8 rounded-full flex items-center justify-center bg-gray-100 text-gray-600">
+        <div
+          className={cn(
+            'w-8 h-8 rounded-full flex items-center justify-center',
+            isNext && !isExpired ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'
+          )}
+        >
           {isExpired ? <Lock className="w-4 h-4" /> : icon}
         </div>
         <div>
-          <p className="font-medium text-gray-900 text-sm">{material.title}</p>
+          <p className="font-medium text-gray-900 text-sm">
+            {material.title}
+            {isNext && !isExpired && (
+              <span className="ml-2 rounded-full bg-green-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+                Up next
+              </span>
+            )}
+          </p>
           {!isExpired && (
             <div className="mt-0.5 flex items-center gap-0.5" aria-label="Rate this lesson">
               {[1, 2, 3, 4, 5].map((s) => (
@@ -664,11 +733,16 @@ function MaterialItem({ material, isExpired }: { material: CourseMaterial; isExp
             disabled={saving}
             title={done ? 'Mark as not done' : 'Mark complete'}
             className={cn(
-              'p-1.5 rounded-full transition-colors',
+              'p-1.5 rounded-full transition-all active:scale-90',
               done ? 'text-green-600' : 'text-gray-300 hover:text-gray-500'
             )}
           >
-            <CheckCircle className="w-5 h-5" />
+            <CheckCircle
+              className={cn(
+                'w-5 h-5 transition-transform duration-300',
+                justCompleted && 'scale-150'
+              )}
+            />
           </button>
         )}
         {!isExpired &&

@@ -10,7 +10,9 @@ import {
   BarChart3,
   MessageCircle,
   Video,
-  Bell,
+  GraduationCap,
+  MonitorCheck,
+  Layers,
   ArrowUp,
   ArrowDown,
   FileText,
@@ -87,6 +89,8 @@ export default function StudentDashboard() {
   const [performance, setPerformance] = useState<PerformanceSnapshot | null>(null)
   const [currentDate, setCurrentDate] = useState(new Date())
   const [showUpgradeModal, setShowUpgradeModal] = useState(false)
+  const [loadError, setLoadError] = useState(false)
+  const [reloadKey, setReloadKey] = useState(0)
 
   const motivationalQuotes = [
     'Success is the sum of small efforts repeated day in and day out.',
@@ -116,8 +120,12 @@ export default function StudentDashboard() {
     async function fetchDashboardData() {
       try {
         setIsLoading(true)
+        setLoadError(false)
         const userId = user?.id || freeUserId
-        if (!userId) return
+        if (!userId) {
+          setIsLoading(false)
+          return
+        }
 
         // Fetch test attempts
         const attemptsResponse = await fetch(`/api/test-attempts?freeUserId=${userId}`)
@@ -137,10 +145,19 @@ export default function StudentDashboard() {
             scores.reduce((a: number, b: number) => a + b, 0) / scores.length
           )
 
-          // Calculate study streak (distinct days with at least one attempt)
-          const dates = attempts.map((a: TestAttempt) => new Date(a.createdAt).toDateString())
-          const uniqueDates = new Set(dates)
-          const studyStreak = uniqueDates.size
+          // Study streak = consecutive days with at least one attempt, counted
+          // back from today (or yesterday, so a streak isn't "broken" before
+          // the student has had today to practice).
+          const dayKeys = new Set(
+            attempts.map((a: TestAttempt) => new Date(a.createdAt).toDateString())
+          )
+          let studyStreak = 0
+          const cursor = new Date()
+          if (!dayKeys.has(cursor.toDateString())) cursor.setDate(cursor.getDate() - 1)
+          while (dayKeys.has(cursor.toDateString())) {
+            studyStreak++
+            cursor.setDate(cursor.getDate() - 1)
+          }
 
           // Best score across all attempts — real, useful, replaces the old
           // hardcoded "Next Class" countdown (there is no schedule data source
@@ -226,6 +243,7 @@ export default function StudentDashboard() {
         setIsLoading(false)
       } catch (error) {
         console.error('Error fetching dashboard data:', error)
+        setLoadError(true)
         setIsLoading(false)
       }
     }
@@ -233,7 +251,7 @@ export default function StudentDashboard() {
     if (user?.id || freeUserId) {
       fetchDashboardData()
     }
-  }, [user?.id, freeUserId])
+  }, [user?.id, freeUserId, reloadKey])
 
   // Update current date every minute
   useEffect(() => {
@@ -266,7 +284,7 @@ export default function StudentDashboard() {
 
       {/* Upgrade Banner (for guest users only) */}
       {isGuestUser && (
-        <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-green-700 text-white py-3 px-4">
+        <div className="bg-gradient-to-r from-green-700 to-green-600 text-white py-3 px-4">
           <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-3">
             <div className="flex items-center gap-3">
               <Crown className="w-5 h-5" />
@@ -283,7 +301,7 @@ export default function StudentDashboard() {
               }
               variant="secondary"
               size="sm"
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="bg-white text-green-700 hover:bg-gray-100"
             >
               Sign Up Free
             </Button>
@@ -309,12 +327,6 @@ export default function StudentDashboard() {
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <Link href="/student/notices" className="hidden sm:block">
-                <Button variant="outline" size="sm">
-                  <Bell className="w-4 h-4 mr-2" />
-                  Notifications
-                </Button>
-              </Link>
               {isPaidUser ? (
                 <Link href="/dashboard/student">
                   <Button variant="primary" size="sm">
@@ -352,6 +364,16 @@ export default function StudentDashboard() {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="space-y-8">
+          {loadError && (
+            <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-orange-200 bg-orange-50 p-4">
+              <p className="text-sm text-orange-800">
+                We couldn&apos;t load your latest progress. Your data is safe — please try again.
+              </p>
+              <Button variant="outline" size="sm" onClick={() => setReloadKey((k) => k + 1)}>
+                Retry
+              </Button>
+            </div>
+          )}
           {/* Payment reminder — surfaces next/overdue installment */}
           <PaymentReminderCard mode="student" />
           {/* Need help? — raise a support/fees/tech/feature request */}
@@ -574,11 +596,25 @@ export default function StudentDashboard() {
                 color="from-blue-500 to-blue-600"
               />
               <ActionButton
+                icon={<GraduationCap className="w-6 h-6" />}
+                title="My Courses"
+                description="Continue learning"
+                href="/student/courses"
+                color="from-green-600 to-green-700"
+              />
+              <ActionButton
+                icon={<Video className="w-6 h-6" />}
+                title="Video Library"
+                description="Free Biology lectures"
+                href="/student/videos"
+                color="from-teal-500 to-teal-600"
+              />
+              <ActionButton
                 icon={<MessageCircle className="w-6 h-6" />}
                 title="Ask a Doubt"
                 description="Get expert help"
                 href="/student/doubts"
-                color="bg-green-600"
+                color="from-green-500 to-green-600"
               />
               {isPaidUser ? (
                 <ActionButton
@@ -602,7 +638,21 @@ export default function StudentDashboard() {
                 title="Browse Materials"
                 description="Study resources"
                 href="/student/materials"
-                color="bg-green-600"
+                color="from-blue-600 to-blue-700"
+              />
+              <ActionButton
+                icon={<MonitorCheck className="w-6 h-6" />}
+                title="NEET Simulator"
+                description="Full exam experience"
+                href="/cbt"
+                color="from-green-700 to-green-800"
+              />
+              <ActionButton
+                icon={<Layers className="w-6 h-6" />}
+                title="Flashcards"
+                description="Smart daily revision"
+                href="/flashcards"
+                color="from-purple-600 to-purple-700"
               />
               {isPaidUser ? (
                 <ActionButton
@@ -775,7 +825,7 @@ function LockedActionButton({
         </CardContent>
 
         {/* Hover overlay */}
-        <div className="absolute inset-0 bg-indigo-100 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+        <div className="absolute inset-0 bg-green-100/90 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
           <span className="text-sm font-semibold text-gray-900 bg-white px-4 py-2 rounded-lg shadow-lg">
             Click to Upgrade
           </span>

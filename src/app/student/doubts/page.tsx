@@ -180,7 +180,7 @@ export default function StudentDoubtsPage() {
           </div>
         )}
 
-        {stats && (
+        {stats && stats.total > 0 && (
           <div className="mb-8">
             <DoubtStatsWidget stats={stats} />
           </div>

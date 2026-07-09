@@ -59,6 +59,12 @@ export default function CBTHubPage() {
 
   return (
     <div className="mx-auto max-w-4xl p-6">
+      <Link
+        href="/student/dashboard"
+        className="mb-4 inline-flex items-center gap-1 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+      >
+        ← Dashboard
+      </Link>
       {/* Hero */}
       <div className="rounded-2xl bg-gradient-to-r from-green-800 to-green-900 p-6 text-white md:p-8">
         <div className="inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-medium">
