@@ -3,8 +3,9 @@ import { prisma } from '@/lib/prisma'
 /**
  * CBT NEET-paper assembly + scoring helpers.
  *
- * Builds a 180-question / 720-mark NEET Biology full mock from the live question
- * bank, keyed to a canonical test_templates row. Correct answers NEVER leave the
+ * Builds a 180-question / 720-mark NEET-pattern Biology full mock (90 Botany +
+ * 90 Zoology) from the live question bank, keyed to a canonical test_templates
+ * row. Correct answers NEVER leave the
  * server — the client receives options only, and scoring happens on submit.
  */
 
@@ -72,7 +73,10 @@ export function correctLetter(q: DbQuestion): string {
 /** Map a DB question to the client shape (no correct answer). */
 export function toClientQuestion(q: DbQuestion): ClientQuestion {
   const opts = parseOptions(q.options)
-  const subj = (q.subject || 'biology').toLowerCase()
+  // Section is a pure function of the question (resolveSection), so it lands in
+  // the SAME tab on the fresh paper, on resume and in review — even though the
+  // DB row is tagged only "biology".
+  const subject = resolveSection(q.id, q.topic, q.subject)
   return {
     id: q.id,
     questionText: q.question,
@@ -84,10 +88,7 @@ export function toClientQuestion(q: DbQuestion): ClientQuestion {
       : 'medium') as 'easy' | 'medium' | 'hard',
     topic: q.topic || '',
     subtopic: '',
-    subject: (subj === 'botany' || subj === 'zoology' ? subj : 'biology') as
-      | 'biology'
-      | 'botany'
-      | 'zoology',
+    subject,
     marks: CORRECT_MARKS,
     timeAllocated: 60,
     keywords: [],
@@ -108,7 +109,8 @@ export async function ensureNeetTemplate(): Promise<string> {
     data: {
       id: `tmpl_${NEET_TEMPLATE_SLUG}`,
       title: 'NEET Biology Full Mock (CBT)',
-      description: '180-question, 720-mark NEET-pattern Biology full mock in CBT exam mode.',
+      description:
+        '180-question, 720-mark NEET-pattern Biology full mock (90 Botany + 90 Zoology) in CBT exam mode.',
       slug: NEET_TEMPLATE_SLUG,
       type: 'MOCK_TEST',
       category: 'FULL_SYLLABUS',
@@ -122,7 +124,7 @@ export async function ensureNeetTemplate(): Promise<string> {
       negativeMarking: true,
       markingScheme: { correct: CORRECT_MARKS, incorrect: -NEGATIVE_MARKS, unattempted: 0 },
       instructions: [
-        'This is a NEET-pattern full mock in computer-based-test mode.',
+        'NEET-pattern Biology full mock — 180 questions (90 Botany + 90 Zoology), 720 marks, 3 hours.',
         'Do not switch tabs or exit full-screen — such events are recorded.',
       ],
       isActive: true,
@@ -134,10 +136,81 @@ export async function ensureNeetTemplate(): Promise<string> {
   return created.id
 }
 
+// Topic keywords that place a Biology question in the NEET Botany vs Zoology
+// section (the bank is ~99.9% tagged only "biology", so section is derived).
+const BOTANY_HINTS = [
+  'plant',
+  'botany',
+  'flower',
+  'photosynth',
+  'mineral nutrition',
+  'transport in plant',
+  'respiration in plant',
+  'morphology of flowering',
+  'anatomy of flowering',
+  'plant growth',
+  'plant kingdom',
+  'seed',
+  'root',
+  'transpiration',
+  'food production',
+]
+const ZOOLOGY_HINTS = [
+  'human',
+  'animal',
+  'zoology',
+  'digestion',
+  'circulation',
+  'body fluid',
+  'breathing',
+  'exchange of gases',
+  'excret',
+  'neural',
+  'locomotion',
+  'movement',
+  'health and disease',
+  'chemical coordination',
+  'endocrine',
+  'reproduction in organism',
+]
+
+/** Stable 0/1 from an id — splits cross-cutting topics evenly & deterministically. */
+function idBit(id: string): number {
+  let h = 0
+  for (let i = 0; i < id.length; i++) h = (h + id.charCodeAt(i)) % 2
+  return h
+}
+
 /**
- * Select a fresh 180-question NEET paper from the bank. Prefers a Botany/Zoology
- * split; falls back to general biology when subjects aren't tagged. Returns the
- * ordered questions (grouped by subject) — DB rows, not yet client-adapted.
+ * Resolve a question to Botany or Zoology — DETERMINISTIC and pure, so the
+ * same question lands in the same section on the fresh paper, on resume, and
+ * in review (the session stores only ids, everything else re-derives). Tagged
+ * subject wins; else topic hints; else a stable id-hash splits cross-cutting
+ * topics (genetics/cell/ecology/biotech) evenly between the two sections.
+ */
+export function resolveSection(id: string, topic: string, subject: string): 'botany' | 'zoology' {
+  const s = (subject || '').toLowerCase()
+  if (s === 'botany' || s === 'zoology') return s
+  const t = (topic || '').toLowerCase()
+  if (BOTANY_HINTS.some((h) => t.includes(h))) return 'botany'
+  if (ZOOLOGY_HINTS.some((h) => t.includes(h))) return 'zoology'
+  return idBit(id) === 0 ? 'botany' : 'zoology'
+}
+
+function shuffle<T>(a: T[]): T[] {
+  const arr = [...a]
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr
+}
+
+/**
+ * Select a fresh 180-question NEET-pattern paper: 90 Botany + 90 Zoology,
+ * classified from the bank by topic. Each selected row's `subject` is set to
+ * its resolved section so the exam UI groups it into the right tab/palette.
+ * Returns the ordered questions (Botany first, then Zoology).
  */
 export async function selectPaperQuestions(): Promise<DbQuestion[]> {
   const select = {
@@ -151,51 +224,43 @@ export async function selectPaperQuestions(): Promise<DbQuestion[]> {
     difficulty: true,
     explanationImage: true,
   }
-  const [botany, zoology] = await Promise.all([
-    prisma.questions.findMany({
-      where: { isActive: true, subject: { equals: 'botany', mode: 'insensitive' } },
-      select,
-      take: 400,
-    }),
-    prisma.questions.findMany({
-      where: { isActive: true, subject: { equals: 'zoology', mode: 'insensitive' } },
-      select,
-      take: 400,
-    }),
-  ])
+  const half = PAPER_SIZE / 2 // 90 per section
 
-  const shuffle = <T>(a: T[]): T[] => {
-    const arr = [...a]
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      ;[arr[i], arr[j]] = [arr[j], arr[i]]
-    }
-    return arr
+  // Pull a large, varied pool (bank is ~19.6k biology). Cap keeps it cheap;
+  // the shuffle below makes every attempt a different paper.
+  const raw = (await prisma.questions.findMany({
+    where: { isActive: true },
+    select,
+    take: 2000,
+  })) as DbQuestion[]
+  // Only usable MCQs: at least two parseable options (options is Json?).
+  const pool = raw.filter((q) => parseOptions(q.options).length >= 2)
+
+  // Deterministic section per question — matches toClientQuestion exactly, so
+  // fresh/resume/review always agree on which tab each question is in.
+  const botany: DbQuestion[] = []
+  const zoology: DbQuestion[] = []
+  for (const q of shuffle(pool)) {
+    if (resolveSection(q.id, q.topic, q.subject) === 'botany') botany.push(q)
+    else zoology.push(q)
   }
 
-  const half = PAPER_SIZE / 2
-  let picked: DbQuestion[] = [
-    ...shuffle(botany as DbQuestion[]).slice(0, half),
-    ...shuffle(zoology as DbQuestion[]).slice(0, half),
-  ]
-
-  // Fallback: not enough tagged botany/zoology — top up from general biology.
+  // 90 + 90. If one side is thin (tiny dev bank only), the paper still reaches
+  // 180 by borrowing from the other side; in prod both pools far exceed 90.
+  const botanySection = botany.slice(0, half)
+  const zoologySection = zoology.slice(0, half)
+  let picked = [...botanySection, ...zoologySection]
   if (picked.length < PAPER_SIZE) {
     const have = new Set(picked.map((q) => q.id))
-    const more = await prisma.questions.findMany({
-      where: { isActive: true, id: { notIn: [...have] } },
-      select,
-      take: PAPER_SIZE * 2,
-    })
-    picked = [...picked, ...shuffle(more as DbQuestion[])].slice(0, PAPER_SIZE)
+    const filler = [...botany.slice(half), ...zoology.slice(half)].filter((q) => !have.has(q.id))
+    picked = [...picked, ...shuffle(filler)].slice(0, PAPER_SIZE)
   }
 
-  // Group by subject so sections/palette are contiguous.
-  const order = ['botany', 'zoology', 'biology']
+  // Botany section first, then Zoology (standard NEET Biology order).
   picked.sort(
     (a, b) =>
-      order.indexOf((a.subject || 'biology').toLowerCase()) -
-      order.indexOf((b.subject || 'biology').toLowerCase())
+      (resolveSection(a.id, a.topic, a.subject) === 'botany' ? 0 : 1) -
+      (resolveSection(b.id, b.topic, b.subject) === 'botany' ? 0 : 1)
   )
   return picked
 }

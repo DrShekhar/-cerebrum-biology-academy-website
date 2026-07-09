@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
-import { correctLetter, CORRECT_MARKS, NEGATIVE_MARKS } from '@/lib/cbt/paper'
+import { correctLetter, resolveSection, CORRECT_MARKS, NEGATIVE_MARKS } from '@/lib/cbt/paper'
 
 /**
  * POST /api/cbt/session/[id]/submit — server-side scoring + finalize.
@@ -69,7 +69,9 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     for (const qid of questionIds) {
       const q = byId.get(qid)
       if (!q) continue
-      const sec = (q.subject || 'biology').toLowerCase()
+      // Same section resolver the exam UI uses, so the scorecard's Botany /
+      // Zoology breakdown matches the tabs the student actually saw.
+      const sec = resolveSection(q.id, q.topic || '', q.subject || '')
       perSection[sec] = perSection[sec] || { correct: 0, incorrect: 0, unattempted: 0 }
       const sel = answers[qid] || null
       let isCorrect = false
