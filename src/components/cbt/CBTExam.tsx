@@ -26,7 +26,7 @@
  * a refresh resumes the attempt.
  */
 
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef, type CSSProperties } from 'react'
 import { AlertTriangle, CheckCircle2, User, X } from 'lucide-react'
 import type { MockTest, Question } from '@/types/mockTest'
 
@@ -125,6 +125,67 @@ const CLIP_ANSWERED = 'polygon(0% 0%, 100% 15%, 100% 85%, 0% 100%)'
 /** Official NTA "Not Answered" trapezoid — exact horizontal mirror. */
 const CLIP_NOT_ANSWERED = 'polygon(0% 15%, 100% 0%, 100% 100%, 0% 85%)'
 
+/**
+ * Two exam skins, one behavior. 'nta' = pixel-faithful official replica (the
+ * simulator promise); 'enhanced' = identical layout/semantics in the brand's
+ * modern look (default). Palette status SHAPES/colors are shared so status
+ * recognition transfers between skins. Toggle lives in the brand strip.
+ */
+interface ExamTheme {
+  font: CSSProperties
+  pageBg: string
+  titleBar: string
+  sectionActive: string
+  sectionInactiveText: string
+  timer: string
+  panelBg: string
+  btnSave: string
+  btnSaveBorder: string
+  btnMark: string
+  btnMarkBorder: string
+  btnReview: string
+  btnReviewBorder: string
+  radius: number
+  enhanced: boolean
+}
+
+const EXAM_THEMES: Record<'nta' | 'enhanced', ExamTheme> = {
+  nta: {
+    font: NTA_FONT,
+    pageBg: '#ffffff',
+    titleBar: TITLE_BLUE,
+    sectionActive: NTA_BLUE,
+    sectionInactiveText: '#36ACE9',
+    timer: TIMER_BLUE,
+    panelBg: NTA_PANEL_BLUE,
+    btnSave: BTN_GREEN,
+    btnSaveBorder: '#4CAE4C',
+    btnMark: BTN_ORANGE,
+    btnMarkBorder: '#EEA236',
+    btnReview: BTN_BLUE,
+    btnReviewBorder: '#2E6DA4',
+    radius: 0,
+    enhanced: false,
+  },
+  enhanced: {
+    font: { fontFamily: 'inherit' },
+    pageBg: '#f8faf9',
+    titleBar: '#136f3e',
+    sectionActive: '#17924f',
+    sectionInactiveText: '#17924f',
+    timer: '#17924f',
+    panelBg: '#f0f9f3',
+    btnSave: '#17924f',
+    btnSaveBorder: '#136f3e',
+    btnMark: '#f59e0b',
+    btnMarkBorder: '#d97706',
+    btnReview: '#2563eb',
+    btnReviewBorder: '#1d4ed8',
+    radius: 10,
+    enhanced: true,
+  },
+}
+
 function sectionLabel(subject: string): string {
   const s = (subject || 'biology').toLowerCase()
   if (s === 'botany') return 'Botany'
@@ -183,6 +244,23 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
   const [showWarning, setShowWarning] = useState<string | null>(null)
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false)
   const [paletteCollapsed, setPaletteCollapsed] = useState(false)
+  // Exam skin — enhanced by default, NTA replica one tap away (persisted).
+  const [uiTheme, setUiTheme] = useState<'nta' | 'enhanced'>('enhanced')
+  useEffect(() => {
+    const saved = localStorage.getItem('cbt_ui_theme')
+    if (saved === 'nta' || saved === 'enhanced') setUiTheme(saved)
+  }, [])
+  const T = EXAM_THEMES[uiTheme]
+  const toggleUiTheme = () =>
+    setUiTheme((t) => {
+      const next = t === 'nta' ? 'enhanced' : 'nta'
+      try {
+        localStorage.setItem('cbt_ui_theme', next)
+      } catch {
+        /* ignore */
+      }
+      return next
+    })
   const [mobilePaletteOpen, setMobilePaletteOpen] = useState(false)
   const [showInstructionsModal, setShowInstructionsModal] = useState(false)
   const [showPaperModal, setShowPaperModal] = useState(false)
@@ -592,13 +670,13 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
   const paletteColumn = (
     <div
       className="flex h-full w-full flex-col border-l border-gray-300"
-      style={{ backgroundColor: NTA_PANEL_BLUE }}
+      style={{ backgroundColor: T.panelBg }}
     >
       {candidatePanel}
       {legend}
       <div
         className="px-2 py-1 text-[12px] font-bold text-white"
-        style={{ backgroundColor: NTA_BLUE }}
+        style={{ backgroundColor: T.sectionActive, borderRadius: T.radius ? 8 : 0 }}
       >
         {activeSection} — Choose a Question
       </div>
@@ -606,8 +684,8 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
       <div className="border-t border-gray-300 p-2">
         <button
           onClick={() => setShowSubmitConfirm(true)}
-          className="w-full px-4 py-2 text-[13px] font-bold text-white hover:opacity-90"
-          style={{ backgroundColor: BTN_GREEN }}
+          className="w-full px-4 py-2 text-[13px] font-bold text-white transition-transform hover:opacity-90 active:scale-[0.99]"
+          style={{ backgroundColor: T.btnSave, borderRadius: T.radius }}
         >
           SUBMIT
         </button>
@@ -955,19 +1033,32 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
 
   // ── RENDER: Exam ──────────────────────────────────────────────────────────
   return (
-    <div ref={examRef} className="flex h-dvh select-none flex-col bg-white" style={NTA_FONT}>
+    <div
+      ref={examRef}
+      className="flex h-dvh select-none flex-col"
+      style={{ ...T.font, backgroundColor: T.pageBg }}
+    >
       {/* Brand strip */}
       <div className="flex items-center justify-between border-b border-gray-300 bg-white px-3 py-1">
         <span className="text-[13px] font-bold tracking-wide text-gray-800">
           CEREBRUM BIOLOGY ACADEMY
         </span>
-        <span className="hidden text-[11px] text-gray-500 sm:block">Computer Based Test</span>
+        <span className="flex items-center gap-3">
+          <span className="hidden text-[11px] text-gray-500 sm:block">Computer Based Test</span>
+          <button
+            onClick={toggleUiTheme}
+            className="rounded-full border border-gray-300 px-2.5 py-0.5 text-[11px] font-semibold text-gray-600 transition-colors hover:bg-gray-100"
+            title="Switch between the enhanced look and the exact NTA exam interface"
+          >
+            {uiTheme === 'nta' ? 'Enhanced look' : 'Real NTA mode'}
+          </button>
+        </span>
       </div>
 
       {/* Paper title bar */}
       <div
         className="flex items-center justify-between gap-2 px-3 py-1.5 text-white"
-        style={{ backgroundColor: TITLE_BLUE }}
+        style={{ backgroundColor: T.titleBar }}
       >
         <span className="truncate text-[13px] font-bold">{test.title}</span>
         <div className="flex shrink-0 items-center gap-3 text-[12px]">
@@ -1004,11 +1095,21 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
                       )
                       if (first >= 0) goTo(first)
                     }}
-                    className="shrink-0 border px-3 py-1 text-[12px] font-semibold"
+                    className="shrink-0 border px-3 py-1 text-[12px] font-semibold transition-colors"
                     style={
                       active
-                        ? { backgroundColor: NTA_BLUE, borderColor: NTA_BLUE, color: '#fff' }
-                        : { backgroundColor: '#fff', borderColor: '#C3C3C1', color: '#36ACE9' }
+                        ? {
+                            backgroundColor: T.sectionActive,
+                            borderColor: T.sectionActive,
+                            color: '#fff',
+                            borderRadius: T.radius,
+                          }
+                        : {
+                            backgroundColor: '#fff',
+                            borderColor: '#C3C3C1',
+                            color: T.sectionInactiveText,
+                            borderRadius: T.radius,
+                          }
                     }
                   >
                     {sec}
@@ -1020,7 +1121,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
               Remaining Time :{' '}
               <span
                 className="inline-block rounded-full px-3 py-0.5 font-mono text-[13px] font-bold text-white"
-                style={{ backgroundColor: timeRemaining < 300 ? '#D9534F' : TIMER_BLUE }}
+                style={{ backgroundColor: timeRemaining < 300 ? '#D9534F' : T.timer }}
               >
                 {formatTime(timeRemaining)}
               </span>
@@ -1054,44 +1155,71 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
           </div>
 
           {/* Question body */}
-          <div className="min-h-0 flex-1 overflow-y-auto bg-white p-4">
-            {currentQ && (
-              <>
-                <p className="text-[14px] leading-relaxed text-gray-900">{currentQ.questionText}</p>
-                {currentQ.questionImage && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={currentQ.questionImage} alt="" className="mt-3 max-h-64" />
-                )}
-                <div className="mt-5 space-y-1">
-                  {currentQ.options.map((opt, i) => {
-                    const selected = pending === opt.id
-                    return (
-                      <label
-                        key={opt.id}
-                        className={`flex cursor-pointer items-start gap-2.5 px-2 py-2 text-[14px] ${
-                          selected ? 'bg-blue-50' : 'hover:bg-gray-50'
-                        }`}
-                      >
-                        <input
-                          type="radio"
-                          name={`q_${currentQ.id}`}
-                          className="mt-1 h-4 w-4"
-                          checked={selected}
-                          onClick={() => {
-                            // NTA: clicking the selected option again deselects it.
-                            if (selected) setPending(null)
-                          }}
-                          onChange={() => setPending(opt.id)}
-                        />
-                        <span className="text-gray-800">
-                          {i + 1}) {opt.text}
-                        </span>
-                      </label>
-                    )
-                  })}
-                </div>
-              </>
-            )}
+          <div
+            className="min-h-0 flex-1 overflow-y-auto p-4"
+            style={{ backgroundColor: T.enhanced ? T.pageBg : '#ffffff' }}
+          >
+            <div
+              className={
+                T.enhanced
+                  ? 'mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-6 shadow-sm'
+                  : undefined
+              }
+            >
+              {currentQ && (
+                <>
+                  <p
+                    className={
+                      T.enhanced
+                        ? 'text-[15px] font-medium leading-relaxed text-gray-900'
+                        : 'text-[14px] leading-relaxed text-gray-900'
+                    }
+                  >
+                    {currentQ.questionText}
+                  </p>
+                  {currentQ.questionImage && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={currentQ.questionImage} alt="" className="mt-3 max-h-64" />
+                  )}
+                  <div className={T.enhanced ? 'mt-6 space-y-2.5' : 'mt-5 space-y-1'}>
+                    {currentQ.options.map((opt, i) => {
+                      const selected = pending === opt.id
+                      return (
+                        <label
+                          key={opt.id}
+                          className={
+                            T.enhanced
+                              ? `flex cursor-pointer items-start gap-3 rounded-xl border px-4 py-3 text-[14px] transition-all ${
+                                  selected
+                                    ? 'border-[#17924f] bg-[#f0f9f3] shadow-sm ring-1 ring-[#17924f]/30'
+                                    : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50'
+                                }`
+                              : `flex cursor-pointer items-start gap-2.5 px-2 py-2 text-[14px] ${
+                                  selected ? 'bg-blue-50' : 'hover:bg-gray-50'
+                                }`
+                          }
+                        >
+                          <input
+                            type="radio"
+                            name={`q_${currentQ.id}`}
+                            className="mt-1 h-4 w-4"
+                            checked={selected}
+                            onClick={() => {
+                              // NTA: clicking the selected option again deselects it.
+                              if (selected) setPending(null)
+                            }}
+                            onChange={() => setPending(opt.id)}
+                          />
+                          <span className="text-gray-800">
+                            {i + 1}) {opt.text}
+                          </span>
+                        </label>
+                      )
+                    })}
+                  </div>
+                </>
+              )}
+            </div>
           </div>
 
           {/* Bottom action bar */}
@@ -1099,28 +1227,41 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
             <div className="flex flex-wrap items-center gap-1.5">
               <button
                 onClick={saveAndNext}
-                className="border px-3 py-1.5 text-[12px] font-bold text-white hover:opacity-90"
-                style={{ backgroundColor: BTN_GREEN, borderColor: '#4CAE4C' }}
+                className="border px-3 py-1.5 text-[12px] font-bold text-white transition-transform hover:opacity-90 active:scale-[0.98]"
+                style={{
+                  backgroundColor: T.btnSave,
+                  borderColor: T.btnSaveBorder,
+                  borderRadius: T.radius,
+                }}
               >
                 SAVE &amp; NEXT
               </button>
               <button
                 onClick={clearResponse}
                 className="border border-[#CCC] bg-white px-3 py-1.5 text-[12px] font-bold text-[#333] hover:bg-gray-50"
+                style={{ borderRadius: T.radius }}
               >
                 CLEAR
               </button>
               <button
                 onClick={saveAndMarkForReview}
                 className="border px-3 py-1.5 text-[12px] font-bold text-white hover:opacity-90"
-                style={{ backgroundColor: BTN_ORANGE, borderColor: '#EEA236' }}
+                style={{
+                  backgroundColor: T.btnMark,
+                  borderColor: T.btnMarkBorder,
+                  borderRadius: T.radius,
+                }}
               >
                 SAVE &amp; MARK FOR REVIEW
               </button>
               <button
                 onClick={markForReviewAndNext}
                 className="border px-3 py-1.5 text-[12px] font-bold text-white hover:opacity-90"
-                style={{ backgroundColor: BTN_BLUE, borderColor: '#2E6DA4' }}
+                style={{
+                  backgroundColor: T.btnReview,
+                  borderColor: T.btnReviewBorder,
+                  borderRadius: T.radius,
+                }}
               >
                 MARK FOR REVIEW &amp; NEXT
               </button>
@@ -1129,6 +1270,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
                   onClick={() => goTo(currentIndex - 1)}
                   disabled={currentIndex === 0}
                   className="border border-[#CCC] bg-white px-3 py-1.5 text-[12px] font-bold text-[#333] hover:bg-gray-50 disabled:opacity-40"
+                  style={{ borderRadius: T.radius }}
                 >
                   &lt;&lt; BACK
                 </button>
@@ -1136,13 +1278,14 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
                   onClick={() => goTo(currentIndex + 1)}
                   disabled={currentIndex === orderedQuestions.length - 1}
                   className="border border-[#CCC] bg-white px-3 py-1.5 text-[12px] font-bold text-[#333] hover:bg-gray-50 disabled:opacity-40"
+                  style={{ borderRadius: T.radius }}
                 >
                   NEXT &gt;&gt;
                 </button>
                 <button
                   onClick={() => setShowSubmitConfirm(true)}
                   className="px-4 py-1.5 text-[12px] font-bold text-white hover:opacity-90 lg:hidden"
-                  style={{ backgroundColor: BTN_GREEN }}
+                  style={{ backgroundColor: T.btnSave, borderRadius: T.radius }}
                 >
                   SUBMIT
                 </button>
@@ -1172,7 +1315,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
       <button
         onClick={() => setMobilePaletteOpen(true)}
         className="fixed right-0 top-1/2 z-40 -translate-y-1/2 rounded-l px-1.5 py-3 text-[11px] font-bold text-white lg:hidden"
-        style={{ backgroundColor: NTA_BLUE }}
+        style={{ backgroundColor: T.sectionActive }}
         aria-label="Open question palette"
       >
         ◄
@@ -1190,7 +1333,7 @@ export function CBTExam({ test, candidateName, onExit, server }: CBTExamProps) {
             <button
               onClick={() => setMobilePaletteOpen(false)}
               className="absolute -left-4 top-1/2 z-10 -translate-y-1/2 rounded-l px-1.5 py-3 text-[11px] font-bold text-white"
-              style={{ backgroundColor: NTA_BLUE }}
+              style={{ backgroundColor: T.sectionActive }}
               aria-label="Close question palette"
             >
               ►
