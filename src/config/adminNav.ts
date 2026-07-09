@@ -306,6 +306,7 @@ export const ADMIN_NAV: AdminNavItem[] = [
     icon: PenTool,
     href: '/admin/content',
     children: [
+      { id: 'video-hub', name: 'Video Hub', icon: MessageSquare, href: '/admin/video-hub' },
       { id: 'content-hub', name: 'Content Hub', icon: PenTool, href: '/admin/content' },
       { id: 'content-drafts', name: 'Drafts', icon: FileText, href: '/admin/content/drafts' },
       {
