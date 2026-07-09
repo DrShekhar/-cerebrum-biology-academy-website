@@ -129,6 +129,12 @@ export default function TeacherAnalyticsPage() {
       <div className="mb-6">
         <div className="flex justify-between items-center mb-4">
           <div>
+            <a
+              href="/teacher"
+              className="mb-2 inline-flex items-center gap-1 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+            >
+              ← Dashboard
+            </a>
             <h1 className="text-3xl font-bold text-gray-900">Performance Analytics</h1>
             <p className="text-gray-600 mt-1">
               Track your teaching performance and student engagement

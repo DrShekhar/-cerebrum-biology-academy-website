@@ -207,6 +207,12 @@ export default function TeacherQuestionsPage() {
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
+          <a
+            href="/teacher"
+            className="mb-2 inline-flex items-center gap-1 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+          >
+            ← Dashboard
+          </a>
           <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-3">
             <BookOpen className="h-8 w-8 text-blue-600" />
             Question Bank

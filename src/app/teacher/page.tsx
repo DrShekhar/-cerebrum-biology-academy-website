@@ -61,6 +61,8 @@ export default function TeacherDashboardPage() {
   const [recentActivities, setRecentActivities] = useState<RecentActivity[]>([])
   const [upcomingClasses, setUpcomingClasses] = useState<UpcomingClass[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  const [loadError, setLoadError] = useState(false)
+  const [reloadKey, setReloadKey] = useState(0)
 
   // Allow access if owner OR teacher role
   const hasTeacherAccess = isOwner || (isAuthenticated && user?.role === 'TEACHER')
@@ -78,6 +80,7 @@ export default function TeacherDashboardPage() {
     async function fetchDashboardData() {
       try {
         setIsLoading(true)
+        setLoadError(false)
         const response = await fetch('/api/teacher/dashboard')
         const data = await response.json()
 
@@ -85,9 +88,12 @@ export default function TeacherDashboardPage() {
           setStats(data.stats)
           setRecentActivities(data.recentActivities || [])
           setUpcomingClasses(data.upcomingClasses || [])
+        } else {
+          setLoadError(true)
         }
       } catch (error) {
         console.error('Error fetching teacher dashboard:', error)
+        setLoadError(true)
       } finally {
         setIsLoading(false)
       }
@@ -96,7 +102,7 @@ export default function TeacherDashboardPage() {
     if (hasTeacherAccess) {
       fetchDashboardData()
     }
-  }, [hasTeacherAccess])
+  }, [hasTeacherAccess, reloadKey])
 
   if (authLoading || isCheckingOwner || isLoading) {
     return <LoadingSkeleton />
@@ -181,12 +187,47 @@ export default function TeacherDashboardPage() {
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="space-y-8">
+            {loadError && (
+              <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-orange-200 bg-orange-50 p-4">
+                <p className="text-sm text-orange-800">
+                  Couldn&apos;t load your dashboard data — the numbers below may be incomplete.
+                </p>
+                <Button variant="outline" size="sm" onClick={() => setReloadKey((k) => k + 1)}>
+                  Retry
+                </Button>
+              </div>
+            )}
+
+            {/* Your day at a glance — the cockpit answer to "what now?" */}
+            {!loadError && (
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 rounded-2xl bg-gradient-to-r from-green-700 to-green-600 px-5 py-4 text-white">
+                <span className="text-sm font-bold uppercase tracking-wide text-green-100">
+                  Today
+                </span>
+                <Link href="/teacher/sessions" className="text-sm font-medium hover:underline">
+                  {upcomingClasses.length > 0
+                    ? `Next class: ${upcomingClasses[0].title} at ${upcomingClasses[0].time}`
+                    : 'No classes scheduled'}
+                </Link>
+                <Link href="/teacher/assignments" className="text-sm font-medium hover:underline">
+                  {stats.pendingSubmissions} to grade
+                </Link>
+                <Link href="/teacher/doubts" className="text-sm font-medium hover:underline">
+                  {stats.studentDoubts} doubts waiting
+                </Link>
+              </div>
+            )}
+
             {/* Quick Stats */}
             <section>
               <h2 className="text-xl font-bold text-gray-900 mb-4">Overview</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {quickStats.map((stat, index) => (
-                  <div key={stat.label} className="animate-fadeInUp">
+                  <div
+                    key={stat.label}
+                    className="animate-fadeInUp"
+                    style={{ animationDelay: `${index * 60}ms`, animationFillMode: 'backwards' }}
+                  >
                     <Link href={stat.href}>
                       <Card className="hover:shadow-lg transition-shadow cursor-pointer">
                         <CardContent className="p-6">
@@ -225,7 +266,7 @@ export default function TeacherDashboardPage() {
                     title="Take Attendance"
                     description="Mark today's attendance"
                     href="/teacher/attendance"
-                    color="bg-green-600"
+                    color="from-green-600 to-green-700"
                   />
                   <QuickActionCard
                     icon={MessageCircle}
@@ -260,7 +301,28 @@ export default function TeacherDashboardPage() {
                     title="Video Lectures"
                     description="Add in-video quiz checkpoints"
                     href="/teacher/videos"
-                    color="from-indigo-500 to-indigo-600"
+                    color="from-blue-600 to-blue-700"
+                  />
+                  <QuickActionCard
+                    icon={Calendar}
+                    title="Live Classes"
+                    description="Schedule & run sessions"
+                    href="/teacher/sessions"
+                    color="from-teal-600 to-teal-700"
+                  />
+                  <QuickActionCard
+                    icon={TrendingUp}
+                    title="Analytics"
+                    description="Class & student performance"
+                    href="/teacher/analytics"
+                    color="from-purple-600 to-purple-700"
+                  />
+                  <QuickActionCard
+                    icon={CheckCircle}
+                    title="Test Assignments"
+                    description="Assign tests to batches"
+                    href="/teacher/test-assignment"
+                    color="from-orange-500 to-orange-600"
                   />
                 </div>
               </section>

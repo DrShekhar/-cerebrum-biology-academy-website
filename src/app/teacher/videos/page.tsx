@@ -57,6 +57,12 @@ export default function TeacherVideosPage() {
   return (
     <div className="mx-auto max-w-5xl p-6">
       <div className="mb-6">
+        <Link
+          href="/teacher"
+          className="mb-2 inline-flex items-center gap-1 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+        >
+          ← Dashboard
+        </Link>
         <h1 className="text-2xl font-bold text-gray-900">Video Lectures</h1>
         <p className="mt-1 text-sm text-gray-600">
           Add in-video quiz checkpoints to a lecture — students get a pause-and-answer moment while

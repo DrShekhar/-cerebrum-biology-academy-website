@@ -59,11 +59,14 @@ export default function TeacherAssignmentsPage() {
         const data = await response.json()
 
         if (response.ok) {
-          setAssignments(data.assignments)
+          setAssignments(data.assignments || [])
           setStats(data.stats)
+        } else {
+          showToast.error(data.error || 'Could not load assignments — pull to refresh or retry')
         }
       } catch (error) {
         console.error('Error fetching assignments:', error)
+        showToast.error('Could not load assignments — check your connection and retry')
       } finally {
         setLoading(false)
       }
@@ -122,6 +125,12 @@ export default function TeacherAssignmentsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
+              <Link
+                href="/teacher"
+                className="mb-2 inline-flex items-center gap-1 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+              >
+                ← Dashboard
+              </Link>
               <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Assignments</h1>
               <p className="text-gray-600 mt-1">Manage and grade student assignments</p>
             </div>

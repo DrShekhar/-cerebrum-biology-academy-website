@@ -306,6 +306,12 @@ export default function TeacherSessionsPage() {
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>
+            <a
+              href="/teacher"
+              className="mb-2 inline-flex items-center gap-1 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+            >
+              ← Dashboard
+            </a>
             <h1 className="text-3xl font-bold text-gray-900">Class Sessions</h1>
             <p className="text-gray-600 mt-1">Manage your class schedules and sessions</p>
           </div>

@@ -17,8 +17,11 @@ export default function TeacherCoursesPage() {
   const [courses, setCourses] = useState<Course[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [reloadKey, setReloadKey] = useState(0)
 
   useEffect(() => {
+    setLoading(true)
+    setError(null)
     fetch('/api/teacher/courses')
       .then((r) => r.json())
       .then((d) => {
@@ -27,7 +30,7 @@ export default function TeacherCoursesPage() {
       })
       .catch(() => setError('Network error'))
       .finally(() => setLoading(false))
-  }, [])
+  }, [reloadKey])
 
   return (
     <div className="mx-auto max-w-4xl p-6">
@@ -44,12 +47,23 @@ export default function TeacherCoursesPage() {
           <Loader2 className="mr-2 h-5 w-5 animate-spin" /> Loading courses…
         </div>
       ) : error ? (
-        <div className="mt-6 rounded-xl border border-red-200 bg-red-50 p-6 text-center text-red-700">
-          {error}
+        <div className="mt-6 rounded-xl border border-red-200 bg-red-50 p-6 text-center">
+          <p className="text-red-700">{error}</p>
+          <button
+            onClick={() => setReloadKey((k) => k + 1)}
+            className="mt-3 rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-red-700"
+          >
+            Try again
+          </button>
         </div>
       ) : courses.length === 0 ? (
-        <div className="mt-6 rounded-xl border border-gray-200 bg-white p-8 text-center text-gray-500">
-          No active courses found.
+        <div className="mt-6 rounded-xl border border-gray-200 bg-white p-10 text-center">
+          <BookOpen className="mx-auto mb-3 h-10 w-10 text-gray-300" />
+          <p className="font-semibold text-gray-900">No courses assigned to you yet</p>
+          <p className="mx-auto mt-1 max-w-sm text-sm text-gray-500">
+            Once an admin assigns you a course (or creates one for your batch), it will appear here
+            ready to build.
+          </p>
         </div>
       ) : (
         <div className="mt-6 grid gap-4 sm:grid-cols-2">

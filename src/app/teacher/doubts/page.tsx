@@ -128,6 +128,12 @@ export default function TeacherDoubtsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
+              <Link
+                href="/teacher"
+                className="mb-2 inline-flex items-center gap-1 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+              >
+                ← Dashboard
+              </Link>
               <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 flex items-center gap-2">
                 <MessageCircle className="w-8 h-8 text-purple-600" />
                 Student Doubts
@@ -140,8 +146,11 @@ export default function TeacherDoubtsPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {error && (
-          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3 p-4 bg-red-50 border border-red-200 rounded-lg">
             <p className="text-red-800">{error}</p>
+            <Button variant="outline" size="sm" onClick={fetchDoubts}>
+              Retry
+            </Button>
           </div>
         )}
 
