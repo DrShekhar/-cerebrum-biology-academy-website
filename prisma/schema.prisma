@@ -165,6 +165,7 @@ model assignments {
   updatedAt              DateTime
   publishedAt            DateTime?
   assignment_submissions assignment_submissions[]
+  study_materials        study_materials[]        @relation("MaterialAssignment")
   chapters               chapters?                @relation(fields: [chapterId], references: [id])
   courses                courses?                 @relation(fields: [courseId], references: [id])
   users                  users                    @relation(fields: [teacherId], references: [id], onDelete: Cascade)
@@ -1063,6 +1064,51 @@ model demo_slot_blocks {
   createdAt DateTime @default(now())
 
   @@index([startDate, endDate])
+}
+
+/// Mentor 1:1 / small-group session slots — recurring weekly availability a
+/// teacher publishes; students book a doubt/mentoring session from the course
+/// page. Mirrors the demo_slots pattern.
+model mentor_slots {
+  id           String            @id @default(cuid())
+  teacherId    String
+  teacherName  String? // denormalized for display
+  dayOfWeek    Int // 0=Sunday … 6=Saturday (IST)
+  startTime    String // "17:00" 24h IST
+  durationMins Int               @default(30)
+  capacity     Int               @default(1) // 1 = true 1:1
+  mode         String            @default("online") // "online" | "offline"
+  meetingUrl   String? // shared Zoom/Meet link
+  topic        String? // optional focus
+  courseId     String? // scope to one course, null = any
+  isActive     Boolean           @default(true)
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+  bookings     mentor_bookings[]
+
+  @@index([teacherId, isActive])
+  @@index([dayOfWeek, isActive])
+}
+
+/// A student's booking of a mentor slot on a specific date.
+model mentor_bookings {
+  id          String       @id @default(cuid())
+  slotId      String
+  studentId   String
+  teacherId   String
+  date        String // YYYY-MM-DD (IST)
+  startTime   String // "17:00"
+  status      String       @default("BOOKED") // BOOKED | COMPLETED | CANCELLED | NO_SHOW
+  studentNote String? // what the student wants help with
+  meetingUrl  String?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  slot        mentor_slots @relation(fields: [slotId], references: [id], onDelete: Cascade)
+
+  @@unique([slotId, date, startTime, studentId])
+  @@index([studentId, status])
+  @@index([teacherId, date])
+  @@index([slotId, date])
 }
 
 model diagram_assets {
@@ -2709,6 +2755,7 @@ model study_materials {
   // Quiz-as-lesson: TEST materials point at the test template they render.
   testTemplateId    String?
   contentBody       String? // markdown body for ARTICLE lessons
+  assignmentId      String? // links an ASSIGNMENT lesson to its assignments row
   sortOrder         Int                 @default(0)
   category          String?
   uploadedBy        String
@@ -2723,6 +2770,7 @@ model study_materials {
   material_access   material_access[]
   material_progress material_progress[]
   test_template     test_templates?     @relation("MaterialTest", fields: [testTemplateId], references: [id])
+  assignment        assignments?        @relation("MaterialAssignment", fields: [assignmentId], references: [id])
   group_content     group_content[]
   chapters          chapters?           @relation(fields: [chapterId], references: [id])
   courses           courses?            @relation(fields: [courseId], references: [id])
@@ -4045,6 +4093,8 @@ enum MaterialType {
   LINK
   TEST
   ARTICLE
+  AUDIO
+  ASSIGNMENT
 }
 
 enum MessageDirection {
