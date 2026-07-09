@@ -89,7 +89,7 @@ export function PersonalizedStudentDashboard() {
   // Real data from API
   const [neetProgress, setNeetProgress] = useState<NEETProgress>({
     currentScore: 0,
-    targetScore: 540,
+    targetScore: 360,
     improvement: 0,
     rank: 0,
     percentile: 0,
