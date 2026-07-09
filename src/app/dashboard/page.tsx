@@ -182,6 +182,15 @@ export default function DashboardPage() {
         router.push('/select-role')
         return
       }
+
+      // Students have ONE home: /student/dashboard (daily plan + shell nav).
+      // This page's analytics live on at /dashboard/student ("Full Analytics").
+      // Ends the two-parallel-dashboards confusion; non-student roles keep
+      // their existing behavior.
+      if (user.role === 'STUDENT' || !user.role) {
+        router.replace('/student/dashboard')
+        return
+      }
     }
   }, [isLoading, user, router, mounted])
 

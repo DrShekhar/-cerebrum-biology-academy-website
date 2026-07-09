@@ -185,8 +185,17 @@ export function PersonalizedStudentDashboard() {
                 recommendedStudyTime: data.count * 30,
               }))
 
-            // Calculate Biology score (out of 360 for NEET Biology section)
-            const biologyScore = Math.round(avgScore * 0.5)
+            // Projected NEET Biology marks: average practice-test PERCENTAGE
+            // mapped onto the 360-mark Biology section — a projection from
+            // real attempts, replacing the old fabricated avgScore*0.5 (which
+            // showed an 80% average as 40/360).
+            const pcts = attempts
+              .map((a: { percentage?: number }) => a.percentage)
+              .filter((p: number | undefined): p is number => typeof p === 'number')
+            const avgPct = pcts.length
+              ? pcts.reduce((a: number, b: number) => a + b, 0) / pcts.length
+              : 0
+            const biologyScore = Math.round((avgPct / 100) * 360)
 
             setNeetProgress({
               currentScore: biologyScore,

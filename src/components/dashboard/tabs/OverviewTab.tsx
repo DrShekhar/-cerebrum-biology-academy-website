@@ -99,9 +99,13 @@ export function OverviewTab({
       <div className="bg-gradient-to-r from-green-600 to-navy-700 rounded-xl sm:rounded-2xl p-4 sm:p-8 text-white">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">🎯 NEET Biology Score</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
+              🎯 NEET Biology Projection
+            </h3>
             <div className="space-y-1.5 sm:space-y-2">
-              <div className="text-xs sm:text-sm text-blue-100">Current Score</div>
+              <div className="text-xs sm:text-sm text-blue-100">
+                Projected from your practice-test average
+              </div>
               <BiologyScoreDisplay
                 currentScore={neetProgress.currentScore}
                 maxScore={360}
