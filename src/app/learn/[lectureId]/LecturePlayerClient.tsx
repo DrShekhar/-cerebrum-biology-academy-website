@@ -22,7 +22,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { Loader2, AlertTriangle, ArrowLeft, Sparkles, Check, X } from 'lucide-react'
-import SecureVideoPlayer from '@/components/lms/SecureVideoPlayer'
+import SecureVideoPlayer, { type SecureVideoPlayerHandle } from '@/components/lms/SecureVideoPlayer'
 import { useAuth } from '@/contexts/AuthContext'
 
 interface Checkpoint {
@@ -63,6 +63,8 @@ export default function LecturePlayerClient({ lectureId }: { lectureId: string }
   const lastWatchedRef = useRef(0)
   // Live playhead for "add note at current time".
   const positionRef = useRef(0)
+  // Handle to seek the player when a timestamped note is clicked.
+  const playerRef = useRef<SecureVideoPlayerHandle>(null)
 
   useEffect(() => {
     if (authLoading) return
@@ -188,6 +190,7 @@ export default function LecturePlayerClient({ lectureId }: { lectureId: string }
       ) : (
         <div className="relative">
           <SecureVideoPlayer
+            ref={playerRef}
             videoId={lectureId}
             videoUrl={data.video.url || ''}
             title="Lecture"
@@ -229,7 +232,11 @@ export default function LecturePlayerClient({ lectureId }: { lectureId: string }
 
       {/* Timestamped personal notes (only for instrumented CF lectures) */}
       {!data.video.youtubeId && (
-        <NotesPanel lectureId={lectureId} getPosition={() => positionRef.current} />
+        <NotesPanel
+          lectureId={lectureId}
+          getPosition={() => positionRef.current}
+          onSeek={(seconds) => playerRef.current?.seekTo(seconds)}
+        />
       )}
     </div>
   )
@@ -248,8 +255,17 @@ const fmtTime = (s: number) => {
   return `${m}:${sec.toString().padStart(2, '0')}`
 }
 
-/** My notes on this lecture — timestamped at the playhead when added. */
-function NotesPanel({ lectureId, getPosition }: { lectureId: string; getPosition: () => number }) {
+/** My notes on this lecture — timestamped at the playhead when added.
+ *  Clicking a note's timestamp seeks the player back to that moment. */
+function NotesPanel({
+  lectureId,
+  getPosition,
+  onSeek,
+}: {
+  lectureId: string
+  getPosition: () => number
+  onSeek: (seconds: number) => void
+}) {
   const [notes, setNotes] = useState<VideoNote[]>([])
   const [content, setContent] = useState('')
   const [saving, setSaving] = useState(false)
@@ -323,9 +339,15 @@ function NotesPanel({ lectureId, getPosition }: { lectureId: string; getPosition
               key={n.id}
               className="flex items-start gap-2 rounded-lg bg-slate-50 px-3 py-2 text-sm"
             >
-              <span className="shrink-0 rounded bg-blue-100 px-1.5 py-0.5 font-mono text-xs text-blue-700">
-                {fmtTime(n.timestamp)}
-              </span>
+              <button
+                type="button"
+                onClick={() => onSeek(n.timestamp)}
+                title="Jump to this moment"
+                aria-label={`Jump to ${fmtTime(n.timestamp)}`}
+                className="shrink-0 cursor-pointer rounded bg-blue-100 px-1.5 py-0.5 font-mono text-xs text-blue-700 transition-colors hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              >
+                ▸ {fmtTime(n.timestamp)}
+              </button>
               <span className="min-w-0 flex-1 whitespace-pre-wrap text-slate-800">{n.content}</span>
               <button
                 onClick={() => remove(n.id)}
