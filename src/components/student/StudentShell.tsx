@@ -19,6 +19,7 @@ import {
   MonitorCheck,
   Layers,
   MessageCircle,
+  CalendarClock,
   FolderOpen,
   Award,
   Bell,
@@ -35,6 +36,7 @@ const NAV_ITEMS = [
   { label: 'NEET Simulator', href: '/cbt', icon: MonitorCheck },
   { label: 'Flashcards', href: '/flashcards', icon: Layers },
   { label: 'Doubts', href: '/student/doubts', icon: MessageCircle },
+  { label: 'Mentor Session', href: '/student/mentor', icon: CalendarClock },
   { label: 'Materials', href: '/student/materials', icon: FolderOpen },
   { label: 'Certificates', href: '/student/certificates', icon: Award },
 ]

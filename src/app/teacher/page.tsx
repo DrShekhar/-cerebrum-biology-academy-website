@@ -333,6 +333,13 @@ export default function TeacherDashboardPage() {
                     href="/teacher/test-assignment"
                     color="from-orange-500 to-orange-600"
                   />
+                  <QuickActionCard
+                    icon={Clock}
+                    title="Mentor Slots"
+                    description="Publish 1:1 / group session slots"
+                    href="/teacher/mentor-slots"
+                    color="from-teal-600 to-teal-700"
+                  />
                 </div>
               </section>
 
