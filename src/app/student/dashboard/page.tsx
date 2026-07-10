@@ -24,6 +24,9 @@ import { Button } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { PaymentReminderCard } from '@/components/payments/PaymentReminderCard'
 import { DashboardHero, MasteryGrid } from '@/components/student/DashboardHero'
+import { NextClassCard } from '@/components/student/NextClassCard'
+import { AttendanceRing } from '@/components/student/AttendanceRing'
+import { LibraryStrip } from '@/components/student/LibraryStrip'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 
@@ -307,11 +310,23 @@ export default function StudentDashboard() {
             isGuest={isGuestUser}
           />
 
+          {/* Next class + attendance — real class_sessions / attendance data */}
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <NextClassCard />
+            <AttendanceRing />
+          </div>
+
           {/* Chapter mastery from real strengths/weak areas */}
           <MasteryGrid attempts={allAttempts} />
 
           {allAttempts.length > 0 && (
-            <div className="-mt-4 text-right">
+            <div className="-mt-4 flex items-center justify-end gap-4">
+              <Link
+                href="/student/syllabus"
+                className="text-sm font-semibold text-green-700 hover:text-green-800"
+              >
+                View full mastery map →
+              </Link>
               <Link
                 href="/student/gradebook"
                 className="text-sm font-semibold text-green-700 hover:text-green-800"
@@ -320,6 +335,9 @@ export default function StudentDashboard() {
               </Link>
             </div>
           )}
+
+          {/* Your library — recorded classes + recent study materials */}
+          <LibraryStrip />
 
           {/* Quick Actions */}
           <section>
