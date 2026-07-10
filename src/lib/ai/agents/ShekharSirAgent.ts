@@ -1,7 +1,7 @@
 /**
  * Shekhar Sir Agent - Expert Biology Question Generator
  *
- * An AI agent modeled after a 20+ year experienced NEET Biology coach.
+ * An AI agent modeled after a 15+ year experienced NEET Biology coach.
  * Trained on NEET PYQ patterns from 2010-2025 to generate authentic,
  * examination-quality questions.
  *

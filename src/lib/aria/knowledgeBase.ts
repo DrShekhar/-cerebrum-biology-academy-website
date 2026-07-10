@@ -439,7 +439,7 @@ export const SCHOLARSHIP_INFO = {
 
 export const ACADEMY_HISTORY = {
   founded: '2012',
-  experience: '14+ years',
+  experience: '15+ years',
   founder: 'Dr. Shekhar C Singh (AIIMS New Delhi Alumnus)',
   origin:
     'Started with 23 students in a 400 sq ft room in Rohini. Dr. Singh chose teaching over medical practice after witnessing capable students struggle with Biology despite expensive coaching.',

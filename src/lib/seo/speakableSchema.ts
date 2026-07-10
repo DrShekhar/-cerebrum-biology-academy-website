@@ -153,7 +153,7 @@ export const voiceOptimizedFAQs = [
   {
     question: 'Who teaches at Cerebrum Biology Academy?',
     answer:
-      'The academy is led by Dr. Shekhar C Singh, an AIIMS New Delhi alumnus with 14 years of teaching experience. Our faculty includes PhD holders and medical doctors.',
+      'The academy is led by Dr. Shekhar C Singh, an AIIMS New Delhi alumnus with 15+ years of teaching experience. Our faculty includes PhD holders and medical doctors.',
   },
   {
     question: 'What is the fee for NEET Biology coaching?',

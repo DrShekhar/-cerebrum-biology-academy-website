@@ -407,7 +407,7 @@ export default function DoubtResolutionPage() {
                 Learn From the Best
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Your doubts are resolved by Dr. Shekhar C Singh, AIIMS graduate with 14+ years of
+                Your doubts are resolved by Dr. Shekhar C Singh, AIIMS graduate with 15+ years of
                 NEET teaching experience. Our faculty team includes experts from top medical
                 colleges.
               </p>

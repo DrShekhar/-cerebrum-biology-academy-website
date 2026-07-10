@@ -117,7 +117,7 @@ export function PageContent() {
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Expert Mentorship</h3>
               <p className="text-gray-700">
-                Learn directly from Dr. Shekhar C Singh with 20+ years of medical education
+                Learn directly from Dr. Shekhar C Singh with 15+ years of medical education
                 expertise.
               </p>
             </div>

@@ -7,7 +7,7 @@ const pageUrl = `${BASE_URL}/dr-shekhar-youtube-channel`
 export const metadata: Metadata = {
   title: 'Dr. Shekhar C Singh YouTube Channel | NEET Biology Expert | AIIMS Faculty',
   description:
-    "Subscribe to Dr. Shekhar C Singh's YouTube channel for free NEET Biology lectures, exam tips, and preparation strategies by an AIIMS New Delhi alumnus with 14+ years experience.",
+    "Subscribe to Dr. Shekhar C Singh's YouTube channel for free NEET Biology lectures, exam tips, and preparation strategies by an AIIMS New Delhi alumnus with 15+ years experience.",
   keywords: [
     'dr shekhar singh youtube',
     'neet biology youtube channel',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Dr. Shekhar C Singh YouTube Channel | NEET Biology Expert',
     description:
-      'Free NEET Biology lectures and preparation strategies from Dr. Shekhar C Singh, AIIMS alumnus with 14+ years experience.',
+      'Free NEET Biology lectures and preparation strategies from Dr. Shekhar C Singh, AIIMS alumnus with 15+ years experience.',
     type: 'profile',
     url: pageUrl,
     siteName: 'Cerebrum Biology Academy',
@@ -52,7 +52,7 @@ export default function DrShekhartYoutubeChannelPage() {
     name: 'Dr. Shekhar C Singh',
     jobTitle: 'Senior Biology Faculty, AIIMS-Trained',
     description:
-      'NEET Biology expert with 14+ years teaching experience and 15,000+ students taught. Founder of Cerebrum Biology Academy.',
+      'NEET Biology expert with 15+ years teaching experience and 15,000+ students taught. Founder of Cerebrum Biology Academy.',
     sameAs: [
       'https://www.youtube.com/@drshekharcsingh',
       'https://www.youtube.com/@cerebrumbiologyacademy',
@@ -288,7 +288,7 @@ export default function DrShekhartYoutubeChannelPage() {
                 Free NEET Biology Lectures & Exam Preparation
               </p>
               <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-                Learn from an AIIMS-trained faculty with 14+ years of teaching experience and
+                Learn from an AIIMS-trained faculty with 15+ years of teaching experience and
                 15,000+ students taught
               </p>
             </div>

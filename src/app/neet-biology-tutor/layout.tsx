@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Biology Tutor | Expert NEET Coaching by AIIMS Faculty',
   description:
-    'Join the best NEET Biology tutor - Dr. Shekhar C Singh, AIIMS Alumnus with 98% success rate. Expert NEET Biology coaching with proven results. 5000+ students trained.',
+    'Join the best NEET Biology tutor - Dr. Shekhar C Singh, AIIMS Alumnus with 98% success rate. Expert NEET Biology coaching with proven results. 15,000+ students trained.',
   keywords: [
     'neet biology tutor',
     'neet biology teacher',
