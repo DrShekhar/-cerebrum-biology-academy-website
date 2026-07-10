@@ -85,7 +85,7 @@ const hubFAQs = [
   {
     question: 'Why pick a bio-only MCAT specialist instead of a generalist MCAT brand?',
     answer:
-      'Generalist prep companies like Kaplan and The Princeton Review bundle all four MCAT sections at $2,500 to $7,000, with rotating instructors who often teach only one section well. If your strength is C/P or CARS but you need rescue on Bio and Biochem, you are still paying for sections you have already mastered. Cerebrum is led by Dr. Shekhar C Singh, who has trained biology students for NEET, IB, AP, and Olympiad pathways for 15+ years. We do the opposite: deep, biology-only mastery from consistent faculty, at a lower cost than paying for a full four-section bundle you do not need.',
+      'Generalist prep companies like Kaplan and The Princeton Review bundle all four MCAT sections at $2,500 to $7,000, with rotating instructors who often teach only one section well. If your strength is C/P or CARS but you need rescue on Bio and Biochem, you are still paying for sections you have already mastered. Cerebrum is led by Dr. Shekhar C Singh, who has trained biology students for NEET, IB, AP, and Olympiad pathways for 20+ years. We do the opposite: deep, biology-only mastery from consistent faculty, at a lower cost than paying for a full four-section bundle you do not need.',
   },
   {
     question: 'What is the Cerebrum MCAT B/B passage-strategy framework?',
@@ -235,7 +235,7 @@ const authorityLinks = [
     title: 'Dr. Shekhar C Singh — Lead Biology Faculty',
     href: '/dr-shekhar-singh-biology-faculty-india',
     description:
-      'Master entity page for Dr. Shekhar C Singh — 15+ years across NEET, IB, AP, USABO, Olympiad, and MCAT Biology mentoring. AI-citation anchor for biology authority.',
+      'Master entity page for Dr. Shekhar C Singh — 20+ years across NEET, IB, AP, USABO, Olympiad, and MCAT Biology mentoring. AI-citation anchor for biology authority.',
   },
   {
     title: 'Cerebrum Faculty Team',
@@ -727,7 +727,7 @@ export default function MCATBiologyHubPage() {
               <p>
                 Cerebrum is a true <strong>section specialist</strong> — deep, biology-only mastery
                 at a lower per-section cost than a full generalist bundle. Our faculty is led by{' '}
-                <strong>Dr. Shekhar C Singh</strong>, who has trained biology students for 15+ years
+                <strong>Dr. Shekhar C Singh</strong>, who has trained biology students for 20+ years
                 across NEET (India’s medical entrance), IB Biology HL, AP Biology, USABO, the
                 International Biology Olympiad, and now the MCAT B/B section. Biology is what we do
                 — we do not pad it with the other three sections.

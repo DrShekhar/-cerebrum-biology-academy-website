@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Results | 98% Success Rate | Cerebrum Biology Academy',
     description:
-      '98% success rate, 67+ AIIMS selections, 15,000+ students coached. Video testimonials from our toppers.',
+      '98% success rate, 67+ AIIMS selections, 2,500+ students coached. Video testimonials from our toppers.',
     url: 'https://cerebrumbiologyacademy.com/results',
   },
 

@@ -220,7 +220,7 @@ AP Biology & IB Biology preparation for international board students. Also cover
 
 ## WHAT MAKES CEREBRUM DIFFERENT
 - 98% NEET success rate (10,000+ medical college admissions)
-- 15+ years of excellence in NEET Biology coaching
+- 14+ years of excellence in NEET Biology coaching
 - 67+ AIIMS selections in NEET 2024 alone
 - Dr. Shekhar (AIIMS New Delhi Alumnus) personally teaches - not just a "brand face"
 - Actually small batches (10-12 in Pinnacle, not 50+ like most claim)

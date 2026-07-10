@@ -600,7 +600,7 @@ export default function HowToScore340InNEETBiology() {
             <div className="bg-teal-50 border-l-4 border-teal-600 p-6 rounded my-8">
               <p className="text-teal-900">
                 <strong>Ready to achieve your 340+ goal?</strong> Join Cerebrum Biology Academy and
-                work with AIIMS-trained faculty who've mentored 15,000+ students to excellence. Our
+                work with AIIMS-trained faculty who've mentored 500+ students to excellence. Our
                 structured curriculum and personalized attention are specifically designed to
                 optimize for competitive scores.
               </p>

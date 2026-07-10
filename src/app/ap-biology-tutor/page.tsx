@@ -231,7 +231,7 @@ const faqs = [
   {
     question: 'Who teaches AP Biology at Cerebrum Biology Academy?',
     answer:
-      'AP Biology at Cerebrum is led by Dr. Shekhar C Singh — an AIIMS Delhi alumnus with 15+ years of biology teaching experience — along with AIIMS-trained senior faculty with 15+ years in biology. The senior-faculty tier (8–15 years AP teaching experience) delivers 1:1 sessions at $120–$150 per hour. Junior faculty deliver content review at $60–$75 per hour. Small-batch sessions (4–6 students) run at $40 per hour. All tutors are biology specialists, not generalist test-prep instructors.',
+      'AP Biology at Cerebrum is led by Dr. Shekhar C Singh — an AIIMS Delhi alumnus with 12+ years of biology teaching experience — along with AIIMS-trained senior faculty with 15+ years in biology. The senior-faculty tier (8–15 years AP teaching experience) delivers 1:1 sessions at $120–$150 per hour. Junior faculty deliver content review at $60–$75 per hour. Small-batch sessions (4–6 students) run at $40 per hour. All tutors are biology specialists, not generalist test-prep instructors.',
   },
 ]
 

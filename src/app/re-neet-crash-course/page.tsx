@@ -287,7 +287,7 @@ const productFaqs = [
   {
     question: 'Who is the lead faculty?',
     answer:
-      'Dr. Shekhar C Singh — AIIMS Delhi alumnus, founder of Cerebrum Biology Academy (2014), and lead NEET Biology curriculum architect. 15+ years biology pedagogy depth, 680+ AIIMS/JIPMER selections since 2014. Senior faculty include other AIIMS-trained biology specialists. The 1:1 ELITE tier guarantees senior-faculty contact through the crash window.',
+      'Dr. Shekhar C Singh — AIIMS Delhi alumnus, founder of Cerebrum Biology Academy (2014), and lead NEET Biology curriculum architect. 12+ years biology pedagogy depth, 680+ AIIMS/JIPMER selections since 2014. Senior faculty include other AIIMS-trained biology specialists. The 1:1 ELITE tier guarantees senior-faculty contact through the crash window.',
   },
 ]
 
@@ -497,7 +497,7 @@ export default function ReNEETCrashCoursePage() {
               {
                 icon: GraduationCap,
                 title: 'AIIMS-trained faculty',
-                body: 'Led by Dr. Shekhar C Singh (AIIMS Delhi, founder, 15+ yrs biology pedagogy). All faculty are biology specialists, not generalist test-prep instructors.',
+                body: 'Led by Dr. Shekhar C Singh (AIIMS Delhi, founder, 12+ yrs biology pedagogy). All faculty are biology specialists, not generalist test-prep instructors.',
               },
               {
                 icon: BookOpen,

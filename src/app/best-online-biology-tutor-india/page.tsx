@@ -54,7 +54,7 @@ const whyBest = [
   {
     icon: Trophy,
     title: 'Proven Results',
-    description: '15,000+ students trained, 98% success rate in NEET with top 1000 AIR selections.',
+    description: '5000+ students trained, 98% success rate in NEET with top 1000 AIR selections.',
   },
   {
     icon: Video,
@@ -123,7 +123,7 @@ const faqs = [
   {
     question: 'Why is Dr. Shekhar C Singh considered the best online Biology tutor in India?',
     answer:
-      'Dr. Shekhar C Singh is an AIIMS Alumnus and former Academic Head at PhysicsWallah (PW) with 15+ years of experience. He has trained 15,000+ students with a 98% NEET success rate. His teaching methodology, developed at premier institutes, is now accessible to students across India through online classes.',
+      'Dr. Shekhar C Singh is an AIIMS Alumnus and former Academic Head at PhysicsWallah (PW) with 15+ years of experience. He has trained 5000+ students with a 98% NEET success rate. His teaching methodology, developed at premier institutes, is now accessible to students across India through online classes.',
   },
   {
     question: 'How do online classes compare to Kota coaching?',

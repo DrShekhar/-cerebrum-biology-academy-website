@@ -65,7 +65,7 @@ const whyChoose = [
   {
     icon: Trophy,
     title: '98% Success Rate',
-    description: '15,000+ students trained with consistent top results in NEET Biology.',
+    description: '5000+ students trained with consistent top results in NEET Biology.',
   },
   {
     icon: Target,
