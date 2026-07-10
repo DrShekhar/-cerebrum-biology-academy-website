@@ -488,7 +488,7 @@ export function IntensiveNEETBiologyPage() {
               Learn from <span className="text-[#4a5d4a]">AIIMS Expert</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-              Dr. Shekhar C Singh, AIIMS Delhi alumnus with 14+ years of experience in NEET Biology
+              Dr. Shekhar C Singh, AIIMS Delhi alumnus with 15+ years of experience in NEET Biology
               coaching and 67+ AIIMS selections.
             </p>
             <a

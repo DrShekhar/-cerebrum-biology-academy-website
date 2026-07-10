@@ -130,7 +130,7 @@ export default function NEETBiologyPreparationTipsPage() {
           'NEET Biology Revision Plan',
         ]}
         courseName="NEET Biology Preparation — Tips & Strategy Hub"
-        courseDescription="Comprehensive NEET Biology preparation strategy: NCERT line-by-line mapping, chapter-wise weightage, mock test cadence, revision cycle, error-log methodology. Based on 12+ years of NEET pedagogy and 680+ medical college selections."
+        courseDescription="Comprehensive NEET Biology preparation strategy: NCERT line-by-line mapping, chapter-wise weightage, mock test cadence, revision cycle, error-log methodology. Based on 15+ years of NEET pedagogy and 680+ medical college selections."
         faqs={faqs}
       />
       {/* Urgency Banner */}
