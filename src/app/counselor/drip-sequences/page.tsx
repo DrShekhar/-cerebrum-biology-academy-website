@@ -412,7 +412,7 @@ function SequenceBuilderModal({
           {showTemplates && (
             <div className="mb-6">
               <h3 className="text-sm font-semibold text-gray-700 mb-3">🚀 Start from a Template</h3>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {SEQUENCE_TEMPLATES.map((t) => (
                   <button
                     key={t.name}
@@ -447,7 +447,7 @@ function SequenceBuilderModal({
             <>
               {/* Basic Info */}
               <div className="bg-white rounded-xl border border-gray-200 p-5 mb-6">
-                <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1.5">
                       Sequence Name
@@ -666,7 +666,7 @@ function SequenceCard({
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <div className="bg-blue-50 rounded-lg p-2.5 text-center">
             <p className="text-lg font-bold text-blue-700">{sequence.stats?.totalEnrolled || 0}</p>
             <p className="text-[10px] text-blue-500">Total Enrolled</p>
@@ -874,7 +874,7 @@ export default function DripSequencesPage() {
       </div>
 
       {/* Summary Stats */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-gradient-to-br from-green-500 to-green-700 rounded-xl p-5 text-white">
           <div className="flex items-center gap-2 mb-1">
             <Play className="w-4 h-4 text-green-200" />

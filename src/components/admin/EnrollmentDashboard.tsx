@@ -144,8 +144,8 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
 
       {/* Filters and Search */}
       <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-        <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-          <div className="flex-1 max-w-md">
+        <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
+          <div className="w-full flex-1 md:max-w-md">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -158,7 +158,7 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
             </div>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value as typeof statusFilter)}

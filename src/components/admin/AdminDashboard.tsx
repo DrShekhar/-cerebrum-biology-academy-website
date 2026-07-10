@@ -184,7 +184,7 @@ export function AdminDashboard({ isAdmin = false }: AdminDashboardProps) {
       {/* Navigation Tabs */}
       <nav className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex space-x-8">
+          <div className="flex space-x-6 sm:space-x-8 overflow-x-auto">
             {[
               { id: 'overview', label: 'Overview', icon: BarChart3 },
               { id: 'students', label: 'Students', icon: Users },
@@ -198,7 +198,7 @@ export function AdminDashboard({ isAdmin = false }: AdminDashboardProps) {
                 <button
                   key={tab.id}
                   onClick={() => setSelectedTab(tab.id)}
-                  className={`flex items-center px-1 py-4 border-b-2 font-medium text-sm ${
+                  className={`flex items-center px-1 py-4 border-b-2 font-medium text-sm whitespace-nowrap shrink-0 ${
                     selectedTab === tab.id
                       ? 'border-blue-500 text-blue-600'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'

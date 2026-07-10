@@ -143,7 +143,7 @@ export default function FacultySettingsPage() {
     <>
       <div className="p-6 max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-8 flex justify-between items-center">
+        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Faculty Management</h1>
             <p className="text-gray-600">Manage faculty profiles, schedules, and assignments</p>

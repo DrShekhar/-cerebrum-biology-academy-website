@@ -220,8 +220,8 @@ export function TemplateLibraryModal({
           {!showCreateForm ? (
             <>
               {/* Filter and Create Button */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex gap-2">
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                <div className="flex flex-wrap gap-2">
                   <button
                     onClick={() => setSelectedType('ALL')}
                     className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${

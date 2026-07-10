@@ -30,7 +30,7 @@ export function BulkActionsBar({
 
   return (
     <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-40 animate-slide-up">
-      <div className="bg-gray-900 text-white rounded-xl shadow-2xl px-6 py-4 flex items-center gap-4 min-w-[400px]">
+      <div className="bg-gray-900 text-white rounded-xl shadow-2xl px-4 py-3 sm:px-6 sm:py-4 flex flex-wrap items-center gap-3 sm:gap-4 max-w-[calc(100vw-2rem)] sm:min-w-[400px]">
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center text-sm font-bold">
             {selectedCount}
@@ -40,9 +40,9 @@ export function BulkActionsBar({
           </span>
         </div>
 
-        <div className="h-6 w-px bg-gray-700" />
+        <div className="hidden sm:block h-6 w-px bg-gray-700" />
 
-        <div className="flex items-center gap-2 flex-1">
+        <div className="flex flex-wrap items-center gap-2 flex-1">
           {actions ? (
             actions.map((action, index) => (
               <button

@@ -331,7 +331,7 @@ export function WhatsAppMessageModal({
               {error}
             </div>
           )}
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="text-sm text-gray-600">
               <span className="font-medium">To:</span> {lead.phone}
             </div>

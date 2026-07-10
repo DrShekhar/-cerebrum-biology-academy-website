@@ -110,7 +110,7 @@ export default function ErrorReportsPage() {
     <>
       <div className="p-6">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6">
           <div>
             <h1 className="text-2xl font-bold text-gray-800">Error Reports</h1>
             <p className="text-gray-600">Review reported errors in MCQ answers</p>

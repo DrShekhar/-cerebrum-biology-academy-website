@@ -279,7 +279,7 @@ export function FeePlanForm({ onSuccess, onCancel }: FeePlanFormProps) {
 
       <div className="bg-blue-50 p-4 rounded-lg">
         <h4 className="text-sm font-semibold text-blue-900 mb-2">Preview</h4>
-        <div className="grid grid-cols-3 gap-4 text-sm">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
           <div>
             <span className="text-blue-600">Total Fee:</span>
             <p className="font-bold text-blue-900">₹{totalFee.toLocaleString('en-IN')}</p>

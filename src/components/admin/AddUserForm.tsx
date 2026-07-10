@@ -216,7 +216,7 @@ export function AddUserForm({ onSuccess, onCancel }: AddUserFormProps) {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {PERMISSION_OPTIONS.map((permission) => (
               <label
                 key={permission.value}

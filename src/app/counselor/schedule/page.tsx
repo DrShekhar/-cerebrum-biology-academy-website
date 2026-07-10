@@ -274,7 +274,7 @@ function ScheduleSessionModal({
           </div>
 
           {/* Date & Time */}
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1.5">Date *</label>
               <input
@@ -432,7 +432,7 @@ export default function SchedulePage() {
       </div>
 
       {/* View Toggle */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex gap-2">
           <button
             onClick={() => setViewMode('week')}
@@ -482,57 +482,59 @@ export default function SchedulePage() {
           <Loader2 className="w-8 h-8 text-indigo-600 animate-spin" />
         </div>
       ) : viewMode === 'week' ? (
-        /* Week View */
-        <div className="grid grid-cols-7 gap-3">
-          {weekDays.map((day) => {
-            const dayTasks = getTasksForDay(day)
-            const isCurrentDay = isToday(day)
-            return (
-              <div
-                key={day.toISOString()}
-                className={`bg-white rounded-xl border p-3 min-h-[200px] ${
-                  isCurrentDay ? 'border-indigo-300 ring-1 ring-indigo-200' : 'border-gray-200'
-                }`}
-              >
+        /* Week View — scrolls horizontally on phones/tablets, full grid on desktop */
+        <div className="overflow-x-auto pb-2">
+          <div className="grid min-w-[840px] grid-cols-7 gap-3 lg:min-w-0">
+            {weekDays.map((day) => {
+              const dayTasks = getTasksForDay(day)
+              const isCurrentDay = isToday(day)
+              return (
                 <div
-                  className={`text-center mb-3 pb-2 border-b ${isCurrentDay ? 'border-indigo-200' : 'border-gray-100'}`}
+                  key={day.toISOString()}
+                  className={`bg-white rounded-xl border p-3 min-h-[200px] ${
+                    isCurrentDay ? 'border-indigo-300 ring-1 ring-indigo-200' : 'border-gray-200'
+                  }`}
                 >
-                  <p className="text-xs text-gray-500 uppercase">{format(day, 'EEE')}</p>
-                  <p
-                    className={`text-lg font-bold ${isCurrentDay ? 'text-indigo-600' : 'text-gray-900'}`}
+                  <div
+                    className={`text-center mb-3 pb-2 border-b ${isCurrentDay ? 'border-indigo-200' : 'border-gray-100'}`}
                   >
-                    {format(day, 'd')}
-                  </p>
+                    <p className="text-xs text-gray-500 uppercase">{format(day, 'EEE')}</p>
+                    <p
+                      className={`text-lg font-bold ${isCurrentDay ? 'text-indigo-600' : 'text-gray-900'}`}
+                    >
+                      {format(day, 'd')}
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    {dayTasks.length === 0 ? (
+                      <p className="text-xs text-gray-300 text-center py-4">No sessions</p>
+                    ) : (
+                      dayTasks.map((task) => (
+                        <div
+                          key={task.id}
+                          className={`p-2 rounded-lg border text-xs ${
+                            task.status === 'COMPLETED'
+                              ? 'bg-green-50 border-green-200 text-green-700'
+                              : isPast(new Date(task.dueDate))
+                                ? 'bg-red-50 border-red-200 text-red-700'
+                                : 'bg-indigo-50 border-indigo-200 text-indigo-700'
+                          }`}
+                        >
+                          <p className="font-medium truncate">
+                            {task.lead?.studentName || task.title}
+                          </p>
+                          <p className="text-[10px] opacity-75 mt-0.5">
+                            {format(new Date(task.dueDate), 'h:mm a')} •{' '}
+                            {task.type?.replace(/_/g, ' ')}
+                          </p>
+                        </div>
+                      ))
+                    )}
+                  </div>
                 </div>
-                <div className="space-y-2">
-                  {dayTasks.length === 0 ? (
-                    <p className="text-xs text-gray-300 text-center py-4">No sessions</p>
-                  ) : (
-                    dayTasks.map((task) => (
-                      <div
-                        key={task.id}
-                        className={`p-2 rounded-lg border text-xs ${
-                          task.status === 'COMPLETED'
-                            ? 'bg-green-50 border-green-200 text-green-700'
-                            : isPast(new Date(task.dueDate))
-                              ? 'bg-red-50 border-red-200 text-red-700'
-                              : 'bg-indigo-50 border-indigo-200 text-indigo-700'
-                        }`}
-                      >
-                        <p className="font-medium truncate">
-                          {task.lead?.studentName || task.title}
-                        </p>
-                        <p className="text-[10px] opacity-75 mt-0.5">
-                          {format(new Date(task.dueDate), 'h:mm a')} •{' '}
-                          {task.type?.replace(/_/g, ' ')}
-                        </p>
-                      </div>
-                    ))
-                  )}
-                </div>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
         </div>
       ) : (
         /* List View */

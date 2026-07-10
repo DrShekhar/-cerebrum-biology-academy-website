@@ -92,7 +92,7 @@ function EMICalculator({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
 
         <div className="p-6 space-y-5">
           {/* Inputs */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1.5">
                 Total Course Fee (₹)
@@ -117,7 +117,7 @@ function EMICalculator({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1.5">
                 Number of EMIs

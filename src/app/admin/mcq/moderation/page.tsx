@@ -108,7 +108,7 @@ export default function ModerationPage() {
     <>
       <div className="p-6">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6">
           <div>
             <h1 className="text-2xl font-bold text-gray-800">MCQ Moderation Queue</h1>
             <p className="text-gray-600">Review and approve community-submitted questions</p>

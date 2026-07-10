@@ -73,7 +73,7 @@ export default function WhatsAppAnalyticsPage() {
   return (
     <>
       <div className="p-6 space-y-6">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">WhatsApp Analytics</h1>
             <p className="text-gray-600 mt-1">Track WhatsApp CTA clicks and engagement</p>
