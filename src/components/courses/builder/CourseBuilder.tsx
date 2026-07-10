@@ -11,7 +11,8 @@
 import { useEffect, useState, useCallback, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
 import { toast } from 'sonner'
-import ReactMarkdown from 'react-markdown'
+import { MarkdownWithDiagrams } from '@/components/diagrams/MarkdownWithDiagrams'
+import { DiagramCheatSheet } from '@/components/diagrams/DiagramCheatSheet'
 import { ConfirmDialog } from '@/components/ui/ConfirmDialog'
 import {
   DndContext,
@@ -1392,7 +1393,7 @@ function ArticleComposer({
         <div className="mt-2 min-h-[12rem] rounded-lg border border-gray-200 bg-white px-4 py-3">
           {body.trim() ? (
             <article className="prose prose-sm prose-gray max-w-none prose-headings:font-bold prose-a:text-green-700">
-              <ReactMarkdown>{body}</ReactMarkdown>
+              <MarkdownWithDiagrams>{body}</MarkdownWithDiagrams>
             </article>
           ) : (
             <p className="text-sm text-gray-400">Nothing to preview yet — write some Markdown.</p>
@@ -1409,6 +1410,7 @@ function ArticleComposer({
           className="mt-2 w-full rounded-lg border border-gray-300 px-3 py-2 font-mono text-sm"
         />
       )}
+      <DiagramCheatSheet className="mt-3" />
       <div className="mt-2 flex items-center justify-between">
         <p className="text-xs text-gray-400">
           Preview shows exactly what students see in the article reader.

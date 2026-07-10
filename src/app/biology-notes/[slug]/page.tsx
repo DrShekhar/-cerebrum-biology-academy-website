@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma'
 
 import { BookOpen, Clock, GraduationCap, Download, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
-import ReactMarkdown from 'react-markdown'
+import { BiologyNotesContent } from '@/components/diagrams/BiologyNotesContent'
 
 interface PageProps {
   params: Promise<{
@@ -189,35 +189,9 @@ export default async function BiologyTopicPage({ params }: PageProps) {
           </div>
         )}
 
-        {/* Main Content - Markdown */}
+        {/* Main Content - Markdown (with ```mermaid / ```svg diagram support) */}
         <div className="prose prose-lg max-w-none">
-          <ReactMarkdown
-            components={{
-              h2: ({ children }) => (
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-8 mb-4">
-                  {children}
-                </h2>
-              ),
-              h3: ({ children }) => (
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mt-6 mb-3">
-                  {children}
-                </h3>
-              ),
-              p: ({ children }) => <p className="text-gray-700 leading-relaxed mb-4">{children}</p>,
-              ul: ({ children }) => (
-                <ul className="list-disc list-inside mb-4 space-y-2">{children}</ul>
-              ),
-              ol: ({ children }) => (
-                <ol className="list-decimal list-inside mb-4 space-y-2">{children}</ol>
-              ),
-              strong: ({ children }) => (
-                <strong className="font-semibold text-gray-900">{children}</strong>
-              ),
-              em: ({ children }) => <em className="italic">{children}</em>,
-            }}
-          >
-            {topic.content}
-          </ReactMarkdown>
+          <BiologyNotesContent content={topic.content} />
         </div>
 
         {/* Lead Magnet CTA */}

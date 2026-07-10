@@ -15,6 +15,8 @@ export { StemCrossSection } from './biology/StemCrossSection'
 export { LessonDiagram } from './LessonDiagram'
 export type { DiagramKind } from './LessonDiagram'
 export { MarkdownWithDiagrams } from './MarkdownWithDiagrams'
+export { BiologyNotesContent } from './BiologyNotesContent'
+export { DiagramCheatSheet } from './DiagramCheatSheet'
 
 // Interactive diagram renderers
 export { InteractiveDiagramRenderer } from './InteractiveDiagramRenderer'

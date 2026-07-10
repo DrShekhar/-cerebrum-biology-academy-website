@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import ReactMarkdown from 'react-markdown'
+import { MarkdownWithDiagrams } from '@/components/diagrams/MarkdownWithDiagrams'
 import { Sparkles, Loader2, AlertCircle } from 'lucide-react'
 
 /**
@@ -109,7 +109,7 @@ export default function AICourseInsights({ courseId }: { courseId: string }) {
       {answer && (
         <div className="mt-4 rounded-lg border border-gray-100 bg-gray-50 p-4">
           <div className="prose prose-sm max-w-none text-gray-800 prose-headings:text-gray-900 prose-strong:text-gray-900 prose-li:my-0.5">
-            <ReactMarkdown>{answer}</ReactMarkdown>
+            <MarkdownWithDiagrams>{answer}</MarkdownWithDiagrams>
           </div>
         </div>
       )}

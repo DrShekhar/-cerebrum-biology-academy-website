@@ -31,7 +31,7 @@ import { parseReadTime } from './utils'
 import { BlogExitIntentWrapper } from './BlogExitIntentWrapper'
 import { BlogWhatsAppQuery } from './BlogWhatsAppQuery'
 import { BlogNewsletterSignup } from './BlogNewsletterSignup'
-import ReactMarkdown from 'react-markdown'
+import { MarkdownWithDiagrams } from '@/components/diagrams/MarkdownWithDiagrams'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import { BlogIllustrationLoader } from './BlogIllustrationLoader'
@@ -337,7 +337,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
 
               {/* Article Content */}
               <div className="prose prose-lg max-w-none prose-headings:scroll-mt-24 animate-fade-in-up">
-                <ReactMarkdown
+                <MarkdownWithDiagrams
                   remarkPlugins={[remarkGfm]}
                   rehypePlugins={[rehypeRaw]}
                   components={{
@@ -505,7 +505,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                   }}
                 >
                   {content}
-                </ReactMarkdown>
+                </MarkdownWithDiagrams>
               </div>
 
               {/* Related Resources - Internal Linking for SEO */}

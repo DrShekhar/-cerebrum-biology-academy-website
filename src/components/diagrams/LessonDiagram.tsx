@@ -150,7 +150,11 @@ export function LessonDiagram({ code, kind, caption, className }: LessonDiagramP
         </div>
       ) : (
         <div
-          className="flex justify-center overflow-x-auto p-4 [&_svg]:h-auto [&_svg]:max-w-full"
+          // `!max-w-full` overrides Mermaid's inline `max-width:<px>` so wide
+          // diagrams scale DOWN to fit the reading column instead of forcing a
+          // horizontal scroll; overflow-x-auto stays as a fallback for the rare
+          // diagram that can't shrink further.
+          className="flex justify-center overflow-x-auto p-4 [&_svg]:mx-auto [&_svg]:h-auto [&_svg]:max-h-[70vh] [&_svg]:!max-w-full"
           // Mermaid output and DOMPurify-sanitized SVG are both safe to inject.
           dangerouslySetInnerHTML={{ __html: svg }}
         />
