@@ -8,7 +8,7 @@
 
 import { use, useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
-import ReactMarkdown from 'react-markdown'
+import { MarkdownWithDiagrams } from '@/components/diagrams/MarkdownWithDiagrams'
 import { ArrowLeft, BookOpen, CheckCircle2, Loader2, Lock } from 'lucide-react'
 
 interface ArticleData {
@@ -118,7 +118,7 @@ export default function ArticleLessonPage({ params }: { params: Promise<{ id: st
           <h1 className="text-3xl font-bold text-gray-900">{article.title}</h1>
 
           <article className="prose prose-gray mt-6 max-w-none prose-headings:font-bold prose-a:text-green-700">
-            <ReactMarkdown>{article.contentBody}</ReactMarkdown>
+            <MarkdownWithDiagrams>{article.contentBody}</MarkdownWithDiagrams>
           </article>
 
           <div className="mt-10 border-t border-gray-100 pt-6">

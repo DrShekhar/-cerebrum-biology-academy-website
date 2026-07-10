@@ -11,6 +11,11 @@ export { RootMeristem } from './biology/RootMeristem'
 export { PlantTissues } from './biology/PlantTissues'
 export { StemCrossSection } from './biology/StemCrossSection'
 
+// Lesson diagram renderer (Mermaid + inline SVG in markdown)
+export { LessonDiagram } from './LessonDiagram'
+export type { DiagramKind } from './LessonDiagram'
+export { MarkdownWithDiagrams } from './MarkdownWithDiagrams'
+
 // Interactive diagram renderers
 export { InteractiveDiagramRenderer } from './InteractiveDiagramRenderer'
 export { DiagramExplainer } from './DiagramExplainer'
