@@ -12,7 +12,7 @@ export const facultyMembers: Faculty[] = [
     bio: 'Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with over 15 years of specialized experience in NEET Biology coaching. As Director of Cerebrum Biology Academy, he has mentored thousands of top NEET scorers. His student Sadhna Sirin scored 695 marks in NEET 2023 and achieved 100 percentile in Biology, becoming Delhi-NCR topper.',
     achievements: [
       'AIIMS New Delhi Alumnus',
-      'Former Academic Head & CO-Campus Faculty at Narayana Group',
+      'Former Academic Head & CO-Campus Faculty at PhysicsWallah (PW)',
       'Founded Delhi Science Foundation and Quark Education',
       'Student Sadhna Sirin: 695 marks in NEET 2023, 100%ile Biology (Delhi-NCR Rank 1)',
       'Student Priya Sehgal: Perfect 360/360 Biology score',

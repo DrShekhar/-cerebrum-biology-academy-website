@@ -72,7 +72,7 @@ export const NOIDA_COMPREHENSIVE_FAQS = {
     {
       question: 'Who is the faculty for NEET Biology in Noida?',
       answer:
-        'Lead faculty Dr. Shekhar C Singh - AIIMS New Delhi alumnus, 15+ years experience, previously served as Academic Head at Narayana Group. Has mentored 15,000+ students with 67+ AIIMS/JIPMER selections. All faculty from AIIMS/premier medical colleges.',
+        'Lead faculty Dr. Shekhar C Singh - AIIMS New Delhi alumnus, 15+ years experience, previously served as Academic Head at PhysicsWallah (PW). Has mentored 15,000+ students with 67+ AIIMS/JIPMER selections. All faculty from AIIMS/premier medical colleges.',
     },
   ],
   comparison: [
@@ -317,7 +317,7 @@ export function NoidaFAQSchema({
     // Faculty FAQ
     {
       question: `Who is the faculty for NEET Biology coaching in ${locationName}?`,
-      answer: `Lead faculty Dr. Shekhar C Singh - AIIMS New Delhi alumnus, 15+ years experience, previously served as Academic Head at Narayana Group. Has mentored 15,000+ students with 67+ AIIMS/JIPMER selections. All faculty from AIIMS/premier medical colleges.`,
+      answer: `Lead faculty Dr. Shekhar C Singh - AIIMS New Delhi alumnus, 15+ years experience, previously served as Academic Head at PhysicsWallah (PW). Has mentored 15,000+ students with 67+ AIIMS/JIPMER selections. All faculty from AIIMS/premier medical colleges.`,
     },
     // Demo FAQ
     {

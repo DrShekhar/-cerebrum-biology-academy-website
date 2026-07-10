@@ -1,6 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Award, Trophy, GraduationCap, ArrowRight, Phone, Star, BookOpen } from 'lucide-react'
+import {
+  Award,
+  Trophy,
+  GraduationCap,
+  ArrowRight,
+  Phone,
+  Star,
+  BookOpen,
+} from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
@@ -122,10 +130,10 @@ const professionalRoles = [
   },
   {
     role: 'Academic Head',
-    organization: 'Narayana Group',
+    organization: 'PhysicsWallah (PW)',
     period: 'Pre-2014',
     description:
-      'Led curriculum development and faculty training for NEET Biology across multiple Narayana Group centres before founding Cerebrum.',
+      'Led curriculum development and faculty training for NEET Biology across multiple PhysicsWallah (PW) centres before founding Cerebrum.',
   },
 ]
 
