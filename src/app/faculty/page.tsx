@@ -329,35 +329,37 @@ export default function FacultyPage() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SENIOR_TEAM.map((faculty, index) => {
-              const palette = [
-                'bg-blue-700',
-                'bg-teal-700',
-                'bg-purple-800',
-                'bg-green-700',
-                'bg-blue-800',
+              const gradient = [
+                'from-blue-600 to-blue-800',
+                'from-teal-600 to-teal-800',
+                'from-purple-700 to-purple-900',
+                'from-green-600 to-green-800',
+                'from-blue-700 to-indigo-800',
               ][index % 5]
               return (
                 <article
                   key={faculty.id}
-                  className="group overflow-hidden rounded-2xl border border-gray-200 bg-white transition hover:border-blue-300 hover:shadow-lg"
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
                 >
-                  <div className={`relative h-44 ${palette}`}>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="flex h-24 w-24 items-center justify-center rounded-full border-2 border-white/40 bg-white/20 shadow-xl backdrop-blur-md">
-                        <span className="text-3xl font-bold text-white drop-shadow-lg">
-                          {initials(faculty.name)}
-                        </span>
-                      </div>
+                  {/* Slim gradient band + overlapping monogram = premium profile card */}
+                  <div className={`h-16 bg-gradient-to-br ${gradient}`} />
+                  {faculty.rating && (
+                    <div className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2 py-1 text-xs font-semibold text-gray-900 shadow-sm">
+                      <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                      {faculty.rating}
                     </div>
-                    {faculty.rating && (
-                      <div className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2 py-1 text-xs font-semibold text-gray-900">
-                        <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
-                        {faculty.rating}
-                      </div>
-                    )}
+                  )}
+                  <div className="-mt-10 flex justify-center">
+                    <div
+                      className={`flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br ${gradient} shadow-lg ring-4 ring-white`}
+                    >
+                      <span className="text-2xl font-bold text-white drop-shadow">
+                        {initials(faculty.name)}
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="p-5">
+                  <div className="flex flex-1 flex-col p-5 pt-3 text-center">
                     <h3 className="text-lg font-bold text-gray-900">{faculty.name}</h3>
                     <p className="mt-1 line-clamp-2 text-sm font-medium text-gray-700">
                       {faculty.qualification}
@@ -367,7 +369,7 @@ export default function FacultyPage() {
                     </p>
 
                     {faculty.specialization.length > 0 && (
-                      <div className="mt-4 flex flex-wrap gap-1.5">
+                      <div className="mt-4 flex flex-wrap justify-center gap-1.5">
                         {faculty.specialization.slice(0, 3).map((spec) => (
                           <span
                             key={spec}
@@ -380,7 +382,7 @@ export default function FacultyPage() {
                     )}
 
                     {faculty.studentsGuided && (
-                      <div className="mt-4 flex items-center gap-1.5 text-xs text-gray-600">
+                      <div className="mt-4 flex items-center justify-center gap-1.5 text-xs text-gray-600">
                         <Users className="h-3.5 w-3.5" />
                         <span>
                           {faculty.studentsGuided.toLocaleString('en-IN')}+ students mentored
@@ -388,7 +390,7 @@ export default function FacultyPage() {
                       </div>
                     )}
 
-                    <Link href={`/faculty/${faculty.id}`} className="mt-5 block">
+                    <Link href={`/faculty/${faculty.id}`} className="mt-auto block pt-5">
                       <Button
                         variant="outline"
                         size="sm"

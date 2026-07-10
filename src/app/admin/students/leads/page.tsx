@@ -546,7 +546,7 @@ export default function LeadsPage() {
                     Lead Details
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Contact & Location
+                    Contact
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Stage & Priority
@@ -584,7 +584,10 @@ export default function LeadsPage() {
                         <div className="ml-4">
                           <div className="text-sm font-medium text-gray-900">{lead.name}</div>
                           <div className="text-sm text-gray-500">
-                            {lead.class || 'N/A'} • {lead.school || 'School not provided'}
+                            {lead.assignedCounselor
+                              ? `Assigned to ${lead.assignedCounselor}`
+                              : 'Unassigned'}
+                            {typeof lead.score === 'number' ? ` • Score ${lead.score}` : ''}
                           </div>
                           <div className="text-xs text-gray-400">
                             Created: {new Date(lead.createdAt).toLocaleDateString()}
@@ -596,16 +599,18 @@ export default function LeadsPage() {
                       <div className="space-y-1">
                         <div className="text-sm text-gray-900 flex items-center">
                           <Mail className="w-3 h-3 mr-2 text-gray-400" />
-                          {lead.email}
+                          {lead.email || <span className="text-gray-400 italic">No email</span>}
                         </div>
                         <div className="text-sm text-gray-500 flex items-center">
                           <Phone className="w-3 h-3 mr-2 text-gray-400" />
                           {lead.phone}
                         </div>
-                        <div className="text-sm text-gray-500 flex items-center">
-                          <MapPin className="w-3 h-3 mr-2 text-gray-400" />
-                          {lead.city || 'N/A'}, {lead.state || 'N/A'}
-                        </div>
+                        {(lead.city || lead.state) && (
+                          <div className="text-sm text-gray-500 flex items-center">
+                            <MapPin className="w-3 h-3 mr-2 text-gray-400" />
+                            {[lead.city, lead.state].filter(Boolean).join(', ')}
+                          </div>
+                        )}
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
