@@ -61,8 +61,8 @@ const whyDelhiNCR = [
   },
   {
     icon: Building,
-    title: 'Former PhysicsWallah (PW) Head',
-    description: 'Academic Head experience at PhysicsWallah (PW), bringing proven methodologies.',
+    title: 'Former Narayana Group Head',
+    description: 'Academic Head experience at Narayana Group, bringing proven methodologies.',
   },
   {
     icon: Trophy,
@@ -90,7 +90,7 @@ const faqs = [
   {
     question: 'Where is the best NEET Biology tutor in Delhi NCR?',
     answer:
-      'Cerebrum Biology Academy in Greater Noida offers the best NEET Biology coaching in Delhi NCR. Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at PhysicsWallah (PW), provides expert coaching. Students from Delhi, Noida, Ghaziabad, Faridabad, and Gurugram join us for quality education.',
+      'Cerebrum Biology Academy in Greater Noida offers the best NEET Biology coaching in Delhi NCR. Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at Narayana Group, provides expert coaching. Students from Delhi, Noida, Ghaziabad, Faridabad, and Gurugram join us for quality education.',
   },
   {
     question: 'Can students from Delhi join classes in Greater Noida?',
@@ -159,7 +159,7 @@ export default function BestNEETBiologyTutorDelhiNCRPage() {
             founder: {
               '@type': 'Person',
               name: 'Dr. Shekhar C Singh',
-              description: 'AIIMS Alumnus, Former Academic Head at PhysicsWallah (PW)',
+              description: 'AIIMS Alumnus, Former Academic Head at Narayana Group',
             },
           }),
         }}

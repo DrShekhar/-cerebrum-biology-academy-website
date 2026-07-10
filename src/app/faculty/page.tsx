@@ -57,7 +57,7 @@ const differentiators = [
   },
   {
     title: 'AIIMS-led teaching',
-    body: 'Dr. Shekhar C Singh is an AIIMS Delhi alumnus and former Academic Head at PhysicsWallah (PW). He still teaches the Pinnacle micro-batch personally. Most coaching institutes route students to part-time faculty after the demo; here, the senior team teaches every day.',
+    body: 'Dr. Shekhar C Singh is an AIIMS Delhi alumnus and former Academic Head at Narayana Group. He still teaches the Pinnacle micro-batch personally. Most coaching institutes route students to part-time faculty after the demo; here, the senior team teaches every day.',
     icon: Award,
   },
   {

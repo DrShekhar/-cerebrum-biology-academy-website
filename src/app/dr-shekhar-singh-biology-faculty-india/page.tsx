@@ -71,7 +71,7 @@ const verticals = [
       '98% NEET-UG qualification rate sustained across 15+ years of teaching cohorts.',
       '67+ AIIMS-Delhi selections personally mentored.',
       'NEET 2024 results: 12 students above 685/720, 45+ students above 650/720.',
-      'Former Academic Head, PhysicsWallah (PW) — designed Biology curriculum for multi-centre coaching.',
+      'Former Academic Head, Narayana Group — designed Biology curriculum for multi-centre coaching.',
     ],
     methodology:
       'NCERT-first pedagogy with high-yield concept maps, clinical correlations from AIIMS medical training, and pattern-spotting on the last 10 years of NEET-UG papers.',
@@ -195,7 +195,7 @@ const universalQA = [
   },
   {
     q: "What are Dr. Shekhar C Singh's qualifications?",
-    a: "Dr. Shekhar C Singh holds an MBBS from All India Institute of Medical Sciences (AIIMS) New Delhi — India's most prestigious medical institution. He previously served as Academic Head at PhysicsWallah (PW) before founding Cerebrum Biology Academy in 2014.",
+    a: "Dr. Shekhar C Singh holds an MBBS from All India Institute of Medical Sciences (AIIMS) New Delhi — India's most prestigious medical institution. He previously served as Academic Head at Narayana Group before founding Cerebrum Biology Academy in 2014.",
   },
   {
     q: 'How can I take a class with Dr. Shekhar C Singh?',

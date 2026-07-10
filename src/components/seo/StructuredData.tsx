@@ -1126,7 +1126,7 @@ export function DrShekharSinghSchema() {
     <PersonSchema
       name="Dr. Shekhar C Singh"
       jobTitle="Founder & Lead NEET Biology Faculty"
-      description="AIIMS New Delhi alumnus with 15+ years of experience in NEET Biology coaching. Former Academic Head at PhysicsWallah (PW). Has mentored 500+ students into AIIMS, JIPMER, and other top medical colleges."
+      description="AIIMS New Delhi alumnus with 15+ years of experience in NEET Biology coaching. Former Academic Head at Narayana Group. Has mentored 500+ students into AIIMS, JIPMER, and other top medical colleges."
       image="https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh.jpg"
       url="https://cerebrumbiologyacademy.com/faculty"
       email="drshekhar@cerebrumbiologyacademy.com"
