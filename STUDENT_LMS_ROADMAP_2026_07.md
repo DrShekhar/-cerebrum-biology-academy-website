@@ -2,6 +2,31 @@
 
 **Date:** Jul 8, 2026. Design mockup (north-star): the student-dashboard Artifact (score trajectory chart, chapter-mastery heatmap, test analysis, class reminders, attendance follow-up, library, mentor/support dock). Goal: a dashboard that **tells the student what to do next and makes progress feel inevitable** — not a stat page.
 
+---
+
+## ⛳ STATUS UPDATE — Jul 10 2026
+
+- **P1 — Overview redesign: ✅ SHIPPED.** DashboardHero (emerald+amber): animated score ring
+  (projected /360, count-up), streak/best/tests chips, SVG score-trajectory chart w/ 85% target line
+  + personal-best dot, Today's-plan card, chapter-mastery grid; designed empty states; fixed the
+  0/360-vs-540 bug. **Added Jul 10:** next-class card, attendance ring, library strip (the last
+  mockup widgets).
+- **P2 — Data depth: ✅ mostly.** Trajectory chart done; test-analysis = the CBT evaluation report
+  (per-section marks/accuracy, per-topic strengths/focus, improvement plan). Chapter mastery: a
+  dashboard grid + a full **/student/syllabus** mastery map from `user_question_responses` (Jul 10).
+- **P3 — Resources & classes: ⚠️ partial.** Library strip + recorded classes surfaced; mentor-slot
+  booking shipped. Class **reminders** (1d/1h/15m) still need a scheduled job + push/WhatsApp keys.
+- **P4 — Gamification: ⚠️ partial.** Streak/XP/flashcards/wall-of-achievers exist; student
+  leaderboard + daily-goal loop + milestone badges pending.
+- **P5 — Communication: ✅ mostly.** "Raise a ticket / feature request" (student requests page →
+  shared_tasks board) + mentor booking shipped. 
+- **P6 — Attendance follow-up: ❌** needs the scheduled-job + WhatsApp/push keys (same as CRM
+  automation).
+- **Admin shared Task/Request board: ✅ LIVE** — `shared_tasks` model + `/admin/tasks` board +
+  student create via `/api/tasks/shared`. Pending-until-resolved, any staff/student can add.
+- **NEW Jul 10:** read-only "My Batch" cohort view (`/student/batch`) from student_groups (roster +
+  shared content + notices).
+
 ## Design system (locked from the mockup)
 Emerald brand accent (#17924f / dark #35d17f); amber = streak/XP energy; coral/teal/violet = semantic (weak / info-tests / feature). Green-biased neutrals; designed dark mode (green-black). System font, oversized tabular numbers for scores. Motion: one load sequence (ring fill + count-up + staggered reveal), hover lift, `prefers-reduced-motion` respected. Both themes token-level.
 

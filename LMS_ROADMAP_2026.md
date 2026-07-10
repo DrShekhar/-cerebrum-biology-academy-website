@@ -6,6 +6,37 @@ SCORM/xAPI). Authored Jul 3 2026._
 
 ---
 
+## ⛳ STATUS UPDATE — Jul 10 2026 (this doc's Jul-3 body below is now historical)
+
+**Phases 0, 1 and 2 are DONE. Phase 3 (the XL reach lifts) is the remaining frontier.**
+
+- **Phase 0 — CBT exam simulator: ✅ COMPLETE.** All five slices shipped (section tabs, candidate
+  gate, server persistence+resume, anti-cheat, and a real authored **180-Q / 720-mark NEET paper** —
+  45 Physics + 45 Chemistry + 45 Botany + 45 Zoology, +4/−1/0, rank/percentile). Beyond the plan:
+  enhanced exam skin + one-tap NTA replica, a detailed evaluation report with improvement plan, and
+  13 labelled-diagram questions. (Seed: `npx tsx scripts/seed-neet-mock.ts`.)
+- **Phase 1 — quick wins: ✅ COMPLETE (code).** AI doubt solver, flashcards UI (SM-2), web push
+  (VAPID), tier gating. Activation needs env keys (ANTHROPIC_API_KEY / VAPID).
+- **Phase 2 — authoring & richer lessons: ✅ COMPLETE + exceeded.** Drag-drop course builder (drip +
+  prerequisites), interactive video (checkpoints **+ inline checkpoint authoring UI**), AI
+  outline/quiz. Beyond the plan: assignment lessons, audio lessons, coupons UI, activity matrix,
+  mentor-slot booking, AI course insights, article lessons, duplicate course, free-preview,
+  completion→next-course offer.
+- **Phase 3 — reach & retention: ❌ NOT STARTED (real remaining builds).** Offline downloads (XL),
+  native mobile app (XL), recurring live interactive classroom w/ in-class chat (XL). These are
+  genuine multi-week lifts; do not half-build.
+- **Phase 4 — community & monetization: ⚠️ PARTIAL.** Coupons shipped; the admin shared task/request
+  board is LIVE (`shared_tasks` + `/admin/tasks` + student "raise a ticket"). Still missing:
+  subscriptions/memberships (needs Razorpay recurring plans) and community-2.0/threads (a light
+  read-only "My Batch" cohort view exists on the student side).
+- **LATER/OPTIONAL:** SCORM/xAPI — still a no (intentional). OMR — `/admin/omr` exists. Proctoring —
+  the CBT anti-cheat flags are now enforced in the simulator.
+
+**Net:** the code-gated LMS is essentially complete through Phase 2. What remains is (a) owner env-key
+activations for the automations, and (b) the Phase-3 XL reach lifts.
+
+---
+
 ## 1. Executive summary — where we are
 
 Cerebrum is **not a coaching marketing site with a login — it is a genuine LMS.** The audit found a
