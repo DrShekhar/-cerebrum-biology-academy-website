@@ -178,7 +178,7 @@ export default function NEETBiologyTutorDroppersPage() {
             instructor: {
               '@type': 'Person',
               name: 'Dr. Shekhar C Singh',
-              description: 'AIIMS Alumnus, Former Academic Head at PhysicsWallah (PW)',
+              description: 'AIIMS Alumnus, Former Academic Head at Narayana Group',
             },
             educationalLevel: 'NEET UG Repeater',
             timeRequired: 'P12M',

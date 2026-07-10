@@ -160,7 +160,7 @@ export default function OnlineBiologyTutorClass11Page() {
             instructor: {
               '@type': 'Person',
               name: 'Dr. Shekhar C Singh',
-              description: 'AIIMS Alumnus, Former Academic Head at PhysicsWallah (PW)',
+              description: 'AIIMS Alumnus, Former Academic Head at Narayana Group',
             },
             courseMode: 'online',
             educationalLevel: 'Class 11',
