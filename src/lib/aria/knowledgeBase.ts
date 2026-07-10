@@ -443,7 +443,7 @@ export const ACADEMY_HISTORY = {
   founder: 'Dr. Shekhar C Singh (AIIMS New Delhi Alumnus)',
   origin:
     'Started with 23 students in a 400 sq ft room in Rohini. Dr. Singh chose teaching over medical practice after witnessing capable students struggle with Biology despite expensive coaching.',
-  totalStudents: '150,000+ students & counting',
+  totalStudents: '15,000+ students & counting',
   medicalSelections: '10,000+ medical college admissions',
   rating: '5.0/5 Google rating (500+ reviews)',
 }
@@ -468,7 +468,7 @@ export const NOTABLE_ACHIEVEMENTS = {
 }
 
 export const NEET_2024_RESULTS = {
-  totalStudents: 150000,
+  totalStudents: 15000,
   aiimsSelections: 67,
   successRate: '98%',
   top500Ranks: 68,

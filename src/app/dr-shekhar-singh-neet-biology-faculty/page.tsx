@@ -134,7 +134,7 @@ const faqs = [
   {
     question: 'How many students has Dr. Singh trained for NEET?',
     answer:
-      'Dr. Singh has personally mentored over 1,50,000 students for NEET over his 15+ year career. Of these, 67+ have been selected to AIIMS and top government medical colleges. His consistent success rate is 98%.',
+      'Dr. Singh has personally mentored over 15,000 students for NEET over his 15+ year career. Of these, 67+ have been selected to AIIMS and top government medical colleges. His consistent success rate is 98%.',
   },
   {
     question: 'Does Dr. Singh teach all batches personally?',
@@ -235,7 +235,7 @@ export default function DrShekharSinghPage() {
               </p>
               <p className="mb-4">
                 With <strong>15+ years of dedicated NEET coaching experience</strong>, Dr. Singh has
-                personally mentored over 1,50,000 students, with 67+ gaining admission to AIIMS and
+                personally mentored over 15,000 students, with 67+ gaining admission to AIIMS and
                 top government medical colleges. His teaching methodology combines rigorous academic
                 preparation with clinical insights from his medical background.
               </p>

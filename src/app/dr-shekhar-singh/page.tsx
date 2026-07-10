@@ -362,7 +362,7 @@ export default function DrShekharSinghPage() {
                   >
                     <div
                       className="text-3xl font-bold text-[#3d4d3d]"
-                      aria-label="150000 plus students"
+                      aria-label="15000 plus students"
                     >
                       15,000+
                     </div>

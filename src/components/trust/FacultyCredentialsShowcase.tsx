@@ -130,7 +130,7 @@ const FACULTY_MEMBERS: FacultyMember[] = [
     achievements: {
       publicationsCount: 45,
       awardsCount: 8,
-      studentsGuided: 150000,
+      studentsGuided: 15000,
       successRate: 96.8,
       topRanksProduced: 156,
     },

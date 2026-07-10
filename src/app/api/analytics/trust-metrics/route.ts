@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 export async function GET() {
   const trustMetrics = {
     successRate: 98,
-    totalStudents: 150000,
+    totalStudents: 15000,
     yearsOfExperience: 10,
     averageRating: 5.0,
     totalReviews: 1800,

@@ -177,7 +177,7 @@ export default function AboutPage() {
   ]
 
   const achievements = [
-    { number: '150000+', label: 'Students Coached', icon: Users },
+    { number: '15000+', label: 'Students Coached', icon: Users },
     { number: '98%', label: 'Success Rate', icon: Target },
     { number: '27', label: 'Top 1000 Ranks', icon: Award },
     { number: '9+', label: 'Years of Excellence', icon: Calendar },

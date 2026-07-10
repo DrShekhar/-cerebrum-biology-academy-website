@@ -64,7 +64,7 @@ const allCourses: Course[] = [
     practiceQuestions: 10000,
     validity: '18 Months',
     rating: 5.0,
-    students: 150000,
+    students: 15000,
     highlights: [
       'Daily 6-hour live classes',
       'Personal mentor assigned',

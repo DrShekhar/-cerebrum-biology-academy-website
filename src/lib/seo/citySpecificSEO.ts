@@ -59,7 +59,7 @@ export class CitySpecificSEOService {
         'mass-batch coaching alternative',
       ],
       competitors: ['other South-Indian chains', 'the 2nd-largest national NEET chain'],
-      studentVolume: 150000,
+      studentVolume: 15000,
     },
     // Tier 2 Cities
     {

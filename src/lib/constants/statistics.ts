@@ -10,11 +10,11 @@
 export const STATISTICS = {
   // Student counts - Use the most accurate current number
   TOTAL_STUDENTS: '15,000+',
-  TOTAL_STUDENTS_NUMBER: 150000,
+  TOTAL_STUDENTS_NUMBER: 15000,
 
   // Student mentored (historical total)
-  STUDENTS_MENTORED: '1.5 lakh+',
-  STUDENTS_MENTORED_NUMBER: 150000,
+  STUDENTS_MENTORED: '15,000+',
+  STUDENTS_MENTORED_NUMBER: 15000,
 
   // Review/rating statistics
   REVIEWS_COUNT: '38',

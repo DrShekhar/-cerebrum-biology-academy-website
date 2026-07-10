@@ -77,7 +77,7 @@ export function SophisticatedHero({
     { value: 98, suffix: '%', label: 'NEET Success Rate', icon: Trophy },
     { value: 330, prefix: '', suffix: '+', label: 'Average Biology Score', icon: BarChart2 },
     { value: 695, suffix: '', label: 'Top Score (Sadhna)', icon: GraduationCap },
-    { value: 150000, suffix: '+', label: 'Students Mentored', icon: Globe },
+    { value: 15000, suffix: '+', label: 'Students Mentored', icon: Globe },
   ]
 
   useEffect(() => {
@@ -144,7 +144,7 @@ export function SophisticatedHero({
                   <span className="font-semibold text-blue-700 cursor-help"> Dr. Shekhar's </span>
                 </PremiumTooltip>
                 proven teaching methods.{' '}
-                <span className="font-semibold text-green-700">1.5 lakh+ students</span> guided to
+                <span className="font-semibold text-green-700">15,000+ students</span> guided to
                 success.
               </p>
             </div>

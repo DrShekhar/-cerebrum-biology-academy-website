@@ -269,7 +269,7 @@ export default function NeetCoachingKotaPage() {
         state="Rajasthan"
         localities={kotaLocalities.map((l) => l.name)}
         faqs={faqs}
-        studentCount="150000"
+        studentCount="15000"
         coordinates={{ lat: '25.2138', lng: '75.8648' }}
       />
       {/* Hero Section */}

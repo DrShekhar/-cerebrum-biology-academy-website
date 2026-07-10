@@ -52,7 +52,7 @@ export default function DrShekhartYoutubeChannelPage() {
     name: 'Dr. Shekhar C Singh',
     jobTitle: 'Senior Biology Faculty, AIIMS-Trained',
     description:
-      'NEET Biology expert with 14+ years teaching experience and 150,000+ student selections. Founder of Cerebrum Biology Academy.',
+      'NEET Biology expert with 14+ years teaching experience and 15,000+ students taught. Founder of Cerebrum Biology Academy.',
     sameAs: [
       'https://www.youtube.com/@drshekharcsingh',
       'https://www.youtube.com/@cerebrumbiologyacademy',
@@ -289,7 +289,7 @@ export default function DrShekhartYoutubeChannelPage() {
               </p>
               <p className="text-gray-300 text-lg max-w-2xl mx-auto">
                 Learn from an AIIMS-trained faculty with 14+ years of teaching experience and
-                150,000+ successful student selections
+                15,000+ students taught
               </p>
             </div>
 
