@@ -27,6 +27,7 @@ import { DashboardHero, MasteryGrid } from '@/components/student/DashboardHero'
 import { NextClassCard } from '@/components/student/NextClassCard'
 import { AttendanceRing } from '@/components/student/AttendanceRing'
 import { LibraryStrip } from '@/components/student/LibraryStrip'
+import { StudyToolsSection } from '@/components/student/StudyToolsSection'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 
@@ -338,6 +339,9 @@ export default function StudentDashboard() {
 
           {/* Your library — recorded classes + recent study materials */}
           <LibraryStrip />
+
+          {/* Study tools — timer, goals, schedule (folded from the retired /dashboard) */}
+          <StudyToolsSection attempts={allAttempts} studyStreak={streak} />
 
           {/* Quick Actions */}
           <section>
