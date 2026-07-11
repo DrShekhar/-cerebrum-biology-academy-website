@@ -2,55 +2,40 @@
 
 import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
-import { useEffect, useState, Component, ReactNode } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { BookOpen, LogIn, UserPlus, RefreshCw, AlertCircle, Brain } from 'lucide-react'
+import { BookOpen, LogIn, UserPlus, Brain } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
-// Owner phone number - only this number gets multi-role access
+// Owner phone number — only this number gets multi-role access.
 const OWNER_PHONE = CONTACT_INFO.phone.owner
 
-// Directly import the dashboard component (no dynamic import issues)
-import { PersonalizedStudentDashboard } from '@/components/dashboard/PersonalizedStudentDashboard'
-import { StudentHeaderBand } from '@/components/dashboard/StudentHeaderBand'
-import { CoachingTrialBanner, useCoachingTrialStatus } from '@/components/trial/CoachingTrialBanner'
+/**
+ * /dashboard is a ROLE ROUTER, not a dashboard. Every role has ONE canonical
+ * home; this page reads the session and forwards there. This ends the old
+ * "two parallel student dashboards" confusion — students land on
+ * /student/dashboard — and fixes the bug where non-student roles
+ * (teacher/parent/counselor) were shown a student's personalized dashboard.
+ */
 
-// Error Boundary for catching dashboard render errors
-interface ErrorBoundaryProps {
-  children: ReactNode
-  fallback: (error: Error, reset: () => void) => ReactNode
+function normalizePhone(phone: string) {
+  return phone.replace(/[+\s\-()]/g, '')
 }
 
-interface ErrorBoundaryState {
-  hasError: boolean
-  error: Error | null
-}
-
-class DashboardErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props)
-    this.state = { hasError: false, error: null }
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error }
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('[Dashboard Error Boundary] Caught error:', error)
-    console.error('[Dashboard Error Boundary] Error info:', errorInfo)
-  }
-
-  reset = () => {
-    this.setState({ hasError: false, error: null })
-  }
-
-  render() {
-    if (this.state.hasError && this.state.error) {
-      return this.props.fallback(this.state.error, this.reset)
-    }
-    return this.props.children
+function roleHome(role: string | undefined | null): string {
+  switch (role) {
+    case 'TEACHER':
+      return '/teacher'
+    case 'PARENT':
+      return '/parent/dashboard'
+    case 'COUNSELOR':
+      return '/counselor'
+    case 'ADMIN':
+      return '/admin'
+    default:
+      // STUDENT or no role → the canonical student home.
+      return '/student/dashboard'
   }
 }
 
@@ -61,14 +46,11 @@ function AuthRequiredMessage() {
         <div className="w-20 h-20 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
           <BookOpen className="w-10 h-10 text-white" />
         </div>
-
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Authentication Required</h1>
-
         <p className="text-gray-600 mb-8">
           Please sign in to access your personalized NEET Biology dashboard with AI-powered learning
           paths.
         </p>
-
         <div className="space-y-4">
           <Link href="/sign-in">
             <Button variant="primary" size="lg" className="w-full">
@@ -76,7 +58,6 @@ function AuthRequiredMessage() {
               Sign In
             </Button>
           </Link>
-
           <Link href="/sign-up">
             <Button variant="outline" size="lg" className="w-full">
               <UserPlus className="w-5 h-5 mr-2" />
@@ -84,7 +65,6 @@ function AuthRequiredMessage() {
             </Button>
           </Link>
         </div>
-
         <div className="mt-6 pt-6 border-t border-gray-200">
           <p className="text-sm text-gray-500">
             New to Cerebrum Biology Academy?{' '}
@@ -112,120 +92,28 @@ function LoadingState() {
   )
 }
 
-function ErrorFallback({ error, reset }: { error: Error; reset: () => void }) {
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp">
-        <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-          <AlertCircle className="w-10 h-10 text-red-500" />
-        </div>
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">Dashboard Error</h1>
-        <p className="text-gray-600 mb-4">There was an error loading your dashboard.</p>
-        <p className="text-xs text-red-500 bg-red-50 p-2 rounded mb-6 text-left overflow-auto max-h-32">
-          {error.message}
-        </p>
-        <div className="space-y-4">
-          <Button variant="primary" size="lg" className="w-full" onClick={reset}>
-            <RefreshCw className="w-5 h-5 mr-2" />
-            Try Again
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="w-full"
-            onClick={() => window.location.reload()}
-          >
-            Reload Page
-          </Button>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 export default function DashboardPage() {
-  // Use AuthContext - same as header for consistency
   const { user, isAuthenticated, isLoading } = useAuth()
   const router = useRouter()
   const [mounted, setMounted] = useState(false)
-  // Trial banner for authenticated FREE-tier users (same banner as
-  // /student/dashboard — previously missing from this, the canonical,
-  // student landing page).
-  const { trialStatus: coachingTrialStatus } = useCoachingTrialStatus()
 
-  // Ensure we're mounted before checking auth (prevent hydration issues)
+  // Wait for mount before touching auth (prevents hydration mismatch).
   useEffect(() => {
     setMounted(true)
   }, [])
 
-  // Debug logging
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && mounted) {
-      console.log('[Dashboard] Auth state from useAuth:', {
-        isLoading,
-        isAuthenticated,
-        hasUser: !!user,
-        userId: user?.id,
-      })
+    if (!mounted || isLoading || !user) return
+    // Owner (multi-role) chooses a role each session.
+    if (normalizePhone(user.phone || '') === normalizePhone(OWNER_PHONE)) {
+      router.replace('/select-role')
+      return
     }
-  }, [isLoading, isAuthenticated, user, mounted])
+    router.replace(roleHome(user.role))
+  }, [mounted, isLoading, user, router])
 
-  // Owner phone check - redirect to role selection
-  useEffect(() => {
-    if (!isLoading && user && mounted) {
-      const userPhone = user.phone || ''
-      const normalizePhone = (phone: string) => phone.replace(/[\+\s\-\(\)]/g, '')
-      const normalizedUserPhone = normalizePhone(userPhone)
-      const normalizedOwnerPhone = normalizePhone(OWNER_PHONE)
-
-      if (normalizedUserPhone === normalizedOwnerPhone) {
-        router.push('/select-role')
-        return
-      }
-
-      // Students have ONE home: /student/dashboard (daily plan + shell nav).
-      // This page's analytics live on at /dashboard/student ("Full Analytics").
-      // Ends the two-parallel-dashboards confusion; non-student roles keep
-      // their existing behavior.
-      if (user.role === 'STUDENT' || !user.role) {
-        router.replace('/student/dashboard')
-        return
-      }
-    }
-  }, [isLoading, user, router, mounted])
-
-  // Don't render until mounted (prevents hydration mismatch)
-  if (!mounted) {
-    return <LoadingState />
-  }
-
-  // Show loading while checking authentication
-  if (isLoading) {
-    return <LoadingState />
-  }
-
-  // Show authentication required if not signed in
-  if (!isAuthenticated || !user) {
-    return <AuthRequiredMessage />
-  }
-
-  // User is authenticated - show the dashboard
-  return (
-    <main className="min-h-screen">
-      {coachingTrialStatus && (
-        <CoachingTrialBanner
-          trialStatus={coachingTrialStatus}
-          onUpgradeClick={() => router.push('/pricing')}
-        />
-      )}
-      <DashboardErrorBoundary
-        fallback={(error, reset) => <ErrorFallback error={error} reset={reset} />}
-      >
-        {/* Profile header band: avatar/grade/courses/streak/XP + live actions
-            (join class, resume mock, due homework) — roadmap P1 */}
-        <StudentHeaderBand />
-        <PersonalizedStudentDashboard />
-      </DashboardErrorBoundary>
-    </main>
-  )
+  if (!mounted || isLoading) return <LoadingState />
+  if (!isAuthenticated || !user) return <AuthRequiredMessage />
+  // Authenticated → a redirect is in flight.
+  return <LoadingState />
 }
