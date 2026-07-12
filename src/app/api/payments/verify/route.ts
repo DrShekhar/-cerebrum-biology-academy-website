@@ -6,6 +6,7 @@ import { prisma } from '@/lib/prisma'
 import { WebhookService } from '@/lib/webhooks/webhookService'
 import { validateUserSession } from '@/lib/auth/config'
 import { mapCourseToTier } from '@/lib/payments/tierMapping'
+import { fetchOrderTier } from '@/lib/payments/razorpayOrder'
 import { logger } from '@/lib/logger'
 import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 
@@ -118,6 +119,9 @@ export async function POST(request: NextRequest) {
         let userId: string | null = null
         let courseId: string | null = null
 
+        // Authoritative tier from the order notes (see webhook). Outside the tx.
+        const orderTier = await fetchOrderTier(orderId)
+
         await prisma.$transaction(async (tx) => {
           const payment = await tx.payments.findFirst({
             where: { razorpayOrderId: orderId },
@@ -199,7 +203,8 @@ export async function POST(request: NextRequest) {
             // Set coachingTier based on course/enrollment fees
             const tierFromCourse = mapCourseToTier(
               payment.enrollments.courseId,
-              payment.enrollments.totalFees
+              payment.enrollments.totalFees,
+              orderTier
             )
             await tx.users.update({
               where: { id: payment.userId },

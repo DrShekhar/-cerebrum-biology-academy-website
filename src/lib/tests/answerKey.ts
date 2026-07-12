@@ -13,7 +13,7 @@ export function resolveCorrectIndex(options: unknown, correctAnswer: unknown): n
 
   const opts = Array.isArray(options) ? (options as unknown[]).map((o) => String(o)) : []
 
-  // Already a numeric index (number or numeric string).
+  // A real numeric index (actual number type, not a numeric string) — trust it.
   if (typeof correctAnswer === 'number' && Number.isInteger(correctAnswer)) {
     return correctAnswer >= 0 && (opts.length === 0 || correctAnswer < opts.length)
       ? correctAnswer
@@ -23,20 +23,25 @@ export function resolveCorrectIndex(options: unknown, correctAnswer: unknown): n
   const raw = String(correctAnswer).trim()
   if (raw === '') return -1
 
-  if (/^\d+$/.test(raw)) {
-    const idx = parseInt(raw, 10)
-    return opts.length === 0 || idx < opts.length ? idx : -1
-  }
+  // TEXT MATCH FIRST — the stored answer is most often the verbatim option text
+  // (AI-authored questions store the option string). Doing this before the
+  // letter/index heuristics avoids misgrading numeric-option questions
+  // (options ["2","4","6"], answer "2") and single-letter-option questions
+  // (options ["B","A","O"], answer "A"), where a letter/index guess is wrong.
+  const textIdx = opts.findIndex((o) => o.trim().toLowerCase() === raw.toLowerCase())
+  if (textIdx >= 0) return textIdx
 
-  // Single letter label A/B/C/D... (case-insensitive).
+  // Single letter label A/B/C/D... (case-insensitive) — the seed-bank convention.
   if (/^[a-zA-Z]$/.test(raw)) {
     const idx = raw.toUpperCase().charCodeAt(0) - 65
     if (idx >= 0 && (opts.length === 0 || idx < opts.length)) return idx
   }
 
-  // Full option text (case-insensitive, trimmed).
-  const textIdx = opts.findIndex((o) => o.trim().toLowerCase() === raw.toLowerCase())
-  if (textIdx >= 0) return textIdx
+  // Finally, a 0-based numeric index string (only when it isn't an option's text).
+  if (/^\d+$/.test(raw)) {
+    const idx = parseInt(raw, 10)
+    return opts.length === 0 || idx < opts.length ? idx : -1
+  }
 
   return -1
 }

@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { correctLetter } from '@/lib/cbt/paper'
 import { assertMaterialEntitlement } from '@/lib/lms/materialEntitlement'
+import { getGroupGrantedContent } from '@/lib/student/groupContent'
 
 /**
  * POST /api/lms/videos/checkpoint — answer an in-video quiz checkpoint.
@@ -31,7 +32,7 @@ export async function POST(request: NextRequest) {
     const checkpoint = await prisma.video_checkpoints.findUnique({
       where: { id: checkpointId },
       include: {
-        video_lectures: { select: { studyMaterialId: true } },
+        video_lectures: { select: { id: true, studyMaterialId: true } },
         questions: {
           select: {
             id: true,
@@ -61,10 +62,17 @@ export async function POST(request: NextRequest) {
       checkpoint.video_lectures.studyMaterialId
     )
     if (!entitlement.allowed) {
-      return NextResponse.json(
-        { success: false, error: entitlement.error || 'Not authorized' },
-        { status: entitlement.status }
-      )
+      // Match the player's gate, which ALSO admits a batch student granted the
+      // VIDEO row directly via group_content (materialEntitlement only covers
+      // material-level grants). Without this, a batch student can watch the
+      // video but every checkpoint 403s.
+      const groupGrants = await getGroupGrantedContent(userId)
+      if (!groupGrants.videoLectureIds.includes(checkpoint.video_lectures.id)) {
+        return NextResponse.json(
+          { success: false, error: entitlement.error || 'Not authorized' },
+          { status: entitlement.status }
+        )
+      }
     }
 
     const correct = correctLetter(checkpoint.questions as never)

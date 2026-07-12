@@ -164,8 +164,6 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
       updateData.scheduledDate = new Date(validatedData.scheduledDate)
     if (validatedData.startTime !== undefined) {
       updateData.startTime = new Date(validatedData.startTime)
-      // Moving the class re-opens its reminder schedule against the new time.
-      updateData.reminderOffsetsSent = []
     }
     if (validatedData.endTime !== undefined) updateData.endTime = new Date(validatedData.endTime)
     if (validatedData.duration !== undefined) updateData.duration = validatedData.duration
@@ -200,6 +198,15 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
         },
       },
     })
+
+    // Moving the class re-opens its reminder schedule against the new time —
+    // clear the sent-reminder ledger so the class-reminders cron re-notifies.
+    // Best-effort (table may not exist yet pre-migration); never fail the update.
+    if (validatedData.startTime !== undefined) {
+      await prisma.class_reminder_log
+        .deleteMany({ where: { sessionId: params.id } })
+        .catch(() => {})
+    }
 
     const { courses: updatedCourses, ...updatedSessionRest } = updatedSession
     const updatedSessionResponse = { ...updatedSessionRest, course: updatedCourses }

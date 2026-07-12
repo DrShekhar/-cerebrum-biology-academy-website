@@ -122,12 +122,27 @@ async function handleDownload(
       if (/^https:\/\//i.test(raw)) {
         // Absolute https (Blob / external CDN) — hand off as-is.
         deliverUrl = raw
-      } else if (raw.startsWith('/') && !raw.startsWith('//')) {
+      } else if (
+        raw.startsWith('/') &&
+        !raw.startsWith('//') &&
+        !raw.includes('\\') &&
+        !raw.includes('@')
+      ) {
         // Same-origin relative path (e.g. seeded /sample-materials/*.pdf files in
-        // public/). Resolve against the request origin so real PDFs deliver
-        // instead of 404-ing. Leading `//` is excluded — that is protocol-relative
-        // and could point off-origin (open-redirect).
-        deliverUrl = new URL(raw, request.url).toString()
+        // public/). Resolve against the request origin so real PDFs deliver.
+        // Reject `//` (protocol-relative), backslashes (WHATWG URL treats `\`
+        // like `/`, so `/\evil.com` would resolve off-origin) and `@`
+        // (userinfo trick) — all open-redirect vectors.
+        const resolved = new URL(raw, request.url)
+        // Belt-and-suspenders: confirm it stayed on our origin before trusting it.
+        if (resolved.origin !== new URL(request.url).origin) {
+          console.error('[materials/download] fileUrl resolved off-origin:', materialId)
+          return NextResponse.json(
+            { success: false, error: 'This material is not available for download.' },
+            { status: 404 }
+          )
+        }
+        deliverUrl = resolved.toString()
       } else {
         console.error('[materials/download] unsupported fileUrl scheme:', materialId)
         return NextResponse.json(

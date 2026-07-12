@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { logger } from '@/lib/utils/logger'
-import { sendWhatsAppMessage, isInteraktConfigured } from '@/lib/interakt'
+import { sendWhatsAppMessage, isWhatsAppSendConfigured } from '@/lib/interakt'
 import { sendPushToUser, isPushConfigured } from '@/lib/push/webPush'
 
 /**
@@ -10,21 +10,17 @@ import { sendPushToUser, isPushConfigured } from '@/lib/push/webPush'
  * Notifies the session's TEACHER, every ACTIVE-enrolled STUDENT of the course
  * (respecting group scoping), and all ADMINs at 1 day / 1 hour / 15 min / 1 min
  * before a scheduled class. Each reminder carries a Join action (the meeting
- * link). Dedup is per (session, offset) via class_sessions.reminderOffsetsSent,
- * so the same reminder never sends twice; rescheduling clears it.
+ * link). Dedup + concurrency safety come from the class_reminder_log table:
+ * the cron "claims" an (session, offset) by inserting its unique row BEFORE
+ * sending, so overlapping per-minute invocations can't double-send; a claim is
+ * released (deleted) only if every channel failed, so it retries next tick.
  *
  * NOTE: the 1-minute reminder requires the cron to run every minute
  * (schedule "* * * * *"), which needs a Vercel Pro plan (Hobby = daily only).
- * On Hobby, run at the finest available interval and the 1-min offset will fire
- * late or be skipped — configure an external per-minute pinger for exact timing.
  */
 
 // Minutes-before offsets, largest first.
 const OFFSETS = [1440, 60, 15, 1]
-// A reminder fires when now is within [target - WINDOW, target]; sized so a
-// coarse cron cadence still catches each offset without double-firing (dedup
-// also guards). Kept under the smallest gap between offsets.
-const WINDOW_MIN = 5
 
 export async function GET(request: NextRequest) {
   return handleCron(request)
@@ -49,7 +45,7 @@ async function handleCron(request: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    const waOn = isInteraktConfigured()
+    const waOn = isWhatsAppSendConfigured()
     const pushOn = isPushConfigured()
     if (!waOn && !pushOn) {
       return NextResponse.json({
@@ -63,8 +59,6 @@ async function handleCron(request: NextRequest) {
     logger.info('Class reminders cron completed', stats)
     return NextResponse.json({ success: true, stats })
   } catch (error) {
-    // A missing reminderOffsetsSent column (migration not yet applied) lands
-    // here — we log and exit rather than spamming, so no duplicate reminders.
     logger.error('Error in class reminders cron job:', { error })
     return NextResponse.json(
       { success: false, error: 'Class reminder processing failed' },
@@ -75,11 +69,13 @@ async function handleCron(request: NextRequest) {
 
 async function processClassReminders({ waOn, pushOn }: { waOn: boolean; pushOn: boolean }) {
   const now = new Date()
-  const horizon = new Date(now.getTime() + (OFFSETS[0] + WINDOW_MIN) * 60 * 1000)
+  const horizon = new Date(now.getTime() + OFFSETS[0] * 60 * 1000)
 
   const sessions = await prisma.class_sessions.findMany({
     where: {
-      status: { in: ['SCHEDULED', 'ONGOING'] },
+      // RESCHEDULED included: a moved-and-marked-rescheduled class must still
+      // notify against its new time. ONGOING harmless (startTime>now excludes it).
+      status: { in: ['SCHEDULED', 'ONGOING', 'RESCHEDULED'] },
       startTime: { gt: now, lte: horizon },
     },
     select: {
@@ -90,8 +86,10 @@ async function processClassReminders({ waOn, pushOn }: { waOn: boolean; pushOn: 
       teacherId: true,
       startTime: true,
       meetingLink: true,
-      reminderOffsetsSent: true,
+      topic: true,
+      chapter: true,
       courses: { select: { name: true } },
+      users: { select: { name: true } },
     },
   })
 
@@ -100,43 +98,95 @@ async function processClassReminders({ waOn, pushOn }: { waOn: boolean; pushOn: 
   for (const s of sessions) {
     const minutesUntil = (s.startTime.getTime() - now.getTime()) / 60000
 
-    // The due offset is the smallest one whose target time we've just reached
-    // and haven't sent yet.
-    const dueOffset = OFFSETS.find(
-      (off) =>
-        !s.reminderOffsetsSent.includes(off) &&
-        minutesUntil <= off &&
-        minutesUntil > off - WINDOW_MIN
-    )
-    if (dueOffset === undefined) continue
+    // Every offset whose target time has already arrived (now >= startTime-off).
+    const passed = OFFSETS.filter((off) => minutesUntil <= off)
+    if (passed.length === 0) continue
+
+    // Which of those have we not sent yet?
+    const alreadySent = await prisma.class_reminder_log
+      .findMany({ where: { sessionId: s.id, offset: { in: passed } }, select: { offset: true } })
+      .then((rows) => new Set(rows.map((r) => r.offset)))
+      .catch((e) => {
+        // Table missing (migration not applied) → rethrow so the whole run 500s
+        // cleanly instead of sending unguarded duplicates.
+        throw e
+      })
+
+    const unsentPassed = passed.filter((off) => !alreadySent.has(off))
+    if (unsentPassed.length === 0) continue
+
+    // Send only the MOST URGENT unsent offset (smallest minutes-before). Any
+    // larger offsets that were missed (late/skipped cron ticks) are suppressed —
+    // we don't send a stale "1 day before" reminder 20 min before class — by
+    // marking them sent below. This makes late/coarse cron cadence degrade to
+    // "one timely reminder" instead of dropping everything.
+    const dueOffset = Math.min(...unsentPassed)
+    const staleOffsets = unsentPassed.filter((off) => off !== dueOffset)
+
+    // CLAIM FIRST: insert the due row (unique on sessionId+offset). If another
+    // invocation already claimed it, this throws → skip (no double-send).
+    let claimed = false
+    try {
+      await prisma.class_reminder_log.create({
+        data: { id: `crl_${s.id}_${dueOffset}`, sessionId: s.id, offset: dueOffset },
+      })
+      claimed = true
+    } catch {
+      claimed = false
+    }
+    if (!claimed) continue
+
+    // Suppress the stale larger offsets (best-effort; not the urgent one).
+    if (staleOffsets.length > 0) {
+      await prisma.class_reminder_log
+        .createMany({
+          data: staleOffsets.map((off) => ({
+            id: `crl_${s.id}_${off}`,
+            sessionId: s.id,
+            offset: off,
+          })),
+          skipDuplicates: true,
+        })
+        .catch(() => {})
+    }
 
     const recipients = await resolveRecipients(s.courseId, s.groupId, s.teacherId)
-    const when = humanizeOffset(dueOffset)
-    const courseName = s.courses?.name || 'your class'
+    const timeRemaining = humanizeOffset(dueOffset)
+    const subject = s.courses?.name || 'Your class'
+    const facultyName = s.users?.name || 'Cerebrum Faculty'
     const startLabel = s.startTime.toLocaleString('en-IN', {
       timeZone: 'Asia/Kolkata',
       dateStyle: 'medium',
       timeStyle: 'short',
     })
 
-    await Promise.allSettled(
+    const results = await Promise.allSettled(
       recipients.map((r) =>
         notify(r, {
-          title: `Class ${when}: ${s.title}`,
-          body: `${courseName} starts at ${startLabel} IST.`,
+          studentName: r.name || 'Student',
+          title: `Class ${timeRemaining}: ${s.title}`,
+          body: `${subject} starts at ${startLabel} IST.`,
+          timeRemaining,
+          subject,
+          topic: s.topic || s.chapter || s.title,
+          facultyName,
           meetingLink: s.meetingLink,
           waOn,
           pushOn,
         })
       )
     )
+    const delivered = results.some((r) => r.status === 'fulfilled' && r.value === true)
 
-    // Mark this offset sent (append; dedup guaranteed by the find above).
-    await prisma.class_sessions.update({
-      where: { id: s.id },
-      data: { reminderOffsetsSent: { set: [...s.reminderOffsetsSent, dueOffset] } },
-    })
-    reminded++
+    // If nothing was delivered on any channel, release the claim so a later tick
+    // retries (transient outage). Stale suppressions stay in place.
+    if (!delivered) {
+      await prisma.class_reminder_log
+        .deleteMany({ where: { sessionId: s.id, offset: dueOffset } })
+        .catch(() => {})
+    } else {
+      reminded++
+    }
   }
 
   return { processed: sessions.length, reminded }
@@ -144,6 +194,7 @@ async function processClassReminders({ waOn, pushOn }: { waOn: boolean; pushOn: 
 
 interface Recipient {
   userId: string
+  name: string | null
   phone: string | null
   role: string
 }
@@ -156,12 +207,15 @@ async function resolveRecipients(
   const byId = new Map<string, Recipient>()
 
   // Students: ACTIVE enrollments in the course. If the session is group-scoped,
-  // narrow to that group's members.
+  // narrow to that group's members. A group-lookup failure SKIPS the students
+  // (returns null studentIds handled by caller) rather than silently notifying
+  // no one — but here we simply let the error propagate to the run's catch.
   let studentIds: string[] | null = null
   if (groupId) {
-    const members = await prisma.student_group_members
-      .findMany({ where: { groupId }, select: { userId: true } })
-      .catch(() => [] as { userId: string }[])
+    const members = await prisma.student_group_members.findMany({
+      where: { groupId },
+      select: { userId: true },
+    })
     studentIds = members.map((m) => m.userId)
   }
 
@@ -171,44 +225,81 @@ async function resolveRecipients(
       status: 'ACTIVE',
       ...(studentIds ? { userId: { in: studentIds } } : {}),
     },
-    select: { users: { select: { id: true, phone: true, role: true } } },
+    select: { users: { select: { id: true, name: true, phone: true, role: true } } },
   })
   for (const e of enrollments) {
     if (e.users)
-      byId.set(e.users.id, { userId: e.users.id, phone: e.users.phone, role: e.users.role })
+      byId.set(e.users.id, {
+        userId: e.users.id,
+        name: e.users.name,
+        phone: e.users.phone,
+        role: e.users.role,
+      })
   }
 
   // The session's teacher + all admins (owner oversight).
   const staff = await prisma.users.findMany({
     where: { OR: [{ id: teacherId }, { role: 'ADMIN' }] },
-    select: { id: true, phone: true, role: true },
+    select: { id: true, name: true, phone: true, role: true },
   })
-  for (const u of staff) byId.set(u.id, { userId: u.id, phone: u.phone, role: u.role })
+  for (const u of staff)
+    byId.set(u.id, { userId: u.id, name: u.name, phone: u.phone, role: u.role })
 
   return Array.from(byId.values())
 }
 
+/** Returns true if the reminder was delivered on at least one channel. */
 async function notify(
   r: Recipient,
-  opts: { title: string; body: string; meetingLink: string | null; waOn: boolean; pushOn: boolean }
-) {
-  const joinSuffix = opts.meetingLink ? ` Join: ${opts.meetingLink}` : ''
+  opts: {
+    studentName: string
+    title: string
+    body: string
+    timeRemaining: string
+    subject: string
+    topic: string
+    facultyName: string
+    meetingLink: string | null
+    waOn: boolean
+    pushOn: boolean
+  }
+): Promise<boolean> {
+  let delivered = false
 
   if (opts.pushOn) {
-    await sendPushToUser(r.userId, {
+    const res = await sendPushToUser(r.userId, {
       title: opts.title,
       body: opts.body,
-      url: opts.meetingLink || '/student/dashboard',
+      // Staff land on their sessions view; students on the join link/dashboard.
+      url:
+        opts.meetingLink ||
+        (r.role === 'TEACHER' || r.role === 'ADMIN' ? '/teacher/sessions' : '/student/dashboard'),
       tag: 'class-reminder',
-    }).catch(() => {})
+    }).catch(() => ({ sent: 0 }))
+    if (res && typeof res.sent === 'number' && res.sent > 0) delivered = true
   }
 
+  // Business-initiated WhatsApp OUTSIDE the 24h window must use an approved
+  // template — a plain-text send is rejected by Meta. Use the approved
+  // `class_reminder` template (params: name, time_remaining, subject, topic,
+  // faculty, join_link).
   if (opts.waOn && r.phone) {
-    await sendWhatsAppMessage({
+    const res = await sendWhatsAppMessage({
       phone: r.phone,
-      message: `${opts.title}\n${opts.body}${joinSuffix}`,
-    }).catch(() => {})
+      templateName: 'class_reminder',
+      templateParams: {
+        '1': opts.studentName,
+        '2': opts.timeRemaining,
+        '3': opts.subject,
+        '4': opts.topic,
+        '5': opts.facultyName,
+        '6': opts.meetingLink || 'Link will be shared shortly',
+      },
+    }).catch(() => ({ success: false }) as { success: boolean })
+    if (res && (res as { success?: boolean }).success) delivered = true
   }
+
+  return delivered
 }
 
 function humanizeOffset(off: number): string {

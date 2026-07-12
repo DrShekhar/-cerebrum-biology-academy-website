@@ -308,7 +308,22 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
 
     // Process final answers if provided (unless the clock has expired)
     if (!answersExpired && validatedData.finalAnswers && validatedData.finalAnswers.length > 0) {
+      // SECURITY: only accept answers for questions that belong to THIS session's
+      // paper. Without this a client could inject arbitrary bank questionIds in
+      // finalAnswers to inflate totalScore past 100% (the score sums marksAwarded
+      // over all stored responses). Mirrors the /answer route's membership check.
+      const paperRows = await prisma.question_bank_questions.findMany({
+        where: {
+          testTemplateId: testSession.testTemplateId,
+          questionId: { in: validatedData.finalAnswers.map((a) => a.questionId) },
+        },
+        select: { questionId: true },
+      })
+      const paperQuestionIds = new Set(paperRows.map((r) => r.questionId))
+
       for (const answer of validatedData.finalAnswers) {
+        if (!paperQuestionIds.has(answer.questionId)) continue // not in this paper — ignore
+
         // Get question details
         const question = await prisma.questions.findUnique({
           where: { id: answer.questionId },

@@ -46,9 +46,15 @@ export async function GET(request: NextRequest) {
       )
     }
 
+    // Ownership scoping: a signed-in user only sees their OWN attempts — a
+    // client-supplied freeUserId is ignored for them, else any logged-in user
+    // could read another (anonymous) user's scores by guessing their id.
+    // Anonymous callers are identified solely by their own freeUserId.
+    const scopedFreeUserId = userId || freeUserId
+
     const attempts = await prisma.test_attempts.findMany({
       where: {
-        freeUserId: freeUserId || userId,
+        freeUserId: scopedFreeUserId,
       },
       include: {
         test_templates: {

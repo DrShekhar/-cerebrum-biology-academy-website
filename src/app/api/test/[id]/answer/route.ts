@@ -375,30 +375,45 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     const accuracy =
       sessionResponses.length > 0 ? (correctCount / sessionResponses.length) * 100 : 0
 
-    // Prepare response
+    // SECURITY: in graded (non-practice) mode reveal NOTHING that discloses
+    // correctness — not in feedback, not on the response row, not in the running
+    // stats. Otherwise a student re-answers a question (allowed while
+    // IN_PROGRESS) and reads isCorrect / diffs correctAnswers to cycle every
+    // question to correct. Only genuine practice mode gets live feedback.
     const responseData = {
       success: true,
       data: {
-        response: {
-          id: userResponse.id,
-          questionId: userResponse.questionId,
-          selectedAnswer: userResponse.selectedAnswer,
-          isCorrect: userResponse.isCorrect,
-          marksAwarded: userResponse.marksAwarded,
-          timeSpent: userResponse.timeSpent,
-          confidence: userResponse.confidence,
-          answeredAt: userResponse.answeredAt,
-        },
-        currentStats: {
-          totalQuestions: sessionResponses.length,
-          correctAnswers: correctCount,
-          totalMarks,
-          accuracy: Math.round(accuracy * 100) / 100,
-          totalTimeSpent: totalTime,
-        },
-        // SECURITY: reveal correctness ONLY in genuine practice mode. In graded
-        // modes we return neither isCorrect nor the answer key, so answers can't
-        // be probed by re-submitting until correct.
+        response: isPracticeMode
+          ? {
+              id: userResponse.id,
+              questionId: userResponse.questionId,
+              selectedAnswer: userResponse.selectedAnswer,
+              isCorrect: userResponse.isCorrect,
+              marksAwarded: userResponse.marksAwarded,
+              timeSpent: userResponse.timeSpent,
+              confidence: userResponse.confidence,
+              answeredAt: userResponse.answeredAt,
+            }
+          : {
+              id: userResponse.id,
+              questionId: userResponse.questionId,
+              selectedAnswer: userResponse.selectedAnswer,
+              timeSpent: userResponse.timeSpent,
+              confidence: userResponse.confidence,
+              answeredAt: userResponse.answeredAt,
+            },
+        currentStats: isPracticeMode
+          ? {
+              totalQuestions: sessionResponses.length,
+              correctAnswers: correctCount,
+              totalMarks,
+              accuracy: Math.round(accuracy * 100) / 100,
+              totalTimeSpent: totalTime,
+            }
+          : {
+              totalQuestions: sessionResponses.length,
+              totalTimeSpent: totalTime,
+            },
         feedback: isPracticeMode
           ? {
               isCorrect,

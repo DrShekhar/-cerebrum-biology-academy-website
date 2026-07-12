@@ -617,6 +617,16 @@ export async function updateVideoProgress(
 
   const reachedCompletion = data.isCompleted || completionPercent >= 90
 
+  // Was this lecture already complete? Used to fire the course-progress recompute
+  // ONLY on the transition to complete, not on every ≥90% progress ping (the
+  // player saves every ~10s, and the tail is re-watched) — avoids ~9 queries +
+  // a write per ping per student.
+  const prior = await prisma.video_progress.findUnique({
+    where: { videoLectureId_userId: { videoLectureId, userId } },
+    select: { isCompleted: true },
+  })
+  const newlyCompleted = reachedCompletion && !prior?.isCompleted
+
   await prisma.video_progress.upsert({
     where: {
       videoLectureId_userId: { videoLectureId, userId },
@@ -656,8 +666,9 @@ export async function updateVideoProgress(
 
   // Watching a video to (near) completion completes its lesson and advances
   // course progress — previously watching earned 0% because only video_progress
-  // was written and the course % counts material_progress.
-  if (reachedCompletion && videoLecture.studyMaterialId) {
+  // was written and the course % counts material_progress. Fire once, on the
+  // transition to complete.
+  if (newlyCompleted && videoLecture.studyMaterialId) {
     await completeMaterialAndRecompute(userId, videoLecture.studyMaterialId)
   }
 }

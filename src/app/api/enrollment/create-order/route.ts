@@ -97,7 +97,12 @@ export async function POST(request: NextRequest) {
     // SECURITY: Never trust client-sent amounts. Derive every price from the
     // canonical table — same math as the checkout UI (base + 18% GST, then
     // the installment split), so the charge always matches what was displayed.
-    const planKey = PAYMENT_PLANS.includes(paymentPlan) ? paymentPlan : 'lumpSum'
+    // Reject an unrecognized plan rather than silently defaulting to lumpSum,
+    // which would charge the full amount a confused client never displayed.
+    if (!PAYMENT_PLANS.includes(paymentPlan)) {
+      return NextResponse.json({ error: 'Invalid payment plan' }, { status: 400 })
+    }
+    const planKey = paymentPlan
     const tierPricing = getPricingForClass(
       classLevel as PricingClassLevel,
       courseType as PricingCourseType
