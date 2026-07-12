@@ -9,6 +9,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
+import { isAnswerCorrect, resolveCorrectIndex } from '@/lib/tests/answerKey'
 
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
@@ -74,8 +75,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     const showAnswers =
       submission.status === 'GRADED' ||
       (submission.status === 'SUBMITTED' &&
-        (showResultsMode === 'IMMEDIATELY' ||
-          (showResultsMode === 'AFTER_DEADLINE' && isPastDue)))
+        (showResultsMode === 'IMMEDIATELY' || (showResultsMode === 'AFTER_DEADLINE' && isPastDue)))
 
     let questions = assignment.test_assignment_questions.map((q) => {
       const base = {
@@ -94,7 +94,9 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       if (showAnswers) {
         return {
           ...base,
-          correctAnswer: q.questions.correctAnswer,
+          // Return the resolved 0-based index so the results UI can compare it
+          // directly against the student's selected option index.
+          correctAnswer: resolveCorrectIndex(q.questions.options, q.questions.correctAnswer),
           explanation: q.questions.explanation,
         }
       }
@@ -255,6 +257,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
                 questions: {
                   select: {
                     id: true,
+                    options: true,
                     correctAnswer: true,
                   },
                 },
@@ -271,6 +274,32 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
 
     if (submission.status === 'SUBMITTED' || submission.status === 'GRADED') {
       return NextResponse.json({ error: 'Test has already been submitted' }, { status: 400 })
+    }
+
+    // SECURITY: enforce the deadline server-side — browser timers can be paused
+    // or bypassed. A submit after the due date is rejected; if the client is
+    // merely autosaving progress past the deadline we also stop accepting it.
+    const assignmentMeta = submission.test_assignments
+    const dueDate = assignmentMeta.dueDate ? new Date(assignmentMeta.dueDate) : null
+    const startedAt = submission.startedAt ? new Date(submission.startedAt) : null
+    const nowTs = new Date()
+    const GRACE_MS = 30 * 1000 // clock skew / in-flight submit
+    const pastDeadline = dueDate ? nowTs.getTime() > dueDate.getTime() + GRACE_MS : false
+    const durationMs = assignmentMeta.duration ? assignmentMeta.duration * 60 * 1000 : null
+    const pastDuration =
+      startedAt && durationMs
+        ? nowTs.getTime() > startedAt.getTime() + durationMs + GRACE_MS
+        : false
+
+    if ((pastDeadline || pastDuration) && (submit || answers !== undefined)) {
+      if (!submit) {
+        return NextResponse.json(
+          { error: 'The time limit for this test has passed. Your test can no longer be edited.' },
+          { status: 400 }
+        )
+      }
+      // Allow the final submit to persist so the attempt is scored & closed,
+      // but it is graded on whatever answers were saved before the deadline.
     }
 
     const updateData: any = {}
@@ -307,15 +336,30 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
         }
 
         questionsAttempted++
-        const isCorrect = answer.selectedAnswer === q.questions.correctAnswer
+        // The client sends a numeric option index; correctAnswer may be stored
+        // as a letter, option text, or index — resolve both to an index.
+        const correct = isAnswerCorrect(
+          q.questions.options,
+          q.questions.correctAnswer,
+          answer.selectedAnswer
+        )
 
-        if (isCorrect) {
+        if (correct) {
           questionsCorrect++
           totalScore += q.marks
         } else {
           questionsWrong++
-          if (assignment.negativeMarking && q.negativeMarks) {
-            totalScore -= Number(q.negativeMarks)
+          if (assignment.negativeMarking) {
+            // Prefer the per-question penalty; fall back to the assignment-level
+            // value the create UI actually sets (per-question negativeMarks is
+            // usually null), so the promised "−N per wrong" is applied.
+            const penalty =
+              q.negativeMarks != null
+                ? Number(q.negativeMarks)
+                : assignment.negativeMarkValue != null
+                  ? Number(assignment.negativeMarkValue)
+                  : 0
+            totalScore -= penalty
           }
         }
       }

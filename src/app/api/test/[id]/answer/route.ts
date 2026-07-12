@@ -164,6 +164,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
           select: {
             negativeMarking: true,
             timeLimit: true,
+            type: true,
           },
         },
       },
@@ -175,6 +176,17 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
         { status: 404 }
       )
     }
+
+    // SECURITY: the response mode is derived server-side from the template type —
+    // never trusted from the client. Only genuine practice tests get immediate
+    // per-answer feedback; graded modes reveal nothing until submission, so a
+    // student cannot probe answers and cycle to 100%.
+    const isPracticeMode =
+      testSession.test_templates?.type === 'PRACTICE_TEST' ||
+      testSession.test_templates?.type === 'QUICK_TEST'
+    // Persisted on the response row — always the server's decision, never the
+    // client-sent responseMode.
+    const serverResponseMode = isPracticeMode ? 'PRACTICE_MODE' : 'TEST_MODE'
 
     // Check if test session is in valid state for answer submission
     if (!['NOT_STARTED', 'IN_PROGRESS', 'PAUSED'].includes(testSession.status)) {
@@ -209,6 +221,24 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
           { status: 400 }
         )
       }
+    }
+
+    // SECURITY: the question must belong to THIS session's paper. Without this
+    // check a student could POST any bank questionId to inflate their score past
+    // 100% or probe correctness across the entire 19k-question bank.
+    const inPaper = await prisma.question_bank_questions.findFirst({
+      where: {
+        testTemplateId: testSession.testTemplateId,
+        questionId: validatedData.questionId,
+      },
+      select: { id: true },
+    })
+
+    if (!inPaper) {
+      return NextResponse.json(
+        { error: 'Question is not part of this test', code: 'QUESTION_NOT_IN_TEST' },
+        { status: 400 }
+      )
     }
 
     // Get question details
@@ -266,7 +296,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
           timeSpent: validatedData.timeSpent || existingResponse.timeSpent,
           marksAwarded,
           confidence: validatedData.confidence,
-          responseMode: validatedData.responseMode,
+          responseMode: serverResponseMode,
           deviceType: validatedData.deviceType,
           answeredAt: new Date(),
         },
@@ -286,7 +316,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
           timeSpent: validatedData.timeSpent || 0,
           marksAwarded,
           confidence: validatedData.confidence,
-          responseMode: validatedData.responseMode,
+          responseMode: serverResponseMode,
           deviceType: validatedData.deviceType,
         },
       })
@@ -366,15 +396,17 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
           accuracy: Math.round(accuracy * 100) / 100,
           totalTimeSpent: totalTime,
         },
-        feedback: {
-          isCorrect,
-          marksAwarded,
-          // Only show immediate feedback in practice mode
-          ...(validatedData.responseMode === 'PRACTICE_MODE' && {
-            correctAnswer: question.correctAnswer,
-            explanation: 'Explanation will be available after test completion',
-          }),
-        },
+        // SECURITY: reveal correctness ONLY in genuine practice mode. In graded
+        // modes we return neither isCorrect nor the answer key, so answers can't
+        // be probed by re-submitting until correct.
+        feedback: isPracticeMode
+          ? {
+              isCorrect,
+              marksAwarded,
+              correctAnswer: question.correctAnswer,
+              explanation: 'Explanation will be available after test completion',
+            }
+          : { recorded: true },
       },
     }
 

@@ -14,12 +14,13 @@ export async function POST(
 ) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'TEACHER') {
+    if (!session || (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN')) {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 
     const assignmentId = params.id
     const submissionId = params.submissionId
+    const isAdmin = session.user.role === 'ADMIN'
     const teacherId = session.user.id
     const body = await request.json()
 
@@ -29,10 +30,12 @@ export async function POST(
       return NextResponse.json({ error: 'Grade is required' }, { status: 400 })
     }
 
+    // ADMIN can grade any assignment (incl. admin-authored ones); a TEACHER is
+    // scoped to assignments they own.
     const assignment = await prisma.assignments.findFirst({
       where: {
         id: assignmentId,
-        teacherId,
+        ...(isAdmin ? {} : { teacherId }),
       },
     })
 

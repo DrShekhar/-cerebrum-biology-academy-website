@@ -9,6 +9,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
+import { resolveAssignmentStudentIds } from '@/lib/tests/assignmentRoster'
 
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
@@ -110,7 +111,14 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
 
     const existing = await prisma.test_assignments.findUnique({
       where: { id },
-      select: { teacherId: true, status: true },
+      select: {
+        teacherId: true,
+        status: true,
+        assignToType: true,
+        courseId: true,
+        assignedClassIds: true,
+        assignedStudentIds: true,
+      },
     })
 
     if (!existing) {
@@ -217,22 +225,17 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
     }
 
     if (status === 'PUBLISHED' && existing.status === 'DRAFT') {
-      let studentIds: string[] = []
-
-      if (assignToType === 'ALL_STUDENTS' && courseId) {
-        const enrollments = await prisma.enrollments.findMany({
-          where: {
-            courseId,
-            status: 'ACTIVE',
-          },
-          select: {
-            userId: true,
-          },
-        })
-        studentIds = enrollments.map((e) => e.userId)
-      } else if (assignToType === 'INDIVIDUAL_STUDENTS' && assignedStudentIds) {
-        studentIds = assignedStudentIds
-      }
+      // The list-page "Publish" button sends only { status }, so the roster must
+      // come from the stored assignment; a full edit-then-publish supplies the
+      // targeting fields in the body. Body wins when present, else fall back to
+      // the persisted values. Uses the same resolver as creation, so publish and
+      // create always assign the identical student set (incl. SPECIFIC_CLASS).
+      const studentIds = await resolveAssignmentStudentIds({
+        assignToType: assignToType ?? existing.assignToType,
+        courseId: courseId ?? existing.courseId,
+        assignedClassIds: assignedClassIds ?? existing.assignedClassIds,
+        assignedStudentIds: assignedStudentIds ?? existing.assignedStudentIds,
+      })
 
       if (studentIds.length > 0) {
         await prisma.test_assignment_submissions.createMany({

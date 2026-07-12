@@ -110,3 +110,52 @@ export async function recomputeEnrollmentProgress(
     },
   }
 }
+
+/**
+ * Mark a study-material lesson COMPLETED for a user and refresh the course
+ * progress it belongs to. Shared by any surface that "completes" a lesson —
+ * assignment submission, video watch-to-end, etc. — so course progress moves
+ * consistently regardless of lesson type. Best-effort: never throws (progress is
+ * not worth failing the primary action for); returns false if it couldn't run.
+ */
+export async function completeMaterialAndRecompute(
+  userId: string,
+  materialId: string
+): Promise<boolean> {
+  try {
+    const material = await prisma.study_materials.findUnique({
+      where: { id: materialId },
+      select: { id: true, courseId: true },
+    })
+    if (!material) return false
+
+    await prisma.material_progress.upsert({
+      where: { materialId_userId: { materialId, userId } },
+      update: { status: 'COMPLETED', completedAt: new Date(), lastViewedAt: new Date() },
+      create: {
+        id: `matprog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
+        materialId,
+        userId,
+        status: 'COMPLETED',
+        completedAt: new Date(),
+        firstViewedAt: new Date(),
+        lastViewedAt: new Date(),
+      },
+    })
+
+    if (material.courseId) {
+      const enrollment = await prisma.enrollments.findFirst({
+        where: { userId, courseId: material.courseId, status: 'ACTIVE' },
+        select: { id: true },
+      })
+      if (enrollment) {
+        await recomputeEnrollmentProgress(enrollment.id)
+      }
+    }
+    return true
+  } catch (error) {
+    console.error('completeMaterialAndRecompute failed:', error)
+    return false
+  }
+}

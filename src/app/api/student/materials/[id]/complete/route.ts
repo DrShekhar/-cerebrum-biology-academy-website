@@ -10,6 +10,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
+import { assertMaterialEntitlement } from '@/lib/lms/materialEntitlement'
 
 export async function POST(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
@@ -23,35 +24,16 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     const body = await request.json().catch(() => ({}))
     const completed = body.completed !== false // default true
 
-    const material = await prisma.study_materials.findUnique({
-      where: { id: materialId },
-      select: { id: true, isPublished: true, accessLevel: true, courseId: true },
-    })
-    if (!material || !material.isPublished) {
-      return NextResponse.json({ success: false, error: 'Material not found' }, { status: 404 })
-    }
-
-    // Entitlement gate (mirrors the download route): FREE, explicit grant, or
-    // an ACTIVE enrolment in the material's course.
-    if (material.accessLevel !== 'FREE') {
-      const grant = await prisma.material_access.findUnique({
-        where: { materialId_userId: { materialId, userId } },
-        select: { id: true },
-      })
-      let allowed = !!grant
-      if (!allowed && material.courseId) {
-        const enrollment = await prisma.enrollments.findFirst({
-          where: { userId, courseId: material.courseId, status: 'ACTIVE' },
-          select: { id: true },
-        })
-        allowed = !!enrollment
-      }
-      if (!allowed) {
-        return NextResponse.json(
-          { success: false, error: 'You need to be enrolled to access this material.' },
-          { status: 403 }
-        )
-      }
+    // Shared entitlement gate — same ladder as video/article/download (FREE,
+    // free-preview chapter, material_access grant, ACTIVE enrollment, group
+    // grant, then tier). Previously this route hand-rolled a subset and had
+    // drifted (missing the free-preview and group branches).
+    const entitlement = await assertMaterialEntitlement(userId, materialId)
+    if (!entitlement.allowed) {
+      return NextResponse.json(
+        { success: false, error: entitlement.error || 'Not authorized' },
+        { status: entitlement.status }
+      )
     }
 
     const status = completed ? 'COMPLETED' : 'VIEWED'
@@ -77,6 +59,9 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     return NextResponse.json({ success: true, completed })
   } catch (error) {
     console.error('Failed to mark material complete:', error)
-    return NextResponse.json({ success: false, error: 'Failed to update progress' }, { status: 500 })
+    return NextResponse.json(
+      { success: false, error: 'Failed to update progress' },
+      { status: 500 }
+    )
   }
 }

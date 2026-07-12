@@ -243,10 +243,13 @@ async function handlePaymentSuccess(event: any) {
           })
         }
 
-        // Set coachingTier based on course/enrollment fees
+        // Set coachingTier — prefer the tier the student actually selected,
+        // carried in the server-set Razorpay order notes; fall back to
+        // course/fee heuristics for payments created outside checkout.
         const tierFromCourse = mapCourseToTier(
           paymentRecord.enrollments.courseId,
-          paymentRecord.enrollments.totalFees
+          paymentRecord.enrollments.totalFees,
+          payment.notes?.tier
         )
         await tx.users.update({
           where: { id: paymentRecord.userId },

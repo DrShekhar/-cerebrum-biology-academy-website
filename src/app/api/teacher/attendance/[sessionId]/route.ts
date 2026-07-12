@@ -30,7 +30,7 @@ export async function GET(req: NextRequest, { params }: { params: { sessionId: s
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'TEACHER') {
+    if (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Teacher access only' },
         { status: 403 }
@@ -66,7 +66,7 @@ export async function GET(req: NextRequest, { params }: { params: { sessionId: s
       return NextResponse.json({ success: false, error: 'Session not found' }, { status: 404 })
     }
 
-    if (classSession.teacherId !== session.user.id) {
+    if (classSession.teacherId !== session.user.id && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Not your session' },
         { status: 403 }
@@ -135,7 +135,7 @@ export async function POST(req: NextRequest, { params }: { params: { sessionId: 
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'TEACHER') {
+    if (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Teacher access only' },
         { status: 403 }
@@ -150,7 +150,7 @@ export async function POST(req: NextRequest, { params }: { params: { sessionId: 
       return NextResponse.json({ success: false, error: 'Session not found' }, { status: 404 })
     }
 
-    if (classSession.teacherId !== session.user.id) {
+    if (classSession.teacherId !== session.user.id && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Not your session' },
         { status: 403 }
@@ -236,7 +236,7 @@ export async function PUT(req: NextRequest, { params }: { params: { sessionId: s
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'TEACHER') {
+    if (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Teacher access only' },
         { status: 403 }
@@ -251,7 +251,7 @@ export async function PUT(req: NextRequest, { params }: { params: { sessionId: s
       return NextResponse.json({ success: false, error: 'Session not found' }, { status: 404 })
     }
 
-    if (classSession.teacherId !== session.user.id) {
+    if (classSession.teacherId !== session.user.id && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Not your session' },
         { status: 403 }

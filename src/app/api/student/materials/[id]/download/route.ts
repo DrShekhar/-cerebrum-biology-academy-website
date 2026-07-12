@@ -119,14 +119,22 @@ async function handleDownload(
           { status: 404 }
         )
       }
-      if (!/^https:\/\//i.test(raw)) {
-        console.error('[materials/download] non-absolute-https fileUrl:', materialId)
+      if (/^https:\/\//i.test(raw)) {
+        // Absolute https (Blob / external CDN) — hand off as-is.
+        deliverUrl = raw
+      } else if (raw.startsWith('/') && !raw.startsWith('//')) {
+        // Same-origin relative path (e.g. seeded /sample-materials/*.pdf files in
+        // public/). Resolve against the request origin so real PDFs deliver
+        // instead of 404-ing. Leading `//` is excluded — that is protocol-relative
+        // and could point off-origin (open-redirect).
+        deliverUrl = new URL(raw, request.url).toString()
+      } else {
+        console.error('[materials/download] unsupported fileUrl scheme:', materialId)
         return NextResponse.json(
           { success: false, error: 'This material is not available for download.' },
           { status: 404 }
         )
       }
-      deliverUrl = raw
     }
 
     // Update material download count

@@ -49,7 +49,7 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'TEACHER') {
+    if (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Teacher access only' },
         { status: 403 }
@@ -92,7 +92,7 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
       return NextResponse.json({ success: false, error: 'Session not found' }, { status: 404 })
     }
 
-    if (classSession.teacherId !== session.user.id) {
+    if (classSession.teacherId !== session.user.id && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Not your session' },
         { status: 403 }
@@ -130,7 +130,7 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'TEACHER') {
+    if (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Teacher access only' },
         { status: 403 }
@@ -145,7 +145,7 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
       return NextResponse.json({ success: false, error: 'Session not found' }, { status: 404 })
     }
 
-    if (existingSession.teacherId !== session.user.id) {
+    if (existingSession.teacherId !== session.user.id && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Not your session' },
         { status: 403 }
@@ -162,8 +162,11 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
     if (validatedData.sessionType !== undefined) updateData.sessionType = validatedData.sessionType
     if (validatedData.scheduledDate !== undefined)
       updateData.scheduledDate = new Date(validatedData.scheduledDate)
-    if (validatedData.startTime !== undefined)
+    if (validatedData.startTime !== undefined) {
       updateData.startTime = new Date(validatedData.startTime)
+      // Moving the class re-opens its reminder schedule against the new time.
+      updateData.reminderOffsetsSent = []
+    }
     if (validatedData.endTime !== undefined) updateData.endTime = new Date(validatedData.endTime)
     if (validatedData.duration !== undefined) updateData.duration = validatedData.duration
     if (validatedData.meetingLink !== undefined) updateData.meetingLink = validatedData.meetingLink
@@ -227,7 +230,7 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'TEACHER') {
+    if (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Teacher access only' },
         { status: 403 }
@@ -245,7 +248,7 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
       return NextResponse.json({ success: false, error: 'Session not found' }, { status: 404 })
     }
 
-    if (existingSession.teacherId !== session.user.id) {
+    if (existingSession.teacherId !== session.user.id && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Not your session' },
         { status: 403 }

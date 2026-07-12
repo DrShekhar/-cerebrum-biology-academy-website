@@ -5,6 +5,12 @@ import { nanoid } from 'nanoid'
 import { rateLimit } from '@/lib/rateLimit'
 import { validateUserSession } from '@/lib/auth/config'
 import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
+import {
+  getPricingForClass,
+  type ClassLevel as PricingClassLevel,
+  type CourseType as PricingCourseType,
+  type TierLevel,
+} from '@/data/pricing'
 
 function getRazorpayInstance() {
   if (!process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
@@ -26,11 +32,15 @@ interface EnrollmentOrderRequest {
   batchId: string
   batchName: string
   paymentPlan: 'lumpSum' | 'twoInstallments' | 'threeInstallments'
-  amount: number
-  installmentAmount: number
-  totalAmount: number
+  // Client-sent amounts are accepted for backward compatibility but NEVER
+  // trusted — all prices are derived server-side from src/data/pricing.ts.
+  amount?: number
+  installmentAmount?: number
+  totalAmount?: number
   wantsCounselor: boolean
 }
+
+const PAYMENT_PLANS = ['lumpSum', 'twoInstallments', 'threeInstallments'] as const
 
 export async function POST(request: NextRequest) {
   try {
@@ -66,13 +76,11 @@ export async function POST(request: NextRequest) {
       batchId,
       batchName,
       paymentPlan,
-      amount,
-      installmentAmount,
       totalAmount,
       wantsCounselor,
     } = body
 
-    if (!studentName || !email || !phone || !classLevel || !tier || !amount) {
+    if (!studentName || !email || !phone || !classLevel || !tier) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
@@ -86,13 +94,40 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid phone number' }, { status: 400 })
     }
 
-    if (amount <= 0 || amount > 500000 || installmentAmount <= 0 || totalAmount <= 0) {
-      return NextResponse.json({ error: 'Invalid amount' }, { status: 400 })
+    // SECURITY: Never trust client-sent amounts. Derive every price from the
+    // canonical table — same math as the checkout UI (base + 18% GST, then
+    // the installment split), so the charge always matches what was displayed.
+    const planKey = PAYMENT_PLANS.includes(paymentPlan) ? paymentPlan : 'lumpSum'
+    const tierPricing = getPricingForClass(
+      classLevel as PricingClassLevel,
+      courseType as PricingCourseType
+    )?.find((t) => t.tier === (tier as TierLevel))
+
+    if (!tierPricing) {
+      return NextResponse.json(
+        { error: 'Invalid course, tier, or plan selection' },
+        { status: 400 }
+      )
     }
 
-    // The client sends rupee amounts; all course/enrollment money columns are
-    // stored in paise (Razorpay's unit) — convert once here.
-    const totalAmountPaise = Math.round(totalAmount * 100)
+    const baseTotal = tierPricing.prices[planKey]
+    const gst = Math.round(baseTotal * 0.18)
+    const grandTotalRupees = baseTotal + gst
+    const firstPaymentRupees =
+      planKey === 'lumpSum'
+        ? grandTotalRupees
+        : planKey === 'twoInstallments'
+          ? Math.round(grandTotalRupees * 0.5)
+          : Math.round(grandTotalRupees * 0.4)
+
+    if (totalAmount && Math.round(totalAmount) !== grandTotalRupees) {
+      console.warn(
+        `Enrollment order: client total ₹${totalAmount} != server total ₹${grandTotalRupees} for ${classLevel}/${courseType}/${tier}/${planKey} — using server total`
+      )
+    }
+
+    // All course/enrollment money columns are stored in paise (Razorpay's unit).
+    const totalAmountPaise = grandTotalRupees * 100
 
     if (!process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
       console.error('Razorpay credentials not configured')
@@ -146,8 +181,13 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    // If no course found, create a placeholder course
+    // If no course found, create a placeholder course rather than blocking the
+    // enrollment. Fees and tier are server-derived above, and the tier keyword
+    // in the name keeps mapCourseToTier correct for these rows.
     if (!course) {
+      console.warn(
+        `Enrollment order: no active course for ${courseInfo.type}/${courseInfo.class} — creating placeholder`
+      )
       course = await prisma.courses.create({
         data: {
           id: nanoid(),
@@ -184,14 +224,16 @@ export async function POST(request: NextRequest) {
         totalFees: totalAmountPaise,
         paidAmount: 0,
         pendingAmount: totalAmountPaise,
-        paymentPlan: paymentPlanMap[paymentPlan] || 'FULL',
+        paymentPlan: paymentPlanMap[planKey] || 'FULL',
         updatedAt: new Date(),
       },
     })
 
-    // Create Razorpay order for the first installment amount
+    // Create Razorpay order for the first installment amount. These notes are
+    // set server-side and echoed back on the payment entity in the webhook —
+    // notes.tier is what activates the student's coachingTier.
     const orderOptions = {
-      amount: installmentAmount * 100, // Convert to paise
+      amount: firstPaymentRupees * 100, // paise
       currency: 'INR',
       receipt: `enroll_${enrollment.id}_${Date.now()}`,
       notes: {
@@ -205,9 +247,9 @@ export async function POST(request: NextRequest) {
         tier,
         batchId,
         batchName,
-        paymentPlan,
-        totalAmount: totalAmount.toString(),
-        installmentAmount: installmentAmount.toString(),
+        paymentPlan: planKey,
+        totalAmount: grandTotalRupees.toString(),
+        installmentAmount: firstPaymentRupees.toString(),
         wantsCounselor: wantsCounselor ? 'yes' : 'no',
       },
     }
@@ -220,14 +262,13 @@ export async function POST(request: NextRequest) {
         id: nanoid(),
         userId: user.id,
         enrollmentId: enrollment.id,
-        amount: installmentAmount * 100, // Store in paise
+        amount: firstPaymentRupees * 100, // Store in paise
         currency: 'INR',
         status: 'PENDING',
         paymentMethod: 'RAZORPAY_UPI',
         razorpayOrderId: order.id,
         installmentNumber: 1,
-        totalInstallments:
-          paymentPlan === 'lumpSum' ? 1 : paymentPlan === 'twoInstallments' ? 2 : 3,
+        totalInstallments: planKey === 'lumpSum' ? 1 : planKey === 'twoInstallments' ? 2 : 3,
         updatedAt: new Date(),
       },
     })
@@ -239,9 +280,9 @@ export async function POST(request: NextRequest) {
       Class: classLevel,
       Tier: tier,
       Batch: batchName,
-      'Payment Plan': paymentPlan,
-      'Installment Amount': `₹${installmentAmount}`,
-      'Total Amount': `₹${totalAmount}`,
+      'Payment Plan': planKey,
+      'Installment Amount': `₹${firstPaymentRupees}`,
+      'Total Amount': `₹${grandTotalRupees}`,
     }).catch(() => {})
 
     return NextResponse.json({

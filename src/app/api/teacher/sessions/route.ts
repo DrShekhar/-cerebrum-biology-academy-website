@@ -55,7 +55,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'TEACHER') {
+    if (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Teacher access only' },
         { status: 403 }
@@ -68,9 +68,8 @@ export async function GET(req: NextRequest) {
     const startDate = searchParams.get('startDate')
     const endDate = searchParams.get('endDate')
 
-    const where: any = {
-      teacherId: session.user.id,
-    }
+    // ADMIN oversees every teacher's sessions; a TEACHER sees only their own.
+    const where: any = session.user.role === 'ADMIN' ? {} : { teacherId: session.user.id }
 
     if (status && status !== 'ALL') {
       where.status = status
@@ -181,7 +180,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'TEACHER') {
+    if (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Teacher access only' },
         { status: 403 }
@@ -304,6 +303,11 @@ function generateRecurringSessions(data: any, teacherId: string) {
       sessionEndTime.setHours(endTime.getHours(), endTime.getMinutes(), 0, 0)
 
       sessions.push({
+        // class_sessions.id has no DB default and updatedAt has no @updatedAt —
+        // both must be supplied (the single-session path does the same), else
+        // every recurring create() is rejected.
+        id: `sess_${Date.now()}_${sessions.length}_${Math.random().toString(36).slice(2, 9)}`,
+        updatedAt: new Date(),
         courseId: data.courseId,
         enrollmentId: data.enrollmentId,
         title: data.title,
