@@ -360,7 +360,9 @@ describe('useAriaChat', () => {
 
       let success: boolean = true
       act(() => {
-        success = result.current.submitLeadField('phone', '1234567890') // Doesn't start with 6-9
+        // Too short: ARIA now accepts international numbers (8-15 digits), so
+        // validity is by length, not the old India-only 6-9 leading-digit rule.
+        success = result.current.submitLeadField('phone', '12345')
       })
 
       expect(success).toBe(false)

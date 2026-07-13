@@ -282,8 +282,20 @@ function evaluateInactivity(lead: any, conditions: TriggerConditions): boolean {
   return daysSinceContact >= conditions.inactivityDays
 }
 
+// `lead.demo_bookings` is an ARRAY (Prisma include returns all bookings), so the
+// most recent booking must be selected before reading its status. Previously the
+// code read `.status` directly off the array (always undefined), so DEMO_NO_SHOW
+// and DEMO_COMPLETED triggers never fired in production.
+function latestDemoBooking(lead: any): any | null {
+  const bookings = lead?.demo_bookings
+  if (!Array.isArray(bookings) || bookings.length === 0) return null
+  return [...bookings].sort(
+    (a, b) => new Date(b.scheduledAt).getTime() - new Date(a.scheduledAt).getTime()
+  )[0]
+}
+
 function evaluateDemoNoShow(lead: any, conditions: TriggerConditions): boolean {
-  const latestDemo = lead.demo_bookings
+  const latestDemo = latestDemoBooking(lead)
   if (!latestDemo) return false
 
   if (latestDemo.status === 'SCHEDULED') {
@@ -298,7 +310,7 @@ function evaluateDemoNoShow(lead: any, conditions: TriggerConditions): boolean {
 }
 
 function evaluateDemoCompleted(lead: any, conditions: TriggerConditions): boolean {
-  const latestDemo = lead.demo_bookings
+  const latestDemo = latestDemoBooking(lead)
   if (!latestDemo) return false
 
   return latestDemo.status === 'COMPLETED'
