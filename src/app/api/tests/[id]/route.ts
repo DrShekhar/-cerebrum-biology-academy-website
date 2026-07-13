@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { auth } from '@/lib/auth'
 
 export const runtime = 'nodejs'
 
@@ -9,6 +10,16 @@ export const runtime = 'nodejs'
  */
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   try {
+    // Require a signed-in user — this returns full question text, options and
+    // explanations, which must not be scrapeable anonymously.
+    const session = await auth()
+    if (!session?.user?.id) {
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
+    }
+
     const testId = params.id
 
     // Fetch test template with questions

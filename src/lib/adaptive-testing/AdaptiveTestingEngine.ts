@@ -692,6 +692,16 @@ class AdaptiveTestingEngine {
   /**
    * Get session status and summary
    */
+  /**
+   * Returns the studentId that owns a session, or null if the session doesn't
+   * exist. Used by the API routes to enforce ownership before exposing analytics
+   * or accepting responses (a session id alone must not grant access).
+   */
+  getSessionOwner(sessionId: string): string | null {
+    const session = this.sessionManager.activeSessions.get(sessionId)
+    return session ? session.studentId : null
+  }
+
   getSessionStatus(sessionId: string): {
     state: string
     progress: number

@@ -3,6 +3,8 @@ import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
 import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 import { formatPaiseToINR } from '@/lib/utils'
+import { mapCourseToTier } from '@/lib/payments/tierMapping'
+import { fetchOrderTier } from '@/lib/payments/razorpayOrder'
 
 function verifyPaymentSignature(orderId: string, paymentId: string, signature: string): boolean {
   const secret = process.env.RAZORPAY_KEY_SECRET || ''
@@ -104,6 +106,21 @@ export async function POST(request: NextRequest) {
           users: true,
           courses: true,
         },
+      })
+
+      // Set the coaching tier on activation. This is the route the checkout
+      // success handler calls, so without it a student's tier depended entirely
+      // on the async webhook firing. Prefer the student-selected tier from the
+      // order notes; fall back to the (paise-correct) fee heuristic.
+      const orderTier = await fetchOrderTier(razorpay_order_id)
+      const tier = mapCourseToTier(
+        payment.enrollments.courseId,
+        payment.enrollments.totalFees,
+        orderTier
+      )
+      await prisma.users.update({
+        where: { id: payment.userId },
+        data: { coachingTier: tier },
       })
     }
 

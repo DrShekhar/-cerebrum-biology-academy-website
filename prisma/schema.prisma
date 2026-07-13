@@ -522,6 +522,23 @@ model class_sessions {
   @@index([teacherId, scheduledDate])
 }
 
+// Dedup ledger for the class-reminders cron: one row per (session, offset)
+// reminder already claimed/sent. A SEPARATE table (not a column on
+// class_sessions) so adding it can't break existing class_sessions reads if the
+// migration lags the deploy — only the cron depends on it. The unique key also
+// lets the cron "claim first" (insert wins the race) to avoid double-sends under
+// overlapping per-minute invocations. Rows for a session are cleared when it is
+// rescheduled so the new time re-notifies.
+model class_reminder_log {
+  id        String   @id
+  sessionId String
+  offset    Int // minutes-before: 1440 | 60 | 15 | 1
+  sentAt    DateTime @default(now())
+
+  @@unique([sessionId, offset])
+  @@index([sessionId])
+}
+
 model communication_logs {
   id                String               @id
   userId            String?

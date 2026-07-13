@@ -3,6 +3,7 @@ import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
 import { Redis } from '@upstash/redis'
 import { mapCourseToTier } from '@/lib/payments/tierMapping'
+import { fetchOrderTier } from '@/lib/payments/razorpayOrder'
 import { logger } from '@/lib/logger'
 import { inngest } from '@/inngest/client'
 
@@ -176,6 +177,11 @@ async function handlePaymentSuccess(event: any) {
   const orderId = payment.order_id
   const paymentId = payment.id
 
+  // Read the student's selected tier from the ORDER notes (authoritative;
+  // payment.notes is unreliable). Done outside the tx (network call). Falls back
+  // to payment.notes then the fee heuristic inside mapCourseToTier.
+  const orderTier = await fetchOrderTier(orderId)
+
   try {
     await prisma.$transaction(async (tx) => {
       const paymentRecord = await tx.payments.findFirst({
@@ -243,10 +249,13 @@ async function handlePaymentSuccess(event: any) {
           })
         }
 
-        // Set coachingTier based on course/enrollment fees
+        // Set coachingTier — prefer the tier the student actually selected
+        // (from the order notes, then any payment notes); fall back to
+        // course/fee heuristics for payments created outside checkout.
         const tierFromCourse = mapCourseToTier(
           paymentRecord.enrollments.courseId,
-          paymentRecord.enrollments.totalFees
+          paymentRecord.enrollments.totalFees,
+          orderTier || payment.notes?.tier
         )
         await tx.users.update({
           where: { id: paymentRecord.userId },

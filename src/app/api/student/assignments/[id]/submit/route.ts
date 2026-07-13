@@ -7,6 +7,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
+import { completeMaterialAndRecompute } from '@/lib/lms/enrollmentProgress'
 
 export async function POST(request: NextRequest, { params }: { params: { id: string } }) {
   try {
@@ -20,9 +21,17 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     const body = await request.json()
     const { submittedFiles, submittedText } = body
 
-    if (!submittedFiles || submittedFiles.length === 0) {
-      return NextResponse.json({ error: 'At least one file must be submitted' }, { status: 400 })
+    // A submission needs either at least one file OR some text — text-only
+    // answers are valid (the schema supports submittedText), previously rejected.
+    const hasFiles = Array.isArray(submittedFiles) && submittedFiles.length > 0
+    const hasText = typeof submittedText === 'string' && submittedText.trim().length > 0
+    if (!hasFiles && !hasText) {
+      return NextResponse.json(
+        { error: 'Please attach a file or enter your answer before submitting.' },
+        { status: 400 }
+      )
     }
+    const normalizedFiles = hasFiles ? submittedFiles : []
 
     const enrollments = await prisma.enrollments.findMany({
       where: {
@@ -85,7 +94,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
           id: existingSubmission.id,
         },
         data: {
-          submittedFiles,
+          submittedFiles: normalizedFiles,
           submittedText,
           status: isLate ? 'LATE' : 'SUBMITTED',
           submittedAt: now,
@@ -108,6 +117,8 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
         },
       })
 
+      await markLinkedLessonComplete(assignmentId, studentId)
+
       return NextResponse.json({
         success: true,
         message: 'Assignment resubmitted successfully',
@@ -120,7 +131,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
         id: `as_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
         assignmentId,
         studentId,
-        submittedFiles,
+        submittedFiles: normalizedFiles,
         submittedText,
         status: isLate ? 'LATE' : 'SUBMITTED',
         submittedAt: now,
@@ -139,6 +150,8 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       },
     })
 
+    await markLinkedLessonComplete(assignmentId, studentId)
+
     return NextResponse.json({
       success: true,
       message: 'Assignment submitted successfully',
@@ -154,5 +167,22 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       },
       { status: 500 }
     )
+  }
+}
+
+/**
+ * When an assignment is delivered as a course lesson (a study_materials row of
+ * type ASSIGNMENT linked via assignmentId), submitting it should complete that
+ * lesson so course progress advances — instead of relying on the student to
+ * separately click "mark complete". No-op for standalone assignments with no
+ * linked lesson.
+ */
+async function markLinkedLessonComplete(assignmentId: string, studentId: string): Promise<void> {
+  const lesson = await prisma.study_materials.findFirst({
+    where: { assignmentId },
+    select: { id: true },
+  })
+  if (lesson) {
+    await completeMaterialAndRecompute(studentId, lesson.id)
   }
 }

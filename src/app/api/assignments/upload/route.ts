@@ -5,10 +5,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import { writeFile, mkdir } from 'fs/promises'
-import { join } from 'path'
+import { put } from '@vercel/blob'
 import { auth } from '@/lib/auth'
-import { existsSync } from 'fs'
 
 const ALLOWED_FILE_TYPES = [
   'application/pdf',
@@ -25,7 +23,12 @@ const MAX_FILE_SIZE = 10 * 1024 * 1024
 export async function POST(request: NextRequest) {
   try {
     const session = await auth()
-    if (!session || (session.user.role !== 'STUDENT' && session.user.role !== 'TEACHER')) {
+    if (
+      !session ||
+      (session.user.role !== 'STUDENT' &&
+        session.user.role !== 'TEACHER' &&
+        session.user.role !== 'ADMIN')
+    ) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -54,27 +57,30 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const bytes = await file.arrayBuffer()
-    const buffer = Buffer.from(bytes)
-
-    const uploadDir = join(process.cwd(), 'public', 'uploads', 'assignments')
-    if (!existsSync(uploadDir)) {
-      await mkdir(uploadDir, { recursive: true })
+    // Store on Vercel Blob (CDN-backed). The previous implementation wrote to
+    // public/uploads on the local filesystem, which is read-only/ephemeral on
+    // Vercel serverless — uploads 500'd or vanished, and since submission
+    // requires a file, students could not submit at all in production.
+    if (!process.env.BLOB_READ_WRITE_TOKEN) {
+      console.error('Assignment upload: BLOB_READ_WRITE_TOKEN is not configured')
+      return NextResponse.json(
+        { success: false, error: 'File storage is not configured. Please contact support.' },
+        { status: 503 }
+      )
     }
 
-    const timestamp = Date.now()
-    const uniqueId = Math.random().toString(36).substring(7)
     const sanitizedFileName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_')
-    const fileName = `${timestamp}_${uniqueId}_${sanitizedFileName}`
-    const filePath = join(uploadDir, fileName)
+    const blob = await put(`assignments/${sanitizedFileName}`, file, {
+      access: 'public',
+      contentType: file.type,
+      addRandomSuffix: true, // avoid collisions; keeps the URL unguessable
+    })
 
-    await writeFile(filePath, buffer)
-
-    const fileUrl = `/uploads/assignments/${fileName}`
-
+    // Response shape preserved so the client (src/lib/fileUpload.ts) and the
+    // teacher grade page (which renders submittedFiles as links) need no change.
     return NextResponse.json({
       success: true,
-      fileUrl,
+      fileUrl: blob.url,
       fileName: file.name,
       fileSize: file.size,
       mimeType: file.type,

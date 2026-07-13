@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { correctLetter } from '@/lib/cbt/paper'
+import { assertMaterialEntitlement } from '@/lib/lms/materialEntitlement'
+import { getGroupGrantedContent } from '@/lib/student/groupContent'
 
 /**
  * POST /api/lms/videos/checkpoint — answer an in-video quiz checkpoint.
@@ -30,6 +32,7 @@ export async function POST(request: NextRequest) {
     const checkpoint = await prisma.video_checkpoints.findUnique({
       where: { id: checkpointId },
       include: {
+        video_lectures: { select: { id: true, studyMaterialId: true } },
         questions: {
           select: {
             id: true,
@@ -48,6 +51,28 @@ export async function POST(request: NextRequest) {
     })
     if (!checkpoint) {
       return NextResponse.json({ success: false, error: 'Checkpoint not found' }, { status: 404 })
+    }
+
+    // SECURITY: this route returns the answer key + explanation, so gate it by
+    // the same entitlement as watching the video. Without this any signed-in
+    // user could harvest checkpoint answers by id, bypassing the enrollment gate
+    // the player enforces.
+    const entitlement = await assertMaterialEntitlement(
+      userId,
+      checkpoint.video_lectures.studyMaterialId
+    )
+    if (!entitlement.allowed) {
+      // Match the player's gate, which ALSO admits a batch student granted the
+      // VIDEO row directly via group_content (materialEntitlement only covers
+      // material-level grants). Without this, a batch student can watch the
+      // video but every checkpoint 403s.
+      const groupGrants = await getGroupGrantedContent(userId)
+      if (!groupGrants.videoLectureIds.includes(checkpoint.video_lectures.id)) {
+        return NextResponse.json(
+          { success: false, error: entitlement.error || 'Not authorized' },
+          { status: entitlement.status }
+        )
+      }
     }
 
     const correct = correctLetter(checkpoint.questions as never)

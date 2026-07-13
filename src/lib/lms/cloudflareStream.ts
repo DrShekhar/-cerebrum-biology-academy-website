@@ -14,6 +14,7 @@
 import { prisma } from '@/lib/prisma'
 import { VideoUploadStatus } from '@/generated/prisma'
 import { getGroupGrantedContent } from '@/lib/student/groupContent'
+import { completeMaterialAndRecompute } from '@/lib/lms/enrollmentProgress'
 
 // Cloudflare API configuration
 const CF_ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID
@@ -604,7 +605,7 @@ export async function updateVideoProgress(
 ): Promise<void> {
   const videoLecture = await prisma.video_lectures.findUnique({
     where: { id: videoLectureId },
-    select: { duration: true },
+    select: { duration: true, studyMaterialId: true },
   })
 
   if (!videoLecture) return
@@ -613,6 +614,18 @@ export async function updateVideoProgress(
     videoLecture.duration > 0
       ? Math.min(100, (data.currentPosition / videoLecture.duration) * 100)
       : 0
+
+  const reachedCompletion = data.isCompleted || completionPercent >= 90
+
+  // Was this lecture already complete? Used to fire the course-progress recompute
+  // ONLY on the transition to complete, not on every ≥90% progress ping (the
+  // player saves every ~10s, and the tail is re-watched) — avoids ~9 queries +
+  // a write per ping per student.
+  const prior = await prisma.video_progress.findUnique({
+    where: { videoLectureId_userId: { videoLectureId, userId } },
+    select: { isCompleted: true },
+  })
+  const newlyCompleted = reachedCompletion && !prior?.isCompleted
 
   await prisma.video_progress.upsert({
     where: {
@@ -623,10 +636,10 @@ export async function updateVideoProgress(
       watchedSeconds:
         data.watchedSeconds !== undefined ? { increment: data.watchedSeconds } : undefined,
       completionPercent,
-      isCompleted: data.isCompleted || completionPercent >= 90,
+      isCompleted: reachedCompletion,
       lastWatchedAt: new Date(),
       totalWatchSessions: { increment: 1 },
-      ...(data.isCompleted && { completedAt: new Date() }),
+      ...(reachedCompletion && { completedAt: new Date() }),
     },
     create: {
       id: `vidprog_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
@@ -649,6 +662,14 @@ export async function updateVideoProgress(
       where: { id: videoLectureId },
       data: { totalWatchTime: { increment: data.watchedSeconds } },
     })
+  }
+
+  // Watching a video to (near) completion completes its lesson and advances
+  // course progress — previously watching earned 0% because only video_progress
+  // was written and the course % counts material_progress. Fire once, on the
+  // transition to complete.
+  if (newlyCompleted && videoLecture.studyMaterialId) {
+    await completeMaterialAndRecompute(userId, videoLecture.studyMaterialId)
   }
 }
 

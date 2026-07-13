@@ -21,6 +21,16 @@ export async function POST(request: NextRequest, { params }: { params: { session
       return NextResponse.json({ error: 'Session ID is required' }, { status: 400 })
     }
 
+    // SECURITY: a session id alone must not grant access — verify the caller owns
+    // this adaptive session before exposing its data or mutating it (IDOR guard).
+    const ownerId = adaptiveTestingEngine.getSessionOwner(sessionId)
+    if (!ownerId) {
+      return NextResponse.json({ error: 'Session not found' }, { status: 404 })
+    }
+    if (ownerId !== session.user.id) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
+
     // Complete the adaptive test session
     const result = await adaptiveTestingEngine.completeSession(sessionId)
 

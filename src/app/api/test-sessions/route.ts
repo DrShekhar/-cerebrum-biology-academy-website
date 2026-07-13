@@ -120,12 +120,11 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    // Fetch test sessions — only match the identifiers we actually have.
-    // (An empty `{}` inside an OR matches every row, leaking all users' data.)
-    const ownershipFilters = [
-      ...(userId ? [{ userId }] : []),
-      ...(freeUserId ? [{ freeUserId }] : []),
-    ]
+    // Ownership scoping: a signed-in user only ever sees their OWN sessions —
+    // a client-supplied freeUserId is ignored for them, otherwise any logged-in
+    // user could read another (anonymous) user's sessions by guessing their id.
+    // Anonymous callers are identified solely by their own freeUserId.
+    const ownershipFilters = userId ? [{ userId }] : freeUserId ? [{ freeUserId }] : []
     const testSessions = await prisma.test_sessions.findMany({
       where: {
         OR: ownershipFilters,

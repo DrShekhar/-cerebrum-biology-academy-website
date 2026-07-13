@@ -10,11 +10,12 @@ import { auth } from '@/lib/auth'
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'TEACHER') {
+    if (!session || (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN')) {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 
     const assignmentId = params.id
+    const isAdmin = session.user.role === 'ADMIN'
     const teacherId = session.user.id
 
     const searchParams = request.nextUrl.searchParams
@@ -24,7 +25,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const assignment = await prisma.assignments.findFirst({
       where: {
         id: assignmentId,
-        teacherId,
+        ...(isAdmin ? {} : { teacherId }),
       },
       select: {
         id: true,

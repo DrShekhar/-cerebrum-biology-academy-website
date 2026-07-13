@@ -9,6 +9,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { generateAndPersistQuestions } from '@/lib/ai/generateAndPersistQuestions'
+import { normalizeAssignToType, resolveAssignmentStudentIds } from '@/lib/tests/assignmentRoster'
 
 // AI generation can take a while for a full paper — allow a longer budget.
 export const maxDuration = 120
@@ -229,53 +230,18 @@ export async function POST(request: NextRequest) {
       manual: 'MANUAL_RELEASE',
       never: 'NEVER',
     }
-    const ASSIGN_TO_MAP: Record<string, string> = {
-      ALL: 'ALL_STUDENTS',
-      COURSE: 'ALL_STUDENTS',
-      CLASS: 'SPECIFIC_CLASS',
-      BATCH: 'SPECIFIC_BATCH',
-      INDIVIDUAL: 'INDIVIDUAL_STUDENTS',
-      STUDENTS: 'INDIVIDUAL_STUDENTS',
-    }
     const normalizedShowResults =
       SHOW_RESULTS_MAP[String(showResults).toLowerCase()] ||
       (typeof showResults === 'string' ? showResults.toUpperCase() : 'IMMEDIATELY')
-    const normalizedAssignToType =
-      ASSIGN_TO_MAP[String(assignToType).toUpperCase()] ||
-      (typeof assignToType === 'string' ? assignToType.toUpperCase() : 'ALL_STUDENTS')
+    const normalizedAssignToType = normalizeAssignToType(assignToType)
 
     // Resolve the real target students once (reused for totalAssigned + publish).
-    //  - ALL_STUDENTS: everyone with an ACTIVE enrollment in the course.
-    //  - SPECIFIC_CLASS: everyone ACTIVE-enrolled in a course of the selected
-    //    class level(s) (assignedClassIds are StudentClass values, e.g. CLASS_12)
-    //    — batches have no student-membership model, so class is resolved via
-    //    course.class.
-    //  - INDIVIDUAL_STUDENTS: the explicit list.
-    async function resolveStudentIds(): Promise<string[]> {
-      if (normalizedAssignToType === 'ALL_STUDENTS' && courseId) {
-        const e = await prisma.enrollments.findMany({
-          where: { courseId, status: 'ACTIVE' },
-          select: { userId: true },
-        })
-        return Array.from(new Set(e.map((x) => x.userId)))
-      }
-      if (
-        normalizedAssignToType === 'SPECIFIC_CLASS' &&
-        Array.isArray(assignedClassIds) &&
-        assignedClassIds.length > 0
-      ) {
-        const e = await prisma.enrollments.findMany({
-          where: { status: 'ACTIVE', courses: { class: { in: assignedClassIds } } },
-          select: { userId: true },
-        })
-        return Array.from(new Set(e.map((x) => x.userId)))
-      }
-      if (normalizedAssignToType === 'INDIVIDUAL_STUDENTS' && Array.isArray(assignedStudentIds)) {
-        return Array.from(new Set(assignedStudentIds))
-      }
-      return []
-    }
-    const resolvedStudentIds = await resolveStudentIds()
+    const resolvedStudentIds = await resolveAssignmentStudentIds({
+      assignToType,
+      courseId,
+      assignedClassIds,
+      assignedStudentIds,
+    })
     const totalAssigned = resolvedStudentIds.length
 
     const assignment = await prisma.test_assignments.create({

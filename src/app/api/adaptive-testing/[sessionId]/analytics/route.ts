@@ -21,6 +21,16 @@ export async function GET(request: NextRequest, { params }: { params: { sessionI
       return NextResponse.json({ error: 'Session ID is required' }, { status: 400 })
     }
 
+    // SECURITY: a session id alone must not grant access — verify the caller owns
+    // this adaptive session before exposing its data or mutating it (IDOR guard).
+    const ownerId = adaptiveTestingEngine.getSessionOwner(sessionId)
+    if (!ownerId) {
+      return NextResponse.json({ error: 'Session not found' }, { status: 404 })
+    }
+    if (ownerId !== session.user.id) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
+
     // Get real-time analytics
     const analytics = adaptiveTestingEngine.getRealTimeAnalytics(sessionId)
 

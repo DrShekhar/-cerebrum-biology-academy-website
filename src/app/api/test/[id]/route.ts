@@ -143,6 +143,15 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const answeredQuestions = testSession.user_question_responses.length
     const progress = totalQuestions > 0 ? (answeredQuestions / totalQuestions) * 100 : 0
 
+    // SECURITY: only reveal per-answer correctness once the test is COMPLETED, or
+    // in genuine practice mode. Otherwise a mid-test GET leaks isCorrect /
+    // marksAwarded for every answered question, letting a student probe answers.
+    const templateType = testSession.test_templates?.type
+    const revealCorrectness =
+      testSession.status === 'COMPLETED' ||
+      templateType === 'PRACTICE_TEST' ||
+      templateType === 'QUICK_TEST'
+
     // Prepare questions with user responses
     const questionsWithResponses =
       testSession.test_templates?.question_bank_questions?.map((qbq, index) => {
@@ -167,15 +176,18 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           userResponse: userResponse
             ? {
                 selectedAnswer: userResponse.selectedAnswer,
-                isCorrect: userResponse.isCorrect,
                 timeSpent: userResponse.timeSpent,
-                marksAwarded: userResponse.marksAwarded,
                 confidence: userResponse.confidence,
                 answeredAt: userResponse.answeredAt,
+                // Correctness only when allowed (COMPLETED or practice mode).
+                ...(revealCorrectness && {
+                  isCorrect: userResponse.isCorrect,
+                  marksAwarded: userResponse.marksAwarded,
+                }),
               }
             : null,
-          // Only show correct answer and explanation if test is completed or in review mode
-          ...(testSession.status === 'COMPLETED' && {
+          // Answer key + explanation only when correctness is revealable.
+          ...(revealCorrectness && {
             correctAnswer: qbq.questions.correctAnswer,
             explanation: qbq.questions.explanation,
             explanationImage: qbq.questions.explanationImage,
@@ -243,11 +255,15 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           totalQuestions,
           answeredQuestions,
           progressPercentage: Math.round(progress * 100) / 100,
-          currentScore,
           totalMarks,
-          accuracy: Math.round(accuracy * 100) / 100,
           timeElapsed,
           remainingTime: effectiveRemainingTime,
+          // Running score/accuracy only when correctness is revealable — else a
+          // graded-test taker watches currentScore climb to infer correctness.
+          ...(revealCorrectness && {
+            currentScore,
+            accuracy: Math.round(accuracy * 100) / 100,
+          }),
         },
         analytics: testSession.test_analytics
           ? {

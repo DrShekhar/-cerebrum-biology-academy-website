@@ -290,9 +290,40 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
 
     const submissionTime = new Date()
 
-    // Process final answers if provided
-    if (validatedData.finalAnswers && validatedData.finalAnswers.length > 0) {
+    // SECURITY: enforce the time limit server-side. If the attempt is past its
+    // limit (plus a small grace for the in-flight submit), the final answers in
+    // this request are IGNORED — the session is still scored and closed, but on
+    // the answers saved via /answer before time ran out. This stops a student
+    // holding a session open and injecting answers long after the clock expired.
+    const timeLimitMin = testSession.test_templates?.timeLimit || 0
+    const answersExpired =
+      timeLimitMin > 0 && testSession.startedAt
+        ? submissionTime.getTime() >
+          testSession.startedAt.getTime() + timeLimitMin * 60 * 1000 + 30 * 1000
+        : false
+
+    // Case/space-insensitive letter compare — matches the /answer route so the
+    // final-answer scoring is consistent with the live per-answer scoring.
+    const normAnswer = (v: unknown) => (v ?? '').toString().trim().toUpperCase()
+
+    // Process final answers if provided (unless the clock has expired)
+    if (!answersExpired && validatedData.finalAnswers && validatedData.finalAnswers.length > 0) {
+      // SECURITY: only accept answers for questions that belong to THIS session's
+      // paper. Without this a client could inject arbitrary bank questionIds in
+      // finalAnswers to inflate totalScore past 100% (the score sums marksAwarded
+      // over all stored responses). Mirrors the /answer route's membership check.
+      const paperRows = await prisma.question_bank_questions.findMany({
+        where: {
+          testTemplateId: testSession.testTemplateId,
+          questionId: { in: validatedData.finalAnswers.map((a) => a.questionId) },
+        },
+        select: { questionId: true },
+      })
+      const paperQuestionIds = new Set(paperRows.map((r) => r.questionId))
+
       for (const answer of validatedData.finalAnswers) {
+        if (!paperQuestionIds.has(answer.questionId)) continue // not in this paper — ignore
+
         // Get question details
         const question = await prisma.questions.findUnique({
           where: { id: answer.questionId },
@@ -300,7 +331,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
         })
 
         if (question) {
-          const isCorrect = answer.selectedAnswer === question.correctAnswer
+          const isCorrect = normAnswer(answer.selectedAnswer) === normAnswer(question.correctAnswer)
           const marksAwarded = isCorrect
             ? question.marks
             : testSession.test_templates?.negativeMarking

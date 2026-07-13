@@ -12,7 +12,7 @@ import { auth } from '@/lib/auth'
 export async function GET(request: NextRequest) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'TEACHER') {
+    if (!session || (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN')) {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 
@@ -23,11 +23,11 @@ export async function GET(request: NextRequest) {
     const page = parseInt(searchParams.get('page') || '1')
     const limit = parseInt(searchParams.get('limit') || '20')
 
+    const isAdmin = session.user.role === 'ADMIN'
     const teacherId = session.user.id
 
-    const where: any = {
-      teacherId,
-    }
+    // ADMIN sees every assignment; a TEACHER only their own.
+    const where: any = isAdmin ? {} : { teacherId }
 
     if (search) {
       where.OR = [
@@ -161,7 +161,7 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'TEACHER') {
+    if (!session || (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN')) {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 

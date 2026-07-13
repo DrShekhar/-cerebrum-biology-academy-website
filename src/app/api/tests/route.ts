@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { auth } from '@/lib/auth'
 
 export const runtime = 'nodejs'
 
@@ -14,6 +15,15 @@ export const runtime = 'nodejs'
  */
 export async function GET(request: NextRequest) {
   try {
+    // Require a signed-in user — test templates are course content, not public.
+    const session = await auth()
+    if (!session?.user?.id) {
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
+    }
+
     const { searchParams } = new URL(request.url)
 
     const type = searchParams.get('type')
