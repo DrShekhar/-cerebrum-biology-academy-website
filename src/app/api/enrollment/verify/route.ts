@@ -1,19 +1,30 @@
 import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
+import { auth } from '@/lib/auth'
 import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 import { formatPaiseToINR } from '@/lib/utils'
 import { mapCourseToTier } from '@/lib/payments/tierMapping'
 import { fetchOrderTier } from '@/lib/payments/razorpayOrder'
 
 function verifyPaymentSignature(orderId: string, paymentId: string, signature: string): boolean {
-  const secret = process.env.RAZORPAY_KEY_SECRET || ''
+  const secret = process.env.RAZORPAY_KEY_SECRET
+  // SECURITY: fail CLOSED when the secret is unset. Previously this fell back to
+  // '' — an HMAC keyed on '' is deterministic and computable by anyone, so a
+  // forged signature would verify and activate any enrollment for free.
+  if (!secret) {
+    console.error('RAZORPAY_KEY_SECRET not configured — rejecting enrollment verification')
+    return false
+  }
   const generatedSignature = crypto
     .createHmac('sha256', secret)
     .update(`${orderId}|${paymentId}`)
     .digest('hex')
 
-  return generatedSignature === signature
+  // Timing-safe compare (equal-length hex buffers).
+  const a = Buffer.from(generatedSignature, 'hex')
+  const b = Buffer.from(signature, 'hex')
+  return a.length === b.length && crypto.timingSafeEqual(a, b)
 }
 
 export async function POST(request: NextRequest) {
@@ -169,6 +180,14 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
+    // SECURITY: this returns student PII (name/email/phone) + payment history.
+    // Require a session and restrict to the enrollment's owner (or an admin) —
+    // previously any caller could read any enrollment by id.
+    const session = await auth()
+    if (!session?.user?.id) {
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+    }
+
     const { searchParams } = new URL(request.url)
     const enrollmentId = searchParams.get('enrollmentId')
 
@@ -210,6 +229,11 @@ export async function GET(request: NextRequest) {
 
     if (!enrollment) {
       return NextResponse.json({ error: 'Enrollment not found' }, { status: 404 })
+    }
+
+    // Owner or admin only.
+    if (enrollment.userId !== session.user.id && session.user.role !== 'ADMIN') {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
     }
 
     return NextResponse.json({

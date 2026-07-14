@@ -6,9 +6,33 @@
 import { WhatsAppBusinessService } from '@/lib/integrations/whatsappBusinessService'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { logger } from '@/lib/utils/logger'
+import { emailService } from '@/lib/email/emailService'
 
 // Admin phone number for lead notifications (918826444334)
 const ADMIN_WHATSAPP_NUMBER = process.env.ADMIN_NOTIFICATION_WHATSAPP || CONTACT_INFO.phone.primary
+
+// Where ops/admin alerts land when WhatsApp is unconfigured. Defaults to the
+// owner's working inbox so critical alerts (e.g. payment-captured-but-enrollment-
+// failed) are never silently dropped.
+const ADMIN_ALERT_EMAIL = process.env.ADMIN_LEAD_EMAIL || 'shekharcsingh57@gmail.com'
+
+/**
+ * Email fallback for admin alerts. Called when the WhatsApp channel is
+ * unconfigured/failed so the alert still reaches a human. Best-effort — returns
+ * true only if the email was actually sent (emailService no-ops without keys).
+ */
+async function sendAdminAlertEmail(subject: string, textBody: string): Promise<boolean> {
+  try {
+    const html = `<pre style="font-family:system-ui,-apple-system,sans-serif;white-space:pre-wrap;font-size:14px">${textBody
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')}</pre>`
+    const res = await emailService.send({ to: ADMIN_ALERT_EMAIL, subject, html })
+    return !!res?.success
+  } catch (error) {
+    logger.error('Admin alert email fallback failed', { error, subject })
+    return false
+  }
+}
 
 export interface LeadNotificationData {
   // Required fields
@@ -326,10 +350,17 @@ export async function notifyAdminFormSubmission(
     const formSendResult = await WhatsAppBusinessService.sendTextMessage(
       formattedAdminNumber,
       message
-    )
+    ).catch(() => ({ skipped: true }) as { skipped?: boolean })
     if (formSendResult?.skipped) {
-      logger.warn('Admin form notification skipped — WhatsApp not configured', { formName })
-      return false
+      // WhatsApp unavailable — fall back to email so the alert still reaches a
+      // human (critical for e.g. the payment-reconcile alert).
+      const emailed = await sendAdminAlertEmail(`[Cerebrum] ${formName}`, message)
+      if (!emailed) {
+        logger.warn('Admin form notification dropped — no channel configured (WhatsApp+email)', {
+          formName,
+        })
+      }
+      return emailed
     }
 
     logger.businessEvent('admin_form_notification_sent', { formName })
