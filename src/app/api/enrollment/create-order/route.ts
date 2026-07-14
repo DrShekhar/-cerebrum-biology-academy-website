@@ -5,12 +5,15 @@ import { nanoid } from 'nanoid'
 import { rateLimit } from '@/lib/rateLimit'
 import { validateUserSession } from '@/lib/auth/config'
 import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
+import { CashfreeService } from '@/lib/payments/cashfreeService'
 import {
   getPricingForClass,
   type ClassLevel as PricingClassLevel,
   type CourseType as PricingCourseType,
   type TierLevel,
 } from '@/data/pricing'
+
+type Gateway = 'razorpay' | 'cashfree'
 
 function getRazorpayInstance() {
   if (!process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
@@ -38,6 +41,9 @@ interface EnrollmentOrderRequest {
   installmentAmount?: number
   totalAmount?: number
   wantsCounselor: boolean
+  // Which gateway the student picked at checkout. Defaults to razorpay so
+  // existing callers keep working unchanged.
+  gateway?: Gateway
 }
 
 const PAYMENT_PLANS = ['lumpSum', 'twoInstallments', 'threeInstallments'] as const
@@ -79,6 +85,8 @@ export async function POST(request: NextRequest) {
       totalAmount,
       wantsCounselor,
     } = body
+
+    const gateway: Gateway = body.gateway === 'cashfree' ? 'cashfree' : 'razorpay'
 
     if (!studentName || !email || !phone || !classLevel || !tier) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
@@ -131,15 +139,25 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // All course/enrollment money columns are stored in paise (Razorpay's unit).
+    // All course/enrollment money columns are stored in paise.
     const totalAmountPaise = grandTotalRupees * 100
 
-    if (!process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
-      console.error('Razorpay credentials not configured')
-      return NextResponse.json({ error: 'Payment service not configured' }, { status: 503 })
+    // Fail fast if the chosen gateway isn't configured — before we create an
+    // orphan user/enrollment we could never collect against.
+    if (gateway === 'razorpay') {
+      if (!process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
+        console.error('Razorpay credentials not configured')
+        return NextResponse.json({ error: 'Payment service not configured' }, { status: 503 })
+      }
+    } else if (gateway === 'cashfree') {
+      if (!process.env.CASHFREE_APP_ID || !process.env.CASHFREE_SECRET_KEY) {
+        console.error('Cashfree credentials not configured')
+        return NextResponse.json(
+          { error: 'Selected payment method is not available right now' },
+          { status: 503 }
+        )
+      }
     }
-
-    const razorpay = getRazorpayInstance()
 
     // Find or create user
     let user = await prisma.users.findFirst({
@@ -234,49 +252,25 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    // Create Razorpay order for the first installment amount. These notes are
-    // set server-side and echoed back on the payment entity in the webhook —
-    // notes.tier is what activates the student's coachingTier.
-    const orderOptions = {
-      amount: firstPaymentRupees * 100, // paise
-      currency: 'INR',
-      receipt: `enroll_${enrollment.id}_${Date.now()}`,
-      notes: {
-        enrollmentId: enrollment.id,
-        userId: user.id,
-        studentName,
-        email,
-        phone,
-        classLevel,
-        courseType: courseType || 'neet',
-        tier,
-        batchId,
-        batchName,
-        paymentPlan: planKey,
-        totalAmount: grandTotalRupees.toString(),
-        installmentAmount: firstPaymentRupees.toString(),
-        wantsCounselor: wantsCounselor ? 'yes' : 'no',
-      },
+    const totalInstallments = planKey === 'lumpSum' ? 1 : planKey === 'twoInstallments' ? 2 : 3
+    // Notes are set server-side and echoed back on the payment entity by each
+    // gateway's webhook — notes.tier is what activates the student's coachingTier.
+    const orderNotes = {
+      enrollmentId: enrollment.id,
+      userId: user.id,
+      studentName,
+      email,
+      phone,
+      classLevel,
+      courseType: courseType || 'neet',
+      tier,
+      batchId,
+      batchName,
+      paymentPlan: planKey,
+      totalAmount: grandTotalRupees.toString(),
+      installmentAmount: firstPaymentRupees.toString(),
+      wantsCounselor: wantsCounselor ? 'yes' : 'no',
     }
-
-    const order = await razorpay.orders.create(orderOptions)
-
-    // Create payment record
-    await prisma.payments.create({
-      data: {
-        id: nanoid(),
-        userId: user.id,
-        enrollmentId: enrollment.id,
-        amount: firstPaymentRupees * 100, // Store in paise
-        currency: 'INR',
-        status: 'PENDING',
-        paymentMethod: 'RAZORPAY_UPI',
-        razorpayOrderId: order.id,
-        installmentNumber: 1,
-        totalInstallments: planKey === 'lumpSum' ? 1 : planKey === 'twoInstallments' ? 2 : 3,
-        updatedAt: new Date(),
-      },
-    })
 
     notifyAdminFormSubmission('Enrollment Order Created', {
       Student: studentName,
@@ -286,12 +280,84 @@ export async function POST(request: NextRequest) {
       Tier: tier,
       Batch: batchName,
       'Payment Plan': planKey,
+      Gateway: gateway,
       'Installment Amount': `₹${firstPaymentRupees}`,
       'Total Amount': `₹${grandTotalRupees}`,
     }).catch(() => {})
 
+    if (gateway === 'cashfree') {
+      // Cashfree order amount is in major units (rupees). The payment record still
+      // stores paise, consistent with the rest of the money model.
+      const cfOrderId = `order_${enrollment.id}_${Date.now()}`
+      const cfOrder = await CashfreeService.createOrder({
+        orderId: cfOrderId,
+        amount: firstPaymentRupees,
+        currency: 'INR',
+        customerName: studentName,
+        customerEmail: email,
+        customerPhone: phone,
+        notes: orderNotes,
+      })
+
+      await prisma.payments.create({
+        data: {
+          id: nanoid(),
+          userId: user.id,
+          enrollmentId: enrollment.id,
+          amount: firstPaymentRupees * 100, // paise
+          currency: 'INR',
+          status: 'PENDING',
+          paymentMethod: 'CASHFREE_UPI',
+          paymentProvider: 'cashfree',
+          cashfreeOrderId: cfOrder.order_id,
+          installmentNumber: 1,
+          totalInstallments,
+          updatedAt: new Date(),
+        },
+      })
+
+      return NextResponse.json({
+        success: true,
+        provider: 'cashfree',
+        orderId: cfOrder.order_id,
+        paymentSessionId: cfOrder.payment_session_id,
+        enrollmentId: enrollment.id,
+        amount: firstPaymentRupees * 100,
+        currency: 'INR',
+        environment: process.env.NODE_ENV === 'production' ? 'production' : 'sandbox',
+        prefill: { name: studentName, email, contact: phone },
+      })
+    }
+
+    // Default: Razorpay. Order amount is in paise.
+    const razorpay = getRazorpayInstance()
+    const order = await razorpay.orders.create({
+      amount: firstPaymentRupees * 100,
+      currency: 'INR',
+      receipt: `enroll_${enrollment.id}_${Date.now()}`,
+      notes: orderNotes,
+    })
+
+    await prisma.payments.create({
+      data: {
+        id: nanoid(),
+        userId: user.id,
+        enrollmentId: enrollment.id,
+        amount: firstPaymentRupees * 100, // Store in paise
+        currency: 'INR',
+        status: 'PENDING',
+        paymentMethod: 'RAZORPAY_UPI',
+        paymentProvider: 'razorpay',
+        razorpayOrderId: order.id,
+        installmentNumber: 1,
+        totalInstallments,
+        updatedAt: new Date(),
+      },
+    })
+
     return NextResponse.json({
       success: true,
+      provider: 'razorpay',
       orderId: order.id,
       enrollmentId: enrollment.id,
       amount: order.amount,

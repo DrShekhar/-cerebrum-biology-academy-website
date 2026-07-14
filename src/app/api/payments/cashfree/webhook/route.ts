@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { CashfreeService } from '@/lib/payments/cashfreeService'
+import { mapCourseToTier } from '@/lib/payments/tierMapping'
+import { sendEnrollmentConfirmation } from '@/lib/notifications/enrollmentConfirmation'
 
 export async function POST(request: NextRequest) {
   try {
@@ -56,7 +58,7 @@ export async function POST(request: NextRequest) {
 
     const payment = await prisma.payments.findFirst({
       where: { cashfreeOrderId: orderId },
-      include: { enrollments: true },
+      include: { enrollments: { include: { courses: true } } },
     })
 
     if (!payment) {
@@ -94,7 +96,7 @@ export async function POST(request: NextRequest) {
           },
         })
 
-        if (payment.enrollmentId) {
+        if (payment.enrollmentId && payment.enrollments) {
           await tx.enrollments.update({
             where: { id: payment.enrollmentId },
             data: {
@@ -105,8 +107,24 @@ export async function POST(request: NextRequest) {
               updatedAt: new Date(),
             },
           })
+
+          // Set coachingTier on activation — parity with the verify path and the
+          // Razorpay webhook. Idempotent: re-running just recomputes the same tier.
+          const tier = mapCourseToTier(payment.enrollments.courseId, payment.enrollments.totalFees)
+          await tx.users.update({
+            where: { id: payment.userId },
+            data: { coachingTier: tier },
+          })
         }
       })
+
+      // Confirmation to the student (WhatsApp + email); best-effort, never blocks.
+      if (payment.enrollmentId && payment.enrollments) {
+        void sendEnrollmentConfirmation({
+          userId: payment.userId,
+          courseId: payment.enrollments.courseId,
+        })
+      }
 
       console.log(`Cashfree webhook: payment SUCCESS for order ${orderId}`)
     }
