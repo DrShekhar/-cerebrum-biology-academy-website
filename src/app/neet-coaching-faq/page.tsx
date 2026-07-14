@@ -39,7 +39,7 @@ const faqData = {
     {
       question: "What are Cerebrum's contact details?",
       answer:
-        'Phone: +91-88264-44334 | Email: info@cerebrumbiologyacademy.com | WhatsApp: +91-88264-44334. Our team is available Monday-Saturday, 9 AM to 7 PM. You can also visit any of our 5 centers or book a free demo class online at cerebrumbiologyacademy.com/book-free-demo.',
+        'Phone: +91-88264-44334 | Email: shekharcsingh57@gmail.com | WhatsApp: +91-88264-44334. Our team is available Monday-Saturday, 9 AM to 7 PM. You can also visit any of our 5 centers or book a free demo class online at cerebrumbiologyacademy.com/book-free-demo.',
     },
     {
       question: 'How can I book a free demo class?',

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { EmailEnquiryButton } from '@/components/seo/EmailEnquiryButton'
 import { mcatMetros } from '@/data/mcat/metros'
 import {
   ArrowRight,
@@ -414,6 +415,17 @@ export default function MCATBiologyHubPage() {
                 <MessageCircle className="h-5 w-5" />
                 WhatsApp a Counsellor
               </a>
+
+              <EmailEnquiryButton
+                label="Or email us"
+                subject="MCAT Biology & Biochemistry tutoring enquiry"
+                body={
+                  'Hi, I am interested in MCAT Bio/Biochem tutoring.\n\n' +
+                  'Name:\nTest date:\nCurrent B/B section score (if any):\nTime zone (ET/CT/PT):\n\n' +
+                  'Please share programme details, US-time slots and USD pricing.'
+                }
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/30 px-8 py-4 text-lg font-semibold text-white transition-all hover:border-white/60"
+              />
             </div>
           </div>
         </section>

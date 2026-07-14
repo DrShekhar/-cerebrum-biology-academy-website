@@ -41,7 +41,7 @@ const faqs: FAQ[] = [
   {
     id: 3,
     question: 'Can I reschedule?',
-    answer: `Absolutely! You can reschedule your demo up to 2 hours before the scheduled time. Simply contact us via WhatsApp at ${CONTACT_INFO.phone.display.primary} or email support@cerebrumbiologyacademy.com with your new preferred time.`,
+    answer: `Absolutely! You can reschedule your demo up to 2 hours before the scheduled time. Simply contact us via WhatsApp at ${CONTACT_INFO.phone.display.primary} or email shekharcsingh57@gmail.com with your new preferred time.`,
     icon: <Clock className="w-4 h-4" />,
   },
   {
@@ -172,10 +172,10 @@ export function FAQAccordion() {
           </button>{' '}
           or email{' '}
           <a
-            href="mailto:support@cerebrumbiologyacademy.com"
+            href="mailto:shekharcsingh57@gmail.com"
             className="font-semibold underline hover:text-blue-700"
           >
-            support@cerebrumbiologyacademy.com
+            shekharcsingh57@gmail.com
           </a>
         </p>
       </div>

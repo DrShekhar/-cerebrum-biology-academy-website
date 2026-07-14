@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
+import { EmailEnquiryButton } from '@/components/seo/EmailEnquiryButton'
 import type { MCATMetroConfig } from '@/data/mcat/metros'
 
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
@@ -208,6 +209,16 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
             >
               MCAT Biology Overview
             </Link>
+            <EmailEnquiryButton
+              label="Or email us"
+              subject={`MCAT Biology tutoring enquiry — ${metro.city}`}
+              body={
+                `Hi, I am a ${metro.city} pre-med (or parent) preparing for the MCAT.\n\n` +
+                'Name:\nTest date:\nTime zone:\n\n' +
+                'Please share Bio/Biochem programme details, slot availability and pricing.'
+              }
+              className="inline-flex items-center gap-2 rounded-xl border-2 border-white/30 px-6 py-3 font-semibold text-white transition hover:border-white/60"
+            />
           </div>
           <p className="mt-3 text-sm font-medium text-slate-300">
             WhatsApp is free from the US — no international call needed.

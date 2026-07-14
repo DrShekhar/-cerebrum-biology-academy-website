@@ -71,7 +71,7 @@ export default function AnandNiketanLayout({ children }: { children: React.React
             image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             url: 'https://cerebrumbiologyacademy.com/locations/anand-niketan',
             telephone: '+91-88264-44334',
-            email: 'info@cerebrumbiologyacademy.com',
+            email: 'shekharcsingh57@gmail.com',
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'Near South Extension',
@@ -153,7 +153,7 @@ export default function AnandNiketanLayout({ children }: { children: React.React
                 name: 'What are the fees for NEET coaching at Cerebrum Academy for Anand Niketan students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Biology Academy offers NEET Biology coaching with fees ranging from Rs. 45,000 to Rs. 1,80,000 depending on the batch type, course duration, and study material provided. We offer flexible payment options including EMI. Contact us at info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed fee structure.',
+                  text: 'Cerebrum Biology Academy offers NEET Biology coaching with fees ranging from Rs. 45,000 to Rs. 1,80,000 depending on the batch type, course duration, and study material provided. We offer flexible payment options including EMI. Contact us at shekharcsingh57@gmail.com or +91-88264-44334 for detailed fee structure.',
                 },
               },
             ],

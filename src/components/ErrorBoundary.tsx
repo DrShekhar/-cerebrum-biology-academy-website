@@ -263,10 +263,10 @@ export function PageErrorBoundary({ children }: { children: ReactNode }) {
                 <p className="text-sm text-gray-500 mb-2">
                   Still having trouble? Contact us at{' '}
                   <a
-                    href="mailto:support@cerebrumbiologyacademy.com"
+                    href="mailto:shekharcsingh57@gmail.com"
                     className="text-blue-600 hover:underline"
                   >
-                    support@cerebrumbiologyacademy.com
+                    shekharcsingh57@gmail.com
                   </a>
                 </p>
                 <p className="text-xs text-gray-600">

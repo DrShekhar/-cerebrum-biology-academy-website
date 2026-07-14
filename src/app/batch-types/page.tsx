@@ -480,11 +480,8 @@ export default function BatchTypesPage() {
               <div className="flex flex-col items-center">
                 <Mail className="w-8 h-8 mb-3" />
                 <p className="text-sm text-blue-100 mb-2">Email Us</p>
-                <a
-                  href="mailto:info@cerebrumbiologyacademy.com"
-                  className="font-bold hover:text-blue-50"
-                >
-                  info@cerebrumbiologyacademy.com
+                <a href="mailto:shekharcsingh57@gmail.com" className="font-bold hover:text-blue-50">
+                  shekharcsingh57@gmail.com
                 </a>
               </div>
               <div className="flex flex-col items-center">
@@ -525,10 +522,10 @@ export default function BatchTypesPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                     <a
-                      href="mailto:info@cerebrumbiologyacademy.com"
+                      href="mailto:shekharcsingh57@gmail.com"
                       className="text-blue-600 hover:underline"
                     >
-                      info@cerebrumbiologyacademy.com
+                      shekharcsingh57@gmail.com
                     </a>
                   </div>
                 </div>

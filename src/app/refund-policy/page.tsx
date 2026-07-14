@@ -153,7 +153,7 @@ export default function RefundPolicyPage() {
               <div className="space-y-4 text-gray-700">
                 <h3 className="text-lg font-semibold text-gray-900">4.1 How to Request a Refund</h3>
                 <ol className="list-decimal list-inside space-y-2 ml-4">
-                  <li>Send a written request to refunds@cerebrumbiologyacademy.com</li>
+                  <li>Send a written request to shekharcsingh57@gmail.com</li>
                   <li>Include your enrollment details and reason for refund</li>
                   <li>Provide supporting documentation if applicable</li>
                   <li>Submit within the eligible time frame</li>
@@ -243,7 +243,7 @@ export default function RefundPolicyPage() {
                 <p>For refund requests and queries:</p>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <p>
-                    <strong>Email:</strong> refunds@cerebrumbiologyacademy.com
+                    <strong>Email:</strong> shekharcsingh57@gmail.com
                   </p>
                   <p>
                     <strong>Phone:</strong> +91 88264 44334 (Mon-Fri: 9 AM - 6 PM)

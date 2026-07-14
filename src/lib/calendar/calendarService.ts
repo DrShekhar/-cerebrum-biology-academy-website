@@ -89,7 +89,7 @@ What to prepare:
 - Quiet environment for focused learning
 
 ${isDemoTypePremium ? 'Premium Demo Benefits:\n- Extended 90-minute session\n- Personalized study plan\n- Free mock test access\n- Session recording provided\n\n' : ''}Contact: +91 88264 44334
-Email: support@cerebrumbiologyacademy.com`
+Email: shekharcsingh57@gmail.com`
 
     const event: EventAttributes = {
       start: [year, month, day, hour, minute],
@@ -102,7 +102,7 @@ Email: support@cerebrumbiologyacademy.com`
       busyStatus: 'BUSY',
       organizer: {
         name: 'Cerebrum Biology Academy',
-        email: 'support@cerebrumbiologyacademy.com',
+        email: 'shekharcsingh57@gmail.com',
       },
       attendees: [
         {

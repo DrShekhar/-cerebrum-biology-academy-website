@@ -32,7 +32,7 @@ const contactPageSchema = {
   name: 'Cerebrum Biology Academy',
   url: 'https://cerebrumbiologyacademy.com',
   telephone: '+91-88264-44334',
-  email: 'info@cerebrumbiologyacademy.com',
+  email: 'shekharcsingh57@gmail.com',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'D 35, South Extension Part 2',

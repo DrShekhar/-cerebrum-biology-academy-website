@@ -251,7 +251,7 @@ export default async function InternationalCoursesPage({ params }: PageProps) {
                 WhatsApp Us
               </a>
               <a
-                href="mailto:contact@cerebrumbiologyacademy.com"
+                href="mailto:shekharcsingh57@gmail.com"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-400 transition-colors border border-teal-400"
               >
                 Email Us

@@ -126,7 +126,7 @@ export default async function CityPage({ params }: CityPageProps) {
     description: `Premier NEET Biology coaching across ${cityLocalities.length} locations in ${cityName}. AIIMS faculty, 98% success rate, small batches.`,
     url: `https://cerebrumbiologyacademy.com/locations/${resolvedParams.city}`,
     telephone: '+91-8826444334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     areaServed: {
       '@type': 'City',
       name: cityName,

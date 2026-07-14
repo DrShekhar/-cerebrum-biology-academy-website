@@ -97,7 +97,7 @@ class CountryContentService {
       ],
       contactInfo: {
         phone: CONTACT_INFO.phone.display.primary,
-        email: 'admissions@cerebrumbiologyacademy.com',
+        email: 'shekharcsingh57@gmail.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Delhi NCR Headquarters + 12 coaching hubs across India',
         hours: 'Available 24/7',
@@ -157,7 +157,7 @@ class CountryContentService {
       ],
       contactInfo: {
         phone: CONTACT_INFO.phone.display.primary,
-        email: 'usa@cerebrumbiologyacademy.com',
+        email: 'shekharcsingh57@gmail.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Available Nationwide - Online Classes',
         hours: '24/7 Support Available (EST/PST friendly)',
@@ -223,7 +223,7 @@ class CountryContentService {
       ],
       contactInfo: {
         phone: CONTACT_INFO.phone.display.primary,
-        email: 'uk@cerebrumbiologyacademy.com',
+        email: 'shekharcsingh57@gmail.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'London Office + Online Classes',
         hours: 'Mon-Fri: 9 AM - 6 PM GMT',
@@ -283,7 +283,7 @@ class CountryContentService {
       ],
       contactInfo: {
         phone: CONTACT_INFO.phone.display.primary,
-        email: 'australia@cerebrumbiologyacademy.com',
+        email: 'shekharcsingh57@gmail.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Sydney Office + Online Classes',
         hours: 'Mon-Fri: 9 AM - 6 PM AEDT',
@@ -349,7 +349,7 @@ class CountryContentService {
       ],
       contactInfo: {
         phone: CONTACT_INFO.phone.display.primary,
-        email: 'canada@cerebrumbiologyacademy.com',
+        email: 'shekharcsingh57@gmail.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Toronto Office + Online Classes',
         hours: 'Mon-Fri: 9 AM - 6 PM EST/PST',
@@ -415,7 +415,7 @@ class CountryContentService {
       ],
       contactInfo: {
         phone: CONTACT_INFO.phone.display.primary,
-        email: 'uae@cerebrumbiologyacademy.com',
+        email: 'shekharcsingh57@gmail.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Dubai Office: Business Bay, Abu Dhabi Center: Al Maryah Island',
         hours: 'Sun-Thu: 9 AM - 6 PM GST, Fri-Sat: Weekend Classes',
@@ -480,7 +480,7 @@ class CountryContentService {
       ],
       contactInfo: {
         phone: CONTACT_INFO.phone.display.primary,
-        email: 'singapore@cerebrumbiologyacademy.com',
+        email: 'shekharcsingh57@gmail.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Singapore Office: Raffles Place + Online Classes',
         hours: 'Mon-Fri: 9 AM - 6 PM SGT, Weekend sessions available',

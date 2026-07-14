@@ -460,7 +460,7 @@ export class ErrorHandlingManager {
       content:
         'I encountered an unexpected issue. Our team has been notified and is working on a fix.',
       fallback: true,
-      supportContact: 'support@cerebrumbiologyacademy.com',
+      supportContact: 'shekharcsingh57@gmail.com',
     }
   }
 

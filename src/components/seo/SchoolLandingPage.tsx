@@ -89,7 +89,7 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
     description: data.metaDescription,
     url: `${baseUrl}/${data.slug}`,
     telephone: CONTACT_INFO.phone.primary,
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     logo: `${baseUrl}/logo.png`,
     founder: {
       '@type': 'Person',

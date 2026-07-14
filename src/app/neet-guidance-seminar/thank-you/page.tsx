@@ -242,7 +242,7 @@ export default function SeminarThankYouPage() {
                 WhatsApp Us
               </button>
               <a
-                href="mailto:info@cerebrumbiologyacademy.com"
+                href="mailto:shekharcsingh57@gmail.com"
                 className="inline-flex items-center justify-center gap-2 bg-slate-700 hover:bg-slate-800 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
               >
                 <Mail className="w-5 h-5" />

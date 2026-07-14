@@ -260,7 +260,7 @@ export const ReceiptPDF: React.FC<ReceiptPDFProps> = ({ data }) => {
         {/* Footer */}
         <View style={styles.footer}>
           <Text style={styles.footerBold}>Cerebrum Biology Academy</Text>
-          <Text style={styles.footerText}>Email: support@cerebrumbiologyacademy.com</Text>
+          <Text style={styles.footerText}>Email: shekharcsingh57@gmail.com</Text>
           <Text style={styles.footerText}>
             Phone: {CONTACT_INFO.phone.display.hyphenated.primary}
           </Text>

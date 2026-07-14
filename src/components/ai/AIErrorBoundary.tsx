@@ -128,7 +128,7 @@ URL: ${window.location.href}
 Please help resolve this AI system issue.
     `)
 
-    window.location.href = `mailto:support@cerebrumbiologyacademy.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:shekharcsingh57@gmail.com?subject=${subject}&body=${body}`
   }
 
   private handleFallbackChat = () => {

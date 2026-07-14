@@ -71,7 +71,7 @@ function NoidaServiceSchema() {
       name: 'Cerebrum Biology Academy',
       url: 'https://cerebrumbiologyacademy.com',
       telephone: '+91-88264-44334',
-      email: 'info@cerebrumbiologyacademy.com',
+      email: 'shekharcsingh57@gmail.com',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'D 35, South Extension Part 2',
@@ -150,7 +150,7 @@ export default function NoidaLocationLayout({ children }: { children: React.Reac
                 name: 'What are the NEET coaching fees for Noida students at Cerebrum Academy?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer special packages for Noida students and flexible payment options. Call us at +91-88264-44334 or email info@cerebrumbiologyacademy.com for personalized fee consultation.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer special packages for Noida students and flexible payment options. Call us at +91-88264-44334 or email shekharcsingh57@gmail.com for personalized fee consultation.',
                 },
               },
             ],

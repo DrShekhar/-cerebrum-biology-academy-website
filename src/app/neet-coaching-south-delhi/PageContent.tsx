@@ -986,10 +986,10 @@ export default function PageContent() {
                     <div>
                       <p className="font-semibold text-gray-900 mb-1">Email</p>
                       <a
-                        href="mailto:info@cerebrumbiologyacademy.com"
+                        href="mailto:shekharcsingh57@gmail.com"
                         className="text-blue-600 hover:text-blue-700 font-medium"
                       >
-                        info@cerebrumbiologyacademy.com
+                        shekharcsingh57@gmail.com
                       </a>
                     </div>
                   </div>

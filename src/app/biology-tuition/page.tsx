@@ -547,7 +547,7 @@ export default function BiologyTuitionPage() {
               'Expert biology tuition for Class 9-12 and NEET preparation. AIIMS faculty, small batches, 98% success rate.',
             url: 'https://cerebrumbiologyacademy.com/biology-tuition',
             telephone: '+918826444334',
-            email: 'info@cerebrumbiologyacademy.com',
+            email: 'shekharcsingh57@gmail.com',
             address: [
               {
                 '@type': 'PostalAddress',

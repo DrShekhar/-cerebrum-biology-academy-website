@@ -751,11 +751,11 @@ export default function CareersPage() {
           </div>
           <div className="mt-8">
             <a
-              href="mailto:careers@cerebrumbiologyacademy.com"
+              href="mailto:shekharcsingh57@gmail.com"
               className="inline-flex items-center space-x-2 bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors duration-300 font-semibold"
             >
               <Send className="w-5 h-5" />
-              <span>careers@cerebrumbiologyacademy.com</span>
+              <span>shekharcsingh57@gmail.com</span>
             </a>
           </div>
         </div>

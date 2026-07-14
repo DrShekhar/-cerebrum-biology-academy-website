@@ -73,7 +73,7 @@ export default function SundarNagarLayout({ children }: { children: React.ReactN
             image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             url: 'https://cerebrumbiologyacademy.com/locations/sundar-nagar',
             telephone: '+91-88264-44334',
-            email: 'info@cerebrumbiologyacademy.com',
+            email: 'shekharcsingh57@gmail.com',
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'Near South Extension',
@@ -155,7 +155,7 @@ export default function SundarNagarLayout({ children }: { children: React.ReactN
                 name: 'What is the NEET coaching fee structure at Cerebrum Academy?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment options for Sundar Nagar students. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for personalized fee details.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment options for Sundar Nagar students. Contact shekharcsingh57@gmail.com or +91-88264-44334 for personalized fee details.',
                 },
               },
             ],

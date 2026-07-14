@@ -151,9 +151,7 @@ export default function PrivacyPolicyPage() {
                   <li>Restrict processing of your data</li>
                   <li>Data portability (receive your data in a structured format)</li>
                 </ul>
-                <p>
-                  To exercise these rights, please contact us at privacy@cerebrumbiologyacademy.com
-                </p>
+                <p>To exercise these rights, please contact us at shekharcsingh57@gmail.com</p>
               </div>
             </section>
 
@@ -245,7 +243,7 @@ export default function PrivacyPolicyPage() {
                 </p>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <p>
-                    <strong>Email:</strong> privacy@cerebrumbiologyacademy.com
+                    <strong>Email:</strong> shekharcsingh57@gmail.com
                   </p>
                   <p>
                     <strong>Phone:</strong> +91 88264 44334

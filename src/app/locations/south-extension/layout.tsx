@@ -289,7 +289,7 @@ export default function SouthExtensionLayout({ children }: { children: React.Rea
                 name: 'What are the coaching fees at Cerebrum Academy South Extension?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options and customized packages for South Extension students. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed fee structure.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options and customized packages for South Extension students. Contact shekharcsingh57@gmail.com or +91-88264-44334 for detailed fee structure.',
                 },
               },
             ],

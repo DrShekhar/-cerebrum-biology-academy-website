@@ -363,11 +363,11 @@ export const Footer = memo(function Footer() {
                 <div className="flex items-center text-gray-300">
                   <Mail className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" aria-hidden="true" />
                   <a
-                    href="mailto:info@cerebrumbiologyacademy.com"
+                    href="mailto:shekharcsingh57@gmail.com"
                     className="hover:text-white transition-colors text-sm"
-                    aria-label="Email us at info@cerebrumbiologyacademy.com"
+                    aria-label="Email us at shekharcsingh57@gmail.com"
                   >
-                    info@cerebrumbiologyacademy.com
+                    shekharcsingh57@gmail.com
                   </a>
                 </div>
 

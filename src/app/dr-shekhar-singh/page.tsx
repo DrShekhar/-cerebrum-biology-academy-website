@@ -214,7 +214,7 @@ export default function DrShekharSinghPage() {
       'NEET Preparation',
       'Student Mentoring',
     ],
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     telephone: '+91-88264-44334',
     address: {
       '@type': 'PostalAddress',
@@ -1052,11 +1052,11 @@ export default function DrShekharSinghPage() {
                 <div className="flex items-center" role="listitem">
                   <Mail className="w-5 h-5 mr-2" aria-hidden="true" />
                   <a
-                    href="mailto:info@cerebrumbiologyacademy.com"
+                    href="mailto:shekharcsingh57@gmail.com"
                     className="hover:text-white transition-colors focus:outline-none focus:underline"
-                    aria-label="Email us at info@cerebrumbiologyacademy.com"
+                    aria-label="Email us at shekharcsingh57@gmail.com"
                   >
-                    info@cerebrumbiologyacademy.com
+                    shekharcsingh57@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center" role="listitem">

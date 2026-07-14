@@ -83,7 +83,7 @@ Our expert team is here to help you!
 
 *Contact Information:*
 📱 Phone: ${CONTACT_INFO.phone.display.primary}
-📧 Email: info@cerebrumbiologyacademy.com
+📧 Email: shekharcsingh57@gmail.com
 🌐 Website: cerebrumbiologyacademy.com
 
 *Support Hours:*
@@ -181,7 +181,7 @@ I encountered an error while processing your request.
 
 *Still not working?*
 📞 Call us: ${CONTACT_INFO.phone.display.primary}
-📧 Email: info@cerebrumbiologyacademy.com
+📧 Email: shekharcsingh57@gmail.com
 
 Our team has been notified and will fix this soon!
 

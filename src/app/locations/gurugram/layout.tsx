@@ -12,7 +12,7 @@ function GurugramLocalBusinessSchema() {
       'Best NEET Biology coaching in Gurugram by AIIMS faculty. Small batches of 15 students, 98% success rate. Located at M2K Corporate Park, Sector 51.',
     image: 'https://cerebrumbiologyacademy.com/images/gurugram-center.jpg',
     telephone: '+91-88264-44334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Unit 17, M2K Corporate Park, Mayfield Garden, Sector 51',

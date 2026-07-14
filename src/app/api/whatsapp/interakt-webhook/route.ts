@@ -461,7 +461,7 @@ Our counselor will call you within 5 minutes!
 
 Or you can reach us at:
 📞 +91-88264-44334
-📧 support@cerebrumbiologyacademy.com
+📧 shekharcsingh57@gmail.com
 
 ⏰ Available: 24/7
 

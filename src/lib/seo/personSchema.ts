@@ -67,7 +67,7 @@ export const facultyMembers: FacultyData[] = [
     description:
       "Dr. Shekhar C Singh is the founder of Cerebrum Biology Academy and has 15+ years of experience in NEET Biology coaching. An AIIMS New Delhi alumnus, he has helped over 500 students secure admissions to top medical colleges including AIIMS, JIPMER, and state medical colleges. His 'Concept-First Approach' has revolutionized Biology teaching for NEET preparation.",
     image: 'https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh.jpg',
-    email: 'drshekhar@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     url: 'https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh',
     sameAs: ['https://www.linkedin.com/in/drshekharsingh', 'https://twitter.com/DrShekharBio'],
     education: [

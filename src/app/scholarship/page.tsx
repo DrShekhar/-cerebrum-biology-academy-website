@@ -625,7 +625,7 @@ export default function ScholarshipPage() {
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm">
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>scholarship@cerebrumbiologyacademy.com</span>
+              <span>shekharcsingh57@gmail.com</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />

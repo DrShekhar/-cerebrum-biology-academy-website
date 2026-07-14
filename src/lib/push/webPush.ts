@@ -29,7 +29,7 @@ function ensureConfigured(): boolean {
   if (configured) return true
   if (!isPushConfigured()) return false
   webpush.setVapidDetails(
-    process.env.VAPID_SUBJECT || 'mailto:info@cerebrumbiologyacademy.com',
+    process.env.VAPID_SUBJECT || 'mailto:shekharcsingh57@gmail.com',
     process.env.VAPID_PUBLIC_KEY!,
     process.env.VAPID_PRIVATE_KEY!
   )

@@ -76,7 +76,7 @@ function GulmoharParkLocalBusinessSchema() {
     image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
     url: 'https://cerebrumbiologyacademy.com/locations/gulmohar-park',
     telephone: '+91-88264-44334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Near South Extension',
@@ -155,7 +155,7 @@ function GulmoharParkFAQSchema() {
         name: 'What are the NEET coaching fees at Cerebrum for Gulmohar Park students?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer flexible EMI options for Gulmohar Park families. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for customized pricing and special offers.',
+          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer flexible EMI options for Gulmohar Park families. Contact shekharcsingh57@gmail.com or +91-88264-44334 for customized pricing and special offers.',
         },
       },
     ],

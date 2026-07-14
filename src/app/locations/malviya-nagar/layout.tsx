@@ -84,7 +84,7 @@ export default function MalviyaNagarLayout({ children }: { children: React.React
             image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             url: 'https://cerebrumbiologyacademy.com/locations/malviya-nagar',
             telephone: '+91-88264-44334',
-            email: 'info@cerebrumbiologyacademy.com',
+            email: 'shekharcsingh57@gmail.com',
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'Near South Extension',
@@ -166,7 +166,7 @@ export default function MalviyaNagarLayout({ children }: { children: React.React
                 name: 'What are the NEET coaching fees at Cerebrum for Malviya Nagar students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer affordable fees with flexible EMI options for Malviya Nagar students. Email info@cerebrumbiologyacademy.com or call +91-88264-44334 for detailed fee structure.',
+                  text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer affordable fees with flexible EMI options for Malviya Nagar students. Email shekharcsingh57@gmail.com or call +91-88264-44334 for detailed fee structure.',
                 },
               },
             ],

@@ -43,7 +43,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         longitude={151.2093}
         phone="+918826444334"
         whatsapp="918826444334"
-        email="info@cerebrumbiologyacademy.com"
+        email="shekharcsingh57@gmail.com"
         website="https://cerebrumbiologyacademy.com"
       />
       {children}

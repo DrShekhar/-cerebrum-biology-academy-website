@@ -580,7 +580,7 @@ interface EnhancedQuickActionButtonProps {
 export function EnhancedQuickActionButton({
   action,
   phoneNumber = CONTACT_INFO.phone.primary,
-  emailAddress = 'contact@cerebrumbiologyacademy.com',
+  emailAddress = 'shekharcsingh57@gmail.com',
   courseId,
   customAction,
   className = '',

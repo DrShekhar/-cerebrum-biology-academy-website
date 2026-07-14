@@ -194,7 +194,7 @@ async function sendAdminEmail(lead: {
   pageUrl?: string | null
   enquiryId: string
 }): Promise<void> {
-  const adminEmail = process.env.ADMIN_LEAD_EMAIL || 'support@cerebrumbiologyacademy.com'
+  const adminEmail = process.env.ADMIN_LEAD_EMAIL || 'shekharcsingh57@gmail.com'
   // 10-digit phones are Indian (normalised upstream); anything longer already
   // carries its own country code.
   const dialPhone = lead.phone.length === 10 ? `91${lead.phone}` : lead.phone

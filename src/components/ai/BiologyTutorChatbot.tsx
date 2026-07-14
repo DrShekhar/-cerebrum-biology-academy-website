@@ -721,7 +721,7 @@ What would you like to explore today?`,
     const tutorMessage: ChatMessage = {
       id: Date.now().toString(),
       type: 'bot',
-      content: `I understand you'd like to connect with a human tutor${data ? ` for ${data}` : ''}. Our expert biology tutors are available for personalized doubt-solving sessions.\n\n📱 WhatsApp: +91-8826-444334\n📧 Email: support@cerebrumbiologyacademy.com\n\nOr I can continue helping you with your questions!`,
+      content: `I understand you'd like to connect with a human tutor${data ? ` for ${data}` : ''}. Our expert biology tutors are available for personalized doubt-solving sessions.\n\n📱 WhatsApp: +91-8826-444334\n📧 Email: shekharcsingh57@gmail.com\n\nOr I can continue helping you with your questions!`,
       timestamp: new Date(),
       actions: [
         {

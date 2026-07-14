@@ -376,7 +376,7 @@ export const ACADEMY_DETAILS = {
   name: 'Cerebrum Biology Academy',
   address: 'India',
   phone: CONTACT_INFO.phone.display.hyphenated.primary,
-  email: 'help@cerebrumbiologyacademy.com',
+  email: 'shekharcsingh57@gmail.com',
   gst: '',
   logo: '',
 }

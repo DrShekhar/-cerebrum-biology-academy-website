@@ -44,9 +44,9 @@ export const CONTACT_INFO = {
 
   // Email addresses
   email: {
-    support: 'support@cerebrumbiologyacademy.com',
-    admissions: 'admissions@cerebrumbiologyacademy.com',
-    info: 'info@cerebrumbiologyacademy.com',
+    support: 'shekharcsingh57@gmail.com',
+    admissions: 'shekharcsingh57@gmail.com',
+    info: 'shekharcsingh57@gmail.com',
   },
 
   // Business information

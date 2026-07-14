@@ -1010,7 +1010,7 @@ export default function FoundationCoursePage() {
               'Best online Biology tutor and NEET coaching institute. Expert online Biology tuition for Class 9, 10, 11 & 12 with AIIMS-trained faculty.',
             url: 'https://cerebrumbiologyacademy.com',
             telephone: '+918826444334',
-            email: 'info@cerebrumbiologyacademy.com',
+            email: 'shekharcsingh57@gmail.com',
             areaServed: 'India',
             hasOfferCatalog: {
               '@type': 'OfferCatalog',

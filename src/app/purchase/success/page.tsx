@@ -407,7 +407,7 @@ function PurchaseSuccessContent() {
               Call: +91 88264 44334
             </a>
             <a
-              href="mailto:support@cerebrumbiologyacademy.com"
+              href="mailto:shekharcsingh57@gmail.com"
               className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-green-600 hover:text-green-600 transition-colors"
             >
               <Mail className="w-5 h-5" />

@@ -738,7 +738,7 @@ export default function StudentFeesPage() {
                       </div>
                     </a>
                     <a
-                      href="mailto:fees@cerebrumbiologyacademy.com"
+                      href="mailto:shekharcsingh57@gmail.com"
                       className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                     >
                       <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
@@ -746,7 +746,7 @@ export default function StudentFeesPage() {
                       </div>
                       <div>
                         <p className="font-medium text-gray-900">Email Support</p>
-                        <p className="text-sm text-gray-500">fees@cerebrumbiologyacademy.com</p>
+                        <p className="text-sm text-gray-500">shekharcsingh57@gmail.com</p>
                       </div>
                     </a>
                   </CardContent>

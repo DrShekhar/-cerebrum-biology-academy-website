@@ -281,7 +281,7 @@ export default function TermsOfServicePage() {
                 <p>For questions about these Terms of Service, please contact us:</p>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <p>
-                    <strong>Email:</strong> legal@cerebrumbiologyacademy.com
+                    <strong>Email:</strong> shekharcsingh57@gmail.com
                   </p>
                   <p>
                     <strong>Phone:</strong> +91 88264 44334

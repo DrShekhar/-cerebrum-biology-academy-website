@@ -240,7 +240,7 @@ export function NEETCoachingMeeraBaghContent() {
       'Best NEET coaching for Meera Bagh, Paschim Vihar students. Premium West Delhi area near Virat Kohli residence. AIIMS faculty, 98% success rate.',
     url: pageUrl,
     telephone: CONTACT_INFO.phone.primary,
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     logo: `${baseUrl}/logo.png`,
     priceRange: '₹40,000 - ₹1,80,000',
     address: {

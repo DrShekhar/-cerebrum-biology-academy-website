@@ -135,7 +135,7 @@ export function LocalitySchema({
     description: `Premier NEET Biology coaching institute serving ${locality}, Delhi. Expert AIIMS faculty with 98% success rate.`,
     url: BASE_URL,
     telephone: CONTACT_INFO.phone.primary,
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     logo: {
       '@type': 'ImageObject',
       url: `${BASE_URL}/logo.png`,

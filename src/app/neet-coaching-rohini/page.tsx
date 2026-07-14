@@ -610,10 +610,10 @@ export default function NEETCoachingRohiniPage() {
                     </p>
                     <p className="text-gray-600 text-sm">
                       <a
-                        href="mailto:info@cerebrumbiologyacademy.com"
+                        href="mailto:shekharcsingh57@gmail.com"
                         className="text-green-600 hover:underline"
                       >
-                        info@cerebrumbiologyacademy.com
+                        shekharcsingh57@gmail.com
                       </a>
                     </p>
                   </div>

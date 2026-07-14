@@ -132,7 +132,7 @@ function DelhiLocalBusinessSchema() {
     image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
     url: 'https://cerebrumbiologyacademy.com/locations/delhi',
     telephone: '+91-88264-44334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'D 35, South Extension Part 2',
@@ -211,7 +211,7 @@ function DelhiFAQSchema() {
         name: 'What are the fees for NEET coaching at Cerebrum Delhi centers?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on the batch type and course duration. We offer EMI options for all Delhi students. Email info@cerebrumbiologyacademy.com or call +91-88264-44334 for detailed fee information and special discounts.',
+          text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on the batch type and course duration. We offer EMI options for all Delhi students. Email shekharcsingh57@gmail.com or call +91-88264-44334 for detailed fee information and special discounts.',
         },
       },
     ],

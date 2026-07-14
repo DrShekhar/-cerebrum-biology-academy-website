@@ -700,7 +700,7 @@ async function handleHelp(userId: string): Promise<BotMessage> {
 Reply with numbers to select options from lists.
 
 *Need more help?*
-Contact us: support@cerebrumbiologyacademy.com
+Contact us: shekharcsingh57@gmail.com
 WhatsApp: +91 88264 44334`,
     buttons: [
       { id: 'menu', title: '🏠 Main Menu' },
@@ -714,7 +714,7 @@ async function handleHelpInput(userId: string, input: string): Promise<BotMessag
     return {
       text: `📞 *Contact Support*
 
-Email: support@cerebrumbiologyacademy.com
+Email: shekharcsingh57@gmail.com
 WhatsApp: +91 88264 44334
 Website: ${SITE_URL}/support
 

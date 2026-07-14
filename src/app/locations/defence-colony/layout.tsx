@@ -77,7 +77,7 @@ function DefenceColonyLocalBusinessSchema() {
     image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
     url: 'https://cerebrumbiologyacademy.com/locations/defence-colony',
     telephone: '+91-88264-44334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Near South Extension',
@@ -156,7 +156,7 @@ function DefenceColonyFAQSchema() {
         name: 'How much are the NEET coaching fees at Cerebrum?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Biology Academy offers NEET coaching fees ranging from Rs. 45,000 to Rs. 1,80,000 depending on the batch type and duration. We provide flexible EMI options for Defence Colony students. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed pricing.',
+          text: 'Cerebrum Biology Academy offers NEET coaching fees ranging from Rs. 45,000 to Rs. 1,80,000 depending on the batch type and duration. We provide flexible EMI options for Defence Colony students. Contact shekharcsingh57@gmail.com or +91-88264-44334 for detailed pricing.',
         },
       },
     ],

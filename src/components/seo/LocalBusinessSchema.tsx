@@ -293,7 +293,7 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     description: `Best NEET Biology Coaching in ${location.addressLocality}. Expert AIIMS faculty, 98% success rate. Live classes, comprehensive study material, and personalized attention for ${location.studentCount}+ students.`,
     url: location.url,
     telephone: location.phone,
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     image: location.image,
     logo: `${baseUrl}/logo.png`,
     priceRange: location.priceRange,

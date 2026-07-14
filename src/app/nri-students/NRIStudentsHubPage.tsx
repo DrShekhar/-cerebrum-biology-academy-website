@@ -1001,7 +1001,7 @@ export function NRIStudentsHubPage() {
 
             <div className="text-sm opacity-80">
               <p>Available 8 AM - 10 PM IST | +91 8826444334</p>
-              <p className="mt-1">info@cerebrumbiologyacademy.com</p>
+              <p className="mt-1">shekharcsingh57@gmail.com</p>
             </div>
           </div>
         </div>

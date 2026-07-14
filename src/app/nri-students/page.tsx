@@ -36,7 +36,7 @@ const organizationSchema = {
   url: 'https://cerebrumbiologyacademy.com',
   logo: 'https://cerebrumbiologyacademy.com/logo.png',
   telephone: '+91-8826444334',
-  email: 'contact@cerebrumbiologyacademy.com',
+  email: 'shekharcsingh57@gmail.com',
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'IN',

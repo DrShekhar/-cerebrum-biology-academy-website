@@ -88,7 +88,7 @@ export const routes = {
     secondary: 'tel:+918826444334',
   },
 
-  email: 'mailto:info@cerebrumbiologyacademy.com',
+  email: 'mailto:shekharcsingh57@gmail.com',
 } as const
 
 /**

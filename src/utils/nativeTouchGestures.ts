@@ -266,7 +266,7 @@ export const QuickActions = {
     }
   },
 
-  emailButton: (email: string = 'contact@cerebrumbiologyacademy.com', subject?: string) => {
+  emailButton: (email: string = 'shekharcsingh57@gmail.com', subject?: string) => {
     const defaultSubject = 'Inquiry about NEET Biology Coaching'
     const emailUrl = `mailto:${email}?subject=${encodeURIComponent(subject || defaultSubject)}`
 

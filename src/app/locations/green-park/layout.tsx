@@ -130,7 +130,7 @@ function GreenParkFAQSchema() {
         name: 'What are the NEET coaching fees at Cerebrum Green Park center?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer flexible EMI options and special rates for Green Park students. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed pricing.',
+          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer flexible EMI options and special rates for Green Park students. Contact shekharcsingh57@gmail.com or +91-88264-44334 for detailed pricing.',
         },
       },
     ],

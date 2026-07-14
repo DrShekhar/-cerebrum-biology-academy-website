@@ -90,7 +90,7 @@ export default function SafdarjungEnclaveLayout({ children }: { children: React.
             image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             url: 'https://cerebrumbiologyacademy.com/locations/safdarjung-enclave',
             telephone: '+91-88264-44334',
-            email: 'info@cerebrumbiologyacademy.com',
+            email: 'shekharcsingh57@gmail.com',
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'Near South Extension',
@@ -172,7 +172,7 @@ export default function SafdarjungEnclaveLayout({ children }: { children: React.
                 name: 'What are the NEET coaching fees for Safdarjung Enclave students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment plans for Safdarjung Enclave families. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed fee structure.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment plans for Safdarjung Enclave families. Contact shekharcsingh57@gmail.com or +91-88264-44334 for detailed fee structure.',
                 },
               },
             ],

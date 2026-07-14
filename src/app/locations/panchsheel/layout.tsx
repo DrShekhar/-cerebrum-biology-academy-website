@@ -77,7 +77,7 @@ function PanchsheelLocalBusinessSchema() {
     image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
     url: 'https://cerebrumbiologyacademy.com/locations/panchsheel',
     telephone: '+91-88264-44334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Near South Extension',
@@ -163,7 +163,7 @@ export default function PanchsheelLayout({ children }: { children: React.ReactNo
                 name: 'What are the NEET coaching fees for Panchsheel students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment options for Panchsheel families. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed fee information.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment options for Panchsheel families. Contact shekharcsingh57@gmail.com or +91-88264-44334 for detailed fee information.',
                 },
               },
             ],

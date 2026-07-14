@@ -805,7 +805,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                   <Mail className="w-5 h-5 text-purple-600 mr-3" />
                   <div>
                     <div className="font-medium text-gray-900">Email</div>
-                    <div className="text-purple-600">info@cerebrumbiologyacademy.com</div>
+                    <div className="text-purple-600">shekharcsingh57@gmail.com</div>
                   </div>
                 </div>
               </div>

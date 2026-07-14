@@ -480,7 +480,7 @@ class GlobalSEOService {
         home: 'Premier MCAT Biology preparation for US medical school aspirants. Expert Indian faculty, flexible timings, and comprehensive curriculum designed for American pre-med students.',
         courses:
           'MCAT Biology courses tailored for US medical schools. Section-wise preparation, practice tests, and personalized coaching to excel in MCAT Biology section.',
-        contact: `Contact Cerebrum Biology Academy USA for MCAT Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email usa@cerebrumbiologyacademy.com for course information.`,
+        contact: `Contact Cerebrum Biology Academy USA for MCAT Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email shekharcsingh57@gmail.com for course information.`,
         about:
           'Cerebrum Biology Academy USA provides world-class Biology coaching for American medical school aspirants with 5 years of proven success in MCAT preparation.',
       },
@@ -488,7 +488,7 @@ class GlobalSEOService {
         home: 'Expert Biology coaching for UK medical school admissions. BMAT, UCAT preparation with experienced faculty. Perfect for A-level students pursuing medicine in UK universities.',
         courses:
           'Medical Biology courses for UK universities. BMAT Biology, UCAT preparation, and A-level Biology coaching designed for UK medical school admissions.',
-        contact: `Contact Cerebrum Biology Academy UK for medical school Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email uk@cerebrumbiologyacademy.com.`,
+        contact: `Contact Cerebrum Biology Academy UK for medical school Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email shekharcsingh57@gmail.com.`,
         about:
           'Cerebrum Biology Academy UK specializes in medical school Biology coaching with 4 years of success helping students secure admission to top UK medical universities.',
       },
@@ -496,7 +496,7 @@ class GlobalSEOService {
         home: 'Leading GAMSAT Biology preparation in Australia. Expert coaching for medical school admissions with personalized study plans and Section 3 mastery.',
         courses:
           'GAMSAT Biology courses for Australian medical schools. Section 3 preparation, practice tests, and comprehensive Biology coaching for GAMSAT success.',
-        contact: `Contact Cerebrum Biology Academy Australia for GAMSAT Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email australia@cerebrumbiologyacademy.com.`,
+        contact: `Contact Cerebrum Biology Academy Australia for GAMSAT Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email shekharcsingh57@gmail.com.`,
         about:
           'Cerebrum Biology Academy Australia provides expert GAMSAT Biology coaching with 3 years of proven success in Australian medical school admissions.',
       },
@@ -504,7 +504,7 @@ class GlobalSEOService {
         home: 'Expert MCAT Biology preparation for Canadian medical schools. Comprehensive coaching with flexible timings designed for Canadian pre-med students.',
         courses:
           'MCAT Biology courses for Canadian medical schools. Section-wise preparation, practice tests, and expert coaching for MCAT Biology success.',
-        contact: `Contact Cerebrum Biology Academy Canada for MCAT Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email canada@cerebrumbiologyacademy.com.`,
+        contact: `Contact Cerebrum Biology Academy Canada for MCAT Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email shekharcsingh57@gmail.com.`,
         about:
           'Cerebrum Biology Academy Canada specializes in MCAT Biology preparation with 3 years of success helping students enter top Canadian medical schools.',
       },
@@ -520,7 +520,7 @@ class GlobalSEOService {
         home: 'Trusted NEET Biology coaching in Singapore with world-class faculty. Hybrid learning model combining Asian education values with modern teaching.',
         courses:
           'NEET Biology courses in Singapore with flexible timings. Expert coaching, comprehensive curriculum, and personalized attention for success.',
-        contact: `Contact Cerebrum Biology Academy Singapore for NEET Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email singapore@cerebrumbiologyacademy.com.`,
+        contact: `Contact Cerebrum Biology Academy Singapore for NEET Biology coaching. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or email shekharcsingh57@gmail.com.`,
         about:
           'Cerebrum Biology Academy Singapore offers premium NEET Biology coaching with 3 years of excellence and 92% success rate.',
       },

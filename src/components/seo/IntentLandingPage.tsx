@@ -98,7 +98,7 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
     description: data.metaDescription,
     url: baseUrl,
     telephone: CONTACT_INFO.phone.primary,
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     logo: {
       '@type': 'ImageObject',
       url: `${baseUrl}/logo.png`,

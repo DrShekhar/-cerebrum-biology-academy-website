@@ -262,7 +262,7 @@ export default function RohiniLayout({ children }: { children: React.ReactNode }
                 name: 'What is the fee structure for NEET coaching at Cerebrum Academy Rohini?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options and scholarship programs for deserving Rohini students. Contact +91-88264-44334 or info@cerebrumbiologyacademy.com for detailed pricing.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options and scholarship programs for deserving Rohini students. Contact +91-88264-44334 or shekharcsingh57@gmail.com for detailed pricing.',
                 },
               },
             ],

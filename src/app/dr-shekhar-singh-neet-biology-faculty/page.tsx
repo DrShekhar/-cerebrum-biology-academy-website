@@ -392,7 +392,7 @@ export default function DrShekharSinghPage() {
               'https://www.youtube.com/@cerebrumbiologyacademy',
               'https://www.instagram.com/cerebrumbiologyacademy/',
             ],
-            email: 'drshekhar@cerebrumbiologyacademy.com',
+            email: 'shekharcsingh57@gmail.com',
             telephone: '+918826444334',
             nationality: { '@type': 'Country', name: 'India' },
             alumniOf: {

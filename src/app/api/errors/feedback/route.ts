@@ -71,7 +71,7 @@ async function storeFeedback(feedback: z.infer<typeof feedbackSchema>, clientIP:
 
 async function notifyTeam(feedback: z.infer<typeof feedbackSchema>) {
   try {
-    const devTeamEmail = process.env.DEV_TEAM_EMAIL || 'support@cerebrumbiologyacademy.com'
+    const devTeamEmail = process.env.DEV_TEAM_EMAIL || 'shekharcsingh57@gmail.com'
 
     const htmlContent = `
 <!DOCTYPE html>

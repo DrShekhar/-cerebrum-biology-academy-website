@@ -36,8 +36,8 @@ export async function GET() {
       <link>${siteUrl}/blog</link>
     </image>
     <copyright>Copyright ${new Date().getFullYear()} Cerebrum Biology Academy</copyright>
-    <managingEditor>contact@cerebrumbiologyacademy.com (Cerebrum Biology Academy)</managingEditor>
-    <webMaster>contact@cerebrumbiologyacademy.com (Cerebrum Biology Academy)</webMaster>
+    <managingEditor>shekharcsingh57@gmail.com (Cerebrum Biology Academy)</managingEditor>
+    <webMaster>shekharcsingh57@gmail.com (Cerebrum Biology Academy)</webMaster>
     <category>Education</category>
     <category>NEET Preparation</category>
     <category>Biology</category>
