@@ -201,7 +201,7 @@ const FAQS = [
   {
     question: 'How does pricing work for US students?',
     answer:
-      'Pricing depends on the exam, tier (1:1 vs small batch) and hours, quoted in US dollars. We don’t publish a flat price sheet because the right plan varies by student — a free trial class comes first, then we share the USD quote. International payment via card / PayPal / Wise / Stripe.',
+      'Pricing depends on the exam, tier (1:1 vs small batch) and hours, quoted in US dollars. We don’t publish a flat price sheet because the right plan varies by student — a free trial class comes first, then we share the USD quote. Pay securely by international debit or credit card.',
   },
   {
     question: 'How much does it cost, and is online as good as in-person?',
