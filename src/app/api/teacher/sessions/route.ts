@@ -8,6 +8,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
+import { parseISTDateTime, wallTimeOf } from '@/lib/utils/datetime'
 
 const createSessionSchema = z.object({
   courseId: z.string(),
@@ -220,9 +221,9 @@ export async function POST(req: NextRequest) {
           title: validatedData.title,
           description: validatedData.description,
           sessionType: validatedData.sessionType,
-          scheduledDate: new Date(validatedData.scheduledDate),
-          startTime: new Date(validatedData.startTime),
-          endTime: new Date(validatedData.endTime),
+          scheduledDate: parseISTDateTime(validatedData.scheduledDate),
+          startTime: parseISTDateTime(validatedData.startTime),
+          endTime: parseISTDateTime(validatedData.endTime),
           duration: validatedData.duration,
           teacherId: session.user.id,
           meetingLink: validatedData.meetingLink,
@@ -271,36 +272,41 @@ export async function POST(req: NextRequest) {
 function generateRecurringSessions(data: any, teacherId: string) {
   const sessions = []
   const { recurringPattern } = data
-  const startDate = new Date(data.scheduledDate)
-  const endDate = new Date(recurringPattern.endDate)
-  const startTime = new Date(data.startTime)
-  const endTime = new Date(data.endTime)
 
-  const currentDate = new Date(startDate)
+  // Work entirely in IST wall-clock terms. The naive datetime-local inputs are
+  // IST; iterating with plain new Date()/getHours()/setHours() would run in the
+  // server's timezone (UTC on Vercel) and shift every occurrence by +5:30.
+  const startYmd = String(data.scheduledDate).slice(0, 10) // "YYYY-MM-DD"
+  const endYmd = String(recurringPattern.endDate).slice(0, 10)
+  const startHHmm = wallTimeOf(data.startTime) || '00:00'
+  const endHHmm = wallTimeOf(data.endTime) || '00:00'
+  const startDayOfMonth = parseInt(startYmd.slice(8, 10), 10)
 
-  while (currentDate <= endDate) {
+  // Iterate calendar dates in UTC so day boundaries/weekday are stable regardless
+  // of the server timezone (each date is anchored at UTC-midnight).
+  const cursor = new Date(`${startYmd}T00:00:00Z`)
+  const end = new Date(`${endYmd}T00:00:00Z`)
+
+  while (cursor <= end) {
+    const ymd = cursor.toISOString().slice(0, 10)
+    const dayOfWeek = cursor.getUTCDay()
+    const dayOfMonth = cursor.getUTCDate()
     let shouldCreate = false
 
     if (recurringPattern.frequency === 'DAILY') {
       shouldCreate = true
     } else if (
       recurringPattern.frequency === 'WEEKLY' &&
-      recurringPattern.daysOfWeek?.includes(currentDate.getDay())
+      recurringPattern.daysOfWeek?.includes(dayOfWeek)
     ) {
       shouldCreate = true
-    } else if (
-      recurringPattern.frequency === 'MONTHLY' &&
-      currentDate.getDate() === startDate.getDate()
-    ) {
+    } else if (recurringPattern.frequency === 'MONTHLY' && dayOfMonth === startDayOfMonth) {
       shouldCreate = true
     }
 
     if (shouldCreate) {
-      const sessionStartTime = new Date(currentDate)
-      sessionStartTime.setHours(startTime.getHours(), startTime.getMinutes(), 0, 0)
-
-      const sessionEndTime = new Date(currentDate)
-      sessionEndTime.setHours(endTime.getHours(), endTime.getMinutes(), 0, 0)
+      const sessionStartTime = parseISTDateTime(`${ymd}T${startHHmm}`)
+      const sessionEndTime = parseISTDateTime(`${ymd}T${endHHmm}`)
 
       sessions.push({
         // class_sessions.id has no DB default and updatedAt has no @updatedAt —
@@ -313,7 +319,7 @@ function generateRecurringSessions(data: any, teacherId: string) {
         title: data.title,
         description: data.description,
         sessionType: data.sessionType,
-        scheduledDate: new Date(currentDate),
+        scheduledDate: parseISTDateTime(ymd),
         startTime: sessionStartTime,
         endTime: sessionEndTime,
         duration: data.duration,
@@ -329,12 +335,14 @@ function generateRecurringSessions(data: any, teacherId: string) {
       })
     }
 
+    // Advance the UTC-anchored cursor. Using setUTC* keeps the iteration in the
+    // same timezone frame the weekday/day-of-month checks above rely on.
     if (recurringPattern.frequency === 'DAILY') {
-      currentDate.setDate(currentDate.getDate() + recurringPattern.interval)
+      cursor.setUTCDate(cursor.getUTCDate() + recurringPattern.interval)
     } else if (recurringPattern.frequency === 'WEEKLY') {
-      currentDate.setDate(currentDate.getDate() + 7 * recurringPattern.interval)
+      cursor.setUTCDate(cursor.getUTCDate() + 7 * recurringPattern.interval)
     } else if (recurringPattern.frequency === 'MONTHLY') {
-      currentDate.setMonth(currentDate.getMonth() + recurringPattern.interval)
+      cursor.setUTCMonth(cursor.getUTCMonth() + recurringPattern.interval)
     }
   }
 
