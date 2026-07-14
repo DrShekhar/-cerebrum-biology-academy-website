@@ -125,7 +125,24 @@ export async function POST(request: NextRequest) {
       key_secret: razorpayKeySecret,
     })
 
-    const amountInPaise = Math.round(validatedData.amount * 100)
+    // SECURITY: never trust the client-sent amount — derive the price from the
+    // course record (courses.totalFees is stored in paise). Otherwise a client
+    // could POST amount:1 and buy any course for ₹1.
+    const amountInPaise = course.totalFees
+    if (!amountInPaise || amountInPaise <= 0) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'This course is not available for online purchase. Please contact us to enroll.',
+        },
+        { status: 400 }
+      )
+    }
+    if (Math.round(validatedData.amount * 100) !== amountInPaise) {
+      console.warn(
+        `[purchase] client amount ₹${validatedData.amount} != server price ₹${amountInPaise / 100} for course ${validatedData.courseId} — charging server price`
+      )
+    }
 
     // Create enrollment and payment records in a transaction
     const result = await prisma.$transaction(async (tx) => {
