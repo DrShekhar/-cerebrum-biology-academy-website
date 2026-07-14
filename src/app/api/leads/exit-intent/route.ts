@@ -36,6 +36,9 @@ export async function POST(request: NextRequest) {
 
     const body = await request.json()
     const { email, phone, name, source, variant, page } = body
+    // Attribution the client already sends (getTrackingDataForAPI) but the CRM
+    // write was dropping. `referrer` is the client key → DB column referrerUrl.
+    const { utmSource, utmMedium, utmCampaign, utmTerm, utmContent, gclid, fbclid, referrer } = body
 
     if (!email || !phone) {
       return NextResponse.json(
@@ -87,6 +90,14 @@ export async function POST(request: NextRequest) {
       email,
       source: `exit-intent:${variant || 'discount'}:${page || '/'}`,
       courseInterest: 'Exit-intent offer',
+      utmSource,
+      utmMedium,
+      utmCampaign,
+      utmTerm,
+      utmContent,
+      gclid,
+      fbclid,
+      referrerUrl: referrer,
     }).catch(() => {})
 
     // Send WhatsApp welcome + notify admin + schedule nurturing (non-blocking)

@@ -34,7 +34,11 @@ const contactInquirySchema = z.object({
   utmMedium: z.string().max(100).optional(),
   utmCampaign: z.string().max(100).optional(),
   utmContent: z.string().max(100).optional(),
+  utmTerm: z.string().max(100).optional(),
   gclid: z.string().max(200).optional(),
+  fbclid: z.string().max(200).optional(),
+  // Client (getTrackingDataForAPI) emits `referrer`; persisted as referrerUrl.
+  referrer: z.string().max(500).optional(),
 })
 
 type ContactInquiryInput = z.infer<typeof contactInquirySchema>
@@ -183,7 +187,11 @@ export async function POST(request: NextRequest) {
       utmSource: data.utmSource,
       utmMedium: data.utmMedium,
       utmCampaign: data.utmCampaign,
+      utmContent: data.utmContent,
+      utmTerm: data.utmTerm,
       gclid: data.gclid,
+      fbclid: data.fbclid,
+      referrerUrl: data.referrer,
       priority: data.supportType === 'admission' ? 'HOT' : 'WARM',
     }).catch(() => {})
 

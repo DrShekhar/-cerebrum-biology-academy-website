@@ -18,6 +18,7 @@
 import { useState, type FormEvent } from 'react'
 import { User, Mail, Phone, Globe, Send, Loader2, CheckCircle2 } from 'lucide-react'
 import { isMobileDevice, openDesktopWhatsAppModal } from '@/lib/whatsapp/tracking'
+import { getTrackingDataForAPI } from '@/lib/tracking/utm'
 
 const PROGRAMMES = [
   'IB Biology (HL/SL)',
@@ -72,6 +73,9 @@ export function GlobalEnquiryForm({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          // Attribution first (utm/gclid/referrer); explicit fields below override
+          // its `source`/`landingPage` so the form's own source label wins.
+          ...getTrackingDataForAPI(),
           name: name.trim(),
           phone,
           email: email.trim() || undefined,

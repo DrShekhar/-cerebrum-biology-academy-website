@@ -25,6 +25,15 @@ const enquirySchema = z.object({
   message: z.string().max(1000, 'Message must be less than 1000 characters').optional(),
   source: z.string().default('website'),
   pageUrl: z.string().optional(),
+  // Attribution (from getTrackingDataForAPI). `referrer` → DB column referrerUrl.
+  utmSource: z.string().max(100).optional(),
+  utmMedium: z.string().max(100).optional(),
+  utmCampaign: z.string().max(100).optional(),
+  utmContent: z.string().max(100).optional(),
+  utmTerm: z.string().max(100).optional(),
+  gclid: z.string().max(200).optional(),
+  fbclid: z.string().max(200).optional(),
+  referrer: z.string().max(500).optional(),
 })
 
 // Rate limiting store (use Redis in production)
@@ -109,6 +118,14 @@ export async function POST(request: NextRequest) {
       courseInterest: data.area ? `Biology coaching — ${data.area}` : undefined,
       source: data.source || `enquiry:${data.pageUrl || 'website'}`,
       message: data.message,
+      utmSource: data.utmSource,
+      utmMedium: data.utmMedium,
+      utmCampaign: data.utmCampaign,
+      utmContent: data.utmContent,
+      utmTerm: data.utmTerm,
+      gclid: data.gclid,
+      fbclid: data.fbclid,
+      referrerUrl: data.referrer,
     }).catch(() => {})
 
     // Build the pre-filled WhatsApp message addressed to admin.
