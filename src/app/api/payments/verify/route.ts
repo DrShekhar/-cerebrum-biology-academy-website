@@ -7,6 +7,7 @@ import { WebhookService } from '@/lib/webhooks/webhookService'
 import { validateUserSession } from '@/lib/auth/config'
 import { mapCourseToTier } from '@/lib/payments/tierMapping'
 import { fetchOrderTier } from '@/lib/payments/razorpayOrder'
+import { sendEnrollmentConfirmation } from '@/lib/notifications/enrollmentConfirmation'
 import { logger } from '@/lib/logger'
 import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 
@@ -219,35 +220,15 @@ export async function POST(request: NextRequest) {
           logger.info(`Payment verified and updated: ${orderId}`)
         })
 
-        // Trigger notifications after successful transaction (fire-and-forget)
+        // Trigger notifications after successful transaction (fire-and-forget).
         if (enrollmentId && userId && courseId) {
-          // Trigger WhatsApp notification
-          fetch(`${request.nextUrl.origin}/api/notifications/whatsapp`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              orderId,
-              enrollmentId,
-              userId,
-              courseId,
-              type: 'enrollment_confirmation',
-            }),
-          }).catch((err) => logger.error('WhatsApp notification failed:', err))
+          // Send the student's confirmation DIRECTLY via the services. The old
+          // code did a server-to-server fetch to the /api/notifications/* routes
+          // without cookies — those are staff-gated, so every call 401'd and the
+          // student got nothing.
+          void sendEnrollmentConfirmation({ userId, courseId })
 
-          // Trigger email notification
-          fetch(`${request.nextUrl.origin}/api/notifications/email`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              orderId,
-              enrollmentId,
-              userId,
-              courseId,
-              type: 'enrollment_confirmation',
-            }),
-          }).catch((err) => logger.error('Email notification failed:', err))
-
-          logger.info('Triggered WhatsApp and Email notifications')
+          logger.info('Sent enrollment confirmation (WhatsApp + email)')
 
           // Dispatch payment.received webhook for external CRM integration
           try {
