@@ -461,7 +461,7 @@ export default function APBiologyTutorPage() {
               Achieve your target AP Biology score with expert tutoring from AIIMS-trained faculty
               (AIIMS — India&apos;s apex medical institute, peer to Harvard Medical School in
               selectivity). Our proven curriculum covers all College Board units, FRQ strategies,
-              and lab investigations. Join 300+ students who scored 4-5!
+              and lab investigations — built to help you target a 4 or 5.
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-4">
@@ -889,8 +889,8 @@ export default function APBiologyTutorPage() {
               Ready to Score 5 on Your AP Biology Exam?
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-              Join 300+ students who achieved their target scores. Expert tutoring, proven
-              curriculum, personalized attention. Your AP Bio success starts here!
+              Expert tutoring, a proven curriculum, and personalized attention to help you reach
+              your target score. Your AP Bio prep starts here!
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
