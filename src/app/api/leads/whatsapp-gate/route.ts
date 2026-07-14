@@ -30,12 +30,16 @@ export async function POST(request: NextRequest) {
 
     if (!phone || !/^\d{8,15}$/.test(phone.replace(/\D/g, ''))) {
       return NextResponse.json(
-        { success: false, error: 'A valid 10-digit phone number is required' },
+        { success: false, error: 'A valid phone number is required' },
         { status: 400 }
       )
     }
 
-    const cleanPhone = phone.replace(/\D/g, '').slice(-10)
+    // Preserve the FULL number incl. country code — slicing to the last 10
+    // digits dropped the +1 on US numbers, making the lead uncallable. Dedup
+    // still happens on the last-10 inside upsertLeadCore.
+    const digits = phone.replace(/\D/g, '')
+    const cleanPhone = phone.trim().startsWith('+') ? `+${digits}` : digits
 
     const existingLead = await prisma.content_leads.findFirst({
       where: {
