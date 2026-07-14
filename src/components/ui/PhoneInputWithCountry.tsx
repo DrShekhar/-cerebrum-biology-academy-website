@@ -1,11 +1,38 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import {
   COUNTRY_DIAL_CODES,
   countryFlagEmoji,
   matchDialCode,
 } from '@/lib/constants/countryDialCodes'
+
+/**
+ * Best-effort visitor country from the browser time zone (then locale), so an
+ * empty phone field pre-selects the right dial code (US +1, UK +44, …) instead
+ * of always defaulting to India. Returns an ISO2 or null. India zones map to IN,
+ * so Indian visitors are unaffected.
+ */
+function guessCountryIso2(): string | null {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''
+    if (/^America\//.test(tz)) {
+      if (/Toronto|Vancouver|Edmonton|Winnipeg|Halifax|Montreal|Regina|St_Johns/.test(tz))
+        return 'CA'
+      return 'US'
+    }
+    if (tz === 'Europe/London') return 'GB'
+    if (/^Asia\/(Dubai|Muscat)/.test(tz)) return 'AE'
+    if (tz === 'Asia/Singapore') return 'SG'
+    if (/^Australia\//.test(tz)) return 'AU'
+    if (tz === 'Asia/Kolkata' || tz === 'Asia/Calcutta') return 'IN'
+    const loc = (typeof navigator !== 'undefined' ? navigator.language : '') || ''
+    const m = loc.toUpperCase().match(/[-_]([A-Z]{2})$/)
+    return m ? m[1] : null
+  } catch {
+    return null
+  }
+}
 
 interface PhoneInputWithCountryProps {
   /** Full number including dial code, e.g. "+919876543210". Empty when unset. */
@@ -14,6 +41,9 @@ interface PhoneInputWithCountryProps {
   onChange: (fullNumber: string) => void
   id?: string
   defaultIso2?: string
+  /** Auto-pick the country from the visitor's browser (time zone/locale) when
+   *  the field is empty. Default true; India visitors still resolve to IN. */
+  autoDetectCountry?: boolean
   placeholder?: string
   required?: boolean
   disabled?: boolean
@@ -37,6 +67,7 @@ export function PhoneInputWithCountry({
   onChange,
   id,
   defaultIso2 = 'IN',
+  autoDetectCountry = true,
   placeholder,
   required,
   disabled,
@@ -54,6 +85,19 @@ export function PhoneInputWithCountry({
 
   const [iso2, setIso2] = useState(initial.iso2)
   const [national, setNational] = useState(initial.national)
+
+  // On mount, if the field is empty (new-lead flow) and no number/dial code was
+  // pre-parsed, pre-select the visitor's country. Client-only (post-hydration),
+  // and it only changes the displayed country — it does NOT emit a value, so an
+  // untouched field stays empty. India visitors resolve to IN (no visible change).
+  useEffect(() => {
+    if (!autoDetectCountry || value || national) return
+    const guessed = guessCountryIso2()
+    if (guessed && guessed !== iso2 && COUNTRY_DIAL_CODES.some((c) => c.iso2 === guessed)) {
+      setIso2(guessed)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- run once on mount
+  }, [])
 
   const country = COUNTRY_DIAL_CODES.find((c) => c.iso2 === iso2) ?? COUNTRY_DIAL_CODES[0]
 

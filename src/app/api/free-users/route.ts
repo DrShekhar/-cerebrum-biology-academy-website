@@ -28,11 +28,14 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Clean phone number (remove non-digits)
-    const cleanPhone = phone.replace(/\D/g, '').slice(-10)
+    // Preserve the FULL number incl. country code (US +1 etc.) — the old
+    // last-10 slice made overseas leads uncallable. `digits` (no +) is used
+    // only to build the synthetic unique email below.
+    const digits = phone.replace(/\D/g, '')
+    const cleanPhone = phone.trim().startsWith('+') ? `+${digits}` : digits
 
     // Generate email from phone if not provided (for unique constraint)
-    const userEmail = email || `${cleanPhone}@mcq.cerebrumbiologyacademy.com`
+    const userEmail = email || `${digits}@mcq.cerebrumbiologyacademy.com`
 
     try {
       // Check if user already exists with this email

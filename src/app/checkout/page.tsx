@@ -163,7 +163,13 @@ function CheckoutContent() {
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
       newErrors.email = 'Invalid email address'
     if (!formData.phone.trim()) newErrors.phone = 'Phone number is required'
-    else if (!/^[6-9]\d{9}$/.test(formData.phone)) newErrors.phone = 'Invalid phone number'
+    else {
+      // Accept international numbers (US +1, UK +44, etc.), not just Indian
+      // 10-digit mobiles — an India-only gate blocked every overseas checkout.
+      const phoneDigits = formData.phone.replace(/\D/g, '')
+      if (phoneDigits.length < 8 || phoneDigits.length > 15)
+        newErrors.phone = 'Enter a valid phone number, including country code'
+    }
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -470,8 +476,8 @@ function CheckoutContent() {
                 'w-full pl-11 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent',
                 errors.phone ? 'border-red-500' : 'border-gray-300'
               )}
-              placeholder="10-digit mobile number"
-              maxLength={10}
+              placeholder="Phone with country code (e.g. +1 555 123 4567)"
+              maxLength={20}
             />
           </div>
           {errors.phone && (
@@ -510,8 +516,8 @@ function CheckoutContent() {
               value={formData.parentPhone}
               onChange={handleInputChange}
               className="w-full pl-11 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Parent's phone number"
-              maxLength={10}
+              placeholder="Parent's phone (with country code)"
+              maxLength={20}
             />
           </div>
         </div>
