@@ -4,6 +4,7 @@ import { z } from 'zod'
 import { validateUserSession } from '@/lib/auth/config'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
+import { answerToLetter } from '@/lib/cbt/paper'
 
 interface RouteParams {
   params: Promise<{
@@ -247,6 +248,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       select: {
         id: true,
         correctAnswer: true,
+        options: true,
         marks: true,
         topic: true,
         difficulty: true,
@@ -273,11 +275,16 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       },
     })
 
-    // Case/space-insensitive compare: correctAnswer is stored as a letter but
-    // casing varies across seed batches (e.g. 'a' vs 'A'); the player posts
-    // uppercase letters. Normalizing avoids false negatives.
+    // The player posts an option LETTER (A/B/C/…). But `correctAnswer` is stored
+    // inconsistently across seed batches — letter, full option TEXT, or a numeric
+    // index. Resolve it to a letter first; a raw string compare silently misgrades
+    // every text/numeric-keyed question. Fall back to the raw compare only when it
+    // can't be resolved so genuinely odd data doesn't regress.
     const norm = (v: string) => (v ?? '').toString().trim().toUpperCase()
-    const isCorrect = norm(validatedData.selectedAnswer) === norm(question.correctAnswer)
+    const correct = answerToLetter(question.options, question.correctAnswer)
+    const isCorrect = correct
+      ? norm(validatedData.selectedAnswer) === correct
+      : norm(validatedData.selectedAnswer) === norm(question.correctAnswer)
     const marksAwarded = calculateMarks(
       isCorrect,
       question.marks,

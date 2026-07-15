@@ -11,6 +11,7 @@ import { Input } from '@/components/ui/Input'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Calendar, Clock, Video, MapPin, BookOpen, Save, X } from 'lucide-react'
 import { showToast } from '@/lib/toast'
+import { toISTDateInput, toISTDateTimeLocal } from '@/lib/utils/datetime'
 import type { ClassSession } from '@/types/attendance'
 
 interface SessionFormProps {
@@ -27,11 +28,9 @@ export function SessionForm({ session, onSuccess, onCancel }: SessionFormProps) 
     title: session?.title || '',
     description: session?.description || '',
     sessionType: session?.sessionType || 'REGULAR',
-    scheduledDate: session?.scheduledDate
-      ? new Date(session.scheduledDate).toISOString().split('T')[0]
-      : '',
-    startTime: session?.startTime ? new Date(session.startTime).toISOString().slice(0, 16) : '',
-    endTime: session?.endTime ? new Date(session.endTime).toISOString().slice(0, 16) : '',
+    scheduledDate: session?.scheduledDate ? toISTDateInput(session.scheduledDate) : '',
+    startTime: session?.startTime ? toISTDateTimeLocal(session.startTime) : '',
+    endTime: session?.endTime ? toISTDateTimeLocal(session.endTime) : '',
     meetingLink: session?.meetingLink || '',
     meetingPassword: session?.meetingPassword || '',
     location: session?.location || '',

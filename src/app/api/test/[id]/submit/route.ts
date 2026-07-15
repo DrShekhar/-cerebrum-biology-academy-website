@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { answerToLetter } from '@/lib/cbt/paper'
 import { z } from 'zod'
 import { validateUserSession } from '@/lib/auth/config'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
@@ -327,11 +328,17 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
         // Get question details
         const question = await prisma.questions.findUnique({
           where: { id: answer.questionId },
-          select: { correctAnswer: true, marks: true },
+          select: { correctAnswer: true, options: true, marks: true },
         })
 
         if (question) {
-          const isCorrect = normAnswer(answer.selectedAnswer) === normAnswer(question.correctAnswer)
+          // Resolve the stored answer to a letter (handles letter/text/numeric
+          // storage); fall back to raw compare only when unresolvable. Matches
+          // the /answer route so per-answer and final scoring never disagree.
+          const correct = answerToLetter(question.options, question.correctAnswer)
+          const isCorrect = correct
+            ? normAnswer(answer.selectedAnswer) === correct
+            : normAnswer(answer.selectedAnswer) === normAnswer(question.correctAnswer)
           const marksAwarded = isCorrect
             ? question.marks
             : testSession.test_templates?.negativeMarking

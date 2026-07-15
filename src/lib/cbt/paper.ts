@@ -78,13 +78,34 @@ type DbQuestion = {
   questionImage: string | null
 }
 
+/**
+ * Resolve a STORED answer to its option LETTER (A/B/C/…).
+ *
+ * Handles the three ways `correctAnswer` is persisted across seed batches:
+ *   - already a letter ('A', 'b')            → uppercased letter
+ *   - the full option TEXT ('Mitochondria')  → matched against options → letter
+ *   - a 1-based numeric index ('2')          → mapped to letter
+ * Returns '' when it cannot be resolved (e.g. options unparseable), so callers
+ * can fall back to a raw compare instead of silently misgrading.
+ */
+export function answerToLetter(options: unknown, correctAnswer: string | null): string {
+  const opts = parseOptions(options)
+  const raw = (correctAnswer || '').trim()
+  if (!raw) return ''
+  if (/^[A-Za-z]$/.test(raw)) return raw.toUpperCase()
+  const textIdx = opts.findIndex((o) => o.trim().toLowerCase() === raw.toLowerCase())
+  if (textIdx >= 0) return letter(textIdx)
+  // 1-based numeric index ('1'..'N')
+  if (/^\d+$/.test(raw)) {
+    const n = parseInt(raw, 10)
+    if (n >= 1 && n <= opts.length) return letter(n - 1)
+  }
+  return ''
+}
+
 /** Server-side: which option LETTER is correct for this question. */
 export function correctLetter(q: DbQuestion): string {
-  const opts = parseOptions(q.options)
-  const raw = (q.correctAnswer || '').trim()
-  if (/^[A-Za-z]$/.test(raw)) return raw.toUpperCase()
-  const idx = opts.findIndex((o) => o.trim().toLowerCase() === raw.toLowerCase())
-  return idx >= 0 ? letter(idx) : ''
+  return answerToLetter(q.options, q.correctAnswer)
 }
 
 /** Map a DB question to the client shape (no correct answer). */

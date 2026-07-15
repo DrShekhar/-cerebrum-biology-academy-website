@@ -9,6 +9,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
+import { parseISTDateTime } from '@/lib/utils/datetime'
 
 const updateSessionSchema = z.object({
   title: z.string().min(1).optional(),
@@ -161,11 +162,12 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
     if (validatedData.description !== undefined) updateData.description = validatedData.description
     if (validatedData.sessionType !== undefined) updateData.sessionType = validatedData.sessionType
     if (validatedData.scheduledDate !== undefined)
-      updateData.scheduledDate = new Date(validatedData.scheduledDate)
+      updateData.scheduledDate = parseISTDateTime(validatedData.scheduledDate)
     if (validatedData.startTime !== undefined) {
-      updateData.startTime = new Date(validatedData.startTime)
+      updateData.startTime = parseISTDateTime(validatedData.startTime)
     }
-    if (validatedData.endTime !== undefined) updateData.endTime = new Date(validatedData.endTime)
+    if (validatedData.endTime !== undefined)
+      updateData.endTime = parseISTDateTime(validatedData.endTime)
     if (validatedData.duration !== undefined) updateData.duration = validatedData.duration
     if (validatedData.meetingLink !== undefined) updateData.meetingLink = validatedData.meetingLink
     if (validatedData.meetingId !== undefined) updateData.meetingId = validatedData.meetingId
