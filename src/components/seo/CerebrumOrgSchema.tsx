@@ -111,11 +111,6 @@ export function CerebrumOrgSchema() {
       'https://www.linkedin.com/company/cerebrumbiologyacademy',
       'https://twitter.com/cerebrumbiology',
     ],
-    award: [
-      'Best Biology Teacher 2025 - Education Excellence Foundation',
-      'Top 10 NEET Coaching 2026 - Career360',
-      'Highest Success Rate 2025 - Gurugram Education Council',
-    ],
     knowsAbout: [
       'NEET Biology',
       'NEET-UG Preparation',

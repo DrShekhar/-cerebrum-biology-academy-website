@@ -12,6 +12,10 @@ import { BRAIN_BEE_CITIES } from '@/data/brain-bee/brainBeeCities'
 import { IBO_COUNTRIES } from '@/data/ibo/iboCountries'
 import { A_LEVEL_BOARDS } from '@/data/a-level/boards'
 import { GLOBAL_EXAMS } from '@/data/global-exams/exams'
+import { countryOlympiads } from '@/data/olympiads/country-olympiads'
+import { olympiadCountrySlugs } from '@/config/olympiad-countries'
+import { comparisons as ibBiologyComparisons } from '@/data/ib-biology/comparisons'
+import { recoveredOrphanRoutes } from '@/data/sitemap/recovered-orphans'
 import { gamsatMetroSlugs } from '@/data/gamsat/metros'
 import { usmleMetroSlugs } from '@/data/usmle-step-1/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
@@ -627,7 +631,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 2026-06-08: massive SEO refresh — ~895 Twitter cards, ~100 openGraph locales,
   // 47 NRI international city pages, 14 hreflang additions, 16 noindex cleanups,
   // ~30 layout enrichments, 9 React-redirects → 301s.
-  const lastUpdated = new Date('2026-06-08')
+  // 2026-07-15: recovered ~97 orphaned static pages into the sitemap + added the
+  // /biology-olympiad/[country] and /ib-biology-vs/[curriculum] generation loops.
+  const lastUpdated = new Date('2026-07-15')
 
   // Dynamically generate blog post URLs from MDX files
   const blogPosts = getAllPosts()
@@ -8327,8 +8333,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const eastDelhiAreaRoutes: MetadataRoute.Sitemap = []
   const westDelhiAreaRoutes: MetadataRoute.Sitemap = []
 
+  // Previously-orphaned static pages: live + indexable but missing from the
+  // hand-curated lists above, so Google never discovered them. Recovered via
+  // scripts/audit-sitemap-coverage.ts (doorway families already excluded there).
+  const recoveredOrphanRouteEntries: MetadataRoute.Sitemap = recoveredOrphanRoutes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // /biology-olympiad/[country] — the dynamic per-country olympiad pages had NO
+  // sitemap loop, so Ireland/IrBO (which exists ONLY here) was invisible. Five of
+  // the six slugs also exist under /programs/biology-olympiad/[country] (already
+  // in the sitemap); emitting those too would dual-list the same country and
+  // worsen cannibalization. So only emit the slugs NOT covered by /programs.
+  // The full canonical consolidation (301 one family → the other) is a separate
+  // deliberate follow-up.
+  const programsOlympiadSlugs = new Set(olympiadCountrySlugs)
+  const countryOlympiadRoutes: MetadataRoute.Sitemap = countryOlympiads
+    .filter((c) => !programsOlympiadSlugs.has(c.slug))
+    .map((c) => ({
+      url: `${baseUrl}/biology-olympiad/${c.slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    }))
+
+  // /ib-biology-vs/[curriculum] — high-intent comparison pages that likewise had
+  // no generation loop.
+  const ibComparisonRoutes: MetadataRoute.Sitemap = Object.values(ibBiologyComparisons).map(
+    (c) => ({
+      url: `${baseUrl}/ib-biology-vs/${c.slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })
+  )
+
   // Combine all routes and deduplicate by URL
   const allRoutes = [
+    ...recoveredOrphanRouteEntries,
+    ...countryOlympiadRoutes,
+    ...ibComparisonRoutes,
     ...campbellChapterRoutes,
     ...campbellUnitRoutes,
     ...locationRoutes,
