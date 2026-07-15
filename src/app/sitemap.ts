@@ -2649,6 +2649,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
+    // Definitional IBO entity/reference hub (Event + DefinedTerm schema, sameAs
+    // to the official IBO site + Wikipedia) — the citation-grade page AI answer
+    // engines prefer, feeding the coaching pages.
+    {
+      url: `${baseUrl}/international-biology-olympiad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
     {
       url: `${baseUrl}/biology-olympiad-coaching`,
       lastModified: lastUpdated,
@@ -4693,6 +4702,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.85,
     },
+    // Dedicated HL/SL tutor pages — the evergreen tutoring intent (distinct from
+    // the crash-course pages above) that /ib-biology-tutor didn't rank for on the
+    // HL/SL-qualified long-tail.
+    {
+      url: `${baseUrl}/ib-biology-hl-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ib-biology-sl-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    // Country-level IB Biology hubs — aggregate the existing city + school pages
+    // for a country (topical authority for the country query).
+    ...['uk', 'usa', 'uae', 'singapore', 'switzerland'].map((slug) => ({
+      url: `${baseUrl}/ib-biology-tutor-${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    })),
     // TOK essay through Biology lens — zero competing pages on the
     // site target "IB Biology TOK essay" today.
     {

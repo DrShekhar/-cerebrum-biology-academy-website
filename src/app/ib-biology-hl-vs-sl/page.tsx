@@ -287,6 +287,36 @@ export default function HLvsSLPage() {
           </div>
         </section>
 
+        <section className="bg-white py-14">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6">
+            <h2 className="mb-6 text-center text-2xl font-bold text-gray-900 sm:text-3xl">
+              Decided your level? Start with a dedicated tutor
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Link
+                href="/ib-biology-hl-tutor"
+                className="rounded-xl border border-gray-200 p-6 transition-colors hover:border-blue-500 hover:bg-blue-50"
+              >
+                <p className="text-lg font-semibold text-gray-900">IB Biology HL Tutor →</p>
+                <p className="mt-1 text-gray-600">
+                  Higher Level: AHL depth, Paper 2 extended response, distinction-grade IA — built
+                  for medicine and life-science applicants.
+                </p>
+              </Link>
+              <Link
+                href="/ib-biology-sl-tutor"
+                className="rounded-xl border border-gray-200 p-6 transition-colors hover:border-blue-500 hover:bg-blue-50"
+              >
+                <p className="text-lg font-semibold text-gray-900">IB Biology SL Tutor →</p>
+                <p className="mt-1 text-gray-600">
+                  Standard Level: the four core themes made clear, sharp Paper 1 &amp; 2 technique,
+                  and a clean route to a 7.
+                </p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-gradient-to-r from-green-600 via-teal-600 to-green-700 py-16 text-white">
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
             <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Still Undecided?</h2>
