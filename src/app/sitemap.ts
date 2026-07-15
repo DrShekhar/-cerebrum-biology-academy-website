@@ -17,6 +17,7 @@ import { olympiadCountrySlugs } from '@/config/olympiad-countries'
 import { comparisons as ibBiologyComparisons } from '@/data/ib-biology/comparisons'
 import { recoveredOrphanRoutes } from '@/data/sitemap/recovered-orphans'
 import { INDEXABLE_FARIDABAD_LOCALITIES } from '@/data/faridabad-enriched'
+import { INDEXABLE_GURUGRAM_LOCALITIES } from '@/data/gurugram-enriched'
 import { gamsatMetroSlugs } from '@/data/gamsat/metros'
 import { usmleMetroSlugs } from '@/data/usmle-step-1/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
@@ -134,7 +135,9 @@ const inlineRedirectPatterns: RegExp[] = [
   // catch-all no longer exists in next.config. The 37 consolidated areas are now
   // filtered via their explicit exact-source entries (faridabadConsolidationRedirects
   // → exactRedirects), leaving the 8 curated indexable localities to be emitted.
-  /^\/neet-coaching-gurugram\/[^/]+$/,
+  // NOTE: blanket /neet-coaching-gurugram/[area] mirror removed — the catch-all no
+  // longer exists in next.config. The 26 consolidated areas are filtered via their
+  // explicit exact-source entries; the 8 curated indexable localities are emitted.
   /^\/neet-coaching-near-metro\/[^/]+$/,
   /^\/neet-coaching-near\/[^/]+$/,
   /^\/locations\/[^/]+\/[^/]+$/,
@@ -8419,12 +8422,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   )
 
+  // Curated, un-redirected Gurugram locality pages (the rest of the /:area family
+  // still 301s to the city hub). These 8 carry genuinely unique prose/metadata.
+  const gurugramLocalityRoutes: MetadataRoute.Sitemap = INDEXABLE_GURUGRAM_LOCALITIES.map(
+    (slug) => ({
+      url: `${baseUrl}/neet-coaching-gurugram/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    })
+  )
+
   // Combine all routes and deduplicate by URL
   const allRoutes = [
     ...recoveredOrphanRouteEntries,
     ...countryOlympiadRoutes,
     ...ibComparisonRoutes,
     ...faridabadLocalityRoutes,
+    ...gurugramLocalityRoutes,
     ...campbellChapterRoutes,
     ...campbellUnitRoutes,
     ...locationRoutes,

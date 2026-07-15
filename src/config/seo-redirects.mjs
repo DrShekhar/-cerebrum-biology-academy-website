@@ -3022,16 +3022,6 @@ export const areaPageConsolidationRedirects = [
 
   // neet-coaching-gurugram area pages (34)
   {
-    source: '/neet-coaching-gurugram/dlf-phase-1',
-    destination: '/neet-coaching-gurugram',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurugram/dlf-phase-2',
-    destination: '/neet-coaching-gurugram',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-gurugram/dlf-phase-3',
     destination: '/neet-coaching-gurugram',
     permanent: true,
@@ -3047,32 +3037,12 @@ export const areaPageConsolidationRedirects = [
     permanent: true,
   },
   {
-    source: '/neet-coaching-gurugram/golf-course-road',
-    destination: '/neet-coaching-gurugram',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurugram/sushant-lok',
-    destination: '/neet-coaching-gurugram',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-gurugram/nirvana-country',
     destination: '/neet-coaching-gurugram',
     permanent: true,
   },
   {
-    source: '/neet-coaching-gurugram/south-city-1',
-    destination: '/neet-coaching-gurugram',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-gurugram/south-city-2',
-    destination: '/neet-coaching-gurugram',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurugram/sector-14',
     destination: '/neet-coaching-gurugram',
     permanent: true,
   },
@@ -3098,11 +3068,6 @@ export const areaPageConsolidationRedirects = [
   },
   {
     source: '/neet-coaching-gurugram/sector-54',
-    destination: '/neet-coaching-gurugram',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurugram/sector-56',
     destination: '/neet-coaching-gurugram',
     permanent: true,
   },
@@ -3153,11 +3118,6 @@ export const areaPageConsolidationRedirects = [
   },
   {
     source: '/neet-coaching-gurugram/sector-84',
-    destination: '/neet-coaching-gurugram',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurugram/sohna-road',
     destination: '/neet-coaching-gurugram',
     permanent: true,
   },
