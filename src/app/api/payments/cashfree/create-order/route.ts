@@ -11,11 +11,8 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { amount, currency, enrollmentId, studentName, email, phone, notes } = body
+    const { enrollmentId, studentName, email, phone, notes } = body
 
-    if (!amount || amount <= 0) {
-      return NextResponse.json({ success: false, error: 'Invalid amount' }, { status: 400 })
-    }
     if (!email || !phone) {
       return NextResponse.json(
         { success: false, error: 'Email and phone are required' },
@@ -23,12 +20,43 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // SECURITY: never trust a client-sent amount (that let anyone pay ₹1 for any
+    // course). Derive the charge from the enrollment the student actually owns —
+    // its outstanding balance in paise. The primary checkout flow uses
+    // /api/enrollment/create-order; this route is the standalone fallback and
+    // must be just as strict.
+    if (!enrollmentId) {
+      return NextResponse.json(
+        { success: false, error: 'enrollmentId is required' },
+        { status: 400 }
+      )
+    }
+
+    const enrollment = await prisma.enrollments.findUnique({
+      where: { id: enrollmentId },
+      select: { id: true, userId: true, pendingAmount: true, totalFees: true },
+    })
+
+    if (!enrollment || enrollment.userId !== session.user.id) {
+      return NextResponse.json({ success: false, error: 'Enrollment not found' }, { status: 404 })
+    }
+
+    const amountPaise =
+      enrollment.pendingAmount > 0 ? enrollment.pendingAmount : enrollment.totalFees
+    if (!amountPaise || amountPaise <= 0) {
+      return NextResponse.json(
+        { success: false, error: 'Nothing due on this enrollment' },
+        { status: 400 }
+      )
+    }
+    const amountRupees = amountPaise / 100
+
     const orderId = `order_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
 
     const cfOrder = await CashfreeService.createOrder({
       orderId,
-      amount,
-      currency: currency || 'INR',
+      amount: amountRupees,
+      currency: 'INR',
       customerName: studentName || session.user.name || 'Student',
       customerEmail: email,
       customerPhone: phone,
@@ -36,7 +64,7 @@ export async function POST(request: NextRequest) {
         purpose: 'Course enrollment',
         platform: 'Cerebrum Biology Academy',
         userId: session.user.id,
-        enrollmentId: enrollmentId || '',
+        enrollmentId,
         ...notes,
       },
     })
@@ -47,9 +75,9 @@ export async function POST(request: NextRequest) {
       data: {
         id: paymentId,
         userId: session.user.id,
-        enrollmentId: enrollmentId || null,
-        amount: Math.round(amount * 100),
-        currency: currency || 'INR',
+        enrollmentId,
+        amount: amountPaise,
+        currency: 'INR',
         status: 'PENDING',
         paymentMethod: 'CASHFREE_UPI',
         paymentProvider: 'cashfree',
@@ -63,8 +91,8 @@ export async function POST(request: NextRequest) {
       orderId: cfOrder.order_id,
       paymentSessionId: cfOrder.payment_session_id,
       cfOrderId: cfOrder.cf_order_id,
-      amount,
-      currency: currency || 'INR',
+      amount: amountPaise,
+      currency: 'INR',
       environment: process.env.NODE_ENV === 'production' ? 'production' : 'sandbox',
     })
   } catch (error) {

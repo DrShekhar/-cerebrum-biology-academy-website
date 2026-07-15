@@ -80,6 +80,7 @@ function CheckoutContent() {
   const [selectedBatch, setSelectedBatch] = useState<string | null>(null)
   const [selectedPaymentPlan, setSelectedPaymentPlan] = useState<PaymentPlanType | null>(null)
   const [wantsCounselor, setWantsCounselor] = useState<boolean | null>(null)
+  const [selectedGateway, setSelectedGateway] = useState<'razorpay' | 'cashfree'>('razorpay')
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -277,13 +278,91 @@ function CheckoutContent() {
           installmentAmount: calculateFirstPayment(),
           totalAmount: calculateGrandTotal(),
           wantsCounselor: wantsCounselor || false,
+          gateway: selectedGateway,
         }),
       })
 
       if (!response.ok) throw new Error('Failed to create order')
 
-      const { orderId, enrollmentId, amount, currency, key, prefill } = await response.json()
+      const {
+        provider,
+        orderId,
+        enrollmentId,
+        amount,
+        currency,
+        key,
+        prefill,
+        paymentSessionId,
+        environment,
+      } = await response.json()
 
+      // Shared success handoff: WhatsApp receipt + redirect to the success page.
+      const onEnrollmentSuccess = async (paymentId: string, gatewayOrderId: string) => {
+        const { openWhatsAppWithFormData } = await import('@/lib/whatsapp/formToWhatsApp')
+        openWhatsAppWithFormData('Course Enrollment', {
+          Name: formData.fullName,
+          Phone: formData.phone,
+          Email: formData.email,
+          Class: selectedClass || '-',
+          Tier: selectedTier || '-',
+          Batch: selectedBatchData?.name || '-',
+          'Payment Plan': selectedPaymentPlan || '-',
+          Amount: `₹${calculateFirstPayment()}`,
+        })
+        router.push(
+          `/purchase/success?payment_id=${paymentId}&order_id=${gatewayOrderId}&enrollment_id=${enrollmentId}&batch=${encodeURIComponent(selectedBatchData?.name || '')}&timing=${encodeURIComponent(selectedBatchData?.time || '')}`
+        )
+      }
+
+      if (provider === 'cashfree') {
+        const { load } = await import('@cashfreepayments/cashfree-js')
+        const cashfree = await load({
+          mode: environment === 'production' ? 'production' : 'sandbox',
+        })
+
+        // Opens Cashfree's hosted checkout in a modal; resolves when it closes.
+        const result = await cashfree.checkout({
+          paymentSessionId,
+          redirectTarget: '_modal',
+        })
+
+        if (result?.error) {
+          // User dismissed or the payment failed at the gateway.
+          setLoading(false)
+          router.push(`/purchase/failed?order_id=${orderId}&reason=cancelled`)
+          return
+        }
+
+        // Server-side status check is authoritative — never trust the modal result.
+        try {
+          const verifyResponse = await fetch('/api/payments/cashfree/verify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ orderId }),
+          })
+          const verifyData = await verifyResponse.json()
+
+          if (verifyResponse.ok && verifyData.status === 'COMPLETED') {
+            await onEnrollmentSuccess(orderId, orderId)
+          } else if (verifyData.status === 'PENDING') {
+            // Captured-but-still-settling: the webhook will finalize it.
+            router.push(
+              `/purchase/success?order_id=${orderId}&enrollment_id=${enrollmentId}&status=processing`
+            )
+          } else {
+            router.push(`/purchase/failed?order_id=${orderId}&reason=verification_failed`)
+          }
+        } catch (verifyError) {
+          console.error('Cashfree verification error:', verifyError)
+          // Payment likely captured; let the webhook reconcile and show processing.
+          router.push(
+            `/purchase/success?order_id=${orderId}&enrollment_id=${enrollmentId}&status=processing`
+          )
+        }
+        return
+      }
+
+      // Default: Razorpay.
       if (typeof window !== 'undefined' && (window as any).Razorpay) {
         const options = {
           key: key || process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
@@ -564,6 +643,11 @@ function CheckoutContent() {
     </div>
   )
 
+  // Cashfree is offered as a second gateway only when the owner has set the
+  // server keys AND flipped this public flag — otherwise checkout stays
+  // Razorpay-only and the selector is hidden entirely (no dead 503 option).
+  const cashfreeEnabled = process.env.NEXT_PUBLIC_CASHFREE_ENABLED === 'true'
+
   const renderReviewStep = () => {
     const classData = allClassPricing.find((c) => c.class === selectedClass)
     const tierDetails = selectedTier ? getTierDetails(selectedTier) : null
@@ -643,6 +727,36 @@ function CheckoutContent() {
               )}
             </div>
           </div>
+
+          {cashfreeEnabled && (
+            <div className="rounded-lg border border-gray-200 bg-white p-4">
+              <h4 className="font-medium text-gray-900 mb-3">Payment Method</h4>
+              <div className="grid grid-cols-2 gap-3">
+                {(
+                  [
+                    { id: 'razorpay', label: 'Cards / UPI / NetBanking', sub: 'Razorpay' },
+                    { id: 'cashfree', label: 'Cards / UPI / Wallets', sub: 'Cashfree' },
+                  ] as const
+                ).map((opt) => (
+                  <button
+                    key={opt.id}
+                    type="button"
+                    onClick={() => setSelectedGateway(opt.id)}
+                    className={cn(
+                      'rounded-lg border p-3 text-left transition-colors',
+                      selectedGateway === opt.id
+                        ? 'border-blue-600 bg-blue-50 ring-1 ring-blue-600'
+                        : 'border-gray-200 hover:border-gray-300'
+                    )}
+                    aria-pressed={selectedGateway === opt.id}
+                  >
+                    <span className="block text-sm font-medium text-gray-900">{opt.sub}</span>
+                    <span className="block text-xs text-gray-500">{opt.label}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     )
