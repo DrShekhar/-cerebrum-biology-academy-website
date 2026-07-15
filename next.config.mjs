@@ -441,11 +441,11 @@ const nextConfig = {
         destination: '/neet-coaching-ghaziabad',
         permanent: true,
       },
-      {
-        source: '/neet-coaching-faridabad/:area',
-        destination: '/neet-coaching-faridabad',
-        permanent: true,
-      },
+      // NOTE: the Faridabad /:area catch-all was replaced by explicit exact-source
+      // 301s in faridabadConsolidationRedirects (src/config/seo-redirects.mjs) so
+      // that 8 curated localities (src/data/faridabad-enriched.ts) can render and
+      // be indexed while the rest still consolidate to the hub. Do not re-add a
+      // /neet-coaching-faridabad/:area catch-all here — it would re-redirect the 8.
       {
         source: '/neet-coaching-gurugram/:area',
         destination: '/neet-coaching-gurugram',
