@@ -106,7 +106,8 @@
     "seo:approve": "tsx scripts/seo-machine/publish.ts --approve",
     "seo:reject": "tsx scripts/seo-machine/publish.ts --reject",
     "seo:social": "tsx scripts/seo-machine/generators/social.ts",
-    "seo:lead-magnet": "tsx scripts/seo-machine/generators/lead-magnet.ts"
+    "seo:lead-magnet": "tsx scripts/seo-machine/generators/lead-magnet.ts",
+    "audit:sitemap-coverage": "tsx scripts/audit-sitemap-coverage.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.63.0",

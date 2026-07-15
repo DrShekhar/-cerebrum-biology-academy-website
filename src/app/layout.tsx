@@ -99,11 +99,11 @@ export const metadata: Metadata = {
     types: {
       'application/rss+xml': '/blog/feed.xml',
     },
-    languages: {
-      en: 'https://cerebrumbiologyacademy.com',
-      'en-IN': 'https://cerebrumbiologyacademy.com',
-      'x-default': 'https://cerebrumbiologyacademy.com',
-    },
+    // NOTE: no site-wide `languages` (hreflang) map here. Because this metadata
+    // lives in the ROOT layout it applies to every route, and a homepage-pointing
+    // hreflang told Google the "en"/"x-default" version of /ap-biology-tutor,
+    // /nseb-coaching, etc. was the homepage — a wrong return-tag on 350+ pages.
+    // hreflang belongs on individual pages that have genuine localized variants.
   },
   category: 'Education',
 }
@@ -150,12 +150,10 @@ export default function RootLayout({
         <meta httpEquiv="Content-Language" content="en-IN" />
         <meta name="language" content="English" />
 
-        {/* hreflang tags — only languages with actual pages */}
-        <link rel="alternate" hrefLang="en" href="https://cerebrumbiologyacademy.com" />
-        <link rel="alternate" hrefLang="en-IN" href="https://cerebrumbiologyacademy.com" />
-        <link rel="alternate" hrefLang="hi-IN" href="https://cerebrumbiologyacademy.com/hi" />
-        <link rel="alternate" hrefLang="ta-IN" href="https://cerebrumbiologyacademy.com/ta" />
-        <link rel="alternate" hrefLang="x-default" href="https://cerebrumbiologyacademy.com" />
+        {/* hreflang intentionally NOT emitted site-wide from the root layout: it
+            would render on every route and (mis)declare the homepage as each
+            page's en/x-default alternate. Per-page hreflang belongs on pages with
+            real localized variants; per-page self-canonicals already handle the rest. */}
         <meta name="theme-color" content="#2563eb" />
         <meta name="apple-mobile-web-app-title" content="Cerebrum Biology" />
         <meta name="application-name" content="Cerebrum Biology Academy" />
