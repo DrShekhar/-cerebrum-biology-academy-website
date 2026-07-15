@@ -232,7 +232,7 @@ export default function BiologyClassesDelhiPage() {
       'Best biology classes in Delhi for NEET & Board preparation. AIIMS-trained faculty, 98% success rate. 4 centers in Rohini, South Extension, Gurugram, and Faridabad.',
     url: `${baseUrl}/biology-classes-delhi`,
     telephone: '+91-8826444334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     logo: `${baseUrl}/logo.png`,
     image: `${baseUrl}/og/biology-classes-delhi.jpg`,
     priceRange: '₹40,000 - ₹1,80,000',

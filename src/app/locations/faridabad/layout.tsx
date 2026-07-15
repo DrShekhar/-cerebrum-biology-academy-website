@@ -63,7 +63,7 @@ function FaridabadServiceSchema() {
       'Best NEET Biology coaching in Faridabad with AIIMS faculty. 98% success rate, small batches, Sector 17 location.',
     url: 'https://cerebrumbiologyacademy.com/locations/faridabad',
     telephone: '+91-88264-44334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'SCF-130, 2nd Floor, Above Union Bank, Huda Market, Sector 17',
@@ -159,7 +159,7 @@ function FaridabadFAQSchema() {
         name: 'What are the NEET coaching fees at Cerebrum Faridabad?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer flexible EMI options for Faridabad students. Contact info@cerebrumbiologyacademy.com or call +91-88264-44334 for detailed fee structure and special Faridabad offers.',
+          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer flexible EMI options for Faridabad students. Contact shekharcsingh57@gmail.com or call +91-88264-44334 for detailed fee structure and special Faridabad offers.',
         },
       },
     ],

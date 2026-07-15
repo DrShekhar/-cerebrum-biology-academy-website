@@ -130,7 +130,7 @@ function generateJsonLd() {
     url: 'https://cerebrumbiologyacademy.com',
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
     telephone: '+91-8826444334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     foundingDate: '2014',
     address: {
       '@type': 'PostalAddress',

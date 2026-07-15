@@ -160,7 +160,7 @@ function SouthDelhiLocalBusinessSchema() {
     image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
     url: 'https://cerebrumbiologyacademy.com/locations/south-delhi',
     telephone: '+91-88264-44334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'D 35, South Extension Part 2',
@@ -246,7 +246,7 @@ export default function SouthDelhiLocationLayout({ children }: { children: React
                 name: 'What is the fee structure for NEET coaching at Cerebrum Academy?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options, scholarships, and customized packages for South Delhi students. Call info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed pricing.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options, scholarships, and customized packages for South Delhi students. Call shekharcsingh57@gmail.com or +91-88264-44334 for detailed pricing.',
                 },
               },
             ],

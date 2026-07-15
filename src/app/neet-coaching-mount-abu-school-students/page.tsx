@@ -207,7 +207,7 @@ export default function NEETCoachingMountAbuSchoolPage() {
     description: pageData.metaDescription,
     url: `${baseUrl}/${pageData.slug}`,
     telephone: CONTACT_INFO.phone.primary,
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     logo: `${baseUrl}/logo.png`,
     founder: {
       '@type': 'Person',

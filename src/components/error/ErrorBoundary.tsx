@@ -274,11 +274,8 @@ function ErrorFallback({
         <div className="mt-6 pt-6 border-t border-gray-200">
           <p className="text-sm text-gray-500">
             Still having issues? Contact us at{' '}
-            <a
-              href="mailto:support@cerebrumbiologyacademy.com"
-              className="text-blue-600 hover:underline"
-            >
-              support@cerebrumbiologyacademy.com
+            <a href="mailto:shekharcsingh57@gmail.com" className="text-blue-600 hover:underline">
+              shekharcsingh57@gmail.com
             </a>{' '}
             or call{' '}
             <a href={getPhoneLink()} className="text-blue-600 hover:underline">

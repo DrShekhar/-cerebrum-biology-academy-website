@@ -664,10 +664,10 @@ export default function InternationalProgramsPage() {
                 Regional Email Support
               </h3>
               <div className="text-xs sm:text-sm text-gray-600 space-y-1">
-                <div>americas@cerebrumbiologyacademy.com</div>
-                <div>europe@cerebrumbiologyacademy.com</div>
-                <div>apac@cerebrumbiologyacademy.com</div>
-                <div>mena@cerebrumbiologyacademy.com</div>
+                <div>shekharcsingh57@gmail.com</div>
+                <div>shekharcsingh57@gmail.com</div>
+                <div>shekharcsingh57@gmail.com</div>
+                <div>shekharcsingh57@gmail.com</div>
               </div>
             </div>
 

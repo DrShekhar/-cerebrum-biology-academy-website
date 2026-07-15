@@ -56,7 +56,7 @@ export function CitySchema({
       `Best NEET Biology Coaching in ${cityName}, ${stateValue}. Expert AIIMS faculty, 98% success rate, personalized attention for ${cityName} students.`,
     url: pageUrl,
     telephone: CONTACT_INFO.phone.primary,
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     logo: `${baseUrl}/logo.png`,
     image: `${baseUrl}/og-image.jpg`,
     foundingDate: '2014',

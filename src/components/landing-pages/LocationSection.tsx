@@ -14,7 +14,7 @@ export function LocationSection({
 }: LocationSectionProps) {
   const phoneNumber = '918826444334'
   const displayPhone = '+91-88264-44334'
-  const email = 'info@cerebrumbiologyacademy.com'
+  const email = 'shekharcsingh57@gmail.com'
   const address = 'Cerebrum Biology Academy, South Extension, New Delhi'
 
   const handlePhoneClick = () => {

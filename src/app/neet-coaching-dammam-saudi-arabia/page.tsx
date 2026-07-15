@@ -72,7 +72,7 @@ export default async function Page() {
         data={{
           ...localityData,
           phone: '+918826444334',
-          email: 'info@cerebrumbiologyacademy.com',
+          email: 'shekharcsingh57@gmail.com',
           website: 'https://cerebrumbiologyacademy.com',
           doctor: 'Dr. Shekhar C Singh',
         }}

@@ -14,7 +14,7 @@ import { prisma } from '@/lib/prisma'
  * has not been applied yet.
  */
 export const SYSTEM_USER_ID = 'system'
-export const SYSTEM_USER_EMAIL = 'system@cerebrumbiologyacademy.com'
+export const SYSTEM_USER_EMAIL = 'shekharcsingh57@gmail.com'
 
 let ensured = false
 

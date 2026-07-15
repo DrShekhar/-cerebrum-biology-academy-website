@@ -134,7 +134,7 @@ export function AddUserForm({ onSuccess, onCancel }: AddUserFormProps) {
               type="email"
               {...register('email')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="user@cerebrumbiologyacademy.com"
+              placeholder="shekharcsingh57@gmail.com"
             />
             {errors.email && <p className="text-sm text-red-600 mt-1">{errors.email.message}</p>}
           </div>

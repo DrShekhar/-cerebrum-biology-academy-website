@@ -772,11 +772,8 @@ export default function CerebrumVsAakash() {
             <p className="text-blue-100 mb-4">Have questions? We are here to help!</p>
             <p className="text-blue-100 text-sm">
               Email:{' '}
-              <a
-                href="mailto:info@cerebrumbiologyacademy.com"
-                className="underline hover:text-white"
-              >
-                info@cerebrumbiologyacademy.com
+              <a href="mailto:shekharcsingh57@gmail.com" className="underline hover:text-white">
+                shekharcsingh57@gmail.com
               </a>
             </p>
           </div>

@@ -65,7 +65,7 @@ function GhaziabadServiceSchema() {
       'Live online NEET Biology coaching for Ghaziabad with AIIMS faculty. 98% success rate, small batches. Online classes for Indirapuram, Vaishali, Raj Nagar, Vasundhara students.',
     url: 'https://cerebrumbiologyacademy.com/locations/ghaziabad',
     telephone: '+91-88264-44334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'D 35, South Extension Part 2',

@@ -230,7 +230,7 @@ export default function ABTestingPage() {
                   </label>
                   <input
                     type="email"
-                    placeholder="admin@cerebrumbiologyacademy.com"
+                    placeholder="shekharcsingh57@gmail.com"
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg"
                   />
                 </div>

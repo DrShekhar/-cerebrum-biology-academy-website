@@ -75,7 +75,7 @@ export default function CRParkLayout({ children }: { children: React.ReactNode }
             image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             url: 'https://cerebrumbiologyacademy.com/locations/cr-park',
             telephone: '+91-88264-44334',
-            email: 'info@cerebrumbiologyacademy.com',
+            email: 'shekharcsingh57@gmail.com',
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'Near South Extension',
@@ -157,7 +157,7 @@ export default function CRParkLayout({ children }: { children: React.ReactNode }
                 name: 'What are the NEET coaching fees at Cerebrum for CR Park students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on the batch type and course duration. We offer flexible payment options and EMI facilities. Email us at info@cerebrumbiologyacademy.com or call +91-88264-44334 for a detailed fee breakdown and discounts for CR Park students.',
+                  text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on the batch type and course duration. We offer flexible payment options and EMI facilities. Email us at shekharcsingh57@gmail.com or call +91-88264-44334 for a detailed fee breakdown and discounts for CR Park students.',
                 },
               },
             ],

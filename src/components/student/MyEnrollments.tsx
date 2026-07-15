@@ -420,7 +420,7 @@ export function MyEnrollments() {
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
                     <div>
                       <div className="font-medium text-gray-900">Email Support</div>
-                      <div className="text-sm text-gray-600">help@cerebrumbiologyacademy.com</div>
+                      <div className="text-sm text-gray-600">shekharcsingh57@gmail.com</div>
                     </div>
                   </div>
                 </div>

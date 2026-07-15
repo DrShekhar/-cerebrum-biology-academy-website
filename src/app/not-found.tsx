@@ -102,7 +102,7 @@ export default function NotFound() {
               '@type': 'ContactPoint',
               contactType: 'Customer Support',
               telephone: '+91-88264-44334',
-              email: 'support@cerebrumbiologyacademy.com',
+              email: 'shekharcsingh57@gmail.com',
             },
           }),
         }}

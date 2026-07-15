@@ -88,7 +88,7 @@ export default function WazirpurNEETCoachingPage() {
       'Best NEET coaching for Wazirpur students. 10-15 min from Rohini center. AIIMS faculty, 98% success rate. Biology classes near Wazirpur Industrial Area.',
     url: `${baseUrl}/neet-coaching-wazirpur`,
     telephone: CONTACT_INFO.phone.primary,
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     logo: `${baseUrl}/logo.png`,
     priceRange: 'Rs Rs',
     address: {

@@ -397,7 +397,7 @@ export const CONTACT_POINTS = {
   phone: '+91 8826444334',
   phone2: '+91 8826444334',
   whatsapp: '+91 8826444334',
-  email: 'admissions@cerebrumbiologyacademy.com',
+  email: 'shekharcsingh57@gmail.com',
   centers: [
     'South Extension, Delhi',
     'Gurugram - Sector 51, M2K Corporate Park',

@@ -91,7 +91,7 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
             image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             url: 'https://cerebrumbiologyacademy.com/locations/maharani-bagh',
             telephone: '+91-88264-44334',
-            email: 'info@cerebrumbiologyacademy.com',
+            email: 'shekharcsingh57@gmail.com',
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'Near South Extension',
@@ -173,7 +173,7 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
                 name: 'What are the fees for NEET coaching at Cerebrum Academy?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer flexible payment options and EMI. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for customized pricing for Maharani Bagh families.',
+                  text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer flexible payment options and EMI. Contact shekharcsingh57@gmail.com or +91-88264-44334 for customized pricing for Maharani Bagh families.',
                 },
               },
             ],

@@ -76,7 +76,7 @@ export default function SaketLayout({ children }: { children: React.ReactNode })
             image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             url: 'https://cerebrumbiologyacademy.com/locations/saket',
             telephone: '+91-88264-44334',
-            email: 'info@cerebrumbiologyacademy.com',
+            email: 'shekharcsingh57@gmail.com',
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'Near South Extension',
@@ -158,7 +158,7 @@ export default function SaketLayout({ children }: { children: React.ReactNode })
                 name: 'What is the NEET coaching fee structure for Saket students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options and personalized packages for Saket students. Call info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed pricing information.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options and personalized packages for Saket students. Call shekharcsingh57@gmail.com or +91-88264-44334 for detailed pricing information.',
                 },
               },
             ],

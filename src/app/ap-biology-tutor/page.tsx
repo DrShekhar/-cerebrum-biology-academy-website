@@ -1,6 +1,7 @@
 'use client'
 
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { EmailEnquiryButton } from '@/components/seo/EmailEnquiryButton'
 import {
   Trophy,
   Users,
@@ -491,6 +492,17 @@ export default function APBiologyTutorPage() {
                 <Phone className="w-5 h-5 mr-2" />
                 Prefer WhatsApp? Message us
               </Button>
+
+              <EmailEnquiryButton
+                label="Or email us"
+                subject="AP Biology tutoring enquiry"
+                body={
+                  'Hi, I am interested in AP Biology tutoring.\n\n' +
+                  'Name:\nStudent grade / target exam date:\nTime zone (ET/CT/PT):\n\n' +
+                  'Please share programme details, US-time slots and USD pricing.'
+                }
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/40 px-6 py-3 font-bold text-white backdrop-blur-sm transition hover:bg-white/10"
+              />
             </div>
 
             <p className="text-sm opacity-80 mb-12">

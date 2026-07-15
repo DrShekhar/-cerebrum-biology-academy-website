@@ -45,6 +45,7 @@ import {
   Trophy,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { EmailEnquiryButton } from '@/components/seo/EmailEnquiryButton'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import type { APBiologyMetro } from '@/data/ap-biology/metros'
 
@@ -246,6 +247,17 @@ export default function APBiologyCityTemplate({ metro }: APBiologyCityTemplatePr
               <Phone className="w-5 h-5" />
               WhatsApp +91-88264-44334
             </button>
+
+            <EmailEnquiryButton
+              label="Or email us"
+              subject={`AP Biology tutoring enquiry — ${metro.cityName}`}
+              body={
+                `Hi, I am in ${metro.cityName} and interested in AP Biology tutoring.\n\n` +
+                'Name:\nStudent grade / target exam date:\nTime zone (ET/CT/PT):\n\n' +
+                'Please share programme details, US-time slots and USD pricing.'
+              }
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/30 bg-white/10 px-6 py-3 font-medium text-white transition hover:bg-white/20"
+            />
           </div>
         </div>
       </section>

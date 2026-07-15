@@ -223,7 +223,7 @@ export default function CareersPage() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <a
-                href="mailto:careers@cerebrumbiologyacademy.com"
+                href="mailto:shekharcsingh57@gmail.com"
                 className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-flex items-center justify-center min-h-[44px]"
               >
                 <Mail className="w-5 h-5 mr-2" />
@@ -369,7 +369,7 @@ export default function CareersPage() {
                     </div>
                   </div>
                   <a
-                    href={`mailto:careers@cerebrumbiologyacademy.com?subject=Application for ${position.title}`}
+                    href={`mailto:shekharcsingh57@gmail.com?subject=Application for ${position.title}`}
                     className="bg-indigo-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-indigo-700 transition-colors whitespace-nowrap inline-flex items-center justify-center min-h-[44px]"
                   >
                     Apply Now
@@ -469,11 +469,11 @@ export default function CareersPage() {
 
           <div className="flex flex-col md:flex-row gap-4 justify-center mb-6 sm:mb-8">
             <a
-              href="mailto:careers@cerebrumbiologyacademy.com"
+              href="mailto:shekharcsingh57@gmail.com"
               className="bg-white text-indigo-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-indigo-50 transition-colors inline-flex items-center justify-center min-h-[44px]"
             >
               <Mail className="w-5 h-5 mr-2" />
-              careers@cerebrumbiologyacademy.com
+              shekharcsingh57@gmail.com
             </a>
             <a
               href="tel:+918826444334"

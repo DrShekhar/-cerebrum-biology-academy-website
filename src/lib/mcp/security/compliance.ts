@@ -662,7 +662,7 @@ export class ComplianceManager {
   private getDataControllerContact(): any {
     return {
       organization: 'Cerebrum Biology Academy',
-      email: 'privacy@cerebrumbiologyacademy.com',
+      email: 'shekharcsingh57@gmail.com',
       phone: '+91 88264 44334',
       address: 'India',
     }
@@ -682,7 +682,7 @@ For the following purposes: ${purposes.join(', ')}
 Required disclosures:
 ${disclosures.map((d) => `• ${d}`).join('\n')}
 
-Contact us for any privacy-related questions at privacy@cerebrumbiologyacademy.com
+Contact us for any privacy-related questions at shekharcsingh57@gmail.com
     `.trim()
   }
 

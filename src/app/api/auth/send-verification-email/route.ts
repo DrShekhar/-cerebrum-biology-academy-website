@@ -152,7 +152,7 @@ export async function POST(request: NextRequest) {
           NEET Biology Excellence Since 2020
         </p>
         <p style="color: #94a3b8; font-size: 12px; margin: 15px 0 0 0;">
-          support@cerebrumbiologyacademy.com | +91-8826444334
+          shekharcsingh57@gmail.com | +91-8826444334
         </p>
       </td>
     </tr>

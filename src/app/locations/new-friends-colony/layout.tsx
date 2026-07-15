@@ -78,7 +78,7 @@ function NFCLocalBusinessSchema() {
     image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
     url: 'https://cerebrumbiologyacademy.com/locations/new-friends-colony',
     telephone: '+91-88264-44334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Near South Extension',
@@ -164,7 +164,7 @@ export default function NewFriendsColonyLayout({ children }: { children: React.R
                 name: 'What is the fee structure for NEET coaching at Cerebrum Academy for NFC students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment plans and scholarships for deserving New Friends Colony students. Contact us at info@cerebrumbiologyacademy.com or +91-88264-44334 for customized fee packages.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment plans and scholarships for deserving New Friends Colony students. Contact us at shekharcsingh57@gmail.com or +91-88264-44334 for customized fee packages.',
                 },
               },
             ],

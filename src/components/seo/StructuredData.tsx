@@ -16,7 +16,7 @@ export function OrganizationSchema() {
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
     image: 'https://cerebrumbiologyacademy.com/og-image.jpg',
     telephone: CONTACT_INFO.phone.primary,
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'D 35, South Extension Part 2',
@@ -1129,7 +1129,7 @@ export function DrShekharSinghSchema() {
       description="AIIMS New Delhi alumnus with 15+ years of experience in NEET Biology coaching. Former Academic Head at Narayana Group. Has mentored 500+ students into AIIMS, JIPMER, and other top medical colleges."
       image="https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh.jpg"
       url="https://cerebrumbiologyacademy.com/faculty"
-      email="drshekhar@cerebrumbiologyacademy.com"
+      email="shekharcsingh57@gmail.com"
       telephone={CONTACT_INFO.phone.primary}
       alumniOf={[
         {

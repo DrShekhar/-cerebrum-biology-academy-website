@@ -107,7 +107,7 @@ export function generateLocalBusinessSchema(
     description: locality.seo.description,
     url: pageUrl,
     telephone: CONTACT_INFO.phone.display.hyphenated.primary,
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     address: {
       '@type': 'PostalAddress',
       addressLocality: locality.city,

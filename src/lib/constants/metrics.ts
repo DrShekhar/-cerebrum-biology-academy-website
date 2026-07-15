@@ -48,7 +48,7 @@ export const CEREBRUM_METRICS = {
   // Contact
   phone: '+91-8826444334',
   phoneDisplay: '+91-88264-44334',
-  email: 'info@cerebrumbiologyacademy.com',
+  email: 'shekharcsingh57@gmail.com',
 
   // Location
   mainAddress: 'D 35, South Extension Part 2, New Delhi',

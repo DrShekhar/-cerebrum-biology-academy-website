@@ -23,7 +23,7 @@ export function generateAggregateRatingSchema(reviews?: ReviewData[]) {
     logo: 'https://cerebrumbiologyacademy.com/brain-logo.webp',
     image: 'https://cerebrumbiologyacademy.com/og-image.jpg',
     telephone: '+91-88264-44334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'D 35, South Extension Part 2',

@@ -259,19 +259,19 @@ async function sendInquiryResponse(data: ContactInquiryInput) {
 async function notifyDepartment(data: ContactInquiryInput, inquiryId: string) {
   const notifications = {
     academic: {
-      email: 'academic@cerebrumbiologyacademy.com',
+      email: 'shekharcsingh57@gmail.com',
       subject: `New Academic Inquiry - ${data.name}`,
     },
     admission: {
-      email: 'admissions@cerebrumbiologyacademy.com',
+      email: 'shekharcsingh57@gmail.com',
       subject: `New Admission Inquiry - ${data.name}`,
     },
     technical: {
-      email: 'tech@cerebrumbiologyacademy.com',
+      email: 'shekharcsingh57@gmail.com',
       subject: `Urgent: Technical Issue - ${data.name}`,
     },
     counseling: {
-      email: 'counseling@cerebrumbiologyacademy.com',
+      email: 'shekharcsingh57@gmail.com',
       subject: `Counseling Request - ${data.name}`,
     },
   }
@@ -321,7 +321,7 @@ async function sendUserConfirmation(data: ContactInquiryInput, inquiryId: string
       <ul>
         <li>WhatsApp: +91 88264 44334</li>
         <li>Call: +91 88264 44334</li>
-        <li>Email: support@cerebrumbiologyacademy.com</li>
+        <li>Email: shekharcsingh57@gmail.com</li>
       </ul>
 
       <p>Best regards,<br>Cerebrum Biology Academy Team</p>

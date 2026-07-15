@@ -171,7 +171,7 @@ export async function POST(request: NextRequest) {
           Cerebrum Biology Academy - NEET Biology Excellence Since 2020
         </p>
         <p style="color: #94a3b8; font-size: 12px; margin: 10px 0 0 0;">
-          If you have any questions, contact us at support@cerebrumbiologyacademy.com
+          If you have any questions, contact us at shekharcsingh57@gmail.com
         </p>
       </td>
     </tr>

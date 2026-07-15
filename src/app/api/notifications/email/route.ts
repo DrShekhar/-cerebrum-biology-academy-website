@@ -115,7 +115,7 @@ export async function POST(request: NextRequest) {
       <h3 style="margin-top: 0; color: #0369a1;">📞 Need Help?</h3>
       <p>Our support team is here to help you:</p>
       <ul>
-        <li>📧 Email: <a href="mailto:support@cerebrumbiologyacademy.com">support@cerebrumbiologyacademy.com</a></li>
+        <li>📧 Email: <a href="mailto:shekharcsingh57@gmail.com">shekharcsingh57@gmail.com</a></li>
         <li>💬 WhatsApp: <a href="https://wa.me/918826444334">+91-8826444334</a></li>
         <li>⏰ Available 24/7</li>
       </ul>
@@ -154,7 +154,7 @@ Access Your Course:
 ${baseUrl}/student/courses/${enrollment.courseId}
 
 Need Help?
-Email: support@cerebrumbiologyacademy.com
+Email: shekharcsingh57@gmail.com
 WhatsApp: +91-8826444334
 Available 24/7
 

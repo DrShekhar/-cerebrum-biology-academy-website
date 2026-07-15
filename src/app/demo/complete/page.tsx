@@ -81,7 +81,7 @@ export default function DemoCompletePage() {
         <div className="mt-8 border-t border-gray-200 pt-6">
           <p className="text-sm text-gray-500">Questions about enrollment?</p>
           <p className="mt-1 font-medium text-gray-700">
-            📞 +91 88264 44334 • 📧 info@cerebrumbiologyacademy.com
+            📞 +91 88264 44334 • 📧 shekharcsingh57@gmail.com
           </p>
         </div>
       </div>

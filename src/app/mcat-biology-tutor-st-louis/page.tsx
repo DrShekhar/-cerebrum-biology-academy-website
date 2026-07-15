@@ -10,6 +10,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { EmailEnquiryButton } from '@/components/seo/EmailEnquiryButton'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/mcat-biology-tutor-st-louis'
 
@@ -218,6 +219,16 @@ export default function MCATBiologyTutorStLouisPage() {
             >
               WhatsApp +91 88264-44334
             </a>
+            <EmailEnquiryButton
+              label="Or email us"
+              subject="MCAT Biology & Biochemistry tutoring enquiry"
+              body={
+                'Hi, I am interested in MCAT Bio/Biochem tutoring.\n\n' +
+                'Name:\nTest date:\nTime zone (ET/CT/PT):\n\n' +
+                'Please share programme details, US-time slots and USD pricing.'
+              }
+              className="inline-flex items-center gap-2 rounded-xl border-2 border-white/30 px-6 py-3 font-semibold text-white transition hover:border-white/60"
+            />
             <Link
               href="/mcat-biology-preparation"
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold"

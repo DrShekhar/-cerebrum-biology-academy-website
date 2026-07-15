@@ -945,7 +945,7 @@ function generateDemoConfirmationEmail(bookingData: any): string {
             <h3 style="color: #1f2937; margin-top: 0;">Need Help?</h3>
             <p style="color: #4b5563; margin: 10px 0;">
               📞 Call/WhatsApp: <strong>+91 93119 46297</strong><br>
-              📧 Email: <strong>info@cerebrumbiologyacademy.com</strong><br>
+              📧 Email: <strong>shekharcsingh57@gmail.com</strong><br>
               🌐 Website: <strong>cerebrumbiologyacademy.com</strong>
             </p>
           </div>

@@ -138,7 +138,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
     description: data.metaDescription,
     url: `${baseUrl}/biology-classes-${data.slug}`,
     telephone: CONTACT_INFO.phone.primary,
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     logo: `${baseUrl}/logo.png`,
     priceRange: '₹40,000 - ₹1,80,000',
     address: data.hasOfflineCenter

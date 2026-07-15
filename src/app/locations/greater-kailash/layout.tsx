@@ -78,7 +78,7 @@ function GreaterKailashLocalBusinessSchema() {
     image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
     url: 'https://cerebrumbiologyacademy.com/locations/greater-kailash',
     telephone: '+91-88264-44334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Near South Extension',
@@ -157,7 +157,7 @@ function GreaterKailashFAQSchema() {
         name: 'What are the NEET coaching fees at Cerebrum for GK students?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer flexible payment and EMI options for Greater Kailash students. Email info@cerebrumbiologyacademy.com or call +91-88264-44334 for detailed fee structure.',
+          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer flexible payment and EMI options for Greater Kailash students. Email shekharcsingh57@gmail.com or call +91-88264-44334 for detailed fee structure.',
         },
       },
     ],

@@ -20,6 +20,7 @@ import {
 } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { GlobalEnquiryForm } from '@/components/seo/GlobalEnquiryForm'
+import { EmailEnquiryButton } from '@/components/seo/EmailEnquiryButton'
 import { GLOBAL_EXAMS, type GlobalExam } from '@/data/global-exams/exams'
 
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
@@ -143,6 +144,16 @@ export default function GlobalExamHubTemplate({ exam }: { exam: GlobalExam }) {
               <MessageCircle className="h-5 w-5" />
               WhatsApp us
             </a>
+            <EmailEnquiryButton
+              label="Or email us"
+              subject={`${exam.exam} tutoring enquiry`}
+              body={
+                `Hi, I am interested in ${exam.exam} tutoring.\n\n` +
+                'Name:\nCountry / time zone:\nGrade or target exam date:\n\n' +
+                'Please share programme details, slots in my time zone and pricing.'
+              }
+              className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-slate-300 px-5 py-3 text-base font-semibold text-slate-700 hover:bg-slate-50"
+            />
           </div>
         </section>
 

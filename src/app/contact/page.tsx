@@ -95,7 +95,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['info@cerebrumbiologyacademy.com', 'admissions@cerebrumbiologyacademy.com'],
+      details: ['shekharcsingh57@gmail.com', 'shekharcsingh57@gmail.com'],
       color: 'bg-[#5a6d5a]',
     },
     {

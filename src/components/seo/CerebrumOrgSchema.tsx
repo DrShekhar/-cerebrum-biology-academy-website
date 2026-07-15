@@ -102,7 +102,7 @@ export function CerebrumOrgSchema() {
       ],
     },
     telephone: '+918826444334',
-    email: 'info@cerebrumbiologyacademy.com',
+    email: 'shekharcsingh57@gmail.com',
     sameAs: [
       'https://www.youtube.com/@cerebrumbiologyacademy',
       'https://www.youtube.com/@drshekharcsingh',

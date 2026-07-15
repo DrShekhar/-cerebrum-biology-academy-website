@@ -99,7 +99,7 @@ const faqs = [
   {
     question: 'What if I face technical issues during live class?',
     answer:
-      'We have a dedicated tech support team available during all class hours. Classes are also recorded, so you never miss content. Our platform has low-bandwidth mode for areas with internet issues. Support: tech@cerebrumbiologyacademy.com',
+      'We have a dedicated tech support team available during all class hours. Classes are also recorded, so you never miss content. Our platform has low-bandwidth mode for areas with internet issues. Support: shekharcsingh57@gmail.com',
   },
 ]
 

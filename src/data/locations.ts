@@ -142,6 +142,6 @@ export const locations: Location[] = offlineLocations
 
 export const primaryContact = {
   phone: ['+918826444334', '+919311946297'],
-  email: 'info@cerebrumbiologyacademy.com',
+  email: 'shekharcsingh57@gmail.com',
   whatsapp: '+918826444334',
 }

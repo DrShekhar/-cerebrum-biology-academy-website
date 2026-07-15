@@ -60,7 +60,7 @@ export type LeadBoardSettings = z.infer<typeof leadBoardSettingsSchema>
 export const SETTINGS_DEFAULTS: { [K in SettingsSection]: z.infer<(typeof SECTION_SCHEMAS)[K]> } = {
   general: {
     academyName: 'Cerebrum Biology Academy',
-    contactEmail: 'contact@cerebrumbiologyacademy.com',
+    contactEmail: 'shekharcsingh57@gmail.com',
     contactPhone: '+91 88264 44334',
     whatsappNumber: '+91 88264 44334',
     timezone: 'Asia/Kolkata',

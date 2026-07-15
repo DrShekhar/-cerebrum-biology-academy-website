@@ -23,6 +23,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { EmailEnquiryButton } from '@/components/seo/EmailEnquiryButton'
 
 const usaboPathway = [
   {
@@ -350,6 +351,17 @@ export default function USABOCoachingPage() {
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp Enquiry
               </button>
+
+              <EmailEnquiryButton
+                label="Or email us"
+                subject="USABO coaching enquiry"
+                body={
+                  'Hi, I am interested in USABO coaching.\n\n' +
+                  'Name:\nCurrent stage (Open / Semifinal / Finals prep):\nTime zone (ET/CT/PT):\n\n' +
+                  'Please share the pathway plan, US-time slots and pricing.'
+                }
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/50 px-8 py-4 font-bold text-white transition hover:bg-white/10"
+              />
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">

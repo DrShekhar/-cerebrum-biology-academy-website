@@ -507,7 +507,7 @@ export function NativeTouchGesturesExample() {
       setRefreshing(false)
     },
     phoneNumber: CONTACT_INFO.phone.primary,
-    emailAddress: 'contact@cerebrumbiologyacademy.com',
+    emailAddress: 'shekharcsingh57@gmail.com',
   })
 
   const handleRefresh = async () => {

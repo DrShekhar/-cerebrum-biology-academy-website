@@ -90,7 +90,7 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
             image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             url: 'https://cerebrumbiologyacademy.com/locations/golf-links',
             telephone: '+91-88264-44334',
-            email: 'info@cerebrumbiologyacademy.com',
+            email: 'shekharcsingh57@gmail.com',
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'Near South Extension',
@@ -172,7 +172,7 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
                 name: 'What are the fees for NEET coaching at Cerebrum Academy?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer premium small batch options. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for customized pricing and special arrangements for Golf Links families.',
+                  text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer premium small batch options. Contact shekharcsingh57@gmail.com or +91-88264-44334 for customized pricing and special arrangements for Golf Links families.',
                 },
               },
             ],

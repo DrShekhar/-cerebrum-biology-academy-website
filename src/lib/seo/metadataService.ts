@@ -405,7 +405,7 @@ export class MetadataService {
       logo: `${this.baseUrl}/logo.png`,
       description: "India's premier Biology coaching institute for NEET and medical entrance exams",
       telephone: CONTACT_INFO.phone.display.hyphenated.primary,
-      email: 'info@cerebrumbiologyacademy.com',
+      email: 'shekharcsingh57@gmail.com',
       address: {
         '@type': 'PostalAddress',
         addressCountry: 'India',

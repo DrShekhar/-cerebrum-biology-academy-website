@@ -130,7 +130,7 @@ export const allFAQs: FAQ[] = [
     id: 'gs-002',
     question: 'What documents do I need for enrollment?',
     answer:
-      'Required documents: 1) Student photograph (passport size, digital copy). 2) School ID card or marksheet proving current class. 3) Aadhaar card of student (for identity verification). 4) Parent/Guardian contact details. 5) Previous NEET attempt details (for droppers only). Optional but helpful: Previous academic records, any medical entrance test scores. All documents can be uploaded digitally during the enrollment process or emailed to admissions@cerebrumbiologyacademy.com',
+      'Required documents: 1) Student photograph (passport size, digital copy). 2) School ID card or marksheet proving current class. 3) Aadhaar card of student (for identity verification). 4) Parent/Guardian contact details. 5) Previous NEET attempt details (for droppers only). Optional but helpful: Previous academic records, any medical entrance test scores. All documents can be uploaded digitally during the enrollment process or emailed to shekharcsingh57@gmail.com',
     category: 'getting-started',
     tags: ['documents', 'enrollment', 'requirements'],
     priority: 4,
@@ -213,7 +213,7 @@ export const allFAQs: FAQ[] = [
     id: 'gs-011',
     question: 'How do I access the student portal for the first time?',
     answer:
-      'First-time login steps: 1) Check your email for "Welcome to Cerebrum Academy" message (arrives within 24 hours of payment). 2) Note your username (usually your registered email) and temporary password. 3) Visit portal.cerebrumbiologyacademy.com 4) Enter credentials and login. 5) You will be prompted to change your password (choose a strong password). 6) Complete your profile with photo and additional details. 7) Watch the 5-minute welcome video for portal navigation. Trouble logging in? Contact support@cerebrumbiologyacademy.com or WhatsApp +91-88264-44334.',
+      'First-time login steps: 1) Check your email for "Welcome to Cerebrum Academy" message (arrives within 24 hours of payment). 2) Note your username (usually your registered email) and temporary password. 3) Visit portal.cerebrumbiologyacademy.com 4) Enter credentials and login. 5) You will be prompted to change your password (choose a strong password). 6) Complete your profile with photo and additional details. 7) Watch the 5-minute welcome video for portal navigation. Trouble logging in? Contact shekharcsingh57@gmail.com or WhatsApp +91-88264-44334.',
     category: 'getting-started',
     tags: ['portal', 'login', 'first-time', 'access'],
     priority: 4,
@@ -314,7 +314,7 @@ export const allFAQs: FAQ[] = [
     id: 'cp-010',
     question: 'Can I switch between online and offline modes?',
     answer:
-      'Yes, mode switching allowed once per course: Process: Submit mode change request via student portal or email 7 days in advance, subject to seat availability in target mode (offline centers have limited capacity), no additional fee for switching. Conditions: Must have attended at least 1 month in current mode, cannot switch during exam/test weeks, recorded sessions provided during transition period. Common scenario: Students start online, switch to offline closer to exam for better focus, or vice versa if relocating. Contact support@cerebrumbiologyacademy.com for mode change requests.',
+      'Yes, mode switching allowed once per course: Process: Submit mode change request via student portal or email 7 days in advance, subject to seat availability in target mode (offline centers have limited capacity), no additional fee for switching. Conditions: Must have attended at least 1 month in current mode, cannot switch during exam/test weeks, recorded sessions provided during transition period. Common scenario: Students start online, switch to offline closer to exam for better focus, or vice versa if relocating. Contact shekharcsingh57@gmail.com for mode change requests.',
     category: 'courses-programs',
     tags: ['mode-switch', 'online-offline', 'flexibility'],
     priority: 3,
@@ -455,7 +455,7 @@ export const allFAQs: FAQ[] = [
     id: 'tc-002',
     question: 'I forgot my login password. How do I reset it?',
     answer:
-      'Easy password reset process: METHOD 1 - Self-service (recommended): Go to portal.cerebrumbiologyacademy.com, click "Forgot Password" link, enter your registered email, check email for reset link (arrives in 2-5 minutes), click link and set new password. METHOD 2 - Contact support: Email support@cerebrumbiologyacademy.com with subject "Password Reset", include your full name and registered mobile number, support team will reset and email you new password (within 1-2 hours). METHOD 3 - Call helpline: +91-88264-44334 (9 AM - 9 PM), verify your identity, instant password reset over phone. Security tip: Use strong password (8+ characters, mix of letters, numbers, symbols), do not share password with anyone, change password every 3 months.',
+      'Easy password reset process: METHOD 1 - Self-service (recommended): Go to portal.cerebrumbiologyacademy.com, click "Forgot Password" link, enter your registered email, check email for reset link (arrives in 2-5 minutes), click link and set new password. METHOD 2 - Contact support: Email shekharcsingh57@gmail.com with subject "Password Reset", include your full name and registered mobile number, support team will reset and email you new password (within 1-2 hours). METHOD 3 - Call helpline: +91-88264-44334 (9 AM - 9 PM), verify your identity, instant password reset over phone. Security tip: Use strong password (8+ characters, mix of letters, numbers, symbols), do not share password with anyone, change password every 3 months.',
     category: 'technical',
     tags: ['password', 'login', 'reset', 'forgot-password'],
     priority: 5,
@@ -520,7 +520,7 @@ export const allFAQs: FAQ[] = [
     id: 'bp-003',
     question: 'Do you offer scholarships or financial aid?',
     answer:
-      'Yes, multiple scholarship schemes: 1) MERIT SCHOLARSHIP: Based on previous academic performance, 10-30% fee waiver for 90%+ in Class 10th/12th, automatically applied during enrollment. 2) NEET SCORE SCHOLARSHIP (for droppers): 50% waiver if previous NEET score 550+, 30% waiver if score 500-549, 20% waiver if score 450-499. 3) SIBLING DISCOUNT: Second sibling gets 15% off, apply code "SIBLING15" during enrollment. 4) EARLY BIRD DISCOUNT: Enroll 2+ months before batch start - get 10% off. 5) NEED-BASED SCHOLARSHIP: Limited seats, income-based (annual income below ₹3 lakh), apply with income certificate. APPLY: Fill scholarship form on website or email scholarship@cerebrumbiologyacademy.com with relevant documents.',
+      'Yes, multiple scholarship schemes: 1) MERIT SCHOLARSHIP: Based on previous academic performance, 10-30% fee waiver for 90%+ in Class 10th/12th, automatically applied during enrollment. 2) NEET SCORE SCHOLARSHIP (for droppers): 50% waiver if previous NEET score 550+, 30% waiver if score 500-549, 20% waiver if score 450-499. 3) SIBLING DISCOUNT: Second sibling gets 15% off, apply code "SIBLING15" during enrollment. 4) EARLY BIRD DISCOUNT: Enroll 2+ months before batch start - get 10% off. 5) NEED-BASED SCHOLARSHIP: Limited seats, income-based (annual income below ₹3 lakh), apply with income certificate. APPLY: Fill scholarship form on website or email shekharcsingh57@gmail.com with relevant documents.',
     category: 'billing-payments',
     tags: ['scholarship', 'financial-aid', 'discount', 'waiver'],
     priority: 4,
@@ -529,7 +529,7 @@ export const allFAQs: FAQ[] = [
     id: 'bp-004',
     question: 'What is your refund policy?',
     answer:
-      'Transparent refund policy: FULL REFUND (100%): Within 7 days of enrollment if not satisfied, no questions asked, processed in 7-10 working days. PARTIAL REFUND: Within 8-30 days: 70% refund (30% deduction for materials, setup costs), 31-60 days: 50% refund, after 60 days: No refund. EXCEPTIONS: Medical emergency (with certificate) - special consideration, relocation/school change - pro-rata refund possible. NON-REFUNDABLE: Lump sum discount amount, scholarship amount already availed. PROCESS: Submit refund request via portal or email refunds@cerebrumbiologyacademy.com, include reason and bank details, refund processed in 15 working days to original payment method. We have 99.5% satisfaction rate - refund requests are rare!',
+      'Transparent refund policy: FULL REFUND (100%): Within 7 days of enrollment if not satisfied, no questions asked, processed in 7-10 working days. PARTIAL REFUND: Within 8-30 days: 70% refund (30% deduction for materials, setup costs), 31-60 days: 50% refund, after 60 days: No refund. EXCEPTIONS: Medical emergency (with certificate) - special consideration, relocation/school change - pro-rata refund possible. NON-REFUNDABLE: Lump sum discount amount, scholarship amount already availed. PROCESS: Submit refund request via portal or email shekharcsingh57@gmail.com, include reason and bank details, refund processed in 15 working days to original payment method. We have 99.5% satisfaction rate - refund requests are rare!',
     category: 'billing-payments',
     tags: ['refund', 'cancellation', 'money-back'],
     priority: 5,
@@ -556,7 +556,7 @@ export const allFAQs: FAQ[] = [
     id: 'bp-007',
     question: 'Can I get an education loan for the course fee?',
     answer:
-      'Education loan guidance: We do not directly provide loans, but we assist in the process: ELIGIBLE BANKS: HDFC Credila (education loan specialist), Axis Bank, ICICI Bank, SBI, Bank of Baroda. LOAN AMOUNT: ₹50K-₹20 lakhs (covers full course fee + materials), interest rates: 9.5-12% per annum (varies by bank), repayment: starts after course completion (typically 6-month grace period). DOCUMENTATION: Cerebrum Academy enrollment confirmation, course fee receipt, student ID proof, parent income proof, collateral (for loans above ₹7.5 lakhs). WE HELP: Provide course approval documents, assist with bank applications, recommend education loan consultants. Direct contact: loans@cerebrumbiologyacademy.com for loan-related queries.',
+      'Education loan guidance: We do not directly provide loans, but we assist in the process: ELIGIBLE BANKS: HDFC Credila (education loan specialist), Axis Bank, ICICI Bank, SBI, Bank of Baroda. LOAN AMOUNT: ₹50K-₹20 lakhs (covers full course fee + materials), interest rates: 9.5-12% per annum (varies by bank), repayment: starts after course completion (typically 6-month grace period). DOCUMENTATION: Cerebrum Academy enrollment confirmation, course fee receipt, student ID proof, parent income proof, collateral (for loans above ₹7.5 lakhs). WE HELP: Provide course approval documents, assist with bank applications, recommend education loan consultants. Direct contact: shekharcsingh57@gmail.com for loan-related queries.',
     category: 'billing-payments',
     tags: ['education-loan', 'loan', 'financing'],
     priority: 3,
@@ -583,7 +583,7 @@ export const allFAQs: FAQ[] = [
     id: 'bp-010',
     question: 'How do I get a payment receipt or invoice?',
     answer:
-      'Multiple ways to access receipts: AUTOMATIC: Payment confirmation email sent immediately after successful payment, GST invoice emailed within 24 hours, both sent to registered email ID. DOWNLOAD from portal: Login to student portal, go to "My Account" → "Billing" section, view all payment history, download any invoice/receipt as PDF. REQUEST via support: Email accounts@cerebrumbiologyacademy.com with payment date and amount, receipt resent within 2 hours. OFFLINE: Visit our physical center with payment reference number, collect printed invoice. What receipts include: Transaction ID and payment date, amount paid and payment method, GST breakup (18% separate), balance due (if installment plan), Cerebrum Academy GST number. Keep receipts: For your records, for potential tax benefits (Section 80C), for education loan claims.',
+      'Multiple ways to access receipts: AUTOMATIC: Payment confirmation email sent immediately after successful payment, GST invoice emailed within 24 hours, both sent to registered email ID. DOWNLOAD from portal: Login to student portal, go to "My Account" → "Billing" section, view all payment history, download any invoice/receipt as PDF. REQUEST via support: Email shekharcsingh57@gmail.com with payment date and amount, receipt resent within 2 hours. OFFLINE: Visit our physical center with payment reference number, collect printed invoice. What receipts include: Transaction ID and payment date, amount paid and payment method, GST breakup (18% separate), balance due (if installment plan), Cerebrum Academy GST number. Keep receipts: For your records, for potential tax benefits (Section 80C), for education loan claims.',
     category: 'billing-payments',
     tags: ['receipt', 'invoice', 'payment-proof'],
     priority: 3,
@@ -603,7 +603,7 @@ export const allFAQs: FAQ[] = [
     id: 'am-002',
     question: 'Can I change my registered email address?',
     answer:
-      'Yes, but requires verification process (for security): Why difficult? Email is your login ID and primary identity, changing it requires careful verification to prevent fraud. PROCESS: Email support@cerebrumbiologyacademy.com with subject "Change Email Request", provide: current email, new email, registered mobile number, reason for change, security verification via OTP sent to mobile, support team updates within 24-48 hours, login with new email after confirmation. ALTERNATIVE: Add new email as "alternate email" in profile (no verification needed), primary email unchanged but can use alternate for communication. NOTE: Payment receipts will continue to old email until next payment. Update important: Keep email accessible as it is used for password resets, important announcements.',
+      'Yes, but requires verification process (for security): Why difficult? Email is your login ID and primary identity, changing it requires careful verification to prevent fraud. PROCESS: Email shekharcsingh57@gmail.com with subject "Change Email Request", provide: current email, new email, registered mobile number, reason for change, security verification via OTP sent to mobile, support team updates within 24-48 hours, login with new email after confirmation. ALTERNATIVE: Add new email as "alternate email" in profile (no verification needed), primary email unchanged but can use alternate for communication. NOTE: Payment receipts will continue to old email until next payment. Update important: Keep email accessible as it is used for password resets, important announcements.',
     category: 'account-management',
     tags: ['email', 'change-email', 'login-id'],
     priority: 2,
@@ -679,7 +679,7 @@ export const allFAQs: FAQ[] = [
     id: 'sp-001',
     question: 'How can I contact Cerebrum Academy support?',
     answer:
-      'Multiple support channels 24/7: PHONE: +91-88264-44334 (9 AM - 9 PM, 7 days), for urgent issues (cannot join class, payment problems). EMAIL: support@cerebrumbiologyacademy.com (response within 4-6 hours), for non-urgent queries, detailed issues requiring explanation. WHATSAPP: +91-88264-44334 (text/voice), quick queries, sharing screenshots. LIVE CHAT: Available on website (bottom right chat widget), instant response during working hours (9 AM - 9 PM). IN-PERSON: Visit our centers in Ahmedabad, Surat, Vadodara, Rajkot (appointment recommended). SOCIAL MEDIA: Facebook/Instagram @cerebrumacademy (for general queries). Response time: Critical issues - 1 hour, general queries - 4-6 hours. We pride ourselves on quick, helpful support!',
+      'Multiple support channels 24/7: PHONE: +91-88264-44334 (9 AM - 9 PM, 7 days), for urgent issues (cannot join class, payment problems). EMAIL: shekharcsingh57@gmail.com (response within 4-6 hours), for non-urgent queries, detailed issues requiring explanation. WHATSAPP: +91-88264-44334 (text/voice), quick queries, sharing screenshots. LIVE CHAT: Available on website (bottom right chat widget), instant response during working hours (9 AM - 9 PM). IN-PERSON: Visit our centers in Ahmedabad, Surat, Vadodara, Rajkot (appointment recommended). SOCIAL MEDIA: Facebook/Instagram @cerebrumacademy (for general queries). Response time: Critical issues - 1 hour, general queries - 4-6 hours. We pride ourselves on quick, helpful support!',
     category: 'support',
     tags: ['contact', 'support', 'help', 'customer-service'],
     priority: 5,
@@ -715,7 +715,7 @@ export const allFAQs: FAQ[] = [
     id: 'sp-005',
     question: 'What if I am not satisfied with the support I received?',
     answer:
-      'Feedback and escalation process: ESCALATION LEVELS: Level 1 - Regular support team (first contact), Level 2 - Senior support manager (if Level 1 did not help), Level 3 - Academic Director (for academic issues), Level 4 - Founder Dr. Shekhar (final escalation for serious issues). HOW TO ESCALATE: Reply to support email with "ESCALATE" in subject, or call and ask for manager, or email escalation@cerebrumbiologyacademy.com directly. FEEDBACK: Every support interaction - feedback form sent via email, rate your experience (1-5 stars), share specific issues or appreciation, helps us improve continuously. ACCOUNTABILITY: Poor support flagged automatically (below 3-star rating), manager reviews and contacts you personally within 24 hours, corrective action taken. Our philosophy: Support is not an expense, it is an investment in student success!',
+      'Feedback and escalation process: ESCALATION LEVELS: Level 1 - Regular support team (first contact), Level 2 - Senior support manager (if Level 1 did not help), Level 3 - Academic Director (for academic issues), Level 4 - Founder Dr. Shekhar (final escalation for serious issues). HOW TO ESCALATE: Reply to support email with "ESCALATE" in subject, or call and ask for manager, or email shekharcsingh57@gmail.com directly. FEEDBACK: Every support interaction - feedback form sent via email, rate your experience (1-5 stars), share specific issues or appreciation, helps us improve continuously. ACCOUNTABILITY: Poor support flagged automatically (below 3-star rating), manager reviews and contacts you personally within 24 hours, corrective action taken. Our philosophy: Support is not an expense, it is an investment in student success!',
     category: 'support',
     tags: ['escalation', 'feedback', 'complaint', 'dissatisfaction'],
     priority: 3,

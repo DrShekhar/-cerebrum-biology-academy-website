@@ -34,6 +34,7 @@ import {
   Users,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { EmailEnquiryButton } from '@/components/seo/EmailEnquiryButton'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 export interface USABOFaq {
@@ -360,6 +361,17 @@ export default function USABOCityTemplate({
               <Phone className="w-5 h-5" />
               WhatsApp +91-88264-44334
             </button>
+
+            <EmailEnquiryButton
+              label="Or email us"
+              subject={`USABO coaching enquiry — ${cityName}`}
+              body={
+                `Hi, I am in ${cityName} and interested in USABO + IBO coaching.\n\n` +
+                'Name:\nCurrent stage (Open / Semifinal / Finals prep):\nTime zone (ET/CT/PT):\n\n' +
+                'Please share the pathway plan, US-time slots and pricing.'
+              }
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/30 bg-white/10 px-6 py-3 font-medium text-white transition hover:bg-white/20"
+            />
           </div>
           <p className="mt-3 text-sm font-medium text-white/80">
             WhatsApp is free from the US — no international call needed.

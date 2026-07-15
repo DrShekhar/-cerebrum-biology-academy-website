@@ -775,7 +775,7 @@ export function IntensiveNEETBiologyPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>elite@cerebrumbiologyacademy.com</span>
+                <span>shekharcsingh57@gmail.com</span>
               </div>
             </div>
           </div>

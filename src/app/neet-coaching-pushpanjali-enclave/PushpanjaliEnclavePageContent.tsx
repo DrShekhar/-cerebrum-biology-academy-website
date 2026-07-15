@@ -158,7 +158,7 @@ const localBusinessSchema = {
     'Best NEET coaching for Pushpanjali Enclave, Pitampura students. 8-10 min from DC Chowk Rohini center. AIIMS faculty, 98% success rate.',
   url: `${BASE_URL}/neet-coaching-pushpanjali-enclave`,
   telephone: CONTACT_INFO.phone.primary,
-  email: 'info@cerebrumbiologyacademy.com',
+  email: 'shekharcsingh57@gmail.com',
   logo: `${BASE_URL}/logo.png`,
   priceRange: 'Rs Rs',
   address: {

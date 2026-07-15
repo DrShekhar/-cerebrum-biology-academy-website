@@ -255,7 +255,7 @@ const localBusinessSchema = {
   url: 'https://cerebrumbiologyacademy.com',
   logo: 'https://cerebrumbiologyacademy.com/logo.png',
   telephone: '+918826444334',
-  email: 'info@cerebrumbiologyacademy.com',
+  email: 'shekharcsingh57@gmail.com',
   founder: {
     '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
   },
