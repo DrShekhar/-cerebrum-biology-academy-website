@@ -446,11 +446,11 @@ const nextConfig = {
       // that 8 curated localities (src/data/faridabad-enriched.ts) can render and
       // be indexed while the rest still consolidate to the hub. Do not re-add a
       // /neet-coaching-faridabad/:area catch-all here — it would re-redirect the 8.
-      {
-        source: '/neet-coaching-gurugram/:area',
-        destination: '/neet-coaching-gurugram',
-        permanent: true,
-      },
+      // NOTE: the Gurugram /:area catch-all was removed (same reason as Faridabad):
+      // 8 curated localities (src/data/gurugram-enriched.ts) now render + index while
+      // the other 26 consolidate via explicit exact sources in
+      // areaPageConsolidationRedirects. Do not re-add this catch-all — it would
+      // re-redirect the 8.
       {
         source: '/neet-coaching-near-metro/:station',
         destination: '/neet-coaching-gurugram',
