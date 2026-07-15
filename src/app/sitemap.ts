@@ -16,6 +16,7 @@ import { countryOlympiads } from '@/data/olympiads/country-olympiads'
 import { olympiadCountrySlugs } from '@/config/olympiad-countries'
 import { comparisons as ibBiologyComparisons } from '@/data/ib-biology/comparisons'
 import { recoveredOrphanRoutes } from '@/data/sitemap/recovered-orphans'
+import { INDEXABLE_FARIDABAD_LOCALITIES } from '@/data/faridabad-enriched'
 import { gamsatMetroSlugs } from '@/data/gamsat/metros'
 import { usmleMetroSlugs } from '@/data/usmle-step-1/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
@@ -129,7 +130,10 @@ const inlineRedirectPatterns: RegExp[] = [
   /^\/neet-coaching-west-delhi\/[^/]+$/,
   /^\/neet-coaching-noida\/[^/]+$/,
   /^\/neet-coaching-ghaziabad\/[^/]+$/,
-  /^\/neet-coaching-faridabad\/[^/]+$/,
+  // NOTE: the blanket /neet-coaching-faridabad/[area] mirror was removed — that
+  // catch-all no longer exists in next.config. The 37 consolidated areas are now
+  // filtered via their explicit exact-source entries (faridabadConsolidationRedirects
+  // → exactRedirects), leaving the 8 curated indexable localities to be emitted.
   /^\/neet-coaching-gurugram\/[^/]+$/,
   /^\/neet-coaching-near-metro\/[^/]+$/,
   /^\/neet-coaching-near\/[^/]+$/,
@@ -8403,11 +8407,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   )
 
+  // Curated, un-redirected Faridabad locality pages (the rest of the /:area family
+  // still 301s to the city hub via faridabadConsolidationRedirects). These 8 carry
+  // genuinely unique prose/metadata so they clear the doorway bar.
+  const faridabadLocalityRoutes: MetadataRoute.Sitemap = INDEXABLE_FARIDABAD_LOCALITIES.map(
+    (slug) => ({
+      url: `${baseUrl}/neet-coaching-faridabad/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    })
+  )
+
   // Combine all routes and deduplicate by URL
   const allRoutes = [
     ...recoveredOrphanRouteEntries,
     ...countryOlympiadRoutes,
     ...ibComparisonRoutes,
+    ...faridabadLocalityRoutes,
     ...campbellChapterRoutes,
     ...campbellUnitRoutes,
     ...locationRoutes,

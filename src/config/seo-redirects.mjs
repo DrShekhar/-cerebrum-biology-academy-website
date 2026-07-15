@@ -2745,7 +2745,38 @@ export const noidaConsolidationRedirects = [
 // stay pending GSC impression data (same Tier-B rule as the doorway pass).
 // If a future merge is decided, populate here — the sitemap redirect filter
 // picks entries up automatically.
-export const faridabadConsolidationRedirects = []
+export const faridabadConsolidationRedirects = [
+  // The 5 Faridabad area slugs that render but were only caught by the (now
+  // removed) next.config /:area catch-all — they are NOT in
+  // areaPageConsolidationRedirects, so they must be listed here to stay
+  // consolidated. The 8 curated indexable localities (src/data/faridabad-enriched.ts)
+  // are deliberately absent from every Faridabad redirect list so they render + index.
+  {
+    source: '/neet-coaching-faridabad/ajronda',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/badarpur',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/badkhal',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/ballabgarh',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/surajkund',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+]
 
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const ghaziabadConsolidationRedirects = [
@@ -3476,27 +3507,7 @@ export const areaPageConsolidationRedirects = [
 
   // neet-coaching-faridabad area pages (40)
   {
-    source: '/neet-coaching-faridabad/sector-15',
-    destination: '/neet-coaching-faridabad',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-faridabad/sector-16',
-    destination: '/neet-coaching-faridabad',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-faridabad/sector-17',
-    destination: '/neet-coaching-faridabad',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-faridabad/sector-21',
-    destination: '/neet-coaching-faridabad',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-faridabad/sector-28',
     destination: '/neet-coaching-faridabad',
     permanent: true,
   },
@@ -3522,11 +3533,6 @@ export const areaPageConsolidationRedirects = [
   },
   {
     source: '/neet-coaching-faridabad/sector-13',
-    destination: '/neet-coaching-faridabad',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-faridabad/sector-14',
     destination: '/neet-coaching-faridabad',
     permanent: true,
   },
@@ -3566,16 +3572,6 @@ export const areaPageConsolidationRedirects = [
     permanent: true,
   },
   {
-    source: '/neet-coaching-faridabad/nit-faridabad',
-    destination: '/neet-coaching-faridabad',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-faridabad/old-faridabad',
-    destination: '/neet-coaching-faridabad',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-faridabad/sector-75',
     destination: '/neet-coaching-faridabad',
     permanent: true,
@@ -3597,11 +3593,6 @@ export const areaPageConsolidationRedirects = [
   },
   {
     source: '/neet-coaching-faridabad/sector-79',
-    destination: '/neet-coaching-faridabad',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-faridabad/sector-84',
     destination: '/neet-coaching-faridabad',
     permanent: true,
   },

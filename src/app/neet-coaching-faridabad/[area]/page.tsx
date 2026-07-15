@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getFaridabadAreaBySlug } from '@/data/faridabad-areas'
+import { getFaridabadEnrichment } from '@/data/faridabad-enriched'
 import {
   CEREBRUM_METRICS,
   FARIDABAD_AREA_COORDINATES,
@@ -79,8 +80,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
-  const title = getTitleByType(area)
-  const description = getMetaDescriptionByType(area)
+  // Curated indexable localities get genuinely unique title/description (not the
+  // per-type template) so they clear the doorway-uniqueness bar.
+  const enrichment = getFaridabadEnrichment(areaSlug)
+  const title = enrichment?.metaTitle || getTitleByType(area)
+  const description = enrichment?.metaDescription || getMetaDescriptionByType(area)
 
   const typeKeywords: Record<string, string[]> = {
     premium: [
