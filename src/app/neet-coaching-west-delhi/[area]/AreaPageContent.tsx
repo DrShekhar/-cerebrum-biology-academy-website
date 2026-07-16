@@ -22,6 +22,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import { TrackedWhatsAppButton } from '@/components/common/TrackedWhatsAppButton'
 import { WestDelhiAreaDetails, courseOptions, areaDetails } from '@/data/west-delhi-areas'
+import { getWestDelhiEnrichment } from '@/data/west-delhi-enriched'
 import { HowToReachSection } from '@/components/seo/HowToReachSection'
 import { AreaTestimonials } from '@/components/testimonials/AreaTestimonials'
 
@@ -167,6 +168,23 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
           </div>
         </div>
       </section>
+
+      {/* Unique locality intro — genuinely differentiated prose for the curated,
+          indexable localities so they clear the doorway-uniqueness bar. */}
+      {(() => {
+        const enrichment = getWestDelhiEnrichment(areaSlug)
+        if (!enrichment) return null
+        return (
+          <section className="py-10 bg-white border-b border-gray-100">
+            <div className="max-w-4xl mx-auto px-4">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                NEET Biology coaching in {area.name}, West Delhi
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed">{enrichment.intro}</p>
+            </div>
+          </section>
+        )
+      })()}
 
       {/* Metro & Landmarks */}
       <section className="py-12 bg-white">

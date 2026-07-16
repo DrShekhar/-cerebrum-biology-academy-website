@@ -19,6 +19,7 @@ import { recoveredOrphanRoutes } from '@/data/sitemap/recovered-orphans'
 import { INDEXABLE_FARIDABAD_LOCALITIES } from '@/data/faridabad-enriched'
 import { INDEXABLE_GURUGRAM_LOCALITIES } from '@/data/gurugram-enriched'
 import { INDEXABLE_NOIDA_LOCALITIES } from '@/data/noida-enriched'
+import { INDEXABLE_WEST_DELHI_LOCALITIES } from '@/data/west-delhi-enriched'
 import { gamsatMetroSlugs } from '@/data/gamsat/metros'
 import { usmleMetroSlugs } from '@/data/usmle-step-1/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
@@ -129,7 +130,9 @@ const inlineRedirectPatterns: RegExp[] = [
   /^\/neet-coaching-south-delhi\/[^/]+$/,
   /^\/neet-coaching-north-delhi\/[^/]+$/,
   /^\/neet-coaching-east-delhi\/[^/]+$/,
-  /^\/neet-coaching-west-delhi\/[^/]+$/,
+  // NOTE: blanket /neet-coaching-west-delhi/[area] mirror removed — catch-all gone;
+  // the consolidated areas are filtered via explicit exact sources, the 8 curated
+  // indexable localities are emitted.
   // NOTE: blanket /neet-coaching-noida/[area] mirror removed — catch-all gone from
   // next.config; the 26 consolidated areas are filtered via explicit exact sources,
   // the 8 curated indexable localities are emitted.
@@ -8445,6 +8448,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }))
 
+  // Curated, un-redirected West Delhi locality pages (the rest of the /:area
+  // family still 301s to the city hub). These 8 carry genuinely unique
+  // prose/metadata and have no standalone twin (so they're additive, not cannibal).
+  const westDelhiLocalityRoutes: MetadataRoute.Sitemap = INDEXABLE_WEST_DELHI_LOCALITIES.map(
+    (slug) => ({
+      url: `${baseUrl}/neet-coaching-west-delhi/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    })
+  )
+
   // Combine all routes and deduplicate by URL
   const allRoutes = [
     ...recoveredOrphanRouteEntries,
@@ -8453,6 +8468,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...faridabadLocalityRoutes,
     ...gurugramLocalityRoutes,
     ...noidaLocalityRoutes,
+    ...westDelhiLocalityRoutes,
     ...campbellChapterRoutes,
     ...campbellUnitRoutes,
     ...locationRoutes,
