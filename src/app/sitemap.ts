@@ -20,6 +20,7 @@ import { INDEXABLE_FARIDABAD_LOCALITIES } from '@/data/faridabad-enriched'
 import { INDEXABLE_GURUGRAM_LOCALITIES } from '@/data/gurugram-enriched'
 import { INDEXABLE_NOIDA_LOCALITIES } from '@/data/noida-enriched'
 import { INDEXABLE_WEST_DELHI_LOCALITIES } from '@/data/west-delhi-enriched'
+import { INDEXABLE_EAST_DELHI_LOCALITIES } from '@/data/east-delhi-enriched'
 import { gamsatMetroSlugs } from '@/data/gamsat/metros'
 import { usmleMetroSlugs } from '@/data/usmle-step-1/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
@@ -129,7 +130,9 @@ const inlineRedirectPatterns: RegExp[] = [
   // are all 301'd to parent in next.config.mjs. Filter sitemap too.
   /^\/neet-coaching-south-delhi\/[^/]+$/,
   /^\/neet-coaching-north-delhi\/[^/]+$/,
-  /^\/neet-coaching-east-delhi\/[^/]+$/,
+  // NOTE: blanket /neet-coaching-east-delhi/[area] mirror removed — catch-all gone;
+  // consolidated areas filtered via explicit exact sources, the 8 curated
+  // indexable localities are emitted.
   // NOTE: blanket /neet-coaching-west-delhi/[area] mirror removed — catch-all gone;
   // the consolidated areas are filtered via explicit exact sources, the 8 curated
   // indexable localities are emitted.
@@ -8460,6 +8463,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   )
 
+  // Curated, un-redirected East Delhi locality pages (rest of /:area still 301s to
+  // the hub). No standalone twins → additive; genuinely unique prose/metadata.
+  const eastDelhiLocalityRoutes: MetadataRoute.Sitemap = INDEXABLE_EAST_DELHI_LOCALITIES.map(
+    (slug) => ({
+      url: `${baseUrl}/neet-coaching-east-delhi/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    })
+  )
+
   // Combine all routes and deduplicate by URL
   const allRoutes = [
     ...recoveredOrphanRouteEntries,
@@ -8469,6 +8483,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...gurugramLocalityRoutes,
     ...noidaLocalityRoutes,
     ...westDelhiLocalityRoutes,
+    ...eastDelhiLocalityRoutes,
     ...campbellChapterRoutes,
     ...campbellUnitRoutes,
     ...locationRoutes,

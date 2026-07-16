@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getAreaBySlug } from '@/data/east-delhi-areas'
+import { getEastDelhiEnrichment } from '@/data/east-delhi-enriched'
 import { CEREBRUM_METRICS, NOIDA_CENTER_METRICS, AREA_COORDINATES } from '@/lib/constants/metrics'
 import AreaPageContent from './AreaPageContent'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
@@ -65,8 +66,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
-  const title = getTitleByType(area)
-  const description = getMetaDescriptionByType(area)
+  // Curated indexable localities get genuinely unique title/description (not the
+  // per-type template) so they clear the doorway-uniqueness bar.
+  const enrichment = getEastDelhiEnrichment(areaSlug)
+  const title = enrichment?.metaTitle || getTitleByType(area)
+  const description = enrichment?.metaDescription || getMetaDescriptionByType(area)
 
   return {
     title,

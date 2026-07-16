@@ -19,6 +19,7 @@ import {
   noidaConsolidationRedirects,
   faridabadConsolidationRedirects,
   westDelhiConsolidationRedirects,
+  eastDelhiConsolidationRedirects,
   ghaziabadConsolidationRedirects,
   rohiniConsolidationRedirects,
   areaPageConsolidationRedirects,
@@ -422,11 +423,10 @@ const nextConfig = {
         destination: '/neet-coaching-north-delhi',
         permanent: true,
       },
-      {
-        source: '/neet-coaching-east-delhi/:area',
-        destination: '/neet-coaching-east-delhi',
-        permanent: true,
-      },
+      // NOTE: the East Delhi /:area catch-all was removed (same reason as the
+      // other NCR cities): 8 curated localities (src/data/east-delhi-enriched.ts)
+      // now render + index; the rest consolidate via areaPageConsolidationRedirects
+      // + eastDelhiConsolidationRedirects.
       // NOTE: the West Delhi /:area catch-all was removed (same reason as the
       // other NCR cities): 8 curated localities (src/data/west-delhi-enriched.ts)
       // now render + index; the rest consolidate via explicit exact sources in
@@ -1620,6 +1620,7 @@ const nextConfig = {
       ...noidaConsolidationRedirects,
       ...faridabadConsolidationRedirects,
       ...westDelhiConsolidationRedirects,
+      ...eastDelhiConsolidationRedirects,
       ...ghaziabadConsolidationRedirects,
       ...rohiniConsolidationRedirects,
       ...areaPageConsolidationRedirects,
