@@ -2870,21 +2870,6 @@ export const areaPageConsolidationRedirects = [
     permanent: true,
   },
   {
-    source: '/neet-coaching-noida/sector-50',
-    destination: '/neet-coaching-noida',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-noida/sector-76',
-    destination: '/neet-coaching-noida',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-noida/sector-78',
-    destination: '/neet-coaching-noida',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-noida/sector-93',
     destination: '/neet-coaching-noida',
     permanent: true,
@@ -2915,27 +2900,12 @@ export const areaPageConsolidationRedirects = [
     permanent: true,
   },
   {
-    source: '/neet-coaching-noida/sector-137',
-    destination: '/neet-coaching-noida',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-noida/sector-143',
     destination: '/neet-coaching-noida',
     permanent: true,
   },
   {
-    source: '/neet-coaching-noida/sector-150',
-    destination: '/neet-coaching-noida',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-noida/noida-extension',
-    destination: '/neet-coaching-noida',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-noida/gaur-city',
     destination: '/neet-coaching-noida',
     permanent: true,
   },
@@ -2951,11 +2921,6 @@ export const areaPageConsolidationRedirects = [
   },
   {
     source: '/neet-coaching-noida/greater-noida',
-    destination: '/neet-coaching-noida',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-noida/knowledge-park',
     destination: '/neet-coaching-noida',
     permanent: true,
   },
@@ -2981,11 +2946,6 @@ export const areaPageConsolidationRedirects = [
   },
   {
     source: '/neet-coaching-noida/ats-pristine',
-    destination: '/neet-coaching-noida',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-noida/jaypee-greens',
     destination: '/neet-coaching-noida',
     permanent: true,
   },

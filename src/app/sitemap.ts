@@ -18,6 +18,7 @@ import { comparisons as ibBiologyComparisons } from '@/data/ib-biology/compariso
 import { recoveredOrphanRoutes } from '@/data/sitemap/recovered-orphans'
 import { INDEXABLE_FARIDABAD_LOCALITIES } from '@/data/faridabad-enriched'
 import { INDEXABLE_GURUGRAM_LOCALITIES } from '@/data/gurugram-enriched'
+import { INDEXABLE_NOIDA_LOCALITIES } from '@/data/noida-enriched'
 import { gamsatMetroSlugs } from '@/data/gamsat/metros'
 import { usmleMetroSlugs } from '@/data/usmle-step-1/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
@@ -129,7 +130,9 @@ const inlineRedirectPatterns: RegExp[] = [
   /^\/neet-coaching-north-delhi\/[^/]+$/,
   /^\/neet-coaching-east-delhi\/[^/]+$/,
   /^\/neet-coaching-west-delhi\/[^/]+$/,
-  /^\/neet-coaching-noida\/[^/]+$/,
+  // NOTE: blanket /neet-coaching-noida/[area] mirror removed — catch-all gone from
+  // next.config; the 26 consolidated areas are filtered via explicit exact sources,
+  // the 8 curated indexable localities are emitted.
   /^\/neet-coaching-ghaziabad\/[^/]+$/,
   // NOTE: the blanket /neet-coaching-faridabad/[area] mirror was removed — that
   // catch-all no longer exists in next.config. The 37 consolidated areas are now
@@ -8433,6 +8436,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   )
 
+  // Curated, un-redirected Noida locality pages (the rest of the /:area family
+  // still 301s to the city hub). These 8 carry genuinely unique prose/metadata.
+  const noidaLocalityRoutes: MetadataRoute.Sitemap = INDEXABLE_NOIDA_LOCALITIES.map((slug) => ({
+    url: `${baseUrl}/neet-coaching-noida/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.75,
+  }))
+
   // Combine all routes and deduplicate by URL
   const allRoutes = [
     ...recoveredOrphanRouteEntries,
@@ -8440,6 +8452,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...ibComparisonRoutes,
     ...faridabadLocalityRoutes,
     ...gurugramLocalityRoutes,
+    ...noidaLocalityRoutes,
     ...campbellChapterRoutes,
     ...campbellUnitRoutes,
     ...locationRoutes,
