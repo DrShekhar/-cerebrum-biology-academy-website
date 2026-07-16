@@ -2778,6 +2778,31 @@ export const faridabadConsolidationRedirects = [
   },
 ]
 
+// West Delhi area slugs that render but were only caught by the (now removed)
+// /neet-coaching-west-delhi/:area catch-all — they are NOT in
+// areaPageConsolidationRedirects, so they must be listed here to stay
+// consolidated. (dwarka + janakpuri also have their own standalone pages.) The 8
+// curated indexable localities (src/data/west-delhi-enriched.ts) are absent from
+// every redirect list so they render + index.
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const westDelhiConsolidationRedirects = [
+  {
+    source: '/neet-coaching-west-delhi/dwarka',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-west-delhi/janakpuri',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-west-delhi/vikaspuri',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+]
+
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const ghaziabadConsolidationRedirects = [
   // 4A. Alternatives → /best-neet-coaching-ghaziabad (2)
@@ -3380,47 +3405,7 @@ export const areaPageConsolidationRedirects = [
 
   // neet-coaching-west-delhi area pages (9)
   {
-    source: '/neet-coaching-west-delhi/rajouri-garden',
-    destination: '/neet-coaching-west-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-west-delhi/uttam-nagar',
-    destination: '/neet-coaching-west-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-west-delhi/tilak-nagar',
-    destination: '/neet-coaching-west-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-west-delhi/subhash-nagar',
-    destination: '/neet-coaching-west-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-west-delhi/paschim-vihar',
-    destination: '/neet-coaching-west-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-west-delhi/punjabi-bagh',
-    destination: '/neet-coaching-west-delhi',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-west-delhi/hari-nagar',
-    destination: '/neet-coaching-west-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-west-delhi/kirti-nagar',
-    destination: '/neet-coaching-west-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-west-delhi/moti-nagar',
     destination: '/neet-coaching-west-delhi',
     permanent: true,
   },
