@@ -238,8 +238,20 @@ async function getUserFromToken(
       const cookieName = secureCookie ? '__Secure-authjs.session-token' : 'authjs.session-token'
       try {
         if (debugAuth) {
-          const raw = await getToken({ req, secret: nextAuthSecret, secureCookie, cookieName, salt: cookieName, raw: true })
-          console.log('[mw-auth] secureCookie=%s cookiePresent=%s rawLen=%s', secureCookie, !!raw, typeof raw === 'string' ? raw.length : 0)
+          const raw = await getToken({
+            req,
+            secret: nextAuthSecret,
+            secureCookie,
+            cookieName,
+            salt: cookieName,
+            raw: true,
+          })
+          console.log(
+            '[mw-auth] secureCookie=%s cookiePresent=%s rawLen=%s',
+            secureCookie,
+            !!raw,
+            typeof raw === 'string' ? raw.length : 0
+          )
         }
         const token = await getToken({
           req,
@@ -249,7 +261,12 @@ async function getUserFromToken(
           salt: cookieName,
         })
         if (debugAuth) {
-          console.log('[mw-auth] secureCookie=%s decoded=%s keys=%s', secureCookie, !!token, token ? Object.keys(token).join(',') : '-')
+          console.log(
+            '[mw-auth] secureCookie=%s decoded=%s keys=%s',
+            secureCookie,
+            !!token,
+            token ? Object.keys(token).join(',') : '-'
+          )
         }
         const userId = (token?.id as string | undefined) || token?.sub
         if (token && userId) {
@@ -578,11 +595,14 @@ export default async function middleware(req: NextRequest) {
     if (userId && userRole === 'ADMIN') {
       return NextResponse.redirect(new URL('/admin', req.url))
     }
-    if (userId) {
-      // User is signed in but not admin - show page
-      return addSecurityHeaders(NextResponse.next())
-    }
-    return addSecurityHeaders(NextResponse.next())
+    // Signed-in non-admin OR signed-out: render the login page. Forward the
+    // pathname as a REQUEST header so the admin layout can detect the /admin/login
+    // route and skip its server-side session redirect. Without this the layout
+    // sees an empty pathname and bounces signed-out users to /sign-in — making the
+    // admin login page unreachable for its intended audience.
+    const loginRequestHeaders = new Headers(req.headers)
+    loginRequestHeaders.set('x-pathname', pathname)
+    return addSecurityHeaders(NextResponse.next({ request: { headers: loginRequestHeaders } }))
   }
 
   // Protected teacher routes - require TEACHER or ADMIN role
