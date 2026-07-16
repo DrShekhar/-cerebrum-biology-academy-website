@@ -431,11 +431,10 @@ const nextConfig = {
         destination: '/neet-coaching-west-delhi',
         permanent: true,
       },
-      {
-        source: '/neet-coaching-noida/:area',
-        destination: '/neet-coaching-noida',
-        permanent: true,
-      },
+      // NOTE: the Noida /:area catch-all was removed (same reason as Faridabad/
+      // Gurugram): 8 curated localities (src/data/noida-enriched.ts) now render +
+      // index while the other 26 consolidate via explicit exact sources in
+      // areaPageConsolidationRedirects. Do not re-add this catch-all.
       {
         source: '/neet-coaching-ghaziabad/:area',
         destination: '/neet-coaching-ghaziabad',
