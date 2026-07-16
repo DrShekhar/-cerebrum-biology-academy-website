@@ -2803,6 +2803,29 @@ export const westDelhiConsolidationRedirects = [
   },
 ]
 
+// East Delhi area slugs that render but were only caught by the (now removed)
+// /neet-coaching-east-delhi/:area catch-all — kept consolidated here. The 8
+// curated indexable localities (src/data/east-delhi-enriched.ts) are absent from
+// every redirect list so they render + index.
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const eastDelhiConsolidationRedirects = [
+  {
+    source: '/neet-coaching-east-delhi/patparganj',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-delhi/karkardooma',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-delhi/shakarpur',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+]
+
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const ghaziabadConsolidationRedirects = [
   // 4A. Alternatives → /best-neet-coaching-ghaziabad (2)
@@ -3343,21 +3366,6 @@ export const areaPageConsolidationRedirects = [
 
   // neet-coaching-east-delhi area pages (12)
   {
-    source: '/neet-coaching-east-delhi/laxmi-nagar',
-    destination: '/neet-coaching-east-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-east-delhi/preet-vihar',
-    destination: '/neet-coaching-east-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-east-delhi/mayur-vihar-phase-1',
-    destination: '/neet-coaching-east-delhi',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-east-delhi/mayur-vihar-phase-2',
     destination: '/neet-coaching-east-delhi',
     permanent: true,
@@ -3368,32 +3376,7 @@ export const areaPageConsolidationRedirects = [
     permanent: true,
   },
   {
-    source: '/neet-coaching-east-delhi/ip-extension',
-    destination: '/neet-coaching-east-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-east-delhi/anand-vihar',
-    destination: '/neet-coaching-east-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-east-delhi/nirman-vihar',
-    destination: '/neet-coaching-east-delhi',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-east-delhi/pandav-nagar',
-    destination: '/neet-coaching-east-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-east-delhi/krishna-nagar',
-    destination: '/neet-coaching-east-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-east-delhi/vivek-vihar',
     destination: '/neet-coaching-east-delhi',
     permanent: true,
   },
