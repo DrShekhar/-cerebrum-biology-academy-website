@@ -5,6 +5,7 @@ import {
   getNearbyGhaziabadAreas,
   getAICitationFacts,
 } from '@/data/ghaziabad-areas'
+import { getGhaziabadEnrichment } from '@/data/ghaziabad-enriched'
 import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { AreaPageContent } from './AreaPageContent'
@@ -80,8 +81,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
   }
 
-  const title = getTitleByType(area)
-  const description = getMetaDescriptionByType(area)
+  // Curated indexable localities get genuinely unique title/description (not the
+  // per-type template) so they clear the doorway-uniqueness bar.
+  const enrichment = getGhaziabadEnrichment(areaSlug)
+  const title = enrichment?.metaTitle || getTitleByType(area)
+  const description = enrichment?.metaDescription || getMetaDescriptionByType(area)
 
   const typeKeywords: Record<string, string[]> = {
     premium: [

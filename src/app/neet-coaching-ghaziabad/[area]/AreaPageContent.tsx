@@ -19,6 +19,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { GhaziabadAreaDetails, getGhaziabadAreaBySlug } from '@/data/ghaziabad-areas'
+import { getGhaziabadEnrichment } from '@/data/ghaziabad-enriched'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
@@ -168,6 +169,23 @@ export function AreaPageContent({
           </div>
         </div>
       </section>
+
+      {/* Unique locality intro — genuinely differentiated prose for the curated,
+          indexable localities so they clear the doorway-uniqueness bar. */}
+      {(() => {
+        const enrichment = getGhaziabadEnrichment(slug)
+        if (!enrichment) return null
+        return (
+          <section className="py-10 bg-white border-b border-gray-100">
+            <div className="max-w-4xl mx-auto px-4">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                NEET Biology coaching in {area.name}, Ghaziabad
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed">{enrichment.intro}</p>
+            </div>
+          </section>
+        )
+      })()}
 
       {/* Stats Section */}
       <section className="py-8 bg-gray-50 border-b">
