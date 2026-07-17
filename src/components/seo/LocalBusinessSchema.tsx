@@ -321,14 +321,11 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
         closes: location.openingHours.closes,
       },
     ],
-    sameAs: [
-      'https://www.facebook.com/cerebrumbiologyacademy',
-      'https://www.instagram.com/cerebrumbiologyacademy',
-      'https://www.youtube.com/@cerebrumbiologyacademy',
-      'https://www.youtube.com/@drshekharcsingh',
-      'https://www.linkedin.com/company/cerebrum-biology-academy',
-      location.googleBusinessUrl,
-    ],
+    // Social profiles from the single NAP source of truth (CONTACT_INFO.social),
+    // so every schema component points at the SAME real, resolving handles. The
+    // per-centre GBP link is appended (owner to replace the g.page shortlink with
+    // a verified Google Business Profile URL).
+    sameAs: [...Object.values(CONTACT_INFO.social), location.googleBusinessUrl],
     founder: {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',

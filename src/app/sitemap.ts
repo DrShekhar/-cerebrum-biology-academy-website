@@ -21,6 +21,7 @@ import { INDEXABLE_GURUGRAM_LOCALITIES } from '@/data/gurugram-enriched'
 import { INDEXABLE_NOIDA_LOCALITIES } from '@/data/noida-enriched'
 import { INDEXABLE_WEST_DELHI_LOCALITIES } from '@/data/west-delhi-enriched'
 import { INDEXABLE_EAST_DELHI_LOCALITIES } from '@/data/east-delhi-enriched'
+import { olympiadCities } from '@/data/olympiads/india-cities'
 import { gamsatMetroSlugs } from '@/data/gamsat/metros'
 import { usmleMetroSlugs } from '@/data/usmle-step-1/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
@@ -8474,6 +8475,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   )
 
+  // /biology-olympiads/india/[city] — the per-city NSEB/INBO/IBO hubs (Delhi,
+  // Gurugram, Noida, Faridabad, South Delhi, Rohini + metros). This dynamic route
+  // had no generation loop, so the pages were indexable but sitemap-orphaned.
+  const olympiadCityRoutes: MetadataRoute.Sitemap = olympiadCities.map((c) => ({
+    url: `${baseUrl}/biology-olympiads/india/${c.slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
   // Combine all routes and deduplicate by URL
   const allRoutes = [
     ...recoveredOrphanRouteEntries,
@@ -8484,6 +8495,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...noidaLocalityRoutes,
     ...westDelhiLocalityRoutes,
     ...eastDelhiLocalityRoutes,
+    ...olympiadCityRoutes,
     ...campbellChapterRoutes,
     ...campbellUnitRoutes,
     ...locationRoutes,

@@ -487,6 +487,40 @@ export function BestNEETCoachingDelhiNCRClient() {
         </div>
       </section>
 
+      {/* NEET coaching across Delhi NCR — internal-linking hub so link equity
+          flows to every city/zone page and Google sees a crawlable cluster. */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="mx-auto max-w-5xl px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+            NEET Biology coaching across Delhi NCR
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {[
+              { href: '/neet-coaching-delhi', label: 'Delhi' },
+              { href: '/neet-coaching-south-delhi', label: 'South Delhi' },
+              { href: '/neet-coaching-north-delhi', label: 'North Delhi' },
+              { href: '/neet-coaching-east-delhi', label: 'East Delhi' },
+              { href: '/neet-coaching-west-delhi', label: 'West Delhi' },
+              { href: '/neet-coaching-dwarka', label: 'Dwarka' },
+              { href: '/neet-coaching-rohini', label: 'Rohini' },
+              { href: '/neet-coaching-gurugram', label: 'Gurugram' },
+              { href: '/neet-coaching-noida', label: 'Noida' },
+              { href: '/best-neet-coaching-greater-noida', label: 'Greater Noida' },
+              { href: '/neet-coaching-faridabad', label: 'Faridabad' },
+              { href: '/neet-coaching-ghaziabad', label: 'Ghaziabad' },
+            ].map((c) => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className="rounded-lg border border-gray-200 px-4 py-3 text-center font-medium text-gray-800 transition-colors hover:border-blue-500 hover:bg-blue-50"
+              >
+                NEET coaching {c.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
