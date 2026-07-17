@@ -1165,6 +1165,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
+    {
+      // /low-neet-score-options — honest post-result "what are my options" guide (top-of-funnel
+      // for the low-scorer segment); reclaimed from a mis-mapped 301 to /neet-2026-cutoff and
+      // funnels into /neet-dropper-2027 + the predictors.
+      url: `${baseUrl}/low-neet-score-options`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
     // ===== /programs/biology-olympiad — international-school programme + 27 country pages =====
     {
       url: `${baseUrl}/programs/biology-olympiad`,
