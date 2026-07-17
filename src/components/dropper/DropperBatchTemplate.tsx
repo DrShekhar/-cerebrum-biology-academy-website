@@ -316,7 +316,7 @@ export default function DropperBatchTemplate({
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <Link href="/dropper" className="text-gray-600 hover:text-teal-600">
+              <Link href="/neet-dropper-2027" className="text-gray-600 hover:text-teal-600">
                 NEET Dropper Program
               </Link>
             </li>
@@ -763,7 +763,10 @@ export default function DropperBatchTemplate({
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/dropper" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md">
+            <Link
+              href="/neet-dropper-2027"
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
+            >
               <h3 className="font-semibold text-teal-600">One-Year Dropper Course</h3>
               <p className="text-sm text-gray-600">Intensive programme</p>
             </Link>

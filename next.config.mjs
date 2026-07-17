@@ -388,12 +388,12 @@ const nextConfig = {
       },
       {
         source: '/blog/neet-repeater-success-stories',
-        destination: '/dropper',
+        destination: '/neet-dropper-2027',
         permanent: true,
       },
       {
         source: '/blog/how-to-overcome-neet-failure',
-        destination: '/dropper',
+        destination: '/neet-dropper-2027',
         permanent: true,
       },
       {
