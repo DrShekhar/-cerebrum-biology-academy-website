@@ -1157,10 +1157,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/dropper`,
+      // /neet-dropper-2027 — the keyword-exact flagship dropper/repeater program.
+      // /dropper now 301s here (cannibalizationConsolidationRedirects), so /dropper
+      // is auto-filtered from the sitemap by the redirect filter below.
+      url: `${baseUrl}/neet-dropper-2027`,
       lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
     },
     // ===== /programs/biology-olympiad — international-school programme + 27 country pages =====
     {

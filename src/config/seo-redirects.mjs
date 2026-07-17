@@ -2102,13 +2102,17 @@ export const gsc404CleanupBatch3Redirects = [
     destination: '/neet-coaching-south-delhi',
     permanent: true,
   },
-  { source: '/neet-dropper-batch-delhi', destination: '/dropper', permanent: true },
+  { source: '/neet-dropper-batch-delhi', destination: '/neet-dropper-2027', permanent: true },
   {
     source: '/neet-foundation-class-11-faridabad',
     destination: '/courses/foundation',
     permanent: true,
   },
-  { source: '/one-year-dropper-course-faridabad', destination: '/dropper', permanent: true },
+  {
+    source: '/one-year-dropper-course-faridabad',
+    destination: '/neet-dropper-2027',
+    permanent: true,
+  },
   {
     source: '/international/ca/courses/bc-biology',
     destination: '/international',
@@ -2200,6 +2204,11 @@ export const hubPageConsolidationRedirects = []
 // ============================================
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const cannibalizationConsolidationRedirects = [
+  // /dropper → /neet-dropper-2027: both targeted the same "NEET dropper 2027 /
+  // repeater" intent. Consolidate the short brand slug into the keyword-exact
+  // flagship (the sitemap filter + coverage guard treat /dropper as redirected).
+  { source: '/dropper', destination: '/neet-dropper-2027', permanent: true },
+
   // About page consolidation
 
   // ============================================
@@ -5127,9 +5136,9 @@ export const aeoCitationRedirects = [
     destination: '/best-biology-tutor-class-12',
     permanent: true,
   },
-  { source: '/neet-dropper-coaching', destination: '/dropper', permanent: true },
-  { source: '/dropper-programme', destination: '/dropper', permanent: true },
-  { source: '/post-12-gap-year-neet', destination: '/dropper', permanent: true },
+  { source: '/neet-dropper-coaching', destination: '/neet-dropper-2027', permanent: true },
+  { source: '/dropper-programme', destination: '/neet-dropper-2027', permanent: true },
+  { source: '/post-12-gap-year-neet', destination: '/neet-dropper-2027', permanent: true },
   { source: '/best-coaching-for-neet-repeaters', destination: '/neet-repeaters', permanent: true },
   { source: '/second-attempt-neet-biology', destination: '/neet-repeaters', permanent: true },
   { source: '/third-attempt-neet-biology', destination: '/neet-repeaters', permanent: true },
