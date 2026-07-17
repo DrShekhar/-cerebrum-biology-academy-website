@@ -22,6 +22,8 @@ import { INDEXABLE_NOIDA_LOCALITIES } from '@/data/noida-enriched'
 import { INDEXABLE_WEST_DELHI_LOCALITIES } from '@/data/west-delhi-enriched'
 import { INDEXABLE_EAST_DELHI_LOCALITIES } from '@/data/east-delhi-enriched'
 import { olympiadCities } from '@/data/olympiads/india-cities'
+import { INDEXABLE_NORTH_DELHI_LOCALITIES } from '@/data/north-delhi-enriched'
+import { INDEXABLE_GHAZIABAD_LOCALITIES } from '@/data/ghaziabad-enriched'
 import { gamsatMetroSlugs } from '@/data/gamsat/metros'
 import { usmleMetroSlugs } from '@/data/usmle-step-1/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
@@ -130,7 +132,9 @@ const inlineRedirectPatterns: RegExp[] = [
   // locations/[city]/[locality], and school/metro-station sub-routes
   // are all 301'd to parent in next.config.mjs. Filter sitemap too.
   /^\/neet-coaching-south-delhi\/[^/]+$/,
-  /^\/neet-coaching-north-delhi\/[^/]+$/,
+  // NOTE: blanket /neet-coaching-north-delhi/[area] mirror removed — catch-all gone;
+  // consolidated areas filtered via explicit exact sources, 5 curated indexable
+  // localities emitted.
   // NOTE: blanket /neet-coaching-east-delhi/[area] mirror removed — catch-all gone;
   // consolidated areas filtered via explicit exact sources, the 8 curated
   // indexable localities are emitted.
@@ -140,7 +144,9 @@ const inlineRedirectPatterns: RegExp[] = [
   // NOTE: blanket /neet-coaching-noida/[area] mirror removed — catch-all gone from
   // next.config; the 26 consolidated areas are filtered via explicit exact sources,
   // the 8 curated indexable localities are emitted.
-  /^\/neet-coaching-ghaziabad\/[^/]+$/,
+  // NOTE: blanket /neet-coaching-ghaziabad/[area] mirror removed — catch-all gone;
+  // consolidated areas filtered via explicit exact sources, 8 curated indexable
+  // localities emitted.
   // NOTE: the blanket /neet-coaching-faridabad/[area] mirror was removed — that
   // catch-all no longer exists in next.config. The 37 consolidated areas are now
   // filtered via their explicit exact-source entries (faridabadConsolidationRedirects
@@ -8485,6 +8491,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  // Curated, un-redirected North Delhi + Ghaziabad locality pages (rest of each
+  // /:area family still 301s to its hub). No standalone twins → additive.
+  const northDelhiLocalityRoutes: MetadataRoute.Sitemap = INDEXABLE_NORTH_DELHI_LOCALITIES.map(
+    (slug) => ({
+      url: `${baseUrl}/neet-coaching-north-delhi/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    })
+  )
+  const ghaziabadLocalityRoutes: MetadataRoute.Sitemap = INDEXABLE_GHAZIABAD_LOCALITIES.map(
+    (slug) => ({
+      url: `${baseUrl}/neet-coaching-ghaziabad/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    })
+  )
+
   // Combine all routes and deduplicate by URL
   const allRoutes = [
     ...recoveredOrphanRouteEntries,
@@ -8495,6 +8520,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...noidaLocalityRoutes,
     ...westDelhiLocalityRoutes,
     ...eastDelhiLocalityRoutes,
+    ...northDelhiLocalityRoutes,
+    ...ghaziabadLocalityRoutes,
     ...olympiadCityRoutes,
     ...campbellChapterRoutes,
     ...campbellUnitRoutes,

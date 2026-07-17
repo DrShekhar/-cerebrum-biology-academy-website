@@ -20,6 +20,7 @@ import {
   faridabadConsolidationRedirects,
   westDelhiConsolidationRedirects,
   eastDelhiConsolidationRedirects,
+  northDelhiConsolidationRedirects,
   ghaziabadConsolidationRedirects,
   rohiniConsolidationRedirects,
   areaPageConsolidationRedirects,
@@ -418,11 +419,10 @@ const nextConfig = {
         destination: '/neet-coaching-south-delhi',
         permanent: true,
       },
-      {
-        source: '/neet-coaching-north-delhi/:area',
-        destination: '/neet-coaching-north-delhi',
-        permanent: true,
-      },
+      // NOTE: the North Delhi /:area catch-all was removed (same reason as the
+      // other NCR cities): 5 curated localities (src/data/north-delhi-enriched.ts)
+      // now render + index; the rest consolidate via areaPageConsolidationRedirects
+      // + northDelhiConsolidationRedirects.
       // NOTE: the East Delhi /:area catch-all was removed (same reason as the
       // other NCR cities): 8 curated localities (src/data/east-delhi-enriched.ts)
       // now render + index; the rest consolidate via areaPageConsolidationRedirects
@@ -435,11 +435,10 @@ const nextConfig = {
       // Gurugram): 8 curated localities (src/data/noida-enriched.ts) now render +
       // index while the other 26 consolidate via explicit exact sources in
       // areaPageConsolidationRedirects. Do not re-add this catch-all.
-      {
-        source: '/neet-coaching-ghaziabad/:area',
-        destination: '/neet-coaching-ghaziabad',
-        permanent: true,
-      },
+      // NOTE: the Ghaziabad /:area catch-all was removed (same reason as the
+      // other NCR cities): 8 curated localities (src/data/ghaziabad-enriched.ts)
+      // now render + index; the rest consolidate via areaPageConsolidationRedirects
+      // + ghaziabadConsolidationRedirects.
       // NOTE: the Faridabad /:area catch-all was replaced by explicit exact-source
       // 301s in faridabadConsolidationRedirects (src/config/seo-redirects.mjs) so
       // that 8 curated localities (src/data/faridabad-enriched.ts) can render and
@@ -1621,6 +1620,7 @@ const nextConfig = {
       ...faridabadConsolidationRedirects,
       ...westDelhiConsolidationRedirects,
       ...eastDelhiConsolidationRedirects,
+      ...northDelhiConsolidationRedirects,
       ...ghaziabadConsolidationRedirects,
       ...rohiniConsolidationRedirects,
       ...areaPageConsolidationRedirects,

@@ -2833,6 +2833,58 @@ export const ghaziabadConsolidationRedirects = [
   // 4C. Foundation → /neet-coaching-ghaziabad (2)
   // 4D. School-specific → /neet-coaching-ghaziabad (3)
   // 4E. FAQ/specialty → /neet-coaching-ghaziabad (6)
+  // Ghaziabad [area] slugs that render but were only caught by the (now removed)
+  // /neet-coaching-ghaziabad/:area catch-all — kept consolidated here. The 8
+  // curated indexable localities (src/data/ghaziabad-enriched.ts) are absent from
+  // every redirect list. (indirapuram/vaishali/vasundhara also have standalone pages.)
+  {
+    source: '/neet-coaching-ghaziabad/indirapuram',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/vaishali',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/vasundhara',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/loni',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/nandgram',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+]
+
+// North Delhi [area] slugs that render but were only caught by the (now removed)
+// /neet-coaching-north-delhi/:area catch-all — kept consolidated here.
+// (rohini/pitampura also have their own standalone pages.) The 5 curated indexable
+// localities (src/data/north-delhi-enriched.ts) are absent from every redirect list.
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const northDelhiConsolidationRedirects = [
+  {
+    source: '/neet-coaching-north-delhi/rohini',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-north-delhi/pitampura',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-north-delhi/wazirpur',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
 ]
 
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
@@ -3329,37 +3381,12 @@ export const areaPageConsolidationRedirects = [
     permanent: true,
   },
   {
-    source: '/neet-coaching-north-delhi/ashok-vihar',
-    destination: '/neet-coaching-north-delhi',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-north-delhi/gtb-nagar',
     destination: '/neet-coaching-north-delhi',
     permanent: true,
   },
   {
     source: '/neet-coaching-north-delhi/mukherjee-nagar',
-    destination: '/neet-coaching-north-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-north-delhi/kamla-nagar',
-    destination: '/neet-coaching-north-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-north-delhi/kingsway-camp',
-    destination: '/neet-coaching-north-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-north-delhi/adarsh-nagar',
-    destination: '/neet-coaching-north-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-north-delhi/prashant-vihar',
     destination: '/neet-coaching-north-delhi',
     permanent: true,
   },
@@ -3567,22 +3594,7 @@ export const areaPageConsolidationRedirects = [
     permanent: true,
   },
   {
-    source: '/neet-coaching-ghaziabad/wave-city',
-    destination: '/neet-coaching-ghaziabad',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-ghaziabad/mohan-nagar',
-    destination: '/neet-coaching-ghaziabad',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-ghaziabad/shaheed-sthal',
-    destination: '/neet-coaching-ghaziabad',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-ghaziabad/vijay-nagar',
     destination: '/neet-coaching-ghaziabad',
     permanent: true,
   },
@@ -3597,17 +3609,7 @@ export const areaPageConsolidationRedirects = [
     permanent: true,
   },
   {
-    source: '/neet-coaching-ghaziabad/pratap-vihar',
-    destination: '/neet-coaching-ghaziabad',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-ghaziabad/ahinsa-khand',
-    destination: '/neet-coaching-ghaziabad',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-ghaziabad/vaibhav-khand',
     destination: '/neet-coaching-ghaziabad',
     permanent: true,
   },
