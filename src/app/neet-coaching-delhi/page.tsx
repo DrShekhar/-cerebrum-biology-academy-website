@@ -105,13 +105,15 @@ const delhiMultiLocationSchema = {
       telephone: '+91-88264-44334',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Rohini Sector 3',
+        // Corrected to the canonical NAP (contactInfo.ts): the Rohini centre is at
+        // Sector 9 (DC Chowk), not "Sector 3", and the geo was ~2 km off.
+        streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9',
         addressLocality: 'Rohini',
         addressRegion: 'Delhi',
         postalCode: '110085',
         addressCountry: 'IN',
       },
-      geo: { '@type': 'GeoCoordinates', latitude: 28.7335, longitude: 77.1196 },
+      geo: { '@type': 'GeoCoordinates', latitude: 28.7143, longitude: 77.1117 },
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',

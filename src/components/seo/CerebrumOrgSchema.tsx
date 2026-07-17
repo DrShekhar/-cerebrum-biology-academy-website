@@ -20,14 +20,12 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 type CentreKey = 'southExtension' | 'rohini' | 'greenPark' | 'gurugram' | 'faridabad' | 'noida'
 
-const CENTRE_ORDER: CentreKey[] = [
-  'southExtension',
-  'rohini',
-  'greenPark',
-  'gurugram',
-  'faridabad',
-  'noida',
-]
+// NOTE: 'noida' is deliberately NOT emitted as a department branch — it is
+// online-only (no physical address), and emitting an EducationalOrganization
+// branch with an empty streetAddress is the fake-location pattern Google
+// penalizes (LocalBusinessSchema excludes it for the same reason). This keeps
+// the 5 real centres aligned with the "5 Delhi NCR centres" description below.
+const CENTRE_ORDER: CentreKey[] = ['southExtension', 'rohini', 'greenPark', 'gurugram', 'faridabad']
 
 function buildBranch(key: CentreKey) {
   const c = CONTACT_INFO.centers[key]
@@ -103,14 +101,11 @@ export function CerebrumOrgSchema() {
     },
     telephone: '+918826444334',
     email: 'info@cerebrumbiologyacademy.com',
-    sameAs: [
-      'https://www.youtube.com/@cerebrumbiologyacademy',
-      'https://www.youtube.com/@drshekharcsingh',
-      'https://www.instagram.com/cerebrumbiologyacademy/',
-      'https://www.facebook.com/cerebrumbiologyacademy',
-      'https://www.linkedin.com/company/cerebrumbiologyacademy',
-      'https://twitter.com/cerebrumbiology',
-    ],
+    // sameAs sourced from the single NAP source of truth (CONTACT_INFO.social) so
+    // every schema component points at the SAME real, resolving profiles. The
+    // previous hardcoded set had wrong FB/YouTube/Twitter handles that defeated
+    // entity corroboration (AI/Google couldn't confirm they were the same brand).
+    sameAs: Object.values(CONTACT_INFO.social),
     knowsAbout: [
       'NEET Biology',
       'NEET-UG Preparation',
