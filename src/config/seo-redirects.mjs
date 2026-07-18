@@ -5196,7 +5196,6 @@ export const aeoCitationRedirects = [
   { source: '/neet-cutoff-analysis', destination: '/neet-2026-cutoff', permanent: true },
   { source: '/neet-cutoff-calculator', destination: '/neet-2026-cutoff', permanent: true },
   { source: '/neet-qualifying-marks', destination: '/neet-2026-cutoff', permanent: true },
-  { source: '/low-neet-score-options', destination: '/neet-2026-cutoff', permanent: true },
   {
     source: '/neet-biology-study-plan',
     destination: '/neet-study-plan-generator',
