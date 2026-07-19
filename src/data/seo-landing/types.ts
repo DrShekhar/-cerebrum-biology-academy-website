@@ -232,9 +232,9 @@ export const coursePageLinks: Record<ClassLevel, string> = {
 
 // Tier page links with query params
 export const tierPageLinks: Record<ClassLevel, string> = {
-  'class-6': '/courses?class=foundation-6',
-  'class-7': '/courses?class=foundation-7',
-  'class-8': '/courses?class=foundation-8',
+  'class-6': '/neet-biology-foundation-class-6-to-8#fees',
+  'class-7': '/neet-biology-foundation-class-6-to-8#fees',
+  'class-8': '/neet-biology-foundation-class-6-to-8#fees',
   'class-9': '/courses?class=foundation-9',
   'class-10': '/courses?class=foundation-10',
   'class-11': '/courses?class=class-11',

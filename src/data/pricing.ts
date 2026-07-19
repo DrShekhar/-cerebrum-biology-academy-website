@@ -2,6 +2,9 @@
 // Based on approved pricing from October 28, 2025
 
 export type ClassLevel =
+  | 'foundation-6'
+  | 'foundation-7'
+  | 'foundation-8'
   | 'foundation-9'
   | 'foundation-10'
   | 'class-11'
@@ -44,7 +47,7 @@ export interface ClassPricing {
 // Common features by tier
 const commonFeaturesByTier = {
   pinnacle: {
-    batch: '10-12 students per batch',
+    batch: '6-10 students per batch',
     hours: '4.5-6.0 hours/week',
     mentorship: 'Personal mentorship from Dr. Shekhar (AIIMS)',
     aiims: 'AIIMS faculty teaching',
@@ -77,6 +80,95 @@ const commonFeaturesByTier = {
     recordings: 'Access to recorded lectures',
     support: 'Standard support',
   },
+}
+
+//=============================================================================
+// PRE-FOUNDATION COURSES (Class VI–VIII) — early, exploration-led biology.
+// Age-appropriate: lighter weekly hours, concept-over-cramming, all boards,
+// gentle Science Olympiad (NSO) exposure. Same 3-tier band as Class IX
+// foundation (₹45,000–₹90,000/year), owner-approved 2026-07.
+//=============================================================================
+
+const preFoundationPinnacleFeatures = [
+  '6-10 students per batch',
+  '2.5-3 hours/week (live, interactive)',
+  'AIIMS-trained biology faculty',
+  'Personal mentorship & monthly parent connect',
+  'Exploration-led biology — concepts, not cramming',
+  'All boards (CBSE / ICSE / IB / state)',
+  'Gentle Science Olympiad (NSO) exposure',
+  'Recordings & notes for revision',
+  'No exam pressure at this age',
+]
+
+const preFoundationAscentFeatures = [
+  '12-16 students per batch',
+  '2 hours/week (live, interactive)',
+  'AIIMS-trained biology faculty',
+  'Exploration-led, all-boards curriculum',
+  'Gentle Science Olympiad (NSO) exposure',
+  'Weekly group doubt support',
+  'Recordings & notes for revision',
+]
+
+const preFoundationPursuitFeatures = [
+  '20-25 students per batch',
+  '2 hours/week (live, interactive)',
+  'AIIMS-trained biology faculty',
+  'All-boards, concept-first curriculum',
+  'Recordings & notes for revision',
+  'Affordable early start',
+]
+
+const preFoundationTiers: PricingTier[] = [
+  {
+    tier: 'pinnacle',
+    batchSize: '6-10',
+    hours: '2.5-3 hrs/week',
+    prices: { lumpSum: 90000, twoInstallments: 93000, threeInstallments: 96000 },
+    features: preFoundationPinnacleFeatures,
+  },
+  {
+    tier: 'ascent',
+    batchSize: '12-16',
+    hours: '2 hrs/week',
+    prices: { lumpSum: 60000, twoInstallments: 62000, threeInstallments: 63000 },
+    features: preFoundationAscentFeatures,
+  },
+  {
+    tier: 'pursuit',
+    batchSize: '20-25',
+    hours: '2 hrs/week',
+    prices: { lumpSum: 45000, twoInstallments: 47000, threeInstallments: 48000 },
+    features: preFoundationPursuitFeatures,
+  },
+]
+
+const foundation6PF: ClassPricing = {
+  class: 'foundation-6',
+  displayName: 'Class VI Pre-Foundation',
+  duration: '1 Year',
+  description: 'The gentlest start — growing curiosity about the living world, all boards',
+  availableCourseTypes: ['academic'],
+  tiers: { academic: preFoundationTiers },
+}
+
+const foundation7PF: ClassPricing = {
+  class: 'foundation-7',
+  displayName: 'Class VII Pre-Foundation',
+  duration: '1 Year',
+  description: 'Early biology foundation with exploration-led teaching, all boards',
+  availableCourseTypes: ['academic'],
+  tiers: { academic: preFoundationTiers },
+}
+
+const foundation8PF: ClassPricing = {
+  class: 'foundation-8',
+  displayName: 'Class VIII Pre-Foundation',
+  duration: '1 Year',
+  description: 'Concept-first biology that bridges into Class IX foundation, all boards',
+  availableCourseTypes: ['academic'],
+  tiers: { academic: preFoundationTiers },
 }
 
 //=============================================================================
@@ -140,21 +232,21 @@ const foundation9: ClassPricing = {
     academic: [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 60000, twoInstallments: 62000, threeInstallments: 63000 },
         features: foundationPinnacleFeatures,
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 50000, twoInstallments: 52000, threeInstallments: 53000 },
         features: foundationAscentFeatures,
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 40000, twoInstallments: 42000, threeInstallments: 43000 },
         features: foundationPursuitFeatures,
@@ -163,7 +255,7 @@ const foundation9: ClassPricing = {
     neet: [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 90000, twoInstallments: 93000, threeInstallments: 96000 },
         features: [
@@ -174,14 +266,14 @@ const foundation9: ClassPricing = {
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 60000, twoInstallments: 62000, threeInstallments: 63000 },
         features: [...foundationAscentFeatures, 'NEET foundation preparation'],
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 45000, twoInstallments: 47000, threeInstallments: 48000 },
         features: [...foundationPursuitFeatures, 'Basic NEET preparation'],
@@ -190,7 +282,7 @@ const foundation9: ClassPricing = {
     'board-neet': [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 90000, twoInstallments: 93000, threeInstallments: 96000 },
         features: [
@@ -201,14 +293,14 @@ const foundation9: ClassPricing = {
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 60000, twoInstallments: 62000, threeInstallments: 63000 },
         features: [...foundationAscentFeatures, 'NEET + Academic combined preparation'],
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 45000, twoInstallments: 47000, threeInstallments: 48000 },
         features: [...foundationPursuitFeatures, 'NEET + Academic combined preparation'],
@@ -227,21 +319,21 @@ const foundation10: ClassPricing = {
     'board-only': [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 60000, twoInstallments: 62000, threeInstallments: 63000 },
         features: foundationPinnacleFeatures,
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 50000, twoInstallments: 52000, threeInstallments: 53000 },
         features: foundationAscentFeatures,
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 40000, twoInstallments: 42000, threeInstallments: 43000 },
         features: foundationPursuitFeatures,
@@ -250,7 +342,7 @@ const foundation10: ClassPricing = {
     neet: [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 90000, twoInstallments: 93000, threeInstallments: 96000 },
         features: [
@@ -261,14 +353,14 @@ const foundation10: ClassPricing = {
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 60000, twoInstallments: 62000, threeInstallments: 63000 },
         features: [...foundationAscentFeatures, 'NEET foundation preparation'],
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 45000, twoInstallments: 47000, threeInstallments: 48000 },
         features: [...foundationPursuitFeatures, 'Basic NEET preparation'],
@@ -277,7 +369,7 @@ const foundation10: ClassPricing = {
     'board-neet': [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 90000, twoInstallments: 93000, threeInstallments: 96000 },
         features: [
@@ -288,14 +380,14 @@ const foundation10: ClassPricing = {
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 60000, twoInstallments: 62000, threeInstallments: 63000 },
         features: [...foundationAscentFeatures, 'NEET + Board combined preparation'],
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 45000, twoInstallments: 47000, threeInstallments: 48000 },
         features: [...foundationPursuitFeatures, 'NEET + Board combined preparation'],
@@ -362,21 +454,21 @@ const class11: ClassPricing = {
     academic: [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 98000, twoInstallments: 102000, threeInstallments: 105000 },
         features: class11PinnacleFeatures.filter((f) => !f.includes('NEET')),
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 58000, twoInstallments: 60000, threeInstallments: 61000 },
         features: class11AscentFeatures.filter((f) => !f.includes('NEET')),
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 40000, twoInstallments: 42000, threeInstallments: 43000 },
         features: class11PursuitFeatures.filter((f) => !f.includes('NEET')),
@@ -385,21 +477,21 @@ const class11: ClassPricing = {
     neet: [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 98000, twoInstallments: 102000, threeInstallments: 105000 },
         features: class11PinnacleFeatures,
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 76000, twoInstallments: 78000, threeInstallments: 79000 },
         features: class11AscentFeatures,
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 48000, twoInstallments: 50000, threeInstallments: 51000 },
         features: class11PursuitFeatures,
@@ -408,21 +500,21 @@ const class11: ClassPricing = {
     'board-neet': [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 98000, twoInstallments: 104000, threeInstallments: 108000 },
         features: class11PinnacleFeatures,
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 76000, twoInstallments: 78000, threeInstallments: 79000 },
         features: class11AscentFeatures,
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 48000, twoInstallments: 50000, threeInstallments: 51000 },
         features: class11PursuitFeatures,
@@ -492,21 +584,21 @@ const class12: ClassPricing = {
     'board-only': [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 68000, twoInstallments: 70000, threeInstallments: 71000 },
         features: class12PinnacleFeatures.filter((f) => !f.includes('NEET')),
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 58000, twoInstallments: 60000, threeInstallments: 61000 },
         features: class12AscentFeatures.filter((f) => !f.includes('NEET')),
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 40000, twoInstallments: 42000, threeInstallments: 43000 },
         features: class12PursuitFeatures.filter((f) => !f.includes('NEET')),
@@ -515,21 +607,21 @@ const class12: ClassPricing = {
     neet: [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 98000, twoInstallments: 102000, threeInstallments: 105000 },
         features: class12PinnacleFeatures,
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 76000, twoInstallments: 78000, threeInstallments: 79000 },
         features: class12AscentFeatures,
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 70000, twoInstallments: 72000, threeInstallments: 75000 },
         features: class12PursuitFeatures,
@@ -538,21 +630,21 @@ const class12: ClassPricing = {
     'board-neet': [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 98000, twoInstallments: 102000, threeInstallments: 105000 },
         features: class12PinnacleFeatures,
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 76000, twoInstallments: 78000, threeInstallments: 79000 },
         features: class12AscentFeatures,
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 70000, twoInstallments: 72000, threeInstallments: 75000 },
         features: class12PursuitFeatures,
@@ -561,7 +653,7 @@ const class12: ClassPricing = {
     flagship: [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 156000, twoInstallments: 158000, threeInstallments: 159000 },
         features: [
@@ -576,7 +668,7 @@ const class12: ClassPricing = {
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 90000, twoInstallments: 92000, threeInstallments: 94000 },
         features: [
@@ -587,7 +679,7 @@ const class12: ClassPricing = {
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 70000, twoInstallments: 72000, threeInstallments: 75000 },
         features: [
@@ -610,7 +702,7 @@ const dropper: ClassPricing = {
     neet: [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 156000, twoInstallments: 158000, threeInstallments: 159000 },
         features: [
@@ -624,14 +716,14 @@ const dropper: ClassPricing = {
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 90000, twoInstallments: 92000, threeInstallments: 94000 },
         features: class12AscentFeatures,
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 70000, twoInstallments: 72000, threeInstallments: 75000 },
         features: class12PursuitFeatures,
@@ -704,21 +796,21 @@ const twoYear: ClassPricing = {
     academic: [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 120000, twoInstallments: 125000, threeInstallments: 128000 },
         features: twoYearPinnacleFeatures.filter((f) => !f.includes('NEET')),
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 100000, twoInstallments: 104000, threeInstallments: 107000 },
         features: twoYearAscentFeatures.filter((f) => !f.includes('NEET')),
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 70000, twoInstallments: 73000, threeInstallments: 76000 },
         features: twoYearPursuitFeatures.filter((f) => !f.includes('NEET')),
@@ -727,21 +819,21 @@ const twoYear: ClassPricing = {
     neet: [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 180000, twoInstallments: 188000, threeInstallments: 192000 },
         features: twoYearPinnacleFeatures,
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 140000, twoInstallments: 146000, threeInstallments: 149000 },
         features: twoYearAscentFeatures,
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 85000, twoInstallments: 89000, threeInstallments: 93000 },
         features: twoYearPursuitFeatures,
@@ -750,21 +842,21 @@ const twoYear: ClassPricing = {
     'board-neet': [
       {
         tier: 'pinnacle',
-        batchSize: '10-12',
+        batchSize: '6-10',
         hours: '4.5-6.0 hrs/week',
         prices: { lumpSum: 180000, twoInstallments: 188000, threeInstallments: 192000 },
         features: twoYearPinnacleFeatures,
       },
       {
         tier: 'ascent',
-        batchSize: '16-25',
+        batchSize: '12-16',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 140000, twoInstallments: 146000, threeInstallments: 149000 },
         features: twoYearAscentFeatures,
       },
       {
         tier: 'pursuit',
-        batchSize: '30-40',
+        batchSize: '20-25',
         hours: '4.5 hrs/week',
         prices: { lumpSum: 85000, twoInstallments: 89000, threeInstallments: 93000 },
         features: twoYearPursuitFeatures,
@@ -872,6 +964,9 @@ export const addOnCourses: AddOnCourse[] = [
 //=============================================================================
 
 export const allClassPricing: ClassPricing[] = [
+  foundation6PF,
+  foundation7PF,
+  foundation8PF,
   foundation9,
   foundation10,
   class11,

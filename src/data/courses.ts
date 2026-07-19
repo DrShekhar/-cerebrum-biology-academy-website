@@ -2,6 +2,63 @@ import { BasicCourse } from '@/types'
 
 export const courses: BasicCourse[] = [
   {
+    id: 'pre-foundation-class-6',
+    title: 'Class 6 Pre-Foundation Biology',
+    description:
+      'The gentlest possible start for a curious young learner. Class 6 Pre-Foundation Biology grows genuine wonder about the living world through exploration-led, live online classes — no exam pressure. Aligned to CBSE, ICSE, IB and state boards, with gentle Science Olympiad (NSO) exposure for keen children. Taught by AIIMS-trained biology faculty in small, warm batches.',
+    duration: '1 Year',
+    price: 45000,
+    targetClass: '6th',
+    features: [
+      'Live Interactive Classes',
+      'Exploration-Led Teaching',
+      'All Boards (CBSE / ICSE / IB)',
+      'Gentle Science Olympiad (NSO) Exposure',
+      'Small Warm Batches',
+      'Recordings & Notes for Revision',
+      'AIIMS-Trained Faculty',
+      'No Exam Pressure',
+    ],
+  },
+  {
+    id: 'pre-foundation-class-7',
+    title: 'Class 7 Pre-Foundation Biology',
+    description:
+      'Early biology foundation for Class 7 that builds conceptual clarity through exploration, not cramming. Live online classes aligned to CBSE, ICSE, IB and state boards, with gentle Science Olympiad (NSO) exposure. Small, warm batches taught by AIIMS-trained biology faculty lay the groundwork for later NEET and board success.',
+    duration: '1 Year',
+    price: 45000,
+    targetClass: '7th',
+    features: [
+      'Live Interactive Classes',
+      'Concept-First Teaching',
+      'All Boards (CBSE / ICSE / IB)',
+      'Gentle Science Olympiad (NSO) Exposure',
+      'Small Warm Batches',
+      'Recordings & Notes for Revision',
+      'AIIMS-Trained Faculty',
+      'Weekly Doubt Support',
+    ],
+  },
+  {
+    id: 'pre-foundation-class-8',
+    title: 'Class 8 Pre-Foundation Biology',
+    description:
+      'Concept-first biology for Class 8 that bridges naturally into the Class 9 foundation programme. Live online classes aligned to CBSE, ICSE, IB and state boards, with gentle Science Olympiad (NSO) exposure. Small batches taught by AIIMS-trained biology faculty build strong fundamentals and study habits ahead of competitive preparation.',
+    duration: '1 Year',
+    price: 45000,
+    targetClass: '8th',
+    features: [
+      'Live Interactive Classes',
+      'Concept-First Teaching',
+      'All Boards (CBSE / ICSE / IB)',
+      'Gentle Science Olympiad (NSO) Exposure',
+      'Bridges into Class 9 Foundation',
+      'Recordings & Notes for Revision',
+      'AIIMS-Trained Faculty',
+      'Weekly Doubt Support',
+    ],
+  },
+  {
     id: 'class-9th-foundation',
     title: 'Class 9th Foundation',
     description:

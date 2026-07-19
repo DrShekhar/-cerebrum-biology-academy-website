@@ -1,8 +1,22 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { getPricingForClass } from '@/data/pricing'
 
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
 const url = `${SITE_URL}/neet-biology-foundation-class-6-to-8`
+
+// Real, catalog-backed pre-foundation pricing (all three classes share the
+// same academic tier band; see src/data/pricing.ts).
+const preFoundationTiers = getPricingForClass('foundation-6', 'academic') ?? []
+const tierLabels: Record<string, string> = {
+  pinnacle: 'Pinnacle',
+  ascent: 'Ascent',
+  pursuit: 'Pursuit',
+}
+const priceValues = preFoundationTiers.map((t) => t.prices.lumpSum)
+const lowPrice = priceValues.length ? Math.min(...priceValues) : 45000
+const highPrice = priceValues.length ? Math.max(...priceValues) : 90000
+const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`
 
 export const metadata: Metadata = {
   title: 'NEET Biology Foundation Class 6, 7 & 8 | Early Start for Future Doctors',
@@ -116,6 +130,14 @@ const courseSchema = {
   },
   educationalLevel: 'Class 6–8 (Foundation)',
   hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'online' },
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'INR',
+    lowPrice,
+    highPrice,
+    offerCount: preFoundationTiers.length,
+    availability: 'https://schema.org/InStock',
+  },
 }
 
 const breadcrumbSchema = {
@@ -244,6 +266,51 @@ export default function NeetBiologyFoundationClass6To8Page() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Fees & tiers */}
+      <section id="fees" className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto mb-10 max-w-3xl text-center">
+            <h2 className="text-3xl font-bold text-gray-900">Fees &amp; Batches</h2>
+            <p className="mt-4 text-gray-600">
+              One academic year, live online, same AIIMS-trained faculty across all tiers. Pick the
+              batch size that suits your child — smaller batches mean more personal attention. Fees
+              are the same for Class 6, 7 and 8.
+            </p>
+          </div>
+          <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
+            {preFoundationTiers.map((tier) => (
+              <div
+                key={tier.tier}
+                className="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+              >
+                <div className="text-xs font-semibold uppercase tracking-wide text-green-700">
+                  {tierLabels[tier.tier] ?? tier.tier}
+                </div>
+                <div className="mt-2 text-3xl font-bold text-gray-900">
+                  {inr(tier.prices.lumpSum)}
+                  <span className="text-base font-medium text-gray-500"> / year</span>
+                </div>
+                <div className="mt-1 text-sm text-gray-600">
+                  {tier.batchSize} students · {tier.hours}
+                </div>
+                <ul className="mt-4 space-y-2 text-sm text-gray-700">
+                  {tier.features.slice(0, 5).map((f) => (
+                    <li key={f} className="flex items-start gap-2">
+                      <span className="mt-1 text-green-600">✓</span>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className="mx-auto mt-6 max-w-3xl text-center text-sm text-gray-500">
+            Flexible installment plans available. Book a free demo before you decide — no
+            obligation.
+          </p>
         </div>
       </section>
 

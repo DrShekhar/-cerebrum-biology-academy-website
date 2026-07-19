@@ -28,6 +28,9 @@ import { MessageCircle } from 'lucide-react'
 
 const getCourseDetailUrl = (classLevel: ClassLevel): string => {
   const urlMap: Record<ClassLevel, string> = {
+    'foundation-6': '/neet-biology-foundation-class-6-to-8#fees',
+    'foundation-7': '/neet-biology-foundation-class-6-to-8#fees',
+    'foundation-8': '/neet-biology-foundation-class-6-to-8#fees',
     'foundation-9': '/courses/class-9-foundation',
     'foundation-10': '/courses/class-10-foundation',
     'class-11': '/courses/class-11',

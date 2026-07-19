@@ -10,7 +10,7 @@ const foundationBase = {
   stats: [
     { value: '50%', label: 'of NEET is Biology', icon: 'target' },
     { value: 'All boards', label: 'CBSE / ICSE / IB', icon: 'book' },
-    { value: '10-12', label: 'Students per batch', icon: 'users' },
+    { value: '6-25', label: 'Students per batch (by tier)', icon: 'users' },
     { value: 'Since 2014', label: 'Biology specialists', icon: 'clock' },
   ],
   testimonials: [],
@@ -236,7 +236,7 @@ export const neetFoundationClass7: SEOLandingContent = {
   courseSummary: {
     title: 'Class 7 Biology Foundation',
     duration: 'Yearly Programme',
-    batchSize: '10-12 Students',
+    batchSize: '6-25 Students (by tier)',
     features: [
       'One short live interactive biology class per week',
       'Aligned to CBSE / ICSE / IB / state board syllabus',
@@ -245,7 +245,7 @@ export const neetFoundationClass7: SEOLandingContent = {
       'Recordings and notes for revision',
       'AIIMS-trained biology faculty',
     ],
-    price: { feeOnEnquiry: true },
+    price: { original: 45000, emi: 'Flexible plans' },
   },
 
   schema: {
@@ -255,6 +255,8 @@ export const neetFoundationClass7: SEOLandingContent = {
     description:
       'Curiosity-led early biology foundation for Class 7: concept-first, low-pressure, all-boards. Live online for students in India and abroad.',
     duration: 'P1Y',
+    price: 45000,
+    priceCurrency: 'INR',
     educationalLevel: 'Class 7 (Foundation)',
   },
 }
