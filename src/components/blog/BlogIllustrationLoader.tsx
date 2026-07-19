@@ -93,15 +93,15 @@ const illustrationLoaders: Record<string, () => Promise<{ default: IllustrationC
     })),
   'body-fluids-circulation-neet': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
-      default: m.CirculationIllustration,
+      default: m.HeartCirculationDiagram,
     })),
   'excretory-system-neet-notes': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
-      default: m.ExcretorySystemIllustration,
+      default: m.NephronDiagram,
     })),
   'nervous-system-neet-biology': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
-      default: m.NervousSystemIllustration,
+      default: m.NeuronDiagram,
     })),
   'plant-kingdom-classification-neet': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
