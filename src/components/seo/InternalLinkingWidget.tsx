@@ -47,7 +47,7 @@ const DELHI_NCR_LOCALITIES = [
     slug: '/biology-coaching-greater-kailash',
     priority: 7,
   },
-  { title: 'NEET Coaching near Dwarka', slug: '/biology-coaching-dwarka', priority: 7 },
+  { title: 'NEET Coaching near Dwarka', slug: '/neet-coaching-dwarka', priority: 7 },
   { title: 'Biology Classes near Rohini', slug: '/biology-classes-rohini', priority: 7 },
   { title: 'NEET Coaching near Saket', slug: '/neet-coaching-saket', priority: 6 },
   { title: 'Biology Coaching near Hauz Khas', slug: '/biology-coaching-hauz-khas', priority: 6 },

@@ -149,7 +149,7 @@ export default function NeetCoachingNoidaSocietyPage() {
               href="/locations/noida"
               className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-900 font-semibold px-6 py-3 rounded-lg border border-gray-300 transition-colors"
             >
-              View Noida Center Details
+              See How Our Noida Online Classes Work
             </Link>
           </div>
         </div>
