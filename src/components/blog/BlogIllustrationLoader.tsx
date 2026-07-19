@@ -77,7 +77,7 @@ const illustrationLoaders: Record<string, () => Promise<{ default: IllustrationC
     })),
   'photosynthesis-neet-biology-notes': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
-      default: m.PlantPhysiologyIllustration,
+      default: m.PhotosynthesisOverviewDiagram,
     })),
   'photosynthesis-vs-respiration-neet-comparison': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
