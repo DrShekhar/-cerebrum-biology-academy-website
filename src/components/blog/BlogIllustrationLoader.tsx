@@ -63,6 +63,10 @@ const illustrationLoaders: Record<string, () => Promise<{ default: IllustrationC
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
       default: m.GeneticsIllustration,
     })),
+  'genetics-molecular-biology-neet-complete-guide': () =>
+    import('@/components/illustrations/BlogIllustrations').then((m) => ({
+      default: m.DNAReplicationDiagram,
+    })),
   'cell-structure-function-neet-notes': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
       default: m.CellBiologyIllustration,
