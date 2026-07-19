@@ -93,7 +93,7 @@ const illustrationLoaders: Record<string, () => Promise<{ default: IllustrationC
     })),
   'body-fluids-circulation-neet': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
-      default: m.CirculationIllustration,
+      default: m.HeartCirculationDiagram,
     })),
   'excretory-system-neet-notes': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
