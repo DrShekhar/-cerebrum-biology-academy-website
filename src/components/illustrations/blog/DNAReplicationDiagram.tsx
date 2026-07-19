@@ -3,7 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 /**
- * DNAReplicationDiagram — a Campbell-style replication fork.
+ * DNAReplicationDiagram — a Campbell-style replication fork (browser-verified).
  *
  * Design language (Campbell art audit):
  *  - Semantic muted palette: parental DNA one colour, new (daughter) strands
@@ -11,33 +11,21 @@ import type { IllustrationProps } from './shared'
  *  - Correct biology: antiparallel 3'/5' ends; leading strand continuous toward
  *    the fork; lagging strand in Okazaki fragments (each from an RNA primer),
  *    joined by ligase; helicase at the fork; SSB proteins on the open strands
- *  - Clean labels with thin grey leaders; a legend; direction-of-replication arrow
+ *  - New strands run PARALLEL to their templates (proper base-pair ladders);
+ *    enzymes drawn clearly separated; labels contained with thin grey leaders
  *  - Pure, accessible SVG (<title>/<desc>) — scalable, tiny, on-brand, zero AI look
  */
 export function DNAReplicationDiagram({ className = '', animate = true }: IllustrationProps) {
   const F = 'system-ui, -apple-system, sans-serif'
   const S = 'Iowan Old Style, Palatino, Georgia, serif'
 
-  const PAR = '#3D5A80' // parental backbone
-  const NEW = '#2A9D8F' // new (daughter) backbone
-  const PRIMER = '#E76F51' // RNA primer
-  const RUNG = '#B9C4CE' // base pairs
-
-  const labels = [
-    { t: 'Parental DNA', x: 830, y: 250, x2: 726, y2: 292, a: 'start' as const },
-    { t: 'Helicase (unwinds)', x: 700, y: 372, x2: 606, y2: 312, a: 'start' as const },
-    { t: 'Leading strand (continuous)', x: 250, y: 120, x2: 360, y2: 214, a: 'start' as const },
-    { t: 'DNA polymerase III', x: 636, y: 210, x2: 574, y2: 268, a: 'start' as const },
-    { t: 'Lagging strand', x: 250, y: 470, x2: 380, y2: 392, a: 'start' as const },
-    { t: 'Okazaki fragments', x: 250, y: 500, x2: 330, y2: 404, a: 'start' as const },
-    { t: 'RNA primer', x: 620, y: 402, x2: 556, y2: 344, a: 'start' as const },
-    { t: 'DNA ligase (joins)', x: 250, y: 440, x2: 452, y2: 372, a: 'start' as const },
-    { t: 'Single-strand binding proteins', x: 250, y: 190, x2: 430, y2: 250, a: 'start' as const },
-  ]
+  const PAR = '#3D5A80'
+  const NEW = '#2A9D8F'
+  const PRIMER = '#E76F51'
 
   return (
     <svg
-      viewBox="0 0 900 600"
+      viewBox="0 0 880 560"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -59,11 +47,11 @@ export function DNAReplicationDiagram({ className = '', animate = true }: Illust
           <stop offset="100%" stopColor="#EEF4F4" />
         </linearGradient>
         <filter id="dnaSoft" x="-40%" y="-40%" width="180%" height="180%">
-          <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#1F3A45" floodOpacity="0.16" />
+          <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#1F3A45" floodOpacity="0.18" />
         </filter>
-        <marker id="dnaArr" markerWidth="9" markerHeight="9" refX="6.5" refY="4.5" orient="auto">
+        <marker id="dnaArr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
           <path
-            d="M1,1 L7.5,4.5 L1,8"
+            d="M1,1 L6.5,4 L1,7"
             fill="none"
             stroke={NEW}
             strokeWidth="1.7"
@@ -71,25 +59,14 @@ export function DNAReplicationDiagram({ className = '', animate = true }: Illust
             strokeLinejoin="round"
           />
         </marker>
-        <marker id="dnaGrey" markerWidth="9" markerHeight="9" refX="6.5" refY="4.5" orient="auto">
-          <path
-            d="M1,1 L7.5,4.5 L1,8"
-            fill="none"
-            stroke="#5B6B75"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </marker>
       </defs>
 
-      <rect x="0" y="0" width="900" height="600" rx="22" fill="url(#dnaBg)" />
+      <rect x="0" y="0" width="880" height="560" rx="20" fill="url(#dnaBg)" />
 
-      {/* Title */}
       <text
-        x="450"
-        y="44"
-        fontSize="26"
+        x="440"
+        y="42"
+        fontSize="25"
         fill="#1F3A45"
         textAnchor="middle"
         fontWeight="700"
@@ -97,125 +74,111 @@ export function DNAReplicationDiagram({ className = '', animate = true }: Illust
       >
         DNA Replication at the Fork
       </text>
-      <text x="450" y="68" fontSize="13" fill="#2A6B6B" textAnchor="middle" fontFamily={F}>
+      <text x="440" y="66" fontSize="13" fill="#2A6B6B" textAnchor="middle" fontFamily={F}>
         Semiconservative · leading strand continuous · lagging strand in Okazaki fragments
       </text>
 
-      {/* Direction of replication */}
-      <line
-        x1="470"
-        y1="300"
-        x2="590"
-        y2="300"
-        stroke="#5B6B75"
-        strokeWidth="2"
-        markerEnd="url(#dnaGrey)"
-        strokeDasharray="2 3"
-      />
-      <text x="470" y="292" fontSize="11" fill="#5B6B75" fontWeight="600" fontFamily={F}>
-        fork moves →
-      </text>
-
-      {/* ===== Parental duplex (right, unwound at the fork) ===== */}
-      <path d="M840 288 L610 296" stroke={PAR} strokeWidth="6" fill="none" strokeLinecap="round" />
-      <path d="M840 312 L610 304" stroke={PAR} strokeWidth="6" fill="none" strokeLinecap="round" />
-      {[636, 664, 692, 720, 748, 776, 804].map((x, i) => (
-        <line key={i} x1={x} y1="292" x2={x} y2="308" stroke={RUNG} strokeWidth="2" />
-      ))}
-
-      {/* ===== Templates splay from the fork ===== */}
-      {/* Top (leading) template */}
-      <path d="M610 296 L150 176" stroke={PAR} strokeWidth="6" fill="none" strokeLinecap="round" />
-      {/* Bottom (lagging) template */}
-      <path d="M610 304 L150 424" stroke={PAR} strokeWidth="6" fill="none" strokeLinecap="round" />
-
-      {/* Helicase at the fork */}
-      <g filter="url(#dnaSoft)">
-        <path
-          d="M604 278 A26 26 0 1 0 604 322 L620 300 Z"
-          fill="#7B6D8D"
-          stroke="#5E5270"
-          strokeWidth="1.5"
-        />
+      {/* base-pair rungs (behind backbones) */}
+      <g stroke="#C0CBD3" strokeWidth="2">
+        <line x1="630" y1="283" x2="630" y2="297" />
+        <line x1="670" y1="281" x2="670" y2="300" />
+        <line x1="710" y1="278" x2="710" y2="302" />
+        <line x1="750" y1="276" x2="750" y2="304" />
+        <line x1="790" y1="274" x2="790" y2="306" />
+        <line x1="250" y1="184" x2="250" y2="202" />
+        <line x1="320" y1="205" x2="320" y2="223" />
+        <line x1="390" y1="226" x2="390" y2="244" />
+        <line x1="460" y1="247" x2="460" y2="265" />
+        <line x1="530" y1="267" x2="530" y2="285" />
+        <line x1="520" y1="298" x2="520" y2="316" />
+        <line x1="450" y1="318" x2="450" y2="336" />
+        <line x1="380" y1="339" x2="380" y2="357" />
+        <line x1="310" y1="360" x2="310" y2="378" />
       </g>
 
-      {/* SSB proteins on the open single strands */}
-      {[
-        [452, 250],
-        [372, 230],
-        [452, 350],
-        [372, 372],
-      ].map(([cx, cy], i) => (
-        <circle
-          key={i}
-          cx={cx}
-          cy={cy}
-          r="9"
-          fill="#9AA7B8"
-          stroke="#7A8794"
-          strokeWidth="1"
-          opacity="0.9"
-        />
-      ))}
+      {/* parental duplex */}
+      <path d="M820 272 L590 285" stroke={PAR} strokeWidth="6" fill="none" strokeLinecap="round" />
+      <path d="M820 308 L590 295" stroke={PAR} strokeWidth="6" fill="none" strokeLinecap="round" />
 
-      {/* ===== Leading strand (continuous, new) ===== */}
+      {/* templates splay from the fork */}
+      <path d="M590 285 L150 155" stroke={PAR} strokeWidth="6" fill="none" strokeLinecap="round" />
+      <path d="M590 295 L150 425" stroke={PAR} strokeWidth="6" fill="none" strokeLinecap="round" />
+
+      {/* SSB proteins */}
+      <circle cx="500" cy="258" r="9" fill="#9AA7B8" stroke="#7A8794" strokeWidth="1" />
+      <circle cx="420" cy="235" r="9" fill="#9AA7B8" stroke="#7A8794" strokeWidth="1" />
+      <circle cx="500" cy="322" r="9" fill="#9AA7B8" stroke="#7A8794" strokeWidth="1" />
+      <circle cx="420" cy="345" r="9" fill="#9AA7B8" stroke="#7A8794" strokeWidth="1" />
+
+      {/* leading strand (parallel to template) */}
       <path
-        d="M196 200 L582 300"
+        d="M172 178 L560 294"
         stroke={NEW}
         strokeWidth="5.5"
         fill="none"
         strokeLinecap="round"
         markerEnd="url(#dnaArr)"
       />
-      {[236, 300, 364, 428, 492].map((x, i) => {
-        const t = (x - 150) / (610 - 150)
-        const yT = 176 + t * (296 - 176)
-        const yN = yT + 22
-        return (
-          <line
-            key={i}
-            x1={x}
-            y1={yT + 4}
-            x2={x + 5}
-            y2={yN - 2}
-            stroke={RUNG}
-            strokeWidth="1.75"
-          />
-        )
-      })}
-      {/* DNA pol III on leading strand (near fork) */}
-      <g filter="url(#dnaSoft)">
-        <ellipse
-          cx="572"
-          cy="278"
-          rx="18"
-          ry="15"
-          fill="#5B8C5A"
-          stroke="#3F6B3F"
-          strokeWidth="1.5"
-        />
-      </g>
 
-      {/* ===== Lagging strand: Okazaki fragments + primers ===== */}
-      {/* fragment 1 (nearest fork) */}
+      {/* lagging strand: 3 Okazaki fragments (fork-end primer + new DNA) */}
       <path
-        d="M556 336 L536 342"
+        d="M560 286 L535 293"
         stroke={PRIMER}
         strokeWidth="5.5"
         fill="none"
         strokeLinecap="round"
       />
       <path
-        d="M536 342 L462 361"
+        d="M535 293 L470 312"
         stroke={NEW}
         strokeWidth="5.5"
         fill="none"
         strokeLinecap="round"
       />
+      <path
+        d="M452 318 L427 325"
+        stroke={PRIMER}
+        strokeWidth="5.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M427 325 L362 344"
+        stroke={NEW}
+        strokeWidth="5.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M344 350 L319 357"
+        stroke={PRIMER}
+        strokeWidth="5.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M319 357 L230 383"
+        stroke={NEW}
+        strokeWidth="5.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <circle cx="461" cy="315" r="7.5" fill="#C08457" stroke="#96633F" strokeWidth="1.25" />
+      <circle cx="353" cy="347" r="7.5" fill="#C08457" stroke="#96633F" strokeWidth="1.25" />
+
+      {/* enzymes (separated) */}
+      <g filter="url(#dnaSoft)">
+        <path
+          d="M588 268 a22 22 0 1 0 0 44 l16 -22 Z"
+          fill="#8878A0"
+          stroke="#5E5270"
+          strokeWidth="1.5"
+        />
+      </g>
       <g filter="url(#dnaSoft)">
         <ellipse
-          cx="548"
-          cy="330"
+          cx="538"
+          cy="288"
           rx="16"
           ry="13"
           fill="#5B8C5A"
@@ -223,137 +186,109 @@ export function DNAReplicationDiagram({ className = '', animate = true }: Illust
           strokeWidth="1.5"
         />
       </g>
-      {/* fragment 2 */}
-      <path
-        d="M446 366 L426 371"
-        stroke={PRIMER}
-        strokeWidth="5.5"
-        fill="none"
-        strokeLinecap="round"
-      />
-      <path
-        d="M426 371 L346 392"
-        stroke={NEW}
-        strokeWidth="5.5"
-        fill="none"
-        strokeLinecap="round"
-      />
-      {/* fragment 3 (oldest) */}
-      <path
-        d="M330 396 L310 401"
-        stroke={PRIMER}
-        strokeWidth="5.5"
-        fill="none"
-        strokeLinecap="round"
-      />
-      <path
-        d="M310 401 L214 426"
-        stroke={NEW}
-        strokeWidth="5.5"
-        fill="none"
-        strokeLinecap="round"
-      />
-      {/* ligase joining fragment gaps */}
-      {[
-        [454, 364],
-        [338, 394],
-      ].map(([cx, cy], i) => (
-        <circle key={i} cx={cx} cy={cy} r="8" fill="#C08457" stroke="#96633F" strokeWidth="1.25" />
-      ))}
-      {/* base pairs on lagging side */}
-      {[500, 420, 340, 260].map((x, i) => {
-        const t = (610 - x) / (610 - 150)
-        const yT = 304 + t * (424 - 304)
-        return (
-          <line
-            key={i}
-            x1={x}
-            y1={yT - 4}
-            x2={x - 5}
-            y2={yT - 24}
-            stroke={RUNG}
-            strokeWidth="1.75"
-          />
-        )
-      })}
+      <g filter="url(#dnaSoft)">
+        <ellipse
+          cx="516"
+          cy="290"
+          rx="14"
+          ry="11"
+          fill="#5B8C5A"
+          stroke="#3F6B3F"
+          strokeWidth="1.5"
+        />
+      </g>
 
-      {/* ===== 3'/5' end labels ===== */}
+      {/* 3'/5' ends */}
       <g fontFamily={F} fontSize="12" fill="#1F3A45" fontWeight="700">
-        <text x="842" y="286">
+        <text x="826" y="270">
           5′
         </text>
-        <text x="842" y="322">
+        <text x="826" y="314">
           3′
         </text>
-        <text x="138" y="174" textAnchor="end">
+        <text x="140" y="152" textAnchor="end">
           3′
         </text>
-        <text x="138" y="430" textAnchor="end">
+        <text x="140" y="430" textAnchor="end">
           5′
         </text>
-        <text x="196" y="196">
+        <text x="158" y="180" textAnchor="end">
           5′
-        </text>
-        <text x="214" y="440">
-          3′
         </text>
       </g>
 
-      {/* ===== Labels ===== */}
-      <g fontFamily={F} fontSize="12" fill="#26313A">
-        {labels.map((l) => (
-          <g key={l.t}>
-            <line
-              x1={l.a === 'end' ? l.x + 6 : l.x - 6}
-              y1={l.y - 4}
-              x2={l.x2}
-              y2={l.y2}
-              stroke="#AEB9C2"
-              strokeWidth="1.3"
-            />
-            <text x={l.x} y={l.y} textAnchor={l.a}>
-              {l.t}
-            </text>
-          </g>
-        ))}
+      {/* labels */}
+      <g fontFamily={F} fontSize="12.5" fill="#26313A">
+        <line x1="286" y1="112" x2="330" y2="223" stroke="#AEB9C2" strokeWidth="1.3" />
+        <text x="200" y="108">
+          Leading strand (continuous)
+        </text>
+        <line x1="196" y1="266" x2="420" y2="235" stroke="#AEB9C2" strokeWidth="1.3" />
+        <text x="190" y="270" textAnchor="end">
+          SSB proteins
+        </text>
+        <line x1="286" y1="452" x2="400" y2="352" stroke="#AEB9C2" strokeWidth="1.3" />
+        <text x="200" y="456">
+          Lagging strand (Okazaki fragments)
+        </text>
+        <line x1="256" y1="484" x2="353" y2="347" stroke="#AEB9C2" strokeWidth="1.3" />
+        <text x="200" y="488">
+          DNA ligase joins fragments
+        </text>
+        <line x1="712" y1="230" x2="740" y2="280" stroke="#AEB9C2" strokeWidth="1.3" />
+        <text x="706" y="226">
+          Parental DNA
+        </text>
+        <line x1="614" y1="212" x2="540" y2="276" stroke="#AEB9C2" strokeWidth="1.3" />
+        <text x="620" y="208">
+          DNA polymerase III
+        </text>
+        <line x1="646" y1="330" x2="600" y2="292" stroke="#AEB9C2" strokeWidth="1.3" />
+        <text x="652" y="334">
+          Helicase (unwinds)
+        </text>
+        <line x1="606" y1="374" x2="556" y2="290" stroke="#AEB9C2" strokeWidth="1.3" />
+        <text x="612" y="378">
+          RNA primer
+        </text>
       </g>
 
-      {/* Legend */}
+      {/* legend */}
       <g fontFamily={F} fontSize="12" fill="#3A4750">
         <line
           x1="300"
-          y1="566"
+          y1="524"
           x2="326"
-          y2="566"
+          y2="524"
           stroke={PAR}
           strokeWidth="5"
           strokeLinecap="round"
         />
-        <text x="334" y="570">
+        <text x="334" y="528">
           Parental DNA
         </text>
         <line
           x1="452"
-          y1="566"
+          y1="524"
           x2="478"
-          y2="566"
+          y2="524"
           stroke={NEW}
           strokeWidth="5"
           strokeLinecap="round"
         />
-        <text x="486" y="570">
+        <text x="486" y="528">
           New DNA
         </text>
         <line
-          x1="574"
-          y1="566"
-          x2="600"
-          y2="566"
+          x1="566"
+          y1="524"
+          x2="592"
+          y2="524"
           stroke={PRIMER}
           strokeWidth="5"
           strokeLinecap="round"
         />
-        <text x="608" y="570">
+        <text x="600" y="528">
           RNA primer
         </text>
       </g>
