@@ -97,7 +97,7 @@ const illustrationLoaders: Record<string, () => Promise<{ default: IllustrationC
     })),
   'excretory-system-neet-notes': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
-      default: m.ExcretorySystemIllustration,
+      default: m.NephronDiagram,
     })),
   'nervous-system-neet-biology': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
