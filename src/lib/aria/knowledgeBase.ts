@@ -22,7 +22,7 @@ export const COURSE_TIERS = {
   ascent: {
     name: 'Ascent',
     tagline: 'Most Popular - Perfect balance of quality and value',
-    batchSize: '16-18 students',
+    batchSize: '12-16 students',
     hoursPerWeek: '8 hours',
     features: [
       'AIIMS faculty teaching',
@@ -36,7 +36,7 @@ export const COURSE_TIERS = {
   pursuit: {
     name: 'Pursuit',
     tagline: 'Affordable Excellence - Serves the purpose well',
-    batchSize: '30-40 students',
+    batchSize: '20-25 students',
     hoursPerWeek: '6 hours',
     features: [
       'AIIMS faculty teaching',
@@ -368,7 +368,7 @@ export const FAQ_DATA = {
   batchSize: {
     question: 'What are your batch sizes?',
     answer:
-      'We maintain small batches for personalized attention: Pinnacle (10-12 students), Ascent (16-18 students), Pursuit (30-40 students). Unlike large coachings with 200+ students per batch, our small sizes enable individual mentoring and personal guidance from faculty.',
+      'We maintain small batches for personalized attention: Pinnacle (6-10 students), Ascent (12-16 students), Pursuit (20-25 students). Unlike large coachings with 200+ students per batch, our small sizes enable individual mentoring and personal guidance from faculty.',
   },
   testSeries: {
     question: 'Do you provide test series?',

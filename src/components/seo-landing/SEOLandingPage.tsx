@@ -64,6 +64,7 @@ export function SEOLandingPage({ content }: SEOLandingPageProps) {
         courseSummary={content.courseSummary}
         classLevel={content.classLevel}
         ctaLink={courseLink}
+        contactButtons={content.contactButtons}
       />
 
       {/* Testimonials */}

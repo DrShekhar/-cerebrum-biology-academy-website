@@ -23,7 +23,7 @@ const COMPARISON_DATA: ComparisonFeature[] = [
   {
     category: 'Batch & Teaching',
     feature: 'Batch Size',
-    pinnacle: '10-12 students',
+    pinnacle: '6-10 students',
     ascent: '20-25 students',
     pursuit: '25-30 students',
     description: 'Maximum students per batch for personalized attention',

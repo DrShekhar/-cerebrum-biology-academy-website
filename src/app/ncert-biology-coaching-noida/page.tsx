@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 const coachingPlans = [
   {
     name: 'Pursuit - NCERT',
-    batchSize: '30-40 students',
+    batchSize: '20-25 students',
     hours: '6 hrs/week',
     fee: '48,000 - 70,000',
     features: [
@@ -64,7 +64,7 @@ const coachingPlans = [
   },
   {
     name: 'Ascent - NCERT',
-    batchSize: '16-18 students',
+    batchSize: '12-16 students',
     hours: '8 hrs/week',
     fee: '76,000',
     features: [
@@ -133,7 +133,7 @@ const faqs = [
   {
     question: 'What is the fee for NCERT Biology coaching in Noida?',
     answer:
-      'NCERT Biology coaching fees: Pursuit (30-40 students) - Rs 48,000-70,000/year, Ascent (16-18 students) - Rs 76,000/year, Pinnacle (10-12 students) - Rs 98,000/year. All include complete NCERT coverage.',
+      'NCERT Biology coaching fees: Pursuit (20-25 students) - Rs 48,000-70,000/year, Ascent (12-16 students) - Rs 76,000/year, Pinnacle (6-10 students) - Rs 98,000/year. All include complete NCERT coverage.',
   },
   {
     question: 'How many times do you cover NCERT in a year?',

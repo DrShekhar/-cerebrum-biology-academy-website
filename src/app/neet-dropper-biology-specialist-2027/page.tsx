@@ -105,7 +105,7 @@ const FAQS = [
   {
     question: "What's the fee structure?",
     answer:
-      'Three tiers for the dropper biology specialization: Pursuit (₹40,000–₹75,000/year, batch of 30-40), Ascent (₹58,000–₹90,000/year, batch of 16-25, our most popular tier), Pinnacle ZA (₹1,20,000–₹1,56,000/year, batch of 10-12 with weekly 1-on-1 mentorship from Dr. Shekhar himself). All tiers include weekly tests, full study material, and unlimited doubt sessions. EMI options available.',
+      'Three tiers for the dropper biology specialization: Pursuit (₹40,000–₹75,000/year, batch of 20-25), Ascent (₹58,000–₹90,000/year, batch of 12-16, our most popular tier), Pinnacle ZA (₹1,20,000–₹1,56,000/year, batch of 6-10 with weekly 1-on-1 mentorship from Dr. Shekhar himself). All tiers include weekly tests, full study material, and unlimited doubt sessions. EMI options available.',
   },
   {
     question: 'Who is Dr. Shekhar and why should I trust this?',
@@ -155,7 +155,7 @@ export default function NEETDropperBiologySpecialistPage() {
     hasCourseInstance: [
       {
         '@type': 'CourseInstance',
-        name: 'Pursuit (Small Batch 30-40)',
+        name: 'Pursuit (Small Batch 20-25)',
         description:
           'Live small-batch NEET biology classes with senior faculty, weekly chapter tests, doubt sessions. Most affordable structured tier.',
         courseMode: 'Online',
@@ -175,7 +175,7 @@ export default function NEETDropperBiologySpecialistPage() {
       },
       {
         '@type': 'CourseInstance',
-        name: 'Ascent (Pro Batch 16-25)',
+        name: 'Ascent (Pro Batch 12-16)',
         description:
           'Tighter batch with weekly 1:1 doubt slots, monthly NEET-pattern mocks, personalised gap analysis. Most popular dropper tier.',
         courseMode: 'Online',
@@ -195,7 +195,7 @@ export default function NEETDropperBiologySpecialistPage() {
       },
       {
         '@type': 'CourseInstance',
-        name: 'Pinnacle ZA (Direct Dr. Shekhar 10-12)',
+        name: 'Pinnacle ZA (Direct Dr. Shekhar 6-10)',
         description:
           'Micro-batch with direct Dr. Shekhar 1-on-1 mentoring. Calibrated for AIIMS / top-1000 rank aspirants among droppers.',
         courseMode: 'Online',

@@ -107,12 +107,12 @@ Then share what actually makes sense for THEM, not what's most expensive.
 - Features: Dr. Shekhar's personal mentorship (AIIMS), 24/7 AI doubt bot, weekly 1-on-1s, money-back guarantee
 
 **ASCENT (Most Popular - Perfect Balance)**
-- Batch: 16-18 students (quality meets value)
+- Batch: 12-16 students (quality meets value)
 - Hours: 8 hrs/week
 - Features: AIIMS faculty, complete materials, group doubt sessions, performance tracking
 
 **PURSUIT (Affordable Excellence - Serves the Purpose Well)**
-- Batch: 30-40 students
+- Batch: 20-25 students
 - Hours: 6 hrs/week
 - Features: AIIMS faculty, essential materials, recorded lectures
 
@@ -223,7 +223,7 @@ AP Biology & IB Biology preparation for international board students. Also cover
 - 15+ years of excellence in NEET Biology coaching
 - 67+ AIIMS selections in NEET 2024 alone
 - Dr. Shekhar (AIIMS New Delhi Alumnus) personally teaches - not just a "brand face"
-- Actually small batches (10-12 in Pinnacle, not 50+ like most claim)
+- Actually small batches (6-10 in Pinnacle, not 50+ like most claim)
 - Recorded lectures + Weekly/Monthly/Biweekly tests included
 - 24/7 doubt support (AI bot + real teachers)
 - Money-back guarantee if you're not satisfied (Pinnacle tier)
@@ -253,7 +253,7 @@ When students ask about one-on-one or personal tuition:
    - **Call us directly**: +91 8826444334 or +91 8826444334
    - **We'll call you**: I'll note your details and our counselor will reach out within 24 hours
    Which would you prefer?"
-5. **If NO (budget issue)**, suggest our group batches: "Our Pinnacle tier (₹98K/year) gives you similar personalized attention with 10-12 student batches. Would you like to explore that?"
+5. **If NO (budget issue)**, suggest our group batches: "Our Pinnacle tier (₹98K/year) gives you similar personalized attention with 6-10 student batches. Would you like to explore that?"
 
 ## WORKING TOWARDS ENROLLMENT
 For seriously interested students:

@@ -66,7 +66,7 @@ const faqs = [
   {
     question: 'What does Class 10 NEET Foundation cost in Mumbai?',
     answer:
-      'Cerebrum Class 10 Foundation pricing for Mumbai families (pan-India online): Pursuit ₹35K-55K, Ascent ₹55K-75K (with weekly 1:1 doubt slots + biweekly board + NEET mocks), Pinnacle ₹75K-95K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Three Mumbai-specific cost comparisons: (1) Allen Scholastics Mumbai Class 10 combined PCB Foundation runs ~₹95K-1.2L/year at 250-student batches across Andheri/Borivali/Thane/Powai centres; (2) Aakash Mumbai Class 10 Foundation ~₹1.1L-1.3L at 6 centres; (3) The hidden Mumbai cost: 8-12 hours weekly commute saved by Cerebrum online vs offline centres in Borivali or Thane. Cerebrum biology-only Ascent ₹65K + PhysicsWallah and Unacademy PCB ₹15K = ₹80K total with better biology pedagogy than Allen standalone — common Mumbai pattern for CBSE families targeting AIIMS / state quota via SSC parallel.',
+      'Cerebrum Class 10 Foundation pricing for Mumbai families (pan-India online): Pursuit ₹35K-55K, Ascent ₹55K-75K (with weekly 1:1 doubt slots + biweekly board + NEET mocks), Pinnacle ₹75K-95K (direct Dr. Shekhar micro-batch 6-10). Ad-hoc 1:1 hourly ₹2,000-3,500. Three Mumbai-specific cost comparisons: (1) Allen Scholastics Mumbai Class 10 combined PCB Foundation runs ~₹95K-1.2L/year at 250-student batches across Andheri/Borivali/Thane/Powai centres; (2) Aakash Mumbai Class 10 Foundation ~₹1.1L-1.3L at 6 centres; (3) The hidden Mumbai cost: 8-12 hours weekly commute saved by Cerebrum online vs offline centres in Borivali or Thane. Cerebrum biology-only Ascent ₹65K + PhysicsWallah and Unacademy PCB ₹15K = ₹80K total with better biology pedagogy than Allen standalone — common Mumbai pattern for CBSE families targeting AIIMS / state quota via SSC parallel.',
   },
 ]
 
@@ -234,14 +234,14 @@ export default function NEETFoundationClass10MumbaiPage() {
           </h2>
           <ul>
             <li>
-              <strong>Pursuit (Small-Batch 30-40) — ₹35,000-55,000/year.</strong>
+              <strong>Pursuit (Small-Batch 20-25) — ₹35,000-55,000/year.</strong>
             </li>
             <li>
-              <strong>Ascent (Pro Batch 16-25) — ₹55,000-75,000/year.</strong> Most popular Mumbai
+              <strong>Ascent (Pro Batch 12-16) — ₹55,000-75,000/year.</strong> Most popular Mumbai
               tier with weekly 1:1 doubt slots + biweekly board + NEET mocks.
             </li>
             <li>
-              <strong>Pinnacle (Direct Dr. Shekhar 10-12) — ₹75,000-95,000/year.</strong>
+              <strong>Pinnacle (Direct Dr. Shekhar 6-10) — ₹75,000-95,000/year.</strong>
             </li>
             <li>
               <strong>Ad-hoc 1:1 — ₹2,000-3,500/hour.</strong>

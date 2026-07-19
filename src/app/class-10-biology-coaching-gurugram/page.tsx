@@ -55,7 +55,7 @@ const faqs = [
   {
     question: 'What is the fee structure?',
     answer:
-      'Class X Foundation (Board-only) fees range from ₹40,000 to ₹60,000/year depending on the tier: Pursuit (₹40,000, 30-40 students), Ascent (₹50,000, 16-18 students), or Pinnacle (₹60,000, 10-12 students). All tiers include comprehensive study materials and mock tests.',
+      'Class X Foundation (Board-only) fees range from ₹40,000 to ₹60,000/year depending on the tier: Pursuit (₹40,000, 20-25 students), Ascent (₹50,000, 12-16 students), or Pinnacle (₹60,000, 6-10 students). All tiers include comprehensive study materials and mock tests.',
   },
   {
     question: 'Where is the Gurugram center?',

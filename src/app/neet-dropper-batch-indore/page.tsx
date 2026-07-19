@@ -89,7 +89,7 @@ export default function Page() {
         },
         {
           question: `What's the pricing for the ${city.displayName} dropper programme?`,
-          answer: `Pricing is the same nationally — Pursuit (30-40 students) ₹40,000–₹75,000/yr; Ascent (16-25 students with weekly 1:1 doubt slot) ₹58,000–₹90,000/yr; Pinnacle ZA (10-12 students with direct Dr. Shekhar weekly mentor calls) ₹1,20,000–₹1,56,000/yr. EMI options available. Shipping of printed material included.`,
+          answer: `Pricing is the same nationally — Pursuit (20-25 students) ₹40,000–₹75,000/yr; Ascent (12-16 students with weekly 1:1 doubt slot) ₹58,000–₹90,000/yr; Pinnacle ZA (6-10 students with direct Dr. Shekhar weekly mentor calls) ₹1,20,000–₹1,56,000/yr. EMI options available. Shipping of printed material included.`,
         },
         {
           question: `Schedule for a ${city.displayName} dropper while doing local Allen / Aakash?`,

@@ -238,7 +238,7 @@ export const neetFoundationClass6: SEOLandingContent = {
       'Recordings and notes for revision',
       'AIIMS-trained biology faculty',
     ],
-    price: { original: 20000, emi: 'Flexible plans' },
+    price: { feeOnEnquiry: true },
   },
 
   schema: {
@@ -248,8 +248,6 @@ export const neetFoundationClass6: SEOLandingContent = {
     description:
       'Wonder-led early biology foundation for Class 6: exploration-first, no exam pressure, all-boards. Live online for students in India and abroad.',
     duration: 'P1Y',
-    price: 20000,
-    priceCurrency: 'INR',
     educationalLevel: 'Class 6 (Foundation)',
   },
 }

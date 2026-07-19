@@ -213,7 +213,7 @@ export default function Class9FoundationPage() {
     {
       question: 'What are the fee options and do you offer scholarships?',
       answer:
-        'We offer 3 tiers: Pursuit (₹45,000/year, batch of 30), Ascent (₹60,000/year, batch of 20), and Pinnacle (₹90,000/year, batch of 12 with extra mentoring). EMI options available. Merit scholarships of up to 30% are offered based on a simple entrance test.',
+        'We offer 3 tiers: Pursuit (₹45,000/year, batch of 20-25), Ascent (₹60,000/year, batch of 12-16), and Pinnacle (₹90,000/year, batch of 6-10 with extra mentoring). EMI options available. Merit scholarships of up to 30% are offered based on a simple entrance test.',
     },
     {
       question: 'What is included vs what costs extra?',
@@ -583,7 +583,7 @@ export default function Class9FoundationPage() {
                   <div className="flex items-center">
                     <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
                     <span className="text-sm sm:text-base">
-                      16-25 students per batch — personal attention
+                      12-16 students per batch — personal attention
                     </span>
                   </div>
                   <div className="flex items-center">

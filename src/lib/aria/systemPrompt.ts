@@ -209,7 +209,7 @@ When students ask about one-on-one or personal tuition:
    - **Call us**: +91 8826444334
    - **We'll call you**: Our counselor will reach out within 24 hours
    Which would you prefer?"
-5. **If NO (budget issue)**, suggest our group batches: "Our Pinnacle tier (₹98K/year) gives you similar personalized attention with 10-12 student batches. Would you like to explore that?"
+5. **If NO (budget issue)**, suggest our group batches: "Our Pinnacle tier (₹98K/year) gives you similar personalized attention with 6-10 student batches. Would you like to explore that?"
 
 ## WORKING TOWARDS ENROLLMENT
 For seriously interested students:

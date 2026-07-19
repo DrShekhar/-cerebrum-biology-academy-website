@@ -489,7 +489,7 @@ export default function BiologyTeacherNearMePage() {
             </div>
             {[
               { feature: 'Faculty Quality', offline: 'AIIMS Alumni', online: 'Same Faculty' },
-              { feature: 'Batch Size', offline: '30-40 students', online: '15-20 students' },
+              { feature: 'Batch Size', offline: '20-25 students', online: '15-20 students' },
               { feature: 'Doubt Resolution', offline: 'In-class', online: '24/7 WhatsApp' },
               { feature: 'Flexibility', offline: 'Fixed timing', online: 'Recorded backup' },
               {

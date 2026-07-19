@@ -120,11 +120,11 @@ export function PricingComparisonTable({
                 <Users className="w-4 h-4 text-gray-400" />
                 Batch Size
               </td>
-              <td className="p-4 text-center text-gray-900 font-medium">30-40 students</td>
+              <td className="p-4 text-center text-gray-900 font-medium">20-25 students</td>
               <td
                 className={`p-4 text-center text-gray-900 font-medium ${highlightTier === 'ascent' ? tierBgColors.ascent : ''}`}
               >
-                16-18 students
+                12-16 students
               </td>
               <td className="p-4 text-center text-gray-900 font-medium">10-12 students</td>
             </tr>

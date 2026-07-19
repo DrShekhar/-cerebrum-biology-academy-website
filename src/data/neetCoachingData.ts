@@ -125,7 +125,7 @@ export const tierOptions: TierSelector[] = [
   {
     id: 'ascent',
     label: 'Ascent',
-    batchSize: '16-25 students',
+    batchSize: '12-16 students',
     hours: '4.5 hrs/week',
     priceRange: '76,000 - 90,000',
     badge: 'Most Popular',
@@ -143,7 +143,7 @@ export const tierOptions: TierSelector[] = [
   {
     id: 'pursuit',
     label: 'Pursuit',
-    batchSize: '30-40 students',
+    batchSize: '20-25 students',
     hours: '4.5 hrs/week',
     priceRange: '48,000 - 75,000',
     tierLevel: 'pursuit',
@@ -300,12 +300,12 @@ export const faqs: FAQItem[] = [
   {
     question: 'What are the fees for NEET coaching at Cerebrum Biology Academy?',
     answer:
-      'Our fees range from Rs 40,000 to Rs 1,56,000 per year depending on the course tier and class. Pursuit (Rs 40,000-75,000) offers quality coaching at affordable prices in 30-40 student batches. Ascent (Rs 58,000-90,000) is our most popular tier with 16-25 student batches and weekly doubt sessions. Pinnacle (Rs 68,000-1,56,000) provides premium 10-12 student batches with personal mentorship from Dr. Shekhar. EMI options are available. Refund terms are detailed in our Refund Policy.',
+      'Our fees range from Rs 40,000 to Rs 1,56,000 per year depending on the course tier and class. Pursuit (Rs 40,000-75,000) offers quality coaching at affordable prices in 20-25 student batches. Ascent (Rs 58,000-90,000) is our most popular tier with 12-16 student batches and weekly doubt sessions. Pinnacle (Rs 68,000-1,56,000) provides premium 6-10 student batches with personal mentorship from Dr. Shekhar. EMI options are available. Refund terms are detailed in our Refund Policy.',
   },
   {
     question: 'What is the difference between Pinnacle, Ascent, and Pursuit tiers?',
     answer:
-      'The tiers differ in batch size and features. Pinnacle (10-12 students) includes personal mentorship from Dr. Shekhar and weekly 1-on-1 doubt sessions. Ascent (16-25 students) offers small-group learning with regular doubt sessions and standard mock test series. Pursuit (30-40 students) provides quality teaching by AIIMS & IITians faculties at affordable prices, with bi-weekly group doubt sessions. All three tiers cover the complete NEET syllabus.',
+      'The tiers differ in batch size and features. Pinnacle (6-10 students) includes personal mentorship from Dr. Shekhar and weekly 1-on-1 doubt sessions. Ascent (12-16 students) offers small-group learning with regular doubt sessions and standard mock test series. Pursuit (20-25 students) provides quality teaching by AIIMS & IITians faculties at affordable prices, with bi-weekly group doubt sessions. All three tiers cover the complete NEET syllabus.',
   },
   {
     question: 'Do you have a special batch for NEET droppers/repeaters?',

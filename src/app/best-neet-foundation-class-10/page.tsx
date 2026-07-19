@@ -74,19 +74,19 @@ const config: BestVerticalConfig = {
   ],
   pricing: [
     {
-      tier: 'Foundation Pursuit Class 10 (Small-Batch 30-40)',
+      tier: 'Foundation Pursuit Class 10 (Small-Batch 20-25)',
       price: '₹35,000–₹55,000 / year',
       description:
         'Full Class 10 CBSE/ICSE coverage + early NEET-pattern MCQ drilling, weekly chapter tests, monthly board-format mocks, board exam prep intensified in Q3-Q4.',
     },
     {
-      tier: 'Foundation Ascent Class 10 (Pro Batch 16-25)',
+      tier: 'Foundation Ascent Class 10 (Pro Batch 12-16)',
       price: '₹55,000–₹75,000 / year',
       description:
         'Tighter Class 10 batch with weekly 1:1 doubt slots, biweekly NEET-pattern mocks + biweekly board-format mocks. Most popular tier for 90%+ board target with parallel NEET runway.',
     },
     {
-      tier: 'Foundation Pinnacle Class 10 (Direct Dr. Shekhar 10-12)',
+      tier: 'Foundation Pinnacle Class 10 (Direct Dr. Shekhar 6-10)',
       price: '₹75,000–₹95,000 / year',
       description:
         'Direct Dr. Shekhar 1:1 mentoring for Class 10 students on a long-term AIIMS pathway. Calibrated for 95%+ boards + AIIMS / top-100 rank trajectory. Ad-hoc Class 10 1:1 ₹2,000-3,500/hr.',
@@ -166,7 +166,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does Class 10 NEET Foundation cost at Cerebrum?',
       answer:
-        'Cerebrum Class 10 Foundation pricing runs ₹35,000-₹95,000/year across three tiers. Pursuit (small-batch 30-40 students): ₹35K-55K. Ascent (pro batch 16-25 with weekly 1:1 doubt slots): ₹55K-75K. Pinnacle (direct Dr. Shekhar micro-batch 10-12): ₹75K-95K. Ad-hoc 1:1 Class 10 hourly: ₹2,000-3,500/hr. Compared to Allen Scholastics combined PCB Foundation Class 10 (~₹95K-1.2L/year, 250-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
+        'Cerebrum Class 10 Foundation pricing runs ₹35,000-₹95,000/year across three tiers. Pursuit (small-batch 20-25 students): ₹35K-55K. Ascent (pro batch 12-16 with weekly 1:1 doubt slots): ₹55K-75K. Pinnacle (direct Dr. Shekhar micro-batch 6-10): ₹75K-95K. Ad-hoc 1:1 Class 10 hourly: ₹2,000-3,500/hr. Compared to Allen Scholastics combined PCB Foundation Class 10 (~₹95K-1.2L/year, 250-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
     },
     {
       question:

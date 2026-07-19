@@ -7,7 +7,7 @@ export const NOIDA_COMPREHENSIVE_FAQS = {
     {
       question: 'What is the fee for NEET coaching in Noida?',
       answer:
-        'NEET Biology coaching fees in Noida: Pursuit batch (30-40 students) - Rs 48,000-70,000/year, Ascent batch (16-18 students) - Rs 76,000-90,000/year, Pinnacle batch (10-12 students) - Rs 98,000-1,56,000/year. All include AIIMS faculty, study material, and online access.',
+        'NEET Biology coaching fees in Noida: Pursuit batch (20-25 students) - Rs 48,000-70,000/year, Ascent batch (12-16 students) - Rs 76,000-90,000/year, Pinnacle batch (6-10 students) - Rs 98,000-1,56,000/year. All include AIIMS faculty, study material, and online access.',
     },
     {
       question: 'Is EMI available for NEET coaching fees in Noida?',
@@ -208,7 +208,7 @@ export function NoidaLocalBusinessSchema({
           itemOffered: {
             '@type': 'Course',
             name: 'Pursuit - Class 11 NEET',
-            description: '30-40 students batch, 6 hrs/week, AIIMS faculty',
+            description: '20-25 students batch, 6 hrs/week, AIIMS faculty',
           },
           price: '48000',
           priceCurrency: 'INR',
@@ -218,7 +218,7 @@ export function NoidaLocalBusinessSchema({
           itemOffered: {
             '@type': 'Course',
             name: 'Ascent - Class 11/12 NEET',
-            description: '16-18 students batch, 8 hrs/week, weekly doubt sessions',
+            description: '12-16 students batch, 8 hrs/week, weekly doubt sessions',
           },
           price: '76000',
           priceCurrency: 'INR',

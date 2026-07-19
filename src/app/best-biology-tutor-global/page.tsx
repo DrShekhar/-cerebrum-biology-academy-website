@@ -152,7 +152,7 @@ const TIERS = [
   },
   {
     name: 'Ascent Pro Batch',
-    students: '16-25 students',
+    students: '12-16 students',
     angle:
       'Senior faculty trained by Dr. Shekhar. Strong personalisation but less than Pinnacle. Best fit for families wanting tutor-style depth at a more accessible tier.',
     bestFor: 'AP Biology 4-5, IB SL 7, GCSE 9, A-Level A',

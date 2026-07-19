@@ -13,7 +13,8 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/neet-foundation-class-10-south-delhi'
 
 export const metadata: Metadata = {
-  title: 'NEET Foundation Class 10 in South Delhi | Board + NEET Parallel · South Ex, GK & Defence Colony',
+  title:
+    'NEET Foundation Class 10 in South Delhi | Board + NEET Parallel · South Ex, GK & Defence Colony',
   description:
     'NEET Foundation Class 10 in South Delhi at Cerebrum Biology Academy — South Extension flagship, Green Park, Greater Kailash. CBSE / ICSE boards + NEET parallel pedagogy. AIIMS-trained faculty, batches of 15-20. ₹35K-95K/year.',
   keywords: [
@@ -37,7 +38,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'NEET Foundation Class 10 in South Delhi | Board + NEET Parallel · South Ex, GK & Defence Colony',
+    title:
+      'NEET Foundation Class 10 in South Delhi | Board + NEET Parallel · South Ex, GK & Defence Colony',
     description:
       'NEET Foundation Class 10 in South Delhi at Cerebrum Biology Academy — South Extension flagship, Green Park, Greater Kailash. CBSE / ICSE boards + NEET parallel pedagogy. AIIMS-trained faculty, batches of 15-20. ₹...',
   },
@@ -45,7 +47,8 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'Can Cerebrum South Delhi prepare my child for Class 10 boards AND NEET at the same time?',
+    question:
+      'Can Cerebrum South Delhi prepare my child for Class 10 boards AND NEET at the same time?',
     answer:
       'Yes — this is the core differentiator of Cerebrum Class 10 Foundation in South Delhi. The same AIIMS-trained biology faculty teach both CBSE / ICSE Class 10 syllabus depth (Life Processes, Control and Coordination, How Do Organisms Reproduce, Heredity and Evolution, Our Environment) AND NEET-pattern MCQ drilling. Separate weekly tests in board format (long-answer with diagrams) and NEET MCQ format. Class 10 board results from Cerebrum Foundation South Delhi students consistently average 90%+ in biology while simultaneously building NEET-ready conceptual foundations for Class 11.',
   },
@@ -60,14 +63,15 @@ const faqs = [
       'Class 10 Foundation in South Delhi runs in 2-hour weekend-friendly slots: Saturday morning (10 AM - 12 PM IST), Sunday morning (10 AM - 12 PM), and a weekday evening 6 PM - 8 PM IST option. Most students attend twice weekly (4 hours total). Q4 (January - March) intensifies board exam preparation with weekly board-format mocks and additional Sunday-afternoon revision slots specifically for CBSE / ICSE Class 10 finals.',
   },
   {
-    question: 'How does Cerebrum South Delhi compare to Allen Scholastics for Class 10 in South Delhi?',
+    question:
+      'How does Cerebrum South Delhi compare to Allen Scholastics for Class 10 in South Delhi?',
     answer:
       'Three structural differences specifically for Class 10. (1) Subject focus: Cerebrum South Delhi is biology-only specialist with AIIMS-trained Class 10 faculty; Allen Scholastics is combined PCB Foundation with school-teacher-level Class 10 instructors. (2) Batch size: Cerebrum 15-20 students vs Allen 200-300+. (3) Board strategy: Cerebrum runs separate weekly board-format mocks with examiner-aligned answer-writing standards; Allen deprioritises boards in favour of NEET-only drilling. For students targeting 90%+ in Class 10 boards AND NEET-ready foundations, Cerebrum South Delhi is structurally different.',
   },
   {
     question: 'What does Class 10 NEET Foundation cost in South Delhi?',
     answer:
-      'Cerebrum Class 10 Foundation in South Delhi runs ₹35,000-₹95,000/year. Pursuit (small-batch 30-40): ₹35K-55K. Ascent (pro batch 16-25 with weekly 1:1 doubt slots): ₹55K-75K. Pinnacle (direct Dr. Shekhar 10-12 student micro-batch at South Extension flagship): ₹75K-95K. Ad-hoc 1:1 Class 10 hourly: ₹2,000-3,500/hr. Board exam preparation included in all tiers. Compared to Allen Scholastics combined PCB Foundation Class 10 in South Delhi (~₹95K-1.2L/year, 250-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
+      'Cerebrum Class 10 Foundation in South Delhi runs ₹35,000-₹95,000/year. Pursuit (small-batch 20-25): ₹35K-55K. Ascent (pro batch 12-16 with weekly 1:1 doubt slots): ₹55K-75K. Pinnacle (direct Dr. Shekhar 6-10 student micro-batch at South Extension flagship): ₹75K-95K. Ad-hoc 1:1 Class 10 hourly: ₹2,000-3,500/hr. Board exam preparation included in all tiers. Compared to Allen Scholastics combined PCB Foundation Class 10 in South Delhi (~₹95K-1.2L/year, 250-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
   },
   {
     question:
@@ -106,7 +110,7 @@ const courseSchema = {
     offers: [
       {
         '@type': 'Offer',
-        name: 'Foundation Pursuit Class 10 (Small-Batch 30-40)',
+        name: 'Foundation Pursuit Class 10 (Small-Batch 20-25)',
         price: '35000',
         priceCurrency: 'INR',
         availability: 'https://schema.org/InStock',
@@ -114,7 +118,7 @@ const courseSchema = {
       },
       {
         '@type': 'Offer',
-        name: 'Foundation Ascent Class 10 (Pro Batch 16-25)',
+        name: 'Foundation Ascent Class 10 (Pro Batch 12-16)',
         price: '55000',
         priceCurrency: 'INR',
         availability: 'https://schema.org/InStock',
@@ -122,7 +126,7 @@ const courseSchema = {
       },
       {
         '@type': 'Offer',
-        name: 'Foundation Pinnacle Class 10 (Direct Dr. Shekhar 10-12)',
+        name: 'Foundation Pinnacle Class 10 (Direct Dr. Shekhar 6-10)',
         price: '75000',
         priceCurrency: 'INR',
         availability: 'https://schema.org/InStock',
@@ -209,7 +213,8 @@ export default function NEETFoundationClass10DelhiPage() {
             NEET Foundation Class 10 in South Delhi
           </h1>
           <p className="text-xl text-slate-300 mb-6 max-w-3xl">
-            Class 10 NEET Foundation Biology at Cerebrum South Delhi — two South Delhi centres (South Extension flagship + Green Park) plus pan-India online live. AIIMS-trained
+            Class 10 NEET Foundation Biology at Cerebrum South Delhi — two South Delhi centres
+            (South Extension flagship + Green Park) plus pan-India online live. AIIMS-trained
             biology specialists, batches of 15-20, CBSE / ICSE boards + NEET-pattern parallel
             pedagogy. ₹35K-₹95K/year. Board prep intensified Q4. Class 10 NCERT Biology bridged
             forward into Class 11 readiness.
@@ -237,9 +242,9 @@ export default function NEETFoundationClass10DelhiPage() {
               Modern Vasant Vihar, Apeejay South Extension feeder families.
             </li>
             <li>
-              <strong>Greater Kailash &amp; Defence Colony</strong> — served from the South Extension
-              flagship (5-15 min away). Lajpat Nagar, Kalkaji, East of Kailash and Saket families
-              attend here.
+              <strong>Greater Kailash &amp; Defence Colony</strong> — served from the South
+              Extension flagship (5-15 min away). Lajpat Nagar, Kalkaji, East of Kailash and Saket
+              families attend here.
             </li>
             <li>
               <strong>Green Park</strong> — South Delhi catchment near Hauz Khas, Vasant Vihar, R.K.
@@ -270,16 +275,16 @@ export default function NEETFoundationClass10DelhiPage() {
           </h2>
           <ul>
             <li>
-              <strong>Pursuit (Small-Batch 30-40) — ₹35,000-55,000/year.</strong> Full Class 10
+              <strong>Pursuit (Small-Batch 20-25) — ₹35,000-55,000/year.</strong> Full Class 10
               biology coverage + early NEET-pattern MCQ, board strategy, weekly chapter tests.
             </li>
             <li>
-              <strong>Ascent (Pro Batch 16-25) — ₹55,000-75,000/year.</strong> Plus weekly 1:1 doubt
+              <strong>Ascent (Pro Batch 12-16) — ₹55,000-75,000/year.</strong> Plus weekly 1:1 doubt
               slots, biweekly NEET-pattern mocks + biweekly board-format mocks. Most popular tier
               for 90%+ board target.
             </li>
             <li>
-              <strong>Pinnacle (Direct Dr. Shekhar 10-12) — ₹75,000-95,000/year.</strong> South
+              <strong>Pinnacle (Direct Dr. Shekhar 6-10) — ₹75,000-95,000/year.</strong> South
               Extension flagship only. AIIMS Delhi alumnus 1:1 mentoring.
             </li>
             <li>
@@ -287,7 +292,9 @@ export default function NEETFoundationClass10DelhiPage() {
             </li>
           </ul>
 
-          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">Related South Delhi pages</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
+            Related South Delhi pages
+          </h2>
           <ul>
             <li>
               <Link href="/best-neet-foundation-class-10" className="text-blue-600 hover:underline">
@@ -295,7 +302,10 @@ export default function NEETFoundationClass10DelhiPage() {
               </Link>
             </li>
             <li>
-              <Link href="/neet-foundation-class-9-south-delhi" className="text-blue-600 hover:underline">
+              <Link
+                href="/neet-foundation-class-9-south-delhi"
+                className="text-blue-600 hover:underline"
+              >
                 Class 9 Foundation in South Delhi
               </Link>
             </li>

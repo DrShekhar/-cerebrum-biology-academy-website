@@ -95,7 +95,7 @@ const TIERS = [
   },
   {
     name: 'Ascent Pro Batch',
-    students: '16-25 students',
+    students: '12-16 students',
     angle:
       'Senior faculty trained by Dr. Shekhar. Strong personalisation but less than Pinnacle. Best fit for families wanting tutor-style depth at a more accessible tier.',
     bestFor: 'NEET 340+/360 biology, AP score-5, NSEB qualification',

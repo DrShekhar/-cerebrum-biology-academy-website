@@ -690,12 +690,12 @@ const metroStationData: Record<string, MetroStationData> = {
       {
         question: 'Do students from DLF Magnolias/Camellias attend?',
         answer:
-          'Yes! Students from DLF Magnolias, Camellias, Aralias (Golf Course Road ultra-premium towers) attend our premium Pinnacle batch with just 10-12 students per batch.',
+          'Yes! Students from DLF Magnolias, Camellias, Aralias (Golf Course Road ultra-premium towers) attend our premium Pinnacle batch with just 6-10 students per batch.',
       },
       {
         question: 'What batch sizes do you offer for Golf Course Road students?',
         answer:
-          'Pinnacle batch: 10-12 students (Rs 98,000/year). Most Golf Course Road families prefer this for maximum personal attention from AIIMS faculty.',
+          'Pinnacle batch: 6-10 students (Rs 98,000/year). Most Golf Course Road families prefer this for maximum personal attention from AIIMS faculty.',
       },
     ],
   },
@@ -851,7 +851,7 @@ const metroStationData: Record<string, MetroStationData> = {
       {
         question: 'What is the fee for DLF Phase 3 students?',
         answer:
-          'Pinnacle batch (10-12 students): Rs 98,000/year. Ascent batch (16-25 students): Rs 76,000/year. Pursuit batch (30-40 students): Rs 48,000/year. EMI available.',
+          'Pinnacle batch (6-10 students): Rs 98,000/year. Ascent batch (12-16 students): Rs 76,000/year. Pursuit batch (20-25 students): Rs 48,000/year. EMI available.',
       },
     ],
   },
@@ -906,7 +906,7 @@ const metroStationData: Record<string, MetroStationData> = {
       {
         question: 'What batch do Golf Course Road families prefer?',
         answer:
-          'Most families from Belvedere, Magnolias, Camellias choose our Pinnacle batch — just 10-12 students with personal attention from AIIMS faculty. Rs 98,000/year.',
+          'Most families from Belvedere, Magnolias, Camellias choose our Pinnacle batch — just 6-10 students with personal attention from AIIMS faculty. Rs 98,000/year.',
       },
       {
         question: 'Do you offer home tuition for Golf Course Road?',
@@ -1005,7 +1005,7 @@ const metroStationData: Record<string, MetroStationData> = {
       {
         question: 'What are the fees for Neelam Chowk area students?',
         answer:
-          'Pinnacle batch (10-12 students): Rs 98,000/year. Ascent (16-25 students): Rs 76,000/year. Pursuit (30-40 students): Rs 48,000/year. EMI available.',
+          'Pinnacle batch (6-10 students): Rs 98,000/year. Ascent (12-16 students): Rs 76,000/year. Pursuit (20-25 students): Rs 48,000/year. EMI available.',
       },
     ],
   },

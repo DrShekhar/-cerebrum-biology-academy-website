@@ -65,7 +65,7 @@ const faqs = [
   {
     question: 'Which Karol Bagh schools send students to Cerebrum?',
     answer:
-      'Common Karol Bagh feeder schools across the Cerebrum cohort: Springdales School (Pusa Road), Punjab Public School (Karol Bagh), Bal Bhavan Public School, Saint Thomas School (Mandir Marg-adjacent), Mata Jai Kaur Public School (Ashok Vihar-adjacent Rajinder Nagar), New Era Senior Secondary, Apeejay School Pitampura (commute). Students from these schools join Pursuit (small-batch 30-40, ₹40K-75K), Ascent (pro batch 16-25 with weekly 1:1 doubt slots, ₹58K-90K), or Pinnacle (direct Dr. Shekhar 1:1 micro-batch 10-12, ₹1.2L-1.56L) depending on target NEET rank.',
+      'Common Karol Bagh feeder schools across the Cerebrum cohort: Springdales School (Pusa Road), Punjab Public School (Karol Bagh), Bal Bhavan Public School, Saint Thomas School (Mandir Marg-adjacent), Mata Jai Kaur Public School (Ashok Vihar-adjacent Rajinder Nagar), New Era Senior Secondary, Apeejay School Pitampura (commute). Students from these schools join Pursuit (small-batch 20-25, ₹40K-75K), Ascent (pro batch 12-16 with weekly 1:1 doubt slots, ₹58K-90K), or Pinnacle (direct Dr. Shekhar 1:1 micro-batch 6-10, ₹1.2L-1.56L) depending on target NEET rank.',
   },
   {
     question: 'How does Cerebrum compare to Aakash and Allen / FIITJEE for Karol Bagh students?',
@@ -75,7 +75,7 @@ const faqs = [
   {
     question: 'What does Cerebrum NEET coaching cost in Karol Bagh?',
     answer:
-      'Cerebrum NEET Biology pricing applies pan-Delhi (online or any centre): Pursuit (small-batch 30-40, ₹40K-75K), Ascent (pro batch 16-25 with weekly 1:1 doubt slots, ₹58K-90K), Pinnacle (direct Dr. Shekhar 1:1 micro-batch 10-12, ₹1.2L-1.56L). Ad-hoc 1:1 hourly is ₹2,500-4,500/hour. Compared to Kota relocation at ₹2L-2.5L all-in (tuition + hostel + mess + travel), Cerebrum Pinnacle at ₹1.5L total is half the cost without relocation stress.',
+      'Cerebrum NEET Biology pricing applies pan-Delhi (online or any centre): Pursuit (small-batch 20-25, ₹40K-75K), Ascent (pro batch 12-16 with weekly 1:1 doubt slots, ₹58K-90K), Pinnacle (direct Dr. Shekhar 1:1 micro-batch 6-10, ₹1.2L-1.56L). Ad-hoc 1:1 hourly is ₹2,500-4,500/hour. Compared to Kota relocation at ₹2L-2.5L all-in (tuition + hostel + mess + travel), Cerebrum Pinnacle at ₹1.5L total is half the cost without relocation stress.',
   },
 ]
 

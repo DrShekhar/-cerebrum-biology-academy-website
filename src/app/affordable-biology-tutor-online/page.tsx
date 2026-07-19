@@ -39,7 +39,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html:
-            '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does affordable Biology tutoring cost?","acceptedAnswer":{"@type":"Answer","text":"Our Pursuit batch starts at Rs 40,000/year (Rs 3,333/month). Includes live classes, recorded lectures, study material, weekly tests, and WhatsApp doubt support. EMI options available."}},{"@type":"Question","name":"Is affordable tutoring good quality?","acceptedAnswer":{"@type":"Answer","text":"Yes! All batches have the same AIIMS-trained faculty. The Pursuit batch has 30-40 students (vs 15 in Pinnacle) but covers the same curriculum with 98% success rate."}},{"@type":"Question","name":"How does this compare to Preply or Superprof?","acceptedAnswer":{"@type":"Answer","text":"Preply/Superprof charge Rs 2,000-4,000/hour for freelance tutors. Our annual batch (Rs 40,000/year) gives you 100+ hours of live classes + study material + tests — 10x more affordable with structured curriculum."}}]}',
+            '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does affordable Biology tutoring cost?","acceptedAnswer":{"@type":"Answer","text":"Our Pursuit batch starts at Rs 40,000/year (Rs 3,333/month). Includes live classes, recorded lectures, study material, weekly tests, and WhatsApp doubt support. EMI options available."}},{"@type":"Question","name":"Is affordable tutoring good quality?","acceptedAnswer":{"@type":"Answer","text":"Yes! All batches have the same AIIMS-trained faculty. The Pursuit batch has 20-25 students (vs 15 in Pinnacle) but covers the same curriculum with 98% success rate."}},{"@type":"Question","name":"How does this compare to Preply or Superprof?","acceptedAnswer":{"@type":"Answer","text":"Preply/Superprof charge Rs 2,000-4,000/hour for freelance tutors. Our annual batch (Rs 40,000/year) gives you 100+ hours of live classes + study material + tests — 10x more affordable with structured curriculum."}}]}',
         }}
       />
       <div className="min-h-screen bg-gray-50">
@@ -93,7 +93,7 @@ export default function Page() {
                 </span>
               </summary>
               <p className="px-6 pb-4 text-gray-600">
-                Yes! All batches have the same AIIMS-trained faculty. The Pursuit batch has 30-40
+                Yes! All batches have the same AIIMS-trained faculty. The Pursuit batch has 20-25
                 students (vs 15 in Pinnacle) but covers the same curriculum with 98% success rate.
               </p>
             </details>

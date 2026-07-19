@@ -34,7 +34,7 @@ const pricingTiers = [
     name: 'Pursuit',
     price: '₹45,000 - ₹70,000',
     perMonth: '₹3,750 - ₹5,833/month',
-    batchSize: '30-40 students',
+    batchSize: '20-25 students',
     features: [
       'Complete Biology syllabus',
       'Weekly tests',
@@ -49,7 +49,7 @@ const pricingTiers = [
     name: 'Ascent',
     price: '₹60,000 - ₹90,000',
     perMonth: '₹5,000 - ₹7,500/month',
-    batchSize: '16-18 students',
+    batchSize: '12-16 students',
     features: [
       'Everything in Pursuit',
       'Smaller batch size',

@@ -8,10 +8,24 @@ interface CourseSummaryCardProps {
   courseSummary: SEOLandingContent['courseSummary']
   classLevel: ClassLevel
   ctaLink: string
+  contactButtons?: SEOLandingContent['contactButtons']
 }
 
-export function CourseSummaryCard({ courseSummary, classLevel, ctaLink }: CourseSummaryCardProps) {
+export function CourseSummaryCard({
+  courseSummary,
+  classLevel,
+  ctaLink,
+  contactButtons,
+}: CourseSummaryCardProps) {
   const tierLink = tierPageLinks[classLevel]
+  const feeOnEnquiry = courseSummary.price.feeOnEnquiry || courseSummary.price.original == null
+  const whatsappNumber = contactButtons?.whatsapp?.number
+  const whatsappHref = whatsappNumber
+    ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+        contactButtons?.whatsapp?.message ||
+          'Hi Cerebrum! Please share the fee structure for this programme.'
+      )}`
+    : ctaLink
 
   return (
     <section className="bg-white py-16 lg:py-24">
@@ -51,53 +65,78 @@ export function CourseSummaryCard({ courseSummary, classLevel, ctaLink }: Course
             <div className="absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-white/10" />
 
             <div className="relative">
-              <p className="text-lg font-medium text-white/80">Starting at</p>
+              {feeOnEnquiry ? (
+                <>
+                  <p className="text-lg font-medium text-white/80">Fee</p>
+                  <div className="mt-2 text-4xl font-bold sm:text-5xl">On enquiry</div>
+                  <p className="mt-2 text-white/80">
+                    Share your child&apos;s class on WhatsApp and we&apos;ll send the fee structure
+                    and batch schedule.
+                  </p>
 
-              <div className="mt-2 flex items-baseline gap-2">
-                {courseSummary.price.discounted ? (
-                  <>
-                    <span className="text-lg text-white/60 line-through">
-                      ₹{courseSummary.price.original.toLocaleString()}
-                    </span>
-                    <span className="text-4xl font-bold sm:text-5xl">
-                      ₹{courseSummary.price.discounted.toLocaleString()}
-                    </span>
-                  </>
-                ) : (
-                  <span className="text-4xl font-bold sm:text-5xl">
-                    ₹{courseSummary.price.original.toLocaleString()}
-                  </span>
-                )}
-                <span className="text-white/70">/year</span>
-              </div>
+                  <div className="mt-8 space-y-4">
+                    <Link
+                      href={whatsappHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 text-lg font-semibold text-blue-600 transition-all hover:bg-gray-100 hover:shadow-lg"
+                    >
+                      Get Fee Structure on WhatsApp
+                      <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <p className="text-lg font-medium text-white/80">Starting at</p>
 
-              {courseSummary.price.emi && (
-                <p className="mt-2 text-white/80">
-                  or EMI starting at{' '}
-                  <span className="font-semibold">{courseSummary.price.emi}</span>
-                </p>
+                  <div className="mt-2 flex items-baseline gap-2">
+                    {courseSummary.price.discounted ? (
+                      <>
+                        <span className="text-lg text-white/60 line-through">
+                          ₹{courseSummary.price.original!.toLocaleString()}
+                        </span>
+                        <span className="text-4xl font-bold sm:text-5xl">
+                          ₹{courseSummary.price.discounted.toLocaleString()}
+                        </span>
+                      </>
+                    ) : (
+                      <span className="text-4xl font-bold sm:text-5xl">
+                        ₹{courseSummary.price.original!.toLocaleString()}
+                      </span>
+                    )}
+                    <span className="text-white/70">/year</span>
+                  </div>
+
+                  {courseSummary.price.emi && (
+                    <p className="mt-2 text-white/80">
+                      or EMI starting at{' '}
+                      <span className="font-semibold">{courseSummary.price.emi}</span>
+                    </p>
+                  )}
+
+                  <div className="mt-8 space-y-4">
+                    <Link
+                      href={ctaLink}
+                      className="group flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 text-lg font-semibold text-blue-600 transition-all hover:bg-gray-100 hover:shadow-lg"
+                    >
+                      View Complete Details
+                      <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    </Link>
+
+                    <Link
+                      href={tierLink}
+                      className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-white/30 bg-white/10 px-6 py-4 text-lg font-semibold text-white transition-all hover:border-white/50 hover:bg-white/20"
+                    >
+                      Compare All Tiers
+                    </Link>
+                  </div>
+
+                  <p className="mt-6 text-center text-sm text-white/70">
+                    3 pricing tiers available to match your budget
+                  </p>
+                </>
               )}
-
-              <div className="mt-8 space-y-4">
-                <Link
-                  href={ctaLink}
-                  className="group flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 text-lg font-semibold text-blue-600 transition-all hover:bg-gray-100 hover:shadow-lg"
-                >
-                  View Complete Details
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Link>
-
-                <Link
-                  href={tierLink}
-                  className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-white/30 bg-white/10 px-6 py-4 text-lg font-semibold text-white transition-all hover:border-white/50 hover:bg-white/20"
-                >
-                  Compare All Tiers
-                </Link>
-              </div>
-
-              <p className="mt-6 text-center text-sm text-white/70">
-                3 pricing tiers available to match your budget
-              </p>
             </div>
           </div>
         </div>

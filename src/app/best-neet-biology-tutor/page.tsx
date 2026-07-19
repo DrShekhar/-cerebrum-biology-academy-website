@@ -170,7 +170,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does the best NEET Biology coaching cost?',
       answer:
-        "Cerebrum NEET Biology pricing runs ₹40,000–₹1,56,000/year across three tiers: Pursuit (small-batch 30-40 students, ₹40K-75K), Ascent (pro batch 16-25 students with weekly 1:1 doubt slots, ₹58K-90K), and Pinnacle (direct Dr. Shekhar micro-batch 10-12 students, ₹1.2L-1.56L). Ad-hoc 1:1 hourly tutoring is ₹2,500-4,500/hour. Compared to Aakash and Allen full-NEET courses (~₹1.4L-1.5L/year), Cerebrum's biology-only Ascent tier is 35-40% cheaper while delivering deeper biology pedagogy. Compared to Kota relocation total cost (₹2L-2.5L including hostel and mess), Cerebrum Pinnacle is half the cost.",
+        "Cerebrum NEET Biology pricing runs ₹40,000–₹1,56,000/year across three tiers: Pursuit (small-batch 20-25 students, ₹40K-75K), Ascent (pro batch 12-16 students with weekly 1:1 doubt slots, ₹58K-90K), and Pinnacle (direct Dr. Shekhar micro-batch 6-10 students, ₹1.2L-1.56L). Ad-hoc 1:1 hourly tutoring is ₹2,500-4,500/hour. Compared to Aakash and Allen full-NEET courses (~₹1.4L-1.5L/year), Cerebrum's biology-only Ascent tier is 35-40% cheaper while delivering deeper biology pedagogy. Compared to Kota relocation total cost (₹2L-2.5L including hostel and mess), Cerebrum Pinnacle is half the cost.",
     },
     {
       question:

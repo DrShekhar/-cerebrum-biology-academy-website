@@ -66,19 +66,19 @@ const config: BestVerticalConfig = {
   ],
   pricing: [
     {
-      tier: 'Pursuit Class 11 (Small-Batch 30-40)',
+      tier: 'Pursuit Class 11 (Small-Batch 20-25)',
       price: '₹40,000–₹65,000 / year',
       description:
         'Full Class 11 Biology NCERT coverage with senior faculty, weekly chapter tests, doubt sessions. Standard pacing for first-year NEET aspirants.',
     },
     {
-      tier: 'Ascent Class 11 (Pro Batch 16-25)',
+      tier: 'Ascent Class 11 (Pro Batch 12-16)',
       price: '₹58,000–₹80,000 / year',
       description:
         'Tighter Class 11 batch with weekly 1:1 doubt slots, monthly NEET-pattern chapter mocks, personalised gap analysis. Most popular for serious AIIMS aspirants.',
     },
     {
-      tier: 'Pinnacle Class 11 (Direct Dr. Shekhar 10-12)',
+      tier: 'Pinnacle Class 11 (Direct Dr. Shekhar 6-10)',
       price: '₹1,20,000–₹1,45,000 / year',
       description:
         'Direct Dr. Shekhar 1:1 mentoring for Class 11 NEET trajectory. Calibrated for AIIMS / top-100 rank early aspirants. Ad-hoc Class 11 1:1 ₹2,500-4,500/hr.',
@@ -158,7 +158,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does Class 11 NEET Biology coaching cost at Cerebrum?',
       answer:
-        'Cerebrum Class 11 NEET Biology pricing runs ₹40,000-₹1,45,000/year across three tiers: Pursuit small-batch 30-40 students (₹40K-65K), Ascent pro batch 16-25 with weekly 1:1 doubt slots (₹58K-80K), Pinnacle direct Dr. Shekhar 10-12 student micro-batch (₹1.2L-1.45L). Ad-hoc 1:1 Class 11 hourly is ₹2,500-4,500/hr. Compared to Aakash Class 11 NEET combined-subject (~₹1.3L/year, 250-student batch) the Cerebrum Class 11 Ascent biology-only tier at ₹80K offers materially deeper biology pedagogy at lower cost.',
+        'Cerebrum Class 11 NEET Biology pricing runs ₹40,000-₹1,45,000/year across three tiers: Pursuit small-batch 20-25 students (₹40K-65K), Ascent pro batch 12-16 with weekly 1:1 doubt slots (₹58K-80K), Pinnacle direct Dr. Shekhar 6-10 student micro-batch (₹1.2L-1.45L). Ad-hoc 1:1 Class 11 hourly is ₹2,500-4,500/hr. Compared to Aakash Class 11 NEET combined-subject (~₹1.3L/year, 250-student batch) the Cerebrum Class 11 Ascent biology-only tier at ₹80K offers materially deeper biology pedagogy at lower cost.',
     },
     {
       question: 'Can Cerebrum teach Class 11 boards and Class 11 NEET in parallel?',

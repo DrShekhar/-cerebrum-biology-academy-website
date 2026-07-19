@@ -173,7 +173,7 @@ const faqs = [
   {
     question: 'What is the fee structure for NEET coaching?',
     answer:
-      'Our fees range from ₹36,000 (Pursuit tier) to ₹1,56,000 (Pinnacle tier) per year. We offer 3 tiers: Pursuit (budget-friendly, 30-40 students), Ascent (popular, 16-18 students), and Pinnacle (premium, 10-12 students). EMI options available.',
+      'Our fees range from ₹36,000 (Pursuit tier) to ₹1,56,000 (Pinnacle tier) per year. We offer 3 tiers: Pursuit (budget-friendly, 20-25 students), Ascent (popular, 12-16 students), and Pinnacle (premium, 6-10 students). EMI options available.',
   },
   {
     question: 'Do you have centers in Noida and Gurgaon?',

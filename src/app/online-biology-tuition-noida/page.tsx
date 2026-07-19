@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 const onlineCourses = [
   {
     name: 'Pursuit - Online',
-    description: '30-40 students | 6 hrs/week',
+    description: '20-25 students | 6 hrs/week',
     classLevel: 'Class 11-12 & Droppers',
     fee: '48,000 - 70,000',
     features: ['Live Zoom classes', 'Recorded lectures', 'AI doubt bot 24/7', 'Basic mock tests'],
@@ -64,7 +64,7 @@ const onlineCourses = [
   },
   {
     name: 'Ascent - Online',
-    description: '16-18 students | 8 hrs/week',
+    description: '12-16 students | 8 hrs/week',
     classLevel: 'Class 11-12 & Droppers',
     fee: '76,000 - 90,000',
     features: [
@@ -131,7 +131,7 @@ const faqs = [
   {
     question: 'What is the fee for online Biology tuition in Noida?',
     answer:
-      'Online tuition fees by tier: Pursuit (30-40 students) - Rs 48,000-70,000/year, Ascent (16-18 students) - Rs 76,000-90,000/year, Pinnacle (10-12 students) - Rs 98,000-1,56,000/year. All include AIIMS faculty and recorded lectures.',
+      'Online tuition fees by tier: Pursuit (20-25 students) - Rs 48,000-70,000/year, Ascent (12-16 students) - Rs 76,000-90,000/year, Pinnacle (6-10 students) - Rs 98,000-1,56,000/year. All include AIIMS faculty and recorded lectures.',
   },
   {
     question: 'Is online tuition as effective as offline?',

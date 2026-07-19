@@ -1216,7 +1216,7 @@ export default function PricingPage() {
                   {
                     icon: Users,
                     title: 'Small Batch Sizes',
-                    desc: 'Pinnacle (10-12), Ascent (16-25), or Pursuit (30-40). Personal attention by design.',
+                    desc: 'Pinnacle (6-10), Ascent (12-16), or Pursuit (20-25). Personal attention by design.',
                   },
                 ].map((item, idx) => (
                   <div
@@ -1307,7 +1307,7 @@ export default function PricingPage() {
                 },
                 {
                   q: "What's the difference between the tiers?",
-                  a: '<strong>Pinnacle (10-12 students):</strong> Premium coaching with maximum personal attention, ideal for top rankers.<br/><strong>Ascent (16-25 students):</strong> Balanced approach with high-quality teaching and good personal attention.<br/><strong>Pursuit (30-40 students):</strong> Quality education at an affordable price, perfect for budget-conscious students.',
+                  a: '<strong>Pinnacle (6-10 students):</strong> Premium coaching with maximum personal attention, ideal for top rankers.<br/><strong>Ascent (12-16 students):</strong> Balanced approach with high-quality teaching and good personal attention.<br/><strong>Pursuit (20-25 students):</strong> Quality education at an affordable price, perfect for budget-conscious students.',
                 },
                 {
                   q: 'What is your refund policy?',

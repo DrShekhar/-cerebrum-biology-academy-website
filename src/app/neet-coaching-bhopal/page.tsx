@@ -61,7 +61,7 @@ const faqs = [
   {
     question: 'What does NEET coaching cost in Bhopal?',
     answer:
-      'Cerebrum NEET Biology: Pursuit ₹48,000/yr (25-30 students, monthly 1:1), Ascent ₹76,000/yr (16-20 students, bi-weekly 1:1), Pinnacle ₹98,000/yr (10-12 students, weekly 1:1). Same pricing pan-India.',
+      'Cerebrum NEET Biology: Pursuit ₹48,000/yr (25-30 students, monthly 1:1), Ascent ₹76,000/yr (16-20 students, bi-weekly 1:1), Pinnacle ₹98,000/yr (6-10 students, weekly 1:1). Same pricing pan-India.',
   },
   {
     question: 'Is Cerebrum better than Allen or Aakash in Bhopal?',
@@ -162,7 +162,7 @@ export default function Page() {
               1:1, weekly progress reviews.
             </li>
             <li>
-              <strong>NEET Biology — Pinnacle: ₹98,000/yr.</strong> 10-12 student batch, weekly 1:1,
+              <strong>NEET Biology — Pinnacle: ₹98,000/yr.</strong> 6-10 student batch, weekly 1:1,
               personal mentor, unlimited doubt support.
             </li>
           </ul>

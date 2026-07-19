@@ -167,12 +167,12 @@ const FAQS = [
   {
     question: "Who is Dr. Shekhar C Singh and what's his role?",
     answer:
-      'Founder of Cerebrum Biology Academy (est. 2014). AIIMS New Delhi alumnus. 15+ years of biology pedagogy across NEET, IB, AP, MCAT, USMLE, and Olympiad verticals. Directly teaches the Pinnacle ZA tier (micro-batches of 10-12 students with weekly 1:1 mentor calls) and supervises curriculum for all other tiers. 680+ medical college selections among his cohorts, including 67+ to AIIMS Delhi.',
+      'Founder of Cerebrum Biology Academy (est. 2014). AIIMS New Delhi alumnus. 15+ years of biology pedagogy across NEET, IB, AP, MCAT, USMLE, and Olympiad verticals. Directly teaches the Pinnacle ZA tier (micro-batches of 6-10 students with weekly 1:1 mentor calls) and supervises curriculum for all other tiers. 680+ medical college selections among his cohorts, including 67+ to AIIMS Delhi.',
   },
   {
     question: 'How are batches structured?',
     answer:
-      "Three tier model that scales across verticals: Pursuit (30-40 students per batch, most affordable structured tier), Ascent (16-25 students, weekly 1:1 doubt slot, most popular value tier), Pinnacle ZA (10-12 students, direct Dr. Shekhar 1:1 mentoring, calibrated for AIIMS / top-rank aspirants). Specific tier matrix shared on WhatsApp based on which programme you're asking about.",
+      "Three tier model that scales across verticals: Pursuit (20-25 students per batch, most affordable structured tier), Ascent (12-16 students, weekly 1:1 doubt slot, most popular value tier), Pinnacle ZA (6-10 students, direct Dr. Shekhar 1:1 mentoring, calibrated for AIIMS / top-rank aspirants). Specific tier matrix shared on WhatsApp based on which programme you're asking about.",
   },
   {
     question: 'How does pricing work? Why no pricing on the website?',

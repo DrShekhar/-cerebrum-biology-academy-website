@@ -67,19 +67,19 @@ const config: BestVerticalConfig = {
   ],
   pricing: [
     {
-      tier: 'Pursuit Class 12 (Small-Batch 30-40)',
+      tier: 'Pursuit Class 12 (Small-Batch 20-25)',
       price: '₹40,000–₹75,000 / year',
       description:
         'Full Class 12 Biology NCERT coverage with senior faculty, weekly chapter tests, doubt sessions. Standard pacing for Class 12 NEET aspirants on a normal trajectory.',
     },
     {
-      tier: 'Ascent Class 12 (Pro Batch 16-25)',
+      tier: 'Ascent Class 12 (Pro Batch 12-16)',
       price: '₹58,000–₹90,000 / year',
       description:
         'Tighter Class 12 batch with weekly 1:1 doubt slots, biweekly full-length NEET mocks, Class 11 + Class 12 cross-revision. Most popular for serious NEET 650+ aspirants.',
     },
     {
-      tier: 'Pinnacle Class 12 (Direct Dr. Shekhar 10-12)',
+      tier: 'Pinnacle Class 12 (Direct Dr. Shekhar 6-10)',
       price: '₹1,20,000–₹1,56,000 / year',
       description:
         'Direct Dr. Shekhar 1:1 mentoring for the Class 12 sprint. Calibrated for AIIMS / top-100 / top-500 rank aspirants. Includes Class 11 revision integration. Ad-hoc Class 12 1:1 ₹2,500-4,500/hr.',
@@ -164,7 +164,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does Class 12 NEET Biology coaching cost at Cerebrum?',
       answer:
-        'Cerebrum Class 12 NEET Biology pricing runs ₹40,000-₹1,56,000/year across three tiers: Pursuit (small-batch 30-40, ₹40K-75K), Ascent (pro batch 16-25 with weekly 1:1 doubt slots, ₹58K-90K), Pinnacle (direct Dr. Shekhar micro-batch 10-12, ₹1.2L-1.56L). Ad-hoc 1:1 Class 12 hourly is ₹2,500-4,500/hr. Compared to Aakash Class 12 NEET combined-subject (~₹1.5L/year, 280-student batch) the Cerebrum Class 12 Ascent biology-only tier at ₹90K delivers materially deeper biology pedagogy at lower cost — and most students pair Cerebrum with PhysicsWallah and Unacademy (₹10K-20K Physics + Chemistry) for the strongest combined coverage.',
+        'Cerebrum Class 12 NEET Biology pricing runs ₹40,000-₹1,56,000/year across three tiers: Pursuit (small-batch 20-25, ₹40K-75K), Ascent (pro batch 12-16 with weekly 1:1 doubt slots, ₹58K-90K), Pinnacle (direct Dr. Shekhar micro-batch 6-10, ₹1.2L-1.56L). Ad-hoc 1:1 Class 12 hourly is ₹2,500-4,500/hr. Compared to Aakash Class 12 NEET combined-subject (~₹1.5L/year, 280-student batch) the Cerebrum Class 12 Ascent biology-only tier at ₹90K delivers materially deeper biology pedagogy at lower cost — and most students pair Cerebrum with PhysicsWallah and Unacademy (₹10K-20K Physics + Chemistry) for the strongest combined coverage.',
     },
     {
       question:

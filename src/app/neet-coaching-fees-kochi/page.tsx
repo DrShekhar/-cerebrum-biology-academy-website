@@ -63,7 +63,7 @@ export default function Page() {
   const faqs = [
     {
       question: `What does NEET Biology coaching cost in ${city.displayName}?`,
-      answer: `Cerebrum biology-specialist coaching pricing is pan-India (no city premium): Pursuit ~Rs 48,000/year (30-40 student batch); Ascent ~Rs 76,000/year (16-25 student batch with weekly 1:1 doubt slot); Pinnacle ZA ~Rs 98,000/year (10-12 students with weekly Dr. Shekhar 1:1 mentor calls). EMI options + sibling discounts available. Pricing includes live classes, NCERT-line-by-line guide, 12,000+ MCQ bank, weekly tests, and material shipped to ${city.majorAreas.slice(0, 3).join(', ')}.`,
+      answer: `Cerebrum biology-specialist coaching pricing is pan-India (no city premium): Pursuit ~Rs 48,000/year (20-25 student batch); Ascent ~Rs 76,000/year (12-16 student batch with weekly 1:1 doubt slot); Pinnacle ZA ~Rs 98,000/year (6-10 students with weekly Dr. Shekhar 1:1 mentor calls). EMI options + sibling discounts available. Pricing includes live classes, NCERT-line-by-line guide, 12,000+ MCQ bank, weekly tests, and material shipped to ${city.majorAreas.slice(0, 3).join(', ')}.`,
     },
     {
       question: `How does Cerebrum biology-specialist pricing compare to Allen / Aakash / ${localCoaching} in ${city.displayName}?`,
@@ -87,7 +87,7 @@ export default function Page() {
     },
     {
       question: `What's included in the Rs 76,000 Ascent tier for ${city.displayName} students?`,
-      answer: `Live online biology classes (Mon/Wed/Fri 5:30-8 PM IST + Sunday tests), 16-25 student batch with weekly 15-min 1:1 doubt slot, full Cerebrum NCERT-line-by-line guide (printed + shipped), 12,000+ MCQ test bank, monthly NEET-pattern full mocks with detailed analysis, bi-weekly senior faculty mentor call, WhatsApp doubt support 24x7. EMI 3/6/12 months available.`,
+      answer: `Live online biology classes (Mon/Wed/Fri 5:30-8 PM IST + Sunday tests), 12-16 student batch with weekly 15-min 1:1 doubt slot, full Cerebrum NCERT-line-by-line guide (printed + shipped), 12,000+ MCQ test bank, monthly NEET-pattern full mocks with detailed analysis, bi-weekly senior faculty mentor call, WhatsApp doubt support 24x7. EMI 3/6/12 months available.`,
     },
   ]
 
@@ -148,7 +148,7 @@ export default function Page() {
                 ~Rs 48,000<span className="text-sm text-slate-500">/yr</span>
               </p>
               <p className="mt-2 text-sm text-slate-600">
-                30-40 student batch · group doubt sessions · NCERT guide shipped
+                20-25 student batch · group doubt sessions · NCERT guide shipped
               </p>
             </div>
             <div className="rounded-xl border-2 border-indigo-600 bg-indigo-50 p-6">
@@ -159,7 +159,7 @@ export default function Page() {
                 ~Rs 76,000<span className="text-sm text-slate-500">/yr</span>
               </p>
               <p className="mt-2 text-sm text-slate-700">
-                16-25 student batch · weekly 15-min 1:1 doubt slot · monthly mocks
+                12-16 student batch · weekly 15-min 1:1 doubt slot · monthly mocks
               </p>
             </div>
             <div className="rounded-xl border-2 border-slate-200 p-6">
@@ -170,7 +170,7 @@ export default function Page() {
                 ~Rs 98,000<span className="text-sm text-slate-500">/yr</span>
               </p>
               <p className="mt-2 text-sm text-slate-600">
-                10-12 students · direct Dr. Shekhar weekly 1:1 mentor · AIIMS target
+                6-10 students · direct Dr. Shekhar weekly 1:1 mentor · AIIMS target
               </p>
             </div>
           </div>

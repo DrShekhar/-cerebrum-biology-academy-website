@@ -44,7 +44,7 @@ export default function BestNeetCoachingTemplate({
     },
     {
       question: `What are NEET coaching fees in ${city.displayName}?`,
-      answer: `National chains typically charge ₹1.2-3.5 lakh/yr for the full PCB package. Cerebrum's biology-specialist programme: Pursuit ₹40,000-75,000/yr (30-40 students); Ascent ₹58,000-90,000/yr (16-25, weekly 1:1 doubt slot); Pinnacle ZA ₹1,20,000-1,56,000/yr (10-12, direct Dr. Shekhar mentoring). EMI available; material shipped to ${city.majorAreas.slice(0, 3).join(', ')}.`,
+      answer: `National chains typically charge ₹1.2-3.5 lakh/yr for the full PCB package. Cerebrum's biology-specialist programme: Pursuit ₹40,000-75,000/yr (20-25 students); Ascent ₹58,000-90,000/yr (12-16, weekly 1:1 doubt slot); Pinnacle ZA ₹1,20,000-1,56,000/yr (6-10, direct Dr. Shekhar mentoring). EMI available; material shipped to ${city.majorAreas.slice(0, 3).join(', ')}.`,
     },
     {
       question: `Which medical college can a ${city.displayName} aspirant realistically target?`,

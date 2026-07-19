@@ -68,7 +68,7 @@ const faqs = [
   {
     question: 'What does Class 9 NEET Foundation cost in Mumbai?',
     answer:
-      'Cerebrum Class 9 Foundation pricing for Mumbai families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. The Mumbai cost calculus runs deeper than headline fees — for an Andheri or Thane family, the unmeasured cost of a Class 9 child commuting to a BKC or Mulund offline batch is 7-10 hours per week of train + auto-rickshaw time (Mumbai Suburban Railway peak-hour data, school year). Cerebrum online eliminates this entirely. Headline price comparison: Allen Scholastics Mumbai Class 9 combined PCB (~₹85K-1L/year, 200-student batch at Andheri/Borivali/Thane); Aakash Mumbai (~₹95K-1.1L, 6 centres). Cerebrum biology-only Ascent ₹65K + PhysicsWallah and Unacademy PCB ₹15K = ₹80K total with materially better biology pedagogy and zero commute.',
+      'Cerebrum Class 9 Foundation pricing for Mumbai families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 6-10). Ad-hoc 1:1 hourly ₹2,000-3,500. The Mumbai cost calculus runs deeper than headline fees — for an Andheri or Thane family, the unmeasured cost of a Class 9 child commuting to a BKC or Mulund offline batch is 7-10 hours per week of train + auto-rickshaw time (Mumbai Suburban Railway peak-hour data, school year). Cerebrum online eliminates this entirely. Headline price comparison: Allen Scholastics Mumbai Class 9 combined PCB (~₹85K-1L/year, 200-student batch at Andheri/Borivali/Thane); Aakash Mumbai (~₹95K-1.1L, 6 centres). Cerebrum biology-only Ascent ₹65K + PhysicsWallah and Unacademy PCB ₹15K = ₹80K total with materially better biology pedagogy and zero commute.',
   },
 ]
 
@@ -250,14 +250,14 @@ export default function NEETFoundationClass9MumbaiPage() {
           </h2>
           <ul>
             <li>
-              <strong>Pursuit (Small-Batch 30-40) — ₹35,000-50,000/year.</strong>
+              <strong>Pursuit (Small-Batch 20-25) — ₹35,000-50,000/year.</strong>
             </li>
             <li>
-              <strong>Ascent (Pro Batch 16-25) — ₹55,000-70,000/year.</strong> Plus weekly 1:1 doubt
+              <strong>Ascent (Pro Batch 12-16) — ₹55,000-70,000/year.</strong> Plus weekly 1:1 doubt
               slots. Most popular Mumbai tier.
             </li>
             <li>
-              <strong>Pinnacle (Direct Dr. Shekhar 10-12) — ₹75,000-90,000/year.</strong>
+              <strong>Pinnacle (Direct Dr. Shekhar 6-10) — ₹75,000-90,000/year.</strong>
             </li>
             <li>
               <strong>Ad-hoc 1:1 — ₹2,000-3,500/hour.</strong>

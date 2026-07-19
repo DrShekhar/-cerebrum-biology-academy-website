@@ -95,7 +95,7 @@ const faqs = [
   {
     question: 'How much does NEET coaching cost near me?',
     answer:
-      'Cerebrum Biology Academy fees: Pursuit batch Rs 40,000-48,000/year (30-40 students), Ascent batch Rs 58,000-78,000/year (16-25 students), Pinnacle batch Rs 98,000-1,56,000/year (10-12 students). EMI options available. Compare: Aakash and Allen charge Rs 1.5-3 lakh for all subjects.',
+      'Cerebrum Biology Academy fees: Pursuit batch Rs 40,000-48,000/year (20-25 students), Ascent batch Rs 58,000-78,000/year (12-16 students), Pinnacle batch Rs 98,000-1,56,000/year (6-10 students). EMI options available. Compare: Aakash and Allen charge Rs 1.5-3 lakh for all subjects.',
   },
   {
     question: 'What makes Cerebrum different from Aakash or Allen near me?',

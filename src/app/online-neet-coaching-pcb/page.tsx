@@ -632,7 +632,7 @@ export default function OnlineNEETCoachingPCBPage() {
                 </li>
                 <li className="flex gap-2">
                   <Microscope className="h-4 w-4 mt-0.5 text-amber-300" />
-                  Direct mentorship for Pinnacle ZA tier (micro-batch 10-12)
+                  Direct mentorship for Pinnacle ZA tier (micro-batch 6-10)
                 </li>
                 <li className="flex gap-2">
                   <Microscope className="h-4 w-4 mt-0.5 text-amber-300" />

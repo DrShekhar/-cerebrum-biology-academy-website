@@ -57,7 +57,7 @@ const faqs = [
   {
     question: 'What are the fees for the foundation program in Gurugram?',
     answer:
-      'Class IX and X Foundation fees range from ₹45,000 to ₹90,000/year depending on the tier: Pursuit (₹45,000, larger batch), Ascent (₹60,000, 16-18 students), or Pinnacle (₹90,000, 10-12 students with personal mentorship from Dr. Shekhar). Book a free demo for a tier recommendation.',
+      'Class IX and X Foundation fees range from ₹45,000 to ₹90,000/year depending on the tier: Pursuit (₹45,000, larger batch), Ascent (₹60,000, 12-16 students), or Pinnacle (₹90,000, 6-10 students with personal mentorship from Dr. Shekhar). Book a free demo for a tier recommendation.',
   },
   {
     question: 'Is the coaching offline at the Gurugram center or online?',

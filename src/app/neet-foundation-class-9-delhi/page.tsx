@@ -66,7 +66,7 @@ const faqs = [
   {
     question: 'What does Class 9 NEET Foundation cost in Delhi?',
     answer:
-      'Cerebrum Class 9 Foundation in Delhi runs ₹35,000-₹90,000/year across three tiers. Pursuit (small-batch 30-40 students): ₹35K-50K. Ascent (pro batch 16-25 with weekly 1:1 doubt slots): ₹55K-70K. Pinnacle (direct Dr. Shekhar micro-batch 10-12 at South Extension flagship): ₹75K-90K. Ad-hoc 1:1 Class 9 hourly: ₹2,000-3,500/hr. CBSE / ICSE board exam preparation is included in all tiers — separate weekly tests in board format alongside NEET-pattern drilling.',
+      'Cerebrum Class 9 Foundation in Delhi runs ₹35,000-₹90,000/year across three tiers. Pursuit (small-batch 20-25 students): ₹35K-50K. Ascent (pro batch 12-16 with weekly 1:1 doubt slots): ₹55K-70K. Pinnacle (direct Dr. Shekhar micro-batch 6-10 at South Extension flagship): ₹75K-90K. Ad-hoc 1:1 Class 9 hourly: ₹2,000-3,500/hr. CBSE / ICSE board exam preparation is included in all tiers — separate weekly tests in board format alongside NEET-pattern drilling.',
   },
   {
     question:
@@ -105,7 +105,7 @@ const courseSchema = {
     offers: [
       {
         '@type': 'Offer',
-        name: 'Foundation Pursuit Class 9 (Small-Batch 30-40)',
+        name: 'Foundation Pursuit Class 9 (Small-Batch 20-25)',
         price: '35000',
         priceCurrency: 'INR',
         availability: 'https://schema.org/InStock',
@@ -113,7 +113,7 @@ const courseSchema = {
       },
       {
         '@type': 'Offer',
-        name: 'Foundation Ascent Class 9 (Pro Batch 16-25)',
+        name: 'Foundation Ascent Class 9 (Pro Batch 12-16)',
         price: '55000',
         priceCurrency: 'INR',
         availability: 'https://schema.org/InStock',
@@ -121,7 +121,7 @@ const courseSchema = {
       },
       {
         '@type': 'Offer',
-        name: 'Foundation Pinnacle Class 9 (Direct Dr. Shekhar 10-12)',
+        name: 'Foundation Pinnacle Class 9 (Direct Dr. Shekhar 6-10)',
         price: '75000',
         priceCurrency: 'INR',
         availability: 'https://schema.org/InStock',
@@ -257,15 +257,15 @@ export default function NEETFoundationClass9DelhiPage() {
           </h2>
           <ul>
             <li>
-              <strong>Pursuit (Small-Batch 30-40) — ₹35,000-50,000/year.</strong> Full Class 9
+              <strong>Pursuit (Small-Batch 20-25) — ₹35,000-50,000/year.</strong> Full Class 9
               biology coverage, weekly chapter tests, monthly board-format mocks.
             </li>
             <li>
-              <strong>Ascent (Pro Batch 16-25) — ₹55,000-70,000/year.</strong> Plus weekly 1:1 doubt
+              <strong>Ascent (Pro Batch 12-16) — ₹55,000-70,000/year.</strong> Plus weekly 1:1 doubt
               slots, biweekly NEET-pattern conceptual mocks. Most popular tier.
             </li>
             <li>
-              <strong>Pinnacle (Direct Dr. Shekhar 10-12) — ₹75,000-90,000/year.</strong> South
+              <strong>Pinnacle (Direct Dr. Shekhar 6-10) — ₹75,000-90,000/year.</strong> South
               Extension flagship only. Direct AIIMS Delhi alumnus mentoring.
             </li>
             <li>

@@ -136,7 +136,7 @@ const FAQS = [
   {
     question: 'How big are the batches?',
     answer:
-      'Three tiers. Pursuit: 30-40 students (most affordable structured tier). Ascent: 16-25 students (most popular value tier). Pinnacle ZA: 10-12 students (direct Dr. Shekhar 1:1 mentor calls). Specific tier matrix shared on WhatsApp.',
+      'Three tiers. Pursuit: 20-25 students (most affordable structured tier). Ascent: 12-16 students (most popular value tier). Pinnacle ZA: 6-10 students (direct Dr. Shekhar 1:1 mentor calls). Specific tier matrix shared on WhatsApp.',
   },
   {
     question: 'Are biology classes online only, or offline available too?',
@@ -315,7 +315,7 @@ export default function BestBiologyClassesIndiaPage() {
               {
                 icon: <Users className="h-5 w-5 text-indigo-600" />,
                 title: 'Small-batch model',
-                text: 'Max 40 students per batch (Pursuit tier); 10-12 in Pinnacle ZA.',
+                text: 'Max 40 students per batch (Pursuit tier); 6-10 in Pinnacle ZA.',
               },
               {
                 icon: <BookOpen className="h-5 w-5 text-indigo-600" />,

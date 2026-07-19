@@ -14,8 +14,8 @@ export const courseTiers: CourseTier[] = [
     series: 'pinnacle',
     name: 'Pinnacle Series',
     description: 'Premium tier with maximum personalization and comprehensive support',
-    batchSize: 12,
-    batchSizeDisplay: '10-12',
+    batchSize: 8,
+    batchSizeDisplay: '6-10',
     priceRange: { min: 60000, max: 180000 },
     features: {
       liveClasses: true,
@@ -38,7 +38,7 @@ export const courseTiers: CourseTier[] = [
       revisionSessions: true,
     },
     highlights: [
-      'Ultra-small batch size (10-12 students)',
+      'Ultra-small batch size (6-10 students)',
       'Dedicated personal mentor',
       'Weekly one-on-one sessions',
       'Customized study plans',
@@ -52,8 +52,8 @@ export const courseTiers: CourseTier[] = [
     series: 'ascent',
     name: 'Ascent Series',
     description: 'Standard tier with balanced features and regular mentoring',
-    batchSize: 18,
-    batchSizeDisplay: '16-18',
+    batchSize: 14,
+    batchSizeDisplay: '12-16',
     priceRange: { min: 60000, max: 140000 },
     features: {
       liveClasses: true,
@@ -76,7 +76,7 @@ export const courseTiers: CourseTier[] = [
       revisionSessions: true,
     },
     highlights: [
-      'Optimal batch size (16-18 students)',
+      'Optimal batch size (12-16 students)',
       'Regular doubt clearing sessions',
       'Comprehensive test series',
       'Digital learning resources',
@@ -90,8 +90,8 @@ export const courseTiers: CourseTier[] = [
     series: 'pursuit',
     name: 'Pursuit Series',
     description: 'Value tier with essential features and self-paced learning support',
-    batchSize: 30,
-    batchSizeDisplay: '30-40',
+    batchSize: 22,
+    batchSizeDisplay: '20-25',
     priceRange: { min: 45000, max: 85000 },
     features: {
       liveClasses: true,
@@ -175,7 +175,7 @@ export const coursePrograms: CourseProgram[] = [
     tiers: {
       pinnacle: {
         price: 90000,
-        batchSize: 12,
+        batchSize: 8,
         features: courseTiers[0].features,
         payment: calculatePaymentOptions(90000),
         additionalBenefits: [
@@ -192,7 +192,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       ascent: {
         price: 60000,
-        batchSize: 20,
+        batchSize: 14,
         features: courseTiers[1].features,
         payment: calculatePaymentOptions(60000),
         additionalBenefits: [
@@ -203,7 +203,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       pursuit: {
         price: 45000,
-        batchSize: 30,
+        batchSize: 22,
         features: courseTiers[2].features,
         payment: calculatePaymentOptions(45000),
         additionalBenefits: ['Basic study materials', 'Self-assessment tools'],
@@ -457,7 +457,7 @@ export const coursePrograms: CourseProgram[] = [
     tiers: {
       pinnacle: {
         price: 90000,
-        batchSize: 12,
+        batchSize: 8,
         features: courseTiers[0].features,
         payment: calculatePaymentOptions(90000),
         additionalBenefits: [
@@ -474,7 +474,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       ascent: {
         price: 60000,
-        batchSize: 20,
+        batchSize: 14,
         features: courseTiers[1].features,
         payment: calculatePaymentOptions(60000),
         additionalBenefits: [
@@ -485,7 +485,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       pursuit: {
         price: 45000,
-        batchSize: 30,
+        batchSize: 22,
         features: courseTiers[2].features,
         payment: calculatePaymentOptions(45000),
         additionalBenefits: ['Standard study materials', 'Basic lab access'],
@@ -779,7 +779,7 @@ export const coursePrograms: CourseProgram[] = [
     tiers: {
       pinnacle: {
         price: 98000,
-        batchSize: 12,
+        batchSize: 8,
         features: courseTiers[0].features,
         payment: calculatePaymentOptions(98000),
         additionalBenefits: [
@@ -796,7 +796,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       ascent: {
         price: 76000,
-        batchSize: 20,
+        batchSize: 14,
         features: courseTiers[1].features,
         payment: calculatePaymentOptions(76000),
         additionalBenefits: [
@@ -807,7 +807,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       pursuit: {
         price: 48000,
-        batchSize: 30,
+        batchSize: 22,
         features: courseTiers[2].features,
         payment: calculatePaymentOptions(48000),
         additionalBenefits: ['Core curriculum focus', 'Essential test practice'],
@@ -1199,7 +1199,7 @@ export const coursePrograms: CourseProgram[] = [
     tiers: {
       pinnacle: {
         price: 98000,
-        batchSize: 12,
+        batchSize: 8,
         features: courseTiers[0].features,
         payment: calculatePaymentOptions(98000),
         additionalBenefits: [
@@ -1216,7 +1216,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       ascent: {
         price: 76000,
-        batchSize: 20,
+        batchSize: 14,
         features: courseTiers[1].features,
         payment: calculatePaymentOptions(76000),
         additionalBenefits: [
@@ -1227,7 +1227,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       pursuit: {
         price: 70000,
-        batchSize: 30,
+        batchSize: 22,
         features: courseTiers[2].features,
         payment: calculatePaymentOptions(70000),
         additionalBenefits: ['Essential NEET preparation', 'Board exam support'],
@@ -1552,7 +1552,7 @@ export const coursePrograms: CourseProgram[] = [
     tiers: {
       pinnacle: {
         price: 156000,
-        batchSize: 10,
+        batchSize: 8,
         features: courseTiers[0].features,
         payment: calculatePaymentOptions(156000),
         additionalBenefits: [
@@ -1572,7 +1572,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       ascent: {
         price: 90000,
-        batchSize: 18,
+        batchSize: 14,
         features: courseTiers[1].features,
         payment: calculatePaymentOptions(90000),
         additionalBenefits: [
@@ -1590,7 +1590,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       pursuit: {
         price: 70000,
-        batchSize: 30,
+        batchSize: 22,
         features: courseTiers[2].features,
         payment: calculatePaymentOptions(70000),
         additionalBenefits: [
@@ -1956,7 +1956,7 @@ export const coursePrograms: CourseProgram[] = [
     tiers: {
       pinnacle: {
         price: 180000,
-        batchSize: 12,
+        batchSize: 8,
         features: courseTiers[0].features,
         payment: calculatePaymentOptions(180000),
         additionalBenefits: [
@@ -1978,7 +1978,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       ascent: {
         price: 140000,
-        batchSize: 18,
+        batchSize: 14,
         features: courseTiers[1].features,
         payment: calculatePaymentOptions(140000),
         additionalBenefits: [
@@ -1993,7 +1993,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       pursuit: {
         price: 85000,
-        batchSize: 30,
+        batchSize: 22,
         features: courseTiers[2].features,
         payment: calculatePaymentOptions(85000),
         additionalBenefits: [
@@ -2093,7 +2093,7 @@ export const coursePrograms: CourseProgram[] = [
     tiers: {
       pinnacle: {
         price: 156000,
-        batchSize: 10,
+        batchSize: 8,
         features: courseTiers[0].features,
         payment: calculatePaymentOptions(156000),
         additionalBenefits: [
@@ -2117,7 +2117,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       ascent: {
         price: 90000,
-        batchSize: 18,
+        batchSize: 14,
         features: courseTiers[1].features,
         payment: calculatePaymentOptions(90000),
         additionalBenefits: [
@@ -2130,7 +2130,7 @@ export const coursePrograms: CourseProgram[] = [
       },
       pursuit: {
         price: 70000,
-        batchSize: 30,
+        batchSize: 22,
         features: courseTiers[2].features,
         payment: calculatePaymentOptions(70000),
         additionalBenefits: [

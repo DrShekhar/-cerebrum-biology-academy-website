@@ -104,9 +104,12 @@ export interface SEOLandingContent {
     batchSize: string
     features: string[]
     price: {
-      original: number
+      original?: number
       discounted?: number
       emi?: string
+      // When true, no fixed product/price exists yet — the card shows a
+      // "fee on enquiry" WhatsApp CTA instead of a fabricated number.
+      feeOnEnquiry?: boolean
     }
   }
 
@@ -179,8 +182,10 @@ export interface SEOLandingContent {
     provider: string
     description: string
     duration: string
-    price: number
-    priceCurrency: string
+    // Omit price/priceCurrency when no fixed product/price exists — the Course
+    // schema then emits no Offer rather than a fabricated one.
+    price?: number
+    priceCurrency?: string
     // Enhanced schema properties
     aggregateRating?: {
       ratingValue: number

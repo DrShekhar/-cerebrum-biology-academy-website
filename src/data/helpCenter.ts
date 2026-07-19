@@ -140,7 +140,7 @@ export const allFAQs: FAQ[] = [
     id: 'gs-003',
     question: 'When do new batches start?',
     answer:
-      'New batches start every month throughout the year. Major intake periods: April-May (post boards), June-July (academic year start), and January (dropper batches post-NEET results). You can join mid-session with catch-up classes provided. To check the next available batch for your class and tier, visit our enrollment page or call +91-88264-44334. Seats fill quickly, especially in Pinnacle tier (only 10-12 students per batch).',
+      'New batches start every month throughout the year. Major intake periods: April-May (post boards), June-July (academic year start), and January (dropper batches post-NEET results). You can join mid-session with catch-up classes provided. To check the next available batch for your class and tier, visit our enrollment page or call +91-88264-44334. Seats fill quickly, especially in Pinnacle tier (only 6-10 students per batch).',
     category: 'getting-started',
     tags: ['batches', 'start-date', 'timing'],
     priority: 5,
@@ -233,7 +233,7 @@ export const allFAQs: FAQ[] = [
     id: 'cp-001',
     question: 'What is the difference between Pinnacle, Ascent, and Pursuit tiers?',
     answer:
-      'PINNACLE (Premium): Batch size 10-12 students, 5-6 hours/week, personal mentor assigned, weekly 1-on-1 sessions, priority doubt clearing, unlimited test attempts, best for top rankers. Price: ₹98K-₹180K depending on class. ASCENT (Standard): Batch size 16-25 students, 4-5 hours/week, group mentoring, regular doubt sessions, comprehensive test series, balanced approach. Price: ₹58K-₹85K. PURSUIT (Value): Batch size 30-40, 3-4 hours/week, self-paced learning support, essential study materials, affordable quality education. Price: ₹48K-₹72K. All tiers have same faculty and NCERT-focused curriculum.',
+      'PINNACLE (Premium): Batch size 6-10 students, 5-6 hours/week, personal mentor assigned, weekly 1-on-1 sessions, priority doubt clearing, unlimited test attempts, best for top rankers. Price: ₹98K-₹180K depending on class. ASCENT (Standard): Batch size 12-16 students, 4-5 hours/week, group mentoring, regular doubt sessions, comprehensive test series, balanced approach. Price: ₹58K-₹85K. PURSUIT (Value): Batch size 30-40, 3-4 hours/week, self-paced learning support, essential study materials, affordable quality education. Price: ₹48K-₹72K. All tiers have same faculty and NCERT-focused curriculum.',
     category: 'courses-programs',
     tags: ['tiers', 'pinnacle', 'ascent', 'pursuit', 'difference'],
     priority: 5,

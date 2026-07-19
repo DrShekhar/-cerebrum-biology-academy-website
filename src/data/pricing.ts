@@ -57,7 +57,7 @@ const commonFeaturesByTier = {
     priority: 'Priority support & assistance',
   },
   ascent: {
-    batch: '16-25 students per batch',
+    batch: '12-16 students per batch',
     hours: '4.5 hours/week',
     aiims: 'AIIMS faculty teaching',
     materials: 'Complete study materials & notes',
@@ -68,7 +68,7 @@ const commonFeaturesByTier = {
     support: 'Regular support & guidance',
   },
   pursuit: {
-    batch: '30-40 students per batch',
+    batch: '20-25 students per batch',
     hours: '4.5 hours/week',
     aiims: 'AIIMS faculty teaching',
     materials: 'Essential study materials',

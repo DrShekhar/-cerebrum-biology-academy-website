@@ -67,7 +67,7 @@ export default function Page() {
     },
     {
       question: `What does online NEET Biology coaching cost in ${city.displayName}?`,
-      answer: `Pursuit ~Rs 48,000/yr (30-40 students); Ascent ~Rs 76,000/yr (16-25); Pinnacle ZA ~Rs 98,000/yr (10-12 with weekly 1:1 Dr. Shekhar mentor). Same pricing pan-India. EMI options + sibling discounts available. WhatsApp for current tier matrix.`,
+      answer: `Pursuit ~Rs 48,000/yr (20-25 students); Ascent ~Rs 76,000/yr (12-16); Pinnacle ZA ~Rs 98,000/yr (6-10 with weekly 1:1 Dr. Shekhar mentor). Same pricing pan-India. EMI options + sibling discounts available. WhatsApp for current tier matrix.`,
     },
     {
       question: `Is Cerebrum biology specialist better than Allen / Aakash ${city.displayName}?`,

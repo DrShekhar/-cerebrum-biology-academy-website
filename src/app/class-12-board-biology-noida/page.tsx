@@ -53,7 +53,7 @@ const courses = [
   {
     name: 'Pursuit - Board Only',
     duration: '12 months',
-    mode: '30-40 students | 6 hrs/week',
+    mode: '20-25 students | 6 hrs/week',
     fee: '40,000',
     features: [
       'Complete NCERT coverage',
@@ -66,7 +66,7 @@ const courses = [
   {
     name: 'Ascent - Board Only',
     duration: '12 months',
-    mode: '16-18 students | 8 hrs/week',
+    mode: '12-16 students | 8 hrs/week',
     fee: '58,000',
     features: [
       'NCERT + Previous years',

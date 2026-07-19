@@ -89,7 +89,7 @@ export default function Page() {
     },
     {
       question: `What does it cost?`,
-      answer: `Pursuit ~Rs 48,000/year (30-40 student batch); Ascent ~Rs 76,000/year (16-25 with weekly 1:1 doubt slot); Pinnacle ZA ~Rs 98,000/year (10-12 with direct Dr. Shekhar 1:1 mentor). EMI + sibling discounts available.`,
+      answer: `Pursuit ~Rs 48,000/year (20-25 student batch); Ascent ~Rs 76,000/year (12-16 with weekly 1:1 doubt slot); Pinnacle ZA ~Rs 98,000/year (6-10 with direct Dr. Shekhar 1:1 mentor). EMI + sibling discounts available.`,
     },
   ]
 
