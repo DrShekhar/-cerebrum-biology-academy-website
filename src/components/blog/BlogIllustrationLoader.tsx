@@ -101,7 +101,7 @@ const illustrationLoaders: Record<string, () => Promise<{ default: IllustrationC
     })),
   'nervous-system-neet-biology': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
-      default: m.NervousSystemIllustration,
+      default: m.NeuronDiagram,
     })),
   'plant-kingdom-classification-neet': () =>
     import('@/components/illustrations/BlogIllustrations').then((m) => ({
