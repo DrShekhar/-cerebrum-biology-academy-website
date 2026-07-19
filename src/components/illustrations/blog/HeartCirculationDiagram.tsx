@@ -3,17 +3,18 @@
 import type { IllustrationProps } from './shared'
 
 /**
- * HeartCirculationDiagram — a Campbell-style four-chamber heart showing double
- * circulation, with semantic red (oxygenated) / blue (deoxygenated) blood.
+ * HeartCirculationDiagram (v2) — a Campbell-style four-chamber heart with an
+ * organic silhouette, a numbered ①→⑦ blood-flow pathway, and AV valves anchored
+ * by chordae tendineae to papillary muscles.
  *
- * Design language (same audit as nephron/neuron):
+ * Design language (Campbell art audit + heart-figure comparison):
  *  - Semantic MUTED palette: right heart + its vessels blue (deoxygenated),
- *    left heart + its vessels red (oxygenated) — the one rule that makes a heart
- *    diagram read correctly
- *  - Anatomically honest: LV wall visibly thicker than RV; septum; four valves
- *  - Clean labels with thin grey leader lines; subtle chamber volume
- *  - Flow arrows trace the two circuits (pulmonary + systemic)
- *  - Pure, accessible SVG (<title>/<desc>) — scalable, tiny, on-brand, zero AI look
+ *    left heart + its vessels red (oxygenated)
+ *  - Organic anatomical outline (not boxy chambers); LV cavity ringed by a thick
+ *    muscular wall; curved interventricular septum
+ *  - Numbered flow ①→⑦ walks the reader through double circulation
+ *  - AV valves drawn with leaflets + chordae tendineae + papillary muscles
+ *  - Clean labels with thin grey leaders; pure accessible SVG (<title>/<desc>)
  */
 export function HeartCirculationDiagram({ className = '', animate = true }: IllustrationProps) {
   const F = 'system-ui, -apple-system, sans-serif'
@@ -21,27 +22,40 @@ export function HeartCirculationDiagram({ className = '', animate = true }: Illu
 
   const BLUE = '#2C6DA3'
   const RED = '#C0392B'
-  const BLUE_FILL = '#DCE9F3'
-  const RED_FILL = '#F6DAD5'
+  const BLUE_FILL = '#D3E4F1'
+  const RED_FILL = '#F4D4CE'
+  const MUSCLE = '#EFD3C7'
+  const MUSCLE_LINE = '#C08E7C'
+  const CHORD = '#8A6246'
+
+  const steps = [
+    { n: '1', x: 360, y: 176, t: 'Venae cavae → right atrium' },
+    { n: '2', x: 396, y: 352, t: 'Tricuspid valve → right ventricle' },
+    { n: '3', x: 404, y: 214, t: 'Pulmonary artery → lungs' },
+    { n: '4', x: 596, y: 214, t: 'Pulmonary veins → left atrium' },
+    { n: '5', x: 500, y: 350, t: 'Bicuspid valve → left ventricle' },
+    { n: '6', x: 556, y: 176, t: 'Aorta → body' },
+    { n: '7', x: 660, y: 300, t: 'Body → venae cavae (repeat)' },
+  ]
 
   const labels = [
-    { t: 'Superior vena cava', x: 150, y: 150, x2: 356, y2: 150, a: 'end' as const },
-    { t: 'Inferior vena cava', x: 150, y: 470, x2: 336, y2: 430, a: 'end' as const },
-    { t: 'Right atrium', x: 150, y: 250, x2: 340, y2: 262, a: 'end' as const },
-    { t: 'Right ventricle', x: 150, y: 400, x2: 356, y2: 430, a: 'end' as const },
-    { t: 'Tricuspid valve', x: 150, y: 330, x2: 378, y2: 326, a: 'end' as const },
-    { t: 'Pulmonary artery → lungs', x: 470, y: 96, x2: 398, y2: 150, a: 'start' as const },
-    { t: 'Aorta → body', x: 690, y: 150, x2: 628, y2: 176, a: 'start' as const },
-    { t: 'Pulmonary veins ← lungs', x: 700, y: 236, x2: 636, y2: 214, a: 'start' as const },
-    { t: 'Left atrium', x: 748, y: 262, x2: 588, y2: 262, a: 'start' as const },
-    { t: 'Left ventricle (thick wall)', x: 748, y: 430, x2: 566, y2: 430, a: 'start' as const },
-    { t: 'Bicuspid (mitral) valve', x: 748, y: 330, x2: 520, y2: 326, a: 'start' as const },
-    { t: 'Septum', x: 748, y: 500, x2: 452, y2: 460, a: 'start' as const },
+    { t: 'Superior vena cava', x: 150, y: 150, x2: 360, y2: 150, a: 'end' as const },
+    { t: 'Right atrium', x: 150, y: 264, x2: 372, y2: 276, a: 'end' as const },
+    { t: 'Tricuspid valve', x: 150, y: 336, x2: 384, y2: 344, a: 'end' as const },
+    { t: 'Right ventricle', x: 150, y: 430, x2: 388, y2: 440, a: 'end' as const },
+    { t: 'Chordae tendineae', x: 150, y: 486, x2: 392, y2: 424, a: 'end' as const },
+    { t: 'Papillary muscle', x: 150, y: 520, x2: 396, y2: 470, a: 'end' as const },
+    { t: 'Aorta → body', x: 690, y: 150, x2: 566, y2: 150, a: 'start' as const },
+    { t: 'Pulmonary veins ← lungs', x: 690, y: 236, x2: 590, y2: 246, a: 'start' as const },
+    { t: 'Left atrium', x: 690, y: 276, x2: 520, y2: 274, a: 'start' as const },
+    { t: 'Bicuspid (mitral) valve', x: 690, y: 336, x2: 512, y2: 344, a: 'start' as const },
+    { t: 'Left ventricle (thick wall)', x: 690, y: 430, x2: 540, y2: 440, a: 'start' as const },
+    { t: 'Septum', x: 690, y: 520, x2: 452, y2: 470, a: 'start' as const },
   ]
 
   return (
     <svg
-      viewBox="0 0 900 640"
+      viewBox="0 0 900 700"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -51,19 +65,20 @@ export function HeartCirculationDiagram({ className = '', animate = true }: Illu
     >
       <title id="heart-title">The human heart and double circulation</title>
       <desc id="heart-desc">
-        A four-chambered heart. Deoxygenated blood (blue) returns from the body via the venae cavae
-        to the right atrium and right ventricle, which pumps it to the lungs through the pulmonary
-        artery. Oxygenated blood (red) returns from the lungs via the pulmonary veins to the left
-        atrium and the thick-walled left ventricle, which pumps it to the body through the aorta.
+        A four-chambered heart with a numbered blood-flow pathway. Deoxygenated blood (blue) returns
+        via the venae cavae to the right atrium and ventricle and is pumped to the lungs; oxygenated
+        blood (red) returns via the pulmonary veins to the left atrium and the thick-walled left
+        ventricle and is pumped to the body through the aorta. Atrioventricular valves are anchored
+        by chordae tendineae to papillary muscles.
       </desc>
 
       <defs>
         <linearGradient id="htBg" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#FBF7F7" />
-          <stop offset="100%" stopColor="#F5EFF2" />
+          <stop offset="100%" stopColor="#F4EEF0" />
         </linearGradient>
         <filter id="htSoft" x="-30%" y="-30%" width="160%" height="170%">
-          <feDropShadow dx="0" dy="2" stdDeviation="3.5" floodColor="#5B2A2A" floodOpacity="0.14" />
+          <feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#5B2A2A" floodOpacity="0.16" />
         </filter>
         <marker id="htBlue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
           <path
@@ -87,11 +102,11 @@ export function HeartCirculationDiagram({ className = '', animate = true }: Illu
         </marker>
       </defs>
 
-      <rect x="0" y="0" width="900" height="640" rx="22" fill="url(#htBg)" />
+      <rect x="0" y="0" width="900" height="700" rx="22" fill="url(#htBg)" />
 
       {/* Title */}
       <text
-        x="450"
+        x="420"
         y="44"
         fontSize="26"
         fill="#5B2A2A"
@@ -101,120 +116,149 @@ export function HeartCirculationDiagram({ className = '', animate = true }: Illu
       >
         The Heart & Double Circulation
       </text>
-      <text x="450" y="68" fontSize="13" fill="#8A4A4A" textAnchor="middle" fontFamily={F}>
-        Deoxygenated blood (blue) → lungs · oxygenated blood (red) → body
+      <text x="420" y="68" fontSize="13" fill="#8A4A4A" textAnchor="middle" fontFamily={F}>
+        Follow the numbered path: body → right heart → lungs → left heart → body
       </text>
 
-      {/* ===== Great vessels (hollow tubes) ===== */}
-      {/* Superior vena cava (blue, into RA) */}
+      {/* ===== Great vessels ===== */}
+      {/* SVC (blue) */}
       <path
-        d="M362 120 L364 210"
+        d="M362 118 L370 236"
         stroke={BLUE}
         strokeWidth="17"
         fill="none"
         strokeLinecap="round"
       />
       <path
-        d="M362 120 L364 210"
+        d="M362 118 L370 236"
         stroke={BLUE_FILL}
         strokeWidth="8"
         fill="none"
         strokeLinecap="round"
       />
-      {/* Inferior vena cava (blue, into RA from below) */}
+      {/* IVC (blue) */}
       <path
-        d="M336 470 Q330 400 340 336"
+        d="M344 470 Q336 400 352 336"
+        stroke={BLUE}
+        strokeWidth="14"
+        fill="none"
+        strokeLinecap="round"
+      />
+      {/* Pulmonary artery (blue → lungs), bifurcating */}
+      <path
+        d="M410 344 L402 188 Q400 150 368 146"
         stroke={BLUE}
         strokeWidth="15"
         fill="none"
         strokeLinecap="round"
       />
       <path
-        d="M336 470 Q330 400 340 336"
-        stroke={BLUE_FILL}
-        strokeWidth="7"
-        fill="none"
-        strokeLinecap="round"
-      />
-      {/* Pulmonary artery (blue, RV → lungs), bifurcating */}
-      <path
-        d="M398 320 L392 186 Q390 150 360 146"
-        stroke={BLUE}
-        strokeWidth="15"
-        fill="none"
-        strokeLinecap="round"
-      />
-      <path
-        d="M398 320 L392 186 Q390 150 360 146"
+        d="M410 344 L402 188 Q400 150 368 146"
         stroke={BLUE_FILL}
         strokeWidth="7"
         fill="none"
         strokeLinecap="round"
       />
       <path
-        d="M366 156 L338 138 M366 168 L342 176"
+        d="M374 156 L346 138 M374 168 L350 178"
         stroke={BLUE}
         strokeWidth="7"
         fill="none"
         strokeLinecap="round"
       />
-      {/* Aorta (red, LV → body), arching */}
+      {/* Aorta (red → body), arching + head/arm branch */}
       <path
-        d="M522 320 L524 200 Q524 156 572 154 Q626 154 628 206 L628 250"
+        d="M508 340 L520 190 Q522 150 566 150 Q616 150 620 202 L620 250"
         stroke={RED}
         strokeWidth="16"
         fill="none"
         strokeLinecap="round"
       />
       <path
-        d="M522 320 L524 200 Q524 156 572 154 Q626 154 628 206 L628 250"
+        d="M508 340 L520 190 Q522 150 566 150 Q616 150 620 202 L620 250"
         stroke={RED_FILL}
         strokeWidth="7.5"
         fill="none"
         strokeLinecap="round"
       />
-      {/* Pulmonary veins (red, lungs → LA) */}
       <path
-        d="M690 216 Q650 210 628 216"
+        d="M556 150 L556 120 M576 150 L582 122"
+        stroke={RED}
+        strokeWidth="6"
+        fill="none"
+        strokeLinecap="round"
+      />
+      {/* Pulmonary veins (red ← lungs) */}
+      <path
+        d="M676 214 Q636 224 596 244"
         stroke={RED}
         strokeWidth="12"
         fill="none"
         strokeLinecap="round"
       />
       <path
-        d="M690 216 Q650 210 628 216"
+        d="M676 214 Q636 224 596 244"
         stroke={RED_FILL}
         strokeWidth="5.5"
         fill="none"
         strokeLinecap="round"
       />
 
-      {/* ===== Atria ===== */}
+      {/* ===== Organic heart silhouette (myocardium) ===== */}
       <g filter="url(#htSoft)">
-        <rect
-          x="332"
-          y="205"
-          width="118"
-          height="120"
-          rx="26"
-          fill={BLUE_FILL}
-          stroke={BLUE}
-          strokeWidth="2.5"
-        />
-        <rect
-          x="452"
-          y="205"
-          width="136"
-          height="120"
-          rx="26"
-          fill={RED_FILL}
-          stroke={RED}
+        <path
+          d="M340 250 C330 224 352 214 378 222 C405 210 445 208 472 220 C500 210 524 222 520 248
+             C566 262 600 292 600 356 C600 430 576 512 508 566 C476 592 452 600 440 600
+             C426 600 402 584 384 552 C360 508 344 448 342 388 C340 330 336 288 340 250 Z"
+          fill={MUSCLE}
+          stroke={MUSCLE_LINE}
           strokeWidth="2.5"
         />
       </g>
+
+      {/* Interventricular septum (curved muscular wall) */}
+      <path
+        d="M452 344 C448 420 446 500 442 566"
+        stroke={MUSCLE_LINE}
+        strokeWidth="9"
+        fill="none"
+        strokeLinecap="round"
+      />
+
+      {/* ===== Chamber cavities (organic) ===== */}
+      {/* RA (blue) */}
+      <path
+        d="M362 244 C392 232 420 246 416 280 C412 312 386 322 362 314 C344 308 346 270 350 258 C352 250 356 246 362 244 Z"
+        fill={BLUE_FILL}
+        stroke={BLUE}
+        strokeWidth="2.5"
+      />
+      {/* LA (red) */}
+      <path
+        d="M470 242 C500 232 528 244 522 278 C516 308 492 318 470 310 C452 304 456 268 460 256 C462 248 466 244 470 242 Z"
+        fill={RED_FILL}
+        stroke={RED}
+        strokeWidth="2.5"
+      />
+      {/* RV (blue, thin wall) */}
+      <path
+        d="M360 356 C382 344 414 350 422 384 C432 424 420 500 396 536 C384 552 368 546 360 522 C346 476 342 402 348 378 C350 366 354 360 360 356 Z"
+        fill={BLUE_FILL}
+        stroke={BLUE}
+        strokeWidth="2.5"
+      />
+      {/* LV (red, small cavity ⇒ thick wall to silhouette edge) */}
+      <path
+        d="M474 356 C500 346 528 354 534 392 C540 434 528 500 502 532 C488 548 476 540 470 514 C458 462 458 400 464 376 C466 366 470 360 474 356 Z"
+        fill={RED_FILL}
+        stroke={RED}
+        strokeWidth="2.5"
+      />
+
+      {/* Chamber letters */}
       <text
-        x="391"
-        y="270"
+        x="384"
+        y="286"
         fontSize="14"
         fill={BLUE}
         textAnchor="middle"
@@ -224,8 +268,8 @@ export function HeartCirculationDiagram({ className = '', animate = true }: Illu
         RA
       </text>
       <text
-        x="520"
-        y="270"
+        x="494"
+        y="284"
         fontSize="14"
         fill={RED}
         textAnchor="middle"
@@ -234,28 +278,10 @@ export function HeartCirculationDiagram({ className = '', animate = true }: Illu
       >
         LA
       </text>
-
-      {/* ===== Ventricles (LV wall clearly thicker) ===== */}
-      <g filter="url(#htSoft)">
-        {/* RV — thin wall */}
-        <path
-          d="M336 332 Q312 344 316 404 L328 500 Q336 540 372 544 L448 544 L448 332 Z"
-          fill={BLUE_FILL}
-          stroke={BLUE}
-          strokeWidth="3"
-        />
-        {/* LV — thick muscular wall */}
-        <path
-          d="M452 332 L560 332 Q596 344 590 410 L574 508 Q562 556 512 560 L456 548 Q452 542 452 332 Z"
-          fill={RED_FILL}
-          stroke={RED}
-          strokeWidth="8"
-        />
-      </g>
       <text
-        x="384"
-        y="440"
-        fontSize="14"
+        x="386"
+        y="446"
+        fontSize="15"
         fill={BLUE}
         textAnchor="middle"
         fontWeight="700"
@@ -264,9 +290,9 @@ export function HeartCirculationDiagram({ className = '', animate = true }: Illu
         RV
       </text>
       <text
-        x="518"
-        y="440"
-        fontSize="14"
+        x="498"
+        y="446"
+        fontSize="15"
         fill={RED}
         textAnchor="middle"
         fontWeight="700"
@@ -274,73 +300,58 @@ export function HeartCirculationDiagram({ className = '', animate = true }: Illu
       >
         LV
       </text>
-      {/* Interventricular septum */}
-      <line x1="450" y1="334" x2="450" y2="544" stroke="#9C6B57" strokeWidth="4" />
 
-      {/* ===== Valves ===== */}
+      {/* ===== AV valves: leaflets + chordae tendineae + papillary muscles ===== */}
       {/* Tricuspid (RA→RV) */}
+      <path d="M366 340 l7 22 M384 340 l3 24 M402 340 l-4 22" stroke={CHORD} strokeWidth="1.25" />
       <path
-        d="M362 326 l8 16 l8 -16 M378 326 l8 16 l8 -16"
-        stroke="#7A5230"
+        d="M360 340 l10 14 l8 -12 l8 14 l8 -14"
+        stroke={BLUE}
         strokeWidth="2.5"
         fill="none"
-        strokeLinecap="round"
+        strokeLinejoin="round"
       />
+      {/* chordae to papillary muscle */}
+      <path
+        d="M373 362 L390 418 M387 364 L392 418 M398 362 L396 418"
+        stroke={CHORD}
+        strokeWidth="1"
+      />
+      <ellipse cx="393" cy="424" rx="9" ry="7" fill={MUSCLE_LINE} />
       {/* Bicuspid (LA→LV) */}
       <path
-        d="M500 326 l9 18 l9 -18"
-        stroke="#7A5230"
+        d="M486 338 l8 20 l10 -18"
+        stroke={RED}
         strokeWidth="2.5"
         fill="none"
-        strokeLinecap="round"
+        strokeLinejoin="round"
       />
-      {/* Pulmonary semilunar (RV outflow) */}
-      <path d="M390 322 q8 8 16 0" stroke="#7A5230" strokeWidth="2.5" fill="none" />
-      {/* Aortic semilunar (LV outflow) */}
-      <path d="M514 322 q8 8 16 0" stroke="#7A5230" strokeWidth="2.5" fill="none" />
+      <path d="M494 358 L500 416 M504 358 L502 416" stroke={CHORD} strokeWidth="1" />
+      <ellipse cx="501" cy="422" rx="9" ry="7" fill={MUSCLE_LINE} />
+      {/* Semilunar valves (three cusps each) at outflows */}
+      <path d="M400 340 q6 7 12 0 q-6 5 -12 0" stroke={CHORD} strokeWidth="1.75" fill="none" />
+      <path d="M500 338 q6 7 12 0 q-6 5 -12 0" stroke={CHORD} strokeWidth="1.75" fill="none" />
 
-      {/* ===== Flow arrows (two circuits) ===== */}
-      <path
-        d="M366 300 L390 320"
-        stroke={BLUE}
-        strokeWidth="2"
-        fill="none"
-        markerEnd="url(#htBlue)"
-      />
-      <path
-        d="M410 430 L410 340"
-        stroke={BLUE}
-        strokeWidth="2"
-        fill="none"
-        markerEnd="url(#htBlue)"
-        strokeDasharray="4 3"
-      />
-      <path
-        d="M536 300 L516 320"
-        stroke={RED}
-        strokeWidth="2"
-        fill="none"
-        markerEnd="url(#htRed)"
-      />
-      <path
-        d="M520 430 L520 340"
-        stroke={RED}
-        strokeWidth="2"
-        fill="none"
-        markerEnd="url(#htRed)"
-        strokeDasharray="4 3"
-      />
-
-      {/* Circuit callouts */}
-      <text x="300" y="112" fontSize="11" fill={BLUE} fontWeight="600" fontFamily={F}>
-        Pulmonary circuit
-      </text>
-      <text x="600" y="300" fontSize="11" fill={RED} fontWeight="600" fontFamily={F}>
-        Systemic circuit
-      </text>
+      {/* ===== Numbered flow markers ===== */}
+      {steps.map((s) => (
+        <g key={s.n}>
+          <circle cx={s.x} cy={s.y} r="11" fill="#7A2E2E" />
+          <text
+            x={s.x}
+            y={s.y + 4}
+            fontSize="12"
+            fill="#FFFFFF"
+            textAnchor="middle"
+            fontWeight="700"
+            fontFamily={F}
+          >
+            {s.n}
+          </text>
+        </g>
+      ))}
 
       {/* ===== Labels ===== */}
-      <g fontFamily={F} fontSize="12.5" fill="#26211A">
+      <g fontFamily={F} fontSize="12" fill="#26211A">
         {labels.map((l) => (
           <g key={l.t}>
             <line
@@ -348,8 +359,8 @@ export function HeartCirculationDiagram({ className = '', animate = true }: Illu
               y1={l.y - 4}
               x2={l.x2}
               y2={l.y2}
-              stroke="#C2B2A8"
-              strokeWidth="1.4"
+              stroke="#C7B7AD"
+              strokeWidth="1.3"
             />
             <text x={l.x} y={l.y} textAnchor={l.a}>
               {l.t}
@@ -358,11 +369,46 @@ export function HeartCirculationDiagram({ className = '', animate = true }: Illu
         ))}
       </g>
 
-      {/* Legend */}
+      {/* ===== Numbered pathway legend ===== */}
+      <g filter="url(#htSoft)">
+        <rect
+          x="662"
+          y="360"
+          width="216"
+          height="252"
+          rx="14"
+          fill="#FFFFFF"
+          stroke="#ECE2E2"
+          strokeWidth="1.5"
+        />
+      </g>
+      <text x="680" y="390" fontSize="14" fill="#5B2A2A" fontWeight="700" fontFamily={S}>
+        Double circulation
+      </text>
+      {steps.map((s, i) => (
+        <g key={`lg${s.n}`} fontFamily={F}>
+          <circle cx="686" cy={414 + i * 28} r="9" fill="#7A2E2E" />
+          <text
+            x="686"
+            y={418 + i * 28}
+            fontSize="11"
+            fill="#FFFFFF"
+            textAnchor="middle"
+            fontWeight="700"
+          >
+            {s.n}
+          </text>
+          <text x="704" y={418 + i * 28} fontSize="11.5" fill="#4B4038">
+            {s.t}
+          </text>
+        </g>
+      ))}
+
+      {/* Colour legend */}
       <g fontFamily={F} fontSize="12" fill="#4B4038">
         <rect
           x="300"
-          y="600"
+          y="656"
           width="14"
           height="14"
           rx="3"
@@ -370,12 +416,12 @@ export function HeartCirculationDiagram({ className = '', animate = true }: Illu
           stroke={BLUE}
           strokeWidth="1.5"
         />
-        <text x="320" y="611">
+        <text x="320" y="667">
           Deoxygenated blood
         </text>
         <rect
           x="470"
-          y="600"
+          y="656"
           width="14"
           height="14"
           rx="3"
@@ -383,7 +429,7 @@ export function HeartCirculationDiagram({ className = '', animate = true }: Illu
           stroke={RED}
           strokeWidth="1.5"
         />
-        <text x="490" y="611">
+        <text x="490" y="667">
           Oxygenated blood
         </text>
       </g>
