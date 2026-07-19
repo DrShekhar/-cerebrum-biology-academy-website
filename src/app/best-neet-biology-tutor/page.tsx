@@ -4,7 +4,7 @@ import { BestVerticalLanding, type BestVerticalConfig } from '@/components/seo/B
 export const metadata: Metadata = {
   title: 'Best NEET Biology Tutor in India | AIIMS-Trained Dr. Shekhar C Singh',
   description:
-    "Dr. Shekhar C Singh (AIIMS Delhi) leads India's only biology-only NEET coaching. 680+ AIIMS/JIPMER/AFMC selections, 98% qualification rate, batches of 15-20. ₹40K–₹1.56L/year — half the cost of Kota relocation. Online + 6 NCR centres.",
+    "Dr. Shekhar C Singh (AIIMS Delhi) leads India's only biology-only NEET coaching. 680+ AIIMS/JIPMER/AFMC selections, 98% qualification rate, batches of 15-20. ₹40K–₹1.56L/year — half the cost of Kota relocation. Online + 5 NCR centres.",
   keywords: [
     'best neet biology tutor',
     'best neet biology tutor india',
@@ -54,7 +54,7 @@ const config: BestVerticalConfig = {
     { label: '680+ Selections' },
     { label: '98% Qualification Rate' },
     { label: '15-20 Student Batches' },
-    { label: '6 NCR Centres + Online' },
+    { label: '5 NCR Centres + Online' },
     { label: 'NCERT Line-by-Line Mapped' },
   ],
   pages: [
@@ -135,7 +135,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Both Online + 6 NCR Offline Centres',
       description:
-        'Six physical Cerebrum centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad, Noida) — one within 30-minute travel time of any NCR address. Pan-India and NRI students receive online live (not recorded) batches with the same AIIMS-trained faculty. Hybrid is supported — start offline, continue online when family travels, or vice versa.',
+        'Five physical Cerebrum centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad) — one within 30-minute travel time of most NCR addresses. Pan-India and NRI students receive online live (not recorded) batches with the same AIIMS-trained faculty. Hybrid is supported — start offline, continue online when family travels, or vice versa.',
     },
   ],
   testimonials: [

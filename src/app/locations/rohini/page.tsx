@@ -394,7 +394,7 @@ export default function RohiniLocationPage() {
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">Our Other Centers</h2>
             <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-              Cerebrum Biology Academy has 4 centers across Delhi-NCR. Visit the one nearest to you.
+              Cerebrum Biology Academy has 5 centers across Delhi-NCR. Visit the one nearest to you.
             </p>
             <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
               {[

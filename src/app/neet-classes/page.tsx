@@ -30,7 +30,7 @@ const classTypes = [
   {
     icon: Users,
     title: 'Offline Classes',
-    description: 'In-person classes at our 4 centres across Delhi NCR.',
+    description: 'In-person classes at our 5 centres across Delhi NCR.',
     features: ['Face-to-face', 'Lab facilities', 'Peer learning'],
   },
   {
@@ -118,7 +118,7 @@ const faqs = [
   {
     question: 'What types of NEET classes do you offer?',
     answer:
-      'We offer live interactive online classes, offline classroom sessions at our 4 centres (Rohini, Gurugram, South Extension, Faridabad, Green Park, Noida), recorded lectures for revision, and dedicated doubt clearing sessions. You can choose the mode that suits you best.',
+      'We offer live interactive online classes, offline classroom sessions at our 5 centres (Rohini, Gurugram, South Extension, Faridabad, Green Park), recorded lectures for revision, and dedicated doubt clearing sessions. You can choose the mode that suits you best.',
   },
   {
     question: 'What are the NEET class timings?',

@@ -38,7 +38,7 @@ const faqs = [
   {
     question: 'Is there a zoology teacher near me in Delhi NCR?',
     answer:
-      'Yes! Cerebrum Biology Academy has 5 offline centres in Delhi NCR - Rohini, Gurugram, South Extension, Faridabad, Green Park, and Noida. All centers feature expert zoology faculty with AIIMS training.',
+      'Yes! Cerebrum Biology Academy has 5 offline centres in Delhi NCR - Rohini, Gurugram, South Extension, Faridabad, and Green Park. All centers feature expert zoology faculty with AIIMS training. Noida students learn through live online classes with the same faculty.',
   },
   {
     question: 'Can I get online zoology classes if no center is nearby?',
@@ -108,7 +108,7 @@ export default function ZoologyTeacherNearMePage() {
         <div className="container relative mx-auto px-4">
           <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
             <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
-              <MapPin className="mr-1 inline h-4 w-4" />4 Centers in Delhi NCR + Pan-India Online
+              <MapPin className="mr-1 inline h-4 w-4" />5 Centers in Delhi NCR + Pan-India Online
             </span>
             <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
               Zoology Teacher Near Me

@@ -87,7 +87,7 @@ export const speakablePages = {
   home: {
     headline: 'Best NEET Biology Coaching in Delhi NCR',
     description:
-      'Cerebrum Biology Academy offers top NEET Biology coaching with 98% success rate. AIIMS faculty, small batches, 4 centers in Delhi NCR.',
+      'Cerebrum Biology Academy offers top NEET Biology coaching with 98% success rate. AIIMS faculty, small batches, 5 centers in Delhi NCR.',
     url: 'https://cerebrumbiologyacademy.com',
     speakableSections: ['.hero-headline', '.hero-subheadline', '.trust-signals', '.faq-section'],
   },
@@ -163,7 +163,7 @@ export const voiceOptimizedFAQs = [
   {
     question: 'Where is Cerebrum Biology Academy located?',
     answer:
-      'We have 4 centers in Delhi NCR: South Extension, Rohini, Gurugram, Green Park, Faridabad, and Noida. We also offer online classes for students outside Delhi.',
+      'We have 5 centers in Delhi NCR: South Extension, Rohini, Gurugram, Green Park, and Faridabad. We also offer live online classes for Noida students and students outside Delhi.',
   },
   {
     question: 'Is there a free demo class available?',

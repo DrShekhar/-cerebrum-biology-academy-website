@@ -162,7 +162,7 @@ const FAQS = [
   {
     question: "Where are Cerebrum's coaching centres?",
     answer:
-      'Four offline centres in Delhi NCR: South Extension (Delhi), Rohini (Delhi), Gurugram, Faridabad. Plus live online programmes serving 30+ countries — India, UAE, USA, UK, Canada, Saudi Arabia, Qatar, Singapore, Australia, Malaysia, and more. Time-zone-matched batches available for Gulf, India, Southeast Asia, UK, US East/West, Canada, and Australia time zones.',
+      'Five offline centres in Delhi NCR: South Extension (Delhi), Green Park (Delhi), Rohini (Delhi), Gurugram, Faridabad. Plus live online programmes serving 30+ countries — India, UAE, USA, UK, Canada, Saudi Arabia, Qatar, Singapore, Australia, Malaysia, and more. Time-zone-matched batches available for Gulf, India, Southeast Asia, UK, US East/West, Canada, and Australia time zones.',
   },
   {
     question: "Who is Dr. Shekhar C Singh and what's his role?",
@@ -310,7 +310,7 @@ export default function BestBiologyCoachingIndiaPage() {
             2014 by Dr. Shekhar C Singh (AIIMS New Delhi alumnus). We cover seven exam verticals
             where biology is the dominant subject &mdash; NEET, IB (HL/SL), AP, MCAT, USMLE Step 1,
             Biology Olympiads, and CBSE/ICSE Class 11-12. One faculty team, one founder supervising
-            curriculum across all programmes, four offline centres in Delhi NCR, and live online
+            curriculum across all programmes, five offline centres in Delhi NCR, and live online
             programmes serving 30+ countries.
           </p>
 
@@ -456,7 +456,7 @@ export default function BestBiologyCoachingIndiaPage() {
         <section className="mx-auto max-w-5xl px-4 py-14">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Where we operate</h2>
           <p className="mt-3 text-slate-600">
-            Four offline centres in Delhi NCR + live online programmes serving 30+ countries.
+            Five offline centres in Delhi NCR + live online programmes serving 30+ countries.
           </p>
 
           <div className="mt-7 grid gap-5 md:grid-cols-2">

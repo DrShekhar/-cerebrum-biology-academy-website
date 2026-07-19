@@ -90,7 +90,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Location Footprint',
-      cerebrum: '6 Delhi NCR centres + pan-India online live classes',
+      cerebrum: '5 Delhi NCR centres + pan-India online live classes',
       competitor: 'Kota flagship + city centres across India · Online via Career Point e-Learning',
       cerebrumWins: false,
     },
@@ -116,7 +116,7 @@ const config: CompetitorComparisonConfig = {
     {
       title: 'No Kota Relocation Required',
       description:
-        "Kota coaching at Career Point's flagship typically requires relocation — hostel, mess, parental separation, mental-health stressors well-documented in recent NTA and media coverage. Cerebrum delivers AIIMS-grade biology coaching online live or at 6 Delhi NCR centres. Study from home.",
+        "Kota coaching at Career Point's flagship typically requires relocation — hostel, mess, parental separation, mental-health stressors well-documented in recent NTA and media coverage. Cerebrum delivers AIIMS-grade biology coaching online live or at 5 Delhi NCR centres. Study from home.",
     },
     {
       title: 'Small Batches (15–20 vs 100–250)',

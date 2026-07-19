@@ -113,7 +113,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Class 11 Online + 6 NCR Offline Centres',
       description:
-        'Class 11 students often need offline structure for the first six months while building NEET study habits. Six Cerebrum centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad, Noida) support offline-first Class 11 batches; pan-India and NRI students get online live (not recorded) Class 11 batches with the same faculty. Hybrid switching supported.',
+        'Class 11 students often need offline structure for the first six months while building NEET study habits. Five Cerebrum centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad) support offline-first Class 11 batches; pan-India and NRI students get online live (not recorded) Class 11 batches with the same faculty. Hybrid switching supported.',
     },
   ],
   testimonials: [
@@ -168,7 +168,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Does Cerebrum offer Class 11 NEET online or only offline?',
       answer:
-        'Both. Six offline Cerebrum centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad, Noida) run offline-first Class 11 batches. Pan-India and NRI students get online live (not recorded) Class 11 batches with the same AIIMS-trained faculty. Hybrid switching is supported — start offline, continue online when family travels, or vice versa. Pan-India Class 11 online students are actively enrolled from Mumbai, Bangalore, Hyderabad, Chennai, Pune, Ahmedabad, Kolkata, and from NRI hubs (USA, UAE, UK, Canada, Australia, Singapore).',
+        'Both. Five offline Cerebrum centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad) run offline-first Class 11 batches. Pan-India and NRI students get online live (not recorded) Class 11 batches with the same AIIMS-trained faculty. Hybrid switching is supported — start offline, continue online when family travels, or vice versa. Pan-India Class 11 online students are actively enrolled from Mumbai, Bangalore, Hyderabad, Chennai, Pune, Ahmedabad, Kolkata, and from NRI hubs (USA, UAE, UK, Canada, Australia, Singapore).',
     },
   ],
   knowsAbout: [

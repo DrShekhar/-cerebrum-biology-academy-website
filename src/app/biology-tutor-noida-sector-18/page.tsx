@@ -86,7 +86,7 @@ const faqs = [
   {
     question: 'How far is your center from Sector 18 Atta Market?',
     answer:
-      'Our center in Greater Noida is about 12 km from Sector 18, which is 20-25 minutes by road or metro. You can take Aqua Line from Sector 18 directly. Many students from this area attend our classes.',
+      'We teach Sector 18 and central Noida students through live online classes — no travel needed. For anyone who prefers in-person coaching, our nearest walk-in center is South Extension, New Delhi (about 35-40 minutes by metro).',
   },
   {
     question: 'Is metro connectivity good from Sector 18?',

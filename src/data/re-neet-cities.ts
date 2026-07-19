@@ -38,14 +38,14 @@ export const reNEETCityProfiles: Record<ReNEETCityKey, ReNEETCityProfile> = {
     slug: 're-neet-2026-delhi',
     cityDisplayName: 'Delhi NCR',
     cityLowercase: 'delhi',
-    ribbonContext: 'Delhi NCR · 6 Offline Centres + Online · AIIMS-Trained Faculty',
+    ribbonContext: 'Delhi NCR · 5 Offline Centres + Online · AIIMS-Trained Faculty',
     introContext:
       "Delhi NCR has India's second-highest concentration of NEET aspirants (after Kota), spread across South Extension, Rohini, Green Park, Gurugram, Faridabad and Noida. Cerebrum operates 5 offline centres across NCR + online live classes. The 6–8 week RE-NEET window is exactly when small-batch attention matters most.",
     studentVolume:
       '~60,000 NEET aspirants across Delhi NCR (Delhi + Gurugram + Faridabad + Noida + Ghaziabad)',
     competitorContext:
       'Allen, Aakash, FIITJEE, PhysicsWallah and Unacademy Vidyapeeth (offline Delhi centres)',
-    uniqueAngle: '6 NCR centres + the same AIIMS-trained faculty online',
+    uniqueAngle: '5 NCR centres + the same AIIMS-trained faculty online',
     testimonialCity: 'Delhi NCR',
   },
   hyderabad: {

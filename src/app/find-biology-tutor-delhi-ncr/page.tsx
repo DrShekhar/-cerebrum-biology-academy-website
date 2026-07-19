@@ -15,7 +15,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'Find Best Biology Tutor in Delhi NCR 2026 | Class 11, 12 | NEET + Board',
   description:
-    'Looking for a biology tutor in Delhi NCR? Compare home tutors vs coaching institutes. AIIMS faculty, 15-student batches, ₹4K/month. 4 centers + online. Call 88264-44334.',
+    'Looking for a biology tutor in Delhi NCR? Compare home tutors vs coaching institutes. AIIMS faculty, 15-student batches, ₹4K/month. 5 centers + online. Call 88264-44334.',
   keywords: [
     'find biology tutor delhi ncr',
     'biology tutor near me delhi',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     title: 'Find Best Biology Tutor in Delhi NCR 2026 | Class 11, 12 | NEET + Board',
     description:
-      'Looking for a biology tutor in Delhi NCR? Compare home tutors vs coaching institutes. AIIMS faculty, 15-student batches, ₹4K/month. 4 centers + online.',
+      'Looking for a biology tutor in Delhi NCR? Compare home tutors vs coaching institutes. AIIMS faculty, 15-student batches, ₹4K/month. 5 centers + online.',
     url: 'https://cerebrumbiologyacademy.com/find-biology-tutor-delhi-ncr',
     type: 'website',
   },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Find Best Biology Tutor in Delhi NCR 2026 | Class 11, 12 | NEET + Board',
     description:
-      'Looking for a biology tutor in Delhi NCR? Compare home tutors vs coaching institutes. AIIMS faculty, 15-student batches, ₹4K/month. 4 centers + online. Call 88264-44334.',
+      'Looking for a biology tutor in Delhi NCR? Compare home tutors vs coaching institutes. AIIMS faculty, 15-student batches, ₹4K/month. 5 centers + online. Call 88264-44334.',
   },
 }
 
@@ -146,7 +146,7 @@ const faqs = [
   {
     question: 'How do I find a good biology tutor near me in Delhi NCR?',
     answer:
-      'Instead of relying on listing sites like Sulekha or UrbanPro that charge tutors commissions (which they recover from you), look for coaching institutes with verified faculty credentials. Cerebrum Biology Academy has AIIMS-qualified faculty, 4 centers across Delhi NCR, and online classes — so you get expert teaching without the middleman markup.',
+      'Instead of relying on listing sites like Sulekha or UrbanPro that charge tutors commissions (which they recover from you), look for coaching institutes with verified faculty credentials. Cerebrum Biology Academy has AIIMS-qualified faculty, 5 centers across Delhi NCR, and online classes — so you get expert teaching without the middleman markup.',
   },
   {
     question: 'What are the biology tuition fees in Delhi NCR?',

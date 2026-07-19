@@ -140,9 +140,9 @@ const config: BestVerticalConfig = {
   ],
   whyBest: [
     {
-      title: '6 Centres = Almost Always "Near You" in Delhi NCR',
+      title: '5 Centres = Almost Always "Near You" in Delhi NCR',
       description:
-        'South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida — covering South Delhi, North Delhi, Gurugram, Faridabad and Noida. For most NCR addresses, a Cerebrum centre is within 30-minute travel time.',
+        'South Extension, Rohini, Green Park, Gurugram, Faridabad — covering South Delhi, North Delhi, Gurugram and Faridabad, with live online classes for Noida and the rest of NCR. For most NCR addresses, a Cerebrum centre is within 30-minute travel time.',
     },
     {
       title: 'Outside Delhi NCR? Online Live Classes (Same Faculty)',
@@ -167,7 +167,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Free Demo + 7-Day Refund Guarantee',
       description:
-        "Free demo class at any of the 6 centres or online — no obligation to enrol. Once enrolled, a 7-day full refund is offered if the class isn't the right fit. Terms in writing.",
+        "Free demo class at any of the 5 centres or online — no obligation to enrol. Once enrolled, a 7-day full refund is offered if the class isn't the right fit. Terms in writing.",
     },
   ],
   testimonials: [

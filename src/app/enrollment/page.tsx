@@ -32,7 +32,7 @@ const upcomingBatches = [
   {
     name: 'NEET 2027 Class 11 Biology Batch — New Session',
     description:
-      'Fresh Class 11 NEET Biology batch starting at Cerebrum Academy. AIIMS faculty, 15-student batches across 6 Delhi NCR centers. Online and offline options.',
+      'Fresh Class 11 NEET Biology batch starting at Cerebrum Academy. AIIMS faculty, 15-student batches across 5 Delhi NCR centers. Online and offline options.',
     startDate: '2026-04-01T09:00:00+05:30',
     endDate: '2027-03-31T18:00:00+05:30',
     url: 'https://cerebrumbiologyacademy.com/enrollment',
@@ -50,7 +50,7 @@ const upcomingBatches = [
   {
     name: 'Free NEET Biology Demo Class — Book Now',
     description:
-      'Experience Cerebrum Academy teaching firsthand. Free 90-minute demo class with AIIMS faculty. Available at all 6 Delhi NCR centers and online.',
+      'Experience Cerebrum Academy teaching firsthand. Free 90-minute demo class with AIIMS faculty. Available at all 5 Delhi NCR centers and online.',
     startDate: '2026-03-15T10:00:00+05:30',
     url: 'https://cerebrumbiologyacademy.com/book-free-demo',
     isAccessibleForFree: true,

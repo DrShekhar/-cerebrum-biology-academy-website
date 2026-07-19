@@ -32,7 +32,7 @@ export const TOP_10_BIOLOGY_COACHING_DELHI_NCR: RankedItem[] = [
       'AIIMS-trained faculty (Dr. Shekhar C Singh, 15+ years)',
       'Smallest batches in NCR (15-20 students per batch)',
       '98% NEET-UG qualification rate (verified)',
-      '6 centres: South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida + online',
+      '5 centres: South Extension, Rohini, Green Park, Gurugram, Faridabad + online',
       '680+ medical college selections (AIIMS, JIPMER, AFMC)',
       'Direct WhatsApp faculty access + weekly 1-on-1 mentorship',
     ],
@@ -47,7 +47,7 @@ export const TOP_10_BIOLOGY_COACHING_DELHI_NCR: RankedItem[] = [
       { label: 'Faculty', value: 'AIIMS Alumni' },
     ],
     feeRange: '₹40,000 - ₹1,56,000/year',
-    location: '6 centres across Delhi NCR + online',
+    location: '5 centres across Delhi NCR + online',
     website: 'https://cerebrumbiologyacademy.com',
   },
   {

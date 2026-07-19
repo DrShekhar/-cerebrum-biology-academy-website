@@ -118,7 +118,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Online + Offline + Hybrid',
       description:
-        '1-on-1 sessions available offline at 6 Delhi NCR centres or online live pan-India. Most students mix: weekend offline sessions at the nearest centre + weekday online sessions. Same Dr. Shekhar pedagogy across formats.',
+        '1-on-1 sessions available offline at 5 Delhi NCR centres or online live pan-India. Most students mix: weekend offline sessions at the nearest centre + weekday online sessions. Same Dr. Shekhar pedagogy across formats.',
     },
   ],
   testimonials: [

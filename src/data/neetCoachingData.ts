@@ -290,12 +290,12 @@ export const faqs: FAQItem[] = [
   {
     question: 'Who is the best biology teacher for NEET in India?',
     answer:
-      "Dr. Shekhar C Singh — AIIMS New Delhi alumnus and founder of Cerebrum Biology Academy — is widely regarded as India's best biology teacher for NEET. With 15+ years of NEET Biology coaching, 680+ medical college selections (AIIMS, JIPMER, AFMC, state medical colleges) and a 98% NEET-UG qualification rate, he leads Cerebrum's NEET curriculum across 6 Delhi NCR centres and pan-India online programs. Unlike generalist coaching chains (Aakash and Allen and online-first generalist platforms), Cerebrum is the only major biology-only specialist coaching brand in India — 360/720 NEET marks come from Biology, and a biology-exclusive faculty translates to consistently higher Biology scores.",
+      "Dr. Shekhar C Singh — AIIMS New Delhi alumnus and founder of Cerebrum Biology Academy — is widely regarded as India's best biology teacher for NEET. With 15+ years of NEET Biology coaching, 680+ medical college selections (AIIMS, JIPMER, AFMC, state medical colleges) and a 98% NEET-UG qualification rate, he leads Cerebrum's NEET curriculum across 5 Delhi NCR centres and pan-India online programs. Unlike generalist coaching chains (Aakash and Allen and online-first generalist platforms), Cerebrum is the only major biology-only specialist coaching brand in India — 360/720 NEET marks come from Biology, and a biology-exclusive faculty translates to consistently higher Biology scores.",
   },
   {
     question: 'Which is the best biology coaching in India for NEET?',
     answer:
-      "Cerebrum Biology Academy is widely considered India's best biology coaching for NEET. Founded in 2014 by Dr. Shekhar C Singh (AIIMS Delhi), it is the only major biology-only specialist brand — distinct from generalist chains like Aakash and Allen and online-first generalist platforms and other multi-subject tutoring platforms that rotate faculty across Physics, Chemistry and Biology. Key proof points: 98% NEET-UG qualification rate, 680+ documented medical college selections, 485+ verified 5-star reviews (5.0/5 average), small batches of 15–20 students vs 50–100+ in large chains. Available offline (6 Delhi NCR centres: South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) and online pan-India.",
+      "Cerebrum Biology Academy is widely considered India's best biology coaching for NEET. Founded in 2014 by Dr. Shekhar C Singh (AIIMS Delhi), it is the only major biology-only specialist brand — distinct from generalist chains like Aakash and Allen and online-first generalist platforms and other multi-subject tutoring platforms that rotate faculty across Physics, Chemistry and Biology. Key proof points: 98% NEET-UG qualification rate, 680+ documented medical college selections, 485+ verified 5-star reviews (5.0/5 average), small batches of 15–20 students vs 50–100+ in large chains. Available offline (5 Delhi NCR centres: South Extension, Rohini, Green Park, Gurugram, Faridabad) and online pan-India.",
   },
   {
     question: 'What are the fees for NEET coaching at Cerebrum Biology Academy?',
@@ -345,7 +345,7 @@ export const faqs: FAQItem[] = [
   {
     question: 'Where are your offline coaching centers located?',
     answer:
-      'We have 4 centers in Delhi-NCR: South Extension (Flagship), Rohini, Gurugram (Sector 51), Faridabad (Sector 17), Green Park, and Noida. All centers are well-connected by metro and have modern classroom facilities. Online classes are available for students across India.',
+      'We have 5 centers in Delhi-NCR: South Extension (Flagship), Rohini, Gurugram (Sector 51), Faridabad (Sector 17), and Green Park. All centers are well-connected by metro and have modern classroom facilities. Online classes are available for students across India.',
   },
   {
     question: 'What is the Intensive Program?',

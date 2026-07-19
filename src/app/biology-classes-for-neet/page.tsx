@@ -47,14 +47,14 @@ const config: BestVerticalConfig = {
   intro:
     'Biology classes for NEET differ from 1:1 tutoring — structured curriculum at scale, peer learning, weekly group mocks, mock-test rankings, and cohort accountability. Cerebrum caps batches at 15–20 students (vs 50–100+ at Aakash and Allen and online-first generalist platforms) — close enough for personal attention, large enough for healthy competition.',
   clusterSummary:
-    'Offline at 6 Delhi NCR centres · Online live (not recorded) pan-India · English + Hindi · NCERT-anchored, PYQ-driven.',
+    'Offline at 5 Delhi NCR centres · Online live (not recorded) pan-India · English + Hindi · NCERT-anchored, PYQ-driven.',
   credentials: [
     { label: 'Small Batch 15–20' },
     { label: 'AIIMS-Trained Faculty' },
     { label: 'NCERT-First' },
     { label: '15+ Years PYQ Archive' },
     { label: 'Weekly Mocks' },
-    { label: '6 Delhi NCR Centres' },
+    { label: '5 Delhi NCR Centres' },
     { label: 'Pan-India Online Live' },
     { label: 'English / Hindi Tracks' },
   ],
@@ -116,7 +116,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Same Faculty Offline + Online',
       description:
-        'Online live (not recorded) classes use the same AIIMS-trained faculty as the offline batches at 6 Delhi NCR centres. Many top NEET scorers chose the online format, including students who switched from Kota.',
+        'Online live (not recorded) classes use the same AIIMS-trained faculty as the offline batches at 5 Delhi NCR centres. Many top NEET scorers chose the online format, including students who switched from Kota.',
     },
     {
       title: 'Documented Results (Not Aggregated Chain Claims)',
@@ -171,7 +171,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Which cities are biology classes for NEET offered in?',
       answer:
-        'Offline biology classes at 6 Delhi NCR centres: South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida. Online live classes pan-India — major hubs include Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Jaipur, Kota, Lucknow, Patna and Indore.',
+        'Offline biology classes at 5 Delhi NCR centres: South Extension, Rohini, Green Park, Gurugram, Faridabad. Online live classes pan-India — major hubs include Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Jaipur, Kota, Lucknow, Patna and Indore.',
     },
     {
       question: 'Are biology classes for NEET offered in Hindi?',

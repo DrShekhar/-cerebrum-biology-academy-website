@@ -104,7 +104,7 @@ const hubFAQs = [
   {
     question: 'Do you offer NEET coaching in Delhi NCR and other Indian cities?',
     answer:
-      'Yes. Cerebrum has four physical centres in Delhi NCR (South Extension flagship, Rohini, Gurugram, Faridabad) and dedicated city-specific pages for Delhi, Gurugram, Noida, Faridabad, Ghaziabad, Greater Noida, Rohini, Dwarka, Mumbai, Bangalore, Hyderabad, Pune, and Chennai. Each page lists local addresses, batch timings, fees in INR, and city-specific testimonials.',
+      'Yes. Cerebrum has five physical centres in Delhi NCR (South Extension flagship, Green Park, Rohini, Gurugram, Faridabad) and dedicated city-specific pages for Delhi, Gurugram, Noida, Faridabad, Ghaziabad, Greater Noida, Rohini, Dwarka, Mumbai, Bangalore, Hyderabad, Pune, and Chennai. Each page lists local addresses, batch timings, fees in INR, and city-specific testimonials.',
   },
   {
     question: 'Do you support NRI students preparing for NEET from outside India?',
@@ -696,7 +696,7 @@ export default function NEETHubPage() {
             <div className="mb-10 text-center">
               <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-orange-100 px-3 py-1 text-sm font-semibold text-orange-800">
                 <MapPin className="h-4 w-4" />
-                Home Market · 4 physical centres in Delhi NCR
+                Home Market · 5 physical centres in Delhi NCR
               </div>
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 NEET Coaching — Delhi NCR

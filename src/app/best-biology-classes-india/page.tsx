@@ -31,7 +31,7 @@ const PAGE_URL = `${SITE_URL}${CANONICAL}`
 export const metadata: Metadata = {
   title: 'Best Biology Classes in India — Live Online + Offline · NEET · IB · AP · Olympiads',
   description:
-    "India's best biology classes — Cerebrum Biology Academy by Dr. Shekhar C Singh (AIIMS New Delhi alumnus). Live online classes in your time zone + 4 offline centres in Delhi NCR. NEET, IB, AP, MCAT, Biology Olympiads. Small-batch, weekly tests, English medium. Free trial class.",
+    "India's best biology classes — Cerebrum Biology Academy by Dr. Shekhar C Singh (AIIMS New Delhi alumnus). Live online classes in your time zone + 5 offline centres in Delhi NCR. NEET, IB, AP, MCAT, Biology Olympiads. Small-batch, weekly tests, English medium. Free trial class.",
   keywords: [
     'best biology classes',
     'best biology classes india',
@@ -141,7 +141,7 @@ const FAQS = [
   {
     question: 'Are biology classes online only, or offline available too?',
     answer:
-      'Both. Online live classes via Zoom from anywhere in the world (active student cohorts in 30+ countries). Plus 4 offline centres in Delhi NCR: South Extension (Delhi), Rohini (Delhi), Gurugram, Faridabad. Online and offline students share the same faculty and curriculum.',
+      'Both. Online live classes via Zoom from anywhere in the world (active student cohorts in 30+ countries). Plus 5 offline centres in Delhi NCR: South Extension (Delhi), Green Park (Delhi), Rohini (Delhi), Gurugram, Faridabad. Online and offline students share the same faculty and curriculum.',
   },
   {
     question:
@@ -238,9 +238,9 @@ export default function BestBiologyClassesIndiaPage() {
             Cerebrum Biology Academy runs live biology classes &mdash; not recorded video courses.
             Real-time Q&amp;A with AIIMS-trained faculty, weekly tests with per-student review,
             English medium of instruction throughout. Live online classes serve 30+ countries in
-            time-zone-matched batches; four offline centres in Delhi NCR (South Extension, Rohini,
-            Gurugram, Faridabad) for in-person students. NEET, IB Biology HL/SL, AP Biology, MCAT,
-            USMLE Step 1, Biology Olympiads, and CBSE/ICSE Class 11-12.
+            time-zone-matched batches; five offline centres in Delhi NCR (South Extension, Green
+            Park, Rohini, Gurugram, Faridabad) for in-person students. NEET, IB Biology HL/SL, AP
+            Biology, MCAT, USMLE Step 1, Biology Olympiads, and CBSE/ICSE Class 11-12.
           </p>
 
           <div className="mt-7 flex flex-col md:flex-row gap-3">

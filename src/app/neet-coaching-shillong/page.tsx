@@ -77,7 +77,7 @@ export default function Page() {
     },
     {
       question: `Are there offline centres in ${city.displayName}?`,
-      answer: `No — Cerebrum's 4 offline centres are in Delhi NCR (South Extension, Rohini, Gurugram, Faridabad). For ${city.displayName} students the programme is 100% live online with the same faculty and curriculum. Many families pair Cerebrum biology online + local ${localCoaching} for PCM offline, which combines depth + accessibility.`,
+      answer: `No — Cerebrum's 5 offline centres are in Delhi NCR (South Extension, Green Park, Rohini, Gurugram, Faridabad). For ${city.displayName} students the programme is 100% live online with the same faculty and curriculum. Many families pair Cerebrum biology online + local ${localCoaching} for PCM offline, which combines depth + accessibility.`,
     },
     {
       question: `My child attends ${city.feederSchools[0]} / ${city.feederSchools[1] || city.feederSchools[0]}. How does the schedule fit?`,

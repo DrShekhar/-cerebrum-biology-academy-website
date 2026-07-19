@@ -40,7 +40,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html:
-            '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many tests are in the series?","acceptedAnswer":{"@type":"Answer","text":"31+ tests including chapter-wise tests, unit tests, and full-length NEET mock tests. Tests are conducted weekly at all 4 centers and online."}},{"@type":"Question","name":"Is the MCQ practice tool free?","acceptedAnswer":{"@type":"Answer","text":"Yes! Our MCQ practice tool with 19,619 questions is completely free at cerebrumbiologyacademy.com/neet-biology-mcq. No login required."}},{"@type":"Question","name":"Can I join the test series without coaching?","acceptedAnswer":{"@type":"Answer","text":"Yes! Test series is available as a standalone product. Also available: full coaching (Pursuit/Ascent/Pinnacle batches) which includes the test series."}}]}',
+            '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many tests are in the series?","acceptedAnswer":{"@type":"Answer","text":"31+ tests including chapter-wise tests, unit tests, and full-length NEET mock tests. Tests are conducted weekly at all 5 centers and online."}},{"@type":"Question","name":"Is the MCQ practice tool free?","acceptedAnswer":{"@type":"Answer","text":"Yes! Our MCQ practice tool with 19,619 questions is completely free at cerebrumbiologyacademy.com/neet-biology-mcq. No login required."}},{"@type":"Question","name":"Can I join the test series without coaching?","acceptedAnswer":{"@type":"Answer","text":"Yes! Test series is available as a standalone product. Also available: full coaching (Pursuit/Ascent/Pinnacle batches) which includes the test series."}}]}',
         }}
       />
       <div className="min-h-screen bg-gray-50">
@@ -82,7 +82,7 @@ export default function Page() {
               </summary>
               <p className="px-6 pb-4 text-gray-600">
                 31+ tests including chapter-wise tests, unit tests, and full-length NEET mock tests.
-                Tests are conducted weekly at all 4 centers and online.
+                Tests are conducted weekly at all 5 centers and online.
               </p>
             </details>
             <details className="bg-white rounded-xl shadow-md group">

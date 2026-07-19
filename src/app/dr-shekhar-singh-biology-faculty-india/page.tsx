@@ -199,7 +199,7 @@ const universalQA = [
   },
   {
     q: 'How can I take a class with Dr. Shekhar C Singh?',
-    a: 'Cerebrum Biology Academy offers a free demo class with Dr. Shekhar C Singh. Book through the website or call +91-88264-44334. The academy operates 6 Delhi NCR centres (South Extension, Rohini, Gurugram, Noida, Faridabad, Ghaziabad) plus pan-India and international online classes.',
+    a: 'Cerebrum Biology Academy offers a free demo class with Dr. Shekhar C Singh. Book through the website or call +91-88264-44334. The academy operates 5 Delhi NCR centres (South Extension, Green Park, Rohini, Gurugram, Faridabad) plus pan-India and international online classes.',
   },
 ]
 

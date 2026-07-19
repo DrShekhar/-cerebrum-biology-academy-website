@@ -80,7 +80,7 @@ const faqs = [
   {
     question: 'How far is your center from Shipra Mall Indirapuram?',
     answer:
-      'Our center in Greater Noida is about 7-8 km from Shipra Mall, which is 15-20 minutes by road. You can also take the Aqua Line from Vaishali Metro. Many students from all Khands of Indirapuram attend our classes.',
+      'We teach students from all Khands of Indirapuram through live online classes — no travel needed. For anyone who prefers in-person coaching, our nearest walk-in center is South Extension, New Delhi (about 20 km away).',
   },
   {
     question: 'Which Indirapuram areas do your students come from?',

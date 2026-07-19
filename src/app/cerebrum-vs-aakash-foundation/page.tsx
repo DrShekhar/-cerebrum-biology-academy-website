@@ -102,7 +102,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Centre Network',
-      cerebrum: '6 Delhi NCR centres + online live pan-India',
+      cerebrum: '5 Delhi NCR centres + online live pan-India',
       competitor: '250+ centres across India (broader physical reach)',
       cerebrumWins: false,
     },

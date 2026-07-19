@@ -121,7 +121,7 @@ const config: BestVerticalConfig = {
     {
       title: 'NCR Offline + Pan-India Online (Family Schedule Flexible)',
       description:
-        'Six Cerebrum centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad, Noida) support offline-first Class 10 Foundation batches. Pan-India and NRI Class 10 students get online live (not recorded) batches with the same AIIMS-trained faculty. Hybrid switching supported — particularly useful when families travel for school holidays or board exam prep retreats.',
+        'Five Cerebrum centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad) support offline-first Class 10 Foundation batches. Pan-India and NRI Class 10 students get online live (not recorded) batches with the same AIIMS-trained faculty. Hybrid switching supported — particularly useful when families travel for school holidays or board exam prep retreats.',
     },
   ],
   testimonials: [

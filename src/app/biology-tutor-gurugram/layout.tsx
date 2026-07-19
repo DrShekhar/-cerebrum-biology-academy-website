@@ -53,7 +53,7 @@ const faqs = [
   {
     question: 'Is your center accessible from Gurugram?',
     answer:
-      'While our center in Greater Noida is 30-40 km from Gurugram, we strongly recommend our online classes for Gurugram students. Our online platform offers the same quality with live interactive sessions, recorded lectures, and practice tests.',
+      'Our Gurugram center is at Unit 17, M2K Corporate Park, Sector 51 (Mayfield Garden), and runs regular offline batches. Students who prefer to study from home can join our online classes — same faculty, live interactive sessions, recorded lectures, and practice tests.',
   },
   {
     question: 'Why should Gurugram students choose online classes?',

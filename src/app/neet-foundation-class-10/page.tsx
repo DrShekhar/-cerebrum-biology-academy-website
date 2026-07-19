@@ -143,7 +143,7 @@ const faqs = [
   {
     question: 'Is online coaching available for Class 10 NEET Foundation?',
     answer:
-      'Yes! We offer both offline classes at our 4 Delhi NCR centers and live online classes for students across India. Same faculty, same quality, same results.',
+      'Yes! We offer both offline classes at our 5 Delhi NCR centers and live online classes for students across India. Same faculty, same quality, same results.',
   },
   {
     question: 'What is the fee structure for Class 10 NEET Foundation?',

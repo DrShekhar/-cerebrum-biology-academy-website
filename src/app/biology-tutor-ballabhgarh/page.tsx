@@ -100,7 +100,7 @@ const faqs = [
   {
     question: 'How far is your center from Ballabhgarh?',
     answer:
-      'Our center in Greater Noida is just 12 km from Ballabhgarh, making it the closest Faridabad locality. The drive takes only 15-20 minutes via the Greater Faridabad sectors (81-89).',
+      'Our Faridabad center (SCF-130, 2nd Floor, Above Union Bank, Huda Market, Sector 17) is the closest in-person option for Ballabhgarh students — a 15-20 minute drive, or take the Violet Line from Raja Nahar Singh (Ballabhgarh) to Bata Chowk, 5 minutes from the center.',
   },
   {
     question: 'Is Ballabhgarh well-connected to Greater Noida?',

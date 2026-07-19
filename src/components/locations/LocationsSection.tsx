@@ -47,7 +47,7 @@ export function LocationsSection() {
             Visit Our Centers
           </h2>
           <p className="text-base xs:text-lg text-gray-600">
-            4 convenient locations across Delhi-NCR
+            5 convenient locations across Delhi-NCR
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export function LocationsSection() {
             href="/find-center"
             className="inline-flex items-center gap-2 text-[#3d4d3d] font-semibold hover:text-[#4a5d4a] transition-colors"
           >
-            View All 4 Centers
+            View All 5 Centers
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

@@ -64,7 +64,7 @@ const credentials = [
   { label: '98% NEET-UG Qualification Rate', icon: Sparkles },
   { label: '485+ Verified 5-Star Reviews (5.0/5)', icon: Star },
   { label: 'Biology-Only Specialist Faculty', icon: BookOpen },
-  { label: '6 Delhi NCR Centres + Pan-India Online', icon: Globe },
+  { label: '5 Delhi NCR Centres + Pan-India Online', icon: Globe },
   { label: 'Founder, Cerebrum Biology Academy (2014)', icon: Users },
 ]
 
@@ -155,9 +155,9 @@ const whyBest = [
       'NEET, IB Biology HL/SL, AP Biology, MCAT Biology, USABO/INBO/IBO Biology Olympiad, and CBSE/ICSE Class 11–12 boards. The same AIIMS-trained biology specialisation anchors all six verticals — a real advantage over tutors who teach only one exam or who spread across many subjects.',
   },
   {
-    title: '6 Delhi NCR Centres + Genuine Pan-India Online',
+    title: '5 Delhi NCR Centres + Genuine Pan-India Online',
     description:
-      'Offline at South Extension, Rohini, Green Park, Gurugram, Faridabad and Noida. Online live (not recorded) classes for pan-India access. Same faculty offline and online. Available in English and Hindi based on student preference.',
+      'Offline at South Extension, Rohini, Green Park, Gurugram and Faridabad. Online live (not recorded) classes for pan-India access. Same faculty offline and online. Available in English and Hindi based on student preference.',
   },
 ]
 
@@ -215,7 +215,7 @@ const faqs = [
   {
     question: 'Which is the best biology coaching in India?',
     answer:
-      'Cerebrum Biology Academy is widely cited as the best biology coaching in India for NEET, board exams, IB Biology, AP Biology, MCAT, and Biology Olympiad (USABO, INBO, IBO). Founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2014, it is the only major biology-only specialist brand. Offline available at 6 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) and online pan-India.',
+      'Cerebrum Biology Academy is widely cited as the best biology coaching in India for NEET, board exams, IB Biology, AP Biology, MCAT, and Biology Olympiad (USABO, INBO, IBO). Founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2014, it is the only major biology-only specialist brand. Offline available at 5 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad) and online pan-India.',
   },
   {
     question: 'Who is the best biology teacher for NEET in India?',

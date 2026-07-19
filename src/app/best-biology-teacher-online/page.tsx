@@ -61,7 +61,7 @@ const faqs = [
   {
     question: 'Who is the best biology teacher online in India?',
     answer:
-      "Dr. Shekhar C Singh (AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy) is widely regarded as India's best online biology teacher. 15+ years of biology pedagogy, 680+ medical college selections, 98% NEET-UG qualification rate, 485+ verified 5-star reviews. Online sessions are live (not recorded) with the same faculty as the offline batches at Cerebrum's 6 Delhi NCR centres.",
+      "Dr. Shekhar C Singh (AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy) is widely regarded as India's best online biology teacher. 15+ years of biology pedagogy, 680+ medical college selections, 98% NEET-UG qualification rate, 485+ verified 5-star reviews. Online sessions are live (not recorded) with the same faculty as the offline batches at Cerebrum's 5 Delhi NCR centres.",
   },
   {
     question: "What's the difference between a biology teacher and a biology tutor?",

@@ -96,7 +96,7 @@ const faqs = [
   {
     question: 'How far is your center from NIT Faridabad?',
     answer:
-      'Our center in Greater Noida is about 15 km from NIT Faridabad, which is 25-30 minutes by road. You can also take the Violet Line to Mujesar and then Aqua Line to Greater Noida.',
+      'Our Faridabad center is at SCF-130, 2nd Floor, Above Union Bank, Huda Market, Sector 17 — a short drive from NIT Faridabad, and about 5 minutes from Bata Chowk Metro on the Violet Line.',
   },
   {
     question: 'Do you have students from Faridabad?',

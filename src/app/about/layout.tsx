@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Cerebrum Biology Academy | AIIMS-Led Excellence',
     description:
-      'Founded 2014. AIIMS alumnus-led. 67+ AIIMS selections. 98% success rate. 4 centers in Delhi NCR.',
+      'Founded 2014. AIIMS alumnus-led. 67+ AIIMS selections. 98% success rate. 5 centers in Delhi NCR.',
     images: ['/og-image.jpg'],
     creator: '@CerebrumAcademy',
     site: '@CerebrumAcademy',

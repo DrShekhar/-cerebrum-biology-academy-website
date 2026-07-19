@@ -7,7 +7,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Delhi NCR 2026-27 [67+ AIIMS Selections]',
   description:
-    'Top NEET coaching in Delhi NCR with AIIMS-trained faculty. 98% success rate, 67+ AIIMS selections. Delhi, Noida, Gurgaon centers. Book FREE demo class today!',
+    'Top NEET coaching in Delhi NCR with AIIMS-trained faculty. 98% success rate, 67+ AIIMS selections. Delhi, Gurugram & Faridabad centres + live online. Book FREE demo class today!',
   keywords: [
     'best neet coaching delhi ncr',
     'neet coaching delhi',
@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Best NEET Coaching in Delhi NCR 2026-27 [67+ AIIMS Selections]',
-    description: 'AIIMS-trained faculty, 98% success rate. Delhi, Noida, Gurgaon. Book FREE demo!',
+    description:
+      'AIIMS-trained faculty, 98% success rate. Delhi, Gurugram & Faridabad centres + live online. Book FREE demo!',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/best-neet-coaching-delhi-ncr',
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best NEET Coaching Delhi NCR [67+ AIIMS Selections]',
-    description: 'AIIMS-trained faculty, 98% success rate, Delhi-Noida-Gurgaon!',
+    description: 'AIIMS-trained faculty, 98% success rate, Delhi-Gurugram-Faridabad + live online!',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/best-neet-coaching-delhi-ncr',

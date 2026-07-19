@@ -155,9 +155,9 @@ export default async function BiologyOlympiadHubPage() {
                   Taught by AIIMSonian biology specialists
                 </h2>
                 <p className="mt-2 max-w-2xl text-sm text-white/80">
-                  Cerebrum runs four offline centres in India (Rohini, Gurugram, South Delhi,
-                  Faridabad) and live online programmes in 27 countries. Faculty are AIIMS-trained;
-                  the senior cohort is taught by Dr. Shekhar himself.
+                  Cerebrum runs five offline centres in India (Rohini, Gurugram, Green Park, South
+                  Delhi, Faridabad) and live online programmes in 27 countries. Faculty are
+                  AIIMS-trained; the senior cohort is taught by Dr. Shekhar himself.
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">

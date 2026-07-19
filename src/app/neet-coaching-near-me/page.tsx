@@ -6,7 +6,7 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 export const metadata: Metadata = {
   title: 'NEET Coaching Near Me 2026 | Find Best NEET Biology Classes Nearby | Delhi NCR',
   description:
-    'Find the best NEET coaching near you in Delhi NCR. 4 centers: South Extension, Rohini, Gurugram, Faridabad. AIIMS faculty, 98% success rate, 15-student batches. Online classes for all India. Book FREE demo.',
+    'Find the best NEET coaching near you in Delhi NCR. 5 centers: South Extension, Green Park, Rohini, Gurugram, Faridabad. AIIMS faculty, 98% success rate, 15-student batches. Online classes for all India. Book FREE demo.',
   keywords: [
     'neet coaching near me',
     'best neet coaching near me',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Coaching Near Me 2026 | Best Biology Classes in Delhi NCR',
     description:
-      'Find NEET coaching near you. 4 centers in Delhi NCR + online for all India. 98% success rate. Book FREE demo.',
+      'Find NEET coaching near you. 5 centers in Delhi NCR + online for all India. 98% success rate. Book FREE demo.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-near-me',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Near Me 2026 | Find Best NEET Biology Classes Nearby | Delhi NCR',
     description:
-      'Find the best NEET coaching near you in Delhi NCR. 4 centers: South Extension, Rohini, Gurugram, Faridabad. AIIMS faculty, 98% success rate, 15-student batches. Online classes for all India. Book F...',
+      'Find the best NEET coaching near you in Delhi NCR. 5 centers: South Extension, Green Park, Rohini, Gurugram, Faridabad. AIIMS faculty, 98% success rate, 15-student batches. Online classes for all India. Book F...',
   },
 }
 
@@ -85,7 +85,7 @@ const faqs = [
   {
     question: 'Where is the best NEET coaching near me?',
     answer:
-      'Cerebrum Biology Academy has 4 centers across Delhi NCR — South Extension (flagship), Rohini, Gurugram Sector 51, and Faridabad Sector 17. All centers have AIIMS-trained faculty, small batches (15-20 students), and 98% success rate. Find your nearest center above or call +91 88264 44334.',
+      'Cerebrum Biology Academy has 5 centers across Delhi NCR — South Extension (flagship), Green Park, Rohini, Gurugram Sector 51, and Faridabad Sector 17. All centers have AIIMS-trained faculty, small batches (15-20 students), and 98% success rate. Find your nearest center above or call +91 88264 44334.',
   },
   {
     question: 'Do you offer online NEET coaching for students outside Delhi NCR?',
@@ -105,7 +105,7 @@ const faqs = [
   {
     question: 'Can I take a free demo class before joining?',
     answer:
-      'Yes! We offer FREE demo classes at all 4 centers and online. Book via WhatsApp (+91 88264 44334) or visit cerebrumbiologyacademy.com/demo-booking. Demo includes a live Biology lecture + counselling session.',
+      'Yes! We offer FREE demo classes at all 5 centers and online. Book via WhatsApp (+91 88264 44334) or visit cerebrumbiologyacademy.com/demo-booking. Demo includes a live Biology lecture + counselling session.',
   },
 ]
 
@@ -115,7 +115,7 @@ export default function NEETCoachingNearMePage() {
     '@type': 'EducationalOrganization',
     name: 'Cerebrum Biology Academy',
     description:
-      'Best NEET coaching near you in Delhi NCR. 4 centers with AIIMS faculty, 98% success rate, small batches.',
+      'Best NEET coaching near you in Delhi NCR. 5 centers with AIIMS faculty, 98% success rate, small batches.',
     url: 'https://cerebrumbiologyacademy.com',
     telephone: CONTACT_INFO.phone.primary,
     areaServed: [
@@ -160,7 +160,7 @@ export default function NEETCoachingNearMePage() {
         <section className="bg-gradient-to-br from-blue-700 via-indigo-700 to-purple-800 text-white py-16">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <span className="inline-flex items-center gap-2 bg-white/15 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              <MapPin className="w-4 h-4" />4 Centers in Delhi NCR + Online All India
+              <MapPin className="w-4 h-4" />5 Centers in Delhi NCR + Online All India
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               NEET Coaching <span className="text-yellow-300">Near Me</span>

@@ -45,7 +45,7 @@ const config: BestVerticalConfig = {
   intro:
     'The best biology classes for NEET 2027 require three things together: AIIMS-trained faculty, biology-only specialisation (no Physics / Chemistry rotation), and small batches that allow individual attention. Cerebrum Biology Academy is the only major institute in India that combines all three — and our 12-year track record (since 2014) backs the claim.',
   clusterSummary:
-    '680+ medical college selections · 98% NEET-UG qualification · 485+ verified 5-star reviews · 6 Delhi NCR centres + pan-India online.',
+    '680+ medical college selections · 98% NEET-UG qualification · 485+ verified 5-star reviews · 5 Delhi NCR centres + pan-India online.',
   credentials: [
     { label: '#1 Biology-Only Brand' },
     { label: 'AIIMS-Trained Faculty' },

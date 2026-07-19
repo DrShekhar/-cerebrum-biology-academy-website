@@ -4,7 +4,7 @@ import { BestVerticalLanding, type BestVerticalConfig } from '@/components/seo/B
 export const metadata: Metadata = {
   title: 'Best NEET Foundation Tutor for Class 9 & 10 Biology | AIIMS-Trained Dr. Shekhar',
   description:
-    'Best NEET Foundation tutor for Class 9 and Class 10 — Dr. Shekhar C Singh (AIIMS Delhi). Early NEET pathway with biology + CBSE/ICSE board parallel track. ₹35K–₹95K/year, batches of 15–20, online + 6 NCR centres.',
+    'Best NEET Foundation tutor for Class 9 and Class 10 — Dr. Shekhar C Singh (AIIMS Delhi). Early NEET pathway with biology + CBSE/ICSE board parallel track. ₹35K–₹95K/year, batches of 15–20, online + 5 NCR centres.',
   keywords: [
     'best neet foundation tutor',
     'best neet foundation tutor india',
@@ -56,7 +56,7 @@ const config: BestVerticalConfig = {
     { label: 'CBSE + ICSE Coverage' },
     { label: '15-20 Student Batches' },
     { label: '4-Year NEET Trajectory' },
-    { label: '6 NCR Centres + Online' },
+    { label: '5 NCR Centres + Online' },
     { label: 'Early NCERT Mapping' },
   ],
   pages: [
@@ -132,7 +132,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Online + 6 NCR Offline Centres (Family-Friendly Scheduling)',
       description:
-        'Class 9-10 students often have school + sports + extracurriculars + family obligations. Cerebrum runs Foundation batches in 2-hour weekend-friendly slots (Saturday morning, Sunday morning, weekday evening 6-8 PM IST). Six offline centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad, Noida) support offline-first Foundation batches; pan-India and NRI students get online live (not recorded) batches with the same AIIMS-trained faculty.',
+        'Class 9-10 students often have school + sports + extracurriculars + family obligations. Cerebrum runs Foundation batches in 2-hour weekend-friendly slots (Saturday morning, Sunday morning, weekday evening 6-8 PM IST). Five offline centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad) support offline-first Foundation batches; pan-India and NRI students get online live (not recorded) batches with the same AIIMS-trained faculty.',
     },
   ],
   testimonials: [
@@ -187,7 +187,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Can NEET Foundation be done online for Class 9-10 students?',
       answer:
-        'Yes. Cerebrum runs both offline Foundation batches (6 Delhi NCR centres — South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) and pan-India online live (not recorded) Foundation batches with the same AIIMS-trained faculty. Online Foundation is particularly valuable for students in cities without strong Foundation infrastructure (Tier 2-3 cities, smaller metros), NRI families abroad, or students with heavy school + extracurricular schedules. Sessions are 2 hours, twice weekly, in weekend-friendly slots (Saturday morning, Sunday morning, weekday evening 6-8 PM IST).',
+        'Yes. Cerebrum runs both offline Foundation batches (5 Delhi NCR centres — South Extension, Rohini, Green Park, Gurugram, Faridabad) and pan-India online live (not recorded) Foundation batches with the same AIIMS-trained faculty. Online Foundation is particularly valuable for students in cities without strong Foundation infrastructure (Tier 2-3 cities, smaller metros), NRI families abroad, or students with heavy school + extracurricular schedules. Sessions are 2 hours, twice weekly, in weekend-friendly slots (Saturday morning, Sunday morning, weekday evening 6-8 PM IST).',
     },
   ],
   knowsAbout: [

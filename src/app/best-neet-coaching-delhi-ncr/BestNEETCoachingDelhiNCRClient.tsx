@@ -178,7 +178,7 @@ const faqs = [
   {
     question: 'Do you have centers in Noida and Gurgaon?',
     answer:
-      'Yes! We have 4 centers - South Extension, Rohini (DC Chowk), Gurugram (M2K Corporate Park, Sector 51), Faridabad, Green Park, and Noida. All centers are well-connected. We also offer online classes for students across India.',
+      'We have 5 centers - South Extension, Rohini (DC Chowk), Green Park, Gurugram (M2K Corporate Park, Sector 51), and Faridabad. All centers are well-connected. Noida students learn through live online classes with the same faculty, and online classes are open to students across India.',
   },
   {
     question: 'Is there a free demo class available?',

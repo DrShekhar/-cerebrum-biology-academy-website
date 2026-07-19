@@ -149,7 +149,7 @@ const config: BestVerticalConfig = {
     {
       question: "Are Cerebrum's NEET biology video lectures by AIIMS faculty?",
       answer:
-        'Yes. Recorded video lectures are by Dr. Shekhar C Singh (AIIMS New Delhi alumnus, founder) and senior biology faculty. Same faculty as the offline batches at 6 Delhi NCR centres. AIIMS clinical correlations embedded in Physiology, Genetics and Biotechnology chapters.',
+        'Yes. Recorded video lectures are by Dr. Shekhar C Singh (AIIMS New Delhi alumnus, founder) and senior biology faculty. Same faculty as the offline batches at 5 Delhi NCR centres. AIIMS clinical correlations embedded in Physiology, Genetics and Biotechnology chapters.',
     },
     {
       question: 'How are video lectures different from live online classes for NEET?',

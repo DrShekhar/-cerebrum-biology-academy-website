@@ -5,7 +5,7 @@ import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 export const metadata: Metadata = {
   title: 'Top 10 Biology Coaching in Delhi NCR 2026 | Honest Ranking',
   description:
-    'Honest 2026 ranking of the top 10 biology coaching institutes in Delhi NCR. Cerebrum Biology Academy #1 with 98% NEET qualification, AIIMS faculty, 6 NCR centres. Compare batch sizes, fees, faculty, results.',
+    'Honest 2026 ranking of the top 10 biology coaching institutes in Delhi NCR. Cerebrum Biology Academy #1 with 98% NEET qualification, AIIMS faculty, 5 NCR centres. Compare batch sizes, fees, faculty, results.',
   keywords: [
     'top 10 biology coaching delhi ncr',
     'best biology coaching delhi ncr',

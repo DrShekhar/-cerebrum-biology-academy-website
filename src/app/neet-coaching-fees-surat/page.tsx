@@ -83,7 +83,7 @@ export default function Page() {
     },
     {
       question: `Is there a ${city.displayName} offline center?`,
-      answer: `Cerebrum runs 4 offline centers (South Extension Delhi, Rohini Delhi, Gurugram, Faridabad). For ${city.displayName} students, the programme is 100% live online via Zoom — same faculty, same curriculum, same pricing as the offline centers. Study material shipped to your ${city.displayName} address.`,
+      answer: `Cerebrum runs 5 offline centers (South Extension Delhi, Green Park Delhi, Rohini Delhi, Gurugram, Faridabad). For ${city.displayName} students, the programme is 100% live online via Zoom — same faculty, same curriculum, same pricing as the offline centers. Study material shipped to your ${city.displayName} address.`,
     },
     {
       question: `What's included in the Rs 76,000 Ascent tier for ${city.displayName} students?`,

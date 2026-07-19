@@ -297,7 +297,7 @@ export function WebsiteSchema() {
         '@type': 'WebPage',
         name: 'All Locations',
         url: 'https://cerebrumbiologyacademy.com/all-locations',
-        description: '6 coaching centers in Delhi NCR plus online classes pan-India',
+        description: '5 coaching centers in Delhi NCR plus online classes pan-India',
       },
       {
         '@type': 'WebPage',
