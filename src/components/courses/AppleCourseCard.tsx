@@ -52,6 +52,7 @@ export function AppleCourseCard({ course, selectedTier = 'ascent' }: AppleCourse
 
   const getClassEmoji = (targetClass: string) => {
     const emojiMap = {
+      '6-8': '🐣',
       '9th': '🌱',
       '10th': '🌿',
       '11th': '🎯',

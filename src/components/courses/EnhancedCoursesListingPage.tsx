@@ -44,6 +44,14 @@ const courseFAQs = [
 
 // Map URL query param values to internal ClassLevel values
 const classParamMap: Record<string, ClassLevel> = {
+  'class-6': '6-8',
+  'class-7': '6-8',
+  'class-8': '6-8',
+  'foundation-6': '6-8',
+  'foundation-7': '6-8',
+  'foundation-8': '6-8',
+  'pre-foundation': '6-8',
+  '6-8': '6-8',
   'class-9': '9th',
   'class-10': '10th',
   'class-11': '11th',
@@ -85,6 +93,7 @@ export function EnhancedCoursesListingPage() {
   // Calculate course counts for each class
   const courseCounts = useMemo(() => {
     const counts: Record<ClassLevel, number> = {
+      '6-8': 0,
       '9th': 0,
       '10th': 0,
       '11th': 0,

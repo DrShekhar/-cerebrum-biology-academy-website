@@ -162,6 +162,220 @@ const calculatePaymentOptions = (basePrice: number): PaymentOptions => {
 
 // Course Programs Data
 export const coursePrograms: CourseProgram[] = [
+  // Class 6-8 Pre-Foundation (early start — NEET + Olympiad + Science foundation)
+  {
+    id: 'pre-foundation-class-6-8-biology',
+    name: 'Class 6-8 Pre-Foundation Biology',
+    description:
+      'The earliest, calmest start for a future in medicine, research or the top global universities. For Class 6, 7 and 8 we build three things together — a genuine curiosity-led science foundation, an early NEET base, and Olympiad-level thinking (NSO/NSEJS toward the Biology Olympiad ladder). Live online, all boards (CBSE/ICSE/IB/state), AIIMS-trained faculty, small warm batches, no exam pressure. Fees are the same for Class 6, 7 and 8.',
+    targetClass: '6-8',
+    duration: '1 year',
+    teachingHours: 3,
+    learningMode: ['Online', 'Hybrid'],
+    tiers: {
+      pinnacle: {
+        price: 90000,
+        batchSize: 8,
+        features: courseTiers[0].features,
+        payment: calculatePaymentOptions(90000),
+        additionalBenefits: [
+          'Personal mentor & monthly parent connect',
+          'Individual Olympiad (NSO/NSEJS) mentoring track',
+          'Guidance on the path to top colleges (India & abroad)',
+        ],
+        enrollmentBonus: ['Free explore-biology starter kit', 'Curiosity project pack'],
+      },
+      ascent: {
+        price: 60000,
+        batchSize: 14,
+        features: courseTiers[1].features,
+        payment: calculatePaymentOptions(60000),
+        additionalBenefits: ['Weekly group doubt support', 'Olympiad (NSO) enrichment sessions'],
+      },
+      pursuit: {
+        price: 45000,
+        batchSize: 22,
+        features: courseTiers[2].features,
+        payment: calculatePaymentOptions(45000),
+        additionalBenefits: [
+          'All-boards concept-first teaching',
+          'Recordings & notes for revision',
+        ],
+      },
+    },
+    curriculum: {
+      totalModules: 6,
+      totalHours: 120,
+      practicalHours: 40,
+      testCount: 12,
+      modules: [
+        {
+          id: 'pf-mod-1',
+          title: 'The Living World Around Us',
+          description:
+            'Wonder-first exploration of life — what makes something living, and how we study it',
+          duration: 20,
+          topics: [
+            'Living vs non-living',
+            'Habitats and adaptation',
+            'Observing nature scientifically',
+            'Why biology matters for medicine & research',
+          ],
+          learningObjectives: [
+            'Grow genuine curiosity about living things',
+            'Observe and ask scientific questions',
+            'Connect biology to real-world careers',
+          ],
+          practicalWork: ['Nature observation journal', 'Simple habitat study'],
+        },
+        {
+          id: 'pf-mod-2',
+          title: 'Cells & the Building Blocks of Life',
+          description: 'The cell as the unit of life — age-appropriate, concept-first',
+          duration: 20,
+          topics: [
+            'What cells are',
+            'Plant vs animal cells',
+            'Using a microscope',
+            'Cells to organisms',
+          ],
+          learningObjectives: [
+            'Understand cells as life’s building blocks',
+            'Build early NEET-level concept clarity',
+            'Develop microscope and observation skills',
+          ],
+          practicalWork: ['Guided microscopy', 'Onion-peel cell observation'],
+        },
+        {
+          id: 'pf-mod-3',
+          title: 'Plants, Animals & How Bodies Work',
+          description: 'Diversity of life and the basics of how living bodies function',
+          duration: 20,
+          topics: [
+            'Classification made simple',
+            'Plant parts and functions',
+            'Nutrition, breathing and movement',
+            'The human body — a first look',
+          ],
+          learningObjectives: [
+            'Classify common organisms',
+            'Understand basic life processes',
+            'Lay the base for Class 9-10 physiology',
+          ],
+          practicalWork: ['Leaf and flower study', 'Body-systems model activity'],
+        },
+        {
+          id: 'pf-mod-4',
+          title: 'Science Skills & Experiments',
+          description: 'The scientific method, safe experiments, and thinking like a scientist',
+          duration: 20,
+          topics: [
+            'Asking questions and forming hypotheses',
+            'Designing simple experiments',
+            'Recording and interpreting results',
+            'Lab safety and ethics',
+          ],
+          learningObjectives: [
+            'Think and reason scientifically',
+            'Build experiment-design skills',
+            'Develop research aptitude for the future',
+          ],
+          practicalWork: ['Design-your-own experiment', 'Results write-up'],
+        },
+        {
+          id: 'pf-mod-5',
+          title: 'Olympiad Thinking (NSO / NSEJS Foundation)',
+          description:
+            'Gentle, enjoyable exposure to Olympiad-style problem solving for keen learners',
+          duration: 20,
+          topics: [
+            'Science Olympiad (NSO) question patterns',
+            'Logical reasoning in biology',
+            'Data and diagram interpretation',
+            'The road to the Biology Olympiad (NSEB → INBO → IBO)',
+          ],
+          learningObjectives: [
+            'Enjoy Olympiad-style challenges',
+            'Build analytical and reasoning skills',
+            'See the long-term olympiad pathway',
+          ],
+          practicalWork: ['Olympiad practice sets', 'Reasoning puzzles'],
+        },
+        {
+          id: 'pf-mod-6',
+          title: 'Bridge to Class 9 Foundation',
+          description: 'A calm on-ramp into the NEET foundation programme, without pressure',
+          duration: 20,
+          topics: [
+            'How school biology connects to NEET',
+            'NCERT framing — a first introduction',
+            'Building study habits early',
+            'Planning the road to medical & research careers',
+          ],
+          learningObjectives: [
+            'Transition smoothly into Class 9 Foundation',
+            'Understand the long-term NEET pathway',
+            'Own strong, unhurried study habits',
+          ],
+          practicalWork: ['Personal learning plan', 'Concept-map project'],
+        },
+      ],
+    },
+    schedule: {
+      daysPerWeek: 2,
+      hoursPerDay: 1.5,
+      timing: ['4:00 PM - 5:30 PM', '5:30 PM - 7:00 PM'],
+      flexibility: 'Weekend-friendly and after-school slots',
+      makeupClasses: true,
+      holidaySchedule: 'No classes on major holidays',
+    },
+    faculty: [
+      {
+        id: 'fac-001',
+        name: 'Dr. Shekhar C Singh',
+        qualification: ['AIIMS New Delhi Alumnus'],
+        experience: '15+ years',
+        specialization: ['Biology Foundation', 'NEET Biology', 'Olympiad Mentoring'],
+        rating: 5.0,
+        teachingExperience: '15+ years in biology teaching',
+        achievementHighlights: [
+          'AIIMS New Delhi Alumnus',
+          'Founder, Cerebrum Biology Academy',
+          'Mentored 15,000+ students',
+          '98% NEET qualification rate',
+        ],
+      },
+    ],
+    prerequisites: ['Curiosity about the living world', 'No prior coaching needed'],
+    learningOutcomes: [
+      'Genuine curiosity and clear early biology concepts',
+      'Scientific reasoning and research aptitude',
+      'Olympiad-style problem-solving (NSO/NSEJS foundation)',
+      'A strong, unhurried base for NEET and top-college pathways',
+    ],
+    testimonials: [],
+    faq: [
+      {
+        id: 'pf-faq-1',
+        question: 'Is Class 6-8 too early to start?',
+        answer:
+          'No — at this age the goal is curiosity and concepts, not exam pressure. Starting early spreads biology learning over years and builds the calmest, strongest foundation for NEET, Olympiads and top-college pathways later.',
+        category: 'general',
+        order: 1,
+      },
+      {
+        id: 'pf-faq-2',
+        question: 'What does the programme prepare my child for?',
+        answer:
+          'Three things at once: an early NEET biology base, Olympiad-level thinking (NSO/NSEJS toward the Biology Olympiad ladder), and a genuine science foundation that keeps every future open — medicine, research, biotechnology, and admission to top universities in India and abroad.',
+        category: 'general',
+        order: 2,
+      },
+    ],
+    specialBadge: 'Early Start',
+    isFeatured: true,
+  },
+
   // Class 9th Foundation Courses
   {
     id: 'class-9-foundation-biology',

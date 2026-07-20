@@ -239,6 +239,7 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
   // Calculate course counts for each class
   const courseCounts = useMemo(() => {
     const counts: Record<ClassLevel, number> = {
+      '6-8': 0,
       '9th': 0,
       '10th': 0,
       '11th': 0,
