@@ -65,7 +65,6 @@ const achievements = [
   'Author of "NEET Biology Made Easy" study material',
   'Guest lecturer at medical colleges across Delhi NCR',
   'YouTube channel with 50,000+ subscribers',
-  'Featured in Education Times and Career360',
   '98% consistent NEET qualification rate over 15 years',
 ]
 
