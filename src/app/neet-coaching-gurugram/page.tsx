@@ -58,13 +58,20 @@ const areasForAccordion: AreaCardData[] = getAllGurugramAreaSlugs().map((slug) =
   }
 })
 
-// Internal-link grid: only the indexable locality pages
-// (INDEXABLE_GURUGRAM_LOCALITIES is the SoT that also feeds the sitemap).
-const indexableLocalityLinks = INDEXABLE_GURUGRAM_LOCALITIES.map((slug) => ({
-  slug,
-  name: getGurugramAreaBySlug(slug)?.name || slug,
-  distance: getGurugramAreaBySlug(slug)?.distanceFromCenter || '',
-})).sort((a, b) => a.name.localeCompare(b.name))
+// Internal-link grid: the indexable locality pages
+// (INDEXABLE_GURUGRAM_LOCALITIES is the SoT that also feeds the sitemap), plus
+// the three localities served by a richer standalone page (their /[area] twins
+// 301 to these — see areaPageConsolidationRedirects).
+const indexableLocalityLinks = [
+  ...INDEXABLE_GURUGRAM_LOCALITIES.map((slug) => ({
+    name: getGurugramAreaBySlug(slug)?.name || slug,
+    href: `/neet-coaching-gurugram/${slug}`,
+    distance: getGurugramAreaBySlug(slug)?.distanceFromCenter || '',
+  })),
+  { name: 'DLF Phase 1', href: '/neet-coaching-dlf-phase-1-gurugram', distance: '15 min' },
+  { name: 'Sushant Lok', href: '/neet-coaching-sushant-lok-gurugram', distance: '15 min' },
+  { name: 'South City', href: '/neet-coaching-south-city-gurugram', distance: '12 min' },
+].sort((a, b) => a.name.localeCompare(b.name))
 
 const gurugramLocalities = [
   // ULTRA-PREMIUM LOCALITIES (Golf Course Road + DLF Phases)
@@ -558,8 +565,8 @@ export default function NeetCoachingGurugramPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {indexableLocalityLinks.map((loc) => (
               <Link
-                key={loc.slug}
-                href={`/neet-coaching-gurugram/${loc.slug}`}
+                key={loc.href}
+                href={loc.href}
                 className="group flex items-center justify-between gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-800 transition hover:border-green-400 hover:bg-green-50 hover:text-green-800"
               >
                 <span>NEET Coaching in {loc.name}</span>

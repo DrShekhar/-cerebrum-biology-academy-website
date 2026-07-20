@@ -2972,6 +2972,25 @@ export const rohiniConsolidationRedirects = [
 
 // Total: 186 area→city redirects
 export const areaPageConsolidationRedirects = [
+  // Cannibalization fix (Jul 2026): 3 localities had both a templated
+  // /neet-coaching-gurugram/[area] page AND a richer, hyperlocal standalone
+  // page. Consolidate onto the standalone (better content) — redirect the
+  // [area] duplicate to it, and drop it from INDEXABLE_GURUGRAM_LOCALITIES.
+  {
+    source: '/neet-coaching-gurugram/sushant-lok',
+    destination: '/neet-coaching-sushant-lok-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/dlf-phase-1',
+    destination: '/neet-coaching-dlf-phase-1-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/south-city-1',
+    destination: '/neet-coaching-south-city-gurugram',
+    permanent: true,
+  },
   // neet-coaching-noida area pages (34)
   {
     source: '/neet-coaching-noida/sector-18',

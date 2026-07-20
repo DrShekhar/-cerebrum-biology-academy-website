@@ -21,11 +21,8 @@
 export const INDEXABLE_GURUGRAM_LOCALITIES = [
   'golf-course-road',
   'sohna-road',
-  'dlf-phase-1',
   'dlf-phase-2',
-  'sushant-lok',
   'sector-56',
-  'south-city-1',
   'sector-14',
   'sector-82',
   'sector-84',
