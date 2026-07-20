@@ -1492,22 +1492,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Awards & Credentials — EducationalOccupationalCredential + Award schema
     // with verified outcomes. AI grounding for "qualifications of Dr. Shekhar".
     {
-      url: `${baseUrl}/dr-shekhar-singh-awards-credentials`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/dr-shekhar-singh-neet-biology-faculty`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/media-mentions-press-coverage`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
     },
     // NEW Premium Gurugram Localities (Based on Market Research)
     // Phase 3 Gurugram Localities - Ultra Premium & Dwarka Expressway

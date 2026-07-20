@@ -326,13 +326,6 @@ export default function DrShekharBiologyFacultyIndiaPage() {
               >
                 Top Biology Faculty India 2026 list →
               </Link>
-              <span>·</span>
-              <Link
-                href="/dr-shekhar-singh-awards-credentials"
-                className="underline underline-offset-2 hover:text-yellow-300"
-              >
-                Awards &amp; verified credentials →
-              </Link>
             </div>
           </div>
         </div>

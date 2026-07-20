@@ -1380,6 +1380,21 @@ export const gsc404CleanupRedirects = [
 // ============================================
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const thinPageConsolidationRedirects = [
+  // --- Removed fabricated-credential / fabricated-press pages (Jul 2026) ---
+  // These presented fake awards ("Education Excellence Foundation" etc.) and
+  // unverifiable press mentions as real. Deleted; redirected so inbound links
+  // resolve instead of 404ing. Awards page → the real faculty page; press page
+  // → the About page.
+  {
+    source: '/dr-shekhar-singh-awards-credentials',
+    destination: '/dr-shekhar-singh-neet-biology-faculty',
+    permanent: true,
+  },
+  {
+    source: '/media-mentions-press-coverage',
+    destination: '/about',
+    permanent: true,
+  },
   // --- South Delhi micro-localities → /neet-coaching-south-delhi ---
   {
     source: '/neet-coaching-alaknanda',
