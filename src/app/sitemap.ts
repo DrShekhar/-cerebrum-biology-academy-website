@@ -6,6 +6,7 @@ import { campbellUnits } from '@/data/campbell-biology/units'
 import { citySlugs as ibBiologyCitySlugs } from '@/data/ib-biology/cities'
 import { aLevelCitySlugs } from '@/data/a-level/cities'
 import { ibBiologySchoolSlugs } from '@/data/ib-biology/schools'
+import { apBiologySchoolSlugs } from '@/data/ap-biology/schools'
 import { mcatMetroSlugs } from '@/data/mcat/metros'
 import { datMetroSlugs } from '@/data/dat/metros'
 import { BRAIN_BEE_CITIES } from '@/data/brain-bee/brainBeeCities'
@@ -341,7 +342,9 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ap-biology-tutor-hunter-college-hs' ||
     // IB Biology per-school feeder pages — same tier as AP schools.
     // Dynamically checked against ibBiologySchoolSlugs from schools.ts
-    ibBiologySchoolSlugs.some((slug) => path === `/ib-biology-tutor-${slug}`)
+    ibBiologySchoolSlugs.some((slug) => path === `/ib-biology-tutor-${slug}`) ||
+    // AP Biology per-school feeder pages (US + Gurgaon), dynamic from schools.ts
+    apBiologySchoolSlugs.some((slug) => path === `/ap-biology-tutor-${slug}`)
   ) {
     return 0.7
   }
@@ -3442,6 +3445,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.7,
     },
+    // AP Biology Gurgaon per-school feeder pages (India). These schools run
+    // IB / Cambridge / CBSE, not AP; the pages target students self-studying AP
+    // Biology for US college applications.
+    ...[
+      'pathways-aravali',
+      'shri-ram-aravali',
+      'heritage-xperiential-gurgaon',
+      'dps-international-gurgaon',
+      'scottish-high-gurgaon',
+      'gd-goenka-world-gurgaon',
+      'lancers-gurgaon',
+    ].map((slug) => ({
+      url: `${baseUrl}/ap-biology-tutor-${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
     // AP Biology cornerstone content — pedagogy moat. Priority 0.9 via
     // normalizePriority (high-authority content spokes that link out
     // to all 20 metro/school pages).
@@ -8165,6 +8185,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'biology-class-11-gurugram',
     'biology-class-12-gurugram',
     'board-exam-biology-gurugram',
+    // Gurugram standalone locality pages — rich, hyperlocal content
+    // (route/metro/traffic FAQs); promoted from orphan status. Their /[area]
+    // twins redirect to the hub, so no cannibalization. (HUDA City Centre is
+    // intentionally excluded — its /[area] twin plus the indexed -metro page
+    // already cover it; the orphan -gurugram 301s to -metro.)
+    'neet-coaching-cyber-city-gurugram',
+    'neet-coaching-mg-road-gurugram',
+    'neet-coaching-iffco-chowk-gurugram',
+    'neet-coaching-pataudi-road-gurugram',
     // Company
   ]
 

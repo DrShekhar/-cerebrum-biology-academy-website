@@ -120,6 +120,15 @@ export const AREA_COORDINATES: Record<string, { lat: number; lng: number }> = {
  * Coverage: 20km radius
  */
 export const GURUGRAM_AREA_COORDINATES: Record<string, { lat: number; lng: number }> = {
+  // New Gurugram / Dwarka Expressway sectors not already listed below
+  // (approximate locality midpoints for the areaServed GeoCircle only; the
+  // business geo is pinned to the real Sector 51 centre).
+  'sector-92': { lat: 28.416, lng: 76.94 },
+  'sector-95': { lat: 28.431, lng: 76.96 },
+  'sector-102': { lat: 28.5, lng: 76.981 },
+  'sector-106': { lat: 28.521, lng: 76.991 },
+  'sector-108': { lat: 28.526, lng: 76.995 },
+
   // Ultra-Premium Areas
   'golf-course-road': { lat: 28.4365, lng: 77.064 },
   'dlf-phase-1': { lat: 28.4744, lng: 77.0856 },

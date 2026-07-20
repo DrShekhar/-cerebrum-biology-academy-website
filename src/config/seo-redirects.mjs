@@ -1380,6 +1380,15 @@ export const gsc404CleanupRedirects = [
 // ============================================
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const thinPageConsolidationRedirects = [
+  // HUDA City Centre cannibalization (Jul 2026): the orphan
+  // /neet-coaching-huda-city-centre-gurugram overlapped the already-indexed,
+  // metro-system-integrated /neet-coaching-huda-city-centre-metro. Consolidate
+  // onto the -metro page (kept in sitemap) to avoid a duplicate.
+  {
+    source: '/neet-coaching-huda-city-centre-gurugram',
+    destination: '/neet-coaching-huda-city-centre-metro',
+    permanent: true,
+  },
   // --- Removed fabricated-credential / fabricated-press pages (Jul 2026) ---
   // These presented fake awards ("Education Excellence Foundation" etc.) and
   // unverifiable press mentions as real. Deleted; redirected so inbound links
@@ -2972,6 +2981,25 @@ export const rohiniConsolidationRedirects = [
 
 // Total: 186 area→city redirects
 export const areaPageConsolidationRedirects = [
+  // Cannibalization fix (Jul 2026): 3 localities had both a templated
+  // /neet-coaching-gurugram/[area] page AND a richer, hyperlocal standalone
+  // page. Consolidate onto the standalone (better content) — redirect the
+  // [area] duplicate to it, and drop it from INDEXABLE_GURUGRAM_LOCALITIES.
+  {
+    source: '/neet-coaching-gurugram/sushant-lok',
+    destination: '/neet-coaching-sushant-lok-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/dlf-phase-1',
+    destination: '/neet-coaching-dlf-phase-1-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/south-city-1',
+    destination: '/neet-coaching-south-city-gurugram',
+    permanent: true,
+  },
   // neet-coaching-noida area pages (34)
   {
     source: '/neet-coaching-noida/sector-18',
@@ -3195,16 +3223,8 @@ export const areaPageConsolidationRedirects = [
     destination: '/neet-coaching-gurugram',
     permanent: true,
   },
-  {
-    source: '/neet-coaching-gurugram/sector-82',
-    destination: '/neet-coaching-gurugram',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurugram/sector-84',
-    destination: '/neet-coaching-gurugram',
-    permanent: true,
-  },
+  // sector-82 & sector-84 UN-REDIRECTED Jul 2026 — now indexable New Gurugram
+  // locality pages (see INDEXABLE_GURUGRAM_LOCALITIES in gurugram-enriched.ts).
   {
     source: '/neet-coaching-gurugram/sector-48',
     destination: '/neet-coaching-gurugram',

@@ -5427,7 +5427,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Students from 30+ nationalities; DP-only IB school (no PYP/MYP)',
     ],
     diplomaContext:
-      "Redlands runs the IB Diploma alongside the NSW HSC. In 2025 its strongest IB result converted to an ATAR of 99.95 and three students scored 44/45. The school publishes ATAR conversions and band achievements rather than a single mean point score.",
+      'Redlands runs the IB Diploma alongside the NSW HSC. In 2025 its strongest IB result converted to an ATAR of 99.95 and three students scored 44/45. The school publishes ATAR conversions and band achievements rather than a single mean point score.',
     collegeContext:
       'Redlands reports that roughly 20% of each cohort apply to universities abroad — in the US, UK, Europe and Asia — alongside the leading Australian universities (Sydney, UNSW, Melbourne, ANU, Monash). Alumni destinations cited by the school include Oxford, Cambridge, Stanford and Yale. For IB Biology HL students the common pathways are Australian and UK medicine and biomedical science, and US pre-med.',
     paceAlignment:
@@ -5557,7 +5557,8 @@ export const ibBiologySchools: IBBiologySchool[] = [
       "St Paul's runs the IB Diploma in the Sixth Form after Cambridge IGCSEs, toward the Northern-Hemisphere IB May exam session. We schedule live 1:1 sessions in BRT around the school day, align IA mentorship to the school’s internal deadlines, and drill the IB Biology Paper 1 / Paper 2 mark schemes with past-paper data-response practice.",
     faqs: [
       {
-        question: "How does the IGCSE-to-IB transition work at St Paul's, and where does Biology coaching help?",
+        question:
+          "How does the IGCSE-to-IB transition work at St Paul's, and where does Biology coaching help?",
         answer:
           'Students take Cambridge IGCSEs in Forms 4–5 then the IB Diploma in the Sixth Form. The step up to IB Biology HL — depth, the IA, and the Paper 2 long-response rubric — is where most coaching value sits. We bridge that transition with IB-specific technique work.',
       },
@@ -5596,7 +5597,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'DP'],
     historyParagraphs: [
       'The American International School of Johannesburg (AISJ) is an American international school founded in 1982, with its main campus in Bryanston near Sandton and a second campus in Pretoria. Accredited by the Middle States Association, it serves an international community drawn from around 80 nationalities, with English as the language of instruction.',
-      "AISJ was authorised for the IB in February 1994 — making it South Africa’s first IB World School. It offers the IB Diploma Programme in Grades 11–12 alongside a US high-school diploma, so students can graduate with both, and it is adding the IB Primary Years Programme as it moves toward becoming a full IB continuum school.",
+      'AISJ was authorised for the IB in February 1994 — making it South Africa’s first IB World School. It offers the IB Diploma Programme in Grades 11–12 alongside a US high-school diploma, so students can graduate with both, and it is adding the IB Primary Years Programme as it moves toward becoming a full IB continuum school.',
       'In the May 2025 session AISJ’s IB Diploma candidates averaged 33 points, above the world average of around 30, and roughly 96% of graduates continue to three- and four-year higher-education institutions — nearly half to the US and Canada, with the remainder largely to the UK and beyond.',
       'For AISJ families, specialist IB Biology coaching most often supports the Paper 1 / Paper 2 mark scheme and the Internal Assessment — translating strong American-style classroom work into the IB’s specific rubric. Our 1:1 sessions run in SAST around the school day.',
     ],
@@ -5752,6 +5753,63 @@ export const ibBiologySchools: IBBiologySchool[] = [
         question: 'When should an ICS student start?',
         answer:
           'Early in DP1 is ideal for full IA mentorship; exam-focused students can start later, focused on Paper 2 mark-scheme calibration and timed data-response practice for the May session.',
+      },
+    ],
+  },
+  {
+    slug: 'lancers-gurgaon',
+    schoolName: 'Lancers International School',
+    shortName: 'Lancers International',
+    cityCountry: 'Gurugram, India',
+    citySlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      'Lancers International School is an IB World School in Gurugram, on the Golf Course Road / Sector 53 corridor that also serves Sushant Lok, Nirvana Country (Sector 50) and the DLF phases. It offers the IB Diploma Programme in the senior school alongside a Cambridge (IGCSE) pathway in the middle years, drawing an internationally-minded, university-abroad-oriented student body.',
+      "Lancers' IB Biology students sit in a focused Diploma cohort taking Biology at HL or SL. Because most Lancers families are applying to universities abroad — the UK, US, Canada and Australia — the demand for external Biology tutoring is driven by the IB's assessment style rather than its content: turning strong conceptual understanding into marks against the Paper 2 long-response rubric, and running a clean, well-scored Internal Assessment (IA) through the DP1 investigation cycle.",
+      'For Lancers families the practical need is examiner-calibrated support that fits a demanding IB Diploma load. We coach IB Biology HL and SL online in IST evening slots (typically 7-9 PM), with weekly written feedback on long-response answers and criterion-by-criterion IA and Extended Essay (EE) mentorship. A meaningful share of Lancers students also want an IB+NEET dual track to keep Indian medical options open — an integrated weekly schedule that few India-based biology providers run.',
+    ],
+    reputationBullets: [
+      'IB World School in Gurugram offering the IB Diploma Programme',
+      'Cambridge (IGCSE) middle-years pathway feeding into the IB DP',
+      'Golf Course Road / Sector 53 corridor — Sushant Lok, Nirvana Country, DLF catchment',
+      'University-abroad-oriented cohort (UK / US / Canada / Australia applications)',
+      'IB Biology offered at HL and SL with the full IB practical programme',
+      'Strong IA / EE demand; a subset pursue the IB+NEET dual pathway',
+    ],
+    collegeContext:
+      'Lancers International IB graduates apply predominantly to universities abroad — UK (Russell Group, Imperial, UCL, Edinburgh, Warwick, KCL), US (Ivy+, top liberal-arts colleges, NYU, Berkeley, Michigan), Canada (McGill, Toronto, UBC) and Australia (Melbourne, Sydney) — with a subset keeping Indian options (Ashoka, Krea, Shiv Nadar, and AIIMS / state medical colleges for the IB+NEET dual-track students). Biology HL students most commonly target UK medicine, US pre-med, or biosciences, where a strong HL Biology grade plus a well-scored IA is a core part of the application.',
+    paceAlignment:
+      "Lancers follows the standard two-year IB Diploma cycle with the IA submission window in late DP1 / early DP2, and IST timezone aligns directly with our India-based live schedule. Sessions run in IST evenings (7-9 PM) or weekend morning blocks. IA mentorship maps to the school's DP1 IA proposal and draft deadlines; EE mentorship runs in parallel for the cohort taking Biology as their EE subject. For IB+NEET dual-track students we layer NEET Biology, Chemistry and Physics onto IB Biology HL on one weekly schedule, calibrated to avoid a burnout-level workload.",
+    faqs: [
+      {
+        question: 'Does Lancers International offer IB Biology at both HL and SL?',
+        answer:
+          'Lancers runs the IB Diploma Programme with Biology available at Higher Level and Standard Level. HL carries the extra depth (and the Option/AHL content) that pre-med and biosciences applicants usually need; SL suits students taking Biology as a supporting science. We coach both, and we help families decide between HL and SL based on the university course the student is targeting.',
+      },
+      {
+        question: 'What do Lancers IB Biology students most often need tutoring for?',
+        answer:
+          'Assessment technique rather than content. Lancers students generally understand the biology; the marks are won or lost on the Paper 2 long-response mark scheme and the Internal Assessment. Our weekly written feedback calibrates long-response answers to the IB rubric and takes the IA draft-by-draft through the four assessment criteria — which is where scores typically move from a 6 to a 7.',
+      },
+      {
+        question: 'Do you offer an IB + NEET dual track for Lancers students?',
+        answer:
+          'Yes. Some Lancers IB Biology HL students want to keep Indian medical options (AIIMS, state medical colleges) open alongside their abroad applications. We run an integrated weekly schedule that layers NEET Biology, Chemistry and Physics onto IB Biology HL — deliberately calibrated to avoid doubling the workload. It is one of the few such tracks offered by an India-based biology provider.',
+      },
+      {
+        question: 'Are the classes online or in person for a Lancers family?',
+        answer:
+          'Live online, in IST evening slots, so there is no Gurgaon commute — students join from home in Sushant Lok, Nirvana Country, Sector 53 or the DLF phases. Faculty are AIIMS-trained and biology-only, and each student gets weekly written feedback. An occasional in-person review at our South Extension hub in Delhi can be arranged on weekends for families who want it.',
+      },
+      {
+        question: 'How is IB Biology tutoring priced for a Lancers student?',
+        answer:
+          'IB-only: a complete year-long IB Biology programme (HL + SL, 150+ hours) with 1:1 elite tutoring, or a small-group batch at a lower hourly rate. IB+NEET: pricing scales with the added Chemistry and Physics coaching. India-resident families can choose INR domestic pricing; we share exact figures on a counselling call once we know the HL/SL choice and whether a NEET track is wanted.',
       },
     ],
   },

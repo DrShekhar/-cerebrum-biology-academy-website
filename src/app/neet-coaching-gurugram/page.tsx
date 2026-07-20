@@ -41,6 +41,7 @@ import { LocalityCues } from '@/components/seo/LocalityCues'
 import { delhiNCRLocalityCues } from '@/data/delhi-ncr-locality-cues'
 import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
 import { getAllGurugramAreaSlugs, getGurugramAreaBySlug } from '@/data/gurugram-areas'
+import { INDEXABLE_GURUGRAM_LOCALITIES } from '@/data/gurugram-enriched'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 import { CityLeadForm } from '@/components/seo/CityLeadForm'
@@ -56,6 +57,25 @@ const areasForAccordion: AreaCardData[] = getAllGurugramAreaSlugs().map((slug) =
     type: area?.type,
   }
 })
+
+// Internal-link grid: the indexable locality pages
+// (INDEXABLE_GURUGRAM_LOCALITIES is the SoT that also feeds the sitemap), plus
+// the three localities served by a richer standalone page (their /[area] twins
+// 301 to these — see areaPageConsolidationRedirects).
+const indexableLocalityLinks = [
+  ...INDEXABLE_GURUGRAM_LOCALITIES.map((slug) => ({
+    name: getGurugramAreaBySlug(slug)?.name || slug,
+    href: `/neet-coaching-gurugram/${slug}`,
+    distance: getGurugramAreaBySlug(slug)?.distanceFromCenter || '',
+  })),
+  { name: 'DLF Phase 1', href: '/neet-coaching-dlf-phase-1-gurugram', distance: '15 min' },
+  { name: 'Sushant Lok', href: '/neet-coaching-sushant-lok-gurugram', distance: '15 min' },
+  { name: 'South City', href: '/neet-coaching-south-city-gurugram', distance: '12 min' },
+  { name: 'Cyber City', href: '/neet-coaching-cyber-city-gurugram', distance: '10 min' },
+  { name: 'MG Road', href: '/neet-coaching-mg-road-gurugram', distance: '12 min' },
+  { name: 'IFFCO Chowk', href: '/neet-coaching-iffco-chowk-gurugram', distance: '12 min' },
+  { name: 'Pataudi Road', href: '/neet-coaching-pataudi-road-gurugram', distance: '20 min' },
+].sort((a, b) => a.name.localeCompare(b.name))
 
 const gurugramLocalities = [
   // ULTRA-PREMIUM LOCALITIES (Golf Course Road + DLF Phases)
@@ -531,6 +551,39 @@ export default function NeetCoachingGurugramPage() {
       />
 
       <LocalityCues {...delhiNCRLocalityCues.gurugram} />
+
+      {/* NEET Biology Coaching Across Gurugram — internal-link grid to the
+          indexable locality pages (also strengthens their crawl/index path). */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              NEET Biology Coaching Across Gurugram
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              From Old Gurugram and the Golf Course Road belt to New Gurugram and the Dwarka
+              Expressway — pick your area for local batches, distances and the online option, all
+              taught from our Sector 51 centre.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {indexableLocalityLinks.map((loc) => (
+              <Link
+                key={loc.href}
+                href={loc.href}
+                className="group flex items-center justify-between gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-800 transition hover:border-green-400 hover:bg-green-50 hover:text-green-800"
+              >
+                <span>NEET Coaching in {loc.name}</span>
+                {loc.distance ? (
+                  <span className="whitespace-nowrap text-xs text-gray-400 group-hover:text-green-600">
+                    {loc.distance}
+                  </span>
+                ) : null}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Why Gurugram Students Choose Us */}
       <section className="py-20 bg-white">
