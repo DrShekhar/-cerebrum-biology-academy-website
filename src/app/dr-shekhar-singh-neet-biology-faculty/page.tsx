@@ -65,7 +65,6 @@ const achievements = [
   'Author of "NEET Biology Made Easy" study material',
   'Guest lecturer at medical colleges across Delhi NCR',
   'YouTube channel with 50,000+ subscribers',
-  'Featured in Education Times and Career360',
   '98% consistent NEET qualification rate over 15 years',
 ]
 
@@ -432,8 +431,6 @@ export default function DrShekharSinghPage() {
               'Campbell Biology',
             ],
             award: [
-              'Best Biology Teacher Award 2022 — Education Excellence Foundation',
-              'NEET Educator of the Year 2023',
               '680+ Medical College Selections (AIIMS, JIPMER, AFMC, State Medical Colleges)',
               '98% NEET-UG Qualification Rate (15+ year track record)',
             ],

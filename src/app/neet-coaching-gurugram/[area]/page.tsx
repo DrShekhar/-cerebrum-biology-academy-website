@@ -217,18 +217,21 @@ export default async function GurugramAreaPage({ params }: PageProps) {
     priceRange: '₹40,000 - ₹1,80,000',
     image: 'https://cerebrumbiologyacademy.com/logo.png',
     parentOrganization: { '@id': organizationId },
+    // The business PHYSICALLY sits at the real Gurugram centre (M2K Sector 51).
+    // Pin address + geo to the centre so we never imply a branch inside each
+    // locality; the locality is expressed as coverage via areaServed/GeoCircle.
     address: {
       '@type': 'PostalAddress',
       streetAddress: GURUGRAM_CENTER_METRICS.address,
-      addressLocality: area.name,
-      addressRegion: 'Haryana',
-      postalCode: area.pincode,
+      addressLocality: GURUGRAM_CENTER_METRICS.locality,
+      addressRegion: GURUGRAM_CENTER_METRICS.region,
+      postalCode: GURUGRAM_CENTER_METRICS.pincode,
       addressCountry: 'IN',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: areaCoords.lat.toString(),
-      longitude: areaCoords.lng.toString(),
+      latitude: GURUGRAM_CENTER_METRICS.coordinates.latitude.toString(),
+      longitude: GURUGRAM_CENTER_METRICS.coordinates.longitude.toString(),
     },
     areaServed: {
       '@type': 'GeoCircle',

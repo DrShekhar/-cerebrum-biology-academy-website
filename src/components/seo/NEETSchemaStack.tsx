@@ -106,12 +106,7 @@ export function NEETSchemaStack({
   educationalLevel = 'NEET-UG Aspirant',
   priceCurrency = 'INR',
   personDescription = 'AIIMS Delhi alumnus and founder of Cerebrum Biology Academy (2014). 15+ years of biology pedagogy across NEET, IB, AP, MCAT and Biology Olympiad. 680+ medical college selections and a 98% NEET-UG qualification rate.',
-  personAward = [
-    'Best Biology Teacher Award 2022',
-    'NEET Educator of the Year 2023',
-    '680+ Medical College Selections',
-    '98% NEET-UG Qualification Rate',
-  ],
+  personAward = ['680+ Medical College Selections', '98% NEET-UG Qualification Rate'],
   educationalCredentialAwarded = 'NEET-UG Biology Preparation',
 }: NEETSchemaStackProps) {
   const personSchema = {

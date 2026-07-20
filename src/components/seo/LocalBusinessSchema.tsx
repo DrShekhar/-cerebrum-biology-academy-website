@@ -323,9 +323,13 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     ],
     // Social profiles from the single NAP source of truth (CONTACT_INFO.social),
     // so every schema component points at the SAME real, resolving handles. The
-    // per-centre GBP link is appended (owner to replace the g.page shortlink with
-    // a verified Google Business Profile URL).
-    sameAs: [...Object.values(CONTACT_INFO.social), location.googleBusinessUrl],
+    // per-centre GBP link is appended ONLY when it is a real, resolving URL —
+    // the legacy `g.page/*` shortlinks are unconfigured/dead, and emitting a
+    // non-resolving GBP URL is a negative trust signal. When the owner replaces
+    // the shortlink with a verified Google Business Profile URL, it flows in.
+    sameAs: [...Object.values(CONTACT_INFO.social), location.googleBusinessUrl].filter(
+      (u) => typeof u === 'string' && !u.includes('g.page/')
+    ),
     founder: {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',
