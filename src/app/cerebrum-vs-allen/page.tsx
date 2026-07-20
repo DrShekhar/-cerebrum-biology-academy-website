@@ -57,7 +57,7 @@ const jsonLdSchema = {
       name: 'Does Cerebrum provide online coaching?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, Cerebrum offers both offline classes at 6 Delhi NCR centers and comprehensive online programs. Students can choose hybrid (combination of online and offline) or fully online modes based on their preferences.',
+        text: 'Yes, Cerebrum offers both offline classes at 5 Delhi NCR centers and comprehensive online programs. Students can choose hybrid (combination of online and offline) or fully online modes based on their preferences.',
       },
     },
     {
@@ -144,7 +144,7 @@ export default function CerebrumVsAllenPage() {
                   },
                   {
                     criteria: 'Batch Size',
-                    cerebrum: '25-30 students',
+                    cerebrum: '20-25 students',
                     allen: '80-100+ students',
                   },
                   {
@@ -169,7 +169,7 @@ export default function CerebrumVsAllenPage() {
                   },
                   {
                     criteria: 'Coverage',
-                    cerebrum: '4 centers in Delhi NCR + Online',
+                    cerebrum: '5 centers in Delhi NCR + Online',
                     allen: 'Pan-India (50+ centers)',
                   },
                 ].map((row, index) => (
@@ -447,7 +447,7 @@ export default function CerebrumVsAllenPage() {
             <div>
               <h3 className="text-xl font-semibold text-blue-600 mb-4">Cerebrum Biology Academy</h3>
               <div className="bg-white p-6 rounded-lg border border-blue-200">
-                <p className="font-semibold text-gray-900 mb-3">4 Centers in Delhi NCR:</p>
+                <p className="font-semibold text-gray-900 mb-3">5 Centers in Delhi NCR:</p>
                 <ul className="space-y-2 text-gray-700 text-sm mb-4">
                   <li>• Delhi (Multiple locations)</li>
                   <li>• Gurgaon</li>
@@ -513,7 +513,7 @@ export default function CerebrumVsAllenPage() {
               {
                 title: 'Small Batch Advantage',
                 description:
-                  'With 25-30 students per batch, you get personalized attention. Teachers know your strengths and weaknesses, enabling targeted improvement.',
+                  'With 20-25 students per batch, you get personalized attention. Teachers know your strengths and weaknesses, enabling targeted improvement.',
               },
               {
                 title: '98% Success Rate',
@@ -528,7 +528,7 @@ export default function CerebrumVsAllenPage() {
               {
                 title: 'Delhi NCR Convenience',
                 description:
-                  '4 centers strategically located across Delhi NCR with flexible online options. Learn in your preferred mode and location.',
+                  '5 centers strategically located across Delhi NCR with flexible online options. Learn in your preferred mode and location.',
               },
             ].map((item, i) => (
               <div
@@ -586,7 +586,7 @@ export default function CerebrumVsAllenPage() {
               },
               {
                 q: 'Does Cerebrum provide online coaching?',
-                a: 'Yes, Cerebrum offers both offline classes at 6 Delhi NCR centers and comprehensive online programs. Students can choose hybrid (combination of online and offline) or fully online modes based on their preferences.',
+                a: 'Yes, Cerebrum offers both offline classes at 5 Delhi NCR centers and comprehensive online programs. Students can choose hybrid (combination of online and offline) or fully online modes based on their preferences.',
               },
               {
                 q: "What is Cerebrum's success rate compared to Allen?",

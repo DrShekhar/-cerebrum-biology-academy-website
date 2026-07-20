@@ -40,13 +40,20 @@ const courseSchema = {
     courseMode: 'online',
     courseWorkload: content.schema.duration,
   },
-  offers: {
-    '@type': 'Offer',
-    price: content.schema.price,
-    priceCurrency: content.schema.priceCurrency,
-    category: 'Paid',
-    availability: 'https://schema.org/InStock',
-  },
+  // Only emit an Offer when a real, fixed price exists. The class 6-8
+  // pre-foundation programme has no packaged product/price yet, so we omit it
+  // rather than publish a fabricated one.
+  ...(content.schema.price != null && content.schema.priceCurrency
+    ? {
+        offers: {
+          '@type': 'Offer',
+          price: content.schema.price,
+          priceCurrency: content.schema.priceCurrency,
+          category: 'Paid',
+          availability: 'https://schema.org/InStock',
+        },
+      }
+    : {}),
 }
 
 const faqSchema = {

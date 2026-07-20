@@ -45,7 +45,7 @@ const faqs = [
   {
     question: 'What are the fees for NEET coaching at Cerebrum?',
     answer:
-      'Our fees range from ₹45,000 to ₹1,56,000 per year depending on the program and tier. Pursuit tier: ₹45,000-70,000 (30-40 students), Ascent tier: ₹60,000-90,000 (16-18 students), Pinnacle tier: ₹90,000-1,56,000 (10-12 students with personal mentorship).',
+      'Our fees range from ₹45,000 to ₹1,56,000 per year depending on the program and tier. Pursuit tier: ₹45,000-70,000 (20-25 students), Ascent tier: ₹60,000-90,000 (12-16 students), Pinnacle tier: ₹90,000-1,56,000 (6-10 students with personal mentorship).',
   },
   {
     question: 'Is EMI facility available?',

@@ -72,7 +72,7 @@ const comparisonData = [
   },
   {
     factor: 'Batch Size',
-    noida: '10-40 students',
+    noida: '6-25 students',
     kota: '100-500 students',
     winner: 'noida',
     details: 'Smaller batches = more personal attention',
@@ -204,7 +204,7 @@ export default function NoidaVsKotaPage() {
           },
         ]}
         customFAQs={faqs}
-        shortAnswer="Stay in Noida for NEET! Save Rs 2-3 lakh on hostel costs, study from home with family support, get 98% success rate with online coaching. Cerebrum offers AIIMS faculty, small batches (10-40), and instant doubt support - all benefits of Kota without the expense."
+        shortAnswer="Stay in Noida for NEET! Save Rs 2-3 lakh on hostel costs, study from home with family support, get 98% success rate with online coaching. Cerebrum offers AIIMS faculty, small batches (6-25), and instant doubt support - all benefits of Kota without the expense."
       />
       <NoidaEventSchema />
 
@@ -244,7 +244,7 @@ export default function NoidaVsKotaPage() {
             <p className="text-gray-700 speakable-content" data-speakable="true">
               <strong>Stay in Noida!</strong> With online NEET coaching from Cerebrum (98% success
               rate), you save Rs 2-3 lakh on hostel/food, study with family support, and get AIIMS
-              faculty guidance in small batches of 10-40 students. Same results, fraction of the
+              faculty guidance in small batches of 6-25 students. Same results, fraction of the
               cost.
             </p>
           </div>
@@ -385,7 +385,7 @@ export default function NoidaVsKotaPage() {
                   icon: Users,
                   title: 'Small Batches',
                   description:
-                    '10-40 students vs 100+ in Kota. More personal attention and doubt resolution.',
+                    '6-25 students vs 100+ in Kota. More personal attention and doubt resolution.',
                 },
                 {
                   icon: Wifi,

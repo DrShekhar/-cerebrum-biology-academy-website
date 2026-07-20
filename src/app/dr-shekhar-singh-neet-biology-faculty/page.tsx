@@ -182,7 +182,7 @@ export default function DrShekharSinghPage() {
                   NEET · IB · AP · MCAT · USABO / INBO / IBO Biology Olympiad
                 </p>
                 <p className="text-slate-400 mb-6">
-                  Cerebrum Biology Academy · 6 Delhi NCR centres · Pan-India online
+                  Cerebrum Biology Academy · 5 Delhi NCR centres · Pan-India online
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a

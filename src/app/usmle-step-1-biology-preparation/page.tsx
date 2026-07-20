@@ -73,7 +73,7 @@ const faqs = [
   {
     question: 'Does Cerebrum work with US M1/M2 students or only IMGs?',
     answer:
-      "Both — and US M1/M2 students are a core audience. US M1/M2 students choose Cerebrum for the biology-foundations specialist depth (Pathoma alone isn't enough for biochemistry), live small-batch and 1:1 teaching in their own US time zone, and a 30–40% cost saving vs Kaplan and Becker. IMG (International Medical Graduate) students are a parallel audience: AIIMS-trained pedagogy resonates structurally with IMGs who trained in AIIMS-pattern medical education, and IMGs in international locations value access to senior faculty where Kaplan and Becker physical campuses aren't available. The same biology-foundations programme serves both.",
+      "Both — and US M1/M2 students are a core audience. US M1/M2 students choose Cerebrum for the biology-foundations specialist depth (Pathoma alone isn't enough for biochemistry), live small-batch and 1:1 teaching in their own US time zone, and a 20–25% cost saving vs Kaplan and Becker. IMG (International Medical Graduate) students are a parallel audience: AIIMS-trained pedagogy resonates structurally with IMGs who trained in AIIMS-pattern medical education, and IMGs in international locations value access to senior faculty where Kaplan and Becker physical campuses aren't available. The same biology-foundations programme serves both.",
   },
   {
     question: 'Is First Aid for the USMLE Step 1 sufficient on its own?',

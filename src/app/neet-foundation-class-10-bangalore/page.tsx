@@ -233,14 +233,14 @@ export default function NEETFoundationClass10BangalorePage() {
           </h2>
           <ul>
             <li>
-              <strong>Pursuit (Small-Batch 30-40) — ₹35,000-55,000/year.</strong>
+              <strong>Pursuit (Small-Batch 20-25) — ₹35,000-55,000/year.</strong>
             </li>
             <li>
-              <strong>Ascent (Pro Batch 16-25) — ₹55,000-75,000/year.</strong> Most popular
+              <strong>Ascent (Pro Batch 12-16) — ₹55,000-75,000/year.</strong> Most popular
               Bangalore tier with weekly 1:1 doubt slots + biweekly board + NEET mocks.
             </li>
             <li>
-              <strong>Pinnacle (Direct Dr. Shekhar 10-12) — ₹75,000-95,000/year.</strong>
+              <strong>Pinnacle (Direct Dr. Shekhar 6-10) — ₹75,000-95,000/year.</strong>
             </li>
             <li>
               <strong>Ad-hoc 1:1 — ₹2,000-3,500/hour.</strong>

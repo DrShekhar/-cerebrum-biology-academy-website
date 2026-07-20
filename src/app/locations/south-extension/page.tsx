@@ -204,7 +204,10 @@ export default function SouthExtensionLocationPage() {
                   desc: '60% of our AIIMS selections from this center',
                 },
               ].map((item, idx) => (
-                <div key={item.title} className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
+                <div
+                  key={item.title}
+                  className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
+                >
                   <div className="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-yellow-600" />
                   </div>
@@ -395,7 +398,7 @@ export default function SouthExtensionLocationPage() {
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">Our Other Centers</h2>
             <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-              Cerebrum Biology Academy has 4 centers across Delhi-NCR. Visit the one nearest to you.
+              Cerebrum Biology Academy has 5 centers across Delhi-NCR. Visit the one nearest to you.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
               {[

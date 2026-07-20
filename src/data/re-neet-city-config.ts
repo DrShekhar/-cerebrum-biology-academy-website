@@ -52,7 +52,7 @@ export function buildReNEETCityConfig(key: ReNEETCityKey): BestVerticalConfig {
       {
         tier: '1:1 Pinnacle RE-NEET',
         price: '₹60,000+ / 6–8 weeks',
-        description: `Direct Dr. Shekhar mentoring + 10–12 student micro-batches for ${p.cityDisplayName} aspirants targeting AIIMS / Top medical college. Includes custom mock review.`,
+        description: `Direct Dr. Shekhar mentoring + 6–10 student micro-batches for ${p.cityDisplayName} aspirants targeting AIIMS / Top medical college. Includes custom mock review.`,
       },
       {
         tier: 'Ad-hoc 1:1 (Hourly)',
@@ -76,7 +76,7 @@ export function buildReNEETCityConfig(key: ReNEETCityKey): BestVerticalConfig {
       },
       {
         title: 'Small Batches (15–20) vs Mass Coaching',
-        description: `In the RE-NEET 6–8 week window, individual attention matters most. Cerebrum caps batches at 15–20 (Ascent) or 10–12 (Pinnacle). ${p.competitorContext} typically run 150–400 students per batch where personal doubt-fixing is structurally impossible.`,
+        description: `In the RE-NEET 6–8 week window, individual attention matters most. Cerebrum caps batches at 12–16 (Ascent) or 6–10 (Pinnacle). ${p.competitorContext} typically run 150–400 students per batch where personal doubt-fixing is structurally impossible.`,
       },
       {
         title: 'Mental Health Integrated (Tele-MANAS 14416 + iCall + Vandrevala)',

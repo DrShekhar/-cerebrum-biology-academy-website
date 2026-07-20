@@ -81,7 +81,7 @@ const faqs = [
   {
     question: 'How close is your center to Gaur City?',
     answer:
-      'Our center in Greater Noida is just 5-6 km from Gaur City, which is about 10-15 minutes by road. We are the closest NEET coaching with AIIMS faculty for Noida Extension students.',
+      'We teach Noida Extension and Gaur City students through live online classes — no travel needed. For anyone who prefers in-person coaching, our nearest walk-in center is South Extension, New Delhi.',
   },
   {
     question: 'Do you have students from other Noida Extension societies?',

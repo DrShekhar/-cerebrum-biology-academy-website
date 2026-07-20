@@ -66,7 +66,7 @@ const faqs = [
   {
     question: 'What does Class 9 NEET Foundation cost in Bangalore?',
     answer:
-      "Cerebrum Class 9 Foundation pricing for Bangalore families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Bangalore-specific competitive context: Allen Scholastics Bangalore Class 9 combined PCB Foundation runs ₹85K-1L/year at 200-student batches across Koramangala, HSR, Marathahalli, Banashankari centres. BYJU's NEET Foundation runs primarily on recorded video with limited live (₹40K-65K). other Delhi-based institutes Foundation Bangalore (~₹95K). Aakash Bangalore ~₹1L. Most Bangalore IT-professional families pair Cerebrum biology (₹55K-70K Ascent) with BYJU's recorded PC (₹20K) or PhysicsWallah and Unacademy live PC (₹15K) for total ₹70K-90K — comparable to single-shop Allen but with materially deeper biology and live small-batch attention vs 200-student recorded-heavy alternatives.",
+      "Cerebrum Class 9 Foundation pricing for Bangalore families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 6-10). Ad-hoc 1:1 hourly ₹2,000-3,500. Bangalore-specific competitive context: Allen Scholastics Bangalore Class 9 combined PCB Foundation runs ₹85K-1L/year at 200-student batches across Koramangala, HSR, Marathahalli, Banashankari centres. BYJU's NEET Foundation runs primarily on recorded video with limited live (₹40K-65K). other Delhi-based institutes Foundation Bangalore (~₹95K). Aakash Bangalore ~₹1L. Most Bangalore IT-professional families pair Cerebrum biology (₹55K-70K Ascent) with BYJU's recorded PC (₹20K) or PhysicsWallah and Unacademy live PC (₹15K) for total ₹70K-90K — comparable to single-shop Allen but with materially deeper biology and live small-batch attention vs 200-student recorded-heavy alternatives.",
   },
 ]
 
@@ -265,14 +265,14 @@ export default function NEETFoundationClass9BangalorePage() {
           </h2>
           <ul>
             <li>
-              <strong>Pursuit (Small-Batch 30-40) — ₹35,000-50,000/year.</strong>
+              <strong>Pursuit (Small-Batch 20-25) — ₹35,000-50,000/year.</strong>
             </li>
             <li>
-              <strong>Ascent (Pro Batch 16-25) — ₹55,000-70,000/year.</strong> Most popular
+              <strong>Ascent (Pro Batch 12-16) — ₹55,000-70,000/year.</strong> Most popular
               Bangalore tier with weekly 1:1 doubt slots.
             </li>
             <li>
-              <strong>Pinnacle (Direct Dr. Shekhar 10-12) — ₹75,000-90,000/year.</strong>
+              <strong>Pinnacle (Direct Dr. Shekhar 6-10) — ₹75,000-90,000/year.</strong>
             </li>
             <li>
               <strong>Ad-hoc 1:1 — ₹2,000-3,500/hour.</strong>

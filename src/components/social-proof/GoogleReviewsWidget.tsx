@@ -176,7 +176,7 @@ export function GoogleReviewsWidget({
             </div>
             <div className="flex items-center">
               <MapPin className="w-4 h-4 mr-1 text-blue-600" />
-              <span>4 Centers in Delhi-NCR</span>
+              <span>5 Centers in Delhi-NCR</span>
             </div>
           </div>
         </div>

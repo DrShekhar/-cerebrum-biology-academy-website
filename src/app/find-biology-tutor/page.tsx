@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Find a Biology Tutor | Online & Offline | NEET, A-Level, IB, IGCSE',
   description:
-    'Find the perfect Biology tutor for your needs. AIIMS-trained faculty for NEET, Board exams, A-Level, IB, IGCSE, AP. Online classes worldwide. 4 centers in Delhi NCR.',
+    'Find the perfect Biology tutor for your needs. AIIMS-trained faculty for NEET, Board exams, A-Level, IB, IGCSE, AP. Online classes worldwide. 5 centers in Delhi NCR.',
   keywords: [
     'find biology tutor',
     'biology tutor',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Find a Biology Tutor | Online & Offline | NEET, A-Level, IB, IGCSE',
     description:
-      'Find the perfect Biology tutor for your needs. AIIMS-trained faculty for NEET, Board exams, A-Level, IB, IGCSE, AP. Online classes worldwide. 4 centers in Delhi NCR.',
+      'Find the perfect Biology tutor for your needs. AIIMS-trained faculty for NEET, Board exams, A-Level, IB, IGCSE, AP. Online classes worldwide. 5 centers in Delhi NCR.',
     url: 'https://cerebrumbiologyacademy.com/find-biology-tutor',
     locale: 'en',
     type: 'website',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Find a Biology Tutor | Online & Offline | NEET, A-Level, IB, IGCSE',
     description:
-      'Find the perfect Biology tutor for your needs. AIIMS-trained faculty for NEET, Board exams, A-Level, IB, IGCSE, AP. Online classes worldwide. 4 centers in Delhi NCR.',
+      'Find the perfect Biology tutor for your needs. AIIMS-trained faculty for NEET, Board exams, A-Level, IB, IGCSE, AP. Online classes worldwide. 5 centers in Delhi NCR.',
   },
 }
 

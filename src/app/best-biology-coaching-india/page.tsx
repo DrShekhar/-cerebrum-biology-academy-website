@@ -152,7 +152,7 @@ const FAQS = [
   {
     question: 'What makes Cerebrum the "best biology coaching" — vs Allen / Aakash / PW?',
     answer:
-      "Allen, Aakash, PW are full-PCM coaching brands. Cerebrum is a biology-only specialist by design — every faculty hour is biology depth, not split across physics + chemistry. That means small-batch live discussion (10-40 students vs Allen's 150-200), weekly per-MCQ review (impossible at lecture-hall scale), AIIMS-trained biology-specific faculty (Dr. Shekhar C Singh personally supervises curriculum), and depth that mass-coaching cannot reach. Most of our students pair us with their existing Allen / Aakash / PW for physics + chemistry — we don't replace, we specialise.",
+      "Allen, Aakash, PW are full-PCM coaching brands. Cerebrum is a biology-only specialist by design — every faculty hour is biology depth, not split across physics + chemistry. That means small-batch live discussion (6-25 students vs Allen's 150-200), weekly per-MCQ review (impossible at lecture-hall scale), AIIMS-trained biology-specific faculty (Dr. Shekhar C Singh personally supervises curriculum), and depth that mass-coaching cannot reach. Most of our students pair us with their existing Allen / Aakash / PW for physics + chemistry — we don't replace, we specialise.",
   },
   {
     question: 'Which programmes does Cerebrum offer?',
@@ -162,17 +162,17 @@ const FAQS = [
   {
     question: "Where are Cerebrum's coaching centres?",
     answer:
-      'Four offline centres in Delhi NCR: South Extension (Delhi), Rohini (Delhi), Gurugram, Faridabad. Plus live online programmes serving 30+ countries — India, UAE, USA, UK, Canada, Saudi Arabia, Qatar, Singapore, Australia, Malaysia, and more. Time-zone-matched batches available for Gulf, India, Southeast Asia, UK, US East/West, Canada, and Australia time zones.',
+      'Five offline centres in Delhi NCR: South Extension (Delhi), Green Park (Delhi), Rohini (Delhi), Gurugram, Faridabad. Plus live online programmes serving 30+ countries — India, UAE, USA, UK, Canada, Saudi Arabia, Qatar, Singapore, Australia, Malaysia, and more. Time-zone-matched batches available for Gulf, India, Southeast Asia, UK, US East/West, Canada, and Australia time zones.',
   },
   {
     question: "Who is Dr. Shekhar C Singh and what's his role?",
     answer:
-      'Founder of Cerebrum Biology Academy (est. 2014). AIIMS New Delhi alumnus. 15+ years of biology pedagogy across NEET, IB, AP, MCAT, USMLE, and Olympiad verticals. Directly teaches the Pinnacle ZA tier (micro-batches of 10-12 students with weekly 1:1 mentor calls) and supervises curriculum for all other tiers. 680+ medical college selections among his cohorts, including 67+ to AIIMS Delhi.',
+      'Founder of Cerebrum Biology Academy (est. 2014). AIIMS New Delhi alumnus. 15+ years of biology pedagogy across NEET, IB, AP, MCAT, USMLE, and Olympiad verticals. Directly teaches the Pinnacle ZA tier (micro-batches of 6-10 students with weekly 1:1 mentor calls) and supervises curriculum for all other tiers. 680+ medical college selections among his cohorts, including 67+ to AIIMS Delhi.',
   },
   {
     question: 'How are batches structured?',
     answer:
-      "Three tier model that scales across verticals: Pursuit (30-40 students per batch, most affordable structured tier), Ascent (16-25 students, weekly 1:1 doubt slot, most popular value tier), Pinnacle ZA (10-12 students, direct Dr. Shekhar 1:1 mentoring, calibrated for AIIMS / top-rank aspirants). Specific tier matrix shared on WhatsApp based on which programme you're asking about.",
+      "Three tier model that scales across verticals: Pursuit (20-25 students per batch, most affordable structured tier), Ascent (12-16 students, weekly 1:1 doubt slot, most popular value tier), Pinnacle ZA (6-10 students, direct Dr. Shekhar 1:1 mentoring, calibrated for AIIMS / top-rank aspirants). Specific tier matrix shared on WhatsApp based on which programme you're asking about.",
   },
   {
     question: 'How does pricing work? Why no pricing on the website?',
@@ -310,7 +310,7 @@ export default function BestBiologyCoachingIndiaPage() {
             2014 by Dr. Shekhar C Singh (AIIMS New Delhi alumnus). We cover seven exam verticals
             where biology is the dominant subject &mdash; NEET, IB (HL/SL), AP, MCAT, USMLE Step 1,
             Biology Olympiads, and CBSE/ICSE Class 11-12. One faculty team, one founder supervising
-            curriculum across all programmes, four offline centres in Delhi NCR, and live online
+            curriculum across all programmes, five offline centres in Delhi NCR, and live online
             programmes serving 30+ countries.
           </p>
 
@@ -432,7 +432,7 @@ export default function BestBiologyCoachingIndiaPage() {
                 },
                 {
                   title: 'Small-batch model',
-                  text: '10-40 students per batch depending on tier vs 150-200 at mass-coaching',
+                  text: '6-25 students per batch depending on tier vs 150-200 at mass-coaching',
                 },
                 {
                   title: 'Founder-supervised curriculum',
@@ -456,7 +456,7 @@ export default function BestBiologyCoachingIndiaPage() {
         <section className="mx-auto max-w-5xl px-4 py-14">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Where we operate</h2>
           <p className="mt-3 text-slate-600">
-            Four offline centres in Delhi NCR + live online programmes serving 30+ countries.
+            Five offline centres in Delhi NCR + live online programmes serving 30+ countries.
           </p>
 
           <div className="mt-7 grid gap-5 md:grid-cols-2">

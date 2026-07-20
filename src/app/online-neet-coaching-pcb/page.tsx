@@ -136,7 +136,7 @@ const FAQS = [
   {
     question: 'How are live classes different from watching recorded YouTube lectures?',
     answer:
-      "Live classes have small batch sizes (10-40 students depending on tier), real-time Q&A, weekly tests with personal review, and a mentor accountable for your week-on-week progression. Recorded lectures don't know when you're falling behind. Per Dunlosky et al (2013) and Karpicke & Roediger (2008), retrieval practice and structured feedback drive learning — neither of which a passive video lecture delivers.",
+      "Live classes have small batch sizes (6-25 students depending on tier), real-time Q&A, weekly tests with personal review, and a mentor accountable for your week-on-week progression. Recorded lectures don't know when you're falling behind. Per Dunlosky et al (2013) and Karpicke & Roediger (2008), retrieval practice and structured feedback drive learning — neither of which a passive video lecture delivers.",
   },
   {
     question: 'What is the schedule like?',
@@ -632,7 +632,7 @@ export default function OnlineNEETCoachingPCBPage() {
                 </li>
                 <li className="flex gap-2">
                   <Microscope className="h-4 w-4 mt-0.5 text-amber-300" />
-                  Direct mentorship for Pinnacle ZA tier (micro-batch 10-12)
+                  Direct mentorship for Pinnacle ZA tier (micro-batch 6-10)
                 </li>
                 <li className="flex gap-2">
                   <Microscope className="h-4 w-4 mt-0.5 text-amber-300" />

@@ -82,7 +82,7 @@ export function NearMeCityTemplate({ city }: Props) {
     '@type': 'Course',
     '@id': `${pageUrl}#course`,
     name: `Online NEET Biology Coaching for ${city.displayName} Students`,
-    description: `Live online NEET Biology coaching for ${city.displayName} students preparing for AIIMS / ${city.stateQuotaCollege} / state-quota medical colleges. AIIMS-trained faculty, 10-40 student batches, NCERT-line-by-line, weekly tests. Pair with your existing PCM coaching (${city.localCoachingPresence.split(',')[0].trim()}).`,
+    description: `Live online NEET Biology coaching for ${city.displayName} students preparing for AIIMS / ${city.stateQuotaCollege} / state-quota medical colleges. AIIMS-trained faculty, 6-25 student batches, NCERT-line-by-line, weekly tests. Pair with your existing PCM coaching (${city.localCoachingPresence.split(',')[0].trim()}).`,
     url: pageUrl,
     inLanguage: 'en-IN',
     educationalLevel: `NEET-UG Aspirant (${city.displayName}, ${city.state})`,
@@ -305,7 +305,7 @@ export function NearMeCityTemplate({ city }: Props) {
           <div className="rounded-xl border border-slate-200 p-5">
             <Users className="h-6 w-6 text-indigo-600" />
             <h3 className="mt-3 text-sm font-semibold text-slate-900">
-              Small-batch model (10-40 students)
+              Small-batch model (6-25 students)
             </h3>
             <p className="mt-2 text-sm text-slate-600 leading-relaxed">
               Local Allen / Aakash {city.displayName} batches are 150-200 students. We run weekly
@@ -403,7 +403,7 @@ export function NearMeCityTemplate({ city }: Props) {
               </tr>
               <tr>
                 <td className="px-4 py-3 font-medium text-slate-900">Batch size</td>
-                <td className="px-4 py-3 text-slate-700">10-40 students</td>
+                <td className="px-4 py-3 text-slate-700">6-25 students</td>
                 <td className="px-4 py-3 text-slate-700">100-200 students</td>
               </tr>
               <tr>

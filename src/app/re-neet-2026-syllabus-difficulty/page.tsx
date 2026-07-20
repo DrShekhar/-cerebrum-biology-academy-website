@@ -85,7 +85,7 @@ const config: BestVerticalConfig = {
       tier: '1:1 RE-NEET Mentoring (Pinnacle)',
       price: '~₹60,000+',
       description:
-        'Direct Dr. Shekhar mentoring + 10–12 student micro-batch. Best for AIIMS / Top medical college aspirants targeting 650+.',
+        'Direct Dr. Shekhar mentoring + 6–10 student micro-batch. Best for AIIMS / Top medical college aspirants targeting 650+.',
     },
   ],
   whyBest: [

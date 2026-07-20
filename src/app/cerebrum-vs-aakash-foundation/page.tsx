@@ -102,7 +102,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Centre Network',
-      cerebrum: '6 Delhi NCR centres + online live pan-India',
+      cerebrum: '5 Delhi NCR centres + online live pan-India',
       competitor: '250+ centres across India (broader physical reach)',
       cerebrumWins: false,
     },
@@ -168,7 +168,7 @@ const config: CompetitorComparisonConfig = {
     {
       question: 'How do Aakash Scholastics and Cerebrum Foundation compare on price?',
       answer:
-        'Aakash Scholastics combined PCB Foundation runs ₹85,000-₹1,20,000/year for Class 9 or Class 10. Cerebrum biology-only Foundation runs ₹35,000-₹95,000/year across three tiers. The Cerebrum Ascent tier (₹55K-75K, pro batch 16-25 with weekly 1:1 doubt slots) offers materially deeper biology pedagogy than the equivalent Aakash Scholastics Foundation tier at 30-40% lower price — but Aakash includes Physics, Chemistry, and Maths in its Foundation fee while Cerebrum is biology-only. Total comparable budget if pairing Cerebrum biology with separate PC tuition: ₹75K-1L vs Aakash ₹85K-1.2L.',
+        'Aakash Scholastics combined PCB Foundation runs ₹85,000-₹1,20,000/year for Class 9 or Class 10. Cerebrum biology-only Foundation runs ₹35,000-₹95,000/year across three tiers. The Cerebrum Ascent tier (₹55K-75K, pro batch 12-16 with weekly 1:1 doubt slots) offers materially deeper biology pedagogy than the equivalent Aakash Scholastics Foundation tier at 30-40% lower price — but Aakash includes Physics, Chemistry, and Maths in its Foundation fee while Cerebrum is biology-only. Total comparable budget if pairing Cerebrum biology with separate PC tuition: ₹75K-1L vs Aakash ₹85K-1.2L.',
     },
     {
       question:

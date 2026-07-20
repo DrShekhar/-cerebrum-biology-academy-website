@@ -15,6 +15,7 @@ export function ClassFilterNav({
 }: ClassFilterNavProps) {
   const classOptions: Array<{ value: ClassLevel | 'all'; label: string; emoji: string }> = [
     { value: 'all', label: 'All Classes', emoji: '📚' },
+    { value: '6-8', label: 'Class 6-8', emoji: '🐣' },
     { value: '9th', label: 'Class 9th', emoji: '🌱' },
     { value: '10th', label: 'Class 10th', emoji: '🌿' },
     { value: '11th', label: 'Class 11th', emoji: '🎯' },

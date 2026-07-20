@@ -104,9 +104,12 @@ export interface SEOLandingContent {
     batchSize: string
     features: string[]
     price: {
-      original: number
+      original?: number
       discounted?: number
       emi?: string
+      // When true, no fixed product/price exists yet — the card shows a
+      // "fee on enquiry" WhatsApp CTA instead of a fabricated number.
+      feeOnEnquiry?: boolean
     }
   }
 
@@ -179,8 +182,10 @@ export interface SEOLandingContent {
     provider: string
     description: string
     duration: string
-    price: number
-    priceCurrency: string
+    // Omit price/priceCurrency when no fixed product/price exists — the Course
+    // schema then emits no Offer rather than a fabricated one.
+    price?: number
+    priceCurrency?: string
     // Enhanced schema properties
     aggregateRating?: {
       ratingValue: number
@@ -227,9 +232,9 @@ export const coursePageLinks: Record<ClassLevel, string> = {
 
 // Tier page links with query params
 export const tierPageLinks: Record<ClassLevel, string> = {
-  'class-6': '/courses?class=foundation-6',
-  'class-7': '/courses?class=foundation-7',
-  'class-8': '/courses?class=foundation-8',
+  'class-6': '/neet-biology-foundation-class-6-to-8#fees',
+  'class-7': '/neet-biology-foundation-class-6-to-8#fees',
+  'class-8': '/neet-biology-foundation-class-6-to-8#fees',
   'class-9': '/courses?class=foundation-9',
   'class-10': '/courses?class=foundation-10',
   'class-11': '/courses?class=class-11',

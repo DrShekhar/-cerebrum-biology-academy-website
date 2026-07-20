@@ -171,7 +171,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does Cerebrum USMLE Step 1 coaching cost vs Kaplan and Becker?',
       answer:
-        "Cerebrum's full Step 1 biology-foundations programme at $2,499 is priced 30–40% below full-course Kaplan ($3,499+) and Becker ($3,200+). At $175/hour 1:1, Cerebrum is priced below Kaplan tutoring ($230/hour) and Becker tutoring ($200/hour). Self-Paced is $799; Small-Batch is $1,599.",
+        "Cerebrum's full Step 1 biology-foundations programme at $2,499 is priced 20–25% below full-course Kaplan ($3,499+) and Becker ($3,200+). At $175/hour 1:1, Cerebrum is priced below Kaplan tutoring ($230/hour) and Becker tutoring ($200/hour). Self-Paced is $799; Small-Batch is $1,599.",
     },
     {
       question: 'Step 1 is Pass/Fail now — is biology depth still worth this much investment?',

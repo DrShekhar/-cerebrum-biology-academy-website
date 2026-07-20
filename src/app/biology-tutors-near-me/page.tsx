@@ -82,7 +82,7 @@ const faqs = [
   {
     question: 'What are the offline center locations?',
     answer:
-      'We have 4 centers in Delhi NCR: Rohini, Gurugram, South Extension, Faridabad, Green Park, and Noida. Each center offers the same quality teaching with small batch sizes of 15-20 students.',
+      'We have 5 centers in Delhi NCR: Rohini, Gurugram, South Extension, Faridabad, and Green Park. Each center offers the same quality teaching with small batch sizes of 15-20 students.',
   },
   {
     question: 'Is hostel facility available for outstation students?',
@@ -200,7 +200,7 @@ export default function BiologyTutorsNearMePage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              4 Offline Centers in Delhi NCR | Online Classes Pan India
+              5 Offline Centers in Delhi NCR | Online Classes Pan India
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">

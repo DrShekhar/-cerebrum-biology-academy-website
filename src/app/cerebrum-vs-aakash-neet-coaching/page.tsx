@@ -81,7 +81,7 @@ const faqs = [
   {
     question: 'Where are Cerebrum centers located compared to Aakash?',
     answer:
-      'Cerebrum has centers in South Extension, Rohini, Green Park, Gurugram, Noida, and Faridabad. Aakash has more centers across Delhi NCR. Both offer hybrid online-offline options.',
+      'Cerebrum has centers in South Extension, Rohini, Green Park, Gurugram, and Faridabad. Aakash has more centers across Delhi NCR. Both offer hybrid online-offline options.',
   },
 ]
 

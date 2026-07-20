@@ -186,7 +186,7 @@ export function EnhancedCourseFinderQuiz({
           duration: '1 Year',
           successRate: '98%',
           features: [
-            '16-18 students per batch',
+            '12-16 students per batch',
             'AIIMS faculty teaching',
             'NEET foundation preparation',
             '3000+ practice questions',
@@ -265,7 +265,7 @@ export function EnhancedCourseFinderQuiz({
           duration: '1 Year',
           successRate: '92.5%',
           features: [
-            '16-18 students per batch',
+            '12-16 students per batch',
             'AIIMS faculty teaching',
             '5000+ practice questions',
             '20+ mock tests',
@@ -346,7 +346,7 @@ export function EnhancedCourseFinderQuiz({
           duration: '1 Year',
           successRate: '91.0%',
           features: [
-            '16-18 students per batch',
+            '12-16 students per batch',
             'AIIMS faculty teaching',
             '8000+ practice questions',
             '30+ mock tests',

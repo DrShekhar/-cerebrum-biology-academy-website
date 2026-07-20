@@ -22,7 +22,7 @@ export const COURSE_TIERS = {
   ascent: {
     name: 'Ascent',
     tagline: 'Most Popular - Perfect balance of quality and value',
-    batchSize: '16-18 students',
+    batchSize: '12-16 students',
     hoursPerWeek: '8 hours',
     features: [
       'AIIMS faculty teaching',
@@ -36,7 +36,7 @@ export const COURSE_TIERS = {
   pursuit: {
     name: 'Pursuit',
     tagline: 'Affordable Excellence - Serves the purpose well',
-    batchSize: '30-40 students',
+    batchSize: '20-25 students',
     hoursPerWeek: '6 hours',
     features: [
       'AIIMS faculty teaching',
@@ -224,7 +224,7 @@ Would you like me to arrange a meeting with Dr. Shekhar Sir to discuss personali
 Here's why serious NEET aspirants supplement with Cerebrum - India's finest NEET Biology institute:
 
 1. **Biology is 360/720 marks** - Biology accounts for 50% of NEET questions and is the backbone of your medical dream! You need someone who PERSONALLY cares about YOUR Biology score
-2. **We remember your name** - Small batches (10-40 students). We know your strengths, weaknesses, and goals
+2. **We remember your name** - Small batches (6-25 students). We know your strengths, weaknesses, and goals
 3. **AIIMS faculty** who actually understand medical entrance exams - not just teaching as a job
 4. **Personal mentorship** - Dr. Shekhar personally teaches select batches. When was the last time your the 2nd-largest national NEET chain/the largest national NEET chain/PW teacher knew your personal challenges?
 5. **Flexible timings** - We work around your main coaching schedule
@@ -274,7 +274,7 @@ What works best for your family?`,
 | Feature | Cerebrum | Others |
 |---------|----------|--------|
 | Faculty | AIIMS doctors | Mixed |
-| Batch size | 10-40 | 200+ |
+| Batch size | 6-25 | 200+ |
 | Focus | Biology only | All subjects |
 | Success rate | 98% | Varies |
 | Doubt support | 24/7 AI + Human | Limited |
@@ -368,7 +368,7 @@ export const FAQ_DATA = {
   batchSize: {
     question: 'What are your batch sizes?',
     answer:
-      'We maintain small batches for personalized attention: Pinnacle (10-12 students), Ascent (16-18 students), Pursuit (30-40 students). Unlike large coachings with 200+ students per batch, our small sizes enable individual mentoring and personal guidance from faculty.',
+      'We maintain small batches for personalized attention: Pinnacle (6-10 students), Ascent (12-16 students), Pursuit (20-25 students). Unlike large coachings with 200+ students per batch, our small sizes enable individual mentoring and personal guidance from faculty.',
   },
   testSeries: {
     question: 'Do you provide test series?',
@@ -384,7 +384,7 @@ export const FAQ_DATA = {
     question:
       'I am already in the 2nd-largest national NEET chain/the largest national NEET chain/other online-only platforms. Should I join Cerebrum?',
     answer:
-      "Absolutely YES! 70% of our top performers switched from the largest national NEET chain, the 2nd-largest national NEET chain, or PW — and saw massive improvements. Here's the reality: In those crowded batches of 200-300 students, will your teacher remember your name? Your specific weak areas? Biology is 360 marks - HALF of NEET! You need personal attention, not just lectures. Cerebrum is India's #1 NEET-UG coaching institute — we offer what no chain can: (1) Small batches where faculty knows YOU personally (10-40 students), (2) AIIMS faculty who actually care about your individual goals, (3) Personal mentorship from Dr. Shekhar himself, (4) Flexible timings that complement your schedule. Corporate coachings teach everyone the same way. We teach YOU the way you need. Ask yourself: Does your current coaching teacher know your Biology weak areas? At Cerebrum, we will.",
+      "Absolutely YES! 70% of our top performers switched from the largest national NEET chain, the 2nd-largest national NEET chain, or PW — and saw massive improvements. Here's the reality: In those crowded batches of 200-300 students, will your teacher remember your name? Your specific weak areas? Biology is 360 marks - HALF of NEET! You need personal attention, not just lectures. Cerebrum is India's #1 NEET-UG coaching institute — we offer what no chain can: (1) Small batches where faculty knows YOU personally (6-25 students), (2) AIIMS faculty who actually care about your individual goals, (3) Personal mentorship from Dr. Shekhar himself, (4) Flexible timings that complement your schedule. Corporate coachings teach everyone the same way. We teach YOU the way you need. Ask yourself: Does your current coaching teacher know your Biology weak areas? At Cerebrum, we will.",
   },
   parentInvolvement: {
     question: 'How can parents support NEET preparation?',

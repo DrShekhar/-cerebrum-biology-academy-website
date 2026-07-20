@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Biology Classes for NEET and Boards (9-12) & Droppers | Online, Offline, Hybrid',
     description:
-      'AIIMS-trained faculty. Small batches. 4 Delhi NCR centres: South Extension, Gurugram, Faridabad, Rohini. Plus live online and hybrid options.',
+      'AIIMS-trained faculty. Small batches. 5 Delhi NCR centres: South Extension, Green Park, Gurugram, Faridabad, Rohini. Plus live online and hybrid options.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/biology-classes',

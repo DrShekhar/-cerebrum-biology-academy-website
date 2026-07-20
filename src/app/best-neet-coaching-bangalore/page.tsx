@@ -10,7 +10,7 @@ const PAGE_URL = `https://cerebrumbiologyacademy.com/best-neet-coaching-${SLUG}`
 export const metadata: Metadata = city
   ? {
       title: `Best NEET Coaching in ${city.displayName} 2026-27 | Biology Specialist · Cerebrum`,
-      description: `Best NEET coaching in ${city.displayName} (${city.state}) compared — and why biology (360/720) decides your rank. AIIMS-trained biology-specialist faculty, 10-40 student batches, live online, targeting ${city.stateQuotaCollege}. Transparent fees.`,
+      description: `Best NEET coaching in ${city.displayName} (${city.state}) compared — and why biology (360/720) decides your rank. AIIMS-trained biology-specialist faculty, 6-25 student batches, live online, targeting ${city.stateQuotaCollege}. Transparent fees.`,
       keywords: [
         `best neet coaching ${city.displayName}`,
         `best neet coaching in ${city.displayName}`,

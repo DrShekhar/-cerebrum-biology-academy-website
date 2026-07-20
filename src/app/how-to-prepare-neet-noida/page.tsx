@@ -81,13 +81,13 @@ const preparationSteps = [
     icon: GraduationCap,
     description: 'Self-study is good, but expert guidance accelerates your preparation by 2x.',
     tasks: [
-      'Choose coaching with small batches (10-40 students max)',
+      'Choose coaching with small batches (6-25 students max)',
       'Verify faculty credentials - AIIMS/top medical college background',
       'Check success rate and recent selections',
       'Ensure doubt-solving support is available daily',
       'Look for mock test series with detailed analysis',
     ],
-    tip: 'Cerebrum offers AIIMS faculty (Dr. Shekhar C Singh), 98% success rate, and batches of just 10-40 students.',
+    tip: 'Cerebrum offers AIIMS faculty (Dr. Shekhar C Singh), 98% success rate, and batches of just 6-25 students.',
   },
   {
     step: 3,

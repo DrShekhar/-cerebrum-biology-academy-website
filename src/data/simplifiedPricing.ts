@@ -121,7 +121,7 @@ export function getSimplifiedPricingDisplay() {
       price: '₹48,000',
       savings: 'Save ₹7,000',
       perMonth: '₹4,000/month',
-      batchSize: '25-30 students',
+      batchSize: '20-25 students',
       comparison: 'vs 100+ in competitors',
     },
   }

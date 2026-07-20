@@ -91,7 +91,7 @@ export default function Home() {
     '@id': 'https://cerebrumbiologyacademy.com/#webpage',
     name: 'Best NEET Biology Coaching in Delhi NCR | Cerebrum Biology Academy',
     description:
-      'Top NEET Biology coaching in Delhi NCR with AIIMS-trained faculty led by Dr. Shekhar C Singh. 98% NEET-UG qualification rate, 680+ medical college selections since 2014. 6 NCR centres: South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida. Online + offline. Also: NEET Foundation Class 9-10, IB, AP, MCAT, DAT, GAMSAT, USMLE Step 1 Biology + Olympiads.',
+      'Top NEET Biology coaching in Delhi NCR with AIIMS-trained faculty led by Dr. Shekhar C Singh. 98% NEET-UG qualification rate, 680+ medical college selections since 2014. 5 NCR centres: South Extension, Rohini, Green Park, Gurugram, Faridabad. Online + offline. Also: NEET Foundation Class 9-10, IB, AP, MCAT, DAT, GAMSAT, USMLE Step 1 Biology + Olympiads.',
     url: 'https://cerebrumbiologyacademy.com',
     isPartOf: {
       '@type': 'WebSite',
@@ -169,7 +169,7 @@ export default function Home() {
       {/* Speakable Schema for Voice Search Optimization */}
       <SpeakableSchema
         headline="Best NEET Biology Coaching Delhi NCR | Cerebrum Academy"
-        description="Top NEET Biology coaching in Delhi NCR with AIIMS-trained faculty led by Dr. Shekhar C Singh. 98% NEET-UG qualification rate, 680+ medical college selections since 2014. 6 NCR centres plus online classes for NEET, NEET Foundation Class 9-10, IB, AP, MCAT, DAT, GAMSAT, USMLE Step 1, and Biology Olympiads."
+        description="Top NEET Biology coaching in Delhi NCR with AIIMS-trained faculty led by Dr. Shekhar C Singh. 98% NEET-UG qualification rate, 680+ medical college selections since 2014. 5 NCR centres plus online classes for NEET, NEET Foundation Class 9-10, IB, AP, MCAT, DAT, GAMSAT, USMLE Step 1, and Biology Olympiads."
         cssSelectors={['[data-speakable="title"]', '[data-speakable="summary"]', '.faq-answer']}
         url="https://cerebrumbiologyacademy.com"
       />
@@ -551,7 +551,7 @@ export default function Home() {
       </section>
 
       {/* 9. Locations Section — Delhi NCR offline centres (South Extension,
-          Rohini, Green Park, Gurugram, Faridabad, Noida).
+          Rohini, Green Park, Gurugram, Faridabad).
           data-region="india-only" — hidden from non-IN visitors since
           they cannot commute to NCR; online-only is the relevant model
           for them. Section still in DOM for Google to crawl. */}

@@ -37,7 +37,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   home: {
     title: 'Best NEET Biology Coaching Delhi NCR | Cerebrum Biology Academy',
     description:
-      'AIIMS-trained NEET Biology coaching by Dr. Shekhar C Singh. 98% NEET qualification, 680+ medical selections. 6 NCR centres + online. Free demo.',
+      'AIIMS-trained NEET Biology coaching by Dr. Shekhar C Singh. 98% NEET qualification, 680+ medical selections. 5 NCR centres + online. Free demo.',
     keywords: [
       'NEET coaching in Delhi',
       'NEET coaching Delhi NCR',
@@ -140,7 +140,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   contact: {
     title: 'Contact Us - NEET Coaching in Delhi NCR | Cerebrum Academy Admissions',
     description:
-      'Contact Cerebrum Biology Academy for NEET coaching — call +91-88264-44334, WhatsApp, or visit our 4 Delhi NCR centers. Book a free counseling session!',
+      'Contact Cerebrum Biology Academy for NEET coaching — call +91-88264-44334, WhatsApp, or visit our 5 Delhi NCR centers. Book a free counseling session!',
     keywords: [
       'contact NEET coaching Delhi',
       'NEET admission Delhi NCR',
@@ -1149,7 +1149,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   neetCoachingHub: {
     title: 'NEET Coaching 2026 | 98% Success Rate | AIIMS Faculty | Cerebrum',
     description:
-      "India's top NEET coaching by AIIMS Alumnus Dr. Shekhar C Singh. 98% success, 67+ AIIMS selections, 15,000+ students. 4 centers in Delhi NCR + Online. Call 88264-44334.",
+      "India's top NEET coaching by AIIMS Alumnus Dr. Shekhar C Singh. 98% success, 67+ AIIMS selections, 15,000+ students. 5 centers in Delhi NCR + Online. Call 88264-44334.",
     keywords: [
       'neet coaching',
       'best neet coaching',

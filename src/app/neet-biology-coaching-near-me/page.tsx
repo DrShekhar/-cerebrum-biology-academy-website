@@ -17,9 +17,9 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Near Me | Delhi NCR | 4 Centers + Online | 98% Success',
+  title: 'NEET Biology Coaching Near Me | Delhi NCR | 5 Centers + Online | 98% Success',
   description:
-    'Find NEET Biology coaching near you in Delhi NCR. 4 centers — South Extension, Rohini, Gurugram (Sector 51), Faridabad (Sector 17). AIIMS faculty, 15-student batches, ₹48K/year. Call 88264-44334.',
+    'Find NEET Biology coaching near you in Delhi NCR. 5 centers — South Extension, Green Park, Rohini, Gurugram (Sector 51), Faridabad (Sector 17). AIIMS faculty, 15-student batches, ₹48K/year. Call 88264-44334.',
   keywords: [
     'neet biology coaching near me',
     'neet biology coaching near me delhi',
@@ -33,17 +33,17 @@ export const metadata: Metadata = {
     'biology coaching classes near me',
   ],
   openGraph: {
-    title: 'NEET Biology Coaching Near Me | Delhi NCR | 4 Centers + Online',
+    title: 'NEET Biology Coaching Near Me | Delhi NCR | 5 Centers + Online',
     description:
-      'Find NEET Biology coaching near you in Delhi NCR. 4 centers, AIIMS faculty, 15-student batches, ₹48K/year.',
+      'Find NEET Biology coaching near you in Delhi NCR. 5 centers, AIIMS faculty, 15-student batches, ₹48K/year.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-near-me',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Near Me | Delhi NCR | 4 Centers',
-    description: 'AIIMS faculty, 98% success rate, 4 centers across Delhi NCR.',
+    title: 'NEET Biology Coaching Near Me | Delhi NCR | 5 Centers',
+    description: 'AIIMS faculty, 98% success rate, 5 centers across Delhi NCR.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-near-me',
@@ -208,7 +208,7 @@ export default function NEETBiologyCoachingNearMePage() {
       <section className="bg-gradient-to-b from-green-50 to-white py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-4 text-center">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl lg:text-5xl">
-            NEET Biology Coaching Near You — 4 Centers Across Delhi NCR
+            NEET Biology Coaching Near You — 5 Centers Across Delhi NCR
           </h1>
           <p className="mx-auto mt-4 max-w-3xl text-lg text-slate-600">
             Stop searching &quot;NEET biology coaching near me&quot; on JustDial. We have 4 physical
@@ -238,7 +238,7 @@ export default function NEETBiologyCoachingNearMePage() {
             Find Your Nearest Center
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-slate-600">
-            4 centers strategically located near Metro stations across Delhi NCR
+            5 centers strategically located near Metro stations across Delhi NCR
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {centers.map((center) => (

@@ -60,7 +60,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Batch Size (Classroom)',
-      cerebrum: '15–20 students (Ascent) or 10–12 students (Pinnacle)',
+      cerebrum: '12–16 students (Ascent) or 6–10 students (Pinnacle)',
       competitor: '100–250 students per Kota classroom · 50+ in city centres',
       cerebrumWins: true,
     },
@@ -90,7 +90,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Location Footprint',
-      cerebrum: '6 Delhi NCR centres + pan-India online live classes',
+      cerebrum: '5 Delhi NCR centres + pan-India online live classes',
       competitor: 'Kota flagship + city centres across India · Online via Career Point e-Learning',
       cerebrumWins: false,
     },
@@ -116,12 +116,12 @@ const config: CompetitorComparisonConfig = {
     {
       title: 'No Kota Relocation Required',
       description:
-        "Kota coaching at Career Point's flagship typically requires relocation — hostel, mess, parental separation, mental-health stressors well-documented in recent NTA and media coverage. Cerebrum delivers AIIMS-grade biology coaching online live or at 6 Delhi NCR centres. Study from home.",
+        "Kota coaching at Career Point's flagship typically requires relocation — hostel, mess, parental separation, mental-health stressors well-documented in recent NTA and media coverage. Cerebrum delivers AIIMS-grade biology coaching online live or at 5 Delhi NCR centres. Study from home.",
     },
     {
       title: 'Small Batches (15–20 vs 100–250)',
       description:
-        'Kota classroom model is structurally built around large batches — 100–250 students per class. Personal attention is impossible at that scale. Cerebrum caps batches at 15–20 (Ascent) or 10–12 (Pinnacle).',
+        'Kota classroom model is structurally built around large batches — 100–250 students per class. Personal attention is impossible at that scale. Cerebrum caps batches at 12–16 (Ascent) or 6–10 (Pinnacle).',
     },
     {
       title: 'Biology-Only (vs Mixed NEET + JEE Faculty)',

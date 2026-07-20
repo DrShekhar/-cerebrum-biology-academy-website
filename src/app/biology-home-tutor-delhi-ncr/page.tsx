@@ -223,7 +223,7 @@ const faqs = [
   },
   {
     q: 'Who is the best biology tutor for Class 11 and 12 in Delhi NCR?',
-    a: 'Dr. Shekhar C Singh (AIIMS alumnus, former Academic Head at Narayana Group) at Cerebrum Biology Academy. 15+ years of experience, 67+ AIIMS selections, 15,000+ students coached. Available at 4 centers across Delhi NCR and online.',
+    a: 'Dr. Shekhar C Singh (AIIMS alumnus, former Academic Head at Narayana Group) at Cerebrum Biology Academy. 15+ years of experience, 67+ AIIMS selections, 15,000+ students coached. Available at 5 centers across Delhi NCR and online.',
   },
 ]
 

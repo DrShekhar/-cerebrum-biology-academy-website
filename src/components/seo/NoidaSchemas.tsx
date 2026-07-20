@@ -7,7 +7,7 @@ export const NOIDA_COMPREHENSIVE_FAQS = {
     {
       question: 'What is the fee for NEET coaching in Noida?',
       answer:
-        'NEET Biology coaching fees in Noida: Pursuit batch (30-40 students) - Rs 48,000-70,000/year, Ascent batch (16-18 students) - Rs 76,000-90,000/year, Pinnacle batch (10-12 students) - Rs 98,000-1,56,000/year. All include AIIMS faculty, study material, and online access.',
+        'NEET Biology coaching fees in Noida: Pursuit batch (20-25 students) - Rs 48,000-70,000/year, Ascent batch (12-16 students) - Rs 76,000-90,000/year, Pinnacle batch (6-10 students) - Rs 98,000-1,56,000/year. All include AIIMS faculty, study material, and online access.',
     },
     {
       question: 'Is EMI available for NEET coaching fees in Noida?',
@@ -79,7 +79,7 @@ export const NOIDA_COMPREHENSIVE_FAQS = {
     {
       question: 'Is Cerebrum better than the major national NEET chains for NEET in Noida?',
       answer:
-        'Cerebrum offers: (1) Smaller batches (10-40 vs 100+ students), (2) AIIMS faculty vs mixed faculty, (3) 98% success rate, (4) 1/3rd fee of Aakash and Allen, (5) Personal mentorship. 850+ students switched from the Allen and Aakash to Cerebrum.',
+        'Cerebrum offers: (1) Smaller batches (6-25 vs 100+ students), (2) AIIMS faculty vs mixed faculty, (3) 98% success rate, (4) 1/3rd fee of Aakash and Allen, (5) Personal mentorship. 850+ students switched from the Allen and Aakash to Cerebrum.',
     },
     {
       question: 'Should I go to Kota or stay in Noida for NEET?',
@@ -208,7 +208,7 @@ export function NoidaLocalBusinessSchema({
           itemOffered: {
             '@type': 'Course',
             name: 'Pursuit - Class 11 NEET',
-            description: '30-40 students batch, 6 hrs/week, AIIMS faculty',
+            description: '20-25 students batch, 6 hrs/week, AIIMS faculty',
           },
           price: '48000',
           priceCurrency: 'INR',
@@ -218,7 +218,7 @@ export function NoidaLocalBusinessSchema({
           itemOffered: {
             '@type': 'Course',
             name: 'Ascent - Class 11/12 NEET',
-            description: '16-18 students batch, 8 hrs/week, weekly doubt sessions',
+            description: '12-16 students batch, 8 hrs/week, weekly doubt sessions',
           },
           price: '76000',
           priceCurrency: 'INR',

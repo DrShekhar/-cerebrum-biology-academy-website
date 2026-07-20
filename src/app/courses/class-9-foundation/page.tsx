@@ -213,7 +213,7 @@ export default function Class9FoundationPage() {
     {
       question: 'What are the fee options and do you offer scholarships?',
       answer:
-        'We offer 3 tiers: Pursuit (₹45,000/year, batch of 30), Ascent (₹60,000/year, batch of 20), and Pinnacle (₹90,000/year, batch of 12 with extra mentoring). EMI options available. Merit scholarships of up to 30% are offered based on a simple entrance test.',
+        'We offer 3 tiers: Pursuit (₹45,000/year, batch of 20-25), Ascent (₹60,000/year, batch of 12-16), and Pinnacle (₹90,000/year, batch of 6-10 with extra mentoring). EMI options available. Merit scholarships of up to 30% are offered based on a simple entrance test.',
     },
     {
       question: 'What is included vs what costs extra?',
@@ -583,7 +583,7 @@ export default function Class9FoundationPage() {
                   <div className="flex items-center">
                     <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
                     <span className="text-sm sm:text-base">
-                      16-25 students per batch — personal attention
+                      12-16 students per batch — personal attention
                     </span>
                   </div>
                   <div className="flex items-center">
@@ -673,6 +673,22 @@ export default function Class9FoundationPage() {
             Explore Related Courses
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            <Link
+              href="/neet-biology-foundation-class-6-to-8"
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow group"
+            >
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                Pre-Foundation (Class 6-8)
+              </h3>
+              <p className="text-sm text-gray-600 mb-3">
+                Have a younger child? Start even earlier — curiosity-led biology that builds the
+                base for NEET, Olympiads and top colleges. Sibling discounts available.
+              </p>
+              <span className="text-blue-600 font-medium text-sm inline-flex items-center">
+                View Course <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+
             <Link
               href="/courses/class-10-foundation"
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow group"

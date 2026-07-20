@@ -154,7 +154,7 @@ export default function Class9FoundationLayout({ children }: { children: React.R
                 name: 'What is the fee for Class 9 Biology Foundation course?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'The NEET Foundation course for Class 9 starts at ₹45,000/year (Pursuit tier). The most popular Ascent tier is ₹60,000/year with 16-25 student batches. Premium Pinnacle tier with personal mentoring is ₹90,000/year. EMI options available starting ₹3,750/month.',
+                  text: 'The NEET Foundation course for Class 9 starts at ₹45,000/year (Pursuit tier). The most popular Ascent tier is ₹60,000/year with 12-16 student batches. Premium Pinnacle tier with personal mentoring is ₹90,000/year. EMI options available starting ₹3,750/month.',
                 },
               },
               {

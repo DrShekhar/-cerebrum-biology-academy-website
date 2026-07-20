@@ -128,7 +128,7 @@ export default function HowToScore340InNEETBiology() {
         '@type': 'HowToStep',
         position: 7,
         name: 'Choose Coaching to Accelerate',
-        text: 'AIIMS-trained Biology-only faculty, small batches (15–20), weekly chapter tests, and rubric-based error feedback compress the 340+ timeline by 30–40%. Cerebrum has 200+ students scoring 340+ since 2014.',
+        text: 'AIIMS-trained Biology-only faculty, small batches (15–20), weekly chapter tests, and rubric-based error feedback compress the 340+ timeline by 20–25%. Cerebrum has 200+ students scoring 340+ since 2014.',
         url: `${articleUrl}#step-7`,
       },
     ],

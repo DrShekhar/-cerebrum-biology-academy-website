@@ -100,7 +100,7 @@ export const NEAR_ME_CITIES: NearMeCityData[] = [
       {
         question: 'Is Cerebrum better than Allen Civil Lines or Aakash Prayagraj for biology?',
         answer:
-          "For biology specifically — yes, because of batch size + faculty depth. Allen and Aakash Prayagraj batches are 100-200 students; you're one face in a lecture hall. Cerebrum batches are 10-40 students depending on tier, with weekly per-student review of wrong MCQs. We don't teach physics or chemistry — keep your Allen / Aakash for PCM and add Cerebrum biology as a 6 hour/week layer.",
+          "For biology specifically — yes, because of batch size + faculty depth. Allen and Aakash Prayagraj batches are 100-200 students; you're one face in a lecture hall. Cerebrum batches are 6-25 students depending on tier, with weekly per-student review of wrong MCQs. We don't teach physics or chemistry — keep your Allen / Aakash for PCM and add Cerebrum biology as a 6 hour/week layer.",
       },
       {
         question: "What's the target for a Prayagraj NEET aspirant — MLN or KGMU?",
@@ -343,7 +343,7 @@ export const NEAR_ME_CITIES: NearMeCityData[] = [
       {
         question: 'Is Cerebrum better than Allen MP Nagar for biology specifically?',
         answer:
-          "For biology only — yes, because of small-batch model and weekly per-MCQ review. Allen MP Nagar batches are 150-200 students; you can't get personal attention on every wrong answer. Cerebrum batches are 10-40 with explicit per-student error review.",
+          "For biology only — yes, because of small-batch model and weekly per-MCQ review. Allen MP Nagar batches are 150-200 students; you can't get personal attention on every wrong answer. Cerebrum batches are 6-25 with explicit per-student error review.",
       },
       {
         question: "What's the cut-off for Gandhi Medical College Bhopal MP state quota?",

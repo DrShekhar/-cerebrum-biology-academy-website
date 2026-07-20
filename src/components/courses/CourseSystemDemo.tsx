@@ -158,6 +158,7 @@ export function CourseSystemDemo() {
                 selectedClass={selectedClass}
                 onClassSelect={setSelectedClass}
                 courseCounts={{
+                  '6-8': 1,
                   '9th': 2,
                   '10th': 2,
                   '11th': 3,

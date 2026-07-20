@@ -61,7 +61,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Batch Size (Live Classes)',
-      cerebrum: '15–20 students (Ascent) or 10–12 students (Pinnacle)',
+      cerebrum: '12–16 students (Ascent) or 6–10 students (Pinnacle)',
       competitor: '50–200+ students per live class · 1:1 tutoring available at premium tier',
       cerebrumWins: true,
     },
@@ -91,7 +91,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Offline Centres',
-      cerebrum: '6 Delhi NCR centres (South Ext, Rohini, Green Park, Gurugram, Faridabad, Noida)',
+      cerebrum: '5 Delhi NCR centres (South Ext, Rohini, Green Park, Gurugram, Faridabad)',
       competitor: 'Primarily online · Limited offline centres (Vedantu Improvement Promise hubs)',
       cerebrumWins: true,
     },
@@ -123,7 +123,7 @@ const config: CompetitorComparisonConfig = {
     {
       title: 'Small Live-Class Batches (15–20 vs 50–200+)',
       description:
-        "Even Vedantu's live classes typically run 50–200+ students per session. Cerebrum caps at 15–20 (Ascent) or 10–12 (Pinnacle). Personal attention is preserved structurally, not just claimed.",
+        "Even Vedantu's live classes typically run 50–200+ students per session. Cerebrum caps at 12–16 (Ascent) or 6–10 (Pinnacle). Personal attention is preserved structurally, not just claimed.",
     },
     {
       title: 'AIIMS Clinical Correlations',
@@ -138,7 +138,7 @@ const config: CompetitorComparisonConfig = {
     {
       title: 'Offline + Online (vs Primarily Online)',
       description:
-        'Cerebrum operates 6 Delhi NCR centres for students who prefer in-person + the same faculty available online pan-India. Vedantu is primarily online with limited offline footprint.',
+        'Cerebrum operates 5 Delhi NCR centres for students who prefer in-person + the same faculty available online pan-India. Vedantu is primarily online with limited offline footprint.',
     },
   ],
   whenCompetitorMightBeBetter: [
@@ -199,7 +199,7 @@ const config: CompetitorComparisonConfig = {
     {
       question: 'Does Cerebrum have offline centres like Vedantu Improvement Promise hubs?',
       answer:
-        'Cerebrum operates 6 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) with the same faculty online + offline. Vedantu is primarily online with a smaller offline footprint via Vedantu Improvement Promise hubs in select cities.',
+        'Cerebrum operates 5 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad) with the same faculty online + offline. Vedantu is primarily online with a smaller offline footprint via Vedantu Improvement Promise hubs in select cities.',
     },
     {
       question: 'What is the NEET biology success rate at Cerebrum vs Vedantu?',

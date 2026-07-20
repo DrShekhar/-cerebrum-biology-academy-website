@@ -113,7 +113,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Small Batches (15–20) vs Mass Batches',
       description:
-        'In a 6–8 week crash window, individual attention matters most. Cerebrum caps batches at 15–20 (Ascent) or 10–12 (Pinnacle). Aakash and Allen typically run 150–400 students per batch. PhysicsWallah and Unacademy runs 300–2,000+ per live session. The smaller batch = the more weak-topic 1:1 fixing.',
+        'In a 6–8 week crash window, individual attention matters most. Cerebrum caps batches at 12–16 (Ascent) or 6–10 (Pinnacle). Aakash and Allen typically run 150–400 students per batch. PhysicsWallah and Unacademy runs 300–2,000+ per live session. The smaller batch = the more weak-topic 1:1 fixing.',
     },
     {
       title: 'AIIMS-Trained Faculty (Not Just Coaching-Trained)',

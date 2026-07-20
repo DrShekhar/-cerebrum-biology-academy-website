@@ -54,7 +54,7 @@ const contactFAQs = [
   {
     question: 'What are the center locations for Cerebrum Biology Academy?',
     answer:
-      'We have 4 centers across Delhi NCR — South Extension Part 2 (Delhi), Rohini DC Chowk (Delhi), Gurugram Sector 51 (Haryana), and Faridabad Sector 17 (Haryana). All centers have experienced AIIMS faculty and follow the same curriculum. We also offer online classes for students across India and worldwide.',
+      'We have 5 centers across Delhi NCR — South Extension Part 2 (Delhi), Green Park (Delhi), Rohini DC Chowk (Delhi), Gurugram Sector 51 (Haryana), and Faridabad Sector 17 (Haryana). All centers have experienced AIIMS faculty and follow the same curriculum. We also offer online classes for students across India and worldwide.',
   },
   {
     question: 'What are the office hours for contacting Cerebrum Academy?',

@@ -573,7 +573,7 @@ export function IntelligentChatbot() {
           '• Regular tests and assessments\n' +
           '• Board exam preparation\n' +
           '• Duration: 1 year\n' +
-          '• Batch size: 25-30 students\n\n'
+          '• Batch size: 20-25 students\n\n'
         break
       case '12':
         response +=

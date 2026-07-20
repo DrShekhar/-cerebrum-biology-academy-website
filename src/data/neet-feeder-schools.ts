@@ -168,7 +168,7 @@ function tierBonusFAQs(
     return [
       {
         question: `Can ${shortName} students afford the Pursuit tier?`,
-        answer: `Yes — Pursuit at ₹40,000/year is intentionally priced as the entry tier for students from emerging-feeder schools where AIIMS-Delhi-fee burden is unrealistic. Same AIIMS / IIT-trained faculty (30–40 student batches), same NCERT pedagogy. EMI plans available. State medical colleges (Delhi government colleges, Haryana state, UP government) are realistic targets at Pursuit-tier preparation.`,
+        answer: `Yes — Pursuit at ₹40,000/year is intentionally priced as the entry tier for students from emerging-feeder schools where AIIMS-Delhi-fee burden is unrealistic. Same AIIMS / IIT-trained faculty (20–25 student batches), same NCERT pedagogy. EMI plans available. State medical colleges (Delhi government colleges, Haryana state, UP government) are realistic targets at Pursuit-tier preparation.`,
       },
       {
         question: `What if my mock score is currently below 200/360 in Biology?`,
@@ -536,7 +536,7 @@ export function buildNEETFeederSchoolConfig(key: NEETFeederSchoolKey): BestVerti
       {
         tier: 'Ascent (Most Popular)',
         price: '₹58,000–₹90,000 / year',
-        description: `16–25 student batches with weekly doubt sessions. Most popular tier for ${s.shortName} students balancing CBSE Boards + NEET preparation.`,
+        description: `12–16 student batches with weekly doubt sessions. Most popular tier for ${s.shortName} students balancing CBSE Boards + NEET preparation.`,
       },
       {
         tier: 'Pinnacle (1:1 Premium)',
@@ -587,7 +587,7 @@ export function buildNEETFeederSchoolConfig(key: NEETFeederSchoolKey): BestVerti
         },
         {
           question: `What does Cerebrum NEET coaching cost for ${s.shortName} students?`,
-          answer: `Pursuit ₹40,000–₹75,000/year (most affordable), Ascent ₹58,000–₹90,000/year (most popular, 16–25 batch + weekly doubt), Pinnacle ₹1,20,000–₹1,56,000/year (10–12 batch + Dr. Shekhar mentorship). EMI plans available. 7-day refund guarantee.`,
+          answer: `Pursuit ₹40,000–₹75,000/year (most affordable), Ascent ₹58,000–₹90,000/year (most popular, 12–16 batch + weekly doubt), Pinnacle ₹1,20,000–₹1,56,000/year (6–10 batch + Dr. Shekhar mentorship). EMI plans available. 7-day refund guarantee.`,
         },
         {
           question: `Should I switch from my current coaching for NEET biology?`,

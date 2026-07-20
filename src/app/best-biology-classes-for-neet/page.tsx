@@ -45,7 +45,7 @@ const config: BestVerticalConfig = {
   intro:
     'The best biology classes for NEET 2027 require three things together: AIIMS-trained faculty, biology-only specialisation (no Physics / Chemistry rotation), and small batches that allow individual attention. Cerebrum Biology Academy is the only major institute in India that combines all three — and our 12-year track record (since 2014) backs the claim.',
   clusterSummary:
-    '680+ medical college selections · 98% NEET-UG qualification · 485+ verified 5-star reviews · 6 Delhi NCR centres + pan-India online.',
+    '680+ medical college selections · 98% NEET-UG qualification · 485+ verified 5-star reviews · 5 Delhi NCR centres + pan-India online.',
   credentials: [
     { label: '#1 Biology-Only Brand' },
     { label: 'AIIMS-Trained Faculty' },
@@ -86,7 +86,7 @@ const config: BestVerticalConfig = {
     {
       tier: 'Ascent (Most Popular)',
       price: '₹58,000–₹90,000 / year',
-      description: '16–25 student batches. Weekly doubt sessions, standard mock-test series.',
+      description: '12–16 student batches. Weekly doubt sessions, standard mock-test series.',
     },
     {
       tier: 'Pinnacle (Premium)',
@@ -113,7 +113,7 @@ const config: BestVerticalConfig = {
     {
       title: '15–20 Student Batches (vs 100–400 at Chains)',
       description:
-        "Personal attention is structurally impossible in 200-student batches. Cerebrum caps Ascent at 16–25 and Pinnacle at 10–12. Every student's doubt is heard, every week.",
+        "Personal attention is structurally impossible in 200-student batches. Cerebrum caps Ascent at 12–16 and Pinnacle at 6–10. Every student's doubt is heard, every week.",
     },
     {
       title: 'NCERT-First, PYQ-Driven (95% of NEET Biology)',
@@ -168,7 +168,7 @@ const config: BestVerticalConfig = {
     {
       question: 'What are the fees for best biology classes for NEET at Cerebrum?',
       answer:
-        'Pursuit ₹40,000–₹75,000/year (30–40 batch, AIIMS / IIT-trained faculty), Ascent ₹58,000–₹90,000/year (16–25 batch + weekly doubt sessions, most popular), Pinnacle ₹1,20,000–₹1,56,000/year (10–12 batch + personal mentorship from Dr. Shekhar). EMI plans available. 50–60% lower than premium chain fees with structurally better biology depth.',
+        'Pursuit ₹40,000–₹75,000/year (20–25 batch, AIIMS / IIT-trained faculty), Ascent ₹58,000–₹90,000/year (12–16 batch + weekly doubt sessions, most popular), Pinnacle ₹1,20,000–₹1,56,000/year (6–10 batch + personal mentorship from Dr. Shekhar). EMI plans available. 50–60% lower than premium chain fees with structurally better biology depth.',
     },
     {
       question: 'Are Cerebrum biology classes available online for NEET?',

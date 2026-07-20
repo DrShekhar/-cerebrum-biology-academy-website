@@ -4,7 +4,7 @@ import { BestVerticalLanding, type BestVerticalConfig } from '@/components/seo/B
 export const metadata: Metadata = {
   title: 'Best NEET Biology Tutor in India | AIIMS-Trained Dr. Shekhar C Singh',
   description:
-    "Dr. Shekhar C Singh (AIIMS Delhi) leads India's only biology-only NEET coaching. 680+ AIIMS/JIPMER/AFMC selections, 98% qualification rate, batches of 15-20. ₹40K–₹1.56L/year — half the cost of Kota relocation. Online + 6 NCR centres.",
+    "Dr. Shekhar C Singh (AIIMS Delhi) leads India's only biology-only NEET coaching. 680+ AIIMS/JIPMER/AFMC selections, 98% qualification rate, batches of 15-20. ₹40K–₹1.56L/year — half the cost of Kota relocation. Online + 5 NCR centres.",
   keywords: [
     'best neet biology tutor',
     'best neet biology tutor india',
@@ -54,7 +54,7 @@ const config: BestVerticalConfig = {
     { label: '680+ Selections' },
     { label: '98% Qualification Rate' },
     { label: '15-20 Student Batches' },
-    { label: '6 NCR Centres + Online' },
+    { label: '5 NCR Centres + Online' },
     { label: 'NCERT Line-by-Line Mapped' },
   ],
   pages: [
@@ -88,19 +88,19 @@ const config: BestVerticalConfig = {
   ],
   pricing: [
     {
-      tier: 'Pursuit (Small-Batch 30–40)',
+      tier: 'Pursuit (Small-Batch 20–25)',
       price: '₹40,000–₹75,000 / year',
       description:
         'Live small-batch NEET biology classes with senior faculty, weekly chapter tests, doubt sessions. Most affordable structured tier.',
     },
     {
-      tier: 'Ascent (Pro Batch 16–25)',
+      tier: 'Ascent (Pro Batch 12–16)',
       price: '₹58,000–₹90,000 / year',
       description:
         'Tighter batch with weekly 1:1 doubt slots, monthly NEET-pattern mocks, personalised gap analysis. Most popular value tier.',
     },
     {
-      tier: 'Pinnacle (Direct Dr. Shekhar 10–12)',
+      tier: 'Pinnacle (Direct Dr. Shekhar 6–10)',
       price: '₹1,20,000–₹1,56,000 / year · ad-hoc 1:1 ₹2,500–₹4,500/hr',
       description:
         'Micro-batch with direct Dr. Shekhar 1:1 mentoring. Calibrated for AIIMS / top-100 rank aspirants. Half the cost of Kota relocation (₹2L–₹2.5L) with materially better biology pedagogy.',
@@ -135,7 +135,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Both Online + 6 NCR Offline Centres',
       description:
-        'Six physical Cerebrum centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad, Noida) — one within 30-minute travel time of any NCR address. Pan-India and NRI students receive online live (not recorded) batches with the same AIIMS-trained faculty. Hybrid is supported — start offline, continue online when family travels, or vice versa.',
+        'Five physical Cerebrum centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad) — one within 30-minute travel time of most NCR addresses. Pan-India and NRI students receive online live (not recorded) batches with the same AIIMS-trained faculty. Hybrid is supported — start offline, continue online when family travels, or vice versa.',
     },
   ],
   testimonials: [
@@ -170,7 +170,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does the best NEET Biology coaching cost?',
       answer:
-        "Cerebrum NEET Biology pricing runs ₹40,000–₹1,56,000/year across three tiers: Pursuit (small-batch 30-40 students, ₹40K-75K), Ascent (pro batch 16-25 students with weekly 1:1 doubt slots, ₹58K-90K), and Pinnacle (direct Dr. Shekhar micro-batch 10-12 students, ₹1.2L-1.56L). Ad-hoc 1:1 hourly tutoring is ₹2,500-4,500/hour. Compared to Aakash and Allen full-NEET courses (~₹1.4L-1.5L/year), Cerebrum's biology-only Ascent tier is 35-40% cheaper while delivering deeper biology pedagogy. Compared to Kota relocation total cost (₹2L-2.5L including hostel and mess), Cerebrum Pinnacle is half the cost.",
+        "Cerebrum NEET Biology pricing runs ₹40,000–₹1,56,000/year across three tiers: Pursuit (small-batch 20-25 students, ₹40K-75K), Ascent (pro batch 12-16 students with weekly 1:1 doubt slots, ₹58K-90K), and Pinnacle (direct Dr. Shekhar micro-batch 6-10 students, ₹1.2L-1.56L). Ad-hoc 1:1 hourly tutoring is ₹2,500-4,500/hour. Compared to Aakash and Allen full-NEET courses (~₹1.4L-1.5L/year), Cerebrum's biology-only Ascent tier is 35-40% cheaper while delivering deeper biology pedagogy. Compared to Kota relocation total cost (₹2L-2.5L including hostel and mess), Cerebrum Pinnacle is half the cost.",
     },
     {
       question:

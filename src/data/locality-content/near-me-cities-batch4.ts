@@ -55,7 +55,7 @@ export const NEAR_ME_CITIES_BATCH4: NearMeCityData[] = [
       {
         question: 'Cerebrum vs Allen Andheri / Aakash Borivali for biology?',
         answer:
-          "For biology specifically — Cerebrum wins on batch size (10-40 vs Allen Andheri's 150+). Keep Allen / Aakash for PCM, add Cerebrum biology specialist layer.",
+          "For biology specifically — Cerebrum wins on batch size (6-25 vs Allen Andheri's 150+). Keep Allen / Aakash for PCM, add Cerebrum biology specialist layer.",
       },
       {
         question: 'Grant Medical College Mumbai biology cut-off?',
@@ -533,7 +533,7 @@ export const NEAR_ME_CITIES_BATCH4: NearMeCityData[] = [
       {
         question: 'Is Cerebrum better than Allen Ramdaspeth or Aakash Nagpur for biology?',
         answer:
-          "For biology alone — yes on batch size and depth. Allen and Aakash Nagpur run 100-200 student batches; Cerebrum runs 10-40 with weekly per-student review of your wrong MCQs. We don't teach physics or chemistry — keep your Nagpur PCM coaching and add Cerebrum biology as a ~6 hour/week layer.",
+          "For biology alone — yes on batch size and depth. Allen and Aakash Nagpur run 100-200 student batches; Cerebrum runs 6-25 with weekly per-student review of your wrong MCQs. We don't teach physics or chemistry — keep your Nagpur PCM coaching and add Cerebrum biology as a ~6 hour/week layer.",
       },
       {
         question: 'What NEET score targets GMC Nagpur or AIIMS Nagpur?',
@@ -582,7 +582,7 @@ export const NEAR_ME_CITIES_BATCH4: NearMeCityData[] = [
       {
         question: 'Is Cerebrum better than Allen Sanjay Place or Aakash Agra for biology?',
         answer:
-          'For biology specifically — yes, on batch size and per-student review. Allen and Aakash Agra batches are 100-180 students; Cerebrum is 10-40 with weekly review of your wrong MCQs. We teach only biology — keep your Agra PCM coaching and layer Cerebrum biology on top at ~6 hours/week.',
+          'For biology specifically — yes, on batch size and per-student review. Allen and Aakash Agra batches are 100-180 students; Cerebrum is 6-25 with weekly review of your wrong MCQs. We teach only biology — keep your Agra PCM coaching and layer Cerebrum biology on top at ~6 hours/week.',
       },
       {
         question: "What's the target for an Agra aspirant — S.N. Medical College or KGMU?",
@@ -639,7 +639,7 @@ export const NEAR_ME_CITIES_BATCH4: NearMeCityData[] = [
       {
         question: 'Do I need to go to Kota, or can I prepare from Jodhpur?',
         answer:
-          "You can prepare from Jodhpur. Kota's advantage is intensity, not biology depth — its batches are 100-200 students. Cerebrum gives you 10-40 student biology batches live online from home, so you get the specialist attention Kota lacks without leaving family and school.",
+          "You can prepare from Jodhpur. Kota's advantage is intensity, not biology depth — its batches are 100-200 students. Cerebrum gives you 6-25 student biology batches live online from home, so you get the specialist attention Kota lacks without leaving family and school.",
       },
       {
         question: 'What NEET score targets AIIMS Jodhpur or Dr. S.N. Medical College?',
@@ -696,7 +696,7 @@ export const NEAR_ME_CITIES_BATCH4: NearMeCityData[] = [
       {
         question: 'Is Cerebrum better than Allen Hiran Magri or Aakash Udaipur for biology?',
         answer:
-          'For biology specifically — yes, on batch size and per-student review. Allen and Aakash Udaipur run large PCB batches; Cerebrum runs 10-40 student biology-only batches with weekly review of your wrong MCQs. Keep your Udaipur PCM coaching and add Cerebrum biology at ~6 hours/week.',
+          'For biology specifically — yes, on batch size and per-student review. Allen and Aakash Udaipur run large PCB batches; Cerebrum runs 6-25 student biology-only batches with weekly review of your wrong MCQs. Keep your Udaipur PCM coaching and add Cerebrum biology at ~6 hours/week.',
       },
       {
         question: 'What NEET score targets R.N.T. Medical College Udaipur?',
@@ -749,7 +749,7 @@ export const NEAR_ME_CITIES_BATCH4: NearMeCityData[] = [
       {
         question: 'Is Cerebrum better than Allen City Center or Aakash Gwalior for biology?',
         answer:
-          'For biology alone — yes, on batch size and per-student review. Allen and Aakash Gwalior run large PCB batches; Cerebrum runs 10-40 student biology-only batches with weekly review of your wrong MCQs. Keep your Gwalior PCM coaching and layer Cerebrum biology on top at ~6 hours/week.',
+          'For biology alone — yes, on batch size and per-student review. Allen and Aakash Gwalior run large PCB batches; Cerebrum runs 6-25 student biology-only batches with weekly review of your wrong MCQs. Keep your Gwalior PCM coaching and layer Cerebrum biology on top at ~6 hours/week.',
       },
       {
         question: 'What NEET score targets GRMC Gwalior?',

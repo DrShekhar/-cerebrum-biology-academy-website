@@ -152,7 +152,7 @@ const faqs = [
   {
     question: 'What are the fees for the best Biology tutor in Noida?',
     answer:
-      "Dr. Shekhar's Biology coaching has 3 tiers: Pursuit (30-40 students), Ascent (16-18 students), Pinnacle (10-12 students). Class 11: Rs 48,000-98,000/year, Class 12: Rs 70,000-98,000/year, Droppers: Rs 70,000-1,56,000/year. Pinnacle tier includes personal mentorship from Dr. Shekhar.",
+      "Dr. Shekhar's Biology coaching has 3 tiers: Pursuit (20-25 students), Ascent (12-16 students), Pinnacle (6-10 students). Class 11: Rs 48,000-98,000/year, Class 12: Rs 70,000-98,000/year, Droppers: Rs 70,000-1,56,000/year. Pinnacle tier includes personal mentorship from Dr. Shekhar.",
   },
   {
     question: 'Does the best Biology tutor offer online classes for Noida students?',

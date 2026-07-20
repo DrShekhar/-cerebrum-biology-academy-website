@@ -12,7 +12,7 @@ const foundationBase = {
   stats: [
     { value: '50%', label: 'of NEET is Biology', icon: 'target' },
     { value: '38', label: 'NCERT chapters ahead', icon: 'book' },
-    { value: '10-12', label: 'Students per batch', icon: 'users' },
+    { value: '6-25', label: 'Students per batch (by tier)', icon: 'users' },
     { value: 'Since 2014', label: 'Biology specialists', icon: 'clock' },
   ],
   testimonials: [],
@@ -244,7 +244,7 @@ export const neetFoundationClass8: SEOLandingContent = {
   courseSummary: {
     title: 'Class 8 Biology Foundation',
     duration: 'Yearly Programme',
-    batchSize: '10-12 Students',
+    batchSize: '6-25 Students (by tier)',
     features: [
       'One live interactive biology class per week',
       'Aligned to CBSE / ICSE / IB / state board syllabus',
@@ -253,7 +253,7 @@ export const neetFoundationClass8: SEOLandingContent = {
       'Recordings and notes for revision',
       'AIIMS-trained biology faculty',
     ],
-    price: { original: 24000, emi: 'Flexible plans' },
+    price: { original: 45000, emi: 'Flexible plans' },
   },
 
   schema: {
@@ -263,7 +263,7 @@ export const neetFoundationClass8: SEOLandingContent = {
     description:
       'Early NEET biology foundation for Class 8: concept-first, low-pressure, all-boards, olympiad-ready. Live online for students in India and abroad.',
     duration: 'P1Y',
-    price: 24000,
+    price: 45000,
     priceCurrency: 'INR',
     educationalLevel: 'Class 8 (Foundation)',
   },

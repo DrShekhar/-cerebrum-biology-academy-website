@@ -47,14 +47,14 @@ const config: BestVerticalConfig = {
   intro:
     'Biology classes for NEET differ from 1:1 tutoring — structured curriculum at scale, peer learning, weekly group mocks, mock-test rankings, and cohort accountability. Cerebrum caps batches at 15–20 students (vs 50–100+ at Aakash and Allen and online-first generalist platforms) — close enough for personal attention, large enough for healthy competition.',
   clusterSummary:
-    'Offline at 6 Delhi NCR centres · Online live (not recorded) pan-India · English + Hindi · NCERT-anchored, PYQ-driven.',
+    'Offline at 5 Delhi NCR centres · Online live (not recorded) pan-India · English + Hindi · NCERT-anchored, PYQ-driven.',
   credentials: [
     { label: 'Small Batch 15–20' },
     { label: 'AIIMS-Trained Faculty' },
     { label: 'NCERT-First' },
     { label: '15+ Years PYQ Archive' },
     { label: 'Weekly Mocks' },
-    { label: '6 Delhi NCR Centres' },
+    { label: '5 Delhi NCR Centres' },
     { label: 'Pan-India Online Live' },
     { label: 'English / Hindi Tracks' },
   ],
@@ -83,20 +83,20 @@ const config: BestVerticalConfig = {
       tier: 'Ascent (Most Popular)',
       price: '₹58,000–₹90,000 / year',
       description:
-        '16–25 student batches. Weekly doubt sessions, standard mock-test series, structured NCERT-first curriculum.',
+        '12–16 student batches. Weekly doubt sessions, standard mock-test series, structured NCERT-first curriculum.',
     },
     {
       tier: 'Pinnacle (Premium 1:1)',
       price: '₹1,20,000–₹1,56,000 / year',
       description:
-        '10–12 student micro-batches + personal mentorship from Dr. Shekhar C Singh. Best for AIIMS / Top medical college aspirants.',
+        '6–10 student micro-batches + personal mentorship from Dr. Shekhar C Singh. Best for AIIMS / Top medical college aspirants.',
     },
   ],
   whyBest: [
     {
       title: 'Why Small-Batch Biology Classes Beat 200+ Lecture Halls',
       description:
-        "Aakash and Allen and online-first generalist platforms typically run batches of 100–400 students per teacher. At those sizes individual attention is impossible — students become invisible. Cerebrum caps batches at 15–20 (Ascent) or 10–12 (Pinnacle). Every student's doubt gets answered every week.",
+        "Aakash and Allen and online-first generalist platforms typically run batches of 100–400 students per teacher. At those sizes individual attention is impossible — students become invisible. Cerebrum caps batches at 12–16 (Ascent) or 6–10 (Pinnacle). Every student's doubt gets answered every week.",
     },
     {
       title: 'Biology-Only Specialisation',
@@ -116,7 +116,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Same Faculty Offline + Online',
       description:
-        'Online live (not recorded) classes use the same AIIMS-trained faculty as the offline batches at 6 Delhi NCR centres. Many top NEET scorers chose the online format, including students who switched from Kota.',
+        'Online live (not recorded) classes use the same AIIMS-trained faculty as the offline batches at 5 Delhi NCR centres. Many top NEET scorers chose the online format, including students who switched from Kota.',
     },
     {
       title: 'Documented Results (Not Aggregated Chain Claims)',
@@ -156,7 +156,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much do biology classes for NEET cost at Cerebrum?',
       answer:
-        'Pursuit ₹40,000–₹75,000/year (30–40 batch), Ascent ₹58,000–₹90,000/year (16–25 batch + weekly doubt sessions), Pinnacle ₹1,20,000–₹1,56,000/year (10–12 batch + personal mentorship from Dr. Shekhar). All tiers include weekly mocks, recorded sessions for revision, and WhatsApp doubt support. EMI options available.',
+        'Pursuit ₹40,000–₹75,000/year (20–25 batch), Ascent ₹58,000–₹90,000/year (12–16 batch + weekly doubt sessions), Pinnacle ₹1,20,000–₹1,56,000/year (6–10 batch + personal mentorship from Dr. Shekhar). All tiers include weekly mocks, recorded sessions for revision, and WhatsApp doubt support. EMI options available.',
     },
     {
       question: 'Are biology classes for NEET available online?',
@@ -171,7 +171,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Which cities are biology classes for NEET offered in?',
       answer:
-        'Offline biology classes at 6 Delhi NCR centres: South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida. Online live classes pan-India — major hubs include Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Jaipur, Kota, Lucknow, Patna and Indore.',
+        'Offline biology classes at 5 Delhi NCR centres: South Extension, Rohini, Green Park, Gurugram, Faridabad. Online live classes pan-India — major hubs include Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Jaipur, Kota, Lucknow, Patna and Indore.',
     },
     {
       question: 'Are biology classes for NEET offered in Hindi?',

@@ -55,7 +55,7 @@ const courses = [
   {
     name: 'Pursuit - Class 12 NEET',
     duration: '12 months',
-    mode: '30-40 students | 6 hrs/week',
+    mode: '20-25 students | 6 hrs/week',
     fee: '70,000',
     features: [
       'AIIMS faculty teaching',
@@ -68,7 +68,7 @@ const courses = [
   {
     name: 'Ascent - Class 12 NEET',
     duration: '12 months',
-    mode: '16-18 students | 8 hrs/week',
+    mode: '12-16 students | 8 hrs/week',
     fee: '76,000',
     features: [
       'Focused NEET preparation',
@@ -132,7 +132,7 @@ const faqs = [
   {
     question: 'What is the fee for Class 12 Biology coaching in Noida?',
     answer:
-      'Our Class 12 Biology fees: Pursuit (30-40 students) - Rs 70,000/year, Ascent (16-18 students) - Rs 76,000/year, Pinnacle (10-12 students) - Rs 98,000/year. All tiers include AIIMS faculty, test series, and doubt support.',
+      'Our Class 12 Biology fees: Pursuit (20-25 students) - Rs 70,000/year, Ascent (12-16 students) - Rs 76,000/year, Pinnacle (6-10 students) - Rs 98,000/year. All tiers include AIIMS faculty, test series, and doubt support.',
   },
   {
     question: 'Is it too late to join NEET coaching in Class 12?',

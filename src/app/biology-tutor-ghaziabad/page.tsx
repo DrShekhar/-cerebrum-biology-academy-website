@@ -81,7 +81,7 @@ const faqs = [
   {
     question: 'How far is your center from Indirapuram?',
     answer:
-      'Our center in Greater Noida is about 8 km from Indirapuram, which is 15-20 minutes by road. You can also take the Aqua Line metro. Many students from Indirapuram and Vaishali attend our classes.',
+      'We teach Indirapuram and Vaishali students through live online classes — no travel needed. For anyone who prefers in-person coaching, our nearest walk-in center is South Extension, New Delhi (about 20 km away).',
   },
   {
     question: 'Do you have students from Ghaziabad?',

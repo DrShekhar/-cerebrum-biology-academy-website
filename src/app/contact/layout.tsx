@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Contact Us | NEET Biology Coaching Inquiry Delhi',
   description:
-    'Contact Cerebrum Biology Academy for NEET coaching — call +91-88264-44334, WhatsApp, or visit our 4 Delhi NCR centers. Book a free counseling session!',
+    'Contact Cerebrum Biology Academy for NEET coaching — call +91-88264-44334, WhatsApp, or visit our 5 Delhi NCR centers. Book a free counseling session!',
   keywords:
     'contact NEET coaching, biology coaching contact, admission inquiry, coaching center Delhi, phone number, WhatsApp contact, visit center, free counseling',
   openGraph: {

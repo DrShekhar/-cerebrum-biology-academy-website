@@ -176,7 +176,7 @@ export const CoachingTiers: Record<CoachingSubscriptionTier, CoachingTierConfig>
       liveClasses: {
         enabled: true,
         hoursPerWeek: 6,
-        batchSize: '30-40 students',
+        batchSize: '20-25 students',
         recordingsAccess: true,
       },
       mcqPractice: {
@@ -245,7 +245,7 @@ export const CoachingTiers: Record<CoachingSubscriptionTier, CoachingTierConfig>
       liveClasses: {
         enabled: true,
         hoursPerWeek: 8,
-        batchSize: '16-18 students',
+        batchSize: '12-16 students',
         recordingsAccess: true,
       },
       mcqPractice: {

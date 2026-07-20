@@ -87,16 +87,6 @@ const imageEntries: ImageSitemapEntry[] = [
     ],
   },
   {
-    loc: `${BASE_URL}/locations/noida`,
-    images: [
-      {
-        loc: `${IMAGES_BASE_URL}/centers/center-noida.jpg`,
-        title: 'Noida Center - Cerebrum Biology Academy',
-        caption: 'Comprehensive biology coaching center in Noida',
-      },
-    ],
-  },
-  {
     loc: `${BASE_URL}/testimonials`,
     images: [
       {

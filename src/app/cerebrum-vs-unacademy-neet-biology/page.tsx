@@ -83,7 +83,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Offline Centres',
-      cerebrum: '6 Delhi NCR centres + pan-India online live',
+      cerebrum: '5 Delhi NCR centres + pan-India online live',
       competitor: 'Online-only (some offline acquisition centres post-2022)',
       cerebrumWins: true,
     },

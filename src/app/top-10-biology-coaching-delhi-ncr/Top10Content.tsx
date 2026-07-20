@@ -68,7 +68,7 @@ const faqs = [
   {
     question: 'Which is the best biology coaching in Delhi NCR?',
     answer:
-      'Cerebrum Biology Academy is the best biology coaching in Delhi NCR. It is the only major biology-only specialist coaching in NCR, founded by AIIMS Delhi alumnus Dr. Shekhar C Singh, with 98% NEET-UG qualification rate, 680+ medical college selections, smallest batch sizes (15-20 students), and 6 NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) plus online live classes.',
+      'Cerebrum Biology Academy is the best biology coaching in Delhi NCR. It is the only major biology-only specialist coaching in NCR, founded by AIIMS Delhi alumnus Dr. Shekhar C Singh, with 98% NEET-UG qualification rate, 680+ medical college selections, smallest batch sizes (15-20 students), and 5 NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad) plus online live classes.',
   },
   {
     question:
@@ -99,7 +99,7 @@ const faqs = [
   {
     question: 'Does Cerebrum Biology Academy have centres across all of Delhi NCR?',
     answer:
-      'Yes. Cerebrum Biology Academy has 5 offline centres across Delhi NCR — South Extension (flagship), Rohini, Green Park, Gurugram, Faridabad, and Noida — plus pan-India online live classes. At least one centre is within 30-minute travel of nearly any Delhi NCR address. The same AIIMS-trained faculty teaches across all centres and the online live track.',
+      'Yes. Cerebrum Biology Academy has 5 offline centres across Delhi NCR — South Extension (flagship), Rohini, Green Park, Gurugram, and Faridabad — plus pan-India online live classes. Noida students learn through the online live track. The same AIIMS-trained faculty teaches across all centres and online.',
   },
   {
     question: 'Is online biology coaching as effective as offline in Delhi NCR?',
@@ -227,7 +227,7 @@ export function Top10BiologyCoachingDelhiNCRContent() {
               <p className="text-blue-100 mb-6">
                 The only biology-only specialist coaching in Delhi NCR. AIIMS-trained faculty led by
                 Dr. Shekhar C Singh. 98% NEET qualification rate. 680+ medical college selections.
-                Smallest batch sizes in NCR (15-20 students). 6 NCR centres plus online live classes
+                Smallest batch sizes in NCR (15-20 students). 5 NCR centres plus online live classes
                 — at least one within 30 minutes of any NCR address.
               </p>
               <div className="flex flex-col md:flex-row gap-4 justify-center">

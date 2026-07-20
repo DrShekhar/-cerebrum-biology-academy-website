@@ -70,7 +70,7 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
     links: [
       { label: 'Greater Kailash', href: '/biology-coaching-greater-kailash' },
       { label: 'Saket', href: '/neet-coaching-saket' },
-      { label: 'Dwarka', href: '/biology-coaching-dwarka' },
+      { label: 'Dwarka', href: '/neet-coaching-dwarka' },
       { label: 'Hauz Khas', href: '/biology-coaching-hauz-khas' },
       { label: 'Vasant Kunj', href: '/biology-coaching-vasant-kunj' },
       { label: 'Defence Colony', href: '/biology-coaching-defence-colony' },

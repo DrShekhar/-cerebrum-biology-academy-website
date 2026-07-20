@@ -81,6 +81,24 @@ export const offlineLocations: Location[] = [
     timing: 'Offline & Online Classes Available',
     type: 'offline',
   },
+  {
+    id: 'green-park',
+    name: 'Green Park Center',
+    address: 'B 113 FF, Gulmohar Park',
+    city: 'New Delhi',
+    pincode: '110049',
+    phone: ['+918826444334', '+919311946297'],
+    googleMapsUrl: 'https://maps.google.com/?q=B+113+Gulmohar+Park+New+Delhi+110049',
+    googleMapsEmbed:
+      'https://www.google.com/maps?q=B+113,+Gulmohar+Park,+New+Delhi+110049&output=embed',
+    features: [
+      'Near Green Park Metro (Yellow Line)',
+      'Doubt Clearing Sessions',
+      'Test Series Center',
+    ],
+    timing: 'Offline & Online Classes Available',
+    type: 'offline',
+  },
   // Noida & Ghaziabad are served via LIVE ONLINE classes only — no walk-in
   // center. (Removed fabricated "Sector 18, Noida" / "Indirapuram, Ghaziabad"
   // offline entries.) See onlineRegions below for online coverage.

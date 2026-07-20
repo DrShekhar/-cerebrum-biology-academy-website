@@ -51,12 +51,12 @@ const faqs: FAQItem[] = [
   {
     question: 'Which institute provides better personal attention?',
     answer:
-      "Cerebrum maintains batch sizes of 25-30 students with a 1:25 student-to-faculty ratio, ensuring personalized attention. Aakash typically has 60-80+ students per batch with higher ratios. For Biology mastery requiring detailed doubt clearing, Cerebrum's smaller batches provide superior personal attention.",
+      "Cerebrum maintains batch sizes of 20-25 students with a 1:25 student-to-faculty ratio, ensuring personalized attention. Aakash typically has 60-80+ students per batch with higher ratios. For Biology mastery requiring detailed doubt clearing, Cerebrum's smaller batches provide superior personal attention.",
   },
   {
     question: 'Does Cerebrum have centers outside Delhi NCR?',
     answer:
-      "Currently, Cerebrum Biology Academy operates 4 centers across Delhi NCR and offers live online classes with recorded sessions. For pan-India availability, Aakash has centers in most major cities. However, Cerebrum's online programs allow students nationwide to access AIIMS-trained faculty expertise.",
+      "Currently, Cerebrum Biology Academy operates 5 centers across Delhi NCR and offers live online classes with recorded sessions. For pan-India availability, Aakash has centers in most major cities. However, Cerebrum's online programs allow students nationwide to access AIIMS-trained faculty expertise.",
   },
 ]
 
@@ -222,7 +222,7 @@ export default function CerebrumVsAakash() {
                     Pan-India Presence
                   </td>
                   <td className="px-4 sm:px-6 py-4 text-sm sm:text-base">
-                    4 Centers Delhi NCR + Online
+                    5 Centers Delhi NCR + Online
                   </td>
                   <td className="px-4 sm:px-6 py-4 text-sm sm:text-base text-gray-700">
                     Pan India + BYJU'S Integration
@@ -541,7 +541,7 @@ export default function CerebrumVsAakash() {
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <span>
-                      <strong>4 Centers in Delhi NCR:</strong> Strategically located for easy
+                      <strong>5 Centers in Delhi NCR:</strong> Strategically located for easy
                       accessibility
                     </span>
                   </li>

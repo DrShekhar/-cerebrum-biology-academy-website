@@ -74,19 +74,19 @@ const DEFAULT_NEET_KNOWS_ABOUT = [
 
 const DEFAULT_NEET_COURSE_TIERS = [
   {
-    tier: 'Pursuit (Small-Batch 30-40)',
+    tier: 'Pursuit (Small-Batch 20-25)',
     price: 40000,
     description:
       'Live small-batch NEET biology classes with senior faculty, weekly chapter tests, doubt sessions. Most affordable structured tier (₹40,000–₹75,000/year).',
   },
   {
-    tier: 'Ascent (Pro Batch 16-25)',
+    tier: 'Ascent (Pro Batch 12-16)',
     price: 58000,
     description:
       'Tighter batch with weekly 1:1 doubt slots, monthly NEET-pattern mocks, personalised gap analysis. Most popular value tier (₹58,000–₹90,000/year).',
   },
   {
-    tier: 'Pinnacle (Direct Dr. Shekhar 10-12)',
+    tier: 'Pinnacle (Direct Dr. Shekhar 6-10)',
     price: 120000,
     description:
       'Micro-batch with direct Dr. Shekhar 1:1 mentoring. Calibrated for AIIMS / top-100 rank aspirants (₹1,20,000–₹1,56,000/year).',

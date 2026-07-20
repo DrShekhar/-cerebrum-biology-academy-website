@@ -154,7 +154,7 @@ const faqs = [
   {
     question: 'Do you offer both online and offline classes for Class 10 CBSE?',
     answer:
-      'Yes. We offer offline classes at our 4 centres in Delhi NCR (South Extension, Gurugram, Faridabad, Rohini) and live online classes for students across India. Both modes have the same faculty, same curriculum, and the same diagram-practice and past-paper drills. Many of our Class 10 students prefer the hybrid model — online for weekday classes, offline for Saturday board-paper drilling.',
+      'Yes. We offer offline classes at our 5 centres in Delhi NCR (South Extension, Green Park, Gurugram, Faridabad, Rohini) and live online classes for students across India. Both modes have the same faculty, same curriculum, and the same diagram-practice and past-paper drills. Many of our Class 10 students prefer the hybrid model — online for weekday classes, offline for Saturday board-paper drilling.',
   },
   {
     question:

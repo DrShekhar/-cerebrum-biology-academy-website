@@ -60,7 +60,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Batch Size (Live Classes)',
-      cerebrum: '15–20 students (Ascent) or 10–12 students (Pinnacle)',
+      cerebrum: '12–16 students (Ascent) or 6–10 students (Pinnacle)',
       competitor: '300–2,000+ students per live class (various mass-online batches)',
       cerebrumWins: true,
     },
@@ -90,7 +90,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Offline Centres',
-      cerebrum: '6 Delhi NCR centres (South Ext, Rohini, Green Park, Gurugram, Faridabad, Noida)',
+      cerebrum: '5 Delhi NCR centres (South Ext, Rohini, Green Park, Gurugram, Faridabad)',
       competitor: '60+ offline centres across India (focus: Tier-2 cities)',
       cerebrumWins: false,
     },
@@ -192,7 +192,7 @@ const config: CompetitorComparisonConfig = {
     {
       question: "Does Cerebrum have offline centres like PhysicsWallah's offline arm?",
       answer:
-        "Cerebrum operates 6 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida). PhysicsWallah's offline arm (PW Vidyapeeth) has 60+ offline centres across India, focused on Tier-2 cities. Different geographic footprints — Cerebrum is NCR-anchored with pan-India online, PhysicsWallah is broadly distributed offline.",
+        "Cerebrum operates 5 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad). PhysicsWallah's offline arm (PW Vidyapeeth) has 60+ offline centres across India, focused on Tier-2 cities. Different geographic footprints — Cerebrum is NCR-anchored with pan-India online, PhysicsWallah is broadly distributed offline.",
     },
     {
       question: 'Does PhysicsWallah have AIIMS-trained biology faculty?',

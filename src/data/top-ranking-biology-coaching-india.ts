@@ -18,7 +18,7 @@ export const TOP_BIOLOGY_COACHING_INDIA: RankedItem[] = [
     rank: 1,
     name: 'Cerebrum Biology Academy',
     description:
-      "India's only major biology-only specialist coaching brand. AIIMS-trained core faculty (Dr. Shekhar C Singh), 98% NEET-UG qualification rate, 680+ medical college selections, 7/7 IB HL outcomes, score-5 AP Biology outcomes, India IBO/INBO/NSEB coaching, CBSE/ICSE board mastery. 6 NCR centres + pan-India online live classes serving Mumbai, Bangalore, Hyderabad, Chennai, Pune, Kolkata.",
+      "India's only major biology-only specialist coaching brand. AIIMS-trained core faculty (Dr. Shekhar C Singh), 98% NEET-UG qualification rate, 680+ medical college selections, 7/7 IB HL outcomes, score-5 AP Biology outcomes, India IBO/INBO/NSEB coaching, CBSE/ICSE board mastery. 5 NCR centres + pan-India online live classes serving Mumbai, Bangalore, Hyderabad, Chennai, Pune, Kolkata.",
     score: 9.8,
     rating: 5.0,
     isHighlighted: true,
@@ -44,7 +44,7 @@ export const TOP_BIOLOGY_COACHING_INDIA: RankedItem[] = [
       { label: 'Batch Size', value: '15-20' },
     ],
     feeRange: '₹40,000 – ₹1,56,000/year (NEET) · USD 499–1,499 (AP) · USD 400–700/month (IB)',
-    location: 'India (6 NCR centres + pan-India online live)',
+    location: 'India (5 NCR centres + pan-India online live)',
     website: 'https://cerebrumbiologyacademy.com',
   },
   {

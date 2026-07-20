@@ -157,7 +157,7 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
     hasCourseInstance: [
       {
         '@type': 'CourseInstance' as const,
-        name: 'Pursuit (Small-Batch 30-40)',
+        name: 'Pursuit (Small-Batch 20-25)',
         description:
           'Live small-batch NEET biology with senior faculty. Most affordable tier (₹40,000-75,000/year).',
         courseMode: 'Online',
@@ -177,7 +177,7 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
       },
       {
         '@type': 'CourseInstance' as const,
-        name: 'Ascent (Pro Batch 16-25)',
+        name: 'Ascent (Pro Batch 12-16)',
         description:
           'Pro batch with weekly 1:1 doubt slots and biweekly NEET-pattern mocks (₹58,000-90,000/year).',
         courseMode: 'Online',
@@ -197,7 +197,7 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
       },
       {
         '@type': 'CourseInstance' as const,
-        name: 'Pinnacle (Direct Dr. Shekhar 10-12)',
+        name: 'Pinnacle (Direct Dr. Shekhar 6-10)',
         description:
           'Direct AIIMS Delhi alumnus Dr. Shekhar 1:1 micro-batch mentoring for AIIMS / top-100 rank aspirants (₹1,20,000-1,56,000/year).',
         courseMode: 'Online',

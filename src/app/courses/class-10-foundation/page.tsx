@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import {
   CheckCircle,
   Clock,
@@ -511,6 +512,30 @@ export default function Class10FoundationPage() {
                 mid-year with additional support to cover missed concepts.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Younger sibling cross-link */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-6 rounded-2xl border border-green-200 bg-green-50 p-6 md:p-8">
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-gray-900">
+                Have a younger child at home? Start the foundation even earlier.
+              </h3>
+              <p className="mt-2 text-gray-700">
+                Our Class 6-8 Pre-Foundation programme builds the calmest, strongest base for NEET,
+                Olympiads and top-college pathways — curiosity-led, no exam pressure. Sibling
+                discounts available.
+              </p>
+            </div>
+            <Link
+              href="/neet-biology-foundation-class-6-to-8"
+              className="whitespace-nowrap rounded-xl bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-700"
+            >
+              Explore Class 6-8 Pre-Foundation →
+            </Link>
           </div>
         </div>
       </section>

@@ -185,7 +185,7 @@ export default function NEETCoachingPage() {
     const classLabel = selectedClassData?.label || 'Class 12'
     const focusLabel = selectedFocusData?.label || 'Board + NEET'
     const tierLabel = selectedTierData?.label || 'Ascent'
-    const tierBatchSize = selectedTierData?.batchSize || '16-18 students'
+    const tierBatchSize = selectedTierData?.batchSize || '12-16 students'
     const batchLabel = batchOptions.find((b) => b.id === selectedBatch)?.label || 'Weekday'
     const modeLabel = modeOptions.find((m) => m.id === selectedMode)?.label || 'Offline'
     const locationLabel =

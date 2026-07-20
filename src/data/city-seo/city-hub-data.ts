@@ -1781,7 +1781,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What is the fee for NEET biology coaching in Delhi?',
         answer:
-          'Pursuit ₹40,000–₹75,000/year (30–40 student batches), Ascent ₹58,000–₹90,000/year (16–25 student batches with weekly doubt sessions — most popular), Pinnacle ₹1,20,000–₹1,56,000/year (10–12 student batches + personal mentorship from Dr. Shekhar). EMI plans available. 7-day full refund guarantee. 50–60% lower than premium chain fees with structurally better biology depth.',
+          'Pursuit ₹40,000–₹75,000/year (20–25 student batches), Ascent ₹58,000–₹90,000/year (12–16 student batches with weekly doubt sessions — most popular), Pinnacle ₹1,20,000–₹1,56,000/year (6–10 student batches + personal mentorship from Dr. Shekhar). EMI plans available. 7-day full refund guarantee. 50–60% lower than premium chain fees with structurally better biology depth.',
       },
       {
         question: 'How does Cerebrum compare to Aakash and Allen / FIITJEE in Delhi?',
@@ -5552,7 +5552,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What are the batch sizes for offline coaching?',
         answer:
-          'We maintain small batches of 25-30 students maximum. This ensures personal attention while maintaining healthy competition among peers.',
+          'We maintain small batches of 20-25 students maximum. This ensures personal attention while maintaining healthy competition among peers.',
       },
       {
         question: 'What facilities are available at the offline center?',
@@ -8342,7 +8342,7 @@ export const cityHubData: Record<string, CityHubData> = {
     nearestCenter: {
       name: 'Multiple Centers',
       address: 'Rohini, Gurugram, South Extension, Green Park',
-      distance: 'All 4 Centers Available',
+      distance: 'All 5 Centers Available',
     },
     localities: [
       { name: 'Rohini Center', url: '/neet-coaching-rohini' },
@@ -8402,7 +8402,7 @@ export const cityHubData: Record<string, CityHubData> = {
     nearestCenter: {
       name: 'Multiple Centers',
       address: 'Rohini, Gurugram, South Extension, Green Park',
-      distance: 'All 4 Centers Available',
+      distance: 'All 5 Centers Available',
     },
     localities: [
       { name: 'After School Batches Rohini', url: '/neet-coaching-rohini' },
@@ -8434,7 +8434,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What batch timings work best with school?',
         answer:
-          'Our 4:30 PM batch suits students finishing school by 3:30 PM. The 6:00 PM batch works for those with extended school hours. Weekend batches (Saturday/Sunday) provide comprehensive coverage. We have flexible options across all 4 centers.',
+          'Our 4:30 PM batch suits students finishing school by 3:30 PM. The 6:00 PM batch works for those with extended school hours. Weekend batches (Saturday/Sunday) provide comprehensive coverage. We have flexible options across all 5 centers.',
       },
     ],
     stats: {
@@ -8462,7 +8462,7 @@ export const cityHubData: Record<string, CityHubData> = {
     nearestCenter: {
       name: 'Multiple Centers',
       address: 'Rohini, Gurugram, South Extension, Green Park',
-      distance: 'All 4 Centers Available',
+      distance: 'All 5 Centers Available',
     },
     localities: [
       { name: 'Full Marks Coaching Rohini', url: '/neet-coaching-rohini' },
@@ -8522,7 +8522,7 @@ export const cityHubData: Record<string, CityHubData> = {
     nearestCenter: {
       name: 'Multiple Centers',
       address: 'Rohini, Gurugram, South Extension, Green Park',
-      distance: 'All 4 Centers Available',
+      distance: 'All 5 Centers Available',
     },
     localities: [
       { name: 'NEET Coaching Rohini', url: '/neet-coaching-rohini' },
@@ -8582,7 +8582,7 @@ export const cityHubData: Record<string, CityHubData> = {
     nearestCenter: {
       name: 'Multiple Centers',
       address: 'Rohini, Gurugram, South Extension, Green Park',
-      distance: 'All 4 Centers Available + Online',
+      distance: 'All 5 Centers Available + Online',
     },
     localities: [
       { name: 'Offline Coaching Rohini', url: '/neet-coaching-rohini' },
@@ -8635,7 +8635,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Affordable NEET Coaching Delhi | Budget-Friendly Biology Classes | Cerebrum Biology Academy',
     metaDescription:
-      'Find the most affordable NEET coaching in Delhi without compromising quality. AIIMS faculty at budget-friendly fees. 4 centers across Delhi. EMI options available. Call 88264-44334!',
+      'Find the most affordable NEET coaching in Delhi without compromising quality. AIIMS faculty at budget-friendly fees. 5 centers across Delhi NCR. EMI options available. Call 88264-44334!',
     heroTitle: 'Affordable NEET Coaching in Delhi',
     heroSubtitle:
       'Quality NEET preparation at budget-friendly fees. AIIMS-trained faculty, proven results, flexible payment options including EMI.',
@@ -8643,7 +8643,7 @@ export const cityHubData: Record<string, CityHubData> = {
     nearestCenter: {
       name: 'Multiple Centers Across Delhi',
       address: 'Rohini (DC Chowk), South Extension, Green Park - Choose your nearest center',
-      distance: '4 centers across Delhi',
+      distance: '5 centers across Delhi NCR',
     },
     localities: [
       { name: 'Rohini', url: '/biology-classes-rohini' },
@@ -8702,7 +8702,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'NEET Coaching with Hostel Delhi | Residential NEET Preparation | Cerebrum Biology Academy',
     metaDescription:
-      'NEET coaching with nearby hostel facilities in Delhi. Safe PG accommodations near all 4 centers - Rohini, Gurugram, South Extension, Green Park. Call 88264-44334 for hostel assistance!',
+      'NEET coaching with nearby hostel facilities in Delhi. Safe PG accommodations near all 5 centers - Rohini, Gurugram, South Extension, Green Park, Faridabad. Call 88264-44334 for hostel assistance!',
     heroTitle: 'NEET Coaching with Hostel Facilities in Delhi',
     heroSubtitle:
       'Focus completely on NEET preparation. Quality coaching with safe, affordable hostel options near all our centers.',
@@ -8727,7 +8727,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Do you provide hostel facilities for NEET students?',
         answer:
-          'While we do not run our own hostel, we help students find safe, verified PG accommodations near all 4 centers (Rohini, Gurugram, South Extension, Green Park). We have tie-ups with several hostels offering secure, affordable stays. Call 88264-44334 for hostel assistance.',
+          'While we do not run our own hostel, we help students find safe, verified PG accommodations near all 5 centers (Rohini, Gurugram, South Extension, Green Park, Faridabad). We have tie-ups with several hostels offering secure, affordable stays. Call 88264-44334 for hostel assistance.',
       },
       {
         question: 'What is the cost of hostel/PG near your centers?',
@@ -8841,7 +8841,8 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Weekend & Evening Batches',
-      address: 'Available at all 4 centers: Rohini, Gurugram, South Extension, Green Park',
+      address:
+        'Available at all 5 centers: Rohini, Gurugram, South Extension, Green Park, Faridabad',
       distance: 'Flexible timing options',
     },
     localities: [
@@ -8901,7 +8902,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'NEET Dropper Crash Course 2027 | Intensive 3-6 Month Program | Cerebrum Biology Academy',
     metaDescription:
-      'Last-minute NEET 2027 crash course for droppers. Intensive 3-6 month program with rapid revision, daily tests, weak topic focus. 4 centers in Delhi. Call 88264-44334!',
+      'Last-minute NEET 2027 crash course for droppers. Intensive 3-6 month program with rapid revision, daily tests, weak topic focus. 5 centers in Delhi NCR. Call 88264-44334!',
     heroTitle: 'NEET 2027 Crash Course for Droppers',
     heroSubtitle:
       'Make every remaining day count! Intensive 3-6 month program with rapid revision, daily practice tests, and focused weak topic coaching.',

@@ -55,14 +55,29 @@ const centers = [
   },
   {
     name: 'Faridabad Center',
-    address: 'Sector 15, Near Crown Interiors Mall',
+    address: 'SCF-130, 2nd Floor, Above Union Bank, Huda Market, Sector 17',
     city: 'Faridabad',
-    pincode: '121007',
+    pincode: '121002',
     phone: '+918826444334',
     features: ['Spacious Classrooms', 'Study Material Library', 'Mock Test Center'],
     timing: 'Offline & Online Classes Available',
     students: '500+',
     href: '/neet-coaching-faridabad',
+  },
+  {
+    name: 'Green Park Center',
+    address: 'B 113 FF Gulmohar Park',
+    city: 'Green Park, New Delhi',
+    pincode: '110049',
+    phone: '+918826444334',
+    features: [
+      'Near Green Park Metro (Yellow Line)',
+      'Doubt Clearing Sessions',
+      'Test Series Center',
+    ],
+    timing: 'Offline & Online Classes Available',
+    students: '',
+    href: '/neet-coaching-south-delhi',
   },
 ]
 
@@ -70,7 +85,6 @@ const features = [
   {
     icon: Building,
     title: 'State-of-the-Art Infrastructure',
-    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-centre' },
     description: 'Modern classrooms with AC, projectors, and comfortable seating.',
   },
   {
@@ -101,7 +115,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Centers', value: '4', icon: Building },
+  { label: 'Centers', value: '5', icon: Building },
   { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Students', value: '3,100+', icon: Users },
   { label: 'Top Score', value: '720', icon: Star },
@@ -111,7 +125,7 @@ const faqs = [
   {
     question: 'Where are your NEET coaching centres located?',
     answer:
-      'We have 6 NEET coaching centres in Delhi NCR: Rohini, Gurugram, South Extension, Faridabad, Green Park, and Noida. All centres are easily accessible by metro and public transport.',
+      'We have 5 NEET coaching centres in Delhi NCR: Rohini, Gurugram, South Extension, Faridabad, and Green Park. All centres are easily accessible by metro and public transport. Noida students learn through live online classes.',
   },
   {
     question: 'Which is the best NEET coaching centre near me?',
@@ -173,7 +187,7 @@ export default function NeetCoachingCentrePage() {
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
-              <MapPin className="w-5 h-5 mr-2 text-yellow-300" />4 Centres Across Delhi NCR
+              <MapPin className="w-5 h-5 mr-2 text-yellow-300" />5 Centres Across Delhi NCR
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -181,11 +195,11 @@ export default function NeetCoachingCentrePage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Rohini | Gurugram | South Extension | Faridabad | Green Park | Noida
+              Rohini | Gurugram | South Extension | Faridabad | Green Park
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Find the best NEET coaching centre near you. 4 strategically located centres in Delhi
+              Find the best NEET coaching centre near you. 5 strategically located centres in Delhi
               NCR with modern infrastructure, AIIMS-trained faculty, and proven 98% success rate.
             </p>
 
@@ -242,7 +256,7 @@ export default function NeetCoachingCentrePage() {
               Our NEET Coaching Centres
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Visit any of our 4 centres for the best NEET preparation experience
+              Visit any of our 5 centres for the best NEET preparation experience
             </p>
           </div>
 
@@ -255,9 +269,11 @@ export default function NeetCoachingCentrePage() {
                 <div className="bg-[#4a5d4a] text-white p-6">
                   <div className="flex items-center justify-between">
                     <h3 className="text-2xl font-bold">{center.name}</h3>
-                    <div className="bg-white/20 px-3 py-1 rounded-full text-sm">
-                      {center.students} Students
-                    </div>
+                    {center.students && (
+                      <div className="bg-white/20 px-3 py-1 rounded-full text-sm">
+                        {center.students} Students
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="p-6">

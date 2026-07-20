@@ -36,15 +36,15 @@ export default function BestNeetCoachingTemplate({
   const allFaqs = [
     {
       question: `Which is the best NEET coaching in ${city.displayName}?`,
-      answer: `There isn't one "best" for everyone — it depends on the subject. For Physics-Chemistry, ${city.localCoachingPresence} run large full-package batches. For Biology (360/720 marks — half the exam), a specialist with 10-40 student batches and per-MCQ weekly review moves the needle most. Cerebrum is the biology-specialist layer: AIIMS-trained faculty, live online for ${city.displayName} students, targeting ${city.stateQuotaCollege} via ${city.state} state quota. Most families pair a local PCM coaching with Cerebrum for biology.`,
+      answer: `There isn't one "best" for everyone — it depends on the subject. For Physics-Chemistry, ${city.localCoachingPresence} run large full-package batches. For Biology (360/720 marks — half the exam), a specialist with 6-25 student batches and per-MCQ weekly review moves the needle most. Cerebrum is the biology-specialist layer: AIIMS-trained faculty, live online for ${city.displayName} students, targeting ${city.stateQuotaCollege} via ${city.state} state quota. Most families pair a local PCM coaching with Cerebrum for biology.`,
     },
     {
       question: `How do I compare NEET coaching institutes in ${city.displayName}?`,
-      answer: `Look past the hoarding. Compare on: batch size (10-40 beats 150-200 for attention), whether biology is taught by a specialist or a generalist, weekly test + per-MCQ review cadence, and honest fees. Ask each institute for their biology-specific results, not just overall selections.`,
+      answer: `Look past the hoarding. Compare on: batch size (6-25 beats 150-200 for attention), whether biology is taught by a specialist or a generalist, weekly test + per-MCQ review cadence, and honest fees. Ask each institute for their biology-specific results, not just overall selections.`,
     },
     {
       question: `What are NEET coaching fees in ${city.displayName}?`,
-      answer: `National chains typically charge ₹1.2-3.5 lakh/yr for the full PCB package. Cerebrum's biology-specialist programme: Pursuit ₹40,000-75,000/yr (30-40 students); Ascent ₹58,000-90,000/yr (16-25, weekly 1:1 doubt slot); Pinnacle ZA ₹1,20,000-1,56,000/yr (10-12, direct Dr. Shekhar mentoring). EMI available; material shipped to ${city.majorAreas.slice(0, 3).join(', ')}.`,
+      answer: `National chains typically charge ₹1.2-3.5 lakh/yr for the full PCB package. Cerebrum's biology-specialist programme: Pursuit ₹40,000-75,000/yr (20-25 students); Ascent ₹58,000-90,000/yr (12-16, weekly 1:1 doubt slot); Pinnacle ZA ₹1,20,000-1,56,000/yr (6-10, direct Dr. Shekhar mentoring). EMI available; material shipped to ${city.majorAreas.slice(0, 3).join(', ')}.`,
     },
     {
       question: `Which medical college can a ${city.displayName} aspirant realistically target?`,
@@ -58,7 +58,7 @@ export default function BestNeetCoachingTemplate({
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: `Best NEET Biology Coaching in ${city.displayName} ${YEAR_LABEL}`,
-    description: `Biology-specialist NEET coaching for ${city.displayName} students. AIIMS-trained faculty, 10-40 student batches, targeting ${city.stateQuotaCollege}.`,
+    description: `Biology-specialist NEET coaching for ${city.displayName} students. AIIMS-trained faculty, 6-25 student batches, targeting ${city.stateQuotaCollege}.`,
     url: pageUrl,
     inLanguage: 'en-IN',
     provider: {
@@ -169,7 +169,7 @@ export default function BestNeetCoachingTemplate({
             <div className="rounded-xl bg-white p-5 border border-indigo-200">
               <p className="font-semibold text-indigo-700 mb-2">Cerebrum — biology specialist</p>
               <p className="text-sm text-slate-700 leading-relaxed">
-                Biology only (the 360/720 that decides rank): 10-40 student batches, AIIMS faculty,
+                Biology only (the 360/720 that decides rank): 6-25 student batches, AIIMS faculty,
                 weekly per-MCQ review, NCERT line-by-line. Pair it with your {localCoaching} for
                 PCM.
               </p>

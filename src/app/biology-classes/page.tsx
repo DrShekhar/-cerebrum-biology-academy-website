@@ -26,7 +26,7 @@ const modes = [
   {
     icon: Building2,
     title: 'Offline',
-    copy: 'Classroom teaching at our four Delhi NCR centres. Face-to-face instruction, group tests, and in-person mentor meetings.',
+    copy: 'Classroom teaching at our five Delhi NCR centres. Face-to-face instruction, group tests, and in-person mentor meetings.',
     who: 'Delhi NCR residents within commute.',
   },
   {
@@ -116,7 +116,7 @@ const faqs = [
   {
     question: 'How do offline, online, and hybrid differ?',
     answer:
-      'Offline is classroom teaching at one of our four Delhi NCR centres. Online is live interactive classes on Zoom with the same faculty and recorded replays. Hybrid is online lectures plus in-person tests and mentor meetings. Fees are close across modes; choose by logistics, not by quality.',
+      'Offline is classroom teaching at one of our five Delhi NCR centres. Online is live interactive classes on Zoom with the same faculty and recorded replays. Hybrid is online lectures plus in-person tests and mentor meetings. Fees are close across modes; choose by logistics, not by quality.',
   },
   {
     question: 'Where are your offline centres?',
@@ -325,10 +325,10 @@ export default function BiologyClassesPage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-              Four centres in Delhi NCR.
+              Five centres in Delhi NCR.
             </h2>
             <p className="mt-3 text-lg text-slate-600">
-              All four centres run Board, NEET, and dropper batches. Call ahead to schedule a trial
+              All five centres run Board, NEET, and dropper batches. Call ahead to schedule a trial
               class in person.
             </p>
           </div>

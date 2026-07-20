@@ -736,7 +736,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       duration: '12 months program',
       batchSize: '10-30 students based on plan',
       features: [
-        'Pursuit Plan: ₹25,000 - Group classes (25-30 students)',
+        'Pursuit Plan: ₹25,000 - Group classes (20-25 students)',
         'Ascent Plan: ₹45,000 - Small batches (15-20 students)',
         'Pinnacle Plan: ₹75,000 - Premium (10-15 students + 1-on-1)',
         'All plans include: Complete materials, test series, doubt support',

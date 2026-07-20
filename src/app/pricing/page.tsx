@@ -28,6 +28,9 @@ import { MessageCircle } from 'lucide-react'
 
 const getCourseDetailUrl = (classLevel: ClassLevel): string => {
   const urlMap: Record<ClassLevel, string> = {
+    'foundation-6': '/neet-biology-foundation-class-6-to-8#fees',
+    'foundation-7': '/neet-biology-foundation-class-6-to-8#fees',
+    'foundation-8': '/neet-biology-foundation-class-6-to-8#fees',
     'foundation-9': '/courses/class-9-foundation',
     'foundation-10': '/courses/class-10-foundation',
     'class-11': '/courses/class-11',
@@ -892,7 +895,7 @@ export default function PricingPage() {
                   name: 'Ascent',
                   color: 'blue',
                   badge: '🔥 Most Popular',
-                  batchSize: '16-25',
+                  batchSize: '12-16',
                   hours: '4.5 hrs',
                   attention: 'High',
                   mentorship: true,
@@ -1037,9 +1040,9 @@ export default function PricingPage() {
                   {[
                     {
                       feature: 'Batch Size',
-                      pursuit: '30-40',
-                      ascent: '16-25',
-                      pinnacle: '10-12',
+                      pursuit: '20-25',
+                      ascent: '12-16',
+                      pinnacle: '6-10',
                       highlight: true,
                     },
                     {
@@ -1216,7 +1219,7 @@ export default function PricingPage() {
                   {
                     icon: Users,
                     title: 'Small Batch Sizes',
-                    desc: 'Pinnacle (10-12), Ascent (16-25), or Pursuit (30-40). Personal attention by design.',
+                    desc: 'Pinnacle (6-10), Ascent (12-16), or Pursuit (20-25). Personal attention by design.',
                   },
                 ].map((item, idx) => (
                   <div
@@ -1307,7 +1310,7 @@ export default function PricingPage() {
                 },
                 {
                   q: "What's the difference between the tiers?",
-                  a: '<strong>Pinnacle (10-12 students):</strong> Premium coaching with maximum personal attention, ideal for top rankers.<br/><strong>Ascent (16-25 students):</strong> Balanced approach with high-quality teaching and good personal attention.<br/><strong>Pursuit (30-40 students):</strong> Quality education at an affordable price, perfect for budget-conscious students.',
+                  a: '<strong>Pinnacle (6-10 students):</strong> Premium coaching with maximum personal attention, ideal for top rankers.<br/><strong>Ascent (12-16 students):</strong> Balanced approach with high-quality teaching and good personal attention.<br/><strong>Pursuit (20-25 students):</strong> Quality education at an affordable price, perfect for budget-conscious students.',
                 },
                 {
                   q: 'What is your refund policy?',

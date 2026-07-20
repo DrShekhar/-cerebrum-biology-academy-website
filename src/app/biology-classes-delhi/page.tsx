@@ -24,7 +24,7 @@ import {
 export const metadata: Metadata = {
   title: 'Biology Classes in Delhi | Best NEET Biology Coaching',
   description:
-    'Join the best biology classes in Delhi with AIIMS-trained faculty. 4 centers in Rohini, South Extension, Gurugram & Faridabad. 98% success rate, 15000+ students. Book free demo!',
+    'Join the best biology classes in Delhi with AIIMS-trained faculty. 5 centers in Rohini, South Extension, Green Park, Gurugram & Faridabad. 98% success rate, 15000+ students. Book free demo!',
   keywords: [
     'biology classes in delhi',
     'biology coaching delhi',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Biology Classes in Delhi | Best NEET Biology Coaching',
     description:
-      'Join the best biology classes in Delhi with AIIMS-trained faculty. 4 centers in Rohini, South Extension, Gurugram & Faridabad. 98% success rate, 15000+ students. Book free demo!',
+      'Join the best biology classes in Delhi with AIIMS-trained faculty. 5 centers in Rohini, South Extension, Green Park, Gurugram & Faridabad. 98% success rate, 15000+ students. Book free demo!',
   },
 }
 
@@ -141,7 +141,7 @@ const faqs = [
   {
     question: 'Which is the best biology coaching in Delhi for NEET?',
     answer:
-      'Cerebrum Biology Academy is rated as one of the best biology coaching institutes in Delhi with 98% success rate. Our AIIMS-trained faculty, small batch sizes (15-20 students), comprehensive study material, and personalized attention make us the top choice for NEET aspirants. We have 4 centers in Delhi NCR - Rohini, South Extension, Gurugram, and Faridabad.',
+      'Cerebrum Biology Academy is rated as one of the best biology coaching institutes in Delhi with 98% success rate. Our AIIMS-trained faculty, small batch sizes (15-20 students), comprehensive study material, and personalized attention make us the top choice for NEET aspirants. We have 5 centers in Delhi NCR - Rohini, South Extension, Green Park, Gurugram, and Faridabad.',
   },
   {
     question: 'What is the fee for biology classes in Delhi?',
@@ -229,7 +229,7 @@ export default function BiologyClassesDelhiPage() {
     '@id': `${baseUrl}/biology-classes-delhi#organization`,
     name: 'Cerebrum Biology Academy - Delhi',
     description:
-      'Best biology classes in Delhi for NEET & Board preparation. AIIMS-trained faculty, 98% success rate. 4 centers in Rohini, South Extension, Gurugram, and Faridabad.',
+      'Best biology classes in Delhi for NEET & Board preparation. AIIMS-trained faculty, 98% success rate. 5 centers in Rohini, South Extension, Green Park, Gurugram, and Faridabad.',
     url: `${baseUrl}/biology-classes-delhi`,
     telephone: '+91-8826444334',
     email: 'info@cerebrumbiologyacademy.com',
@@ -370,7 +370,7 @@ export default function BiologyClassesDelhiPage() {
           <div className="container relative mx-auto px-4">
             <div className="mx-auto max-w-4xl text-center">
               <div className="mb-6 inline-flex items-center rounded-full bg-white/10 px-6 py-2 text-sm font-medium backdrop-blur-sm">
-                <MapPin className="mr-2 h-4 w-4 text-yellow-400" />4 Centers in Delhi NCR
+                <MapPin className="mr-2 h-4 w-4 text-yellow-400" />5 Centers in Delhi NCR
               </div>
 
               <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">

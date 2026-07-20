@@ -197,7 +197,7 @@ export const neetBiologyCoachingClass11: SEOLandingContent = {
     {
       question: 'What is the batch size for Class 11 NEET Biology classes?',
       answer:
-        "Our Pinnacle batch has only 10-12 students, ensuring every student gets personal attention. This small batch size allows Dr. Shekhar to track each student's progress and address individual weaknesses.",
+        "Our Pinnacle batch has only 6-10 students, ensuring every student gets personal attention. This small batch size allows Dr. Shekhar to track each student's progress and address individual weaknesses.",
     },
     {
       question: 'What topics are covered in Class 11 NEET Biology coaching?',
@@ -835,7 +835,7 @@ export const bestBiologyTutorClass11: SEOLandingContent = {
     {
       question: 'Can I learn directly from Dr. Shekhar?',
       answer:
-        'Yes! Our Pinnacle batch students get direct teaching from Dr. Shekhar in small batches of 10-12 students. This includes personal mentorship, direct WhatsApp access, and one-on-one doubt sessions. Book a demo to experience his teaching style.',
+        'Yes! Our Pinnacle batch students get direct teaching from Dr. Shekhar in small batches of 6-10 students. This includes personal mentorship, direct WhatsApp access, and one-on-one doubt sessions. Book a demo to experience his teaching style.',
     },
   ],
 

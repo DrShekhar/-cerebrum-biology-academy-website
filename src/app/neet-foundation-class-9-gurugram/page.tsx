@@ -58,12 +58,12 @@ const faqs = [
   {
     question: 'What is the fee structure?',
     answer:
-      'Class IX Foundation (NEET) fees range from ₹45,000 to ₹90,000/year depending on the tier: Pursuit (₹45,000, 30-40 students), Ascent (₹60,000, 16-18 students), or Pinnacle (₹90,000, 10-12 students with personal mentorship from Dr. Shekhar).',
+      'Class IX Foundation (NEET) fees range from ₹45,000 to ₹90,000/year depending on the tier: Pursuit (₹45,000, 20-25 students), Ascent (₹60,000, 12-16 students), or Pinnacle (₹90,000, 6-10 students with personal mentorship from Dr. Shekhar).',
   },
   {
     question: 'What is the batch size and timing?',
     answer:
-      'Batch sizes vary by tier: Pinnacle (10-12 students), Ascent (16-18 students), Pursuit (30-40 students). Weekend batches (Sat-Sun) and weekday evening batches are available to accommodate school schedules.',
+      'Batch sizes vary by tier: Pinnacle (6-10 students), Ascent (12-16 students), Pursuit (20-25 students). Weekend batches (Sat-Sun) and weekday evening batches are available to accommodate school schedules.',
   },
   {
     question: 'How is this different from regular tuition?',

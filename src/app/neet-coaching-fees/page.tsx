@@ -289,7 +289,7 @@ const faqs = [
   {
     question: 'What is the fee for NEET coaching at Cerebrum?',
     answer:
-      'Our fees range from Rs 2,500/month to Rs 9,000/month depending on the program and tier you choose. Fees vary by batch size (Pinnacle: 10-12, Ascent: 15-18, Pursuit: 20-25 students) and complexity level.',
+      'Our fees range from Rs 2,500/month to Rs 9,000/month depending on the program and tier you choose. Fees vary by batch size (Pinnacle: 6-10, Ascent: 12-16, Pursuit: 20-25 students) and complexity level.',
   },
   {
     question: 'Is there any registration or admission fee?',

@@ -62,7 +62,7 @@ const differentiators = [
   },
   {
     title: 'Direct founder mentoring at the top tier',
-    body: 'Pinnacle tier (10-12 students per batch) gives you direct 1:1 mentoring with Dr. Shekhar — weekly doubt slots, your tests reviewed by him, and your progress tracked personally. Available on request to NEET, IB, AP, CBSE Class 11-12, and Olympiad-track students.',
+    body: 'Pinnacle tier (6-10 students per batch) gives you direct 1:1 mentoring with Dr. Shekhar — weekly doubt slots, your tests reviewed by him, and your progress tracked personally. Available on request to NEET, IB, AP, CBSE Class 11-12, and Olympiad-track students.',
     icon: Star,
   },
 ]

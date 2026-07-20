@@ -114,7 +114,7 @@ const faqs = [
   {
     question: 'Do you offer both online and offline NEET Biology coaching?',
     answer:
-      'Yes! We offer both online and offline coaching. Online classes have live interactive sessions with recorded lectures for revision. Offline classes are available at our center in Greater Noida. Both formats include the same quality teaching and study material.',
+      'Yes! We offer both online and offline coaching. Online classes have live interactive sessions with recorded lectures for revision. Offline classes are available at our five Delhi NCR centers — South Extension, Rohini, Green Park, Gurugram, and Faridabad. Both formats include the same quality teaching and study material.',
   },
 ]
 

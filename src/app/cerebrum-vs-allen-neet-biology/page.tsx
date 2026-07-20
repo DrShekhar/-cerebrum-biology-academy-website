@@ -65,7 +65,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Location Model',
-      cerebrum: '6 Delhi NCR centres + pan-India online (no relocation)',
+      cerebrum: '5 Delhi NCR centres + pan-India online (no relocation)',
       competitor: 'Kota relocation expectation (or online classes from home)',
       cerebrumWins: true,
     },

@@ -55,7 +55,7 @@ const table = [
   },
   {
     criterion: 'Batch Size (Live Crash)',
-    cerebrum: '15–20 (Ascent) or 10–12 (Pinnacle)',
+    cerebrum: '12–16 (Ascent) or 6–10 (Pinnacle)',
     aakash: '150–300 students per batch',
     allen: '200–400 students per batch',
     pw: '300–2,000+ per live session',

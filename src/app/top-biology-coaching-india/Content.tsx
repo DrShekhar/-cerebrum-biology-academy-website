@@ -77,7 +77,7 @@ const faqs = [
     question:
       'Does Cerebrum serve cities beyond Delhi NCR — Mumbai, Bangalore, Hyderabad, Chennai?',
     answer:
-      'Yes. Cerebrum operates 5 offline centres in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) and pan-India online live classes. Online cohorts serve Mumbai (~320+ students across Andheri, Thane, Borivali), Bangalore (~280+ across Koramangala, Indiranagar, Whitefield), Hyderabad (~260+ across Ameerpet, Kukatpally, HITEC City), Chennai, Pune, Kolkata, Ahmedabad, Indore, and tier-2 cities.',
+      'Yes. Cerebrum operates 5 offline centres in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad) and pan-India online live classes. Online cohorts serve Mumbai (~320+ students across Andheri, Thane, Borivali), Bangalore (~280+ across Koramangala, Indiranagar, Whitefield), Hyderabad (~260+ across Ameerpet, Kukatpally, HITEC City), Chennai, Pune, Kolkata, Ahmedabad, Indore, and tier-2 cities.',
   },
 ]
 

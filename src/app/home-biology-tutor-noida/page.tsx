@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 const homeTuitionModes = [
   {
     mode: 'Pursuit Tier (Online)',
-    description: '30-40 students | 6 hrs/week',
+    description: '20-25 students | 6 hrs/week',
     fee: '48,000 - 70,000',
     features: [
       'Live interactive classes',
@@ -69,7 +69,7 @@ const homeTuitionModes = [
   },
   {
     mode: 'Ascent Tier (Online)',
-    description: '16-18 students | 8 hrs/week',
+    description: '12-16 students | 8 hrs/week',
     fee: '76,000',
     features: [
       'Weekly group doubt sessions',
@@ -126,7 +126,7 @@ const faqs = [
   {
     question: 'What is the fee for home Biology tutor in Noida?',
     answer:
-      'Online home tuition fees by tier: Pursuit (30-40 students): Rs 48,000-70,000/year, Ascent (16-18 students): Rs 76,000/year, Pinnacle (10-12 students): Rs 98,000-1,56,000/year. All tiers include AIIMS faculty and recorded lectures. Much better value than home tutors charging Rs 1,000-2,000/hour.',
+      'Online home tuition fees by tier: Pursuit (20-25 students): Rs 48,000-70,000/year, Ascent (12-16 students): Rs 76,000/year, Pinnacle (6-10 students): Rs 98,000-1,56,000/year. All tiers include AIIMS faculty and recorded lectures. Much better value than home tutors charging Rs 1,000-2,000/hour.',
   },
   {
     question: 'How does online home tuition work?',

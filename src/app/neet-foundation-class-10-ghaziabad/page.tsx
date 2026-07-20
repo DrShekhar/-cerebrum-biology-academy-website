@@ -51,7 +51,7 @@ const faqs = [
   {
     question: 'What is the fee structure?',
     answer:
-      'Class X Foundation (NEET) fees range from ₹45,000 to ₹90,000/year depending on the tier: Pursuit (₹45,000, 30-40 students), Ascent (₹60,000-90,000, 16-18 students), or Pinnacle (₹90,000, 10-12 students with personal mentorship from Dr. Shekhar).',
+      'Class X Foundation (NEET) fees range from ₹45,000 to ₹90,000/year depending on the tier: Pursuit (₹45,000, 20-25 students), Ascent (₹60,000-90,000, 12-16 students), or Pinnacle (₹90,000, 6-10 students with personal mentorship from Dr. Shekhar).',
   },
   {
     question: 'Do you have a center in Ghaziabad?',

@@ -179,12 +179,12 @@ export function buildOnlineOfflineCityConfig(key: OnlineOfflineCityKey): BestVer
       {
         tier: 'Ascent (Online, Most Popular)',
         price: '₹58,000–₹90,000 / year',
-        description: `16–25 student online live batches with weekly 1:1 doubt slots. Most popular among ${city} students balancing Class 12 boards + NEET prep.`,
+        description: `12–16 student online live batches with weekly 1:1 doubt slots. Most popular among ${city} students balancing Class 12 boards + NEET prep.`,
       },
       {
         tier: 'Pinnacle Online 1:1',
         price: '₹1,20,000–₹1,56,000 / year',
-        description: `Direct Dr. Shekhar mentoring + 10–12 student micro-batches. Best for ${city} students targeting AIIMS / Top medical college.`,
+        description: `Direct Dr. Shekhar mentoring + 6–10 student micro-batches. Best for ${city} students targeting AIIMS / Top medical college.`,
       },
     ],
     whyBest: [
@@ -202,12 +202,12 @@ export function buildOnlineOfflineCityConfig(key: OnlineOfflineCityKey): BestVer
       {
         title: 'Same AIIMS-Trained Faculty (No 2nd-Tier Online Pool)',
         description:
-          'Online students get the same AIIMS-trained biology faculty as the offline batches at Cerebrum\'s 6 Delhi NCR centres — including Dr. Shekhar C Singh for Pinnacle tier. No "online-only junior faculty" rotation common at mass-online platforms.',
+          'Online students get the same AIIMS-trained biology faculty as the offline batches at Cerebrum\'s 5 Delhi NCR centres — including Dr. Shekhar C Singh for Pinnacle tier. No "online-only junior faculty" rotation common at mass-online platforms.',
       },
       {
         title: 'Small Batches Preserved Online (15–20)',
         description:
-          'Many online coaching platforms run 300–2,000+ students per live session (PhysicsWallah and Unacademy, other multi-subject tutoring platforms mass tiers). Cerebrum keeps batches small (15–20 in Ascent, 10–12 in Pinnacle). Personal attention is preserved structurally.',
+          'Many online coaching platforms run 300–2,000+ students per live session (PhysicsWallah and Unacademy, other multi-subject tutoring platforms mass tiers). Cerebrum keeps batches small (15–20 in Ascent, 6–10 in Pinnacle). Personal attention is preserved structurally.',
       },
       {
         title: 'No Hostel, No Mess, No Travel — Total Savings',
@@ -263,7 +263,7 @@ export function buildOnlineOfflineCityConfig(key: OnlineOfflineCityKey): BestVer
         question: `Does Cerebrum have an offline centre in ${city}?`,
         answer: p.hasCerebrumCentre
           ? `Yes — ${p.cerebrumCentreLine}. ${city} students can choose offline or online or hybrid (online weekday + offline weekend workshops).`
-          : `Not currently. Cerebrum's 5 offline centres are all in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida). For ${city} students, online live is the recommended path — same AIIMS-trained faculty, same small-batch format, no relocation needed.`,
+          : `Not currently. Cerebrum's 5 offline centres are all in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad). For ${city} students, online live is the recommended path — same AIIMS-trained faculty, same small-batch format, no relocation needed.`,
       },
       {
         question: 'What hardware / internet do I need for online coaching?',
@@ -274,7 +274,7 @@ export function buildOnlineOfflineCityConfig(key: OnlineOfflineCityKey): BestVer
         question: 'Can I switch from online to offline mid-year?',
         answer: p.hasCerebrumCentre
           ? `Yes — ${city} has a Cerebrum offline centre, so you can switch online → offline (or vice versa) at any time. Same faculty across both modes. No fee adjustment for the switch within a calendar year.`
-          : `Cerebrum doesn't have an offline centre in ${city}, but you can attend occasional weekend workshops at the nearest NCR centre (South Extension, Rohini, Gurugram, Faridabad, Noida) for in-person time with Dr. Shekhar.`,
+          : `Cerebrum doesn't have an offline centre in ${city}, but you can attend occasional weekend workshops at the nearest NCR centre (South Extension, Rohini, Green Park, Gurugram, Faridabad) for in-person time with Dr. Shekhar.`,
       },
       {
         question: 'How quickly can I join the online programme?',

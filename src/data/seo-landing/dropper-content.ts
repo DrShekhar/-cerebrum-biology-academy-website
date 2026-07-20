@@ -852,7 +852,7 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
     {
       question: 'How is personal attention ensured in online coaching?',
       answer:
-        'Small batches (10-12 students), weekly one-on-one sessions for Pinnacle batch, WhatsApp access to faculty, doubt sessions, and monthly parent-teacher meetings. Personal attention is actually better online than in 100+ student offline batches.',
+        'Small batches (6-10 students), weekly one-on-one sessions for Pinnacle batch, WhatsApp access to faculty, doubt sessions, and monthly parent-teacher meetings. Personal attention is actually better online than in 100+ student offline batches.',
     },
     {
       question: "What if I don't improve despite best coaching?",

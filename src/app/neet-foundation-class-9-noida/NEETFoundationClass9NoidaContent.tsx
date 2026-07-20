@@ -318,7 +318,7 @@ export default function NEETFoundationClass9NoidaContent({ faqs }: { faqs: FAQ[]
                 </div>
                 <div className="flex justify-between py-3 border-b">
                   <span className="text-slate-600">Batch Size</span>
-                  <span className="font-semibold">10-40 students (by tier)</span>
+                  <span className="font-semibold">6-25 students (by tier)</span>
                 </div>
                 <div className="flex justify-between py-3">
                   <span className="text-slate-600">Mode</span>

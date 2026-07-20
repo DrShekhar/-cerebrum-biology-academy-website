@@ -3,12 +3,12 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best NEET Coaching Institute in Delhi NCR | Cerebrum Biology Academy',
   description:
-    'Top-rated NEET coaching institute in Delhi NCR. 4 centers, AIIMS-trained faculty, 98% success rate, 67+ AIIMS selections. Affordable fees, small batches. Join now!',
+    'Top-rated NEET coaching institute in Delhi NCR. 5 centers, AIIMS-trained faculty, 98% success rate, 67+ AIIMS selections. Affordable fees, small batches. Join now!',
   openGraph: {
     title: 'Best NEET Coaching Institute in Delhi NCR | Cerebrum Biology Academy',
     images: ['/og-image.jpg'],
     description:
-      'Top-rated NEET coaching institute in Delhi NCR. 4 centers, AIIMS-trained faculty, 98% success rate, 67+ AIIMS selections. Affordable fees, small batches. Join now!',
+      'Top-rated NEET coaching institute in Delhi NCR. 5 centers, AIIMS-trained faculty, 98% success rate, 67+ AIIMS selections. Affordable fees, small batches. Join now!',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-institute',
     type: 'website',
     locale: 'en_IN',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image' as const,
     title: 'Best NEET Coaching Institute in Delhi NCR | Cerebrum Biology Academy',
     description:
-      'Top-rated NEET coaching institute in Delhi NCR. 4 centers, AIIMS-trained faculty, 98% success rate, 67+ AIIMS selections. Affordable fees, small batches. Join now!',
+      'Top-rated NEET coaching institute in Delhi NCR. 5 centers, AIIMS-trained faculty, 98% success rate, 67+ AIIMS selections. Affordable fees, small batches. Join now!',
   },
 }
 

@@ -74,19 +74,19 @@ const config: BestVerticalConfig = {
   ],
   pricing: [
     {
-      tier: 'Foundation Pursuit Class 9 (Small-Batch 30-40)',
+      tier: 'Foundation Pursuit Class 9 (Small-Batch 20-25)',
       price: '₹35,000–₹50,000 / year',
       description:
         'Full Class 9 Biology CBSE/ICSE coverage + early NEET-pattern MCQ drilling, weekly chapter tests, monthly board-format mocks. Most affordable Class 9 entry tier.',
     },
     {
-      tier: 'Foundation Ascent Class 9 (Pro Batch 16-25)',
+      tier: 'Foundation Ascent Class 9 (Pro Batch 12-16)',
       price: '₹55,000–₹70,000 / year',
       description:
         'Tighter Class 9 batch with weekly 1:1 doubt slots, biweekly NEET-pattern conceptual mocks. Most popular tier for serious early NEET aspirants from Class 9.',
     },
     {
-      tier: 'Foundation Pinnacle Class 9 (Direct Dr. Shekhar 10-12)',
+      tier: 'Foundation Pinnacle Class 9 (Direct Dr. Shekhar 6-10)',
       price: '₹75,000–₹90,000 / year',
       description:
         'Direct Dr. Shekhar 1:1 mentoring for Class 9 entrants on a long-term AIIMS pathway. Ad-hoc Class 9 1:1 ₹2,000-3,500/hr.',
@@ -121,7 +121,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Online + 6 NCR Offline Centres',
       description:
-        'Six Cerebrum centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad, Noida) support offline-first Class 9 Foundation batches. Pan-India and NRI Class 9 students get online live (not recorded) batches with the same AIIMS-trained faculty. Hybrid switching supported — particularly useful for families that travel during school holidays.',
+        'Five Cerebrum centres across Delhi NCR (South Extension flagship, Rohini, Green Park, Gurugram, Faridabad) support offline-first Class 9 Foundation batches. Pan-India and NRI Class 9 students get online live (not recorded) batches with the same AIIMS-trained faculty. Hybrid switching supported — particularly useful for families that travel during school holidays.',
     },
   ],
   testimonials: [
@@ -166,7 +166,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does Class 9 NEET Foundation cost at Cerebrum?',
       answer:
-        'Cerebrum Class 9 Foundation pricing runs ₹35,000-₹90,000/year across three tiers. Pursuit (small-batch 30-40 students): ₹35K-50K. Ascent (pro batch 16-25 with weekly 1:1 doubt slots): ₹55K-70K. Pinnacle (direct Dr. Shekhar micro-batch 10-12): ₹75K-90K. Ad-hoc 1:1 Class 9 hourly: ₹2,000-3,500/hr. Compared to Allen Scholastics combined PCB Foundation Class 9 (~₹85K-1L/year, 200-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
+        'Cerebrum Class 9 Foundation pricing runs ₹35,000-₹90,000/year across three tiers. Pursuit (small-batch 20-25 students): ₹35K-50K. Ascent (pro batch 12-16 with weekly 1:1 doubt slots): ₹55K-70K. Pinnacle (direct Dr. Shekhar micro-batch 6-10): ₹75K-90K. Ad-hoc 1:1 Class 9 hourly: ₹2,000-3,500/hr. Compared to Allen Scholastics combined PCB Foundation Class 9 (~₹85K-1L/year, 200-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
     },
     {
       question: 'Can I switch from Allen Scholastics / FIITJEE Foundation to Cerebrum mid-Class 9?',

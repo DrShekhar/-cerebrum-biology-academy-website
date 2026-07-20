@@ -80,13 +80,13 @@ const config: BestVerticalConfig = {
       tier: 'Online RE-NEET Crash (Standard)',
       price: '₹25,000–₹35,000 / 6–8 weeks',
       description:
-        'Live online classes (IST evening), 16–25 student batches, weekly mocks, WhatsApp doubt support. Best value tier.',
+        'Live online classes (IST evening), 12–16 student batches, weekly mocks, WhatsApp doubt support. Best value tier.',
     },
     {
       tier: 'Online RE-NEET Pinnacle 1:1',
       price: '₹45,000–₹60,000 / 6–8 weeks',
       description:
-        'Direct Dr. Shekhar mentoring + 10–12 student micro-batches. Best for AIIMS / Top medical college aspirants.',
+        'Direct Dr. Shekhar mentoring + 6–10 student micro-batches. Best for AIIMS / Top medical college aspirants.',
     },
     {
       tier: 'Ad-hoc 1:1 Hourly',
@@ -114,12 +114,12 @@ const config: BestVerticalConfig = {
     {
       title: 'AIIMS-Trained Faculty (Same as Offline)',
       description:
-        'Online students get the same AIIMS-trained biology faculty as the offline batches at Cerebrum\'s 6 Delhi NCR centres — including Dr. Shekhar C Singh personally for Pinnacle tier. No "online-only junior faculty" rotation.',
+        'Online students get the same AIIMS-trained biology faculty as the offline batches at Cerebrum\'s 5 Delhi NCR centres — including Dr. Shekhar C Singh personally for Pinnacle tier. No "online-only junior faculty" rotation.',
     },
     {
       title: 'Small Batches Preserved Online (15–20)',
       description:
-        'Many online coaching platforms run 300–2,000+ students per live session — Cerebrum keeps batches small (15–20 in Ascent, 10–12 in Pinnacle). Personal attention is preserved structurally even online.',
+        'Many online coaching platforms run 300–2,000+ students per live session — Cerebrum keeps batches small (15–20 in Ascent, 6–10 in Pinnacle). Personal attention is preserved structurally even online.',
     },
     {
       title: 'WhatsApp Same-Day Doubts Across Timezones',
@@ -154,7 +154,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Is online RE-NEET 2026 coaching effective?',
       answer:
-        "Yes — and arguably more effective than offline in the 6–8 week crash window because there's no commute time lost. Cerebrum's online live classes use the same AIIMS-trained faculty as the offline batches at 6 Delhi NCR centres. Small batches (15–20 students) preserve personal attention. WhatsApp same-day doubts cover the gap between live sessions.",
+        "Yes — and arguably more effective than offline in the 6–8 week crash window because there's no commute time lost. Cerebrum's online live classes use the same AIIMS-trained faculty as the offline batches at 5 Delhi NCR centres. Small batches (15–20 students) preserve personal attention. WhatsApp same-day doubts cover the gap between live sessions.",
     },
     {
       question: 'What timezones does the online RE-NEET coaching support?',
@@ -184,7 +184,7 @@ const config: BestVerticalConfig = {
     {
       question: "What if online coaching doesn't suit me?",
       answer:
-        "Cerebrum offers a 7-day full refund from enrollment if the class isn't the right fit — terms in writing. Free demo class before commitment. If you prefer offline, the 6 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) are open for the same RE-NEET crash course.",
+        "Cerebrum offers a 7-day full refund from enrollment if the class isn't the right fit — terms in writing. Free demo class before commitment. If you prefer offline, the 5 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad) are open for the same RE-NEET crash course.",
     },
   ],
   knowsAbout: [

@@ -529,7 +529,7 @@ export default function IBBiologyHubPage() {
               >
                 dedicated Gurugram IB/IGCSE hub
               </Link>{' '}
-              and 4 physical centres (South Extension, Rohini, Gurugram, Faridabad).
+              and 5 physical centres (South Extension, Green Park, Rohini, Gurugram, Faridabad).
             </p>
           </div>
         </section>

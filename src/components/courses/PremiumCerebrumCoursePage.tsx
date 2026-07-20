@@ -128,7 +128,7 @@ const CEREBRUM_COURSES: CourseCard[] = [
       three: 78000,
     },
     duration: '12 Months',
-    batchSize: 'Max 16-18 students',
+    batchSize: 'Max 12-16 students',
     badge: {
       text: 'RECOMMENDED',
       color: 'text-white',
@@ -223,7 +223,7 @@ const FAQ_DATA: FAQ[] = [
     id: '1',
     question: 'What is the difference between Pinnacle, Ascent, and Pursuit series?',
     answer:
-      'Pinnacle is our premium series with max 12 students and personal mentoring (₹98K). Ascent offers comprehensive preparation for 16-18 students (₹76K). Pursuit provides quality education for larger batches at affordable pricing (₹48K).',
+      'Pinnacle is our premium series with max 12 students and personal mentoring (₹98K). Ascent offers comprehensive preparation for 12-16 students (₹76K). Pursuit provides quality education for larger batches at affordable pricing (₹48K).',
     category: 'programs',
   },
   {
@@ -244,7 +244,7 @@ const FAQ_DATA: FAQ[] = [
     id: '4',
     question: 'What is the batch size for each program?',
     answer:
-      'Pinnacle: Maximum 12 students (personalized), Ascent: 16-18 students, Pursuit: Minimum 25 students. Smaller batches ensure more personalized attention.',
+      'Pinnacle: Maximum 12 students (personalized), Ascent: 12-16 students, Pursuit: Minimum 25 students. Smaller batches ensure more personalized attention.',
     category: 'batch',
   },
   {

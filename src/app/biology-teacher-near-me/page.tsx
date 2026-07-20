@@ -222,7 +222,7 @@ export default function BiologyTeacherNearMePage() {
               </h1>
 
               <p className="text-xl md:text-2xl text-white/90 mb-4 font-light">
-                4 Offline Centers in Delhi NCR
+                5 Offline Centers in Delhi NCR
               </p>
               <p className="text-lg text-white/70 mb-8">
                 {isInDelhiNCR === true
@@ -285,7 +285,7 @@ export default function BiologyTeacherNearMePage() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16 animate-fadeInUp">
               <div className="inline-flex items-center bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                <MapPin className="w-4 h-4 mr-2" />4 Centers in Delhi NCR
+                <MapPin className="w-4 h-4 mr-2" />5 Centers in Delhi NCR
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
                 Our Offline Centers
@@ -489,7 +489,7 @@ export default function BiologyTeacherNearMePage() {
             </div>
             {[
               { feature: 'Faculty Quality', offline: 'AIIMS Alumni', online: 'Same Faculty' },
-              { feature: 'Batch Size', offline: '30-40 students', online: '15-20 students' },
+              { feature: 'Batch Size', offline: '20-25 students', online: '15-20 students' },
               { feature: 'Doubt Resolution', offline: 'In-class', online: '24/7 WhatsApp' },
               { feature: 'Flexibility', offline: 'Fixed timing', online: 'Recorded backup' },
               {
