@@ -32,12 +32,20 @@ export interface APBiologySchool {
   cityState: string
   /** Metro slug to link the school back to its parent metro page */
   metroSlug: string
-  /** US time zone label for live-class scheduling */
-  timezone: 'ET (Eastern)' | 'CT (Central)' | 'MT (Mountain)' | 'PT (Pacific)'
+  /** Time zone label for live-class scheduling (US zones for US feeders;
+   *  IST for India feeders whose students self-study AP for US admissions). */
+  timezone: 'ET (Eastern)' | 'CT (Central)' | 'MT (Mountain)' | 'PT (Pacific)' | 'IST (India)'
   /** ISO timezone string for schema.org */
   timezoneIana: string
-  /** Public / private / magnet / boarding */
-  schoolType: 'Public Specialized' | 'Private Independent' | 'Public Magnet' | 'Boarding'
+  /** School type. India feeders are IB/Cambridge/CBSE schools whose students
+   *  layer AP for US college applications (they do not run AP as a subject). */
+  schoolType:
+    | 'Public Specialized'
+    | 'Private Independent'
+    | 'Public Magnet'
+    | 'Boarding'
+    | 'IB World School (India)'
+    | 'IB Continuum School (India)'
   /** 2-3 paragraph history + reputation + AP Bio context */
   historyParagraphs: string[]
   /** Key public claims about the school (cited where possible) */
@@ -654,6 +662,299 @@ export const apBiologySchools: APBiologySchool[] = [
         question: 'Is AP Bio useful for Brown PLME or Yale pre-med admissions?',
         answer:
           "Brown PLME and Yale pre-med both look for sustained biology depth. AP-5 is a baseline; USABO Semifinalist standing differentiates. Hunter\'s reputation plus AP-5 + research is a competitive baseline; AP-5 + USABO Semifinal + research is the strongest signal.",
+      },
+    ],
+  },
+  {
+    slug: 'pathways-aravali',
+    schoolName: 'Pathways World School Aravali',
+    shortName: 'Pathways Aravali',
+    cityState: 'Gurgaon, India',
+    metroSlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    schoolType: 'IB Continuum School (India)',
+    historyParagraphs: [
+      'Pathways World School Aravali is a residential and day IB Continuum school in the Aravali range south of Gurgaon, founded in 2003. It runs the full IB continuum (PYP, MYP and DP), which makes it one of the longer-established full-continuum IB schools in the Delhi NCR region. Day students commute from DLF, Golf Course Road and Sohna Road; boarders study on campus through the evening.',
+      'Pathways Aravali carries one of the larger IB Diploma Biology cohorts in NCR, offering Biology at both HL and SL. Because so many of its students apply to US universities alongside UK and Indian ones, a meaningful share layer an AP Biology exam onto their IB profile as a College-Board-standardised US-admissions credential — the school itself teaches the IB syllabus, and the AP work is done independently for the May exam.',
+      'For Pathways Aravali families the practical need is a track that adds AP Biology without disrupting a demanding IB Diploma load. We run AP Biology as a parallel programme in IST evening slots that fit both day-scholars (joining from home after the commute) and boarders (during scheduled evening study), with weekend intensive blocks when a student is compressing AP prep into the DP timetable.',
+    ],
+    reputationBullets: [
+      "Full IB Continuum school (PYP / MYP / DP), founded 2003 — one of NCR's longest-running",
+      'One of the larger IB Diploma Biology cohorts in Delhi NCR (HL and SL offered)',
+      'Residential + day school; catchment across DLF, Golf Course Road and Sohna Road',
+      'Strong US + UK + India university-application profile — the driver for layering AP',
+      'AP Biology prepared independently for the May College Board exam, alongside the IB syllabus',
+    ],
+    collegeContext:
+      'Pathways Aravali graduates apply broadly across US, UK and Indian universities. For the US-bound cohort — especially pre-med and life-sciences applicants — a 4-5 on AP Biology is a common way to add a College-Board-standardised signal on top of IB Diploma predicted grades, and it can earn first-year credit or placement at many US universities.',
+    paceAlignment:
+      "IB Diploma Biology and AP Biology overlap heavily in content but differ in assessment: IB rewards the long-response mark scheme and the IA, while AP rewards the six free-response-question (FRQ) rubric and the multiple-choice section under strict timing. We align AP prep to the school's DP calendar — content consolidation through the DP1/DP2 year, then FRQ rubric drilling and timed full-length AP papers in the run-up to the May exam — so the AP layer reinforces rather than competes with IB work.",
+    faqs: [
+      {
+        question: 'Does Pathways Aravali offer AP Biology as a school subject?',
+        answer:
+          "Most Gurgaon international schools — Pathways Aravali included — run the IB Diploma (and/or Cambridge or CBSE), not the US College Board AP programme as a timetabled subject. Students who want AP Biology on their transcript almost always self-register for the May College Board exam and prepare for it outside school. That is exactly what we coach: a full AP Biology track (Campbell content, FRQ rubric mastery, timed full-length papers) that runs alongside your child's IB or school coursework, without clashing with it.",
+      },
+      {
+        question: 'Why would an IB student at Pathways Aravali take AP Biology at all?',
+        answer:
+          'For US university applications. A strong AP Biology score (4-5) is a recognised, College-Board-standardised signal that US admissions officers read easily, and it can earn first-year credit or placement at many US universities. IB-Diploma students at Pathways Aravali layer one or two APs onto their profile precisely to strengthen the US side of a dual India + US application. Biology is the most common choice for pre-med and life-sciences applicants.',
+      },
+      {
+        question: 'Can you coach IB Biology and AP Biology together for a Pathways student?',
+        answer:
+          'Yes — this is our most common Pathways pattern. Because the IB HL Biology and AP Biology content sets overlap by roughly 70-80%, we teach the shared core once and then split the assessment coaching: IB Paper 2 mark-scheme calibration and IA mentorship on one side, AP FRQ rubric and timed practice on the other. One student, one weekly schedule, both credentials.',
+      },
+      {
+        question: 'How do the classes run for a Gurgaon family — online or in person?',
+        answer:
+          "Live online, in IST evening slots (typically 7-9 PM), so there is no Gurgaon-to-Delhi commute. Your child joins from home in Aravali, DLF, Golf Course Road or Sohna Road. Cerebrum's biology faculty are AIIMS-trained and biology-only, and each student gets weekly written feedback on FRQ answers against the College Board rubric. For families who want it, an occasional in-person review at our South Extension hub in Delhi can be arranged on weekends.",
+      },
+      {
+        question: 'What does AP Biology coaching cost for a Pathways Aravali student?',
+        answer:
+          'Senior-faculty 1:1 AP Biology begins at about $1,800 for a 12-hour block, or roughly $40/hour, with full-year tracks from about $2,500 — well below the $150-400/hour that US-based AP tutors charge over Zoom. Fees are the same whether your child is on the IB Diploma, Cambridge or CBSE track at Pathways Aravali; the AP work is delivered as a parallel programme either way.',
+      },
+    ],
+  },
+  {
+    slug: 'shri-ram-aravali',
+    schoolName: 'The Shri Ram School Aravali',
+    shortName: 'TSRS Aravali',
+    cityState: 'Gurgaon, India',
+    metroSlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    schoolType: 'IB Continuum School (India)',
+    historyParagraphs: [
+      "The Shri Ram School Aravali (TSRS Aravali) is the senior campus of one of Delhi NCR's most respected school groups, set on the Gurgaon-Faridabad Aravali stretch. Its senior school runs the IB Diploma Programme, and the school is known for a strong humanities-and-sciences balance and a highly selective, academically serious student body.",
+      "TSRS Aravali's IB Biology students sit within a small, high-performing DP cohort. A large share of Shri Ram graduates apply to selective US universities, and for those students an AP Biology score is a familiar way to add a US-standardised academic signal alongside the IB Diploma — the school delivers the IB syllabus, and students self-register for the AP exam.",
+      "Shri Ram families typically want precision rather than volume: focused, rubric-aware coaching that respects an already-heavy IB load. We deliver AP Biology as a tight parallel track in IST evenings, with weekly written FRQ feedback, timed to the College Board May exam and the student's own DP internal-assessment rhythm.",
+    ],
+    reputationBullets: [
+      "Senior campus of The Shri Ram School group — among NCR's most selective schools",
+      'IB Diploma Programme in the senior school; small, high-performing Biology cohort',
+      'Strong selective-US-university applicant base — the reason students add AP',
+      'AP Biology self-registered for the May exam, alongside the IB syllabus',
+      'Aravali catchment (Gurgaon-Faridabad border, Sohna Road, Golf Course Extension)',
+    ],
+    collegeContext:
+      'A high proportion of TSRS Aravali graduates target selective US and UK universities. For the US-application subset, AP Biology (aimed at a 4-5) complements IB Diploma predicted grades with a College-Board-standardised metric that US admissions officers read directly — particularly valued by pre-med and biological-sciences applicants.',
+    paceAlignment:
+      'We keep the AP layer lean for Shri Ram students: consolidate the Campbell/AP content that overlaps IB HL Biology, then concentrate on the AP-specific FRQ rubric and timed multiple-choice practice in the months before the May exam. Sessions sit in IST evenings and flex around the DP internal-assessment and mock calendar so the AP work never collides with school deadlines.',
+    faqs: [
+      {
+        question: 'Does TSRS Aravali offer AP Biology as a school subject?',
+        answer:
+          "Most Gurgaon international schools — TSRS Aravali included — run the IB Diploma (and/or Cambridge or CBSE), not the US College Board AP programme as a timetabled subject. Students who want AP Biology on their transcript almost always self-register for the May College Board exam and prepare for it outside school. That is exactly what we coach: a full AP Biology track (Campbell content, FRQ rubric mastery, timed full-length papers) that runs alongside your child's IB or school coursework, without clashing with it.",
+      },
+      {
+        question: 'Why would an IB student at TSRS Aravali take AP Biology at all?',
+        answer:
+          'For US university applications. A strong AP Biology score (4-5) is a recognised, College-Board-standardised signal that US admissions officers read easily, and it can earn first-year credit or placement at many US universities. IB-Diploma students at TSRS Aravali layer one or two APs onto their profile precisely to strengthen the US side of a dual India + US application. Biology is the most common choice for pre-med and life-sciences applicants.',
+      },
+      {
+        question: 'How do the classes run for a Gurgaon family — online or in person?',
+        answer:
+          "Live online, in IST evening slots (typically 7-9 PM), so there is no Gurgaon-to-Delhi commute. Your child joins from home in Aravali, DLF, Golf Course Road or Sohna Road. Cerebrum's biology faculty are AIIMS-trained and biology-only, and each student gets weekly written feedback on FRQ answers against the College Board rubric. For families who want it, an occasional in-person review at our South Extension hub in Delhi can be arranged on weekends.",
+      },
+      {
+        question: 'What does AP Biology coaching cost for a TSRS Aravali student?',
+        answer:
+          'Senior-faculty 1:1 AP Biology begins at about $1,800 for a 12-hour block, or roughly $40/hour, with full-year tracks from about $2,500 — well below the $150-400/hour that US-based AP tutors charge over Zoom. Fees are the same whether your child is on the IB Diploma, Cambridge or CBSE track at TSRS Aravali; the AP work is delivered as a parallel programme either way.',
+      },
+    ],
+  },
+  {
+    slug: 'heritage-xperiential-gurgaon',
+    schoolName: 'Heritage Xperiential Learning School',
+    shortName: 'Heritage Xperiential',
+    cityState: 'Gurgaon, India',
+    metroSlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    schoolType: 'IB World School (India)',
+    historyParagraphs: [
+      'Heritage Xperiential Learning School in Sector 62, Gurgaon, is an IB World School known for its experiential, inquiry-led pedagogy. Its senior programme includes the IB Diploma, and the school draws families from the Golf Course Extension Road and Sohna Road corridors who value a progressive, concepts-first approach to science.',
+      "Heritage's inquiry-led style produces students with strong conceptual biology but who benefit from targeted exam-technique work when they add a standardised external exam. For the US-application cohort, that external exam is often AP Biology — self-registered for the May College Board sitting and prepared independently of the school's IB teaching.",
+      "For Heritage families the fit is a coach who respects the school's conceptual foundation and adds the missing piece: disciplined FRQ rubric application and timed practice. We run AP Biology online in IST evenings with weekly written feedback, so a Heritage student keeps their inquiry-based strengths and gains AP exam precision.",
+    ],
+    reputationBullets: [
+      'IB World School in Sector 62, Gurgaon — known for experiential, inquiry-led teaching',
+      'IB Diploma in the senior school; conceptually strong biology students',
+      'Golf Course Extension Road / Sohna Road catchment',
+      'US-bound students layer AP Biology for admissions; self-registered for the May exam',
+      "Coaching adds AP FRQ rubric + timed technique on top of the school's concept base",
+    ],
+    collegeContext:
+      'Heritage Xperiential graduates apply across US, UK and Indian universities. For the US-bound subset — especially those targeting life sciences and pre-med — an AP Biology 4-5 adds a College-Board-standardised credential to an IB Diploma profile, and can earn first-year credit at many US institutions.',
+    paceAlignment:
+      'Heritage students typically arrive with strong conceptual understanding but need structured exam technique for a timed external paper. We align AP prep so content consolidation happens early, then focus the final months on the AP FRQ rubric, data-analysis questions and full-length timed practice ahead of the May exam — all in IST evening slots that fit the school week.',
+    faqs: [
+      {
+        question: 'Does Heritage Xperiential offer AP Biology as a school subject?',
+        answer:
+          "Most Gurgaon international schools — Heritage Xperiential included — run the IB Diploma (and/or Cambridge or CBSE), not the US College Board AP programme as a timetabled subject. Students who want AP Biology on their transcript almost always self-register for the May College Board exam and prepare for it outside school. That is exactly what we coach: a full AP Biology track (Campbell content, FRQ rubric mastery, timed full-length papers) that runs alongside your child's IB or school coursework, without clashing with it.",
+      },
+      {
+        question: 'Why would an IB student at Heritage Xperiential take AP Biology at all?',
+        answer:
+          'For US university applications. A strong AP Biology score (4-5) is a recognised, College-Board-standardised signal that US admissions officers read easily, and it can earn first-year credit or placement at many US universities. IB-Diploma students at Heritage Xperiential layer one or two APs onto their profile precisely to strengthen the US side of a dual India + US application. Biology is the most common choice for pre-med and life-sciences applicants.',
+      },
+      {
+        question: 'How do the classes run for a Gurgaon family — online or in person?',
+        answer:
+          "Live online, in IST evening slots (typically 7-9 PM), so there is no Gurgaon-to-Delhi commute. Your child joins from home in Aravali, DLF, Golf Course Road or Sohna Road. Cerebrum's biology faculty are AIIMS-trained and biology-only, and each student gets weekly written feedback on FRQ answers against the College Board rubric. For families who want it, an occasional in-person review at our South Extension hub in Delhi can be arranged on weekends.",
+      },
+      {
+        question: 'What does AP Biology coaching cost for a Heritage Xperiential student?',
+        answer:
+          'Senior-faculty 1:1 AP Biology begins at about $1,800 for a 12-hour block, or roughly $40/hour, with full-year tracks from about $2,500 — well below the $150-400/hour that US-based AP tutors charge over Zoom. Fees are the same whether your child is on the IB Diploma, Cambridge or CBSE track at Heritage Xperiential; the AP work is delivered as a parallel programme either way.',
+      },
+    ],
+  },
+  {
+    slug: 'dps-international-gurgaon',
+    schoolName: 'DPS International School',
+    shortName: 'DPS International',
+    cityState: 'Gurgaon, India',
+    metroSlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    schoolType: 'IB World School (India)',
+    historyParagraphs: [
+      'DPS International, Gurgaon (Sector 45) is an IB World School within the wider DPS Society umbrella, offering the IB Diploma alongside Cambridge pathways. It sits in the established DLF / Sushant Lok / Sector 45 catchment and draws a large, internationally-minded student body.',
+      "With both IB and Cambridge tracks in the school, DPS International's US-application cohort commonly adds AP Biology as the College-Board-standardised credential that US universities recognise most directly. The school teaches its IB and Cambridge syllabi; students self-register for the AP May exam and prepare for it independently.",
+      'DPS International families want an AP Biology track that slots cleanly around either an IB Diploma or a Cambridge A-Level load. We deliver it online in IST evenings with weekly FRQ feedback, mapping the shared Campbell content once and then drilling AP-specific technique toward the May exam.',
+    ],
+    reputationBullets: [
+      'IB World School in Sector 45, Gurgaon (DPS Society) — IB Diploma + Cambridge pathways',
+      'Large internationally-minded cohort; DLF / Sushant Lok / Sector 45 catchment',
+      'US-application students add AP Biology; self-registered for the May College Board exam',
+      'Coaching maps AP onto either the IB or Cambridge school track',
+      'Biology-only, AIIMS-trained faculty with weekly written FRQ feedback',
+    ],
+    collegeContext:
+      'DPS International sends students to US, UK and Indian universities. For US applicants, AP Biology (targeting 4-5) adds a widely-recognised, standardised signal on top of IB or Cambridge grades and can earn first-year credit or placement — especially useful for pre-med and life-sciences pathways.',
+    paceAlignment:
+      "Whether a DPS International student is on the IB Diploma or a Cambridge A-Level, AP Biology shares most of its content with their school course. We consolidate that shared core early, then focus on the AP six-FRQ rubric and timed multiple-choice practice in the run-up to the May exam, scheduling around the school's own assessment calendar in IST evening slots.",
+    faqs: [
+      {
+        question: 'Does DPS International offer AP Biology as a school subject?',
+        answer:
+          "Most Gurgaon international schools — DPS International included — run the IB Diploma (and/or Cambridge or CBSE), not the US College Board AP programme as a timetabled subject. Students who want AP Biology on their transcript almost always self-register for the May College Board exam and prepare for it outside school. That is exactly what we coach: a full AP Biology track (Campbell content, FRQ rubric mastery, timed full-length papers) that runs alongside your child's IB or school coursework, without clashing with it.",
+      },
+      {
+        question: 'Why would an IB student at DPS International take AP Biology at all?',
+        answer:
+          'For US university applications. A strong AP Biology score (4-5) is a recognised, College-Board-standardised signal that US admissions officers read easily, and it can earn first-year credit or placement at many US universities. IB-Diploma students at DPS International layer one or two APs onto their profile precisely to strengthen the US side of a dual India + US application. Biology is the most common choice for pre-med and life-sciences applicants.',
+      },
+      {
+        question: 'How do the classes run for a Gurgaon family — online or in person?',
+        answer:
+          "Live online, in IST evening slots (typically 7-9 PM), so there is no Gurgaon-to-Delhi commute. Your child joins from home in Aravali, DLF, Golf Course Road or Sohna Road. Cerebrum's biology faculty are AIIMS-trained and biology-only, and each student gets weekly written feedback on FRQ answers against the College Board rubric. For families who want it, an occasional in-person review at our South Extension hub in Delhi can be arranged on weekends.",
+      },
+      {
+        question: 'What does AP Biology coaching cost for a DPS International student?',
+        answer:
+          'Senior-faculty 1:1 AP Biology begins at about $1,800 for a 12-hour block, or roughly $40/hour, with full-year tracks from about $2,500 — well below the $150-400/hour that US-based AP tutors charge over Zoom. Fees are the same whether your child is on the IB Diploma, Cambridge or CBSE track at DPS International; the AP work is delivered as a parallel programme either way.',
+      },
+    ],
+  },
+  {
+    slug: 'scottish-high-gurgaon',
+    schoolName: 'Scottish High International School',
+    shortName: 'Scottish High',
+    cityState: 'Gurgaon, India',
+    metroSlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    schoolType: 'IB World School (India)',
+    historyParagraphs: [
+      'Scottish High International School in Sector 57, Gurgaon runs multiple pathways in parallel — the IB Diploma alongside Cambridge (IGCSE / A-Level) and CBSE. That multi-curriculum structure means its IB Biology cohort is smaller than at a single-curriculum IB school, and students often value external benchmarking against a standardised exam.',
+      "For Scottish High's US-application students, AP Biology is a natural fit: a College-Board-standardised exam that sits cleanly on top of whichever school track a student is on. The school delivers its IB, Cambridge and CBSE syllabi; students self-register for the AP May exam and prepare independently.",
+      'Because the in-school IB peer group can be thinner here, Scottish High families particularly value the rubric-tight, feedback-heavy coaching we provide. We run AP Biology online in IST evenings with weekly written FRQ feedback, replicating the exam-technique intensity that larger single-curriculum cohorts get from sheer density.',
+    ],
+    reputationBullets: [
+      'IB World School in Sector 57, Gurgaon — IB Diploma alongside Cambridge and CBSE',
+      'Multi-curriculum school; smaller, benchmark-seeking IB Biology cohort',
+      'US-application students add AP Biology; self-registered for the May exam',
+      'Coaching supplies the rubric-tight benchmarking a smaller cohort can lack',
+      'Sector 57 / Golf Course Extension / Sohna Road catchment',
+    ],
+    collegeContext:
+      'Scottish High graduates apply across US, UK and Indian universities. For US applicants, an AP Biology 4-5 provides a standardised academic signal that complements IB, Cambridge or CBSE grades and can earn US first-year credit — valued especially by pre-med and biological-sciences applicants.',
+    paceAlignment:
+      "Scottish High's parallel-curriculum structure means AP Biology overlaps whichever track a student is on. We consolidate the shared content early and then drive AP-specific FRQ rubric mastery and timed full-length practice before the May exam, with weekly written feedback to supply the benchmarking a smaller in-school IB cohort may not. Sessions are IST evenings, around the school calendar.",
+    faqs: [
+      {
+        question: 'Does Scottish High offer AP Biology as a school subject?',
+        answer:
+          "Most Gurgaon international schools — Scottish High included — run the IB Diploma (and/or Cambridge or CBSE), not the US College Board AP programme as a timetabled subject. Students who want AP Biology on their transcript almost always self-register for the May College Board exam and prepare for it outside school. That is exactly what we coach: a full AP Biology track (Campbell content, FRQ rubric mastery, timed full-length papers) that runs alongside your child's IB or school coursework, without clashing with it.",
+      },
+      {
+        question: 'Why would an IB student at Scottish High take AP Biology at all?',
+        answer:
+          'For US university applications. A strong AP Biology score (4-5) is a recognised, College-Board-standardised signal that US admissions officers read easily, and it can earn first-year credit or placement at many US universities. IB-Diploma students at Scottish High layer one or two APs onto their profile precisely to strengthen the US side of a dual India + US application. Biology is the most common choice for pre-med and life-sciences applicants.',
+      },
+      {
+        question: 'How do the classes run for a Gurgaon family — online or in person?',
+        answer:
+          "Live online, in IST evening slots (typically 7-9 PM), so there is no Gurgaon-to-Delhi commute. Your child joins from home in Aravali, DLF, Golf Course Road or Sohna Road. Cerebrum's biology faculty are AIIMS-trained and biology-only, and each student gets weekly written feedback on FRQ answers against the College Board rubric. For families who want it, an occasional in-person review at our South Extension hub in Delhi can be arranged on weekends.",
+      },
+      {
+        question: 'What does AP Biology coaching cost for a Scottish High student?',
+        answer:
+          'Senior-faculty 1:1 AP Biology begins at about $1,800 for a 12-hour block, or roughly $40/hour, with full-year tracks from about $2,500 — well below the $150-400/hour that US-based AP tutors charge over Zoom. Fees are the same whether your child is on the IB Diploma, Cambridge or CBSE track at Scottish High; the AP work is delivered as a parallel programme either way.',
+      },
+    ],
+  },
+  {
+    slug: 'gd-goenka-world-gurgaon',
+    schoolName: 'GD Goenka World School',
+    shortName: 'GD Goenka World',
+    cityState: 'Gurgaon, India',
+    metroSlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    schoolType: 'IB Continuum School (India)',
+    historyParagraphs: [
+      'GD Goenka World School is a residential IB Continuum school on Sohna Road, Gurgaon, offering the full IB continuum including the IB Diploma. As a boarding-plus-day school it draws students from across NCR and beyond, with a large, internationally-focused senior cohort.',
+      "GD Goenka World's US-application students commonly add AP Biology to their IB Diploma profile as a College-Board-standardised credential. The school teaches the IB syllabus; students self-register for the AP May exam and prepare for it independently of school lessons.",
+      'For GD Goenka World families — many of them boarders — scheduling matters most. We run AP Biology online in IST evening slots that fit both day-scholars from the Sohna Road corridor and boarders during scheduled evening study, with weekly written FRQ feedback timed to the May exam.',
+    ],
+    reputationBullets: [
+      'Residential IB Continuum school on Sohna Road, Gurgaon (PYP / MYP / DP)',
+      'Boarding + day; large internationally-focused senior cohort',
+      'US-bound students add AP Biology on top of the IB Diploma; self-registered for May',
+      'IST evening scheduling fits both day-scholars and boarders',
+      'Biology-only, AIIMS-trained faculty with weekly written FRQ feedback',
+    ],
+    collegeContext:
+      'GD Goenka World graduates apply to US, UK and Indian universities. For the US-bound cohort, AP Biology (targeting 4-5) adds a standardised signal to IB Diploma predicted grades and can earn first-year credit or placement at many US universities — particularly relevant for pre-med and life-sciences applicants.',
+    paceAlignment:
+      "AP Biology overlaps IB HL Biology heavily in content. For GD Goenka World students we consolidate that shared core through the DP year, then focus on the AP FRQ rubric and timed full-length practice before the May exam. Sessions are scheduled in IST evenings to work for both boarders (evening study) and day-scholars, flexing around the school's DP assessment calendar.",
+    faqs: [
+      {
+        question: 'Does GD Goenka World offer AP Biology as a school subject?',
+        answer:
+          "Most Gurgaon international schools — GD Goenka World included — run the IB Diploma (and/or Cambridge or CBSE), not the US College Board AP programme as a timetabled subject. Students who want AP Biology on their transcript almost always self-register for the May College Board exam and prepare for it outside school. That is exactly what we coach: a full AP Biology track (Campbell content, FRQ rubric mastery, timed full-length papers) that runs alongside your child's IB or school coursework, without clashing with it.",
+      },
+      {
+        question: 'Why would an IB student at GD Goenka World take AP Biology at all?',
+        answer:
+          'For US university applications. A strong AP Biology score (4-5) is a recognised, College-Board-standardised signal that US admissions officers read easily, and it can earn first-year credit or placement at many US universities. IB-Diploma students at GD Goenka World layer one or two APs onto their profile precisely to strengthen the US side of a dual India + US application. Biology is the most common choice for pre-med and life-sciences applicants.',
+      },
+      {
+        question: 'How do the classes run for a Gurgaon family — online or in person?',
+        answer:
+          "Live online, in IST evening slots (typically 7-9 PM), so there is no Gurgaon-to-Delhi commute. Your child joins from home in Aravali, DLF, Golf Course Road or Sohna Road. Cerebrum's biology faculty are AIIMS-trained and biology-only, and each student gets weekly written feedback on FRQ answers against the College Board rubric. For families who want it, an occasional in-person review at our South Extension hub in Delhi can be arranged on weekends.",
+      },
+      {
+        question: 'What does AP Biology coaching cost for a GD Goenka World student?',
+        answer:
+          'Senior-faculty 1:1 AP Biology begins at about $1,800 for a 12-hour block, or roughly $40/hour, with full-year tracks from about $2,500 — well below the $150-400/hour that US-based AP tutors charge over Zoom. Fees are the same whether your child is on the IB Diploma, Cambridge or CBSE track at GD Goenka World; the AP work is delivered as a parallel programme either way.',
       },
     ],
   },
