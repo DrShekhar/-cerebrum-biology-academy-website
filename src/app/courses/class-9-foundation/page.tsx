@@ -674,6 +674,22 @@ export default function Class9FoundationPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <Link
+              href="/neet-biology-foundation-class-6-to-8"
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow group"
+            >
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                Pre-Foundation (Class 6-8)
+              </h3>
+              <p className="text-sm text-gray-600 mb-3">
+                Have a younger child? Start even earlier — curiosity-led biology that builds the
+                base for NEET, Olympiads and top colleges. Sibling discounts available.
+              </p>
+              <span className="text-blue-600 font-medium text-sm inline-flex items-center">
+                View Course <ArrowRight className="w-4 h-4 ml-1" />
+              </span>
+            </Link>
+
+            <Link
               href="/courses/class-10-foundation"
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow group"
             >

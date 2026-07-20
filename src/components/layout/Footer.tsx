@@ -148,6 +148,7 @@ export const Footer = memo(function Footer() {
     { name: 'Class 11 Biology', href: '/courses/class-11' },
     { name: 'Class 12 Biology', href: '/courses/class-12' },
     { name: 'NEET Dropper Program', href: '/courses/neet-dropper' },
+    { name: 'Pre-Foundation (Class 6-8)', href: '/neet-biology-foundation-class-6-to-8' },
     { name: 'Foundation Course (9th-10th)', href: '/courses/foundation' },
     { name: 'IB Biology Coaching', href: '/ib-biology' },
     { name: 'Biology Olympiads', href: '/biology-olympiads' },
