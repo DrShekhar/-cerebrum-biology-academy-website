@@ -41,7 +41,6 @@ export { CourseDetailSchema } from './CourseDetailSchema'
 
 // Structured data schemas (Organization, Course, LocalBusiness, HowTo, Person, Video, Review)
 export {
-  OrganizationSchema,
   WebsiteSchema,
   CourseSchema,
   FAQSchema,

@@ -152,11 +152,7 @@ export default function ContactPage() {
               'USMLE Step 1 Biology Foundations',
               'Biology Olympiads (USABO, INBO, IBO, BBO, CBO, NSEB, SBO)',
             ],
-            award: [
-              '680+ Medical College Selections',
-              '98% NEET-UG Qualification Rate',
-              'Best Biology Teacher Award 2022',
-            ],
+            award: ['680+ Medical College Selections', '98% NEET-UG Qualification Rate'],
           }),
         }}
       />

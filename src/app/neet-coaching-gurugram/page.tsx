@@ -26,7 +26,6 @@ import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import {
-  LocalBusinessSchema,
   GurugramServiceSchema,
   FAQSchema,
   DrShekharSinghSchema,
@@ -954,7 +953,7 @@ export default function NeetCoachingGurugramPage() {
             {/* Google Maps */}
             <div className="rounded-xl overflow-hidden shadow-lg">
               <LazyGoogleMap
-                embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.8904729344643!2d77.0426!3d28.4295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19e3f6f5f5f5%3A0x1234567890abcdef!2sM2K%20Corporate%20Park%2C%20Sector%2051%2C%20Gurugram!5e0!3m2!1sen!2sin!4v1234567890"
+                embedUrl="https://www.google.com/maps?q=M2K+Corporate+Park,+Mayfield+Garden,+Sector+51,+Gurugram,+Haryana+122018&output=embed"
                 title="NEET Coaching Center Location - Gurugram"
                 height={300}
                 placeholder={{
@@ -1830,8 +1829,11 @@ export default function NeetCoachingGurugramPage() {
         </div>
       </section>
 
-      {/* Schema Markup for SEO */}
-      <LocalBusinessSchema />
+      {/* Schema Markup for SEO — LocalBusiness is emitted once from layout.tsx
+          (LocalBusinessSchema locationId="gurugram", real M2K Sector 51 NAP).
+          The StructuredData LocalBusiness node is intentionally NOT rendered
+          here: it carries the South Extension (Delhi) address and would emit a
+          second, conflicting NAP on this money page. */}
       <GurugramServiceSchema />
       <FAQSchema />
       <DrShekharSinghSchema />

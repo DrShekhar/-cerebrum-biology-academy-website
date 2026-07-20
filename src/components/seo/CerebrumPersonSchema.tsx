@@ -76,8 +76,6 @@ const UNIVERSAL_KNOWS_ABOUT = [
 ]
 
 const UNIVERSAL_AWARDS = [
-  'Best Biology Teacher Award 2022 — Education Excellence Foundation',
-  'NEET Educator of the Year 2023',
   '680+ Medical College Selections (AIIMS, JIPMER, AFMC, State Medical Colleges)',
   '98% NEET-UG Qualification Rate (15+ year track record)',
   'Founder, Cerebrum Biology Academy (est. 2014)',

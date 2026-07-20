@@ -3111,12 +3111,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.88,
     },
-    {
-      url: `${baseUrl}/ibo-preparation-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.88,
-    },
+    // NOTE: /ibo-preparation-gurugram is intentionally NOT listed — the page is
+    // robots: 'noindex, follow' (page.tsx:39). Listing a noindexed URL in the
+    // sitemap is a contradictory signal; removed Jul 2026. Re-add only if the
+    // page is de-noindexed and enriched past the thin/doorway bar.
     // NCERT Biology Books SEO Pages - High Traffic Keywords
     {
       url: `${baseUrl}/ncert-biology-class-11`,
@@ -8163,6 +8161,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'lp/neet-demo',
     // Seminar
     'neet-guidance-seminar/thank-you',
+    // Gurugram — index-eligible pages previously orphaned from the sitemap
+    // (all self-canonical, not redirected, not noindexed). Added Jul 2026.
+    'ib-igcse-biology-tuition-gurugram',
+    'neet-crash-course-gurugram',
+    'neet-test-series-gurugram',
+    'neet-scholarship-gurugram',
+    'neet-evening-batch-gurugram',
+    'neet-weekend-batch-gurugram',
+    '1-year-neet-course-gurugram',
+    '2-year-neet-course-gurugram',
+    'top-10-neet-coaching-gurugram',
+    'top-5-neet-coaching-gurugram',
+    'cbse-biology-coaching-gurugram',
+    'biology-class-11-gurugram',
+    'biology-class-12-gurugram',
+    'board-exam-biology-gurugram',
     // Company
   ]
 

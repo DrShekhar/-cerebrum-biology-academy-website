@@ -64,7 +64,13 @@ function buildBranch(key: CentreKey) {
       },
     ],
     hasMap: c.mapUrl,
-    sameAs: c.googleBusinessUrl ? [c.googleBusinessUrl] : undefined,
+    // Only emit a per-centre GBP link when it is a real, resolving URL — the
+    // legacy `g.page/*` shortlinks are dead, and a non-resolving sameAs is a
+    // negative trust signal. A verified GBP URL (owner to add) flows in.
+    sameAs:
+      c.googleBusinessUrl && !c.googleBusinessUrl.includes('g.page/')
+        ? [c.googleBusinessUrl]
+        : undefined,
   }
 }
 
