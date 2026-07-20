@@ -3195,16 +3195,8 @@ export const areaPageConsolidationRedirects = [
     destination: '/neet-coaching-gurugram',
     permanent: true,
   },
-  {
-    source: '/neet-coaching-gurugram/sector-82',
-    destination: '/neet-coaching-gurugram',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurugram/sector-84',
-    destination: '/neet-coaching-gurugram',
-    permanent: true,
-  },
+  // sector-82 & sector-84 UN-REDIRECTED Jul 2026 — now indexable New Gurugram
+  // locality pages (see INDEXABLE_GURUGRAM_LOCALITIES in gurugram-enriched.ts).
   {
     source: '/neet-coaching-gurugram/sector-48',
     destination: '/neet-coaching-gurugram',
