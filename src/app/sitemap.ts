@@ -3455,6 +3455,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'dps-international-gurgaon',
       'scottish-high-gurgaon',
       'gd-goenka-world-gurgaon',
+      'lancers-gurgaon',
     ].map((slug) => ({
       url: `${baseUrl}/ap-biology-tutor-${slug}`,
       lastModified: lastUpdated,

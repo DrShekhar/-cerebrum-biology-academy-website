@@ -958,6 +958,54 @@ export const apBiologySchools: APBiologySchool[] = [
       },
     ],
   },
+  {
+    slug: 'lancers-gurgaon',
+    schoolName: 'Lancers International School',
+    shortName: 'Lancers International',
+    cityState: 'Gurgaon, India',
+    metroSlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    schoolType: 'IB World School (India)',
+    historyParagraphs: [
+      'Lancers International School is an IB World School in Gurugram on the Golf Course Road / Sector 53 corridor, offering the IB Diploma alongside a Cambridge (IGCSE) pathway. Its student body is heavily oriented toward universities abroad, including the US.',
+      'Lancers does not run the US College Board AP programme as a timetabled subject — students who want AP Biology on their transcript self-register for the May exam and prepare independently. For the US-application cohort, a strong AP Biology score (4-5) is a College-Board-standardised signal that complements the IB Diploma on a US application.',
+      'For Lancers families the fit is an AP Biology track that slots cleanly around the IB Diploma load. We deliver it online in IST evening slots with weekly written FRQ feedback against the College Board rubric, mapping the content shared with IB HL Biology once and then drilling AP-specific technique toward the May exam.',
+    ],
+    reputationBullets: [
+      'IB World School in Gurugram (Golf Course Road / Sector 53 corridor)',
+      'IB Diploma + Cambridge tracks; strongly US-and-abroad-application-oriented',
+      'US-bound students add AP Biology; self-registered for the May College Board exam',
+      "Coaching maps AP onto the student's IB (or Cambridge) school track",
+      'Biology-only, AIIMS-trained faculty with weekly written FRQ feedback',
+    ],
+    collegeContext:
+      'Lancers International graduates apply widely abroad, including to US universities. For the US-application subset, AP Biology (targeting 4-5) adds a standardised, admissions-readable signal on top of IB Diploma grades and can earn first-year credit or placement at many US universities — particularly relevant for pre-med and life-sciences applicants.',
+    paceAlignment:
+      "AP Biology overlaps IB HL Biology heavily in content but differs in assessment: AP rewards the six free-response-question (FRQ) rubric and a timed multiple-choice section. For Lancers students we consolidate the shared core early, then focus on the AP FRQ rubric and timed full-length practice ahead of the May exam, scheduling around the school's IB assessment calendar in IST evening slots.",
+    faqs: [
+      {
+        question: 'Does Lancers International offer AP Biology as a school subject?',
+        answer:
+          'No — like most Gurgaon international schools, Lancers runs the IB Diploma (and Cambridge), not the US College Board AP programme as a timetabled subject. Students who want AP Biology self-register for the May exam and prepare for it outside school. That is exactly what we coach: a full AP Biology track that runs alongside the IB coursework without clashing with it.',
+      },
+      {
+        question: 'Why would a Lancers IB student take AP Biology at all?',
+        answer:
+          'For US university applications. A strong AP Biology score (4-5) is a College-Board-standardised signal that US admissions officers read directly, and it can earn first-year credit or placement. IB-Diploma students at Lancers layer AP onto their profile to strengthen the US side of an application — Biology being the most common choice for pre-med and life-sciences applicants.',
+      },
+      {
+        question: 'Are the classes online or in person for a Gurgaon family?',
+        answer:
+          'Live online, in IST evening slots (typically 7-9 PM), so there is no Gurgaon-to-Delhi commute — students join from home in Sushant Lok, Nirvana Country, Sector 53 or the DLF phases. Faculty are AIIMS-trained and biology-only, with weekly written FRQ feedback against the College Board rubric. An occasional in-person review at our South Extension hub can be arranged on weekends.',
+      },
+      {
+        question: 'What does AP Biology coaching cost for a Lancers student?',
+        answer:
+          'Senior-faculty 1:1 AP Biology begins at about $1,800 for a 12-hour block, or roughly $40/hour, with full-year tracks from about $2,500 — well below the $150-400/hour US-based tutors charge over Zoom. Fees are the same whether the student is on the IB Diploma or a Cambridge track at Lancers; the AP work is delivered as a parallel programme either way.',
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
