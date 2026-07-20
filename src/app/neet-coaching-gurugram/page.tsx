@@ -71,6 +71,10 @@ const indexableLocalityLinks = [
   { name: 'DLF Phase 1', href: '/neet-coaching-dlf-phase-1-gurugram', distance: '15 min' },
   { name: 'Sushant Lok', href: '/neet-coaching-sushant-lok-gurugram', distance: '15 min' },
   { name: 'South City', href: '/neet-coaching-south-city-gurugram', distance: '12 min' },
+  { name: 'Cyber City', href: '/neet-coaching-cyber-city-gurugram', distance: '10 min' },
+  { name: 'MG Road', href: '/neet-coaching-mg-road-gurugram', distance: '12 min' },
+  { name: 'IFFCO Chowk', href: '/neet-coaching-iffco-chowk-gurugram', distance: '12 min' },
+  { name: 'Pataudi Road', href: '/neet-coaching-pataudi-road-gurugram', distance: '20 min' },
 ].sort((a, b) => a.name.localeCompare(b.name))
 
 const gurugramLocalities = [

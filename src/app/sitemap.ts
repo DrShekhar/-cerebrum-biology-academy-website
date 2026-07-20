@@ -8165,6 +8165,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'biology-class-11-gurugram',
     'biology-class-12-gurugram',
     'board-exam-biology-gurugram',
+    // Gurugram standalone locality pages — rich, hyperlocal content
+    // (route/metro/traffic FAQs); promoted from orphan status. Their /[area]
+    // twins redirect to the hub, so no cannibalization. (HUDA City Centre is
+    // intentionally excluded — its /[area] twin plus the indexed -metro page
+    // already cover it; the orphan -gurugram 301s to -metro.)
+    'neet-coaching-cyber-city-gurugram',
+    'neet-coaching-mg-road-gurugram',
+    'neet-coaching-iffco-chowk-gurugram',
+    'neet-coaching-pataudi-road-gurugram',
     // Company
   ]
 
