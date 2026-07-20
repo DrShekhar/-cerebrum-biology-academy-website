@@ -416,7 +416,7 @@ export default function BestNeetCoachingIndiaPage() {
                 '@type': 'CourseInstance',
                 name: 'Ascent (Most Popular)',
                 description:
-                  '16–25 student batches with weekly doubt sessions and standard mock-test series. Most popular tier.',
+                  '12–16 student batches with weekly doubt sessions and standard mock-test series. Most popular tier.',
                 courseMode: ['Onsite', 'Online'],
                 instructor: {
                   '@type': 'Person',

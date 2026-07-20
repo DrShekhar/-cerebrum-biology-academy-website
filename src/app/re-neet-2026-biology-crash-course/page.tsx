@@ -82,13 +82,13 @@ const config: BestVerticalConfig = {
       tier: 'Biology Crash (Standard)',
       price: '₹20,000–₹30,000 / 6–8 weeks',
       description:
-        'Biology-only crash course. 16–25 student batches, weekly mocks, WhatsApp doubt support. Pair with your existing Physics + Chemistry coaching.',
+        'Biology-only crash course. 12–16 student batches, weekly mocks, WhatsApp doubt support. Pair with your existing Physics + Chemistry coaching.',
     },
     {
       tier: 'Biology Pinnacle 1:1',
       price: '₹40,000–₹55,000 / 6–8 weeks',
       description:
-        'Direct Dr. Shekhar mentoring + 10–12 student micro-batches. Best for AIIMS / Top medical college aspirants.',
+        'Direct Dr. Shekhar mentoring + 6–10 student micro-batches. Best for AIIMS / Top medical college aspirants.',
     },
     {
       tier: 'Biology Ad-hoc 1:1 Hourly',

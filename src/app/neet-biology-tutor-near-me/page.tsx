@@ -83,7 +83,7 @@ const config: BestVerticalConfig = {
       tier: 'Pinnacle 1:1 + Micro-Batch',
       price: '₹1,20,000–₹1,56,000 / year',
       description:
-        'Direct Dr. Shekhar C Singh mentoring + 10–12 student batches at the centre closest to you.',
+        'Direct Dr. Shekhar C Singh mentoring + 6–10 student batches at the centre closest to you.',
     },
     {
       tier: 'Ad-hoc 1:1 Hourly',

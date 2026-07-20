@@ -82,7 +82,7 @@ const config: BestVerticalConfig = {
       tier: 'RE-NEET Pinnacle Dropper 1:1',
       price: '₹60,000+ / 6–8 weeks',
       description:
-        'Direct Dr. Shekhar mentoring + 10–12 student micro-batches + 2x weekly 1:1 sessions. Best for droppers targeting AIIMS / top medical college.',
+        'Direct Dr. Shekhar mentoring + 6–10 student micro-batches + 2x weekly 1:1 sessions. Best for droppers targeting AIIMS / top medical college.',
     },
     {
       tier: 'Ad-hoc 1:1 Hourly',
@@ -131,7 +131,7 @@ const config: BestVerticalConfig = {
       score: 'Government medical college',
       college: 'Anonymised',
       quote:
-        "The 1:1 mentoring and Tele-MANAS check-ins kept me steady through a tough year — the structure mattered as much as the syllabus.",
+        'The 1:1 mentoring and Tele-MANAS check-ins kept me steady through a tough year — the structure mattered as much as the syllabus.',
     },
     {
       name: 'Past NEET repeater',

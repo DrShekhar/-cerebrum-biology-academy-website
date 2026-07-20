@@ -144,7 +144,7 @@ export default function CerebrumVsAllenPage() {
                   },
                   {
                     criteria: 'Batch Size',
-                    cerebrum: '25-30 students',
+                    cerebrum: '20-25 students',
                     allen: '80-100+ students',
                   },
                   {
@@ -513,7 +513,7 @@ export default function CerebrumVsAllenPage() {
               {
                 title: 'Small Batch Advantage',
                 description:
-                  'With 25-30 students per batch, you get personalized attention. Teachers know your strengths and weaknesses, enabling targeted improvement.',
+                  'With 20-25 students per batch, you get personalized attention. Teachers know your strengths and weaknesses, enabling targeted improvement.',
               },
               {
                 title: '98% Success Rate',

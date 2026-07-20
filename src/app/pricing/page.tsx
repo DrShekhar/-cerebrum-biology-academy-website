@@ -895,7 +895,7 @@ export default function PricingPage() {
                   name: 'Ascent',
                   color: 'blue',
                   badge: '🔥 Most Popular',
-                  batchSize: '16-25',
+                  batchSize: '12-16',
                   hours: '4.5 hrs',
                   attention: 'High',
                   mentorship: true,
@@ -1040,9 +1040,9 @@ export default function PricingPage() {
                   {[
                     {
                       feature: 'Batch Size',
-                      pursuit: '30-40',
-                      ascent: '16-25',
-                      pinnacle: '10-12',
+                      pursuit: '20-25',
+                      ascent: '12-16',
+                      pinnacle: '6-10',
                       highlight: true,
                     },
                     {

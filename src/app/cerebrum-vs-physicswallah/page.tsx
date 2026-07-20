@@ -60,7 +60,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Batch Size (Live Classes)',
-      cerebrum: '15–20 students (Ascent) or 10–12 students (Pinnacle)',
+      cerebrum: '12–16 students (Ascent) or 6–10 students (Pinnacle)',
       competitor: '300–2,000+ students per live class (various mass-online batches)',
       cerebrumWins: true,
     },

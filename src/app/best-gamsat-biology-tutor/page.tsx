@@ -161,7 +161,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does Cerebrum GAMSAT Biology tutoring cost vs Gold Standard / Griffiths?',
       answer:
-        "Cerebrum's full Section III biology programme at £1,249 (A$2,399 / €1,449) is priced 30–40% below full-course GAMSAT programmes such as Gradready and Griffiths GAMSAT (£1,995+) and at materially deeper biology pedagogy. Self-Paced is £399 / A$799 / €469; Small-Batch is £799 / A$1,599 / €939. At £110/hour 1:1 ad-hoc (A$215 / €130), Cerebrum is priced below typical full-course GAMSAT tutoring (£140+/hour).",
+        "Cerebrum's full Section III biology programme at £1,249 (A$2,399 / €1,449) is priced 20–25% below full-course GAMSAT programmes such as Gradready and Griffiths GAMSAT (£1,995+) and at materially deeper biology pedagogy. Self-Paced is £399 / A$799 / €469; Small-Batch is £799 / A$1,599 / €939. At £110/hour 1:1 ad-hoc (A$215 / €130), Cerebrum is priced below typical full-course GAMSAT tutoring (£140+/hour).",
     },
     {
       question: 'Can someone from a non-biology background prepare for GAMSAT Section III?',

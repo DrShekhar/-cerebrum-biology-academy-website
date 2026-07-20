@@ -152,7 +152,7 @@ const FAQS = [
   {
     question: 'What makes Cerebrum the "best biology coaching" — vs Allen / Aakash / PW?',
     answer:
-      "Allen, Aakash, PW are full-PCM coaching brands. Cerebrum is a biology-only specialist by design — every faculty hour is biology depth, not split across physics + chemistry. That means small-batch live discussion (10-40 students vs Allen's 150-200), weekly per-MCQ review (impossible at lecture-hall scale), AIIMS-trained biology-specific faculty (Dr. Shekhar C Singh personally supervises curriculum), and depth that mass-coaching cannot reach. Most of our students pair us with their existing Allen / Aakash / PW for physics + chemistry — we don't replace, we specialise.",
+      "Allen, Aakash, PW are full-PCM coaching brands. Cerebrum is a biology-only specialist by design — every faculty hour is biology depth, not split across physics + chemistry. That means small-batch live discussion (6-25 students vs Allen's 150-200), weekly per-MCQ review (impossible at lecture-hall scale), AIIMS-trained biology-specific faculty (Dr. Shekhar C Singh personally supervises curriculum), and depth that mass-coaching cannot reach. Most of our students pair us with their existing Allen / Aakash / PW for physics + chemistry — we don't replace, we specialise.",
   },
   {
     question: 'Which programmes does Cerebrum offer?',
@@ -432,7 +432,7 @@ export default function BestBiologyCoachingIndiaPage() {
                 },
                 {
                   title: 'Small-batch model',
-                  text: '10-40 students per batch depending on tier vs 150-200 at mass-coaching',
+                  text: '6-25 students per batch depending on tier vs 150-200 at mass-coaching',
                 },
                 {
                   title: 'Founder-supervised curriculum',

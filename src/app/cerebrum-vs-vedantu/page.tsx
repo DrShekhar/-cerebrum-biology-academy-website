@@ -61,7 +61,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Batch Size (Live Classes)',
-      cerebrum: '15–20 students (Ascent) or 10–12 students (Pinnacle)',
+      cerebrum: '12–16 students (Ascent) or 6–10 students (Pinnacle)',
       competitor: '50–200+ students per live class · 1:1 tutoring available at premium tier',
       cerebrumWins: true,
     },
@@ -123,7 +123,7 @@ const config: CompetitorComparisonConfig = {
     {
       title: 'Small Live-Class Batches (15–20 vs 50–200+)',
       description:
-        "Even Vedantu's live classes typically run 50–200+ students per session. Cerebrum caps at 15–20 (Ascent) or 10–12 (Pinnacle). Personal attention is preserved structurally, not just claimed.",
+        "Even Vedantu's live classes typically run 50–200+ students per session. Cerebrum caps at 12–16 (Ascent) or 6–10 (Pinnacle). Personal attention is preserved structurally, not just claimed.",
     },
     {
       title: 'AIIMS Clinical Correlations',

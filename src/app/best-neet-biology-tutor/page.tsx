@@ -88,19 +88,19 @@ const config: BestVerticalConfig = {
   ],
   pricing: [
     {
-      tier: 'Pursuit (Small-Batch 30–40)',
+      tier: 'Pursuit (Small-Batch 20–25)',
       price: '₹40,000–₹75,000 / year',
       description:
         'Live small-batch NEET biology classes with senior faculty, weekly chapter tests, doubt sessions. Most affordable structured tier.',
     },
     {
-      tier: 'Ascent (Pro Batch 16–25)',
+      tier: 'Ascent (Pro Batch 12–16)',
       price: '₹58,000–₹90,000 / year',
       description:
         'Tighter batch with weekly 1:1 doubt slots, monthly NEET-pattern mocks, personalised gap analysis. Most popular value tier.',
     },
     {
-      tier: 'Pinnacle (Direct Dr. Shekhar 10–12)',
+      tier: 'Pinnacle (Direct Dr. Shekhar 6–10)',
       price: '₹1,20,000–₹1,56,000 / year · ad-hoc 1:1 ₹2,500–₹4,500/hr',
       description:
         'Micro-batch with direct Dr. Shekhar 1:1 mentoring. Calibrated for AIIMS / top-100 rank aspirants. Half the cost of Kota relocation (₹2L–₹2.5L) with materially better biology pedagogy.',

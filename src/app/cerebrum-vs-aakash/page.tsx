@@ -51,7 +51,7 @@ const faqs: FAQItem[] = [
   {
     question: 'Which institute provides better personal attention?',
     answer:
-      "Cerebrum maintains batch sizes of 25-30 students with a 1:25 student-to-faculty ratio, ensuring personalized attention. Aakash typically has 60-80+ students per batch with higher ratios. For Biology mastery requiring detailed doubt clearing, Cerebrum's smaller batches provide superior personal attention.",
+      "Cerebrum maintains batch sizes of 20-25 students with a 1:25 student-to-faculty ratio, ensuring personalized attention. Aakash typically has 60-80+ students per batch with higher ratios. For Biology mastery requiring detailed doubt clearing, Cerebrum's smaller batches provide superior personal attention.",
   },
   {
     question: 'Does Cerebrum have centers outside Delhi NCR?',

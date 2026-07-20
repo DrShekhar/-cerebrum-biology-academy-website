@@ -83,20 +83,20 @@ const config: BestVerticalConfig = {
       tier: 'Ascent (Most Popular)',
       price: '₹58,000–₹90,000 / year',
       description:
-        '16–25 student batches. Weekly doubt sessions, standard mock-test series, structured NCERT-first curriculum.',
+        '12–16 student batches. Weekly doubt sessions, standard mock-test series, structured NCERT-first curriculum.',
     },
     {
       tier: 'Pinnacle (Premium 1:1)',
       price: '₹1,20,000–₹1,56,000 / year',
       description:
-        '10–12 student micro-batches + personal mentorship from Dr. Shekhar C Singh. Best for AIIMS / Top medical college aspirants.',
+        '6–10 student micro-batches + personal mentorship from Dr. Shekhar C Singh. Best for AIIMS / Top medical college aspirants.',
     },
   ],
   whyBest: [
     {
       title: 'Why Small-Batch Biology Classes Beat 200+ Lecture Halls',
       description:
-        "Aakash and Allen and online-first generalist platforms typically run batches of 100–400 students per teacher. At those sizes individual attention is impossible — students become invisible. Cerebrum caps batches at 15–20 (Ascent) or 10–12 (Pinnacle). Every student's doubt gets answered every week.",
+        "Aakash and Allen and online-first generalist platforms typically run batches of 100–400 students per teacher. At those sizes individual attention is impossible — students become invisible. Cerebrum caps batches at 12–16 (Ascent) or 6–10 (Pinnacle). Every student's doubt gets answered every week.",
     },
     {
       title: 'Biology-Only Specialisation',
@@ -156,7 +156,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much do biology classes for NEET cost at Cerebrum?',
       answer:
-        'Pursuit ₹40,000–₹75,000/year (30–40 batch), Ascent ₹58,000–₹90,000/year (16–25 batch + weekly doubt sessions), Pinnacle ₹1,20,000–₹1,56,000/year (10–12 batch + personal mentorship from Dr. Shekhar). All tiers include weekly mocks, recorded sessions for revision, and WhatsApp doubt support. EMI options available.',
+        'Pursuit ₹40,000–₹75,000/year (20–25 batch), Ascent ₹58,000–₹90,000/year (12–16 batch + weekly doubt sessions), Pinnacle ₹1,20,000–₹1,56,000/year (6–10 batch + personal mentorship from Dr. Shekhar). All tiers include weekly mocks, recorded sessions for revision, and WhatsApp doubt support. EMI options available.',
     },
     {
       question: 'Are biology classes for NEET available online?',

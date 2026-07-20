@@ -60,7 +60,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       criterion: 'Batch Size (Classroom)',
-      cerebrum: '15–20 students (Ascent) or 10–12 students (Pinnacle)',
+      cerebrum: '12–16 students (Ascent) or 6–10 students (Pinnacle)',
       competitor: '100–250 students per Kota classroom · 50+ in city centres',
       cerebrumWins: true,
     },
@@ -121,7 +121,7 @@ const config: CompetitorComparisonConfig = {
     {
       title: 'Small Batches (15–20 vs 100–250)',
       description:
-        'Kota classroom model is structurally built around large batches — 100–250 students per class. Personal attention is impossible at that scale. Cerebrum caps batches at 15–20 (Ascent) or 10–12 (Pinnacle).',
+        'Kota classroom model is structurally built around large batches — 100–250 students per class. Personal attention is impossible at that scale. Cerebrum caps batches at 12–16 (Ascent) or 6–10 (Pinnacle).',
     },
     {
       title: 'Biology-Only (vs Mixed NEET + JEE Faculty)',

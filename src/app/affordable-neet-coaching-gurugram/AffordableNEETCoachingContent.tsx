@@ -87,7 +87,7 @@ const comparison = [
   },
   {
     feature: 'Batch Size',
-    cerebrum: '10-40 students',
+    cerebrum: '6-25 students',
     allen: '80-100+ students',
     aakash: '60-80 students',
   },
@@ -122,7 +122,7 @@ const scholarships = [
 const valueProps = [
   { stat: '30-40%', label: 'Lower than Aakash and Allen fees' },
   { stat: '98%', label: 'Success rate (Biology)' },
-  { stat: '10-40', label: 'Students per batch (vs 100+)' },
+  { stat: '6-25', label: 'Students per batch (vs 100+)' },
   { stat: '0%', label: 'EMI interest (3 months)' },
 ]
 

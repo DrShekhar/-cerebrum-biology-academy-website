@@ -9,7 +9,7 @@ const city = NEAR_ME_CITY_BY_SLUG[SLUG]
 export const metadata: Metadata = city
   ? {
       title: `NEET Coaching Near Me in ${city.displayName} | Online Biology Specialist · Cerebrum`,
-      description: `Online NEET biology coaching for ${city.displayName} students. AIIMS-trained faculty, small batches (10-40), live Zoom classes from any neighbourhood (${city.majorAreas.slice(0, 3).join(', ')}), printed study material shipped. Target: ${city.stateQuotaCollege}. Pair with your existing PCM coaching.`,
+      description: `Online NEET biology coaching for ${city.displayName} students. AIIMS-trained faculty, small batches (6-25), live Zoom classes from any neighbourhood (${city.majorAreas.slice(0, 3).join(', ')}), printed study material shipped. Target: ${city.stateQuotaCollege}. Pair with your existing PCM coaching.`,
       keywords: [
         `NEET coaching near me ${city.displayName}`,
         `NEET coaching near me ${SLUG}`,

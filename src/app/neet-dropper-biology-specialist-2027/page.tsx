@@ -90,7 +90,7 @@ const FAQS = [
   {
     question: "I'm already at PW / Allen / Aakash / Kota — why would I add Cerebrum on top?",
     answer:
-      'Because biology is where most droppers lose 30–40 marks, and large-batch coaching cannot teach biology depth. Physics and chemistry are problem-solving subjects — a 200-seat lecture works. Biology is conceptual + memory-heavy + question-pattern-specific — it needs small-batch discussion, per-question rationale, and weekly retrieval practice. Our dropper students typically keep their primary coaching for PCM and add us as a 6 hour/week biology layer.',
+      'Because biology is where most droppers lose 20–25 marks, and large-batch coaching cannot teach biology depth. Physics and chemistry are problem-solving subjects — a 200-seat lecture works. Biology is conceptual + memory-heavy + question-pattern-specific — it needs small-batch discussion, per-question rationale, and weekly retrieval practice. Our dropper students typically keep their primary coaching for PCM and add us as a 6 hour/week biology layer.',
   },
   {
     question: 'How much can biology realistically improve in one drop year?',
@@ -595,7 +595,7 @@ export default function NEETDropperBiologySpecialistPage() {
               </p>
               <p className="text-sm text-slate-500">Up to ₹75,000 depending on add-ons</p>
               <ul className="mt-5 space-y-2 text-sm text-slate-700">
-                <li>Small batch (30–40 students)</li>
+                <li>Small batch (20–25 students)</li>
                 <li>Weekly chapter tests + full mocks</li>
                 <li>Live doubt sessions</li>
                 <li>Cerebrum NCERT guide + MCQ bank shipped</li>
@@ -613,7 +613,7 @@ export default function NEETDropperBiologySpecialistPage() {
               </p>
               <p className="text-sm text-indigo-200">Up to ₹90,000 depending on add-ons</p>
               <ul className="mt-5 space-y-2 text-sm">
-                <li>Pro batch (16–25 students)</li>
+                <li>Pro batch (12–16 students)</li>
                 <li>Weekly 1:1 doubt slot (15 min)</li>
                 <li>Monthly NEET-pattern full mocks</li>
                 <li>Personalised gap-analysis dashboard</li>
@@ -631,7 +631,7 @@ export default function NEETDropperBiologySpecialistPage() {
               </p>
               <p className="text-sm text-slate-400">Up to ₹1,56,000 depending on add-ons</p>
               <ul className="mt-5 space-y-2 text-sm">
-                <li>Micro-batch (10–12 students)</li>
+                <li>Micro-batch (6–10 students)</li>
                 <li>Direct teaching by Dr. Shekhar</li>
                 <li>Weekly 30-min 1-on-1 mentor call</li>
                 <li>Customised study plan per student</li>

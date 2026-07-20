@@ -53,7 +53,7 @@ export const NEAR_ME_CITIES_BATCH2: NearMeCityData[] = [
       {
         question: 'Is Cerebrum better than Allen Saheed Nagar for biology?',
         answer:
-          "For biology alone — yes, because of 10-40 student batches vs 150-200. We don't teach PCM, so families typically keep Allen for physics-chemistry and add Cerebrum for biology.",
+          "For biology alone — yes, because of 6-25 student batches vs 150-200. We don't teach PCM, so families typically keep Allen for physics-chemistry and add Cerebrum for biology.",
       },
       {
         question: 'Can a Patia or Chandrasekharpur student attend live online + school?',
@@ -117,7 +117,7 @@ export const NEAR_ME_CITIES_BATCH2: NearMeCityData[] = [
       {
         question: 'How does Cerebrum compare to Allen Sector 22 for biology?',
         answer:
-          'Allen Sector 22 has world-class brand recognition but 150+ student batches. For biology specifically, we run 10-40 students with weekly per-MCQ review. Families often keep Allen for physics-chemistry and add Cerebrum biology.',
+          'Allen Sector 22 has world-class brand recognition but 150+ student batches. For biology specifically, we run 6-25 students with weekly per-MCQ review. Families often keep Allen for physics-chemistry and add Cerebrum biology.',
       },
       {
         question: 'My child is in Mohali — can they still attend Cerebrum live online?',
@@ -424,7 +424,7 @@ export const NEAR_ME_CITIES_BATCH2: NearMeCityData[] = [
       {
         question: 'How does this compare with Allen Knowledge Park?',
         answer:
-          'Allen Knowledge Park is solid for PCM but biology depth limited by batch size (~100 students). Cerebrum biology batches are 10-40 with per-student review.',
+          'Allen Knowledge Park is solid for PCM but biology depth limited by batch size (~100 students). Cerebrum biology batches are 6-25 with per-student review.',
       },
       {
         question: 'Shipping to Knowledge Park or Pari Chowk?',

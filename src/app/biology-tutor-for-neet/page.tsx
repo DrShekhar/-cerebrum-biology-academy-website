@@ -78,13 +78,13 @@ const config: BestVerticalConfig = {
       tier: 'Pinnacle 1:1 (Premium)',
       price: '₹1,20,000–₹1,56,000 / year',
       description:
-        'Direct mentoring with Dr. Shekhar C Singh. 10–12 student micro-batches + 1:1 sessions. Best for AIIMS / Top medical college aspirants.',
+        'Direct mentoring with Dr. Shekhar C Singh. 6–10 student micro-batches + 1:1 sessions. Best for AIIMS / Top medical college aspirants.',
     },
     {
       tier: 'Ascent (Small Batch)',
       price: '₹58,000–₹90,000 / year',
       description:
-        '16–25 student batches with weekly 1:1 doubt slots. Most popular tier. Strong fit for serious NEET aspirants.',
+        '12–16 student batches with weekly 1:1 doubt slots. Most popular tier. Strong fit for serious NEET aspirants.',
     },
     {
       tier: 'Ad-hoc 1:1 Tutoring',
@@ -162,7 +162,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does a NEET biology tutor cost?',
       answer:
-        'At Cerebrum: Pinnacle (1:1 + 10–12 batch) ₹1,20,000–₹1,56,000/year; Ascent (16–25 batch + weekly 1:1) ₹58,000–₹90,000/year; Pursuit (small group) ₹40,000–₹75,000/year. Ad-hoc 1:1 tutoring is priced hourly. EMI options available. Most home biology tutors in Delhi NCR charge ₹2,500–₹3,500/hour with no curriculum or mock structure — Cerebrum delivers more for less.',
+        'At Cerebrum: Pinnacle (1:1 + 6–10 batch) ₹1,20,000–₹1,56,000/year; Ascent (12–16 batch + weekly 1:1) ₹58,000–₹90,000/year; Pursuit (small group) ₹40,000–₹75,000/year. Ad-hoc 1:1 tutoring is priced hourly. EMI options available. Most home biology tutors in Delhi NCR charge ₹2,500–₹3,500/hour with no curriculum or mock structure — Cerebrum delivers more for less.',
     },
     {
       question:

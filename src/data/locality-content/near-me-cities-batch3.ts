@@ -111,7 +111,7 @@ export const NEAR_ME_CITIES_BATCH3: NearMeCityData[] = [
       {
         question: 'Is Cerebrum better than Allen Vijay Nagar for biology?',
         answer:
-          'For biology alone — yes, due to 10-40 vs 150-200 student batch sizes. Keep Allen for PCM, add Cerebrum biology.',
+          'For biology alone — yes, due to 6-25 vs 150-200 student batch sizes. Keep Allen for PCM, add Cerebrum biology.',
       },
       {
         question: 'Schedule for a Daly College or Emerald Heights student?',
@@ -340,7 +340,7 @@ export const NEAR_ME_CITIES_BATCH3: NearMeCityData[] = [
       {
         question: 'Is Allen Swaroop Nagar better than Cerebrum for biology?',
         answer:
-          'For PCM combined — Allen wins. For biology specifically — Cerebrum, due to 10-40 student batches.',
+          'For PCM combined — Allen wins. For biology specifically — Cerebrum, due to 6-25 student batches.',
       },
       {
         question: 'Schedule for Methodist or Christ Church College School student?',
@@ -503,7 +503,7 @@ export const NEAR_ME_CITIES_BATCH3: NearMeCityData[] = [
       {
         question: 'Is Cerebrum better than Allen Kota for biology specifically?',
         answer:
-          'For biology only — yes. Allen Kota PCM is unmatched, but their biology batches are 150+ students. Cerebrum batches are 10-40 with per-MCQ review.',
+          'For biology only — yes. Allen Kota PCM is unmatched, but their biology batches are 150+ students. Cerebrum batches are 6-25 with per-MCQ review.',
       },
     ],
   },

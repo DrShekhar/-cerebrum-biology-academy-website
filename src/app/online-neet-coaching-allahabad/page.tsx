@@ -63,7 +63,7 @@ export default function Page() {
   const faqs = [
     {
       question: `How does online NEET coaching work for ${city.displayName} students?`,
-      answer: `Live Zoom classes IST evening slots (5:30-8 PM weekdays, 9-11 AM Sunday). AIIMS-trained biology-specialist faculty. ${city.displayName} students join pan-India cohorts of 10-40 students depending on tier. Recordings available if you miss. Weekly chapter tests with per-MCQ review. Material shipped to ${city.majorAreas.slice(0, 3).join(', ')}.`,
+      answer: `Live Zoom classes IST evening slots (5:30-8 PM weekdays, 9-11 AM Sunday). AIIMS-trained biology-specialist faculty. ${city.displayName} students join pan-India cohorts of 6-25 students depending on tier. Recordings available if you miss. Weekly chapter tests with per-MCQ review. Material shipped to ${city.majorAreas.slice(0, 3).join(', ')}.`,
     },
     {
       question: `What does online NEET Biology coaching cost in ${city.displayName}?`,
@@ -71,7 +71,7 @@ export default function Page() {
     },
     {
       question: `Is Cerebrum biology specialist better than Allen / Aakash ${city.displayName}?`,
-      answer: `Different model. Allen / Aakash / ${localCoaching}: full-package PCM coaching, 150-200 student batches. Cerebrum: biology-only specialist with 10-40 student batches, AIIMS faculty, per-MCQ weekly review. We don't compete with their PCM teaching — most students keep their existing coaching for physics-chemistry and add Cerebrum for the biology layer (360/720 marks, half the exam).`,
+      answer: `Different model. Allen / Aakash / ${localCoaching}: full-package PCM coaching, 150-200 student batches. Cerebrum: biology-only specialist with 6-25 student batches, AIIMS faculty, per-MCQ weekly review. We don't compete with their PCM teaching — most students keep their existing coaching for physics-chemistry and add Cerebrum for the biology layer (360/720 marks, half the exam).`,
     },
     {
       question: `What's the target medical college for a ${city.displayName} aspirant?`,

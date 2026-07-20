@@ -65,7 +65,7 @@ export default function Page() {
   const faqs = [
     {
       question: `Why pick Cerebrum biology specialist over Allen / Aakash / ${localCoaching} in ${city.displayName}?`,
-      answer: `We don't replace them — we add the biology depth they can't deliver. Allen / Aakash / ${localCoaching} ${city.displayName} batches are 150-200 students with generalist faculty; biology gets the same surface treatment as physics + chemistry. Cerebrum is biology-only by design — 10-40 student batches, AIIMS-trained faculty, weekly per-MCQ review, NCERT-line-by-line. Biology is 360/720 NEET marks (half the exam) — adding a specialist for it is the cleanest way to break through a 280-300 score plateau.`,
+      answer: `We don't replace them — we add the biology depth they can't deliver. Allen / Aakash / ${localCoaching} ${city.displayName} batches are 150-200 students with generalist faculty; biology gets the same surface treatment as physics + chemistry. Cerebrum is biology-only by design — 6-25 student batches, AIIMS-trained faculty, weekly per-MCQ review, NCERT-line-by-line. Biology is 360/720 NEET marks (half the exam) — adding a specialist for it is the cleanest way to break through a 280-300 score plateau.`,
     },
     {
       question: `What's the typical target college for a ${city.displayName} NEET aspirant?`,
@@ -118,9 +118,9 @@ export default function Page() {
           </h1>
           <p className="text-xl text-slate-300 mb-6 max-w-3xl">
             Live online NEET Biology coaching for {city.displayName} ({city.state}) students —
-            AIIMS-trained faculty, small batches (10-40), NCERT-line-by-line curriculum, weekly
-            tests with per-MCQ review. Serving {city.majorAreas.slice(0, 4).join(', ')}. Designed to
-            pair with your existing {localCoaching} for the physics-chemistry side. Target:{' '}
+            AIIMS-trained faculty, small batches (6-25), NCERT-line-by-line curriculum, weekly tests
+            with per-MCQ review. Serving {city.majorAreas.slice(0, 4).join(', ')}. Designed to pair
+            with your existing {localCoaching} for the physics-chemistry side. Target:{' '}
             <strong>{city.stateQuotaCollege}</strong>
             {city.otherStateMedicalColleges?.length ? (
               <> or {city.otherStateMedicalColleges[0]}</>

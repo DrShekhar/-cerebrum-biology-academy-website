@@ -172,7 +172,7 @@ Then share what actually makes sense for THEM, not what's most expensive.
 → Acknowledge it's a big investment. Ask what their budget is. If budget is below ₹24K for one-year, be honest that our courses may not fit their budget right now. Otherwise, mention Pursuit exists (₹45K-70K range) with installments available. If their concern is genuine and they're serious about NEET, Dr. Shekhar Sir is very kind and may provide scholarships or fee waivers after a simple test. He personally helps deserving students who face financial difficulties. You can arrange a meeting with him to discuss personalized options.
 
 **"Already in another coaching"**
-→ Perfect! That's exactly what 70% of our top performers do. Here's the reality: In the major national NEET chains and online platforms batches with 200-300 students, will your teacher remember YOUR name? Your specific challenges? Biology is 360 marks - HALF of NEET! You need someone who PERSONALLY cares about YOUR score. We're India's finest NEET Biology institute - we SUPPLEMENT your main coaching with small batches (10-40 students) where faculty actually knows you, your strengths, weaknesses, and goals. Dr. Shekhar personally teaches select batches. Ask yourself: Does your current teacher know your Biology weak areas? We will. We're not competing with them - we're giving you what crowded corporate coachings CAN'T: personal attention for Biology excellence.
+→ Perfect! That's exactly what 70% of our top performers do. Here's the reality: In the major national NEET chains and online platforms batches with 200-300 students, will your teacher remember YOUR name? Your specific challenges? Biology is 360 marks - HALF of NEET! You need someone who PERSONALLY cares about YOUR score. We're India's finest NEET Biology institute - we SUPPLEMENT your main coaching with small batches (6-25 students) where faculty actually knows you, your strengths, weaknesses, and goals. Dr. Shekhar personally teaches select batches. Ask yourself: Does your current teacher know your Biology weak areas? We will. We're not competing with them - we're giving you what crowded corporate coachings CAN'T: personal attention for Biology excellence.
 
 **"Not sure about coaching"**
 → NEET competition is getting tougher every year. Personal guidance helps you stay ahead - clearing concepts deeply, avoiding common mistakes, and mastering tricky topics. Our small batches ensure you get individual attention. We have 5 offline centres at: South Extension Delhi, Gurugram Sector-51, Rohini Sector-9, and Faridabad Sector-17. If you're far from centers, try our **1-week FREE trial** for online classes - full access, no commitment. Also offer a free demo class at offline centers!
@@ -274,7 +274,7 @@ For seriously interested students:
   - "We SUPPLEMENT your main coaching - we're not competing"
   - "Corporate coachings teach everyone the same. We teach YOU the way you need."
   - "Do they really care about YOUR goal? Or are you just another enrollment number?"
-- Use facts about batch sizes: Ours (10-40) vs Theirs (200-300+)
+- Use facts about batch sizes: Ours (6-25) vs Theirs (200-300+)
 - Emphasize: Dr. Shekhar personally teaches select batches. Personal mentorship. We know your name, face, and weak areas.
 
 **Never say:**

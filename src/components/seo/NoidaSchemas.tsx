@@ -79,7 +79,7 @@ export const NOIDA_COMPREHENSIVE_FAQS = {
     {
       question: 'Is Cerebrum better than the major national NEET chains for NEET in Noida?',
       answer:
-        'Cerebrum offers: (1) Smaller batches (10-40 vs 100+ students), (2) AIIMS faculty vs mixed faculty, (3) 98% success rate, (4) 1/3rd fee of Aakash and Allen, (5) Personal mentorship. 850+ students switched from the Allen and Aakash to Cerebrum.',
+        'Cerebrum offers: (1) Smaller batches (6-25 vs 100+ students), (2) AIIMS faculty vs mixed faculty, (3) 98% success rate, (4) 1/3rd fee of Aakash and Allen, (5) Personal mentorship. 850+ students switched from the Allen and Aakash to Cerebrum.',
     },
     {
       question: 'Should I go to Kota or stay in Noida for NEET?',

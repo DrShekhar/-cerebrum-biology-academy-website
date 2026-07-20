@@ -45,7 +45,7 @@ const config: BestVerticalConfig = {
   intro:
     '1-on-1 NEET biology tutoring is the most personalised pathway — bespoke curriculum pacing, weak-topic drilling identified from YOUR mock scores, custom revision plans for YOUR exam window. Best suited for AIIMS / Top medical college aspirants, students with non-standard schedules, or those needing focused score-jump programmes (250 → 350+ in months).',
   clusterSummary:
-    'Pinnacle tier · 10–12 student micro-batches + 1:1 sessions · Ad-hoc hourly tutoring · WhatsApp doubt support.',
+    'Pinnacle tier · 6–10 student micro-batches + 1:1 sessions · Ad-hoc hourly tutoring · WhatsApp doubt support.',
   credentials: [
     { label: 'Dr. Shekhar C Singh Direct' },
     { label: 'AIIMS Delhi Pedagogy' },
@@ -71,10 +71,10 @@ const config: BestVerticalConfig = {
   ],
   pricing: [
     {
-      tier: 'Pinnacle (1:1 + 10–12 Batch)',
+      tier: 'Pinnacle (1:1 + 6–10 Batch)',
       price: '₹1,20,000–₹1,56,000 / year',
       description:
-        'Direct mentoring from Dr. Shekhar C Singh + 10–12 student micro-batches + weekly 1-on-1 sessions. Best for AIIMS aspirants.',
+        'Direct mentoring from Dr. Shekhar C Singh + 6–10 student micro-batches + weekly 1-on-1 sessions. Best for AIIMS aspirants.',
     },
     {
       tier: 'Ad-hoc 1-on-1 Hourly',
@@ -93,7 +93,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Direct Dr. Shekhar C Singh Mentoring (Pinnacle)',
       description:
-        'In the Pinnacle programme, Dr. Shekhar C Singh personally mentors every student. Not an "introduction call" — actual weekly 1-on-1 sessions plus 10–12 student micro-batches. This level of access is structurally impossible at chains running 100+ student batches.',
+        'In the Pinnacle programme, Dr. Shekhar C Singh personally mentors every student. Not an "introduction call" — actual weekly 1-on-1 sessions plus 6–10 student micro-batches. This level of access is structurally impossible at chains running 100+ student batches.',
     },
     {
       title: 'Custom Mock Review (Not Generic Feedback)',
@@ -153,7 +153,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does a 1-on-1 NEET biology tutor cost in India?',
       answer:
-        'Cerebrum: Pinnacle programme ₹1,20,000–₹1,56,000/year (1:1 + 10–12 batch + weekly Dr. Shekhar sessions). Ad-hoc 1:1 hourly: ₹2,500–₹4,500/hour depending on faculty. Most Delhi NCR home biology tutors charge ₹2,500–₹3,500/hour with no curriculum or mock structure — Cerebrum delivers more for less.',
+        'Cerebrum: Pinnacle programme ₹1,20,000–₹1,56,000/year (1:1 + 6–10 batch + weekly Dr. Shekhar sessions). Ad-hoc 1:1 hourly: ₹2,500–₹4,500/hour depending on faculty. Most Delhi NCR home biology tutors charge ₹2,500–₹3,500/hour with no curriculum or mock structure — Cerebrum delivers more for less.',
     },
     {
       question: 'Does Dr. Shekhar C Singh personally tutor 1-on-1?',

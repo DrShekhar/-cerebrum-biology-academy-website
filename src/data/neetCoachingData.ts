@@ -275,7 +275,7 @@ export const successStats = [
 export const comparisonData = {
   headers: ['Feature', 'Cerebrum', 'Aakash', 'Allen'],
   rows: [
-    ['Batch Size', '10-40 students', '80-150 students', '60-120 students'],
+    ['Batch Size', '6-25 students', '80-150 students', '60-120 students'],
     ['Price/Year', 'Rs 40,000-1,56,000', 'Rs 1,50,000-2,40,000', 'Rs 1,20,000-2,00,000'],
     ['Faculty', 'AIIMS & IITians', 'Mixed', 'Mixed'],
     ['Success Rate', '98%', '~60%', '~55%'],

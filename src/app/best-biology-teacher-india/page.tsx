@@ -147,7 +147,7 @@ const whyBest = [
   {
     title: 'Small Batches by Design (Max 15–20)',
     description:
-      'Large coaching chains pack 50–100+ students per batch across all subjects. Cerebrum caps batches at 15–20 students for the standard tier and 10–12 for the premium Pinnacle tier. Every student gets personal attention from Dr. Shekhar in Pinnacle batches.',
+      'Large coaching chains pack 50–100+ students per batch across all subjects. Cerebrum caps batches at 15–20 students for the standard tier and 6–10 for the premium Pinnacle tier. Every student gets personal attention from Dr. Shekhar in Pinnacle batches.',
   },
   {
     title: 'Cross-Vertical Expertise Across Six Biology Pathways',

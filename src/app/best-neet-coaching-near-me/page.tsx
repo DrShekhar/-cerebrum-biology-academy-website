@@ -130,7 +130,7 @@ const config: BestVerticalConfig = {
     {
       tier: 'Ascent (Most Popular)',
       price: '₹58,000–₹90,000 / year',
-      description: '16–25 student batches. Weekly doubt sessions. Standard mock-test series.',
+      description: '12–16 student batches. Weekly doubt sessions. Standard mock-test series.',
     },
     {
       tier: 'Pinnacle (Premium)',
@@ -157,7 +157,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Small Batches (15–20 vs 100–400 at Big Chains)',
       description:
-        'Individual attention requires small batches. Cerebrum caps Ascent at 16–25 and Pinnacle at 10–12. Aakash, Allen and similar institutes typically run 100–400 students per batch — making personal doubt resolution structurally impossible.',
+        'Individual attention requires small batches. Cerebrum caps Ascent at 12–16 and Pinnacle at 6–10. Aakash, Allen and similar institutes typically run 100–400 students per batch — making personal doubt resolution structurally impossible.',
     },
     {
       title: '12+ Years of Operating Track Record',

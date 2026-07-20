@@ -233,7 +233,7 @@ export const allFAQs: FAQ[] = [
     id: 'cp-001',
     question: 'What is the difference between Pinnacle, Ascent, and Pursuit tiers?',
     answer:
-      'PINNACLE (Premium): Batch size 6-10 students, 5-6 hours/week, personal mentor assigned, weekly 1-on-1 sessions, priority doubt clearing, unlimited test attempts, best for top rankers. Price: ₹98K-₹180K depending on class. ASCENT (Standard): Batch size 12-16 students, 4-5 hours/week, group mentoring, regular doubt sessions, comprehensive test series, balanced approach. Price: ₹58K-₹85K. PURSUIT (Value): Batch size 30-40, 3-4 hours/week, self-paced learning support, essential study materials, affordable quality education. Price: ₹48K-₹72K. All tiers have same faculty and NCERT-focused curriculum.',
+      'PINNACLE (Premium): Batch size 6-10 students, 5-6 hours/week, personal mentor assigned, weekly 1-on-1 sessions, priority doubt clearing, unlimited test attempts, best for top rankers. Price: ₹98K-₹180K depending on class. ASCENT (Standard): Batch size 12-16 students, 4-5 hours/week, group mentoring, regular doubt sessions, comprehensive test series, balanced approach. Price: ₹58K-₹85K. PURSUIT (Value): Batch size 20-25, 3-4 hours/week, self-paced learning support, essential study materials, affordable quality education. Price: ₹48K-₹72K. All tiers have same faculty and NCERT-focused curriculum.',
     category: 'courses-programs',
     tags: ['tiers', 'pinnacle', 'ascent', 'pursuit', 'difference'],
     priority: 5,

@@ -80,13 +80,13 @@ const config: BestVerticalConfig = {
       tier: 'Online RE-NEET Crash (Standard)',
       price: '₹25,000–₹35,000 / 6–8 weeks',
       description:
-        'Live online classes (IST evening), 16–25 student batches, weekly mocks, WhatsApp doubt support. Best value tier.',
+        'Live online classes (IST evening), 12–16 student batches, weekly mocks, WhatsApp doubt support. Best value tier.',
     },
     {
       tier: 'Online RE-NEET Pinnacle 1:1',
       price: '₹45,000–₹60,000 / 6–8 weeks',
       description:
-        'Direct Dr. Shekhar mentoring + 10–12 student micro-batches. Best for AIIMS / Top medical college aspirants.',
+        'Direct Dr. Shekhar mentoring + 6–10 student micro-batches. Best for AIIMS / Top medical college aspirants.',
     },
     {
       tier: 'Ad-hoc 1:1 Hourly',
@@ -119,7 +119,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Small Batches Preserved Online (15–20)',
       description:
-        'Many online coaching platforms run 300–2,000+ students per live session — Cerebrum keeps batches small (15–20 in Ascent, 10–12 in Pinnacle). Personal attention is preserved structurally even online.',
+        'Many online coaching platforms run 300–2,000+ students per live session — Cerebrum keeps batches small (15–20 in Ascent, 6–10 in Pinnacle). Personal attention is preserved structurally even online.',
     },
     {
       title: 'WhatsApp Same-Day Doubts Across Timezones',

@@ -9,7 +9,7 @@ const city = NEAR_ME_CITY_BY_SLUG[SLUG]
 export const metadata: Metadata = city
   ? {
       title: `NEET Dropper Batch 2027 ${city.displayName} | Biology Specialist Repeater Programme · Cerebrum`,
-      description: `NEET Dropper Batch 2027 for ${city.displayName} (${city.state}) students. Biology-specialist coaching for repeaters targeting ${city.stateQuotaCollege}${city.otherStateMedicalColleges?.length ? ' or ' + city.otherStateMedicalColleges[0] : ''}. AIIMS-trained faculty, 10-40 student batches, live online + study material shipped to ${city.majorAreas.slice(0, 3).join(', ')}. Pair with your existing ${city.localCoachingPresence
+      description: `NEET Dropper Batch 2027 for ${city.displayName} (${city.state}) students. Biology-specialist coaching for repeaters targeting ${city.stateQuotaCollege}${city.otherStateMedicalColleges?.length ? ' or ' + city.otherStateMedicalColleges[0] : ''}. AIIMS-trained faculty, 6-25 student batches, live online + study material shipped to ${city.majorAreas.slice(0, 3).join(', ')}. Pair with your existing ${city.localCoachingPresence
         .split(',')[0]
         .trim()
         .replace(/\\(.*\\)/, '')
@@ -83,7 +83,7 @@ export default function Page() {
         },
         {
           question: `Is online dropper coaching from ${city.displayName} as good as relocating to Kota?`,
-          answer: `For biology specifically — yes. Kota's PCM teaching is unmatched, but their biology batches are 150-200 students. Cerebrum biology batches are 10-40 with per-MCQ review weekly. Many ${city.displayName} families pair us with a local Allen or Aakash for PCM and save the ₹2-3L Kota hostel cost while keeping the family support system intact.`,
+          answer: `For biology specifically — yes. Kota's PCM teaching is unmatched, but their biology batches are 150-200 students. Cerebrum biology batches are 6-25 with per-MCQ review weekly. Many ${city.displayName} families pair us with a local Allen or Aakash for PCM and save the ₹2-3L Kota hostel cost while keeping the family support system intact.`,
         },
         {
           question: `How do ${city.displayName} dropper batches handle schools like ${city.feederSchools.slice(0, 2).join(' or ')}?`,

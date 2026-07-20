@@ -74,7 +74,7 @@ export default function MalviyaNagarPage() {
   const faqs = [
     {
       q: 'How far is the center from Malviya Nagar?',
-      a: "Our South Extension flagship center is about 10-12 minutes from Malviya Nagar. You can take Malviya Nagar Metro (Yellow Line) to AIIMS Metro, then walk or auto to South Extension. By road, it's a direct drive via Outer Ring Road.",
+      a: "Our South Extension flagship center is about 6-10 minutes from Malviya Nagar. You can take Malviya Nagar Metro (Yellow Line) to AIIMS Metro, then walk or auto to South Extension. By road, it's a direct drive via Outer Ring Road.",
     },
     {
       q: 'What are the fees for NEET Biology coaching?',

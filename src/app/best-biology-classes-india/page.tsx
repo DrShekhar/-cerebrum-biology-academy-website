@@ -121,7 +121,7 @@ const FAQS = [
   {
     question: "What's the difference between Cerebrum's classes and Allen / Aakash / PW classes?",
     answer:
-      "Three structural differences. (1) Specialisation: Cerebrum is biology-only; Allen/Aakash/PW are full-PCM. Our faculty don't split focus across three subjects. (2) Batch size: 10-40 students depending on tier vs 150-200 at mass-coaching. (3) Per-MCQ review: every wrong answer on weekly tests is discussed in the next live class — impossible at lecture-hall scale. The trade-off: we don't teach physics or chemistry. Most students pair Cerebrum biology with their existing Allen/Aakash for PCM.",
+      "Three structural differences. (1) Specialisation: Cerebrum is biology-only; Allen/Aakash/PW are full-PCM. Our faculty don't split focus across three subjects. (2) Batch size: 6-25 students depending on tier vs 150-200 at mass-coaching. (3) Per-MCQ review: every wrong answer on weekly tests is discussed in the next live class — impossible at lecture-hall scale. The trade-off: we don't teach physics or chemistry. Most students pair Cerebrum biology with their existing Allen/Aakash for PCM.",
   },
   {
     question: 'When are biology classes scheduled?',

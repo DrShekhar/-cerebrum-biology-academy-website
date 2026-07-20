@@ -1781,7 +1781,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What is the fee for NEET biology coaching in Delhi?',
         answer:
-          'Pursuit ₹40,000–₹75,000/year (30–40 student batches), Ascent ₹58,000–₹90,000/year (16–25 student batches with weekly doubt sessions — most popular), Pinnacle ₹1,20,000–₹1,56,000/year (10–12 student batches + personal mentorship from Dr. Shekhar). EMI plans available. 7-day full refund guarantee. 50–60% lower than premium chain fees with structurally better biology depth.',
+          'Pursuit ₹40,000–₹75,000/year (20–25 student batches), Ascent ₹58,000–₹90,000/year (12–16 student batches with weekly doubt sessions — most popular), Pinnacle ₹1,20,000–₹1,56,000/year (6–10 student batches + personal mentorship from Dr. Shekhar). EMI plans available. 7-day full refund guarantee. 50–60% lower than premium chain fees with structurally better biology depth.',
       },
       {
         question: 'How does Cerebrum compare to Aakash and Allen / FIITJEE in Delhi?',
@@ -5552,7 +5552,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What are the batch sizes for offline coaching?',
         answer:
-          'We maintain small batches of 25-30 students maximum. This ensures personal attention while maintaining healthy competition among peers.',
+          'We maintain small batches of 20-25 students maximum. This ensures personal attention while maintaining healthy competition among peers.',
       },
       {
         question: 'What facilities are available at the offline center?',
