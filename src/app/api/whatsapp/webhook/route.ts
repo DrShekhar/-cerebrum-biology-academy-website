@@ -20,6 +20,7 @@ import { aiOrchestrator } from '@/lib/ai/intelligent-ai-orchestrator'
 import { responseEnhancer } from '@/lib/ai/response-enhancer'
 import { logInboundWhatsAppMessage } from '@/lib/whatsapp/inboundLogger'
 import { captureInboundWhatsAppLead } from '@/lib/whatsapp/inboundLeadCapture'
+import { persistWhatsAppDeliveryStatus } from '@/lib/whatsapp/statusPersistence'
 
 const VERIFY_TOKEN = process.env.WHATSAPP_VERIFY_TOKEN
 const WEBHOOK_SECRET = process.env.WHATSAPP_WEBHOOK_SECRET
@@ -74,6 +75,7 @@ interface WhatsAppWebhookEntry {
         status: 'sent' | 'delivered' | 'read' | 'failed'
         timestamp: string
         recipient_id: string
+        errors?: Array<{ code?: number; title?: string; message?: string }>
       }>
     }
     field: string
@@ -324,6 +326,14 @@ async function processWhatsAppEducationWebhook(payload: WhatsAppWebhookPayload) 
             status: status.status,
             recipientId: status.recipient_id,
             timestamp: status.timestamp,
+          })
+          // Persist the delivery status onto the stored message so counselors
+          // see failures (out-of-24h-window etc.) instead of a permanent SENT.
+          const err = status.errors?.[0]
+          await persistWhatsAppDeliveryStatus({
+            providerMessageId: status.id,
+            status: status.status,
+            errorMessage: err ? err.title || err.message || `Meta error ${err.code}` : null,
           })
         }
       }
