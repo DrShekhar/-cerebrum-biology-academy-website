@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
 import { prisma } from '@/lib/prisma'
+import { requireAdminAuth } from '@/lib/auth'
 import { upsertLead } from '@/lib/leads/upsertLead'
 import { processContentLead } from '@/lib/whatsapp/contentLeadFollowup'
 
@@ -133,10 +134,21 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// Analytics endpoint for catalog downloads
 export async function GET(request: NextRequest) {
+  const { searchParams } = new URL(request.url)
+
+  // Public brochure request (course-finder quiz "Download Details" button opens
+  // /api/catalog/download?course=<id>). No auth, no PII — send the prospect to
+  // the live courses catalog. Must be handled BEFORE the admin gate below so
+  // the prospect flow never hits a 401.
+  if (searchParams.get('course')) {
+    return NextResponse.redirect(new URL('/courses', request.url))
+  }
+
+  // Analytics (ADMIN only — returns lead PII).
   try {
-    const { searchParams } = new URL(request.url)
+    await requireAdminAuth()
+
     const timeframe = searchParams.get('timeframe') || '24h'
     const source = searchParams.get('source')
 
@@ -202,6 +214,9 @@ export async function GET(request: NextRequest) {
       })),
     })
   } catch (error) {
+    if (error instanceof Error && error.message === 'Admin authentication required') {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
     console.error('Catalog analytics error:', error)
     return NextResponse.json({ error: 'Failed to retrieve analytics' }, { status: 500 })
   }
