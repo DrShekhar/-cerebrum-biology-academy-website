@@ -39,6 +39,7 @@ import bcrypt from 'bcryptjs'
 import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
 import type { UserRole as PrismaUserRole } from '@/generated/prisma'
+import { isAccountDisabled } from '@/lib/auth/accountStatus'
 
 export type UserRole = PrismaUserRole
 
@@ -381,10 +382,17 @@ export async function validateUserSession(request: NextRequest): Promise<UserSes
           if (decoded && decoded.email) {
             const user = await prisma.users.findUnique({
               where: { email: decoded.email },
-              select: { id: true, email: true, name: true, role: true },
+              select: {
+                id: true,
+                email: true,
+                name: true,
+                role: true,
+                isActive: true,
+                profile: true,
+              },
             })
 
-            if (user) {
+            if (user && !isAccountDisabled(user)) {
               return {
                 valid: true,
                 userId: user.id,
@@ -430,6 +438,11 @@ export async function validateUserSession(request: NextRequest): Promise<UserSes
     })
 
     if (!session || !session.users) {
+      return { valid: false }
+    }
+
+    // Refuse offboarded/suspended accounts even on a still-valid DB session.
+    if (isAccountDisabled(session.users)) {
       return { valid: false }
     }
 

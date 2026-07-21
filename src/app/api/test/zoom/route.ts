@@ -5,6 +5,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { requireAdminAuth } from '@/lib/auth'
 import { zoomService } from '@/lib/zoom/zoomService'
 
 export async function GET() {
@@ -36,10 +37,13 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
-    // Check if this is production and block if not admin
+    // In production this test endpoint requires a real admin session. Never
+    // gate on AUTH_SECRET — that is the JWT signing secret and must never
+    // travel in a header/curl/logs.
     if (process.env.NODE_ENV === 'production') {
-      const adminKey = request.headers.get('x-admin-key')
-      if (adminKey !== process.env.AUTH_SECRET) {
+      try {
+        await requireAdminAuth()
+      } catch {
         return NextResponse.json(
           { success: false, error: 'Unauthorized in production' },
           { status: 401 }
