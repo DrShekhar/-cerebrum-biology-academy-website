@@ -1,4 +1,16 @@
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import {
+  sendMetaText,
+  sendMetaTemplate,
+  sendMetaInteractive,
+  getMetaMediaUrl,
+} from '@/lib/whatsapp/metaSender'
+
+/** Meta expects E.164 digits without '+'. Bare 10-digit numbers default to +91. */
+function toMetaPhone(phone: string): string {
+  const digits = (phone || '').replace(/\D/g, '')
+  return digits.length === 10 ? `91${digits}` : digits
+}
 
 interface WhatsAppMessage {
   phone: string
@@ -27,23 +39,26 @@ export class WhatsAppService {
 
   async sendMessage(messageData: WhatsAppMessage): Promise<boolean> {
     try {
-      // For MVP, we'll log the message and simulate sending
-      console.log('📱 WhatsApp Message:', {
-        to: messageData.phone,
-        message: messageData.message,
-        timestamp: new Date().toISOString(),
-      })
+      const to = toMetaPhone(messageData.phone)
+      if (!to) return false
 
-      // In production, you would use the actual WhatsApp Business API
-      const response = await fetch('/api/whatsapp/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(messageData),
-      })
+      // Send directly via the Meta WhatsApp Cloud API. (Was a relative-URL
+      // fetch to /api/whatsapp/send — which throws server-side AND is admin-
+      // gated — so every auto-reply silently no-op'd.) sendMeta* return false
+      // and log when the WhatsApp env is not configured; they never throw.
+      const result =
+        messageData.type === 'template' && messageData.templateName
+          ? await sendMetaTemplate({
+              to,
+              templateName: messageData.templateName,
+              bodyValues: messageData.templateParams,
+            })
+          : await sendMetaText(to, messageData.message)
 
-      return response.ok
+      if (!result.success) {
+        console.warn('WhatsApp send failed:', result.error)
+      }
+      return result.success
     } catch (error) {
       console.error('WhatsApp send error:', error)
       return false
@@ -204,20 +219,26 @@ Keep going, future doctor! 🩺🌟`
   }
 
   async getMediaUrl(mediaId: string): Promise<string> {
-    // TODO: Integrate with WhatsApp Business API to download media
-    // Returns empty string until WhatsApp credentials are configured
-    return ''
+    // Resolve the Meta media id to its downloadable URL. Empty string when
+    // unconfigured or on failure (callers already handle the empty case).
+    return (await getMetaMediaUrl(mediaId)) || ''
   }
 
   async sendInteractiveMessage(phoneNumberId: string, message: any): Promise<boolean> {
-    // This would send interactive messages with buttons via WhatsApp Business API
-    // For MVP, log the interactive message
-    console.log('📱 Interactive WhatsApp Message:', {
-      phoneNumberId,
-      message,
-      timestamp: new Date().toISOString(),
-    })
-    return true
+    // The caller builds a full Meta payload; the recipient is message.to and
+    // the buttons/list live in message.interactive.
+    try {
+      const to = toMetaPhone(message?.to || '')
+      if (!to || !message?.interactive) return false
+      const result = await sendMetaInteractive(to, message.interactive)
+      if (!result.success) {
+        console.warn('WhatsApp interactive send failed:', result.error)
+      }
+      return result.success
+    } catch (error) {
+      console.error('WhatsApp interactive send error:', error)
+      return false
+    }
   }
 }
 
