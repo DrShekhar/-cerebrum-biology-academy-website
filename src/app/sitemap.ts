@@ -2831,6 +2831,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.86,
     },
+    {
+      url: `${baseUrl}/usabo-coaching-connecticut`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/usabo-coaching-michigan`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/usabo-coaching-pittsburgh`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
     // ===== USABO content cluster (Apr 2026) =====
     {
       url: `${baseUrl}/ap-biology-vs-usabo`,

@@ -56,6 +56,8 @@ const heroBlurb =
 const rigourBlurb =
   "New Jersey families come to Cerebrum because the local landscape is over-saturated with all-subject tutoring and under-served on biology specialisation. AIIMS-trained, biology-only faculty teaching with weekly written feedback on every past-paper attempt is structurally different from US AP tutoring — it's the depth that converts AP-5 students at WW-P, Princeton, and Montgomery into national-tier USABO standing."
 const schools = [
+  'Princeton International School of Math & Science',
+  'Bergen County Academies (Hackensack)',
   'West Windsor-Plainsboro HS South',
   'West Windsor-Plainsboro HS North',
   'Princeton HS',

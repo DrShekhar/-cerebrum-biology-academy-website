@@ -560,6 +560,9 @@ export default function USABOCoachingPage() {
               { slug: 'phoenix', label: 'Phoenix' },
               { slug: 'twin-cities', label: 'Twin Cities (Minneapolis-St. Paul)' },
               { slug: 'research-triangle', label: 'Research Triangle (NC)' },
+              { slug: 'connecticut', label: 'Connecticut (Fairfield County)' },
+              { slug: 'michigan', label: 'Michigan (Detroit + Ann Arbor)' },
+              { slug: 'pittsburgh', label: 'Pittsburgh + Western PA' },
             ].map((c) => (
               <a
                 key={c.slug}
