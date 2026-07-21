@@ -68,6 +68,12 @@ export interface USABOCityTemplateProps {
   apBiologyCitySlug?: string
   /** Display label for the AP Biology card; defaults to cityName */
   apBiologyCityLabel?: string
+  /**
+   * Optional sibling-metro links — used by STATE-HUB pages (e.g. California →
+   * its metros) to render a "Regional pages" grid that links down to the
+   * metro pages. Existing single-metro pages omit this, so nothing renders.
+   */
+  relatedMetros?: { slug: string; label: string }[]
 }
 
 const usaboPathway = [
@@ -143,6 +149,7 @@ export default function USABOCityTemplate({
   faqs,
   apBiologyCitySlug,
   apBiologyCityLabel,
+  relatedMetros,
 }: USABOCityTemplateProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
@@ -572,6 +579,29 @@ export default function USABOCityTemplate({
           </div>
         </div>
       </section>
+
+      {/* Regional pages — state-hub pages (e.g. California) link down to their
+          metro pages. Renders only when relatedMetros is provided. */}
+      {relatedMetros && relatedMetros.length > 0 && (
+        <section className="py-12 bg-slate-50">
+          <div className="max-w-5xl mx-auto px-4">
+            <h2 className="text-xl font-bold text-slate-900 mb-6 text-center">
+              USABO coaching by {cityName} metro
+            </h2>
+            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+              {relatedMetros.map((m) => (
+                <Link
+                  key={m.slug}
+                  href={`/usabo-coaching-${m.slug}`}
+                  className="block bg-white rounded-lg px-4 py-3 text-sm font-semibold text-teal-700 border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
+                >
+                  {m.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Related — when apBiologyCitySlug is set we surface a 5th card
           for the matching AP Biology metro page. Reciprocal cross-cluster

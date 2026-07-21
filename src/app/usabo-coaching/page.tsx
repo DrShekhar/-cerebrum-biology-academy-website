@@ -538,8 +538,11 @@ export default function USABOCoachingPage() {
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
             {[
+              { slug: 'california', label: 'California (statewide hub)' },
               { slug: 'northern-virginia-dc', label: 'Northern Virginia / DC' },
               { slug: 'bay-area', label: 'SF Bay Area' },
+              { slug: 'orange-county', label: 'Orange County (Irvine)' },
+              { slug: 'sacramento', label: 'Sacramento' },
               { slug: 'new-york', label: 'New York City + Long Island' },
               { slug: 'boston', label: 'Greater Boston' },
               { slug: 'houston', label: 'Houston' },
