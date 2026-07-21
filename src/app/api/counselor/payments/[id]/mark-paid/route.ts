@@ -14,12 +14,20 @@ interface RouteParams {
 async function handlePOST(request: NextRequest, session: UserSession, { params }: RouteParams) {
   try {
     const body = await request.json()
-    const { paidAmount, paymentMethod, razorpayPaymentId } = body
+    const { paymentMethod, razorpayPaymentId } = body
+    // Coerce + validate: the server must not trust a client-supplied amount.
+    // A negative/zero/NaN value would corrupt the ledger (amountDue increases)
+    // while still marking the installment PAID and force-enrolling the student.
+    const paidAmount =
+      typeof body.paidAmount === 'number' ? body.paidAmount : Number(body.paidAmount)
 
     const installmentId = params.id
 
-    if (!paidAmount || !paymentMethod) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+    if (!Number.isFinite(paidAmount) || paidAmount <= 0 || !paymentMethod) {
+      return NextResponse.json(
+        { error: 'A positive paidAmount and a paymentMethod are required' },
+        { status: 400 }
+      )
     }
 
     // Ownership gate: a counselor may only settle installments on their own
@@ -60,6 +68,17 @@ async function handlePOST(request: NextRequest, session: UserSession, { params }
 
       if (installment.status === 'PAID') {
         throw new Error('Installment already marked as paid')
+      }
+
+      // This action marks the installment fully PAID and can force-enroll the
+      // student, so the amount must match the installment (no partial payment
+      // here). Small tolerance for Decimal/float rounding; blocks the "pay ₹1
+      // to enroll" abuse. The UI sends exactly installment.amount.
+      const expectedAmount = Number(installment.amount)
+      if (Number.isFinite(expectedAmount) && Math.abs(paidAmount - expectedAmount) > 0.5) {
+        throw new Error(
+          `Paid amount (₹${paidAmount}) does not match the installment amount (₹${expectedAmount}).`
+        )
       }
 
       const updatedInstallment = await tx.installments.update({
