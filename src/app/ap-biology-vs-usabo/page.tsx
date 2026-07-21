@@ -222,7 +222,7 @@ const faqs = [
   {
     question: 'Can international students take USABO?',
     answer:
-      'No. USABO is restricted to students currently enrolled in a US high school. International students should look at their national olympiad — BBO (United Kingdom), INBO (India), SBO (Singapore), CNBO (Canada), JBO (Japan), KBO (South Korea) — which we also coach.',
+      'Yes — for the Open Exam. Any student enrolled at a registered US high school can sit the USABO Open Exam, regardless of citizenship. The citizenship rule applies only to advancing beyond the Open: to reach the Semifinal, National Finals, and Team USA / IBO, a student must be a US citizen or legal permanent resident (green-card holder). So an international student at a US school can take the Open and use the result on college applications, but cannot make Team USA. Students not enrolled at a US school should look at their national olympiad — BBO (UK), INBO (India), SBO (Singapore), CNBO (Canada), JBO (Japan), KBO (South Korea) — which we also coach.',
   },
   {
     question: 'What is the most important reference book beyond Campbell?',
