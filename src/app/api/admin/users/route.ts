@@ -255,6 +255,23 @@ export async function PUT(request: NextRequest) {
       )
     }
 
+    // An admin must not set another ADMIN's password (admin-to-admin account
+    // takeover). Mirrors the guard on /api/admin/users/[id]/reset-password;
+    // changing your own password here is fine.
+    if (
+      validatedData.password &&
+      existingUser.role === 'ADMIN' &&
+      session.user.id !== existingUser.id
+    ) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Cannot change another admin’s password. Ask that admin to change it.',
+        },
+        { status: 403 }
+      )
+    }
+
     const existingProfile = existingUser.profile as any
     const changes: Record<string, { from: any; to: any }> = {}
     const updateData: any = {
@@ -293,6 +310,9 @@ export async function PUT(request: NextRequest) {
     if (validatedData.status) {
       changes.status = { from: existingProfile?.status, to: validatedData.status }
       newProfile.status = validatedData.status
+      // Keep isActive in sync so status changes actually gate login/session
+      // (isAccountDisabled keys on isActive===false). 'active' reactivates.
+      updateData.isActive = validatedData.status === 'active'
     }
     if (validatedData.permissions || validatedData.status) {
       updateData.profile = newProfile
@@ -401,10 +421,18 @@ export async function DELETE(request: NextRequest) {
     }
 
     const existingProfile = userToDelete.profile as any
+    // Soft-delete must actually REVOKE access, not just flag the profile:
+    // disable the account (blocks every authorize/session path via
+    // isAccountDisabled), clear the password hash (kills credential login), and
+    // clear any live OTP bridge token (kills WhatsApp-OTP login).
     await prisma.users.update({
       where: { id: validatedData.id },
       data: {
         profile: { ...existingProfile, status: 'deleted', deletedAt: new Date().toISOString() },
+        isActive: false,
+        passwordHash: null,
+        verificationToken: null,
+        verificationTokenExpiry: null,
         updatedAt: new Date(),
       },
     })

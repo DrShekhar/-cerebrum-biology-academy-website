@@ -14,6 +14,7 @@ import crypto from 'crypto'
 import { isFromOwner, processApprovalResponse } from '@/lib/seo-marketing/approvalService'
 import { logInboundWhatsAppMessage } from '@/lib/whatsapp/inboundLogger'
 import { captureInboundWhatsAppLead } from '@/lib/whatsapp/inboundLeadCapture'
+import { persistWhatsAppDeliveryStatus } from '@/lib/whatsapp/statusPersistence'
 import {
   classifyConsentMessage,
   optOutPhone,
@@ -650,6 +651,15 @@ async function handleStatusUpdate(data: any) {
     messageId,
     status,
     timestamp,
+  })
+
+  // Persist the delivery status onto the stored message (all messages, not just
+  // campaign ones) so counselors see failures instead of a permanent SENT. Runs
+  // before the campaign early-return below. Non-blocking; never throws.
+  await persistWhatsAppDeliveryStatus({
+    providerMessageId: messageId,
+    status: String(status || ''),
+    errorMessage: data?.errorMessage || data?.error || null,
   })
 
   // Attribute delivery/read status to a marketing campaign when the message was

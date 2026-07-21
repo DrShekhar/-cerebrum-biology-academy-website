@@ -19,6 +19,8 @@ import { WhatsAppMessageProcessor } from '@/lib/whatsapp/messageProcessor'
 import { aiOrchestrator } from '@/lib/ai/intelligent-ai-orchestrator'
 import { responseEnhancer } from '@/lib/ai/response-enhancer'
 import { logInboundWhatsAppMessage } from '@/lib/whatsapp/inboundLogger'
+import { captureInboundWhatsAppLead } from '@/lib/whatsapp/inboundLeadCapture'
+import { persistWhatsAppDeliveryStatus } from '@/lib/whatsapp/statusPersistence'
 import { sendMetaText } from '@/lib/whatsapp/metaSender'
 import {
   classifyConsentMessage,
@@ -80,6 +82,7 @@ interface WhatsAppWebhookEntry {
         status: 'sent' | 'delivered' | 'read' | 'failed'
         timestamp: string
         recipient_id: string
+        errors?: Array<{ code?: number; title?: string; message?: string }>
       }>
     }
     field: string
@@ -278,9 +281,23 @@ async function processWhatsAppEducationWebhook(payload: WhatsAppWebhookPayload) 
               sentAt: Number.isFinite(seconds) ? new Date(seconds * 1000) : undefined,
             })
 
-            // Consent (STOP/START) — handled before the AI pipeline. STOP records
-            // the opt-out, cancels pending sequences, confirms, and skips the
-            // auto-reply.
+            // CRM lead engine (additive): a first message from an unknown phone
+            // becomes a CRM lead, threads into whatsapp_conversations, and bells
+            // the counselor. Without this, direct-Meta inbound never enters the
+            // CRM or the Team Inbox (the Interakt webhook had this; Meta didn't).
+            // AWAITED — a void promise can be dropped when the serverless
+            // instance freezes after the response; the fn never throws.
+            await captureInboundWhatsAppLead({
+              phone: message.from,
+              message: inboundMessageBody,
+              messageType: message.type,
+              providerMessageId: message.id,
+              profileName: contact?.profile?.name || null,
+            })
+
+            // Consent (STOP/START) — after capture so the STOP message is logged.
+            // STOP records the opt-out, cancels pending sequences, confirms, and
+            // skips the auto-reply.
             const consent = classifyConsentMessage(message.text?.body)
             if (consent === 'STOP') {
               await optOutPhone(message.from, 'user_stop')
@@ -338,6 +355,14 @@ async function processWhatsAppEducationWebhook(payload: WhatsAppWebhookPayload) 
             status: status.status,
             recipientId: status.recipient_id,
             timestamp: status.timestamp,
+          })
+          // Persist the delivery status onto the stored message so counselors
+          // see failures (out-of-24h-window etc.) instead of a permanent SENT.
+          const err = status.errors?.[0]
+          await persistWhatsAppDeliveryStatus({
+            providerMessageId: status.id,
+            status: status.status,
+            errorMessage: err ? err.title || err.message || `Meta error ${err.code}` : null,
           })
         }
       }

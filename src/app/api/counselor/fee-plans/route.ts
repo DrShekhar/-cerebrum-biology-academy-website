@@ -28,7 +28,7 @@ async function handleGET(request: NextRequest, session: any) {
     const status = searchParams.get('status')
 
     const where: any = {
-      lead: {
+      leads: {
         assignedToId: session.userId,
       },
     }

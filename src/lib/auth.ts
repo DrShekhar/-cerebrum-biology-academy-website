@@ -13,6 +13,7 @@ import { z } from 'zod'
 import { prisma } from './prisma'
 import { logLogin } from './security/auditLogger'
 import { logger } from './utils/logger'
+import { isAccountDisabled } from './auth/accountStatus'
 
 declare module 'next-auth' {
   interface User {
@@ -246,6 +247,7 @@ const providers: NextAuthConfig['providers'] = [
             role: true,
             profile: true,
             phoneVerified: true,
+            isActive: true,
           },
         })
 
@@ -255,6 +257,15 @@ const providers: NextAuthConfig['providers'] = [
             authMethod: 'whatsapp_otp',
           })
           throw new Error('Invalid or expired verification token')
+        }
+
+        // Refuse offboarded/suspended accounts even with a valid token.
+        if (isAccountDisabled(user)) {
+          logger.warn('Login blocked for disabled account', {
+            userId: user.id,
+            authMethod: 'whatsapp_otp',
+          })
+          throw new Error('This account has been deactivated. Please contact support.')
         }
 
         // One-time use: clear the bridge token; mark the phone as verified
@@ -327,6 +338,7 @@ const providers: NextAuthConfig['providers'] = [
             role: true,
             profile: true,
             passwordHash: true,
+            isActive: true,
           },
         })
 
@@ -346,6 +358,17 @@ const providers: NextAuthConfig['providers'] = [
           logger.warn('Invalid password attempt', {
             userId: user.id,
             email: validatedData.email,
+            authMethod: 'credentials',
+          })
+          throw new Error('Invalid email or password')
+        }
+
+        // Refuse offboarded/suspended accounts. Checked AFTER the password
+        // compare so a valid password on a disabled account leaks nothing more
+        // than a wrong password would — same generic error.
+        if (isAccountDisabled(user)) {
+          logger.warn('Login blocked for disabled account', {
+            userId: user.id,
             authMethod: 'credentials',
           })
           throw new Error('Invalid email or password')
