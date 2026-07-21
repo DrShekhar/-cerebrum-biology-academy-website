@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { isMissingRelationError } from '@/lib/db/missingTable'
 
 // ============================================
 // GET - Fetch wall of achievers (public)
@@ -117,6 +118,22 @@ export async function GET(request: NextRequest) {
       }
     )
   } catch (error) {
+    // The wall_of_achievers table is a pending manual migration. Until it is
+    // applied, serve an empty wall (200) rather than 500 a PUBLIC page — this
+    // route is internally linked from /results and the SEO widget.
+    if (isMissingRelationError(error)) {
+      return NextResponse.json(
+        {
+          success: true,
+          data: {
+            achievers: [],
+            filters: { categories: [], periods: [] },
+            pagination: { total: 0, limit: 0, offset: 0, hasMore: false },
+          },
+        },
+        { headers: { 'Cache-Control': 'no-store' } }
+      )
+    }
     console.error('Error fetching wall of achievers:', error)
     return NextResponse.json(
       { success: false, error: 'Failed to fetch achievers' },

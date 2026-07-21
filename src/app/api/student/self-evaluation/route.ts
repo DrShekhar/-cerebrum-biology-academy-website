@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth/config'
+import { isMissingRelationError } from '@/lib/db/missingTable'
 import type { EvaluationSlot } from '@/types/prisma-enums'
 
 export const dynamic = 'force-dynamic'
@@ -120,6 +121,25 @@ export async function GET(request: NextRequest) {
       },
     })
   } catch (error) {
+    // self_evaluations is a pending manual migration — until applied, serve an
+    // empty history (200) so the student page renders instead of erroring.
+    if (isMissingRelationError(error)) {
+      return NextResponse.json({
+        success: true,
+        data: {
+          evaluations: [],
+          stats: {
+            totalEntries: 0,
+            avgDifficulty: null,
+            avgConfidence: null,
+            totalStudyHours: null,
+            totalQuestions: null,
+            accuracy: 0,
+          },
+          pagination: { total: 0, limit: 0, offset: 0, hasMore: false },
+        },
+      })
+    }
     console.error('Error fetching self-evaluations:', error)
     return NextResponse.json(
       { success: false, error: 'Failed to fetch self-evaluations' },
