@@ -16,9 +16,13 @@ async function sendOwnerWhatsAppAlert(info: {
   device: string
   message?: string
   campaign?: string | null
+  journey?: VisitorJourney | null
 }) {
   const adminEmail = process.env.ADMIN_LEAD_EMAIL || 'bobbyaiims@gmail.com'
   const when = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+  // The pages the visitor moved through this session (the context of what they
+  // read before reaching out) — the most useful signal for the counselor.
+  const journeyPath = info.journey?.path?.length ? info.journey.path.join('  →  ') : null
   try {
     await emailService.send({
       to: adminEmail,
@@ -32,18 +36,32 @@ async function sendOwnerWhatsAppAlert(info: {
         `<li><b>Source:</b> ${info.source}</li>` +
         `<li><b>Device:</b> ${info.device}</li>` +
         (info.campaign ? `<li><b>Campaign:</b> ${info.campaign}</li>` : '') +
+        (info.journey?.landingPage
+          ? `<li><b>Landed on:</b> ${info.journey.landingPage}</li>`
+          : '') +
+        (journeyPath ? `<li><b>Pages viewed:</b> ${journeyPath}</li>` : '') +
         (info.message ? `<li><b>Prefilled message:</b> ${info.message}</li>` : '') +
         `<li><b>Time (IST):</b> ${when}</li>` +
         `</ul>`,
       text:
         `WhatsApp lead intent\nPage: ${info.page}\nSource: ${info.source}\nDevice: ${info.device}\n` +
         (info.campaign ? `Campaign: ${info.campaign}\n` : '') +
+        (info.journey?.landingPage ? `Landed on: ${info.journey.landingPage}\n` : '') +
+        (journeyPath ? `Pages viewed: ${journeyPath}\n` : '') +
         (info.message ? `Message: ${info.message}\n` : '') +
         `Time (IST): ${when}\n`,
     })
   } catch (error) {
     console.error('Owner WhatsApp-intent alert email failed:', error)
   }
+}
+
+interface VisitorJourney {
+  landingPage: string
+  path: string[]
+  pageCount: number
+  firstSeenAt: string
+  referrer: string
 }
 
 interface WhatsAppClickPayload {
@@ -54,6 +72,7 @@ interface WhatsAppClickPayload {
   message?: string
   sessionId?: string
   userId?: string
+  journey?: VisitorJourney | null
 }
 
 function generateId(): string {
@@ -101,6 +120,10 @@ export async function POST(request: NextRequest) {
       message: body.message,
       campaign: body.campaign || utmCampaign,
       timestamp: new Date().toISOString(),
+      // Visitor journey — the pages viewed this session before the click.
+      landingPage: body.journey?.landingPage,
+      journeyPath: body.journey?.path,
+      journeyPageCount: body.journey?.pageCount,
     }
 
     // Log to database
@@ -133,6 +156,7 @@ export async function POST(request: NextRequest) {
       device: getDeviceType(userAgent),
       message: body.message,
       campaign: body.campaign || utmCampaign,
+      journey: body.journey,
     })
 
     // Build WhatsApp URL with tracking in message

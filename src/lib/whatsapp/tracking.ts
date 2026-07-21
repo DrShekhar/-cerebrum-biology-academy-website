@@ -1,5 +1,6 @@
 import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 import { trackWhatsAppLead } from '@/lib/ads/googleAdsConversion'
+import { getVisitorJourney } from '@/lib/analytics/visitorJourney'
 
 const WHATSAPP_NUMBER = CONTACT_INFO.whatsapp.number
 const PHONE_DISPLAY = CONTACT_INFO.phone.display.primary
@@ -136,6 +137,7 @@ export async function trackWhatsAppClick(
     page,
     sessionId,
     locality,
+    journey: getVisitorJourney(), // pages viewed this session → CRM context
     ...utmParams, // Include UTM params in tracking
   }
 
@@ -186,6 +188,9 @@ function openWhatsAppDirectly(params: WhatsAppTrackingParams): void {
         page: typeof window !== 'undefined' ? window.location.pathname : '',
         message,
         campaign: params.campaign || params.source,
+        journey: getVisitorJourney(), // pages viewed this session → CRM context
+        sessionId: getSessionId(),
+        ...getUTMParams(), // beacon path previously dropped UTM — include it now
       })
       navigator.sendBeacon?.(API_ENDPOINT, new Blob([beaconPayload], { type: 'application/json' }))
     } catch {

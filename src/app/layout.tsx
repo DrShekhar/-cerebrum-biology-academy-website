@@ -9,6 +9,7 @@ import GoogleTagManager, { GoogleTagManagerNoscript } from '@/components/analyti
 import FacebookPixel from '@/components/analytics/FacebookPixel'
 import MicrosoftClarity from '@/components/analytics/MicrosoftClarity'
 import { WebVitalsReporter } from '@/components/analytics/WebVitalsReporter'
+import { VisitorJourneyTracker } from '@/components/analytics/VisitorJourneyTracker'
 // PERFORMANCE: Using hybrid header for faster mobile LCP
 // Server-rendered shell with lazy-loaded interactivity
 import { HeaderHybrid } from '@/components/layout/HeaderHybrid'
@@ -270,6 +271,7 @@ export default function RootLayout({
                       <FacebookPixel />
                       <WebVitalsReporter />
                       <MicrosoftClarity />
+                      <VisitorJourneyTracker />
                     </PersonalizationProvider>
                   </TrustProvider>
                 </ToastProvider>
