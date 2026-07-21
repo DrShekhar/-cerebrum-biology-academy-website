@@ -5105,6 +5105,20 @@ model email_suppressions {
   @@index([reason])
 }
 
+// WhatsApp opt-out / consent-withdrawal ledger (DPDP + WhatsApp Commerce
+// Policy). Keyed by the last-10-digit normalized phone. A row here means the
+// person texted STOP (or was manually suppressed) and must receive NO automated
+// WhatsApp marketing (welcome series, drips, campaigns). Created by
+// prisma/manual-migrations/2026-07-21_add_whatsapp_opt_outs.sql (owner-run).
+model whatsapp_opt_outs {
+  id        String   @id
+  phone     String   @unique // last-10 normalized
+  reason    String // 'user_stop' | 'manual'
+  createdAt DateTime @default(now())
+
+  @@index([phone])
+}
+
 // Student groups (batches/cohorts) — admin-curated sets of students that can
 // receive materials/videos/tests as a unit, with optional drip scheduling
 // (releaseAt absolute, or dayOffset days after the group's startDate).

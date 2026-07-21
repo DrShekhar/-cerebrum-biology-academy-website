@@ -13,6 +13,7 @@
 import { prisma } from '@/lib/prisma'
 import { ensureSystemUser } from '@/lib/constants/systemUser'
 import { sendWhatsAppMessage, trackEvent } from '@/lib/interakt'
+import { shouldSuppressAutomatedWhatsApp } from '@/lib/whatsapp/optOut'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { LeadStage, Prisma } from '@/generated/prisma'
 
@@ -835,6 +836,16 @@ export class WhatsAppDripService {
                 completedAt: new Date(),
                 updatedAt: new Date(),
               },
+            })
+            continue
+          }
+
+          // Stop-on-reply / opt-out: cancel the drip if the lead has replied on
+          // WhatsApp (a human is engaged) or texted STOP.
+          if ((await shouldSuppressAutomatedWhatsApp(item.leads.phone)).suppress) {
+            await prisma.followup_queue.update({
+              where: { id: item.id },
+              data: { status: 'CANCELLED', completedAt: new Date(), updatedAt: new Date() },
             })
             continue
           }

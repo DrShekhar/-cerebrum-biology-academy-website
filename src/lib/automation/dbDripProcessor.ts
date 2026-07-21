@@ -20,6 +20,7 @@ import { randomUUID } from 'crypto'
 import { prisma } from '@/lib/prisma'
 import { sendWhatsAppMessage, isInteraktConfigured } from '@/lib/interakt'
 import { isMetaWhatsAppConfigured } from '@/lib/whatsapp/metaSender'
+import { shouldSuppressAutomatedWhatsApp } from '@/lib/whatsapp/optOut'
 import { logger } from '@/lib/utils/logger'
 import { LeadStage } from '@/generated/prisma'
 
@@ -109,6 +110,10 @@ export async function processDbDripSequences(): Promise<{ sent: number; skipped:
               .filter(Boolean)
           )
 
+          // Stop-on-reply / opt-out is WhatsApp-specific — compute once per lead
+          // and gate only WhatsApp steps below (email steps are unaffected).
+          const waSuppressed = (await shouldSuppressAutomatedWhatsApp(lead.phone)).suppress
+
           for (const step of seq.steps) {
             if (sentStepIds.has(step.id)) continue
             if (anchor + step.delayHours * 3600_000 > now) break // later steps not due either
@@ -133,6 +138,8 @@ export async function processDbDripSequences(): Promise<{ sent: number; skipped:
                 }
               }
             } else {
+              // Skip WhatsApp steps for a replied/opted-out lead.
+              if (waSuppressed) continue
               const result = await sendWhatsAppMessage({ phone: lead.phone, message: body })
               delivered = !!result.success
             }

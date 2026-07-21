@@ -15,6 +15,12 @@ import { isFromOwner, processApprovalResponse } from '@/lib/seo-marketing/approv
 import { logInboundWhatsAppMessage } from '@/lib/whatsapp/inboundLogger'
 import { captureInboundWhatsAppLead } from '@/lib/whatsapp/inboundLeadCapture'
 import { persistWhatsAppDeliveryStatus } from '@/lib/whatsapp/statusPersistence'
+import {
+  classifyConsentMessage,
+  optOutPhone,
+  optInPhone,
+  cancelPendingSequencesForPhone,
+} from '@/lib/whatsapp/optOut'
 
 const INTERAKT_WEBHOOK_SECRET = process.env.INTERAKT_WEBHOOK_SECRET
 
@@ -246,6 +252,28 @@ async function handleIncomingMessage(data: any, originalPayload: InteraktWebhook
       (originalPayload.data?.customer as { name?: string } | undefined)?.name ||
       null,
   })
+
+  // Consent (STOP/START) — checked before intent routing. STOP records the
+  // opt-out, cancels pending sequences, confirms, and stops (no auto-reply).
+  const consent = classifyConsentMessage(messageText)
+  if (consent === 'STOP') {
+    await optOutPhone(phone, 'user_stop')
+    await cancelPendingSequencesForPhone(phone)
+    await sendWhatsAppMessage({
+      phone,
+      message:
+        'You have been unsubscribed from Cerebrum Biology Academy WhatsApp updates. Reply START anytime to resubscribe.',
+    })
+    return
+  }
+  if (consent === 'START') {
+    await optInPhone(phone)
+    await sendWhatsAppMessage({
+      phone,
+      message: "You're resubscribed to Cerebrum Biology Academy WhatsApp updates. 🎉",
+    })
+    return
+  }
 
   if (messageType === 'text' && messageText) {
     await processTextMessage(phone, messageText, originalPayload)
