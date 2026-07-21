@@ -30,8 +30,8 @@ function VideoListSchema({ videos, channelName }: { videos: YouTubeVideo[]; chan
     thumbnailUrl: video.thumbnail,
     uploadDate: video.publishedAt,
     duration: video.duration ? `PT${video.duration.replace(':', 'M')}S` : undefined,
-    contentUrl: `https://www.youtube.com/watch?v=${video.id}`,
-    embedUrl: `https://www.youtube.com/embed/${video.id}`,
+    contentUrl: `https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwwatch?v=${video.id}`,
+    embedUrl: `https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwembed/${video.id}`,
     interactionStatistic: video.views
       ? {
           '@type': 'InteractionCounter',
@@ -81,7 +81,7 @@ interface YouTubeChannelProps {
 export function YouTubeChannel({
   channelId = '',
   channelName = 'Cerebrum Biology Academy',
-  channelUrl = 'https://www.youtube.com/@cerebrumbiologyacademy',
+  channelUrl = 'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy',
   subscriberCount = '50K+',
   videoCount = '500+',
   recentVideos = [],

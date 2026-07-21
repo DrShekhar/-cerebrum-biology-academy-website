@@ -53,8 +53,8 @@ export function CourseDetailSchema({
       sameAs: [
         'https://www.facebook.com/cerebrumbiologyacademy',
         'https://www.instagram.com/cerebrumbiologyacademy',
-        'https://www.youtube.com/@cerebrumbiologyacademy',
-        'https://www.youtube.com/@drshekharcsingh',
+        'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy',
+        'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh',
       ],
     },
     datePublished: '2024-01-01',

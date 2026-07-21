@@ -121,8 +121,8 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
     sameAs: [
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
-      'https://www.youtube.com/@cerebrumbiologyacademy',
-      'https://www.youtube.com/@drshekharcsingh',
+      'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy',
+      'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh',
       'https://maps.app.goo.gl/cerebrum-biology-academy',
     ],
     knowsAbout: [

@@ -303,12 +303,16 @@ export function LocalBusinessSchema() {
       },
     ],
     // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
+    // Canonical handles only (single source: CONTACT_INFO.social) so this
+    // LocalBusiness node corroborates the same entity as CerebrumOrgSchema.
+    // The previous hardcoded set contradicted it and included a 404 YouTube URL
+    // + an unfindable LinkedIn/company — anti-corroboration for AI engines.
     sameAs: [
-      'https://www.facebook.com/cerebrumbiologyacademy',
-      'https://www.instagram.com/cerebrumbiologyacademy',
-      'https://www.youtube.com/@cerebrumbiologyacademy',
-      'https://www.youtube.com/@drshekharcsingh',
-      'https://www.linkedin.com/company/cerebrumbiologyacademy',
+      CONTACT_INFO.social.instagram,
+      CONTACT_INFO.social.youtube,
+      CONTACT_INFO.social.youtubePersonal,
+      CONTACT_INFO.social.facebook,
+      CONTACT_INFO.social.twitter,
     ],
     founder: {
       '@type': 'Person',
@@ -887,9 +891,11 @@ export function DrShekharSinghSchema() {
         'Zoology for NEET',
       ]}
       sameAs={[
+        // Removed the 404 youtube.com/@cerebrumbiologyacademy (anti-corroboration).
+        // linkedin.com/in/drshekharsingh is unverified — owner to confirm it is
+        // the founder's account or remove it.
         'https://www.linkedin.com/in/drshekharsingh',
-        'https://www.youtube.com/@cerebrumbiologyacademy',
-        'https://www.youtube.com/@drshekharcsingh',
+        CONTACT_INFO.social.youtubePersonal,
         'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
       ]}
       hasCredential={[

@@ -54,8 +54,8 @@ export default function DrShekhartYoutubeChannelPage() {
     description:
       'NEET Biology expert with 15+ years teaching experience and 15,000+ students taught. Founder of Cerebrum Biology Academy.',
     sameAs: [
-      'https://www.youtube.com/@drshekharcsingh',
-      'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh',
+      'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy',
       'https://instagram.com/cerebrumbiologyacademy',
       'https://cerebrumbiologyacademy.com',
     ],
@@ -100,7 +100,7 @@ export default function DrShekhartYoutubeChannelPage() {
       thumbnailUrl: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
       uploadDate: new Date(2025, 0, 15 - index).toISOString().split('T')[0],
       duration: 'PT30M',
-      embedUrl: `https://www.youtube.com/embed/${videoId}`,
+      embedUrl: `https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwembed/${videoId}`,
       interactionStatistic: {
         '@type': 'InteractionCounter',
         interactionType: 'https://schema.org/WatchAction',
@@ -296,7 +296,7 @@ export default function DrShekhartYoutubeChannelPage() {
             {/* CTA Buttons */}
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
-                href="https://www.youtube.com/@drshekharcsingh"
+                href="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors shadow-lg"
@@ -307,7 +307,7 @@ export default function DrShekhartYoutubeChannelPage() {
                 Subscribe to Personal Channel
               </a>
               <a
-                href="https://www.youtube.com/@cerebrumbiologyacademy"
+                href="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-slate-900 font-semibold py-3 px-6 rounded-lg transition-colors shadow-lg"
@@ -352,7 +352,7 @@ export default function DrShekhartYoutubeChannelPage() {
               {videoIds.map((videoId, index) => (
                 <a
                   key={index}
-                  href={`https://www.youtube.com/watch?v=${videoId}`}
+                  href={`https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwwatch?v=${videoId}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all duration-300"
@@ -389,7 +389,7 @@ export default function DrShekhartYoutubeChannelPage() {
 
             <div className="text-center mt-12">
               <a
-                href="https://www.youtube.com/@drshekharcsingh"
+                href="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg"
@@ -467,7 +467,7 @@ export default function DrShekhartYoutubeChannelPage() {
                   </li>
                 </ul>
                 <a
-                  href="https://www.youtube.com/@drshekharcsingh"
+                  href="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-center bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg transition-colors"
@@ -502,7 +502,7 @@ export default function DrShekhartYoutubeChannelPage() {
                   </li>
                 </ul>
                 <a
-                  href="https://www.youtube.com/@cerebrumbiologyacademy"
+                  href="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors"
@@ -527,7 +527,7 @@ export default function DrShekhartYoutubeChannelPage() {
               </p>
               <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <a
-                  href="https://www.youtube.com/@drshekharcsingh"
+                  href="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-white hover:bg-gray-100 text-red-600 font-semibold py-3 px-8 rounded-lg transition-colors"
@@ -535,7 +535,7 @@ export default function DrShekhartYoutubeChannelPage() {
                   Personal Channel
                 </a>
                 <a
-                  href="https://www.youtube.com/@cerebrumbiologyacademy"
+                  href="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-red-800 hover:bg-red-900 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
@@ -584,7 +584,7 @@ export default function DrShekhartYoutubeChannelPage() {
             <p className="text-lg mb-6">Ready to ace NEET Biology?</p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
-                href="https://www.youtube.com/@drshekharcsingh"
+                href="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"

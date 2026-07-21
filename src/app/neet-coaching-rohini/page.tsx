@@ -442,7 +442,7 @@ export default function NEETCoachingRohiniPage() {
                     <iframe
                       width="100%"
                       height="100%"
-                      src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                      src={`https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwembed/${video.youtubeId}`}
                       title={`${video.student} NEET Success Story`}
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -461,7 +461,7 @@ export default function NEETCoachingRohiniPage() {
 
             <div className="text-center mt-8 animate-fadeInUp">
               <a
-                href="https://www.youtube.com/@cerebrumbiologyacademy"
+                href="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
@@ -725,8 +725,8 @@ export default function NEETCoachingRohiniPage() {
         thumbnailUrl="https://i.ytimg.com/vi/bk6wQCh6b9w/maxresdefault.jpg"
         uploadDate="2025-01-01"
         duration="PT8M30S"
-        contentUrl="https://www.youtube.com/watch?v=bk6wQCh6b9w"
-        embedUrl="https://www.youtube.com/embed/bk6wQCh6b9w"
+        contentUrl="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwwatch?v=bk6wQCh6b9w"
+        embedUrl="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwembed/bk6wQCh6b9w"
       />
       <VideoSchema
         name="Abhisek - AFMC Pune Selection Success Story"
@@ -734,8 +734,8 @@ export default function NEETCoachingRohiniPage() {
         thumbnailUrl="https://i.ytimg.com/vi/NfhkGqOQXzk/maxresdefault.jpg"
         uploadDate="2025-01-01"
         duration="PT6M45S"
-        contentUrl="https://www.youtube.com/watch?v=NfhkGqOQXzk"
-        embedUrl="https://www.youtube.com/embed/NfhkGqOQXzk"
+        contentUrl="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwwatch?v=NfhkGqOQXzk"
+        embedUrl="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwembed/NfhkGqOQXzk"
       />
       <VideoSchema
         name="Nishita - Medical College Admission in 6 Months"
@@ -743,8 +743,8 @@ export default function NEETCoachingRohiniPage() {
         thumbnailUrl="https://i.ytimg.com/vi/t5F8RBuHITM/maxresdefault.jpg"
         uploadDate="2025-01-01"
         duration="PT5M20S"
-        contentUrl="https://www.youtube.com/watch?v=t5F8RBuHITM"
-        embedUrl="https://www.youtube.com/embed/t5F8RBuHITM"
+        contentUrl="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwwatch?v=t5F8RBuHITM"
+        embedUrl="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwembed/t5F8RBuHITM"
       />
       <StickyMobileCTABar waUrl="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20for%20NEET%20Biology%20coaching%20in%20Rohini.%20Please%20share%20timings." />
     </>

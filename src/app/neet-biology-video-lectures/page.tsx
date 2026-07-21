@@ -64,10 +64,13 @@ const config: BestVerticalConfig = {
     { title: 'Best NEET Biology Coaching India', href: '/best-neet-biology-coaching-india' },
     { title: 'Best Biology Teacher for NEET', href: '/best-biology-teacher-for-neet' },
     { title: 'NEET Biology Crash Course', href: '/best-neet-crash-course' },
-    { title: 'YouTube — Dr. Shekhar C Singh', href: 'https://www.youtube.com/@drshekharcsingh' },
+    {
+      title: 'YouTube — Dr. Shekhar C Singh',
+      href: 'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh',
+    },
     {
       title: 'YouTube — Cerebrum Biology Academy',
-      href: 'https://www.youtube.com/@cerebrumbiologyacademy',
+      href: 'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy',
     },
   ],
   pricing: [
