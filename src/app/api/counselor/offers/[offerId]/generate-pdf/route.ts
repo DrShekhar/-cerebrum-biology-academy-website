@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { withCounselor } from '@/lib/auth/middleware'
+import { counselorCanAccessLead } from '@/lib/leads/access'
 import { offerLetterService } from '@/lib/documents/offerLetterService'
 
 const generatePDFSchema = z.object({
@@ -24,6 +25,18 @@ async function handlePOST(
     const validatedData = generatePDFSchema.parse(body)
 
     const counselorId = session.userId
+
+    // Ownership gate (IDOR): the offer letter carries the student's name,
+    // course, discounts and full installment schedule. canGenerateOfferLetter
+    // below only checks existence/expiry, never ownership — so without this a
+    // counselor could pull any lead's offer PDF by id. Mirrors the sibling
+    // offers/create + fee-plans/create gate.
+    if (!(await counselorCanAccessLead(validatedData.leadId, counselorId, session.role))) {
+      return NextResponse.json(
+        { success: false, error: 'Lead not assigned to you' },
+        { status: 403 }
+      )
+    }
 
     const eligibility = await offerLetterService.canGenerateOfferLetter(
       validatedData.leadId,
