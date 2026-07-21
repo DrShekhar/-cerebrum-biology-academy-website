@@ -101,6 +101,37 @@ export async function sendMetaMedia(
 }
 
 /**
+ * Interactive message (reply buttons / list). `interactive` is the Meta
+ * `interactive` object built by the caller. Only works inside the 24h window.
+ */
+export async function sendMetaInteractive(
+  to: string,
+  interactive: Record<string, unknown>
+): Promise<MetaSendResult> {
+  return graphSend({ to, type: 'interactive', interactive })
+}
+
+/**
+ * Resolve a Meta media id to a temporary downloadable URL. Returns null when
+ * unconfigured or on failure. NOTE: the returned URL still needs the Bearer
+ * token to download the bytes — callers that fetch it must send the auth header.
+ */
+export async function getMetaMediaUrl(mediaId: string): Promise<string | null> {
+  const token = process.env.WHATSAPP_ACCESS_TOKEN
+  if (!token || !mediaId) return null
+  try {
+    const res = await fetch(`https://graph.facebook.com/${GRAPH_VERSION}/${mediaId}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+    if (!res.ok) return null
+    const data = await res.json()
+    return data?.url || null
+  } catch {
+    return null
+  }
+}
+
+/**
  * Template message. bodyValues map positionally to {{1}}, {{2}}… in the
  * template body; headerValues to the header; buttonValues (index → url param)
  * to dynamic URL buttons. Templates must be approved under the SAME names in

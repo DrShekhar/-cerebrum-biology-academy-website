@@ -1,24 +1,40 @@
 import { WhatsAppService } from '@/lib/whatsapp/whatsappService'
+import * as metaSender from '@/lib/whatsapp/metaSender'
 
-global.fetch = jest.fn()
+// The service now sends via the Meta WhatsApp Cloud API (metaSender), not a
+// relative-URL fetch to /api/whatsapp/send (the old, broken, silently-no-op'ing
+// path). Mock the sender so tests assert the service's behaviour, not HTTP.
+jest.mock('@/lib/whatsapp/metaSender', () => ({
+  sendMetaText: jest.fn(),
+  sendMetaTemplate: jest.fn(),
+  sendMetaInteractive: jest.fn(),
+  getMetaMediaUrl: jest.fn(),
+}))
+
+const mockSendMetaText = metaSender.sendMetaText as jest.MockedFunction<
+  typeof metaSender.sendMetaText
+>
+const mockSendMetaTemplate = metaSender.sendMetaTemplate as jest.MockedFunction<
+  typeof metaSender.sendMetaTemplate
+>
+const mockGetMetaMediaUrl = metaSender.getMetaMediaUrl as jest.MockedFunction<
+  typeof metaSender.getMetaMediaUrl
+>
+
+const ok = { success: true as const, messageId: 'wamid.test' }
+const fail = { success: false as const, error: 'boom' }
 
 describe('WhatsAppService', () => {
   let service: WhatsAppService
-  const mockFetch = global.fetch as jest.MockedFunction<typeof fetch>
 
   beforeEach(() => {
     jest.clearAllMocks()
     service = new WhatsAppService()
-    process.env.WHATSAPP_API_URL = 'https://graph.facebook.com/v17.0'
-    process.env.WHATSAPP_ACCESS_TOKEN = 'test_token'
   })
 
-  describe('Message Sending', () => {
-    it('should send text message successfully', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ success: true }),
-      } as Response)
+  describe('sendMessage (text)', () => {
+    it('sends a free-form text via Meta and returns true on success', async () => {
+      mockSendMetaText.mockResolvedValueOnce(ok)
 
       const result = await service.sendMessage({
         phone: '+918826444334',
@@ -26,63 +42,45 @@ describe('WhatsAppService', () => {
       })
 
       expect(result).toBe(true)
-      expect(mockFetch).toHaveBeenCalledWith(
-        '/api/whatsapp/send',
-        expect.objectContaining({
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-        })
-      )
+      // '+91…' is normalized to Meta digits (no '+').
+      expect(mockSendMetaText).toHaveBeenCalledWith('918826444334', 'Hello Student!')
     })
 
-    it('should handle message sending failure', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: false,
-        status: 500,
-      } as Response)
+    it('normalizes a bare 10-digit number to +91', async () => {
+      mockSendMetaText.mockResolvedValueOnce(ok)
 
-      const result = await service.sendMessage({
-        phone: '+918826444334',
-        message: 'Test message',
-      })
+      await service.sendMessage({ phone: '8826444334', message: 'Test' })
+
+      expect(mockSendMetaText).toHaveBeenCalledWith('918826444334', 'Test')
+    })
+
+    it('returns false when the Meta send fails', async () => {
+      mockSendMetaText.mockResolvedValueOnce(fail)
+
+      const result = await service.sendMessage({ phone: '+918826444334', message: 'Test' })
 
       expect(result).toBe(false)
     })
 
-    it('should handle network errors', async () => {
-      mockFetch.mockRejectedValueOnce(new Error('Network error'))
+    it('returns false (never throws) on a network/unexpected error', async () => {
+      mockSendMetaText.mockRejectedValueOnce(new Error('Network error'))
 
-      const result = await service.sendMessage({
-        phone: '+918826444334',
-        message: 'Test message',
-      })
+      const result = await service.sendMessage({ phone: '+918826444334', message: 'Test' })
 
       expect(result).toBe(false)
     })
 
-    it('should send message with correct phone format', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ success: true }),
-      } as Response)
+    it('does not send when the phone has no digits', async () => {
+      const result = await service.sendMessage({ phone: 'invalid', message: 'Test' })
 
-      await service.sendMessage({
-        phone: '+918826444334',
-        message: 'Test',
-      })
-
-      const call = mockFetch.mock.calls[0][1]
-      const body = JSON.parse(call?.body as string)
-      expect(body.phone).toBe('+918826444334')
+      expect(result).toBe(false)
+      expect(mockSendMetaText).not.toHaveBeenCalled()
     })
   })
 
-  describe('Template Messages', () => {
-    it('should send template message', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ success: true }),
-      } as Response)
+  describe('sendMessage (template)', () => {
+    it('routes template messages through sendMetaTemplate', async () => {
+      mockSendMetaTemplate.mockResolvedValueOnce(ok)
 
       const result = await service.sendMessage({
         phone: '+918826444334',
@@ -93,239 +91,83 @@ describe('WhatsAppService', () => {
       })
 
       expect(result).toBe(true)
+      expect(mockSendMetaTemplate).toHaveBeenCalledWith({
+        to: '918826444334',
+        templateName: 'demo_booking_confirmation',
+        bodyValues: ['John Doe', '2025-10-25', '10:00 AM'],
+      })
+      expect(mockSendMetaText).not.toHaveBeenCalled()
     })
   })
 
-  describe('Demo Booking Confirmation', () => {
-    it('should send demo booking confirmation', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ success: true }),
-      } as Response)
+  describe('confirmation / reminder helpers', () => {
+    it('demo booking confirmation includes the student name and confirmation copy', async () => {
+      mockSendMetaText.mockResolvedValueOnce(ok)
 
-      const demoTime = new Date('2025-10-25T10:00:00Z')
       const result = await service.sendDemoBookingConfirmation(
         '+918826444334',
         'John Doe',
-        demoTime
+        new Date('2025-10-25T10:00:00Z')
       )
 
       expect(result).toBe(true)
-      const call = mockFetch.mock.calls[0][1]
-      const body = JSON.parse(call?.body as string)
-      expect(body.message).toContain('John Doe')
-      expect(body.message).toContain('demo class is confirmed')
+      const [, message] = mockSendMetaText.mock.calls[0]
+      expect(message).toContain('John Doe')
+      expect(message).toContain('demo class is confirmed')
     })
 
-    it('should include demo details in message', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ success: true }),
-      } as Response)
+    it('enrollment confirmation includes the course name', async () => {
+      mockSendMetaText.mockResolvedValueOnce(ok)
 
-      const demoTime = new Date('2025-10-25T10:00:00Z')
-      await service.sendDemoBookingConfirmation('+918826444334', 'Jane Smith', demoTime)
+      await service.sendEnrollmentConfirmation('+918826444334', 'Alice', 'NEET Biology Pinnacle')
 
-      const call = mockFetch.mock.calls[0][1]
-      const body = JSON.parse(call?.body as string)
-      expect(body.message).toContain('Cell Biology')
-      expect(body.message).toContain('Dr. Priya Sharma')
-      expect(body.message).toContain('cerebrumbiologyacademy.com')
+      const [, message] = mockSendMetaText.mock.calls[0]
+      expect(message).toContain('Alice')
+      expect(message).toContain('NEET Biology Pinnacle')
+    })
+
+    it('payment reminder formats the amount', async () => {
+      mockSendMetaText.mockResolvedValueOnce(ok)
+
+      await service.sendPaymentReminder('+918826444334', 'Charlie', 42000, new Date('2025-11-01'))
+
+      const [, message] = mockSendMetaText.mock.calls[0]
+      expect(message).toContain('Charlie')
+      expect(message).toContain('42,000')
     })
   })
 
-  describe('Enrollment Confirmation', () => {
-    it('should send enrollment confirmation', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ success: true }),
-      } as Response)
+  describe('getMediaUrl', () => {
+    it('returns the resolved Meta media URL', async () => {
+      mockGetMetaMediaUrl.mockResolvedValueOnce('https://lookaside.example/media/abc')
 
-      const result = await service.sendEnrollmentConfirmation(
-        '+918826444334',
-        'Alice Johnson',
-        'NEET Biology Pinnacle'
+      const url = await service.getMediaUrl('media_123')
+
+      expect(url).toBe('https://lookaside.example/media/abc')
+    })
+
+    it('returns an empty string when the media cannot be resolved', async () => {
+      mockGetMetaMediaUrl.mockResolvedValueOnce(null)
+
+      const url = await service.getMediaUrl('media_123')
+
+      expect(url).toBe('')
+    })
+  })
+
+  describe('bulk send', () => {
+    it('tallies sent / failed across recipients', async () => {
+      mockSendMetaText
+        .mockResolvedValueOnce(ok)
+        .mockResolvedValueOnce(fail)
+        .mockResolvedValueOnce(ok)
+
+      const result = await service.sendBulkMessage(
+        ['+918826444334', '+919311946297', '+919999744334'],
+        'Broadcast'
       )
 
-      expect(result).toBe(true)
-      const call = mockFetch.mock.calls[0][1]
-      const body = JSON.parse(call?.body as string)
-      expect(body.message).toContain('Alice Johnson')
-      expect(body.message).toContain('NEET Biology Pinnacle')
-      expect(body.message).toContain('98% NEET qualification')
-    })
-
-    it('should include course details and next steps', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ success: true }),
-      } as Response)
-
-      await service.sendEnrollmentConfirmation('+918826444334', 'Bob', 'Test Course')
-
-      const call = mockFetch.mock.calls[0][1]
-      const body = JSON.parse(call?.body as string)
-      expect(body.message).toContain('Login details sent via email')
-      expect(body.message).toContain('Personal mentor assigned')
-    })
-  })
-
-  describe('Payment Reminder', () => {
-    it('should send payment reminder', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ success: true }),
-      } as Response)
-
-      const dueDate = new Date('2025-11-01')
-      const result = await service.sendPaymentReminder('+918826444334', 'Charlie', 42000, dueDate)
-
-      expect(result).toBe(true)
-      const call = mockFetch.mock.calls[0][1]
-      const body = JSON.parse(call?.body as string)
-      expect(body.message).toContain('Charlie')
-      expect(body.message).toContain('42,000')
-    })
-
-    it('should format amount correctly', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ success: true }),
-      } as Response)
-
-      const dueDate = new Date('2025-11-01')
-      await service.sendPaymentReminder('+918826444334', 'Test', 100000, dueDate)
-
-      const call = mockFetch.mock.calls[0][1]
-      const body = JSON.parse(call?.body as string)
-      expect(body.message).toMatch(/1,00,000|100,000/)
-    })
-  })
-
-  describe('Status Tracking', () => {
-    it('should track message delivery status', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ success: true, messageId: 'msg_123' }),
-      } as Response)
-
-      const result = await service.sendMessage({
-        phone: '+918826444334',
-        message: 'Test',
-      })
-
-      expect(result).toBe(true)
-    })
-  })
-
-  describe('Error Handling', () => {
-    it('should handle API timeout', async () => {
-      mockFetch.mockRejectedValueOnce(new Error('Timeout'))
-
-      const result = await service.sendMessage({
-        phone: '+918826444334',
-        message: 'Test',
-      })
-
-      expect(result).toBe(false)
-    })
-
-    it('should handle invalid phone number', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: false,
-        status: 400,
-        json: async () => ({ error: 'Invalid phone number' }),
-      } as Response)
-
-      const result = await service.sendMessage({
-        phone: 'invalid',
-        message: 'Test',
-      })
-
-      expect(result).toBe(false)
-    })
-
-    it('should handle authentication failure', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: false,
-        status: 401,
-        json: async () => ({ error: 'Unauthorized' }),
-      } as Response)
-
-      const result = await service.sendMessage({
-        phone: '+918826444334',
-        message: 'Test',
-      })
-
-      expect(result).toBe(false)
-    })
-  })
-
-  describe('Rate Limiting', () => {
-    it('should handle rate limit errors', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: false,
-        status: 429,
-        json: async () => ({ error: 'Rate limit exceeded' }),
-      } as Response)
-
-      const result = await service.sendMessage({
-        phone: '+918826444334',
-        message: 'Test',
-      })
-
-      expect(result).toBe(false)
-    })
-  })
-
-  describe('Message Queuing', () => {
-    it('should send messages sequentially', async () => {
-      mockFetch.mockResolvedValue({
-        ok: true,
-        json: async () => ({ success: true }),
-      } as Response)
-
-      const results = await Promise.all([
-        service.sendMessage({ phone: '+918826444334', message: 'Message 1' }),
-        service.sendMessage({ phone: '+918826444334', message: 'Message 2' }),
-        service.sendMessage({ phone: '+919311946297', message: 'Message 3' }),
-      ])
-
-      expect(results.every((r) => r === true)).toBe(true)
-      expect(mockFetch).toHaveBeenCalledTimes(3)
-    })
-  })
-
-  describe('Retry Logic', () => {
-    it('should retry failed messages', async () => {
-      mockFetch
-        .mockResolvedValueOnce({
-          ok: false,
-          status: 500,
-        } as Response)
-        .mockResolvedValueOnce({
-          ok: true,
-          json: async () => ({ success: true }),
-        } as Response)
-
-      const result = await service.sendMessage({
-        phone: '+918826444334',
-        message: 'Test',
-      })
-
-      expect(result).toBe(false)
-    })
-  })
-
-  describe('API Authentication', () => {
-    it('should use access token from environment', () => {
-      expect(process.env.WHATSAPP_ACCESS_TOKEN).toBe('test_token')
-    })
-
-    it('should handle missing access token gracefully', () => {
-      delete process.env.WHATSAPP_ACCESS_TOKEN
-      const newService = new WhatsAppService()
-      expect(newService).toBeDefined()
+      expect(result).toEqual({ sent: 2, failed: 1, total: 3 })
     })
   })
 })
