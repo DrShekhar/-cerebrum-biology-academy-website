@@ -7,6 +7,7 @@
 
 import { prisma } from '@/lib/prisma'
 import { formatPhoneNumber } from '@/lib/interakt'
+import { shouldSuppressAutomatedWhatsApp } from '@/lib/whatsapp/optOut'
 
 interface WelcomeSeriesMessage {
   day: number
@@ -312,6 +313,10 @@ export async function processWelcomeSeriesQueue(): Promise<{
       const startDate = metadata.welcomeSeriesStarted as string
 
       if (!startDate) continue
+
+      // Stop-on-reply / opt-out: never send automated welcome messages to a lead
+      // who has replied on WhatsApp (a human is engaged) or texted STOP.
+      if ((await shouldSuppressAutomatedWhatsApp(lead.phone)).suppress) continue
 
       const daysSinceStart = Math.floor(
         (Date.now() - new Date(startDate).getTime()) / (24 * 60 * 60 * 1000)

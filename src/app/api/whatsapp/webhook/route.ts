@@ -19,6 +19,13 @@ import { WhatsAppMessageProcessor } from '@/lib/whatsapp/messageProcessor'
 import { aiOrchestrator } from '@/lib/ai/intelligent-ai-orchestrator'
 import { responseEnhancer } from '@/lib/ai/response-enhancer'
 import { logInboundWhatsAppMessage } from '@/lib/whatsapp/inboundLogger'
+import { sendMetaText } from '@/lib/whatsapp/metaSender'
+import {
+  classifyConsentMessage,
+  optOutPhone,
+  optInPhone,
+  cancelPendingSequencesForPhone,
+} from '@/lib/whatsapp/optOut'
 
 const VERIFY_TOKEN = process.env.WHATSAPP_VERIFY_TOKEN
 const WEBHOOK_SECRET = process.env.WHATSAPP_WEBHOOK_SECRET
@@ -270,6 +277,28 @@ async function processWhatsAppEducationWebhook(payload: WhatsAppWebhookPayload) 
               providerMessageId: message.id,
               sentAt: Number.isFinite(seconds) ? new Date(seconds * 1000) : undefined,
             })
+
+            // Consent (STOP/START) — handled before the AI pipeline. STOP records
+            // the opt-out, cancels pending sequences, confirms, and skips the
+            // auto-reply.
+            const consent = classifyConsentMessage(message.text?.body)
+            if (consent === 'STOP') {
+              await optOutPhone(message.from, 'user_stop')
+              await cancelPendingSequencesForPhone(message.from)
+              await sendMetaText(
+                message.from,
+                'You have been unsubscribed from Cerebrum Biology Academy WhatsApp updates. Reply START anytime to resubscribe.'
+              )
+              continue
+            }
+            if (consent === 'START') {
+              await optInPhone(message.from)
+              await sendMetaText(
+                message.from,
+                "You're resubscribed to Cerebrum Biology Academy WhatsApp updates. 🎉"
+              )
+              continue
+            }
 
             // Process message with AI enhancement
             await processEnhancedMessage({
