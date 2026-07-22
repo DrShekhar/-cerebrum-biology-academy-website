@@ -2912,6 +2912,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.93,
     },
     {
+      url: `${baseUrl}/middle-school-biology-olympiad-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/bbo-preparation`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
