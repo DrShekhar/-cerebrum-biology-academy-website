@@ -8,9 +8,10 @@ on:
   issues:
     types: [opened, labeled]
 
-# Only allow one Claude run per PR at a time
+# Only allow one Claude run per PR at a time, scoped per event type so a bot
+# comment (issue_comment) can't cancel an in-flight pull_request review.
 concurrency:
-  group: claude-${{ github.event.pull_request.number || github.event.issue.number }}
+  group: claude-${{ github.event_name }}-${{ github.event.pull_request.number || github.event.issue.number }}
   cancel-in-progress: true
 
 jobs:
@@ -25,6 +26,7 @@ jobs:
       contents: read
       pull-requests: write
       issues: write
+      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,8 +37,11 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          model: claude-sonnet-4-20250514
-          timeout_minutes: 30
+          # Use the workflow's GITHUB_TOKEN so the action does not require the
+          # Claude Code GitHub App to be installed on the repo.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # (model left to the action default; v1 rejects the old `model`/
+          # `timeout_minutes` inputs, and a stale pinned id causes is_error)
           # Custom prompt for code review
           prompt: |
             You are reviewing code for Cerebrum Biology Academy, a Next.js 15 educational platform.
