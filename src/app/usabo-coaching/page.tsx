@@ -449,6 +449,42 @@ export default function USABOCoachingPage() {
         </div>
       </section>
 
+      {/* Sample class videos */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Watch a sample USABO class
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Real recorded live classes on USABO Genetics, taught by Dr. Shekhar. See the depth and
+              the teaching style for yourself before you enroll.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+            {[
+              { id: 'CbQHpBiEKKs', label: 'Live class: USABO Genetics' },
+              { id: '61NIROotk6Y', label: 'Live class: USABO Genetics (part 2)' },
+            ].map((v) => (
+              <div key={v.id} className="rounded-xl bg-gray-50 p-4 shadow-lg">
+                <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-black">
+                  <iframe
+                    className="absolute inset-0 h-full w-full"
+                    src={`https://www.youtube-nocookie.com/embed/${v.id}`}
+                    title={v.label}
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="mt-3 text-sm font-medium text-gray-800">{v.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
