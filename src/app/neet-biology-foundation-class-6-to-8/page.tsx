@@ -5,18 +5,15 @@ import { getPricingForClass } from '@/data/pricing'
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
 const url = `${SITE_URL}/neet-biology-foundation-class-6-to-8`
 
-// Real, catalog-backed pre-foundation pricing (all three classes share the
-// same academic tier band; see src/data/pricing.ts).
+// Pre-foundation tier structure (batch sizes / features) is shown for context,
+// but the Class 6-8 pre-foundation programme has no fixed, packaged price yet,
+// so fees are shown on enquiry rather than as a fabricated number.
 const preFoundationTiers = getPricingForClass('foundation-6', 'academic') ?? []
 const tierLabels: Record<string, string> = {
   pinnacle: 'Pinnacle',
   ascent: 'Ascent',
   pursuit: 'Pursuit',
 }
-const priceValues = preFoundationTiers.map((t) => t.prices.lumpSum)
-const lowPrice = priceValues.length ? Math.min(...priceValues) : 45000
-const highPrice = priceValues.length ? Math.max(...priceValues) : 90000
-const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`
 
 export const metadata: Metadata = {
   title: 'NEET Biology Foundation Class 6, 7 & 8 | Early Start for Future Doctors',
@@ -130,14 +127,6 @@ const courseSchema = {
   },
   educationalLevel: 'Class 6–8 (Foundation)',
   hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'online' },
-  offers: {
-    '@type': 'AggregateOffer',
-    priceCurrency: 'INR',
-    lowPrice,
-    highPrice,
-    offerCount: preFoundationTiers.length,
-    availability: 'https://schema.org/InStock',
-  },
 }
 
 const breadcrumbSchema = {
@@ -289,9 +278,8 @@ export default function NeetBiologyFoundationClass6To8Page() {
                 <div className="text-xs font-semibold uppercase tracking-wide text-green-700">
                   {tierLabels[tier.tier] ?? tier.tier}
                 </div>
-                <div className="mt-2 text-3xl font-bold text-gray-900">
-                  {inr(tier.prices.lumpSum)}
-                  <span className="text-base font-medium text-gray-500"> / year</span>
+                <div className="mt-2 text-2xl font-bold text-gray-900">
+                  Fee on enquiry
                 </div>
                 <div className="mt-1 text-sm text-gray-600">
                   {tier.batchSize} students · {tier.hours}
