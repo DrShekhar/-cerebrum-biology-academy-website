@@ -16,6 +16,7 @@ import { useVisitorCountry } from '@/hooks/useVisitorCountry'
 
 const EXAM_NAV_LINKS: { href: string; label: string }[] = [
   { href: '/best-biology-tutor-usa', label: 'USA — all exams' },
+  { href: '/middle-school-biology-olympiad-usa', label: 'Middle School Biology (6–8)' },
   { href: '/ap-biology-tutor', label: 'AP Biology' },
   { href: '/usabo-coaching', label: 'USABO / Olympiad' },
   { href: '/brain-bee-coaching', label: 'Brain Bee (Neuroscience)' },
