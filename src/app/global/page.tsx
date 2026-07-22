@@ -117,6 +117,20 @@ const VERTICALS = [
     flag: '🔬',
   },
   {
+    name: 'Middle School Biology (USA)',
+    detail:
+      'Grades 6-8 early biology foundation & honest olympiad prep — the on-ramp before high school',
+    href: '/middle-school-biology-olympiad-usa',
+    flag: '🌱',
+  },
+  {
+    name: 'Science Olympiad Division B',
+    detail:
+      'Coaching for the Division B biology events (grades 6-9) — the real US middle-school olympiad',
+    href: '/science-olympiad-division-b-biology-coaching',
+    flag: '🔬',
+  },
+  {
     name: 'USABO Coaching',
     detail: 'USA Biology Olympiad — Open, Semifinal and National rounds',
     href: '/usabo-coaching',
