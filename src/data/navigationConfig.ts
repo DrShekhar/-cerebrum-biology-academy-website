@@ -169,14 +169,6 @@ export const navigationConfig: NavigationSection[] = [
         isPopular: true,
       },
       {
-        id: 'usabo-coaching',
-        title: 'USABO Coaching (USA)',
-        href: '/usabo-coaching',
-        description: 'USA Biology Olympiad preparation - 1:1 & batch options',
-        keywords: ['usabo', 'usa biology olympiad', 'olympiad usa', 'usabo prep'],
-        isNew: true,
-      },
-      {
         id: 'biology-olympiad-coaching',
         title: 'Indian Biology Olympiad (NSEB/INBO)',
         href: '/biology-olympiad-coaching',
@@ -219,6 +211,45 @@ export const navigationConfig: NavigationSection[] = [
         description: 'NEET abroad · IB · AP · A-Level · MCAT · GAMSAT · Olympiads in 75+ countries',
         keywords: ['global', 'international', 'worldwide', 'abroad', 'overseas'],
         isPopular: true,
+      },
+      {
+        id: 'usabo-coaching',
+        title: 'USABO Coaching (USA)',
+        href: '/usabo-coaching',
+        description: 'USA Biology Olympiad preparation - 1:1 & batch options',
+        keywords: ['usabo', 'usa biology olympiad', 'olympiad usa', 'usabo prep'],
+        isNew: true,
+      },
+      {
+        id: 'middle-school-biology-usa',
+        title: 'Middle School Biology (USA, Grades 6-8)',
+        href: '/middle-school-biology-olympiad-usa',
+        description:
+          'Early biology foundation & honest olympiad prep for US students in grades 6-8',
+        keywords: [
+          'middle school biology',
+          'grades 6-8',
+          'usabo foundation',
+          'early olympiad prep',
+          'science olympiad division b',
+        ],
+        isNew: true,
+      },
+      {
+        id: 'science-olympiad-division-b',
+        title: 'Science Olympiad Division B (Grades 6-9)',
+        href: '/science-olympiad-division-b-biology-coaching',
+        description:
+          'Coaching for the Division B biology events — the real US middle-school olympiad',
+        keywords: [
+          'science olympiad',
+          'division b',
+          'anatomy and physiology',
+          'disease detectives',
+          'microbe mission',
+          'middle school science competition',
+        ],
+        isNew: true,
       },
       {
         id: 'biology-tutor-usa',

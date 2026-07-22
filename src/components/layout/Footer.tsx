@@ -164,6 +164,11 @@ export const Footer = memo(function Footer() {
 
   const examLinks = [
     { name: 'USA — All Biology Exams', href: '/best-biology-tutor-usa' },
+    { name: 'Middle School Biology (Grades 6-8)', href: '/middle-school-biology-olympiad-usa' },
+    {
+      name: 'Science Olympiad Div B (Grades 6-9)',
+      href: '/science-olympiad-division-b-biology-coaching',
+    },
     { name: 'AP Biology Tutor', href: '/ap-biology-tutor' },
     { name: 'USABO / Olympiad Coaching', href: '/usabo-coaching' },
     { name: 'Brain Bee (Neuroscience)', href: '/brain-bee-coaching' },

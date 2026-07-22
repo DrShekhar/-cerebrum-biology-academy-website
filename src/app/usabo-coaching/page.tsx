@@ -23,6 +23,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { ClassVideoCard } from '@/components/media/ClassVideoCard'
 
 const usaboPathway = [
   {
@@ -445,6 +446,33 @@ export default function USABOCoachingPage() {
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sample class videos */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Watch a sample USABO class
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Real recorded live classes on USABO Genetics, taught by Dr. Shekhar. See the depth and
+              the teaching style for yourself before you enroll.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+            <ClassVideoCard
+              id="CbQHpBiEKKs"
+              title="Live class: USABO Genetics"
+              caption="Live class · USABO Genetics"
+            />
+            <ClassVideoCard
+              id="61NIROotk6Y"
+              title="Live class: USABO Genetics (part 2)"
+              caption="Live class · USABO Genetics (part 2)"
+            />
           </div>
         </div>
       </section>

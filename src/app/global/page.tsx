@@ -3,6 +3,7 @@ import { GlobalEnquiryForm } from '@/components/seo/GlobalEnquiryForm'
 import Link from 'next/link'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { GlobalPricingStrip } from '@/components/global/GlobalPricingStrip'
+import { ClassVideoCard } from '@/components/media/ClassVideoCard'
 import { testimonials } from '@/data/testimonials'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
@@ -114,6 +115,20 @@ const VERTICALS = [
     name: 'GAMSAT & DAT Biology',
     detail: 'GAMSAT Section III reasoning + DAT survey of natural sciences',
     href: '/best-gamsat-biology-tutor',
+    flag: '🔬',
+  },
+  {
+    name: 'Middle School Biology (USA)',
+    detail:
+      'Grades 6-8 early biology foundation & honest olympiad prep — the on-ramp before high school',
+    href: '/middle-school-biology-olympiad-usa',
+    flag: '🌱',
+  },
+  {
+    name: 'Science Olympiad Division B',
+    detail:
+      'Coaching for the Division B biology events (grades 6-9) — the real US middle-school olympiad',
+    href: '/science-olympiad-division-b-biology-coaching',
     flag: '🔬',
   },
   {
@@ -280,12 +295,10 @@ export default function GlobalHomePage() {
             className="mx-auto mt-4 max-w-2xl text-base text-white/85 sm:text-lg"
             data-speakable="summary"
           >
-            Cerebrum Biology Academy teaches one subject — biology — across every major pathway:
-            NEET for students abroad, IB and AP Biology, A-Level and GCSE, MCAT, GAMSAT, USMLE, DAT,
-            and national biology olympiads up to the IBO. Live online, in your time zone, taught by
-            AIIMS-trained faculty — AIIMS New Delhi ranks among the most selective medical schools
-            in the world, peer to Harvard Medical School, Johns Hopkins and Oxford, so the teaching
-            depth applies to any biology exam, anywhere.
+            One subject, taught deeply. We coach biology across every major pathway — NEET for
+            students abroad, IB and AP Biology, A-Level and GCSE, MCAT, GAMSAT, USMLE, DAT, and
+            national biology olympiads up to the IBO — live online, in your time zone, with
+            AIIMS-trained specialist faculty.
           </p>
 
           {/* Two-pathway fork */}
@@ -347,8 +360,55 @@ export default function GlobalHomePage() {
         </div>
       </section>
 
+      {/* Trust band */}
+      <section className="border-b border-gray-200 bg-white/70 py-6 backdrop-blur">
+        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-4 px-4 text-center sm:grid-cols-4 sm:px-6">
+          {[
+            { k: 'Est. 2014', v: 'Founded by an AIIMS alumnus' },
+            { k: 'AIIMS-trained', v: 'Specialist biology faculty' },
+            { k: 'Biology only', v: 'One subject, taught in depth' },
+            { k: '75+ countries', v: 'Live, time-zone-matched classes' },
+          ].map((s) => (
+            <div key={s.k}>
+              <div className="text-xl font-bold text-[#3d4d3d] sm:text-2xl">{s.k}</div>
+              <div className="mt-1 text-xs text-gray-600 sm:text-sm">{s.v}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* See a real class */}
+      <section className="bg-[#eef2ee] py-12 sm:py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
+              See a real Cerebrum class
+            </h2>
+            <p className="mx-auto mt-2 max-w-2xl text-gray-600">
+              Not a promo reel — actual recorded live classes taught by Dr. Shekhar. Small live
+              batches, cameras on, real teaching. Click to watch.
+            </p>
+          </div>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <ClassVideoCard
+              id="CbQHpBiEKKs"
+              title="Live class: USABO Genetics"
+              caption="Live class · USABO Genetics"
+            />
+            <ClassVideoCard
+              id="61NIROotk6Y"
+              title="Live class: USABO Genetics (part 2)"
+              caption="Live class · USABO Genetics (part 2)"
+            />
+          </div>
+          <p className="mx-auto mt-5 max-w-2xl text-center text-xs text-gray-500">
+            Sample recorded live classes from our YouTube channel.
+          </p>
+        </div>
+      </section>
+
       {/* Programmes grid */}
-      <section id="programmes" className="py-12 sm:py-16">
+      <section id="programmes" className="bg-white py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="text-center text-2xl font-bold text-gray-900 sm:text-3xl">
             Every biology pathway, one specialist faculty
@@ -362,13 +422,24 @@ export default function GlobalHomePage() {
               <Link
                 key={v.href + v.name}
                 href={v.href}
-                className="group rounded-2xl bg-white p-5 shadow-md ring-1 ring-gray-200 transition-all hover:shadow-lg hover:ring-[#3d4d3d]/30"
+                className="group relative overflow-hidden rounded-2xl bg-white p-5 shadow-sm ring-1 ring-gray-200 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:ring-[#3d4d3d]/30"
               >
-                <div className="text-2xl">{v.flag}</div>
-                <div className="mt-2 text-base font-bold text-gray-900 group-hover:text-[#3d4d3d]">
-                  {v.name}
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#3d4d3d] to-[#4a5d4a] opacity-0 transition-opacity group-hover:opacity-100"
+                />
+                <div className="flex items-start justify-between gap-3">
+                  <div className="text-base font-bold text-gray-900 group-hover:text-[#3d4d3d]">
+                    {v.name}
+                  </div>
+                  <span aria-hidden="true" className="shrink-0 text-lg opacity-80">
+                    {v.flag}
+                  </span>
                 </div>
-                <p className="mt-1 text-sm text-gray-600">{v.detail}</p>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">{v.detail}</p>
+                <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#3d4d3d] opacity-0 transition-opacity group-hover:opacity-100">
+                  Explore →
+                </span>
               </Link>
             ))}
           </div>
