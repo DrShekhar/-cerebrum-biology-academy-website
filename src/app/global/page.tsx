@@ -3,7 +3,7 @@ import { GlobalEnquiryForm } from '@/components/seo/GlobalEnquiryForm'
 import Link from 'next/link'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { GlobalPricingStrip } from '@/components/global/GlobalPricingStrip'
-import { ClassVideoCard } from '@/components/global/ClassVideoCard'
+import { ClassVideoCard } from '@/components/media/ClassVideoCard'
 import { testimonials } from '@/data/testimonials'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 

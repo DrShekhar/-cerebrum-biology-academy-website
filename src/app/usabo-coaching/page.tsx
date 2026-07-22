@@ -23,6 +23,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { ClassVideoCard } from '@/components/media/ClassVideoCard'
 
 const usaboPathway = [
   {
@@ -462,25 +463,16 @@ export default function USABOCoachingPage() {
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 md:gap-8">
-            {[
-              { id: 'CbQHpBiEKKs', label: 'Live class: USABO Genetics' },
-              { id: '61NIROotk6Y', label: 'Live class: USABO Genetics (part 2)' },
-            ].map((v) => (
-              <div key={v.id} className="rounded-xl bg-gray-50 p-4 shadow-lg">
-                <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-black">
-                  <iframe
-                    className="absolute inset-0 h-full w-full"
-                    src={`https://www.youtube-nocookie.com/embed/${v.id}`}
-                    title={v.label}
-                    loading="lazy"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
-                <div className="mt-3 text-sm font-medium text-gray-800">{v.label}</div>
-              </div>
-            ))}
+            <ClassVideoCard
+              id="CbQHpBiEKKs"
+              title="Live class: USABO Genetics"
+              caption="Live class · USABO Genetics"
+            />
+            <ClassVideoCard
+              id="61NIROotk6Y"
+              title="Live class: USABO Genetics (part 2)"
+              caption="Live class · USABO Genetics (part 2)"
+            />
           </div>
         </div>
       </section>
