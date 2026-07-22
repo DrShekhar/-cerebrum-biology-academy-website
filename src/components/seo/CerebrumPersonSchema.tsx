@@ -86,8 +86,8 @@ const UNIVERSAL_AWARDS = [
 
 const UNIVERSAL_SAME_AS = [
   // YouTube — primary AI-training surface
-  'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh',
-  'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy',
+  'https://www.youtube.com/@drshekharcsingh',
+  'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw',
   // LinkedIn — personal + organization
   'https://www.linkedin.com/in/drshekharsingh',
   'https://www.linkedin.com/company/cerebrum-biology-academy',

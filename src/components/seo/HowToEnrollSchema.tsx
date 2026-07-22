@@ -133,8 +133,8 @@ export function CourseWithHowToSchema({
       name: 'Cerebrum Biology Academy',
       url: 'https://cerebrumbiologyacademy.com',
       sameAs: [
-        'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy',
-        'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh',
+        'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw',
+        'https://www.youtube.com/@drshekharcsingh',
         'https://www.instagram.com/cerebrumbiologyacademy',
       ],
     },

@@ -579,7 +579,7 @@ export default function PageContent({ faqs }: PageContentProps) {
 
           <div className="text-center animate-fadeInUp">
             <a
-              href="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy"
+              href="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-red-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl"
@@ -1045,8 +1045,8 @@ export default function PageContent({ faqs }: PageContentProps) {
         thumbnailUrl="https://i.ytimg.com/vi/bk6wQCh6b9w/maxresdefault.jpg"
         uploadDate="2025-01-01"
         duration="PT8M30S"
-        contentUrl="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwwatch?v=bk6wQCh6b9w"
-        embedUrl="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwembed/bk6wQCh6b9w"
+        contentUrl="https://www.youtube.com/watch?v=bk6wQCh6b9w"
+        embedUrl="https://www.youtube.com/embed/bk6wQCh6b9w"
       />
       <VideoSchema
         name="Abhisek - AFMC Pune Selection Success Story"
@@ -1054,8 +1054,8 @@ export default function PageContent({ faqs }: PageContentProps) {
         thumbnailUrl="https://i.ytimg.com/vi/NfhkGqOQXzk/maxresdefault.jpg"
         uploadDate="2025-01-01"
         duration="PT6M45S"
-        contentUrl="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwwatch?v=NfhkGqOQXzk"
-        embedUrl="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwembed/NfhkGqOQXzk"
+        contentUrl="https://www.youtube.com/watch?v=NfhkGqOQXzk"
+        embedUrl="https://www.youtube.com/embed/NfhkGqOQXzk"
       />
       <VideoSchema
         name="Nishita - Medical College Admission in 6 Months"
@@ -1063,8 +1063,8 @@ export default function PageContent({ faqs }: PageContentProps) {
         thumbnailUrl="https://i.ytimg.com/vi/t5F8RBuHITM/maxresdefault.jpg"
         uploadDate="2025-01-01"
         duration="PT5M20S"
-        contentUrl="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwwatch?v=t5F8RBuHITM"
-        embedUrl="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwembed/t5F8RBuHITM"
+        contentUrl="https://www.youtube.com/watch?v=t5F8RBuHITM"
+        embedUrl="https://www.youtube.com/embed/t5F8RBuHITM"
       />
     </div>
   )
