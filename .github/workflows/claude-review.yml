@@ -40,9 +40,8 @@ jobs:
           # Use the workflow's GITHUB_TOKEN so the action does not require the
           # Claude Code GitHub App to be installed on the repo.
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # v1 no longer accepts `model`/`timeout_minutes` inputs — pass model
-          # (and any other Claude Code flags) via claude_args.
-          claude_args: '--model claude-sonnet-4-20250514'
+          # (model left to the action default; v1 rejects the old `model`/
+          # `timeout_minutes` inputs, and a stale pinned id causes is_error)
           # Custom prompt for code review
           prompt: |
             You are reviewing code for Cerebrum Biology Academy, a Next.js 15 educational platform.
