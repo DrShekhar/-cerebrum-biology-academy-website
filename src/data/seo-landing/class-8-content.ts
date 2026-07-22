@@ -253,7 +253,7 @@ export const neetFoundationClass8: SEOLandingContent = {
       'Recordings and notes for revision',
       'AIIMS-trained biology faculty',
     ],
-    price: { original: 45000, emi: 'Flexible plans' },
+    price: { feeOnEnquiry: true },
   },
 
   schema: {
@@ -263,8 +263,6 @@ export const neetFoundationClass8: SEOLandingContent = {
     description:
       'Early NEET biology foundation for Class 8: concept-first, low-pressure, all-boards, olympiad-ready. Live online for students in India and abroad.',
     duration: 'P1Y',
-    price: 45000,
-    priceCurrency: 'INR',
     educationalLevel: 'Class 8 (Foundation)',
   },
 }

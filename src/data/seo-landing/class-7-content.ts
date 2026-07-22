@@ -245,7 +245,7 @@ export const neetFoundationClass7: SEOLandingContent = {
       'Recordings and notes for revision',
       'AIIMS-trained biology faculty',
     ],
-    price: { original: 45000, emi: 'Flexible plans' },
+    price: { feeOnEnquiry: true },
   },
 
   schema: {
@@ -255,8 +255,6 @@ export const neetFoundationClass7: SEOLandingContent = {
     description:
       'Curiosity-led early biology foundation for Class 7: concept-first, low-pressure, all-boards. Live online for students in India and abroad.',
     duration: 'P1Y',
-    price: 45000,
-    priceCurrency: 'INR',
     educationalLevel: 'Class 7 (Foundation)',
   },
 }
