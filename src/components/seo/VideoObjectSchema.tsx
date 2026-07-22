@@ -27,7 +27,7 @@ interface VideoObjectSchemaProps {
  *   thumbnailUrl="https://img.youtube.com/vi/ABC123/maxresdefault.jpg"
  *   uploadDate="2025-02-15"
  *   duration="PT45M30S"
- *   embedUrl="https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwembed/ABC123"
+ *   embedUrl="https://www.youtube.com/embed/ABC123"
  *   interactionStatistic={{ watchCount: 25000, likeCount: 800 }}
  * />
  */
@@ -49,7 +49,7 @@ export function VideoObjectSchema({
   // Ensure embed URL is absolute
   const absoluteEmbedUrl = embedUrl.startsWith('http')
     ? embedUrl
-    : `https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQwembed/${embedUrl}`
+    : `https://www.youtube.com/embed/${embedUrl}`
 
   const videoObjectSchema = {
     '@context': 'https://schema.org',
@@ -78,8 +78,8 @@ export function VideoObjectSchema({
       sameAs: [
         'https://www.facebook.com/cerebrumbiologyacademy',
         'https://www.instagram.com/cerebrumbiologyacademy',
-        'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy',
-        'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh',
+        'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw',
+        'https://www.youtube.com/@drshekharcsingh',
         'https://www.linkedin.com/company/cerebrum-biology-academy',
       ],
     },

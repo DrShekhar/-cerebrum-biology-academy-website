@@ -110,8 +110,8 @@ export function BestVerticalLanding({
     url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
     mainEntityOfPage: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-biology-faculty-india',
     sameAs: [
-      'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh',
-      'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy',
+      'https://www.youtube.com/@drshekharcsingh',
+      'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw',
       'https://www.linkedin.com/in/drshekharsingh',
       'https://www.linkedin.com/company/cerebrum-biology-academy',
       'https://twitter.com/DrShekharBio',

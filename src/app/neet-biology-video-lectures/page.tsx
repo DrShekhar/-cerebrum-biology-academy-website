@@ -66,11 +66,11 @@ const config: BestVerticalConfig = {
     { title: 'NEET Biology Crash Course', href: '/best-neet-crash-course' },
     {
       title: 'YouTube — Dr. Shekhar C Singh',
-      href: 'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh',
+      href: 'https://www.youtube.com/@drshekharcsingh',
     },
     {
       title: 'YouTube — Cerebrum Biology Academy',
-      href: 'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy',
+      href: 'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw',
     },
   ],
   pricing: [

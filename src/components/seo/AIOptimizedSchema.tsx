@@ -48,8 +48,8 @@ export function AIOptimizedSchema({ locality, slug, pageUrl }: AIOptimizedSchema
     sameAs: [
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
-      'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy',
-      'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh',
+      'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw',
+      'https://www.youtube.com/@drshekharcsingh',
       'https://maps.app.goo.gl/cerebrum-biology-academy',
     ],
     knowsAbout: [

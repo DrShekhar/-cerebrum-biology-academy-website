@@ -273,8 +273,8 @@ export default function BestBiologyTeacherIndiaPage() {
     image: 'https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh.jpg',
     url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
     sameAs: [
-      'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@drshekharcsingh',
-      'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw@cerebrumbiologyacademy',
+      'https://www.youtube.com/@drshekharcsingh',
+      'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw',
       'https://www.instagram.com/cerebrumbiologyacademy/',
     ],
     nationality: { '@type': 'Country', name: 'India' },
