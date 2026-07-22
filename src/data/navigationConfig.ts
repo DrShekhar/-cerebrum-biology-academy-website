@@ -236,6 +236,22 @@ export const navigationConfig: NavigationSection[] = [
         isNew: true,
       },
       {
+        id: 'science-olympiad-division-b',
+        title: 'Science Olympiad Division B (Grades 6-9)',
+        href: '/science-olympiad-division-b-biology-coaching',
+        description:
+          'Coaching for the Division B biology events — the real US middle-school olympiad',
+        keywords: [
+          'science olympiad',
+          'division b',
+          'anatomy and physiology',
+          'disease detectives',
+          'microbe mission',
+          'middle school science competition',
+        ],
+        isNew: true,
+      },
+      {
         id: 'biology-tutor-usa',
         title: 'Biology Tutor — USA',
         href: '/best-biology-tutor-usa',
