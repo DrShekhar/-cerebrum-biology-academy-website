@@ -542,8 +542,26 @@ export default function LeadDetailPage() {
             </dl>
           </div>
 
-          {/* Commission Info */}
-          {(lead.status === 'ENROLLED' || lead.commissions.length > 0) && (
+          {/* Commission Info — only when commission data actually exists.
+              Marking a referral ENROLLED here does NOT create a commission
+              record; that happens on the admin side. An ENROLLED lead with no
+              commission yet gets an honest "pending" note instead of an empty
+              green box implying money that was never written. */}
+          {lead.status === 'ENROLLED' &&
+            lead.commissions.length === 0 &&
+            !lead.commissionEarned &&
+            !lead.totalFeeAmount && (
+              <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <h2 className="text-lg font-semibold text-gray-700 mb-2">Commission</h2>
+                <p className="text-sm text-gray-500">
+                  Enrollment recorded. Your commission will appear here once the admin team confirms
+                  the fee and enrollment details.
+                </p>
+              </div>
+            )}
+          {(lead.commissions.length > 0 ||
+            (lead.commissionEarned !== null && lead.commissionEarned > 0) ||
+            lead.totalFeeAmount) && (
             <div className="bg-green-50 rounded-xl p-6 border border-green-200">
               <h2 className="text-lg font-semibold text-green-700 mb-4">Commission</h2>
               {lead.totalFeeAmount && (

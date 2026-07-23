@@ -1,31 +1,16 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 import { processTimeTriggers } from '@/lib/followupEngine'
+import { requireCronAuth } from '@/lib/auth/cron-auth'
 
 // Vercel Cron invokes registered paths with GET (Authorization: Bearer CRON_SECRET),
 // so GET must run the real processing — a 405 stub here means triggers never fire.
-async function handleCron(request: NextRequest) {
+const handleCron = requireCronAuth(async () => {
   try {
-    const authHeader = request.headers.get('authorization')
-    const cronSecret = process.env.CRON_SECRET
-
-    if (!cronSecret) {
-      console.error('CRON_SECRET not configured')
-      return NextResponse.json(
-        { success: false, error: 'Cron configuration error' },
-        { status: 500 }
-      )
-    }
-
-    if (authHeader !== `Bearer ${cronSecret}`) {
-      console.error('Unauthorized cron job attempt')
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
-    }
-
     const result = await processTimeTriggers()
 
     return NextResponse.json({
       success: true,
-      message: 'Time-based triggers processed successfully',
+      message: 'Follow-up rule sweep completed',
       data: result,
     })
   } catch (error) {
@@ -39,12 +24,7 @@ async function handleCron(request: NextRequest) {
       { status: 500 }
     )
   }
-}
+})
 
-export async function GET(request: NextRequest) {
-  return handleCron(request)
-}
-
-export async function POST(request: NextRequest) {
-  return handleCron(request)
-}
+export const GET = handleCron
+export const POST = handleCron

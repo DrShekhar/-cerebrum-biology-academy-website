@@ -28,12 +28,12 @@ export async function GET(request: NextRequest, context: { params: Promise<{ id:
     if (!session?.user) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
-    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+    if (!['COUNSELOR', 'ADMIN'].includes((session.user.role || '').toUpperCase())) {
       return NextResponse.json({ success: false, error: 'Forbidden' }, { status: 403 })
     }
 
     // Tenant isolation matches the notes route.
-    const isAdmin = session.user.role === 'ADMIN'
+    const isAdmin = (session.user.role || '').toUpperCase() === 'ADMIN'
     const lead = await prisma.leads.findFirst({
       where: { id: params.id, ...(isAdmin ? {} : { assignedToId: session.user.id }) },
       select: {

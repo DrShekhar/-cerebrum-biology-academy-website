@@ -15,12 +15,12 @@ export async function GET(request: NextRequest, context: { params: Promise<{ id:
     if (!session?.user) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
-    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+    if (!['COUNSELOR', 'ADMIN'].includes((session.user.role || '').toUpperCase())) {
       return NextResponse.json({ success: false, error: 'Forbidden' }, { status: 403 })
     }
 
     // Tenant isolation: counselor can only read notes for leads assigned to them.
-    const isAdmin = session.user.role === 'ADMIN'
+    const isAdmin = (session.user.role || '').toUpperCase() === 'ADMIN'
     const owned = await prisma.leads.findFirst({
       where: { id: params.id, ...(isAdmin ? {} : { assignedToId: session.user.id }) },
       select: { id: true },
@@ -64,7 +64,7 @@ export async function POST(request: NextRequest, context: { params: Promise<{ id
     if (!session?.user?.id) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
-    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+    if (!['COUNSELOR', 'ADMIN'].includes((session.user.role || '').toUpperCase())) {
       return NextResponse.json({ success: false, error: 'Forbidden' }, { status: 403 })
     }
 
@@ -76,7 +76,7 @@ export async function POST(request: NextRequest, context: { params: Promise<{ id
     }
 
     // Tenant isolation: counselor can only add notes to leads assigned to them.
-    const isAdmin = session.user.role === 'ADMIN'
+    const isAdmin = (session.user.role || '').toUpperCase() === 'ADMIN'
     const lead = await prisma.leads.findFirst({
       where: { id: params.id, ...(isAdmin ? {} : { assignedToId: session.user.id }) },
       select: { id: true, studentName: true },

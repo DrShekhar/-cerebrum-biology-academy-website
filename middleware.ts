@@ -184,6 +184,7 @@ function isProtectedRoute(pathname: string): boolean {
     '/test',
     '/teacher',
     '/counselor',
+    '/consultant',
     '/select-role',
     '/settings',
     '/practice',
@@ -748,6 +749,17 @@ export default async function middleware(req: NextRequest) {
           },
           { status: 403 }
         )
+      )
+    }
+  }
+
+  // API route protection - consultant APIs. Session required at the edge;
+  // the fine-grained gate (a `consultants` profile row, or ADMIN) needs the
+  // DB and lives in each route via requireConsultantAccess().
+  if (pathname.startsWith('/api/consultant/')) {
+    if (!userId && !hasSession) {
+      return addSecurityHeaders(
+        NextResponse.json({ error: 'Authentication required' }, { status: 401 })
       )
     }
   }

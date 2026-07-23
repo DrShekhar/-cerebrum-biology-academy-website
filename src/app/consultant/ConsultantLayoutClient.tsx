@@ -19,30 +19,16 @@ function ConsultantAuthWrapper({ children }: { children: React.ReactNode }) {
   const router = useRouter()
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [isConsultant, setIsConsultant] = useState(false)
 
+  // Access control (ADMIN or a consultants profile row) is enforced
+  // server-side in layout.tsx — this wrapper only handles the client-side
+  // session-expiry case. The old client-only gate admitted ADMIN exclusively,
+  // bouncing the very consultants the /api/consultant routes serve.
   useEffect(() => {
-    if (session?.user) {
-      const userRole = session.user.role
-      // CONSULTANT role doesn't exist in schema - consultants are tracked via isConsultant field
-      // For now, only ADMIN can access consultant panel
-      setIsConsultant(userRole === 'ADMIN')
-    }
-  }, [session])
-
-  useEffect(() => {
-    if (status === 'loading') return
-
     if (status === 'unauthenticated') {
       router.push(`/sign-in?redirect_url=${encodeURIComponent(pathname)}`)
-      return
     }
-
-    if (status === 'authenticated' && !isConsultant && session?.user?.role) {
-      router.push('/dashboard?error=consultant_required')
-      return
-    }
-  }, [status, isConsultant, router, pathname, session])
+  }, [status, router, pathname])
 
   if (status === 'loading') {
     return (
@@ -60,7 +46,7 @@ function ConsultantAuthWrapper({ children }: { children: React.ReactNode }) {
     )
   }
 
-  if (status === 'unauthenticated' || !isConsultant) {
+  if (status === 'unauthenticated') {
     return null
   }
 
