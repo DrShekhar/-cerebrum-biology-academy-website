@@ -676,25 +676,32 @@ export const apBiologySchools: APBiologySchool[] = [
     schoolType: 'IB Continuum School (India)',
     historyParagraphs: [
       'Pathways World School Aravali is a residential and day IB Continuum school in the Aravali range south of Gurgaon, founded in 2003. It runs the full IB continuum (PYP, MYP and DP), which makes it one of the longer-established full-continuum IB schools in the Delhi NCR region. Day students commute from DLF, Golf Course Road and Sohna Road; boarders study on campus through the evening.',
-      'Pathways Aravali carries one of the larger IB Diploma Biology cohorts in NCR, offering Biology at both HL and SL. Because so many of its students apply to US universities alongside UK and Indian ones, a meaningful share layer an AP Biology exam onto their IB profile as a College-Board-standardised US-admissions credential — the school itself teaches the IB syllabus, and the AP work is done independently for the May exam.',
-      'For Pathways Aravali families the practical need is a track that adds AP Biology without disrupting a demanding IB Diploma load. We run AP Biology as a parallel programme in IST evening slots that fit both day-scholars (joining from home after the commute) and boarders (during scheduled evening study), with weekend intensive blocks when a student is compressing AP prep into the DP timetable.',
+      "Pathways Aravali carries one of the larger IB Diploma Biology cohorts in NCR, offering Biology at both HL and SL. It is also unusual among Gurugram international schools in running the College Board AP programme alongside the IB: per the school's published AP page, AP Biology is among the subjects offered, and the campus is authorised by the AP Program to administer the 2026 AP Exams — so students can both study and sit AP Biology without leaving Aravali Retreat. (The centre does not host AP exams needing extra equipment or a portfolio component — languages, Music Theory, Art and Design, Seminar and Research — none of which affects Biology.)",
+      'That makes Pathways Aravali a different coaching case from the other Gurugram international schools. Students here fall into two groups: those taking the school\'s AP Biology course who want the May exam score converted from "good grades" into a 5, and IB Diploma students layering AP Biology on top of DP Biology for US applications. We support both — the first with FRQ rubric mastery and timed full-length papers on top of the school\'s teaching, the second as a parallel content-plus-assessment track. Sessions run in IST evening slots that suit day-scholars and boarders alike, with weekend intensive blocks when AP prep is being compressed into the DP timetable.',
     ],
     reputationBullets: [
       "Full IB Continuum school (PYP / MYP / DP), founded 2003 — one of NCR's longest-running",
       'One of the larger IB Diploma Biology cohorts in Delhi NCR (HL and SL offered)',
+      "Runs the College Board AP programme alongside the IB — AP Biology is among the subjects offered (per the school's published AP page)",
+      'Authorised by the AP Program to administer the 2026 AP Exams — students can sit AP Biology on campus',
+      'Also a CEEB / ETS / UCAS / TOEFL iBT test centre',
       'Residential + day school; catchment across DLF, Golf Course Road and Sohna Road',
       'Strong US + UK + India university-application profile — the driver for layering AP',
-      'AP Biology prepared independently for the May College Board exam, alongside the IB syllabus',
     ],
     collegeContext:
       'Pathways Aravali graduates apply broadly across US, UK and Indian universities. For the US-bound cohort — especially pre-med and life-sciences applicants — a 4-5 on AP Biology is a common way to add a College-Board-standardised signal on top of IB Diploma predicted grades, and it can earn first-year credit or placement at many US universities.',
     paceAlignment:
-      "IB Diploma Biology and AP Biology overlap heavily in content but differ in assessment: IB rewards the long-response mark scheme and the IA, while AP rewards the six free-response-question (FRQ) rubric and the multiple-choice section under strict timing. We align AP prep to the school's DP calendar — content consolidation through the DP1/DP2 year, then FRQ rubric drilling and timed full-length AP papers in the run-up to the May exam — so the AP layer reinforces rather than competes with IB work.",
+      "Pathways Aravali is one of the few Gurugram schools where a student may already be taking AP Biology in class, so we start by asking which track they are on. For students in the school's AP Biology course, our work is a top-up: FRQ rubric calibration and timed full-length papers against the May paper, not re-teaching content the school already delivers. For IB Diploma students layering AP on top of DP Biology, we teach the shared core once — the two syllabi overlap heavily — then split the assessment coaching, since IB rewards the long-response mark scheme and the IA while AP rewards the six-FRQ rubric and a tightly timed multiple-choice section. Either way we align to the school's DP and AP calendar so the AP layer reinforces rather than competes with school work.",
     faqs: [
       {
         question: 'Does Pathways Aravali offer AP Biology as a school subject?',
         answer:
-          "Most Gurgaon international schools — Pathways Aravali included — run the IB Diploma (and/or Cambridge or CBSE), not the US College Board AP programme as a timetabled subject. Students who want AP Biology on their transcript almost always self-register for the May College Board exam and prepare for it outside school. That is exactly what we coach: a full AP Biology track (Campbell content, FRQ rubric mastery, timed full-length papers) that runs alongside your child's IB or school coursework, without clashing with it.",
+          "Yes. Unlike most Gurugram international schools — which run only the IB Diploma, Cambridge or CBSE — Pathways Aravali offers the College Board AP programme alongside the IB, and AP Biology is among the subjects listed on the school's own AP page. The campus is also authorised by the AP Program to administer the 2026 AP Exams, so students can sit the May exam on site rather than travelling to an external centre. Our role is therefore different here than at a non-AP school: we add exam-specific coaching — FRQ rubric mastery and timed full-length papers — on top of the teaching your child already receives, rather than delivering the course from scratch. For IB Diploma students not taking the school's AP course, we still run AP Biology as a full parallel track. Confirm current subject availability with the school directly, as offerings change year to year.",
+      },
+      {
+        question: 'Can my child sit the AP Biology exam at Pathways Aravali itself?',
+        answer:
+          "Per the school's published AP page, Pathways World School Aravali is authorised by the AP Program to administer the 2026 AP Exams, which means the May exam can be sat on campus. The centre does not host AP exams that need additional equipment or carry a portfolio component (world languages, Music Theory, Art and Design, Seminar and Research) — AP Biology is not in that excluded group. Registration windows for authorised centres in India typically open in mid-September and close in mid-November for the following May, so the decision to add AP Biology needs to be made early in the school year. Always confirm dates and eligibility with the school and College Board directly.",
       },
       {
         question: 'Why would an IB student at Pathways Aravali take AP Biology at all?',
@@ -714,7 +721,7 @@ export const apBiologySchools: APBiologySchool[] = [
       {
         question: 'What does AP Biology coaching cost for a Pathways Aravali student?',
         answer:
-          'Senior-faculty 1:1 AP Biology begins at about $1,800 for a 12-hour block, or roughly $40/hour, with full-year tracks from about $2,500 — well below the $150-400/hour that US-based AP tutors charge over Zoom. Fees are the same whether your child is on the IB Diploma, Cambridge or CBSE track at Pathways Aravali; the AP work is delivered as a parallel programme either way.',
+          "Senior-faculty 1:1 AP Biology begins at about $1,800 for a 12-hour block, or roughly $40/hour, with full-year tracks from about $2,500 — well below the $150-400/hour that US-based AP tutors charge over Zoom. Fees are the same whether your child is taking the school's own AP Biology course or layering AP onto the IB Diploma; what changes is the emphasis — exam-technique top-up in the first case, full content-plus-assessment coverage in the second.",
       },
     ],
   },

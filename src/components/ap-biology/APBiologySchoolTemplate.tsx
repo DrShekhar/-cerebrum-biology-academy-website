@@ -371,11 +371,19 @@ export default function APBiologySchoolTemplate({ school }: APBiologySchoolTempl
                     className={`w-5 h-5 text-slate-500 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`}
                   />
                 </button>
-                {openFaq === idx && (
-                  <div className="px-5 pb-5 text-sm text-slate-700 leading-relaxed faq-answer">
-                    {faq.answer}
-                  </div>
-                )}
+                {/* Always rendered, collapsed with `hidden` rather than
+                    conditionally mounted. These answers are also emitted as
+                    FAQPage structured data, and Google requires that marked-up
+                    content actually exist on the page — it renders JS but does
+                    not click accordions, so a conditionally-mounted answer was
+                    invisible to it while still being claimed in the schema. */}
+                <div
+                  className={`px-5 pb-5 text-sm text-slate-700 leading-relaxed faq-answer ${
+                    openFaq === idx ? '' : 'hidden'
+                  }`}
+                >
+                  {faq.answer}
+                </div>
               </div>
             ))}
           </div>

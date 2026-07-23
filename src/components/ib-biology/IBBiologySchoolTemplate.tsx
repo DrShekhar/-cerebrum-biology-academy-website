@@ -440,11 +440,15 @@ export default function IBBiologySchoolTemplate({ school }: IBBiologySchoolTempl
                     className={`w-5 h-5 text-slate-500 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`}
                   />
                 </button>
-                {openFaq === idx && (
-                  <div className="px-5 pb-5 text-sm text-slate-700 leading-relaxed faq-answer">
-                    {faq.answer}
-                  </div>
-                )}
+                {/* Collapsed with `hidden`, not conditionally mounted: these answers are
+                    also emitted as FAQPage structured data, and Google requires the
+                    marked-up content to exist on the page. Googlebot renders JS but
+                    does not click accordions. */}
+                <div
+                  className={`px-5 pb-5 text-sm text-slate-700 leading-relaxed faq-answer ${openFaq === idx ? '' : 'hidden'}`}
+                >
+                  {faq.answer}
+                </div>
               </div>
             ))}
           </div>
