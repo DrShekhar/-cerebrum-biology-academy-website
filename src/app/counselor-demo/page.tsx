@@ -15,6 +15,7 @@ import {
   useDroppable,
 } from '@dnd-kit/core'
 import { formatDistanceToNow } from 'date-fns'
+import { demoLeads } from './demoLeads'
 
 type LeadStage =
   | 'NEW_LEAD'
@@ -186,23 +187,11 @@ export default function CounselorDemoPage() {
   const sensors = useSensors(useSensor(PointerSensor), useSensor(KeyboardSensor))
 
   useEffect(() => {
-    fetchLeads()
+    // Showcase page — static demo data, no API round-trip (the old
+    // unauthenticated demo endpoint was removed).
+    setLeads(demoLeads as Lead[])
+    setLoading(false)
   }, [])
-
-  async function fetchLeads() {
-    try {
-      setLoading(true)
-      const response = await fetch('/api/counselor/leads/demo')
-      const result = await response.json()
-      if (result.success) {
-        setLeads(result.data)
-      }
-    } catch (error) {
-      console.error('Error fetching leads:', error)
-    } finally {
-      setLoading(false)
-    }
-  }
 
   const filteredLeads = leads.filter((lead) => {
     const matchesSearch =
@@ -287,7 +276,7 @@ export default function CounselorDemoPage() {
               <p className="text-sm text-gray-600 mt-1">Demo Mode - No Authentication Required</p>
             </div>
             <button
-              onClick={fetchLeads}
+              onClick={() => setLeads(demoLeads as Lead[])}
               className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -298,7 +287,7 @@ export default function CounselorDemoPage() {
                   d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
                 />
               </svg>
-              Refresh
+              Reset Demo
             </button>
           </div>
 

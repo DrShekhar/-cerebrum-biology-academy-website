@@ -11,6 +11,7 @@ jest.mock('@/lib/prisma', () => ({
     followup_rules: {
       findUnique: jest.fn(),
       findMany: jest.fn(),
+      count: jest.fn(),
     },
     followup_queue: {
       findFirst: jest.fn(),
@@ -709,7 +710,21 @@ describe('Follow-up Engine', () => {
   })
 
   describe('processTimeTriggers', () => {
-    it('should process all time-based rules', async () => {
+    it('should sweep open leads and evaluate all active rules', async () => {
+      ;(prisma.followup_rules.count as jest.Mock).mockResolvedValue(1)
+      ;(prisma.leads.findMany as jest.Mock).mockResolvedValue([{ id: 'lead-1' }, { id: 'lead-2' }])
+      // processLeadRules internals: assignee lookup + full lead for evaluateRule
+      ;(prisma.leads.findUnique as jest.Mock).mockResolvedValue({
+        id: 'lead-1',
+        assignedToId: 'counselor-1',
+        createdAt: new Date(Date.now() - 8 * 24 * 60 * 60 * 1000),
+        stage: 'NEW_LEAD',
+        crm_communications: [],
+        tasks: [],
+        activities: [],
+        demo_bookings: [],
+        offers: [],
+      })
       ;(prisma.followup_rules.findMany as jest.Mock).mockResolvedValue([
         {
           id: 'rule-1',
@@ -720,17 +735,6 @@ describe('Follow-up Engine', () => {
           delayMinutes: 0,
         },
       ])
-      ;(prisma.leads.findMany as jest.Mock).mockResolvedValue([{ id: 'lead-1' }, { id: 'lead-2' }])
-      ;(prisma.leads.findUnique as jest.Mock).mockResolvedValue({
-        id: 'lead-1',
-        createdAt: new Date(Date.now() - 8 * 24 * 60 * 60 * 1000),
-        stage: 'NEW_LEAD',
-        crm_communications: [],
-        tasks: [],
-        activities: [],
-        demo_bookings: [],
-        offers: [],
-      })
       ;(prisma.followup_rules.findUnique as jest.Mock).mockResolvedValue({
         id: 'rule-1',
         isActive: true,
@@ -740,43 +744,24 @@ describe('Follow-up Engine', () => {
       ;(prisma.followup_queue.findFirst as jest.Mock).mockResolvedValue(null)
       ;(prisma.followup_queue.create as jest.Mock).mockResolvedValue({})
 
-      await processTimeTriggers()
+      const result = await processTimeTriggers()
 
-      expect(prisma.followup_rules.findMany).toHaveBeenCalledWith({
-        where: {
-          isActive: true,
-          triggerType: 'TIME_BASED',
-        },
-      })
+      expect(result).toEqual({ rulesActive: 1, leadsEvaluated: 2, leadsFailed: 0 })
       expect(prisma.leads.findMany).toHaveBeenCalled()
+      expect(prisma.followup_queue.create).toHaveBeenCalled()
     })
 
-    it('should use default timePeriodDays of 7 when not specified', async () => {
-      ;(prisma.followup_rules.findMany as jest.Mock).mockResolvedValue([
-        {
-          id: 'rule-1',
-          isActive: true,
-          triggerType: 'TIME_BASED',
-          triggerConditions: {},
-        },
-      ])
-      ;(prisma.leads.findMany as jest.Mock).mockResolvedValue([])
+    it('should return early when no active rules exist', async () => {
+      ;(prisma.followup_rules.count as jest.Mock).mockResolvedValue(0)
 
-      await processTimeTriggers()
+      const result = await processTimeTriggers()
 
-      // Should calculate cutoff date using 7 days
-      expect(prisma.leads.findMany).toHaveBeenCalled()
+      expect(result).toEqual({ rulesActive: 0, leadsEvaluated: 0, leadsFailed: 0 })
+      expect(prisma.leads.findMany).not.toHaveBeenCalled()
     })
 
     it('should exclude completed and lost leads', async () => {
-      ;(prisma.followup_rules.findMany as jest.Mock).mockResolvedValue([
-        {
-          id: 'rule-1',
-          isActive: true,
-          triggerType: 'TIME_BASED',
-          triggerConditions: { timePeriodDays: 7 },
-        },
-      ])
+      ;(prisma.followup_rules.count as jest.Mock).mockResolvedValue(1)
       ;(prisma.leads.findMany as jest.Mock).mockResolvedValue([])
 
       await processTimeTriggers()
@@ -790,8 +775,19 @@ describe('Follow-up Engine', () => {
       )
     })
 
+    it('should keep sweeping when a single lead fails', async () => {
+      ;(prisma.followup_rules.count as jest.Mock).mockResolvedValue(1)
+      ;(prisma.leads.findMany as jest.Mock).mockResolvedValue([{ id: 'lead-1' }, { id: 'lead-2' }])
+      // processLeadRules throws for every lead (assignee lookup explodes)
+      ;(prisma.leads.findUnique as jest.Mock).mockRejectedValue(new Error('boom'))
+
+      const result = await processTimeTriggers()
+
+      expect(result).toEqual({ rulesActive: 1, leadsEvaluated: 2, leadsFailed: 2 })
+    })
+
     it('should handle errors gracefully', async () => {
-      ;(prisma.followup_rules.findMany as jest.Mock).mockRejectedValue(new Error('Database error'))
+      ;(prisma.followup_rules.count as jest.Mock).mockRejectedValue(new Error('Database error'))
 
       await expect(processTimeTriggers()).rejects.toThrow('Database error')
     })

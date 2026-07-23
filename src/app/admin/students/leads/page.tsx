@@ -96,6 +96,7 @@ interface Pagination {
 interface Stats {
   total: number
   byStage: Record<string, number>
+  byPriority?: Record<string, number>
 }
 
 // Transform API lead to UI lead
@@ -107,7 +108,7 @@ function transformLead(apiLead: APILead): Lead {
     phone: apiLead.phone,
     courseInterest: apiLead.courseInterest ? [apiLead.courseInterest] : [],
     leadSource: apiLead.source.toLowerCase(),
-    leadStage: apiLead.stage.toLowerCase().replace('_', '_'),
+    leadStage: apiLead.stage.toLowerCase(),
     priority: apiLead.priority.toLowerCase(),
     assignedCounselor: apiLead.users?.name,
     assignedToId: apiLead.assignedToId || undefined,
@@ -147,7 +148,12 @@ export default function LeadsPage() {
   const [isAddLeadModalOpen, setIsAddLeadModalOpen] = useState(false)
   const [isEditLeadModalOpen, setIsEditLeadModalOpen] = useState(false)
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null)
-  const [toolRunning, setToolRunning] = useState<'merge' | 'backfill' | null>(null)
+  const [toolRunning, setToolRunning] = useState<'merge' | 'backfill' | 'rebalance' | null>(null)
+
+  // Bulk assignment (row selection → /api/admin/leads/assign)
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set())
+  const [bulkCounselorId, setBulkCounselorId] = useState('')
+  const [bulkAssigning, setBulkAssigning] = useState(false)
 
   // ── CRM maintenance tools (endpoints existed since June with no UI) ──
 
@@ -211,7 +217,7 @@ export default function LeadsPage() {
       }
       if (
         !confirm(
-          `${preview.eligibleWithPhone} content-form lead(s) with phone numbers never reached the CRM. Import them now? (Existing leads are matched by phone, not duplicated.)`
+          `${preview.eligibleWithPhone} capture-log lead(s) (content forms + contact inquiries) with phone numbers. Import them now? (Existing leads are matched by phone, not duplicated.)`
         )
       )
         return
@@ -231,6 +237,72 @@ export default function LeadsPage() {
     }
   }
 
+  const toggleSelect = (id: string) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      return next
+    })
+  }
+
+  const toggleSelectAll = () => {
+    setSelectedIds((prev) =>
+      prev.size === filteredLeads.length ? new Set() : new Set(filteredLeads.map((l) => l.id))
+    )
+  }
+
+  const handleBulkAssign = async () => {
+    if (!bulkCounselorId || selectedIds.size === 0) return
+    try {
+      setBulkAssigning(true)
+      const result = await fetch('/api/admin/leads/assign', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({
+          leadIds: [...selectedIds],
+          counselorId: bulkCounselorId,
+          reason: 'Bulk assignment from admin leads table',
+        }),
+      }).then((r) => r.json())
+      if (!result.success) throw new Error(result.error || 'Assignment failed')
+      toast.success(result.message || `Assigned ${selectedIds.size} lead(s)`)
+      setSelectedIds(new Set())
+      setBulkCounselorId('')
+      fetchLeads()
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : 'Assignment failed')
+    } finally {
+      setBulkAssigning(false)
+    }
+  }
+
+  const handleRebalance = async () => {
+    if (
+      !confirm(
+        'Rebalance distributes ALL leads evenly across active counselors (round-robin). Existing assignments will change. Proceed?'
+      )
+    )
+      return
+    try {
+      setToolRunning('rebalance')
+      const result = await fetch('/api/admin/leads/assign', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ rebalance: true }),
+      }).then((r) => r.json())
+      if (!result.success) throw new Error(result.error || 'Rebalance failed')
+      toast.success(result.message || 'Leads rebalanced across counselors')
+      fetchLeads()
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : 'Rebalance failed')
+    } finally {
+      setToolRunning(null)
+    }
+  }
+
   // Fetch leads from API
   const fetchLeads = useCallback(async () => {
     try {
@@ -242,6 +314,7 @@ export default function LeadsPage() {
       params.set('limit', pagination.limit.toString())
       if (stageFilter !== 'all') params.set('stage', stageFilter.toUpperCase().replace(' ', '_'))
       if (priorityFilter !== 'all') params.set('priority', priorityFilter.toUpperCase())
+      if (sourceFilter !== 'all') params.set('source', sourceFilter.toUpperCase())
       if (searchTerm) params.set('search', searchTerm)
       if (assignedToId) params.set('assignedToId', assignedToId)
 
@@ -257,6 +330,8 @@ export default function LeadsPage() {
         setFilteredLeads(transformedLeads)
         setPagination(data.pagination)
         setStats(data.stats)
+        // Row set changed — a stale selection could bulk-assign unseen leads.
+        setSelectedIds(new Set())
       } else {
         throw new Error(data.error || 'Failed to fetch leads')
       }
@@ -267,7 +342,15 @@ export default function LeadsPage() {
     } finally {
       setLoading(false)
     }
-  }, [pagination.page, pagination.limit, stageFilter, priorityFilter, searchTerm, assignedToId])
+  }, [
+    pagination.page,
+    pagination.limit,
+    stageFilter,
+    priorityFilter,
+    sourceFilter,
+    searchTerm,
+    assignedToId,
+  ])
 
   // Fetch counselors from API
   const fetchCounselors = useCallback(async () => {
@@ -292,16 +375,10 @@ export default function LeadsPage() {
     fetchCounselors()
   }, [fetchLeads, fetchCounselors])
 
-  // Client-side filtering for source (not in API)
+  // Source is filtered server-side (fetchLeads sends it); mirror the list.
   useEffect(() => {
-    let filtered = leads
-
-    if (sourceFilter !== 'all') {
-      filtered = filtered.filter((lead) => lead.leadSource === sourceFilter)
-    }
-
-    setFilteredLeads(filtered)
-  }, [leads, sourceFilter])
+    setFilteredLeads(leads)
+  }, [leads])
 
   const getStageColor = (stage: string) => stageBadgeClass(stage)
 
@@ -344,7 +421,7 @@ export default function LeadsPage() {
     },
     {
       label: 'Hot Leads',
-      value: leads.filter((l) => l.priority === 'hot').length,
+      value: stats.byPriority?.HOT || 0,
       icon: Star,
       color: 'bg-red-100 text-red-600',
     },
@@ -445,6 +522,19 @@ export default function LeadsPage() {
               Merge Duplicates
             </Button>
             <Button
+              variant="outline"
+              className="text-gray-700 border-gray-300"
+              onClick={handleRebalance}
+              disabled={toolRunning !== null}
+            >
+              {toolRunning === 'rebalance' ? (
+                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              ) : (
+                <Users className="w-4 h-4 mr-2" />
+              )}
+              Rebalance Leads
+            </Button>
+            <Button
               className="bg-blue-600 hover:bg-blue-700 text-white"
               onClick={() => setIsAddLeadModalOpen(true)}
             >
@@ -527,14 +617,59 @@ export default function LeadsPage() {
               >
                 <option value="all">All Sources</option>
                 <option value="website">Website</option>
+                <option value="whatsapp">WhatsApp</option>
                 <option value="referral">Referral</option>
                 <option value="social_media">Social Media</option>
                 <option value="advertisement">Advertisement</option>
-                <option value="direct">Direct</option>
+                <option value="event">Event</option>
+                <option value="phone_call">Phone Call</option>
+                <option value="walk_in">Walk-in</option>
+                <option value="email">Email</option>
+                <option value="manual_entry">Manual Entry</option>
+                <option value="other">Other</option>
               </select>
             </div>
           </div>
         </div>
+
+        {/* Bulk-assign bar — appears when rows are selected */}
+        {selectedIds.size > 0 && (
+          <div className="flex flex-wrap items-center gap-3 bg-blue-50 border border-blue-200 rounded-xl px-4 py-3">
+            <span className="text-sm font-medium text-blue-900">
+              {selectedIds.size} lead{selectedIds.size > 1 ? 's' : ''} selected
+            </span>
+            <select
+              value={bulkCounselorId}
+              onChange={(e) => setBulkCounselorId(e.target.value)}
+              className="px-3 py-1.5 border border-blue-200 rounded-lg text-sm bg-white"
+            >
+              <option value="">Assign to counselor…</option>
+              {counselors.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.name}
+                </option>
+              ))}
+            </select>
+            <Button
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+              onClick={handleBulkAssign}
+              disabled={!bulkCounselorId || bulkAssigning}
+            >
+              {bulkAssigning ? (
+                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              ) : (
+                <ArrowRight className="w-4 h-4 mr-2" />
+              )}
+              Assign
+            </Button>
+            <button
+              onClick={() => setSelectedIds(new Set())}
+              className="text-sm text-blue-700 hover:underline ml-auto"
+            >
+              Clear selection
+            </button>
+          </div>
+        )}
 
         {/* Leads Table */}
         <div className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp">
@@ -542,6 +677,17 @@ export default function LeadsPage() {
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
+                  <th className="px-4 py-3">
+                    <input
+                      type="checkbox"
+                      aria-label="Select all leads on this page"
+                      checked={
+                        filteredLeads.length > 0 && selectedIds.size === filteredLeads.length
+                      }
+                      onChange={toggleSelectAll}
+                      className="rounded text-blue-600 w-4 h-4"
+                    />
+                  </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Lead Details
                   </th>
@@ -562,6 +708,15 @@ export default function LeadsPage() {
               <tbody className="bg-white divide-y divide-gray-200">
                 {filteredLeads.map((lead) => (
                   <tr key={lead.id} className="hover:bg-gray-50">
+                    <td className="px-4 py-4">
+                      <input
+                        type="checkbox"
+                        aria-label={`Select ${lead.name}`}
+                        checked={selectedIds.has(lead.id)}
+                        onChange={() => toggleSelect(lead.id)}
+                        className="rounded text-blue-600 w-4 h-4"
+                      />
+                    </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-10 w-10">

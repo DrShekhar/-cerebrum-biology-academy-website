@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
     if (!session?.user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
-    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+    if (!['COUNSELOR', 'ADMIN'].includes((session.user.role || '').toUpperCase())) {
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
     }
 
@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'leadId is required' }, { status: 400 })
     }
 
-    const isAdmin = session.user.role === 'ADMIN'
+    const isAdmin = (session.user.role || '').toUpperCase() === 'ADMIN'
     const lead = await prisma.leads.findFirst({
       where: { id: leadId, ...(isAdmin ? {} : { assignedToId: session.user.id }) },
       select: { id: true },

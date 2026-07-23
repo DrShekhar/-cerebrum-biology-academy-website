@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { upsertLead } from '@/lib/leads/upsertLead'
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,6 +14,21 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // A trial-extension request is a HOT lead — someone who used the product
+    // and wants more. It must land on a counselor's board (lead + 30-min
+    // follow-up task), not only in the analytics log where nobody looks.
+    // upsertLead never throws; on failure Sentry alerts and the daily
+    // leads-reconcile safety net cannot recover this one (no content_leads
+    // row), so keep the analytics event below as the durable record.
+    const crmLead = await upsertLead({
+      phone,
+      email,
+      message,
+      source: `trial-${requestType || 'extension'}-request`,
+      courseInterest: 'Trial extension / course upgrade',
+      priority: 'HOT',
+    })
+
     await prisma.analytics_events.create({
       data: {
         id: `evt_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -24,6 +40,7 @@ export async function POST(request: NextRequest) {
           phone,
           message,
           requestType,
+          crmLeadId: crmLead?.leadId || null,
           timestamp: new Date().toISOString(),
         },
       },

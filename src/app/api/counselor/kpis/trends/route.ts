@@ -16,7 +16,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+    if (!['COUNSELOR', 'ADMIN'].includes((session.user.role || '').toUpperCase())) {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Counselor access only' },
         { status: 403 }
@@ -27,7 +27,10 @@ export async function GET(req: NextRequest) {
     const days = parseInt(searchParams.get('days') || '30')
     const counselorId = searchParams.get('counselorId') || session.user.id
 
-    if (session.user.role === 'COUNSELOR' && counselorId !== session.user.id) {
+    if (
+      (session.user.role || '').toUpperCase() === 'COUNSELOR' &&
+      counselorId !== session.user.id
+    ) {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Can only view own trends' },
         { status: 403 }

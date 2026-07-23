@@ -103,6 +103,7 @@ export default function ConsultantLeads() {
   const searchParams = useSearchParams()
   const [data, setData] = useState<LeadsResponse | null>(null)
   const [loading, setLoading] = useState(true)
+  const [loadingMore, setLoadingMore] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const [status, setStatus] = useState(searchParams.get('status') || 'all')
@@ -158,6 +159,31 @@ export default function ConsultantLeads() {
 
   const handleStatusChange = (newStatus: string) => {
     setStatus(newStatus)
+  }
+
+  // Append the next page (offset = rows already shown) onto the current list.
+  const loadMore = async () => {
+    if (!data || loadingMore) return
+    setLoadingMore(true)
+    try {
+      const params = new URLSearchParams()
+      if (status !== 'all') params.set('status', status)
+      if (debouncedSearch) params.set('search', debouncedSearch)
+      params.set('limit', '50')
+      params.set('offset', String(data.leads.length))
+
+      const response = await fetch(`/api/consultant/leads?${params.toString()}`)
+      const result = await response.json()
+      if (result.success) {
+        setData((prev) =>
+          prev ? { ...result.data, leads: [...prev.leads, ...result.data.leads] } : result.data
+        )
+      }
+    } catch {
+      // keep what's shown; the button stays visible for a retry
+    } finally {
+      setLoadingMore(false)
+    }
   }
 
   return (
@@ -390,12 +416,11 @@ export default function ConsultantLeads() {
             Showing {data.leads.length} of {data.pagination.total} leads
             {data.pagination.hasMore && (
               <button
-                onClick={() => {
-                  // Load more functionality can be added here
-                }}
-                className="ml-2 text-teal-600 hover:text-teal-700 font-medium"
+                onClick={loadMore}
+                disabled={loadingMore}
+                className="ml-2 text-teal-600 hover:text-teal-700 font-medium disabled:opacity-50"
               >
-                Load more
+                {loadingMore ? 'Loading…' : 'Load more'}
               </button>
             )}
           </div>

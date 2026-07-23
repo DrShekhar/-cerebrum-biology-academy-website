@@ -107,6 +107,28 @@ export async function evaluateRule(leadId: string, ruleId: string): Promise<bool
 }
 
 /**
+ * Fire-and-forget wrapper around processLeadRules for event call sites
+ * (lead created, stage changed). Never throws into the caller — a rules
+ * failure must not break a lead write or a public form response.
+ */
+export function scheduleLeadRuleProcessing(leadId: string, context?: string): void {
+  void processLeadRules(leadId).catch((error) => {
+    logError('scheduleLeadRuleProcessing', error, {
+      leadId,
+      context,
+      operation: 'event-driven rule processing',
+    })
+  })
+}
+
+// TIME_BASED and INACTIVITY rules may legitimately re-fire (cooldown = the
+// rule's own period). Every other trigger describes a one-time event
+// (stage reached, demo no-show, offer aging) — those fire once per lead per
+// rule, ever, or the cron backstop would resend them every sweep after the
+// queue item completes.
+const RECURRING_TRIGGERS = new Set(['TIME_BASED', 'INACTIVITY'])
+
+/**
  * Process all active rules for a specific lead
  * Creates queue items for triggered rules
  *
@@ -135,13 +157,26 @@ export async function processLeadRules(leadId: string): Promise<void> {
       const shouldTrigger = await evaluateRule(leadId, rule.id)
 
       if (shouldTrigger) {
-        const existingQueue = await prisma.followup_queue.findFirst({
-          where: {
-            leadId,
-            ruleId: rule.id,
-            status: { in: ['PENDING', 'PROCESSING'] },
-          },
-        })
+        let existingQueue
+        if (RECURRING_TRIGGERS.has(rule.triggerType)) {
+          const conditions = rule.triggerConditions as TriggerConditions
+          const periodDays = conditions.timePeriodDays || conditions.inactivityDays || 7
+          const cooldownStart = new Date(Date.now() - periodDays * 24 * 60 * 60 * 1000)
+          existingQueue = await prisma.followup_queue.findFirst({
+            where: {
+              leadId,
+              ruleId: rule.id,
+              OR: [
+                { status: { in: ['PENDING', 'PROCESSING'] } },
+                { createdAt: { gte: cooldownStart } },
+              ],
+            },
+          })
+        } else {
+          existingQueue = await prisma.followup_queue.findFirst({
+            where: { leadId, ruleId: rule.id },
+          })
+        }
 
         if (!existingQueue) {
           const scheduledFor = new Date()
@@ -181,48 +216,64 @@ export async function processLeadRules(leadId: string): Promise<void> {
 }
 
 /**
- * Process time-based triggers for all leads
- * Should be run periodically via cron job
+ * Cron backstop: evaluate ALL active rules across the open pipeline.
+ *
+ * Instant triggers (STAGE_CHANGE, SCORE_THRESHOLD, …) fire at the event via
+ * scheduleLeadRuleProcessing(); this sweep exists for the triggers that only
+ * become true as time passes (TIME_BASED, INACTIVITY, DEMO_NO_SHOW, an offer
+ * aging past its follow-up window) and as a safety net for events that were
+ * missed. Previously the sweep only ran leads sitting inside a TIME_BASED
+ * rule's createdAt window, so with no active TIME_BASED rule the entire rule
+ * engine produced nothing.
  */
-export async function processTimeTriggers(): Promise<void> {
+export async function processTimeTriggers(): Promise<{
+  rulesActive: number
+  leadsEvaluated: number
+  leadsFailed: number
+}> {
   try {
-    const timeBasedRules = await prisma.followup_rules.findMany({
+    const rulesActive = await prisma.followup_rules.count({ where: { isActive: true } })
+    if (rulesActive === 0) {
+      logInfo('processTimeTriggers', 'No active follow-up rules — nothing to evaluate', {
+        operation: 'rule sweep',
+      })
+      return { rulesActive: 0, leadsEvaluated: 0, leadsFailed: 0 }
+    }
+
+    // 90 days of updatedAt covers the live pipeline (any touchpoint bumps
+    // updatedAt); leads untouched longer than that have already had every
+    // time window expire. Capped so one sweep can't blow the function budget.
+    const cutoff = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000)
+    const openLeads = await prisma.leads.findMany({
       where: {
-        isActive: true,
-        triggerType: 'TIME_BASED',
+        stage: { notIn: ['ENROLLED', 'ACTIVE_STUDENT', 'LOST'] },
+        updatedAt: { gte: cutoff },
       },
+      select: { id: true },
+      orderBy: { updatedAt: 'desc' },
+      take: 1000,
     })
 
-    for (const rule of timeBasedRules) {
-      const conditions = rule.triggerConditions as TriggerConditions
-      const timePeriodDays = conditions.timePeriodDays || 7
-
-      const cutoffDate = new Date()
-      cutoffDate.setDate(cutoffDate.getDate() - timePeriodDays)
-
-      const matchingLeads = await prisma.leads.findMany({
-        where: {
-          createdAt: { gte: cutoffDate },
-          stage: { notIn: ['ENROLLED', 'ACTIVE_STUDENT', 'LOST'] },
-        },
-        select: { id: true },
-      })
-
-      for (const lead of matchingLeads) {
-        const shouldTrigger = await evaluateRule(lead.id, rule.id)
-        if (shouldTrigger) {
-          await processLeadRules(lead.id)
-        }
+    let leadsFailed = 0
+    for (const lead of openLeads) {
+      try {
+        await processLeadRules(lead.id)
+      } catch {
+        // already logged inside processLeadRules — keep sweeping
+        leadsFailed++
       }
     }
 
-    logInfo('processTimeTriggers', `Processed time-based trigger rules`, {
-      rulesCount: timeBasedRules.length,
-      operation: 'time-based trigger evaluation',
+    logInfo('processTimeTriggers', `Rule sweep complete`, {
+      rulesActive,
+      leadsEvaluated: openLeads.length,
+      leadsFailed,
+      operation: 'rule sweep',
     })
+    return { rulesActive, leadsEvaluated: openLeads.length, leadsFailed }
   } catch (error) {
     logError('processTimeTriggers', error, {
-      operation: 'time-based trigger processing',
+      operation: 'rule sweep',
     })
     throw error
   }

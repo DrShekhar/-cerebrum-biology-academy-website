@@ -42,7 +42,7 @@ async function viewerFromSession(): Promise<LeadViewer | NextResponse> {
   if (!session?.user) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
-  if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+  if (!['COUNSELOR', 'ADMIN'].includes((session.user.role || '').toUpperCase())) {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
   }
   return { userId: session.user.id, role: session.user.role }

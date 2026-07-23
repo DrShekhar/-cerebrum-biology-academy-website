@@ -35,10 +35,9 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Error capturing blog lead:', error)
 
-    // Still return success to not block user experience
-    return NextResponse.json({
-      success: true,
-      message: 'Query tracked',
-    })
+    // The caller fires-and-forgets (WhatsApp opens regardless), so an honest
+    // error status costs nothing — and a silent fake success would hide a
+    // broken analytics write forever.
+    return NextResponse.json({ success: false, error: 'Failed to track query' }, { status: 500 })
   }
 }

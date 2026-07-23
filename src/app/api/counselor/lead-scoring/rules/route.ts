@@ -5,35 +5,117 @@ export const dynamic = 'force-dynamic'
 
 // Lead-scoring rules — READ-ONLY mirror of the actual engine.
 //
-// This route previously returned empty placeholder rules and a POST that
-// claimed to save while writing nothing ("store in memory") — the UI showed a
-// success toast for edits that never took effect. The scoring weights live in
-// code (rescore/route.ts); until they move to configuration, GET reports the
-// REAL rules the engine applies and POST honestly refuses.
+// The scoring weights live in code (src/lib/leadScoring.ts — the same engine
+// used at capture time AND by bulk rescore); until they move to
+// configuration, GET reports the REAL factors the engine applies and POST
+// honestly refuses. Shape matches the page's ScoringRule interface
+// (label/category/description/isActive with UPPERCASE categories) so the
+// rules actually render in their category groups.
 
 const ENGINE_RULES = [
-  { id: 'demo_attended', name: 'Demo attended', points: 30, category: 'Behavioral' },
-  { id: 'demo_scheduled', name: 'Demo scheduled', points: 15, category: 'Behavioral' },
-  { id: 'fee_plan', name: 'Fee plan created', points: 20, category: 'Behavioral' },
+  // DEMOGRAPHIC (max 25)
   {
-    id: 'stage_progression',
-    name: 'Stage progression bonus (OFFER_SENT +15 … PAYMENT_PLAN_CREATED +50)',
-    points: 50,
-    category: 'Stage',
+    id: 'has_contact_info',
+    event: 'CONTACT_INFO',
+    label: 'Email + phone on file',
+    category: 'DEMOGRAPHIC',
+    points: 10,
+    description: '+5 for email, +5 for phone',
+    isActive: true,
   },
   {
-    id: 'whatsapp_replies',
-    name: 'WhatsApp replies in last 7 days (+10 each, max 30)',
-    points: 30,
-    category: 'Engagement',
+    id: 'source_quality',
+    event: 'SOURCE_QUALITY',
+    label: 'Lead source quality',
+    category: 'DEMOGRAPHIC',
+    points: 10,
+    description: 'Website/Referral +10, Phone +9, WhatsApp +8, Walk-in +7, Social +6, Manual +4',
+    isActive: true,
+  },
+  // BEHAVIORAL (max 30)
+  {
+    id: 'activity_volume',
+    event: 'ACTIVITY_VOLUME',
+    label: 'Activity on the lead',
+    category: 'BEHAVIORAL',
+    points: 8,
+    description: '1+ activities +2, 5+ +5, 10+ +8',
+    isActive: true,
   },
   {
-    id: 'inbound_call',
-    name: 'Parent called back (last 7 days)',
-    points: 25,
-    category: 'Engagement',
+    id: 'communication_volume',
+    event: 'COMMUNICATION_VOLUME',
+    label: 'Communications logged',
+    category: 'BEHAVIORAL',
+    points: 7,
+    description: '1+ +2, 5+ +4, 10+ +7',
+    isActive: true,
   },
-  { id: 'session_notes', name: '3+ session notes', points: 10, category: 'Engagement' },
+  {
+    id: 'tasks_notes',
+    event: 'TASKS_NOTES',
+    label: 'Completed tasks & notes',
+    category: 'BEHAVIORAL',
+    points: 10,
+    description: 'Completed tasks up to +5, notes up to +5',
+    isActive: true,
+  },
+  {
+    id: 'stage_progress',
+    event: 'STAGE_PROGRESS',
+    label: 'Pipeline stage progress',
+    category: 'BEHAVIORAL',
+    points: 10,
+    description: 'Demo scheduled +6 … negotiation +10',
+    isActive: true,
+  },
+  // ENGAGEMENT (max 30)
+  {
+    id: 'demo',
+    event: 'DEMO',
+    label: 'Demo booked / attended',
+    category: 'ENGAGEMENT',
+    points: 15,
+    description: 'Booked +10, attended +15',
+    isActive: true,
+  },
+  {
+    id: 'response_speed',
+    event: 'RESPONSE_SPEED',
+    label: 'First contact speed',
+    category: 'ENGAGEMENT',
+    points: 10,
+    description: 'Contacted within 24h +10, 48h +7, 72h +4, later +2',
+    isActive: true,
+  },
+  {
+    id: 'recent_comms',
+    event: 'RECENT_COMMS',
+    label: 'Conversations this week',
+    category: 'ENGAGEMENT',
+    points: 5,
+    description: '1+ in last 7 days +3, 3+ +5',
+    isActive: true,
+  },
+  // TIMELINE / NEGATIVE (max 15, staleness subtracts)
+  {
+    id: 'freshness',
+    event: 'FRESHNESS',
+    label: 'Lead freshness & follow-up hygiene',
+    category: 'ENGAGEMENT',
+    points: 15,
+    description: 'New lead +5, contacted in last 3 days +5, follow-up scheduled +5',
+    isActive: true,
+  },
+  {
+    id: 'staleness',
+    event: 'STALENESS',
+    label: 'Gone stale',
+    category: 'NEGATIVE',
+    points: -5,
+    description: '90+ days old −3, no contact 30+ days −2, follow-up overdue −2',
+    isActive: true,
+  },
 ]
 
 export async function GET(_req: NextRequest) {

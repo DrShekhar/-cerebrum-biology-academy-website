@@ -29,7 +29,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+    if (!['COUNSELOR', 'ADMIN'].includes((session.user.role || '').toUpperCase())) {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Counselor access only' },
         { status: 403 }
@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+    if (!['COUNSELOR', 'ADMIN'].includes((session.user.role || '').toUpperCase())) {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Counselor access only' },
         { status: 403 }
@@ -85,7 +85,8 @@ export async function POST(req: NextRequest) {
     let updatedCount = 0
 
     if (validatedData.updateAll) {
-      const counselorId = session.user.role === 'COUNSELOR' ? session.user.id : undefined
+      const counselorId =
+        (session.user.role || '').toUpperCase() === 'COUNSELOR' ? session.user.id : undefined
       updatedCount = await updateAllLeadScores(counselorId)
 
       return NextResponse.json({

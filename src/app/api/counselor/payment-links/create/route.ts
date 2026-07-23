@@ -27,14 +27,14 @@ export async function POST(request: NextRequest) {
     if (!session?.user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
-    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+    if (!['COUNSELOR', 'ADMIN'].includes((session.user.role || '').toUpperCase())) {
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
     }
 
     const body = createSchema.parse(await request.json())
 
     // Tenant isolation: counselor can only create links for leads assigned to them.
-    const isAdmin = session.user.role === 'ADMIN'
+    const isAdmin = (session.user.role || '').toUpperCase() === 'ADMIN'
     const lead = await prisma.leads.findFirst({
       where: { id: body.leadId, ...(isAdmin ? {} : { assignedToId: session.user.id }) },
       select: {
