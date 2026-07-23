@@ -8532,6 +8532,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const southDelhiComplementRoutes: MetadataRoute.Sitemap = [
     '/complement-aakash-coaching-south-delhi',
     '/complement-allen-coaching-south-delhi',
+    // Online classes page (Jul 2026) — mirrors /online-neet-classes-gurugram,
+    // which is emitted via recoveredOrphanRoutes with the same weekly/0.7.
+    '/online-neet-classes-south-delhi',
+    // Switcher-intent pages (Jul 2026) — same family as /aakash-alternative-gurugram
+    // + /allen-alternative-gurugram, which are emitted via recoveredOrphanRoutes
+    // above with the same weekly/0.7.
+    '/aakash-alternative-south-delhi',
+    '/allen-alternative-south-delhi',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: lastUpdated,

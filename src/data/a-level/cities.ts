@@ -640,6 +640,58 @@ export const aLevelCities: ALevelCityConfig[] = [
 
   // ── India (4 cities) ───────────────────────────────────────────────
   {
+    slug: 'south-delhi',
+    cityName: 'South Delhi',
+    countryCode: 'IN',
+    country: 'India',
+    region: 'Delhi NCR',
+    timezone: 'IST',
+    timezoneIana: 'Asia/Kolkata',
+    examBoards: ['CAIE', 'Edexcel'],
+    heroBlurb:
+      "South Delhi is home to The British School and the capital's densest cluster of internationally minded families — Vasant Vihar, Chanakyapuri, GK, Defence Colony. Cerebrum coaches A-Level Biology in person at our South Extension centre (D-35, South Extension Part 2) and online, for students targeting UK and Indian medical schools.",
+    schools: [
+      'The British School New Delhi',
+      'American Embassy School (AP/IB families considering A-Level tuition)',
+      'Vasant Valley School',
+      'Sanskriti School',
+      'The Shri Ram School',
+    ],
+    faqs: [
+      {
+        question: 'Where do South Delhi A-Level Biology students study with Cerebrum?',
+        answer:
+          'In person at our South Extension flagship (D-35, South Extension Part 2, near AIIMS) or our Gulmohar Park centre near Green Park — both minutes from Vasant Vihar, Chanakyapuri, GK and Defence Colony — or live online on IST-friendly slots.',
+      },
+      {
+        question: 'Which A-Level exam boards do South Delhi students use?',
+        answer:
+          'CAIE dominates — The British School New Delhi uses CAIE A-Level Biology. Some students on Edexcel International A-Level are also supported, with board-specific past-paper training.',
+      },
+      {
+        question: 'How much does A-Level Biology tutoring cost in South Delhi?',
+        answer:
+          'Group sessions start at ₹2,000/hr. Annual programme packages from ₹60,000/year. 1:1 examiner-style sessions are also available at the South Extension centre or online.',
+      },
+      {
+        question: 'Can Cerebrum prepare a South Delhi student for both A-Level and NEET Biology?',
+        answer:
+          'Yes. Several South Delhi families keep UK and Indian medical options open. Our integrated track covers both curricula, using the heavy overlap in cell biology, genetics and human physiology.',
+      },
+      {
+        question: 'Which universities do South Delhi A-Level students target?',
+        answer:
+          "Mostly UK Russell Group (Imperial, UCL, Edinburgh, King's) for medicine and biosciences; some also use A-Level grades for Indian private medical colleges alongside NEET.",
+      },
+    ],
+    pricing: {
+      localCurrency: 'INR',
+      currencySymbol: '₹',
+      perHour: 2000,
+      perHourText: '₹2,000–3,500/hr',
+    },
+  },
+  {
     slug: 'delhi-ncr',
     cityName: 'Delhi NCR',
     countryCode: 'IN',
