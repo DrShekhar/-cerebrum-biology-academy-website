@@ -251,6 +251,24 @@ export default function NEETBiologyMCQPage() {
         if (storedUserId) {
           setFreeUserId(storedUserId)
           setHasLeadCaptured(true)
+          // One-time: link this anonymous practice history to the signed-in
+          // account (no-ops with 401 for guests; idempotent server-side).
+          // Without this, signing up used to lose all practice history.
+          if (localStorage.getItem('mcq_history_claimed') !== storedUserId) {
+            fetch('/api/mcq/claim', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              credentials: 'include',
+              body: JSON.stringify({ freeUserId: storedUserId }),
+            })
+              .then((r) => r.json())
+              .then((data) => {
+                if (data?.success && data?.claimed) {
+                  localStorage.setItem('mcq_history_claimed', storedUserId)
+                }
+              })
+              .catch(() => {})
+          }
           // Fetch user stats
           const statsRes = await fetch(`/api/mcq/stats?freeUserId=${storedUserId}`)
           if (statsRes.ok) {

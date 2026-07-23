@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { auth } from '@/lib/auth'
 import { rateLimit } from '@/lib/rateLimit'
 import {
   calculateXPForAnswer,
@@ -293,6 +294,26 @@ export async function POST(request: NextRequest) {
               badges: [],
             },
           })
+        }
+
+        // Link this practice profile to the signed-in account, so MCQ history
+        // survives signup/login instead of living only in localStorage. If the
+        // account already owns a different stats row, /api/mcq/claim merges.
+        if (!userStats.userId) {
+          const session = await auth().catch(() => null)
+          const sessionUserId = session?.user?.id
+          if (sessionUserId) {
+            try {
+              await prisma.mcq_user_stats.update({
+                where: { id: userStats.id },
+                data: { userId: sessionUserId },
+              })
+              userStats = { ...userStats, userId: sessionUserId }
+            } catch {
+              // unique(userId) already claimed by another row — merge happens
+              // via /api/mcq/claim; don't block the answer submission.
+            }
+          }
         }
 
         const previousXp = userStats.totalXp
