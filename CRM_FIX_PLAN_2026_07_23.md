@@ -6,6 +6,42 @@ Legend: **P0** = losing leads/revenue today · **P1** = broken UI or misleading 
 
 ---
 
+## ✅ STATUS — updated 2026-07-23 (end of day)
+
+All code phases (1–4) are **implemented and committed** on branch `fix/crm-phase1-followups` (4 commits, based on origin/main). `npx tsc --noEmit` is fully green (was 2 errors); followupEngine tests 44/44.
+
+| Item | Status | Commit |
+|---|---|---|
+| 1.1 Demo form → API | **SKIPPED by owner decision** — WhatsApp-direct flow kept so owner keeps getting direct messages | — |
+| 1.2 Event-driven follow-up rules | ✅ Done — rules fire on lead create/touchpoint (`upsertLead`) + stage change (`updateLeadFields`); cron sweep rewritten as all-rule-types backstop; dedup hardened (event rules once-per-lead-per-rule; TIME_BASED/INACTIVITY cooldown) | `0403d70` |
+| 1.3 trial/contact → CRM | ✅ Done — HOT lead + counselor task; analytics kept | `0403d70` |
+| 1.4 Silent-failure visibility | ✅ Done — Sentry on upsertLead failure + daily `/api/cron/leads-reconcile` (3:15 AM IST) | `0403d70` |
+| 2.1 Merge Duplicates endpoint | ✅ Done — transactional per-group merge, 13 child relations re-parented, mergedFrom audit, dry-run default | `ce0681d` |
+| 2.2 Consultant Load more | ✅ Done — real offset pagination | `ce0681d` |
+| 2.3 Lead-scoring honesty | ✅ Done — rescore now uses the live engine (was a 3rd divergent algorithm); rules API mirrors real engine (categories now render — they previously rendered EMPTY); fake preview diff removed; rescore hidden for non-admin | `ce0681d` |
+| 2.4 Source filter + Hot tile server-side | ✅ Done — also removed bogus "direct" source option | `ce0681d` |
+| 2.5 Bulk assign UI | ✅ Done — checkboxes + assign bar + Rebalance button wired to the orphaned assign API | `ce0681d` |
+| 2.6 Button.tsx casing | ✅ Done — BOTH casings were git-tracked; lowercase duplicate removed; also fixed MarkdownWithDiagrams TS error → tsc fully green | `ce0681d` |
+| 3.1 /consultant server-side auth | ✅ Done — middleware protection + server-component layout gate (consultants row OR admin — same rule as the APIs; the old client-only gate admitted ONLY admins) | `0e25faf` |
+| 3.2 Auth hygiene | ✅ Done — 13 routes' role checks normalized; unauth mock endpoint deleted (demo page now uses static data); crons on shared requireCronAuth | `0e25faf` |
+| 3.3 Consultant commissions | ✅ Conservative fix — honest "pending admin confirmation" note; box renders only with real data. Auto-creating commissions on ENROLLED = **open owner decision** | `0e25faf` |
+| 4.1 contact_inquiries backfill | ✅ Done — backfill route + nightly reconcile scan both capture logs | `f91e1d9` |
+| 4.2 Email-only captures | ✅ Done — email-match → touchpoint on existing lead (no phoneless lead creation) | `f91e1d9` |
+| 4.3 Drip sequences | ✅ Done — **correction: sending was ALREADY wired** (dbDripProcessor, hourly nurturing cron; the CRUD route's note was stale). Fixed: triggerStage enum validation, hours-input dropped on save, stats from real execution markers | `f91e1d9` |
+| 4.4 Dead endpoints | ✅ Done — seo/leads/capture + leads/whatsapp-gate deleted; blog-query honest 500. Interakt template workaround stays until `seo_content_approval` template is approved | `f91e1d9` |
+| 4.5 Phone normalizer | ✅ Done — utils/phone delegates to canonical @/lib/leads/phone | `f91e1d9` |
+| 4.6 leadId FK consolidation | ⏳ DEFERRED — needs Prisma schema migration against prod DB; schedule separately | — |
+
+### Still needs the owner (nothing else blocks)
+
+1. **Push the branch**: `git push -u origin fix/crm-phase1-followups` (no GitHub credentials in the agent session).
+2. **Phase 0 env verification** in Vercel prod: WhatsApp (`WHATSAPP_ACCESS_TOKEN`+`WHATSAPP_PHONE_NUMBER_ID` or `INTERAKT_API_KEY`), `RESEND_API_KEY`, Twilio/MSG91, `WEBHOOK_SECRET_*` (**unset = prod rejects ALL partner leads**), `CRON_SECRET`. Then one live smoke test per channel.
+3. **Activation**: create ≥1 active rule in `/counselor/followup/rules`; toggle authored drip sequences to Active.
+4. **Open decisions**: (a) auto-create commission on consultant ENROLLED, or keep admin-side? (b) keep or remove the `ADMIN_ACCESS_KEY` side door (`src/lib/auth/admin-auth.ts`)?
+5. ~~Remove stale `SMTP_*` lines from `.env.example`~~ ✅ done in the status-update commit.
+
+---
+
 ## Phase 0 — Production config verification (½ day, no code)
 
 The send pipeline and partner webhooks are code-complete but silently no-op or fail closed without env keys. Before any code fix, confirm in Vercel production env:
