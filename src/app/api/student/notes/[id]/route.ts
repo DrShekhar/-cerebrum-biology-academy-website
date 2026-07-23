@@ -5,14 +5,7 @@ import type { NoteType } from '@/types/prisma-enums'
 
 export const dynamic = 'force-dynamic'
 
-// NOTE: schema drift — the `notes` model in prisma/schema.prisma is a CRM
-// lead-note model (leadId/content/createdById) and lacks the student-note
-// columns this route uses (title, noteType, isArchived, isFavorite,
-// lastEditedAt, studentId, etc.). No replacement model exists in the schema.
-// Casting to `any` to preserve existing runtime behavior without fabricating
-// columns. This route requires a real `student_notes` schema to work.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const notesModel = (prisma as any).notes
+const notesModel = prisma.student_notes
 
 // ============================================
 // TYPES
@@ -138,7 +131,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
     if (body.isArchived !== undefined) updateData.isArchived = body.isArchived
     if (body.metadata !== undefined) updateData.metadata = body.metadata
 
-    const note = await prisma.notes.update({
+    const note = await prisma.student_notes.update({
       where: { id },
       data: updateData,
     })

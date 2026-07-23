@@ -3331,6 +3331,7 @@ model users {
   student_group_members                                                 student_group_members[]
   achiever_nominations                                                  achiever_nominations[]
   self_evaluations                                                      self_evaluations[]
+  student_notes                                                         student_notes[]
   work_tracking                                                         work_tracking[]
   marketing_campaigns                                                   marketing_campaigns[]
   accounts                                                              accounts[]
@@ -5117,6 +5118,39 @@ model whatsapp_opt_outs {
   createdAt DateTime @default(now())
 
   @@index([phone])
+}
+
+// Student personal notes (the /student/notes notebook). Distinct from the CRM
+// `notes` model (lead comments) — /api/student/notes previously queried that
+// model by mistake and 500'd on every request (schema drift fixed 2026-07-23,
+// migration 20260723120000_add_student_notes).
+model student_notes {
+  id           String   @id @default(cuid())
+  studentId    String
+  title        String
+  noteType     NoteType @default(TEXT)
+  content      Json
+  thumbnail    String?
+  courseId     String?
+  chapterId    String?
+  topicId      String?
+  tags         String[] @default([])
+  isFavorite   Boolean  @default(false)
+  isArchived   Boolean  @default(false)
+  metadata     Json?
+  lastEditedAt DateTime @default(now())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  users        users    @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@index([studentId, isArchived, lastEditedAt])
+  @@index([studentId, isFavorite])
+}
+
+enum NoteType {
+  TEXT
+  DRAWING
+  MIXED
 }
 
 // Student groups (batches/cohorts) — admin-curated sets of students that can

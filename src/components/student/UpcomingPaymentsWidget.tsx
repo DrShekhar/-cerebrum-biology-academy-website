@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { PaymentStatusBadge } from './PaymentStatusBadge'
+import { PayInstallmentButton } from './PayInstallmentButton'
 import { Calendar, AlertCircle, Clock, CreditCard, ChevronRight } from 'lucide-react'
 import { showToast } from '@/lib/toast'
 import { cn } from '@/lib/utils'
@@ -203,16 +204,18 @@ export function UpcomingPaymentsWidget({
                   </div>
                 </div>
 
-                {payment.paymentLink && (
+                {payment.status !== 'PAID' && (
                   <div className="mt-3 pt-3 border-t">
-                    <Button
-                      variant={isOverdue ? 'destructive' : 'primary'}
-                      size="sm"
-                      className="w-full"
-                      onClick={() => window.open(payment.paymentLink!, '_blank')}
-                    >
-                      {isOverdue ? 'Pay Now (Overdue)' : 'Pay Now'}
-                    </Button>
+                    {/* Inline Razorpay checkout — previously a Pay button only
+                        appeared when a counselor had generated an external
+                        payment link, so most installments were unpayable. */}
+                    <PayInstallmentButton
+                      installmentId={payment.id}
+                      amountDue={Number(payment.amount) - Number(payment.paidAmount || 0)}
+                      courseName={payment.feePlan?.courseName || 'Course Payment'}
+                      isOverdue={isOverdue}
+                      onPaid={fetchUpcomingPayments}
+                    />
                   </div>
                 )}
               </div>

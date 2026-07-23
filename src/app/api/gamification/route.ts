@@ -23,21 +23,22 @@ export async function GET(request: NextRequest) {
     const session = await auth()
     const authenticatedUserId = session?.user?.id
 
-    // Determine which user to fetch
-    const isPaidUser = !!authenticatedUserId && !freeUserId
-    const userIdToQuery = freeUserId || userId || authenticatedUserId
-
-    if (!userIdToQuery) {
-      return NextResponse.json({ error: 'Missing userId or freeUserId parameter' }, { status: 400 })
-    }
-
-    // Fetch data based on user type
-    if (isPaidUser && authenticatedUserId === userIdToQuery) {
+    // Signed-in users always get THEIR OWN data — query params are ignored
+    // (previously any caller could pass an arbitrary userId/freeUserId and
+    // read another user's stats).
+    if (authenticatedUserId) {
       return await getPaidUserGamification(authenticatedUserId)
     }
 
-    // Legacy free user gamification
-    return await getFreeUserGamification(userIdToQuery)
+    // Anonymous callers may only use the self-issued freeUserId token from
+    // their own localStorage (same identity model as the MCQ endpoints) —
+    // never an arbitrary account userId.
+    if (!freeUserId) {
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
+    }
+    void userId // accepted but intentionally unused for anonymous callers
+
+    return await getFreeUserGamification(freeUserId)
   } catch (error) {
     console.error('Error fetching gamification data:', error)
     return NextResponse.json(
