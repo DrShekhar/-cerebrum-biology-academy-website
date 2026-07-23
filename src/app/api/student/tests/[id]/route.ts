@@ -10,6 +10,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { isAnswerCorrect, resolveCorrectIndex } from '@/lib/tests/answerKey'
+import { recordTestXp } from '@/lib/gamification/xpEvents'
+import { checkAndAwardBadges } from '@/lib/gamification/badges'
 
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
@@ -407,6 +409,19 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
           console.error('Failed to record per-question responses:', responseError)
         }
       }
+
+      // Account-level XP + badges for completing an assigned test (dashboard
+      // XP breakdown / badge showcase). Best-effort, never blocks submission.
+      const finalScore = Math.max(0, totalScore)
+      void recordTestXp(submission.studentId, {
+        testId: assignment.id,
+        score: finalScore,
+        totalMarks: assignment.totalMarks,
+        isPerfect: assignment.totalMarks > 0 && finalScore === assignment.totalMarks,
+      }).catch(() => {})
+      void checkAndAwardBadges(submission.studentId, {
+        testScore: assignment.totalMarks > 0 ? (finalScore / assignment.totalMarks) * 100 : 0,
+      }).catch(() => {})
 
       const percentage = (totalScore / assignment.totalMarks) * 100
 

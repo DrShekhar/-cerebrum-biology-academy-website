@@ -14,6 +14,8 @@ import {
   checkBadgeUnlock,
 } from '@/lib/mcq/gamification'
 import type { AnswerSubmission, AnswerResult, UserStats, QuestionType } from '@/lib/mcq/types'
+import { recordMcqXp } from '@/lib/gamification/xpEvents'
+import { checkAndAwardBadges } from '@/lib/gamification/badges'
 import { Prisma, type DifficultyLevel } from '@/generated/prisma'
 
 // Helper to check if a table doesn't exist error
@@ -411,6 +413,28 @@ export async function POST(request: NextRequest) {
               totalXp: { increment: badgeXp },
             },
           })
+        }
+
+        // Feed the account-level gamification tables (xp events + badge rows)
+        // for signed-in users. These power the dashboard's XP breakdown and
+        // badge showcase, which rendered EMPTY before because their recorders
+        // existed but were never called from any activity path.
+        if (userStats.userId) {
+          const accountUserId = userStats.userId
+          const xpDifficulty =
+            questionDifficulty === 'EXPERT'
+              ? 'HARD'
+              : (questionDifficulty as 'EASY' | 'MEDIUM' | 'HARD')
+          void recordMcqXp(accountUserId, {
+            difficulty: xpDifficulty,
+            isFirstAttempt: true,
+            currentStreak: newStreak,
+            sessionId,
+            questionId,
+          }).catch(() => {})
+          void checkAndAwardBadges(accountUserId, {
+            sessionQuestions: newTotalQuestions,
+          }).catch(() => {})
         }
 
         return {
