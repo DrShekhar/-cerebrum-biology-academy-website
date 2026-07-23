@@ -21,7 +21,14 @@
  * (a caller-supplied `pre` still wins for non-diagram blocks).
  */
 
-import { Children, isValidElement, type ComponentProps, type ReactNode } from 'react'
+import {
+  Children,
+  createElement,
+  isValidElement,
+  type ComponentProps,
+  type ElementType,
+  type ReactNode,
+} from 'react'
 import ReactMarkdown, { type Components } from 'react-markdown'
 import { LessonDiagram, type DiagramKind } from './LessonDiagram'
 
@@ -73,8 +80,10 @@ function buildComponents(extra?: Components): Components {
         )
       }
       // Defer to a caller-supplied `pre` for ordinary code blocks, else default.
+      // Components['pre'] admits any tag-name string, so a JSX spread would be
+      // checked against every intrinsic element — createElement sidesteps that.
       const ExtraPre = extra?.pre
-      return ExtraPre ? <ExtraPre {...props} /> : <pre {...props} />
+      return ExtraPre ? createElement(ExtraPre as ElementType, props) : <pre {...props} />
     },
   }
 }

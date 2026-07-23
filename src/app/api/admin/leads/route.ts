@@ -69,17 +69,30 @@ export async function GET(request: NextRequest) {
       prisma.leads.count({ where }),
     ])
 
-    // Get stage counts for stats
-    const stageCounts = await prisma.leads.groupBy({
-      by: ['stage'],
-      _count: { id: true },
-    })
+    // Get stage + priority counts for the stat tiles (global, like byStage)
+    const [stageCounts, priorityCounts] = await Promise.all([
+      prisma.leads.groupBy({
+        by: ['stage'],
+        _count: { id: true },
+      }),
+      prisma.leads.groupBy({
+        by: ['priority'],
+        _count: { id: true },
+      }),
+    ])
 
     const stats = {
       total,
       byStage: stageCounts.reduce(
         (acc, item) => {
           acc[item.stage] = item._count.id
+          return acc
+        },
+        {} as Record<string, number>
+      ),
+      byPriority: priorityCounts.reduce(
+        (acc, item) => {
+          acc[item.priority] = item._count.id
           return acc
         },
         {} as Record<string, number>

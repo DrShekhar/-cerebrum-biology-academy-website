@@ -18,6 +18,7 @@ import {
   RefreshCw,
 } from 'lucide-react'
 import { showToast } from '@/lib/toast'
+import { useAuth } from '@/contexts/AuthContext'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -37,184 +38,10 @@ interface LeadScorePreview {
   phone: string
   stage: string
   priority: string
-  currentScore: number
-  calculatedScore: number
+  /** Stored score as last written by the scoring engine — not a simulation. */
+  score: number
   breakdown: { rule: string; points: number }[]
 }
-
-// ─── Default Scoring Rules ───────────────────────────────────────────────────
-
-const DEFAULT_RULES: ScoringRule[] = [
-  // Behavioral signals
-  {
-    id: 'demo_attended',
-    event: 'DEMO_ATTENDED',
-    label: 'Demo class attended',
-    category: 'BEHAVIORAL',
-    points: 30,
-    description: 'Student attended a demo class',
-    isActive: true,
-  },
-  {
-    id: 'scholarship_test',
-    event: 'SCHOLARSHIP_TEST_TAKEN',
-    label: 'Scholarship test taken',
-    category: 'BEHAVIORAL',
-    points: 35,
-    description: 'Student attempted scholarship admission test',
-    isActive: true,
-  },
-  {
-    id: 'parent_callback',
-    event: 'PARENT_CALLBACK',
-    label: 'Parent called back',
-    category: 'BEHAVIORAL',
-    points: 25,
-    description: 'Parent initiated a callback or followup',
-    isActive: true,
-  },
-  {
-    id: 'campus_visit',
-    event: 'CAMPUS_VISIT',
-    label: 'Campus/center visit',
-    category: 'BEHAVIORAL',
-    points: 20,
-    description: 'Student/parent visited the center in person',
-    isActive: true,
-  },
-  {
-    id: 'fee_doc_viewed',
-    event: 'FEE_DOC_VIEWED',
-    label: 'Fee document viewed',
-    category: 'BEHAVIORAL',
-    points: 20,
-    description: 'Parent opened fee structure PDF',
-    isActive: true,
-  },
-
-  // Demographic fit
-  {
-    id: 'class_12',
-    event: 'CLASS_12_STUDENT',
-    label: 'Class 12 student',
-    category: 'DEMOGRAPHIC',
-    points: 20,
-    description: 'Currently in Class 12 — ideal NEET timing',
-    isActive: true,
-  },
-  {
-    id: 'dropper',
-    event: 'DROPPER_WITH_SCORE',
-    label: 'Dropper with previous NEET score',
-    category: 'DEMOGRAPHIC',
-    points: 25,
-    description: 'Has attempted NEET before — high intent',
-    isActive: true,
-  },
-  {
-    id: 'local_resident',
-    event: 'LOCAL_RESIDENT',
-    label: 'Local resident (within 10km)',
-    category: 'DEMOGRAPHIC',
-    points: 10,
-    description: 'Lives nearby — lower commute friction',
-    isActive: true,
-  },
-  {
-    id: 'bio_weak',
-    event: 'BIOLOGY_WEAK_SUBJECT',
-    label: 'Biology identified as weak subject',
-    category: 'DEMOGRAPHIC',
-    points: 15,
-    description: 'Perfect fit for biology-focused coaching',
-    isActive: true,
-  },
-
-  // Engagement signals
-  {
-    id: 'wa_opened',
-    event: 'WHATSAPP_OPENED',
-    label: 'WhatsApp message opened',
-    category: 'ENGAGEMENT',
-    points: 5,
-    description: 'Opened a WhatsApp message from counselor',
-    isActive: true,
-  },
-  {
-    id: 'wa_replied',
-    event: 'WHATSAPP_REPLIED',
-    label: 'WhatsApp reply received',
-    category: 'ENGAGEMENT',
-    points: 15,
-    description: 'Student/parent replied to a WhatsApp message',
-    isActive: true,
-  },
-  {
-    id: 'email_opened',
-    event: 'EMAIL_OPENED',
-    label: 'Email opened',
-    category: 'ENGAGEMENT',
-    points: 3,
-    description: 'Opened an email from the institute',
-    isActive: true,
-  },
-  {
-    id: 'website_return',
-    event: 'WEBSITE_RETURN_VISIT',
-    label: 'Returned to website',
-    category: 'ENGAGEMENT',
-    points: 10,
-    description: 'Visited website more than once',
-    isActive: true,
-  },
-  {
-    id: 'brochure_dl',
-    event: 'BROCHURE_DOWNLOADED',
-    label: 'Brochure downloaded',
-    category: 'ENGAGEMENT',
-    points: 8,
-    description: 'Downloaded the course brochure',
-    isActive: true,
-  },
-
-  // Negative signals
-  {
-    id: 'no_response_7d',
-    event: 'NO_RESPONSE_7_DAYS',
-    label: 'No response in 7 days',
-    category: 'NEGATIVE',
-    points: -15,
-    description: 'No engagement for a week — cooling off',
-    isActive: true,
-  },
-  {
-    id: 'no_response_14d',
-    event: 'NO_RESPONSE_14_DAYS',
-    label: 'No response in 14 days',
-    category: 'NEGATIVE',
-    points: -25,
-    description: 'No engagement for two weeks — going cold',
-    isActive: true,
-  },
-  {
-    id: 'demo_no_show',
-    event: 'DEMO_NO_SHOW',
-    label: 'Demo class no-show',
-    category: 'NEGATIVE',
-    points: -20,
-    description: 'Booked demo but did not attend',
-    isActive: true,
-  },
-  {
-    id: 'competitor_mentioned',
-    event: 'COMPETITOR_MENTIONED',
-    label: 'Competitor mentioned',
-    category: 'NEGATIVE',
-    points: -10,
-    description: 'Actively comparing with competitors',
-    isActive: true,
-  },
-]
 
 // ─── Category Config ─────────────────────────────────────────────────────────
 
@@ -297,10 +124,12 @@ function ScoreGauge({ score, size = 'md' }: { score: number; size?: 'sm' | 'md' 
 
 function RuleRow({
   rule,
+  readOnly,
   onUpdate,
   onDelete,
 }: {
   rule: ScoringRule
+  readOnly: boolean
   onUpdate: (rule: ScoringRule) => void
   onDelete: () => void
 }) {
@@ -312,14 +141,16 @@ function RuleRow({
         rule.isActive ? 'bg-white border-gray-200' : 'bg-gray-50 border-gray-100 opacity-60'
       }`}
     >
-      <label className="flex-shrink-0">
-        <input
-          type="checkbox"
-          checked={rule.isActive}
-          onChange={(e) => onUpdate({ ...rule, isActive: e.target.checked })}
-          className="rounded text-indigo-600 w-4 h-4"
-        />
-      </label>
+      {!readOnly && (
+        <label className="flex-shrink-0">
+          <input
+            type="checkbox"
+            checked={rule.isActive}
+            onChange={(e) => onUpdate({ ...rule, isActive: e.target.checked })}
+            className="rounded text-indigo-600 w-4 h-4"
+          />
+        </label>
+      )}
 
       <div className="flex-1 min-w-0">
         <p className="text-sm font-medium text-gray-900">{rule.label}</p>
@@ -327,25 +158,39 @@ function RuleRow({
       </div>
 
       <div className="flex items-center gap-2 flex-shrink-0">
-        <input
-          type="number"
-          value={rule.points}
-          onChange={(e) => onUpdate({ ...rule, points: Number(e.target.value) })}
-          className={`w-16 px-2 py-1.5 border rounded-lg text-center text-sm font-bold ${
-            isNegative
-              ? 'border-red-200 text-red-600 bg-red-50'
-              : 'border-green-200 text-green-600 bg-green-50'
-          }`}
-        />
+        {readOnly ? (
+          <span
+            className={`w-16 px-2 py-1.5 border rounded-lg text-center text-sm font-bold ${
+              isNegative
+                ? 'border-red-200 text-red-600 bg-red-50'
+                : 'border-green-200 text-green-600 bg-green-50'
+            }`}
+          >
+            {rule.points > 0 ? `+${rule.points}` : rule.points}
+          </span>
+        ) : (
+          <input
+            type="number"
+            value={rule.points}
+            onChange={(e) => onUpdate({ ...rule, points: Number(e.target.value) })}
+            className={`w-16 px-2 py-1.5 border rounded-lg text-center text-sm font-bold ${
+              isNegative
+                ? 'border-red-200 text-red-600 bg-red-50'
+                : 'border-green-200 text-green-600 bg-green-50'
+            }`}
+          />
+        )}
         <span className="text-xs text-gray-400">pts</span>
       </div>
 
-      <button
-        onClick={onDelete}
-        className="p-1.5 hover:bg-red-50 text-gray-300 hover:text-red-500 rounded-lg transition-colors flex-shrink-0"
-      >
-        <Trash2 className="w-3.5 h-3.5" />
-      </button>
+      {!readOnly && (
+        <button
+          onClick={onDelete}
+          className="p-1.5 hover:bg-red-50 text-gray-300 hover:text-red-500 rounded-lg transition-colors flex-shrink-0"
+        >
+          <Trash2 className="w-3.5 h-3.5" />
+        </button>
+      )}
     </div>
   )
 }
@@ -353,7 +198,9 @@ function RuleRow({
 // ─── Main Page ───────────────────────────────────────────────────────────────
 
 export default function LeadScoringPage() {
-  const [rules, setRules] = useState<ScoringRule[]>(DEFAULT_RULES)
+  const { user } = useAuth()
+  const isAdmin = (user?.role || '').toUpperCase() === 'ADMIN'
+  const [rules, setRules] = useState<ScoringRule[]>([])
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
   const [rescoring, setRescoring] = useState(false)
@@ -373,19 +220,19 @@ export default function LeadScoringPage() {
     try {
       setLoading(true)
       const res = await fetch('/api/counselor/lead-scoring/rules', { credentials: 'include' })
-      if (res.ok) {
-        const data = await res.json()
-        if (data.data?.rules?.length > 0) {
-          setRules(data.data.rules)
-          setHotThreshold(data.data.hotThreshold || 70)
-          setWarmThreshold(data.data.warmThreshold || 40)
-        }
-        if (data.data?.editable === false) {
-          setEditable(false)
-        }
+      if (!res.ok) throw new Error('Failed to load scoring rules')
+      const data = await res.json()
+      if (data.data?.rules?.length > 0) {
+        setRules(data.data.rules)
+        setHotThreshold(data.data.hotThreshold || 70)
+        setWarmThreshold(data.data.warmThreshold || 40)
+      }
+      if (data.data?.editable === false) {
+        setEditable(false)
       }
     } catch {
-      // Use default rules
+      // No fabricated fallback rules — say it plainly.
+      showToast.error('Could not load scoring rules')
     } finally {
       setLoading(false)
     }
@@ -435,12 +282,11 @@ export default function LeadScoringPage() {
   async function fetchPreview() {
     try {
       const res = await fetch('/api/counselor/lead-scoring/preview', { credentials: 'include' })
-      if (res.ok) {
-        const data = await res.json()
-        setPreviewLeads(data.data || [])
-      }
+      if (!res.ok) throw new Error()
+      const data = await res.json()
+      setPreviewLeads(data.data || [])
     } catch {
-      // silent
+      showToast.error('Could not load lead scores')
     }
   }
 
@@ -500,18 +346,22 @@ export default function LeadScoringPage() {
           </p>
         </div>
         <div className="flex gap-3">
-          <button
-            onClick={handleRescore}
-            disabled={rescoring}
-            className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors disabled:opacity-50"
-          >
-            {rescoring ? (
-              <Loader2 className="w-4 h-4 animate-spin" />
-            ) : (
-              <RotateCcw className="w-4 h-4" />
-            )}
-            Rescore All Leads
-          </button>
+          {/* Bulk rescore is ADMIN-only server-side — don't show counselors a
+              button that can only fail with a 403. */}
+          {isAdmin && (
+            <button
+              onClick={handleRescore}
+              disabled={rescoring}
+              className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors disabled:opacity-50"
+            >
+              {rescoring ? (
+                <Loader2 className="w-4 h-4 animate-spin" />
+              ) : (
+                <RotateCcw className="w-4 h-4" />
+              )}
+              Rescore All Leads
+            </button>
+          )}
           {editable && (
             <button
               onClick={handleSave}
@@ -528,7 +378,8 @@ export default function LeadScoringPage() {
       {!editable && (
         <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-900">
           Scoring rules are defined in the scoring engine and shown here for reference — the weights
-          below aren&apos;t editable yet. &quot;Rescore All Leads&quot; still works.
+          below aren&apos;t editable yet.
+          {isAdmin && ' "Rescore All Leads" applies this engine to every open lead.'}
         </div>
       )}
 
@@ -570,8 +421,9 @@ export default function LeadScoringPage() {
                 <input
                   type="number"
                   value={hotThreshold}
+                  disabled={!editable}
                   onChange={(e) => setHotThreshold(Number(e.target.value))}
-                  className="w-16 px-2 py-1.5 border border-red-200 rounded-lg text-center text-sm font-bold text-red-600 bg-red-50"
+                  className="w-16 px-2 py-1.5 border border-red-200 rounded-lg text-center text-sm font-bold text-red-600 bg-red-50 disabled:opacity-70"
                 />
               </div>
               <div className="flex items-center gap-3">
@@ -580,8 +432,9 @@ export default function LeadScoringPage() {
                 <input
                   type="number"
                   value={warmThreshold}
+                  disabled={!editable}
                   onChange={(e) => setWarmThreshold(Number(e.target.value))}
-                  className="w-16 px-2 py-1.5 border border-amber-200 rounded-lg text-center text-sm font-bold text-amber-600 bg-amber-50"
+                  className="w-16 px-2 py-1.5 border border-amber-200 rounded-lg text-center text-sm font-bold text-amber-600 bg-amber-50 disabled:opacity-70"
                 />
               </div>
               <div className="flex items-center gap-3">
@@ -615,6 +468,7 @@ export default function LeadScoringPage() {
                       <RuleRow
                         key={rule.id}
                         rule={rule}
+                        readOnly={!editable}
                         onUpdate={(r) => updateRule(ruleIndex, r)}
                         onDelete={() => deleteRule(ruleIndex)}
                       />
@@ -625,20 +479,22 @@ export default function LeadScoringPage() {
             )
           })}
 
-          {/* Add Custom Rule */}
-          <button
-            onClick={addCustomRule}
-            className="flex items-center gap-2 px-4 py-2.5 border-2 border-dashed border-gray-300 text-gray-500 rounded-xl hover:bg-gray-50 transition-colors text-sm font-medium w-full justify-center"
-          >
-            <Plus className="w-4 h-4" /> Add Custom Scoring Rule
-          </button>
+          {/* Add Custom Rule — only when rules are actually editable */}
+          {editable && (
+            <button
+              onClick={addCustomRule}
+              className="flex items-center gap-2 px-4 py-2.5 border-2 border-dashed border-gray-300 text-gray-500 rounded-xl hover:bg-gray-50 transition-colors text-sm font-medium w-full justify-center"
+            >
+              <Plus className="w-4 h-4" /> Add Custom Scoring Rule
+            </button>
+          )}
         </>
       )}
 
       {activeTab === 'preview' && (
         <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
           <div className="p-4 border-b border-gray-200 flex items-center justify-between">
-            <h3 className="text-sm font-bold text-gray-700">Lead Score Preview</h3>
+            <h3 className="text-sm font-bold text-gray-700">Current Lead Scores</h3>
             <button
               onClick={fetchPreview}
               className="flex items-center gap-1 text-xs text-indigo-600 hover:underline"
@@ -650,9 +506,9 @@ export default function LeadScoringPage() {
           {previewLeads.length === 0 ? (
             <div className="p-8 text-center text-gray-500">
               <BarChart3 className="w-10 h-10 text-gray-300 mx-auto mb-2" />
-              <p className="text-sm">Loading score preview...</p>
+              <p className="text-sm">No scored leads yet</p>
               <p className="text-xs text-gray-400 mt-1">
-                Scores are calculated based on your configured rules
+                Scores shown here are the stored values last calculated by the scoring engine
               </p>
             </div>
           ) : (
@@ -662,7 +518,7 @@ export default function LeadScoringPage() {
                   key={lead.id}
                   className="flex items-center gap-4 px-5 py-4 hover:bg-gray-50 transition-colors"
                 >
-                  <ScoreGauge score={lead.calculatedScore} size="sm" />
+                  <ScoreGauge score={lead.score} size="sm" />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-semibold text-gray-900">{lead.studentName}</p>
                     <div className="flex items-center gap-2 mt-0.5">
@@ -681,24 +537,19 @@ export default function LeadScoringPage() {
                   <div className="text-right">
                     <p
                       className={`text-sm font-bold ${
-                        lead.calculatedScore >= hotThreshold
+                        lead.score >= hotThreshold
                           ? 'text-red-600'
-                          : lead.calculatedScore >= warmThreshold
+                          : lead.score >= warmThreshold
                             ? 'text-amber-600'
                             : 'text-blue-600'
                       }`}
                     >
-                      {lead.calculatedScore >= hotThreshold
+                      {lead.score >= hotThreshold
                         ? '🔥 Hot'
-                        : lead.calculatedScore >= warmThreshold
+                        : lead.score >= warmThreshold
                           ? '⚡ Warm'
                           : '❄️ Cold'}
                     </p>
-                    {lead.currentScore !== lead.calculatedScore && (
-                      <p className="text-[10px] text-gray-400">
-                        was {lead.currentScore} → now {lead.calculatedScore}
-                      </p>
-                    )}
                   </div>
                 </div>
               ))}
