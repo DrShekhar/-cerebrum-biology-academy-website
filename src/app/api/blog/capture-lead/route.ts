@@ -143,12 +143,14 @@ export async function POST(request: NextRequest) {
     })
 
     // Also into the CRM (additive, deduped by phone, never blocks response).
-    // Only when a phone was given — newsletter-email-only signups have no
-    // phone, so they stay in the content_leads log (CRM dedups on phone).
-    if (phone) {
+    // Email-only signups can't CREATE a lead (the CRM keys on phone), but
+    // upsertLeadCore now logs a touchpoint when the email matches an existing
+    // lead — so fire for phone OR email; a no-match email-only signup simply
+    // stays in the content_leads log.
+    if (phone || email) {
       void upsertLead({
         name,
-        phone,
+        phone: phone || '',
         email,
         source: `${source}:${articleSlug || 'blog'}`,
         courseInterest: articleTitle ? `Blog: ${articleTitle}` : 'NEET Biology (blog)',

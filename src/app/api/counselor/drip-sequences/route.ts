@@ -7,9 +7,24 @@ export const dynamic = 'force-dynamic'
 
 // Real drip-sequence CRUD (previously POST/PATCH/DELETE fabricated ids and
 // persisted nothing — saved sequences vanished on reload). Definitions are
-// stored in drip_sequences/drip_sequence_steps; the nurturing processor
-// reading steps from here is a separate owner-approved change, so sequences
-// save inactive and sending stays on the existing hardcoded series.
+// stored in drip_sequences/drip_sequence_steps and SENT by
+// src/lib/automation/dbDripProcessor.ts (hourly `nurturing` cron): sequences
+// save inactive, and flipping the toggle to Active makes them live.
+
+// triggerStage must be a real LeadStage value — dbDripProcessor silently
+// skips sequences whose stage doesn't match the enum, so free text here
+// would create a sequence that never sends.
+const TRIGGER_STAGES = [
+  'NEW_LEAD',
+  'DEMO_SCHEDULED',
+  'DEMO_COMPLETED',
+  'OFFER_SENT',
+  'NEGOTIATING',
+  'PAYMENT_PLAN_CREATED',
+  'ENROLLED',
+  'ACTIVE_STUDENT',
+  'LOST',
+] as const
 
 const stepSchema = z.object({
   order: z.number().int().min(0).max(50),
@@ -25,7 +40,7 @@ const stepSchema = z.object({
 const createSchema = z.object({
   name: z.string().min(1).max(120),
   description: z.string().max(500).optional(),
-  triggerStage: z.string().min(1).max(60),
+  triggerStage: z.enum(TRIGGER_STAGES),
   stopOnStageChange: z.boolean().default(true),
   steps: z.array(stepSchema).min(1).max(20),
 })
@@ -34,49 +49,59 @@ function rand(prefix: string): string {
   return `${prefix}_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`
 }
 
-interface NurturingStat {
-  triggerStage: string
-  totalEnrolled: number
-  active: number
-  completed: number
-  stopped: number
-}
-
-// GET - List sequences with live enrollment stats from whatsapp_nurturing
+// GET - List sequences with REAL execution stats from the dbDripProcessor's
+// `drip_step_sent` activity markers. (Previously stats came from the
+// unrelated whatsapp_nurturing subsystem keyed by source==triggerStage, so
+// the numbers had nothing to do with these sequences.)
 export async function GET() {
   const authResult = await authenticateCounselor()
   if ('error' in authResult) return authResult.error
 
   try {
-    const [sequences, nurturingStats] = await Promise.all([
+    const [sequences, reachedRows, perStepRows] = await Promise.all([
       prisma.drip_sequences.findMany({
         include: { steps: { orderBy: { order: 'asc' } } },
         orderBy: { createdAt: 'desc' },
       }),
       prisma.$queryRaw`
-        SELECT source as "triggerStage",
-          COUNT(*)::int as "totalEnrolled",
-          COUNT(CASE WHEN status = 'ACTIVE' THEN 1 END)::int as active,
-          COUNT(CASE WHEN status = 'COMPLETED' THEN 1 END)::int as completed,
-          COUNT(CASE WHEN status = 'STOPPED' THEN 1 END)::int as stopped
-        FROM whatsapp_nurturing
-        GROUP BY source
-      ` as Promise<NurturingStat[]>,
+        SELECT metadata->>'sequenceId' AS "sequenceId",
+          COUNT(DISTINCT "leadId")::int AS reached
+        FROM activities
+        WHERE action = 'drip_step_sent'
+        GROUP BY 1
+      ` as Promise<Array<{ sequenceId: string; reached: number }>>,
+      prisma.$queryRaw`
+        SELECT metadata->>'sequenceId' AS "sequenceId",
+          (metadata->>'order')::int AS ord,
+          COUNT(DISTINCT "leadId")::int AS leads
+        FROM activities
+        WHERE action = 'drip_step_sent'
+        GROUP BY 1, 2
+      ` as Promise<Array<{ sequenceId: string; ord: number; leads: number }>>,
     ])
 
-    const statsByStage = new Map(nurturingStats.map((s) => [s.triggerStage, s]))
+    const reachedBySeq = new Map(reachedRows.map((r) => [r.sequenceId, r.reached]))
 
     return NextResponse.json({
       success: true,
-      data: sequences.map((seq) => ({
-        ...seq,
-        stats: statsByStage.get(seq.triggerStage) || {
-          totalEnrolled: 0,
-          active: 0,
-          completed: 0,
-          stopped: 0,
-        },
-      })),
+      data: sequences.map((seq) => {
+        const totalEnrolled = reachedBySeq.get(seq.id) || 0
+        // Completed = leads that received the sequence's final step.
+        const maxOrder = seq.steps.length > 0 ? seq.steps[seq.steps.length - 1].order : null
+        const completed =
+          maxOrder === null
+            ? 0
+            : perStepRows.find((r) => r.sequenceId === seq.id && r.ord === maxOrder)?.leads || 0
+        return {
+          ...seq,
+          stats: {
+            totalEnrolled,
+            active: Math.max(0, totalEnrolled - completed),
+            completed,
+            stopped: 0, // per-lead stop tracking doesn't exist yet
+          },
+        }
+      }),
     })
   } catch (error) {
     console.error('Error fetching sequences:', error)

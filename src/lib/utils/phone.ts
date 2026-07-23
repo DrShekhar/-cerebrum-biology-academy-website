@@ -3,18 +3,25 @@
  * Provides consistent phone number handling across the application
  */
 
+import { normalizePhone as canonicalNormalizePhone } from '@/lib/leads/phone'
+
 /**
- * Normalize phone number to last 10 digits (Indian format)
- * Strips all non-numeric characters and takes last 10 digits
+ * Normalize a phone number — delegates to the CANONICAL CRM implementation
+ * (@/lib/leads/phone) so every dedup key in the app agrees.
+ *
+ * Indian numbers collapse to bare 10 digits; international numbers keep
+ * their full digit string. (The old version here blindly took the last 10
+ * digits, which truncated international numbers and could collide two
+ * different foreign numbers onto one key.)
  *
  * @example
  * normalizePhone('+91 88264 44334') // '8826444334'
  * normalizePhone('91-8826444334')   // '8826444334'
- * normalizePhone('8826444334')      // '8826444334'
+ * normalizePhone('+44 7911 123456') // '447911123456'
  */
 export function normalizePhone(phone: string): string {
   if (!phone) return ''
-  return phone.replace(/\D/g, '').slice(-10)
+  return canonicalNormalizePhone(phone)
 }
 
 /**

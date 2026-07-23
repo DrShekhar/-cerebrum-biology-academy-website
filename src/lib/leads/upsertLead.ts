@@ -130,6 +130,36 @@ export async function upsertLeadCore(
   const phone = normalizePhone(input.phone || '')
   // Need at least 8 digits to be a usable lead.
   if (phone.replace(/\D/g, '').length < 8) {
+    // Email-only capture (newsletter signup etc.): the CRM keys and dedups on
+    // phone, so we never CREATE a phoneless lead — but if this email already
+    // belongs to a lead, record the engagement as a touchpoint instead of
+    // dropping the signal on the floor.
+    const email = input.email?.trim()
+    if (email) {
+      const byEmail = await db.leads.findFirst({
+        where: { email: { equals: email, mode: 'insensitive' } },
+        select: { id: true, assignedToId: true },
+      })
+      if (byEmail) {
+        await db.leads.update({
+          where: { id: byEmail.id },
+          data: { updatedAt: new Date() },
+        })
+        await db.activities.create({
+          data: {
+            id: rand('act'),
+            leadId: byEmail.id,
+            userId: byEmail.assignedToId,
+            action: 'LEAD_TOUCHPOINT',
+            description: `Email-only form submission (matched by email)${
+              input.source?.trim() ? ` via ${input.source.trim()}` : ''
+            }${input.message ? ` — ${input.message.slice(0, 200)}` : ''}`,
+            metadata: { source: input.source?.trim() || null, matchedBy: 'email' },
+          },
+        })
+        return { leadId: byEmail.id, created: false, assignedToId: byEmail.assignedToId }
+      }
+    }
     throw new Error('upsertLeadCore: phone too short to be a usable lead')
   }
 
@@ -426,13 +456,19 @@ export async function upsertLead(
 
     return { leadId, created }
   } catch (error) {
+    const message = error instanceof Error ? error.message : 'Unknown error'
+    // Expected no-op: email-only capture with no matching lead (newsletter
+    // signups). Not a failure — don't page ops for it.
+    if (message.includes('phone too short')) {
+      return null
+    }
     // Never break the caller — the capture-log row + WhatsApp already hold it.
     // But a swallowed failure here means a prospect no counselor will ever
     // see, so it must page ops: Sentry + the daily leads-reconcile cron are
     // the safety net.
     logger.error('upsertLead failed (non-blocking)', {
       service: 'upsert-lead',
-      error: error instanceof Error ? error.message : 'Unknown error',
+      error: message,
     })
     captureException(error instanceof Error ? error : new Error(String(error)), {
       service: 'upsert-lead',

@@ -752,8 +752,9 @@ export default function DripSequencesPage() {
             steps: (seq.steps || []).map((st: any, i: number) => ({
               id: st.id,
               stepNumber: (st.order ?? i) + 1,
-              delayDays: Math.round((st.delayHours ?? 0) / 24),
-              delayHours: st.delayHours ?? 0,
+              // Stored total hours split back into the editor's day + hour inputs
+              delayDays: Math.floor((st.delayHours ?? 0) / 24),
+              delayHours: (st.delayHours ?? 0) % 24,
               messageTemplate: st.body || '',
               channel: st.channel || 'WHATSAPP',
               stopOnReply: true,
@@ -787,7 +788,12 @@ export default function DripSequencesPage() {
       stopOnStageChange: seqData.stopOnStageChange,
       steps: (seqData.steps || []).map((s: any, i: number) => ({
         order: i,
-        delayHours: Math.max(0, Math.round((s.delayDays ?? 0) * 24)),
+        // Combine the editor's day + hour inputs (previously the hours input
+        // was silently dropped, losing sub-day timing like "0d 2h").
+        delayHours: Math.min(
+          24 * 60,
+          Math.max(0, Math.round((s.delayDays ?? 0) * 24 + (s.delayHours ?? 0)))
+        ),
         channel: 'WHATSAPP' as const,
         body: s.messageTemplate,
       })),

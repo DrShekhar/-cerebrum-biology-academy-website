@@ -217,7 +217,7 @@ export default function LeadsPage() {
       }
       if (
         !confirm(
-          `${preview.eligibleWithPhone} content-form lead(s) with phone numbers never reached the CRM. Import them now? (Existing leads are matched by phone, not duplicated.)`
+          `${preview.eligibleWithPhone} capture-log lead(s) (content forms + contact inquiries) with phone numbers. Import them now? (Existing leads are matched by phone, not duplicated.)`
         )
       )
         return
