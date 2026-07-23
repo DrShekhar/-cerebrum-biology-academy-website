@@ -1,10 +1,19 @@
 /**
  * /ap-biology-tutor-pathways-aravali
  *
- * Per-school AP Biology feeder page for Pathways World School Aravali (Gurgaon) students.
- * These schools run the IB Diploma / Cambridge / CBSE, NOT AP as a subject;
- * the page targets students self-studying AP Biology for US college
- * applications. Built from APBiologySchoolTemplate + apBiologySchools['pathways-aravali'].
+ * Per-school AP Biology feeder page for Pathways World School Aravali (Gurgaon).
+ *
+ * NOTE: this school is the exception in the Gurugram set. The other Gurugram
+ * feeders (DPS International, Heritage Xperiential, Lancers, Scottish High)
+ * run only IB / Cambridge / CBSE, so those pages correctly target students
+ * SELF-STUDYING AP. Pathways Aravali actually offers the College Board AP
+ * programme — AP Biology included — and is authorised to administer the 2026
+ * AP Exams on campus (https://www.pws.edu.in/gurgaon/ap; the Gurgaon site is
+ * the Aravali Retreat campus). This page was previously copy-pasted from the
+ * self-study template and asserted the school does NOT run AP, which was
+ * simply wrong and understated the strongest AP page in the set.
+ *
+ * Built from APBiologySchoolTemplate + apBiologySchools['pathways-aravali'].
  */
 
 import type { Metadata } from 'next'
@@ -20,14 +29,15 @@ const school = getSchoolBySlug(SLUG)
 export const metadata: Metadata = buildAPBiologySchoolMetadata({
   title: 'AP Biology Tutor for Pathways Aravali Students · Gurgaon · Cerebrum',
   description:
-    'AP Biology tutoring for Pathways World School Aravali (Gurgaon) students self-studying AP for US university applications, alongside their IB or school coursework. AIIMS-trained biology faculty, weekly FRQ feedback vs the College Board rubric, IST evening live classes. From $2,500/yr (1:1 from $40/hr).',
+    'AP Biology tutoring for Pathways World School Aravali (Gurgaon) — one of the few Gurugram schools that runs the College Board AP programme and hosts the AP exam on campus. Score-5 coaching for students in the school AP course, plus a parallel track for IB Diploma students adding AP. AIIMS-trained faculty, weekly FRQ feedback vs the College Board rubric, IST evening classes. From $2,500/yr (1:1 from $40/hr).',
   keywords: [
     'AP Biology tutor Pathways Aravali',
     'AP Biology tutor Pathways World School Aravali',
     'AP Biology coaching Pathways Aravali Gurgaon',
     'AP Biology Pathways Aravali US college applications',
     'AP Biology for IB students Pathways Aravali',
-    'self-study AP Biology Pathways Aravali',
+    'AP Biology exam centre Gurugram',
+    'AP exam centre Pathways World School',
     'online AP Biology tutor Gurgaon',
     'AP Biology Score 5 Pathways Aravali',
     'AP Biology tutor Gurgaon international school',
