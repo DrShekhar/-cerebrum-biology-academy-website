@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getAreaBySlug } from '@/data/south-delhi-areas'
+import { getSouthDelhiEnrichment } from '@/data/south-delhi-enriched'
 import { CEREBRUM_METRICS, AREA_COORDINATES } from '@/lib/constants/metrics'
 import AreaPageContent from './AreaPageContent'
 
@@ -78,8 +79,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
-  const title = getTitleByType(area)
-  const description = getMetaDescriptionByType(area)
+  // Curated indexable localities carry hand-written enrichment metadata
+  // (src/data/south-delhi-enriched.ts); the rest fall back to type templates.
+  const enrichment = getSouthDelhiEnrichment(areaSlug)
+  const title = enrichment?.metaTitle || getTitleByType(area)
+  const description = enrichment?.metaDescription || getMetaDescriptionByType(area)
 
   // Area-type specific keywords
   const typeKeywords: Record<string, string[]> = {
@@ -413,7 +417,7 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
       },
       {
         question: `How can students from ${area.name} reach Cerebrum Biology Academy?`,
-        answer: `Students from ${area.name} can easily reach us via ${area.nearbyMetro[0] || 'metro'}. Our center in Kalu Sarai is well-connected to all parts of South Delhi. We also offer online and hybrid modes for convenience.`,
+        answer: `Students from ${area.name} can easily reach us via ${area.nearbyMetro[0] || 'metro'}. Our flagship centre at ${CEREBRUM_METRICS.mainAddress} is well-connected to all parts of South Delhi. We also offer online and hybrid modes for convenience.`,
       },
       {
         question: `Which schools from ${area.name} have students at Cerebrum?`,

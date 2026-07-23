@@ -85,6 +85,7 @@ export const AREA_COORDINATES: Record<string, { lat: number; lng: number }> = {
   // Govt Colonies
   'rk-puram': { lat: 28.5633, lng: 77.1755 },
   'sarojini-nagar': { lat: 28.5756, lng: 77.2 },
+  chanakyapuri: { lat: 28.5924, lng: 77.1857 },
   'lodhi-colony': { lat: 28.585, lng: 77.22 },
   'andrews-ganj': { lat: 28.57, lng: 77.215 },
   'kidwai-nagar': { lat: 28.5717, lng: 77.2017 },

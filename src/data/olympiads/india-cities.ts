@@ -118,7 +118,7 @@ export const olympiadCities: OlympiadCityEntry[] = [
       'South Delhi Biology Olympiad coaching at our South Extension centre and online across Greater Kailash, Saket, Vasant Kunj, Hauz Khas.',
     intro:
       'South Delhi has the highest density of IB/IGCSE and CBSE olympiad-track schools in India. Our South Extension centre services Greater Kailash, Defence Colony, Saket, Vasant Kunj, Hauz Khas, Panchsheel Park, and Chanakyapuri. Complete Olympiad Year runs as a blended programme — offline intensive weekends plus online weekday cohort with online-only students across India.',
-    inCentre: { label: 'South Extension centre', href: '/biology-classes-south-delhi' },
+    inCentre: { label: 'South Extension centre', href: '/neet-coaching-south-delhi' },
     schoolCatchment: [
       'Vasant Valley School',
       'Shriram School Aravali',
@@ -138,7 +138,7 @@ export const olympiadCities: OlympiadCityEntry[] = [
     relatedLinks: [
       { label: 'NSEB coaching', href: '/nseb-coaching' },
       { label: 'INBO coaching', href: '/inbo-coaching' },
-      { label: 'South Delhi NEET classes', href: '/biology-classes-south-delhi' },
+      { label: 'South Delhi NEET classes', href: '/neet-coaching-south-delhi' },
       { label: 'Delhi olympiad hub', href: '/biology-olympiads/india/delhi' },
     ],
     localContext:

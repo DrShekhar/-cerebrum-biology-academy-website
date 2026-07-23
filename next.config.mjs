@@ -414,11 +414,10 @@ const nextConfig = {
       // These wildcards catch the ~170 URLs Google rejected as
       // near-duplicate doorways (Buckets D/E/H from the GSC audit).
       // ============================================
-      {
-        source: '/neet-coaching-south-delhi/:area',
-        destination: '/neet-coaching-south-delhi',
-        permanent: true,
-      },
+      // NOTE: the South Delhi /:area catch-all was removed (2026-07, same reason
+      // as the other NCR cities): 8 curated localities
+      // (src/data/south-delhi-enriched.ts) now render + index; the remaining 23
+      // consolidate via the explicit per-slug redirects in seo-redirects.mjs.
       // NOTE: the North Delhi /:area catch-all was removed (same reason as the
       // other NCR cities): 5 curated localities (src/data/north-delhi-enriched.ts)
       // now render + index; the rest consolidate via areaPageConsolidationRedirects

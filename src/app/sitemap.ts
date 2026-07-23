@@ -22,6 +22,7 @@ import { INDEXABLE_GURUGRAM_LOCALITIES } from '@/data/gurugram-enriched'
 import { INDEXABLE_NOIDA_LOCALITIES } from '@/data/noida-enriched'
 import { INDEXABLE_WEST_DELHI_LOCALITIES } from '@/data/west-delhi-enriched'
 import { INDEXABLE_EAST_DELHI_LOCALITIES } from '@/data/east-delhi-enriched'
+import { INDEXABLE_SOUTH_DELHI_LOCALITIES } from '@/data/south-delhi-enriched'
 import { olympiadCities } from '@/data/olympiads/india-cities'
 import { INDEXABLE_NORTH_DELHI_LOCALITIES } from '@/data/north-delhi-enriched'
 import { INDEXABLE_GHAZIABAD_LOCALITIES } from '@/data/ghaziabad-enriched'
@@ -132,7 +133,9 @@ const inlineRedirectPatterns: RegExp[] = [
   // Phase 2 GSC wildcards (2026-04-23) — metro [area] sub-pages,
   // locations/[city]/[locality], and school/metro-station sub-routes
   // are all 301'd to parent in next.config.mjs. Filter sitemap too.
-  /^\/neet-coaching-south-delhi\/[^/]+$/,
+  // NOTE: blanket /neet-coaching-south-delhi/[area] mirror removed (2026-07) —
+  // catch-all gone; the 23 consolidated areas are filtered via explicit exact
+  // sources in seo-redirects.mjs, the 8 curated indexable localities emitted.
   // NOTE: blanket /neet-coaching-north-delhi/[area] mirror removed — catch-all gone;
   // consolidated areas filtered via explicit exact sources, 5 curated indexable
   // localities emitted.
@@ -1547,6 +1550,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       // South Delhi class-level + foundation pages (2026-07 gap fill — flagship catchment)
       'class-9-biology-tuition-south-delhi',
       'class-10-biology-coaching-south-delhi',
+      'class-11-biology-coaching-south-delhi',
+      'class-12-biology-coaching-south-delhi',
       'neet-foundation-class-9-south-delhi',
       'neet-foundation-class-10-south-delhi',
       // Metro biology-classes pages (2026-07 gap fill — were Delhi/NCR-only)
@@ -8492,7 +8497,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const noidaAreaRoutes: MetadataRoute.Sitemap = []
   const faridabadAreaRoutes: MetadataRoute.Sitemap = []
   const ghaziabadAreaRoutes: MetadataRoute.Sitemap = []
-  const southDelhiAreaRoutes: MetadataRoute.Sitemap = []
+  // Curated, un-redirected South Delhi locality pages (rest of /:area still
+  // 301s to the hub via explicit entries in seo-redirects.mjs). All 8 have NO
+  // standalone twin page → additive, not cannibalistic; unique enriched
+  // prose/metadata in src/data/south-delhi-enriched.ts. Covers the flagship's
+  // own catchment (South Extension / AIIMS govt colonies), the Green Park
+  // centre's colony (Gulmohar Park), and the IIT-gate outstation-student PG
+  // belt (Ber Sarai / Katwaria Sarai).
+  const southDelhiAreaRoutes: MetadataRoute.Sitemap = INDEXABLE_SOUTH_DELHI_LOCALITIES.map(
+    (slug) => ({
+      url: `${baseUrl}/neet-coaching-south-delhi/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    })
+  )
   const northDelhiAreaRoutes: MetadataRoute.Sitemap = []
   const eastDelhiAreaRoutes: MetadataRoute.Sitemap = []
   const westDelhiAreaRoutes: MetadataRoute.Sitemap = []
@@ -8501,6 +8520,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // hand-curated lists above, so Google never discovered them. Recovered via
   // scripts/audit-sitemap-coverage.ts (doorway families already excluded there).
   const recoveredOrphanRouteEntries: MetadataRoute.Sitemap = recoveredOrphanRoutes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // South Delhi complement pages (Jul 2026) — same family as the gurugram
+  // /complement-aakash-coaching-gurugram + /complement-allen-coaching-gurugram
+  // pages emitted via recoveredOrphanRoutes above; identical priority/frequency.
+  const southDelhiComplementRoutes: MetadataRoute.Sitemap = [
+    '/complement-aakash-coaching-south-delhi',
+    '/complement-allen-coaching-south-delhi',
+  ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: lastUpdated,
     changeFrequency: 'weekly' as const,
@@ -8622,6 +8654,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Combine all routes and deduplicate by URL
   const allRoutes = [
     ...recoveredOrphanRouteEntries,
+    ...southDelhiComplementRoutes,
     ...countryOlympiadRoutes,
     ...ibComparisonRoutes,
     ...faridabadLocalityRoutes,
