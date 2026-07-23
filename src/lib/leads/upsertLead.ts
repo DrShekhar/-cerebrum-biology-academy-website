@@ -30,6 +30,8 @@ import { startWelcomeSeries } from '@/lib/whatsapp/welcomeSeries'
 import { sendCapiEvent } from '@/lib/marketing/metaCapi'
 import { getSettings } from '@/lib/settings/siteSettings'
 import { normalizePhone } from '@/lib/leads/phone'
+import { scheduleLeadRuleProcessing } from '@/lib/followupEngine'
+import { captureException } from '@/lib/sentry'
 import type { LeadSource, LeadStage, Priority, Prisma, PrismaClient } from '@/generated/prisma'
 
 export { normalizePhone }
@@ -417,12 +419,24 @@ export async function upsertLead(
     // New leads get an initial score; touchpoints change engagement signals.
     void updateLeadScore(leadId).catch(() => {})
 
+    // Evaluate follow-up automation rules at the event (create AND touchpoint —
+    // a touchpoint can advance the stage). Dedup lives inside the engine, so
+    // repeat submissions can't double-enqueue.
+    scheduleLeadRuleProcessing(leadId, input.source?.trim() || 'upsert-lead')
+
     return { leadId, created }
   } catch (error) {
     // Never break the caller — the capture-log row + WhatsApp already hold it.
+    // But a swallowed failure here means a prospect no counselor will ever
+    // see, so it must page ops: Sentry + the daily leads-reconcile cron are
+    // the safety net.
     logger.error('upsertLead failed (non-blocking)', {
       service: 'upsert-lead',
       error: error instanceof Error ? error.message : 'Unknown error',
+    })
+    captureException(error instanceof Error ? error : new Error(String(error)), {
+      service: 'upsert-lead',
+      source: input.source?.trim() || null,
     })
     return null
   }

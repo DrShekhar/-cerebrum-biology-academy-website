@@ -10,6 +10,7 @@
 import { prisma } from '@/lib/prisma'
 import { inngest } from '@/inngest/client'
 import { sendCapiEvent } from '@/lib/marketing/metaCapi'
+import { scheduleLeadRuleProcessing } from '@/lib/followupEngine'
 import type { LeadSource, LeadStage, Priority, Prisma } from '@/generated/prisma'
 
 export interface LeadViewer {
@@ -225,6 +226,10 @@ export async function updateLeadFields(viewer: LeadViewer, id: string, patch: Le
         eventId: `${updated.id}:${patch.stage}`,
       })
     }
+
+    // Event-driven follow-up rules (STAGE_CHANGE, DEMO_COMPLETED, OFFER_SENT…)
+    // fire on the transition itself; the cron sweep is only the backstop.
+    scheduleLeadRuleProcessing(id, `stage:${String(patch.stage)}`)
   }
 
   if (patch.stage === 'ENROLLED' && prior.stage !== 'ENROLLED') {

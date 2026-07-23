@@ -96,6 +96,10 @@
       "schedule": "15,45 * * * *"
     },
     {
+      "path": "/api/cron/leads-reconcile",
+      "schedule": "45 21 * * *"
+    },
+    {
       "path": "/api/cron/seo-reminder",
       "schedule": "0 4 * * 5"
     },
