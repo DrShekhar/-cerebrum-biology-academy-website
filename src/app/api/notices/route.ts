@@ -70,23 +70,33 @@ export async function GET(request: NextRequest) {
     if (session?.user) {
       const userId = session.user.id
 
-      // Get user's enrollments to determine their batches/courses
-      const user = await prisma.users.findUnique({
-        where: { id: userId },
-        select: {
-          id: true,
-          enrollments: {
-            where: { status: { in: ['ACTIVE', 'PENDING'] } },
-            select: {
-              courseId: true,
+      // Get user's enrollments (courses) and group memberships (batches).
+      // Batches = student_groups: enrollments carry no batch FK, so
+      // BATCH-targeted notices previously matched NOBODY — composers could
+      // target a batch and the notice silently reached zero students.
+      const [user, groupMemberships] = await Promise.all([
+        prisma.users.findUnique({
+          where: { id: userId },
+          select: {
+            id: true,
+            enrollments: {
+              where: { status: { in: ['ACTIVE', 'PENDING'] } },
+              select: {
+                courseId: true,
+              },
             },
           },
-        },
-      })
+        }),
+        prisma.student_group_members
+          .findMany({
+            where: { userId },
+            select: { groupId: true },
+          })
+          .catch(() => [] as { groupId: string }[]),
+      ])
 
       const userCourseIds = user?.enrollments.map((e) => e.courseId).filter(Boolean) || []
-      // enrollments carry no batch FK in the schema; batch-targeted notices are unmatched.
-      const userBatchIds: string[] = []
+      const userBatchIds: string[] = groupMemberships.map((m) => m.groupId)
 
       const userRole = (session.user.role || '').toUpperCase()
 
