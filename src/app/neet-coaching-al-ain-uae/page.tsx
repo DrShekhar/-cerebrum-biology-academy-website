@@ -16,7 +16,7 @@ const ogImageParams = new URLSearchParams({
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in Al Ain, UAE | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for ~100K Indian-origin Class 11-12 students in Al Ain (UAE's "Garden City", Abu Dhabi emirate inland oasis). Feeder schools: Our Own English High School (OOEHS) Al Ain, Al Ain Indian School (AIS), GEMS Wellington Academy, Choithram's Indian School, Glendale International School. GST 4-6:30 PM batch (after-school slot). Abu Dhabi NTA NEET exam centre (1.5-hour drive). NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  description: `Live online NEET Biology coaching for ~100K Indian-origin Class 11-12 students in Al Ain (UAE's "Garden City", Abu Dhabi emirate inland oasis). Schools we serve: Our Own English High School (OOEHS) Al Ain, Al Ain Indian School (AIS), GEMS Wellington Academy, Choithram's Indian School, Glendale International School. GST 4-6:30 PM batch (after-school slot). Abu Dhabi NTA NEET exam centre (1.5-hour drive). NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
   keywords: [
     'NEET coaching Al Ain',
     'NEET coaching Al Ain UAE',

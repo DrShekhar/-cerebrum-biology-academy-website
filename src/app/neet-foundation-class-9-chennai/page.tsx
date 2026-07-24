@@ -55,7 +55,7 @@ const faqs = [
   {
     question: 'Which Chennai schools are common Cerebrum Foundation feeders?',
     answer:
-      "Common Chennai feeder schools across Class 9-10 Foundation cohorts: Padma Seshadri Bala Bhavan (PSBB) Nungambakkam/KK Nagar/T. Nagar, DAV Boys/Girls Schools, Velammal Vidyalaya (CBSE branches across Chennai), Vidya Mandir Mylapore, Sishya School, Chettinad Vidyashram, Sankara Senior Secondary, Bala Vidya Mandir, MGR Janaki College Senior Secondary, KFI (Krishnamurti Foundation India) — The School, Lady Andal Venkatasubba Rao Matriculation, Bhavan's Rajaji Vidyashram, The Hindu Senior Secondary. International curriculum feeders: AISC (American International School Chennai), British International School Chennai. Tamil Nadu State Board feeders span the wider Greater Chennai education ecosystem.",
+      "Common Chennai schools across Class 9-10 Foundation cohorts: Padma Seshadri Bala Bhavan (PSBB) Nungambakkam/KK Nagar/T. Nagar, DAV Boys/Girls Schools, Velammal Vidyalaya (CBSE branches across Chennai), Vidya Mandir Mylapore, Sishya School, Chettinad Vidyashram, Sankara Senior Secondary, Bala Vidya Mandir, MGR Janaki College Senior Secondary, KFI (Krishnamurti Foundation India) — The School, Lady Andal Venkatasubba Rao Matriculation, Bhavan's Rajaji Vidyashram, The Hindu Senior Secondary. International curriculum feeders: AISC (American International School Chennai), British International School Chennai. Tamil Nadu State Board feeders span the wider Greater Chennai education ecosystem.",
   },
   {
     question:
@@ -232,7 +232,7 @@ export default function NEETFoundationClass9ChennaiPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Chennai feeder schools and board coverage
+            Chennai schools and board coverage
           </h2>
           <p>
             CBSE feeders: PSBB Nungambakkam / KK Nagar / T. Nagar, DAV Boys / Girls (multiple

@@ -10,7 +10,7 @@ const city = NRI_INTERNATIONAL_CITIES['leicester-uk']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for Leicester Indian Class 11-12 students — UK's most Indian city per-capita (~33% Indian-origin, 140K residents). Belgrave, Rushey Mead, Spinney Hills, Stoneygate concentration. Feeder schools: Leicester Grammar, Loughborough Grammar, Loughborough High, Stoneygate School, Ratcliffe College. A-Level Biology to NCERT bridge. GMT 12-2:30 PM batch. NRI quota + UK MBBS analysis. 98% qualification rate.`,
+  description: `Live online NEET Biology coaching for Leicester Indian Class 11-12 students — UK's most Indian city per-capita (~33% Indian-origin, 140K residents). Belgrave, Rushey Mead, Spinney Hills, Stoneygate concentration. Schools we serve: Leicester Grammar, Loughborough Grammar, Loughborough High, Stoneygate School, Ratcliffe College. A-Level Biology to NCERT bridge. GMT 12-2:30 PM batch. NRI quota + UK MBBS analysis. 98% qualification rate.`,
   keywords: [
     'NEET coaching Leicester',
     'NEET coaching UK',

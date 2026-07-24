@@ -324,7 +324,7 @@ export default async function OlympiadCityPage({ params }: PageProps) {
                   Schools we serve in {entry.city}.
                 </h2>
                 <p className="mt-3 text-lg text-slate-600">
-                  Students from these feeder schools have joined our NSEB and INBO cohorts. If your
+                  Students from these schools have joined our NSEB and INBO cohorts. If your
                   school is not listed we serve all CBSE, ICSE, IB, and Cambridge students across
                   India.
                 </p>

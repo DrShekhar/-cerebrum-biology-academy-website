@@ -10,7 +10,7 @@ const city = NRI_INTERNATIONAL_CITIES['houston-usa']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for Greater Houston Indian-origin Class 11-12 students — Sugar Land, Pearland, Katy, Cypress, Spring, Missouri City. Feeder schools: Clements HS Sugar Land, Dulles HS, Stephen F. Austin HS Sugar Land, Cinco Ranch, Seven Lakes, Memorial, Bellaire. AP Biology + NEET dual prep. CST 6-8:30 AM batch. NRI quota for AIIMS / JIPMER / Manipal / KMC. MCAT B/B track for UT Austin / Rice / Baylor premed alternative. 98% success rate.`,
+  description: `Live online NEET Biology coaching for Greater Houston Indian-origin Class 11-12 students — Sugar Land, Pearland, Katy, Cypress, Spring, Missouri City. Schools we serve: Clements HS Sugar Land, Dulles HS, Stephen F. Austin HS Sugar Land, Cinco Ranch, Seven Lakes, Memorial, Bellaire. AP Biology + NEET dual prep. CST 6-8:30 AM batch. NRI quota for AIIMS / JIPMER / Manipal / KMC. MCAT B/B track for UT Austin / Rice / Baylor premed alternative. 98% success rate.`,
   keywords: [
     'NEET coaching Houston',
     'NEET coaching USA',

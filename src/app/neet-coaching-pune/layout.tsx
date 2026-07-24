@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Coaching in Pune | Biology Specialist | Cerebrum Biology Academy',
   description:
-    'NEET Biology coaching in Pune — biology-only specialist serving Koregaon Park, Aundh, Baner, Kothrud, Viman Nagar, Hadapsar, Kharadi, Wakad, Pimpri-Chinchwad. AIIMS-trained Dr. Shekhar C Singh, NCERT line-by-line, Marathi-medium NCERT bridge for state-board students, small batches of 15-20. Feeder schools: Symbiosis School, Mercedes-Benz International, Pawar Public School. 98% qualification rate.',
+    'NEET Biology coaching in Pune — biology-only specialist serving Koregaon Park, Aundh, Baner, Kothrud, Viman Nagar, Hadapsar, Kharadi, Wakad, Pimpri-Chinchwad. AIIMS-trained Dr. Shekhar C Singh, NCERT line-by-line, Marathi-medium NCERT bridge for state-board students, small batches of 15-20. Schools we serve: Symbiosis School, Mercedes-Benz International, Pawar Public School. 98% qualification rate.',
   keywords: [
     'NEET coaching Pune',
     'best NEET coaching Pune',

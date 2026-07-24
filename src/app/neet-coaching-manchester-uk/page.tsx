@@ -10,7 +10,7 @@ const city = NRI_INTERNATIONAL_CITIES['manchester-uk']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for Greater Manchester Indian Class 11-12 students — Bolton, Stockport, Bury, Trafford, Cheadle, Altrincham. Feeder schools: Manchester Grammar, Withington Girls, Bury Grammar, Cheadle Hulme, Bolton School, Stockport Grammar. A-Level Biology to NCERT bridge. GMT 12-2:30 PM batch matches IST evening. NRI quota + UK MBBS alternative. 98% qualification rate.`,
+  description: `Live online NEET Biology coaching for Greater Manchester Indian Class 11-12 students — Bolton, Stockport, Bury, Trafford, Cheadle, Altrincham. Schools we serve: Manchester Grammar, Withington Girls, Bury Grammar, Cheadle Hulme, Bolton School, Stockport Grammar. A-Level Biology to NCERT bridge. GMT 12-2:30 PM batch matches IST evening. NRI quota + UK MBBS alternative. 98% qualification rate.`,
   keywords: [
     'NEET coaching Manchester',
     'NEET coaching UK',

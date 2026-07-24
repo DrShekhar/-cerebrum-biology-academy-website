@@ -47,7 +47,7 @@ function useScrollAnimation(threshold = 0.1) {
 
 const colabaAreas = [
   { name: 'Colaba', distance: '19 km', landmark: 'South Mumbai Peninsula' },
-  { name: 'Navy Nagar', distance: '19 km', landmark: 'Upscale Naval Officers' },
+  { name: 'Navy Nagar', distance: '19 km', landmark: 'Naval Residential Area' },
   { name: 'Cuffe Parade', distance: '18 km', landmark: 'Iconic Waterfront' },
   { name: 'Fort', distance: '17 km', landmark: 'Business District' },
   { name: 'Kala Ghoda', distance: '18 km', landmark: 'Arts & Culture' },
@@ -59,21 +59,21 @@ const colabaAreas = [
 const whyChooseUs = [
   {
     icon: Gem,
-    title: 'South Mumbai Elite Specialist',
+    title: 'South Mumbai Specialist',
     description:
-      'Colaba is the most prestigious South Mumbai locality. We specialize in coaching for affluent Navy families and high-income households in South Mumbai.',
+      'From Colaba to Navy Nagar, we know South Mumbai routines. Structured online coaching for Navy families and households that need discipline, flexibility, and discretion.',
   },
   {
     icon: Target,
     title: '67+ AIIMS Selections',
     description:
-      'Proven track record with students from Cathedral School, Bombay Scottish, and elite institutions in South Mumbai.',
+      'Proven track record with students from Cathedral School, Bombay Scottish, and other top institutions in South Mumbai.',
   },
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
     description:
-      "Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching highly motivated students from South Mumbai's premium families.",
+      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching highly motivated students from South Mumbai.',
   },
   {
     icon: Star,
@@ -87,7 +87,7 @@ const faqs = [
   {
     question: 'Do you have a coaching center in Colaba or South Mumbai?',
     answer:
-      'Our main center is in Greater Noida. For Colaba and South Mumbai residents, we offer exclusive live online NEET classes with personalized attention. Many affluent South Mumbai families prefer online coaching for convenience and security. Our comprehensive material and recorded lectures ensure uninterrupted preparation.',
+      'Our main center is in Greater Noida. For Colaba and South Mumbai residents, we offer live online NEET classes with personalized attention. Many South Mumbai families prefer online coaching for convenience and security. Our comprehensive material and recorded lectures ensure uninterrupted preparation.',
   },
   {
     question: "How do you understand Navy families\' needs?",
@@ -97,7 +97,7 @@ const faqs = [
   {
     question: 'Which schools do your Colaba students attend?',
     answer:
-      'We have students from Cathedral School Mumbai, Bombay Scottish, Jamnabai Narsee, and other elite institutions in South Mumbai. The academically rigorous environment of these schools aligns perfectly with our NEET preparation methodology.',
+      'We have students from Cathedral School Mumbai, Bombay Scottish, Jamnabai Narsee, and other top institutions in South Mumbai. The academically rigorous environment of these schools aligns perfectly with our NEET preparation methodology.',
   },
   {
     question: 'Is NEET coaching suitable for internationally mobile families?',
@@ -120,7 +120,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Colaba',
-  description: 'Best NEET Coaching for Colaba South Mumbai - Elite naval families coaching',
+  description:
+    'Best NEET Coaching for Colaba South Mumbai - online Biology coaching with AIIMS-trained faculty',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-colaba-mumbai',
   telephone: '+91-88264-44334',
   address: {
@@ -163,7 +164,7 @@ export default function PageContent() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Gem className="w-5 h-5 mr-2 text-yellow-400" />
-              Elite South Mumbai Coaching | AIIMS Faculty
+              South Mumbai NEET Coaching | AIIMS Faculty
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -171,13 +172,13 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Coaching for South Mumbai&apos;s Most Prestigious Locality
+              Premium NEET Biology Coaching in Colaba - Structured, Discreet, AIIMS-Trained Faculty
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Exclusive NEET coaching for Colaba, Navy Nagar, and South Mumbai elite families. Learn
-              from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by affluent South
-              Mumbai families.
+              Online NEET coaching for Colaba, Navy Nagar, and South Mumbai. Learn from{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - structured classes that fit
+              naval postings, transfers, and busy South Mumbai routines.
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
@@ -231,8 +232,8 @@ export default function PageContent() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Gem className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
-                <div className="text-2xl font-bold">Elite</div>
-                <div className="text-sm opacity-80">Naval Families</div>
+                <div className="text-2xl font-bold">Navy Nagar</div>
+                <div className="text-sm opacity-80">Families Coached</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
@@ -262,7 +263,7 @@ export default function PageContent() {
               Colaba & South Mumbai Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Online NEET coaching for South Mumbai&apos;s elite and affluent residents
+              Online NEET Biology coaching built around South Mumbai schedules
             </p>
           </div>
 
@@ -355,10 +356,10 @@ export default function PageContent() {
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Colaba Elite Families, Secure Your Medical Future!
+              Colaba Families, Secure Your Medical Future!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium NEET coaching for South Mumbai&apos;s most prestigious locality
+              Premium NEET coaching for Colaba, Navy Nagar, and South Mumbai
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">

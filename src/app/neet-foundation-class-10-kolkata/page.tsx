@@ -230,7 +230,7 @@ export default function NEETFoundationClass10KolkataPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Kolkata Class 10 feeder schools
+            Kolkata Class 10 schools
           </h2>
           <p>
             ICSE Class 10 (the most prestigious local academic credential, often weighted more than

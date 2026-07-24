@@ -8,7 +8,7 @@ const city = NRI_INTERNATIONAL_CITIES['dammam-saudi-arabia']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in Dammam, Saudi Arabia | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for Eastern Province Indian-origin Class 11-12 students in Dammam (Saudi Arabia\'s oil + petrochem hub, 600K+ Indian community). Flagship feeder school: International Indian School Dammam (IISD) with 6,000+ students. Also Bhavan\'s, IISR Dammam branch, Manarat Al Sharqiya. AST 3-5:30 PM batch (after-IISD-dismissal slot). Ramadan schedule adjustments. NRI quota for AIIMS / JIPMER / Manipal / KMC. 98% success rate.`,
+  description: `Live online NEET Biology coaching for Eastern Province Indian-origin Class 11-12 students in Dammam (Saudi Arabia\'s oil + petrochem hub, 600K+ Indian community). Largest school we serve: International Indian School Dammam (IISD) with 6,000+ students. Also Bhavan\'s, IISR Dammam branch, Manarat Al Sharqiya. AST 3-5:30 PM batch (after-IISD-dismissal slot). Ramadan schedule adjustments. NRI quota for AIIMS / JIPMER / Manipal / KMC. 98% success rate.`,
   keywords: [
     'NEET coaching Dammam',
     'NEET coaching Eastern Province Saudi',

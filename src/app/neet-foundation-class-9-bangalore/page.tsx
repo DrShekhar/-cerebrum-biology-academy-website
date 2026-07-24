@@ -55,7 +55,7 @@ const faqs = [
   {
     question: 'Which Bangalore schools are common Cerebrum Foundation feeders?',
     answer:
-      'Common Bangalore feeder schools across Class 9-10 Foundation cohorts: National Public School (Indiranagar, Koramangala, HSR Layout), Inventure Academy (Sarjapur), Stonehill International (Sarjapur), Greenwood High International (Bannerghatta + Sarjapur), Mallya Aditi International (RT Nagar), Bishop Cottons Boys School, Bishop Cottons Girls High School, Sophia High School, Vidyashilp Academy (Yelahanka), Trio World Academy (Sahakar Nagar), Indus International (Sarjapur), Sishu Griha Senior School (Banashankari), and various Karnataka State Board high schools.',
+      'Common Bangalore schools across Class 9-10 Foundation cohorts: National Public School (Indiranagar, Koramangala, HSR Layout), Inventure Academy (Sarjapur), Stonehill International (Sarjapur), Greenwood High International (Bannerghatta + Sarjapur), Mallya Aditi International (RT Nagar), Bishop Cottons Boys School, Bishop Cottons Girls High School, Sophia High School, Vidyashilp Academy (Yelahanka), Trio World Academy (Sahakar Nagar), Indus International (Sarjapur), Sishu Griha Senior School (Banashankari), and various Karnataka State Board high schools.',
   },
   {
     question:
@@ -248,7 +248,7 @@ export default function NEETFoundationClass9BangalorePage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Bangalore feeder schools and board coverage
+            Bangalore schools and board coverage
           </h2>
           <p>
             CBSE feeders (highest concentration in Bangalore): National Public School (Indiranagar,

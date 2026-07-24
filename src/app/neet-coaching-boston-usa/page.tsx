@@ -10,7 +10,7 @@ const city = NRI_INTERNATIONAL_CITIES['boston-usa']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for Greater Boston Indian-origin Class 11-12 students — Lexington, Acton-Boxborough, Westford, Newton, Wellesley, Concord, Belmont. Feeder schools: Boston Latin, Lexington HS, Acton-Boxborough, Newton North, Wellesley, Westford Academy. AP Biology + NEET dual prep. EST 7-9:30 AM batch (before-school). NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. MCAT B/B track for Harvard / MIT / Tufts premed alternative. 98% success rate.`,
+  description: `Live online NEET Biology coaching for Greater Boston Indian-origin Class 11-12 students — Lexington, Acton-Boxborough, Westford, Newton, Wellesley, Concord, Belmont. Schools we serve: Boston Latin, Lexington HS, Acton-Boxborough, Newton North, Wellesley, Westford Academy. AP Biology + NEET dual prep. EST 7-9:30 AM batch (before-school). NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. MCAT B/B track for Harvard / MIT / Tufts premed alternative. 98% success rate.`,
   keywords: [
     'NEET coaching Boston',
     'NEET coaching USA',

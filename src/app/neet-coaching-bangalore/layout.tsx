@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Coaching in Bangalore | Biology Specialist | Cerebrum Biology Academy',
   description:
-    'NEET Biology coaching in Bangalore — biology-only specialist serving Indiranagar, Koramangala, HSR Layout, Whitefield, Electronic City, Marathahalli, Sarjapur, Jayanagar. AIIMS-trained Dr. Shekhar C Singh, NCERT line-by-line, small batches of 15-20, weekly 1:1 doubt slots. Feeder schools: NPS Indiranagar, DPS Bangalore, Inventure Academy. 98% qualification rate.',
+    'NEET Biology coaching in Bangalore — biology-only specialist serving Indiranagar, Koramangala, HSR Layout, Whitefield, Electronic City, Marathahalli, Sarjapur, Jayanagar. AIIMS-trained Dr. Shekhar C Singh, NCERT line-by-line, small batches of 15-20, weekly 1:1 doubt slots. Schools we serve: NPS Indiranagar, DPS Bangalore, Inventure Academy. 98% qualification rate.',
   keywords: [
     'NEET coaching Bangalore',
     'NEET coaching Bengaluru',

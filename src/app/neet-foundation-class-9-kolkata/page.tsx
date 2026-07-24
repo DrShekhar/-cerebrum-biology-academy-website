@@ -55,7 +55,7 @@ const faqs = [
   {
     question: 'Which Kolkata schools are common Cerebrum Foundation feeders?',
     answer:
-      "Common Kolkata feeder schools across Class 9-10 Foundation cohorts: ICSE legacy schools (Kolkata's strongest tradition) — La Martiniere for Boys, La Martiniere for Girls, Don Bosco Park Circus, St. Xavier's Collegiate School, South Point School, Modern High School for Girls, Loreto House, Pratt Memorial, St. James'. CBSE feeders: DPS Ruby Park, DPS Megacity Newtown, Lakshmipat Singhania Academy, Sushila Birla Girls' School, BD Memorial, Future Foundation School, Heritage School. International curriculum feeders: Calcutta International School, Indus International (Newtown). West Bengal Board (Madhyamik) feeders span the broader Kolkata Municipal Corporation and Bidhannagar Municipal Corporation school ecosystem.",
+      "Common Kolkata schools across Class 9-10 Foundation cohorts: ICSE legacy schools (Kolkata's strongest tradition) — La Martiniere for Boys, La Martiniere for Girls, Don Bosco Park Circus, St. Xavier's Collegiate School, South Point School, Modern High School for Girls, Loreto House, Pratt Memorial, St. James'. CBSE feeders: DPS Ruby Park, DPS Megacity Newtown, Lakshmipat Singhania Academy, Sushila Birla Girls' School, BD Memorial, Future Foundation School, Heritage School. International curriculum feeders: Calcutta International School, Indus International (Newtown). West Bengal Board (Madhyamik) feeders span the broader Kolkata Municipal Corporation and Bidhannagar Municipal Corporation school ecosystem.",
   },
   {
     question:
@@ -232,7 +232,7 @@ export default function NEETFoundationClass9KolkataPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Kolkata feeder schools and board coverage
+            Kolkata schools and board coverage
           </h2>
           <p>
             ICSE legacy (Kolkata&apos;s strongest tradition): La Martiniere for Boys (Loudon

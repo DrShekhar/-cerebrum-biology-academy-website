@@ -8,7 +8,7 @@ const city = NRI_INTERNATIONAL_CITIES['kuala-lumpur-malaysia']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for Malaysian-Indian Class 11-12 students in ${city.city}, ${city.country}. Feeder schools: ${city.indianSchools.slice(0, 3).join(', ')}. Batch slot: ${city.localBatchSlot}. NRI quota guidance for AIIMS / JIPMER / MMMC Manipal / KMC Mangalore. 98% success rate.`,
+  description: `Live online NEET Biology coaching for Malaysian-Indian Class 11-12 students in ${city.city}, ${city.country}. Schools we serve: ${city.indianSchools.slice(0, 3).join(', ')}. Batch slot: ${city.localBatchSlot}. NRI quota guidance for AIIMS / JIPMER / MMMC Manipal / KMC Mangalore. 98% success rate.`,
   keywords: [
     `NEET coaching ${city.city}`,
     `NEET coaching ${city.country}`,

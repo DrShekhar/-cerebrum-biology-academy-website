@@ -147,7 +147,7 @@ export default function Page() {
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             <div className="rounded-xl bg-slate-50 p-5">
               <p className="text-sm font-semibold text-indigo-700">
-                Feeder schools in {city.displayName}
+                Schools we serve in {city.displayName}
               </p>
               <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
                 {city.feederSchools.map((s) => (

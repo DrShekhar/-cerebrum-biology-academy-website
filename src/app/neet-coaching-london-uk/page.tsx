@@ -10,7 +10,7 @@ const city = NRI_INTERNATIONAL_CITIES['london-uk']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for London-Indian Class 11-12 students — Harrow, Southall, Wembley, Ilford, Hounslow, Croydon, Brent. Feeder schools: Harrow School, Westminster, St Paul's, UCS, Habs Boys, NLCS. A-Level Biology to NCERT bridge. GMT 12-2:30 PM batch (matches IST evening). NRI quota guidance + UK MBBS alternative analysis. 98% qualification rate.`,
+  description: `Live online NEET Biology coaching for London-Indian Class 11-12 students — Harrow, Southall, Wembley, Ilford, Hounslow, Croydon, Brent. Schools we serve: Harrow School, Westminster, St Paul's, UCS, Habs Boys, NLCS. A-Level Biology to NCERT bridge. GMT 12-2:30 PM batch (matches IST evening). NRI quota guidance + UK MBBS alternative analysis. 98% qualification rate.`,
   keywords: [
     'NEET coaching London',
     'NEET coaching UK',

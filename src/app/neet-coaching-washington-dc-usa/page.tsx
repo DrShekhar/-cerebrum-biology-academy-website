@@ -10,7 +10,7 @@ const city = NRI_INTERNATIONAL_CITIES['washington-dc-usa']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for DC Metro Indian-origin Class 11-12 students — Northern Virginia (McLean, Vienna, Reston, Herndon, Centreville, Chantilly), Maryland (Bethesda, Potomac, Rockville, Gaithersburg). One of America's wealthiest, most education-focused Indian diasporas (~200K). Feeder schools: Thomas Jefferson HSST (TJHSST), Langley HS, McLean HS, Oakton, Marshall, Madison, Walt Whitman, Winston Churchill. AP Biology + NEET. EST 7-9:30 AM batch. NRI quota + MCAT B/B track. 98% success rate.`,
+  description: `Live online NEET Biology coaching for DC Metro Indian-origin Class 11-12 students — Northern Virginia (McLean, Vienna, Reston, Herndon, Centreville, Chantilly), Maryland (Bethesda, Potomac, Rockville, Gaithersburg). One of America's wealthiest, most education-focused Indian diasporas (~200K). Schools we serve: Thomas Jefferson HSST (TJHSST), Langley HS, McLean HS, Oakton, Marshall, Madison, Walt Whitman, Winston Churchill. AP Biology + NEET. EST 7-9:30 AM batch. NRI quota + MCAT B/B track. 98% success rate.`,
   keywords: [
     'NEET coaching Washington DC',
     'NEET coaching DC Metro',

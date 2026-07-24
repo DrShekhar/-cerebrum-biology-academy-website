@@ -72,7 +72,7 @@ const faqs = [
     question:
       'My child goes to DPS RK Puram / Modern School Barakhamba / Sanskriti — which centre is closest?',
     answer:
-      "DPS RK Puram, Modern School Barakhamba, Sanskriti School and other R.K. Puram / Vasant Vihar feeder schools → Green Park or South Extension are closest. DPS Vasant Kunj, The Shri Ram School Vasant Vihar, Mother's International → Green Park. DPS Mathura Road, Sardar Patel Vidyalaya, families in Greater Kailash / Defence Colony / Lajpat Nagar / Kalkaji / Saket → South Extension flagship. Live online Class 9 Foundation is available across the rest of South Delhi where offline commute is impractical.",
+      "DPS RK Puram, Modern School Barakhamba, Sanskriti School and other R.K. Puram / Vasant Vihar schools → Green Park or South Extension are closest. DPS Vasant Kunj, The Shri Ram School Vasant Vihar, Mother's International → Green Park. DPS Mathura Road, Sardar Patel Vidyalaya, families in Greater Kailash / Defence Colony / Lajpat Nagar / Kalkaji / Saket → South Extension flagship. Live online Class 9 Foundation is available across the rest of South Delhi where offline commute is impractical.",
   },
 ]
 

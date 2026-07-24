@@ -56,7 +56,7 @@ const faqs = [
   {
     question: 'Which Hyderabad schools are common Cerebrum Foundation feeders?',
     answer:
-      "Common Hyderabad feeder schools across Class 9-10 Foundation cohorts: Hyderabad Public School (Begumpet, Ramanthapur), Chirec International (Kondapur, Jubilee Hills, Gachibowli), Delhi Public School (Hyderabad and Secunderabad branches), Bharatiya Vidya Bhavan's Public School, Glendale Academy, International School of Hyderabad (Eishaan Aman), Oakridge International (Bachupally, Gachibowli), Indus International (Hyderabad), Sancta Maria International, Birla Open Minds International, Niharika School. Telangana / AP State Board feeders span the broader Hyderabad metro public-school catchment.",
+      "Common Hyderabad schools across Class 9-10 Foundation cohorts: Hyderabad Public School (Begumpet, Ramanthapur), Chirec International (Kondapur, Jubilee Hills, Gachibowli), Delhi Public School (Hyderabad and Secunderabad branches), Bharatiya Vidya Bhavan's Public School, Glendale Academy, International School of Hyderabad (Eishaan Aman), Oakridge International (Bachupally, Gachibowli), Indus International (Hyderabad), Sancta Maria International, Birla Open Minds International, Niharika School. Telangana / AP State Board feeders span the broader Hyderabad metro public-school catchment.",
   },
   {
     question:
@@ -232,7 +232,7 @@ export default function NEETFoundationClass9HyderabadPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Hyderabad feeder schools and board coverage
+            Hyderabad schools and board coverage
           </h2>
           <p>
             CBSE feeders: Hyderabad Public School (Begumpet, Ramanthapur), Delhi Public School

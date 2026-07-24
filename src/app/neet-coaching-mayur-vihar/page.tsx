@@ -65,12 +65,12 @@ const faqs = [
   {
     question: 'Which Mayur Vihar schools send students to Cerebrum?',
     answer:
-      'Common Mayur Vihar feeder schools across the Cerebrum cohort: DPS Mayur Vihar (Phase 1), Vasant Public School (Patparganj), Modern Public School (Shalimar Bagh has Mayur Vihar sister campus), Father Agnel School (Noida-adjacent), ASN Senior Secondary School (Mayur Vihar Phase 1), Bal Bhavan Public School (Mayur Vihar), Salwan Public School (Mayur Vihar). Students from these schools join Pursuit (small-batch 20-25, ₹40K-75K), Ascent (pro batch 12-16 with weekly 1:1 doubt slots, ₹58K-90K), or Pinnacle (direct Dr. Shekhar 1:1 micro-batch 6-10, ₹1.2L-1.56L) depending on target NEET rank.',
+      'Mayur Vihar schools our students most often come from: DPS Mayur Vihar (Phase 1), Vasant Public School (Patparganj), Modern Public School (Shalimar Bagh has Mayur Vihar sister campus), Father Agnel School (Noida-adjacent), ASN Senior Secondary School (Mayur Vihar Phase 1), Bal Bhavan Public School (Mayur Vihar), Salwan Public School (Mayur Vihar). Students from these schools join Pursuit (small-batch 20-25, ₹40K-75K), Ascent (pro batch 12-16 with weekly 1:1 doubt slots, ₹58K-90K), or Pinnacle (direct Dr. Shekhar 1:1 micro-batch 6-10, ₹1.2L-1.56L) depending on target NEET rank.',
   },
   {
     question: 'How does Cerebrum compare to Aakash and Allen / FIITJEE for Mayur Vihar students?',
     answer:
-      'Aakash and Allen / FIITJEE Delhi run combined Physics + Chemistry + Biology batches of 200-400 students with rotating subject faculty (typically ₹1.4L-1.6L/year). Cerebrum is biology-only with 15-20 student batches and continuous AIIMS-trained faculty (₹40K-1.56L/year biology-only). Most strategic Mayur Vihar pattern: Cerebrum biology + PhysicsWallah and Unacademy / other multi-subject tutoring platforms / PhysicsWallah and Unacademy for PC = total ₹70K-1.1L with materially deeper biology pedagogy than full-Aakash at half the all-in cost.',
+      'Aakash and Allen / FIITJEE Delhi run combined Physics + Chemistry + Biology batches of 200-400 students with rotating subject faculty (typically ₹1.4L-1.6L/year). Cerebrum is biology-only with 15-20 student batches and continuous AIIMS-trained faculty (₹40K-1.56L/year biology-only). The combination many Mayur Vihar families choose: Cerebrum biology + PhysicsWallah and Unacademy / other multi-subject tutoring platforms / PhysicsWallah and Unacademy for PC = total ₹70K-1.1L with materially deeper biology pedagogy than full-Aakash at half the all-in cost.',
   },
   {
     question: 'What does Cerebrum NEET coaching cost in Mayur Vihar?',
@@ -177,7 +177,7 @@ export default function NEETCoachingMayurViharPage() {
             <span className="text-white">Mayur Vihar</span>
           </nav>
           <span className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-4 py-1 text-sm font-semibold text-slate-900 mb-6">
-            Biology-Only Specialist · 15-20 Student Batches · Mayur Vihar Catchment
+            Biology-Only Specialist · 15-20 Student Batches · Mayur Vihar, Delhi
           </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Best NEET Coaching in Mayur Vihar</h1>
           <p className="text-xl text-slate-300 mb-6 max-w-3xl">
@@ -209,18 +209,18 @@ export default function NEETCoachingMayurViharPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-5xl px-4 prose prose-slate max-w-none">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
-            Mayur Vihar NEET catchment — what makes this market distinctive
+            Why Mayur Vihar students choose a Biology specialist
           </h2>
           <p>
-            Mayur Vihar is East Delhi's premium residential cluster (~150K residents). Phase 1
-            attracts judicial / IAS / DDA-allotment families; Phase 2 is mid-tier professional
-            housing. DPS Mayur Vihar feeds heavily into the local NEET aspirant pool — typically
-            200+ Class 11-12 medical aspirants annually. The Blue Line metro connects Mayur Vihar to
-            Rajiv Chowk in 18 minutes and Hauz Khas/Green Park in 30 minutes.
+            If you live in Mayur Vihar — East Delhi's premier residential cluster of around 150K
+            residents, whether in the judicial, IAS and DDA-allotment homes of Phase 1 or the
+            professional colonies of Phase 2 — you're in serious NEET company: DPS Mayur Vihar
+            alone produces 200+ Class 11-12 medical aspirants annually. The Blue Line metro takes
+            you to Rajiv Chowk in 18 minutes and Hauz Khas/Green Park in 30 minutes.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Mayur Vihar feeder schools we serve
+            Mayur Vihar schools we serve
           </h2>
           <p>
             DPS Mayur Vihar (Phase 1), Vasant Public School (Patparganj), Modern Public School
@@ -230,30 +230,32 @@ export default function NEETCoachingMayurViharPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Mayur Vihar school-by-school NEET Biology analysis
+            NEET Biology support for Mayur Vihar's schools
           </h2>
           <p>
-            <strong>DPS Mayur Vihar (Phase 1):</strong> The dominant NEET feeder in East Delhi with
-            200+ medical aspirants annually from Classes 11-12. DPS MV students have strong NCERT
-            foundations from the DPS system. The typical gap: NEET exam technique (assertion-reason
+            <strong>DPS Mayur Vihar (Phase 1):</strong> No East Delhi school sends more students
+            into NEET — 200+ medical aspirants annually from Classes 11-12. The DPS system gives
+            you strong NCERT foundations; the typical gap is NEET exam technique (assertion-reason
             questions, diagram-based MCQs) which school Biology exams don't test. Most DPS MV
             families book Ascent (₹58K-90K) or Pinnacle (₹1.2L-1.56L).
           </p>
           <p>
-            <strong>Vasant Public School (Patparganj):</strong> Strong CBSE school with growing NEET
-            aspirant numbers. Vasant Public students often combine school + coaching from Class 11.
-            The Pursuit tier (₹40K-75K) with online-live is the typical starting point.
+            <strong>Vasant Public School (Patparganj):</strong> A strong CBSE school with growing
+            NEET aspirant numbers. If you're at Vasant Public, you'll likely combine school +
+            coaching from Class 11 — the Pursuit tier (₹40K-75K) with online-live is the typical
+            starting point.
           </p>
           <p>
-            <strong>Father Agnel School (Noida-adjacent):</strong> Straddles the Delhi-Noida border.
-            Father Agnel students can attend our Green Park (Delhi) walk-in centre, or join live
-            online classes from home in Noida — no commute needed.
+            <strong>Father Agnel School (Noida-adjacent):</strong> Your school straddles the
+            Delhi-Noida border, so you can attend our Green Park (Delhi) walk-in centre, or join
+            live online classes from home in Noida — no commute needed.
           </p>
           <p>
             <strong>KV / Government school students (Mayur Vihar Phase 1-3):</strong> Three Kendriya
-            Vidyalayas serve the Mayur Vihar area. KV students have NCERT-aligned teaching (strong
-            for NEET) but limited NEET-specific coaching exposure. The Pursuit tier with competitive
-            pricing is designed for this segment.
+            Vidyalayas serve the Mayur Vihar area. If you're at one, your NCERT-aligned teaching is
+            a genuine NEET strength — what you've likely had less of is NEET-specific coaching. And
+            if you're watching the budget, the Pursuit tier's competitive pricing is designed with
+            you in mind.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
@@ -261,12 +263,11 @@ export default function NEETCoachingMayurViharPage() {
           </h2>
           <p>
             Laxmi Nagar (10 minutes from Mayur Vihar by metro) is East Delhi's main coaching hub —
-            but it's dominated by generalist chains running 150-300 student batches across all
-            subjects. For Biology-specific depth, the generalist model structurally underserves:
-            Biology gets one-third of teaching time despite being 50% of NEET marks. Mayur Vihar
-            families who understand this arithmetic choose to add Cerebrum as the biology specialist
-            while keeping a Laxmi Nagar chain for Physics and Chemistry. This "pair-and-specialist"
-            model is now the dominant pattern in East Delhi.
+            but its generalist chains run 150-300 student batches across all subjects. Here's the
+            arithmetic that matters to you: Biology is 50% of NEET marks, yet in a generalist batch
+            it gets only one-third of the teaching time. That's why so many of your neighbours keep
+            a Laxmi Nagar chain for Physics and Chemistry and add Cerebrum as the biology
+            specialist — generalist coverage where it's fine, specialist depth where it counts.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
@@ -282,8 +283,8 @@ export default function NEETCoachingMayurViharPage() {
           </p>
           <p>
             <strong>Nearest Cerebrum centre:</strong> Green Park (~30 min via Blue Line) or
-            pan-India online live. For Mayur Vihar families who prefer to skip the commute entirely,
-            pan-India online live batches offer the same AIIMS-trained faculty, same biology-only
+            pan-India online live. If you'd rather skip the commute entirely, pan-India online live
+            batches offer the same AIIMS-trained faculty, same biology-only
             specialist pedagogy, same 15-20 student batch structure — no train/auto-rickshaw time,
             weekend-friendly slots.
           </p>

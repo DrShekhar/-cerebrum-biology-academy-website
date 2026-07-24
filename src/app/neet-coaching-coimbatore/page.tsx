@@ -56,7 +56,7 @@ const faqs = [
   {
     question: 'Which Coimbatore schools send students to Cerebrum?',
     answer:
-      'Common Coimbatore feeder schools: PSG Krishnammal Higher Secondary, GD Naidu Vidyalaya, SSVM School, Delhi Public School Coimbatore, Stanes School, Sri Ramakrishna Mission Vidyalaya. Students join Pursuit (₹48K-75K), Ascent (₹58K-90K), or Pinnacle (₹98K-1.56L) depending on target NEET rank.',
+      'Common Coimbatore schools: PSG Krishnammal Higher Secondary, GD Naidu Vidyalaya, SSVM School, Delhi Public School Coimbatore, Stanes School, Sri Ramakrishna Mission Vidyalaya. Students join Pursuit (₹48K-75K), Ascent (₹58K-90K), or Pinnacle (₹98K-1.56L) depending on target NEET rank.',
   },
   {
     question: 'What does NEET coaching cost in Coimbatore?',
@@ -140,7 +140,7 @@ export default function Page() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Coimbatore feeder schools we serve
+            Coimbatore schools we serve
           </h2>
           <p>
             PSG Krishnammal Higher Secondary, GD Naidu Vidyalaya, SSVM School, Delhi Public School

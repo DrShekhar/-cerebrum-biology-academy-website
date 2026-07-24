@@ -43,7 +43,7 @@ export const metadata: Metadata = city
         description: `Best NEET Biology coaching for ${city.displayName} students at Cerebrum.`,
       },
       // index 2026-06: promoted back from Tier-C noindex — this page now renders a
-      // city-unique local-roadmap section (real target colleges, feeder schools,
+      // city-unique local-roadmap section (real target colleges, schools,
       // delivery areas) + 7 city-specific FAQs, clearing the doorway-uniqueness bar.
       robots: 'index, follow',
     }

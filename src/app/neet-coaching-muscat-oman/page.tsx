@@ -16,7 +16,7 @@ const ogImageParams = new URLSearchParams({
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in Muscat, Oman | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for ~700K Indian-origin Class 11-12 students in Oman (16% of population). Muscat (Ruwi, Mutrah, Wadi Kabir, Al Khoud, Bousher, Al Ghubra, Qurum). Feeder schools: Indian School Muscat (Wadi Kabir), Indian School Al Ghubra, Indian School Al Wadi Al Kabir, Indian School Bousher. GST 4-6:30 PM batch (after-school slot). Muscat NTA NEET exam centre on-site. NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  description: `Live online NEET Biology coaching for ~700K Indian-origin Class 11-12 students in Oman (16% of population). Muscat (Ruwi, Mutrah, Wadi Kabir, Al Khoud, Bousher, Al Ghubra, Qurum). Schools we serve: Indian School Muscat (Wadi Kabir), Indian School Al Ghubra, Indian School Al Wadi Al Kabir, Indian School Bousher. GST 4-6:30 PM batch (after-school slot). Muscat NTA NEET exam centre on-site. NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
   keywords: [
     'NEET coaching Muscat',
     'NEET coaching Oman',

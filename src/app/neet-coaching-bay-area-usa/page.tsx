@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 const subAreas = [
   { name: 'Fremont', note: 'Highest Indian-American population concentration in the Bay Area' },
   { name: 'Sunnyvale', note: 'Silicon Valley engineering hub · Bishop Hartmann area' },
-  { name: 'Cupertino', note: 'Cupertino HS / Monta Vista feeder schools' },
+  { name: 'Cupertino', note: 'Cupertino HS / Monta Vista schools' },
   { name: 'San Jose', note: 'Evergreen / Almaden / Mission San Jose HS' },
   { name: 'Palo Alto', note: 'Gunn HS / Palo Alto HS · Stanford-area community' },
   { name: 'Mountain View', note: 'Adjacent to Google · large Indian-tech community' },
@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: 'Which Bay Area schools do you support?',
-    a: 'All — NEET is NCERT-based and curriculum-agnostic. Common feeder schools: Lynbrook HS, Monta Vista HS, Mission San Jose HS, Cupertino HS, Saratoga HS, Gunn HS, Palo Alto HS, Henry M Gunn, Bellarmine, Harker, Notre Dame San Jose, Evergreen Valley, Independence HS, Milpitas HS, Bishop Hartmann.',
+    a: 'All — NEET is NCERT-based and curriculum-agnostic. Common schools: Lynbrook HS, Monta Vista HS, Mission San Jose HS, Cupertino HS, Saratoga HS, Gunn HS, Palo Alto HS, Henry M Gunn, Bellarmine, Harker, Notre Dame San Jose, Evergreen Valley, Independence HS, Milpitas HS, Bishop Hartmann.',
   },
   {
     q: 'What does NEET coaching cost in the Bay Area?',

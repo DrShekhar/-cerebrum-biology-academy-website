@@ -45,25 +45,25 @@ interface PageContentProps {
 const premiumResidences = [
   {
     name: 'Oberoi Apartments',
-    description: 'Ultra-luxury apartments with distinguished families',
-    highlights: ['Ultra Premium', 'Exclusive Society', 'Top Schools'],
+    description: 'Ultra-luxury apartments in the heart of Civil Lines',
+    highlights: ['Gated Society', 'Near Metro', 'Top Schools'],
     students: '25+',
   },
   {
     name: 'Mittal Rishi Apartments',
-    description: 'Premium residential complex with academic families',
-    highlights: ['Premium Society', 'Well-Connected', 'Educated Families'],
+    description: 'Premium residential complex in Civil Lines',
+    highlights: ['Residential Society', 'Well-Connected', 'Academic Focus'],
     students: '30+',
   },
   {
     name: 'Maidens Court',
-    description: 'Heritage locality with established families',
-    highlights: ['Heritage Area', 'Elite Residents', 'Near Metro'],
+    description: 'Heritage locality in Civil Lines',
+    highlights: ['Heritage Area', 'Residential', 'Near Metro'],
     students: '20+',
   },
   {
     name: 'Cavalry Lines',
-    description: 'Prestigious defense area with service families',
+    description: 'Defence area home to service families',
     highlights: ['Defense Colony', 'Disciplined Students', 'Academic Focus'],
     students: '35+',
   },
@@ -156,7 +156,7 @@ export default function PageContent({ faqs }: PageContentProps) {
           <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Building2 className="w-5 h-5 mr-2 text-yellow-300" />
-              Ultra-Premium Civil Lines - Direct Metro to Rohini
+              Civil Lines to Rohini - Direct Yellow Line Metro
             </div>
 
             <h1 className="hero-title text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -168,8 +168,8 @@ export default function PageContent({ faqs }: PageContentProps) {
             </h2>
 
             <p className="hero-description text-lg md:text-xl opacity-80 mb-8 max-w-4xl mx-auto speakable-intro">
-              Join Delhi's most trusted NEET Biology coaching. Civil Lines' ultra-premium families
-              trust us for academic excellence. Direct Yellow Line Metro to our Rohini DC Chowk
+              Join Delhi's most trusted NEET Biology coaching. Civil Lines families trust us for
+              academic excellence. Direct Yellow Line Metro to our Rohini DC Chowk
               center - just 8 stops, 20 minutes! AIIMS faculty, 98% success rate, small batches of
               15-20 students.
             </p>
@@ -263,15 +263,15 @@ export default function PageContent({ faqs }: PageContentProps) {
           <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Building2 className="w-4 h-4 mr-2" />
-              Ultra-Premium Locality
+              Civil Lines, North Delhi
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Civil Lines Families Trust Cerebrum
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Civil Lines is one of Delhi's most prestigious areas. Families here demand excellence
-              - and Cerebrum delivers with AIIMS faculty, proven results, and personalized
-              attention.
+              If you expect excellence from a coaching institute, Cerebrum delivers - AIIMS
+              faculty, proven results, and personalized attention, all a direct Metro ride from
+              Civil Lines.
             </p>
           </div>
 
@@ -385,11 +385,11 @@ export default function PageContent({ faqs }: PageContentProps) {
               Premium Residences We Serve
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Students from Civil Lines' Finest Addresses
+              Students from Across Civil Lines
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We're trusted by families from Oberoi Apartments, Mittal Rishi Apartments, and other
-              elite residences in Civil Lines
+              residences across Civil Lines
             </p>
           </div>
 
@@ -1016,7 +1016,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             '@type': 'EducationalOrganization',
             name: 'Cerebrum Biology Academy - NEET Coaching for Civil Lines Delhi',
             description:
-              'Best NEET coaching for Civil Lines Delhi students. Ultra-premium area with direct Yellow Line Metro access. 98% success rate, AIIMS faculty.',
+              'Best NEET coaching for Civil Lines Delhi students. Direct Yellow Line Metro access to our Rohini center. 98% success rate, AIIMS faculty.',
             url: 'https://cerebrumbiologyacademy.com/neet-coaching-civil-lines-delhi',
             areaServed: [
               'Civil Lines',

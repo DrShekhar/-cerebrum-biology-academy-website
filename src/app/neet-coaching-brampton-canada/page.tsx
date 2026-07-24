@@ -8,7 +8,7 @@ const city = NRI_INTERNATIONAL_CITIES['brampton-canada']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for Brampton Indian-origin Class 11-12 students — North America\'s most Indian city (52% Indian-origin, ~600K). Feeder schools: Turner Fenton, Mayfield, Heart Lake, Bramalea, Chinguacousy. EST 7-9:30 AM batch matches IST evening cleanly. NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. 98% success rate. Cerebrum\'s largest GTA student concentration.`,
+  description: `Live online NEET Biology coaching for Brampton Indian-origin Class 11-12 students — North America\'s most Indian city (52% Indian-origin, ~600K). Schools we serve: Turner Fenton, Mayfield, Heart Lake, Bramalea, Chinguacousy. EST 7-9:30 AM batch matches IST evening cleanly. NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. 98% success rate. Cerebrum\'s largest GTA student concentration.`,
   keywords: [
     'NEET coaching Brampton',
     'NEET coaching Peel Region',

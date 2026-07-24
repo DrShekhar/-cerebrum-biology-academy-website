@@ -56,7 +56,7 @@ const faqs = [
   {
     question: 'Which Surat schools send students to Cerebrum?',
     answer:
-      'Common Surat feeder schools: Delhi Public School Surat, Fountainhead School, Nirman High School, P.P. Savani School, Bhulka Vihar School, Mount Litera Zee School. Students join Pursuit (₹48K-75K), Ascent (₹58K-90K), or Pinnacle (₹98K-1.56L) depending on target NEET rank.',
+      'Common Surat schools: Delhi Public School Surat, Fountainhead School, Nirman High School, P.P. Savani School, Bhulka Vihar School, Mount Litera Zee School. Students join Pursuit (₹48K-75K), Ascent (₹58K-90K), or Pinnacle (₹98K-1.56L) depending on target NEET rank.',
   },
   {
     question: 'What does NEET coaching cost in Surat?',
@@ -135,7 +135,7 @@ export default function Page() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Surat feeder schools we serve
+            Surat schools we serve
           </h2>
           <p>
             Delhi Public School Surat, Fountainhead School, Nirman High School, P.P. Savani School,

@@ -46,22 +46,22 @@ function useScrollAnimation(threshold = 0.1) {
 }
 
 const ballygungeAreas = [
-  { name: 'Ballygunge', distance: '0 km', landmark: 'Old Money Hub' },
+  { name: 'Ballygunge', distance: '0 km', landmark: 'Heritage Neighbourhood' },
   { name: 'Gariahat', distance: '1 km', landmark: 'Central Market' },
-  { name: 'Alipore', distance: '3 km', landmark: 'South Kolkata Elite' },
+  { name: 'Alipore', distance: '3 km', landmark: 'South Kolkata' },
   { name: 'Bhawanipore', distance: '2 km', landmark: 'Heritage Zone' },
   { name: 'Sunny Park', distance: '4 km', landmark: 'Residential Area' },
   { name: 'Kalighat', distance: '5 km', landmark: 'South Kolkata' },
-  { name: 'Maidaverry', distance: '6 km', landmark: 'Premium Locality' },
+  { name: 'Maidaverry', distance: '6 km', landmark: 'Residential' },
   { name: 'New Alipore', distance: '7 km', landmark: 'South East Kolkata' },
 ]
 
 const whyChooseUs = [
   {
     icon: Building,
-    title: 'Ballygunge Elite Community Trust',
+    title: 'Trusted Across Ballygunge',
     description:
-      'Top choice for ultra-premium Ballygunge families with old money heritage. Trusted by industrialists, professionals, and established families seeking the best NEET preparation.',
+      'A top choice for Ballygunge families seeking the best NEET preparation - premium small-batch coaching with the personal attention your child deserves.',
   },
   {
     icon: Target,
@@ -73,7 +73,7 @@ const whyChooseUs = [
     icon: GraduationCap,
     title: 'Medical Faculty Excellence',
     description:
-      'Expert NEET biology coaching by accomplished medical professionals with 15+ years experience coaching students from elite Ballygunge families.',
+      'Expert NEET biology coaching by accomplished medical professionals with 15+ years experience coaching students from Ballygunge and South Kolkata.',
   },
   {
     icon: Star,
@@ -87,7 +87,7 @@ const faqs = [
   {
     question: 'Why should I choose your NEET coaching in Ballygunge?',
     answer:
-      'Ballygunge families appreciate quality, heritage, and proven results. We provide premium online NEET coaching with personalized attention matching the high standards of Ballygunge elite. Our 98% success rate and 67+ AIIMS selections demonstrate consistent excellence.',
+      'If you expect quality teaching and proven results, we deliver both. We provide premium online NEET coaching with personalized attention that matches the high standards Ballygunge families set. Our 98% success rate and 67+ AIIMS selections demonstrate consistent excellence.',
   },
   {
     question: 'Do you offer in-person classes in Ballygunge?',
@@ -121,7 +121,7 @@ const localBusinessSchema = {
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Ballygunge',
   description:
-    'Best NEET Coaching for Ballygunge Kolkata - Ultra-Premium Coaching for Elite Families',
+    'Best NEET Coaching for Ballygunge Kolkata - premium small-batch Biology coaching with expert medical faculty',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-ballygunge-kolkata',
   telephone: '+91-88264-44334',
   address: {
@@ -164,7 +164,7 @@ export default function PageContent() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Shield className="w-5 h-5 mr-2 text-yellow-400" />
-              Trusted by Ballygunge Elite | Premium Faculty
+              Trusted Across Ballygunge | Premium Faculty
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -172,13 +172,12 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Ultra-Premium NEET Coaching for Kolkata's Most Prestigious Locality
+              Premium NEET Biology Coaching in Ballygunge - Small Batches, Expert Medical Faculty
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Exclusive NEET coaching for Ballygunge, Gariahat, and surrounding elite areas. Learn
-              from accomplished medical faculty trusted by{' '}
-              <strong>industrialists and established families</strong>. Premium online classes with
+              NEET coaching for Ballygunge, Gariahat, and surrounding areas. Learn from{' '}
+              <strong>accomplished medical faculty</strong> in premium online classes with
               personalized attention and proven 690+ NEET scores.
             </p>
 
@@ -233,8 +232,8 @@ export default function PageContent() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Shield className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
-                <div className="text-2xl font-bold">Elite</div>
-                <div className="text-sm opacity-80">Family Trusted</div>
+                <div className="text-2xl font-bold">98%</div>
+                <div className="text-sm opacity-80">Success Rate</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
@@ -261,10 +260,10 @@ export default function PageContent() {
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Ballygunge & Nearby Prestigious Areas
+              Ballygunge & Nearby Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Online NEET coaching for South Kolkata's ultra-premium localities
+              Online NEET Biology coaching across Ballygunge and South Kolkata
             </p>
           </div>
 
@@ -357,10 +356,10 @@ export default function PageContent() {
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Ballygunge Elite, Master NEET with Premium Coaching!
+              Ballygunge Families, Master NEET with Premium Coaching!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Ultra-premium NEET coaching for Ballygunge's most prestigious families
+              Premium NEET coaching with small batches and personal mentoring
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">

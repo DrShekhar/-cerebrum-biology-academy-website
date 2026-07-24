@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Coaching in Chennai | Biology Specialist | Cerebrum Biology Academy',
   description:
-    'NEET Biology coaching in Chennai — biology-only specialist serving Adyar, Anna Nagar, T. Nagar, Velachery, OMR, Mylapore, Nungambakkam, Tambaram. AIIMS-trained Dr. Shekhar C Singh, NCERT line-by-line, Tamil-medium NCERT bridge for state-board students, small batches of 15-20. Feeder schools: PSBB, DAV, Velammal, Chettinad Vidyashram. 98% qualification rate.',
+    'NEET Biology coaching in Chennai — biology-only specialist serving Adyar, Anna Nagar, T. Nagar, Velachery, OMR, Mylapore, Nungambakkam, Tambaram. AIIMS-trained Dr. Shekhar C Singh, NCERT line-by-line, Tamil-medium NCERT bridge for state-board students, small batches of 15-20. Schools we serve: PSBB, DAV, Velammal, Chettinad Vidyashram. 98% qualification rate.',
   keywords: [
     'NEET coaching Chennai',
     'best NEET coaching Chennai',

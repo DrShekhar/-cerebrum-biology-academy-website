@@ -56,7 +56,7 @@ const faqs = [
   {
     question: 'Which Bhopal schools send students to Cerebrum?',
     answer:
-      'Common Bhopal feeder schools: Campion School, St. Josephs Convent, Sagar Public School, Delhi Public School Bhopal, The Sanskaar Valley School, Lakshmi Narain College of Technology. Students join Pursuit (₹48K-75K), Ascent (₹58K-90K), or Pinnacle (₹98K-1.56L) depending on target NEET rank.',
+      'Common Bhopal schools: Campion School, St. Josephs Convent, Sagar Public School, Delhi Public School Bhopal, The Sanskaar Valley School, Lakshmi Narain College of Technology. Students join Pursuit (₹48K-75K), Ascent (₹58K-90K), or Pinnacle (₹98K-1.56L) depending on target NEET rank.',
   },
   {
     question: 'What does NEET coaching cost in Bhopal?',
@@ -139,7 +139,7 @@ export default function Page() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Bhopal feeder schools we serve
+            Bhopal schools we serve
           </h2>
           <p>
             Campion School, St. Josephs Convent, Sagar Public School, Delhi Public School Bhopal,

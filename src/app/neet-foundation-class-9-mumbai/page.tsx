@@ -58,7 +58,7 @@ const faqs = [
   {
     question: 'Which Mumbai schools are common Cerebrum Foundation feeders?',
     answer:
-      'Common Mumbai feeder schools across Class 9-10 Foundation cohorts: Dhirubhai Ambani International School (BKC), Cathedral & John Connon School (Fort), Bombay Scottish School (Mahim), Jamnabai Narsee School (Vile Parle), American School of Bombay (BKC), Oberoi International School (Goregaon), Hill Spring International School (Tardeo), Singapore International School (Dahisar), JBCN International School (Borivali), Mukesh Patel School (Bhandup). For Maharashtra Board feeders: KES Shroff College Junior, Ramnarain Ruia Junior College, Mithibai College Junior, and various Mumbai School Board Class 9-10 sections.',
+      'Common Mumbai schools across Class 9-10 Foundation cohorts: Dhirubhai Ambani International School (BKC), Cathedral & John Connon School (Fort), Bombay Scottish School (Mahim), Jamnabai Narsee School (Vile Parle), American School of Bombay (BKC), Oberoi International School (Goregaon), Hill Spring International School (Tardeo), Singapore International School (Dahisar), JBCN International School (Borivali), Mukesh Patel School (Bhandup). For Maharashtra Board feeders: KES Shroff College Junior, Ramnarain Ruia Junior College, Mithibai College Junior, and various Mumbai School Board Class 9-10 sections.',
   },
   {
     question: 'How does Cerebrum compare to Allen Scholastics or Aakash Foundation in Mumbai?',
@@ -232,10 +232,10 @@ export default function NEETFoundationClass9MumbaiPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Mumbai feeder schools and board coverage
+            Mumbai schools and board coverage
           </h2>
           <p>
-            CBSE-board feeder schools (most common in Mumbai): Dhirubhai Ambani International (BKC),
+            CBSE-board schools (most common in Mumbai): Dhirubhai Ambani International (BKC),
             Cathedral &amp; John Connon (Fort), Bombay Scottish (Mahui Bay), American School of
             Bombay (BKC), Oberoi International (Goregaon), Hill Spring International (Tardeo). ICSE
             feeders: Jamnabai Narsee, Bombay Scottish, Hiranandani Foundation School (Powai +

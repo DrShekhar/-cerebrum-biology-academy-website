@@ -10,7 +10,7 @@ const city = NRI_INTERNATIONAL_CITIES['birmingham-uk']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for Birmingham-Indian Class 11-12 students — Handsworth, Smethwick, Solihull, Sparkhill, Erdington. Feeder schools: King Edward's Birmingham, King Edward VI Camp Hill, Solihull School, Edgbaston High School. A-Level Biology to NCERT bridge. GMT 12-2:30 PM batch matches IST evening. NRI quota + UK MBBS alternative. 98% qualification rate.`,
+  description: `Live online NEET Biology coaching for Birmingham-Indian Class 11-12 students — Handsworth, Smethwick, Solihull, Sparkhill, Erdington. Schools we serve: King Edward's Birmingham, King Edward VI Camp Hill, Solihull School, Edgbaston High School. A-Level Biology to NCERT bridge. GMT 12-2:30 PM batch matches IST evening. NRI quota + UK MBBS alternative. 98% qualification rate.`,
   keywords: [
     'NEET coaching Birmingham',
     'NEET coaching UK',

@@ -145,7 +145,7 @@ export default function Page() {
             2 hours east) are the primary local Canadian medical targets.
           </p>
 
-          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">Ottawa feeder schools</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">Ottawa schools</h2>
           <p>
             Lisgar Collegiate Institute, Colonel By Secondary School, Earl of March Secondary
             School, Merivale High School, Ashbury College (IB Diploma), and Elmwood School. Students

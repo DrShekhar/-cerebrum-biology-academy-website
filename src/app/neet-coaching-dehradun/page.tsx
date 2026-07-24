@@ -56,7 +56,7 @@ const faqs = [
   {
     question: 'Which Dehradun schools send students to Cerebrum?',
     answer:
-      'Common Dehradun feeder schools: The Doon School, Welham Girls School, Welham Boys School, Hopetown Girls School, Ann Mary School, Brightlands School, Pestle Weed College. Students join Pursuit (₹48K-75K), Ascent (₹58K-90K), or Pinnacle (₹98K-1.56L) depending on target NEET rank.',
+      'Common Dehradun schools: The Doon School, Welham Girls School, Welham Boys School, Hopetown Girls School, Ann Mary School, Brightlands School, Pestle Weed College. Students join Pursuit (₹48K-75K), Ascent (₹58K-90K), or Pinnacle (₹98K-1.56L) depending on target NEET rank.',
   },
   {
     question: 'What does NEET coaching cost in Dehradun?',
@@ -139,7 +139,7 @@ export default function Page() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Dehradun feeder schools we serve
+            Dehradun schools we serve
           </h2>
           <p>
             The Doon School, Welham Girls School, Welham Boys School, Hopetown Girls School, Ann

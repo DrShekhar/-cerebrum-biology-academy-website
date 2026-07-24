@@ -15,7 +15,7 @@ const ogImageParams = new URLSearchParams({
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in Bahrain (Manama) | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for ~350K Indian-origin Class 11-12 students in Bahrain (25% of population). Manama, Muharraq, Riffa, Saar, Janabiyah. Feeder schools: Indian School Bahrain (ISB), New Indian School Bahrain, Asian School Bahrain. AST 3-5:30 PM batch (after-school slot). Manama NTA NEET exam centre on-site. NRI quota for AIIMS / JIPMER / Manipal / KMC. 98% success rate.`,
+  description: `Live online NEET Biology coaching for ~350K Indian-origin Class 11-12 students in Bahrain (25% of population). Manama, Muharraq, Riffa, Saar, Janabiyah. Schools we serve: Indian School Bahrain (ISB), New Indian School Bahrain, Asian School Bahrain. AST 3-5:30 PM batch (after-school slot). Manama NTA NEET exam centre on-site. NRI quota for AIIMS / JIPMER / Manipal / KMC. 98% success rate.`,
   keywords: [
     'NEET coaching Bahrain',
     'NEET coaching Manama',

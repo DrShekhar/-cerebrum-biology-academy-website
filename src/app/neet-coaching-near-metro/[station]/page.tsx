@@ -386,7 +386,7 @@ const metroStationData: Record<string, MetroStationData> = {
       {
         question: 'Do DPS RK Puram students attend Cerebrum?',
         answer:
-          'Yes! DPS RK Puram is one of our feeder schools. Students from DPS RK Puram consistently score 650+ in NEET Biology with our coaching.',
+          'Yes! DPS RK Puram is one of our schools. Students from DPS RK Puram consistently score 650+ in NEET Biology with our coaching.',
       },
       {
         question: 'How do I reach South Extension from RK Puram?',
@@ -846,7 +846,7 @@ const metroStationData: Record<string, MetroStationData> = {
       {
         question: 'Do The Shri Ram School students attend Cerebrum?',
         answer:
-          'Yes! The Shri Ram School DLF Phase 3 is one of our top feeder schools. We offer Board + NEET combined preparation that complements their curriculum perfectly.',
+          'Yes! The Shri Ram School DLF Phase 3 is one of our top schools. We offer Board + NEET combined preparation that complements their curriculum perfectly.',
       },
       {
         question: 'What is the fee for DLF Phase 3 students?',
@@ -1000,7 +1000,7 @@ const metroStationData: Record<string, MetroStationData> = {
       {
         question: 'Do Apeejay School students attend Cerebrum?',
         answer:
-          'Yes! Apeejay School near Neelam Chowk is one of our feeder schools. Students walk to our Sector 17 center after school for evening batches.',
+          'Yes! Apeejay School near Neelam Chowk is one of our schools. Students walk to our Sector 17 center after school for evening batches.',
       },
       {
         question: 'What are the fees for Neelam Chowk area students?',

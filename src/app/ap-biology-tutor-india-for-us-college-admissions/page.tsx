@@ -69,7 +69,7 @@ const whyAPReasons = [
   },
 ]
 
-// City cards — feeder schools verified by IB / AP exam center listings.
+// City cards — schools verified by IB / AP exam center listings.
 // City links are placeholders; the city pages are created in a parallel
 // agent task. If those pages slip, the cards still render and the links
 // will 404 — flag for re-link if needed.
@@ -561,7 +561,7 @@ export default function APBiologyIndiaForUSAdmissionsPage() {
                 </div>
 
                 <p className="text-xs font-semibold uppercase tracking-wide text-blue-700 mb-3">
-                  Feeder schools we coach
+                  Schools we coach
                 </p>
                 <ul className="space-y-2 mb-6">
                   {card.schools.map((school) => (

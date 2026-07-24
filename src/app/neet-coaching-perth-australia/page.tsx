@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     q: 'Do you support Perth Indian-curriculum schools?',
-    a: "Cerebrum supports Perth students from all schools — NEET is NCERT-based and curriculum-agnostic. Common Perth feeder schools: Perth Modern, Wesley College, Hale, Scotch, Christ Church Grammar, Methodist Ladies' College, Penrhos College, plus public ATAR-track schools across Perth metro and Fremantle.",
+    a: "Cerebrum supports Perth students from all schools — NEET is NCERT-based and curriculum-agnostic. Common Perth schools: Perth Modern, Wesley College, Hale, Scotch, Christ Church Grammar, Methodist Ladies' College, Penrhos College, plus public ATAR-track schools across Perth metro and Fremantle.",
   },
   {
     q: 'Are there other Cerebrum NEET batches in Australia?',

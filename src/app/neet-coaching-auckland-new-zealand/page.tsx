@@ -9,7 +9,7 @@ const city = NRI_INTERNATIONAL_CITIES['auckland-new-zealand']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in Auckland, New Zealand | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for Auckland Indian-origin Class 11-12 students — 240K Indian community (~14% of city), New Zealand's largest. Papatoetoe / Mount Roskill / Sandringham / Otahuhu / Manukau / Botany / Howick. Feeder schools: Mt Albert Grammar, Auckland Grammar, Epsom Girls Grammar, Macleans College, Westlake Boys/Girls HS, Rangitoto College, Mount Roskill Grammar. NCEA + NEET dual prep. Saturday morning live (9-11:30 AM NZST). NRI quota + U of Auckland MBChB alternative. 98% success rate.`,
+  description: `Live online NEET Biology coaching for Auckland Indian-origin Class 11-12 students — 240K Indian community (~14% of city), New Zealand's largest. Papatoetoe / Mount Roskill / Sandringham / Otahuhu / Manukau / Botany / Howick. Schools we serve: Mt Albert Grammar, Auckland Grammar, Epsom Girls Grammar, Macleans College, Westlake Boys/Girls HS, Rangitoto College, Mount Roskill Grammar. NCEA + NEET dual prep. Saturday morning live (9-11:30 AM NZST). NRI quota + U of Auckland MBChB alternative. 98% success rate.`,
   keywords: [
     'NEET coaching Auckland',
     'NEET coaching New Zealand',

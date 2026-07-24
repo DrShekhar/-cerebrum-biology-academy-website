@@ -7,7 +7,7 @@ const city = NRI_INTERNATIONAL_CITIES['sydney-australia']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for Australian-Indian Class 11-12 students in ${city.city}. Feeder schools: ${city.indianSchools.slice(0, 3).join(', ')}. Time-zone-friendly Saturday morning live batch (9-11:30 AM AEDT) + weekday recordings. NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. 98% success rate.`,
+  description: `Live online NEET Biology coaching for Australian-Indian Class 11-12 students in ${city.city}. Schools we serve: ${city.indianSchools.slice(0, 3).join(', ')}. Time-zone-friendly Saturday morning live batch (9-11:30 AM AEDT) + weekday recordings. NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. 98% success rate.`,
   keywords: [
     'NEET coaching Sydney',
     'NEET coaching Australia',

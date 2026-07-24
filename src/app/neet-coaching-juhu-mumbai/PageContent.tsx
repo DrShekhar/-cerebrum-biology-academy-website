@@ -53,27 +53,27 @@ const juhuAreas = [
   { name: 'Vile Parle', distance: '15 km', landmark: 'Airport Adjacent' },
   { name: 'Oshiwara', distance: '13 km', landmark: 'South Juhu' },
   { name: 'Kala Ghoda', distance: '16 km', landmark: 'Andheri East' },
-  { name: 'Ville Parle East', distance: '15 km', landmark: 'Premium Colony' },
+  { name: 'Ville Parle East', distance: '15 km', landmark: 'Residential' },
 ]
 
 const whyChooseUs = [
   {
     icon: Gem,
-    title: 'Premium Locality Expertise',
+    title: 'Built Around Juhu Schedules',
     description:
-      "Specialized coaching for Juhu's celebrity families and high-income households. We understand the unique needs of premium locality residents.",
+      'Discreet, flexible online NEET Biology coaching for Juhu students. Classes fit around school hours, travel, and busy family calendars.',
   },
   {
     icon: Target,
     title: '67+ AIIMS Selections',
     description:
-      "Proven track record with students from international schools and elite institutions across Mumbai's premium areas.",
+      "Proven track record with students from international schools and top institutions across Mumbai's western suburbs.",
   },
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
     description:
-      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching high-achieving students from premium households.',
+      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching high-achieving NEET aspirants.',
   },
   {
     icon: Star,
@@ -87,17 +87,17 @@ const faqs = [
   {
     question: 'Do you have a coaching center in Juhu?',
     answer:
-      'Our main center is in Greater Noida. For Juhu students, we offer premium live online NEET classes with personalized attention. Many affluent families in Juhu prefer online coaching for flexibility with travel schedules and international engagements. Our comprehensive material and recorded lectures ensure uninterrupted preparation.',
+      'Our main center is in Greater Noida. For Juhu students, we offer premium live online NEET classes with personalized attention. Many Juhu families prefer online coaching for flexibility with travel schedules and other commitments. Our comprehensive material and recorded lectures ensure uninterrupted preparation.',
   },
   {
-    question: 'How do you cater to premium locality families in Juhu?',
+    question: 'What can Juhu families expect from your coaching?',
     answer:
-      'We understand premium families value quality, exclusivity, and personalized service. We offer flexible schedules, one-on-one guidance, progress reports, and result-oriented teaching. Our approach is tailored for high-achievers from prestigious family backgrounds.',
+      'You get flexible schedules, one-on-one guidance, regular progress reports, and result-oriented teaching. If you value personalized service and discretion, our approach is built for exactly that - quality coaching tailored to high-achieving students.',
   },
   {
     question: 'Which schools do your Juhu students come from?',
     answer:
-      'We have students from Cathedral School Mumbai, Bombay Scottish, Jamnabai Narsee, Ecole Mondiale World School, and other elite international schools in Juhu and nearby premium areas. The academically rigorous environment of these institutions aligns perfectly with our NEET preparation.',
+      'We have students from Cathedral School Mumbai, Bombay Scottish, Jamnabai Narsee, Ecole Mondiale World School, and other international schools in Juhu and nearby areas. The academically rigorous environment of these institutions aligns perfectly with our NEET preparation.',
   },
   {
     question: 'How do online classes work for international travel?',
@@ -120,7 +120,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Juhu',
-  description: 'Best NEET Coaching for Juhu students - Premium coaching for celebrity families',
+  description:
+    'Best NEET Coaching for Juhu students - premium online Biology coaching with AIIMS-trained faculty',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-juhu-mumbai',
   telephone: '+91-88264-44334',
   address: {
@@ -163,7 +164,7 @@ export default function PageContent() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Gem className="w-5 h-5 mr-2 text-yellow-400" />
-              Premium Coaching for Elite Families | AIIMS Faculty
+              Premium Small-Batch Coaching | AIIMS Faculty
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -171,13 +172,13 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Coaching for Mumbai&apos;s Most Prestigious Locality
+              Premium NEET Biology Coaching in Juhu - Personal Attention, AIIMS-Trained Faculty
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Exclusive NEET coaching for Juhu, JVPD Scheme, and nearby premium areas. Learn from{' '}
-              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by celebrity families
-              and high-income households.
+              Discreet, flexible NEET coaching for Juhu, JVPD Scheme, and nearby areas. Learn from{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - classes built around your
+              school hours and travel plans.
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
@@ -232,7 +233,7 @@ export default function PageContent() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Gem className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
                 <div className="text-2xl font-bold">Premium</div>
-                <div className="text-sm opacity-80">Family Focus</div>
+                <div className="text-sm opacity-80">Personal Attention</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
@@ -259,10 +260,10 @@ export default function PageContent() {
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Juhu & Nearby Premium Areas
+              Juhu & Nearby Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Online NEET coaching for Mumbai&apos;s celebrity families and elite residents
+              Discreet, flexible online NEET Biology coaching built around Juhu schedules
             </p>
           </div>
 
@@ -355,10 +356,10 @@ export default function PageContent() {
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Elite Juhu Families, Secure Your Medical Future!
+              Juhu Families, Secure Your Medical Future!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium NEET coaching designed for premium families and their aspirations
+              Premium NEET coaching built around your schedule and your aspirations
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">

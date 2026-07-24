@@ -9,7 +9,7 @@ const city = NRI_INTERNATIONAL_CITIES['edmonton-canada']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in Edmonton, Canada | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for Edmonton Indian-origin Class 11-12 students — 80K Indian community (Alberta\'s 2nd largest after Calgary), Mill Woods / Castle Downs / Beverly / Riverbend / Whitemud / U of A campus area. Significant Sikh/Punjabi + Gujarati communities. Feeder schools: Old Scona Academic, Strathcona HS, Ross Sheppard, Lillian Osborne, Harry Ainlay, Jasper Place. MST 5-7:30 AM batch + Saturday morning live. NRI quota + U of Alberta Medicine alternative. MCAT B/B track. 98% success rate.`,
+  description: `Live online NEET Biology coaching for Edmonton Indian-origin Class 11-12 students — 80K Indian community (Alberta\'s 2nd largest after Calgary), Mill Woods / Castle Downs / Beverly / Riverbend / Whitemud / U of A campus area. Significant Sikh/Punjabi + Gujarati communities. Schools we serve: Old Scona Academic, Strathcona HS, Ross Sheppard, Lillian Osborne, Harry Ainlay, Jasper Place. MST 5-7:30 AM batch + Saturday morning live. NRI quota + U of Alberta Medicine alternative. MCAT B/B track. 98% success rate.`,
   keywords: [
     'NEET coaching Edmonton',
     'NEET coaching Edmonton Canada',
@@ -142,7 +142,7 @@ export default function Page() {
             join the same Alberta cohort as Calgary families.
           </p>
 
-          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">Edmonton feeder schools</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">Edmonton schools</h2>
           <p>
             Ross Sheppard High School, Strathcona High School, Old Scona Academic, Harry Ainlay High
             School, Jasper Place High School, Lillian Osborne High School, and McNally High School.

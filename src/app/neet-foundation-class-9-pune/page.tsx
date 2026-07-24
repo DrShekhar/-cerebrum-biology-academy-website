@@ -55,7 +55,7 @@ const faqs = [
   {
     question: 'Which Pune schools are common Cerebrum Foundation feeders?',
     answer:
-      "Common Pune feeder schools across Class 9-10 Foundation cohorts: Symbiosis International School (Viman Nagar), Mercedes-Benz International School (Hadapsar), Indus International School (Bavdhan), Vibgyor High (Balewadi, Magarpatta, Kondhwa), Bishop's School (Camp + Undri), Loyola High School (Camp), Mahindra International School (Lavale), MIT Vishwashanti Gurukul (Loni Kalbhor), Pawar Public School (Hinjewadi, Bavdhan), DPS Pune, The Bishop's Co-Ed (Kalyani Nagar), Hutchings High School (Camp), Akshara International (Wakad), DSK World (Wadgaon Sheri), Sanskriti School (Bhosari). Maharashtra State Board feeders span the broader Pune Municipal Corporation school catchment.",
+      "Common Pune schools across Class 9-10 Foundation cohorts: Symbiosis International School (Viman Nagar), Mercedes-Benz International School (Hadapsar), Indus International School (Bavdhan), Vibgyor High (Balewadi, Magarpatta, Kondhwa), Bishop's School (Camp + Undri), Loyola High School (Camp), Mahindra International School (Lavale), MIT Vishwashanti Gurukul (Loni Kalbhor), Pawar Public School (Hinjewadi, Bavdhan), DPS Pune, The Bishop's Co-Ed (Kalyani Nagar), Hutchings High School (Camp), Akshara International (Wakad), DSK World (Wadgaon Sheri), Sanskriti School (Bhosari). Maharashtra State Board feeders span the broader Pune Municipal Corporation school catchment.",
   },
   {
     question: 'How does Cerebrum compare to Allen Pune or Aakash Pune for Class 9 Foundation?',

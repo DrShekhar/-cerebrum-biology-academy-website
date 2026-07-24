@@ -16,7 +16,7 @@ const ogImageParams = new URLSearchParams({
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in Doha, Qatar | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for ~700K Indian-origin Class 11-12 students in Doha (Qatar's largest expat community at 25% of population). Al Sadd / Bin Mahmoud / Al Mansoura / Wakra / Al Wukair / Al Khor. Feeder schools: DPS Modern Indian School Doha (DPS-MIS), Birla Public School Doha, MES Indian School, Bhavan's Public School, Ideal Indian School, Olive International. AST 3-5:30 PM batch (after-school slot). Doha NTA NEET exam centre (one of largest overseas). NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  description: `Live online NEET Biology coaching for ~700K Indian-origin Class 11-12 students in Doha (Qatar's largest expat community at 25% of population). Al Sadd / Bin Mahmoud / Al Mansoura / Wakra / Al Wukair / Al Khor. Schools we serve: DPS Modern Indian School Doha (DPS-MIS), Birla Public School Doha, MES Indian School, Bhavan's Public School, Ideal Indian School, Olive International. AST 3-5:30 PM batch (after-school slot). Doha NTA NEET exam centre (one of largest overseas). NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
   keywords: [
     'NEET coaching Doha',
     'NEET coaching Qatar',

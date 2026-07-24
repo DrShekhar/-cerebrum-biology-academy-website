@@ -10,7 +10,7 @@ const city = NRI_INTERNATIONAL_CITIES['atlanta-usa']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for Greater Atlanta Indian-origin Class 11-12 students — North Fulton (Sandy Springs, Roswell, Alpharetta, Johns Creek), East Cobb, Gwinnett Tech Corridor. Feeder schools: Walton HS, Lambert HS, Northview HS, Pope HS, Chattahoochee, Centennial Roswell, Johns Creek HS. AP Biology + NEET dual prep. EST 7-9:30 AM batch. NRI quota for AIIMS / JIPMER / Manipal. MCAT B/B for Emory / Georgia Tech / UGA premed alternative. 98% success rate.`,
+  description: `Live online NEET Biology coaching for Greater Atlanta Indian-origin Class 11-12 students — North Fulton (Sandy Springs, Roswell, Alpharetta, Johns Creek), East Cobb, Gwinnett Tech Corridor. Schools we serve: Walton HS, Lambert HS, Northview HS, Pope HS, Chattahoochee, Centennial Roswell, Johns Creek HS. AP Biology + NEET dual prep. EST 7-9:30 AM batch. NRI quota for AIIMS / JIPMER / Manipal. MCAT B/B for Emory / Georgia Tech / UGA premed alternative. 98% success rate.`,
   keywords: [
     'NEET coaching Atlanta',
     'NEET coaching USA',

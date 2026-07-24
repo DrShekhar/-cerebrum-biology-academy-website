@@ -15,7 +15,7 @@ const ogImageParams = new URLSearchParams({
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in Kuwait City | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for ~1M Indian-origin Class 11-12 students in Kuwait (largest Gulf Indian community at 21% of population). Salmiya, Hawalli, Farwaniya, Mahboula, Mangaf, Abbasiya. Feeder schools: Indian Community School Kuwait (ICSK), Indian Public School (IPS), Gulf Indian School. AST 3-5:30 PM batch. Kuwait City NTA NEET exam centre on-site. NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  description: `Live online NEET Biology coaching for ~1M Indian-origin Class 11-12 students in Kuwait (largest Gulf Indian community at 21% of population). Salmiya, Hawalli, Farwaniya, Mahboula, Mangaf, Abbasiya. Schools we serve: Indian Community School Kuwait (ICSK), Indian Public School (IPS), Gulf Indian School. AST 3-5:30 PM batch. Kuwait City NTA NEET exam centre on-site. NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
   keywords: [
     'NEET coaching Kuwait',
     'NEET coaching Kuwait City',

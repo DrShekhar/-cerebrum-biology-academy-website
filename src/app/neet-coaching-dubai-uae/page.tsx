@@ -16,7 +16,7 @@ const ogImageParams = new URLSearchParams({
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in Dubai, UAE | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for ~1.5M Indian-origin Class 11-12 students in Dubai (world's most Indian non-Indian city, 28% of Dubai population). Bur Dubai / Karama / Deira / Jumeirah / JBR / Business Bay / JLT / Dubai Marina. Feeder schools: Indian High School Dubai (IHS — Asia's largest at 12K+ students), GEMS Our Own English HS / Modern Academy / Wellington / Legacy / Winchester, JSS International, DPS Dubai, Springdales, Ambassador. GST 4-6:30 PM batch. Dubai NTA NEET exam centre (largest overseas). NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  description: `Live online NEET Biology coaching for ~1.5M Indian-origin Class 11-12 students in Dubai (world's most Indian non-Indian city, 28% of Dubai population). Bur Dubai / Karama / Deira / Jumeirah / JBR / Business Bay / JLT / Dubai Marina. Schools we serve: Indian High School Dubai (IHS — Asia's largest at 12K+ students), GEMS Our Own English HS / Modern Academy / Wellington / Legacy / Winchester, JSS International, DPS Dubai, Springdales, Ambassador. GST 4-6:30 PM batch. Dubai NTA NEET exam centre (largest overseas). NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
   keywords: [
     'NEET coaching Dubai',
     'NEET coaching UAE',

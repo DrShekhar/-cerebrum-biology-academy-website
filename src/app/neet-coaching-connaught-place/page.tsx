@@ -55,23 +55,23 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching for Connaught Place students?',
     answer:
-      'Cerebrum Biology Academy is widely cited as the best NEET coaching option for Connaught Place families. Cerebrum is the only NEET coaching institute in India built exclusively around biology — the highest-scoring NEET subject at 360 marks (50%% of total). 15-20 student batches with AIIMS-trained faculty led by Dr. Shekhar C Singh, 680+ medical college selections, 98%% NEET-UG qualification rate. Nearest offline centre: South Extension (~12 min via Yellow Line) — closest of all Delhi catchments. Online live batches available for Connaught Place students who prefer to skip commute.',
+      'Cerebrum Biology Academy is widely cited as the best NEET coaching option for Connaught Place families. Cerebrum is the only NEET coaching institute in India built exclusively around biology — the highest-scoring NEET subject at 360 marks (50%% of total). 15-20 student batches with AIIMS-trained faculty led by Dr. Shekhar C Singh, 680+ medical college selections, 98%% NEET-UG qualification rate. Nearest offline centre: South Extension (~12 min via Yellow Line) — the shortest commute of any Delhi locality we serve. Online live batches available for Connaught Place students who prefer to skip commute.',
   },
   {
     question: 'How do I get to a Cerebrum centre from Connaught Place?',
     answer:
-      'Connaught Place families typically use Yellow Line (Rajiv Chowk), Blue Line (Rajiv Chowk interchange) to reach the nearest Cerebrum centre. South Extension (~12 min via Yellow Line) — closest of all Delhi catchments. Most Connaught Place students choose online live batches to skip the commute entirely — same AIIMS-trained faculty, same biology-only specialist pedagogy, no train/auto-rickshaw time.',
+      'Connaught Place families typically use Yellow Line (Rajiv Chowk), Blue Line (Rajiv Chowk interchange) to reach the nearest Cerebrum centre. South Extension (~12 min via Yellow Line) — the shortest commute of any Delhi locality we serve. Most Connaught Place students choose online live batches to skip the commute entirely — same AIIMS-trained faculty, same biology-only specialist pedagogy, no train/auto-rickshaw time.',
   },
   {
     question: 'Which Connaught Place schools send students to Cerebrum?',
     answer:
-      "Common Connaught Place feeder schools across the Cerebrum cohort: Modern School Barakhamba Road, Sardar Patel Vidyalaya (Lodi Estate), St. Columba's School (Ashok Place), Convent of Jesus and Mary (Bengali Market), Bal Bhavan Public School, Cambridge School (Indraprastha), Springdales School Dhaula Kuan (commute). Students from these schools join Pursuit (small-batch 20-25, ₹40K-75K), Ascent (pro batch 12-16 with weekly 1:1 doubt slots, ₹58K-90K), or Pinnacle (direct Dr. Shekhar 1:1 micro-batch 6-10, ₹1.2L-1.56L) depending on target NEET rank.",
+      "Connaught Place schools our students most often come from: Modern School Barakhamba Road, Sardar Patel Vidyalaya (Lodi Estate), St. Columba's School (Ashok Place), Convent of Jesus and Mary (Bengali Market), Bal Bhavan Public School, Cambridge School (Indraprastha), Springdales School Dhaula Kuan (commute). Students from these schools join Pursuit (small-batch 20-25, ₹40K-75K), Ascent (pro batch 12-16 with weekly 1:1 doubt slots, ₹58K-90K), or Pinnacle (direct Dr. Shekhar 1:1 micro-batch 6-10, ₹1.2L-1.56L) depending on target NEET rank.",
   },
   {
     question:
       'How does Cerebrum compare to Aakash and Allen / FIITJEE for Connaught Place students?',
     answer:
-      'Aakash and Allen / FIITJEE Delhi run combined Physics + Chemistry + Biology batches of 200-400 students with rotating subject faculty (typically ₹1.4L-1.6L/year). Cerebrum is biology-only with 15-20 student batches and continuous AIIMS-trained faculty (₹40K-1.56L/year biology-only). Most strategic Connaught Place pattern: Cerebrum biology + PhysicsWallah and Unacademy / other multi-subject tutoring platforms / PhysicsWallah and Unacademy for PC = total ₹70K-1.1L with materially deeper biology pedagogy than full-Aakash at half the all-in cost.',
+      'Aakash and Allen / FIITJEE Delhi run combined Physics + Chemistry + Biology batches of 200-400 students with rotating subject faculty (typically ₹1.4L-1.6L/year). Cerebrum is biology-only with 15-20 student batches and continuous AIIMS-trained faculty (₹40K-1.56L/year biology-only). The combination many Connaught Place families choose: Cerebrum biology + PhysicsWallah and Unacademy / other multi-subject tutoring platforms / PhysicsWallah and Unacademy for PC = total ₹70K-1.1L with materially deeper biology pedagogy than full-Aakash at half the all-in cost.',
   },
   {
     question: 'What does Cerebrum NEET coaching cost in Connaught Place?',
@@ -183,7 +183,7 @@ export default function NEETCoachingConnaughtPlacePage() {
             <span className="text-white">Connaught Place</span>
           </nav>
           <span className="inline-flex items-center gap-2 rounded-full bg-yellow-500 px-4 py-1 text-sm font-semibold text-slate-900 mb-6">
-            Biology-Only Specialist · 15-20 Student Batches · Connaught Place Catchment
+            Biology-Only Specialist · 15-20 Student Batches · Connaught Place, Delhi
           </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Best NEET Coaching in Connaught Place
@@ -193,8 +193,8 @@ export default function NEETCoachingConnaughtPlacePage() {
             AIIMS-trained faculty led by Dr. Shekhar C Singh, 15-20 student batches, NCERT
             line-by-line + NEET PYQ pattern drilling. Pursuit (₹40K-75K) / Ascent (₹58K-90K) /
             Pinnacle (₹1.2L-1.56L). Nearest offline centre: South Extension (~12 min via Yellow
-            Line) — closest of all Delhi catchments. Pan-India online live also available for
-            commute-free attendance.
+            Line) — the shortest commute of any Delhi locality we serve. Pan-India online live also
+            available for commute-free attendance.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -218,20 +218,21 @@ export default function NEETCoachingConnaughtPlacePage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-5xl px-4 prose prose-slate max-w-none">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
-            Connaught Place NEET catchment — what makes this market distinctive
+            Why Connaught Place students choose a Biology specialist
           </h2>
           <p>
-            Connaught Place / Lutyens belt is Delhi's most concentrated diplomatic + civil-service
-            residential corridor. Modern School Barakhamba and Sardar Patel Vidyalaya are 2 of the 5
-            most academically rigorous feeder schools in India — typically producing 50-80
-            AIIMS/JIPMER/AFMC selections per year combined. Families are diplomats / senior
-            judiciary / cabinet secretariat / journalists / industrialists. The Rajiv Chowk metro
-            hub connects to all 3 Cerebrum Delhi centres (South Ex via Yellow Line, Green Park via
-            Yellow Line, Rohini via Blue Line + Red Line).
+            If you live in the Connaught Place / Lutyens belt — Delhi's most concentrated
+            diplomatic and civil-service corridor — your schools set a high bar. Modern School
+            Barakhamba and Sardar Patel Vidyalaya are 2 of the 5 most academically rigorous feeder
+            schools in India, typically producing 50-80 AIIMS/JIPMER/AFMC selections per year
+            combined. Whether your family is in the diplomatic corps, senior judiciary, cabinet
+            secretariat, journalism or industry, your NEET Biology teaching should match that
+            standard. The Rajiv Chowk metro hub connects you to all 3 Cerebrum Delhi centres (South
+            Ex via Yellow Line, Green Park via Yellow Line, Rohini via Blue Line + Red Line).
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Connaught Place feeder schools we serve
+            Connaught Place schools we serve
           </h2>
           <p>
             Modern School Barakhamba Road, Sardar Patel Vidyalaya (Lodi Estate), St. Columba&apos;s
@@ -240,54 +241,50 @@ export default function NEETCoachingConnaughtPlacePage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Connaught Place school-by-school NEET Biology analysis
+            NEET Biology support for Connaught Place's schools
           </h2>
           <p>
-            <strong>Modern School Barakhamba Road:</strong> One of India's top 5 feeder schools for
-            AIIMS/JIPMER selections. Modern School students have the strongest academic foundations
-            in the Connaught Place catchment — they typically need minimal content support and
-            maximum exam-technique refinement. Most Modern School families book Pinnacle
-            (₹1.2L-1.56L) for the 1:5 faculty ratio and personalised NEET PYQ pattern drilling.
+            <strong>Modern School Barakhamba Road:</strong> You're at one of India's top 5 feeder
+            schools for AIIMS/JIPMER selections, with academic foundations as strong as any in
+            Delhi — what you typically need is minimal content support and maximum exam-technique
+            refinement. Most Modern School families book Pinnacle (₹1.2L-1.56L) for the 1:5 faculty
+            ratio and personalised NEET PYQ pattern drilling.
           </p>
           <p>
-            <strong>Sardar Patel Vidyalaya (Lodi Estate):</strong> Another top-tier NEET feeder in
-            the diplomatic corridor. SPV students combine academic rigour with strong
-            extracurricular profiles. NEET Biology coaching for SPV families is typically about
-            adding the examination edge — assertion-reason questions, high-yield chapter deep-dives
-            (Human Physiology, Genetics) — on top of already-strong foundations.
+            <strong>Sardar Patel Vidyalaya (Lodi Estate):</strong> At SPV you combine academic
+            rigour with a strong extracurricular profile. For you, NEET Biology coaching is
+            typically about adding the examination edge — assertion-reason questions, high-yield
+            chapter deep-dives (Human Physiology, Genetics) — on top of already-strong foundations.
           </p>
           <p>
-            <strong>St. Columba's School (Ashok Place):</strong> Strong CBSE science department. St.
-            Columba's feeds into both NEET and engineering tracks. NEET-specific students need the
-            biology-only specialist model because the school's science teaching serves both biology
-            and physics/chemistry tracks equally — NEET aspirants need deeper biology than the
-            school provides.
+            <strong>St. Columba's School (Ashok Place):</strong> St. Columba's strong CBSE science
+            department serves both the NEET and engineering tracks equally. If you're on the NEET
+            track, that's exactly why the biology-only specialist model matters — you need deeper
+            biology than the school provides.
           </p>
           <p>
-            <strong>Convent of Jesus and Mary (Bengali Market):</strong> All-girls school with
-            strong academic traditions. CJM students are often highly disciplined but may start NEET
-            coaching later (mid-Class 11 vs start of Class 11). The Ascent tier with its structured
-            catch-up modules is designed for this timeline.
+            <strong>Convent of Jesus and Mary (Bengali Market):</strong> With CJM's strong academic
+            traditions, you're likely highly disciplined but may be starting NEET coaching later
+            (mid-Class 11 vs start of Class 11). The Ascent tier with its structured catch-up
+            modules is designed for exactly this timeline.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
             The Lutyens Delhi advantage: proximity to India's medical research hub
           </h2>
           <p>
-            The Connaught Place / Lutyens catchment is within 15 minutes of AIIMS New Delhi,
+            Living in the CP / Lutyens belt puts you within 15 minutes of AIIMS New Delhi,
             Safdarjung Hospital, RML Hospital, Lady Hardinge Medical College, and Maulana Azad
-            Medical College. This proximity is not just geographic — many CP-area families have
-            direct connections to the medical establishment (AIIMS faculty parents, senior doctors
-            at government hospitals). These families evaluate NEET coaching at a deeper level: they
-            want faculty who understand medical education, not just exam coaching. Dr. Shekhar C
-            Singh's AIIMS Delhi background is the reason Cerebrum resonates in this catchment more
-            than any generalist chain.
+            Medical College. If your family has direct connections to the medical establishment —
+            an AIIMS faculty parent, a senior doctor at a government hospital — you'll evaluate
+            NEET coaching at a deeper level: you want faculty who understand medical education, not
+            just exam coaching. That is exactly what Dr. Shekhar C Singh's AIIMS Delhi background
+            gives you — and what no generalist chain can match.
           </p>
           <p>
-            The CP catchment also includes families of foreign diplomats (Chanakyapuri, Jor Bagh,
-            Lodi Colony) whose children attend Delhi International School or American Embassy
-            School. Some of these students pursue NEET alongside IB/IGCSE — we support this
-            dual-track with integrated scheduling.
+            If yours is a diplomat family in Chanakyapuri, Jor Bagh, or Lodi Colony and your child
+            attends Delhi International School or American Embassy School, NEET can be pursued
+            alongside IB/IGCSE — we support this dual-track with integrated scheduling.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
@@ -296,7 +293,7 @@ export default function NEETCoachingConnaughtPlacePage() {
           <p>
             <strong>Sectors / localities served:</strong> Connaught Place (Inner/Middle/Outer
             Circle), Janpath, Barakhamba Road, Sansad Marg, Jor Bagh, Bengali Market, Mandi House
-            catchment.
+            area.
           </p>
           <p>
             <strong>Metro connectivity:</strong> Yellow Line (Rajiv Chowk), Blue Line (Rajiv Chowk
@@ -304,8 +301,8 @@ export default function NEETCoachingConnaughtPlacePage() {
           </p>
           <p>
             <strong>Nearest Cerebrum centre:</strong> South Extension (~12 min via Yellow Line) —
-            closest of all Delhi catchments. For Connaught Place families who prefer to skip the
-            commute entirely, pan-India online live batches offer the same AIIMS-trained faculty,
+            the shortest commute of any Delhi locality we serve. If you'd rather skip the commute
+            entirely, pan-India online live batches offer the same AIIMS-trained faculty,
             same biology-only specialist pedagogy, same 15-20 student batch structure — no
             train/auto-rickshaw time, weekend-friendly slots.
           </p>

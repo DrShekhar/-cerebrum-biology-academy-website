@@ -243,9 +243,9 @@ export default function NEETCoachingDelhiPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Delhi feeder schools we serve
+            Delhi schools we serve
           </h2>
-          <p>Cerebrum Delhi cohort spans 20+ feeder schools across the city:</p>
+          <p>Cerebrum Delhi cohort spans 20+ schools across the city:</p>
           <ul>
             <li>
               <strong>South Delhi / Diplomatic Enclave</strong> — DPS RK Puram, Modern School

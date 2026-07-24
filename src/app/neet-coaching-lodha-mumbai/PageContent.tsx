@@ -59,21 +59,21 @@ const lodhaAreas = [
 const whyChooseUs = [
   {
     icon: Gem,
-    title: 'Ultra-Premium Community',
+    title: 'Gated Community Convenience',
     description:
-      "Lodha developments are India's most luxurious gated communities. We specialize in coaching for residents of premium properties with world-class amenities.",
+      'Live in Lodha Park, Palava City, or another Lodha development? Our online classes fit gated-community life - learn from home with zero commute.',
   },
   {
     icon: Target,
     title: '67+ AIIMS Selections',
     description:
-      'Proven track record with students from elite international schools across Lodha properties and premium residential areas.',
+      'Proven track record with students from international schools across Lodha properties and nearby residential areas.',
   },
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
     description:
-      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching high-achievers from ultra-premium communities.',
+      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching high-achieving NEET aspirants.',
   },
   {
     icon: Star,
@@ -87,17 +87,17 @@ const faqs = [
   {
     question: 'Do you have a coaching center in Lodha?',
     answer:
-      'Our main center is in Greater Noida. For Lodha Premium residents, we offer world-class live online NEET classes with premium personalized attention. Many ultra-premium residents prefer online coaching for convenience and security. Our comprehensive material and recorded lectures ensure continuous preparation.',
+      'Our main center is in Greater Noida. For Lodha residents, we offer live online NEET classes with personalized attention. Many residents of gated communities prefer online coaching for convenience and security. Our comprehensive material and recorded lectures ensure continuous preparation.',
   },
   {
-    question: 'How do you cater to ultra-premium community needs?',
+    question: 'What can Lodha residents expect from your coaching?',
     answer:
-      'Lodha communities represent the pinnacle of Indian real estate. We understand residents value exclusivity, quality, and perfection. We offer premium service through flexible schedules, world-class online platform, regular progress updates, and result-oriented teaching tailored for high-achievers.',
+      'You get premium service through flexible schedules, a world-class online platform, regular progress updates, and result-oriented teaching tailored for high-achievers - quality coaching that meets the standards you expect.',
   },
   {
     question: "Which schools do your Lodha residents' children attend?",
     answer:
-      'We have students from top international schools including Cathedral School, Bombay Scottish, Jamnabai Narsee, IB World Schools, and other elite institutions. The academic excellence of these schools complements our rigorous NEET preparation.',
+      'We have students from top international schools including Cathedral School, Bombay Scottish, Jamnabai Narsee, IB World Schools, and other leading institutions. The academic excellence of these schools complements our rigorous NEET preparation.',
   },
   {
     question: 'Is NEET coaching suitable for globally mobile families?',
@@ -120,7 +120,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Lodha',
-  description: 'Best NEET Coaching for Lodha Premium - Ultra-premium gated community coaching',
+  description:
+    'Best NEET Coaching for Lodha residents - premium online Biology coaching with AIIMS-trained faculty',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-lodha-mumbai',
   telephone: '+91-88264-44334',
   address: {
@@ -163,7 +164,7 @@ export default function PageContent() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Gem className="w-5 h-5 mr-2 text-yellow-400" />
-              Ultra-Premium Community Coaching | AIIMS Faculty
+              Zero-Commute Online Coaching | AIIMS Faculty
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -171,13 +172,13 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Coaching for India's Most Luxurious Developments
+              Premium NEET Biology Coaching for Lodha Residents - Learn from Home
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Exclusive NEET coaching for Lodha Park, Palava City, and premium gated communities.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by India's
-              most affluent families.
+              Online NEET coaching for Lodha Park, Palava City, and nearby gated communities. Learn
+              from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - premium classes with zero
+              commute from your community.
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
@@ -231,8 +232,8 @@ export default function PageContent() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Gem className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
-                <div className="text-2xl font-bold">Luxury</div>
-                <div className="text-sm opacity-80">Focused</div>
+                <div className="text-2xl font-bold">Online</div>
+                <div className="text-sm opacity-80">Zero Commute</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
@@ -262,7 +263,7 @@ export default function PageContent() {
               Lodha & Extended Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Online NEET coaching for premium developments and ultra-luxury communities
+              Online NEET Biology coaching across Lodha developments and nearby areas
             </p>
           </div>
 
@@ -355,10 +356,10 @@ export default function PageContent() {
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Lodha Premium Residents, Excel in NEET!
+              Lodha Residents, Excel in NEET!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Ultra-premium NEET coaching for India's most exclusive communities
+              Premium NEET coaching delivered to your home, on your schedule
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">

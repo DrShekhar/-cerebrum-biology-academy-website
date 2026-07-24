@@ -10,7 +10,7 @@ const city = NRI_INTERNATIONAL_CITIES['new-york-usa']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for NYC Metro Indian-origin Class 11-12 students — Queens, Brooklyn, Manhattan, Edison NJ, Iselin, Jersey City, Princeton, Long Island, Westchester. America's largest Indian community (~700K). Feeder schools: Stuyvesant, Bronx Science, Brooklyn Tech, Hunter College HS, Edison HS, Bergen County Academies, Princeton HS, West Windsor-Plainsboro. AP Biology + NEET dual prep. EST 7-9:30 AM batch. NRI quota + MCAT B/B track. 98% success rate.`,
+  description: `Live online NEET Biology coaching for NYC Metro Indian-origin Class 11-12 students — Queens, Brooklyn, Manhattan, Edison NJ, Iselin, Jersey City, Princeton, Long Island, Westchester. America's largest Indian community (~700K). Schools we serve: Stuyvesant, Bronx Science, Brooklyn Tech, Hunter College HS, Edison HS, Bergen County Academies, Princeton HS, West Windsor-Plainsboro. AP Biology + NEET dual prep. EST 7-9:30 AM batch. NRI quota + MCAT B/B track. 98% success rate.`,
   keywords: [
     'NEET coaching New York',
     'NEET coaching NYC',

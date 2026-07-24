@@ -171,7 +171,7 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Best Biology Coaching for South Delhi&apos;s Prestigious Locality
+              Best NEET Biology Coaching in Defence Colony - Structured, Result-Oriented
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">

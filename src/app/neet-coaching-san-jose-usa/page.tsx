@@ -8,7 +8,7 @@ const city = NRI_INTERNATIONAL_CITIES['san-jose-usa']!
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in ${city.city}, Silicon Valley | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for Bay Area Indian-origin Class 11-12 students — San Jose, Cupertino, Fremont, Sunnyvale, Mountain View, Palo Alto, Milpitas. Feeder schools: Lynbrook, Monta Vista, Mission San Jose, Saratoga, Harker. AP Biology + NEET dual prep. PST Saturday morning live (9-11:30 AM). NRI quota guidance. MCAT B/B track. 98% success rate.`,
+  description: `Live online NEET Biology coaching for Bay Area Indian-origin Class 11-12 students — San Jose, Cupertino, Fremont, Sunnyvale, Mountain View, Palo Alto, Milpitas. Schools we serve: Lynbrook, Monta Vista, Mission San Jose, Saratoga, Harker. AP Biology + NEET dual prep. PST Saturday morning live (9-11:30 AM). NRI quota guidance. MCAT B/B track. 98% success rate.`,
   keywords: [
     'NEET coaching San Jose',
     'NEET coaching Silicon Valley',

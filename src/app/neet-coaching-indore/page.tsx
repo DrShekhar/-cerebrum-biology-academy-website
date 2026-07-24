@@ -56,7 +56,7 @@ const faqs = [
   {
     question: 'Which Indore schools send students to Cerebrum?',
     answer:
-      'Common Indore feeder schools: Daly College, Choithram School, Emerald Heights International, Delhi Public School Indore, The Shishukunj International, Brilliant Academy. Students join Pursuit (₹48K-75K), Ascent (₹58K-90K), or Pinnacle (₹98K-1.56L) depending on target NEET rank.',
+      'Common Indore schools: Daly College, Choithram School, Emerald Heights International, Delhi Public School Indore, The Shishukunj International, Brilliant Academy. Students join Pursuit (₹48K-75K), Ascent (₹58K-90K), or Pinnacle (₹98K-1.56L) depending on target NEET rank.',
   },
   {
     question: 'What does NEET coaching cost in Indore?',
@@ -138,7 +138,7 @@ export default function Page() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Indore feeder schools we serve
+            Indore schools we serve
           </h2>
           <p>
             Daly College, Choithram School, Emerald Heights International, Delhi Public School

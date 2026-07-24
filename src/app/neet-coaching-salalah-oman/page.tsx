@@ -16,7 +16,7 @@ const ogImageParams = new URLSearchParams({
 
 export const metadata: Metadata = {
   title: `NEET Biology Coaching in Salalah, Oman | Cerebrum (Live Online)`,
-  description: `Live online NEET Biology coaching for ~50K Indian-origin Class 11-12 students in Salalah (Oman's second city, Dhofar region — Port of Salalah container hub + fishing + agriculture sector). Predominantly Malayali (Kerala) community. Feeder schools: Indian School Salalah, Indian Social Club School Salalah, Salalah Indian School. GST 4-6:30 PM batch (after-school slot). Muscat NTA NEET exam centre (1-hr flight or 12-hr drive). Khareef-season-proof online format. NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  description: `Live online NEET Biology coaching for ~50K Indian-origin Class 11-12 students in Salalah (Oman's second city, Dhofar region — Port of Salalah container hub + fishing + agriculture sector). Predominantly Malayali (Kerala) community. Schools we serve: Indian School Salalah, Indian Social Club School Salalah, Salalah Indian School. GST 4-6:30 PM batch (after-school slot). Muscat NTA NEET exam centre (1-hr flight or 12-hr drive). Khareef-season-proof online format. NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
   keywords: [
     'NEET coaching Salalah',
     'NEET coaching Oman',
