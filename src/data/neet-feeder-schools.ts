@@ -123,7 +123,7 @@ const TESTIMONIAL_POOL: FeederTestimonial[] = [
     score: 'NEET 615/720',
     college: 'LHMC Delhi',
     quote:
-      'Tier 2 college aspirant. Cerebrum did NOT push AIIMS narrative — coached me realistically toward LHMC. 615 hit my target.',
+      'Cerebrum did NOT push an AIIMS narrative — they coached me realistically toward LHMC. 615 hit my target.',
   },
 ]
 

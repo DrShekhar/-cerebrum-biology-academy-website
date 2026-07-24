@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { headers } from 'next/headers'
 import { emailService } from '@/lib/email/emailService'
+import { notifyStaff } from '@/lib/staff/notify'
+import { captureMessage } from '@/lib/sentry'
 
 const WHATSAPP_NUMBER = '918826444334'
 
@@ -24,7 +26,7 @@ async function sendOwnerWhatsAppAlert(info: {
   // read before reaching out) — the most useful signal for the counselor.
   const journeyPath = info.journey?.path?.length ? info.journey.path.join('  →  ') : null
   try {
-    await emailService.send({
+    const result = await emailService.send({
       to: adminEmail,
       from: 'leads@cerebrumbiologyacademy.com',
       subject: `📲 WhatsApp lead — ${info.page} (${info.device})`,
@@ -51,8 +53,46 @@ async function sendOwnerWhatsAppAlert(info: {
         (info.message ? `Message: ${info.message}\n` : '') +
         `Time (IST): ${when}\n`,
     })
+
+    // emailService.send returns {success:false} WITHOUT throwing when both
+    // providers fail (e.g. RESEND_API_KEY/SENDGRID_API_KEY unset in prod) —
+    // which made every owner alert fail silently. Fall back to the staff
+    // dashboard bell (DB-backed, needs no email keys) and page Sentry.
+    if (!result?.success) {
+      await notifyOwnerViaBell(info, journeyPath)
+      captureMessage('WhatsApp-click owner alert: BOTH email providers failed', 'warning', {
+        page: info.page,
+        source: info.source,
+        error: result?.error || 'unknown',
+      })
+    }
   } catch (error) {
     console.error('Owner WhatsApp-intent alert email failed:', error)
+    await notifyOwnerViaBell(info, journeyPath).catch(() => {})
+  }
+}
+
+// Email-independent fallback: bell notification to every active ADMIN on the
+// staff dashboard. Best-effort; never throws into the caller.
+async function notifyOwnerViaBell(
+  info: { source: string; page: string; device: string; message?: string },
+  journeyPath: string | null
+) {
+  try {
+    const admins = await prisma.users.findMany({
+      where: { role: 'ADMIN', isActive: true },
+      select: { id: true },
+    })
+    if (admins.length === 0) return
+    await notifyStaff({
+      userIds: admins.map((a) => a.id),
+      type: 'SYSTEM',
+      title: '📲 WhatsApp lead intent',
+      body: `${info.page} (${info.device}) · source: ${info.source}${journeyPath ? ` · viewed: ${journeyPath.slice(0, 120)}` : ''}`,
+      href: '/counselor/whatsapp-inbox',
+    })
+  } catch (error) {
+    console.error('WhatsApp-click bell fallback failed:', error)
   }
 }
 
