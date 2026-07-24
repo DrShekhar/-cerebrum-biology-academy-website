@@ -8243,6 +8243,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Gurugram — index-eligible pages previously orphaned from the sitemap
     // (all self-canonical, not redirected, not noindexed). Added Jul 2026.
     'ib-igcse-biology-tuition-gurugram',
+    'ib-igcse-biology-tuition-south-delhi',
     'neet-crash-course-gurugram',
     'neet-test-series-gurugram',
     'neet-scholarship-gurugram',

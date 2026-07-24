@@ -52,8 +52,37 @@ export default function CreateAssignmentPage() {
   })
 
   const [attachmentInput, setAttachmentInput] = useState('')
+  const [uploadingFile, setUploadingFile] = useState(false)
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null)
   const [selectedChapter, setSelectedChapter] = useState<Chapter | null>(null)
+
+  // Real file upload via the shared Vercel Blob endpoint (same one student
+  // submissions use). Previously teachers could only paste URL strings.
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    setUploadingFile(true)
+    try {
+      const uploadData = new FormData()
+      uploadData.append('file', file)
+      const res = await fetch('/api/assignments/upload', {
+        method: 'POST',
+        credentials: 'include',
+        body: uploadData,
+      })
+      const data = await res.json()
+      if (!res.ok || !data.success || !data.fileUrl) {
+        throw new Error(data.error || 'Upload failed')
+      }
+      setFormData((prev) => ({ ...prev, attachments: [...prev.attachments, data.fileUrl] }))
+      showToast.success(`Uploaded ${data.fileName || file.name}`)
+    } catch (error) {
+      showToast.error(error instanceof Error ? error.message : 'File upload failed')
+    } finally {
+      setUploadingFile(false)
+      e.target.value = ''
+    }
+  }
 
   useEffect(() => {
     if (!authLoading && (!isAuthenticated || user?.role !== 'TEACHER')) {
@@ -448,12 +477,32 @@ export default function CreateAssignmentPage() {
                 <CardTitle>Attachments</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
+                <label
+                  className={`flex items-center justify-center gap-2 w-full px-4 py-6 border-2 border-dashed rounded-lg cursor-pointer transition-colors ${
+                    uploadingFile
+                      ? 'border-gray-200 bg-gray-50 text-gray-400 cursor-wait'
+                      : 'border-blue-300 hover:bg-blue-50 text-blue-700'
+                  }`}
+                >
+                  <Upload className="w-5 h-5" />
+                  <span className="text-sm font-medium">
+                    {uploadingFile ? 'Uploading…' : 'Upload a file (PDF, DOC, images)'}
+                  </span>
+                  <input
+                    type="file"
+                    className="hidden"
+                    accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.txt,.zip"
+                    onChange={handleFileUpload}
+                    disabled={uploadingFile}
+                  />
+                </label>
+
                 <div className="flex gap-2">
                   <Input
                     type="url"
                     value={attachmentInput}
                     onChange={(e) => setAttachmentInput(e.target.value)}
-                    placeholder="Enter file URL (e.g., https://example.com/file.pdf)"
+                    placeholder="Or paste a file URL (e.g., https://example.com/file.pdf)"
                     className="flex-1"
                   />
                   <Button type="button" onClick={handleAddAttachment} variant="outline">
