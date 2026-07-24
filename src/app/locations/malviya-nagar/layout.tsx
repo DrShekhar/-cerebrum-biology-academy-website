@@ -87,8 +87,8 @@ export default function MalviyaNagarLayout({ children }: { children: React.React
             email: 'info@cerebrumbiologyacademy.com',
             address: {
               '@type': 'PostalAddress',
-              streetAddress: 'Near South Extension',
-              addressLocality: 'Malviya Nagar',
+              streetAddress: 'D 35, South Extension Part 2',
+              addressLocality: 'New Delhi',
               addressRegion: 'Delhi',
               postalCode: '110049',
               addressCountry: 'IN',

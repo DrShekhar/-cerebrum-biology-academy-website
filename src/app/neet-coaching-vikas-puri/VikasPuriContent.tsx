@@ -29,10 +29,12 @@ const structuredData = {
   telephone: '+91-8826444334',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Vikas Puri',
-    addressLocality: 'West Delhi',
+    // Honest address: no Vikas Puri premises — the Rohini centre serves
+    // West Delhi (areaServed below); classes are in-person there or online.
+    streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9',
+    addressLocality: 'Rohini, Delhi',
     addressRegion: 'Delhi',
-    postalCode: '110018',
+    postalCode: '110085',
     addressCountry: 'IN',
   },
   areaServed: [

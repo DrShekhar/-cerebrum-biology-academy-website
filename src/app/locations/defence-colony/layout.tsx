@@ -80,8 +80,8 @@ function DefenceColonyLocalBusinessSchema() {
     email: 'info@cerebrumbiologyacademy.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Near South Extension',
-      addressLocality: 'Defence Colony',
+      streetAddress: 'D 35, South Extension Part 2',
+      addressLocality: 'New Delhi',
       addressRegion: 'Delhi',
       postalCode: '110049',
       addressCountry: 'IN',

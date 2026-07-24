@@ -94,8 +94,8 @@ export default function WestendLayout({ children }: { children: React.ReactNode 
             email: 'info@cerebrumbiologyacademy.com',
             address: {
               '@type': 'PostalAddress',
-              streetAddress: 'Near South Extension',
-              addressLocality: 'Westend',
+              streetAddress: 'D 35, South Extension Part 2',
+              addressLocality: 'New Delhi',
               addressRegion: 'Delhi',
               postalCode: '110049',
               addressCountry: 'IN',

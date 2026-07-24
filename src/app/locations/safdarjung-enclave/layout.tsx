@@ -93,8 +93,8 @@ export default function SafdarjungEnclaveLayout({ children }: { children: React.
             email: 'info@cerebrumbiologyacademy.com',
             address: {
               '@type': 'PostalAddress',
-              streetAddress: 'Near South Extension',
-              addressLocality: 'Safdarjung Enclave',
+              streetAddress: 'D 35, South Extension Part 2',
+              addressLocality: 'New Delhi',
               addressRegion: 'Delhi',
               postalCode: '110049',
               addressCountry: 'IN',
