@@ -138,7 +138,9 @@ export default function NeetCoachingNoidaSocietyPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href={CONTACT_INFO.whatsapp.link}
+              href={CONTACT_INFO.whatsapp.linkWithMessage(
+                'Hi! I live in a Noida society and want to know about NEET Biology coaching options (online / near me). Please share details.'
+              )}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-6 py-3 rounded-lg transition-colors"

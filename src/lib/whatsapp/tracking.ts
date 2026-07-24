@@ -171,7 +171,10 @@ function openWhatsAppDirectly(params: WhatsAppTrackingParams): void {
   const message = params.message || 'Hi! I am interested in NEET Biology coaching.'
   const utmData = getUTMParams()
   const sourceTag = utmData.gclid ? 'Google Ads' : params.source
-  const trackingInfo = ` [Source: ${sourceTag}]`
+  // Source tag + the exact page URL, so the counselor replying on WhatsApp
+  // sees precisely what the prospect was reading (owner request 2026-07-24).
+  const pageUrl = getCurrentPageUrl()
+  const trackingInfo = ` [Source: ${sourceTag}]${pageUrl ? `\n${pageUrl}` : ''}`
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message + trackingInfo)}`
 
   // Fire synchronous tracking FIRST (Google Ads conversion — no network call)
@@ -244,6 +247,16 @@ function showCallFallback() {
   }, 10000)
 }
 
+/** Clean absolute URL of the page the visitor is on (no query noise). */
+function getCurrentPageUrl(): string {
+  if (typeof window === 'undefined') return ''
+  try {
+    return `${window.location.origin}${window.location.pathname}`
+  } catch {
+    return ''
+  }
+}
+
 export function buildWhatsAppUrl(
   message: string,
   source?: string,
@@ -251,7 +264,8 @@ export function buildWhatsAppUrl(
 ): string {
   let fullMessage = message
   if (includeTracking && source) {
-    fullMessage = `${message} [Source: ${source}]`
+    const pageUrl = getCurrentPageUrl()
+    fullMessage = `${message} [Source: ${source}]${pageUrl ? `\n${pageUrl}` : ''}`
   }
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(fullMessage)}`
 }
