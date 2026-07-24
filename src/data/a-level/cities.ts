@@ -744,6 +744,59 @@ export const aLevelCities: ALevelCityConfig[] = [
     },
   },
   {
+    slug: 'gurugram',
+    cityName: 'Gurugram',
+    countryCode: 'IN',
+    country: 'India',
+    region: 'Delhi NCR',
+    timezone: 'IST',
+    timezoneIana: 'Asia/Kolkata',
+    examBoards: ['CAIE', 'Edexcel'],
+    heroBlurb:
+      "Gurugram has one of Delhi NCR's biggest clusters of international schools — Scottish High, GD Goenka World, Pathways, Heritage Xperiential and Lancers all run A-Level or IB tracks. Cerebrum coaches A-Level Biology online and in person at our Sector 51 centre (M2K Corporate Park), for students targeting UK and Indian medical schools.",
+    schools: [
+      'Scottish High International School',
+      'GD Goenka World School',
+      'Pathways World School, Aravali',
+      'Heritage Xperiential Learning School',
+      'Lancers International School',
+      'DPS International Edge',
+    ],
+    faqs: [
+      {
+        question: 'Where do Gurugram A-Level Biology students study with Cerebrum?',
+        answer:
+          'In person at our Sector 51 centre (Unit 17, M2K Corporate Park, Mayfield Garden), central to DLF, Golf Course Road and Sohna Road — or live online on IST-friendly slots if you prefer to skip the commute.',
+      },
+      {
+        question: 'Which A-Level exam boards do Gurugram schools use?',
+        answer:
+          'Mostly CAIE (Cambridge International) A-Level Biology, with Edexcel International A-Level also supported. Schools like Scottish High and Lancers run CAIE; every batch trains on board-specific past papers and mark schemes.',
+      },
+      {
+        question: 'How much does A-Level Biology tutoring cost in Gurugram?',
+        answer:
+          'Group sessions start at ₹2,000/hr, with annual programme packages from ₹60,000/year. One-to-one examiner-style sessions are available at the Sector 51 centre or online.',
+      },
+      {
+        question: 'Can you prepare a Gurugram student for both A-Level and NEET Biology?',
+        answer:
+          'Yes. If you want to keep UK and Indian medical options open, our integrated track covers both curricula, using the heavy overlap in cell biology, genetics and human physiology.',
+      },
+      {
+        question: 'Which universities do Gurugram A-Level students target?',
+        answer:
+          "Mostly UK Russell Group (Imperial, UCL, Edinburgh, King's) for medicine and biosciences; some also use A-Level grades for Indian private medical colleges alongside NEET.",
+      },
+    ],
+    pricing: {
+      localCurrency: 'INR',
+      currencySymbol: '₹',
+      perHour: 2000,
+      perHourText: '₹2,000–3,500/hr',
+    },
+  },
+  {
     slug: 'delhi-ncr',
     cityName: 'Delhi NCR',
     countryCode: 'IN',

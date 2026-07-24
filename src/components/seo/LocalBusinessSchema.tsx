@@ -50,26 +50,6 @@ const locationData = {
       'Paschim Vihar',
       'Ashok Vihar',
     ],
-    reviews: [
-      {
-        author: 'Ananya Sharma',
-        rating: 5,
-        date: '2024-09-15',
-        body: 'Best biology coaching in Rohini! Dr. Shekhar Sir explains complex topics like Genetics and Human Physiology so clearly. Scored 680 in NEET 2024.',
-      },
-      {
-        author: 'Rahul Verma',
-        rating: 5,
-        date: '2024-08-22',
-        body: 'Joined Cerebrum Rohini center for dropper batch. The faculty is extremely supportive and test series is excellent. Improved my score by 120 marks.',
-      },
-      {
-        author: 'Priya Gupta',
-        rating: 5,
-        date: '2024-07-10',
-        body: 'Convenient location near DC Chowk metro. The classroom infrastructure is great and doubt sessions are very helpful.',
-      },
-    ],
   },
   gurugram: {
     name: 'Cerebrum Biology Academy - Gurugram',
@@ -106,26 +86,6 @@ const locationData = {
       'Sector 57',
       'MG Road',
     ],
-    reviews: [
-      {
-        author: 'Ishita Malhotra',
-        rating: 5,
-        date: '2024-09-01',
-        body: 'Premium coaching center in Gurugram. State-of-the-art digital classrooms and personalized attention. Got AIR 3421 in NEET 2024!',
-      },
-      {
-        author: 'Arjun Singh',
-        rating: 5,
-        date: '2024-08-15',
-        body: 'The best NEET biology coaching in Gurgaon hands down. Dr. Shekhar sir makes Botany and Zoology so interesting. Worth every rupee.',
-      },
-      {
-        author: 'Meera Kapoor',
-        rating: 5,
-        date: '2024-06-28',
-        body: 'Modern infrastructure, AC classrooms, and excellent study material. The online doubt resolution is available even after class hours.',
-      },
-    ],
   },
   'south-extension': {
     name: 'Cerebrum Biology Academy - South Extension',
@@ -156,26 +116,6 @@ const locationData = {
       'Saket',
       'Malviya Nagar',
     ],
-    reviews: [
-      {
-        author: 'Kavya Reddy',
-        rating: 5,
-        date: '2024-09-10',
-        body: 'South Delhi students - this is the best NEET coaching near AIIMS! Faculty quality is unmatched. Cleared NEET with 695 marks.',
-      },
-      {
-        author: 'Aditya Jain',
-        rating: 5,
-        date: '2024-08-05',
-        body: 'Prime location, excellent teaching methodology. The NCERT-focused approach helped me score 340/360 in Biology.',
-      },
-      {
-        author: 'Sneha Agarwal',
-        rating: 5,
-        date: '2024-07-20',
-        body: 'Very accessible location in South Extension. The batch sizes are small which means personal attention for every student.',
-      },
-    ],
   },
   'green-park': {
     name: 'Cerebrum Biology Academy - Green Park',
@@ -197,26 +137,6 @@ const locationData = {
     googleMapsUrl:
       'https://maps.google.com/?q=Cerebrum+Biology+Academy+Green+Park,+Delhi&ll=28.5597,77.2089&z=15',
     areaServed: ['Green Park', 'Safdarjung', 'INA', 'RK Puram', 'Malviya Nagar', 'Vasant Kunj'],
-    reviews: [
-      {
-        author: 'Nisha Sharma',
-        rating: 5,
-        date: '2024-09-12',
-        body: 'Excellent location near Green Park metro. Dr. Shekhar C Singh teaching methodology is amazing. Scored 685 in NEET 2024!',
-      },
-      {
-        author: 'Karan Mehra',
-        rating: 5,
-        date: '2024-08-20',
-        body: 'Best biology coaching in South Delhi. The faculty explains even the most complex topics with ease. Highly recommend!',
-      },
-      {
-        author: 'Riya Bansal',
-        rating: 5,
-        date: '2024-07-15',
-        body: 'Joined for NEET dropper batch. The personalized attention and test series helped me improve by 150 marks.',
-      },
-    ],
   },
   faridabad: {
     name: 'Cerebrum Biology Academy - Faridabad',
@@ -252,26 +172,6 @@ const locationData = {
       'Greater Faridabad',
       'Ballabgarh',
       'Surajkund',
-    ],
-    reviews: [
-      {
-        author: 'Rohan Yadav',
-        rating: 5,
-        date: '2024-09-05',
-        body: 'Finally a quality NEET coaching in Faridabad! No need to travel to Delhi anymore. Dr. Shekhar sir teaching is exceptional.',
-      },
-      {
-        author: 'Simran Kaur',
-        rating: 5,
-        date: '2024-08-18',
-        body: 'Best biology coaching in Faridabad. The mock test series and analysis helped me identify my weak areas. Scored 660 in NEET.',
-      },
-      {
-        author: 'Vikram Choudhary',
-        rating: 5,
-        date: '2024-07-02',
-        body: 'Spacious classrooms, good library, and supportive faculty. The fees are also reasonable compared to Delhi coaching centers.',
-      },
     ],
   },
   // 'noida' removed 2026-06: contactInfo.ts declares Noida online-only

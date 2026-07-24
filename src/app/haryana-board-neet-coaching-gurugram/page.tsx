@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     title: 'Haryana Board NEET Coaching in Gurugram | HBSE-to-NCERT Bridge',
     description:
-      'NEET Biology coaching for Haryana Board students. Hindi/English support, NCERT bridging, 78% success rate.',
+      'NEET Biology coaching for Haryana Board students. Hindi/English support, NCERT bridging, small batches with AIIMS-trained faculty.',
     url: 'https://cerebrumbiologyacademy.com/haryana-board-neet-coaching-gurugram',
   },
   alternates: {
@@ -43,7 +43,7 @@ const faqs = [
   {
     question: 'Can Haryana Board students crack NEET?',
     answer:
-      'Absolutely! Many NEET toppers come from state boards. The key is proper NCERT bridging and dedicated practice. Our HBSE students score 290+ on average in NEET Biology with proper coaching.',
+      'Absolutely! Many NEET toppers come from state boards. The key is proper NCERT bridging and dedicated practice. With the right coaching, state-board students close the gap and compete strongly in NEET Biology.',
   },
   {
     question: 'Do you offer Hindi medium NEET coaching?',
@@ -73,7 +73,7 @@ const faqs = [
   {
     question: 'What results do HBSE students achieve?',
     answer:
-      'Our Haryana Board students average 290+ in NEET Biology. Last year, 78% cleared NEET cutoff. Top performer from HBSE scored 682/720 overall.',
+      'With the NCERT bridge, small batches and weekly testing, our Haryana Board students routinely match their CBSE peers in NEET Biology — the board you come from stops being a disadvantage. Come in for a diagnostic test and we will show you exactly where you stand and what a realistic target looks like.',
   },
 ]
 

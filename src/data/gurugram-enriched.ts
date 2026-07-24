@@ -65,28 +65,28 @@ export const gurugramEnriched: Record<string, GurugramEnrichment> = {
     metaDescription:
       'DLF Phase 1 families from DPS Gurugram, Heritage and Pathways — structured NEET Biology coaching along the MG Road / Guru Dronacharya Metro corridor from our Sector 51 centre.',
     intro:
-      'If you live in DLF Phase 1 — Gurugram’s original planned township, home to executives, entrepreneurs and long-settled families — your child probably fills a seat at DPS Gurugram, Heritage or Pathways. It is one of our strongest catchments precisely because your expectations are high: you want a coach who can add real NEET Biology rigour on top of an already-serious school. The Guru Dronacharya and Sikanderpur metro stations and the MG Road corridor connect Phase 1 straight to our Sector 51 centre.',
+      'If you live in DLF Phase 1 — Gurugram’s original planned township, home to long-settled families — your child probably fills a seat at DPS Gurugram, Heritage or Pathways. If you’re here, your expectations are usually high: you want a coach who can add real NEET Biology rigour on top of an already-serious school. The Guru Dronacharya and Sikanderpur metro stations and the MG Road corridor connect Phase 1 straight to our Sector 51 centre.',
   },
   'dlf-phase-2': {
     metaTitle: 'NEET Biology Coaching in DLF Phase 2 (near Cyber City) | Cerebrum',
     metaDescription:
       'DLF Phase 2 sits beside Cyber City — IT-professional families from Scottish High and Amity. Personalised NEET Biology coaching, easy from Sikanderpur Metro to our Sector 51 centre.',
     intro:
-      'If you live in DLF Phase 2, in the shadow of Cyber City and Cyber Hub, you’re probably from an IT or corporate professional household — your child at Scottish High, GD Goenka or Amity, used to a fast, results-driven environment. That is exactly how we coach NEET Biology: tight feedback loops, real diagnostics, and a plan that respects your busy household’s time. Sikanderpur Metro links Phase 2 directly to the corridor that reaches our Sector 51 centre.',
+      'If you live in DLF Phase 2, in the shadow of Cyber City and Cyber Hub, you’re likely used to a fast, results-driven environment, perhaps at Scottish High, GD Goenka or Amity. That is exactly how we coach NEET Biology: tight feedback loops, real diagnostics, and a plan that respects a busy schedule. Sikanderpur Metro links Phase 2 directly to the corridor that reaches our Sector 51 centre.',
   },
   'sushant-lok': {
     metaTitle: 'NEET Biology Coaching in Sushant Lok, Gurugram | Cerebrum',
     metaDescription:
       'Sushant Lok — one of Gurugram’s first planned areas, near HUDA City Centre Metro. NEET Biology coaching from DPS, Amity and Blue Bells students, close to our Sector 51 centre.',
     intro:
-      'If Sushant Lok is home — one of Gurugram’s earliest planned residential areas, still drawing professional families decades on for its schools and metro links — your child is likely at DPS Gurugram, Amity or Blue Bells, all of which feed our batches. The HUDA City Centre and IFFCO Chowk metro stations make yours one of the best-connected catchments for reaching our Sector 51 centre, and we build Biology schedules that slot neatly around Sushant Lok’s school timetables.',
+      'If Sushant Lok is home — one of Gurugram’s earliest planned residential areas, still drawing families decades on for its schools and metro links — your child is likely at DPS Gurugram, Amity or Blue Bells, schools we already teach students from. The HUDA City Centre and IFFCO Chowk metro stations make Sushant Lok one of the best-connected areas for reaching our Sector 51 centre, and we build Biology schedules that slot neatly around Sushant Lok’s school timetables.',
   },
   'sector-56': {
     metaTitle: 'NEET Biology Coaching in Sector 56, Gurugram (near HUDA City Centre) | Cerebrum',
     metaDescription:
       'Sector 56 is metro-convenient — HUDA City Centre and the Sector 55–56 Rapid Metro. Small, well-timed NEET Biology batches just 4 km from our Sector 51 centre.',
     intro:
-      'If you live in Sector 56, you’re in one of the most convenient catchments we serve — barely four kilometres from our Sector 51 centre, with both the HUDA City Centre metro and the Sector 55–56 Rapid Metro station on your doorstep. That access is the whole appeal: a serious NEET Biology programme your child can reach on a short, predictable commute. If you’re at DPS Gurugram, Amity or GD Goenka, you’ll find Sector 56 classmates already a regular part of our batches.',
+      'If you live in Sector 56, you’re in one of the most convenient areas we serve — barely four kilometres from our Sector 51 centre, with both the HUDA City Centre metro and the Sector 55–56 Rapid Metro station on your doorstep. That access is the whole appeal: a serious NEET Biology programme your child can reach on a short, predictable commute. If you’re at DPS Gurugram, Amity or GD Goenka, you’ll find Sector 56 classmates already a regular part of our batches.',
   },
   'south-city-1': {
     metaTitle: 'NEET Biology Coaching in South City 1, Gurugram | Cerebrum',
@@ -128,7 +128,7 @@ export const gurugramEnriched: Record<string, GurugramEnrichment> = {
     metaDescription:
       'Sector 86 (Vatika India Next) — IT and corporate families. Live online NEET Biology, small batches, AIIMS faculty, plus our Sector 51 centre.',
     intro:
-      'If you live in Sector 86, anchoring the Vatika India Next township, you’re probably from an IT or corporate professional home used to a fast, results-driven pace — which is exactly how we teach NEET Biology, with tight feedback loops and honest diagnostics. About 15 km from our Sector 51 centre, you’ll most likely take our live online small-batch classes, dropping in to the centre for offline tests when it suits your week.',
+      'If you live in Sector 86, anchoring the Vatika India Next township, you’re likely used to a fast, results-driven pace — which is exactly how we teach NEET Biology, with tight feedback loops and honest diagnostics. About 15 km from our Sector 51 centre, you’ll most likely take our live online small-batch classes, dropping in to the centre for offline tests when it suits your week.',
   },
   'sector-89': {
     metaTitle: 'NEET Biology Coaching in Sector 89, New Gurugram | Cerebrum',

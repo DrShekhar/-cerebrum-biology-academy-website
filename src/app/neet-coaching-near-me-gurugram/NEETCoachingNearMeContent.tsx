@@ -90,10 +90,10 @@ const whyLocation = [
 ]
 
 const successStats = [
-  { stat: '15 min', label: 'Avg. Commute Time' },
-  { stat: '500+', label: 'Students from 50+ Areas' },
-  { stat: '98%', label: 'Students Find Location Convenient' },
-  { stat: '24/7', label: 'Online Support Available' },
+  { stat: 'Sector 51', label: 'Central Gurugram Location' },
+  { stat: '10-20 min', label: 'From Most Gurugram Areas' },
+  { stat: '15-20', label: 'Students per Batch' },
+  { stat: 'AIIMS', label: 'Trained Faculty' },
 ]
 
 export default function NEETCoachingNearMeContent({ faqs }: { faqs: FAQ[] }) {

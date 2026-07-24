@@ -14,21 +14,22 @@ import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaS
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
-  title: 'NEET 2024 Results Gurugram | 98% Success',
+  title: 'NEET Results Gurugram | 98% Qualify',
   description:
-    'Cerebrum Biology Academy NEET 2024 results: 98% qualification rate, 12 students scored 650+, 3 in top 5000 AIR. See our Gurugram (Gurgaon) toppers. Call 88264-44334!',
+    'Cerebrum Biology Academy Gurugram: 98% of our students qualify NEET. Small batches of 15-20, AIIMS-alumnus faculty, biology-only depth. Book a diagnostic. Call 88264-44334!',
   keywords: [
-    'neet 2024 results gurugram',
+    'neet results gurugram',
     'neet result gurugram coaching',
     'cerebrum academy neet results',
-    'neet toppers gurugram 2024',
-    'best neet results gurgaon',
-    'neet coaching results gurugram',
+    'neet coaching gurugram results',
+    'best neet coaching gurgaon',
+    'neet biology coaching results gurugram',
   ],
   openGraph: {
     locale: 'en_IN',
-    title: 'NEET 2024 Results Gurugram',
-    description: '98% success rate, 12 students 650+, 3 in top 5000 AIR.',
+    title: 'NEET Results Gurugram',
+    description:
+      '98% of our students qualify NEET. Small batches, AIIMS faculty, biology-only focus.',
     url: 'https://cerebrumbiologyacademy.com/neet-result-2024-gurugram',
   },
   alternates: {
@@ -37,112 +38,78 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'NEET 2024 Results Gurugram | 98% Success',
+    title: 'NEET Results Gurugram | 98% Qualify',
     description:
-      'Cerebrum Biology Academy NEET 2024 results: 98% qualification rate, 12 students scored 650+, 3 in top 5000 AIR. See our Gurugram (Gurgaon) toppers. Call 88264-44334!',
+      'Cerebrum Biology Academy Gurugram: 98% of our students qualify NEET. Small batches of 15-20, AIIMS-alumnus faculty, biology-only depth. Call 88264-44334!',
   },
 }
 
 const overallStats = [
-  { label: 'Students Appeared', value: '127', icon: Users },
-  { label: 'Qualified NEET', value: '124', subtext: '98%', icon: Trophy },
-  { label: 'Scored 600+', value: '45', subtext: '35%', icon: TrendingUp },
-  { label: 'Scored 650+', value: '12', subtext: '9%', icon: Star },
-  { label: 'Top 5000 AIR', value: '3', icon: Award },
-  { label: 'Top 10000 AIR', value: '8', icon: GraduationCap },
+  { label: 'Students Qualify NEET', value: '98%', icon: Trophy },
+  { label: 'Students per Batch', value: '15-20', icon: Users },
+  { label: 'Faculty Experience', value: '15+ yrs', icon: GraduationCap },
+  { label: 'Our Focus', value: 'Biology only', icon: Star },
 ]
 
-const toppers = [
+const approach = [
   {
-    name: 'Priya Sharma',
-    score: 695,
-    rank: 'AIR 2,847',
-    college: 'AIIMS Delhi',
-    school: 'DPS Sector 45',
-    batch: '2-Year',
+    title: 'NCERT mastery',
+    description:
+      'We go through NCERT Biology line by line, because that is where most NEET Biology questions come from. Nothing gets skipped.',
+    icon: Star,
   },
   {
-    name: 'Arjun Verma',
-    score: 682,
-    rank: 'AIR 4,123',
-    college: 'MAMC Delhi',
-    school: 'Shri Ram School',
-    batch: '2-Year',
+    title: 'Weekly testing',
+    description:
+      'You sit a test every week. It keeps your revision honest and shows you exactly which chapters still need work.',
+    icon: TrendingUp,
   },
   {
-    name: 'Ananya Gupta',
-    score: 671,
-    rank: 'AIR 4,892',
-    college: 'Lady Hardinge',
-    school: 'Ryan International',
-    batch: '1-Year',
+    title: 'Per-question review',
+    description:
+      'After every test we go over the questions you got wrong, one by one, so the same mistake does not cost you twice.',
+    icon: Award,
   },
   {
-    name: 'Rahul Singh',
-    score: 668,
-    rank: 'AIR 5,234',
-    college: 'UCMS Delhi',
-    school: 'GD Goenka',
-    batch: '2-Year',
+    title: 'Small batches',
+    description:
+      'Only 15-20 students in a batch. You can ask a doubt the moment you have it, and the teacher knows your weak areas by name.',
+    icon: Users,
   },
   {
-    name: 'Sneha Kapoor',
-    score: 662,
-    rank: 'AIR 6,012',
-    college: 'MAMC Delhi',
-    school: 'Amity Global',
-    batch: '1-Year',
+    title: 'AIIMS-alumnus faculty',
+    description:
+      'Classes are led by Dr. Shekhar C Singh, an AIIMS alumnus with 15+ years of teaching NEET Biology.',
+    icon: GraduationCap,
   },
   {
-    name: 'Aditya Kumar',
-    score: 658,
-    rank: 'AIR 6,789',
-    college: 'LHMC Delhi',
-    school: 'Pathways World',
-    batch: '2-Year',
+    title: 'A target that is real for you',
+    description:
+      'Come in for a diagnostic and we will show you where you stand today and set a target you can actually reach, not a generic promise.',
+    icon: Trophy,
   },
-]
-
-const scoreDistribution = [
-  { range: '680-720', count: 3, percentage: 2 },
-  { range: '650-679', count: 9, percentage: 7 },
-  { range: '600-649', count: 33, percentage: 26 },
-  { range: '550-599', count: 42, percentage: 33 },
-  { range: '500-549', count: 25, percentage: 20 },
-  { range: '450-499', count: 12, percentage: 9 },
-  { range: 'Below 450', count: 3, percentage: 3 },
-]
-
-const collegePlacements = [
-  { college: 'AIIMS (Delhi, Jodhpur, Rishikesh)', count: 4 },
-  { college: 'MAMC Delhi', count: 6 },
-  { college: 'Lady Hardinge Medical College', count: 5 },
-  { college: 'UCMS Delhi', count: 4 },
-  { college: 'VMMC & Safdarjung', count: 3 },
-  { college: 'Other Govt Medical Colleges', count: 35 },
-  { college: 'Private Medical Colleges', count: 67 },
 ]
 
 const faqs = [
   {
-    question: "What was Cerebrum's NEET 2024 success rate?",
+    question: "What is Cerebrum's NEET success rate?",
     answer:
-      'Our NEET 2024 success rate was 98% - 124 out of 127 students qualified. 45 students scored above 600, and 12 scored above 650. 3 students made it to top 5000 All India Rank.',
+      'Across our programmes, 98% of our students qualify NEET. We keep batches small (15-20 students) so every student gets attention on their weak areas rather than being one more face in a large hall.',
   },
   {
-    question: "Who was Cerebrum's NEET 2024 topper?",
+    question: 'How will I know if Cerebrum is right for me?',
     answer:
-      'Priya Sharma topped our batch with 695/720 marks and AIR 2,847. She secured admission to AIIMS Delhi. She was a 2-year program student from DPS Sector 45.',
+      'Come in for a diagnostic. We will test where you stand in NEET Biology today and show you a realistic target based on your current level, so you know what to expect before you commit.',
   },
   {
-    question: 'How many students got into AIIMS in 2024?',
+    question: 'What makes your Biology teaching different?',
     answer:
-      '4 students got into various AIIMS campuses (Delhi, Jodhpur, Rishikesh). Additionally, 15 students got into top Delhi government medical colleges.',
+      'We teach Biology only, led by Dr. Shekhar C Singh, an AIIMS alumnus with 15+ years of experience. That means deeper NCERT coverage, line by line, with weekly testing and per-question review.',
   },
   {
-    question: 'What is the average score improvement at Cerebrum?',
+    question: 'How do you help me improve my score?',
     answer:
-      'Students who joined from other coaching or as repeaters improved by an average of 85 marks. First-time aspirants averaged 595 marks with our 2-year program.',
+      'NCERT mastery, weekly tests, and per-MCQ review. After every test we sit with you on the questions you got wrong so the same mistakes stop repeating. Book a diagnostic and we will map a plan around your gaps.',
   },
 ]
 
@@ -162,15 +129,13 @@ export default function NEETResult2024Gurugram() {
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-flex items-center gap-2 bg-white text-amber-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               <Trophy className="w-4 h-4" />
-              Official Results
+              98% Qualify
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">NEET 2024 Results</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">NEET Results at Cerebrum</h1>
             <p className="text-xl text-amber-100 mb-4">Cerebrum Biology Academy, Gurugram</p>
             <div className="flex items-center justify-center gap-2 text-yellow-200 mb-8">
               <Award className="w-5 h-5" />
-              <span className="text-2xl font-bold">
-                98% Success Rate | 12 Students 650+ | 3 in Top 5000
-              </span>
+              <span className="text-2xl font-bold">98% of our students qualify NEET</span>
             </div>
           </div>
         </div>
@@ -178,14 +143,11 @@ export default function NEETResult2024Gurugram() {
 
       <section className="py-12 bg-white border-b">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {overallStats.map((stat, index) => (
               <div key={index} className="bg-amber-50 rounded-xl p-4 text-center">
                 <stat.icon className="w-8 h-8 text-amber-600 mx-auto mb-2" />
                 <p className="text-3xl font-bold text-amber-700">{stat.value}</p>
-                {stat.subtext && (
-                  <p className="text-lg font-semibold text-amber-500">{stat.subtext}</p>
-                )}
                 <p className="text-sm text-gray-600">{stat.label}</p>
               </div>
             ))}
@@ -195,118 +157,21 @@ export default function NEETResult2024Gurugram() {
 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Our NEET 2024 Toppers</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            What Our NEET Biology Students Achieve
+          </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            We do not put invented names and ranks on a wall. Here is the work that actually moves
+            your Biology score.
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {toppers.map((topper, index) => (
-              <div
-                key={index}
-                className={`bg-white rounded-xl shadow-lg overflow-hidden ${index === 0 ? 'ring-2 ring-amber-500' : ''}`}
-              >
-                {index === 0 && (
-                  <div className="bg-amber-500 text-white text-center py-2 text-sm font-semibold">
-                    BATCH TOPPER
-                  </div>
-                )}
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold">{topper.name}</h3>
-                      <p className="text-gray-500 text-sm">{topper.school}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-2xl font-bold text-amber-600">{topper.score}</p>
-                      <p className="text-sm text-gray-500">/720</p>
-                    </div>
-                  </div>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Rank:</span>
-                      <span className="font-semibold">{topper.rank}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">College:</span>
-                      <span className="font-semibold text-green-600">{topper.college}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Program:</span>
-                      <span className="font-semibold">{topper.batch}</span>
-                    </div>
-                  </div>
-                </div>
+            {approach.map((item, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+                <item.icon className="w-8 h-8 text-amber-600 mb-4" />
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Score Distribution</h2>
-          <div className="max-w-3xl mx-auto">
-            {scoreDistribution.map((item, index) => (
-              <div key={index} className="mb-4">
-                <div className="flex justify-between mb-1">
-                  <span className="font-semibold">{item.range}</span>
-                  <span className="text-gray-600">
-                    {item.count} students ({item.percentage}%)
-                  </span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-4">
-                  <div
-                    className={`h-4 rounded-full ${
-                      item.range.includes('680')
-                        ? 'bg-amber-500'
-                        : item.range.includes('650')
-                          ? 'bg-amber-400'
-                          : item.range.includes('600')
-                            ? 'bg-green-500'
-                            : item.range.includes('550')
-                              ? 'bg-green-400'
-                              : item.range.includes('500')
-                                ? 'bg-blue-400'
-                                : 'bg-gray-400'
-                    }`}
-                    style={{ width: `${item.percentage * 2}%` }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-amber-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">College Placements</h2>
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead className="bg-amber-600 text-white">
-                    <tr>
-                      <th className="px-6 py-3 text-left">Medical College</th>
-                      <th className="px-6 py-3 text-center">Students Admitted</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {collegePlacements.map((item, index) => (
-                      <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                        <td className="px-6 py-3">{item.college}</td>
-                        <td className="px-6 py-3 text-center font-bold text-amber-600">
-                          {item.count}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                  <tfoot className="bg-amber-100">
-                    <tr>
-                      <td className="px-6 py-3 font-bold">Total Admissions</td>
-                      <td className="px-6 py-3 text-center font-bold text-amber-700">124</td>
-                    </tr>
-                  </tfoot>
-                </table>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -338,8 +203,8 @@ export default function NEETResult2024Gurugram() {
               href="/neet-topper-interview-gurugram"
               className="bg-purple-50 p-4 rounded-lg hover:bg-purple-100 transition text-center"
             >
-              <h3 className="font-semibold text-purple-800">Topper Interviews</h3>
-              <p className="text-sm text-gray-600">Learn strategies from 650+ scorers</p>
+              <h3 className="font-semibold text-purple-800">Study Strategies</h3>
+              <p className="text-sm text-gray-600">Habits that raise your Biology score</p>
             </Link>
             <Link
               href="/neet-biology-faculty-gurugram"
@@ -368,9 +233,9 @@ export default function NEETResult2024Gurugram() {
 
       <section className="py-16 bg-amber-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Join Our 2027 Batch</h2>
+          <h2 className="text-3xl font-bold mb-4">Join Our Next Batch</h2>
           <p className="text-xl text-amber-100 mb-8">
-            Be part of our next success story. Limited seats available.
+            Small batches at our Sector 51 centre. Come in for a diagnostic and see where you stand.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -381,10 +246,10 @@ export default function NEETResult2024Gurugram() {
               Call 88264-44334
             </a>
             <Link
-              href="/neet-result-2025-gurugram"
+              href="/free-neet-demo-class-gurugram"
               className="inline-flex items-center gap-2 bg-amber-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-900 transition"
             >
-              See 2025 Results
+              Book a Free Demo
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -397,8 +262,9 @@ export default function NEETResult2024Gurugram() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Article',
-            headline: 'NEET 2024 Results - Cerebrum Biology Academy Gurugram',
-            description: '98% success rate with 12 students scoring 650+ and 3 in top 5000 AIR',
+            headline: 'NEET Results at Cerebrum Biology Academy Gurugram',
+            description:
+              '98% of Cerebrum Biology Academy students qualify NEET. Small batches, AIIMS-alumnus faculty, biology-only depth in Gurugram.',
             author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
             publisher: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
             datePublished: '2024-06-15',

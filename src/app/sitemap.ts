@@ -7504,6 +7504,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.86,
     },
     ...[
+      'biology-tutor-near-me-gurugram',
+      'biology-classes-near-me-gurugram',
+      'biology-teacher-near-me-gurugram',
+    ].map((slug) => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.82,
+    })),
+    ...[
       'green-park-metro',
       'iit-delhi-metro',
       'aiims-metro',

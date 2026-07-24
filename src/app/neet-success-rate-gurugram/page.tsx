@@ -5,21 +5,22 @@ import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaS
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
-  title: 'NEET Success Rate Gurugram 2026 | Coaching Results Comparison',
+  title: 'NEET Success Rate Gurugram | How to Compare Coaching',
   description:
-    'Compare NEET success rates of coaching institutes in Gurugram (Gurgaon). Cerebrum: 98% qualification, 15 students 650+. See selection data, topper stats. Call 88264-44334!',
+    'Compare NEET coaching in Gurugram (Gurgaon) honestly. Cerebrum: 98% of our students qualify, small batches of 15-20, AIIMS faculty. What to look for beyond headline rates. Call 88264-44334!',
   keywords: [
     'neet success rate gurugram',
-    'neet coaching results comparison',
-    'how many students selected neet gurugram',
-    'best neet coaching results gurgaon',
+    'neet coaching comparison gurugram',
+    'how to choose neet coaching gurugram',
+    'best neet coaching gurgaon',
     'neet qualification rate coaching',
-    'neet topper coaching gurugram',
+    'neet biology coaching gurugram',
   ],
   openGraph: {
     locale: 'en_IN',
-    title: 'NEET Success Rate by Coaching Institute | Gurugram 2026',
-    description: 'Compare NEET success rates: Cerebrum 98%, see detailed selection statistics.',
+    title: 'NEET Success Rate Gurugram | How to Compare Coaching',
+    description:
+      'Cerebrum: 98% of our students qualify NEET. How to compare coaching beyond headline rates.',
     url: 'https://cerebrumbiologyacademy.com/neet-success-rate-gurugram',
   },
   alternates: {
@@ -28,88 +29,66 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'NEET Success Rate Gurugram 2026 | Coaching Results Comparison',
+    title: 'NEET Success Rate Gurugram | How to Compare Coaching',
     description:
-      'Compare NEET success rates of coaching institutes in Gurugram (Gurgaon). Cerebrum: 98% qualification, 15 students 650+. See selection data, topper stats. Call 88264-44334!',
+      'Compare NEET coaching in Gurugram honestly. Cerebrum: 98% of our students qualify, small batches of 15-20, AIIMS faculty. Call 88264-44334!',
   },
 }
 
 const quickAnswer = {
   question: 'What is the NEET success rate of coaching institutes in Gurugram?',
   answer:
-    'NEET success rates in Gurugram coaching institutes range from 60% to 98%. Cerebrum Biology Academy has the highest verified rate at 98% (151/156 qualified in 2025). Large institutes like Allen report 85-90% qualification rates. Success rate varies based on batch size, faculty quality, and student selection criteria.',
+    'Success rates vary widely, and a headline percentage on its own tells you very little. At Cerebrum Biology Academy, 98% of our students qualify NEET. What matters just as much is how that number is produced: we keep batches to 15-20 students, we teach Biology only, and classes are led by an AIIMS alumnus. A rate from a small, attentive batch is a very different thing from a rate averaged across thousands.',
 }
-
-const successRateComparison = [
-  {
-    institute: 'Cerebrum Biology Academy',
-    qualificationRate: '98%',
-    students650Plus: 15,
-    studentsAppeared: 156,
-    topRank: 'AIR 1,892',
-    avgScore: '565',
-    aimsSelections: 4,
-    year: '2025',
-    highlight: true,
-  },
-  {
-    institute: 'Allen (Gurugram)',
-    qualificationRate: '88%',
-    students650Plus: '50+',
-    studentsAppeared: '2000+',
-    topRank: 'AIR 500-1000',
-    avgScore: '520',
-    aimsSelections: '15+',
-    year: '2025',
-  },
-  {
-    institute: 'Large national NEET chain (Gurugram)',
-    qualificationRate: '85%',
-    students650Plus: '40+',
-    studentsAppeared: '1500+',
-    topRank: 'AIR 800-1200',
-    avgScore: '510',
-    aimsSelections: '10+',
-    year: '2025',
-  },
-  {
-    institute: 'Online-only NEET platform',
-    qualificationRate: '75%',
-    students650Plus: '30+',
-    studentsAppeared: '3000+',
-    topRank: 'AIR 1500-2000',
-    avgScore: '480',
-    aimsSelections: '8+',
-    year: '2025',
-  },
-]
 
 const cerebrumStats = [
   {
-    label: 'Qualification Rate',
+    label: 'Qualify NEET',
     value: '98%',
     icon: Trophy,
-    description: '151 out of 156 students qualified',
+    description: 'Across our programmes',
   },
-  { label: 'Students 650+', value: '15', icon: Star, description: '10% of batch scored 650+' },
   {
-    label: 'Top Rank',
-    value: 'AIR 1,892',
+    label: 'Batch Size',
+    value: '15-20',
+    icon: Star,
+    description: 'Personal attention, not a crowd',
+  },
+  {
+    label: 'Faculty',
+    value: 'AIIMS',
     icon: Target,
-    description: 'Ishita Malhotra - AIIMS Delhi',
+    description: 'Dr. Shekhar C Singh, 15+ years',
   },
   {
-    label: 'AIIMS Selections',
-    value: '4',
+    label: 'Focus',
+    value: 'Biology',
     icon: TrendingUp,
-    description: 'Delhi, Jodhpur, Rishikesh',
+    description: 'Biology only, so coverage goes deeper',
   },
 ]
 
-const yearOverYear = [
-  { year: '2023', qualified: 112, appeared: 118, rate: '95%', students650: 8 },
-  { year: '2024', qualified: 124, appeared: 127, rate: '98%', students650: 12 },
-  { year: '2025', qualified: 151, appeared: 156, rate: '97%', students650: 15 },
+const howToCompare = [
+  {
+    title: 'Ask about batch size',
+    description:
+      'A 98% rate from a batch of 20 is not the same as 98% averaged across thousands. Ask how many students share one teacher.',
+  },
+  {
+    title: 'Ask who actually teaches',
+    description:
+      'Find out who stands in front of your class every day, not just the name on the banner. At Cerebrum it is Dr. Shekhar C Singh, an AIIMS alumnus with 15+ years of experience.',
+  },
+  {
+    title: 'Ask about subject depth',
+    description:
+      'Biology is roughly half your NEET marks. A Biology-only setup can cover it more deeply than a place splitting time across three subjects.',
+  },
+  {
+    title: 'Ask how doubts get cleared',
+    description:
+      'In a large hall your questions wait. In a small batch you can ask the moment you are stuck, which is how weak areas actually close.',
+  },
 ]
 
 const whyHighSuccessRate = [
@@ -133,24 +112,24 @@ const whyHighSuccessRate = [
 
 const faqs = [
   {
-    question: 'Which coaching has the highest NEET success rate in Gurugram?',
+    question: "What is Cerebrum's NEET success rate in Gurugram?",
     answer:
-      'Cerebrum Biology Academy has the highest verified NEET success rate in Gurugram at 98% (2024-2025). This is based on actual student data: 151 out of 156 students qualified in NEET 2025. The high rate is attributed to small batches (15-20 students) and personalized attention.',
+      "98% of our students qualify NEET. We keep that meaningful by teaching in small batches of 15-20, where the faculty knows each student's weak areas rather than treating the class as a crowd.",
   },
   {
-    question: 'How many students get selected for AIIMS from Gurugram coaching?',
+    question: 'How do I compare NEET coaching honestly?',
     answer:
-      'Top Gurugram coaching institutes send 4-15 students to various AIIMS campuses annually. Cerebrum Academy sent 4 students to AIIMS in 2025 (Delhi, Jodhpur, Rishikesh). Larger institutes like Allen report 15+ AIIMS selections from their pan-India batches.',
+      'Look past the headline percentage. Ask about batch size, who teaches your class day to day, how deeply Biology is covered, and how quickly you can get a doubt cleared. Those decide your result far more than a number on a poster.',
   },
   {
     question: 'What is a good NEET coaching success rate?',
     answer:
-      'A good NEET coaching success rate is above 85% qualification. Top institutes achieve 90-98%. However, consider batch size: 98% of 150 students is more meaningful than 85% of 5000. Also check 650+ scorers percentage - that indicates quality, not just passing.',
+      'A high rate is only useful once you know how it was measured. A strong qualification rate from a small, attentive batch is worth more than the same number averaged across thousands of students. Ask how the figure is calculated before you compare.',
   },
   {
-    question: 'Why do small coaching institutes have higher success rates?',
+    question: 'Why do small coaching institutes often do well?',
     answer:
-      'Small institutes have higher success rates because: 1) Better student selection (only serious aspirants), 2) Personal attention from faculty, 3) Regular doubt clearing, 4) Lower student-teacher ratio. Large batches (100+ students) make individual focus impossible.',
+      'Smaller batches allow personal attention, quicker doubt clearing, and a lower student-teacher ratio. In a large hall of a hundred-plus students, individual focus is simply harder. That is why we cap our batches at 15-20.',
   },
 ]
 
@@ -174,9 +153,7 @@ export default function NEETSuccessRateGurugram() {
               <p className="text-lg text-purple-100 leading-relaxed">{quickAnswer.answer}</p>
               <div className="mt-4 flex items-center gap-2 text-yellow-300">
                 <Trophy className="w-5 h-5" />
-                <span className="font-semibold">
-                  Top Rate: 98% (Cerebrum) | Industry Avg: 75-85%
-                </span>
+                <span className="font-semibold">98% of our students qualify NEET</span>
               </div>
             </div>
           </div>
@@ -187,7 +164,7 @@ export default function NEETSuccessRateGurugram() {
       <section className="py-12 bg-white border-b">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">
-            Cerebrum Biology Academy - NEET 2025 Results
+            Cerebrum Biology Academy, Gurugram
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {cerebrumStats.map((stat, index) => (
@@ -202,110 +179,42 @@ export default function NEETSuccessRateGurugram() {
         </div>
       </section>
 
-      {/* Success Rate Comparison Table */}
+      {/* How to Compare */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-4">
-            NEET Success Rate Comparison - Gurugram 2025
+            How to Compare NEET Coaching in Gurugram
           </h2>
-          <p className="text-center text-gray-600 mb-8">
-            Based on publicly available data and student feedback
+          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+            A percentage on a poster is easy to print. These are the questions that actually tell
+            you whether a coaching will work for you.
           </p>
 
-          <div className="max-w-6xl mx-auto overflow-x-auto">
-            <table className="w-full border-collapse bg-white rounded-xl shadow-lg overflow-hidden">
-              <thead>
-                <tr className="bg-purple-600 text-white">
-                  <th className="px-4 py-3 text-left">Institute</th>
-                  <th className="px-4 py-3 text-center">Success Rate</th>
-                  <th className="px-4 py-3 text-center">650+ Scorers</th>
-                  <th className="px-4 py-3 text-center">Total Students</th>
-                  <th className="px-4 py-3 text-center">Top Rank</th>
-                  <th className="px-4 py-3 text-center">AIIMS Selections</th>
-                </tr>
-              </thead>
-              <tbody>
-                {successRateComparison.map((item, index) => (
-                  <tr
-                    key={index}
-                    className={`border-b ${item.highlight ? 'bg-purple-50' : index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
-                  >
-                    <td className="px-4 py-4">
-                      <div className="font-semibold">{item.institute}</div>
-                      {item.highlight && (
-                        <span className="text-xs bg-purple-600 text-white px-2 py-0.5 rounded">
-                          Highest Rate
-                        </span>
-                      )}
-                    </td>
-                    <td className="px-4 py-4 text-center">
-                      <span
-                        className={`font-bold text-lg ${item.highlight ? 'text-purple-600' : ''}`}
-                      >
-                        {item.qualificationRate}
-                      </span>
-                    </td>
-                    <td className="px-4 py-4 text-center">{item.students650Plus}</td>
-                    <td className="px-4 py-4 text-center">{item.studentsAppeared}</td>
-                    <td className="px-4 py-4 text-center text-sm">{item.topRank}</td>
-                    <td className="px-4 py-4 text-center">{item.aimsSelections}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <p className="text-sm text-gray-500 text-center mt-4">
-            * Data from official announcements and student verification. Large institutes report
-            aggregate numbers.
-          </p>
-        </div>
-      </section>
-
-      {/* Year Over Year Trend */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Cerebrum Success Rate Trend (2023-2025)
-          </h2>
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-purple-50 rounded-xl p-6">
-              <div className="grid grid-cols-4 gap-4 text-center font-semibold text-gray-600 mb-4">
-                <div>Year</div>
-                <div>Qualified/Appeared</div>
-                <div>Success Rate</div>
-                <div>650+ Scorers</div>
-              </div>
-              {yearOverYear.map((year, index) => (
-                <div
-                  key={index}
-                  className="grid grid-cols-4 gap-4 text-center py-3 border-t border-purple-200"
-                >
-                  <div className="font-bold text-purple-700">{year.year}</div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {howToCompare.map((item, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-purple-500 flex-shrink-0 mt-1" />
                   <div>
-                    {year.qualified}/{year.appeared}
+                    <h3 className="font-bold text-lg mb-1">{item.title}</h3>
+                    <p className="text-gray-600">{item.description}</p>
                   </div>
-                  <div className="font-semibold text-green-600">{year.rate}</div>
-                  <div>{year.students650}</div>
                 </div>
-              ))}
-            </div>
-            <p className="text-center text-gray-600 mt-4">
-              Consistent 95%+ success rate maintained over 3 years
-            </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Why High Success Rate */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Why Cerebrum Has 98% Success Rate
+            Why Cerebrum Reaches a 98% Success Rate
           </h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {whyHighSuccessRate.map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
+              <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-sm">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
@@ -320,13 +229,13 @@ export default function NEETSuccessRateGurugram() {
       </section>
 
       {/* FAQs */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
-              <details key={index} className="bg-gray-50 rounded-lg shadow-md group">
-                <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-100">
+              <details key={index} className="bg-white rounded-lg shadow-md group">
+                <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
                   <span className="text-purple-600 group-open:rotate-180 transition-transform">
                     ▼
@@ -340,34 +249,34 @@ export default function NEETSuccessRateGurugram() {
       </section>
 
       {/* Related Pages */}
-      <section className="py-12 bg-gray-50 border-t">
+      <section className="py-12 bg-white border-t">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">Related Resources</h2>
           <div className="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             <Link
-              href="/neet-result-2025-gurugram"
-              className="bg-white p-4 rounded-lg hover:shadow-md transition text-center"
+              href="/neet-result-2024-gurugram"
+              className="bg-gray-50 p-4 rounded-lg hover:shadow-md transition text-center"
             >
-              <h3 className="font-semibold text-green-700">2025 Results</h3>
-              <p className="text-sm text-gray-600">Detailed results breakdown</p>
+              <h3 className="font-semibold text-green-700">Our Results</h3>
+              <p className="text-sm text-gray-600">What our students achieve</p>
             </Link>
             <Link
               href="/neet-topper-interview-gurugram"
-              className="bg-white p-4 rounded-lg hover:shadow-md transition text-center"
+              className="bg-gray-50 p-4 rounded-lg hover:shadow-md transition text-center"
             >
-              <h3 className="font-semibold text-purple-700">Topper Interviews</h3>
-              <p className="text-sm text-gray-600">Success strategies</p>
+              <h3 className="font-semibold text-purple-700">Study Strategies</h3>
+              <p className="text-sm text-gray-600">Habits that raise scores</p>
             </Link>
             <Link
               href="/neet-coaching-fee-gurugram"
-              className="bg-white p-4 rounded-lg hover:shadow-md transition text-center"
+              className="bg-gray-50 p-4 rounded-lg hover:shadow-md transition text-center"
             >
-              <h3 className="font-semibold text-blue-700">Fee Comparison</h3>
-              <p className="text-sm text-gray-600">Value for money analysis</p>
+              <h3 className="font-semibold text-blue-700">Fees</h3>
+              <p className="text-sm text-gray-600">Value for money</p>
             </Link>
             <Link
               href="/neet-coaching-gurugram"
-              className="bg-white p-4 rounded-lg hover:shadow-md transition text-center"
+              className="bg-gray-50 p-4 rounded-lg hover:shadow-md transition text-center"
             >
               <h3 className="font-semibold text-amber-700">Join Cerebrum</h3>
               <p className="text-sm text-gray-600">Program details</p>
@@ -381,7 +290,7 @@ export default function NEETSuccessRateGurugram() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Join the 98% Success Rate Coaching</h2>
           <p className="text-xl text-purple-100 mb-8">
-            Limited seats. Small batches. Proven results.
+            Small batches at our Sector 51 centre. Come in for a diagnostic and see where you stand.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -423,7 +332,7 @@ export default function NEETSuccessRateGurugram() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Article',
-            headline: 'NEET Success Rate Comparison - Gurugram Coaching Institutes 2026',
+            headline: 'NEET Success Rate in Gurugram - How to Compare Coaching',
             description: quickAnswer.answer,
             author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
             publisher: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },

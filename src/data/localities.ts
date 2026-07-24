@@ -4643,6 +4643,7 @@ export const localities: Locality[] = [
       localKeywords: ['dlf phase 1', 'dlf phase 2', 'cyber city', 'mg road metro'],
       h1: 'Best NEET Biology Coaching in DLF Phase 1 Gurugram',
       metaRobots: 'index,follow',
+      canonicalUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-dlf-phase-1-gurugram',
     },
 
     coordinates: { lat: 28.4817, lng: 77.0862 },
@@ -4719,7 +4720,7 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "DLF Phase 1 is Gurugram's original premium residential area, home to top corporate executives and business owners. If your family holds high academic benchmarks, our Biology program is built to meet them.",
+        "DLF Phase 1 is one of Gurugram's original, established residential areas. If you're aiming for a medical seat and want teaching that holds you to a high standard, our Biology programme is built for exactly that.",
       competitionAnalysis:
         "Around DLF Phase 1 you'll find premium tutors and a few high-end centers, but almost all offer generic multi-subject programs. For specialized NEET Biology coaching, we're the focused option.",
       parentConcerns:
@@ -4751,6 +4752,7 @@ export const localities: Locality[] = [
       localKeywords: ['golf course road', 'dlf magnolias', 'ireo', 'nirvana country'],
       h1: 'Best NEET Biology Coaching on Golf Course Road Gurugram',
       metaRobots: 'index,follow',
+      canonicalUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram/golf-course-road',
     },
 
     coordinates: { lat: 28.4654, lng: 77.0716 },
@@ -4827,7 +4829,7 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "Golf Course Road is Gurugram's most premium address, home to C-suite executives and ultra-HNI families pursuing medicine as a prestigious path. If that's your household, world-class Biology teaching is now available at home.",
+        "Golf Course Road is one of Gurugram's most sought-after addresses. If you're preparing for NEET from here and want serious, focused Biology teaching without the daily travel, you can now get it close to home.",
       competitionAnalysis:
         'For such a premium corridor, Golf Course Road has surprisingly few coaching centers - the usual route is Sector 14 or Delhi. Our online classes give you a convenient, high-quality alternative.',
       parentConcerns:
@@ -4859,6 +4861,7 @@ export const localities: Locality[] = [
       localKeywords: ['sushant lok 1', 'sushant lok 2', 'sushant lok 3', 'sector 43'],
       h1: 'Top NEET Biology Coaching in Sushant Lok Gurugram',
       metaRobots: 'index,follow',
+      canonicalUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-sushant-lok-gurugram',
     },
 
     coordinates: { lat: 28.462, lng: 77.0791 },
@@ -4960,6 +4963,7 @@ export const localities: Locality[] = [
       localKeywords: ['sector 56 gurugram', 'huda city centre', 'sector 55', 'sector 57'],
       h1: 'Best NEET Biology Coaching in Sector 56 Gurugram',
       metaRobots: 'index,follow',
+      canonicalUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram/sector-56',
     },
 
     coordinates: { lat: 28.4289, lng: 77.0829 },
@@ -5061,6 +5065,7 @@ export const localities: Locality[] = [
       localKeywords: ['sector 14 market', 'civil lines', 'sadar bazar', 'railway road'],
       h1: 'Best NEET Biology Coaching in Sector 14 Gurugram',
       metaRobots: 'index,follow',
+      canonicalUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram/sector-14',
     },
 
     coordinates: { lat: 28.4595, lng: 77.0266 },
@@ -5167,6 +5172,7 @@ export const localities: Locality[] = [
       localKeywords: ['south city 1', 'south city 2', 'galleria market', 'sohna road'],
       h1: 'Best NEET Biology Coaching in South City 1 Gurugram',
       metaRobots: 'index,follow',
+      canonicalUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-south-city-gurugram',
     },
 
     coordinates: { lat: 28.4601, lng: 77.0503 },

@@ -64,10 +64,10 @@ const bridgeAdvantages = [
 ]
 
 const successStats = [
-  { stat: '290+', label: 'Average Biology Score' },
-  { stat: '78%', label: 'Clear NEET Cutoff' },
-  { stat: '682', label: 'Top HBSE Student Score' },
-  { stat: '150+', label: 'HBSE Students Enrolled' },
+  { stat: 'AIIMS', label: 'Trained Faculty' },
+  { stat: '15-20', label: 'Students per Batch' },
+  { stat: 'Hindi + English', label: 'Bilingual Teaching' },
+  { stat: 'NCERT', label: 'Bridge Program' },
 ]
 
 const syllabusGaps = [
@@ -170,7 +170,7 @@ export default function HaryanaBoardNEETCoachingContent({ faqs }: { faqs: FAQ[] 
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Star className="w-5 h-5 text-yellow-400" />
-                <span>290+ Avg Biology Score</span>
+                <span>Hindi + English Medium</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Wallet className="w-5 h-5 text-green-400" />
@@ -365,23 +365,23 @@ export default function HaryanaBoardNEETCoachingContent({ faqs }: { faqs: FAQ[] 
               </Link>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
-              <h3 className="text-2xl font-bold mb-6">HBSE Student Results 2024</h3>
+              <h3 className="text-2xl font-bold mb-6">What HBSE Students Get</h3>
               <div className="space-y-4">
                 <div className="flex justify-between py-3 border-b border-white/20">
-                  <span>Average NEET Biology</span>
-                  <span className="font-semibold">292/360</span>
+                  <span>Batch size</span>
+                  <span className="font-semibold">15-20 students</span>
                 </div>
                 <div className="flex justify-between py-3 border-b border-white/20">
-                  <span>Average HBSE Biology</span>
-                  <span className="font-semibold">88.5%</span>
+                  <span>Teaching medium</span>
+                  <span className="font-semibold">Hindi + English</span>
                 </div>
                 <div className="flex justify-between py-3 border-b border-white/20">
-                  <span>Top HBSE Student</span>
-                  <span className="font-semibold">682/720</span>
+                  <span>Faculty</span>
+                  <span className="font-semibold">AIIMS-trained</span>
                 </div>
                 <div className="flex justify-between py-3">
-                  <span>NEET Qualified</span>
-                  <span className="font-semibold text-green-300">78%</span>
+                  <span>First 4 weeks</span>
+                  <span className="font-semibold text-green-300">NCERT bridge</span>
                 </div>
               </div>
             </div>
@@ -641,7 +641,7 @@ export default function HaryanaBoardNEETCoachingContent({ faqs }: { faqs: FAQ[] 
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your NEET Journey?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Join 150+ HBSE students preparing for NEET with bilingual support
+            Join our HBSE batch preparing for NEET with bilingual support
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
