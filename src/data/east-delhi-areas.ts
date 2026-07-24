@@ -47,7 +47,7 @@ export const areaDetails: Record<string, EastDelhiAreaDetails> = {
     fullName: 'Preet Vihar, East Delhi',
     description: 'Premium residential area with top schools',
     heroDescription:
-      'Preet Vihar is one of East Delhis most sought-after residential localities, home to DPS students and educated families. Students here seek quality NEET coaching with personalized attention.',
+      'Preet Vihar is one of East Delhis most sought-after residential localities, home to many DPS students and well connected by metro.',
     nearbyMetro: ['Preet Vihar Metro', 'Karkardooma Metro'],
     landmarks: ['Preet Vihar Market', 'DPS Preet Vihar', 'Karkardooma Court'],
     schools: ['DPS Preet Vihar', 'Ryan International', 'Cambridge School'],
@@ -70,7 +70,7 @@ export const areaDetails: Record<string, EastDelhiAreaDetails> = {
     fullName: 'Mayur Vihar Phase 1, East Delhi',
     description: 'Largest DDA colony with excellent metro connectivity',
     heroDescription:
-      'Mayur Vihar Phase 1 is one of the largest DDA colonies in East Delhi with direct metro connectivity. Home to educated middle-class families seeking quality NEET preparation for their children.',
+      'Mayur Vihar Phase 1 is one of the largest DDA colonies in East Delhi with direct metro connectivity. Many middle-class families call it home.',
     nearbyMetro: ['Mayur Vihar Phase 1 Metro', 'Mayur Vihar Extension Metro'],
     landmarks: ['Mayur Vihar Extension', 'Patparganj Road', 'Phase 1 Market'],
     schools: ['DAV Public School', 'Apeejay School', 'Mount Carmel School'],
@@ -93,7 +93,7 @@ export const areaDetails: Record<string, EastDelhiAreaDetails> = {
     fullName: 'Mayur Vihar Phase 2, East Delhi',
     description: 'Established residential area near Akshardham',
     heroDescription:
-      'Mayur Vihar Phase 2 is an established residential locality near the famous Akshardham Temple. Families here value education and seek quality NEET coaching for their aspiring doctors.',
+      'Mayur Vihar Phase 2 is an established residential locality near the famous Akshardham Temple, a settled and family-oriented part of East Delhi.',
     nearbyMetro: ['Mayur Vihar Phase 2 Metro', 'Akshardham Metro'],
     landmarks: ['Akshardham Temple', 'Phase 2 Market', 'NH-24'],
     schools: ['Ryan International', 'DAV Public School', 'Bal Bharati'],
@@ -116,7 +116,7 @@ export const areaDetails: Record<string, EastDelhiAreaDetails> = {
     fullName: 'Mayur Vihar Phase 3, East Delhi',
     description: 'Growing residential area with new developments',
     heroDescription:
-      'Mayur Vihar Phase 3 is a rapidly developing residential area with new housing complexes. Growing student population seeking affordable yet quality NEET coaching options.',
+      'Mayur Vihar Phase 3 is a rapidly developing residential area with new housing complexes and a student population that grows every year.',
     nearbyMetro: ['New Ashok Nagar Metro', 'Noida Sector 15 Metro'],
     landmarks: ['Phase 3 Market', 'Noida Link Road', 'DND Flyway'],
     schools: ['Apeejay School', 'DAV Public School', 'Kendriya Vidyalaya'],
@@ -139,7 +139,7 @@ export const areaDetails: Record<string, EastDelhiAreaDetails> = {
     fullName: 'Patparganj, East Delhi',
     description: 'Industrial-residential area with IT hub',
     heroDescription:
-      'Patparganj is a unique mix of industrial and residential areas, including the famous IP Extension. Home to corporate families and IT professionals seeking quality education for their children.',
+      'Patparganj is a unique mix of industrial and residential areas, including the famous IP Extension. Home to corporate families and IT professionals.',
     nearbyMetro: ['IP Extension Metro', 'Mayur Vihar Extension Metro'],
     landmarks: ['IP Extension', 'Patparganj Industrial Area', 'Mother Dairy'],
     schools: ['DPS IP Extension', 'Ryan International', 'Cambridge School'],
@@ -162,11 +162,11 @@ export const areaDetails: Record<string, EastDelhiAreaDetails> = {
     fullName: 'IP Extension, East Delhi',
     description: 'Upscale residential colony in East Delhi',
     heroDescription:
-      'IP Extension (Indraprastha Extension) is one of East Delhis most upscale residential colonies. Home to professionals, businessmen, and families from top schools seeking premium NEET coaching.',
+      'IP Extension (Indraprastha Extension) is one of East Delhis most upscale residential colonies. Home to professionals, businessmen, and students from top schools.',
     nearbyMetro: ['IP Extension Metro', 'Mayur Vihar Phase 1 Metro'],
     landmarks: ['IP Estate', 'Jaypee Greens', 'IP Market'],
     schools: ['DPS IP Extension', 'Amity International', 'The Indian School'],
-    highlights: ['Premium Colony', 'Educated Families', 'Good Schools', 'Professional Area'],
+    highlights: ['Premium Colony', 'Family Neighbourhood', 'Good Schools', 'Professional Area'],
     type: 'posh',
     pincode: '110092',
     voiceSearchPhrases: [
@@ -185,7 +185,7 @@ export const areaDetails: Record<string, EastDelhiAreaDetails> = {
     fullName: 'Karkardooma, East Delhi',
     description: 'Legal hub with Karkardooma Court Complex',
     heroDescription:
-      'Karkardooma is known for its large court complex and is home to many legal professionals and their families. Students here seek quality education with disciplined environment.',
+      'Karkardooma is known for its large court complex and is home to many legal professionals and their families.',
     nearbyMetro: ['Karkardooma Metro', 'Anand Vihar Metro'],
     landmarks: ['Karkardooma Court Complex', 'Anand Vihar ISBT', 'Karkardooma Market'],
     schools: ['DAV Public School', 'Ryan International', 'Modern School'],
@@ -208,7 +208,7 @@ export const areaDetails: Record<string, EastDelhiAreaDetails> = {
     fullName: 'Shakarpur, East Delhi',
     description: 'Dense residential area near Laxmi Nagar coaching hub',
     heroDescription:
-      'Shakarpur is a densely populated residential area adjacent to the Laxmi Nagar coaching hub. Budget-conscious students here often seek quality alternatives to mass coaching centers.',
+      'Shakarpur is a densely populated residential area adjacent to the Laxmi Nagar coaching hub, and a budget-friendly base for NEET aspirants.',
     nearbyMetro: ['Laxmi Nagar Metro', 'Nirman Vihar Metro'],
     landmarks: ['Shakarpur Khas', 'Laxmi Nagar Border', 'Old Kondli Road'],
     schools: ['Sarvodaya Vidyalaya', 'DAV Public School', 'Govt Schools'],
@@ -300,7 +300,7 @@ export const areaDetails: Record<string, EastDelhiAreaDetails> = {
     fullName: 'Krishna Nagar, East Delhi',
     description: 'Historic East Delhi locality with famous market',
     heroDescription:
-      'Krishna Nagar is one of the oldest and most established localities in East Delhi, known for its vibrant market and strong business community. Families here prioritize quality education.',
+      'Krishna Nagar is one of the oldest and most established localities in East Delhi, known for its vibrant market and strong business community.',
     nearbyMetro: ['Krishna Nagar Metro', 'Jhilmil Metro'],
     landmarks: ['Krishna Nagar Market', 'Famous Sweets Shops', 'Lal Quarter'],
     schools: ['DAV Public School', 'Cambridge School', 'Ryan International'],
@@ -323,11 +323,11 @@ export const areaDetails: Record<string, EastDelhiAreaDetails> = {
     fullName: 'Vivek Vihar, East Delhi',
     description: 'Residential colony near Anand Vihar',
     heroDescription:
-      'Vivek Vihar is a well-established residential colony near Anand Vihar with good schools and educated families seeking quality NEET preparation options.',
+      'Vivek Vihar is a well-established residential colony near Anand Vihar with good schools.',
     nearbyMetro: ['Anand Vihar Metro', 'Karkardooma Metro'],
     landmarks: ['Vivek Vihar Market', 'GTB Hospital', 'Dilshad Garden Border'],
     schools: ['DAV Public School', 'Ryan International', 'Bloom Public School'],
-    highlights: ['Residential Colony', 'Near GTB Hospital', 'Educated Families', 'Good Schools'],
+    highlights: ['Residential Colony', 'Near GTB Hospital', 'Family Neighbourhood', 'Good Schools'],
     type: 'residential',
     pincode: '110095',
     voiceSearchPhrases: [

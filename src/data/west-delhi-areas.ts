@@ -24,7 +24,7 @@ export const areaDetails: Record<string, WestDelhiAreaDetails> = {
     fullName: 'Dwarka (All Sectors), West Delhi',
     description: 'Largest sub-city in Asia with 29 sectors',
     heroDescription:
-      'Dwarka is one of the largest sub-cities in Asia with 29 planned sectors. Home to DPS Dwarka students and educated families near IGI Airport seeking quality NEET coaching with proven results.',
+      'Dwarka is one of the largest sub-cities in Asia with 29 planned sectors, located close to IGI Airport. Many DPS Dwarka students live here.',
     nearbyMetro: [
       'Dwarka Sector 21 Metro',
       'Dwarka Metro',
@@ -98,7 +98,7 @@ export const areaDetails: Record<string, WestDelhiAreaDetails> = {
     fullName: 'Vikaspuri, West Delhi',
     description: 'Large residential colony with good schools',
     heroDescription:
-      'Vikaspuri is a large residential area in West Delhi with multiple blocks and good schools. Affordable housing attracts middle-class families seeking quality NEET preparation.',
+      'Vikaspuri is a large residential area in West Delhi with multiple blocks, good schools, and plenty of affordable housing.',
     nearbyMetro: ['Uttam Nagar East Metro', 'Janakpuri West Metro'],
     landmarks: ['Vikaspuri Main Road', 'Vikaspuri Market', 'Outer Ring Road'],
     schools: ['DAV Public School', 'Ryan International', 'Cambridge School', 'Bal Bharati'],
@@ -121,7 +121,7 @@ export const areaDetails: Record<string, WestDelhiAreaDetails> = {
     fullName: 'Uttam Nagar, West Delhi',
     description: 'Densely populated area with high student demand',
     heroDescription:
-      'Uttam Nagar is one of the most densely populated areas in Delhi with high demand for affordable coaching. Students here seek quality NEET preparation with value for money.',
+      "Uttam Nagar is one of the most densely populated areas in Delhi with high demand for affordable coaching. If you're preparing for NEET here, value for money matters as much as quality.",
     nearbyMetro: ['Uttam Nagar West Metro', 'Uttam Nagar East Metro', 'Nawada Metro'],
     landmarks: ['Uttam Nagar Market', 'West Enclave', 'Milap Nagar', 'Indira Park'],
     schools: ['DAV Public School', 'Government Schools', 'Private Schools', 'Ryan International'],
@@ -144,7 +144,7 @@ export const areaDetails: Record<string, WestDelhiAreaDetails> = {
     fullName: 'Tilak Nagar, West Delhi',
     description: 'Established residential colony with metro access',
     heroDescription:
-      'Tilak Nagar is an established residential colony in West Delhi with excellent metro connectivity. Families here value education and seek quality NEET coaching institutes.',
+      "Tilak Nagar is an established residential colony in West Delhi with excellent metro connectivity — handy if you're travelling to NEET classes.",
     nearbyMetro: ['Tilak Nagar Metro', 'Subhash Nagar Metro', 'Janakpuri East Metro'],
     landmarks: ['Tilak Nagar Market', 'Metro Station', 'Govt. Hospital', 'Community Centre'],
     schools: ['DAV Public School', 'Bal Bharati', 'Ryan International', 'Cambridge School'],
@@ -190,7 +190,7 @@ export const areaDetails: Record<string, WestDelhiAreaDetails> = {
     fullName: 'Paschim Vihar, West Delhi',
     description: 'Large residential colony with multiple blocks',
     heroDescription:
-      'Paschim Vihar is a large residential colony with multiple blocks (A1, A2, B1, B2, etc.). Home to educated families seeking quality NEET coaching for their children.',
+      'Paschim Vihar is a large residential colony with multiple blocks (A1, A2, B1, B2, etc.), well connected to the rest of West Delhi.',
     nearbyMetro: ['Paschim Vihar West Metro', 'Paschim Vihar East Metro', 'Madipur Metro'],
     landmarks: ['Paschim Vihar Market', 'A Block Market', 'Metro Walk', 'District Park'],
     schools: ['DAV Public School', 'Ryan International', 'Mount Carmel', 'Cambridge School'],
@@ -259,7 +259,7 @@ export const areaDetails: Record<string, WestDelhiAreaDetails> = {
     fullName: 'Kirti Nagar, West Delhi',
     description: 'Known for famous furniture market',
     heroDescription:
-      'Kirti Nagar is famous for Asias largest furniture market but also has significant residential areas. Business families here seek quality education for their children.',
+      'Kirti Nagar is famous for Asias largest furniture market but also has significant residential areas and a strong business community.',
     nearbyMetro: ['Kirti Nagar Metro', 'Moti Nagar Metro', 'Rajouri Garden Metro'],
     landmarks: ['Kirti Nagar Furniture Market', 'Metro Station', 'Industrial Area'],
     schools: ['DAV Public School', 'Ryan International', 'Cambridge School', 'Private Schools'],

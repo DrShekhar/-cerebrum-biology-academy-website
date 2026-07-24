@@ -100,11 +100,11 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'Defence Colony, South Delhi',
     description: 'Prestigious colony with defence and government families',
     heroDescription:
-      "Defence Colony is one of Delhi's most prestigious residential areas, home to defence personnel, senior government officials, and educated families seeking quality education for their children.",
+      "Defence Colony is one of Delhi's most prestigious residential areas, home to defence personnel, senior government officials, and their families.",
     nearbyMetro: ['Lajpat Nagar Metro', 'Moolchand Metro'],
     landmarks: ['Defence Colony Market', 'Lajpat Nagar Central Market'],
     schools: ['Modern School Barakhamba', 'Delhi Public School'],
-    highlights: ['Prestigious Colony', 'Educated Families', 'Metro Access', 'Central Location'],
+    highlights: ['Prestigious Colony', 'Family Neighbourhood', 'Metro Access', 'Central Location'],
     type: 'posh',
     pincode: '110024',
     voiceSearchPhrases: [
@@ -192,7 +192,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'Green Park, South Delhi',
     description: 'Central location with easy accessibility',
     heroDescription:
-      'Green Park is a well-connected residential area in South Delhi, offering easy access to coaching centers in Hauz Khas and Kalu Sarai. Ideal for students seeking quality education.',
+      "Green Park is a well-connected residential area in South Delhi, offering easy access to coaching centers in Hauz Khas and Kalu Sarai — a convenient base if you're preparing for NEET.",
     nearbyMetro: ['Green Park Metro'],
     landmarks: ['Green Park Market', 'Aurobindo Market', 'Green Park Extension'],
     schools: ['Sardar Patel Vidyalaya', 'Springdales School'],
@@ -215,7 +215,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'Panchsheel Park, South Delhi',
     description: 'Upscale residential area near Greater Kailash',
     heroDescription:
-      'Panchsheel Park is an upscale residential colony in South Delhi, home to educated professionals and students from top schools seeking premium NEET coaching.',
+      "Panchsheel Park is an upscale residential colony in South Delhi, home to professionals and students from many of the city's top schools.",
     nearbyMetro: ['Panchsheel Park Metro', 'Chirag Delhi Metro'],
     landmarks: ['Panchsheel Club', 'Sheikh Sarai'],
     schools: ['The Indian School', 'Springdales Pusa Road'],
@@ -236,13 +236,13 @@ export const areaDetails: Record<string, AreaDetails> = {
   'new-friends-colony': {
     name: 'New Friends Colony',
     fullName: 'New Friends Colony, South Delhi',
-    description: 'Established colony with educated families',
+    description: 'Well-established colony with good schools',
     heroDescription:
-      'New Friends Colony (NFC) is a well-established residential area with educated families and good schools. Students here seek quality NEET coaching with flexible timings.',
+      'New Friends Colony (NFC) is a well-established residential area with good schools and a large student community.',
     nearbyMetro: ['Sukhdev Vihar Metro', 'Okhla Metro'],
     landmarks: ['NFC Market', 'Friends Colony', 'Okhla Industrial Area'],
     schools: ['Amity International', 'Mount Carmel School'],
-    highlights: ['Established Colony', 'Educated Families', 'Good Schools', 'NFC Market'],
+    highlights: ['Established Colony', 'Family Neighbourhood', 'Good Schools', 'NFC Market'],
     type: 'residential',
     pincode: '110025',
     voiceSearchPhrases: [
@@ -311,7 +311,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'RK Puram (All Sectors), South Delhi',
     description: 'Premier government officers colony in South Delhi',
     heroDescription:
-      "RK Puram is one of South Delhi's largest residential colonies, home to CPWD, Central Govt, and PSU officers. With sectors from 1 to 13, it has a high concentration of educated families seeking quality NEET coaching for their children.",
+      "RK Puram is one of South Delhi's largest residential colonies, home to CPWD, Central Govt, and PSU officers. With sectors from 1 to 13, it houses families from across the government services.",
     nearbyMetro: ['RK Puram Metro', 'Munirka Metro', 'IIT Delhi Metro'],
     landmarks: ['Sector Markets', 'DPS RK Puram', 'CPWD Offices', 'Bhikaji Cama Place'],
     schools: ['DPS RK Puram', 'Army Public School', 'Kendriya Vidyalaya RK Puram'],
@@ -334,7 +334,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'Sarojini Nagar, South Delhi',
     description: 'Famous government quarters and DDA flats area',
     heroDescription:
-      'Sarojini Nagar houses thousands of government employees in DDA flats and Type I-IV quarters. Known for its famous market, it has a large student population seeking affordable yet quality NEET coaching.',
+      'Sarojini Nagar houses thousands of government employees in DDA flats and Type I-IV quarters. Known for its famous market, it also has a large student population.',
     nearbyMetro: ['Sarojini Nagar Metro', 'INA Metro'],
     landmarks: ['Sarojini Nagar Market', 'DDA Flats', 'Govt Quarters', 'INA Market'],
     schools: ['Kendriya Vidyalaya Sarojini Nagar', 'Sarvodaya Vidyalaya', 'Army School'],
@@ -357,11 +357,11 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'Lodhi Colony, New Delhi',
     description: 'Exclusive IAS/IPS officers residential area',
     heroDescription:
-      'Lodhi Colony is an exclusive residential area for senior IAS, IPS, and Class-I officers near Lodhi Gardens. Families here seek premium NEET coaching with personalized attention for their high-achieving children.',
+      "Lodhi Colony is an exclusive residential area for senior IAS, IPS, and Class-I officers near Lodhi Gardens. If you're preparing for NEET here, our South Extension center is close by.",
     nearbyMetro: ['Jor Bagh Metro', 'Khan Market Metro'],
     landmarks: ['Lodhi Gardens', 'Khan Market', 'India Habitat Centre', 'IGNCA'],
     schools: ['Modern School Barakhamba', "St. Columba's School", 'Mater Dei School'],
-    highlights: ['IAS/IPS Officers', 'Premium Locality', 'Near Lodhi Gardens', 'Elite Families'],
+    highlights: ['IAS/IPS Officers', 'Premium Locality', 'Near Lodhi Gardens', 'Premium Homes'],
     type: 'govt-colony',
     pincode: '110003',
     voiceSearchPhrases: [
@@ -380,7 +380,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'Andrews Ganj, South Delhi',
     description: 'Senior government officials residential complex',
     heroDescription:
-      'Andrews Ganj is a Type V-VI government quarters complex for senior officers near South Extension. Residents include IAS, IPS, and senior bureaucrats seeking quality education for their children.',
+      'Andrews Ganj is a Type V-VI government quarters complex for senior officers near South Extension. Residents include IAS, IPS, and senior bureaucrats.',
     nearbyMetro: ['AIIMS Metro', 'Green Park Metro'],
     landmarks: ['South Extension Market', 'Ring Road', 'AIIMS Hospital'],
     schools: ['Holy Child Auxilium', 'Modern School', 'Delhi Public School'],
@@ -403,7 +403,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'Kidwai Nagar (East & West), South Delhi',
     description: 'Government employee residential colony near AIIMS',
     heroDescription:
-      'Kidwai Nagar (East & West) is a large government colony near AIIMS, housing thousands of central govt employees. With the new redevelopment, it attracts families seeking quality NEET coaching.',
+      'Kidwai Nagar (East & West) is a large government colony near AIIMS, housing thousands of central govt employees. With the new redevelopment, many more families are moving in.',
     nearbyMetro: ['AIIMS Metro', 'Kidwai Nagar Metro'],
     landmarks: ['AIIMS Hospital', 'Kidwai Nagar Redevelopment', 'Safdarjung Hospital'],
     schools: ['Kendriya Vidyalaya AIIMS', 'Sarvodaya Vidyalaya', 'Govt Schools'],
@@ -426,7 +426,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'Netaji Nagar, South Delhi',
     description: 'Government quarters near South Delhi hub',
     heroDescription:
-      'Netaji Nagar is a Type I-IV government quarters complex in South Delhi. Home to central government employees seeking quality and affordable NEET coaching for their children.',
+      'Netaji Nagar is a Type I-IV government quarters complex in South Delhi. Home to central government employees and their families.',
     nearbyMetro: ['AIIMS Metro', 'Green Park Metro'],
     landmarks: ['Netaji Nagar Market', 'IIT Flyover', 'South Delhi Hub'],
     schools: ['Kendriya Vidyalaya', 'Sarvodaya Vidyalaya', 'DAV Public School'],
@@ -473,7 +473,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'Moti Bagh, South Delhi',
     description: 'Large government officers colony in South Delhi',
     heroDescription:
-      "Moti Bagh is one of South Delhi's largest government colonies, housing Type III-V officers. The multi-storey complex has a high concentration of educated families with NEET-aspiring children.",
+      "Moti Bagh is one of South Delhi's largest government colonies, housing Type III-V officers. Government families from across the services live in its multi-storey complexes.",
     nearbyMetro: ['Moti Bagh Metro', 'Durgabai Deshmukh Metro'],
     landmarks: ['Bhikaji Cama Place', 'Africa Avenue', 'Moti Bagh Flyover'],
     schools: ['Air Force Bal Bharati', 'Army Public School', 'Kendriya Vidyalaya'],
@@ -500,7 +500,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     nearbyMetro: ['Khan Market Metro', 'Jor Bagh Metro'],
     landmarks: ['India Gate', 'Khan Market', 'Supreme Court', 'India Habitat Centre'],
     schools: ['The Shri Ram School', 'Modern School', 'Convent of Jesus & Mary'],
-    highlights: ['Ultra Premium', 'Lutyens Delhi', 'Elite Families', 'Personalized Coaching'],
+    highlights: ['Ultra Premium', 'Lutyens Delhi', 'Premium Homes', 'Personalized Coaching'],
     type: 'ultra-premium',
     pincode: '110003',
     voiceSearchPhrases: [
@@ -519,7 +519,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'Jor Bagh, New Delhi',
     description: 'Premium Lutyens area near Lodhi Gardens',
     heroDescription:
-      'Jor Bagh is a premium residential enclave near Lodhi Gardens, home to diplomats, senior bureaucrats, and business families seeking the finest NEET preparation for their children.',
+      'Jor Bagh is a premium residential enclave near Lodhi Gardens, home to diplomats, senior bureaucrats, and business families.',
     nearbyMetro: ['Jor Bagh Metro'],
     landmarks: ['Lodhi Gardens', 'Lodhi Art District', 'Jor Bagh Market'],
     schools: ['Modern School', 'The Shri Ram School', 'Springdales School'],
@@ -542,11 +542,11 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'Sunder Nagar, New Delhi',
     description: 'Elite embassy and diplomatic enclave',
     heroDescription:
-      'Sunder Nagar is an exclusive residential area near embassies and diplomatic missions. Home to diplomats and elite families seeking world-class NEET coaching with flexible schedules.',
+      'Sunder Nagar is an exclusive residential area near embassies and diplomatic missions. Home to diplomats and their families.',
     nearbyMetro: ['Khan Market Metro', 'Pragati Maidan Metro'],
     landmarks: ['Purana Qila', 'National Zoo', 'Sunder Nursery', "Humayun's Tomb"],
     schools: ['Sanskriti School', 'Modern School', 'The Shri Ram School'],
-    highlights: ['Embassy Area', 'Diplomatic Enclave', 'Elite Families', 'Historical Area'],
+    highlights: ['Embassy Area', 'Diplomatic Enclave', 'Premium Homes', 'Historical Area'],
     type: 'ultra-premium',
     pincode: '110003',
     voiceSearchPhrases: [
@@ -678,9 +678,9 @@ export const areaDetails: Record<string, AreaDetails> = {
   'safdarjung-enclave': {
     name: 'Safdarjung Enclave',
     fullName: 'Safdarjung Enclave, South Delhi',
-    description: 'Premium residential colony with educated families',
+    description: 'Premium residential colony near Green Park',
     heroDescription:
-      'Safdarjung Enclave is a premium residential colony near Green Park, home to doctors, professionals, and business families seeking quality NEET coaching for their children.',
+      'Safdarjung Enclave is a premium residential colony near Green Park, home to doctors, professionals, and business families.',
     nearbyMetro: ['Green Park Metro', 'AIIMS Metro'],
     landmarks: ['Safdarjung Hospital', 'Green Park Market', 'Humaun Pur Village'],
     schools: ['Holy Child School', 'Mount Carmel School', 'Springdales School'],
@@ -703,7 +703,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'Gulmohar Park, South Delhi',
     description: 'Elite residential enclave with celebrity residents',
     heroDescription:
-      "Gulmohar Park is one of South Delhi's most elite residential areas, home to celebrities, industrialists, and top professionals. Families here demand exclusive, premium NEET coaching.",
+      "Gulmohar Park is one of South Delhi's most elite residential areas, home to celebrities, industrialists, and top professionals.",
     nearbyMetro: ['Hauz Khas Metro', 'Green Park Metro'],
     landmarks: ['Hauz Khas Village', 'Gulmohar Park Club', 'SDA Market'],
     schools: ['Sardar Patel Vidyalaya', 'Springdales School', 'The Shri Ram School'],
@@ -726,7 +726,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'East of Kailash (EOK), South Delhi',
     description: 'Premium residential area with DPS EOK students',
     heroDescription:
-      'East of Kailash is a premium residential area adjacent to Greater Kailash. Home to DPS EOK students and educated families seeking quality NEET coaching.',
+      'East of Kailash is a premium residential area adjacent to Greater Kailash, home to many DPS EOK students.',
     nearbyMetro: ['Kailash Colony Metro', 'Nehru Place Metro'],
     landmarks: ['DPS East of Kailash', 'EOK Market', 'GK-I M Block'],
     schools: ['DPS East of Kailash', 'Bal Bharati', 'Mount Carmel'],
@@ -749,7 +749,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     fullName: 'Alaknanda, South Delhi',
     description: 'Well-planned DDA colony with good connectivity',
     heroDescription:
-      'Alaknanda is a well-planned DDA residential colony in South Delhi with excellent metro connectivity. Popular among middle-class families seeking quality NEET coaching.',
+      'Alaknanda is a well-planned DDA residential colony in South Delhi with excellent metro connectivity, popular with middle-class families.',
     nearbyMetro: ['Nehru Place Metro', 'Kalkaji Mandir Metro'],
     landmarks: ['Alaknanda Market', 'Lotus Temple', 'Nehru Place'],
     schools: ['DAV Public School', 'Amity International', 'Ryan International'],
@@ -868,7 +868,7 @@ export const areaDetails: Record<string, AreaDetails> = {
     nearbyMetro: ['Civil Lines Metro', 'Vidhan Sabha Metro'],
     landmarks: ['Delhi University', 'Majnu Ka Tila', 'ISBT Kashmere Gate'],
     schools: ["St. Stephen's School", 'Cambridge School', 'The Mothers International'],
-    highlights: ['Premium Area', 'North Delhi', 'Elite Families', 'Near DU'],
+    highlights: ['Premium Area', 'North Delhi', 'Premium Homes', 'Near DU'],
     type: 'posh',
     pincode: '110054',
     voiceSearchPhrases: [

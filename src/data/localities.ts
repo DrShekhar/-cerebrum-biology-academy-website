@@ -145,7 +145,8 @@ export const localities: Locality[] = [
         'Personalized doubt clearing',
         'Flexible timings',
       ],
-      marketGap: 'Big institutes prioritize batch size over quality. If you want personalized attention on Biology concepts, our small batches were designed for exactly that.',
+      marketGap:
+        'Big institutes prioritize batch size over quality. If you want personalized attention on Biology concepts, our small batches were designed for exactly that.',
     },
 
     content: {
@@ -155,7 +156,8 @@ export const localities: Locality[] = [
         'Small batches, expert faculty, and proven strategies designed specifically for South Delhi NEET aspirants',
       urgencyMessage:
         'Only 8 seats left in February batch! South Delhi students are enrolling fast.',
-      localChallenge: 'Struggling to retain Biology theory despite attending a big institute? Our concept-based learning approach solves exactly that.',
+      localChallenge:
+        'Struggling to retain Biology theory despite attending a big institute? Our concept-based learning approach solves exactly that.',
       successMetric: '89% of our South Delhi students scored above 330 in NEET 2024 Biology',
     },
 
@@ -203,10 +205,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'very-high',
-      demandExplanation: "South Delhi is one of India's most competitive NEET preparation hubs, with a long tradition of academic excellence. If you're preparing here, you're surrounded by thousands of fellow aspirants targeting top medical colleges - and focused Biology coaching is how you stand out.",
-      competitionAnalysis: "South Delhi has no shortage of big institutes - Allen, Aakash, and many local centers. Most sell all-subject packages, though; if you want Biology-specialist teaching with personalized attention, options thin out fast. That's exactly what we built.",
-      parentConcerns: "Worried your child will get lost in a coaching batch of 100+ students? You're not alone - it's the most common concern we hear from South Delhi parents. Our small batches make sure the individual attention matches the standard you expect.",
-      studyCultureTrend: "South Delhi's competitive study culture keeps preparation intense year-round. Most of our students from the area now prefer online and hybrid classes that cut out the commute across this sprawling region - you can too.",
+      demandExplanation:
+        "South Delhi is one of India's most competitive NEET preparation hubs, with a long tradition of academic excellence. If you're preparing here, you're surrounded by thousands of fellow aspirants targeting top medical colleges - and focused Biology coaching is how you stand out.",
+      competitionAnalysis:
+        "South Delhi has no shortage of big institutes - Allen, Aakash, and many local centers. Most sell all-subject packages, though; if you want Biology-specialist teaching with personalized attention, options thin out fast. That's exactly what we built.",
+      parentConcerns:
+        "Worried your child will get lost in a coaching batch of 100+ students? You're not alone - it's the most common concern we hear from South Delhi parents. Our small batches make sure the individual attention matches the standard you expect.",
+      studyCultureTrend:
+        "South Delhi's competitive study culture keeps preparation intense year-round. Most of our students from the area now prefer online and hybrid classes that cut out the commute across this sprawling region - you can too.",
     },
   },
   {
@@ -279,7 +285,8 @@ export const localities: Locality[] = [
         'Smaller batch sizes',
         'Flexible online format saves GK traffic time',
       ],
-      marketGap: 'Already have Physics and Chemistry coaching sorted? Our specialized Biology program is built to complement it.',
+      marketGap:
+        'Already have Physics and Chemistry coaching sorted? Our specialized Biology program is built to complement it.',
     },
 
     content: {
@@ -288,7 +295,8 @@ export const localities: Locality[] = [
       valueProposition:
         "Exclusive Biology-focused coaching designed for Greater Kailash students' unique needs",
       urgencyMessage: 'Limited seats! GK students enrolling fast for February batch.',
-      localChallenge: 'Juggling multiple coaching institutes? Our online format saves you travel time while delivering superior Biology results.',
+      localChallenge:
+        'Juggling multiple coaching institutes? Our online format saves you travel time while delivering superior Biology results.',
       successMetric: '92% of GK students scored 330+ in NEET 2024 Biology',
     },
 
@@ -330,10 +338,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'very-high',
-      demandExplanation: "Greater Kailash students come to us from top schools like DPS, Sanskriti, and Modern School - GK has one of the highest concentrations of NEET aspirants in Delhi NCR. If you're targeting NEET from GK, you're in strong company.",
-      competitionAnalysis: "GK's main market areas host multiple coaching centers, but most cater to IIT-JEE or bundle all subjects together. Dedicated small-batch Biology coaching is rare here - which is exactly the need we fill for you.",
-      parentConcerns: "Want regular progress updates and measurable improvement, not vague promises? GK parents tell us that's what was missing elsewhere. We share our methodology and results transparently, so you always know where your child stands.",
-      studyCultureTrend: "If you're juggling multiple tuitions like many GK students, you'll appreciate our approach: focused, single-subject Biology mastery instead of scattered multi-subject coaching.",
+      demandExplanation:
+        "Greater Kailash students come to us from top schools like DPS, Sanskriti, and Modern School - GK has one of the highest concentrations of NEET aspirants in Delhi NCR. If you're targeting NEET from GK, you're in strong company.",
+      competitionAnalysis:
+        "GK's main market areas host multiple coaching centers, but most cater to IIT-JEE or bundle all subjects together. Dedicated small-batch Biology coaching is rare here - which is exactly the need we fill for you.",
+      parentConcerns:
+        "Want regular progress updates and measurable improvement, not vague promises? GK parents tell us that's what was missing elsewhere. We share our methodology and results transparently, so you always know where your child stands.",
+      studyCultureTrend:
+        "If you're juggling multiple tuitions like many GK students, you'll appreciate our approach: focused, single-subject Biology mastery instead of scattered multi-subject coaching.",
     },
   },
   {
@@ -393,7 +405,8 @@ export const localities: Locality[] = [
         'Biology specialization vs general coaching',
         'Online format saves Hauz Khas traffic hassle',
       ],
-      marketGap: "Plenty of institutes around Hauz Khas offer generic NEET coaching. If you want specialized Biology focus, that's exactly what we do.",
+      marketGap:
+        "Plenty of institutes around Hauz Khas offer generic NEET coaching. If you want specialized Biology focus, that's exactly what we do.",
     },
 
     content: {
@@ -402,7 +415,8 @@ export const localities: Locality[] = [
       valueProposition:
         'Specialized Biology coaching that complements your existing NEET preparation',
       urgencyMessage: 'Only 6 seats remaining in Hauz Khas February batch!',
-      localChallenge: 'At large institutes, Biology often gets less focus than Physics and Chemistry. We fix that.',
+      localChallenge:
+        'At large institutes, Biology often gets less focus than Physics and Chemistry. We fix that.',
       successMetric: '88% of Hauz Khas students improved Biology score by 40+ marks',
     },
 
@@ -445,10 +459,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: 'With AIIMS Delhi right next door, medicine feels close to home in Hauz Khas. Students join us from the nearby universities and prestigious schools, making NEET Biology preparation a natural first step for you too.',
-      competitionAnalysis: 'Hauz Khas is better known for arts and culture than organized NEET coaching, so students often travel to South Delhi or Kalu Sarai for classes. With us, you get quality Biology coaching without leaving home.',
-      parentConcerns: "Worried the buzzing Hauz Khas environment will pull your child's focus? Our structured schedules and proven track record keep students on task - no flashy marketing, just results.",
-      studyCultureTrend: "Self-motivated but want expert direction? You'll fit right in - our Hauz Khas students prefer smart, concept-first study that combines technology with expert mentorship over rote learning.",
+      demandExplanation:
+        'With AIIMS Delhi right next door, medicine feels close to home in Hauz Khas. Students join us from the nearby universities and prestigious schools, making NEET Biology preparation a natural first step for you too.',
+      competitionAnalysis:
+        'Hauz Khas is better known for arts and culture than organized NEET coaching, so students often travel to South Delhi or Kalu Sarai for classes. With us, you get quality Biology coaching without leaving home.',
+      parentConcerns:
+        "Worried the buzzing Hauz Khas environment will pull your child's focus? Our structured schedules and proven track record keep students on task - no flashy marketing, just results.",
+      studyCultureTrend:
+        "Self-motivated but want expert direction? You'll fit right in - our Hauz Khas students prefer smart, concept-first study that combines technology with expert mentorship over rote learning.",
     },
   },
   {
@@ -502,7 +520,8 @@ export const localities: Locality[] = [
         'No travel needed',
         'Personalized attention',
       ],
-      marketGap: 'Vasant Vihar has few quality local coaching options, so students travel far every day. Our online classes solve that perfectly for you.',
+      marketGap:
+        'Vasant Vihar has few quality local coaching options, so students travel far every day. Our online classes solve that perfectly for you.',
     },
 
     content: {
@@ -510,7 +529,8 @@ export const localities: Locality[] = [
       heroSubtitle: "Elite Biology coaching for Vasant Vihar's aspiring doctors",
       valueProposition: 'Premium quality NEET Biology coaching delivered to your Vasant Vihar home',
       urgencyMessage: 'Exclusive Vasant Vihar batch starting soon - Limited to 12 students only!',
-      localChallenge: 'Why waste hours traveling to coaching hubs? Our online format delivers superior results without the commute.',
+      localChallenge:
+        'Why waste hours traveling to coaching hubs? Our online format delivers superior results without the commute.',
       successMetric: '98% of Vasant Vihar students scored 335+ in Biology',
     },
 
@@ -546,10 +566,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'very-high',
-      demandExplanation: "Home to diplomat families, corporate executives, and professionals, Vasant Vihar sets high academic standards. If you're aiming for a medical career from here, you want teaching that matches those standards - that's what we deliver.",
-      competitionAnalysis: "Coaching in Vasant Vihar is split between premium tutors and franchise centers, with no single institute leading in Biology. If you want a dedicated Biology specialist, we're built for that.",
-      parentConcerns: "If world-class teaching quality is your baseline - credentialed faculty, safety, and convenience included - you'll find our program measures up, with online classes taught from the comfort of your home.",
-      studyCultureTrend: 'Prefer conceptual understanding over memorization? So do most of our Vasant Vihar students, many of whom grew up with global education standards - and our tech-friendly online format suits them perfectly.',
+      demandExplanation:
+        "Home to diplomat families, corporate executives, and professionals, Vasant Vihar sets high academic standards. If you're aiming for a medical career from here, you want teaching that matches those standards - that's what we deliver.",
+      competitionAnalysis:
+        "Coaching in Vasant Vihar is split between premium tutors and franchise centers, with no single institute leading in Biology. If you want a dedicated Biology specialist, we're built for that.",
+      parentConcerns:
+        "If world-class teaching quality is your baseline - credentialed faculty, safety, and convenience included - you'll find our program measures up, with online classes taught from the comfort of your home.",
+      studyCultureTrend:
+        'Prefer conceptual understanding over memorization? So do most of our Vasant Vihar students, many of whom grew up with global education standards - and our tech-friendly online format suits them perfectly.',
     },
   },
   {
@@ -622,7 +646,8 @@ export const localities: Locality[] = [
         'Flexible online format',
         'Biology specialization',
       ],
-      marketGap: "Most Dwarka institutes spread attention across all subjects. Biology deserves specialized attention - that's what we provide.",
+      marketGap:
+        "Most Dwarka institutes spread attention across all subjects. Biology deserves specialized attention - that's what we provide.",
     },
 
     content: {
@@ -631,7 +656,8 @@ export const localities: Locality[] = [
       valueProposition:
         'Specialized Biology coaching for Dwarka students aiming for top medical colleges',
       urgencyMessage: 'Dwarka batch filling fast! Only 10 seats left for February.',
-      localChallenge: 'Tired of getting lost in large batch sizes? We provide personalized attention with small batches.',
+      localChallenge:
+        'Tired of getting lost in large batch sizes? We provide personalized attention with small batches.',
       successMetric: '87% of Dwarka students scored 330+ in NEET 2024 Biology',
     },
 
@@ -668,10 +694,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Dwarka is one of Delhi's largest residential sub-cities, and more of its students target medicine every year. If you're preparing for NEET from any Dwarka sector, quality Biology coaching is now within reach - no commute needed.",
-      competitionAnalysis: "Coaching centers have boomed across Dwarka's Sectors 6, 7, and 12 over the past decade, but quality varies widely and assembly-line teaching is common. If you've felt like just another roll number, our small batches will feel different.",
-      parentConcerns: 'Comparing value across coaching options and dreading the long commute to South Delhi hubs? You can get proven results locally - our online classes bring expert Biology teaching straight home to Dwarka.',
-      studyCultureTrend: "Dwarka's peer study groups across sectors make preparation easier - and our students from the area combine that local energy with structured online Biology classes.",
+      demandExplanation:
+        "Dwarka is one of Delhi's largest residential sub-cities, and more of its students target medicine every year. If you're preparing for NEET from any Dwarka sector, quality Biology coaching is now within reach - no commute needed.",
+      competitionAnalysis:
+        "Coaching centers have boomed across Dwarka's Sectors 6, 7, and 12 over the past decade, but quality varies widely and assembly-line teaching is common. If you've felt like just another roll number, our small batches will feel different.",
+      parentConcerns:
+        'Comparing value across coaching options and dreading the long commute to South Delhi hubs? You can get proven results locally - our online classes bring expert Biology teaching straight home to Dwarka.',
+      studyCultureTrend:
+        "Dwarka's peer study groups across sectors make preparation easier - and our students from the area combine that local energy with structured online Biology classes.",
     },
   },
   {
@@ -730,7 +760,8 @@ export const localities: Locality[] = [
         'Better individual attention',
         'Flexible online format',
       ],
-      marketGap: "In many Rohini institutes, Biology gets overshadowed by Physics and Chemistry. With us, Biology gets your full attention - because it's all we teach.",
+      marketGap:
+        "In many Rohini institutes, Biology gets overshadowed by Physics and Chemistry. With us, Biology gets your full attention - because it's all we teach.",
     },
 
     content: {
@@ -738,7 +769,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for all Rohini sectors',
       valueProposition: 'Specialized Biology coaching designed for Rohini NEET aspirants',
       urgencyMessage: 'Rohini batch starting soon! Limited seats available.',
-      localChallenge: 'In crowded institutes, Biology rarely gets adequate attention. We solve this with Biology-only focus.',
+      localChallenge:
+        'In crowded institutes, Biology rarely gets adequate attention. We solve this with Biology-only focus.',
       successMetric: '86% of Rohini students improved Biology scores by 50+ marks',
     },
 
@@ -775,10 +807,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Medical careers are the top aspiration across Rohini's middle and upper-middle class households, and NEET interest has surged accordingly. If that's your goal too, focused Biology preparation gives you the edge.",
-      competitionAnalysis: "Coaching centers cluster around Rohini's Sectors 3, 7, and 11, and most run on volume. If you want personalized, Biology-focused teaching instead of a crowded hall, that's the difference we offer.",
-      parentConcerns: 'Frustrated with big batches where individual attention is minimal? Many Rohini parents come to us for exactly that reason - effective, affordable coaching with outcomes you can measure.',
-      studyCultureTrend: "Rohini's local success stories keep the competitive spirit high. If you work hard and thrive on structured preparation, you'll fit right in - and our online format makes it even easier.",
+      demandExplanation:
+        "Medical careers are the top aspiration across Rohini's middle and upper-middle class households, and NEET interest has surged accordingly. If that's your goal too, focused Biology preparation gives you the edge.",
+      competitionAnalysis:
+        "Coaching centers cluster around Rohini's Sectors 3, 7, and 11, and most run on volume. If you want personalized, Biology-focused teaching instead of a crowded hall, that's the difference we offer.",
+      parentConcerns:
+        'Frustrated with big batches where individual attention is minimal? Many Rohini parents come to us for exactly that reason - effective, affordable coaching with outcomes you can measure.',
+      studyCultureTrend:
+        "Rohini's local success stories keep the competitive spirit high. If you work hard and thrive on structured preparation, you'll fit right in - and our online format makes it even easier.",
     },
   },
   {
@@ -876,7 +912,8 @@ export const localities: Locality[] = [
         '24/7 WhatsApp doubt clearing (not class-hours only)',
         'Physical presence in DC Chowk - no need to travel to Sector 6 or Sector 10',
       ],
-      marketGap: 'There is NO specialist biology-only coaching at DC Chowk - the nearest specialist is in Sector 6, and the big brands in Sector 10 are expensive. We bring you LOCAL, AFFORDABLE, PREMIUM biology coaching right AT DC Chowk with hybrid flexibility.',
+      marketGap:
+        'There is NO specialist biology-only coaching at DC Chowk - the nearest specialist is in Sector 6, and the big brands in Sector 10 are expensive. We bring you LOCAL, AFFORDABLE, PREMIUM biology coaching right AT DC Chowk with hybrid flexibility.',
     },
 
     content: {
@@ -887,7 +924,8 @@ export const localities: Locality[] = [
         'Only specialist NEET Biology coaching AT DC Chowk. Save 30-40 min daily travel vs Sector 6/10. Hybrid mode perfect for gated society students.',
       urgencyMessage:
         'DC Chowk Sector 9 batch starting soon! First 15 enrollments get ₹8K discount.',
-      localChallenge: 'Traveling to Sector 6 (15-20 min each way) or Sector 10 (25+ min), or settling for general coaching? Get PREMIUM specialist Biology coaching right AT DC Chowk instead.',
+      localChallenge:
+        'Traveling to Sector 6 (15-20 min each way) or Sector 10 (25+ min), or settling for general coaching? Get PREMIUM specialist Biology coaching right AT DC Chowk instead.',
       successMetric:
         '92% of DC Chowk area students improved Biology scores by 60+ marks. Zero travel time = more study time.',
     },
@@ -958,10 +996,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: 'Sector 9 is a well-established residential pocket with major coaching hubs in Rohini and Pitampura close by - so NEET preparation is a natural choice here. Start yours with the subject that carries the highest weightage: Biology.',
-      competitionAnalysis: "Sector 9 benefits from Rohini's broader coaching ecosystem but has no specialized Biology-only centers. If you've joined general NEET coaching, you may be missing the deep Biology preparation that decides final scores - we fill that need for you.",
-      parentConcerns: 'Worried about the hours your child loses shuttling between school and coaching? Our timings integrate seamlessly with school schedules, with flexible slots to suit your routine.',
-      studyCultureTrend: "Study groups come naturally in Sector 9 - and once you realize Biology carries the highest weightage in NEET, expert-led Biology coaching is the logical next step. That's where we come in.",
+      demandExplanation:
+        'Sector 9 is a well-established residential pocket with major coaching hubs in Rohini and Pitampura close by - so NEET preparation is a natural choice here. Start yours with the subject that carries the highest weightage: Biology.',
+      competitionAnalysis:
+        "Sector 9 benefits from Rohini's broader coaching ecosystem but has no specialized Biology-only centers. If you've joined general NEET coaching, you may be missing the deep Biology preparation that decides final scores - we fill that need for you.",
+      parentConcerns:
+        'Worried about the hours your child loses shuttling between school and coaching? Our timings integrate seamlessly with school schedules, with flexible slots to suit your routine.',
+      studyCultureTrend:
+        "Study groups come naturally in Sector 9 - and once you realize Biology carries the highest weightage in NEET, expert-led Biology coaching is the logical next step. That's where we come in.",
     },
   },
   {
@@ -1023,7 +1065,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Local coaching centers', 'students go to South Ex/Kailash Colony'],
       avgFees: 112000,
       ourAdvantage: ['Convenient online format', 'Better pricing', 'Biology specialization'],
-      marketGap: 'No need to travel to nearby areas for coaching - our online classes serve you better, right from home.',
+      marketGap:
+        'No need to travel to nearby areas for coaching - our online classes serve you better, right from home.',
     },
 
     content: {
@@ -1031,7 +1074,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching near Lajpat Nagar Metro',
       valueProposition: 'Quality NEET Biology coaching for Lajpat Nagar students',
       urgencyMessage: 'Lajpat Nagar batch starting February! Enroll now.',
-      localChallenge: 'Still traveling to South Ex or Kailash Colony for coaching? Save that time with our online format.',
+      localChallenge:
+        'Still traveling to South Ex or Kailash Colony for coaching? Save that time with our online format.',
       successMetric: '85% of Lajpat Nagar students scored 325+ in Biology',
     },
 
@@ -1067,10 +1111,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Education is a top family priority in Lajpat Nagar, and with established coaching centers and institutions nearby, NEET is a natural target. If it's yours, we'll make Biology your strongest subject.",
-      competitionAnalysis: "Several mid-tier institutes and individual tutors operate in Lajpat Nagar, but most offer generalized coaching. For specialized Biology preparation, you'd normally have to look elsewhere - or join us online.",
-      parentConcerns: "Missing personalized attention at a larger center? With us you get regular assessments and direct communication with faculty about your child's progress.",
-      studyCultureTrend: "Lajpat Nagar's bookshops and study resources give you a supportive environment; our online classes add the expert teaching - without losing hours to traffic.",
+      demandExplanation:
+        "Education is a top family priority in Lajpat Nagar, and with established coaching centers and institutions nearby, NEET is a natural target. If it's yours, we'll make Biology your strongest subject.",
+      competitionAnalysis:
+        "Several mid-tier institutes and individual tutors operate in Lajpat Nagar, but most offer generalized coaching. For specialized Biology preparation, you'd normally have to look elsewhere - or join us online.",
+      parentConcerns:
+        "Missing personalized attention at a larger center? With us you get regular assessments and direct communication with faculty about your child's progress.",
+      studyCultureTrend:
+        "Lajpat Nagar's bookshops and study resources give you a supportive environment; our online classes add the expert teaching - without losing hours to traffic.",
     },
   },
   {
@@ -1183,7 +1231,8 @@ export const localities: Locality[] = [
         'Walking distance for South Extension residents vs travel to Lajpat Nagar',
         'Premium quality at accessible pricing - no compromise on excellence',
       ],
-      marketGap: 'South Extension Part 2 has NO premium biology-only coaching at accessible pricing: Allen charges ₹1.36-4.28L for mass batches (50-100 students), and Aakash in Lajpat Nagar means travel plus ₹1.56-2.91L fees. We give you PREMIUM biology-only coaching in small batches (12-20) at 65-80% lower cost, with NCR-wide Pink Line connectivity.',
+      marketGap:
+        'South Extension Part 2 has NO premium biology-only coaching at accessible pricing: Allen charges ₹1.36-4.28L for mass batches (50-100 students), and Aakash in Lajpat Nagar means travel plus ₹1.56-2.91L fees. We give you PREMIUM biology-only coaching in small batches (12-20) at 65-80% lower cost, with NCR-wide Pink Line connectivity.',
     },
 
     socialProof: {
@@ -1206,7 +1255,8 @@ export const localities: Locality[] = [
         'Premium NEET Biology coaching at 65-80% lower cost than Allen/Aakash. Biology-ONLY specialization in small batches with NCR-wide Pink Line connectivity.',
       urgencyMessage:
         'South Extension Part 2 batch starting soon! Only 18 seats available. First 10 enrollments get ₹10K discount.',
-      localChallenge: 'Paying ₹1.36-4.28L at Allen for a 50-100 student mass batch, or commuting into South Delhi? Get premium biology-only coaching at ₹48-98K with small batches (12-20) and hybrid flexibility.',
+      localChallenge:
+        'Paying ₹1.36-4.28L at Allen for a 50-100 student mass batch, or commuting into South Delhi? Get premium biology-only coaching at ₹48-98K with small batches (12-20) and hybrid flexibility.',
       successMetric: '92% of South Extension Part 2 students scored 330+ in Biology',
     },
 
@@ -1235,7 +1285,7 @@ export const localities: Locality[] = [
         question:
           "I'm from Noida/Ghaziabad/Faridabad - is it worth traveling to South Extension for coaching?",
         answer:
-          "Absolutely YES! Here's why: (1) Metro connectivity: 40 min from Noida (Blue Line → Mayur Vihar → Pink Line), 50 min from Ghaziabad, accessible from Faridabad via Violet Line. (2) Cost savings: Save ₹2-3L vs big brands (₹48-98K vs ₹1.5-4.28L). (3) Quality: Premium AIIMS-trained faculty, small batches (12-20 vs 50-100). (4) Hybrid mode: Attend online on heavy traffic days, offline when convenient. (5) Better than local: Most NCR centers are mass-market. South Delhi offers premium quality. Worth the commute!",
+          "Absolutely YES! Here's why: (1) Metro connectivity: 40 min from Noida (Blue Line → Mayur Vihar → Pink Line), 50 min from Ghaziabad, accessible from Faridabad via Violet Line. (2) Cost savings: Save ₹2-3L vs big brands (₹48-98K vs ₹1.5-4.28L). (3) Quality: Premium AIIMS-trained faculty, small batches (12-20 vs 50-100). (4) Hybrid mode: Attend online on heavy traffic days, offline when convenient. (5) Better than local: Most NCR centers run mass batches. South Delhi offers premium quality. Worth the commute!",
       },
       {
         question:
@@ -1267,10 +1317,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'very-high',
-      demandExplanation: "South Extension Part 2 sits among premium residential colonies where serious NEET preparation often starts in Class 11. Starting early? We'll help you turn that head start into a real competitive advantage.",
-      competitionAnalysis: "Several well-known institutes operate from South Ex's commercial spaces, but affordable specialized Biology coaching is hard to find. That combination - specialist teaching at accessible fees - is exactly what we offer you.",
-      parentConcerns: "Concerned about the return on expensive coaching programs that promise big and underdeliver? You deserve premium service quality and quick responsiveness - and that's the standard we hold ourselves to.",
-      studyCultureTrend: 'If you benchmark yourself against peers in top coaching centers, you already know Biology is where NEET ranks are won. Targeted Biology coaching gives you that edge.',
+      demandExplanation:
+        "South Extension Part 2 sits among premium residential colonies where serious NEET preparation often starts in Class 11. Starting early? We'll help you turn that head start into a real competitive advantage.",
+      competitionAnalysis:
+        "Several well-known institutes operate from South Ex's commercial spaces, but affordable specialized Biology coaching is hard to find. That combination - specialist teaching at accessible fees - is exactly what we offer you.",
+      parentConcerns:
+        "Concerned about the return on expensive coaching programs that promise big and underdeliver? You deserve premium service quality and quick responsiveness - and that's the standard we hold ourselves to.",
+      studyCultureTrend:
+        'If you benchmark yourself against peers in top coaching centers, you already know Biology is where NEET ranks are won. Targeted Biology coaching gives you that edge.',
     },
   },
   {
@@ -1324,7 +1378,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Local NEET coaching centers', 'competition from Dwarka institutes'],
       avgFees: 108000,
       ourAdvantage: ['Affordable pricing', 'Quality faculty', 'Flexible timings'],
-      marketGap: "Quality Biology coaching shouldn't strain your budget - ours is built to be both affordable and excellent.",
+      marketGap:
+        "Quality Biology coaching shouldn't strain your budget - ours is built to be both affordable and excellent.",
     },
 
     content: {
@@ -1332,7 +1387,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Quality Biology coaching for Janakpuri East & West',
       valueProposition: 'Affordable, quality NEET Biology coaching for Janakpuri students',
       urgencyMessage: 'Janakpuri batch filling fast! Enroll today.',
-      localChallenge: "Don't compromise on quality because of budget. We offer both quality and affordability.",
+      localChallenge:
+        "Don't compromise on quality because of budget. We offer both quality and affordability.",
       successMetric: '83% of Janakpuri students scored 320+ in Biology',
     },
 
@@ -1368,10 +1424,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Janakpuri's excellent metro access puts all of Delhi within reach - but with our online classes you don't need to go anywhere. More students from this West Delhi hub aspire to medical careers every year; we help them get there.",
-      competitionAnalysis: "Several coaching centers line Janakpuri's main market roads, but quality varies widely and no Biology-specialist brand stands out. That's the gap we fill for you.",
-      parentConcerns: "Want real value for money and tangible score improvements, not premium fees with opaque results? Our transparent result tracking shows you exactly what you're paying for.",
-      studyCultureTrend: "Community libraries and group study spaces support Janakpuri's growing study culture. Like many of our students here, you can add top faculty to that mix - online, without traveling across Delhi.",
+      demandExplanation:
+        "Janakpuri's excellent metro access puts all of Delhi within reach - but with our online classes you don't need to go anywhere. More students from this West Delhi hub aspire to medical careers every year; we help them get there.",
+      competitionAnalysis:
+        "Several coaching centers line Janakpuri's main market roads, but quality varies widely and no Biology-specialist brand stands out. That's the gap we fill for you.",
+      parentConcerns:
+        "Want real value for money and tangible score improvements, not premium fees with opaque results? Our transparent result tracking shows you exactly what you're paying for.",
+      studyCultureTrend:
+        "Community libraries and group study spaces support Janakpuri's growing study culture. Like many of our students here, you can add top faculty to that mix - online, without traveling across Delhi.",
     },
   },
   {
@@ -1416,7 +1476,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local options', 'competition from South Extension'],
       avgFees: 128000,
       ourAdvantage: ['Premium quality teaching', 'Convenient online format', 'Better pricing'],
-      marketGap: 'Saket has few quality local coaching options, so students travel daily. Our online classes solve that for you.',
+      marketGap:
+        'Saket has few quality local coaching options, so students travel daily. Our online classes solve that for you.',
     },
 
     content: {
@@ -1424,7 +1485,8 @@ export const localities: Locality[] = [
       heroSubtitle: "Elite Biology coaching for Saket's medical aspirants",
       valueProposition: 'Premium quality NEET Biology coaching delivered to your Saket home',
       urgencyMessage: 'Exclusive Saket batch! Limited to 15 students only.',
-      localChallenge: 'Traveling to coaching hubs and losing valuable study time? Our online format eliminates that.',
+      localChallenge:
+        'Traveling to coaching hubs and losing valuable study time? Our online format eliminates that.',
       successMetric: '91% of Saket students scored 335+ in Biology',
     },
 
@@ -1460,10 +1522,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'very-high',
-      demandExplanation: "Saket is a premium South Delhi residential area with top schools like Sanskriti and Sardar Patel Vidyalaya close by. If you study at one of them - or anywhere nearby - and NEET is the goal, you're in the right place to start.",
-      competitionAnalysis: "Saket sits close to major South Delhi coaching hubs, and several centers operate nearby - but small-batch, Biology-specialist coaching is still hard to find. That's the need we fill for you.",
-      parentConcerns: "Do you research coaching options thoroughly before enrolling? Good - so do most Saket parents we work with. You'll find our teaching methodology fully transparent, with regular performance analytics on your child's progress.",
-      studyCultureTrend: "If you keep a disciplined, goal-oriented preparation schedule, you'll fit right in with our Saket students - most of whom choose online classes for the convenience without compromising quality.",
+      demandExplanation:
+        "Saket is a premium South Delhi residential area with top schools like Sanskriti and Sardar Patel Vidyalaya close by. If you study at one of them - or anywhere nearby - and NEET is the goal, you're in the right place to start.",
+      competitionAnalysis:
+        "Saket sits close to major South Delhi coaching hubs, and several centers operate nearby - but small-batch, Biology-specialist coaching is still hard to find. That's the need we fill for you.",
+      parentConcerns:
+        "Do you research coaching options thoroughly before enrolling? Good - so do most Saket parents we work with. You'll find our teaching methodology fully transparent, with regular performance analytics on your child's progress.",
+      studyCultureTrend:
+        "If you keep a disciplined, goal-oriented preparation schedule, you'll fit right in with our Saket students - most of whom choose online classes for the convenience without compromising quality.",
     },
   },
   {
@@ -1520,7 +1586,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching near Pitampura Metro',
       valueProposition: 'Quality NEET Biology coaching for Pitampura students',
       urgencyMessage: 'Pitampura batch starting soon! Limited seats.',
-      localChallenge: 'Still commuting to Rohini coaching centers? Save that time with our online format.',
+      localChallenge:
+        'Still commuting to Rohini coaching centers? Save that time with our online format.',
       successMetric: '84% of Pitampura students scored 325+ in Biology',
     },
 
@@ -1556,10 +1623,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Pitampura is a major educational hub in North West Delhi with a high concentration of schools and coaching centers. If you're preparing for NEET here, you have plenty of company - and we make sure you have the Biology edge.",
-      competitionAnalysis: "Pitampura is packed with coaching - branches of Aakash, Allen, and numerous local institutes. Yet specialized Biology-only coaching is surprisingly rare, and that's exactly what we bring you.",
-      parentConcerns: "Overwhelmed by the number of coaching options and unsure which quality claims are genuine? We understand - that's why we let verifiable results and word-of-mouth from Pitampura families speak for us.",
-      studyCultureTrend: "Preparing for multiple competitive exams like many Pitampura students? You'll appreciate the shift many of them have made: focused subject-wise coaching instead of all-in-one packages.",
+      demandExplanation:
+        "Pitampura is a major educational hub in North West Delhi with a high concentration of schools and coaching centers. If you're preparing for NEET here, you have plenty of company - and we make sure you have the Biology edge.",
+      competitionAnalysis:
+        "Pitampura is packed with coaching - branches of Aakash, Allen, and numerous local institutes. Yet specialized Biology-only coaching is surprisingly rare, and that's exactly what we bring you.",
+      parentConcerns:
+        "Overwhelmed by the number of coaching options and unsure which quality claims are genuine? We understand - that's why we let verifiable results and word-of-mouth from Pitampura families speak for us.",
+      studyCultureTrend:
+        "Preparing for multiple competitive exams like many Pitampura students? You'll appreciate the shift many of them have made: focused subject-wise coaching instead of all-in-one packages.",
     },
   },
   {
@@ -1617,7 +1688,8 @@ export const localities: Locality[] = [
         'No travel needed',
         'Personalized attention',
       ],
-      marketGap: 'Defence Colony has few quality local coaching options. Our online format serves you perfectly at home.',
+      marketGap:
+        'Defence Colony has few quality local coaching options. Our online format serves you perfectly at home.',
     },
 
     content: {
@@ -1626,7 +1698,8 @@ export const localities: Locality[] = [
       valueProposition:
         'Premium quality NEET Biology coaching delivered to your Defence Colony home',
       urgencyMessage: 'Exclusive Defence Colony batch! Limited to 12 students only.',
-      localChallenge: 'Traveling daily to coaching hubs? Our online format gives you better quality without the commute.',
+      localChallenge:
+        'Traveling daily to coaching hubs? Our online format gives you better quality without the commute.',
       successMetric: '93% of Defence Colony students scored 335+ in Biology',
     },
 
@@ -1662,10 +1735,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'very-high',
-      demandExplanation: "Defence Colony is one of Delhi's most prestigious residential areas, home to senior professionals and defence families. If service and excellence are the values you were raised on, a medical career fits naturally - and we help you get there.",
-      competitionAnalysis: "Around Defence Colony you'll mostly find premium tutors and boutique centers charging high fees, with large institutes having limited presence. If you want specialist Biology coaching without the boutique price tag, that's us.",
-      parentConcerns: "Expecting the highest standards of teaching and genuinely focused attention - not an overcrowded batch? That's exactly what our small batches guarantee your child.",
-      studyCultureTrend: "If you keep a structured daily routine and set clear goals, you'll be right at home among our Defence Colony students - a community that celebrates academic excellence and supports it with mentorship.",
+      demandExplanation:
+        "Defence Colony is one of Delhi's most prestigious residential areas, home to senior professionals and defence families. If service and excellence are the values you were raised on, a medical career fits naturally - and we help you get there.",
+      competitionAnalysis:
+        "Around Defence Colony you'll mostly find premium tutors and boutique centers charging high fees, with large institutes having limited presence. If you want specialist Biology coaching without the boutique price tag, that's us.",
+      parentConcerns:
+        "Expecting the highest standards of teaching and genuinely focused attention - not an overcrowded batch? That's exactly what our small batches guarantee your child.",
+      studyCultureTrend:
+        "If you keep a structured daily routine and set clear goals, you'll be right at home among our Defence Colony students - a community that celebrates academic excellence and supports it with mentorship.",
     },
   },
   {
@@ -1718,7 +1795,8 @@ export const localities: Locality[] = [
         'Better student-teacher ratio',
         'Convenient online format',
       ],
-      marketGap: "Doing general NEET prep? You still need specialized Biology coaching alongside it - that's what we provide.",
+      marketGap:
+        "Doing general NEET prep? You still need specialized Biology coaching alongside it - that's what we provide.",
     },
 
     content: {
@@ -1726,7 +1804,8 @@ export const localities: Locality[] = [
       heroSubtitle: "Expert Biology coaching for Model Town's medical aspirants",
       valueProposition: 'Specialized Biology coaching designed for Model Town NEET students',
       urgencyMessage: 'Model Town batch filling fast! Enroll now.',
-      localChallenge: 'In general NEET coaching, Biology often gets less focus. We give you specialized Biology coaching.',
+      localChallenge:
+        'In general NEET coaching, Biology often gets less focus. We give you specialized Biology coaching.',
       successMetric: '87% of Model Town students scored 330+ in Biology',
     },
 
@@ -1763,10 +1842,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Model Town is a well-established North Delhi colony with a strong academic tradition - generations of medical professionals have started here. If you want to be next, we'll help you build the Biology foundation.",
-      competitionAnalysis: 'GTB Nagar and Mukherjee Nagar coaching hubs are close to Model Town, but the travel time adds up, and local options lack the specialization serious NEET aspirants need. We bring that specialization to you online.',
-      parentConcerns: "Want teaching that combines traditional rigor with modern test strategies - and respects your child's school commitments? Our schedule and methods are designed around exactly that.",
-      studyCultureTrend: "Model Town celebrates academic achievement, and students here respond well to mentorship. That's how we teach: coaching that builds your confidence alongside your subject knowledge.",
+      demandExplanation:
+        "Model Town is a well-established North Delhi colony with a strong academic tradition - generations of medical professionals have started here. If you want to be next, we'll help you build the Biology foundation.",
+      competitionAnalysis:
+        'GTB Nagar and Mukherjee Nagar coaching hubs are close to Model Town, but the travel time adds up, and local options lack the specialization serious NEET aspirants need. We bring that specialization to you online.',
+      parentConcerns:
+        "Want teaching that combines traditional rigor with modern test strategies - and respects your child's school commitments? Our schedule and methods are designed around exactly that.",
+      studyCultureTrend:
+        "Model Town celebrates academic achievement, and if you respond well to mentorship, you'll thrive with us: coaching that builds your confidence alongside your subject knowledge.",
     },
   },
   {
@@ -1823,7 +1906,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers', 'competition from Noida institutes'],
       avgFees: 105000,
       ourAdvantage: ['Convenient for East Delhi students', 'Affordable', 'Quality teaching'],
-      marketGap: 'No need to travel to Noida or Laxmi Nagar - our online coaching serves you better.',
+      marketGap:
+        'No need to travel to Noida or Laxmi Nagar - our online coaching serves you better.',
     },
 
     content: {
@@ -1831,7 +1915,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for all Mayur Vihar phases',
       valueProposition: 'Quality NEET Biology coaching for East Delhi students',
       urgencyMessage: 'Mayur Vihar batch starting soon! Enroll today.',
-      localChallenge: 'Traveling long distances to coaching centers? Our online format eliminates that hassle.',
+      localChallenge:
+        'Traveling long distances to coaching centers? Our online format eliminates that hassle.',
       successMetric: '82% of Mayur Vihar students scored 320+ in Biology',
     },
 
@@ -1867,10 +1952,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: 'Mayur Vihar is a large East Delhi residential complex where more students target medical careers every year. If NEET is your pathway, quality Biology coaching is now available without leaving your home.',
-      competitionAnalysis: "Across Mayur Vihar's three phases, most coaching centers focus on IIT-JEE. NEET-specific Biology coaching is limited, which usually means traveling to Laxmi Nagar or central Delhi - unless you join us online.",
-      parentConcerns: 'Worried about commute safety and the hours lost traveling to distant coaching centers? Our online classes keep the quality high and your child at home.',
-      studyCultureTrend: 'Community study groups are becoming common across Mayur Vihar - and like many of our students here, you can pair that peer support with specialized coaching instead of generic classroom instruction.',
+      demandExplanation:
+        'Mayur Vihar is a large East Delhi residential complex where more students target medical careers every year. If NEET is your pathway, quality Biology coaching is now available without leaving your home.',
+      competitionAnalysis:
+        "Across Mayur Vihar's three phases, most coaching centers focus on IIT-JEE. NEET-specific Biology coaching is limited, which usually means traveling to Laxmi Nagar or central Delhi - unless you join us online.",
+      parentConcerns:
+        'Worried about commute safety and the hours lost traveling to distant coaching centers? Our online classes keep the quality high and your child at home.',
+      studyCultureTrend:
+        'Community study groups are becoming common across Mayur Vihar - and like many of our students here, you can pair that peer support with specialized coaching instead of generic classroom instruction.',
     },
   },
   {
@@ -1923,7 +2012,8 @@ export const localities: Locality[] = [
         'Better individual attention',
         'Online convenience',
       ],
-      marketGap: "Karol Bagh has many coaching institutes, but Biology-only coaching is rare - and it's exactly what you need for NEET.",
+      marketGap:
+        "Karol Bagh has many coaching institutes, but Biology-only coaching is rare - and it's exactly what you need for NEET.",
     },
 
     content: {
@@ -1931,7 +2021,8 @@ export const localities: Locality[] = [
       heroSubtitle: "Specialized Biology coaching in Central Delhi's coaching hub",
       valueProposition: 'Expert Biology coaching for Karol Bagh NEET aspirants',
       urgencyMessage: 'Karol Bagh batch starting soon! Limited seats.',
-      localChallenge: "In crowded coaching classes, Biology doesn't get adequate focus. We solve this.",
+      localChallenge:
+        "In crowded coaching classes, Biology doesn't get adequate focus. We solve this.",
       successMetric: '85% of Karol Bagh students scored 325+ in Biology',
     },
 
@@ -1968,10 +2059,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Karol Bagh is a historic Central Delhi coaching hub that draws NEET aspirants from across North India - many relocate here just for exam preparation. If you're one of them, make Biology your scoring subject with us.",
-      competitionAnalysis: 'Karol Bagh has one of the highest densities of coaching centers in Delhi, but the focus is predominantly UPSC and bank exams. Dedicated NEET Biology coaching is in short supply - we fill that need for you.',
-      parentConcerns: "Hard to spot genuine quality among so many options, and uneasy about the busy commercial environment? You'll get verified, result-oriented coaching from us - from the safety of home.",
-      studyCultureTrend: "Students in Karol Bagh routinely study 10-12 hours a day. If you're putting in those hours, make them count: generic preparation doesn't yield top NEET scores - specialized Biology coaching does.",
+      demandExplanation:
+        "Karol Bagh is a historic Central Delhi coaching hub that draws NEET aspirants from across North India - many relocate here just for exam preparation. If you're one of them, make Biology your scoring subject with us.",
+      competitionAnalysis:
+        'Karol Bagh has one of the highest densities of coaching centers in Delhi, but the focus is predominantly UPSC and bank exams. Dedicated NEET Biology coaching is in short supply - we fill that need for you.',
+      parentConcerns:
+        "Hard to spot genuine quality among so many options, and uneasy about the busy commercial environment? You'll get verified, result-oriented coaching from us - from the safety of home.",
+      studyCultureTrend:
+        "Students in Karol Bagh routinely study 10-12 hours a day. If you're putting in those hours, make them count: generic preparation doesn't yield top NEET scores - specialized Biology coaching does.",
     },
   },
   {
@@ -2024,7 +2119,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Local NEET coaching centers', 'competition from Dwarka'],
       avgFees: 112000,
       ourAdvantage: ['Biology specialization', 'Convenient online format', 'Better pricing'],
-      marketGap: "Your general preparation needs specialized Biology coaching to complete it - that's what we provide.",
+      marketGap:
+        "Your general preparation needs specialized Biology coaching to complete it - that's what we provide.",
     },
 
     content: {
@@ -2032,7 +2128,8 @@ export const localities: Locality[] = [
       heroSubtitle: "Expert Biology coaching at West Delhi's metro hub",
       valueProposition: 'Specialized NEET Biology coaching for Rajouri Garden students',
       urgencyMessage: 'Rajouri Garden batch filling fast! Enroll now.',
-      localChallenge: 'In general coaching, Biology needs more focus than it gets. We provide specialized Biology coaching.',
+      localChallenge:
+        'In general coaching, Biology needs more focus than it gets. We provide specialized Biology coaching.',
       successMetric: '86% of Rajouri Garden students scored 328+ in Biology',
     },
 
@@ -2068,10 +2165,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: 'Rajouri Garden is a bustling, metro-connected West Delhi area with a growing number of NEET aspirants. Wherever you are along the line, our online classes bring quality Biology coaching straight to you.',
-      competitionAnalysis: "New coaching centers keep opening in Rajouri Garden, but established quality is limited and most centers teach everything from languages to competitive exams. If you want a dedicated Biology specialist, that's us.",
-      parentConcerns: 'Looking for affordable coaching with a proven track record - and worried about distractions in this busy commercial area? Our structured online classes keep your child focused, at home.',
-      studyCultureTrend: 'Success stories from Rajouri Garden are inspiring more students toward medical careers. Like many of them, you can access quality preparation online - no need to navigate the crowded markets.',
+      demandExplanation:
+        'Rajouri Garden is a bustling, metro-connected West Delhi area with a growing number of NEET aspirants. Wherever you are along the line, our online classes bring quality Biology coaching straight to you.',
+      competitionAnalysis:
+        "New coaching centers keep opening in Rajouri Garden, but established quality is limited and most centers teach everything from languages to competitive exams. If you want a dedicated Biology specialist, that's us.",
+      parentConcerns:
+        'Looking for affordable coaching with a proven track record - and worried about distractions in this busy commercial area? Our structured online classes keep your child focused, at home.',
+      studyCultureTrend:
+        'Success stories from Rajouri Garden are inspiring more students toward medical careers. Like many of them, you can access quality preparation online - no need to navigate the crowded markets.',
     },
   },
   {
@@ -2120,7 +2221,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local institutes', 'students go to Hauz Khas/Saket'],
       avgFees: 133000,
       ourAdvantage: ['Premium quality', 'No travel needed', 'Personalized attention'],
-      marketGap: 'Vasant Kunj has few quality local coaching options. Our online format serves you perfectly at home.',
+      marketGap:
+        'Vasant Kunj has few quality local coaching options. Our online format serves you perfectly at home.',
     },
 
     content: {
@@ -2128,7 +2230,8 @@ export const localities: Locality[] = [
       heroSubtitle: "Elite Biology coaching for Vasant Kunj's medical aspirants",
       valueProposition: 'Premium NEET Biology coaching delivered to your Vasant Kunj home',
       urgencyMessage: 'Exclusive Vasant Kunj batch! Limited to 12 students only.',
-      localChallenge: 'Traveling far to coaching hubs? Our online format delivers superior quality at home.',
+      localChallenge:
+        'Traveling far to coaching hubs? Our online format delivers superior quality at home.',
       successMetric: '92% of Vasant Kunj students scored 335+ in Biology',
     },
 
@@ -2164,10 +2267,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'very-high',
-      demandExplanation: "Vasant Kunj is a premium South West Delhi area, home to senior officials, corporate leaders, and NRI families who start NEET preparation early. Starting early yourself? We'll make every year count.",
-      competitionAnalysis: 'For a premium locality, Vasant Kunj has surprisingly limited local coaching - students typically travel to South Delhi hubs. Our online classes give you a quality alternative without the travel.',
-      parentConcerns: "Used to high service standards and expecting genuinely personalized attention? You'll get detailed progress reports and adaptive learning strategies tailored to your child.",
-      studyCultureTrend: "If you have a dedicated study space at home and you're comfortable with technology - like most of our Vasant Kunj students - our interactive online classes will fit your routine perfectly.",
+      demandExplanation:
+        "Vasant Kunj is a premium South West Delhi area, home to senior officials, corporate leaders, and NRI families who start NEET preparation early. Starting early yourself? We'll make every year count.",
+      competitionAnalysis:
+        'For a premium locality, Vasant Kunj has surprisingly limited local coaching - students typically travel to South Delhi hubs. Our online classes give you a quality alternative without the travel.',
+      parentConcerns:
+        "Used to high service standards and expecting genuinely personalized attention? You'll get detailed progress reports and adaptive learning strategies tailored to your child.",
+      studyCultureTrend:
+        "If you have a dedicated study space at home and you're comfortable with technology - like most of our Vasant Kunj students - our interactive online classes will fit your routine perfectly.",
     },
   },
   {
@@ -2228,7 +2335,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for Punjabi Bagh East & West',
       valueProposition: 'Quality NEET Biology coaching for Punjabi Bagh students',
       urgencyMessage: 'Punjabi Bagh batch starting soon! Enroll today.',
-      localChallenge: 'Need specialized Biology coaching at affordable rates? We provide both quality and affordability.',
+      localChallenge:
+        'Need specialized Biology coaching at affordable rates? We provide both quality and affordability.',
       successMetric: '84% of Punjabi Bagh students scored 325+ in Biology',
     },
 
@@ -2264,10 +2372,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Punjabi Bagh's business families increasingly see medicine as a prestigious career, and NEET preparation has grown steadily here. If it's your ambition, we'll help you build the Biology scores to match.",
-      competitionAnalysis: "Several centers operate along Punjabi Bagh's main road, but most cater to broader competitive exams. Specialized NEET Biology coaching is scarce nearby - our program fills that need for you.",
-      parentConcerns: 'Comparing coaching options carefully and want clear value for your investment? Fair enough - we back our fees with proven faculty expertise and consistent teaching quality.',
-      studyCultureTrend: "Pragmatic and results-oriented, like most Punjabi Bagh households? Then you'll see why so many of our students here choose online classes: the same structured preparation without the commute.",
+      demandExplanation:
+        "Punjabi Bagh's business families increasingly see medicine as a prestigious career, and NEET preparation has grown steadily here. If it's your ambition, we'll help you build the Biology scores to match.",
+      competitionAnalysis:
+        "Several centers operate along Punjabi Bagh's main road, but most cater to broader competitive exams. Specialized NEET Biology coaching is scarce nearby - our program fills that need for you.",
+      parentConcerns:
+        'Comparing coaching options carefully and want clear value for your investment? Fair enough - we back our fees with proven faculty expertise and consistent teaching quality.',
+      studyCultureTrend:
+        "Pragmatic and results-oriented, like most Punjabi Bagh households? Then you'll see why so many of our students here choose online classes: the same structured preparation without the commute.",
     },
   },
   {
@@ -2326,7 +2438,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Various competitive exam coaching centers', 'limited NEET focus'],
       avgFees: 125000,
       ourAdvantage: ['NEET Biology specialization', 'Online convenience', 'Flexible timings'],
-      marketGap: "Need NEET Biology coaching with flexible timings around a central Delhi schedule? That's exactly what we offer.",
+      marketGap:
+        "Need NEET Biology coaching with flexible timings around a central Delhi schedule? That's exactly what we offer.",
     },
 
     content: {
@@ -2334,7 +2447,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching accessible from Connaught Place area',
       valueProposition: 'Specialized Biology coaching for students across Central Delhi',
       urgencyMessage: 'Central Delhi batch starting soon! Limited seats.',
-      localChallenge: 'Need coaching that fits your schedule? Our online format provides perfect flexibility.',
+      localChallenge:
+        'Need coaching that fits your schedule? Our online format provides perfect flexibility.',
       successMetric: '88% of Central Delhi students scored 330+ in Biology',
     },
 
@@ -2370,10 +2484,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Connaught Place is Central Delhi's transit hub, and the residential pockets around it are home to plenty of NEET aspirants. If you live or study near CP, our online classes fit right into your routine.",
-      competitionAnalysis: "Most coaching around CP targets short-term crash courses for a transient student crowd. If you want sustained, year-long Biology coaching, we're built for that.",
-      parentConcerns: 'Concerned about commercial-district distractions and travel through congested central Delhi? Our online classes keep your child focused - no commute required.',
-      studyCultureTrend: "Well-informed about preparation strategies, like most central Delhi students? Then you'll value what we optimize for: efficient, focused coaching that maximizes learning per hour of study.",
+      demandExplanation:
+        "Connaught Place is Central Delhi's transit hub, and the residential pockets around it are home to plenty of NEET aspirants. If you live or study near CP, our online classes fit right into your routine.",
+      competitionAnalysis:
+        "Most coaching around CP targets short-term crash courses for a transient student crowd. If you want sustained, year-long Biology coaching, we're built for that.",
+      parentConcerns:
+        'Concerned about commercial-district distractions and travel through congested central Delhi? Our online classes keep your child focused - no commute required.',
+      studyCultureTrend:
+        "Well-informed about preparation strategies, like most central Delhi students? Then you'll value what we optimize for: efficient, focused coaching that maximizes learning per hour of study.",
     },
   },
 
@@ -2441,7 +2559,7 @@ export const localities: Locality[] = [
         'Modern Public School',
       ],
       popularColleges: ['Deshbandhu College', 'Vivekananda College', 'IP College'],
-      coachingHubs: ['Laxmi Nagar coaching hub', 'largest coaching market in East Delhi'],
+      coachingHubs: ['Laxmi Nagar coaching hub', 'largest coaching hub in East Delhi'],
       populationType: 'student-heavy',
       economicProfile: 'middle',
     },
@@ -2456,7 +2574,8 @@ export const localities: Locality[] = [
         '20% lower fees than Allen/Aakash',
         'Weekly doubt clearing sessions',
       ],
-      marketGap: 'Many Laxmi Nagar institutes chase quantity over quality. Your Biology deserves the specialized attention only focused coaching provides.',
+      marketGap:
+        'Many Laxmi Nagar institutes chase quantity over quality. Your Biology deserves the specialized attention only focused coaching provides.',
     },
 
     content: {
@@ -2466,7 +2585,8 @@ export const localities: Locality[] = [
         'Expert AIIMS trained faculty, small batches, and proven strategies for East Delhi NEET aspirants',
       urgencyMessage:
         'Only 12 seats left in January 2026 batch! Laxmi Nagar students enrolling fast.',
-      localChallenge: 'Stuck in an overcrowded center with generic teaching? Our specialized Biology-only focus gives you concept clarity and better NEET scores.',
+      localChallenge:
+        'Stuck in an overcrowded center with generic teaching? Our specialized Biology-only focus gives you concept clarity and better NEET scores.',
       successMetric: '92% of our Laxmi Nagar students scored above 340 in NEET 2024 Biology',
     },
 
@@ -2520,10 +2640,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'very-high',
-      demandExplanation: "Laxmi Nagar is East Delhi's primary coaching hub, drawing thousands of NEET aspirants from East Delhi, Ghaziabad, and the UP border - complete with bookshops and student hostels. If you're preparing here, stand out with specialist Biology coaching.",
-      competitionAnalysis: 'Laxmi Nagar has the highest density of NEET coaching centers in East Delhi, but most run batches of 50-100 students. If individual attention and Biology mastery matter to you, our small batches are the alternative.',
-      parentConcerns: 'Does the overwhelming Laxmi Nagar coaching environment worry you - big crowds, little personal guidance? We offer the same expertise with smaller batches and real mentorship for your child.',
-      studyCultureTrend: "In Laxmi Nagar you'll see students preparing in every cafe and park. To convert that effort into marks, do what our top students did: choose specialized Biology coaching, because all-subject coaching often shortchanges Biology.",
+      demandExplanation:
+        "Laxmi Nagar is East Delhi's primary coaching hub, drawing thousands of NEET aspirants from East Delhi, Ghaziabad, and the UP border - complete with bookshops and student hostels. If you're preparing here, stand out with specialist Biology coaching.",
+      competitionAnalysis:
+        'Laxmi Nagar has the highest density of NEET coaching centers in East Delhi, but most run batches of 50-100 students. If individual attention and Biology mastery matter to you, our small batches are the alternative.',
+      parentConcerns:
+        'Does the overwhelming Laxmi Nagar coaching environment worry you - big crowds, little personal guidance? We offer the same expertise with smaller batches and real mentorship for your child.',
+      studyCultureTrend:
+        "In Laxmi Nagar you'll see students preparing in every cafe and park. To convert that effort into marks, do what our top students did: choose specialized Biology coaching, because all-subject coaching often shortchanges Biology.",
     },
   },
 
@@ -2588,7 +2712,8 @@ export const localities: Locality[] = [
         'Better individual attention',
         'Convenient online format',
       ],
-      marketGap: 'Most Sector 18 institutes spread themselves across all subjects. Your Biology deserves specialized attention.',
+      marketGap:
+        'Most Sector 18 institutes spread themselves across all subjects. Your Biology deserves specialized attention.',
     },
 
     content: {
@@ -2596,7 +2721,8 @@ export const localities: Locality[] = [
       heroSubtitle: "Expert Biology coaching at Noida's education hub",
       valueProposition: 'Specialized NEET Biology coaching for Sector 18 Noida students',
       urgencyMessage: 'Sector 18 batch filling fast! Only 12 seats left.',
-      localChallenge: 'Stuck in a crowded coaching center? We give you personalized attention with small batches.',
+      localChallenge:
+        'Stuck in a crowded coaching center? We give you personalized attention with small batches.',
       successMetric: '89% of Sector 18 students scored 335+ in NEET 2024 Biology',
     },
 
@@ -2633,10 +2759,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Sector 18 is the commercial heart of Noida, surrounded by residential sectors full of IT-professional households where medicine ranks high among career goals. If that's your family too, strong Biology coaching is the natural starting point.",
-      competitionAnalysis: "Sector 18's commercial complexes house several coaching centers, mostly branches of Delhi-based institutes - and the quality of Biology teaching in particular is inconsistent. We give you the specialist alternative.",
-      parentConcerns: 'Prefer a data-driven approach to coaching, with regular performance metrics - and no risky commutes to Delhi? Our online classes give you exactly that, tracked and transparent.',
-      studyCultureTrend: 'Central Noida students are quick to adopt technology-enhanced learning, peer study groups, and online forums. If that sounds like you, our interactive online classes will fit naturally.',
+      demandExplanation:
+        "Sector 18 is the commercial heart of Noida, surrounded by residential sectors full of IT-professional households where medicine ranks high among career goals. If that's your family too, strong Biology coaching is the natural starting point.",
+      competitionAnalysis:
+        "Sector 18's commercial complexes house several coaching centers, mostly branches of Delhi-based institutes - and the quality of Biology teaching in particular is inconsistent. We give you the specialist alternative.",
+      parentConcerns:
+        'Prefer a data-driven approach to coaching, with regular performance metrics - and no risky commutes to Delhi? Our online classes give you exactly that, tracked and transparent.',
+      studyCultureTrend:
+        'Central Noida students are quick to adopt technology-enhanced learning, peer study groups, and online forums. If that sounds like you, our interactive online classes will fit naturally.',
     },
   },
   {
@@ -2694,7 +2824,8 @@ export const localities: Locality[] = [
         'No travel to Sector 18',
         'Biology specialization',
       ],
-      marketGap: 'No need to travel to Sector 18 for coaching - our online format serves you better.',
+      marketGap:
+        'No need to travel to Sector 18 for coaching - our online format serves you better.',
     },
 
     content: {
@@ -2702,7 +2833,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for Noida IT hub area',
       valueProposition: 'Quality NEET Biology coaching for Sector 62 and nearby sectors',
       urgencyMessage: 'Sector 62 batch starting soon! Enroll now.',
-      localChallenge: 'Wasting time traveling to Sector 18? Our online format eliminates that hassle.',
+      localChallenge:
+        'Wasting time traveling to Sector 18? Our online format eliminates that hassle.',
       successMetric: '87% of Sector 62 students scored 330+ in Biology',
     },
 
@@ -2738,10 +2870,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Sector 62 is Noida's IT hub, and many of our students here are children of techpark employees. If you've grown up around technology and high standards, our online Biology coaching will feel like a natural fit.",
-      competitionAnalysis: 'Coaching options in Sector 62 are limited compared to the commercial sectors, which usually means commuting. Our online Biology classes meet the quality bar without the travel.',
-      parentConcerns: "Expect modern teaching - digital resources, analytics-based progress tracking, the same innovation standards you see at work? That's precisely how our platform is built.",
-      studyCultureTrend: "Comfortable with technology and structured goals, like most Sector 62 students? You'll adapt to our online platform in a single class.",
+      demandExplanation:
+        "Sector 62 is Noida's IT hub, and many of our students here are children of techpark employees. If you've grown up around technology and high standards, our online Biology coaching will feel like a natural fit.",
+      competitionAnalysis:
+        'Coaching options in Sector 62 are limited compared to the commercial sectors, which usually means commuting. Our online Biology classes meet the quality bar without the travel.',
+      parentConcerns:
+        "Expect modern teaching - digital resources, analytics-based progress tracking, the same innovation standards you see at work? That's precisely how our platform is built.",
+      studyCultureTrend:
+        "Comfortable with technology and structured goals, like most Sector 62 students? You'll adapt to our online platform in a single class.",
     },
   },
   {
@@ -2795,7 +2931,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers', 'major institutes in Noida Sector 18'],
       avgFees: 112000,
       ourAdvantage: ['Saves Greater Noida to Noida travel', 'Affordable', 'Quality teaching'],
-      marketGap: 'Quality coaching is scarce in Greater Noida and students travel far daily. Our online classes solve this perfectly for you.',
+      marketGap:
+        'Quality coaching is scarce in Greater Noida and students travel far daily. Our online classes solve this perfectly for you.',
     },
 
     content: {
@@ -2803,7 +2940,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for all Greater Noida sectors',
       valueProposition: 'Quality NEET Biology coaching accessible from anywhere in Greater Noida',
       urgencyMessage: 'Greater Noida batch starting soon! Limited seats.',
-      localChallenge: 'Traveling 1-2 hours to Noida for coaching? Our online format eliminates this.',
+      localChallenge:
+        'Traveling 1-2 hours to Noida for coaching? Our online format eliminates this.',
       successMetric: '85% of Greater Noida students scored 328+ in Biology',
     },
 
@@ -2839,10 +2977,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Greater Noida's universities and residential townships have brought a fast-growing student population - many families moved here from smaller cities with big medical-career dreams. If that's your story, we're built for you.",
-      competitionAnalysis: 'Greater Noida has fewer established institutes than Noida proper, so finding quality NEET Biology coaching locally is hard. Our online classes close that distance for you.',
-      parentConcerns: 'Struggling to find quality coaching locally, but dreading the long commute to Noida or Delhi? Your child can get competitive-quality preparation from home with our live online classes.',
-      studyCultureTrend: "New coaching centers and study groups are emerging across Greater Noida. If you're eager for quality guidance, you'll thrive in our structured online program - like many of our students here already do.",
+      demandExplanation:
+        "Greater Noida's universities and residential townships have brought a fast-growing student population - many families moved here from smaller cities with big medical-career dreams. If that's your story, we're built for you.",
+      competitionAnalysis:
+        'Greater Noida has fewer established institutes than Noida proper, so finding quality NEET Biology coaching locally is hard. Our online classes close that distance for you.',
+      parentConcerns:
+        'Struggling to find quality coaching locally, but dreading the long commute to Noida or Delhi? Your child can get competitive-quality preparation from home with our live online classes.',
+      studyCultureTrend:
+        "New coaching centers and study groups are emerging across Greater Noida. If you're eager for quality guidance, you'll thrive in our structured online program - like many of our students here already do.",
     },
   },
   {
@@ -2896,7 +3038,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers', 'competition from Sector 18'],
       avgFees: 120000,
       ourAdvantage: ['Convenient for Expressway area', 'No travel needed', 'Premium quality'],
-      marketGap: 'The Sector 137 area has few quality coaching options. Our online format is perfect for you as an Expressway resident.',
+      marketGap:
+        'The Sector 137 area has few quality coaching options. Our online format is perfect for you as an Expressway resident.',
     },
 
     content: {
@@ -2904,7 +3047,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for Noida Expressway area',
       valueProposition: 'Premium NEET Biology coaching for Sector 137 and nearby sectors',
       urgencyMessage: 'Sector 137 batch filling fast! Enroll now.',
-      localChallenge: 'Traveling all the way to Sector 18? Our online format delivers quality at home.',
+      localChallenge:
+        'Traveling all the way to Sector 18? Our online format delivers quality at home.',
       successMetric: '90% of Sector 137 students scored 333+ in Biology',
     },
 
@@ -2929,7 +3073,7 @@ export const localities: Locality[] = [
       {
         question: 'What makes your coaching suitable for Sector 137 families?',
         answer:
-          'We understand Sector 137 families value quality and convenience. Our small batches (15 students), expert faculty, and flexible online format cater perfectly to Noida Expressway residents.',
+          'We understand you value quality and convenience. Our small batches (15 students), expert faculty, and flexible online format cater perfectly to Noida Expressway residents.',
       },
       {
         question: 'Do you provide recorded lectures?',
@@ -2940,10 +3084,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Sector 137 on the Noida Expressway is one of NCR's fastest-growing residential corridors, with premium high-rises full of young professional families. If a medical career is your child's goal, we bring the coaching to your tower.",
-      competitionAnalysis: 'Despite its large population, the Expressway corridor has limited coaching infrastructure - most residents travel to Sector 18 or Delhi. Our online classes give you a quality option right at home.',
-      parentConcerns: 'Frustrated by the limited educational infrastructure near your new residential tower? Our online coaching matches the convenience and standards you chose the Expressway corridor for.',
-      studyCultureTrend: 'Study life along the Expressway is modern and technology-driven, with community WhatsApp groups comparing every option. Ask around about us - then experience our digital-first Biology classes yourself.',
+      demandExplanation:
+        "Sector 137 on the Noida Expressway is one of NCR's fastest-growing residential corridors, with premium high-rises full of young professional families. If a medical career is your child's goal, we bring the coaching to your tower.",
+      competitionAnalysis:
+        'Despite its large population, the Expressway corridor has limited coaching infrastructure - most residents travel to Sector 18 or Delhi. Our online classes give you a quality option right at home.',
+      parentConcerns:
+        'Frustrated by the limited educational infrastructure near your new residential tower? Our online coaching matches the convenience and standards you chose the Expressway corridor for.',
+      studyCultureTrend:
+        'Study life along the Expressway is modern and technology-driven, with community WhatsApp groups comparing every option. Ask around about us - then experience our digital-first Biology classes yourself.',
     },
   },
   {
@@ -3036,10 +3184,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: 'Sector 50 is a well-established residential area where many families have children right in the NEET preparation years. If yours is one of them, consistent quality Biology coaching is available without leaving the sector.',
-      competitionAnalysis: 'Sector 50 has a few coaching centers but no Biology specialist, so students often combine general coaching with private Biology tutors - expensive and inefficient. We replace that patchwork with one focused program.',
-      parentConcerns: "Tired of piecemeal solutions? If you want one comprehensive source for both conceptual understanding and Biology exam strategy, that's exactly what our program delivers.",
-      studyCultureTrend: 'Balancing school performance with NEET preparation, like most Sector 50 students? Our structured schedule is designed so neither suffers.',
+      demandExplanation:
+        'Sector 50 is a well-established residential area where many families have children right in the NEET preparation years. If yours is one of them, consistent quality Biology coaching is available without leaving the sector.',
+      competitionAnalysis:
+        'Sector 50 has a few coaching centers but no Biology specialist, so students often combine general coaching with private Biology tutors - expensive and inefficient. We replace that patchwork with one focused program.',
+      parentConcerns:
+        "Tired of piecemeal solutions? If you want one comprehensive source for both conceptual understanding and Biology exam strategy, that's exactly what our program delivers.",
+      studyCultureTrend:
+        'Balancing school performance with NEET preparation, like most Sector 50 students? Our structured schedule is designed so neither suffers.',
     },
   },
   {
@@ -3088,7 +3240,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers', 'competition from Sector 18'],
       avgFees: 112000,
       ourAdvantage: ['Affordable quality', 'No Sector 18 travel', 'Biology specialization'],
-      marketGap: "Want affordable quality coaching without traveling far? That's exactly what we built for you.",
+      marketGap:
+        "Want affordable quality coaching without traveling far? That's exactly what we built for you.",
     },
 
     content: {
@@ -3096,7 +3249,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for Sector 76 students',
       valueProposition: 'Affordable quality NEET Biology coaching for Sector 76',
       urgencyMessage: 'Sector 76 batch starting soon! Enroll today.',
-      localChallenge: 'Traveling to Sector 18 daily? Our online format saves you that time and expense.',
+      localChallenge:
+        'Traveling to Sector 18 daily? Our online format saves you that time and expense.',
       successMetric: '84% of Sector 76 students scored 325+ in Biology',
     },
 
@@ -3132,10 +3286,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Sector 76 is part of Noida's residential expansion, home to families from diverse professional backgrounds who value medical education. If you're preparing for NEET from here, expert Biology coaching is a login away.",
-      competitionAnalysis: 'Coaching infrastructure in Sector 76 is minimal, and most students travel to central Noida sectors for classes. Our online coaching fills that genuine need - you get quality teaching without leaving your sector.',
-      parentConcerns: "Counting the hours your child loses commuting to coaching? Our live online classes come to your doorstep with the same quality you'd travel for.",
-      studyCultureTrend: "Sector 76's young aspirants are open to new ways of learning. If that's you, our structured online program with clear milestones will keep you on track.",
+      demandExplanation:
+        "Sector 76 is part of Noida's residential expansion, home to families from diverse professional backgrounds who value medical education. If you're preparing for NEET from here, expert Biology coaching is a login away.",
+      competitionAnalysis:
+        'Coaching infrastructure in Sector 76 is minimal, and most students travel to central Noida sectors for classes. Our online coaching fills that genuine need - you get quality teaching without leaving your sector.',
+      parentConcerns:
+        "Counting the hours your child loses commuting to coaching? Our live online classes come to your doorstep with the same quality you'd travel for.",
+      studyCultureTrend:
+        "Sector 76's young aspirants are open to new ways of learning. If that's you, our structured online program with clear milestones will keep you on track.",
     },
   },
   {
@@ -3184,7 +3342,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers', 'students go to Noida Sector 18'],
       avgFees: 110000,
       ourAdvantage: ['Saves long distance travel', 'Affordable', 'Quality teaching'],
-      marketGap: 'Quality coaching is scarce in Noida Extension and students travel very far daily. Our online classes solve this for you.',
+      marketGap:
+        'Quality coaching is scarce in Noida Extension and students travel very far daily. Our online classes solve this for you.',
     },
 
     content: {
@@ -3192,7 +3351,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for Greater Noida West',
       valueProposition: 'Quality NEET Biology coaching accessible from anywhere in Noida Extension',
       urgencyMessage: 'Noida Extension batch starting soon! Limited seats.',
-      localChallenge: 'Traveling 2-3 hours to Noida for coaching? Our online format eliminates this.',
+      localChallenge:
+        'Traveling 2-3 hours to Noida for coaching? Our online format eliminates this.',
       successMetric: '83% of Noida Extension students scored 323+ in Biology',
     },
 
@@ -3229,10 +3389,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'growing',
-      demandExplanation: "Noida Extension (Greater Noida West) is one of NCR's fastest-growing residential areas, with thousands of young families settling in and focusing on education. If NEET is on your horizon, start with the subject that scores most: Biology.",
-      competitionAnalysis: 'Very few established coaching players operate in Noida Extension yet. Rather than wait for quality to arrive, you can join our proven online Biology program today.',
-      parentConcerns: "Concerned about the lack of quality educational infrastructure in your new neighborhood? You're not alone - and our reliable online coaching is the solution many Noida Extension families have chosen.",
-      studyCultureTrend: 'Like most Noida Extension families, you probably already use digital solutions for services not yet available locally. Quality NEET Biology coaching works the same way - live and online.',
+      demandExplanation:
+        "Noida Extension (Greater Noida West) is one of NCR's fastest-growing residential areas, with thousands of young families settling in and focusing on education. If NEET is on your horizon, start with the subject that scores most: Biology.",
+      competitionAnalysis:
+        'Very few established coaching players operate in Noida Extension yet. Rather than wait for quality to arrive, you can join our proven online Biology program today.',
+      parentConcerns:
+        "Concerned about the lack of quality educational infrastructure in your new neighborhood? You're not alone - and our reliable online coaching is the solution many Noida Extension families have chosen.",
+      studyCultureTrend:
+        'Like most Noida Extension families, you probably already use digital solutions for services not yet available locally. Quality NEET Biology coaching works the same way - live and online.',
     },
   },
   {
@@ -3329,10 +3493,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Sector 78 mixes established and new housing societies, and many families here relocated from other parts of NCR. If your family is among them, you can keep your child's NEET preparation consistent with our online classes.",
-      competitionAnalysis: 'With limited local coaching, Sector 78 students usually travel to other sectors for preparation. Our online classes remove that trade-off - quality teaching, zero commute.',
-      parentConcerns: 'Want quality coaching without the commute burden that defines Noida life? Our flexible schedules adapt to yours, not the other way around.',
-      studyCultureTrend: 'Residential societies in Sector 78 often organize study groups. Pair that collaborative energy with our structured Biology coaching and you get the best of both.',
+      demandExplanation:
+        "Sector 78 mixes established and new housing societies, and many families here relocated from other parts of NCR. If your family is among them, you can keep your child's NEET preparation consistent with our online classes.",
+      competitionAnalysis:
+        'With limited local coaching, Sector 78 students usually travel to other sectors for preparation. Our online classes remove that trade-off - quality teaching, zero commute.',
+      parentConcerns:
+        'Want quality coaching without the commute burden that defines Noida life? Our flexible schedules adapt to yours, not the other way around.',
+      studyCultureTrend:
+        'Residential societies in Sector 78 often organize study groups. Pair that collaborative energy with our structured Biology coaching and you get the best of both.',
     },
   },
   {
@@ -3361,7 +3529,8 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.585, lng: 77.31 },
-    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
+    centerAddress:
+      'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Sector 15 Metro', 'Film City Road', 'Sector 15 Market'],
     transportLinks: {
       metros: ['Sector 15 Metro (Blue Line)', 'Sector 16 Metro'],
@@ -3381,7 +3550,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers'],
       avgFees: 110000,
       ourAdvantage: ['Direct Blue Line metro access', 'Biology specialization', 'AIIMS faculty'],
-      marketGap: "You shouldn't have to travel to Delhi for quality NEET coaching - we bring it to you online.",
+      marketGap:
+        "You shouldn't have to travel to Delhi for quality NEET coaching - we bring it to you online.",
     },
 
     content: {
@@ -3389,7 +3559,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for Sector 15 students',
       valueProposition: 'Quality NEET Biology coaching for Old Noida families',
       urgencyMessage: 'New batch starting! Direct metro access from Sector 15.',
-      localChallenge: "Want quality coaching without traveling to Delhi? That's exactly what our online classes deliver.",
+      localChallenge:
+        "Want quality coaching without traveling to Delhi? That's exactly what our online classes deliver.",
       successMetric: '90% of Sector 15 students scored 320+ in Biology',
     },
 
@@ -3420,10 +3591,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Sector 15 is one of Noida's oldest, most established sectors, and many families here have children in Classes 11-12 actively preparing for NEET. If that's your household, focused Biology coaching will set the pace.",
-      competitionAnalysis: 'Even in well-established Sector 15, NEET Biology-focused coaching is limited - general coaching centers rarely give Biology the depth it needs. That depth is our entire specialty.',
-      parentConcerns: 'As a long-time Noida resident, you compare coaching against the best in Delhi NCR - as you should. Our track record of high Biology scores stands up to that comparison.',
-      studyCultureTrend: "Disciplined, with established study routines? You'll enjoy our expert-led classes - they're designed to challenge you intellectually, not just cover the syllabus.",
+      demandExplanation:
+        "Sector 15 is one of Noida's oldest, most established sectors, and many families here have children in Classes 11-12 actively preparing for NEET. If that's your household, focused Biology coaching will set the pace.",
+      competitionAnalysis:
+        'Even in well-established Sector 15, NEET Biology-focused coaching is limited - general coaching centers rarely give Biology the depth it needs. That depth is our entire specialty.',
+      parentConcerns:
+        'As a long-time Noida resident, you compare coaching against the best in Delhi NCR - as you should. Our track record of high Biology scores stands up to that comparison.',
+      studyCultureTrend:
+        "Disciplined, with established study routines? You'll enjoy our expert-led classes - they're designed to challenge you intellectually, not just cover the syllabus.",
     },
   },
   {
@@ -3452,7 +3627,8 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.578, lng: 77.315 },
-    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
+    centerAddress:
+      'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Sector 16 Metro', 'Film City', 'Sector 16 Market'],
     transportLinks: {
       metros: ['Sector 16 Metro (Blue Line)', 'Sector 15 Metro'],
@@ -3472,7 +3648,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers'],
       avgFees: 105000,
       ourAdvantage: ['Metro connectivity', 'Specialized Biology coaching'],
-      marketGap: 'Quality NEET coaching is hard to find in the Sector 16 area - we deliver it to you online.',
+      marketGap:
+        'Quality NEET coaching is hard to find in the Sector 16 area - we deliver it to you online.',
     },
 
     content: {
@@ -3480,7 +3657,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert coaching with direct metro access',
       valueProposition: 'Specialized Biology coaching for Sector 16 families',
       urgencyMessage: 'Limited seats! Enroll now for next batch.',
-      localChallenge: 'Specialized NEET Biology coaching is missing in Sector 16 - we fill that need for you online.',
+      localChallenge:
+        'Specialized NEET Biology coaching is missing in Sector 16 - we fill that need for you online.',
       successMetric: '88% of Sector 16 students improved by 100+ marks',
     },
 
@@ -3503,10 +3681,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'moderate',
-      demandExplanation: "Sector 16 is an older, stable residential sector where academic expectations stay high. If you're preparing for NEET here, you deserve coaching that matches those expectations - without leaving home.",
-      competitionAnalysis: "Coaching activity in Sector 16 itself is quiet, so students usually rely on neighboring sectors or online classes. If you'd rather skip the travel, our specialist Biology program is built for you.",
-      parentConcerns: "Practical and value-oriented? You'll appreciate our approach: clear communication about course structure and expected outcomes, results without unnecessary frills.",
-      studyCultureTrend: 'Prefer structured, traditional learning? Our online classes keep that structure intact - live teachers, fixed schedules, real accountability.',
+      demandExplanation:
+        "Sector 16 is an older, stable residential sector where academic expectations stay high. If you're preparing for NEET here, you deserve coaching that matches those expectations - without leaving home.",
+      competitionAnalysis:
+        "Coaching activity in Sector 16 itself is quiet, so students usually rely on neighboring sectors or online classes. If you'd rather skip the travel, our specialist Biology program is built for you.",
+      parentConcerns:
+        "Practical and value-oriented? You'll appreciate our approach: clear communication about course structure and expected outcomes, results without unnecessary frills.",
+      studyCultureTrend:
+        'Prefer structured, traditional learning? Our online classes keep that structure intact - live teachers, fixed schedules, real accountability.',
     },
   },
   {
@@ -3535,7 +3717,8 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.55, lng: 77.38 },
-    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
+    centerAddress:
+      'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Noida Expressway', 'IT Parks', 'Commercial Hub'],
     transportLinks: {
       metros: ['Sector 93 Metro (Aqua Line)'],
@@ -3555,7 +3738,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Limited local centers'],
       avgFees: 120000,
       ourAdvantage: ['Expressway convenience', 'Flexible timings for IT families'],
-      marketGap: "Working in IT and need flexible NEET coaching for your child? Our batch timings are built around your family's schedule.",
+      marketGap:
+        "Working in IT and need flexible NEET coaching for your child? Our batch timings are built around your family's schedule.",
     },
 
     content: {
@@ -3563,7 +3747,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Flexible timings for working professional families',
       valueProposition: 'Quality coaching with evening and weekend batches',
       urgencyMessage: 'Evening batch ideal for Sector 93 families!',
-      localChallenge: "Need coaching that fits a working family's schedule? Our flexible online batches do.",
+      localChallenge:
+        "Need coaching that fits a working family's schedule? Our flexible online batches do.",
       successMetric: '85% success rate among Sector 93 students',
     },
 
@@ -3586,10 +3771,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Sector 93 on the Noida Expressway is lined with premium residential societies where education comes first and medicine is a preferred career. If that's your home, expert Biology coaching can now reach your tower directly.",
-      competitionAnalysis: "The Expressway corridor still lacks dedicated coaching centers, so quality teaching has to come to you - and that's exactly what our live online Biology classes do, right into your high-rise.",
-      parentConcerns: 'Expecting premium-quality coaching with expert faculty - and a clear return in score improvement and college placement? We track and share both, so your investment is always visible.',
-      studyCultureTrend: "If your family actively monitors preparation progress, you'll like how we work: structured schedules, motivated peers, and progress you can see week by week.",
+      demandExplanation:
+        "Sector 93 on the Noida Expressway is lined with premium residential societies where education comes first and medicine is a preferred career. If that's your home, expert Biology coaching can now reach your tower directly.",
+      competitionAnalysis:
+        "The Expressway corridor still lacks dedicated coaching centers, so quality teaching has to come to you - and that's exactly what our live online Biology classes do, right into your high-rise.",
+      parentConcerns:
+        'Expecting premium-quality coaching with expert faculty - and a clear return in score improvement and college placement? We track and share both, so your investment is always visible.',
+      studyCultureTrend:
+        "If your family actively monitors preparation progress, you'll like how we work: structured schedules, motivated peers, and progress you can see week by week.",
     },
   },
   {
@@ -3618,7 +3807,8 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.53, lng: 77.4 },
-    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
+    centerAddress:
+      'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['ATS Pristine', 'Supertech Supernova', 'Mahagun Moderne'],
     transportLinks: {
       metros: ['Noida City Centre Metro', 'Sector 101 Metro'],
@@ -3638,7 +3828,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few premium coaching options'],
       avgFees: 140000,
       ourAdvantage: ['Premium service', 'Small batches', 'Personal attention'],
-      marketGap: "You chose a premium society for a reason - your child's coaching should meet the same standard. Ours does.",
+      marketGap:
+        "You chose a premium society for a reason - your child's coaching should meet the same standard. Ours does.",
     },
 
     content: {
@@ -3646,7 +3837,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Serving ATS, Supertech, and Mahagun families',
       valueProposition: 'Quality coaching matching premium lifestyle expectations',
       urgencyMessage: 'Limited seats for Sector 104 residents!',
-      localChallenge: 'Expect personalized attention? Our small batches are built around exactly that.',
+      localChallenge:
+        'Expect personalized attention? Our small batches are built around exactly that.',
       successMetric: '92% of Sector 104 students qualified NEET',
     },
 
@@ -3672,10 +3864,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: 'Sector 104 is a premium Expressway sector with luxury apartments and families from diverse professional backgrounds. As your community grows, so does the need for serious NEET preparation - we deliver it to your doorstep.',
-      competitionAnalysis: 'Coaching options near Sector 104 are limited, which usually means long travel or settling for less. Our online classes give you the quality without either compromise.',
-      parentConcerns: "Want convenience and quality in equal measure, without disrupting your family's routine? Our online classes slot into your schedule - no travel required.",
-      studyCultureTrend: 'Comfortable with digital tools, like most Sector 104 students? Our technology-forward classes will feel familiar from day one - and your residential association study circles pair well with them.',
+      demandExplanation:
+        'Sector 104 is a premium Expressway sector with luxury apartments and families from diverse professional backgrounds. As your community grows, so does the need for serious NEET preparation - we deliver it to your doorstep.',
+      competitionAnalysis:
+        'Coaching options near Sector 104 are limited, which usually means long travel or settling for less. Our online classes give you the quality without either compromise.',
+      parentConcerns:
+        "Want convenience and quality in equal measure, without disrupting your family's routine? Our online classes slot into your schedule - no travel required.",
+      studyCultureTrend:
+        'Comfortable with digital tools, like most Sector 104 students? Our technology-forward classes will feel familiar from day one - and your residential association study circles pair well with them.',
     },
   },
   {
@@ -3704,7 +3900,8 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.51, lng: 77.42 },
-    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
+    centerAddress:
+      'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Jaypee Greens', 'Jaypee Wishtown', 'Golf Course'],
     transportLinks: {
       metros: ['Sector 120 Metro (Aqua Line)'],
@@ -3724,7 +3921,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Almost no local options'],
       avgFees: 150000,
       ourAdvantage: ['Only quality option nearby', 'Online convenience'],
-      marketGap: "Living in Jaypee and can't find quality NEET coaching locally? We bring it to you online.",
+      marketGap:
+        "Living in Jaypee and can't find quality NEET coaching locally? We bring it to you online.",
     },
 
     content: {
@@ -3732,7 +3930,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert coaching for premium township residents',
       valueProposition: 'Quality coaching for Jaypee families without long travel',
       urgencyMessage: 'Jaypee batch starting soon! Limited seats.',
-      localChallenge: 'Traveling far from Jaypee for quality coaching? Our online classes end that commute.',
+      localChallenge:
+        'Traveling far from Jaypee for quality coaching? Our online classes end that commute.',
       successMetric: '88% of Jaypee students scored 330+ in Biology',
     },
 
@@ -3755,10 +3954,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: 'Sector 120 is a densely populated sector where competitive-exam preparation is a way of life. If NEET is your goal, dedicated Biology coaching is the advantage most of your peers are missing.',
-      competitionAnalysis: "The few coaching centers in Sector 120 focus mainly on IIT-JEE, leaving NEET aspirants to manage Biology on their own. You don't have to - that's exactly the specialist teaching we provide.",
-      parentConcerns: "Worried your child's general NEET program isn't covering Biology adequately? That concern is well-founded - and our comprehensive Biology-focused coaching is the answer.",
-      studyCultureTrend: "Study groups already run across Sector 120's societies. Add our expert-led online classes to yours and turn group motivation into real Biology marks.",
+      demandExplanation:
+        'Sector 120 is a densely populated sector where competitive-exam preparation is a way of life. If NEET is your goal, dedicated Biology coaching is the advantage most of your peers are missing.',
+      competitionAnalysis:
+        "The few coaching centers in Sector 120 focus mainly on IIT-JEE, leaving NEET aspirants to manage Biology on their own. You don't have to - that's exactly the specialist teaching we provide.",
+      parentConcerns:
+        "Worried your child's general NEET program isn't covering Biology adequately? That concern is well-founded - and our comprehensive Biology-focused coaching is the answer.",
+      studyCultureTrend:
+        "Study groups already run across Sector 120's societies. Add our expert-led online classes to yours and turn group motivation into real Biology marks.",
     },
   },
   {
@@ -3787,7 +3990,8 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.48, lng: 77.43 },
-    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
+    centerAddress:
+      'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['ATS Destinaire', 'ATS Le Grandiose', 'Sector 137 Metro'],
     transportLinks: {
       metros: ['Sector 137 Metro (Aqua Line)'],
@@ -3807,13 +4011,14 @@ export const localities: Locality[] = [
       majorInstitutes: ['Almost no quality options'],
       avgFees: 145000,
       ourAdvantage: ['Metro connected', 'Premium service', 'Online option'],
-      marketGap: 'A premium sector deserves quality NEET coaching - since none exists locally, we deliver it online.',
+      marketGap:
+        'A premium sector deserves quality NEET coaching - since none exists locally, we deliver it online.',
     },
 
     content: {
-      heroTitle: 'NEET Biology Coaching for Sector 137 Elite',
+      heroTitle: 'Elite NEET Biology Coaching for Sector 137',
       heroSubtitle: 'Serving ATS, Supertech, Mahagun premium residents',
-      valueProposition: 'Premium coaching experience for premium families',
+      valueProposition: 'A premium coaching experience to match your premium home',
       urgencyMessage: 'Sector 137 exclusive batch starting!',
       localChallenge: 'Your home is premium - your coaching should match. Ours does.',
       successMetric: '90% of Sector 137 students qualified NEET',
@@ -3841,10 +4046,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: 'The Sector 137 corridor houses thousands of families in premium Expressway apartments, and NEET ambitions grow with the community. Yours can start today - no waiting for local infrastructure to catch up.',
-      competitionAnalysis: 'Coaching infrastructure here is still catching up with the population. Our online classes reach you directly in your tower - no waiting, no commute.',
-      parentConcerns: 'Prefer your child not navigate busy Expressway traffic for coaching? With our live online classes, safety and convenience come built in - along with the teaching quality.',
-      studyCultureTrend: 'Prefer interactive learning over passive video lectures? So do our students here - which is why every class we run is live, with real-time doubt solving.',
+      demandExplanation:
+        'The Sector 137 corridor houses thousands of families in premium Expressway apartments, and NEET ambitions grow with the community. Yours can start today - no waiting for local infrastructure to catch up.',
+      competitionAnalysis:
+        'Coaching infrastructure here is still catching up with the population. Our online classes reach you directly in your tower - no waiting, no commute.',
+      parentConcerns:
+        'Prefer your child not navigate busy Expressway traffic for coaching? With our live online classes, safety and convenience come built in - along with the teaching quality.',
+      studyCultureTrend:
+        'Prefer interactive learning over passive video lectures? So do our students here - which is why every class we run is live, with real-time doubt solving.',
     },
   },
   {
@@ -3873,7 +4082,8 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.5, lng: 77.415 },
-    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
+    centerAddress:
+      'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['IT Park', 'Tech Companies', 'Noida Expressway'],
     transportLinks: {
       metros: ['Nearby Aqua Line stations'],
@@ -3893,7 +4103,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['No local options'],
       avgFees: 125000,
       ourAdvantage: ['Fellow IT hub', 'Flexible timings', 'Online option'],
-      marketGap: "Balancing IT work hours with your child's coaching? Our flexible schedules make it workable.",
+      marketGap:
+        "Balancing IT work hours with your child's coaching? Our flexible schedules make it workable.",
     },
 
     content: {
@@ -3924,10 +4135,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Sector 135 sits inside Noida's tech hub, where IT campuses and residential complexes share the skyline. If your family works in the tech parks nearby, our online Biology classes match the quality bar you're used to.",
-      competitionAnalysis: 'Despite the major IT offices nearby, local coaching infrastructure is thin - the usual choice is online classes or a trip to central Noida. Choose the option that saves you hours: ours.',
-      parentConcerns: "Want a modern, data-driven approach - performance analytics and teaching that adapts to your child's specific weak areas? That's exactly how our program runs.",
-      studyCultureTrend: 'Evening study after school is the rhythm here, and our class timings respect it. Digital-native students settle into our platform immediately.',
+      demandExplanation:
+        "Sector 135 sits inside Noida's tech hub, where IT campuses and residential complexes share the skyline. If your family works in the tech parks nearby, our online Biology classes match the quality bar you're used to.",
+      competitionAnalysis:
+        'Despite the major IT offices nearby, local coaching infrastructure is thin - the usual choice is online classes or a trip to central Noida. Choose the option that saves you hours: ours.',
+      parentConcerns:
+        "Want a modern, data-driven approach - performance analytics and teaching that adapts to your child's specific weak areas? That's exactly how our program runs.",
+      studyCultureTrend:
+        'Evening study after school is the rhythm here, and our class timings respect it. Digital-native students settle into our platform immediately.',
     },
   },
   {
@@ -3956,7 +4171,8 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.41, lng: 77.5 },
-    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
+    centerAddress:
+      'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Gaur City Mall', 'Gaur City 1', 'Gaur City 2'],
     transportLinks: {
       metros: ['Sector 147 Metro (Aqua Line) - nearest'],
@@ -3976,7 +4192,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers', 'quality gap exists'],
       avgFees: 95000,
       ourAdvantage: ['Online convenience', 'Quality teaching', 'Weekend offline option'],
-      marketGap: '50K+ families live here, yet quality NEET coaching is very limited - we close that gap for you online.',
+      marketGap:
+        '50K+ families live here, yet quality NEET coaching is very limited - we close that gap for you online.',
     },
 
     content: {
@@ -3984,7 +4201,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Serving 50,000+ Gaur City families',
       valueProposition: 'Premium coaching accessible to Noida Extension',
       urgencyMessage: 'Gaur City batch filling fast! 150+ students already enrolled.',
-      localChallenge: 'Quality NEET coaching options are missing in Gaur City - we bring them to you online.',
+      localChallenge:
+        'Quality NEET coaching options are missing in Gaur City - we bring them to you online.',
       successMetric: '150+ Gaur City students trust our coaching',
     },
 
@@ -4015,10 +4233,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'growing',
-      demandExplanation: "Gaur City is a massive township with a young, fast-growing community - and career preparation is on every family's mind. If NEET is on yours, you can start from your own living room.",
-      competitionAnalysis: 'Within the township itself, coaching infrastructure is minimal - external travel used to be the only option. Our online classes bring specialist Biology teaching inside Gaur City for you.',
-      parentConcerns: 'Searching for quality NEET preparation you can access without leaving the community? That search ends with our live online classes.',
-      studyCultureTrend: "Gaur City's community events and natural study groups give you a head start. Channel that collaborative energy through our structured Biology program.",
+      demandExplanation:
+        "Gaur City is a massive township with a young, fast-growing community - and career preparation is on every family's mind. If NEET is on yours, you can start from your own living room.",
+      competitionAnalysis:
+        'Within the township itself, coaching infrastructure is minimal - external travel used to be the only option. Our online classes bring specialist Biology teaching inside Gaur City for you.',
+      parentConcerns:
+        'Searching for quality NEET preparation you can access without leaving the community? That search ends with our live online classes.',
+      studyCultureTrend:
+        "Gaur City's community events and natural study groups give you a head start. Channel that collaborative energy through our structured Biology program.",
     },
   },
   {
@@ -4052,7 +4274,8 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.38, lng: 77.52 },
-    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
+    centerAddress:
+      'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Galgotias University', 'Sharda University', 'IT Companies'],
     transportLinks: {
       metros: ['Knowledge Park II Metro (Aqua Line)'],
@@ -4072,7 +4295,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers'],
       avgFees: 100000,
       ourAdvantage: ['Educational hub affinity', 'Online convenience'],
-      marketGap: 'Living near the universities but missing quality NEET coaching? We deliver it to you online.',
+      marketGap:
+        'Living near the universities but missing quality NEET coaching? We deliver it to you online.',
     },
 
     content: {
@@ -4080,7 +4304,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Serving the educational hub of Greater Noida',
       valueProposition: 'Quality coaching in the heart of education',
       urgencyMessage: 'Knowledge Park batch starting!',
-      localChallenge: 'Surrounded by universities yet short on NEET coaching options? We fill that need for you.',
+      localChallenge:
+        'Surrounded by universities yet short on NEET coaching options? We fill that need for you.',
       successMetric: '82% success rate among Knowledge Park students',
     },
 
@@ -4103,10 +4328,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'growing',
-      demandExplanation: "Knowledge Park's universities and colleges give Greater Noida an academic atmosphere - a great environment for NEET preparation. Add focused Biology coaching and you have the complete package.",
-      competitionAnalysis: "Some coaching exists around the university ecosystem, but NEET-specific teaching is limited. If you want true NEET Biology specialization, that's our entire focus.",
-      parentConcerns: 'Want focused NEET preparation at prices that make sense for the area? Our fees are transparent and affordable, with scholarships available.',
-      studyCultureTrend: "If Knowledge Park's studious atmosphere suits you, our rigorous, well-structured program will too - it's built for academically inclined students who want to be challenged.",
+      demandExplanation:
+        "Knowledge Park's universities and colleges give Greater Noida an academic atmosphere - a great environment for NEET preparation. Add focused Biology coaching and you have the complete package.",
+      competitionAnalysis:
+        "Some coaching exists around the university ecosystem, but NEET-specific teaching is limited. If you want true NEET Biology specialization, that's our entire focus.",
+      parentConcerns:
+        'Want focused NEET preparation at prices that make sense for the area? Our fees are transparent and affordable, with scholarships available.',
+      studyCultureTrend:
+        "If Knowledge Park's studious atmosphere suits you, our rigorous, well-structured program will too - it's built for academically inclined students who want to be challenged.",
     },
   },
   {
@@ -4135,7 +4364,8 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.37, lng: 77.53 },
-    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
+    centerAddress:
+      'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Pari Chowk Roundabout', 'Commercial Center', 'Shopping Hub'],
     transportLinks: {
       metros: ['Pari Chowk Metro (Aqua Line)'],
@@ -4155,7 +4385,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers'],
       avgFees: 95000,
       ourAdvantage: ['Metro connected', 'Quality coaching'],
-      marketGap: 'Quality coaching near the commercial hub is scarce - our online classes put it right in your home.',
+      marketGap:
+        'Quality coaching near the commercial hub is scarce - our online classes put it right in your home.',
     },
 
     content: {
@@ -4163,7 +4394,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Metro connected quality coaching',
       valueProposition: 'Accessible online coaching for Greater Noida',
       urgencyMessage: 'Pari Chowk area batch starting!',
-      localChallenge: 'Specialized coaching is missing around the commercial area - we provide it online.',
+      localChallenge:
+        'Specialized coaching is missing around the commercial area - we provide it online.',
       successMetric: '80% success rate among Pari Chowk students',
     },
 
@@ -4186,10 +4418,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'moderate',
-      demandExplanation: "Pari Chowk is Greater Noida's key commercial and transit hub, with new residential developments all around. Moving in and planning your NEET journey? We're ready when you are.",
-      competitionAnalysis: "Around Pari Chowk you'll find only a few small coaching centers, and quality NEET Biology teaching is virtually absent. Our specialized online classes fill that need for you.",
-      parentConcerns: 'Prioritize affordability and accessibility? Our pricing is transparent - no hidden costs - and proven quality comes standard.',
-      studyCultureTrend: "Motivated but short on access to top-quality coaching? That's the exact problem our online platform solves for students around Pari Chowk.",
+      demandExplanation:
+        "Pari Chowk is Greater Noida's key commercial and transit hub, with new residential developments all around. Moving in and planning your NEET journey? We're ready when you are.",
+      competitionAnalysis:
+        "Around Pari Chowk you'll find only a few small coaching centers, and quality NEET Biology teaching is virtually absent. Our specialized online classes fill that need for you.",
+      parentConcerns:
+        'Prioritize affordability and accessibility? Our pricing is transparent - no hidden costs - and proven quality comes standard.',
+      studyCultureTrend:
+        "Motivated but short on access to top-quality coaching? That's the exact problem our online platform solves for students around Pari Chowk.",
     },
   },
   {
@@ -4218,7 +4454,8 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.36, lng: 77.54 },
-    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
+    centerAddress:
+      'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Alpha 1 Market', 'Alpha Commercial Belt', 'Metro Stations'],
     transportLinks: {
       metros: ['Alpha 1 Metro', 'Alpha 2 Metro (Aqua Line)'],
@@ -4238,7 +4475,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers'],
       avgFees: 90000,
       ourAdvantage: ['Established reputation', 'Metro access'],
-      marketGap: 'Quality NEET coaching is hard to find in the established sectors - we bring it to you online.',
+      marketGap:
+        'Quality NEET coaching is hard to find in the established sectors - we bring it to you online.',
     },
 
     content: {
@@ -4246,7 +4484,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Serving established Greater Noida sectors',
       valueProposition: 'Quality coaching for GN families',
       urgencyMessage: 'Alpha area batch starting soon!',
-      localChallenge: 'Looking for coaching you can trust? Our results and transparent approach earn it.',
+      localChallenge:
+        'Looking for coaching you can trust? Our results and transparent approach earn it.',
       successMetric: '78% success rate among Alpha students',
     },
 
@@ -4269,10 +4508,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'moderate',
-      demandExplanation: "Alpha is a residential sector where families across income levels share one belief: education changes trajectories. If a medical career is your route, we'll help you earn it with strong Biology scores.",
-      competitionAnalysis: 'Greater Noida still has far fewer quality coaching options than Noida. Instead of settling, you can join our reliable online Biology program from home.',
-      parentConcerns: 'Pragmatic about costs and want maximum value? Our programs have clear schedules, predictable fees, and no surprises.',
-      studyCultureTrend: "If you're a hard worker who just needs clear direction, our structured coaching with regular assessments gives you exactly that.",
+      demandExplanation:
+        "Alpha is a residential sector where families across income levels share one belief: education changes trajectories. If a medical career is your route, we'll help you earn it with strong Biology scores.",
+      competitionAnalysis:
+        'Greater Noida still has far fewer quality coaching options than Noida. Instead of settling, you can join our reliable online Biology program from home.',
+      parentConcerns:
+        'Pragmatic about costs and want maximum value? Our programs have clear schedules, predictable fees, and no surprises.',
+      studyCultureTrend:
+        "If you're a hard worker who just needs clear direction, our structured coaching with regular assessments gives you exactly that.",
     },
   },
   {
@@ -4301,7 +4544,8 @@ export const localities: Locality[] = [
     },
 
     coordinates: { lat: 28.62, lng: 77.45 },
-    centerAddress: 'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
+    centerAddress:
+      'Live online classes — no commute (nearest walk-in centre: South Extension, New Delhi)',
     nearbyLandmarks: ['Crossing Republik Mall', 'Main Gate', 'NH-24'],
     transportLinks: {
       metros: ['Proposed Metro'],
@@ -4321,7 +4565,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers', 'quality gap'],
       avgFees: 85000,
       ourAdvantage: ['Online convenience', 'Quality teaching', 'Affordable'],
-      marketGap: 'Lakhs of residents, very limited quality NEET coaching - we close that gap for you online.',
+      marketGap:
+        'Lakhs of residents, very limited quality NEET coaching - we close that gap for you online.',
     },
 
     content: {
@@ -4360,10 +4605,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'growing',
-      demandExplanation: 'Crossing Republik on the Noida-Ghaziabad border is a large township whose community matures every year - and long-term educational planning comes with it. Start your NEET Biology preparation without stepping outside.',
-      competitionAnalysis: "There's almost no coaching inside the township, so students travel to Noida or Ghaziabad. Our online classes make that trip unnecessary for you.",
-      parentConcerns: 'Uneasy about safety and commute logistics for coaching outside the township? Our live online classes keep your child home - and keep the quality high.',
-      studyCultureTrend: "Crossing Republik families support each other's educational goals, and online learning adoption here is high. Join the neighbors who already study with us.",
+      demandExplanation:
+        'Crossing Republik on the Noida-Ghaziabad border is a large township whose community matures every year - and long-term educational planning comes with it. Start your NEET Biology preparation without stepping outside.',
+      competitionAnalysis:
+        "There's almost no coaching inside the township, so students travel to Noida or Ghaziabad. Our online classes make that trip unnecessary for you.",
+      parentConcerns:
+        'Uneasy about safety and commute logistics for coaching outside the township? Our live online classes keep your child home - and keep the quality high.',
+      studyCultureTrend:
+        "Crossing Republik families support each other's educational goals, and online learning adoption here is high. Join the neighbors who already study with us.",
     },
   },
 
@@ -4410,7 +4659,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few in DLF area', 'students go to Delhi'],
       avgFees: 135000,
       ourAdvantage: ['No Delhi travel needed', 'Premium quality', 'Personalized attention'],
-      marketGap: 'Quality coaching is scarce in the DLF area and students cross into Delhi daily. Our online classes solve that for you.',
+      marketGap:
+        'Quality coaching is scarce in the DLF area and students cross into Delhi daily. Our online classes solve that for you.',
     },
 
     content: {
@@ -4418,7 +4668,8 @@ export const localities: Locality[] = [
       heroSubtitle: "Elite Biology coaching for Gurugram's medical aspirants",
       valueProposition: 'Premium NEET Biology coaching delivered to your DLF home',
       urgencyMessage: 'Exclusive DLF Phase 1 batch! Limited to 10 students only.',
-      localChallenge: 'Wasting hours crossing the border to Delhi for coaching? Our online format eliminates this.',
+      localChallenge:
+        'Wasting hours crossing the border to Delhi for coaching? Our online format eliminates this.',
       successMetric: '98% of DLF Phase 1 students scored 338+ in Biology',
     },
 
@@ -4449,7 +4700,7 @@ export const localities: Locality[] = [
       {
         question: 'What makes your coaching suitable for DLF families?',
         answer:
-          'We understand DLF families value excellence and convenience. Our small batches (10-12 students), expert faculty (15+ years), and flexible online format cater perfectly to DLF Phase 1 residents.',
+          'We understand you value excellence and convenience. Our small batches (10-12 students), expert faculty (15+ years), and flexible online format cater perfectly to DLF Phase 1 residents.',
       },
       {
         question: 'Do you offer one-on-one mentoring?',
@@ -4460,10 +4711,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'very-high',
-      demandExplanation: "DLF Phase 1 is Gurugram's original premium residential area, home to top corporate executives and business owners. If your family holds high academic benchmarks, our Biology program is built to meet them.",
-      competitionAnalysis: "Around DLF Phase 1 you'll find premium tutors and a few high-end centers, but almost all offer generic multi-subject programs. For specialized NEET Biology coaching, we're the focused option.",
-      parentConcerns: "Expect boutique-quality coaching with highly qualified faculty? You'll get it - along with the personalized attention and measurable results that justify every rupee.",
-      studyCultureTrend: 'With the best study materials and environments already at your disposal, the missing piece is expert guidance. Our online classes add it flexibly and efficiently - no physical center needed.',
+      demandExplanation:
+        "DLF Phase 1 is Gurugram's original premium residential area, home to top corporate executives and business owners. If your family holds high academic benchmarks, our Biology program is built to meet them.",
+      competitionAnalysis:
+        "Around DLF Phase 1 you'll find premium tutors and a few high-end centers, but almost all offer generic multi-subject programs. For specialized NEET Biology coaching, we're the focused option.",
+      parentConcerns:
+        "Expect boutique-quality coaching with highly qualified faculty? You'll get it - along with the personalized attention and measurable results that justify every rupee.",
+      studyCultureTrend:
+        'With the best study materials and environments already at your disposal, the missing piece is expert guidance. Our online classes add it flexibly and efficiently - no physical center needed.',
     },
   },
   {
@@ -4512,7 +4767,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Minimal local presence', 'students go to South Delhi'],
       avgFees: 140000,
       ourAdvantage: ['Eliminates Delhi travel', 'Premium quality at home', 'Exclusive batches'],
-      marketGap: 'Quality coaching is simply missing on Golf Course Road. Our online classes are the perfect fit for you.',
+      marketGap:
+        'Quality coaching is simply missing on Golf Course Road. Our online classes are the perfect fit for you.',
     },
 
     content: {
@@ -4520,7 +4776,8 @@ export const localities: Locality[] = [
       heroSubtitle: "Premium Biology coaching for Gurugram's finest",
       valueProposition: 'Elite NEET Biology coaching delivered to your Golf Course Road residence',
       urgencyMessage: 'Ultra-exclusive batch! Only 8 students maximum.',
-      localChallenge: 'Crossing the border to Delhi daily? Our online format delivers superior results at home.',
+      localChallenge:
+        'Crossing the border to Delhi daily? Our online format delivers superior results at home.',
       successMetric: '96% of Golf Course Road students scored 338+ in Biology',
     },
 
@@ -4562,10 +4819,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'very-high',
-      demandExplanation: "Golf Course Road is Gurugram's most premium address, home to C-suite executives and ultra-HNI families pursuing medicine as a prestigious path. If that's your household, world-class Biology teaching is now available at home.",
-      competitionAnalysis: 'For such a premium corridor, Golf Course Road has surprisingly few coaching centers - the usual route is Sector 14 or Delhi. Our online classes give you a convenient, high-quality alternative.',
-      parentConcerns: "Expect international-standard teaching with a personalized learning plan - not generalized coaching that ignores your child's learning style? That's precisely how we teach.",
-      studyCultureTrend: "With a dedicated study space and technology at hand, you're perfectly set up for our interactive online classes - highly focused preparation without leaving Golf Course Road.",
+      demandExplanation:
+        "Golf Course Road is Gurugram's most premium address, home to C-suite executives and ultra-HNI families pursuing medicine as a prestigious path. If that's your household, world-class Biology teaching is now available at home.",
+      competitionAnalysis:
+        'For such a premium corridor, Golf Course Road has surprisingly few coaching centers - the usual route is Sector 14 or Delhi. Our online classes give you a convenient, high-quality alternative.',
+      parentConcerns:
+        "Expect international-standard teaching with a personalized learning plan - not generalized coaching that ignores your child's learning style? That's precisely how we teach.",
+      studyCultureTrend:
+        "With a dedicated study space and technology at hand, you're perfectly set up for our interactive online classes - highly focused preparation without leaving Golf Course Road.",
     },
   },
   {
@@ -4622,7 +4883,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for all Sushant Lok phases',
       valueProposition: 'Quality NEET Biology coaching for Sushant Lok students',
       urgencyMessage: 'Sushant Lok batch filling fast! Enroll now.',
-      localChallenge: 'Crossing the border to Delhi for coaching? Our online format saves you this daily hassle.',
+      localChallenge:
+        'Crossing the border to Delhi for coaching? Our online format saves you this daily hassle.',
       successMetric: '91% of Sushant Lok students scored 335+ in Biology',
     },
 
@@ -4658,10 +4920,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Sushant Lok is a well-planned colony whose students attend top schools like Heritage, Scottish High, and GD Goenka. If you're one of them and NEET is the goal, we'll build your Biology edge.",
-      competitionAnalysis: "Some centers operate along Sushant Lok's main roads, but most cater to IIT-JEE. For specialized NEET Biology coaching, we're the dedicated option available to you.",
-      parentConcerns: 'Want coaching that complements school without schedule conflicts? Our flexible batch timings are designed around school hours - quality and flexibility together.',
-      studyCultureTrend: 'Balancing good school performance with NEET preparation, like most Sushant Lok students? Our structured online classes fit neatly into that planned lifestyle.',
+      demandExplanation:
+        "Sushant Lok is a well-planned colony whose students attend top schools like Heritage, Scottish High, and GD Goenka. If you're one of them and NEET is the goal, we'll build your Biology edge.",
+      competitionAnalysis:
+        "Some centers operate along Sushant Lok's main roads, but most cater to IIT-JEE. For specialized NEET Biology coaching, we're the dedicated option available to you.",
+      parentConcerns:
+        'Want coaching that complements school without schedule conflicts? Our flexible batch timings are designed around school hours - quality and flexibility together.',
+      studyCultureTrend:
+        'Balancing good school performance with NEET preparation, like most Sushant Lok students? Our structured online classes fit neatly into that planned lifestyle.',
     },
   },
   {
@@ -4710,7 +4976,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers', 'competition from Delhi'],
       avgFees: 118000,
       ourAdvantage: ['Affordable for Sector 56', 'No Delhi travel', 'Quality coaching'],
-      marketGap: "Affordable quality coaching without traveling to Delhi - that's exactly what we give you.",
+      marketGap:
+        "Affordable quality coaching without traveling to Delhi - that's exactly what we give you.",
     },
 
     content: {
@@ -4754,10 +5021,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Sector 56 is a dense residential sector of independent houses and group housing where medical careers are a serious family goal. If it's yours, we make quality Biology coaching affordable and close.",
-      competitionAnalysis: "Sector 56 has only a few coaching centers, and if you're comparing on value, options are thin. Our program is built for exactly that comparison - quality teaching at sensible fees.",
-      parentConcerns: "Want affordable coaching that doesn't compromise on quality? Compare us on transparent pricing and proven results - we welcome it.",
-      studyCultureTrend: 'In Sector 56, coaching recommendations travel between neighbors. Ask around about us - then see why so many local families switched to our online classes.',
+      demandExplanation:
+        "Sector 56 is a dense residential sector of independent houses and group housing where medical careers are a serious family goal. If it's yours, we make quality Biology coaching affordable and close.",
+      competitionAnalysis:
+        "Sector 56 has only a few coaching centers, and if you're comparing on value, options are thin. Our program is built for exactly that comparison - quality teaching at sensible fees.",
+      parentConcerns:
+        "Want affordable coaching that doesn't compromise on quality? Compare us on transparent pricing and proven results - we welcome it.",
+      studyCultureTrend:
+        'In Sector 56, coaching recommendations travel between neighbors. Ask around about us - then see why so many local families switched to our online classes.',
     },
   },
   {
@@ -4811,7 +5082,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few NEET specific centers', 'students go to Delhi'],
       avgFees: 115000,
       ourAdvantage: ['Biology specialization', 'Affordable', 'No Delhi travel'],
-      marketGap: 'Even Sector 14 lacks specialized Biology coaching. Our online format serves you well.',
+      marketGap:
+        'Even Sector 14 lacks specialized Biology coaching. Our online format serves you well.',
     },
 
     content: {
@@ -4855,10 +5127,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Sector 14 is Old Gurugram's educational hub, near Government College and several schools, with a long coaching tradition. Preparing for NEET here? Specialist Biology teaching is how you pull ahead.",
-      competitionAnalysis: "Sector 14 has Gurugram's highest concentration of coaching centers, including national chains. What's still rare is Biology-specific coaching with expert faculty - and that's exactly us.",
-      parentConcerns: 'Know the Sector 14 coaching scene and want something beyond the standard large-batch model? Our expert faculty with proven Biology credentials is that something.',
-      studyCultureTrend: "In Gurugram's most established study culture, everyone works hard - the edge comes from focus. Our Biology-only coaching sharpens yours.",
+      demandExplanation:
+        "Sector 14 is Old Gurugram's educational hub, near Government College and several schools, with a long coaching tradition. Preparing for NEET here? Specialist Biology teaching is how you pull ahead.",
+      competitionAnalysis:
+        "Sector 14 has Gurugram's highest concentration of coaching centers, including national chains. What's still rare is Biology-specific coaching with expert faculty - and that's exactly us.",
+      parentConcerns:
+        'Know the Sector 14 coaching scene and want something beyond the standard large-batch model? Our expert faculty with proven Biology credentials is that something.',
+      studyCultureTrend:
+        "In Gurugram's most established study culture, everyone works hard - the edge comes from focus. Our Biology-only coaching sharpens yours.",
     },
   },
   {
@@ -4907,7 +5183,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers', 'students go to Delhi'],
       avgFees: 128000,
       ourAdvantage: ['No Delhi travel', 'Premium quality', 'Personalized attention'],
-      marketGap: 'Quality coaching is missing in South City and students travel to Delhi. Our online classes solve this for you.',
+      marketGap:
+        'Quality coaching is missing in South City and students travel to Delhi. Our online classes solve this for you.',
     },
 
     content: {
@@ -4915,7 +5192,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for South City residents',
       valueProposition: 'Premium NEET Biology coaching for South City 1 & 2',
       urgencyMessage: 'South City batch filling fast! Limited seats.',
-      localChallenge: 'Crossing the border to Delhi daily? Our online format eliminates this hassle.',
+      localChallenge:
+        'Crossing the border to Delhi daily? Our online format eliminates this hassle.',
       successMetric: '90% of South City students scored 335+ in Biology',
     },
 
@@ -4951,10 +5229,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "South City 1 is an upscale colony of educated, professionally accomplished families who invest early in competitive exam preparation. Starting early too? We'll make those extra months count.",
-      competitionAnalysis: 'South City 1 residents typically travel to Sector 14 or the DLF areas for coaching. Our online classes bring expert teaching home instead.',
-      parentConcerns: "Research coaching options extensively before enrolling? You'll like what you find here: personalized teaching that adapts to your child's pace and learning style.",
-      studyCultureTrend: 'Disciplined and goal-oriented, with family backing? Perfect - our coaching sets clear targets and tracks progress, exactly the structure you thrive on.',
+      demandExplanation:
+        "South City 1 is an upscale colony of educated, professionally accomplished families who invest early in competitive exam preparation. Starting early too? We'll make those extra months count.",
+      competitionAnalysis:
+        'South City 1 residents typically travel to Sector 14 or the DLF areas for coaching. Our online classes bring expert teaching home instead.',
+      parentConcerns:
+        "Research coaching options extensively before enrolling? You'll like what you find here: personalized teaching that adapts to your child's pace and learning style.",
+      studyCultureTrend:
+        'Disciplined and goal-oriented, with family backing? Perfect - our coaching sets clear targets and tracks progress, exactly the structure you thrive on.',
     },
   },
   {
@@ -4999,7 +5281,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Very few', 'students go to South Delhi'],
       avgFees: 138000,
       ourAdvantage: ['Eliminates Delhi travel', 'Premium quality', 'Small exclusive batches'],
-      marketGap: "DLF Phase 4 has zero quality coaching, so students waste hours going to Delhi. You don't have to.",
+      marketGap:
+        "DLF Phase 4 has zero quality coaching, so students waste hours going to Delhi. You don't have to.",
     },
 
     content: {
@@ -5007,7 +5290,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Premium Biology coaching for DLF residents',
       valueProposition: 'Elite NEET Biology coaching delivered to your DLF Phase 4 home',
       urgencyMessage: 'Ultra-exclusive DLF Phase 4 batch! Only 10 students.',
-      localChallenge: 'Crossing the border to Delhi daily? Our online format delivers superior results at home.',
+      localChallenge:
+        'Crossing the border to Delhi daily? Our online format delivers superior results at home.',
       successMetric: '95% of DLF Phase 4 students scored 338+ in Biology',
     },
 
@@ -5043,10 +5327,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'very-high',
-      demandExplanation: "DLF Phase 4's large independent houses and luxury apartments house families who expect personalized, specialized teaching. For NEET Biology, that's exactly what we deliver to you.",
-      competitionAnalysis: "Within Phase 4, organized NEET Biology coaching with a structured curriculum simply doesn't exist - only premium private tutors. Our program gives you the structure and the expertise together.",
-      parentConcerns: 'Want exclusive, small-group coaching with undivided faculty attention - and plenty of practice and feedback on Biology questions? Both are core to how we teach.',
-      studyCultureTrend: 'You already have every resource for academic success at home. Our expert coaching is the piece that takes you from good to exceptional in Biology.',
+      demandExplanation:
+        "DLF Phase 4's large independent houses and luxury apartments house families who expect personalized, specialized teaching. For NEET Biology, that's exactly what we deliver to you.",
+      competitionAnalysis:
+        "Within Phase 4, organized NEET Biology coaching with a structured curriculum simply doesn't exist - only premium private tutors. Our program gives you the structure and the expertise together.",
+      parentConcerns:
+        'Want exclusive, small-group coaching with undivided faculty attention - and plenty of practice and feedback on Biology questions? Both are core to how we teach.',
+      studyCultureTrend:
+        'You already have every resource for academic success at home. Our expert coaching is the piece that takes you from good to exceptional in Biology.',
     },
   },
   {
@@ -5103,7 +5391,8 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching near Golf Course Road',
       valueProposition: 'Quality NEET Biology coaching for Sector 43 students',
       urgencyMessage: 'Sector 43 batch filling fast! Enroll now.',
-      localChallenge: 'Crossing the border to Delhi for coaching? Our online format saves you this daily hassle.',
+      localChallenge:
+        'Crossing the border to Delhi for coaching? Our online format saves you this daily hassle.',
       successMetric: '89% of Sector 43 students scored 333+ in Biology',
     },
 
@@ -5139,10 +5428,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "Sector 43 is well-connected with good metro access and a diverse professional population. If you're preparing for NEET here, add the one thing the area lacks: specialist Biology coaching.",
-      competitionAnalysis: 'Sector 43 has decent coaching infrastructure, but NEET Biology specialization is scarce - most students patch it with self-study, which often falls short. Our focused program fixes that for you.',
-      parentConcerns: 'Want Biology covered thoroughly without hiring an extra tutor? Our program is complete preparation under one roof.',
-      studyCultureTrend: "Balancing school and coaching, like most Sector 43 students? With the sector's good internet, our online classes slot in without disrupting either.",
+      demandExplanation:
+        "Sector 43 is well-connected with good metro access and a diverse professional population. If you're preparing for NEET here, add the one thing the area lacks: specialist Biology coaching.",
+      competitionAnalysis:
+        'Sector 43 has decent coaching infrastructure, but NEET Biology specialization is scarce - most students patch it with self-study, which often falls short. Our focused program fixes that for you.',
+      parentConcerns:
+        'Want Biology covered thoroughly without hiring an extra tutor? Our program is complete preparation under one roof.',
+      studyCultureTrend:
+        "Balancing school and coaching, like most Sector 43 students? With the sector's good internet, our online classes slot in without disrupting either.",
     },
   },
   {
@@ -5191,7 +5484,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers', 'competition from Delhi'],
       avgFees: 116000,
       ourAdvantage: ['Affordable for Sector 57', 'No Delhi travel', 'Quality coaching'],
-      marketGap: "Affordable quality coaching without Delhi travel - that's what we deliver to you.",
+      marketGap:
+        "Affordable quality coaching without Delhi travel - that's what we deliver to you.",
     },
 
     content: {
@@ -5235,10 +5529,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'high',
-      demandExplanation: "More Sector 57 students target medical admissions every year. If you're joining them, reliable Biology-focused preparation is the strongest first move.",
-      competitionAnalysis: 'Coaching options within Sector 57 are limited, and traveling to nearby sectors eats your day. Our online Biology classes bridge that distance for you.',
-      parentConcerns: "Want reliable coaching with consistent quality - and to actually be kept informed about your child's progress and weak areas? We report both, regularly.",
-      studyCultureTrend: "In Sector 57, families compare notes on coaching before choosing. Ask about us in your community - our students' results speak first.",
+      demandExplanation:
+        "More Sector 57 students target medical admissions every year. If you're joining them, reliable Biology-focused preparation is the strongest first move.",
+      competitionAnalysis:
+        'Coaching options within Sector 57 are limited, and traveling to nearby sectors eats your day. Our online Biology classes bridge that distance for you.',
+      parentConcerns:
+        "Want reliable coaching with consistent quality - and to actually be kept informed about your child's progress and weak areas? We report both, regularly.",
+      studyCultureTrend:
+        "In Sector 57, families compare notes on coaching before choosing. Ask about us in your community - our students' results speak first.",
     },
   },
   {
@@ -5287,7 +5585,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Very few local centers', 'students go to Delhi or DLF area'],
       avgFees: 112000,
       ourAdvantage: ['Saves long distance travel', 'Affordable', 'Quality online coaching'],
-      marketGap: 'New Gurugram has essentially no coaching and students travel very far. Our online classes are the solution built for you.',
+      marketGap:
+        'New Gurugram has essentially no coaching and students travel very far. Our online classes are the solution built for you.',
     },
 
     content: {
@@ -5331,10 +5630,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'growing',
-      demandExplanation: "New Gurugram's sectors along the Southern Peripheral Road are filling with young families - and NEET ambitions are arriving with them. Yours doesn't need to wait for local coaching to be built.",
-      competitionAnalysis: 'Coaching infrastructure in New Gurugram is still very limited while the area develops. Our online classes give you proven teaching now, not whenever physical centers arrive.',
-      parentConcerns: 'Frustrated by the lack of quality educational infrastructure near your new home? Our online coaching is the practical alternative to those long commutes.',
-      studyCultureTrend: "As a new community takes shape, adaptable students win. If you're open to online learning, you'll have expert Biology teaching before your neighbors find a local option.",
+      demandExplanation:
+        "New Gurugram's sectors along the Southern Peripheral Road are filling with young families - and NEET ambitions are arriving with them. Yours doesn't need to wait for local coaching to be built.",
+      competitionAnalysis:
+        'Coaching infrastructure in New Gurugram is still very limited while the area develops. Our online classes give you proven teaching now, not whenever physical centers arrive.',
+      parentConcerns:
+        'Frustrated by the lack of quality educational infrastructure near your new home? Our online coaching is the practical alternative to those long commutes.',
+      studyCultureTrend:
+        "As a new community takes shape, adaptable students win. If you're open to online learning, you'll have expert Biology teaching before your neighbors find a local option.",
     },
   },
   {
@@ -5437,7 +5740,8 @@ export const localities: Locality[] = [
         'Flexible timing for working parents in gated communities',
         'Individual attention impossible at mass coaching centers',
       ],
-      marketGap: 'Sector 51 and nearby areas (Nirvana Country, Orchid Island) completely lack specialized NEET Biology coaching, and students waste 2-3 hours daily traveling to Sector 14 or South City. We give you local, affordable, quality coaching with multiple mode options.',
+      marketGap:
+        'Sector 51 and nearby areas (Nirvana Country, Orchid Island) completely lack specialized NEET Biology coaching, and students waste 2-3 hours daily traveling to Sector 14 or South City. We give you local, affordable, quality coaching with multiple mode options.',
     },
 
     content: {
@@ -5448,7 +5752,8 @@ export const localities: Locality[] = [
         'Only specialized Biology coaching in Sector 51 with physical presence. Choose Offline classes at our center, Online live classes from home, or Hybrid mode. 70% lower fees than big brands with better results.',
       urgencyMessage:
         'Limited seats for 2026 NEET batch - Only 3 batches available! First 10 enrollments get ₹5000 scholarship',
-      localChallenge: "Traveling 8-10 km from Nirvana Country, Orchid Island, or nearby societies to Sector 14 or South City - losing 2-3 hours daily in Gurugram traffic? Big institutes charge ₹1.5-2.4L for overcrowded batches of 50-100 where individual attention is impossible. We're the alternative.",
+      localChallenge:
+        "Traveling 8-10 km from Nirvana Country, Orchid Island, or nearby societies to Sector 14 or South City - losing 2-3 hours daily in Gurugram traffic? Big institutes charge ₹1.5-2.4L for overcrowded batches of 50-100 where individual attention is impossible. We're the alternative.",
       successMetric: '87% of Sector 51 students scored 330+ in Biology (avg big institutes: 68%)',
     },
 
@@ -5519,10 +5824,14 @@ export const localities: Locality[] = [
 
     educationalLandscape: {
       neetDemandLevel: 'very-high',
-      demandExplanation: 'Sector 51 is a premium New Gurugram area of luxury apartments and upscale living. If you expect quality with personalized attention - in coaching as in everything else - our Biology program delivers it.',
-      competitionAnalysis: 'Local coaching infrastructure in Sector 51 is minimal, leaving Sector 14 centers or online platforms as the options. Ours brings specialist Biology teaching straight to your home.',
-      parentConcerns: "Want premium coaching delivered conveniently, with top-tier faculty and measurable outcomes? That's our standard - and we show you the numbers to prove it.",
-      studyCultureTrend: "If you take an active role in your child's preparation schedule, you'll value our parent dashboards and regular updates - full visibility, structured progress.",
+      demandExplanation:
+        'Sector 51 is a premium New Gurugram area of luxury apartments and upscale living. If you expect quality with personalized attention - in coaching as in everything else - our Biology program delivers it.',
+      competitionAnalysis:
+        'Local coaching infrastructure in Sector 51 is minimal, leaving Sector 14 centers or online platforms as the options. Ours brings specialist Biology teaching straight to your home.',
+      parentConcerns:
+        "Want premium coaching delivered conveniently, with top-tier faculty and measurable outcomes? That's our standard - and we show you the numbers to prove it.",
+      studyCultureTrend:
+        "If you take an active role in your child's preparation schedule, you'll value our parent dashboards and regular updates - full visibility, structured progress.",
     },
   },
   // ADDITIONAL GURUGRAM PREMIUM LOCALITIES (Based on Market Research)
@@ -5616,7 +5925,7 @@ export const localities: Locality[] = [
         'Personal attention impossible at mass centers',
       ],
       marketGap:
-        "Nirvana Country is one of Gurugram's most premium gated communities with 500+ villas. No quality NEET coaching within the township. Parents pay premium for convenience - we provide it.",
+        "Nirvana Country is one of Gurugram's most premium gated communities with 500+ villas, yet there's no quality NEET coaching within the township. You pay a premium for convenience - we deliver coaching the same way.",
     },
 
     content: {
@@ -5628,7 +5937,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Special batch for Nirvana Country residents starting soon - Limited to 15 students!',
       localChallenge:
-        'Nirvana Country parents are frustrated spending 1-2 hours daily driving kids to Sector 14 for coaching. Traffic, safety concerns, and time waste affect preparation. Our online + hybrid model solves this completely.',
+        'Spending 1-2 hours daily driving your child to Sector 14 for coaching - traffic, safety worries, lost study time? Our online + hybrid model solves this completely.',
       successMetric: '92% of Nirvana Country students scored 340+ in Biology',
     },
 
@@ -5666,13 +5975,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        'Nirvana Country is an exclusive gated community near Sector 50 with premium villas and apartments. The affluent families here demand the best educational opportunities, driving very high NEET coaching interest.',
+        'Nirvana Country is an exclusive gated community near Sector 50 with premium villas and apartments. If you expect the best educational opportunities for your child, our specialist Biology coaching is built to that standard.',
       competitionAnalysis:
-        'As a gated community, Nirvana Country has no internal coaching centers. Residents rely entirely on external options, making online coaching an ideal solution for this captive market.',
+        'There are no coaching centers inside the Nirvana Country gates, so every option means going out - unless you bring the teaching in. Our live online classes do exactly that.',
       parentConcerns:
-        'Parents in Nirvana Country expect coaching services that match the exclusivity of their lifestyle. They value discreet, high-quality coaching with direct access to expert faculty.',
+        "Want coaching that matches the exclusivity of your lifestyle - discreet, high-quality, with direct access to expert faculty? That's precisely how we serve Nirvana Country families.",
       studyCultureTrend:
-        'The study culture is private and focused, with families investing in dedicated study environments at home. Students here thrive with personalized online coaching that respects their structured home routines.',
+        'If your home already has a dedicated study environment and structured routines, our personalized online coaching fits right in - private, focused, and on your schedule.',
     },
   },
   {
@@ -5760,7 +6069,7 @@ export const localities: Locality[] = [
         'Better student-teacher ratio for doubt clearing',
       ],
       marketGap:
-        'Allen is in Sector 49 but charges ₹1.8-2.5L with overcrowded batches. Parents want quality + affordability. We provide specialized Biology coaching at 65% lower cost with better attention.',
+        'Allen is in Sector 49 but charges ₹1.8-2.5L with overcrowded batches. If you want quality plus affordability, our specialized Biology coaching costs 65% less with far better attention.',
     },
 
     content: {
@@ -5771,7 +6080,7 @@ export const localities: Locality[] = [
         'Why pay ₹2L+ at Allen Sector 49 when you can get better Biology coaching at ₹48-98K? AIIMS trained faculty, small batches, personalized attention. 145+ Sector 49 students already trust us.',
       urgencyMessage: 'Sector 49 batch filling fast - Only 8 seats left!',
       localChallenge:
-        'Sector 49 parents know Allen is nearby but fees are ₹1.8-2.5L with 50-100 students per batch. Individual attention is impossible. We solve this with specialized Biology coaching, small batches, and affordable pricing.',
+        'Allen is nearby, but at ₹1.8-2.5L with 50-100 students per batch, individual attention is impossible. We solve this with specialized Biology coaching, small batches, and affordable pricing.',
       successMetric: '88% of Sector 49 students scored 335+ in Biology vs 72% at Allen',
     },
 
@@ -5810,13 +6119,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Sector 49 near South City is a residential area with upper-middle-class families who prioritize quality education. NEET demand is high as families seek medical careers for their children.',
+        'Sector 49 near South City is home to upper-middle-class families who prioritize quality education. If a medical career is the goal in your house, we make the Biology part simple.',
       competitionAnalysis:
-        'Sector 49 has limited coaching options, with students accessing centers in South City or Sector 14. Specialized Biology coaching online effectively serves this underserved but motivated student base.',
+        'Coaching options within Sector 49 are limited, so students usually head to South City or Sector 14. Our specialized online Biology classes save you that trip.',
       parentConcerns:
-        "Parents want coaching that is convenient and does not disrupt their children's daily school routine. They prefer evening or weekend coaching that allows balanced preparation.",
+        "Want coaching that doesn't disrupt the school routine? Our evening and weekend batches keep your child's preparation balanced.",
       studyCultureTrend:
-        'The study culture is community-driven with families sharing resources and recommendations. Students here are motivated and benefit from coaching that provides clear structure and regular assessments.',
+        'In Sector 49, families share resources and recommendations freely. Ask about us - then experience the clear structure and regular assessments our students value.',
     },
   },
   {
@@ -5908,7 +6217,7 @@ export const localities: Locality[] = [
         'AIIMS trained expert faculty',
       ],
       marketGap:
-        'Sohna Road has premium ₹5-15Cr apartments (Central Park, Vatika) but no quality NEET coaching. Residents travel 30-45 mins to coaching centers. Online + hybrid model is perfect for these premium families.',
+        'Sohna Road has premium ₹5-15Cr apartments (Central Park, Vatika) but no quality NEET coaching - residents travel 30-45 minutes for classes. Our online + hybrid model is the perfect fit for you.',
     },
 
     content: {
@@ -5920,7 +6229,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Exclusive Sohna Road batch starting - Premium small group of 12 students only!',
       localChallenge:
-        'Central Park and Vatika City families pay ₹5-15Cr for homes but struggle to find quality NEET coaching nearby. Daily travel to Sector 14 or South City wastes 1.5+ hours. We bring premium coaching to your Sohna Road home.',
+        'Living in Central Park or Vatika City but struggling to find quality NEET coaching nearby? Daily travel to Sector 14 or South City wastes 1.5+ hours. We bring premium coaching to your Sohna Road home.',
       successMetric: '90% of Sohna Road students scored 340+ in Biology',
     },
 
@@ -5958,13 +6267,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Sohna Road is Gurugram's rapidly developing residential corridor with multiple premium apartment complexes. The growing population of young professional families generates increasing NEET coaching demand.",
+        "Sohna Road is Gurugram's fast-developing residential corridor, full of premium apartment complexes and young professional families. If yours is one of them, expert NEET Biology coaching can reach you at home.",
       competitionAnalysis:
-        'Sohna Road has limited coaching infrastructure despite its massive residential development. Students travel to Sector 14 or Golf Course Road areas for coaching, making online options highly appealing.',
+        'Despite the massive residential growth, Sohna Road still has limited coaching infrastructure - the usual answer is a trip to Sector 14 or Golf Course Road. Our online classes are the better answer.',
       parentConcerns:
-        'Parents on Sohna Road are concerned about the developing infrastructure and prefer established coaching brands. They want reliability and consistency in coaching services for their children.',
+        "Prefer an established coaching brand while the area's infrastructure catches up? Our proven track record gives you the reliability and consistency you're looking for.",
       studyCultureTrend:
-        'The study culture along Sohna Road is growing with the residential population. Community-organized educational events and study groups are becoming common in major residential societies.',
+        "Educational events and study groups are becoming common across Sohna Road's big societies. Add our structured Biology classes and your child gets the complete ecosystem.",
     },
   },
   {
@@ -6045,7 +6354,7 @@ export const localities: Locality[] = [
         'Better individual attention',
       ],
       marketGap:
-        'Sector 84 and new Gurugram areas have Allen but fees are ₹1.8-2.5L. Young families moving to these affordable sectors want quality coaching at reasonable prices. We fill this gap.',
+        'Allen serves Sector 84 and New Gurugram, but fees run ₹1.8-2.5L. If you moved here for sensible costs, our quality coaching at reasonable prices is the match.',
     },
 
     content: {
@@ -6056,7 +6365,7 @@ export const localities: Locality[] = [
         'Allen is in M3M 84 Market charging ₹2L+. Get superior Biology coaching at ₹48-98K with small batches, AIIMS trained faculty, and personalized attention. 55+ Sector 84 students already chose us.',
       urgencyMessage: 'New Gurugram batch starting - Early bird discount for Sector 84 residents!',
       localChallenge:
-        'Families moved to affordable Sector 84 expecting lower costs everywhere. Allen charges Delhi prices (₹2L+) for 50-100 student batches. We offer premium coaching at prices that match new Gurugram affordability.',
+        'Moved to affordable Sector 84 only to find Allen charging Delhi prices (₹2L+) for 50-100 student batches? We offer premium coaching at prices that match New Gurugram affordability.',
       successMetric: '85% of Sector 84 students scored 330+ in Biology',
     },
 
@@ -6065,7 +6374,7 @@ export const localities: Locality[] = [
       topScore: 348,
       testimonialIds: ['sec84-001', 'sec84-002'],
       successStories: [
-        'Vikram from M3M Merlin compared us with Allen in same market - chose us. Scored 345/360.',
+        'Vikram from M3M Merlin compared us with Allen in the same M3M 84 Market complex - chose us. Scored 345/360.',
         'Family from Sector 82 saved ₹1.2L vs Allen. Daughter scored 342 in Biology.',
         '5 students from Dwarka Expressway sectors got medical college admissions in 2024.',
       ],
@@ -6094,13 +6403,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'growing',
       demandExplanation:
-        'Sector 84 is part of New Gurugram with relatively new residential developments attracting young families. NEET demand is growing as the first wave of students reaches competitive exam preparation age.',
+        "Sector 84 is part of New Gurugram, where young families in new residential developments are reaching NEET preparation age. If your child is among the first wave, we're ready for you now.",
       competitionAnalysis:
-        'Coaching infrastructure in Sector 84 is virtually nonexistent, with the nearest centers several kilometers away. Online coaching is the most practical solution for families in this developing area.',
+        'Coaching infrastructure in Sector 84 is virtually nonexistent - the nearest centers are kilometers away. Our online classes are the practical solution built for you.',
       parentConcerns:
-        'Parents worry about the lack of educational support infrastructure near their homes. They actively seek coaching solutions that eliminate the need for long daily commutes.',
+        'Worried about the lack of educational support near your new home? Our live online coaching removes the long daily commute entirely.',
       studyCultureTrend:
-        "The study culture is emerging in line with the community's development. Students here are receptive to online learning and benefit from structured coaching that establishes strong study habits.",
+        'In a community still finding its rhythm, strong study habits are your advantage. Our structured coaching helps you build them early - online, from home.',
     },
   },
   {
@@ -6117,7 +6426,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching in DLF Phase 2 Gurugram | Premium Bungalow Area',
       description:
-        'Best NEET Biology coaching for DLF Phase 2 Gurugram residents. Elite families, premium villa coaching. AIIMS trained faculties. Near DLF Qutub Plaza. Call 88264-44334',
+        'Best NEET Biology coaching for DLF Phase 2 Gurugram. Premium small-batch teaching by AIIMS-trained faculty. Near DLF Qutub Plaza. Call 88264-44334',
       keywords: [
         'neet coaching dlf phase 2',
         'biology coaching dlf phase 2 gurugram',
@@ -6179,11 +6488,11 @@ export const localities: Locality[] = [
         'No travel from DLF Phase 2 needed',
         '50% cheaper than Delhi-based coaching',
         'Biology specialization',
-        'Premium service for premium families',
+        'Premium service, delivered to your home',
         'Flexible timings for Shri Ram School students',
       ],
       marketGap:
-        'DLF Phase 2 has large bungalows and villas worth ₹5-20Cr. Families expect premium but convenient coaching. We provide elite-quality Biology coaching at home.',
+        'DLF Phase 2 has large bungalows and villas worth ₹5-20Cr, yet no premium convenient coaching. We bring elite-quality Biology coaching to your home.',
     },
 
     content: {
@@ -6191,10 +6500,10 @@ export const localities: Locality[] = [
       heroSubtitle:
         'Bungalow residents deserve premium education at home. AIIMS trained faculty, personalized attention.',
       valueProposition:
-        'DLF Phase 2 families value quality and convenience. AIIMS trained faculty, small exclusive batches, flexible timing around Shri Ram School schedule. Join 40+ DLF families already preparing with us.',
+        'You value quality and convenience - so we deliver AIIMS trained faculty, small exclusive batches, and flexible timing around the Shri Ram School schedule. Join 40+ DLF families already preparing with us.',
       urgencyMessage: 'Exclusive DLF Phase 2 batch - Only 10 seats!',
       localChallenge:
-        'DLF Phase 2 parents have resources but hate sending kids to crowded coaching in Sector 14 or Delhi. We bring personalized, elite coaching to your DLF home.',
+        'Have the resources but hate sending your child to crowded coaching in Sector 14 or Delhi? We bring personalized, elite coaching to your DLF home.',
       successMetric: '91% of DLF Phase 2 students scored 345+ in Biology',
     },
 
@@ -6232,13 +6541,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "DLF Phase 2 is a prestigious residential enclave with some of Gurugram's most expensive properties. The affluent families here set high educational standards and invest heavily in NEET preparation.",
+        "DLF Phase 2 is a prestigious enclave with some of Gurugram's most expensive properties. If you hold high educational standards and invest seriously in NEET preparation, our Biology program was made for you.",
       competitionAnalysis:
-        'DLF Phase 2 residents have access to premium tutors but lack organized coaching centers nearby. The market favors personalized, high-quality coaching delivered through convenient channels.',
+        'Phase 2 residents have premium tutors on call but no organized coaching centers nearby. We combine the personal touch with a structured curriculum - delivered conveniently online.',
       parentConcerns:
-        'Phase 2 parents demand the absolute best in teaching quality and are discerning about faculty credentials. They want coaching that matches the premium standards of their community.',
+        'Discerning about faculty credentials and want the absolute best in teaching quality? Review ours - AIIMS-trained, experienced, and accountable to the standards of your community.',
       studyCultureTrend:
-        'The study culture is aspirational and well-resourced, with families providing comprehensive support. Students are academically driven and excel when given focused, expert-led Biology coaching.',
+        'Academically driven with every resource behind you? Focused, expert-led Biology coaching is what turns that support into top NEET scores.',
     },
   },
   {
@@ -6312,7 +6621,7 @@ export const localities: Locality[] = [
         'Small batches, personal attention',
       ],
       marketGap:
-        'The Shri Ram School is in DLF Phase 3 but no quality NEET coaching nearby. Students waste time traveling. We bring coaching to their doorstep.',
+        "The Shri Ram School is in DLF Phase 3, but quality NEET coaching isn't - students waste time traveling. We bring coaching to your doorstep.",
     },
 
     content: {
@@ -6323,7 +6632,7 @@ export const localities: Locality[] = [
         'Shri Ram School students deserve specialized NEET preparation. AIIMS trained faculty, flexible timing around school, expert Biology coaching. 35+ Shri Ram students already preparing with us.',
       urgencyMessage: 'Special Shri Ram School batch forming - Limited seats!',
       localChallenge:
-        'Shri Ram School students have rigorous schedules. Traveling to Sector 14 for coaching wastes precious time. We provide premium coaching that fits around their schedule.',
+        'Managing a rigorous Shri Ram School schedule? Traveling to Sector 14 for coaching wastes precious time - our premium coaching fits around your day instead.',
       successMetric: '93% of Shri Ram students scored 350+ in Biology with us',
     },
 
@@ -6361,13 +6670,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        'DLF Phase 3 is a premium residential area with families from top corporate and business backgrounds. NEET demand is very high as medical education is viewed as a prestigious and stable career path.',
+        "DLF Phase 3 is a premium residential area of top corporate and business families where medicine is a prestigious, stable career choice. If it's yours too, we'll build the Biology scores to back it.",
       competitionAnalysis:
-        'Phase 3 has limited coaching centers within its boundaries, with most students accessing external coaching. Online coaching with expert Biology faculty serves this premium market effectively.',
+        "Coaching centers within Phase 3 are limited, so most students go outside for classes. Our online program with expert Biology faculty means you don't have to.",
       parentConcerns:
-        "Parents expect a premium experience with detailed progress tracking and personalized learning plans. They want coaching that is efficient and does not waste their children's limited preparation time.",
+        "Expect a premium experience - detailed progress tracking, a personalized learning plan, and zero wasted preparation time? That's exactly how our program runs.",
       studyCultureTrend:
-        'The study culture in Phase 3 is focused and ambitious, with families supporting academic goals with every resource available. Students here are high performers who need expert coaching to maintain their competitive edge.',
+        "If you're already a high performer with every resource behind you, expert coaching is what keeps your competitive edge sharp. That's our job.",
     },
   },
   {
@@ -6447,12 +6756,12 @@ export const localities: Locality[] = [
         'Only premium Biology coaching for Golf Course Road',
         'Ultra-small batches (max 8 for premium)',
         'AIIMS trained faculty',
-        'Flexible timing for elite families',
+        'Flexible timings that fit your family schedule',
         'Private online sessions available',
         'No travel from Magnolias/Camellias needed',
       ],
       marketGap:
-        "DLF Phase 5 has India's most expensive apartments (₹50-100Cr). These families demand premium but convenient education. No quality NEET coaching exists nearby. We fill this ultra-premium gap.",
+        "DLF Phase 5 has India's most expensive apartments (₹50-100Cr) yet no quality NEET coaching nearby. If you want premium and convenient education, we deliver both.",
     },
 
     content: {
@@ -6464,7 +6773,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Exclusive Golf Course Road batch - Only 8 seats for ultra-premium experience!',
       localChallenge:
-        'Magnolias, Camellias, Aralias residents are frustrated with mass coaching options. Their children deserve personalized, elite attention. Private tutors charge ₹2000+/hr without NEET expertise. We provide the perfect solution.',
+        'Living in Magnolias, Camellias, or Aralias and frustrated with mass coaching options? Private tutors charge ₹2000+/hr without NEET expertise. Your child deserves personalized, elite attention - we provide it.',
       successMetric: '95% of DLF Phase 5 students scored 350+ in Biology',
     },
 
@@ -6491,7 +6800,7 @@ export const localities: Locality[] = [
       {
         question: 'Do you offer private sessions for Magnolias/Camellias residents?',
         answer:
-          'Yes! We offer private 1-on-1 online sessions for ultra-premium families who prefer exclusive attention. Also ultra-small group batches of max 8 students. Perfect for DLF Phase 5 elite families.',
+          'Yes! We offer private 1-on-1 online sessions if you prefer exclusive attention. Also ultra-small group batches of max 8 students. Perfect for DLF Phase 5 residents.',
       },
       {
         question: 'How is this better than hiring expensive private tutors?',
@@ -6508,13 +6817,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "DLF Phase 5 along Golf Course Road is among Gurugram's most upscale addresses, housing senior corporate leaders and affluent families. The demand for NEET coaching is very high, driven by premium expectations for children's education.",
+        "DLF Phase 5 on Golf Course Road is among Gurugram's most upscale addresses, home to senior corporate leaders. If you hold premium expectations for your child's education, our Biology program is built to meet them.",
       competitionAnalysis:
-        'Phase 5 has virtually no coaching centers within its residential area. Students access coaching through premium tutors or online platforms, with the latter gaining strong preference for convenience.',
+        "Phase 5 has virtually no coaching centers within the residential area - it's premium tutors or online platforms. Our live online classes give you expert faculty plus convenience.",
       parentConcerns:
-        'Phase 5 parents expect world-class coaching with faculty who can engage and challenge their academically strong children. They want coaching that develops deep understanding, not just exam tricks.',
+        "Want faculty who can genuinely engage and challenge an academically strong child - building deep understanding, not just exam tricks? That's the teaching we deliver.",
       studyCultureTrend:
-        'The study culture is rigorous and globally influenced, with students often comparing themselves to peers in international programs. Expert online coaching that meets global standards resonates well.',
+        "If you benchmark against peers in international programs, you'll appreciate coaching that meets global standards. Ours does - rigorously and online.",
     },
   },
 
@@ -6598,7 +6907,7 @@ export const localities: Locality[] = [
         'AIIMS trained faculties with personalized attention',
       ],
       marketGap:
-        "MG Road is Gurugram's prime corridor with premium societies like Beverly Park and Essel Towers. No quality NEET coaching on MG Road itself.",
+        "MG Road is Gurugram's prime corridor with premium societies like Beverly Park and Essel Towers, yet has no quality NEET coaching of its own. We fill that need for you online.",
     },
     content: {
       heroTitle: 'Premium NEET Biology Coaching for MG Road Gurugram Residents',
@@ -6608,7 +6917,7 @@ export const localities: Locality[] = [
         'MG Road families work in Cyber City and value time. AIIMS trained faculty, flexible online/hybrid classes. Join 45+ MG Road students already preparing with us.',
       urgencyMessage: 'Special MG Road batch starting soon - Limited to 15 students!',
       localChallenge:
-        'MG Road residents are busy professionals who cannot afford 1-2 hours daily for coaching commute. Our online + hybrid model is perfect.',
+        'Busy professional household with no time for a 1-2 hour daily coaching commute? Our online + hybrid model is perfect for you.',
       successMetric: '91% of MG Road students scored 340+ in Biology',
     },
     socialProof: {
@@ -6638,13 +6947,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "MG Road is Gurugram's primary commercial corridor with premium residential areas on both sides. The well-connected metro line draws students from across Gurugram, creating strong NEET coaching demand.",
+        "MG Road is Gurugram's primary commercial corridor with premium residential areas on both sides and metro connectivity that draws students from across the city. Prepare for NEET right here - or better, from home.",
       competitionAnalysis:
-        'MG Road has several coaching centers in its commercial complexes, but most focus on IIT-JEE and management exams. NEET Biology coaching remains a gap in this otherwise well-served coaching market.',
+        "MG Road's commercial complexes host several coaching centers, but most focus on IIT-JEE and management exams. For NEET Biology, we're the specialist you've been missing.",
       parentConcerns:
-        'Parents near MG Road want coaching that is accessible via metro and safe for their children to attend independently. They value location convenience alongside teaching quality.',
+        'Want coaching your child can attend safely and independently? Ours needs no travel at all - live online classes from home beat even the best metro access.',
       studyCultureTrend:
-        'The study culture along MG Road is influenced by its urban, connected environment. Students are exposed to multiple academic influences and prefer focused coaching that cuts through the noise.',
+        'Surrounded by academic options and noise? Our focused Biology coaching cuts through it - one subject, taught brilliantly.',
     },
   },
   // Sector 54 - Ultra Premium (₹24,100/sq ft) - Aravali Views
@@ -6722,7 +7031,7 @@ export const localities: Locality[] = [
         'Property price ₹24,100/sq ft - residents expect premium service',
       ],
       marketGap:
-        "Sector 54 has property rates of ₹24,100/sq ft - one of Gurugram's most expensive. No NEET coaching exists in the sector.",
+        "Sector 54 has property rates of ₹24,100/sq ft - one of Gurugram's most expensive - yet no NEET coaching in the sector. We bring it to you online.",
     },
     content: {
       heroTitle: 'Elite NEET Biology Coaching for Sector 54 Gurugram Residents',
@@ -6733,7 +7042,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Exclusive Sector 54 batch - Limited to 12 students for personalized attention!',
       localChallenge:
-        'Sector 54 residents enjoy peaceful Aravali-adjacent living but lack nearby coaching options. We bring coaching to you.',
+        'Enjoying peaceful Aravali-adjacent living but missing nearby coaching options? We bring coaching to you.',
       successMetric: '93% of Sector 54 students scored 345+ in Biology',
     },
     socialProof: {
@@ -6757,13 +7066,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "Sector 54 on Golf Course Road is one of Gurugram's most premium residential sectors with luxury apartments. The affluent demographics create very high demand for specialized NEET coaching.",
+        "Sector 54 on Golf Course Road is one of Gurugram's most premium residential sectors. If you expect specialized, high-quality NEET coaching to match, that's exactly what we bring to your home.",
       competitionAnalysis:
-        'Like other Golf Course Road sectors, coaching infrastructure within Sector 54 is minimal. Premium online coaching effectively serves families who want quality without compromising on convenience.',
+        'Like the rest of Golf Course Road, Sector 54 has minimal coaching infrastructure. Our premium online classes give you quality without compromising convenience.',
       parentConcerns:
-        "Sector 54 parents are highly selective and research coaching providers thoroughly. They want transparent results, experienced faculty, and a coaching approach that respects their children's individuality.",
+        "Highly selective and researching providers thoroughly? Good - you'll find transparent results, experienced faculty, and teaching that respects your child's individuality.",
       studyCultureTrend:
-        'The study culture is focused and supported by excellent home study environments. Students here thrive with coaching that provides intellectual stimulation alongside systematic exam preparation.',
+        "With an excellent home study environment already in place, you're set for coaching that adds intellectual stimulation and systematic exam preparation. That's ours.",
     },
   },
   // Sector 58 - Ultra Premium (₹24,250/sq ft) - Ireo Grand Arch
@@ -6840,7 +7149,7 @@ export const localities: Locality[] = [
         '16.6% YoY growth sector',
       ],
       marketGap:
-        "Sector 58 has Gurugram's highest property appreciation (16.6% YoY) at ₹24,250/sq ft. Ireo Grand Arch is iconic. These affluent families lack nearby coaching.",
+        "Sector 58 has Gurugram's highest property appreciation (16.6% YoY) at ₹24,250/sq ft, with the iconic Ireo Grand Arch - but no coaching nearby. We close that distance online.",
     },
     content: {
       heroTitle: 'Elite NEET Biology Coaching for Sector 58 Ireo Grand Arch Residents',
@@ -6850,7 +7159,7 @@ export const localities: Locality[] = [
         "Sector 58 is Gurugram's fastest appreciating sector. Your premium address deserves premium education. AIIMS trained faculty, online from Ireo Grand Arch.",
       urgencyMessage: 'Exclusive Sector 58 batch - Only 12 seats for premium experience!',
       localChallenge:
-        'Ireo Grand Arch families enjoy landmark living but travel 45+ mins for quality coaching. Our online model solves this.',
+        'Enjoying landmark living at Ireo Grand Arch but traveling 45+ minutes for quality coaching? Our online model solves this.',
       successMetric: '98% of Sector 58 students scored 345+ in Biology',
     },
     socialProof: {
@@ -6874,13 +7183,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Sector 58 on Golf Course Extension Road has seen rapid residential development with premium apartments. The growing population of professional families drives strong NEET coaching demand.',
+        'Sector 58 on Golf Course Extension Road has grown fast, with premium apartments and professional families. If NEET is in your plans, expert Biology coaching is available without leaving the sector.',
       competitionAnalysis:
-        'Sector 58 is relatively new and lacks established coaching infrastructure. The growing population presents an opportunity for quality online coaching to establish early presence.',
+        "Sector 58 is new enough that established coaching hasn't arrived yet. You don't need to wait - our proven online program is already here for you.",
       parentConcerns:
-        "Parents want reliable coaching options as the area's infrastructure develops. They prefer established online coaching with proven results over untested local startups.",
+        "Want reliability while the area's infrastructure develops - an established program with proven results, not an untested local startup? That's us.",
       studyCultureTrend:
-        'The study culture is forming alongside the community, with families actively building educational networks. Online coaching is the natural choice for this tech-forward, premium demographic.',
+        'As your community builds its educational networks, our online classes are the natural choice for a tech-forward home like yours.',
     },
   },
   // Sector 53 - Vipul Aarohan, Golf Course Road Elite
@@ -6955,7 +7264,7 @@ export const localities: Locality[] = [
         'English medium focus preferred by elite',
       ],
       marketGap:
-        "Sector 53's Vipul Aarohan is preferred by expats and corporate professionals. These families value quality education but cannot spare commute time.",
+        "Vipul Aarohan in Sector 53 is preferred by expats and corporate professionals who value quality education but can't spare commute time. Our online classes solve exactly that for you.",
     },
     content: {
       heroTitle: 'Elite NEET Biology Coaching for Sector 53 Golf Course Road Residents',
@@ -6964,7 +7273,7 @@ export const localities: Locality[] = [
         'Sector 53 houses corporate leaders and expats. Your professional lifestyle needs flexible, quality education. AIIMS trained faculty, small batches, online from home.',
       urgencyMessage: 'Exclusive Sector 53 batch - Limited to 12 students!',
       localChallenge:
-        'Vipul Aarohan families work in Cyber City. Long work hours + coaching commute is unsustainable. Online coaching integrates with your professional lifestyle.',
+        'Working Cyber City hours in Vipul Aarohan? Long workdays plus a coaching commute is unsustainable - our online coaching integrates with your professional lifestyle.',
       successMetric: '92% of Sector 53 students scored 342+ in Biology',
     },
     socialProof: {
@@ -6988,13 +7297,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "Sector 53 on Golf Course Road houses some of Gurugram's most expensive residences, with families who expect nothing but the best in education. NEET demand is very high as families pursue medical careers as a mark of prestige.",
+        "Sector 53 on Golf Course Road holds some of Gurugram's most expensive residences. If you expect nothing but the best in education, our NEET Biology program is designed for exactly that standard.",
       competitionAnalysis:
-        'Premium tutors serve this market individually, but organized coaching with structured curriculum is rare. Online coaching fills this gap with expert faculty and systematic preparation plans.',
+        'Premium tutors serve this area one household at a time, but organized coaching with a structured curriculum is rare. We give you expert faculty and a systematic preparation plan - online.',
       parentConcerns:
-        'Sector 53 parents want coaching that is both exclusive and effective. They are concerned about cookie-cutter approaches and want customized preparation strategies for their children.',
+        'Wary of cookie-cutter approaches? So are we. Your child gets a customized preparation strategy - exclusive and effective.',
       studyCultureTrend:
-        'The study culture is private and highly focused, with families investing in the best resources. Students here benefit from one-on-one style coaching delivered through interactive online platforms.',
+        'Prefer private, highly focused study? Our interactive online platform delivers one-on-one style coaching without anyone leaving home.',
     },
   },
   // Ambience Island (Sector 24) - Ultra-Premium Township
@@ -7065,7 +7374,7 @@ export const localities: Locality[] = [
         'Online from island without leaving gated community',
       ],
       marketGap:
-        'Ambience Island (Creacions) is an 18-acre exclusive township. Residents specifically chose island living for isolation from city. They want quality education without leaving.',
+        'Ambience Island (Creacions) is an 18-acre exclusive township - you chose island living precisely to stay away from the city. With us, quality education comes to you instead.',
     },
     content: {
       heroTitle: 'Ultra-Premium NEET Biology Coaching for Ambience Island Elite',
@@ -7076,7 +7385,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Exclusive Ambience Island batch - Only 10 seats for ultra-premium experience!',
       localChallenge:
-        'Ambience Creacions families deliberately chose isolated township living. Sending kids outside defeats this purpose. Our online coaching preserves your island lifestyle.',
+        'You deliberately chose secluded township living at Ambience Creacions - sending your child across the city defeats that purpose. Our online coaching preserves your island lifestyle.',
       successMetric: '95% of Ambience Island students scored 348+ in Biology',
     },
     socialProof: {
@@ -7100,13 +7409,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        'Ambience Island near Sector 24 is a premium mixed-use development with luxury residences adjacent to Ambience Mall. The affluent families here drive very high demand for quality NEET coaching.',
+        'Ambience Island near Sector 24 is a premium mixed-use development with luxury residences right next to Ambience Mall. If you expect quality NEET coaching to match that address, we deliver it to your home.',
       competitionAnalysis:
-        'Ambience Island has no coaching centers within its premises. Residents access coaching from Sector 14 or online, with the latter being increasingly preferred for convenience.',
+        'There are no coaching centers within Ambience Island itself - the choice is Sector 14 or online. Our live online classes make that an easy decision.',
       parentConcerns:
-        'Parents want coaching that matches the premium lifestyle standards of Ambience Island. They expect professional service, expert faculty, and seamless scheduling.',
+        "Expect professional service, expert faculty, and seamless scheduling - the standard you're used to at Ambience Island? That's how we operate.",
       studyCultureTrend:
-        'The study culture is structured and well-supported, with families providing excellent study environments. Students here are comfortable with technology and embrace online coaching platforms.',
+        'With an excellent study environment at home and technology at your fingertips, our online platform fits your routine from day one.',
     },
   },
   // Sector 45 - DPS Gurgaon Hub
@@ -7171,13 +7480,13 @@ export const localities: Locality[] = [
       majorInstitutes: ['Allen Sector 14 (4 km)', 'Aakash (not nearby)', 'Various local tuitions'],
       avgFees: 160000,
       ourAdvantage: [
-        'Proximity to DPS Gurgaon - largest feeder school',
+        'Minutes from DPS Gurgaon',
         'After-school timing perfect for DPS students',
         'AIIMS trained faculty',
         'CBSE curriculum aligned',
       ],
       marketGap:
-        'DPS Gurgaon in Sector 45 is one of the largest schools producing NEET aspirants. Students currently travel to Sector 14 for coaching.',
+        "DPS Gurgaon in Sector 45 is one of the largest schools producing NEET aspirants - yet students still travel to Sector 14 for coaching. You don't have to.",
     },
     content: {
       heroTitle: 'Best NEET Biology Coaching for DPS Gurgaon & Sector 45 Students',
@@ -7186,7 +7495,7 @@ export const localities: Locality[] = [
         "DPS Gurgaon is Gurugram's premier school producing 200+ NEET aspirants yearly. Our coaching is designed for DPS schedule. Join 85+ DPS students!",
       urgencyMessage: 'Special DPS Gurgaon batch starting - Aligned with school schedule!',
       localChallenge:
-        'DPS Gurgaon students spend 6+ hours in school, then 1+ hour commuting to Sector 14 coaching. Our local/online format preserves energy.',
+        'Spending 6+ hours at DPS Gurgaon and then an hour commuting to Sector 14 coaching? Our local/online format preserves your energy for actual study.',
       successMetric: '88% of DPS Gurgaon students scored 340+ in Biology with us',
     },
     socialProof: {
@@ -7210,13 +7519,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Sector 45 is a well-established residential sector with upper-middle-class families who prioritize academic achievement. NEET coaching demand is consistently high as medical careers remain aspirational.',
+        "Sector 45 is a well-established sector where academic achievement is a family priority and medical careers remain the big aspiration. If that's your home, we make the Biology part world-class.",
       competitionAnalysis:
-        'Sector 45 has moderate coaching infrastructure with some centers nearby. The market is competitive but lacks specialized Biology coaching that focuses on NEET-specific preparation.',
+        'Some coaching centers operate near Sector 45, but specialized NEET Biology preparation is missing. That specialization is our entire focus - available to you online.',
       parentConcerns:
-        'Parents in Sector 45 want balanced coaching that covers Biology comprehensively without overloading their children. They prefer coaching with flexible scheduling and regular assessments.',
+        'Want Biology covered comprehensively without overloading your child? Our flexible scheduling and regular assessments keep preparation thorough but balanced.',
       studyCultureTrend:
-        'The study culture is steady and community-supported, with families actively involved in educational decisions. Students benefit from structured coaching that builds confidence through consistent practice.',
+        "If your family is actively involved in educational decisions, you'll appreciate our approach: structured coaching that builds confidence through consistent practice.",
     },
   },
   // TIER 2: PREMIUM SECTORS - Sector 48 (Central Park)
@@ -7280,7 +7589,7 @@ export const localities: Locality[] = [
         'AIIMS trained faculty',
       ],
       marketGap:
-        "Sector 48's Central Park communities offer resort-style living. Residents don't want to compromise this lifestyle with long coaching commutes.",
+        "Sector 48's Central Park communities offer resort-style living - don't trade it for long coaching commutes. Our online classes keep both.",
     },
     content: {
       heroTitle: 'Best NEET Biology Coaching for Sector 48 Central Park Residents',
@@ -7290,7 +7599,7 @@ export const localities: Locality[] = [
         'Central Park residents chose resort-style living. Your children deserve quality education without disturbing this lifestyle.',
       urgencyMessage: 'Sector 48 batch starting - Limited to 15 students!',
       localChallenge:
-        'Sector 48 is 8+ km from Sector 14 coaching hub. Daily 1.5 hour commute defeats resort living purpose. Online coaching preserves your lifestyle.',
+        'Sector 48 is 8+ km from the Sector 14 coaching hub - a daily 1.5 hour commute that defeats the point of resort living. Online coaching preserves your lifestyle.',
       successMetric: '89% of Sector 48 students scored 338+ in Biology',
     },
     socialProof: {
@@ -7307,20 +7616,20 @@ export const localities: Locality[] = [
       {
         question: 'Is online coaching suitable for Central Park residents?',
         answer:
-          'Perfect fit! Central Park families value their resort-style living. Our online coaching lets kids study from their beautiful apartments without the stress of commute.',
+          'Perfect fit! You chose Central Park for its resort-style living. Our online coaching lets your kids study from their beautiful apartments without the stress of commute.',
       },
     ],
 
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Sector 48 near Sohna Road is a residential area with a growing population of families seeking quality NEET preparation. The area's upper-middle-class demographics drive consistent coaching demand.",
+        'Sector 48 near Sohna Road is a growing residential area where quality NEET preparation is in real demand. If you live here, expert Biology coaching no longer requires a commute.',
       competitionAnalysis:
-        'Coaching options near Sector 48 are limited, with students traveling to Sector 14 or accessing online platforms. The underserved market creates opportunity for quality Biology coaching.',
+        "Coaching options near Sector 48 are limited - it's Sector 14 or online. Few biology-specialist options exist nearby; our small-batch online classes fill that need for you.",
       parentConcerns:
-        'Parents want coaching that is locally accessible or available online without compromising quality. They value coaching that provides structured preparation with clear milestones.',
+        'Want locally accessible or online coaching without a quality compromise? Our structured program with clear milestones gives you both.',
       studyCultureTrend:
-        'The study culture in Sector 48 is growing with the residential community. Students here are hardworking and respond well to coaching that provides consistent structure and expert guidance.',
+        "Hardworking and looking for consistent structure? You'll fit right in with our Sector 48 students - expert guidance, steady rhythm, real results.",
     },
   },
   // Sector 62 - Heritage Xperiential School Area
@@ -7385,13 +7694,13 @@ export const localities: Locality[] = [
       majorInstitutes: ['Allen Sector 14 (7 km)', 'Aakash (not nearby)'],
       avgFees: 180000,
       ourAdvantage: [
-        'Heritage School students feeder - IB/IGCSE compatible',
+        'IB/IGCSE compatible for Heritage School students',
         'Emaar Urban Oasis premium residents',
         'IB/IGCSE to NEET transition support',
         'AIIMS trained faculty',
       ],
       marketGap:
-        'Heritage Xperiential School produces NEET aspirants from IB/IGCSE backgrounds. These students need specialized coaching for NEET transition.',
+        "Heritage Xperiential School produces NEET aspirants from IB/IGCSE backgrounds. If that's you, you need specialized coaching for the NEET transition - and that's what we provide.",
     },
     content: {
       heroTitle: 'Best NEET Biology Coaching for Heritage School & Sector 62 Students',
@@ -7401,7 +7710,7 @@ export const localities: Locality[] = [
         'Heritage School students learn through experiential methods. Our coaching complements this - application-based NEET prep, not rote learning.',
       urgencyMessage: 'Special Heritage School batch - IB/IGCSE to NEET bridge program!',
       localChallenge:
-        'Heritage School students with IB/IGCSE background struggle with traditional coaching. Our approach bridges progressive education with NEET requirements.',
+        "Coming from Heritage School's IB/IGCSE background and finding traditional coaching a poor fit? Our approach bridges progressive education with NEET requirements.",
       successMetric: '90% of Heritage School students scored 340+ in Biology',
     },
     socialProof: {
@@ -7425,13 +7734,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        'Sector 62 on Golf Course Extension Road features premium residential developments with affluent families. The demand for quality NEET coaching is very high as families invest heavily in education.',
+        "Sector 62 on Golf Course Extension Road features premium residential developments where education is a serious investment. If you're investing in NEET preparation, invest where it counts most: Biology.",
       competitionAnalysis:
-        'This relatively new sector has minimal coaching infrastructure. Online coaching providers have a clear first-mover advantage in serving this premium, underserved market.',
+        'This relatively new sector has minimal coaching infrastructure, and few quality options nearby. Our online Biology classes bring you proven teaching without waiting for centers to open.',
       parentConcerns:
-        'Parents expect top-tier coaching with expert faculty and personalized attention. They are willing to invest in quality and want coaching that delivers measurable improvement.',
+        "Expect top-tier coaching with expert faculty, personalized attention, and measurable improvement? That's exactly the return we deliver on your investment.",
       studyCultureTrend:
-        'The study culture is focused and family-driven, with parents actively monitoring preparation progress. Students here are ambitious and benefit from coaching that challenges them to excel.',
+        'Ambitious, with your family tracking every step? Perfect - our coaching challenges you to excel and shows the progress week by week.',
     },
   },
   // Sector 63 - DLF The Arbour (₹21,550/sq ft)
@@ -7490,12 +7799,12 @@ export const localities: Locality[] = [
       avgFees: 190000,
       ourAdvantage: [
         'Only NEET coaching for Sector 63',
-        'DLF Arbour 13.53 acres - premium families',
+        'DLF Arbour: 13.53-acre premium address',
         '₹21,550/sq ft - high-value residents',
         'AIIMS trained faculty',
       ],
       marketGap:
-        "Sector 63's DLF Arbour is a 13.53-acre premium development with 3/4 BHK luxury apartments. These families expect quality education without commute hassle.",
+        'DLF Arbour in Sector 63 is a 13.53-acre premium development with 3/4 BHK luxury apartments. If you expect quality education without commute hassle, we deliver it online.',
     },
     content: {
       heroTitle: 'Premium NEET Biology Coaching for Sector 63 DLF Arbour Residents',
@@ -7505,7 +7814,7 @@ export const localities: Locality[] = [
         'DLF Arbour is 13.53 acres of luxury living. Your children deserve education that matches this lifestyle.',
       urgencyMessage: 'Exclusive Sector 63 batch - Limited to 12 students!',
       localChallenge:
-        'Sector 63 residents invested in premium Golf Course Extension living. Sending kids to crowded Sector 14 coaching is contradictory.',
+        "You invested in premium Golf Course Extension living - sending your child to crowded Sector 14 coaching contradicts that. Our online classes don't.",
       successMetric: '91% of Sector 63 students scored 342+ in Biology',
     },
     socialProof: {
@@ -7522,20 +7831,20 @@ export const localities: Locality[] = [
       {
         question: 'Is online coaching effective for DLF Arbour families?',
         answer:
-          'Perfect fit! DLF Arbour families value their premium lifestyle. Our online coaching lets kids study from their spacious apartments without commute stress.',
+          'Perfect fit! You chose DLF Arbour for its premium lifestyle. Our online coaching lets your kids study from their spacious apartments without commute stress.',
       },
     ],
 
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        'Sector 63 on Golf Course Extension is home to premium residential projects attracting senior professionals. These families drive very high NEET coaching demand with expectations of excellence.',
+        'Sector 63 on Golf Course Extension is home to premium residential projects and senior professionals who expect excellence. In NEET Biology coaching, excellence is exactly what we hold ourselves to for you.',
       competitionAnalysis:
-        'Like neighboring sectors on the Extension Road, coaching infrastructure is developing but insufficient. Online coaching with proven results effectively serves this premium, demanding demographic.',
+        'Coaching infrastructure on the Extension Road is developing but still insufficient. Our online program with proven results gives you a dependable option today.',
       parentConcerns:
-        'Parents in Sector 63 want coaching that is efficient and results-oriented. They are concerned about wasting time on ineffective preparation and seek coaching with proven methodology.',
+        'Want efficient, results-oriented coaching - no time wasted on ineffective preparation? Our proven methodology is built for exactly that.',
       studyCultureTrend:
-        'The study culture is ambitious and structured, with families providing comprehensive support. Students here need expert coaching that helps them achieve competitive scores in Biology.',
+        'With comprehensive family support behind you, expert coaching is the multiplier. We help you convert that support into competitive Biology scores.',
     },
   },
   // Sector 41 - Shikshantar School Area
@@ -7582,13 +7891,13 @@ export const localities: Locality[] = [
       majorInstitutes: ['Allen Sector 14 (5 km)', 'Local tuitions'],
       avgFees: 155000,
       ourAdvantage: [
-        'Shikshantar School students feeder',
+        'Tailored for Shikshantar School students',
         'Progressive school - needs aligned coaching',
         'AIIMS trained faculty',
         'Experiential learning compatible',
       ],
       marketGap:
-        'Shikshantar School follows progressive education. Students need coaching that aligns with experiential learning.',
+        'Shikshantar School follows progressive education - if you studied there, you need coaching that aligns with experiential learning. Ours does.',
     },
     content: {
       heroTitle: 'Best NEET Biology Coaching for Shikshantar & Sector 41 Students',
@@ -7597,7 +7906,7 @@ export const localities: Locality[] = [
         'Shikshantar follows progressive, experiential education. Our NEET coaching aligns with this approach. Join 45+ Shikshantar students.',
       urgencyMessage: 'Special Shikshantar batch - Progressive learning approach!',
       localChallenge:
-        'Shikshantar students struggle with traditional rote-based coaching. Their progressive education background needs different approach.',
+        'Finding traditional rote-based coaching a mismatch for your Shikshantar background? Our teaching connects progressive learning to NEET success.',
       successMetric: '88% of Shikshantar students scored 338+ in Biology',
     },
     socialProof: {
@@ -7621,13 +7930,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Sector 41 in Central Gurugram is a well-connected residential area near the IFFCO Chowk metro station. The diverse professional population generates consistent NEET coaching demand.',
+        'Sector 41 in Central Gurugram sits near IFFCO Chowk metro with a diverse professional population. Preparing for NEET here? Make Biology your strength with focused coaching.',
       competitionAnalysis:
-        'Sector 41 benefits from good connectivity to coaching centers in nearby areas. However, specialized Biology coaching remains a gap, with most centers focusing on full-subject NEET packages.',
+        "Sector 41 is well connected to coaching centers nearby, but nearly all sell full-subject NEET packages. For specialized Biology coaching, we're the option built for you.",
       parentConcerns:
-        'Parents value metro-accessible coaching options and convenient scheduling. They want coaching that fits into busy family routines without excessive commute requirements.',
+        'Value convenient scheduling that fits a busy family routine? Our online classes need no commute at all - even better than metro access.',
       studyCultureTrend:
-        'The study culture in Sector 41 is practical and results-focused. Students here are efficient learners who benefit from coaching that maximizes learning outcomes per study hour.',
+        'Practical and results-focused, like most Sector 41 students? Our coaching is designed to maximize what you learn per hour of study.',
     },
   },
   // TIER 3: DWARKA EXPRESSWAY - Sector 102
@@ -7688,12 +7997,12 @@ export const localities: Locality[] = [
       avgFees: 160000,
       ourAdvantage: [
         'Only NEET coaching for Dwarka Expressway',
-        'Multiple premium projects - large catchment',
+        'Close to multiple premium projects',
         'Online perfect for emerging area',
         'AIIMS trained faculty',
       ],
       marketGap:
-        'Dwarka Expressway has 10,000+ new apartments in Sector 102 alone. No coaching infrastructure exists. Online coaching is the only quality option.',
+        'Sector 102 alone has 10,000+ new apartments and no coaching infrastructure. Our online classes are the quality option available to you right now.',
     },
     content: {
       heroTitle: 'Best NEET Biology Coaching for Sector 102 Dwarka Expressway',
@@ -7702,7 +8011,7 @@ export const localities: Locality[] = [
         "Sector 102 on Dwarka Expressway is new Gurugram's emerging hub. No coaching exists nearby. We bring AIIMS-quality preparation to your doorstep.",
       urgencyMessage: 'First batch for Dwarka Expressway starting - Be a pioneer!',
       localChallenge:
-        'Sector 102 residents face 15+ km commute to old Gurugram coaching centers. Online coaching is the solution.',
+        'Facing a 15+ km commute to old Gurugram coaching centers? Online coaching is the solution.',
       successMetric: 'New batch - Join the first cohort from Dwarka Expressway!',
     },
     socialProof: {
@@ -7726,13 +8035,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'growing',
       demandExplanation:
-        "Sector 102 on the Dwarka Expressway is part of Gurugram's newest development corridor. The influx of families into newly delivered apartments is creating rapidly growing NEET coaching demand.",
+        "Sector 102 on the Dwarka Expressway is part of Gurugram's newest corridor, with families moving into newly delivered apartments every month. If yours just arrived, your NEET preparation can start immediately - online.",
       competitionAnalysis:
-        'The Dwarka Expressway corridor is coaching-underserved as infrastructure lags behind residential delivery. Online coaching is essentially the only quality option for students here.',
+        'Along the Dwarka Expressway, coaching infrastructure lags far behind residential delivery. For quality NEET Biology teaching, our online classes are essentially your only real option - and a good one.',
       parentConcerns:
-        'Parents on the Dwarka Expressway are concerned about the lack of educational infrastructure in their developing corridor. They want established coaching brands to serve their growing community.',
+        "Concerned about the lack of educational infrastructure in this developing corridor? We're the established coaching brand already serving your community - online.",
       studyCultureTrend:
-        'The study culture is nascent but growing as the community takes shape. Early adoption of online coaching is high as families recognize it as the most practical solution.',
+        "As the community takes shape, families here are adopting online coaching early - it's simply the most practical solution. Join the neighbors already studying with us.",
     },
   },
   // Sector 106 - Elan Presidential
@@ -7792,12 +8101,12 @@ export const localities: Locality[] = [
       avgFees: 175000,
       ourAdvantage: [
         'Only NEET coaching for Sector 106',
-        'Elan Presidential - premium families',
+        'Right at home for Elan Presidential residents',
         'Online perfect for new area',
         'AIIMS trained faculty',
       ],
       marketGap:
-        'Sector 106 has Elan Presidential (3,4,5 BHK luxury). Premium families expect quality education. No coaching exists on Dwarka Expressway.',
+        'Sector 106 has Elan Presidential (3, 4, 5 BHK luxury) but no coaching on the Dwarka Expressway. If you expect quality education to match your home, we bring it to you.',
     },
     content: {
       heroTitle: 'Premium NEET Biology Coaching for Sector 106 Elan Presidential',
@@ -7806,7 +8115,7 @@ export const localities: Locality[] = [
         "Sector 106's Elan Presidential offers 3,4,5 BHK luxury. Your premium lifestyle deserves premium education.",
       urgencyMessage: 'Exclusive Sector 106 batch - Limited to 12 students!',
       localChallenge:
-        'Elan Presidential families invested in luxury on Dwarka Expressway. Sending kids 15+ km for coaching contradicts this.',
+        "You invested in luxury at Elan Presidential - sending your child 15+ km for coaching contradicts that. Our online classes don't.",
       successMetric: 'New premium batch forming - Join Dwarka Expressway pioneers!',
     },
     socialProof: {
@@ -7829,13 +8138,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Sector 106 on the Dwarka Expressway has premium residential developments with corporate families. As one of the more developed Expressway sectors, it generates strong NEET coaching demand.',
+        'Sector 106 is one of the more developed Dwarka Expressway sectors, with premium residences and corporate families. If NEET is the goal in your home, strong Biology coaching is now within reach.',
       competitionAnalysis:
-        'A few coaching centers have started operating in the Dwarka Expressway corridor, but quality and specialization are limited. NEET Biology coaching remains a clear gap.',
+        'A few coaching centers have appeared along the Expressway, but quality and specialization are limited - NEET Biology remains the clear missing piece. We provide it to you online.',
       parentConcerns:
-        'Parents want coaching that provides stability and consistency as their neighborhood develops. They prefer established coaching providers with track records over new, unproven centers.',
+        "Want stability and consistency while your neighborhood develops - a provider with a track record, not an unproven new center? That's exactly what we offer.",
       studyCultureTrend:
-        'The study culture is developing with a young, ambitious community. Students here are comfortable with technology and embrace online coaching as a natural part of their preparation.',
+        'Young, ambitious, and comfortable with technology? Then online coaching will feel like a natural part of your preparation - as it already does for our students here.',
     },
   },
   // Sector 109 - Sobha International City
@@ -7900,7 +8209,7 @@ export const localities: Locality[] = [
         'Private online sessions available',
       ],
       marketGap:
-        'Sobha International City has luxury row houses and presidential villas. These ultra-premium families want quality education with privacy.',
+        'Sobha International City has luxury row houses and presidential villas. If you want quality education with privacy, our online classes deliver both.',
     },
     content: {
       heroTitle: 'Ultra-Premium NEET Biology Coaching for Sobha International City',
@@ -7910,7 +8219,7 @@ export const localities: Locality[] = [
         'Sobha International City offers presidential villas. Your exclusive lifestyle deserves exclusive education. Private online sessions available.',
       urgencyMessage: 'Exclusive Villa batch - Only 8 seats for ultra-premium experience!',
       localChallenge:
-        "Sobha villa families chose presidential living for exclusivity. Mass coaching centers don't fit this lifestyle.",
+        "You chose presidential living at Sobha for exclusivity - mass coaching centers don't fit that. Our private online coaching does.",
       successMetric: 'New ultra-premium batch - Join Sobha pioneers!',
     },
     socialProof: {
@@ -7931,13 +8240,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Sector 109 on the Dwarka Expressway features premium residential projects that are attracting families from across NCR. NEET demand is strong and growing as the area's population increases.",
+        "Sector 109 on the Dwarka Expressway is drawing families from across NCR into its premium residential projects. If you've just made it home, make it your NEET base too - we teach you right here.",
       competitionAnalysis:
-        'Coaching infrastructure in Sector 109 is still developing, leaving students dependent on online coaching or distant physical centers. Quality online Biology coaching fills a genuine need.',
+        'Coaching infrastructure in Sector 109 is still developing, which leaves online classes or distant centers. Our quality online Biology program fills that genuine need for you.',
       parentConcerns:
-        'Parents are eager for quality educational options closer to home. They want coaching that delivers consistent results and provides ongoing support throughout the preparation journey.',
+        'Eager for quality educational options closer to home? Ours is the closest possible - live expert classes in your living room, with support throughout the preparation journey.',
       studyCultureTrend:
-        "The study culture is forming alongside the community, with families actively seeking educational resources. Online coaching is the preferred mode given the area's infrastructure limitations.",
+        'As your community forms, online coaching is the mode that works here - and our students in the area are already proving it.',
     },
   },
   // Sector 111 - M3M Crown
@@ -7995,7 +8304,7 @@ export const localities: Locality[] = [
         'AIIMS trained faculty',
       ],
       marketGap:
-        'M3M Crown offers luxury apartments with Waterfront Club. Premium families need quality coaching without long commutes.',
+        'M3M Crown offers luxury apartments with the Waterfront Club. If you want quality coaching without long commutes, we bring it home to you.',
     },
     content: {
       heroTitle: 'Premium NEET Biology Coaching for M3M Crown Sector 111',
@@ -8004,7 +8313,7 @@ export const localities: Locality[] = [
         'M3M Crown offers Waterfront Club lifestyle. Your luxury living deserves quality education. Study from your premium apartment overlooking the waterfront.',
       urgencyMessage: 'M3M Crown batch starting - Limited seats!',
       localChallenge:
-        'M3M Crown families enjoy Waterfront Club lifestyle. Long commutes to coaching ruin this balance.',
+        'Enjoying the Waterfront Club lifestyle at M3M Crown? Long commutes to coaching would ruin that balance - our online classes keep it.',
       successMetric: 'New premium batch - Join M3M Crown pioneers!',
     },
     socialProof: {
@@ -8025,13 +8334,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Sector 111 on the Dwarka Expressway is home to ultra-premium residential developments with affluent families. These families demand top-quality NEET coaching and are willing to invest for excellence.',
+        "Sector 111 on the Dwarka Expressway is home to ultra-premium residential developments. If you demand top-quality NEET coaching and are ready to invest in excellence, we're built for you.",
       competitionAnalysis:
-        'Despite the premium demographics, coaching infrastructure is absent in Sector 111. Online coaching with expert faculty is the only viable option for quality NEET Biology preparation.',
+        'Coaching infrastructure is absent in Sector 111 despite its premium homes. For quality NEET Biology preparation, our expert-led online classes are the viable option - and the right one.',
       parentConcerns:
-        'Parents in these premium developments expect coaching that matches their lifestyle standards. They want personalized attention and are willing to pay for exclusivity and quality.',
+        "Expect coaching that matches your lifestyle standards - personalized, exclusive, high quality? That's precisely the experience we deliver.",
       studyCultureTrend:
-        'The study culture is private and highly focused, with families providing exceptional study environments at home. Students here thrive with expert online coaching that offers personalized learning paths.',
+        'With an exceptional study environment already at home, our personalized online learning paths complete the picture - private, focused, expert-led.',
     },
   },
   // Sector 113 - Smart World, Tata La Vida
@@ -8090,7 +8399,7 @@ export const localities: Locality[] = [
         'AIIMS trained faculty',
       ],
       marketGap:
-        "Sector 113 has Smart World, Tata, M3M projects - trusted developers. Young families moving here need quality coaching that doesn't exist yet.",
+        "Sector 113 has Smart World, Tata, and M3M projects from trusted developers - but quality coaching doesn't exist here yet. We bring it to you online.",
     },
     content: {
       heroTitle: 'Premium NEET Biology Coaching for Sector 113 Dwarka Expressway',
@@ -8100,7 +8409,7 @@ export const localities: Locality[] = [
         'Sector 113 offers smart living from top developers. Your forward-thinking lifestyle deserves innovative education.',
       urgencyMessage: 'Sector 113 batch starting - Join the smart learners!',
       localChallenge:
-        "Sector 113 families chose smart, modern living. Traditional coaching with long commutes doesn't fit this lifestyle.",
+        "You chose smart, modern living in Sector 113 - traditional coaching with long commutes doesn't fit that. Our online classes do.",
       successMetric: 'New batch forming - Pioneer quality coaching on Dwarka Expressway!',
     },
     socialProof: {
@@ -8124,13 +8433,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Sector 113 on the Dwarka Expressway is among the newer residential sectors with growing occupancy. NEET demand is building as families settle and focus on their children's academic futures.",
+        "Sector 113 is among the Dwarka Expressway's newer sectors, with occupancy growing month by month. Settling in and thinking about academic futures? Your NEET Biology preparation can start now.",
       competitionAnalysis:
-        'Coaching options in Sector 113 are extremely limited, with the nearest centers kilometers away. Online coaching provides the most accessible and quality-assured option for students.',
+        'Coaching options in Sector 113 are extremely limited - the nearest centers are kilometers away. Our online classes are the accessible, quality-assured option for you.',
       parentConcerns:
-        'Parents want reliable coaching that they can trust for long-term preparation. They are concerned about consistency and want coaching programs with structured curricula and regular evaluations.',
+        "Want coaching you can trust for the long haul - structured curriculum, regular evaluations, consistent quality? That's our standard commitment to you.",
       studyCultureTrend:
-        'The study culture is in its early stages but shows promise as the community grows. Students here are eager for quality coaching and adopt online learning readily.',
+        'Getting in early has advantages: while the community grows, you can already be learning with expert faculty online - like our first students here.',
     },
   },
 
@@ -8181,7 +8490,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few NEET specific centers', 'students go to Delhi'],
       avgFees: 115000,
       ourAdvantage: ['Biology specialization', 'No Delhi travel', 'Affordable'],
-      marketGap: 'Faridabad students travel to Delhi for quality coaching. Online solves this.',
+      marketGap:
+        "You shouldn't have to travel to Delhi for quality coaching - our online classes solve that.",
     },
 
     content: {
@@ -8190,7 +8500,7 @@ export const localities: Locality[] = [
       valueProposition: 'Quality NEET Biology coaching for Sector 15 and nearby sectors',
       urgencyMessage: 'Faridabad batch filling fast! Enroll now.',
       localChallenge:
-        'Sector 15 students cross border to Delhi for coaching. Our online format saves this daily commute.',
+        'Crossing the border to Delhi for coaching? Our online format saves you this daily commute.',
       successMetric: '87% of Sector 15 students scored 330+ in Biology',
     },
 
@@ -8233,13 +8543,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Sector 15 Faridabad is the city's primary commercial and educational hub with a large student population. NEET coaching demand is high as families in this established area actively pursue medical careers for their children.",
+        "Sector 15 is Faridabad's primary commercial and educational hub with a large student population actively pursuing medicine. Preparing for NEET here? Make Biology the subject that sets you apart.",
       competitionAnalysis:
-        'Sector 15 has the highest concentration of coaching centers in Faridabad, including branches of Delhi-based institutes. The competition is significant, but Biology-specific coaching with expert faculty differentiates.',
+        "Sector 15 has Faridabad's highest concentration of coaching centers, including Delhi-based branches. What still stands out is Biology-specific coaching with expert faculty - and that's exactly what we give you.",
       parentConcerns:
-        'Parents in Sector 15 compare coaching options extensively and want value for their investment. They seek coaching that outperforms the established centers they are already familiar with.',
+        'Comparing coaching options extensively and want genuine value for your investment? Put us side by side with the established centers you know - our results hold up.',
       studyCultureTrend:
-        "Sector 15 has Faridabad's most established study culture, with coaching being a common pursuit. Students here are competitive and respond well to expert coaching that pushes them beyond their comfort zone.",
+        "In Faridabad's most established study culture, everyone attends coaching. If you're ready to be pushed beyond your comfort zone, our expert classes will do it.",
     },
   },
   {
@@ -8284,7 +8594,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few NEET centers', 'mostly engineering coaching'],
       avgFees: 113000,
       ourAdvantage: ['NEET Biology focus', 'Affordable', 'No Delhi travel'],
-      marketGap: 'NIT area has engineering coaching but lacks NEET Biology focus',
+      marketGap:
+        'The NIT area is strong on engineering coaching but weak on NEET Biology. We fill that need for you.',
     },
 
     content: {
@@ -8292,8 +8603,7 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching near NIT campus',
       valueProposition: 'Specialized NEET Biology coaching for NIT area students',
       urgencyMessage: 'NIT area batch starting soon! Limited seats.',
-      localChallenge:
-        'NIT area students travel to Delhi for NEET coaching. Our online format is more convenient.',
+      localChallenge: 'Traveling to Delhi for NEET coaching? Our online format is more convenient.',
       successMetric: '85% of NIT area students scored 328+ in Biology',
     },
 
@@ -8330,13 +8640,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'NIT Faridabad is a well-established residential and commercial area with a strong student population. The area has a growing aspiration for medical careers, driving consistent NEET coaching demand.',
+        "NIT Faridabad is a well-established area with a strong student population and rising medical-career ambitions. If NEET is your target, we'll turn Biology into your highest-scoring subject.",
       competitionAnalysis:
-        'NIT has moderate coaching infrastructure with some established centers. However, specialized NEET Biology coaching is limited, with most centers offering generalized multi-subject programs.',
+        "NIT has some established coaching centers, but most run generalized multi-subject programs. For specialized NEET Biology coaching, we're the focused choice available to you.",
       parentConcerns:
-        'NIT parents want coaching that is accessible and affordable without compromising quality. They are practical in their approach and value consistent results over marketing claims.',
+        'Practical about coaching - want accessibility and affordability without a quality compromise? Judge us by consistent results, not marketing claims.',
       studyCultureTrend:
-        'The study culture in NIT is hardworking and aspiration-driven. Students here put in long study hours and benefit from coaching that channels their effort effectively toward NEET Biology preparation.',
+        'Already putting in long study hours, like most NIT students? Our coaching channels that effort exactly where NEET rewards it: Biology.',
     },
   },
   {
@@ -8385,7 +8695,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few NEET specific centers', 'students go to Delhi'],
       avgFees: 110000,
       ourAdvantage: ['Affordable', 'No Delhi travel', 'Quality teaching'],
-      marketGap: 'Old Faridabad students need affordable quality coaching without Delhi travel',
+      marketGap:
+        "Affordable quality coaching without Delhi travel - that's exactly what we deliver to you.",
     },
 
     content: {
@@ -8394,7 +8705,7 @@ export const localities: Locality[] = [
       valueProposition: 'Quality NEET Biology coaching at affordable prices for Old Faridabad',
       urgencyMessage: 'Old Faridabad batch starting soon! Enroll today.',
       localChallenge:
-        'Old Faridabad students travel to Delhi or New Faridabad. Our online format is more convenient and affordable.',
+        'Traveling to Delhi or New Faridabad? Our online format is more convenient and affordable.',
       successMetric: '83% of Old Faridabad students scored 325+ in Biology',
     },
 
@@ -8419,7 +8730,7 @@ export const localities: Locality[] = [
       {
         question: 'Is your coaching affordable for Old Faridabad students?',
         answer:
-          'Yes! At ₹1,08,000 with EMI and scholarships, we are very affordable. We understand Old Faridabad families value quality at reasonable prices.',
+          'Yes! At ₹1,08,000 with EMI and scholarships, we are very affordable. We understand you want quality at reasonable prices.',
       },
       {
         question: 'Why online coaching for Old Faridabad?',
@@ -8436,13 +8747,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Old Faridabad is a traditional commercial area with a mixed-income population. NEET demand is moderate but growing as awareness about medical career opportunities increases among families here.',
+        'Old Faridabad is a traditional commercial area where more families discover medical career opportunities every year. If your family is one of them, we make quality Biology coaching accessible.',
       competitionAnalysis:
-        'Old Faridabad has a few coaching centers primarily serving the local market. Quality coaching is limited, creating an opportunity for providers who can deliver expert teaching at accessible price points.',
+        'The few coaching centers in Old Faridabad mostly serve basic needs - quality teaching is limited. We bring you expert Biology coaching at accessible prices, online.',
       parentConcerns:
-        'Parents in Old Faridabad are price-sensitive and want coaching that is affordable yet effective. They value coaching that delivers clear results and justifies the investment.',
+        'Watching your budget and want coaching that clearly justifies the investment? Our results-first approach and affordable fees are built for you.',
       studyCultureTrend:
-        'The study culture is traditional and family-supported, with students studying at home alongside school. Online coaching is gaining acceptance as internet access improves across the area.',
+        'If you study at home alongside school, in the traditional way, our online classes fit that routine perfectly - and internet access keeps improving across the area.',
     },
   },
   {
@@ -8491,7 +8802,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Very few', 'students go to Delhi or Sector 15'],
       avgFees: 112000,
       ourAdvantage: ['Saves long distance travel', 'Affordable', 'Quality coaching'],
-      marketGap: 'Greater Faridabad lacks coaching. Students travel very far. Online solves this.',
+      marketGap:
+        'Greater Faridabad lacks coaching and students travel very far. Our online classes solve this for you.',
     },
 
     content: {
@@ -8500,7 +8812,7 @@ export const localities: Locality[] = [
       valueProposition: 'Quality NEET Biology coaching accessible from all Greater Faridabad',
       urgencyMessage: 'Greater Faridabad batch starting soon! Limited seats.',
       localChallenge:
-        'Greater Faridabad students travel 2-3 hours to Delhi or Sector 15. Our online format eliminates this.',
+        'Traveling 2-3 hours to Delhi or Sector 15? Our online format eliminates this.',
       successMetric: '84% of Greater Faridabad students scored 326+ in Biology',
     },
 
@@ -8537,13 +8849,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'growing',
       demandExplanation:
-        "Greater Faridabad is a rapidly developing residential area with new townships and apartment complexes. NEET demand is growing as young families settle and begin focusing on their children's competitive exam preparation.",
+        "Greater Faridabad's new townships and apartment complexes are filling with young families. If competitive exam preparation is on your family's mind, you can start today - from home.",
       competitionAnalysis:
-        'Greater Faridabad has minimal coaching infrastructure as the area is still developing. Online coaching fills a critical gap for students who otherwise lack local quality options.',
+        'Coaching infrastructure in Greater Faridabad is minimal while the area develops. Our online classes fill that critical need - quality teaching without local options having to exist first.',
       parentConcerns:
-        'Parents are concerned about the lack of quality coaching options in their developing neighborhoods. They actively seek coaching solutions that do not require long commutes to central Faridabad.',
+        'Frustrated by the lack of quality coaching in your developing neighborhood? No long commutes to central Faridabad needed - our live classes come to you.',
       studyCultureTrend:
-        'The study culture is emerging with the growing community. Families are forming educational networks and sharing resources, creating a supportive environment for structured online coaching.',
+        'Families here are already forming educational networks and sharing resources. Plug into that supportive environment with our structured online coaching.',
     },
   },
   {
@@ -8588,7 +8900,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Very few', 'students go to Sector 15 or Delhi'],
       avgFees: 108000,
       ourAdvantage: ['Affordable', 'Saves travel time', 'Quality coaching'],
-      marketGap: 'Ballabhgarh lacks coaching. Students travel far daily. Online perfect solution.',
+      marketGap:
+        'Ballabhgarh lacks coaching and students travel far daily. Our online classes are the solution built for you.',
     },
 
     content: {
@@ -8597,7 +8910,7 @@ export const localities: Locality[] = [
       valueProposition: 'Quality NEET Biology coaching at affordable prices for Ballabhgarh',
       urgencyMessage: 'Ballabhgarh batch starting soon! Enroll today.',
       localChallenge:
-        'Ballabhgarh students travel to Sector 15 or Delhi daily. Our online format saves this time and expense.',
+        'Traveling to Sector 15 or Delhi daily? Our online format saves you that time and expense.',
       successMetric: '82% of Ballabhgarh students scored 323+ in Biology',
     },
 
@@ -8634,13 +8947,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Ballabhgarh is a satellite town of Faridabad with a significant student population from middle-class families. NEET demand is moderate but growing steadily as medical career aspirations increase.',
+        "Ballabhgarh's students are targeting medicine in growing numbers every year. If you're one of them, you no longer need to leave town for serious NEET Biology coaching.",
       competitionAnalysis:
-        'Ballabhgarh has limited coaching infrastructure, with most quality options located in central Faridabad. Students here lose significant time commuting, making online coaching a practical alternative.',
+        'Most quality coaching sits in central Faridabad, which means Ballabhgarh students lose hours commuting. Our online classes give you the same quality without the travel.',
       parentConcerns:
-        'Parents in Ballabhgarh want affordable coaching that their children can access without long daily commutes. They value coaching programs that offer the same quality as Faridabad city centers.',
+        "Want affordable coaching your child can attend without a long daily commute - at the same quality as Faridabad city centers? That's precisely what we deliver.",
       studyCultureTrend:
-        'The study culture in Ballabhgarh is developing, with growing numbers of students targeting competitive exams. Online coaching is increasingly popular as it eliminates the travel burden to Sector 15.',
+        'More Ballabhgarh students target competitive exams each year, and many have discovered the same thing: online coaching removes the Sector 15 travel burden entirely.',
     },
   },
   // Sector 16 Faridabad - Adjacent to center
@@ -8691,7 +9004,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few NEET specific centers', 'students prefer our center nearby'],
       avgFees: 75000,
       ourAdvantage: ['1 km from our center', 'Walk-in access', 'Best faculty in Faridabad'],
-      marketGap: 'Sector 16 students need quality NEET coaching without traveling to Delhi',
+      marketGap:
+        "Quality NEET coaching without traveling to Delhi - that's what we deliver to you.",
     },
     content: {
       heroTitle: 'Premium NEET Biology Coaching for Sector 16 Faridabad',
@@ -8722,13 +9036,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Sector 16 Faridabad is adjacent to the main coaching hub of Sector 15, drawing students who benefit from the area's educational ecosystem. NEET demand is high due to the proximity to established coaching infrastructure.",
+        "Sector 16 sits right next to Faridabad's main coaching hub, so you already know the educational ecosystem. The next step is choosing teaching that actually gives you individual attention.",
       competitionAnalysis:
-        'Students in Sector 16 have easy access to Sector 15 coaching centers but often find them overcrowded. Specialized Biology coaching with smaller batches addresses this quality gap.',
+        "Sector 15's centers are close by but often overcrowded. If you want specialized Biology coaching with smaller batches, that's the difference we offer you.",
       parentConcerns:
-        'Parents want coaching that offers better attention than the crowded Sector 15 centers. They prefer quality over convenience and are willing to explore online options for better teaching.',
+        "Want better attention than the crowded Sector 15 centers provide? Our small online batches put quality first - and your child won't even need the short commute.",
       studyCultureTrend:
-        "The study culture benefits from proximity to Faridabad's coaching hub. Students here are competitive and seek coaching that gives them an edge over peers in neighboring sectors.",
+        "Competing with peers across neighboring sectors? Specialized Biology coaching is the edge most of them don't have. Take it.",
     },
   },
   // Sector 17 Faridabad - Our center location
@@ -8779,14 +9093,16 @@ export const localities: Locality[] = [
       majorInstitutes: ['Local coaching centers'],
       avgFees: 75000,
       ourAdvantage: ['Our center location', 'Most convenient', 'Best-in-class faculty'],
-      marketGap: 'Central location serving all of Faridabad',
+      marketGap:
+        'Centrally located for all of Faridabad - and with our online classes, even closer: right at home.',
     },
     content: {
       heroTitle: 'Cerebrum Biology Academy - Sector 17 Faridabad Center',
       heroSubtitle: 'The heart of Faridabad - Your NEET coaching destination',
       valueProposition: 'Our flagship Faridabad center serving the entire city',
       urgencyMessage: 'Visit our center for a free demo class today!',
-      localChallenge: 'The most accessible location for all Faridabad students',
+      localChallenge:
+        'Wherever you are in Faridabad, our classes are the most accessible - they come to you.',
       successMetric: '98% success rate from our Sector 17 center',
     },
     socialProof: {
@@ -8810,13 +9126,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Sector 17 is a central Faridabad location with strong educational demand from surrounding residential areas. The presence of the HUDA Complex makes it a natural gathering point for students.',
+        "Sector 17 is central Faridabad, with the HUDA Complex making it a natural gathering point for students. Preparing for NEET here? We're the Biology specialists in your corner.",
       competitionAnalysis:
-        'Sector 17 has moderate coaching presence but lacks specialized NEET Biology centers. Students combine general coaching with private tutors, an inefficient arrangement that quality coaching can replace.',
+        'Sector 17 has moderate coaching presence but no specialized NEET Biology centers - the usual fix is general coaching plus a private tutor. Our single focused program replaces that patchwork for you.',
       parentConcerns:
-        'Parents want one-stop coaching solutions that cover Biology comprehensively for NEET. They are tired of managing multiple tutors and coaching schedules for their children.',
+        'Tired of managing multiple tutors and coaching schedules? Our program covers Biology comprehensively for NEET - one solution, one schedule.',
       studyCultureTrend:
-        'The study culture is established and community-supported, with students forming study groups across sectors. Online coaching complements this collaborative approach with expert-led structured learning.',
+        'Study groups already run across the sectors here. Pair yours with our expert-led structured classes and get the best of both.',
     },
   },
   // BPTP Parklands - Premium Township
@@ -8833,7 +9149,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching for BPTP Parklands Faridabad | Premium Coaching',
       description:
-        'Premium NEET Biology coaching for BPTP Parklands residents. Elite families deserve elite coaching. 98% success rate. Book free demo!',
+        'Premium NEET Biology coaching for BPTP Parklands. Small batches, AIIMS-trained faculty, 98% success rate. Book a free demo!',
       keywords: [
         'neet coaching bptp parklands',
         'biology coaching greater faridabad',
@@ -8871,15 +9187,17 @@ export const localities: Locality[] = [
         'Elite faculty',
         'Online + offline',
       ],
-      marketGap: 'BPTP Parklands families need quality NEET coaching without long travel',
+      marketGap:
+        'Want quality NEET coaching without long travel from Parklands? We bring it to you online.',
     },
     content: {
-      heroTitle: 'Premium NEET Coaching for BPTP Parklands Elite Families',
+      heroTitle: 'Premium NEET Coaching for BPTP Parklands',
       heroSubtitle: 'Your premium lifestyle deserves premium education',
       valueProposition:
         'The only specialized NEET Biology coaching for Greater Faridabad townships',
       urgencyMessage: 'BPTP Parklands batch starting - Limited elite seats!',
-      localChallenge: 'Elite Parklands families deserve coaching that matches their standards',
+      localChallenge:
+        "Your Parklands home reflects high standards - your child's coaching should too. Ours does.",
       successMetric: '92% of BPTP students scored 650+ in NEET',
     },
     socialProof: {
@@ -8903,13 +9221,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'growing',
       demandExplanation:
-        'BPTP Parklands is a large premium township in Greater Faridabad with an upscale residential population. NEET demand is growing as families in this relatively new community focus on academic preparation.',
+        'BPTP Parklands is a large premium township in Greater Faridabad. As your community grows, so do NEET ambitions - and your preparation can start without leaving the township.',
       competitionAnalysis:
-        'BPTP Parklands has no coaching centers within the township, relying entirely on external options. Online coaching is the most convenient and effective solution for this captive market.',
+        'There are no coaching centers inside BPTP Parklands - everything requires going out. Our live online classes bring specialist Biology teaching inside your home instead.',
       parentConcerns:
-        'Premium township parents expect coaching that matches their lifestyle standards. They want convenient, quality coaching accessible from home without the hassle of commuting.',
+        "Expect coaching that matches your township's lifestyle standards - convenient, high quality, and accessible from home? That's exactly how we deliver.",
       studyCultureTrend:
-        'The study culture is developing within the township community. Families are establishing educational networks and embracing online coaching as the practical solution for quality preparation.',
+        'Families across the township are building educational networks and moving to online coaching as the practical route to quality. Join them with us.',
     },
   },
   // Omaxe Heights - Premium Township
@@ -8960,14 +9278,16 @@ export const localities: Locality[] = [
       majorInstitutes: ['No local NEET coaching'],
       avgFees: 80000,
       ourAdvantage: ['Specialized NEET Biology', 'Expert faculty', 'Flexible modes'],
-      marketGap: 'Omaxe Heights needs quality NEET coaching nearby',
+      marketGap:
+        'Quality NEET coaching near Omaxe Heights is missing - we deliver it to you online.',
     },
     content: {
       heroTitle: 'Quality NEET Biology Coaching for Omaxe Heights',
       heroSubtitle: 'Premium coaching for your medical dreams',
       valueProposition: 'The best NEET coaching accessible to Omaxe Heights families',
       urgencyMessage: 'Omaxe Heights batch starting - Enroll now!',
-      localChallenge: 'Quality families deserve quality coaching without long commutes',
+      localChallenge:
+        "You deserve quality coaching without long commutes - that's exactly what we provide.",
       successMetric: '88% of Omaxe students scored 630+ in NEET',
     },
     socialProof: {
@@ -8991,13 +9311,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'growing',
       demandExplanation:
-        'Omaxe Heights is a residential complex in Greater Faridabad with a growing student population. NEET demand is increasing as families settle and prioritize competitive exam preparation.',
+        "Omaxe Heights' student community grows every year, and competitive exam preparation grows with it. If NEET is your goal, expert Biology coaching is one login away.",
       competitionAnalysis:
-        'Like other Greater Faridabad complexes, Omaxe Heights lacks local coaching infrastructure. Students depend on external coaching or online platforms for NEET preparation.',
+        "Like most Greater Faridabad complexes, Omaxe Heights has no local coaching infrastructure. Our online classes mean you depend on no one's commute - just your internet connection.",
       parentConcerns:
-        'Parents want accessible coaching solutions that do not require their children to travel far. They appreciate the convenience and safety of online coaching from home.',
+        'Prefer your child not travel far for coaching? Ours combines convenience and safety - live expert classes from home.',
       studyCultureTrend:
-        "The study culture is community-based with residents supporting each other's educational goals. Online coaching is well-accepted and growing in popularity among families here.",
+        "Residents here support each other's educational goals, and online coaching is increasingly the community's choice. Our classes fit right into that culture.",
     },
   },
   // RPS Palms - Premium Township
@@ -9043,14 +9363,15 @@ export const localities: Locality[] = [
       majorInstitutes: ['No NEET coaching in township'],
       avgFees: 78000,
       ourAdvantage: ['Only quality NEET coaching for RPS', 'Online convenience', 'Expert faculty'],
-      marketGap: 'RPS families need quality NEET coaching without long travel',
+      marketGap:
+        'Want quality NEET coaching without long travel from RPS Palms? We bring it to you online.',
     },
     content: {
       heroTitle: 'Expert NEET Biology Coaching for RPS Palms',
       heroSubtitle: 'Green living, quality learning',
       valueProposition: 'Quality NEET coaching for green township families',
       urgencyMessage: 'RPS Palms batch forming - Book your demo!',
-      localChallenge: 'Quality education to match your quality lifestyle',
+      localChallenge: 'Quality education to match your quality lifestyle - delivered to your home.',
       successMetric: '86% of RPS students scored 620+ in NEET',
     },
     socialProof: {
@@ -9077,13 +9398,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'growing',
       demandExplanation:
-        'RPS Palms is a residential project in Greater Faridabad with upper-middle-class families. NEET coaching demand is growing as families become more aware of competitive exam preparation needs.',
+        "RPS Palms' families increasingly recognize what competitive exam preparation takes. If you're planning your NEET journey, we'll give Biology the head start it deserves.",
       competitionAnalysis:
-        'The Greater Faridabad coaching market is underdeveloped, giving online coaching providers a significant advantage. Students here need quality preparation but lack local access.',
+        'Quality coaching is still scarce across Greater Faridabad, and local access is the real problem. Our online Biology classes remove that problem for you completely.',
       parentConcerns:
-        'Parents in RPS Palms want reliable coaching they can trust. They prioritize quality and convenience, preferring established coaching programs over ad-hoc tutoring arrangements.',
+        'Want coaching you can rely on - an established program, not an ad-hoc tutoring arrangement? Our structured courses give you exactly that trust.',
       studyCultureTrend:
-        'The study culture is forming with the community, with families increasingly focused on academic preparation. Online coaching fits naturally into the modern lifestyle of these residential projects.',
+        'Academic preparation is becoming a priority across the community, and online coaching fits the modern lifestyle of these residential projects - yours included.',
     },
   },
   // Crown Interiorz Mall Area
@@ -9129,14 +9450,15 @@ export const localities: Locality[] = [
       majorInstitutes: ['No specialized NEET coaching'],
       avgFees: 82000,
       ourAdvantage: ['Premium coaching for premium area', 'Expert AIIMS faculty'],
-      marketGap: 'Crown area families need quality NEET coaching',
+      marketGap:
+        'Quality NEET coaching near Crown Interiorz is missing - we deliver it to you online.',
     },
     content: {
       heroTitle: 'Premium NEET Coaching for Crown Interiorz Area',
       heroSubtitle: 'Where quality meets convenience',
       valueProposition: "The best NEET coaching for Greater Faridabad's premium hub",
       urgencyMessage: 'Crown area batch starting - Premium seats limited!',
-      localChallenge: 'Premium location deserves premium education',
+      localChallenge: 'A premium location deserves premium education - we bring it to your home.',
       successMetric: '90% of Crown area students scored 640+ in NEET',
     },
     socialProof: {
@@ -9160,13 +9482,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Crown Interiorz Mall area is a premium commercial hub in Faridabad that draws families from surrounding upscale residential areas. The affluent demographics drive high NEET coaching demand.',
+        'The Crown Interiorz Mall area is a premium commercial hub surrounded by upscale residential neighborhoods. If NEET is the goal in your home, quality Biology coaching is available without the drive.',
       competitionAnalysis:
-        'The area around Crown Interiorz has some coaching centers in commercial spaces, but NEET Biology specialization is absent. Quality online coaching serves the premium families effectively.',
+        'Some coaching operates in the commercial spaces around Crown Interiorz, but NEET Biology specialization is absent. Our online classes bring you exactly that missing specialization.',
       parentConcerns:
-        'Parents in this premium catchment expect high-quality coaching with expert faculty. They compare options carefully and choose coaching based on quality, not just proximity.',
+        'Do you compare coaching options carefully and choose on quality, not just proximity? Then look closely at our expert faculty - we welcome the scrutiny.',
       studyCultureTrend:
-        "The study culture is influenced by the area's premium demographics, with families investing in quality education. Students here are motivated and benefit from expert coaching.",
+        "In an area where families invest seriously in education, motivated students deserve expert teaching. That's the pairing our Biology classes complete.",
     },
   },
   // Surajkund
@@ -9212,14 +9534,15 @@ export const localities: Locality[] = [
       majorInstitutes: ['No local NEET coaching'],
       avgFees: 72000,
       ourAdvantage: ['Closest quality coaching', 'Expert faculty', 'Flexible modes'],
-      marketGap: 'Surajkund area lacks quality NEET coaching',
+      marketGap: 'Quality NEET coaching is missing around Surajkund - we bring it to you online.',
     },
     content: {
       heroTitle: 'Quality NEET Coaching for Surajkund Area',
       heroSubtitle: 'From scenic Surajkund to medical success',
       valueProposition: 'The best NEET coaching accessible from Surajkund',
       urgencyMessage: 'Surajkund batch starting - Enroll now!',
-      localChallenge: 'Scenic living should not mean compromising on education',
+      localChallenge:
+        "Scenic living shouldn't mean compromising on education - with our online classes, it doesn't.",
       successMetric: '85% of Surajkund students scored 610+ in NEET',
     },
     socialProof: {
@@ -9243,13 +9566,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Surajkund is a historic area near Faridabad known for its crafts mela and lake. The residential pockets nearby generate moderate NEET coaching demand from families with academic aspirations.',
+        'Surajkund is a historic area known for its crafts mela and lake, with residential pockets full of academic ambition. If yours is one of them, expert NEET Biology coaching is now within reach.',
       competitionAnalysis:
-        'Surajkund has very few coaching options, with students traveling to Sector 15 or accessing online platforms. The area is underserved despite having motivated students.',
+        "Surajkund has very few coaching options - it's Sector 15 or nothing for most students, despite plenty of motivation here. Our online classes change that for you.",
       parentConcerns:
-        'Parents want quality coaching without requiring their children to travel long distances. They value coaching programs that are accessible online and provide comprehensive Biology preparation.',
+        'Want quality coaching without sending your child long distances? Our comprehensive online Biology program is fully accessible from home.',
       studyCultureTrend:
-        'The study culture is quiet but dedicated, with students focused on their preparation. Online coaching is increasingly popular as it provides access to expert teachers not available locally.',
+        "Quiet, dedicated, and focused? You'll fit our style - and our online classes give you access to expert teachers not available locally.",
     },
   },
   // Badkhal
@@ -9295,14 +9618,16 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local options'],
       avgFees: 70000,
       ourAdvantage: ['Metro connected', 'Quality faculty', 'Affordable'],
-      marketGap: 'Badkhal needs quality NEET coaching near metro',
+      marketGap:
+        'Quality NEET coaching near the metro is missing in Badkhal - we deliver it to you online.',
     },
     content: {
       heroTitle: 'Metro-Connected NEET Coaching for Badkhal',
       heroSubtitle: 'From Badkhal Mor Metro to medical success',
       valueProposition: 'Convenient NEET coaching with metro access',
       urgencyMessage: 'Badkhal batch starting - Metro-convenient location!',
-      localChallenge: 'Metro connectivity should mean quality coaching access',
+      localChallenge:
+        'Metro connectivity should mean easy coaching access - our online classes make it even easier.',
       successMetric: '84% of Badkhal students scored 600+ in NEET',
     },
     socialProof: {
@@ -9325,13 +9650,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Badkhal is a residential area in Faridabad with middle-class families who aspire to medical careers for their children. NEET demand is moderate and growing as awareness about quality coaching increases.',
+        "Badkhal's families increasingly aim for medical careers, and awareness of what quality coaching means keeps rising. If you're ready for NEET, we're ready to teach you.",
       competitionAnalysis:
-        'Coaching options in Badkhal are limited to a few small local centers. Quality NEET Biology coaching is unavailable locally, making online coaching the practical solution.',
+        "Badkhal's few small local centers can't offer quality NEET Biology coaching. Our online classes are the practical solution for you.",
       parentConcerns:
-        'Parents in Badkhal are price-conscious and want affordable coaching that delivers results. They value clear communication about course content and expected outcomes.',
+        "Price-conscious and want coaching that delivers results? You'll get transparent course content, clear expected outcomes, and affordable fees from us.",
       studyCultureTrend:
-        'The study culture is hardworking and aspiration-driven. Students here are dedicated and benefit from structured coaching that provides direction alongside content delivery.',
+        'Hardworking and aspiration-driven? Our structured coaching gives your dedication direction - content plus strategy, week after week.',
     },
   },
   // Sector 21 Faridabad
@@ -9382,14 +9707,14 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few quality options'],
       avgFees: 75000,
       ourAdvantage: ['3 km from center', 'Best faculty', 'MVN students trust us'],
-      marketGap: 'Premium Sector 21 families need quality NEET coaching',
+      marketGap: 'Quality NEET coaching is what Sector 21 lacks - we deliver it to your home.',
     },
     content: {
       heroTitle: 'Premium NEET Coaching for Sector 21 Faridabad',
       heroSubtitle: 'Just 3 km from your home - Quality coaching nearby',
       valueProposition: 'The closest quality NEET coaching for Sector 21 families',
       urgencyMessage: 'Sector 21 batch filling fast - Book your seat!',
-      localChallenge: 'Premium sector deserves premium coaching',
+      localChallenge: 'A premium sector deserves premium coaching - we provide it online.',
       successMetric: '88% of Sector 21 students scored 630+ in NEET',
     },
     socialProof: {
@@ -9412,13 +9737,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Sector 21 Faridabad is a well-established residential sector with families who prioritize education. NEET demand is high as the area produces a steady stream of competitive exam aspirants.',
+        'Sector 21 is a well-established sector that produces a steady stream of competitive exam aspirants. Joining them? Make Biology your strongest paper with us.',
       competitionAnalysis:
-        'Sector 21 has some coaching presence but lacks specialized Biology coaching. Students combine general coaching with self-study, often with suboptimal results in Biology.',
+        'Sector 21 has some coaching presence but no Biology specialists - the general-coaching-plus-self-study route often underdelivers in Biology. Our focused program fixes that for you.',
       parentConcerns:
-        "Parents want comprehensive Biology coaching that eliminates the need for additional tutoring. They seek efficient coaching programs that maximize their children's preparation time.",
+        "Want comprehensive Biology coaching that removes the need for extra tutoring? Our program is complete on its own - maximum preparation in your child's limited time.",
       studyCultureTrend:
-        'The study culture is established and community-supported. Students form study groups and share resources, creating a collaborative environment that coaching can enhance.',
+        'Study groups and shared resources are a strength here. Add our expert-led classes to that collaborative base and your preparation compounds.',
     },
   },
   // Sector 28 Faridabad
@@ -9469,14 +9794,15 @@ export const localities: Locality[] = [
       majorInstitutes: ['General coaching centers'],
       avgFees: 72000,
       ourAdvantage: ['Metro connected', 'NEET specialized', 'Expert faculty'],
-      marketGap: 'Sector 28 needs specialized NEET coaching',
+      marketGap: 'Specialized NEET coaching is missing in Sector 28 - we provide it to you online.',
     },
     content: {
       heroTitle: 'Metro-Connected NEET Coaching for Sector 28',
       heroSubtitle: 'Just 2 metro stops to quality coaching',
       valueProposition: 'The most convenient NEET coaching for Sector 28 families',
       urgencyMessage: 'Sector 28 batch starting - Metro-convenient location!',
-      localChallenge: 'Commercial hub families deserve specialized NEET coaching',
+      localChallenge:
+        'You deserve specialized NEET coaching close to home - ours comes all the way to your desk.',
       successMetric: '86% of Sector 28 students qualified NEET',
     },
     socialProof: {
@@ -9499,13 +9825,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Sector 28 Faridabad is a residential area with middle-class families seeking quality education opportunities. NEET demand is moderate with a growing number of students targeting medical admissions.',
+        "Sector 28's students are targeting medical admissions in growing numbers. If you're among them, quality Biology coaching no longer requires leaving the sector.",
       competitionAnalysis:
-        'Limited coaching options exist in Sector 28, with students accessing centers in other sectors. Online coaching provides a convenient alternative for NEET Biology preparation.',
+        'Coaching options within Sector 28 are limited, and traveling to other sectors costs you daily hours. Our online NEET Biology classes are the convenient alternative.',
       parentConcerns:
-        'Parents want affordable, quality coaching that fits their budget. They appreciate transparent pricing and clear value propositions from coaching providers.',
+        'Want quality coaching that fits your budget? Our pricing is transparent and the value is clear - no surprises, just results.',
       studyCultureTrend:
-        'The study culture is developing, with students becoming more aware of competitive exam preparation. Online coaching adoption is growing as families see its benefits.',
+        'As awareness of competitive exam preparation grows here, families keep discovering the same benefit: online coaching delivers quality without commute. See it for yourself.',
     },
   },
   // Sector 75 Faridabad - BPTP Parklands area
@@ -9555,14 +9881,16 @@ export const localities: Locality[] = [
         'Expert faculty',
         'Online option',
       ],
-      marketGap: 'Greater Faridabad townships need quality NEET coaching',
+      marketGap:
+        "Greater Faridabad's townships lack quality NEET coaching - we bring it to your home.",
     },
     content: {
       heroTitle: 'Premium NEET Coaching for Sector 75 Greater Faridabad',
       heroSubtitle: 'BPTP Parklands families deserve quality coaching',
       valueProposition: 'The only specialized NEET Biology coaching for Greater Faridabad',
       urgencyMessage: 'Greater Faridabad batch starting - Premium seats limited!',
-      localChallenge: 'Elite township families need coaching that matches their standards',
+      localChallenge:
+        "Your township reflects high standards - your child's coaching should match. Ours does.",
       successMetric: '90% of Sector 75 students scored 640+ in NEET',
     },
     socialProof: {
@@ -9590,13 +9918,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'growing',
       demandExplanation:
-        'Sector 75 Faridabad is part of the Greater Faridabad development with premium residential projects. The growing population is driving increasing NEET coaching demand from affluent families.',
+        "Sector 75 is part of Greater Faridabad's premium development wave. If your family has moved in and NEET is on the horizon, expert Biology coaching is ready when you are.",
       competitionAnalysis:
-        'Sector 75 has minimal coaching infrastructure as it is still developing. Online coaching effectively serves this premium but underserved market segment.',
+        "Sector 75's coaching infrastructure is minimal while the area develops. Few quality options exist nearby - our online Biology classes fill that need for you.",
       parentConcerns:
-        'Parents in premium projects want coaching that matches their lifestyle expectations. They value quality, convenience, and personalized attention from coaching providers.',
+        "Expect coaching that matches your lifestyle - quality, convenience, and personalized attention? That's the standard we deliver to premium project residents.",
       studyCultureTrend:
-        'The study culture is forming with the community. Families are receptive to online coaching as the primary preparation channel for competitive exams.',
+        'As your community takes shape, online coaching has become the primary preparation channel here. Our live classes make it a strong one.',
     },
   },
   // Sector 84 Faridabad - Omaxe New Heights area
@@ -9642,14 +9970,14 @@ export const localities: Locality[] = [
       majorInstitutes: ['No NEET coaching nearby'],
       avgFees: 78000,
       ourAdvantage: ['Only NEET coaching for Sector 84', 'Online convenience', 'Expert faculty'],
-      marketGap: 'Sector 84 families need quality NEET coaching',
+      marketGap: 'Quality NEET coaching is missing in Sector 84 - we deliver it to you online.',
     },
     content: {
       heroTitle: 'Quality NEET Coaching for Sector 84 Greater Faridabad',
       heroSubtitle: 'Omaxe New Heights families trust us',
       valueProposition: 'Quality NEET coaching accessible from Sector 84',
       urgencyMessage: 'Sector 84 batch starting - Enroll now!',
-      localChallenge: 'Quality townships need quality education',
+      localChallenge: 'A quality township needs quality education - we bring it to your home.',
       successMetric: '87% of Sector 84 students scored 620+ in NEET',
     },
     socialProof: {
@@ -9673,13 +10001,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'growing',
       demandExplanation:
-        'Sector 84 Faridabad is a newer residential sector in Greater Faridabad attracting young families. NEET demand is growing as families with school-age children focus on competitive preparation.',
+        "Sector 84 is one of Greater Faridabad's newer sectors, filling with young families focused on the future. If competitive preparation is part of your plan, start Biology with us now.",
       competitionAnalysis:
-        'Like other Greater Faridabad sectors, coaching infrastructure is limited. Online coaching is the most viable option for quality NEET Biology preparation in this area.',
+        'Coaching infrastructure is limited across these newer sectors, making online classes the viable route to quality NEET Biology preparation. Ours is the proven one.',
       parentConcerns:
-        'Parents seek reliable coaching with proven track records. They want assurance that online coaching delivers the same quality as established physical centers.',
+        'Need assurance that online coaching matches established physical centers? Our track record and results give you exactly that proof.',
       studyCultureTrend:
-        'The study culture is nascent but growing with the residential community. Students here are open to online learning and adapt quickly to digital coaching platforms.',
+        "Open to online learning, like most students in this young community? You'll be fully at home on our platform within a class or two.",
     },
   },
   // Sector 29 Faridabad
@@ -9730,14 +10058,15 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local options'],
       avgFees: 70000,
       ourAdvantage: ['Metro connected', 'Quality faculty', 'Affordable'],
-      marketGap: 'Sector 29 needs specialized NEET coaching',
+      marketGap: 'Specialized NEET coaching is missing in Sector 29 - we provide it to you online.',
     },
     content: {
       heroTitle: 'Metro-Connected NEET Coaching for Sector 29',
       heroSubtitle: 'Just 2 metro stops to quality coaching',
       valueProposition: 'Convenient NEET coaching for Sector 29 families',
       urgencyMessage: 'Sector 29 batch starting - Metro-convenient!',
-      localChallenge: 'Established area families need quality NEET coaching',
+      localChallenge:
+        'Living in an established area but missing quality NEET coaching? We deliver it to your home.',
       successMetric: '85% of Sector 29 students qualified NEET',
     },
     socialProof: {
@@ -9761,13 +10090,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Sector 29 Faridabad is a central residential sector with a mixed population. NEET demand is moderate but consistent, driven by families who see medicine as a pathway to professional success.',
+        "Sector 29 is a central residential sector where medicine is seen as the pathway to professional success. If that's your path, strong Biology scores will carry you - and that's our specialty.",
       competitionAnalysis:
-        'Some coaching centers operate near Sector 29, but specialized Biology coaching is not available. Students rely on general coaching supplemented by self-study for Biology.',
+        "Coaching centers operate near Sector 29, but specialized Biology teaching isn't among them - self-study usually fills the gap. Our expert classes fill it properly for you.",
       parentConcerns:
-        'Parents want coaching that provides comprehensive Biology preparation without requiring multiple coaching enrollments. They value efficiency and completeness in coaching programs.',
+        'Want comprehensive Biology preparation without juggling multiple enrollments? Our single program covers it completely and efficiently.',
       studyCultureTrend:
-        'The study culture is steady and practical, with students maintaining balanced preparation routines. Online coaching complements their approach by providing expert Biology guidance.',
+        'Keep a steady, balanced preparation routine? Our online Biology classes slot in as the expert guidance layer - without disturbing what already works.',
     },
   },
   // Sector 31 Faridabad - NHPC Colony
@@ -9813,14 +10142,16 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local options'],
       avgFees: 72000,
       ourAdvantage: ['Metro connected', 'PSU families trust us', 'Quality faculty'],
-      marketGap: 'NHPC Colony needs specialized NEET coaching',
+      marketGap:
+        'Specialized NEET coaching is missing around NHPC Colony - we provide it to you online.',
     },
     content: {
       heroTitle: 'Quality NEET Coaching for NHPC Colony Sector 31',
       heroSubtitle: 'PSU families trust our quality coaching',
       valueProposition: 'The preferred NEET coaching for NHPC Colony families',
       urgencyMessage: 'NHPC Colony batch starting - Book your seat!',
-      localChallenge: 'PSU families expect quality education for their children',
+      localChallenge:
+        'Coming from a PSU household with high educational standards? Our coaching meets them - at home.',
       successMetric: '88% of NHPC Colony students scored 630+ in NEET',
     },
     socialProof: {
@@ -9844,13 +10175,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Sector 31 Faridabad is a residential sector with upper-middle-class families who prioritize competitive exam preparation. NEET demand is moderate with consistent enrollment from the area.',
+        "Sector 31's households take competitive exam preparation seriously, and students from here enroll for NEET year after year. When it's your turn, we make Biology the sure thing.",
       competitionAnalysis:
-        'Coaching options in Sector 31 are limited, with students accessing centers in central Faridabad. Specialized online Biology coaching addresses the convenience gap effectively.',
+        'With limited coaching in Sector 31, the default is traveling to central Faridabad. Our specialized online Biology classes remove that trade-off for you.',
       parentConcerns:
-        "Parents seek coaching that delivers consistent quality and regular progress updates. They want to stay informed about their child's preparation journey.",
+        "Want consistent quality plus regular progress updates? We keep you informed at every stage of your child's preparation journey.",
       studyCultureTrend:
-        'The study culture is stable and family-driven. Students here are disciplined and benefit from coaching that provides structured preparation with regular assessments.',
+        'Disciplined and family-supported? Our structured preparation with regular assessments is designed for students exactly like you.',
     },
   },
   // Sector 37 Faridabad - Industrial Area
@@ -9896,14 +10227,16 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local options'],
       avgFees: 68000,
       ourAdvantage: ['Affordable', 'EMI options', 'Quality coaching'],
-      marketGap: 'Industrial area families need affordable quality NEET coaching',
+      marketGap:
+        'Affordable quality NEET coaching is what this industrial belt lacks - we deliver it to you online.',
     },
     content: {
       heroTitle: 'Affordable NEET Coaching for Sector 37 Industrial Area',
       heroSubtitle: 'Quality coaching at affordable prices',
       valueProposition: 'Quality NEET coaching accessible to all families',
       urgencyMessage: 'Sector 37 batch starting - Affordable fees with EMI!',
-      localChallenge: 'Working families deserve quality education at reasonable prices',
+      localChallenge:
+        "A working family deserves quality education at reasonable prices - that's our promise to you.",
       successMetric: '83% of Sector 37 students qualified NEET',
     },
     socialProof: {
@@ -9927,13 +10260,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        "Sector 37 Faridabad is a developing residential sector with middle-class families building their futures. NEET demand is moderate and growing as families invest in their children's competitive exam preparation.",
+        'Sector 37 is a developing sector where families are building futures - and investing in competitive exam preparation is part of that. We make the Biology part affordable and excellent.',
       competitionAnalysis:
-        'Limited coaching options exist in Sector 37, with students traveling to other sectors for quality coaching. Online coaching eliminates this travel burden and provides expert access.',
+        'With few coaching options in Sector 37, students usually travel to other sectors. Our online classes end that travel burden and give you direct access to expert faculty.',
       parentConcerns:
-        'Parents value affordability and want coaching that fits their family budget. They seek programs with clear fee structures and no hidden costs.',
+        'Need coaching that fits the family budget? Our fee structure is clear, with no hidden costs - quality that respects your planning.',
       studyCultureTrend:
-        "The study culture is growing with the community's development. Students are motivated and eager for quality coaching that guides them toward their medical career goals.",
+        "Motivated and eager for real guidance toward a medical career? That's the student our program is built for.",
     },
   },
 
@@ -9985,7 +10318,7 @@ export const localities: Locality[] = [
         'No travel to Noida/Delhi',
       ],
       marketGap:
-        'Indirapuram students travel to Noida Sector 18 or Delhi. Online serves them better.',
+        'No need to travel to Noida Sector 18 or Delhi - our online classes serve you better.',
     },
 
     content: {
@@ -9994,7 +10327,7 @@ export const localities: Locality[] = [
       valueProposition: 'Specialized NEET Biology coaching for Indirapuram students',
       urgencyMessage: 'Indirapuram batch filling fast! Enroll now.',
       localChallenge:
-        'Indirapuram students travel to Noida or Delhi for coaching. Our online format saves this daily commute.',
+        'Traveling to Noida or Delhi for coaching? Our online format saves you this daily commute.',
       successMetric: '88% of Indirapuram students scored 333+ in Biology',
     },
 
@@ -10032,13 +10365,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Indirapuram is Ghaziabad's most prominent residential hub, home to thousands of families from diverse professional backgrounds. NEET demand is high as educated families prioritize medical careers and seek quality coaching locally rather than commuting to Delhi.",
+        "Indirapuram is Ghaziabad's most prominent residential hub, home to thousands of families from diverse professional backgrounds. If you'd rather prepare for NEET locally than commute to Delhi, we built our online Biology program for you.",
       competitionAnalysis:
-        'Indirapuram has a developing coaching market with branches of major institutes and local centers. However, the quality of Biology teaching specifically is inconsistent, creating demand for specialized coaching.',
+        "Indirapuram's coaching scene is developing, with branches of major institutes and local centers - but Biology teaching quality is inconsistent. Our specialist classes give you the dependable option.",
       parentConcerns:
-        'Parents in Indirapuram are concerned about their children spending hours commuting to Delhi coaching hubs. They want quality coaching that is available locally or online, saving valuable preparation time.',
+        'Worried about your child spending hours commuting to Delhi coaching hubs? Our online classes deliver the quality locally - and hand those hours back to preparation.',
       studyCultureTrend:
-        'Indirapuram has a vibrant study culture with multiple student communities and study groups. The area is increasingly embracing online coaching as a practical, quality-assured alternative to physical centers.',
+        "Indirapuram's student communities and study groups keep preparation lively. Like many of them, you can pair that energy with our quality-assured online classes instead of a physical center.",
     },
   },
   {
@@ -10087,7 +10420,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few NEET centers', 'students go to Delhi/Noida'],
       avgFees: 115000,
       ourAdvantage: ['Convenient for Vaishali', 'Affordable', 'Biology specialization'],
-      marketGap: 'Vaishali students travel to Delhi or Noida. Online coaching more convenient.',
+      marketGap:
+        'No need to travel to Delhi or Noida - our online coaching is more convenient for you.',
     },
 
     content: {
@@ -10096,7 +10430,7 @@ export const localities: Locality[] = [
       valueProposition: 'Quality NEET Biology coaching for all Vaishali sectors',
       urgencyMessage: 'Vaishali batch starting soon! Limited seats.',
       localChallenge:
-        'Vaishali students cross to Delhi or travel to Noida. Our online format saves this daily hassle.',
+        'Crossing to Delhi or traveling to Noida? Our online format saves you this daily hassle.',
       successMetric: '86% of Vaishali students scored 330+ in Biology',
     },
 
@@ -10133,13 +10467,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Vaishali is a well-connected Ghaziabad locality near the metro line, with families who actively seek quality NEET coaching. The proximity to Delhi means students compare coaching options across both cities.',
+        "Vaishali sits right on the metro line near Delhi, so you can compare coaching across both cities. Compare us too - and keep the commute time you'd otherwise lose.",
       competitionAnalysis:
-        'Vaishali has moderate coaching infrastructure with some centers near the metro station. Students often travel to Kaushambi or Delhi for coaching, indicating unmet local demand for quality options.',
+        "Vaishali has some centers near the metro station, but many students still travel to Kaushambi or Delhi - a sign of what's missing locally. Our online Biology classes fill that need for you.",
       parentConcerns:
-        'Parents want coaching quality comparable to Delhi institutes without the commute. They value metro accessibility for physical coaching and increasingly prefer online alternatives.',
+        "Want Delhi-institute quality without the Delhi commute? That's precisely what our live online classes deliver to your home.",
       studyCultureTrend:
-        "The study culture in Vaishali is competitive, influenced by proximity to Delhi's coaching ecosystem. Students here are aspirational and seek coaching that gives them an edge in NEET.",
+        "Competitive and aspirational, like most Vaishali students living next to Delhi's coaching ecosystem? Our specialist Biology coaching is the edge that sets you apart.",
     },
   },
   {
@@ -10188,7 +10522,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers', 'students go to Delhi/Noida'],
       avgFees: 113000,
       ourAdvantage: ['Saves travel to Delhi/Noida', 'Affordable', 'Quality teaching'],
-      marketGap: 'Vasundhara students travel far for coaching. Online format more convenient.',
+      marketGap:
+        'No need to travel far for coaching - our online format is more convenient for you.',
     },
 
     content: {
@@ -10197,7 +10532,7 @@ export const localities: Locality[] = [
       valueProposition: 'Quality NEET Biology coaching for Vasundhara students',
       urgencyMessage: 'Vasundhara batch starting soon! Enroll today.',
       localChallenge:
-        'Vasundhara students travel to Delhi or Noida. Our online format saves this daily commute.',
+        'Traveling to Delhi or Noida? Our online format saves you this daily commute.',
       successMetric: '85% of Vasundhara students scored 328+ in Biology',
     },
 
@@ -10234,13 +10569,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Vasundhara is a large residential area in Ghaziabad with a significant student population preparing for competitive exams. NEET demand is high, driven by middle-class families with strong educational aspirations.',
+        "Vasundhara is a large residential area with a strong tradition of educational ambition. If you're preparing for NEET here, integrated Biology coaching will save you both money and confusion.",
       competitionAnalysis:
-        'Vasundhara has some coaching centers but lacks specialized NEET Biology coaching. Students often combine general coaching with private Biology tutors, a costly and fragmented approach.',
+        'Vasundhara has coaching centers, but no NEET Biology specialists - so students stitch together general coaching plus private tutors, a costly and fragmented approach. Our single program replaces it for you.',
       parentConcerns:
-        'Parents in Vasundhara are concerned about fragmented coaching approaches that do not deliver integrated Biology preparation. They seek comprehensive coaching that addresses all aspects of NEET Biology.',
+        'Frustrated with fragmented coaching that never delivers integrated Biology preparation? Our comprehensive program covers every aspect of NEET Biology in one place.',
       studyCultureTrend:
-        'The study culture is strong and community-driven, with students supporting each other through preparation. Online coaching is gaining ground as an efficient alternative to multiple coaching enrollments.',
+        'Vasundhara students support each other through preparation - a real strength. Add our efficient online classes and skip the multiple-enrollment maze.',
     },
   },
   {
@@ -10285,7 +10620,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Very few', 'students go to Vaishali or Delhi'],
       avgFees: 110000,
       ourAdvantage: ['Saves long travel', 'Affordable', 'Quality coaching'],
-      marketGap: 'RNE lacks coaching. Students travel far. Online perfect solution.',
+      marketGap:
+        'RNE lacks coaching and students travel far. Our online classes are the solution built for you.',
     },
 
     content: {
@@ -10294,7 +10630,7 @@ export const localities: Locality[] = [
       valueProposition: 'Quality NEET Biology coaching at affordable prices',
       urgencyMessage: 'RNE batch starting soon! Limited seats.',
       localChallenge:
-        'RNE students travel to Vaishali or Delhi daily. Our online format saves this time and expense.',
+        'Traveling to Vaishali or Delhi daily? Our online format saves you that time and expense.',
       successMetric: '83% of RNE students scored 326+ in Biology',
     },
 
@@ -10328,13 +10664,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'growing',
       demandExplanation:
-        "Raj Nagar Extension is one of Ghaziabad's fastest-growing residential areas with thousands of new apartments. NEET demand is growing as young families settle and their children reach competitive exam age.",
+        "Raj Nagar Extension is one of Ghaziabad's fastest-growing areas, with thousands of new apartments. If your family is settling in and NEET is approaching, your preparation doesn't need to wait for local institutes.",
       competitionAnalysis:
-        'The coaching market in Raj Nagar Extension is still developing with few established options. Online coaching has high acceptance here as physical infrastructure catches up with population growth.',
+        'Established coaching options in RNE are still few while the area develops. Our online classes give you proven teaching today - no waiting for infrastructure.',
       parentConcerns:
-        'Parents are anxious about the lack of quality educational infrastructure in their rapidly developing area. They want proven coaching options that deliver consistent quality regardless of location.',
+        'Anxious about the lack of quality educational infrastructure in your fast-growing area? Our coaching delivers consistent quality wherever you live - including RNE.',
       studyCultureTrend:
-        'The study culture is forming alongside the growing community. Families are enthusiastic about quality coaching options and embrace online learning as a practical solution.',
+        'As the community grows, enthusiasm for quality coaching grows with it - and online learning is the practical answer. Join the RNE families already studying with us.',
     },
   },
   {
@@ -10383,7 +10719,7 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few local centers', 'students go to Delhi'],
       avgFees: 114000,
       ourAdvantage: ['Convenient for Kaushambi', 'No Delhi travel', 'Quality teaching'],
-      marketGap: 'Kaushambi students cross to Delhi. Online coaching more convenient.',
+      marketGap: 'No need to cross into Delhi - our online coaching is more convenient for you.',
     },
 
     content: {
@@ -10392,7 +10728,7 @@ export const localities: Locality[] = [
       valueProposition: 'Quality NEET Biology coaching for Kaushambi students',
       urgencyMessage: 'Kaushambi batch starting soon! Enroll now.',
       localChallenge:
-        'Kaushambi students cross border to Delhi for coaching. Our online format saves this daily commute.',
+        'Crossing the border to Delhi for coaching? Our online format saves you this daily commute.',
       successMetric: '87% of Kaushambi students scored 330+ in Biology',
     },
 
@@ -10429,13 +10765,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Kaushambi is a prime Ghaziabad location on the Delhi border with excellent metro connectivity. The area draws students from across Ghaziabad, creating strong NEET coaching demand in this transit-friendly locality.',
+        'Kaushambi sits on the Delhi border with excellent metro connectivity, drawing students from across Ghaziabad. Preparing for NEET here? You can skip the transit entirely with our live online classes.',
       competitionAnalysis:
-        'Kaushambi has several coaching centers leveraging its metro connectivity, but Biology specialization is limited. Many students use Kaushambi as a transit point to Delhi coaching, indicating quality gaps locally.',
+        "Kaushambi's centers lean on metro connectivity, but Biology specialization is limited - many students just pass through en route to Delhi coaching. Our online classes end that journey for you.",
       parentConcerns:
-        "Parents value Kaushambi's connectivity but want coaching that makes travel unnecessary. They prefer quality online coaching that their children can access from home safely and conveniently.",
+        'Great connectivity is nice - coaching that makes travel unnecessary is better. Our online classes let your child learn safely and conveniently from home.',
       studyCultureTrend:
-        'The study culture in Kaushambi is shaped by its urban, connected environment. Students are exposed to multiple coaching options and are discerning about quality and specialization.',
+        'Exposed to many coaching options and discerning about quality, like most Kaushambi students? Apply that judgment to us - our Biology specialization stands the test.',
     },
   },
   {
@@ -10484,7 +10820,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Very few', 'students go to Indirapuram or Delhi'],
       avgFees: 116000,
       ourAdvantage: ['Saves long travel', 'Convenient', 'Quality teaching'],
-      marketGap: 'Crossings Republik lacks coaching. Students travel far. Online solves this.',
+      marketGap:
+        'Crossings Republik lacks coaching and students travel far. Our online classes solve this for you.',
     },
 
     content: {
@@ -10492,8 +10829,7 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for Crossings residents',
       valueProposition: 'Quality NEET Biology coaching for Crossings Republik',
       urgencyMessage: 'Crossings Republik batch starting soon! Limited seats.',
-      localChallenge:
-        'Crossings Republik students travel to Indirapuram or Delhi. Our online format eliminates this.',
+      localChallenge: 'Traveling to Indirapuram or Delhi? Our online format eliminates this.',
       successMetric: '86% of Crossings Republik students scored 329+ in Biology',
     },
 
@@ -10530,13 +10866,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'growing',
       demandExplanation:
-        'Crossings Republik is a massive residential township on the Ghaziabad-Noida border with a growing population. NEET demand is increasing as families with children in the preparation age group seek quality coaching.',
+        'Crossings Republik is a massive township on the Ghaziabad-Noida border with a fast-growing population. If your child is reaching preparation age, quality NEET coaching is available right inside your home.',
       competitionAnalysis:
-        'Crossings Republik has virtually no coaching infrastructure within the township. Students travel to Ghaziabad or Noida for coaching, making online options highly attractive for this captive market.',
+        "There's virtually no coaching inside the township, so students travel to Ghaziabad or Noida. Our online classes make that unnecessary for you.",
       parentConcerns:
-        'Parents are frustrated by the absence of quality coaching within their township. They strongly prefer online coaching that brings expert teachers to their homes without the commute hassle.',
+        'Frustrated that your township has no quality coaching? Our online classes bring expert teachers into your home - no commute hassle at all.',
       studyCultureTrend:
-        'The study culture is community-oriented with residents forming education-focused groups. Online coaching adoption is high as families recognize it as the most practical preparation solution.',
+        "Education-focused resident groups are already active here, and online coaching adoption is high. Join the neighbors who've made it work with us.",
     },
   },
   {
@@ -10585,7 +10921,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Few NEET centers', 'students go to Delhi'],
       avgFees: 110000,
       ourAdvantage: ['Affordable', 'No Delhi travel', 'Quality teaching'],
-      marketGap: 'Mohan Nagar students need affordable quality coaching without Delhi travel',
+      marketGap:
+        "Affordable quality coaching without Delhi travel - that's what we deliver to you.",
     },
 
     content: {
@@ -10593,8 +10930,7 @@ export const localities: Locality[] = [
       heroSubtitle: 'Affordable quality Biology coaching',
       valueProposition: 'Quality NEET Biology coaching at affordable prices',
       urgencyMessage: 'Mohan Nagar batch starting soon! Enroll today.',
-      localChallenge:
-        'Mohan Nagar students cross to Delhi for coaching. Our online format saves time and money.',
+      localChallenge: 'Crossing to Delhi for coaching? Our online format saves you time and money.',
       successMetric: '84% of Mohan Nagar students scored 326+ in Biology',
     },
 
@@ -10631,13 +10967,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Mohan Nagar is a commercial and residential area in central Ghaziabad with a middle-class population. NEET demand is moderate but consistent, with families viewing medicine as a respected career path.',
+        "Mohan Nagar's families view medicine as a respected career path, and more students take up NEET each year. If you're next, our affordable Biology program is built for you.",
       competitionAnalysis:
-        'Mohan Nagar has some coaching centers catering to various competitive exams. NEET-specific coaching with expert Biology faculty is limited, leaving room for specialized providers.',
+        "Mohan Nagar's centers cover various competitive exams, but NEET-specific coaching with expert Biology faculty is limited. That's the specialist role we fill for you.",
       parentConcerns:
-        'Parents want affordable coaching that delivers practical results. They are budget-conscious and compare coaching options based on value and proven track records.',
+        'Budget-conscious and comparing options on value and track record? Good - our affordable fees and proven results are made for exactly that comparison.',
       studyCultureTrend:
-        'The study culture is traditional and hard-working, with students dedicating significant hours to preparation. Online coaching is gradually gaining acceptance as awareness of quality options increases.',
+        'Already dedicating long hours to preparation, in the classic hard-working Mohan Nagar way? Our structured online classes make sure those hours convert to marks.',
     },
   },
   {
@@ -10691,7 +11027,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Limited NEET coaching', 'students travel to Delhi'],
       avgFees: 95000,
       ourAdvantage: ['No travel needed', 'Online convenience', 'Same quality as Delhi'],
-      marketGap: 'Sahibabad students travel to Delhi for coaching. Online saves commute.',
+      marketGap:
+        'No need to travel to Delhi for coaching - our online classes save you the commute.',
     },
 
     content: {
@@ -10700,7 +11037,7 @@ export const localities: Locality[] = [
       valueProposition: 'Quality NEET coaching without traveling to Delhi',
       urgencyMessage: 'Limited seats for Sahibabad batch!',
       localChallenge:
-        'Sahibabad students cross to Delhi spending hours daily. Online serves better.',
+        'Crossing to Delhi and losing hours daily? Our online classes serve you better.',
       successMetric: '85% of Sahibabad students scored 330+ in Biology',
     },
 
@@ -10732,13 +11069,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Sahibabad is an industrial and residential area in Ghaziabad with a mixed-income population. NEET demand is moderate, with growing numbers of families aspiring to medical careers for their children.',
+        "Sahibabad's families increasingly aspire to medical careers for their children. If that's your household, accessible quality coaching is no longer out of reach.",
       competitionAnalysis:
-        'Sahibabad has limited coaching options, with most quality centers located in Indirapuram or central Ghaziabad. Students here need accessible coaching that does not require long commutes.',
+        'Most quality centers sit in Indirapuram or central Ghaziabad, leaving Sahibabad students with long commutes. Our online classes bring the quality to you instead.',
       parentConcerns:
-        'Parents in Sahibabad prioritize affordability and accessibility. They want coaching that fits their budget while providing quality comparable to more expensive urban centers.',
+        "Need coaching that fits your budget but matches the quality of expensive urban centers? That's exactly the balance we deliver.",
       studyCultureTrend:
-        'The study culture is developing with increasing awareness about competitive exam preparation. Students here are eager for guidance and respond well to structured coaching programs.',
+        "Awareness about competitive exam preparation is rising fast here. If you're eager for guidance, our structured program gives you a clear path.",
     },
   },
   {
@@ -10787,7 +11124,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Very few NEET coaching', 'students travel outside'],
       avgFees: 120000,
       ourAdvantage: ['No travel from township', 'Online convenience', 'Premium quality'],
-      marketGap: 'Wave City residents travel 30+ minutes for coaching. Online saves this.',
+      marketGap:
+        'Traveling 30+ minutes for coaching from Wave City? Our online classes save you that trip.',
     },
 
     content: {
@@ -10795,7 +11133,7 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for Wave City residents',
       valueProposition: 'Premium NEET coaching without leaving Wave City',
       urgencyMessage: 'Wave City batch enrolling now!',
-      localChallenge: 'Wave City residents travel to Noida or Delhi. Online coaching is ideal.',
+      localChallenge: 'Traveling to Noida or Delhi? Our online coaching is ideal for you.',
       successMetric: '82% of Wave City students scored 325+ in Biology',
     },
 
@@ -10827,13 +11165,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'growing',
       demandExplanation:
-        "Wave City is a large township in Ghaziabad with a growing residential population. NEET demand is increasing as families settle into the township and focus on their children's academic preparation.",
+        'Wave City is a large township with a growing residential community focused on academics. If NEET preparation is starting in your home, it can start right there - online.',
       competitionAnalysis:
-        'Wave City has minimal coaching infrastructure within its township limits. Online coaching is the primary viable option for students seeking quality NEET Biology preparation.',
+        'Coaching infrastructure inside Wave City is minimal, so for quality NEET Biology preparation, our online classes are the practical route - and a proven one.',
       parentConcerns:
-        'Parents want coaching that is available within their township or online. They are concerned about children commuting long distances and prefer safe, convenient coaching solutions.',
+        'Prefer your child not commute long distances? Our safe, convenient online classes are available right within your township walls.',
       studyCultureTrend:
-        'The study culture is community-driven, with the township organizing educational initiatives. Online coaching is well-accepted and growing among families here.',
+        "Wave City's community educational initiatives create real momentum. Our online classes plug into it - as they already have for families here.",
     },
   },
   {
@@ -10878,7 +11216,7 @@ export const localities: Locality[] = [
       majorInstitutes: ['Very limited NEET coaching'],
       avgFees: 85000,
       ourAdvantage: ['Affordable online option', 'No travel to Delhi', 'Quality teaching'],
-      marketGap: 'Loni students have limited local options. Online coaching fills this gap.',
+      marketGap: 'Local options are limited in Loni - our online coaching fills that need for you.',
     },
 
     content: {
@@ -10886,7 +11224,7 @@ export const localities: Locality[] = [
       heroSubtitle: 'Affordable Biology coaching for Loni students',
       valueProposition: 'Quality NEET coaching at affordable fees for Loni students',
       urgencyMessage: 'Loni batch starting soon!',
-      localChallenge: 'Loni students have few local coaching options. Online solves this.',
+      localChallenge: 'Few local coaching options in Loni? Our online classes solve this.',
       successMetric: '80% of Loni students scored 320+ in Biology',
     },
 
@@ -10918,13 +11256,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Loni is a developing area on the outskirts of Ghaziabad with a growing student population. NEET demand is moderate as families become more aware of competitive exam opportunities.',
+        "Loni's student population is growing, and so is awareness of what competitive exams can open up. If NEET is your ambition, quality coaching is finally within reach - online.",
       competitionAnalysis:
-        'Coaching infrastructure in Loni is minimal, with students relying on distant centers or self-study. Quality online coaching addresses a genuine gap in this underserved area.',
+        'Coaching infrastructure in Loni is minimal, leaving distant centers or self-study as the defaults. Our quality online classes give you a genuine third option.',
       parentConcerns:
-        'Parents want affordable coaching with proven quality. They are concerned about limited local options and want coaching that is accessible online without requiring travel.',
+        "Want affordable coaching with proven quality, accessible without travel? That's exactly what our online program delivers to your home.",
       studyCultureTrend:
-        "The study culture is growing alongside the area's development. Students here are motivated and benefit greatly from structured coaching that provides expert guidance and regular assessments.",
+        'Motivated and ready to work? Our structured coaching adds the expert guidance and regular assessments that turn motivation into results.',
     },
   },
   {
@@ -10973,7 +11311,7 @@ export const localities: Locality[] = [
       majorInstitutes: ['Limited NEET coaching options'],
       avgFees: 90000,
       ourAdvantage: ['No travel to Delhi', 'Online convenience', 'Affordable'],
-      marketGap: 'Shalimar Garden students travel to Delhi. Online coaching is the solution.',
+      marketGap: 'No need to travel to Delhi - our online coaching is the solution for you.',
     },
 
     content: {
@@ -10981,7 +11319,7 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for Shalimar Garden students',
       valueProposition: 'Quality NEET coaching without traveling to Delhi',
       urgencyMessage: 'Shalimar Garden batch filling fast!',
-      localChallenge: 'Shalimar Garden students commute to Delhi. Online saves time and money.',
+      localChallenge: 'Commuting to Delhi? Our online classes save you time and money.',
       successMetric: '83% of Shalimar Garden students scored 325+ in Biology',
     },
 
@@ -11013,13 +11351,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Shalimar Garden is a residential colony in Ghaziabad with middle-class families seeking quality education. NEET demand is moderate with a steady stream of students targeting medical admissions each year.',
+        "Shalimar Garden sends a steady stream of students toward medical admissions every year. When it's your turn, complete Biology preparation is available without leaving the colony.",
       competitionAnalysis:
-        'Limited coaching options exist in Shalimar Garden, with students accessing centers in other parts of Ghaziabad. Online coaching provides convenient, quality access to expert Biology teaching.',
+        'With limited coaching in Shalimar Garden, students usually travel across Ghaziabad. Our online classes give you convenient access to expert Biology teaching at home.',
       parentConcerns:
-        'Parents want coaching that provides complete Biology preparation without requiring multiple tutoring arrangements. They value comprehensive programs with clear structure and regular feedback.',
+        'Want complete Biology preparation without juggling multiple tutoring arrangements? Our comprehensive program has clear structure and regular feedback built in.',
       studyCultureTrend:
-        'The study culture is traditional and dedicated, with students following disciplined preparation routines. Online coaching enhances their preparation by providing expert-led, structured learning.',
+        'Follow a disciplined, traditional preparation routine? Perfect - our expert-led structured classes strengthen it rather than disrupt it.',
     },
   },
   {
@@ -11068,7 +11406,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Very limited NEET coaching'],
       avgFees: 85000,
       ourAdvantage: ['Affordable online option', 'Expert faculty', 'No commute'],
-      marketGap: 'Govindpuram has limited coaching options. Online fills this gap perfectly.',
+      marketGap:
+        'Coaching options are limited in Govindpuram - our online classes fill that need for you perfectly.',
     },
 
     content: {
@@ -11076,7 +11415,7 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for Govindpuram students',
       valueProposition: 'Quality NEET coaching for Trans-Hindon students',
       urgencyMessage: 'Govindpuram batch enrolling now!',
-      localChallenge: 'Govindpuram students have few local options. Online coaching is ideal.',
+      localChallenge: 'Few local options in Govindpuram? Our online coaching is ideal for you.',
       successMetric: '78% of Govindpuram students scored 315+ in Biology',
     },
 
@@ -11108,13 +11447,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Govindpuram is a residential area in Ghaziabad with a growing student population. NEET demand is moderate as families increasingly consider medical careers for their children.',
+        'More Govindpuram families consider medical careers every year. If yours is one of them, quality NEET preparation is now as close as your internet connection.',
       competitionAnalysis:
-        'Govindpuram has very few coaching options, making it an underserved market for quality NEET preparation. Online coaching is the most practical way to reach students in this area.',
+        'Govindpuram has very few coaching options for quality NEET preparation. Our online classes are the practical way to get expert Biology teaching here - built for you.',
       parentConcerns:
-        "Parents seek affordable and reliable coaching that they can trust for their children's preparation. They value consistency and want coaching with clear schedules and expectations.",
+        'Want affordable, reliable coaching with clear schedules and expectations? That consistency is exactly what we commit to your family.',
       studyCultureTrend:
-        'The study culture is growing with the community. Students here are eager for quality coaching and adapt well to online learning platforms that provide structured preparation.',
+        "Eager for quality coaching? You'll adapt to our structured online platform quickly - most of our students here did within a week.",
     },
   },
 
@@ -11162,7 +11501,7 @@ export const localities: Locality[] = [
       avgFees: 108000,
       ourAdvantage: ['Saves Delhi travel', 'Affordable', 'Quality teaching'],
       marketGap:
-        'Bahadurgarh lacks quality coaching. Students travel to Delhi. Online perfect solution.',
+        'Bahadurgarh lacks quality coaching and students travel to Delhi. Our online classes are the solution built for you.',
     },
 
     content: {
@@ -11170,8 +11509,7 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for Bahadurgarh students',
       valueProposition: 'Quality NEET Biology coaching for Bahadurgarh and Jhajjar area',
       urgencyMessage: 'Bahadurgarh batch starting soon! Limited seats.',
-      localChallenge:
-        'Bahadurgarh students travel 2-3 hours to Delhi daily. Our online format eliminates this.',
+      localChallenge: 'Traveling 2-3 hours to Delhi daily? Our online format eliminates this.',
       successMetric: '85% of Bahadurgarh students scored 328+ in Biology',
     },
 
@@ -11197,7 +11535,7 @@ export const localities: Locality[] = [
       {
         question: 'Is your coaching affordable for Bahadurgarh students?',
         answer:
-          'Yes! At ₹1,08,000 with EMI and scholarships, we are very affordable. We understand Bahadurgarh families value quality at reasonable prices.',
+          'Yes! At ₹1,08,000 with EMI and scholarships, we are very affordable. We understand you want quality at reasonable prices.',
       },
       {
         question: 'Do you provide study material and test series?',
@@ -11209,13 +11547,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Bahadurgarh is a satellite town near Delhi on the Rohtak road with a growing student population. NEET demand is moderate but steadily increasing as families become aware of quality coaching options beyond local providers.',
+        "Bahadurgarh is a satellite town on the Rohtak road whose students increasingly look beyond local providers for quality coaching. If you're one of them, Delhi-quality Biology teaching is available without the trip.",
       competitionAnalysis:
-        'Bahadurgarh has a few coaching centers but quality is inconsistent compared to Delhi standards. Students often travel to Dwarka or Rohini for coaching, wasting significant time in daily commutes.',
+        "Bahadurgarh's few coaching centers are inconsistent against Delhi standards, so students commute to Dwarka or Rohini - losing hours daily. Our online classes end that trade-off for you.",
       parentConcerns:
-        'Parents in Bahadurgarh want Delhi-quality coaching without the travel burden. They are price-sensitive and seek coaching that provides competitive preparation at reasonable costs.',
+        'Want Delhi-quality coaching without the travel burden - at prices that make sense? That combination is exactly what we deliver to Bahadurgarh families.',
       studyCultureTrend:
-        'The study culture is evolving as Bahadurgarh grows closer to Delhi through improved connectivity. Students here are hardworking and benefit from structured coaching that bridges the quality gap.',
+        "As connectivity pulls Bahadurgarh closer to Delhi, expectations rise too. If you're a hardworking student, our structured coaching bridges the quality difference for you.",
     },
   },
   {
@@ -11264,7 +11602,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Very few', 'students go to Delhi'],
       avgFees: 106000,
       ourAdvantage: ['Affordable', 'No Delhi travel', 'Quality coaching'],
-      marketGap: 'Sector 3 lacks coaching. Students travel far. Online perfect solution.',
+      marketGap:
+        'Sector 3 lacks coaching and students travel far. Our online classes are the solution for you.',
     },
 
     content: {
@@ -11272,8 +11611,7 @@ export const localities: Locality[] = [
       heroSubtitle: 'Affordable quality Biology coaching',
       valueProposition: 'Quality NEET Biology coaching at affordable prices',
       urgencyMessage: 'Sector 3 batch starting soon! Enroll today.',
-      localChallenge:
-        'Sector 3 students travel to Delhi daily. Our online format saves time and expense.',
+      localChallenge: 'Traveling to Delhi daily? Our online format saves you time and expense.',
       successMetric: '83% of Sector 3 students scored 325+ in Biology',
     },
 
@@ -11310,13 +11648,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Sector 3 Bahadurgarh is a residential sector with middle-class families who aspire to medical careers for their children. NEET demand is moderate with a consistent student base each year.',
+        "Sector 3 sends a consistent group of students toward NEET every year. If a medical career is your family's aspiration, we make the Biology preparation straightforward and affordable.",
       competitionAnalysis:
-        'Coaching options in Sector 3 are limited to a few local providers. Quality NEET Biology coaching is unavailable locally, making online coaching the practical alternative.',
+        "Sector 3's coaching options are a few local providers - quality NEET Biology teaching isn't among them. Our online classes are the practical alternative for you.",
       parentConcerns:
-        'Parents want coaching that matches the quality of Delhi institutes at Bahadurgarh-friendly prices. They value programs that provide comprehensive preparation without hidden costs.',
+        'Want Delhi-institute quality at Bahadurgarh-friendly prices? Our comprehensive program delivers it - with no hidden costs.',
       studyCultureTrend:
-        'The study culture is developing as the sector grows. Students are motivated and respond positively to structured online coaching that provides expert guidance and regular practice.',
+        'Motivated and ready for structure? Our online coaching gives you expert guidance and regular practice, exactly what growing sectors like yours have been missing.',
     },
   },
   {
@@ -11365,7 +11703,8 @@ export const localities: Locality[] = [
       majorInstitutes: ['Very few', 'students go to Delhi'],
       avgFees: 105000,
       ourAdvantage: ['Saves long travel', 'Affordable', 'Quality teaching'],
-      marketGap: 'Sector 5 lacks coaching completely. Online only solution.',
+      marketGap:
+        'Sector 5 has no local coaching at all - our online classes are the solution for you.',
     },
 
     content: {
@@ -11373,8 +11712,7 @@ export const localities: Locality[] = [
       heroSubtitle: 'Expert Biology coaching for Sector 5',
       valueProposition: 'Quality NEET Biology coaching for Sector 5 students',
       urgencyMessage: 'Sector 5 batch starting soon! Limited seats.',
-      localChallenge:
-        'Sector 5 students travel to Delhi or main Bahadurgarh. Our online format eliminates this.',
+      localChallenge: 'Traveling to Delhi or main Bahadurgarh? Our online format eliminates this.',
       successMetric: '82% of Sector 5 students scored 324+ in Biology',
     },
 
@@ -11411,13 +11749,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        "Sector 5 Bahadurgarh has residential developments with families focused on their children's academic growth. NEET demand is moderate and growing as awareness about quality coaching increases.",
+        "Sector 5's families are focused on their children's academic growth, and awareness of quality coaching keeps rising. If NEET is the goal in your home, we're ready to start with you.",
       competitionAnalysis:
-        'Limited coaching infrastructure means students rely on nearby sectors or online platforms. Quality NEET Biology coaching online effectively serves students in this underserved sector.',
+        'With limited coaching infrastructure in Sector 5, the options are nearby sectors or online platforms. Our quality NEET Biology classes bring the better option to your home.',
       parentConcerns:
-        'Parents want accessible coaching solutions that do not strain their budgets. They appreciate transparent pricing and clear communication about course expectations.',
+        "Need coaching that doesn't strain the budget? Our transparent pricing and clear course expectations respect your planning.",
       studyCultureTrend:
-        'The study culture is community-based, with families supporting educational pursuits. Online coaching is gaining acceptance as a quality alternative to limited local options.',
+        "Sector 5 families back each other's educational pursuits - and more of them are choosing online coaching as the quality alternative. Join them with us.",
     },
   },
 
@@ -11497,7 +11835,7 @@ export const localities: Locality[] = [
         'Personalized attention for Biology mastery',
       ],
       marketGap:
-        'Premium institutes charge high fees but lack personalized Biology focus. Students waste 2-3 hours daily in Mumbai traffic.',
+        'Premium institutes charge high fees without personalized Biology focus - and Mumbai traffic eats 2-3 hours daily. We solve both for you.',
     },
 
     content: {
@@ -11507,7 +11845,7 @@ export const localities: Locality[] = [
         'Premium online coaching eliminating Mumbai traffic hassles. Expert faculty, small batches, and proven strategies for Malabar Hill NEET aspirants.',
       urgencyMessage: 'Limited seats in Premium batch! Malabar Hill students enrolling fast.',
       localChallenge:
-        'Malabar Hill students spend 3-4 hours daily commuting to coaching centers. Our online model delivers the same quality without the traffic stress.',
+        'Spending 3-4 hours daily commuting to coaching centers? Our online model delivers the same quality without the traffic stress.',
       successMetric: '92% of our South Mumbai students scored above 330 in NEET 2024 Biology',
     },
 
@@ -11550,13 +11888,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "Malabar Hill is South Mumbai's most prestigious residential area, home to industrialists, politicians, and top professionals. NEET demand is very high as these families have the resources and ambition to pursue top medical college admissions.",
+        "Malabar Hill is South Mumbai's most prestigious address, home to industrialists, politicians, and top professionals. If your ambitions point at top medical colleges, our Biology coaching is calibrated for that level.",
       competitionAnalysis:
-        'Despite the premium demographics, South Mumbai has limited NEET coaching infrastructure compared to suburbs. Students rely on private tutors or travel to Andheri for coaching, creating demand for quality online options.',
+        'South Mumbai has surprisingly limited NEET coaching compared to the suburbs - private tutors or a trek to Andheri are the usual options. Our quality online classes give you a third, better one.',
       parentConcerns:
-        'Malabar Hill parents expect the highest standards of teaching and would not settle for average coaching. They want personalized preparation with faculty who understand the nuances of competitive Biology.',
+        "You wouldn't settle for average coaching - nor should you. Our faculty understand the nuances of competitive Biology and personalize preparation to your child.",
       studyCultureTrend:
-        'The study culture is elite and focused, with students having access to the best resources. Online coaching that delivers expert teaching conveniently is highly valued by these busy, affluent families.',
+        'With elite resources already at hand, what busy families here value most is expert teaching delivered conveniently. Our online classes are exactly that.',
     },
   },
   {
@@ -11634,7 +11972,7 @@ export const localities: Locality[] = [
         'Exclusive Biology focus',
       ],
       marketGap:
-        'Large institutes in Nariman Point/Churchgate are expensive and crowded. Biology gets diluted in multi-subject programs.',
+        'The large institutes in Nariman Point and Churchgate are expensive and crowded, and Biology gets diluted in multi-subject programs. With us, Biology is the whole point.',
     },
 
     content: {
@@ -11645,7 +11983,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Only 6 seats left in Pinnacle batch! Cuffe Parade students securing spots fast.',
       localChallenge:
-        'Cuffe Parade students travel to crowded Churchgate/Nariman Point centers. Our online model provides better learning environment without the commute.',
+        'Traveling to crowded Churchgate or Nariman Point centers? Our online model gives you a better learning environment without the commute.',
       successMetric: '90% of our Cuffe Parade students scored above 335 in NEET 2024 Biology',
     },
 
@@ -11688,13 +12026,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "Cuffe Parade is one of Mumbai's most affluent addresses, home to business leaders and senior professionals. The demand for quality NEET coaching is very high as families invest heavily in their children's medical education aspirations.",
+        "Cuffe Parade is one of Mumbai's most affluent addresses, and medical education here is an investment made seriously. We match that seriousness with specialist Biology teaching delivered to your home.",
       competitionAnalysis:
-        'Cuffe Parade has minimal coaching infrastructure due to its primarily residential nature. Students travel to other parts of Mumbai for coaching, making online alternatives extremely attractive.',
+        'Being primarily residential, Cuffe Parade has minimal coaching infrastructure - students travel across Mumbai for classes. Our online program removes that entire burden for you.',
       parentConcerns:
-        'Parents expect premium coaching experiences with individualized attention. They are willing to pay top fees but demand measurable results and faculty with exceptional credentials.',
+        'Expect a premium coaching experience - individualized attention, exceptional faculty credentials, measurable results? All three are our baseline, not our upsell.',
       studyCultureTrend:
-        'The study culture is private and highly structured, with families providing all necessary support. Students here thrive with expert online coaching that offers the convenience of learning from home.',
+        'If your home already provides structure and support, our expert online coaching completes the setup - private, convenient, and rigorous.',
     },
   },
   {
@@ -11772,7 +12110,7 @@ export const localities: Locality[] = [
         'Biology specialists with 15+ years experience',
       ],
       marketGap:
-        'Colaba students commute to crowded Churchgate centers. Need for premium online coaching with personalized attention.',
+        "Commuting to crowded Churchgate centers from Colaba? What you need is premium online coaching with personalized attention - and that's us.",
     },
 
     content: {
@@ -11782,7 +12120,7 @@ export const localities: Locality[] = [
         'Skip the Churchgate commute. Learn from NEET Biology experts through live online classes designed for South Mumbai students.',
       urgencyMessage: 'Limited seats available! Colaba students enrolling for 2027 batch.',
       localChallenge:
-        'Colaba students face long commutes to Churchgate coaching hubs. Our online platform provides superior learning without travel fatigue.',
+        'Facing long commutes to Churchgate coaching hubs? Our online platform gives you superior learning without travel fatigue.',
       successMetric: '88% of our Colaba students scored above 330 in NEET 2024 Biology',
     },
 
@@ -11825,13 +12163,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "Colaba is a historic South Mumbai locality with a mix of affluent residents and young professionals. NEET demand is very high as the area's educated demographics drive strong medical career aspirations.",
+        "Colaba's educated, cosmopolitan community produces strong medical-career ambitions year after year. If you share them, structured Biology coaching will take you further than tutoring patchworks.",
       competitionAnalysis:
-        "Colaba's coaching market is limited, with most NEET preparation happening through private tutors. Organized online coaching with structured curriculum fills a significant gap in this premium market.",
+        "NEET preparation in Colaba mostly happens through private tutors - organized coaching with a structured curriculum is hard to find. That's precisely what our online program gives you.",
       parentConcerns:
-        'Parents in Colaba value coaching that combines academic rigor with modern teaching methods. They want coaching that prepares their children for NEET while developing deep scientific understanding.',
+        "Want academic rigor combined with modern teaching - preparation that builds deep scientific understanding, not just exam technique? That's our teaching philosophy exactly.",
       studyCultureTrend:
-        "The study culture is intellectual and well-rounded, influenced by South Mumbai's cosmopolitan environment. Students are articulate and respond well to interactive, discussion-based coaching approaches.",
+        "Articulate and intellectually curious, like most South Mumbai students? You'll love our interactive, discussion-based classes.",
     },
   },
   {
@@ -11910,7 +12248,7 @@ export const localities: Locality[] = [
         'Exclusive Biology focus by specialists',
       ],
       marketGap:
-        'Bandra students waste hours in Western Express Highway traffic. Premium institutes charge high fees without personalized Biology attention.',
+        'Losing hours in Western Express Highway traffic while premium institutes charge high fees without personalized Biology attention? We fix both for you.',
     },
 
     content: {
@@ -11921,7 +12259,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Only 8 seats left in Premium batch! Bandra students from DAIS and JBCN enrolling fast.',
       localChallenge:
-        'Bandra students spend 3-4 hours daily on Western Express Highway and local trains. Our online model delivers superior results without the commute stress.',
+        'Spending 3-4 hours daily on the Western Express Highway and local trains? Our online model delivers superior results without the commute stress.',
       successMetric: '98% of our Bandra students scored above 335 in NEET 2024 Biology',
     },
 
@@ -11964,13 +12302,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "Bandra is Mumbai's most aspirational neighborhood, home to celebrities, professionals, and affluent families. NEET demand is very high as medical education is viewed as a prestigious career path worth significant investment.",
+        "Bandra is Mumbai's most aspirational neighborhood, and medicine remains one of its most prestigious career paths. If NEET is your plan, we'll make the Biology investment pay off.",
       competitionAnalysis:
-        'Bandra has some coaching centers, particularly near the station area, but quality varies widely. Specialized NEET Biology coaching with expert faculty is rare, creating clear market opportunity.',
+        "Bandra has coaching centers near the station area, but quality varies widely and Biology specialists are rare. We're the focused option your search has been missing.",
       parentConcerns:
-        'Bandra parents are discerning and well-networked, relying on community recommendations for coaching choices. They want coaching that is both effective and convenient, respecting their busy family schedules.',
+        'Discerning, well-networked, and relying on community recommendations? Ask about us - then see how our effective, schedule-friendly coaching earns them.',
       studyCultureTrend:
-        'The study culture in Bandra balances academic ambition with lifestyle considerations. Students prefer efficient, focused coaching that maximizes learning without excessive time demands.',
+        'Balancing academic ambition with a full life, the Bandra way? Our efficient, focused classes maximize learning without consuming your week.',
     },
   },
   {
@@ -12043,7 +12381,7 @@ export const localities: Locality[] = [
         'Biology experts with proven NEET track record',
       ],
       marketGap:
-        'Juhu students travel to Vile Parle/Andheri for coaching, wasting hours. Need for quality online coaching with personalized attention.',
+        'Traveling to Vile Parle or Andheri and losing hours? What you need is quality online coaching with personalized attention - we deliver it.',
     },
 
     content: {
@@ -12053,7 +12391,7 @@ export const localities: Locality[] = [
         "Skip the Vile Parle commute. Learn from NEET Biology specialists through live online classes designed for Juhu's premium school students.",
       urgencyMessage: 'Limited seats in Pinnacle batch! Ryan and AVM Juhu students enrolling fast.',
       localChallenge:
-        'Juhu students spend hours in Western suburbs traffic to reach Vile Parle/Andheri coaching. Our online platform delivers better results without travel fatigue.',
+        'Stuck in Western suburbs traffic to reach Vile Parle or Andheri coaching? Our online platform delivers better results without travel fatigue.',
       successMetric: '91% of our Juhu students scored above 330 in NEET 2024 Biology',
     },
 
@@ -12096,13 +12434,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "Juhu is one of Mumbai's most prestigious neighborhoods with celebrity residents and affluent families. NEET coaching demand is very high as families spare no expense in pursuing quality medical education.",
+        "Juhu is one of Mumbai's most prestigious neighborhoods, where quality education is non-negotiable. If a medical career is the goal, our specialist Biology coaching meets you at that standard.",
       competitionAnalysis:
-        'Juhu has limited coaching infrastructure within its residential area. Students travel to Andheri or use online platforms, with the latter gaining preference for convenience and quality.',
+        "Juhu has limited coaching within its residential area - it's Andheri or online. For convenience and quality together, our live online classes are the answer.",
       parentConcerns:
-        'Juhu parents want coaching that matches the exclusivity of their lifestyle. They expect personalized service, top faculty, and a coaching experience that reflects premium standards.',
+        "Expect personalized service, top faculty, and a coaching experience that reflects premium standards? That's precisely the experience we deliver to Juhu families.",
       studyCultureTrend:
-        'The study culture is focused and well-supported, with families providing every resource for success. Students here are motivated and respond well to expert coaching delivered through convenient online platforms.',
+        'With every resource for success already around you, our expert online coaching is the focused final piece - motivation meets world-class teaching.',
     },
   },
   {
@@ -12176,7 +12514,7 @@ export const localities: Locality[] = [
         'Biology-only focus ensures mastery',
       ],
       marketGap:
-        'Growing area with limited local coaching. Students travel to Andheri West, wasting time and energy.',
+        'Local coaching is limited and the Andheri West trip wastes your time and energy. Our online classes bring the teaching to you.',
     },
 
     content: {
@@ -12187,7 +12525,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Seats filling fast! Versova students from Oberoi and Jamnabai enrolling now.',
       localChallenge:
-        'Versova students commute to Andheri for coaching despite metro connectivity. Our online model provides better learning environment at home.',
+        'Still commuting to Andheri for coaching despite the metro? Our online model gives you a better learning environment at home.',
       successMetric: '89% of our Versova students scored above 330 in NEET 2024 Biology',
     },
 
@@ -12230,13 +12568,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Versova is a thriving western suburb locality with a mix of creative professionals and business families. NEET demand is high as families increasingly view medicine as a stable, prestigious career choice.',
+        "Versova's mix of creative professionals and business families increasingly sees medicine as the stable, prestigious path. If that's your direction, we'll build your Biology edge.",
       competitionAnalysis:
-        "Versova has moderate coaching presence, primarily through Andheri-based centers' branches. Specialized Biology coaching for NEET is limited, with students relying on general programs.",
+        "Versova's coaching is mostly branches of Andheri-based centers running general programs. For specialized NEET Biology coaching, we're the dedicated option for you.",
       parentConcerns:
-        "Parents in Versova want coaching that provides focused Biology preparation alongside a balanced lifestyle. They value flexible scheduling that accommodates their children's diverse interests.",
+        "Want focused Biology preparation that still leaves room for your child's other interests? Our flexible scheduling makes that balance real.",
       studyCultureTrend:
-        'The study culture is balanced and modern, with students embracing technology-enabled learning. Online coaching platforms fit naturally into the tech-forward lifestyle of Versova residents.',
+        'Tech-forward and balanced, like most Versova households? Our online platform fits your lifestyle naturally.',
     },
   },
   {
@@ -12310,7 +12648,7 @@ export const localities: Locality[] = [
         'Exclusive Biology specialists',
       ],
       marketGap:
-        'Andheri has many multi-subject institutes but lacks Biology-focused coaching. Large batch sizes reduce individual attention.',
+        'Andheri is full of multi-subject institutes with large batches and little individual attention. Our Biology-focused small batches are the alternative you need.',
     },
 
     content: {
@@ -12321,7 +12659,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Only 10 seats left in Premium batch! DPS and Ryan students enrolling rapidly.',
       localChallenge:
-        'Andheri students face severe traffic congestion despite being a coaching hub. 2-3 hours daily wasted in commute reduces study time and increases stress.',
+        'Losing 2-3 hours daily to Andheri traffic - even living in a coaching hub? Our online classes hand that time back to your preparation.',
       successMetric: '93% of our Andheri students scored above 335 in NEET 2024 Biology',
     },
 
@@ -12364,13 +12702,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Andheri is Mumbai's most populated suburb and a major coaching hub for the western suburbs. NEET demand is high as the large and diverse population generates a steady stream of medical aspirants.",
+        "Andheri is Mumbai's most populated suburb and the western suburbs' major coaching hub, producing a steady stream of medical aspirants. To stand out among them, specialize where it counts: Biology.",
       competitionAnalysis:
-        'Andheri has the highest concentration of coaching centers in the western suburbs, creating intense competition. However, Biology-specific coaching is still a differentiator in this crowded market.',
+        'Andheri has the highest concentration of coaching centers in the western suburbs - but Biology-specific coaching is still the differentiator. We give you exactly that advantage.',
       parentConcerns:
-        'Parents are overwhelmed by coaching options and struggle to identify quality among quantity. They want coaching with proven results and transparent teaching methodology.',
+        'Overwhelmed by options and struggling to separate quality from quantity? Judge us on proven results and transparent teaching methodology - we publish both.',
       studyCultureTrend:
-        'Andheri has a robust study culture with coaching being a mainstream activity. Students are competitive and seek specialized coaching that provides an advantage over peers in general programs.',
+        "In Andheri's robust coaching culture, everyone attends something. The edge goes to students in specialized programs - our Biology-only focus is yours.",
     },
   },
   {
@@ -12455,7 +12793,7 @@ export const localities: Locality[] = [
         'Biology experts with IIT/medical backgrounds',
       ],
       marketGap:
-        'Powai is IT hub but lacks quality local coaching. Students commute to Ghatkopar through heavy traffic.',
+        'Living in the Powai IT hub but lacking quality local coaching, with a traffic-choked commute to Ghatkopar? Our online classes are your answer.',
     },
 
     content: {
@@ -12466,7 +12804,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Limited seats in Pinnacle batch! DPS Powai and Somaiya School students enrolling fast.',
       localChallenge:
-        'Powai students travel to Ghatkopar/Kanjurmarg through heavy JVLR traffic. 3-4 hours daily wasted despite living in premium locality.',
+        'Traveling to Ghatkopar or Kanjurmarg through heavy JVLR traffic - 3-4 hours daily despite living in a premium locality? Our online classes end that.',
       successMetric: '98% of our Powai students scored above 340 in NEET 2024 Biology',
     },
 
@@ -12509,13 +12847,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        'Powai is an upscale Mumbai suburb near IIT Bombay, attracting tech professionals and corporate families. NEET demand is very high as these educated families set high academic benchmarks for their children.',
+        'Powai is an upscale suburb near IIT Bombay, full of tech professionals and corporate families with high academic benchmarks. If those are your standards too, our Biology coaching is built to meet them.',
       competitionAnalysis:
-        'Powai has limited coaching infrastructure despite its affluent, education-focused population. The proximity to IIT creates an academic atmosphere, but NEET-specific coaching is scarce.',
+        'Despite its education-focused population and IIT-fueled academic atmosphere, Powai has scarce NEET-specific coaching. We give you the specialist teaching the area is missing.',
       parentConcerns:
-        'Powai parents with IIT or engineering backgrounds expect analytical, conceptual teaching for NEET Biology. They want coaching that develops problem-solving skills alongside content knowledge.',
+        'Coming from an IIT or engineering background and expecting analytical, conceptual teaching for NEET Biology? Our classes develop problem-solving skills alongside content - exactly your language.',
       studyCultureTrend:
-        "The study culture in Powai is influenced by its proximity to IIT and Hiranandani's corporate environment. Students are analytical and benefit from coaching that emphasizes understanding over memorization.",
+        "If Powai's IIT-and-Hiranandani environment shaped you into an analytical learner, you'll appreciate our approach: understanding first, memorization last.",
     },
   },
   {
@@ -12595,7 +12933,7 @@ export const localities: Locality[] = [
         'Pure Biology focus vs diluted multi-subject',
       ],
       marketGap:
-        'Major coaching hub but institutes focus on multi-subject programs. Large batches reduce Biology attention. Travel fatigue affects performance.',
+        'The big institutes here run multi-subject programs in large batches, and travel fatigue eats your energy. Our small-batch Biology focus solves both for you.',
     },
 
     content: {
@@ -12605,7 +12943,7 @@ export const localities: Locality[] = [
         'Major hub means major crowds! Skip Ghatkopar station rush and coaching center chaos. Get focused NEET Biology coaching with live online classes and personalized attention.',
       urgencyMessage: 'Seats filling fast! Ryan Ghatkopar and Gokuldham students enrolling now.',
       localChallenge:
-        'Even with metro, Ghatkopar students face station crowds, rush hour chaos, and coaching center congestion. 2-3 hours daily lost despite local availability.',
+        'Even with the metro, station crowds, rush hour, and coaching-center congestion cost you 2-3 hours daily. Our online classes return that time to your books.',
       successMetric: '90% of our Ghatkopar students scored above 330 in NEET 2024 Biology',
     },
 
@@ -12648,13 +12986,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Ghatkopar is one of Mumbai's most densely populated suburbs with a strong Gujarati and Marwadi business community. NEET demand is high as families invest in quality education for their children.",
+        "Ghatkopar's strong Gujarati and Marwadi business community invests seriously in education. If your family measures coaching by outcomes, our Biology results will speak your language.",
       competitionAnalysis:
-        'Ghatkopar has a competitive coaching market with several established centers. However, specialized Biology coaching that goes beyond standard classroom teaching is limited.',
+        'Ghatkopar has several established coaching centers competing hard, but Biology teaching that goes beyond the standard classroom is limited. That depth is our specialty - and your advantage.',
       parentConcerns:
-        'Parents in Ghatkopar value results above all else and compare coaching centers based on student performance. They want coaching that delivers tangible score improvements in NEET Biology.',
+        "Compare coaching centers on student performance above all? So do we - our students' tangible NEET Biology score improvements are the comparison we welcome.",
       studyCultureTrend:
-        'The study culture is intense and community-driven, with families celebrating academic achievements. Students are hardworking and respond well to coaching that sets high standards and tracks progress.',
+        "In Ghatkopar's intense, achievement-celebrating study culture, you're already working hard. Our coaching sets the high standards and tracks the progress that make it count.",
     },
   },
   {
@@ -12733,7 +13071,7 @@ export const localities: Locality[] = [
         'Exclusive Biology specialists',
       ],
       marketGap:
-        'Growing residential area with limited local coaching. Students commute to Thane or Ghatkopar, wasting hours daily.',
+        'Local coaching is limited and the commute to Thane or Ghatkopar costs hours daily. Our online classes bring the teaching home to you.',
     },
 
     content: {
@@ -12744,7 +13082,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Limited seats available! Mulund students from Gundecha and VIBGYOR enrolling fast.',
       localChallenge:
-        'Mulund students travel to Thane or Ghatkopar for coaching, spending 2-3 hours daily on crowded trains. Our online platform delivers quality education at home.',
+        'Spending 2-3 hours daily on crowded trains to Thane or Ghatkopar? Our online platform delivers quality education at home.',
       successMetric: '88% of our Mulund students scored above 325 in NEET 2024 Biology',
     },
 
@@ -12787,13 +13125,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Mulund is a well-established eastern suburb of Mumbai with a strong educational tradition. NEET demand is high as families continue to prioritize medical careers across generations.',
+        "Mulund's educational tradition runs generations deep, and medical careers remain the family benchmark. If you're carrying that tradition forward, our Biology coaching gives you the modern edge.",
       competitionAnalysis:
-        'Mulund has moderate coaching infrastructure with a few established centers. Specialized NEET Biology coaching is limited, creating an opportunity for expert-led online coaching.',
+        'Mulund has a few established coaching centers, but specialized NEET Biology coaching is limited. Our expert-led online classes bring that specialization to you.',
       parentConcerns:
-        'Mulund parents are traditional in their approach and value coaching with experienced, senior faculty. They want coaching that combines modern methods with the thoroughness of traditional teaching.',
+        "Value experienced, senior faculty and traditional thoroughness - but want modern methods too? Our teaching combines both, exactly as you'd wish.",
       studyCultureTrend:
-        'The study culture in Mulund is established and disciplined, with families maintaining strong academic traditions. Students here are consistent and benefit from coaching that reinforces their disciplined approach.',
+        'Disciplined and consistent, in the classic Mulund way? Our structured coaching reinforces that approach instead of fighting it.',
     },
   },
   {
@@ -12872,7 +13210,7 @@ export const localities: Locality[] = [
         'Biology-only focus ensures mastery',
       ],
       marketGap:
-        'Planned city with educated families but limited quality local coaching. Students commute to Vashi through harbour line congestion.',
+        'A planned city of educated families deserves better than a harbour-line commute to Vashi for coaching. We bring the quality to you online.',
     },
 
     content: {
@@ -12883,7 +13221,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Limited seats in Premium batch! DPS and Ryan Kharghar students enrolling fast.',
       localChallenge:
-        'Kharghar students commute to Vashi for coaching, wasting 2-3 hours daily on harbour line. Our online model provides better learning from home.',
+        'Losing 2-3 hours daily on the harbour line commuting to Vashi? Our online model gives you better learning from home.',
       successMetric: '91% of our Kharghar students scored above 335 in NEET 2024 Biology',
     },
 
@@ -12926,13 +13264,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Kharghar in Navi Mumbai is a planned township with a growing population of young professional families. NEET demand is high as these families invest in their children's competitive exam preparation.",
+        "Kharghar is Navi Mumbai's planned township, growing with young professional families who take competitive preparation seriously. If that's your family, our structured Biology program will feel right at home.",
       competitionAnalysis:
-        'Kharghar has a developing coaching market with new centers opening regularly. However, quality and specialization in NEET Biology remain inconsistent, leaving room for expert providers.',
+        "New coaching centers open in Kharghar regularly, but NEET Biology quality and specialization remain inconsistent. We're the expert option you can rely on.",
       parentConcerns:
-        'Parents in Kharghar want coaching that matches the planned, organized nature of their township. They prefer structured programs with clear schedules and predictable outcomes.',
+        "Want coaching as planned and organized as your township - clear schedules, predictable outcomes? That's exactly how our program is structured.",
       studyCultureTrend:
-        'The study culture in Kharghar is growing with the township, with community-organized educational events becoming common. Online coaching is well-received in this modern, tech-forward community.',
+        "Kharghar's tech-forward community has embraced online learning alongside its community education events. Our live classes fit that culture perfectly.",
     },
   },
   {
@@ -13017,7 +13355,7 @@ export const localities: Locality[] = [
         'Pure Biology specialists',
       ],
       marketGap:
-        'Major Navi Mumbai coaching hub but institutes run large multi-subject batches. Biology gets diluted. Coaching centers crowded and stressful.',
+        "Even as a coaching hub, Vashi's institutes run large multi-subject batches where Biology gets diluted and centers stay crowded. Our small-batch Biology focus is the alternative.",
     },
 
     content: {
@@ -13028,7 +13366,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Only 10 seats left! Vashi students from DPS and Fr. Agnel enrolling rapidly.',
       localChallenge:
-        'Even with local availability, Vashi students face coaching center crowds, rush hours, and large batches. Online model provides peaceful learning environment.',
+        'Local centers exist, but crowds, rush hours, and large batches drain you. Our online model gives you a peaceful learning environment instead.',
       successMetric: '92% of our Vashi students scored above 335 in NEET 2024 Biology',
     },
 
@@ -13071,13 +13409,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Vashi is Navi Mumbai's commercial hub with a large professional population. NEET demand is high as families from diverse backgrounds aspire to medical careers for their children.",
+        "Vashi is Navi Mumbai's commercial hub, where families from diverse backgrounds aim for medical careers. If you're one of them, specialist Biology coaching is your fastest route to a real edge.",
       competitionAnalysis:
-        'Vashi has a moderate coaching market with several centers in its commercial areas. Specialized NEET Biology coaching is available but limited, with quality varying significantly.',
+        "Vashi's commercial areas host several coaching centers, but specialized NEET Biology teaching is limited and uneven. Ours is consistent, focused, and available to you at home.",
       parentConcerns:
-        'Parents in Vashi compare coaching across Navi Mumbai and Mumbai, seeking the best value. They want coaching that provides a competitive edge without requiring travel to mainland Mumbai.',
+        "Comparing coaching across Navi Mumbai and Mumbai for the best value? You'll find our program gives your child the competitive edge without any mainland travel.",
       studyCultureTrend:
-        "The study culture in Vashi is professional and focused, influenced by the area's corporate environment. Students are disciplined and benefit from coaching that mirrors the structured work culture of their families.",
+        "Professional and focused, like Vashi's corporate culture? Our coaching mirrors that structure - clear plans, measurable milestones, disciplined execution.",
     },
   },
   {
@@ -13150,7 +13488,7 @@ export const localities: Locality[] = [
         'Exclusive Biology specialists',
       ],
       marketGap:
-        'CBD area with corporate families but limited quality local coaching. Students commute to Vashi/Kharghar for NEET preparation.',
+        'Living in the CBD area but commuting to Vashi or Kharghar for NEET preparation? Our online classes end that trip for you.',
     },
 
     content: {
@@ -13161,7 +13499,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Limited seats available! Belapur students from Ryan and Cambridge enrolling fast.',
       localChallenge:
-        'Belapur students travel to Vashi or Kharghar for coaching, wasting 2+ hours daily on harbour line. Our online platform delivers quality at home.',
+        'Wasting 2+ hours daily on the harbour line to Vashi or Kharghar? Our online platform delivers quality at home.',
       successMetric: '89% of our Belapur students scored above 330 in NEET 2024 Biology',
     },
 
@@ -13204,13 +13542,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'moderate',
       demandExplanation:
-        'Belapur is a developing node in Navi Mumbai with a growing residential population. NEET demand is moderate but increasing as the area attracts more families focused on quality education.',
+        'Belapur is a developing Navi Mumbai node attracting families focused on quality education. If yours just arrived - or has been here all along - expert Biology coaching is now a login away.',
       competitionAnalysis:
-        'Coaching infrastructure in Belapur is still developing, with fewer options than Vashi or Kharghar. Online coaching effectively serves this growing but underserved market.',
+        "Belapur has fewer coaching options than Vashi or Kharghar while it develops. Our online classes give you a quality option that doesn't depend on local infrastructure.",
       parentConcerns:
-        'Parents want reliable coaching options in their developing area. They prefer proven coaching programs that deliver consistent quality regardless of physical location.',
+        'Want proven, reliable coaching even though your area is still developing? Our program delivers consistent quality wherever you live - including Belapur.',
       studyCultureTrend:
-        'The study culture is developing alongside the community. Students here are motivated and embrace online coaching as a practical way to access quality preparation.',
+        'Motivated students here have already discovered the practical path to quality preparation: live online coaching. Join them with us.',
     },
   },
   {
@@ -13289,7 +13627,7 @@ export const localities: Locality[] = [
         'Pure Biology focus by specialists',
       ],
       marketGap:
-        'Major coaching hub but institutes run large multi-subject programs. Biology attention diluted. Station crowds and auto congestion add stress.',
+        'The big institutes here run large multi-subject programs where Biology attention gets diluted - and station crowds add stress. Our focused online classes remove both problems.',
     },
 
     content: {
@@ -13299,7 +13637,7 @@ export const localities: Locality[] = [
         'City of Lakes deserves quality education! Skip Thane station chaos and coaching center rush. Get premium NEET Biology coaching with live online classes and proven results.',
       urgencyMessage: 'Only 12 seats left! CP Goenka and Dnyan Ganga students enrolling fast.',
       localChallenge:
-        'Thane is coaching hub but students face station crowds, auto congestion, and large batches. Online model provides peaceful, focused learning at home.',
+        'Thane is a coaching hub, but station crowds, auto congestion, and large batches wear you down. Our online model gives you peaceful, focused learning at home.',
       successMetric: '92% of our Thane West students scored above 335 in NEET 2024 Biology',
     },
 
@@ -13342,13 +13680,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Thane West is one of Mumbai's most populated suburban areas with a large student population. NEET demand is consistently high as families from diverse economic backgrounds pursue medical education.",
+        "Thane West is one of Mumbai's most populated suburban areas, with students from every background pursuing medicine. To rise above that crowd, make Biology your decisive subject with us.",
       competitionAnalysis:
-        'Thane West has a competitive coaching market with several established centers. However, the large student population means many students still lack access to quality Biology coaching.',
+        "Thane West has established coaching centers, but with such a large student population, quality Biology teaching is still out of many students' reach. Our online classes put it within yours.",
       parentConcerns:
-        'Parents in Thane want quality coaching that is affordable and accessible. They compare options across Thane and Mumbai, seeking the best value for their investment.',
+        "Comparing options across Thane and Mumbai for quality that's also affordable and accessible? Our program is designed to win exactly that comparison.",
       studyCultureTrend:
-        'The study culture in Thane is robust and community-driven. Students are competitive and benefit from coaching that provides structured preparation with regular assessments and feedback.',
+        "In Thane's robust, competitive study culture, structure wins. Our regular assessments and feedback keep your preparation ahead of the pack.",
     },
   },
   {
@@ -13416,7 +13754,7 @@ export const localities: Locality[] = [
         'Biology specialists with proven track record',
       ],
       marketGap:
-        'Fast-growing premium area with new schools but zero local coaching. Students commute to Thane West through heavy traffic.',
+        'A fast-growing premium area with new schools but zero local coaching, and heavy traffic to Thane West - our online classes are the solution for you.',
     },
 
     content: {
@@ -13426,7 +13764,7 @@ export const localities: Locality[] = [
         'New development area deserves modern education! Skip Thane West commute and Ghodbunder traffic. Get premium NEET Biology coaching from home with live online classes.',
       urgencyMessage: 'Limited seats! Lodha World School and Euro School students enrolling fast.',
       localChallenge:
-        'Ghodbunder Road has zero local coaching. Students travel to Thane West through heavy traffic, wasting 2-3 hours daily. Our online platform solves this completely.',
+        'Zero local coaching on Ghodbunder Road and 2-3 hours lost daily in traffic to Thane West? Our online platform solves this completely.',
       successMetric: '90% of our Ghodbunder Road students scored above 330 in NEET 2024 Biology',
     },
 
@@ -13469,13 +13807,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Ghodbunder Road is Thane's fastest-growing residential corridor with premium apartment complexes. The influx of young professional families is driving strong NEET coaching demand in this developing area.",
+        "Ghodbunder Road is Thane's fastest-growing corridor, its premium complexes filling with young professional families. If NEET preparation is starting in your home, it can start right there.",
       competitionAnalysis:
-        'Ghodbunder Road has limited coaching infrastructure despite its massive residential development. Online coaching fills a critical gap for families who would otherwise commute to Thane West.',
+        'Despite massive residential development, Ghodbunder Road has limited coaching infrastructure - the default is commuting to Thane West. Our online classes fill that critical need for you.',
       parentConcerns:
-        'Parents on Ghodbunder Road are concerned about limited educational infrastructure in their developing corridor. They want quality coaching that is accessible from their homes without long commutes.',
+        'Concerned about the limited educational infrastructure along your developing corridor? Quality coaching is accessible from your home with our live online classes - no long commutes.',
       studyCultureTrend:
-        'The study culture is growing rapidly with the residential population. Families actively seek quality coaching options and are receptive to online platforms that provide expert teaching conveniently.',
+        "Families here are actively seeking quality coaching, and online platforms are the receptive community's answer. Ours delivers expert teaching with none of the traffic.",
     },
   },
   // BANGALORE - 12 localities
@@ -13543,7 +13881,7 @@ export const localities: Locality[] = [
         'Data-driven progress tracking',
       ],
       marketGap:
-        'Tech-savvy HSR parents want metrics and results. Large institutes lack personalization and AI-driven insights.',
+        'Want metrics and results, not just promises? Large institutes lack personalization and AI-driven insights - we deliver both to you.',
     },
 
     content: {
@@ -13554,7 +13892,7 @@ export const localities: Locality[] = [
       urgencyMessage:
         'Next AI-powered batch starts in 10 days! Only 12 seats left for HSR students.',
       localChallenge:
-        'HSR Layout students waste 2+ hours daily in traffic to coaching centers. Our online format eliminates commute while delivering superior AI-powered personalized learning.',
+        'Wasting 2+ hours daily in traffic to coaching centers? Our online format eliminates the commute while delivering superior AI-powered personalized learning.',
       successMetric: '91% of our HSR Layout students scored 335+ in NEET 2024 Biology',
     },
 
@@ -13598,13 +13936,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "HSR Layout is one of Bangalore's most sought-after residential areas, home to tech startup founders and senior IT professionals. NEET demand is very high as these families set ambitious academic goals and invest in premium coaching.",
+        "HSR Layout is one of Bangalore's most sought-after areas, home to startup founders and senior IT professionals with ambitious academic goals. If those goals include NEET, our premium Biology coaching is your match.",
       competitionAnalysis:
-        "HSR Layout has some coaching centers but most focus on IIT-JEE given the area's engineering-heavy demographics. Specialized NEET Biology coaching is a significant gap waiting to be filled.",
+        "Most coaching in HSR Layout targets IIT-JEE, in line with the area's engineering-heavy crowd. If you need specialized NEET Biology coaching, that's the space we fill for you.",
       parentConcerns:
-        'HSR parents are tech-savvy and expect data-driven coaching approaches with real-time progress tracking. They want coaching that uses technology effectively to enhance learning outcomes.',
+        "Tech-savvy and expecting data-driven coaching with real-time progress tracking? Our platform uses technology exactly the way you'd want it used - to improve learning outcomes.",
       studyCultureTrend:
-        'The study culture is modern and innovative, influenced by the startup ecosystem. Students prefer interactive, technology-enabled coaching over traditional classroom methods.',
+        "If HSR's startup ecosystem shaped how you learn, you'll prefer our interactive, technology-enabled classes over traditional classrooms - most of our students here do.",
     },
   },
   {
@@ -13671,7 +14009,7 @@ export const localities: Locality[] = [
         'Live progress dashboards for parents',
       ],
       marketGap:
-        'Koramangala has coaching but terrible traffic. Tech parents want online efficiency with proven results.',
+        "Coaching exists in Koramangala - but so does terrible traffic. If you want online efficiency with proven results, that's us.",
     },
 
     content: {
@@ -13681,7 +14019,7 @@ export const localities: Locality[] = [
         'Why spend 2 hours daily in Koramangala traffic when you can get better results online? AI-powered learning, live classes, and data you can trust.',
       urgencyMessage: 'Limited seats in our premium AI batch! Koramangala students enrolling fast.',
       localChallenge:
-        'Koramangala students lose 10-15 hours weekly to traffic. Our online format delivers superior learning without the commute, giving students more time for practice and rest.',
+        'Losing 10-15 hours weekly to traffic? Our online format delivers superior learning without the commute, giving you more time for practice and rest.',
       successMetric: '89% of Koramangala students scored 330+ in NEET 2024 Biology',
     },
 
@@ -13724,13 +14062,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "Koramangala is Bangalore's startup capital with a young, educated population that values quality education. NEET demand is very high as ambitious families pursue medical careers alongside tech-focused education options.",
+        "Koramangala is Bangalore's startup capital, young and ambitious. If you're pursuing medicine from here, our focused Biology coaching keeps pace with that ambition.",
       competitionAnalysis:
-        'Koramangala has a moderate coaching market, but NEET Biology specialization is rare among the predominantly IIT-JEE focused centers. This creates a clear opportunity for Biology-focused coaching.',
+        "Koramangala's centers are predominantly IIT-JEE focused - NEET Biology specialization is rare. We're the Biology-focused option built for you.",
       parentConcerns:
-        "Koramangala parents want innovative coaching that matches the area's entrepreneurial spirit. They expect coaching that is efficient, engaging, and produces measurable results.",
+        "Expect coaching that matches Koramangala's entrepreneurial spirit - efficient, engaging, and measurable? That's exactly the product we ship.",
       studyCultureTrend:
-        'The study culture is dynamic and results-oriented, with students balancing academic preparation with diverse interests. Online coaching fits perfectly into the flexible, fast-paced lifestyle of Koramangala.',
+        'Balancing serious preparation with diverse interests, at Koramangala pace? Our flexible online classes fit that fast-moving lifestyle perfectly.',
     },
   },
   {
@@ -13797,7 +14135,7 @@ export const localities: Locality[] = [
         'Real-time progress analytics',
       ],
       marketGap:
-        'Premium Indiranagar families want quality without traffic hassles. Online delivery with AI personalization is the perfect fit.',
+        'Want quality without traffic hassles? Our online delivery with AI personalization is the perfect fit for you.',
     },
 
     content: {
@@ -13807,7 +14145,7 @@ export const localities: Locality[] = [
         'Premium education deserves premium delivery. Our AI-powered platform combines expert faculty, small batches, and cutting-edge technology - all from home.',
       urgencyMessage: 'Premium batch for Indiranagar students starting soon! Only 10 seats left.',
       localChallenge:
-        'Indiranagar students attend top schools and need top coaching. Why waste time in traffic when online learning delivers better personalization and results?',
+        'You attend a top school - you need top coaching to match. Why waste time in traffic when online learning delivers better personalization and results?',
       successMetric: '93% of Indiranagar students scored 335+ in NEET 2024 Biology',
     },
 
@@ -13850,13 +14188,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'very-high',
       demandExplanation:
-        "Indiranagar is one of Bangalore's most premium residential areas with affluent families from diverse professional backgrounds. NEET demand is very high as families invest in quality coaching for medical aspirations.",
+        "Indiranagar is one of Bangalore's most premium residential areas, and its families invest seriously in medical aspirations. If that's your investment, our specialist Biology coaching protects it.",
       competitionAnalysis:
-        "Indiranagar's coaching market is primarily IIT-JEE focused, with limited NEET Biology options. Students often travel to other areas for coaching, creating demand for convenient online alternatives.",
+        "Indiranagar's coaching scene leans IIT-JEE, with limited NEET Biology options - many students travel elsewhere for classes. Our convenient online program saves you that journey.",
       parentConcerns:
-        'Indiranagar parents expect premium coaching with personalized attention. They are concerned about their children getting lost in large coaching batches and want small-group or individual coaching.',
+        "Worried about your child getting lost in a large coaching batch? Our small groups guarantee the personalized, premium attention you're looking for.",
       studyCultureTrend:
-        'The study culture is sophisticated and globally aware, with students accessing international resources alongside Indian coaching. Expert online coaching that meets global standards resonates well.',
+        "Globally aware, using international resources alongside Indian coaching? Our expert online classes meet those global standards - and NEET's specific demands.",
     },
   },
   {
@@ -13923,7 +14261,7 @@ export const localities: Locality[] = [
         'Save ₹30K+ annually on travel costs',
       ],
       marketGap:
-        'Whitefield has limited local coaching. Students waste 3+ hours daily on ORR traffic. Online is the only sensible solution.',
+        'Limited local coaching plus 3+ hours daily in ORR traffic? Online is the only sensible solution - and ours is the proven one.',
     },
 
     content: {
@@ -13933,7 +14271,7 @@ export const localities: Locality[] = [
         'Why battle Outer Ring Road traffic for 3+ hours daily? Get the same expert teaching, AI-powered personalization, and better results - all from Whitefield.',
       urgencyMessage: 'Whitefield batch filling fast! Save your commute time - enroll now.',
       localChallenge:
-        'Whitefield students travel to Marathahalli or Koramangala, losing 15-20 hours weekly to traffic. Our online platform eliminates this waste while delivering superior AI-powered learning.',
+        'Traveling to Marathahalli or Koramangala and losing 15-20 hours weekly to traffic? Our online platform eliminates this waste while delivering superior AI-powered learning.',
       successMetric: '87% of Whitefield students scored 330+ in NEET 2024 Biology',
     },
 
@@ -13976,13 +14314,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Whitefield is Bangalore's IT hub with a massive population of tech professionals and their families. NEET demand is high as these educated families prioritize quality education and competitive exam preparation.",
+        "Whitefield is Bangalore's IT hub, packed with tech professionals' families who prioritize education. If NEET is your family's focus, we bring the specialist Biology teaching Whitefield lacks.",
       competitionAnalysis:
-        "Whitefield has growing coaching infrastructure but remains underserved for specialized NEET Biology coaching. Most centers focus on engineering entrance exams, reflecting the area's IT demographics.",
+        "Whitefield's coaching is growing but centers mostly chase engineering entrances, so specialized NEET Biology coaching is scarce. We fill that need for you - online.",
       parentConcerns:
-        'Whitefield parents want coaching that leverages technology for effective learning. They expect regular analytics and progress reports, reflecting their data-oriented professional backgrounds.',
+        "Want technology-leveraged learning with regular analytics and progress reports - the way you work professionally? That's exactly how we run your child's preparation.",
       studyCultureTrend:
-        "The study culture is tech-forward and structured, with students comfortable using digital learning tools. Online coaching is a natural fit for Whitefield's technology-embracing community.",
+        "Comfortable with digital learning tools, like most of Whitefield's tech-embracing community? Our online classes will feel native from day one.",
     },
   },
   {
@@ -14049,7 +14387,7 @@ export const localities: Locality[] = [
         'Flexible timing for working parents',
       ],
       marketGap:
-        'Marathahalli students either travel far or settle for mediocre local options. Online quality coaching is the gap.',
+        "Don't choose between traveling far and settling for mediocre local options - our quality online coaching is the third way.",
     },
 
     content: {
@@ -14059,7 +14397,7 @@ export const localities: Locality[] = [
         'Marathahalli traffic is brutal. Why waste hours commuting when you can get expert NEET Biology coaching with AI-powered personalization from home?',
       urgencyMessage: 'Marathahalli batch starting in 12 days! Limited seats available.',
       localChallenge:
-        'Marathahalli students face terrible traffic to reach quality coaching. Our online format solves this with live classes, AI personalization, and zero commute time.',
+        'Terrible traffic between you and quality coaching? Our online format solves this with live classes, AI personalization, and zero commute time.',
       successMetric: '88% of Marathahalli students scored 330+ in NEET 2024 Biology',
     },
 
@@ -14102,13 +14440,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Marathahalli is a densely populated residential and commercial area near Whitefield. NEET demand is high, driven by a large middle-class population that values medical education as a career path.',
+        "Marathahalli's large middle-class community values medical education as a career path. If you're preparing for NEET here, quality Biology coaching no longer requires braving the traffic.",
       competitionAnalysis:
-        'Marathahalli has moderate coaching infrastructure but lacks specialized NEET Biology coaching. Students share coaching resources with the broader Whitefield and Bellandur student community.',
+        "Marathahalli has moderate coaching but no NEET Biology specialists, and you'd be sharing resources with the whole Whitefield-Bellandur student crowd. Our online classes are yours alone.",
       parentConcerns:
-        "Parents are concerned about traffic congestion making physical coaching impractical. They strongly prefer online coaching that eliminates Marathahalli's notorious commute challenges.",
+        "Does Marathahalli's notorious traffic make physical coaching impractical for your family? Our online classes remove the commute from the equation entirely.",
       studyCultureTrend:
-        "The study culture is practical and focused, with students maximizing limited free time for preparation. Online coaching is highly preferred given the area's extreme traffic conditions.",
+        'Maximizing limited free time, like every practical Marathahalli student? Online coaching gives you the most learning per hour - and ours gives you the best of it.',
     },
   },
   {
@@ -14175,7 +14513,7 @@ export const localities: Locality[] = [
         'Save ₹25K+ yearly on travel',
       ],
       marketGap:
-        'Bellandur has tech-savvy families but lacks quality local coaching. Online AI-powered learning is perfect fit.',
+        'Tech-savvy family, no quality local coaching? Our online AI-powered learning is the perfect fit for you.',
     },
 
     content: {
@@ -14185,7 +14523,7 @@ export const localities: Locality[] = [
         'Tech families deserve tech-forward coaching. Our AI platform delivers personalized learning, live classes, and superior results - all without the ORR traffic nightmare.',
       urgencyMessage: 'Next AI-powered batch for Bellandur students starts soon! 11 seats left.',
       localChallenge:
-        'Bellandur students lose hours on ORR traveling to HSR/Koramangala. Our online format eliminates this while providing AI-driven personalization that offline batches lack.',
+        'Losing hours on the ORR traveling to HSR or Koramangala? Our online format eliminates this while providing AI-driven personalization that offline batches lack.',
       successMetric: '90% of Bellandur students scored 332+ in NEET 2024 Biology',
     },
 
@@ -14228,13 +14566,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Bellandur is one of Bangalore's fastest-growing IT corridors with premium residential developments. The young, educated population drives high NEET demand as families plan for their children's competitive exam preparation.",
+        "Bellandur is one of Bangalore's fastest-growing IT corridors, full of young families planning ahead for competitive exams. If your planning includes NEET, our Biology coaching starts wherever you are.",
       competitionAnalysis:
-        "Bellandur's coaching market is nascent despite its large population. Most students access coaching from HSR Layout or online, creating significant opportunity for quality NEET Biology providers.",
+        "Bellandur's coaching scene is still young - most students reach out to HSR Layout or study online. Our quality NEET Biology classes make online the stronger choice for you.",
       parentConcerns:
-        "Parents want coaching that is accessible despite Bellandur's traffic challenges. They prefer online solutions that provide quality teaching without the daily commute burden.",
+        "Want quality teaching without fighting Bellandur's traffic every evening? Our online classes deliver it straight home.",
       studyCultureTrend:
-        "The study culture is modern and community-driven, with residential societies organizing educational events. Online coaching is the preferred mode given the area's traffic realities.",
+        'Your residential society already organizes educational events - and online coaching is the mode this area has chosen. Our live classes are the natural next step.',
     },
   },
   {
@@ -14301,7 +14639,7 @@ export const localities: Locality[] = [
         'Flexible online convenience',
       ],
       marketGap:
-        'JP Nagar students travel to Jayanagar for coaching. Online format provides same quality with better convenience.',
+        'No need to travel to Jayanagar for coaching - our online format gives you the same quality with better convenience.',
     },
 
     content: {
@@ -14311,7 +14649,7 @@ export const localities: Locality[] = [
         'Quality NEET Biology coaching designed for JP Nagar students. AI-powered learning, expert faculty, and proven results - all from home.',
       urgencyMessage: 'JP Nagar batch starting in 8 days! Only 13 seats remaining.',
       localChallenge:
-        'JP Nagar students travel to Jayanagar or Banashankari for coaching. Our online format delivers superior AI-powered learning without the commute.',
+        'Traveling to Jayanagar or Banashankari for coaching? Our online format delivers superior AI-powered learning without the commute.',
       successMetric: '86% of JP Nagar students scored 328+ in NEET 2024 Biology',
     },
 
@@ -14354,13 +14692,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'JP Nagar is a well-established South Bangalore residential area with a large student population. NEET demand is high as families from diverse backgrounds pursue medical career aspirations.',
+        'JP Nagar is an established South Bangalore area with a large student population chasing medical careers. To stand out among them, specialize early - Biology is where NEET is won.',
       competitionAnalysis:
-        'JP Nagar has a mature coaching market with several established centers. Specialized NEET Biology coaching exists but is limited, with most centers offering multi-subject programs.',
+        "JP Nagar's many established institutes mostly run multi-subject programs; specialized NEET Biology coaching is limited. Our expert faculty give you that genuine differentiation.",
       parentConcerns:
-        'Parents in JP Nagar are experienced with coaching markets and seek coaching that offers genuine differentiation. They want expert Biology faculty with proven NEET teaching credentials.',
+        "Seen plenty of coaching institutes and looking for genuine differentiation? Examine our Biology faculty's NEET teaching credentials - that's our answer.",
       studyCultureTrend:
-        'The study culture in JP Nagar is established and disciplined. Students here benefit from coaching that builds on their strong academic foundations with specialized NEET Biology preparation.',
+        'Disciplined with strong academic foundations, like most JP Nagar students? Our specialized NEET Biology preparation builds directly on that base.',
     },
   },
   {
@@ -14427,7 +14765,7 @@ export const localities: Locality[] = [
         'Better results with individual attention',
       ],
       marketGap:
-        'Jayanagar has many coaching institutes but they use outdated batch-focused approach. AI personalization is the differentiator.',
+        'Many Jayanagar institutes still use an outdated batch-focused approach. Our AI personalization is the differentiator you can use.',
     },
 
     content: {
@@ -14437,7 +14775,7 @@ export const localities: Locality[] = [
         'Traditional Jayanagar coaching institutes pack 50+ students in a batch. We use AI to personalize learning for just 15 students, delivering superior results.',
       urgencyMessage: 'Jayanagar batch filling up fast! Only 9 seats left in premium AI tier.',
       localChallenge:
-        'Jayanagar students have access to coaching but face crowded batches with minimal individual attention. Our AI-powered small batches solve this completely.',
+        'Plenty of coaching nearby, but crowded batches and minimal individual attention? Our AI-powered small batches solve this completely.',
       successMetric: '89% of Jayanagar students scored 332+ in NEET 2024 Biology',
     },
 
@@ -14480,13 +14818,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Jayanagar is one of Bangalore's oldest and most prestigious residential areas with a strong academic tradition. NEET demand is high as families continue a legacy of pursuing professional careers through competitive exams.",
+        "Jayanagar is one of Bangalore's oldest, most prestigious areas, where professional careers through competitive exams are a family legacy. Carrying that legacy? We'll make Biology your strongest link.",
       competitionAnalysis:
-        'Jayanagar has an established coaching ecosystem with several well-known centers. The competition is mature, and specialized Biology coaching that provides an edge is valued by discerning students.',
+        "Jayanagar's coaching ecosystem is mature and well-known - which is exactly why specialized Biology coaching is the edge discerning students pick. Pick it with us.",
       parentConcerns:
-        'Jayanagar parents have traditional values and expect thorough, comprehensive coaching. They want coaching that covers every aspect of NEET Biology without cutting corners.',
+        'Expect thorough, comprehensive coaching with no corners cut? Our program covers every aspect of NEET Biology - in the complete, traditional way you value.',
       studyCultureTrend:
-        'The study culture in Jayanagar is deeply rooted and disciplined, with families maintaining strong academic traditions. Students are dedicated and respond well to rigorous, comprehensive coaching programs.',
+        "Dedicated and disciplined, in Jayanagar's deep academic tradition? Our rigorous, comprehensive program is built for students exactly like you.",
     },
   },
   {
@@ -14553,7 +14891,7 @@ export const localities: Locality[] = [
         'Tech-forward approach for results',
       ],
       marketGap:
-        'BTM students split between local mediocre options and traveling far. Quality online coaching fills the gap perfectly.',
+        'Torn between mediocre local options and traveling far? Our quality online coaching fills that gap perfectly for you.',
     },
 
     content: {
@@ -14563,7 +14901,7 @@ export const localities: Locality[] = [
         'Smart students make smart choices. Our AI-powered platform delivers personalized NEET Biology coaching with expert faculty - all from BTM Layout.',
       urgencyMessage: 'BTM Layout batch starting soon! Limited seats in premium AI tier.',
       localChallenge:
-        'BTM students face a choice: mediocre local coaching or long commute to Jayanagar/Koramangala. Our online AI-powered learning offers a third, better option.',
+        'Facing the choice between mediocre local coaching and a long commute to Jayanagar or Koramangala? Our online AI-powered learning is the third, better option.',
       successMetric: '87% of BTM Layout students scored 330+ in NEET 2024 Biology',
     },
 
@@ -14606,13 +14944,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "BTM Layout is a vibrant South Bangalore locality with a mix of tech professionals and business families. NEET demand is high as the area's educated demographics drive strong medical career aspirations.",
+        "BTM Layout's mix of tech professionals and business families drives strong medical-career ambitions. If they're yours, comprehensive Biology preparation is available right in your locality - online.",
       competitionAnalysis:
-        'BTM Layout has growing coaching infrastructure but NEET Biology remains underserved. Students access coaching from neighboring areas or online, indicating unmet local demand.',
+        "BTM's coaching infrastructure is growing, but NEET Biology is still hard to find locally - students go elsewhere or online. Our classes end that search for you.",
       parentConcerns:
-        'BTM parents want affordable yet quality coaching accessible from their locality. They value coaching that provides comprehensive Biology preparation without requiring travel across Bangalore.',
+        "Want affordable, quality Biology coaching without sending your child across Bangalore? That's precisely what our online program provides.",
       studyCultureTrend:
-        'The study culture is active and community-supported, with students forming preparation groups in residential areas. Online coaching complements this collaborative spirit with expert-led structured learning.',
+        'Part of a residential-area preparation group? Great - our expert-led structured classes turn that collaborative spirit into ranked results.',
     },
   },
   {
@@ -14679,17 +15017,17 @@ export const localities: Locality[] = [
         'Flexible online format',
       ],
       marketGap:
-        'Malleshwaram families value quality education. Online AI-powered coaching delivers this with added convenience.',
+        'You value quality education - our online AI-powered coaching delivers it with added convenience.',
     },
 
     content: {
       heroTitle: "Malleshwaram's Trusted NEET Biology Coaching",
       heroSubtitle: 'Quality Education, Modern Delivery - 140+ Students Scoring 335+',
       valueProposition:
-        'Malleshwaram families value quality. Our AI-powered NEET Biology coaching combines traditional excellence with modern technology for superior results.',
+        'You value quality. Our AI-powered NEET Biology coaching combines traditional excellence with modern technology for superior results.',
       urgencyMessage: 'Malleshwaram batch starting in 7 days! Seats filling fast.',
       localChallenge:
-        'Malleshwaram students travel to Rajajinagar or other areas for quality coaching. Our online format delivers the same quality with better convenience and AI personalization.',
+        'Traveling to Rajajinagar or beyond for quality coaching? Our online format delivers the same quality with better convenience and AI personalization.',
       successMetric: '88% of Malleshwaram students scored 331+ in NEET 2024 Biology',
     },
 
@@ -14732,13 +15070,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Malleshwaram is one of Bangalore's most historic and culturally rich neighborhoods with a strong academic heritage. NEET demand is high as families with deep educational roots pursue medical careers across generations.",
+        "Malleshwaram's academic heritage runs generations deep, and medical careers are part of that story. Writing your chapter? Our focused Biology coaching honors the tradition with modern methods.",
       competitionAnalysis:
-        'Malleshwaram has an established educational ecosystem with several coaching centers. However, NEET Biology specialization is limited, with most centers offering broad competitive exam preparation.',
+        "Malleshwaram's established centers offer broad competitive exam preparation, but NEET Biology specialization is limited. We provide that focus for you.",
       parentConcerns:
-        "Malleshwaram parents value traditional teaching excellence and expect faculty with deep subject matter expertise. They want coaching that combines Bangalore's academic heritage with modern exam strategies.",
+        'Value traditional teaching excellence and deep subject expertise? Our faculty bring both - combined with modern NEET exam strategies.',
       studyCultureTrend:
-        'The study culture in Malleshwaram is rich and deeply embedded in the community. Students benefit from this academic environment and excel when provided with focused, expert Biology coaching.',
+        "Growing up in Malleshwaram's rich academic environment gives you a head start. Focused, expert Biology coaching converts it into NEET marks.",
     },
   },
   {
@@ -14809,7 +15147,7 @@ export const localities: Locality[] = [
         'Online convenience with offline quality',
       ],
       marketGap:
-        'Rajajinagar has many coaching institutes but they use outdated batch approach. AI personalization is the game-changer.',
+        'Many Rajajinagar institutes still run the outdated batch approach. Our AI personalization is the game-changer available to you.',
     },
 
     content: {
@@ -14819,7 +15157,7 @@ export const localities: Locality[] = [
         'Traditional Rajajinagar coaching packs 50+ students in batches. We use AI to personalize learning for 15 students, delivering measurably better results.',
       urgencyMessage: 'Rajajinagar premium AI batch starting soon! Only 10 seats left.',
       localChallenge:
-        'Rajajinagar students have access to coaching but face large batches with minimal individual attention. Our AI-powered small batches provide the personalization needed for top scores.',
+        'Coaching is nearby, but large batches mean minimal individual attention. Our AI-powered small batches provide the personalization you need for top scores.',
       successMetric: '90% of Rajajinagar students scored 333+ in NEET 2024 Biology',
     },
 
@@ -14862,13 +15200,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        "Rajajinagar is a central Bangalore locality with a mix of residential and commercial areas. NEET demand is high as the area's diverse population includes many families targeting medical admissions.",
+        "Rajajinagar's diverse central-Bangalore community includes many families targeting medical admissions. If yours is among them, we prepare you for the national stage, not just the local one.",
       competitionAnalysis:
-        'Rajajinagar has several coaching centers but most focus on Karnataka CET alongside NEET. Specialized NEET Biology coaching that targets national-level performance is a differentiator.',
+        "Most Rajajinagar centers split focus between Karnataka CET and NEET. If you want Biology coaching aimed squarely at national-level NEET performance, that's our specialty.",
       parentConcerns:
-        'Parents want coaching that prepares their children for both Karnataka CET and national NEET competition. They seek comprehensive coaching that addresses the requirements of multiple medical entrance pathways.',
+        'Need preparation that covers both Karnataka CET and national NEET competition? Our comprehensive Biology program addresses both pathways.',
       studyCultureTrend:
-        'The study culture is practical and goal-oriented, with students preparing for multiple entrance exams simultaneously. Coaching that provides efficient, focused Biology preparation is highly valued.',
+        'Preparing for multiple entrance exams at once, like most students here? Our efficient, focused Biology classes give you maximum coverage per hour.',
     },
   },
   {
@@ -14935,7 +15273,7 @@ export const localities: Locality[] = [
         'Save time and money on commute',
       ],
       marketGap:
-        'Yeshwanthpur lacks quality local coaching. Students waste time traveling. Online AI-powered coaching is the perfect solution.',
+        'Quality local coaching is missing in Yeshwanthpur and travel wastes your time. Our online AI-powered coaching is the solution built for you.',
     },
 
     content: {
@@ -14945,7 +15283,7 @@ export const localities: Locality[] = [
         'Why travel to Rajajinagar or Malleshwaram when you can get better AI-powered NEET Biology coaching from home? Smart solution for Yeshwanthpur students.',
       urgencyMessage: 'Yeshwanthpur batch starting in 9 days! Limited seats available.',
       localChallenge:
-        'Yeshwanthpur students travel to Rajajinagar or Malleshwaram for quality coaching, wasting precious time. Our online AI-powered format delivers superior learning without the commute.',
+        'Traveling to Rajajinagar or Malleshwaram for quality coaching? Our online AI-powered format delivers superior learning without the commute.',
       successMetric: '86% of Yeshwanthpur students scored 329+ in NEET 2024 Biology',
     },
 
@@ -14988,13 +15326,13 @@ export const localities: Locality[] = [
     educationalLandscape: {
       neetDemandLevel: 'high',
       demandExplanation:
-        'Yeshwanthpur is a developing West Bangalore area with growing residential developments attracting young professional families. NEET demand is high as these families prioritize competitive exam preparation for their children.',
+        'Yeshwanthpur is a developing West Bangalore area where young professional families are settling fast. If competitive preparation is your priority, quality Biology coaching is already here - online.',
       competitionAnalysis:
-        'Yeshwanthpur has limited coaching infrastructure compared to established South and East Bangalore areas. Online coaching fills a significant gap for families seeking quality NEET Biology preparation.',
+        "Compared to South and East Bangalore, Yeshwanthpur's coaching infrastructure is limited. Our online classes close that gap for you with specialist NEET Biology teaching.",
       parentConcerns:
-        "Parents want quality coaching that is accessible without traveling across Bangalore's congested roads. They prefer online coaching that brings expert faculty to their homes conveniently.",
+        "Prefer expert faculty at home over battling Bangalore's congested roads? Our live online classes deliver exactly that convenience.",
       studyCultureTrend:
-        "The study culture is growing with the area's residential development. Students here are eager for quality coaching and embrace online learning as a practical solution for NEET preparation.",
+        'Eager for quality coaching as your area grows? Online learning is the practical route - and our students here are proving it works.',
     },
   },
 ]

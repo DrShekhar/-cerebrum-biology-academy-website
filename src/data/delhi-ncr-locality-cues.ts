@@ -28,8 +28,8 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
       { name: 'Sectors 5–8', description: 'Old Rohini residential' },
       { name: 'Sectors 13–18', description: 'New Rohini, Avantika' },
       { name: 'Pitampura', description: '3 km · adjacent NW Delhi' },
-      { name: 'Shalimar Bagh', description: '5 km · large feeder area' },
-      { name: 'Adarsh Nagar / Wazirpur', description: 'Catchment overlap' },
+      { name: 'Shalimar Bagh', description: '5 km · many of our students live here' },
+      { name: 'Adarsh Nagar / Wazirpur', description: 'Also served by our Rohini centre' },
     ],
     metroStations: [
       { name: 'Rohini West', line: 'Red Line (closest)' },
@@ -60,7 +60,7 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
       { name: 'Tagore International', area: 'Vasant Vihar · 5 km' },
     ],
     subAreas: [
-      { name: 'South Extension Part 1 & 2', description: 'Cerebrum centre catchment' },
+      { name: 'South Extension Part 1 & 2', description: 'Cerebrum centre location' },
       { name: 'Defence Colony', description: '2 km · 8 min' },
       { name: 'Lajpat Nagar', description: '3 km · 10 min' },
       { name: 'Greater Kailash (M, N, S blocks)', description: '3 km · 10 min' },
@@ -94,7 +94,7 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
     cityName: 'Gurugram',
     cityShortName: 'Gurugram',
     introCopy:
-      'Cerebrum Gurugram at Unit 17, M2K Corporate Park, Sector 51 serves Gurugram NEET aspirants from DLF Phases 1–5, Sushant Lok, MG Road, Golf Course Road, Sohna Road, and Sectors 14 through 65 — covering the entire Gurugram NCR catchment.',
+      'Cerebrum Gurugram at Unit 17, M2K Corporate Park, Sector 51 serves Gurugram NEET aspirants from DLF Phases 1–5, Sushant Lok, MG Road, Golf Course Road, Sohna Road, and Sectors 14 through 65 — covering all of Gurugram NCR.',
     feederSchools: [
       { name: 'GD Goenka World School', area: 'Sohna Road · 7 km' },
       { name: 'Suncity School', area: 'Sector 54 · 2 km' },

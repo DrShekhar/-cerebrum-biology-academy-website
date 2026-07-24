@@ -34,7 +34,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 18, Noida',
     description: 'Commercial and entertainment hub of Noida with Atta Market and GIP Mall',
     heroDescription:
-      'Sector 18 is the commercial heart of Noida, home to the famous Atta Market, Great India Place Mall, and Wave Mall. Students from this bustling area seek quality NEET coaching nearby to save travel time.',
+      "Sector 18 is the commercial heart of Noida, home to the famous Atta Market, Great India Place Mall, and Wave Mall. If you're preparing for NEET from this bustling area, studying nearby saves serious travel time.",
     nearbyMetro: ['Sector 18 Metro Station'],
     metroLine: 'Blue',
     landmarks: ['Atta Market', 'GIP Mall', 'Wave Mall', 'Brahmaputra Market'],
@@ -87,7 +87,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 15, Noida',
     description: 'One of the oldest and most established sectors in Noida',
     heroDescription:
-      "Sector 15 is one of Noida's oldest sectors with well-established residential colonies. Families here value quality education and seek specialized NEET coaching for their medical aspirants.",
+      "Sector 15 is one of Noida's oldest sectors with well-established residential colonies.",
     nearbyMetro: ['Sector 15 Metro Station'],
     metroLine: 'Blue',
     landmarks: ['Sector 15 Metro', 'Film City Road', 'Sector 15 Market'],
@@ -138,7 +138,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 50, Noida',
     description: 'Mid-Noida residential sector with Aqua Line connectivity',
     heroDescription:
-      'Sector 50 marks the beginning of the Aqua Line metro corridor. This residential sector is home to many families seeking quality NEET coaching without traveling to Delhi.',
+      "Sector 50 marks the beginning of the Aqua Line metro corridor. If you're preparing for NEET here, you don't need to travel to Delhi for classes.",
     nearbyMetro: ['Sector 51 Metro Station'],
     metroLine: 'Aqua',
     landmarks: ['Sector 50 Market', 'Aqua Line Metro', 'Golf Course'],
@@ -214,7 +214,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 93, Noida',
     description: 'Commercial sector along Noida Expressway',
     heroDescription:
-      'Sector 93 is located along the Noida Expressway with excellent connectivity. The commercial nature of this sector attracts working professionals whose children seek quality NEET coaching.',
+      'Sector 93 is located along the Noida Expressway with excellent connectivity. The commercial nature of this sector attracts many working professionals and their families.',
     nearbyMetro: ['Sector 93 Metro Station'],
     metroLine: 'Aqua',
     landmarks: ['Noida Expressway', 'Sector 93 Commercial', 'IT Parks'],
@@ -239,7 +239,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 104, Noida',
     description: 'Premium sector with ATS and other luxury societies',
     heroDescription:
-      "Sector 104 is home to premium societies like ATS Pristine and others. Families here prioritize quality education and seek the best NEET coaching for their children's medical aspirations.",
+      'Sector 104 is home to premium societies like ATS Pristine and others, with good schools within easy reach.',
     nearbyMetro: ['Noida City Centre Metro', 'Sector 101 Metro'],
     metroLine: 'Aqua',
     landmarks: ['ATS Pristine', 'Noida Expressway', 'City Centre'],
@@ -265,7 +265,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 117, Noida',
     description: 'Developing sector with Supertech and other projects',
     heroDescription:
-      "Sector 117 is a rapidly developing area with major residential projects. Young families here are looking for quality educational support for their children's NEET preparation.",
+      'Sector 117 is a rapidly developing area with major residential projects and many young families.',
     nearbyMetro: ['Sector 117 Metro Station'],
     metroLine: 'Aqua',
     landmarks: ['Supertech Projects', 'Developing Area', 'Expressway'],
@@ -290,7 +290,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 120, Noida',
     description: 'Premium sector with Jaypee Greens and other luxury projects',
     heroDescription:
-      "Sector 120 is home to Jaypee Greens and other premium developments. Families in these luxury societies seek the best NEET coaching to ensure their children's success in medical entrance.",
+      'Sector 120 is home to Jaypee Greens and other premium residential developments.',
     nearbyMetro: ['Sector 120 Metro Station'],
     metroLine: 'Aqua',
     landmarks: ['Jaypee Greens', 'Noida Expressway', 'Premium Towers'],
@@ -341,7 +341,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 135, Noida',
     description: 'IT hub with tech companies and residential projects',
     heroDescription:
-      'Sector 135 is emerging as a tech hub with IT companies and modern residential projects. Working professionals here seek quality NEET coaching for their children with flexible timings.',
+      'Sector 135 is emerging as a tech hub with IT companies and modern residential projects, home to many working professionals.',
     nearbyMetro: ['Sector 135 Area'],
     metroLine: 'Aqua',
     landmarks: ['IT Park', 'Tech Companies', 'Noida Expressway'],
@@ -366,7 +366,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 137, Noida',
     description: 'Premium sector with ATS, Supertech, and other major societies',
     heroDescription:
-      'Sector 137 is one of the most premium residential areas in Noida, home to ATS, Supertech, and other luxury societies. Families here seek the best NEET coaching with personalized attention.',
+      'Sector 137 is one of the most premium residential areas in Noida, home to ATS, Supertech, and other luxury societies.',
     nearbyMetro: ['Sector 137 Metro Station'],
     metroLine: 'Aqua',
     landmarks: ['ATS Destinaire', 'Supertech', 'Express Highway', 'Metro Station'],
@@ -393,7 +393,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 143, Noida',
     description: 'Developing sector near Noida Extension border',
     heroDescription:
-      'Sector 143 is a developing area near the Noida Extension border. New residential projects are coming up, and families here seek quality NEET coaching accessible via metro.',
+      'Sector 143 is a developing area near the Noida Extension border. New residential projects are coming up, and the sector is well connected by metro.',
     nearbyMetro: ['Sector 143 Metro Station'],
     metroLine: 'Aqua',
     landmarks: ['Metro Station', 'New Development', 'Extension Border'],
@@ -418,7 +418,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 150, Noida',
     description: 'Sports City area with premium residential projects',
     heroDescription:
-      'Sector 150 is known as the Sports City area with world-class sports facilities and premium residential projects. Families here combine quality lifestyle with excellent education.',
+      'Sector 150 is known as the Sports City area with world-class sports facilities and premium residential projects.',
     nearbyMetro: ['Sector 150 Area'],
     metroLine: 'None',
     landmarks: ['Sports City', 'Jaypee Stadium', 'Premium Projects'],
@@ -499,7 +499,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Ace City, Noida Extension',
     description: 'Premium township with Ace Divino and Ace Parkway',
     heroDescription:
-      'Ace City in Noida Extension includes premium projects like Ace Divino and Ace Parkway. Families here seek quality NEET coaching that matches their premium lifestyle expectations.',
+      'Ace City in Noida Extension includes premium projects like Ace Divino and Ace Parkway.',
     nearbyMetro: ['Sector 147 Metro'],
     metroLine: 'Aqua',
     landmarks: ['Ace Divino', 'Ace Parkway', 'Ace Golfshire'],
@@ -524,7 +524,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Supertech Ecovillage, Noida Extension',
     description: 'Large township with Ecovillage 1, 2, and 3',
     heroDescription:
-      'Supertech Ecovillage is a large township in Noida Extension spanning multiple phases. Students from this area seek quality NEET coaching with flexible timing options.',
+      'Supertech Ecovillage is a large township in Noida Extension spanning multiple phases, with a large resident community.',
     nearbyMetro: ['Sector 146-147 Metro'],
     metroLine: 'Aqua',
     landmarks: ['Ecovillage 1', 'Ecovillage 2', 'Ecovillage 3'],
@@ -550,7 +550,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Greater Noida',
     description: 'Planned city with Alpha, Beta, Gamma sectors and Knowledge Park',
     heroDescription:
-      'Greater Noida is a planned industrial and educational city with Alpha, Beta, Gamma sectors, Knowledge Park, and various universities. Students here seek specialized NEET coaching to compete at the national level.',
+      "Greater Noida is a planned industrial and educational city with Alpha, Beta, Gamma sectors, Knowledge Park, and various universities. If you're preparing for NEET here, specialized coaching helps you compete at the national level.",
     nearbyMetro: ['Knowledge Park Metro', 'Alpha 1 Metro', 'Delta 1 Metro'],
     metroLine: 'Aqua',
     landmarks: ['Knowledge Park', 'Pari Chowk', 'Alpha Commercial Belt', 'Buddha Circuit'],
@@ -577,7 +577,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Knowledge Park, Greater Noida',
     description: 'Educational hub with universities and IT companies',
     heroDescription:
-      "Knowledge Park is Greater Noida's educational and IT hub, home to multiple universities and tech companies. Students here have access to excellent educational infrastructure and seek specialized NEET coaching.",
+      "Knowledge Park is Greater Noida's educational and IT hub, home to multiple universities and tech companies. Students here have access to excellent educational infrastructure.",
     nearbyMetro: ['Knowledge Park II Metro'],
     metroLine: 'Aqua',
     landmarks: ['Galgotias University', 'Sharda University', 'IT Companies', 'Alpha Commercial'],
@@ -603,7 +603,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Pari Chowk, Greater Noida',
     description: 'Commercial hub of Greater Noida',
     heroDescription:
-      'Pari Chowk is the commercial heart of Greater Noida with shopping centers, offices, and residential areas. Families here seek quality NEET coaching that combines convenience with excellence.',
+      'Pari Chowk is the commercial heart of Greater Noida with shopping centers, offices, and residential areas.',
     nearbyMetro: ['Pari Chowk Metro'],
     metroLine: 'Aqua',
     landmarks: ['Pari Chowk Roundabout', 'Commercial Hub', 'Shopping Centers'],
@@ -628,7 +628,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Alpha 1, Greater Noida',
     description: 'First planned sector of Greater Noida',
     heroDescription:
-      'Alpha 1 is one of the first planned sectors of Greater Noida with established infrastructure. Families here have been seeking quality education for years and trust specialized coaching for NEET preparation.',
+      'Alpha 1 is one of the first planned sectors of Greater Noida with established infrastructure and a settled residential community.',
     nearbyMetro: ['Alpha 1 Metro'],
     metroLine: 'Aqua',
     landmarks: ['Alpha 1 Market', 'Alpha Commercial Belt', 'Metro Station'],
@@ -653,7 +653,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Alpha 2, Greater Noida',
     description: 'Residential and commercial sector in Greater Noida',
     heroDescription:
-      'Alpha 2 is a well-developed sector in Greater Noida with both residential and commercial areas. Students here have access to quality schools and seek specialized NEET coaching.',
+      'Alpha 2 is a well-developed sector in Greater Noida with both residential and commercial areas. Students here have access to quality schools.',
     nearbyMetro: ['Alpha 2 Metro'],
     metroLine: 'Aqua',
     landmarks: ['Alpha 2 Commercial', 'Metro Station', 'Residential Blocks'],
@@ -704,7 +704,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'ATS Pristine, Sector 150, Noida',
     description: 'Premium luxury society in Sector 150',
     heroDescription:
-      'ATS Pristine is one of the most premium residential societies in Noida, located in Sector 150. Families here prioritize excellence in everything, including NEET coaching for their children.',
+      'ATS Pristine is one of the most premium residential societies in Noida, located in Sector 150.',
     nearbyMetro: ['Sector 148 Metro (Nearest)'],
     metroLine: 'Aqua',
     landmarks: ['ATS Pristine Towers', 'Sports City', 'Premium Facilities'],
@@ -730,7 +730,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Jaypee Greens, Noida',
     description: 'Premium integrated township with golf course',
     heroDescription:
-      'Jaypee Greens is a premium integrated township featuring a golf course, sports facilities, and luxury residences. Families here expect the best in education, including specialized NEET coaching.',
+      'Jaypee Greens is a premium integrated township featuring a golf course, sports facilities, and luxury residences.',
     nearbyMetro: ['Sector 120-128 Metro Area'],
     metroLine: 'Aqua',
     landmarks: ['Jaypee Golf Course', 'Jaypee Wishtown', 'F1 Track (Former)'],
@@ -756,7 +756,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Mahagun Societies, Noida',
     description: 'Premium residential projects across Noida',
     heroDescription:
-      'Mahagun has developed multiple premium residential projects across Noida including Mahagun Moderne, Mywoods, and Meadows. Families in these societies seek quality NEET coaching.',
+      'Mahagun has developed multiple premium residential projects across Noida including Mahagun Moderne, Mywoods, and Meadows.',
     nearbyMetro: ['Various Metro Stations'],
     metroLine: 'Multiple',
     landmarks: ['Mahagun Moderne', 'Mahagun Mywoods', 'Mahagun Meadows'],
@@ -781,7 +781,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Amrapali Societies, Noida',
     description: 'Large residential societies across Noida sectors',
     heroDescription:
-      'Amrapali has developed several large residential societies across Noida. Despite some challenges, lakhs of families live here and seek quality educational support for their children.',
+      'Amrapali has developed several large residential societies across Noida. Despite some challenges, lakhs of families live here.',
     nearbyMetro: ['Various Metro Stations'],
     metroLine: 'Multiple',
     landmarks: ['Amrapali Zodiac', 'Amrapali Sapphire', 'Various Locations'],
@@ -807,7 +807,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 12, Noida',
     description: 'Established residential sector in old Noida with good infrastructure',
     heroDescription:
-      'Sector 12 is one of the original residential sectors of Noida with well-established colonies and government quarters. Families here value quality education and seek specialized NEET coaching for their medical aspirants near Sector 15 Metro.',
+      'Sector 12 is one of the original residential sectors of Noida with well-established colonies and government quarters, close to Sector 15 Metro.',
     nearbyMetro: ['Sector 15 Metro Station'],
     metroLine: 'Blue',
     landmarks: ['Sector 15 Metro', 'Sector 12 Market', 'Government Quarters'],
@@ -833,7 +833,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Sector 25, Noida',
     description: 'Residential sector in Noida near Film City Road',
     heroDescription:
-      'Sector 25 is a well-planned residential area in Noida located near Film City Road. The sector offers peaceful living with good school access and is popular among families seeking quality NEET coaching for their children.',
+      'Sector 25 is a well-planned residential area in Noida located near Film City Road. The sector offers peaceful living with good school access, popular with young families.',
     nearbyMetro: ['Sector 15 Metro Station', 'Sector 16 Metro Station'],
     metroLine: 'Blue',
     landmarks: ['Film City Road', 'Sector 25 Market', 'Sector 16A'],
@@ -859,7 +859,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
     fullName: 'Film City, Sector 16A, Noida',
     description: 'Commercial zone housing Noida Film City and media companies',
     heroDescription:
-      "Film City (Sector 16A) is home to Noida's famous media and entertainment hub. The area has residential pockets and is well-connected via Blue Line Metro. Families of media professionals seek specialized NEET coaching with flexible timings.",
+      "Film City (Sector 16A) is home to Noida's famous media and entertainment hub. The area has residential pockets and is well-connected via Blue Line Metro. Many media professionals and their families live here.",
     nearbyMetro: ['Sector 16 Metro Station', 'Sector 15 Metro Station'],
     metroLine: 'Blue',
     landmarks: ['Noida Film City', 'Sector 16A Studios', 'Film City Gate'],

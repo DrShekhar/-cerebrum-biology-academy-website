@@ -24,7 +24,7 @@ export const areaDetails: Record<string, NorthDelhiAreaDetails> = {
     fullName: 'Rohini (All Sectors), North Delhi',
     description: 'Largest planned sub-city with 35+ sectors',
     heroDescription:
-      'Rohini is one of the largest planned residential sub-cities in Asia with over 35 sectors. Home to DPS Rohini students and educated families seeking quality NEET coaching with proven results.',
+      'Rohini is one of the largest planned residential sub-cities in Asia with over 35 sectors. Many of our students here come from DPS Rohini and other schools across the sub-city.',
     nearbyMetro: ['Rohini West Metro', 'Rohini East Metro', 'Pitampura Metro', 'Rithala Metro'],
     landmarks: ['Adventure Island', 'Metro Walk Mall', 'DPS Rohini', 'Rohini Court Complex'],
     schools: ['DPS Rohini', 'Ryan International', 'Cambridge School', 'Mount Carmel'],
@@ -47,7 +47,7 @@ export const areaDetails: Record<string, NorthDelhiAreaDetails> = {
     fullName: 'Pitampura, North Delhi',
     description: 'Premium locality with famous TV Tower',
     heroDescription:
-      'Pitampura is one of North Delhis most prestigious localities, known for the iconic TV Tower and proximity to Netaji Subhash Place commercial hub. Educated families here seek premium NEET coaching.',
+      "Pitampura is one of North Delhis most prestigious localities, known for the iconic TV Tower and proximity to Netaji Subhash Place commercial hub. If you're preparing for NEET here, you can reach our Rohini center directly by metro.",
     nearbyMetro: ['Pitampura Metro', 'Netaji Subhash Place Metro', 'Kohat Enclave Metro'],
     landmarks: ['Pitampura TV Tower', 'Netaji Subhash Place', 'Metro Mall', 'Madhuban Chowk'],
     schools: ['DPS Rohini', 'Mount Carmel', 'Cambridge School', 'Ryan International'],
@@ -70,11 +70,11 @@ export const areaDetails: Record<string, NorthDelhiAreaDetails> = {
     fullName: 'Model Town, North Delhi',
     description: 'Posh residential area near DU North Campus',
     heroDescription:
-      'Model Town is one of North Delhis most sought-after residential areas, adjacent to Delhi University North Campus. Home to educated families, professors, and professionals seeking quality education.',
+      'Model Town is one of North Delhis most sought-after residential areas, adjacent to Delhi University North Campus. Many professors and working professionals make their home here.',
     nearbyMetro: ['Model Town Metro', 'GTB Nagar Metro', 'Vishwavidyalaya Metro'],
     landmarks: ['Model Town Market', 'DU North Campus', 'Model Town Park', 'GTB Hospital'],
     schools: ['St. Marks School', 'Bal Bharati', 'DAV Public School', 'Cambridge School'],
-    highlights: ['Near DU', 'Posh Area', 'Educated Families', 'Well Planned'],
+    highlights: ['Near DU', 'Posh Area', 'Family Neighbourhood', 'Well Planned'],
     type: 'posh',
     pincode: '110009',
     voiceSearchPhrases: [
@@ -93,7 +93,7 @@ export const areaDetails: Record<string, NorthDelhiAreaDetails> = {
     fullName: 'Shalimar Bagh, North Delhi',
     description: 'Large residential colony with good schools',
     heroDescription:
-      'Shalimar Bagh is a well-established residential colony with multiple blocks (AD, BG, etc.) and excellent schools. Families here prioritize quality education and seek proven coaching institutes.',
+      "Shalimar Bagh is a well-established residential colony with multiple blocks (AD, BG, etc.) and excellent schools. If you're preparing for NEET here, our Rohini center is close by.",
     nearbyMetro: ['Shalimar Bagh Metro', 'Azadpur Metro', 'Netaji Subhash Place Metro'],
     landmarks: ['Shalimar Bagh Market', 'Ring Road', 'Azadpur Mandi', 'Club Road'],
     schools: ['DAV Public School', 'Ryan International', 'Mount Abu School', 'Apeejay School'],
@@ -116,7 +116,7 @@ export const areaDetails: Record<string, NorthDelhiAreaDetails> = {
     fullName: 'Ashok Vihar, North Delhi',
     description: 'Established colony near Netaji Subhash Place',
     heroDescription:
-      'Ashok Vihar is a well-established residential colony near Netaji Subhash Place commercial hub. Students from Phase 1-4 areas seek quality NEET coaching with personalized attention.',
+      'Ashok Vihar is a well-established residential colony near Netaji Subhash Place commercial hub. The colony spans Phases 1-4, all within easy reach of Netaji Subhash Place Metro.',
     nearbyMetro: ['Netaji Subhash Place Metro', 'Shalimar Bagh Metro', 'Ashok Park Main Metro'],
     landmarks: ['Netaji Subhash Place', 'Ashok Vihar Market', 'Wazirpur Industrial Area'],
     schools: ['DAV Public School', 'Ryan International', 'Modern School', 'Cambridge School'],
@@ -208,11 +208,11 @@ export const areaDetails: Record<string, NorthDelhiAreaDetails> = {
     fullName: 'Kingsway Camp, North Delhi',
     description: 'Residential area near DU and GTB Hospital',
     heroDescription:
-      'Kingsway Camp is a residential area strategically located near Delhi University and GTB Hospital. Educated families and medical professionals seek quality NEET coaching here.',
+      'Kingsway Camp is a residential area strategically located near Delhi University and GTB Hospital. Many families of medical professionals live here.',
     nearbyMetro: ['GTB Nagar Metro', 'Vishwavidyalaya Metro'],
     landmarks: ['GTB Hospital', 'DU North Campus', 'Kingsway Camp Market'],
     schools: ['Various Schools', 'St. Marks School', 'DAV Public School'],
-    highlights: ['Near DU', 'Hospital Area', 'Educated Families', 'Medical Students'],
+    highlights: ['Near DU', 'Hospital Area', 'Family Neighbourhood', 'Medical Students'],
     type: 'residential',
     pincode: '110009',
     voiceSearchPhrases: [
@@ -277,11 +277,11 @@ export const areaDetails: Record<string, NorthDelhiAreaDetails> = {
     fullName: 'Prashant Vihar, North Delhi',
     description: 'Quiet residential area in Rohini zone',
     heroDescription:
-      'Prashant Vihar is a peaceful residential area in the Rohini zone, known for its educated families and well-maintained colonies seeking quality NEET preparation.',
+      'Prashant Vihar is a peaceful residential area in the Rohini zone, known for its well-maintained colonies.',
     nearbyMetro: ['Rohini West Metro', 'Pitampura Metro'],
     landmarks: ['Prashant Vihar Market', 'Rohini Sector 7 Border', 'Madhuban Chowk'],
     schools: ['DAV Public School', 'Ryan International', 'Bal Bharati'],
-    highlights: ['Peaceful Area', 'Rohini Zone', 'Good Connectivity', 'Educated Families'],
+    highlights: ['Peaceful Area', 'Rohini Zone', 'Good Connectivity', 'Family Neighbourhood'],
     type: 'residential',
     pincode: '110085',
     voiceSearchPhrases: [

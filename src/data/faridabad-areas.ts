@@ -28,7 +28,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 15, Faridabad',
     description: 'Established premium sector with quality apartments and schools',
     heroDescription:
-      "Sector 15 is one of Faridabad's most established premium sectors with well-planned infrastructure. Home to families from DAV School and Crown Heights, students here seek quality NEET Biology coaching nearby.",
+      "Sector 15 is one of Faridabad's most established premium sectors with well-planned infrastructure. Home to families from DAV School and Crown Heights, it's a short trip from our Sector 17 center.",
     nearbyMetro: ['Neelam Chowk Ajronda Metro'],
     landmarks: ['Neelam Chowk', 'Sector 15 Market', 'Crown Heights Plaza'],
     schools: ['DAV Public School Sec 15', 'Crown Heights School', 'Aggarwal Public School'],
@@ -103,7 +103,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 21, Faridabad',
     description: 'Premium sector with well-established infrastructure',
     heroDescription:
-      'Sector 21 is a premium residential area in Faridabad with excellent schools and infrastructure. Families here prioritize quality education and seek specialized NEET Biology coaching for their medical aspirants.',
+      "Sector 21 is a premium residential area in Faridabad with excellent schools and infrastructure. If you're preparing for NEET here, our Sector 17 center is nearby.",
     nearbyMetro: ['Badkhal Mor Metro', 'Bata Chowk Metro'],
     landmarks: ['Sector 21 Market', 'MVN School Campus', 'Sector 21 Park'],
     schools: ['MVN School Sector 21', 'DAV Public School', 'Greenfields School'],
@@ -178,7 +178,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 31, Faridabad',
     description: 'NHPC Colony and residential area',
     heroDescription:
-      'Sector 31 houses the prestigious NHPC Colony along with other residential societies. Students from NHPC families and nearby areas seek quality NEET coaching with convenient metro access.',
+      'Sector 31 houses the prestigious NHPC Colony along with other residential societies, with convenient metro access for students from NHPC Colony and nearby areas.',
     nearbyMetro: ['NHPC Chowk Metro'],
     landmarks: ['NHPC Chowk', 'NHPC Colony', 'Sector 31 Market'],
     schools: ['NHPC DAV School', 'Local Schools', 'Aravali School'],
@@ -227,7 +227,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
   'sector-12': {
     name: 'Sector 12',
     fullName: 'Sector 12, Faridabad',
-    description: 'Established residential sector with schools catchment area',
+    description: 'Established residential sector close to major schools',
     heroDescription:
       'Sector 12 is a well-established residential area in central Faridabad. Families from this sector benefit from proximity to top schools and easy access to our Sector 17 NEET Biology coaching center, just 3 km away.',
     nearbyMetro: ['Neelam Chowk Ajronda Metro', 'Bata Chowk Metro'],
@@ -279,7 +279,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 14, Faridabad',
     description: 'Premium educational hub with DAV and MRIS schools',
     heroDescription:
-      'Sector 14 is a premium educational hub housing both DAV Public School and MRIS (Manav Rachna International School). Families in this sector prioritize quality education, making it a key catchment area for our NEET Biology coaching just 2 km away.',
+      'Sector 14 is a premium educational hub housing both DAV Public School and MRIS (Manav Rachna International School), with our NEET Biology coaching center just 2 km away.',
     nearbyMetro: ['Bata Chowk Metro', 'Neelam Chowk Ajronda Metro'],
     landmarks: ['MRIS Campus', 'DAV School Sector 14', 'Sector 14 Market'],
     schools: ['DAV Public School Sector 14', 'MRIS Faridabad', 'Apeejay School Sector 15'],
@@ -352,9 +352,9 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
   'sector-22': {
     name: 'Sector 22',
     fullName: 'Sector 22, Faridabad',
-    description: 'Residential sector near DPS Faridabad catchment',
+    description: 'Residential sector near DPS Faridabad',
     heroDescription:
-      'Sector 22 is a residential hub near the DPS Faridabad catchment area. Students from this sector and neighbouring sectors commute easily to our Sector 17 coaching center for specialized NEET Biology preparation.',
+      'Sector 22 is a residential hub near DPS Faridabad. Students from this sector and neighbouring sectors commute easily to our Sector 17 coaching center for specialized NEET Biology preparation.',
     nearbyMetro: ['Bata Chowk Metro', 'Badkhal Mor Metro'],
     landmarks: ['Sector 22 Market', 'Faridabad Bypass Road', 'Sector 22 Park'],
     schools: ['DPS Faridabad (nearby)', 'DAV Public School', 'Local Schools'],
@@ -379,7 +379,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 23, Faridabad',
     description: 'Growing residential sector with increasing student population',
     heroDescription:
-      'Sector 23 is a growing residential area in Faridabad with an increasing student population. Families here seek accessible, quality NEET coaching, and our Sector 17 center is just 4 km away with metro connectivity.',
+      "Sector 23 is a growing residential area in Faridabad with an increasing student population. If you're preparing for NEET here, our Sector 17 center is just 4 km away with metro connectivity.",
     nearbyMetro: ['Badkhal Mor Metro', 'Bata Chowk Metro'],
     landmarks: ['Sector 23 Market', 'Badkhal Road', 'Sector 23 Community Center'],
     schools: ['Local Schools', 'DAV Public School (nearby)', 'Ryan International'],
@@ -433,7 +433,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 48, Faridabad',
     description: 'Residential sector near GD Goenka School',
     heroDescription:
-      "Sector 48 is a residential area near GD Goenka Public School Faridabad. Families from this growing sector seek quality NEET Biology coaching for their children's medical aspirations at our Sector 17 center.",
+      'Sector 48 is a residential area near GD Goenka Public School Faridabad, within easy reach of our Sector 17 center.',
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['GD Goenka School', 'Sector 48 Market', 'Greater Faridabad Road'],
     schools: ['GD Goenka Public School', 'Local Schools', 'Greater Faridabad Schools'],
@@ -458,7 +458,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 62, Greater Faridabad',
     description: 'New developing area in Greater Faridabad',
     heroDescription:
-      'Sector 62 is a rapidly developing area in Greater Faridabad with new residential projects attracting young families. Students from this growing sector seek quality NEET Biology coaching to pursue their medical dreams.',
+      'Sector 62 is a rapidly developing area in Greater Faridabad with new residential projects attracting young families.',
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['New Developments', 'Sector 62 Junction', 'Greater Faridabad Road'],
     schools: ['Greater Faridabad Schools', 'Upcoming Schools', 'Local Schools'],
@@ -510,7 +510,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'NIT Faridabad (New Industrial Township)',
     description: 'Established industrial township with residential areas',
     heroDescription:
-      'NIT Faridabad is one of the oldest planned townships in Faridabad with established infrastructure. Students from NIT Colony families, many from industrial and business backgrounds, seek quality NEET coaching.',
+      'NIT Faridabad is one of the oldest planned townships in Faridabad with established infrastructure. Many NIT Colony families come from industrial and business backgrounds.',
     nearbyMetro: ['Old Faridabad Metro', 'Neelam Chowk Ajronda Metro'],
     landmarks: ['NIT Complex', 'NIT Market', 'Railway Station'],
     schools: ['NIT DAV School', 'Aggarwal Public School', 'Local Schools'],
@@ -535,7 +535,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Old Faridabad',
     description: 'Historic heart of Faridabad with metro connectivity',
     heroDescription:
-      'Old Faridabad is the historic heart of the city with a vibrant business community. Students from trader and business families here seek quality NEET coaching with convenient metro access via Old Faridabad Metro Station.',
+      'Old Faridabad is the historic heart of the city with a vibrant business community, well connected via Old Faridabad Metro Station.',
     nearbyMetro: ['Old Faridabad Metro'],
     landmarks: ['Old Faridabad Railway Station', 'Main Market', 'Bus Stand'],
     schools: ['Aggarwal Public School', 'DAV Old Faridabad', 'Local Schools'],
@@ -612,12 +612,12 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 75, Greater Faridabad',
     description: 'BPTP Parklands premium township',
     heroDescription:
-      "Sector 75 houses the prestigious BPTP Parklands township, one of Faridabad's most premium gated communities. Elite families here invest in quality education and seek specialized NEET Biology coaching.",
+      "Sector 75 houses the prestigious BPTP Parklands township, one of Faridabad's most premium gated communities.",
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['BPTP Parklands', 'Sector 75 Market', 'Greater Faridabad'],
     schools: ['DAV Greater Faridabad', 'Ryan International', 'Internal Township Schools'],
     societies: ['BPTP Parklands', 'Premium Villas', 'High-Rise Apartments'],
-    highlights: ['BPTP Parklands', 'Ultra-Premium', 'Gated Township', 'Elite Families'],
+    highlights: ['BPTP Parklands', 'Ultra-Premium', 'Gated Township', 'Premium Homes'],
     type: 'greater-faridabad',
     pincode: '121004',
     distanceFromCenter: '10 km',
@@ -637,7 +637,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 76, Greater Faridabad',
     description: 'RPS Palms premium township',
     heroDescription:
-      "Sector 76 features the RPS Palms township, a premium residential community in Greater Faridabad. Families from this exclusive township seek quality NEET coaching for their children's medical aspirations.",
+      'Sector 76 features the RPS Palms township, a premium residential community in Greater Faridabad.',
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['RPS Palms', 'Sector 76 Junction', 'Greater Faridabad Road'],
     schools: ['DPS Greater Faridabad', 'Ryan International', 'Local Schools'],
@@ -662,7 +662,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 77, Greater Faridabad',
     description: 'Omaxe Heights premium township',
     heroDescription:
-      "Sector 77 is home to Omaxe Heights, one of Greater Faridabad's most sought-after townships. Premium families here prioritize education and seek specialized NEET coaching for their children.",
+      "Sector 77 is home to Omaxe Heights, one of Greater Faridabad's most sought-after townships.",
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['Omaxe Heights', 'Sector 77 Market', 'Greater Faridabad Bypass'],
     schools: ['MVN Sector 88', 'Greater Faridabad Schools', 'Local Schools'],
@@ -687,7 +687,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 78, Greater Faridabad',
     description: 'Eldeco Saubhagyam premium township',
     heroDescription:
-      'Sector 78 features Eldeco Saubhagyam, a premium residential complex in Greater Faridabad. Families from this township seek quality NEET coaching with convenient access and expert faculty.',
+      'Sector 78 features Eldeco Saubhagyam, a premium residential complex in Greater Faridabad.',
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['Eldeco Saubhagyam', 'Sector 78 Road', 'Greater Faridabad'],
     schools: ['Modern School', 'Greater Faridabad Schools', 'Local Schools'],
@@ -737,7 +737,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 84, Greater Faridabad',
     description: 'Omaxe New Heights premium township',
     heroDescription:
-      'Sector 84 features Omaxe New Heights, a premium residential project in Greater Faridabad. Families here invest in quality education and seek specialized NEET Biology coaching.',
+      'Sector 84 features Omaxe New Heights, a premium residential project in Greater Faridabad.',
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['Omaxe New Heights', 'Sector 84 Market', 'Greater Faridabad'],
     schools: ['Greater Faridabad Schools', 'MVN School', 'Local Schools'],
@@ -762,7 +762,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 85, Greater Faridabad',
     description: 'Ansal Aquapolis premium township',
     heroDescription:
-      "Sector 85 is home to Ansal Aquapolis, one of Greater Faridabad's unique water-themed townships. Premium families here seek quality NEET coaching for their children's medical dreams.",
+      "Sector 85 is home to Ansal Aquapolis, one of Greater Faridabad's unique water-themed townships.",
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['Ansal Aquapolis', 'Sector 85 Road', 'Water Park Area'],
     schools: ['Internal Schools', 'Greater Faridabad Schools', 'Local Schools'],
@@ -787,7 +787,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 86, Greater Faridabad',
     description: 'Crown Interiorz Mall and premium residences',
     heroDescription:
-      'Sector 86 is known for Crown Interiorz Mall and surrounding premium residences. This commercial-residential hub attracts families seeking quality NEET coaching nearby.',
+      'Sector 86 is known for Crown Interiorz Mall and its surrounding premium residences.',
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['Crown Interiorz Mall', 'Sector 86 Market', 'Greater Faridabad'],
     schools: ['MVN School', 'Ryan International', 'Local Schools'],
@@ -837,7 +837,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Sector 88, Greater Faridabad',
     description: 'MVN Campus area with educational focus',
     heroDescription:
-      'Sector 88 is home to MVN University Campus, making it an education-focused area. Students from MVN and surrounding areas seek specialized NEET Biology coaching to complement their academic pursuits.',
+      'Sector 88 is home to MVN University Campus, making it an education-focused area. If you study at MVN or a nearby school, specialized NEET Biology coaching can run alongside your academics.',
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['MVN University', 'Sector 88 Campus', 'Greater Faridabad'],
     schools: ['MVN School Sector 88', 'MVN University', 'Local Schools'],
@@ -894,7 +894,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     landmarks: ['BPTP Parklands Gate', 'Parklands Club', 'Premium Villas'],
     schools: ['DAV Greater Faridabad', 'Ryan International', 'Premium Schools'],
     societies: ['BPTP Parklands Villas', 'BPTP Independent Floors', 'BPTP Towers'],
-    highlights: ['Most Exclusive', 'Gated Community', 'Elite Families', 'Premium Amenities'],
+    highlights: ['Most Exclusive', 'Gated Community', 'Premium Homes', 'Premium Amenities'],
     type: 'premium',
     pincode: '121004',
     distanceFromCenter: '10 km',
@@ -914,7 +914,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Omaxe Heights, Sector 77-78, Faridabad',
     description: 'Premium township by Omaxe Group',
     heroDescription:
-      'Omaxe Heights is a premium township in Greater Faridabad known for quality construction and amenities. Families here prioritize education and seek specialized NEET Biology coaching.',
+      'Omaxe Heights is a premium township in Greater Faridabad known for quality construction and amenities.',
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['Omaxe Heights Main Gate', 'Omaxe Club', 'Community Center'],
     schools: ['Greater Faridabad Schools', 'Premium Schools', 'Local Schools'],
@@ -938,8 +938,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     name: 'RPS Palms',
     fullName: 'RPS Palms, Sector 76, Faridabad',
     description: 'Premium residential township with green spaces',
-    heroDescription:
-      'RPS Palms in Sector 76 offers premium living with extensive green spaces. Families in this township seek quality NEET coaching that matches their lifestyle expectations.',
+    heroDescription: 'RPS Palms in Sector 76 offers premium living with extensive green spaces.',
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['RPS Palms Gate', 'Palm Residences', 'RPS Club'],
     schools: ['DPS Greater Faridabad', 'Premium Schools', 'Local Schools'],
@@ -964,7 +963,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'SRS Residency, Greater Faridabad',
     description: 'Affordable premium township in Greater Faridabad',
     heroDescription:
-      "SRS Residency offers affordable premium housing in Greater Faridabad. Middle-class families here seek quality NEET coaching at reasonable fees for their children's medical dreams.",
+      'SRS Residency offers affordable premium housing in Greater Faridabad, home to many middle-class families.',
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['SRS Residency Gate', 'SRS Complex', 'Greater Faridabad Road'],
     schools: ['Local Schools', 'Greater Faridabad Schools', 'Affordable Schools'],
@@ -989,7 +988,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Eldeco Saubhagyam, Sector 78, Faridabad',
     description: 'Premium Eldeco township with modern amenities',
     heroDescription:
-      'Eldeco Saubhagyam in Sector 78 is a premium residential complex by the trusted Eldeco group. Families here seek quality NEET coaching to complement the premium lifestyle.',
+      'Eldeco Saubhagyam in Sector 78 is a premium residential complex by the trusted Eldeco group.',
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['Eldeco Main Gate', 'Community Center', 'Eldeco Park'],
     schools: ['Modern School', 'Premium Schools', 'Local Schools'],
@@ -1016,7 +1015,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Surajkund, Faridabad',
     description: 'Tourist area with upscale residences',
     heroDescription:
-      'Surajkund is known for its historical lake, annual crafts mela, and upscale farmhouses. Families from this scenic area seek quality NEET coaching in centrally located Sector 17.',
+      'Surajkund is known for its historical lake, annual crafts mela, and upscale farmhouses. Our centrally located Sector 17 center serves students from this scenic area.',
     nearbyMetro: ['Badkhal Mor Metro', 'Old Faridabad Metro'],
     landmarks: ['Surajkund Lake', 'Mela Ground', 'Surajkund Road'],
     schools: ['Local Schools', 'Nearby Schools', 'Private Schools'],
@@ -1145,7 +1144,7 @@ export const faridabadAreaDetails: Record<string, FaridabadAreaDetails> = {
     fullName: 'Crown Interiorz Mall, Sector 86, Faridabad',
     description: 'Premium mall area with upscale residences',
     heroDescription:
-      "Crown Interiorz Mall in Sector 86 is Greater Faridabad's premier shopping destination surrounded by upscale residences. Families in this area seek quality NEET coaching matching their lifestyle.",
+      "Crown Interiorz Mall in Sector 86 is Greater Faridabad's premier shopping destination surrounded by upscale residences.",
     nearbyMetro: ['Escorts Mujesar Metro'],
     landmarks: ['Crown Interiorz Mall', 'Sector 86 Market', 'Premium Hotels'],
     schools: ['MVN School', 'Ryan International', 'Premium Schools'],

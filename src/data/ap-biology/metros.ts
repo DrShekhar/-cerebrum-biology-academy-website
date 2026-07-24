@@ -491,7 +491,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     addressRegion: 'WA',
     usaboCitySlug: 'seattle',
     heroBlurb:
-      "Lakeside School and Seattle's strong public AP cluster — Bellevue, International School, Mercer Island, Newport, Garfield — run rigorous AP Biology programmes. Many Seattle families also consider the BS/MD and biotech-research pipeline given the city\'s deep biotech industry (Fred Hutch, ISB, Aakash Institute). Our Seattle programme runs in Pacific Time.",
+      "Lakeside School and Seattle's strong public AP cluster — Bellevue, International School, Mercer Island, Newport, Garfield — run rigorous AP Biology programmes. Many Seattle families also consider the BS/MD and biotech-research pipeline given the city\'s deep biotech industry (Fred Hutch, ISB, Allen Institute). Our Seattle programme runs in Pacific Time.",
     positioningBlurb:
       "Seattle public-school AP Biology is strong on lab work but classroom-grading rubrics often differ from College Board's FRQ rubric. The May AP exam is a national benchmark — the gap we close is rubric application and timed full-length practice. PT evenings and weekends.",
     schools: [
@@ -515,7 +515,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'Does AP Biology help with University of Washington biology admissions?',
         answer:
-          'UW Biology is competitive at the college level — most Washington pre-meds and biotech students take college biology regardless of AP credit. AP-5 is foundational. The bigger value of strong AP Bio is research-readiness for Fred Hutch / ISB / Aakash Institute internships during high school and college.',
+          'UW Biology is competitive at the college level — most Washington pre-meds and biotech students take college biology regardless of AP credit. AP-5 is foundational. The bigger value of strong AP Bio is research-readiness for Fred Hutch / ISB / Allen Institute internships during high school and college.',
       },
       {
         question: 'Do you coach USABO for Seattle students?',
@@ -694,8 +694,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
           'Yes. We accept AED via Emirates NBD / Mashreq bank transfer (no FX conversion needed), international Visa / Mastercard / Amex in USD, and Wise / Revolut transfers. We do not directly integrate Tabby or Tamara, but several Dubai families split the $1,800 senior-faculty package across two AED transfers (month 1 and month 3) at no extra charge. Razorpay USD checkout also works if you prefer that route.',
       },
       {
-        question:
-          'How is your AP Biology coaching different from local Dubai tutoring agencies?',
+        question: 'How is your AP Biology coaching different from local Dubai tutoring agencies?',
         answer:
           'Three structural differences. First, faculty: we use AIIMS-trained biology faculty as your dedicated tutor for the year, not a rotating bench of generalist tutors hired on freelance terms. Second, methodology: retrieval-heavy small-batch coaching (Indian tradition) with weekly written FRQ feedback against the College Board rubric, not generic platform tutoring. Third, price: senior-faculty 1:1 at $1,800 for 12 hours works out to $150/hr versus the AED 220–400/hr ($60–$110/hr) typical of local agencies — and at those local rates you are usually getting undergraduate or master’s-level generalists, not full biology specialists.',
       },
@@ -1002,7 +1001,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'My child is at NPS / Greenwood and STEM-leaning — they’re already doing AP Calc BC, USACO, and coding. Does adding AP Biology over-stretch them?',
         answer:
-          'Honestly, it depends on the student. The tech-family STEM-leaning Bangalore profile (AP Calc BC + USACO Silver/Gold + AP Computer Science) is one of our most common — and the strong ones absolutely add AP Biology in junior year for MIT / Stanford / CMU breadth signalling. The weaker ones over-extend and produce a 3 or 4 that hurts the application more than no AP Bio at all would have. The honest call: if your child is comfortably 5-track in math/CS already, AP Bio is a strong add. If they’re grinding to maintain those tracks, deepen what’s working rather than adding a fourth.',
+          'Honestly, it depends on the student. The AP Calc BC + USACO Silver/Gold + AP Computer Science combination is one of the most common profiles we coach — students comfortably on top of that load absolutely add AP Biology in junior year for MIT / Stanford / CMU breadth signalling, while students already stretched by it over-extend and produce a 3 or 4 that hurts the application more than no AP Bio at all would have. The honest call: if your child is comfortably 5-track in math/CS already, AP Bio is a strong add. If they’re grinding to maintain those tracks, deepen what’s working rather than adding a fourth.',
       },
       {
         question:
@@ -1446,8 +1445,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
           'Those are excellent class-level results, but the students who land at a 3 rather than a 4 or 5 are usually losing points on FRQ writing and timed-exam composure — not on content knowledge. HKIS AP Biology teachers run sections of 20–25 students and cannot mark every FRQ attempt to College Board rubric weekly. Our 1:1 layer fills exactly that: same Campbell-aligned syllabus HKIS teaches, plus dedicated weekly rubric calibration, timed full-length mocks, and the FRQ writing skill that converts a strong 3 into a clean 5.',
       },
       {
-        question:
-          'How does Cerebrum compare to Hong Kong tutoring agencies on price and quality?',
+        question: 'How does Cerebrum compare to Hong Kong tutoring agencies on price and quality?',
         answer:
           'Local HK agencies charge HKD 470–1,000+/hr (~US$60–130/hr) for mostly graduate or recent-graduate tutors with no biology specialism. Senior-faculty 1:1 with us is US$1,800 for 12 hours — about US$150/hr — but you are getting AIIMS-trained biology faculty as your dedicated tutor for the year, weekly written FRQ feedback against the College Board rubric, and continuity across the full AP cycle. At the HKD 800–1,000/hr tier you would be paying for a tutor still building biology depth; at our rate you get a published specialist.',
       },
@@ -2087,7 +2085,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'My family is in the Sorrento Valley biotech corridor — planning conversation?',
         answer:
-          "If you work in the biotech corridor, you already understand biology depth. We discuss: (a) AP-5 target + USABO semifinal bridge, (b) UCSD bio-research access for extracurriculars, (c) whether the student targets UC system or East Coast schools. Most families here book the senior-faculty 1:1 package.",
+          'If you work in the biotech corridor, you already understand biology depth. We discuss: (a) AP-5 target + USABO semifinal bridge, (b) UCSD bio-research access for extracurriculars, (c) whether the student targets UC system or East Coast schools. Most families here book the senior-faculty 1:1 package.',
       },
       {
         question: 'How does Cerebrum compare to San Diego AP tutors?',
@@ -2115,7 +2113,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     timezoneIana: 'America/Denver',
     addressRegion: 'CO',
     heroBlurb:
-      "Denver is the Mountain West's strongest AP Biology market. Cherry Creek High School, ThunderRidge High School, Fairview High (Boulder), Kent Denver School, Colorado Academy, and Regis Jesuit anchor the AP-5 pipeline. The growing South Asian tech community in Centennial, Lone Tree, and Highlands Ranch drives pre-med AP demand.",
+      "Denver is the Mountain West's strongest AP Biology market. Cherry Creek High School, ThunderRidge High School, Fairview High (Boulder), Kent Denver School, Colorado Academy, and Regis Jesuit anchor the AP-5 pipeline. If you're in Centennial, Lone Tree, or Highlands Ranch and thinking pre-med, AP Biology is the anchor course.",
     positioningBlurb:
       'Colorado students in the Mountain Time zone have a scheduling advantage: MT evening sessions fit cleanly between the typical 3 PM school dismissal and a 9 PM bedtime. We coach Campbell Biology with FRQ rubric overlay and bridge to USABO for students targeting the semifinal.',
     schools: [
@@ -2139,7 +2137,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'My family is in Centennial / Lone Tree — planning conversation?',
         answer:
-          'The Centennial/Lone Tree/Highlands Ranch corridor has growing South Asian pre-med culture. We discuss: (a) AP-5 target + CU Boulder or out-of-state pre-med, (b) USABO bridge, (c) Mountain Time scheduling. Most families in this corridor book the senior-faculty 1:1 package.',
+          "If you're in Centennial, Lone Tree, or Highlands Ranch and thinking pre-med, we discuss: (a) AP-5 target + CU Boulder or out-of-state pre-med, (b) USABO bridge, (c) Mountain Time scheduling. Most families here book the senior-faculty 1:1 package.",
       },
       {
         question: 'Mountain Time scheduling for Denver students?',
@@ -2167,7 +2165,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     timezoneIana: 'America/Chicago',
     addressRegion: 'TX',
     heroBlurb:
-      "Austin is Texas's fastest-growing AP Biology market. LASA (Liberal Arts and Science Academy), Westlake High School, Westwood High School (Round Rock), McNeil High School, and St. Stephen's Episcopal anchor the AP-5 pipeline. The tech-corridor Indian-American community in Round Rock, Cedar Park, and Pflugerville (Apple, Samsung, Tesla, Oracle) drives strong pre-med AP demand.",
+      "Austin is Texas's fastest-growing AP Biology market. LASA (Liberal Arts and Science Academy), Westlake High School, Westwood High School (Round Rock), McNeil High School, and St. Stephen's Episcopal anchor the AP-5 pipeline. If you're in the Round Rock, Cedar Park, or Pflugerville tech corridor and thinking pre-med, AP Biology is the anchor course to get right.",
     positioningBlurb:
       "Austin students benefit from UT Austin's proximity — the College of Natural Sciences pre-med track is a major local target. Our CT evening sessions fit the typical Texas school schedule, and we overlay FRQ rubric mastery on strong LASA/Westlake science foundations.",
     schools: [
@@ -2191,7 +2189,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'My family is in Round Rock / Cedar Park — planning conversation?',
         answer:
-          "The Round Rock/Cedar Park tech corridor (Apple, Samsung, Dell) has one of Texas's highest South Asian household densities. We discuss: (a) AP-5 target + UT Austin CNS pre-med or out-of-state, (b) USABO bridge, (c) Central Time scheduling. Most Round Rock families book the senior-faculty 1:1 package.",
+          "If you're in the Round Rock / Cedar Park tech corridor, we discuss: (a) AP-5 target + UT Austin CNS pre-med or out-of-state, (b) USABO bridge, (c) Central Time scheduling. Most families here book the senior-faculty 1:1 package.",
       },
       {
         question: 'UT Austin pre-med pipeline — does AP Biology help?',
@@ -2219,7 +2217,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     timezoneIana: 'America/Los_Angeles',
     addressRegion: 'OR',
     heroBlurb:
-      "Portland is the Pacific Northwest's secondary AP Biology market after Seattle. Lincoln High School, Catlin Gabel, Oregon Episcopal School, Lake Oswego High School, and Sunset High School (Beaverton) drive AP-5 volume. The growing Indian-American tech community in Beaverton and Hillsboro (Intel, Nike) drives pre-med AP demand.",
+      "Portland is the Pacific Northwest's secondary AP Biology market after Seattle. Lincoln High School, Catlin Gabel, Oregon Episcopal School, Lake Oswego High School, and Sunset High School (Beaverton) drive AP-5 volume. If you're in Beaverton or Hillsboro and thinking pre-med, AP Biology is the anchor course.",
     positioningBlurb:
       'Portland students share the PT timezone with Seattle and the Bay Area, making multi-city small-batch sessions viable. We coach Campbell Biology with FRQ rubric overlay and bridge to USABO for students targeting the semifinal. OHSU (Oregon Health & Science University) is the dominant local medical-school target.',
     schools: [
@@ -2243,7 +2241,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       {
         question: 'My family is in Beaverton / Hillsboro — planning conversation?',
         answer:
-          'The Beaverton/Hillsboro corridor (Intel, Nike) has growing South Asian pre-med culture. We discuss: (a) AP-5 target + OHSU pipeline or out-of-state pre-med, (b) USABO bridge, (c) PT scheduling. Most Beaverton families book the senior-faculty 1:1 package.',
+          "If you're in Beaverton or Hillsboro and thinking pre-med, we discuss: (a) AP-5 target + OHSU pipeline or out-of-state pre-med, (b) USABO bridge, (c) PT scheduling. Most families here book the senior-faculty 1:1 package.",
       },
       {
         question: 'OHSU pre-med pipeline — does AP Biology help?',

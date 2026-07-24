@@ -1791,7 +1791,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Which schools in Delhi do you support?',
         answer:
-          "All Delhi schools — NEET is NCERT-based and curriculum-agnostic. Common feeder schools: DPS RK Puram, DPS Vasant Kunj, DPS Mathura Road, Sanskriti School (Chanakyapuri), Modern School Barakhamba, Springdales (Pusa Road and Dhaula Kuan), Mother's International, Tagore International, Delhi Public School Dwarka, Ahlcon International (Mayur Vihar), Apeejay (Pitampura), DAV (multiple).",
+          "All Delhi schools — NEET is NCERT-based and curriculum-agnostic. Schools we serve: DPS RK Puram, DPS Vasant Kunj, DPS Mathura Road, Sanskriti School (Chanakyapuri), Modern School Barakhamba, Springdales (Pusa Road and Dhaula Kuan), Mother's International, Tagore International, Delhi Public School Dwarka, Ahlcon International (Mayur Vihar), Apeejay (Pitampura), DAV (multiple).",
       },
       {
         question: 'Do you offer NEET dropper batch in Delhi?',
@@ -2926,7 +2926,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Do you have students from Defence Colony?',
         answer:
-          'Yes! Defence Colony is one of our top feeder areas for South Extension center. Many NEET qualifiers from here. Call 88264-44334 to meet our students.',
+          'Yes! Defence Colony is one of our busiest areas for the South Extension center. Many NEET qualifiers from here. Call 88264-44334 to meet our students.',
       },
     ],
     stats: {
@@ -3334,7 +3334,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Do you have students from DPS RK Puram?',
         answer:
-          'Absolutely! DPS RK Puram is our top feeder school. We understand DPS curriculum and coordinate NEET prep with school schedule. Call 88264-44334.',
+          'Absolutely! More of our students come from DPS RK Puram than from any other school. We understand DPS curriculum and coordinate NEET prep with school schedule. Call 88264-44334.',
       },
       {
         question: 'Which sector is nearest to the coaching center?',
@@ -12019,7 +12019,7 @@ export const cityHubData: Record<string, CityHubData> = {
     },
     areaSpecificContent: {
       whyThisArea:
-        "Gaur City is Delhi NCR's largest residential township with 50,000+ apartments. The sheer density of NEET aspirants here — estimated 2,000+ students across Classes 9-12 — makes it one of our highest-priority catchment areas. Despite this, the township has no specialized coaching for Biology. Students previously commuted to Noida Sector 18 or Kota for quality NEET prep. Our 120+ student base from Gaur City proves that community-based, zero-commute coaching works better than long-distance solutions.",
+        "Gaur City is Delhi NCR's largest residential township with 50,000+ apartments. The sheer density of NEET aspirants here — estimated 2,000+ students across Classes 9-12 — makes it one of the areas we focus on most. Despite this, the township has no specialized coaching for Biology. Students previously commuted to Noida Sector 18 or Kota for quality NEET prep. Our 120+ student base from Gaur City proves that community-based, zero-commute coaching works better than long-distance solutions.",
     },
     studentSuccessStory: {
       name: 'Ankit S.',
@@ -12100,7 +12100,7 @@ export const cityHubData: Record<string, CityHubData> = {
     },
     areaSpecificContent: {
       whyThisArea:
-        "Raj Nagar Extension is Ghaziabad's largest new residential belt with 150+ housing societies and an estimated 1 lakh+ families. The area lacks quality education infrastructure — students commute 45+ minutes to Indirapuram or Delhi for NEET coaching. Our online model serves this underserved market perfectly. With 80+ students already enrolled and growing 30% year-over-year, RNE is our fastest-growing catchment in Ghaziabad.",
+        "Raj Nagar Extension is Ghaziabad's largest new residential belt with 150+ housing societies and an estimated 1 lakh+ families. The area lacks quality education infrastructure — students commute 45+ minutes to Indirapuram or Delhi for NEET coaching. Our live online classes remove that commute entirely. With 80+ students already enrolled and growing 30% year-over-year, RNE is where our Ghaziabad student base is growing fastest.",
     },
     studentSuccessStory: {
       name: 'Kavya R.',
@@ -12184,7 +12184,7 @@ export const cityHubData: Record<string, CityHubData> = {
     },
     areaSpecificContent: {
       whyThisArea:
-        "Sector 18 is Noida's most connected area, and our live online classes reach students from Sectors 12, 15, 16, 18, and 25. With 180+ students from this catchment, it's one of our highest-density areas. The after-school timing works perfectly: students finish at 2 PM and join the 4 PM live online batch from home.",
+        "Sector 18 is Noida's most connected area, and our live online classes reach students from Sectors 12, 15, 16, 18, and 25. With 180+ students from this area studying with us, it's one of our busiest areas. The after-school timing works perfectly: students finish at 2 PM and join the 4 PM live online batch from home.",
     },
     studentSuccessStory: {
       name: 'Meera S.',

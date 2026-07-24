@@ -100,7 +100,7 @@ export const gurugramMetroStations: Record<string, GurugramMetroStation> = {
     nearbyAreas: ['Sector 54', 'Golf Course Road', 'DLF Phase 5', 'Sector 53'],
     landmarks: ['Sector 54 Chowk', 'Golf Course Road', 'Central Plaza', 'One Horizon Centre'],
     description:
-      'Sector 54 Chowk Rapid Metro serves the ultra-premium Golf Course Road area. Elite families here prefer our personalized NEET coaching.',
+      'Sector 54 Chowk Rapid Metro serves the ultra-premium Golf Course Road area. If you live along Golf Course Road, this station puts our personalized NEET coaching just 10 minutes away.',
     walkingTime: '10 minutes from our center',
     coordinates: { lat: 28.4475, lng: 77.067 },
   },
@@ -196,7 +196,7 @@ export const gurugramMetroStations: Record<string, GurugramMetroStation> = {
     nearbyAreas: ['DLF Phase 3', 'Golf Course Road', 'Belvedere Park'],
     landmarks: ['Belvedere Towers', 'Belvedere Park', 'DLF Golf Course'],
     description:
-      'Belvedere Towers Rapid Metro serves the ultra-premium Golf Course Road segment with luxury residential towers.',
+      'Belvedere Towers Rapid Metro serves the ultra-premium stretch of Golf Course Road with its luxury residential towers.',
     walkingTime: '15 minutes from our center',
     coordinates: { lat: 28.4617, lng: 77.0756 },
   },

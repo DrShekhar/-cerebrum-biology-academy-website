@@ -28,7 +28,7 @@ export const TOP_USABO_COACHING: RankedItem[] = [
       'Small batches (4-8 students for olympiad track)',
     ],
     cons: [
-      'Limited seats per USABO cohort',
+      'Limited seats per USABO batch',
       'Olympiad-only track — students need separate AP/SAT prep',
     ],
     keyFeatures: [
@@ -57,7 +57,7 @@ export const TOP_USABO_COACHING: RankedItem[] = [
       'No live faculty or mentorship',
       'No structured pacing — many candidates abandon before Open',
       'No Semifinal-level research-paper coaching',
-      'No accountability or peer cohort',
+      'No accountability or peer group',
     ],
     keyFeatures: [
       { label: 'Cost', value: 'Free' },
@@ -99,11 +99,11 @@ export const TOP_USABO_COACHING: RankedItem[] = [
     rank: 4,
     name: 'Other Local High-School Biology Olympiad Clubs',
     description:
-      'School-run biology olympiad clubs at top US high schools (TJHSST, Stuyvesant, Bronx Science, Lowell, etc.). Strong peer cohort, variable faculty.',
+      'School-run biology olympiad clubs at top US high schools (TJHSST, Stuyvesant, Bronx Science, Lowell, etc.). Strong peer group, variable faculty.',
     score: 5.8,
     rating: 4.0,
     pros: [
-      'Strong peer cohort at top STEM high schools',
+      'Strong peer group at top STEM high schools',
       'Free for enrolled students',
       'Local meeting cadence',
     ],
