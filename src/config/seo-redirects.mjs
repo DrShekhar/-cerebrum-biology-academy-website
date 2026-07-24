@@ -3256,7 +3256,7 @@ export const areaPageConsolidationRedirects = [
     permanent: true,
   },
 
-  // neet-coaching-south-delhi area pages (23 consolidated; the 8 curated
+  // neet-coaching-south-delhi area pages (22 consolidated; the 8 curated
   // indexable localities in src/data/south-delhi-enriched.ts are NOT listed
   // here — they render and index)
   {
@@ -3356,11 +3356,6 @@ export const areaPageConsolidationRedirects = [
   },
   {
     source: '/neet-coaching-south-delhi/sukhdev-vihar',
-    destination: '/neet-coaching-south-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-south-delhi/rajendra-nagar',
     destination: '/neet-coaching-south-delhi',
     permanent: true,
   },

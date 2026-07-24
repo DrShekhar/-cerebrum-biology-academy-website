@@ -32,6 +32,7 @@ export const INDEXABLE_SOUTH_DELHI_LOCALITIES = [
   'lodhi-colony',
   'gulmohar-park',
   'chanakyapuri',
+  'rajendra-nagar',
 ] as const
 
 export interface SouthDelhiEnrichment {
@@ -89,6 +90,13 @@ export const southDelhiEnriched: Record<string, SouthDelhiEnrichment> = {
       'Lodhi Colony & Khan Market area — premium NEET Biology coaching without the premium crowd. AIIMS-trained faculty, small batches at South Extension, or live online.',
     intro:
       'Lodhi Colony pairs heritage streets and art walls with some of Delhi’s most education-focused households — and it anchors the wider Khan Market catchment, from Golf Links and Jor Bagh to Sunder Nagar. Students here attend Modern School Barakhamba, St. Columba’s and Mater Dei, and their families expect teaching of the same calibre. For NEET Biology, that calibre means AIIMS-trained faculty rather than a franchise classroom: our South Extension flagship is a ten-minute drive down Lodhi Road, and our batches stay small enough that every doubt gets answered the day it appears. Prefer to skip Delhi traffic entirely? The same faculty teach the same batches live online.',
+  },
+  'rajendra-nagar': {
+    metaTitle: 'NEET Biology Coaching in Old Rajinder Nagar | Cerebrum Academy',
+    metaDescription:
+      'Old Rajinder Nagar aspirants: add a NEET Biology specialist alongside your coaching. Small batches, AIIMS-trained faculty — live online from your PG, or at our South Extension centre.',
+    intro:
+      'Old Rajinder Nagar is Delhi’s second great aspirant colony — best known for UPSC, but its PG lanes also house NEET droppers and repeaters drawn by the Karol Bagh–Pusa Road coaching corridor next door. Students here already live inside a batch-factory ecosystem; what they lack is per-student attention in Biology, the subject worth 360 of NEET’s 720 marks. Our answer fits PG life: live online small-batch classes taught by AIIMS-trained faculty that slot around a big institute’s timetable, weekly tests with mistake-level review, and an in-person option at the South Extension flagship — a direct Metro run down the Blue and Pink lines — for students who want centre discipline on weekends.',
   },
   chanakyapuri: {
     metaTitle: 'NEET Biology Coaching near Chanakyapuri | Sanskriti School Students | Cerebrum',

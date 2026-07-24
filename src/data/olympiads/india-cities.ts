@@ -139,6 +139,10 @@ export const olympiadCities: OlympiadCityEntry[] = [
       { label: 'NSEB coaching', href: '/nseb-coaching' },
       { label: 'INBO coaching', href: '/inbo-coaching' },
       { label: 'South Delhi NEET classes', href: '/neet-coaching-south-delhi' },
+      // IB↔NSEB overlap is ~75-85% (see localContext) — the IB city page is
+      // the natural next step for the IB-school families this page attracts.
+      { label: 'IB Biology tuition South Delhi', href: '/ib-biology/south-delhi' },
+      { label: 'IB & IGCSE Biology South Delhi', href: '/ib-igcse-biology-tuition-south-delhi' },
       { label: 'Delhi olympiad hub', href: '/biology-olympiads/india/delhi' },
     ],
     localContext:

@@ -414,6 +414,24 @@ export default function BiologyTutorSouthDelhiPage() {
             >
               Online Classes
             </Link>
+            <Link
+              href="/ib-biology/south-delhi"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
+            >
+              IB Biology South Delhi
+            </Link>
+            <Link
+              href="/ib-igcse-biology-tuition-south-delhi"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
+            >
+              IB & IGCSE Tuition
+            </Link>
+            <Link
+              href="/a-level-biology/south-delhi"
+              className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
+            >
+              A-Level Biology
+            </Link>
           </div>
         </div>
       </section>

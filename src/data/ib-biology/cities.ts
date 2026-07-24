@@ -965,6 +965,8 @@ export const cities: Record<CitySlug, CityConfig> = {
     pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
     annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
     ibSchools: [
+      'The British School New Delhi',
+      'American Embassy School (Chanakyapuri)',
       'Vasant Valley School',
       'The Shri Ram School, Aravali',
       'Sardar Patel Vidyalaya',
@@ -983,10 +985,14 @@ export const cities: Record<CitySlug, CityConfig> = {
       'Lajpat Nagar',
     ],
     localHook:
-      'South Delhi has the highest density of IB/IGCSE schools in India after Gurugram. Our flagship South Extension centre sits at the heart of this cluster — GK, Defence Colony, Saket, and Vasant Kunj students reach in 15-25 minutes. We blend offline intensive weekends with IST online classes.',
+      'South Delhi has the highest density of IB World Schools in India after Gurugram — The British School and AES in the diplomatic quarter, Vasant Valley, Shri Ram Aravali and Step by Step Jasola ringing it. Our flagship South Extension centre sits at the heart of this cluster (GK, Defence Colony, Saket and Vasant Kunj students reach in 15–25 minutes; a second centre at B-113 Gulmohar Park serves the Green Park side), with HL and SL batches, IA and EE (Biology) supervision-support, and past-paper marking against IB rubrics. We blend offline intensive weekends with IST online classes — and for families keeping Indian medical options open, the same faculty run our dual IB + NEET track.',
     inPersonCentre: {
       name: 'Cerebrum Biology Academy — South Extension (Flagship)',
       address: 'D 35, South Extension Part 2, New Delhi 110049',
+    },
+    companionPage: {
+      title: 'IB & IGCSE Biology Tuition in South Delhi',
+      href: '/ib-igcse-biology-tuition-south-delhi',
     },
   },
 
