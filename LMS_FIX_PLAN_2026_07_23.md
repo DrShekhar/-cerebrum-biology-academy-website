@@ -8,6 +8,36 @@ Legend: **P0** = broken student-facing / security / revenue · **P1** = data-uni
 
 ---
 
+## ✅ STATUS — updated 2026-07-23 (end of day)
+
+Phases 1–3 **implemented and committed** on branch `fix/lms-phase1` (3 commits on top of the plan doc). `npx tsc --noEmit` green throughout.
+
+| Item | Status | Commit |
+|---|---|---|
+| 1.1 student_notes schema + routes | ✅ Done — new model + migration `20260723120000_add_student_notes`; `as any` casts removed | `559c505` |
+| 1.2 Fees checkout | ✅ Done — inline Razorpay per installment; create-order validates ownership+amount; verify completes fee-plan ledger idempotently (mirrors counselor mark-paid) | `559c505` |
+| 1.3 Gamification IDOR | ✅ Done — session identity wins; anonymous limited to own freeUserId token | `559c505` |
+| 1.4 ADMIN 401s on Questions/Analytics | ✅ Done | `559c505` |
+| 1.5 Worksheet authoring | ✅ Done (built, not hidden) — POST/PATCH API + /teacher/worksheets/create form matching student content shape | `559c505` |
+| 2.1 Assigned tests → per-question responses | ✅ Done — Mistakes + Mastery now cover assigned tests | `af875a9` |
+| 2.2 Unified gradebook | ✅ Done — unions both stores, respects result-release modes | `af875a9` |
+| 2.3 MCQ account linking | ✅ Done — submit stamps userId; /api/mcq/claim links or merges guest history; page fires claim post-login | `af875a9` |
+| 2.4 Reports counters | ✅ Done — assigned/checked derived from submission lifecycles (were hardcoded 0) | `af875a9` |
+| 3.1 Mentor booking notifications | ✅ Done — bell + emails on book/cancel + student confirmation | `c9e2019` |
+| 3.2 AI tutor + doubt-solver hardening | ✅ Done — IP rate limits + per-user daily caps; fake MCP claims replaced with REAL weak-topic injection; page surfaces auth/429 messages | `c9e2019` |
+| 3.3 Doubt status machine | ✅ Done (in Phase 1 batch) | `559c505` |
+| 3.4 Auto-issue certificates | ⏳ OWNER DECISION — self-claim may be intended friction | — |
+| 3.5 Gamification wiring | ✅ Done — MCQ + assigned-test submits feed xp_events/user_badges (recorders had zero callers) | `c9e2019` |
+| Phase 4 (catalog strategy, question-source unification, teacher scoping, Zoom provisioning, batch notices, recordings env activation, adaptive-testing de-link, dead schema drops, teacher attachment uploads) | ⏳ Not started — schedule separately | — |
+
+### Ship steps
+1. Push branch, merge to main (or PR).
+2. **Run `npm run db:migrate` against prod** (additive: student_notes table + NoteType enum) with the deploy.
+3. Verify in prod: /student/notes CRUD; an installment test payment (Razorpay test mode); assigned test → gradebook + mistakes; MCQ login → history claim.
+4. Ops (unchanged from Phase 4 list): set Zoom/Cloudflare env keys to activate the recordings pipeline.
+
+---
+
 ## Phase 1 — P0: Broken, insecure, or losing revenue (3–4 days)
 
 ### 1.1 Fix "My Notes" (guaranteed 500)

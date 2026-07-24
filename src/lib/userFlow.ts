@@ -210,7 +210,8 @@ function getRoleDashboardRoute(role: UserRole | string | undefined): {
     case 'ADMIN':
       return { route: '/admin/dashboard', type: 'ADMIN' }
     case 'TEACHER':
-      return { route: '/teacher/dashboard', type: 'TEACHER' }
+      // /teacher is the portal home — /teacher/dashboard does not exist
+      return { route: '/teacher', type: 'TEACHER' }
     case 'COUNSELOR':
       return { route: '/counselor/dashboard', type: 'COUNSELOR' }
     case 'CONSULTANT':

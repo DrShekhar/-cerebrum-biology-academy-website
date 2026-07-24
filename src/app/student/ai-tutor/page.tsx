@@ -156,7 +156,14 @@ export default function AITutorPage() {
       })
 
       if (!response.ok) {
-        throw new Error(`API request failed: ${response.status}`)
+        // Surface the API's own message for auth/rate-limit cases instead of a
+        // generic failure (guests and expired sessions get 401 here; heavy
+        // usage gets a 429 with a friendly daily-cap message).
+        const errBody = await response.json().catch(() => null)
+        if (response.status === 401) {
+          throw new Error('Please sign in to use the AI tutor.')
+        }
+        throw new Error(errBody?.error || `API request failed: ${response.status}`)
       }
 
       const data = await response.json()

@@ -45,9 +45,11 @@ export async function GET(req: NextRequest) {
 
     // Real daily activity, computed from student-side signals. The work_tracking
     // table has no writer, so instead of returning an empty (fake-looking) report
-    // we aggregate real events: completed test sessions, material study time, and
-    // class attendance. Teacher-side counters (assigned/checked) stay 0 until a
-    // teacher-tracking flow exists.
+    // we aggregate real events: completed test sessions, material study time,
+    // class attendance, and the assignment/test/worksheet submission lifecycles
+    // (created = assigned, submittedAt = done, gradedAt = checked). Previously
+    // the assigned/checked counters were hardcoded 0, so every completion rate
+    // rendered 0%.
     const dayKey = (d: Date) => d.toISOString().slice(0, 10)
     type DayRecord = {
       date: Date
@@ -92,20 +94,49 @@ export async function GET(req: NextRequest) {
       return rec
     }
 
-    const [sessions, matProgress, attendance] = await Promise.all([
-      prisma.test_sessions.findMany({
-        where: { userId: studentId, status: 'COMPLETED', createdAt: { gte: dateFrom, lte: dateTo } },
-        select: { createdAt: true, timeSpent: true },
-      }),
-      prisma.material_progress.findMany({
-        where: { userId: studentId, lastViewedAt: { gte: dateFrom, lte: dateTo } },
-        select: { lastViewedAt: true, timeSpent: true },
-      }),
-      prisma.student_attendance.findMany({
-        where: { studentId, markedAt: { gte: dateFrom, lte: dateTo } },
-        select: { markedAt: true, status: true },
-      }),
-    ])
+    // A submission row is created when the work is ASSIGNED (assignments/tests
+    // pre-create rows on publish; worksheets on start), submittedAt marks the
+    // student's completion, gradedAt marks the teacher's check. Query with a
+    // wide OR so each lifecycle event lands on its own day bucket.
+    const lifecycleWindow = {
+      OR: [
+        { createdAt: { gte: dateFrom, lte: dateTo } },
+        { submittedAt: { gte: dateFrom, lte: dateTo } },
+        { gradedAt: { gte: dateFrom, lte: dateTo } },
+      ],
+    }
+
+    const [sessions, matProgress, attendance, assignmentSubs, testSubs, worksheetSubs] =
+      await Promise.all([
+        prisma.test_sessions.findMany({
+          where: {
+            userId: studentId,
+            status: 'COMPLETED',
+            createdAt: { gte: dateFrom, lte: dateTo },
+          },
+          select: { createdAt: true, timeSpent: true },
+        }),
+        prisma.material_progress.findMany({
+          where: { userId: studentId, lastViewedAt: { gte: dateFrom, lte: dateTo } },
+          select: { lastViewedAt: true, timeSpent: true },
+        }),
+        prisma.student_attendance.findMany({
+          where: { studentId, markedAt: { gte: dateFrom, lte: dateTo } },
+          select: { markedAt: true, status: true },
+        }),
+        prisma.assignment_submissions.findMany({
+          where: { studentId, ...lifecycleWindow },
+          select: { createdAt: true, submittedAt: true, gradedAt: true },
+        }),
+        prisma.test_assignment_submissions.findMany({
+          where: { studentId, ...lifecycleWindow },
+          select: { createdAt: true, submittedAt: true, gradedAt: true },
+        }),
+        prisma.worksheet_submissions.findMany({
+          where: { studentId, ...lifecycleWindow },
+          select: { createdAt: true, submittedAt: true, gradedAt: true },
+        }),
+      ])
 
     for (const s of sessions) {
       const rec = ensureDay(dayKey(s.createdAt))
@@ -123,6 +154,25 @@ export async function GET(req: NextRequest) {
       if (a.status === 'PRESENT' || a.status === 'LATE' || a.status === 'HALF_DAY') {
         rec.classesAttended += 1
       }
+    }
+
+    const inWindow = (d: Date | null) => d != null && d >= dateFrom && d <= dateTo
+    for (const sub of assignmentSubs) {
+      if (inWindow(sub.createdAt)) ensureDay(dayKey(sub.createdAt)).assignmentsAssigned += 1
+      if (inWindow(sub.submittedAt)) ensureDay(dayKey(sub.submittedAt!)).assignmentsSubmitted += 1
+      if (inWindow(sub.gradedAt)) ensureDay(dayKey(sub.gradedAt!)).assignmentsChecked += 1
+    }
+    for (const sub of testSubs) {
+      if (inWindow(sub.createdAt)) ensureDay(dayKey(sub.createdAt)).testsAssigned += 1
+      if (inWindow(sub.gradedAt)) ensureDay(dayKey(sub.gradedAt!)).testsChecked += 1
+      // testsAttempted stays sourced from completed test_sessions above plus
+      // assigned-test submissions the student actually turned in:
+      if (inWindow(sub.submittedAt)) ensureDay(dayKey(sub.submittedAt!)).testsAttempted += 1
+    }
+    for (const sub of worksheetSubs) {
+      if (inWindow(sub.createdAt)) ensureDay(dayKey(sub.createdAt)).worksheetsAssigned += 1
+      if (inWindow(sub.submittedAt)) ensureDay(dayKey(sub.submittedAt!)).worksheetsSubmitted += 1
+      if (inWindow(sub.gradedAt)) ensureDay(dayKey(sub.gradedAt!)).worksheetsChecked += 1
     }
 
     const workTracking = Array.from(byDay.values()).sort(

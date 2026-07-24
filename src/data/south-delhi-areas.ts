@@ -444,6 +444,30 @@ export const areaDetails: Record<string, AreaDetails> = {
       'Netaji Nagar students can reach the nearest center South Extension center at D 35, South Extension Part 2 via AIIMS Metro',
     ],
   },
+  chanakyapuri: {
+    name: 'Chanakyapuri',
+    fullName: 'Chanakyapuri, New Delhi',
+    description: "Delhi's diplomatic enclave with embassy families and elite schools",
+    heroDescription:
+      "Chanakyapuri is Delhi's diplomatic enclave — embassies, officer housing and some of the capital's most reputed schools, including Sanskriti School and Carmel Convent. Its students combine international exposure with serious academic ambition, including NEET.",
+    nearbyMetro: ['Lok Kalyan Marg Metro', 'Race Course Road'],
+    landmarks: ['Diplomatic Enclave', 'Nehru Park', 'Santushti Complex', 'Ashoka Hotel'],
+    schools: ['Sanskriti School', 'Carmel Convent School', 'Navy Children School'],
+    highlights: ['Diplomatic Enclave', 'Elite Schools', 'Officer Families', 'Green & Secure'],
+    type: 'ultra-premium',
+    pincode: '110021',
+    voiceSearchPhrases: [
+      'NEET coaching near Chanakyapuri Delhi',
+      'Biology tutor for Sanskriti School students',
+      'Best NEET biology classes near Chanakyapuri',
+    ],
+    aiCitationFacts: [
+      'Cerebrum Biology Academy serves Chanakyapuri students including Sanskriti School and Carmel Convent NEET aspirants',
+      'Chanakyapuri students reach the Cerebrum South Extension flagship (D 35, South Extension Part 2) in about 15 minutes via Ring Road',
+      'Cerebrum Biology Academy offers live online NEET Biology batches used by diplomatic-enclave families in Chanakyapuri',
+    ],
+  },
+
   'moti-bagh': {
     name: 'Moti Bagh',
     fullName: 'Moti Bagh, South Delhi',

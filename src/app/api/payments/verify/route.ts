@@ -119,6 +119,8 @@ export async function POST(request: NextRequest) {
         let enrollmentId: string | null = null
         let userId: string | null = null
         let courseId: string | null = null
+        let paidAmountPaise: number | null = null
+        let payerUserId: string | null = null
 
         // Authoritative tier from the order notes (see webhook). Outside the tx.
         const orderTier = await fetchOrderTier(orderId)
@@ -153,6 +155,9 @@ export async function POST(request: NextRequest) {
               completedAt: new Date(),
             },
           })
+
+          paidAmountPaise = payment.amount
+          payerUserId = payment.userId
 
           if (payment.enrollmentId && payment.enrollments) {
             // Update enrollment status
@@ -219,6 +224,94 @@ export async function POST(request: NextRequest) {
 
           logger.info(`Payment verified and updated: ${orderId}`)
         })
+
+        // Installment orders (student portal fee-plan payments): complete the
+        // CRM fee-plan side. Idempotent — a re-verify or webhook replay skips
+        // an already-PAID installment. Mirrors the counselor mark-paid
+        // transaction so both paths keep the ledger identical.
+        try {
+          const installment = await prisma.installments.findFirst({
+            where: { razorpayOrderId: orderId },
+            select: { id: true, status: true, feePlanId: true },
+          })
+          if (installment && installment.status !== 'PAID' && paidAmountPaise !== null) {
+            const paidRupees = paidAmountPaise / 100
+            await prisma.$transaction(async (tx) => {
+              await tx.installments.update({
+                where: { id: installment.id },
+                data: {
+                  status: 'PAID',
+                  paidAt: new Date(),
+                  paidAmount: paidRupees,
+                  razorpayPaymentId: paymentId,
+                  updatedAt: new Date(),
+                },
+              })
+
+              await tx.fee_payments.create({
+                data: {
+                  id: `feepay_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+                  feePlanId: installment.feePlanId,
+                  installmentId: installment.id,
+                  amount: paidRupees,
+                  paymentMethod: 'RAZORPAY',
+                  razorpayOrderId: orderId,
+                  razorpayPaymentId: paymentId,
+                  status: 'COMPLETED',
+                  paidAt: new Date(),
+                },
+              })
+
+              const updatedFeePlan = await tx.fee_plans.update({
+                where: { id: installment.feePlanId },
+                data: {
+                  amountPaid: { increment: paidRupees },
+                  amountDue: { decrement: paidRupees },
+                  updatedAt: new Date(),
+                },
+                include: { installments: true },
+              })
+
+              const allPaid = updatedFeePlan.installments.every((inst) => inst.status === 'PAID')
+              if (allPaid) {
+                await tx.fee_plans.update({
+                  where: { id: updatedFeePlan.id },
+                  data: { status: 'COMPLETED' },
+                })
+                await tx.leads.update({
+                  where: { id: updatedFeePlan.leadId },
+                  data: { stage: 'ENROLLED', updatedAt: new Date() },
+                })
+              }
+
+              if (payerUserId) {
+                await tx.activities.create({
+                  data: {
+                    id: `act_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+                    userId: payerUserId,
+                    leadId: updatedFeePlan.leadId,
+                    action: 'PAYMENT_RECEIVED',
+                    description: `Installment of ₹${paidRupees.toLocaleString('en-IN')} paid online by the student (portal checkout).${allPaid ? ' Fee plan fully paid!' : ''}`,
+                    metadata: { orderId, paymentId, installmentId: installment.id },
+                  },
+                })
+              }
+            })
+            logger.info(`Installment ${installment.id} completed via portal payment ${paymentId}`)
+          }
+        } catch (installmentError) {
+          // Money captured but the fee-plan ledger didn't update — alert ops.
+          logger.error('Installment completion failed after verified payment:', installmentError)
+          notifyAdminFormSubmission(
+            '⚠️ Payment captured but installment update FAILED — reconcile',
+            {
+              OrderId: orderId,
+              PaymentId: paymentId,
+              Error:
+                installmentError instanceof Error ? installmentError.message : 'Unknown DB error',
+            }
+          ).catch(() => {})
+        }
 
         // Trigger notifications after successful transaction (fire-and-forget).
         if (enrollmentId && userId && courseId) {

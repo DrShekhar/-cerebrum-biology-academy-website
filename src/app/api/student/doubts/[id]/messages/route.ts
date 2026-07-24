@@ -79,13 +79,13 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     })
 
     let newStatus = doubt.status
-    if (userId !== doubt.studentId && doubt.status === 'OPEN') {
-      newStatus = 'IN_PROGRESS'
-    } else if (
-      userId !== doubt.studentId &&
-      (doubt.status === 'IN_PROGRESS' || doubt.status === 'OPEN')
-    ) {
+    if (userId !== doubt.studentId && (doubt.status === 'OPEN' || doubt.status === 'IN_PROGRESS')) {
+      // A staff reply IS the answer — the old if/else-if made ANSWERED
+      // unreachable on the first reply, stranding tickets in IN_PROGRESS.
       newStatus = 'ANSWERED'
+    } else if (userId === doubt.studentId && doubt.status === 'ANSWERED') {
+      // Student follow-up on an answered doubt re-enters the teacher queue.
+      newStatus = 'IN_PROGRESS'
     }
 
     const responseTime =

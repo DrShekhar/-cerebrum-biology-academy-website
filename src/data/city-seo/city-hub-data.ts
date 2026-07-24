@@ -13707,15 +13707,16 @@ export const cityHubData: Record<string, CityHubData> = {
     },
     localities: [
       { name: 'South Extension', url: '/neet-coaching-south-delhi' },
-      { name: 'Greater Kailash', url: '/biology-classes-south-delhi/gk' },
-      { name: 'Defence Colony', url: '/biology-classes-south-delhi/defence-colony' },
-      { name: 'Saket', url: '/neet-coaching-south-delhi' },
+      { name: 'Greater Kailash', url: '/biology-classes-greater-kailash' },
+      { name: 'Defence Colony', url: '/biology-coaching-defence-colony' },
+      { name: 'Saket', url: '/neet-coaching-saket-delhi' },
       { name: 'Hauz Khas', url: '/biology-classes-hauz-khas' },
     ],
     relatedCities: [
       { name: 'Class 9 Biology South Delhi', url: '/class-9-biology-tuition-south-delhi' },
+      { name: 'Class 11 Biology South Delhi', url: '/class-11-biology-coaching-south-delhi' },
+      { name: 'Class 12 Biology South Delhi', url: '/class-12-biology-coaching-south-delhi' },
       { name: 'NEET Foundation Class 10', url: '/neet-foundation-class-10' },
-      { name: 'Biology Classes South Delhi', url: '/biology-classes-south-delhi' },
     ],
     faqs: [
       {
@@ -13744,6 +13745,125 @@ export const cityHubData: Record<string, CityHubData> = {
     areaSpecificContent: {
       whyThisArea:
         'Our flagship centre at South Extension is central to South Delhi — Greater Kailash, Defence Colony, Saket, Hauz Khas. Class 10 is the ideal point to begin a biology-first NEET foundation while boards are still the priority.',
+    },
+  },
+
+  'class-11-biology-coaching-south-delhi': {
+    slug: 'class-11-biology-coaching-south-delhi',
+    cityName: 'South Delhi',
+    stateName: 'Delhi',
+    metaTitle:
+      'Class 11 Biology Coaching in South Delhi | Boards + NEET | Cerebrum Biology Academy',
+    metaDescription:
+      'Class 11 Biology coaching in South Delhi at our South Extension centre — the year NEET preparation truly begins. AIIMS-trained faculty, small batches. Serving South Ex, GK, Defence Colony, Saket, Hauz Khas. Free demo!',
+    heroTitle: 'Class 11 Biology Coaching in South Delhi',
+    heroSubtitle:
+      'Class 11 is where NEET Biology is won or lost — the syllabus doubles and boards run in parallel. Structured NCERT-first teaching with NEET-level MCQ training, in-person at our South Extension centre (D-35, South Extension Part 2) or live online.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'South Extension Centre',
+      address: 'D 35, South Extension Part 2, New Delhi',
+      distance: 'In South Delhi',
+    },
+    localities: [
+      { name: 'South Extension', url: '/neet-coaching-south-delhi' },
+      { name: 'Greater Kailash', url: '/biology-classes-greater-kailash' },
+      { name: 'Defence Colony', url: '/biology-coaching-defence-colony' },
+      { name: 'Saket', url: '/neet-coaching-saket-delhi' },
+      { name: 'Hauz Khas', url: '/biology-classes-hauz-khas' },
+    ],
+    relatedCities: [
+      { name: 'Class 10 Biology South Delhi', url: '/class-10-biology-coaching-south-delhi' },
+      { name: 'Class 12 Biology South Delhi', url: '/class-12-biology-coaching-south-delhi' },
+      { name: 'NEET Coaching South Delhi', url: '/neet-coaching-south-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Why is Class 11 the most important year for NEET Biology?',
+        answer:
+          'Class 11 contributes roughly half of the NEET Biology syllabus, and its chapters (plant physiology, human physiology foundations, cell biology) are where most aspirants first fall behind. Starting structured NEET-level preparation in Class 11 means Class 12 becomes consolidation, not catch-up.',
+      },
+      {
+        question: 'Can Class 11 students manage school, boards and NEET coaching together?',
+        answer:
+          'Yes — that is exactly what the batch is designed around. Weekday-evening and weekend options fit DPS RK Puram, Modern School, Sanskriti and other South Delhi school schedules, and the teaching covers boards and NEET as one integrated track rather than two separate preparations.',
+      },
+      {
+        question: 'What are the fees for Class 11 Biology coaching in South Delhi?',
+        answer:
+          'Class 11 Biology programmes are ₹60,000/year (tier options available). Small batches, weekly tests with mistake-level review, and full NCERT + NEET MCQ coverage — in person at South Extension or live online.',
+      },
+      {
+        question: 'Do you take students who also attend Aakash or Allen for PCM/PCB?',
+        answer:
+          'Yes — many South Delhi students keep their integrated coaching for Physics and Chemistry and study Biology with us as specialists. Our South Extension centre is minutes from the Aakash South Extension and Allen Lajpat Nagar centres, so adding a Biology-specialist batch costs no extra commute.',
+      },
+    ],
+    stats: { studentsFromCity: '100+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '28.5677', lng: '77.2237' },
+    areaSpecificContent: {
+      whyThisArea:
+        'South Delhi Class 11 students face the sharpest jump in Biology difficulty just as school demands peak. Our South Extension flagship gives them specialist, small-batch NEET Biology teaching in their own neighbourhood — close to GK, Defence Colony, Saket and Hauz Khas.',
+    },
+  },
+
+  'class-12-biology-coaching-south-delhi': {
+    slug: 'class-12-biology-coaching-south-delhi',
+    cityName: 'South Delhi',
+    stateName: 'Delhi',
+    metaTitle:
+      'Class 12 Biology Coaching in South Delhi | Board + NEET Year | Cerebrum Biology Academy',
+    metaDescription:
+      'Class 12 Biology coaching in South Delhi — board excellence and NEET readiness in the same year. AIIMS-trained faculty, small batches at South Extension. Serving GK, Defence Colony, Saket, Hauz Khas. Free demo!',
+    heroTitle: 'Class 12 Biology Coaching in South Delhi',
+    heroSubtitle:
+      'The decisive year: board exams and NEET arrive together. Genetics, biotechnology and ecology taught to NEET depth with board-answer training built in — at our South Extension centre (D-35, South Extension Part 2) or live online.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'South Extension Centre',
+      address: 'D 35, South Extension Part 2, New Delhi',
+      distance: 'In South Delhi',
+    },
+    localities: [
+      { name: 'South Extension', url: '/neet-coaching-south-delhi' },
+      { name: 'Greater Kailash', url: '/biology-classes-greater-kailash' },
+      { name: 'Defence Colony', url: '/biology-coaching-defence-colony' },
+      { name: 'Saket', url: '/neet-coaching-saket-delhi' },
+      { name: 'Hauz Khas', url: '/biology-classes-hauz-khas' },
+    ],
+    relatedCities: [
+      { name: 'Class 11 Biology South Delhi', url: '/class-11-biology-coaching-south-delhi' },
+      { name: 'NEET Coaching South Delhi', url: '/neet-coaching-south-delhi' },
+      { name: 'NEET Dropper Batch Delhi', url: '/neet-dropper-batch-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Can one programme really cover both boards and NEET in Class 12?',
+        answer:
+          'Yes — because in Biology they overlap heavily. NCERT is the backbone of both; we teach every chapter to NEET depth and separately train board-style structured answers, so neither exam is sacrificed for the other.',
+      },
+      {
+        question: 'Which Class 12 chapters matter most for NEET?',
+        answer:
+          'Genetics and evolution, human reproduction, biotechnology and ecology are the highest-yield units — together they dominate the Class 12 share of NEET Biology. These are exactly the units where our AIIMS-trained faculty spend the most contact time and testing.',
+      },
+      {
+        question: 'What are the fees for Class 12 Biology coaching in South Delhi?',
+        answer:
+          'Class 12 Biology programmes are ₹75,000/year (tier options available). Small batches at South Extension or live online, weekly tests, board-answer practice and full NEET MCQ training.',
+      },
+      {
+        question:
+          'I am at a big integrated institute and my Biology is slipping — can I join mid-year?',
+        answer:
+          'Yes. Mid-year joiners get a diagnostic test and a personal catch-up plan for the chapters already passed. Many students attend Aakash South Extension or Allen Lajpat Nagar for Physics/Chemistry and fix Biology with us — the centres are minutes apart.',
+      },
+    ],
+    stats: { studentsFromCity: '100+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '28.5677', lng: '77.2237' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Class 12 in South Delhi means board pressure from elite schools plus the NEET clock. Our South Extension flagship keeps the specialist Biology work close to home for GK, Defence Colony, Saket, Hauz Khas and the Ring Road colonies.',
     },
   },
 

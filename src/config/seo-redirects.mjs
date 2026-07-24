@@ -3256,7 +3256,9 @@ export const areaPageConsolidationRedirects = [
     permanent: true,
   },
 
-  // neet-coaching-south-delhi area pages (31)
+  // neet-coaching-south-delhi area pages (23 consolidated; the 8 curated
+  // indexable localities in src/data/south-delhi-enriched.ts are NOT listed
+  // here — they render and index)
   {
     source: '/neet-coaching-south-delhi/hauz-khas',
     destination: '/neet-coaching-south-delhi',
@@ -3318,32 +3320,7 @@ export const areaPageConsolidationRedirects = [
     permanent: true,
   },
   {
-    source: '/neet-coaching-south-delhi/sarojini-nagar',
-    destination: '/neet-coaching-south-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-south-delhi/lodhi-colony',
-    destination: '/neet-coaching-south-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-south-delhi/andrews-ganj',
-    destination: '/neet-coaching-south-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-south-delhi/kidwai-nagar',
-    destination: '/neet-coaching-south-delhi',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-south-delhi/netaji-nagar',
-    destination: '/neet-coaching-south-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-south-delhi/moti-bagh',
     destination: '/neet-coaching-south-delhi',
     permanent: true,
   },
@@ -3363,27 +3340,12 @@ export const areaPageConsolidationRedirects = [
     permanent: true,
   },
   {
-    source: '/neet-coaching-south-delhi/ber-sarai',
-    destination: '/neet-coaching-south-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-south-delhi/katwaria-sarai',
-    destination: '/neet-coaching-south-delhi',
-    permanent: true,
-  },
-  {
     source: '/neet-coaching-south-delhi/lajpat-nagar',
     destination: '/neet-coaching-south-delhi',
     permanent: true,
   },
   {
     source: '/neet-coaching-south-delhi/safdarjung-enclave',
-    destination: '/neet-coaching-south-delhi',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-south-delhi/gulmohar-park',
     destination: '/neet-coaching-south-delhi',
     permanent: true,
   },

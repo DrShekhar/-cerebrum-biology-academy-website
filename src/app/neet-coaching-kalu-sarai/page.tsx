@@ -19,23 +19,26 @@ import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'EducationalOrganization',
-  name: 'Cerebrum Biology Academy - Kalu Sarai',
+  // Honest address: we have NO Kalu Sarai premises — the flagship at South
+  // Extension SERVES Kalu Sarai (areaServed below). A fabricated local street
+  // address is a Google spam-policy risk and contradicts our GBP listings.
+  name: 'Cerebrum Biology Academy - South Extension (serving Kalu Sarai)',
   description:
-    'Best NEET coaching in Kalu Sarai, South Delhi. Expert AIIMS faculty, proven results, and personalized attention for medical aspirants.',
+    'Best NEET Biology coaching serving Kalu Sarai, South Delhi from our South Extension flagship. Expert AIIMS faculty, proven results, and personalized attention for medical aspirants.',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-kalu-sarai',
   telephone: '+91-8826444334',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Kalu Sarai, Near IIT Delhi',
-    addressLocality: 'South Delhi',
+    streetAddress: 'D 35, South Extension Part 2',
+    addressLocality: 'New Delhi',
     addressRegion: 'Delhi',
-    postalCode: '110016',
+    postalCode: '110049',
     addressCountry: 'IN',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: '28.5460',
-    longitude: '77.1937',
+    latitude: '28.5725',
+    longitude: '77.2217',
   },
   areaServed: [
     'Kalu Sarai',
@@ -75,10 +78,10 @@ const faqStructuredData = {
     },
     {
       '@type': 'Question',
-      name: 'How to reach Kalu Sarai coaching center?',
+      name: 'How do Kalu Sarai students reach the Cerebrum centre?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Kalu Sarai is well-connected via Hauz Khas Metro Station (Yellow Line) which is just 5 minutes away. It's also accessible from Green Park and AIIMS Metro stations.",
+        text: 'Our flagship centre is at D-35 South Extension Part 2 — about 10-15 minutes from Kalu Sarai via the Ring Road, or via Hauz Khas Metro (Yellow Line) to South Extension. Live online batches are also available, which many Kalu Sarai PG students prefer.',
       },
     },
     {
@@ -99,7 +102,7 @@ const faqStructuredData = {
     },
     {
       '@type': 'Question',
-      name: 'What batch timings are available at Cerebrum Kalu Sarai?',
+      name: 'What batch timings are available for Kalu Sarai students at Cerebrum?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'We offer flexible batches: Early Morning (6 AM - 9 AM), Morning (9 AM - 12 PM), Afternoon (2 PM - 5 PM), and Evening (6 PM - 9 PM). Weekend-only batches are available for school-going students.',
@@ -325,6 +328,48 @@ export default function NEETCoachingKaluSarai() {
                   <p className="text-sm text-green-600">{area.distance}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Complement track for students already at the big Kalu Sarai institutes */}
+        <section className="py-16 px-4 bg-blue-50">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Already at Aakash or Allen in Kalu Sarai?
+            </h2>
+            <p className="text-gray-700 max-w-2xl mx-auto mb-8">
+              Many Kalu Sarai students keep their integrated institute for Physics and Chemistry and
+              add Cerebrum as their Biology specialist — small batches, AIIMS-trained faculty, and
+              Biology is 360 of 720 NEET marks. Evening and weekend batches are timed so they never
+              clash with the big institutes&apos; schedules, and outstation students in the Ber
+              Sarai and Katwaria Sarai PGs can join the same batches live online.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/complement-aakash-coaching-south-delhi"
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              >
+                Biology alongside Aakash
+              </Link>
+              <Link
+                href="/complement-allen-coaching-south-delhi"
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              >
+                Biology alongside Allen
+              </Link>
+              <Link
+                href="/neet-coaching-south-delhi/ber-sarai"
+                className="px-6 py-3 border border-blue-600 text-blue-700 rounded-lg font-medium hover:bg-blue-100 transition-colors"
+              >
+                Ber Sarai students
+              </Link>
+              <Link
+                href="/neet-coaching-south-delhi/katwaria-sarai"
+                className="px-6 py-3 border border-blue-600 text-blue-700 rounded-lg font-medium hover:bg-blue-100 transition-colors"
+              >
+                Katwaria Sarai students
+              </Link>
             </div>
           </div>
         </section>

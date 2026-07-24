@@ -72,6 +72,7 @@ export async function POST(request: NextRequest) {
       receipt,
       notes,
       enrollmentId,
+      installmentId,
       userId,
       couponCode,
       courseId,
@@ -129,6 +130,67 @@ export async function POST(request: NextRequest) {
           {
             success: false,
             error: 'Payment amount does not match expected amount. Please refresh and try again.',
+          },
+          { status: 400 }
+        )
+      }
+    }
+
+    // SECURITY: Installment orders (CRM fee-plan installments paid from the
+    // student portal). Ownership = the fee plan's lead email matches the
+    // authenticated user's email — same linkage /api/student/payments uses to
+    // SHOW these installments. Amount is validated server-side against the
+    // installment's outstanding balance; INR only (fee plans are INR).
+    if (installmentId) {
+      if (currency.toUpperCase() !== 'INR') {
+        return NextResponse.json(
+          { success: false, error: 'Installments are payable in INR only' },
+          { status: 400 }
+        )
+      }
+
+      const installment = await prisma.installments.findUnique({
+        where: { id: installmentId },
+        include: { fee_plans: { include: { leads: { select: { email: true } } } } },
+      })
+
+      if (!installment) {
+        return NextResponse.json(
+          { success: false, error: 'Installment not found' },
+          { status: 404 }
+        )
+      }
+
+      if (installment.status === 'PAID') {
+        return NextResponse.json(
+          { success: false, error: 'This installment is already paid' },
+          { status: 400 }
+        )
+      }
+
+      const sessionUser = await prisma.users.findUnique({
+        where: { id: authenticatedUserId },
+        select: { email: true },
+      })
+      const leadEmail = installment.fee_plans.leads?.email?.toLowerCase()
+      if (!leadEmail || !sessionUser?.email || sessionUser.email.toLowerCase() !== leadEmail) {
+        return NextResponse.json(
+          { success: false, error: 'Unauthorized: installment does not belong to you' },
+          { status: 403 }
+        )
+      }
+
+      const expectedAmount = Number(installment.amount) - Number(installment.paidAmount || 0)
+      const tolerance = expectedAmount * 0.01
+      if (expectedAmount <= 0 || Math.abs(amount - expectedAmount) > tolerance) {
+        logger.warn(
+          `[Payment] Amount mismatch: received ${amount}, expected ${expectedAmount} for installment ${installmentId}`
+        )
+        return NextResponse.json(
+          {
+            success: false,
+            error:
+              'Payment amount does not match the installment due. Please refresh and try again.',
           },
           { status: 400 }
         )
@@ -291,12 +353,12 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    if (enrollmentId && authenticatedUserId) {
+    if ((enrollmentId || installmentId) && authenticatedUserId) {
       await prisma.payments.create({
         data: {
           id: `pay_${Date.now()}_${crypto.randomBytes(6).toString('hex')}`,
           userId: authenticatedUserId,
-          enrollmentId,
+          enrollmentId: enrollmentId || null,
           amount: amountInSmallestUnit,
           currency: normalizedCurrency,
           razorpayOrderId: order.id,
@@ -305,6 +367,16 @@ export async function POST(request: NextRequest) {
           updatedAt: new Date(),
         },
       })
+
+      // Link the order to the installment so /api/payments/verify can complete
+      // the fee-plan side (installments.razorpayOrderId existed in the schema
+      // for exactly this, previously unused by any portal flow).
+      if (installmentId) {
+        await prisma.installments.update({
+          where: { id: installmentId },
+          data: { razorpayOrderId: order.id, updatedAt: new Date() },
+        })
+      }
 
       // Record coupon redemption if coupon was used
       if (couponId && validatedCouponCode) {

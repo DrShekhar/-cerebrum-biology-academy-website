@@ -5,7 +5,11 @@ import { auth } from '@/lib/auth'
 import { SONNET } from '@/lib/ai/models'
 import { ensureSystemUser } from '@/lib/constants/systemUser'
 import { userHasPermission } from '@/lib/auth/permissions'
+import { rateLimit } from '@/lib/rateLimit'
 import type { UserRole } from '@/lib/auth/config'
+
+// Cost control: AI solves per user per day (counted from AI-answered tickets).
+const DAILY_SOLVE_CAP = 25
 
 /**
  * POST /api/doubts/ai-solve — instant AI doubt solver.
@@ -41,6 +45,44 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { success: false, error: 'AI doubt solver access has been disabled for your account.' },
         { status: 403 }
+      )
+    }
+
+    // Cost controls (previously unlimited for any permission-holder):
+    // per-IP hourly rate limit + per-user daily cap.
+    const rateLimitResult = await rateLimit(request, {
+      maxRequests: 15,
+      windowMs: 60 * 60 * 1000,
+    })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many requests this hour — please try again later.' },
+        { status: 429 }
+      )
+    }
+
+    // AI-answered tickets are the ones carrying a system-user message.
+    const startOfDay = new Date()
+    startOfDay.setHours(0, 0, 0, 0)
+    const systemUserIdForCap = await ensureSystemUser().catch(() => null)
+    const solvesToday = systemUserIdForCap
+      ? await prisma.doubt_tickets
+          .count({
+            where: {
+              studentId: userId,
+              createdAt: { gte: startOfDay },
+              doubt_messages: { some: { senderId: systemUserIdForCap } },
+            },
+          })
+          .catch(() => 0)
+      : 0
+    if (solvesToday >= DAILY_SOLVE_CAP) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: `Daily limit of ${DAILY_SOLVE_CAP} AI solves reached — ask a teacher or try again tomorrow.`,
+        },
+        { status: 429 }
       )
     }
 

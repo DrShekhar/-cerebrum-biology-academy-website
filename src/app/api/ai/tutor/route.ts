@@ -1,11 +1,19 @@
 /**
  * AI Tutor API - 24/7 Personalized Biology Tutoring
- * Uses MCP servers to access biology content, student progress, and NCERT materials
+ *
+ * Cost controls: per-IP hourly rate limit + per-user daily message cap
+ * (counted from chat_history). Personalization is REAL — the student's weak
+ * topics are queried from user_question_responses and injected into the
+ * prompt. (The old prompt advertised MCP tools that were never wired.)
  */
 
 import { Anthropic } from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth/config'
+import { prisma } from '@/lib/prisma'
+import { rateLimit } from '@/lib/rateLimit'
+
+const DAILY_MESSAGE_CAP = 50
 
 // Lazy initialize Anthropic client for better tree-shaking
 let _anthropic: Anthropic | null = null
@@ -38,17 +46,69 @@ interface TutorResponse {
 export async function POST(request: NextRequest) {
   try {
     const session = await auth()
-    if (!session) {
+    if (!session?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+    const sessionUserId = session.user.id
+
+    // COST CONTROL 1: per-IP hourly rate limit
+    const rateLimitResult = await rateLimit(request, {
+      maxRequests: 20,
+      windowMs: 60 * 60 * 1000,
+    })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many questions this hour — take a short break and come back!' },
+        { status: 429 }
+      )
+    }
+
+    // COST CONTROL 2: per-user daily cap, counted from saved chat history
+    const startOfDay = new Date()
+    startOfDay.setHours(0, 0, 0, 0)
+    const todayCount = await prisma.chat_history
+      .count({
+        where: { userId: sessionUserId, isUserMessage: true, createdAt: { gte: startOfDay } },
+      })
+      .catch(() => 0)
+    if (todayCount >= DAILY_MESSAGE_CAP) {
+      return NextResponse.json(
+        {
+          error: `Daily limit of ${DAILY_MESSAGE_CAP} questions reached. Your tutor will be ready again tomorrow!`,
+        },
+        { status: 429 }
+      )
     }
 
     const body: TutorRequest = await request.json()
 
-    if (!body.question || !body.studentId) {
-      return NextResponse.json(
-        { error: 'Missing required fields: question and studentId' },
-        { status: 400 }
-      )
+    if (!body.question) {
+      return NextResponse.json({ error: 'Missing required field: question' }, { status: 400 })
+    }
+
+    // REAL personalization: the student's weakest topics from their actual
+    // question responses (CBT + assigned tests). Replaces the old prompt's
+    // claims about MCP tools that were never wired to anything.
+    let weakAreasLine = ''
+    try {
+      const weakRows = await prisma.$queryRaw<{ topic: string; accuracy: number }[]>`
+        SELECT q.topic,
+          ROUND(100.0 * SUM(CASE WHEN uqr."isCorrect" THEN 1 ELSE 0 END) / COUNT(*))::int AS accuracy
+        FROM user_question_responses uqr
+        JOIN questions q ON q.id = uqr."questionId"
+        WHERE uqr."userId" = ${sessionUserId} AND q.topic IS NOT NULL
+        GROUP BY q.topic
+        HAVING COUNT(*) >= 3
+        ORDER BY accuracy ASC
+        LIMIT 5
+      `
+      if (weakRows.length > 0) {
+        weakAreasLine = `- Weakest topics from their recent test performance (accuracy %): ${weakRows
+          .map((r) => `${r.topic} (${r.accuracy}%)`)
+          .join(', ')}. Weave targeted reinforcement of these into your answers when relevant.`
+      }
+    } catch {
+      // weak-area lookup is best-effort personalization only
     }
 
     // Prepare system prompt for NEET Biology expert tutor
@@ -67,19 +127,13 @@ Your teaching style:
 6. Be empathetic and supportive
 
 Student Context:
-- Student ID: ${body.studentId}
 - Current topic: ${body.context?.topic || 'General Biology'}
 - Difficulty preference: ${body.context?.difficulty || 'medium'}
-
-Available Tools (via MCP):
-- query_biology_questions: Search NEET questions by topic/difficulty
-- get_ncert_content: Retrieve NCERT textbook content
-- get_student_weak_areas: Get student's weak topics for personalized help
+${weakAreasLine}
 
 Always:
-- Cite NCERT references when applicable
+- Cite NCERT chapter references when applicable (only ones you are certain of)
 - Suggest related practice questions
-- Identify weak areas and provide targeted help
 - Maintain accuracy (no hallucinations!)
 - Be encouraging and supportive`
 

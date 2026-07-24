@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { auth } from '@/lib/auth'
 import { rateLimit } from '@/lib/rateLimit'
 import {
   calculateXPForAnswer,
@@ -13,6 +14,8 @@ import {
   checkBadgeUnlock,
 } from '@/lib/mcq/gamification'
 import type { AnswerSubmission, AnswerResult, UserStats, QuestionType } from '@/lib/mcq/types'
+import { recordMcqXp } from '@/lib/gamification/xpEvents'
+import { checkAndAwardBadges } from '@/lib/gamification/badges'
 import { Prisma, type DifficultyLevel } from '@/generated/prisma'
 
 // Helper to check if a table doesn't exist error
@@ -295,6 +298,26 @@ export async function POST(request: NextRequest) {
           })
         }
 
+        // Link this practice profile to the signed-in account, so MCQ history
+        // survives signup/login instead of living only in localStorage. If the
+        // account already owns a different stats row, /api/mcq/claim merges.
+        if (!userStats.userId) {
+          const session = await auth().catch(() => null)
+          const sessionUserId = session?.user?.id
+          if (sessionUserId) {
+            try {
+              await prisma.mcq_user_stats.update({
+                where: { id: userStats.id },
+                data: { userId: sessionUserId },
+              })
+              userStats = { ...userStats, userId: sessionUserId }
+            } catch {
+              // unique(userId) already claimed by another row — merge happens
+              // via /api/mcq/claim; don't block the answer submission.
+            }
+          }
+        }
+
         const previousXp = userStats.totalXp
         const newXp = previousXp + xpEarned
 
@@ -390,6 +413,28 @@ export async function POST(request: NextRequest) {
               totalXp: { increment: badgeXp },
             },
           })
+        }
+
+        // Feed the account-level gamification tables (xp events + badge rows)
+        // for signed-in users. These power the dashboard's XP breakdown and
+        // badge showcase, which rendered EMPTY before because their recorders
+        // existed but were never called from any activity path.
+        if (userStats.userId) {
+          const accountUserId = userStats.userId
+          const xpDifficulty =
+            questionDifficulty === 'EXPERT'
+              ? 'HARD'
+              : (questionDifficulty as 'EASY' | 'MEDIUM' | 'HARD')
+          void recordMcqXp(accountUserId, {
+            difficulty: xpDifficulty,
+            isFirstAttempt: true,
+            currentStreak: newStreak,
+            sessionId,
+            questionId,
+          }).catch(() => {})
+          void checkAndAwardBadges(accountUserId, {
+            sessionQuestions: newTotalQuestions,
+          }).catch(() => {})
         }
 
         return {

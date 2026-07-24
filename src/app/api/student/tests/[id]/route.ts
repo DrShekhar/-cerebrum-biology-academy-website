@@ -10,6 +10,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { isAnswerCorrect, resolveCorrectIndex } from '@/lib/tests/answerKey'
+import { recordTestXp } from '@/lib/gamification/xpEvents'
+import { checkAndAwardBadges } from '@/lib/gamification/badges'
 
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
@@ -322,6 +324,20 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
       let questionsWrong = 0
       let questionsSkipped = 0
 
+      // Per-question response rows for the shared assessment store — this is
+      // what the Mistakes notebook and Mastery map read. Before this, assigned
+      // tests never wrote per-question rows, so a student's mistakes from
+      // assigned tests were invisible to both features.
+      const responseRows: {
+        id: string
+        userId: string
+        questionId: string
+        selectedAnswer: string
+        isCorrect: boolean
+        marksAwarded: number
+        responseMode: 'TEST_MODE'
+      }[] = []
+
       // Past the deadline we score only what was saved in time; otherwise the
       // just-submitted answers (falling back to the last autosave).
       const answersList =
@@ -344,9 +360,11 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
           answer.selectedAnswer
         )
 
+        let marksAwarded = 0
         if (correct) {
           questionsCorrect++
           totalScore += q.marks
+          marksAwarded = q.marks
         } else {
           questionsWrong++
           if (assignment.negativeMarking) {
@@ -360,9 +378,50 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
                   ? Number(assignment.negativeMarkValue)
                   : 0
             totalScore -= penalty
+            marksAwarded = -penalty
           }
         }
+
+        // Store the answer as a letter (A/B/C/…) to match the CBT rows the
+        // Mistakes notebook already renders; deterministic id = idempotent.
+        const selectedIndex = Number(answer.selectedAnswer)
+        responseRows.push({
+          id: `uqr_${submission.id}_${q.questionId}`.slice(0, 190),
+          userId: submission.studentId,
+          questionId: q.questionId,
+          selectedAnswer: Number.isInteger(selectedIndex)
+            ? String.fromCharCode(65 + selectedIndex)
+            : String(answer.selectedAnswer),
+          isCorrect: correct,
+          marksAwarded,
+          responseMode: 'TEST_MODE',
+        })
       }
+
+      if (responseRows.length > 0) {
+        try {
+          await prisma.user_question_responses.createMany({
+            data: responseRows,
+            skipDuplicates: true,
+          })
+        } catch (responseError) {
+          // Mistakes/Mastery feed is best-effort — never fail the submission.
+          console.error('Failed to record per-question responses:', responseError)
+        }
+      }
+
+      // Account-level XP + badges for completing an assigned test (dashboard
+      // XP breakdown / badge showcase). Best-effort, never blocks submission.
+      const finalScore = Math.max(0, totalScore)
+      void recordTestXp(submission.studentId, {
+        testId: assignment.id,
+        score: finalScore,
+        totalMarks: assignment.totalMarks,
+        isPerfect: assignment.totalMarks > 0 && finalScore === assignment.totalMarks,
+      }).catch(() => {})
+      void checkAndAwardBadges(submission.studentId, {
+        testScore: assignment.totalMarks > 0 ? (finalScore / assignment.totalMarks) * 100 : 0,
+      }).catch(() => {})
 
       const percentage = (totalScore / assignment.totalMarks) * 100
 
