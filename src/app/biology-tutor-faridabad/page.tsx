@@ -44,27 +44,27 @@ function useScrollAnimation(threshold = 0.1) {
 }
 
 const faridabadAreas = [
-  { name: 'Sector 15', distance: '18 km', metro: 'Violet Line', landmark: 'Commercial Hub' },
-  { name: 'Sector 16', distance: '17 km', metro: 'Violet Line', landmark: 'HUDA Market' },
-  { name: 'NIT Faridabad', distance: '15 km', metro: 'NIT Metro', landmark: 'Crown Interiorz' },
-  { name: 'Sector 21', distance: '16 km', metro: 'Badkhal Mor', landmark: 'SRS Mall' },
-  { name: 'Sector 37', distance: '20 km', metro: 'Mujesar Metro', landmark: 'Residential Hub' },
+  { name: 'Sector 15', distance: '2 km', metro: 'Bata Chowk', landmark: 'Commercial Hub' },
+  { name: 'Sector 16', distance: '1.5 km', metro: 'Bata Chowk', landmark: 'HUDA Market' },
+  { name: 'NIT Faridabad', distance: '4 km', metro: 'NHPC Chowk', landmark: 'Crown Interiorz' },
+  { name: 'Sector 21', distance: '3 km', metro: 'Old Faridabad', landmark: 'SRS Mall' },
+  { name: 'Sector 37', distance: '5 km', metro: 'Bata Chowk', landmark: 'Residential Hub' },
   {
     name: 'Old Faridabad',
-    distance: '14 km',
-    metro: 'Old Faridabad Metro',
+    distance: '2 km',
+    metro: 'Old Faridabad',
     landmark: 'Heritage Area',
   },
   {
     name: 'Ballabhgarh',
-    distance: '12 km',
-    metro: 'Ballabhgarh Metro',
-    landmark: 'Near Greater Noida',
+    distance: '8 km',
+    metro: 'Raja Nahar Singh',
+    landmark: 'Ballabgarh Town',
   },
   {
     name: 'Sector 81-89',
-    distance: '10 km',
-    metro: 'Near Aqua Line',
+    distance: '12 km',
+    metro: 'Escorts Mujesar',
     landmark: 'Greater Faridabad',
   },
 ]
@@ -88,7 +88,8 @@ const whyChooseUs = [
   {
     icon: Star,
     title: 'Strategic Location',
-    description: 'Easy access via Violet Line metro and Faridabad-Greater Noida road.',
+    description:
+      'Right at Huda Market, Sector 17 — 5 minutes from Bata Chowk Metro on the Violet Line.',
   },
 ]
 
@@ -104,9 +105,9 @@ const faqs = [
       'Yes! We have many students from NIT, Sector 15, Sector 16, Old Faridabad, and Ballabhgarh. Parents appreciate that we offer quality teaching with AIIMS faculty.',
   },
   {
-    question: 'What is the best route from Faridabad?',
+    question: 'What is the best way to reach your Sector 17 center?',
     answer:
-      'From Faridabad, you can take the Faridabad-Greater Noida Expressway (25-30 mins) or take Violet Line metro to HUDA City Centre and then Aqua Line. Both routes are convenient.',
+      'The center is at Huda Market, Sector 17, right in the heart of Faridabad. Take the Violet Line metro to Bata Chowk (about 5 minutes away), or drive in from any Faridabad sector — most families reach us within 10-15 minutes.',
   },
   {
     question: 'Are online classes available for Faridabad students?',
@@ -159,9 +160,16 @@ export default function BiologyTutorFaridabadPage() {
             telephone: '+91-88264-44334',
             address: {
               '@type': 'PostalAddress',
-              addressLocality: 'Greater Noida',
-              addressRegion: 'Uttar Pradesh',
+              streetAddress: 'SCF-130, 2nd Floor, Above Union Bank, Huda Market, Sector 17',
+              addressLocality: 'Faridabad',
+              addressRegion: 'Haryana',
+              postalCode: '121002',
               addressCountry: 'IN',
+            },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: 28.4089,
+              longitude: 77.3178,
             },
             areaServed: ['Faridabad', 'NIT Faridabad', 'Sector 15', 'Ballabhgarh', 'Old Faridabad'],
             priceRange: '$$',
@@ -408,16 +416,16 @@ export default function BiologyTutorFaridabadPage() {
               Ballabhgarh
             </Link>
             <Link
-              href="/neet-coaching-noida"
+              href="/neet-coaching-faridabad"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
-              Greater Noida
+              NEET Coaching Faridabad
             </Link>
             <Link
-              href="/biology-tutor-noida"
+              href="/online-neet-classes-faridabad"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
-              Noida
+              Online Classes Faridabad
             </Link>
             <Link
               href="/neet-biology-tutor-online"

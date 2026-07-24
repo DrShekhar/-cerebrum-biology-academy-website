@@ -52,9 +52,9 @@ export const faridabadEnriched: Record<string, FaridabadEnrichment> = {
   'sector-14': {
     metaTitle: 'NEET Biology Coaching for Sector 14 Faridabad (DAV & MRIS) | Cerebrum',
     metaDescription:
-      'Sector 14 is a school-dense catchment — DAV and Manav Rachna (MRIS) side by side. NEET Biology depth on top of a serious academic base, 2 km from our Sector 17 centre.',
+      'Sector 14 is packed with strong schools — DAV and Manav Rachna (MRIS) side by side. NEET Biology depth on top of a serious academic base, 2 km from our Sector 17 centre.',
     intro:
-      'If you study in Sector 14, you’re in one of Faridabad’s most school-dense pockets — DAV Public School and Manav Rachna International (MRIS) sit almost side by side, with Apeejay a short distance on. That makes yours one of our strongest catchment areas: you already have a serious academic environment, and you want NEET Biology depth on top of it. Our Sector 17 centre is two kilometres away, and we schedule Biology batches to dovetail with the DAV and MRIS timetables so you’re never choosing between school and prep.',
+      'If you study in Sector 14, you’re in one of Faridabad’s most school-dense pockets — DAV Public School and Manav Rachna International (MRIS) sit almost side by side, with Apeejay a short distance on. That means you already have a serious academic environment around you, and you want NEET Biology depth on top of it. Our Sector 17 centre is two kilometres away, and we schedule Biology batches to dovetail with the DAV and MRIS timetables so you’re never choosing between school and prep.',
   },
   'sector-21': {
     metaTitle: 'NEET Biology Coaching near Sector 21 Faridabad (Badkhal Mor) | Cerebrum',
@@ -89,7 +89,7 @@ export const faridabadEnriched: Record<string, FaridabadEnrichment> = {
     metaDescription:
       'Sector 84 in Greater Faridabad (Neharpar) is ~15 km out — so we build a hybrid plan: live online Biology weekdays, centre visits for full tests and practicals. Near Escorts Mujesar Metro.',
     intro:
-      'If you live in Sector 84 — part of Greater Faridabad, the fast-growing Neharpar belt east of the old city, perhaps in Omaxe New Heights or one of the wave of new residential projects — yours is the one catchment where distance genuinely matters. At roughly fifteen kilometres from our Sector 17 centre, we build you a hybrid plan: live online Biology classes for weekday depth, with centre visits for full-length tests and practicals. The Escorts Mujesar metro terminus anchors your area and makes those centre visits straightforward.',
+      'If you live in Sector 84 — part of Greater Faridabad, the fast-growing Neharpar belt east of the old city, perhaps in Omaxe New Heights or one of the wave of new residential projects — yours is the one area where distance genuinely matters. At roughly fifteen kilometres from our Sector 17 centre, we build you a hybrid plan: live online Biology classes for weekday depth, with centre visits for full-length tests and practicals. The Escorts Mujesar metro terminus anchors your area and makes those centre visits straightforward.',
   },
 }
 

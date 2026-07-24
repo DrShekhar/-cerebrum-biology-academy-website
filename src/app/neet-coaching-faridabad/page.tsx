@@ -252,7 +252,7 @@ export default function NeetCoachingFaridabadPage() {
           'NCERT Class 11 Class 12 Biology',
           'AIIMS MBBS Admission',
           'AIIMS NCR Selection',
-          'NEET Biology Faridabad Catchment (Faridabad-Sector 21-Sector 28-NIT Faridabad-Crown Plaza-Old Faridabad-Surajkund)',
+          'NEET Biology Faridabad (Sector 21, Sector 28, NIT Faridabad, Old Faridabad, Surajkund)',
         ]}
         courseName="Best NEET Coaching in Faridabad — Programme"
         courseDescription="Biology-only specialist NEET coaching for Faridabad aspirants. AIIMS-trained faculty led by Dr. Shekhar C Singh, 6 Delhi NCR offline centres plus online live with 15-20 student batches. Pursuit/Ascent/Pinnacle tier options at ₹40K-₹1.56L/year. 680+ medical college selections, 98% NEET-UG qualification rate."
@@ -1962,6 +1962,30 @@ export default function NeetCoachingFaridabadPage() {
               <span className="font-medium text-slate-900 text-sm">Parents Guide</span>
             </Link>
           </div>
+          <h3 className="text-lg font-semibold text-slate-900 mt-6 mb-3">
+            NEET Coaching by Faridabad Sector
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {[
+              { slug: 'sector-16', label: 'Sector 16' },
+              { slug: 'sector-15', label: 'Sector 15' },
+              { slug: 'sector-14', label: 'Sector 14' },
+              { slug: 'sector-21', label: 'Sector 21' },
+              { slug: 'nit-faridabad', label: 'NIT Faridabad' },
+              { slug: 'old-faridabad', label: 'Old Faridabad' },
+              { slug: 'sector-28', label: 'Sector 28' },
+              { slug: 'sector-84', label: 'Sector 84 (Greater Faridabad)' },
+            ].map((area) => (
+              <Link
+                key={area.slug}
+                href={`/neet-coaching-faridabad/${area.slug}`}
+                className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+              >
+                <span className="font-medium text-slate-900 text-sm">{area.label}</span>
+              </Link>
+            ))}
+          </div>
+
           <h3 className="text-lg font-semibold text-slate-900 mt-6 mb-3">
             Other Delhi NCR Centres
           </h3>

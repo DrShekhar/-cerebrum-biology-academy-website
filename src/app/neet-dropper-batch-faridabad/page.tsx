@@ -75,7 +75,7 @@ export default function Page() {
         },
         {
           question: `What's the realistic mark improvement for a ${city.displayName} dropper?`,
-          answer: `Average across our dropper cohorts: +25 to +40 marks in biology alone over 10 months. That's the largest subject-level improvement we see — biology has the most ground to gain because most droppers have unrefined recall, not weak fundamentals. The mechanism is research-backed (Karpicke & Roediger 2008 spaced retrieval + Dunlosky 2013 testing effect) — exactly what our weekly cycle delivers.`,
+          answer: `Average across our dropper batches: +25 to +40 marks in biology alone over 10 months. That's the largest subject-level improvement we see — biology has the most ground to gain because most droppers have unrefined recall, not weak fundamentals. The mechanism is research-backed (Karpicke & Roediger 2008 spaced retrieval + Dunlosky 2013 testing effect) — exactly what our weekly cycle delivers.`,
         },
         {
           question: `Which medical college is realistic for a ${city.displayName} aspirant after the dropper year?`,

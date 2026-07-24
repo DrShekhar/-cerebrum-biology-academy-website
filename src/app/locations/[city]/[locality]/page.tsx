@@ -467,7 +467,7 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              NEET Coaching Landscape in {locality.displayName}
+              Preparing for NEET in {locality.displayName}
             </h2>
             <div className="space-y-6">
               <div className="rounded-xl bg-blue-50 border border-blue-200 p-6">
@@ -492,7 +492,9 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Competition Analysis</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Why Students Here Choose Us
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
                   {locality.educationalLandscape.competitionAnalysis}
                 </p>
@@ -506,7 +508,7 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Study Culture Trends</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Studying for NEET Here</h3>
                 <p className="text-gray-700 leading-relaxed">
                   {locality.educationalLandscape.studyCultureTrend}
                 </p>

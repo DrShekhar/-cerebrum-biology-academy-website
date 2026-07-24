@@ -8443,7 +8443,7 @@ export const localities: Locality[] = [
     },
   },
 
-  // FARIDABAD - 5 localities
+  // FARIDABAD - 20 localities
   {
     id: 'fbd-01',
     name: 'Sector 15 Faridabad',
