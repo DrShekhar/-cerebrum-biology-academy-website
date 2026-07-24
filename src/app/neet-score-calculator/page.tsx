@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { logToolLeadSignal } from '@/lib/leadSignal'
 import {
   Calculator,
   Target,
@@ -163,6 +164,14 @@ export default function NEETScoreCalculatorPage() {
       percentage: Math.round((totalScore / 720) * 100 * 10) / 10,
     })
     setShowResult(true)
+
+    // Anonymous lead signal — high buying intent (reveals computed NEET score).
+    logToolLeadSignal('neet-score-calculator', {
+      totalScore,
+      maxScore: 720,
+      totalCorrect,
+      overallAccuracy,
+    })
   }
 
   const handleReset = () => {

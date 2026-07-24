@@ -10,6 +10,7 @@ import FacebookPixel from '@/components/analytics/FacebookPixel'
 import MicrosoftClarity from '@/components/analytics/MicrosoftClarity'
 import { WebVitalsReporter } from '@/components/analytics/WebVitalsReporter'
 import { VisitorJourneyTracker } from '@/components/analytics/VisitorJourneyTracker'
+import { PublicPushPrompt } from '@/components/push/PublicPushPrompt'
 // PERFORMANCE: Using hybrid header for faster mobile LCP
 // Server-rendered shell with lazy-loaded interactivity
 import { HeaderHybrid } from '@/components/layout/HeaderHybrid'
@@ -272,6 +273,9 @@ export default function RootLayout({
                       <WebVitalsReporter />
                       <MicrosoftClarity />
                       <VisitorJourneyTracker />
+                      {/* Anonymous lead capture: soft web-push opt-in on public
+                          pages — a re-contactable channel without email/phone. */}
+                      <PublicPushPrompt />
                     </PersonalizationProvider>
                   </TrustProvider>
                 </ToastProvider>

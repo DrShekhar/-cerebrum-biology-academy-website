@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { logToolLeadSignal } from '@/lib/leadSignal'
 import {
   Calculator,
   TrendingUp,
@@ -117,6 +118,12 @@ export default function NEETRankPredictorPage() {
       const chances = getCollegeChances(prediction.air)
       setResult({ ...prediction, chances })
       setShowResult(true)
+
+      // Anonymous lead signal — high buying intent (reveals expected score → rank).
+      logToolLeadSignal('neet-rank-predictor', {
+        expectedScore: marksNum,
+        predictedRank: prediction.air,
+      })
     } catch (err) {
       setPredictError(err instanceof Error ? err.message : 'Prediction failed. Please try again.')
     } finally {

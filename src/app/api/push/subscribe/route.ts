@@ -31,6 +31,11 @@ export async function POST(request: NextRequest) {
     const session = await auth()
     const userId = (session?.user as { id?: string } | undefined)?.id || null
 
+    const existing = await prisma.push_subscriptions.findUnique({
+      where: { endpoint },
+      select: { id: true },
+    })
+
     await prisma.push_subscriptions.upsert({
       where: { endpoint },
       update: { p256dh, auth: authKey, ...(userId ? { userId } : {}) },
@@ -43,6 +48,39 @@ export async function POST(request: NextRequest) {
         userAgent: request.headers.get('user-agent')?.slice(0, 250) || null,
       },
     })
+
+    // A NEW guest subscription is an anonymous lead — a re-contactable channel
+    // captured without an email or phone number. Log it (with the page they
+    // opted in from) so it feeds the anonymous-visitor scoring / CRM. Best-
+    // effort; never blocks the subscribe.
+    if (!existing && !userId) {
+      const ctx = (body?.context ?? {}) as {
+        page?: string
+        source?: string
+        sessionId?: string
+      }
+      await prisma.analytics_events
+        .create({
+          data: {
+            id: `evt_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+            userId: null,
+            sessionId: typeof ctx.sessionId === 'string' ? ctx.sessionId.slice(0, 120) : null,
+            eventType: 'push',
+            eventName: 'push_subscribe',
+            properties: {
+              source: typeof ctx.source === 'string' ? ctx.source.slice(0, 80) : 'push-prompt',
+            },
+            pagePath: typeof ctx.page === 'string' ? ctx.page.slice(0, 250) : null,
+            referrer: request.headers.get('referer') || null,
+            userAgent: request.headers.get('user-agent')?.slice(0, 250) || null,
+            ipAddress:
+              request.headers.get('x-forwarded-for')?.split(',')[0] ||
+              request.headers.get('x-real-ip') ||
+              null,
+          },
+        })
+        .catch(() => {})
+    }
 
     return NextResponse.json({ success: true })
   } catch (error) {
