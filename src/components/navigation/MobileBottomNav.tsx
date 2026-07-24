@@ -28,7 +28,11 @@ import {
   UserPlus,
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
-import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import {
+  trackAndOpenWhatsApp,
+  WHATSAPP_MESSAGES,
+  getContextAwareMessage,
+} from '@/lib/whatsapp/tracking'
 
 interface MobileNavigationProps {
   className?: string
@@ -201,7 +205,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
                   onClick={() =>
                     trackAndOpenWhatsApp({
                       source: 'mobile-bottom-nav',
-                      message: WHATSAPP_MESSAGES.default,
+                      message: getContextAwareMessage(),
                       campaign: 'bottom-nav',
                     })
                   }

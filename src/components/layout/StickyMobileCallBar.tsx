@@ -3,10 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Phone, MessageCircle, X } from 'lucide-react'
 import { trackPhoneCall } from '@/lib/ads/googleAdsConversion'
-import {
-  WHATSAPP_MESSAGES,
-  buildWhatsAppUrl,
-} from '@/lib/whatsapp/tracking'
+import { buildWhatsAppUrl, getContextAwareMessage } from '@/lib/whatsapp/tracking'
 
 /**
  * StickyMobileCallBar — Always-visible Call + WhatsApp bar on mobile
@@ -38,7 +35,7 @@ export function StickyMobileCallBar() {
     trackPhoneCall('sticky_mobile_bar', 100)
   }
 
-  const whatsappHref = buildWhatsAppUrl(WHATSAPP_MESSAGES.enquiry, 'sticky_mobile_bar')
+  const whatsappHref = buildWhatsAppUrl(getContextAwareMessage(), 'sticky_mobile_bar')
 
   if (dismissed || !isVisible) return null
 

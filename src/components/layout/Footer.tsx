@@ -19,7 +19,7 @@ import Image from 'next/image'
 import { LanguageSwitcher } from '@/components/i18n/LanguageSwitcher'
 import { useI18n } from '@/contexts/I18nContext'
 import { useVisitorCountry } from '@/hooks/useVisitorCountry'
-import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { trackAndOpenWhatsApp, getContextAwareMessage } from '@/lib/whatsapp/tracking'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
 import {
@@ -382,7 +382,7 @@ export const Footer = memo(function Footer() {
                   onClick={() =>
                     trackAndOpenWhatsApp({
                       source: 'footer-subscribe',
-                      message: WHATSAPP_MESSAGES.enquiry,
+                      message: getContextAwareMessage(),
                       campaign: 'footer',
                     })
                   }
@@ -498,7 +498,7 @@ export const Footer = memo(function Footer() {
                           e.preventDefault()
                           await trackAndOpenWhatsApp({
                             source: 'footer-social',
-                            message: WHATSAPP_MESSAGES.enquiry,
+                            message: getContextAwareMessage(),
                             campaign: 'footer',
                           })
                         }

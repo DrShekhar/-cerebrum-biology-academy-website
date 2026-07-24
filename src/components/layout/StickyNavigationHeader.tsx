@@ -21,7 +21,7 @@ import {
   Video,
   FileText,
 } from 'lucide-react'
-import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { trackAndOpenWhatsApp, getContextAwareMessage } from '@/lib/whatsapp/tracking'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
 import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
 import { throttle } from '@/lib/performance'
@@ -474,7 +474,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                   onClick={async () => {
                     await trackAndOpenWhatsApp({
                       source: 'sticky-header-desktop',
-                      message: WHATSAPP_MESSAGES.default,
+                      message: getContextAwareMessage(),
                       campaign: 'header-cta',
                     })
                   }}
@@ -627,7 +627,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                   onClick={async () => {
                     await trackAndOpenWhatsApp({
                       source: 'sticky-header-mobile',
-                      message: WHATSAPP_MESSAGES.default,
+                      message: getContextAwareMessage(),
                       campaign: 'header-cta',
                     })
                     setIsMobileMenuOpen(false)
