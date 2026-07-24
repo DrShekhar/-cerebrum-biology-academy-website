@@ -481,7 +481,7 @@ export const cities: Record<CitySlug, CityConfig> = {
       'Osaka International School of Kwansei Gakuin (OIS)',
       'Canadian Academy (Kobe)',
       'Senri International School (SIS)',
-      'AICJ (Hiroshima — Kansai catchment)',
+      'AICJ (Hiroshima — students join from across Kansai)',
     ],
     neighbourhoods: ['Minoh', 'Senri', 'Ashiya', 'Kobe Rokko Island', 'Nishinomiya'],
     localHook:
@@ -972,7 +972,7 @@ export const cities: Record<CitySlug, CityConfig> = {
       'Sardar Patel Vidyalaya',
       "Mother's International School",
       'Step by Step School Jasola',
-      'Pathways School Noida (South Delhi feeder)',
+      'Pathways School Noida (many of its students join from South Delhi)',
     ],
     neighbourhoods: [
       'Greater Kailash',
@@ -1025,7 +1025,7 @@ export const cities: Record<CitySlug, CityConfig> = {
       'Surajkund',
     ],
     localHook:
-      'Faridabad IB/IGCSE students access our Sector 17 offline centre alongside the IST online cohort. NIT Faridabad, Old Faridabad, and Sectors 14-19 reach the centre in 10-15 minutes. Greater Faridabad students typically join online with optional intensive weekends at the centre.',
+      'Faridabad IB/IGCSE students access our Sector 17 offline centre alongside our IST online batches. NIT Faridabad, Old Faridabad, and Sectors 14-19 reach the centre in 10-15 minutes. Greater Faridabad students typically join online with optional intensive weekends at the centre.',
     inPersonCentre: {
       name: 'Cerebrum Biology Academy — Faridabad',
       address: 'Sector 17, Faridabad, Haryana',
@@ -1152,7 +1152,7 @@ export const cities: Record<CitySlug, CityConfig> = {
     ],
     neighbourhoods: ['Bruderholz', 'Riehen', 'Bottmingen', 'Allschwil', 'Reinach'],
     localHook:
-      "Basel's IB cohort is anchored by International School Basel (ISB) in Reinach and SIS Basel — both serving the pharma-corporate expat community around Novartis, Roche, and Lonza. Our CET evening sessions (5–8 PM Basel) fit the after-school window. We coach for Swiss medicine eligibility (largely closed to non-EU) plus the more realistic UK Russell Group / US / Asia medical pathways that Basel IB graduates actually pursue.",
+      "Most of Basel's IB students study at International School Basel (ISB) in Reinach or SIS Basel, and many of their families work at Novartis, Roche, and Lonza. Our CET evening sessions (5–8 PM Basel) fit the after-school window. We coach for Swiss medicine eligibility (largely closed to non-EU) plus the more realistic UK Russell Group / US / Asia medical pathways that Basel IB graduates actually pursue.",
   },
 
   zug: {
@@ -1171,7 +1171,7 @@ export const cities: Record<CitySlug, CityConfig> = {
     ],
     neighbourhoods: ['Baar', 'Cham', 'Steinhausen', 'Hünenberg', 'Walchwil'],
     localHook:
-      "Zug's tax-favoured corporate expat density (commodity-trading, crypto, biotech) drives consistent IB demand. International School of Zug and Luzern (ISZL) anchors the local IB cohort. Our CET evening sessions accommodate the financial-sector working-parent schedule with weekday flexibility.",
+      "Zug's tax-favoured economy draws corporate expat families (commodity-trading, crypto, biotech), and IB demand here is consistently strong. International School of Zug and Luzern (ISZL) is the main local IB school. Our CET evening sessions run with weekday flexibility, so classes fit around busy family schedules.",
   },
 
   lausanne: {
@@ -1190,7 +1190,7 @@ export const cities: Record<CitySlug, CityConfig> = {
     ],
     neighbourhoods: ['Pully', 'Lutry', 'Belmont-sur-Lausanne', 'Morges', 'Nyon'],
     localHook:
-      "Lausanne's IB community is centred on International School of Lausanne (ISL) in Pully, with feeder demand from the Vaud expat corridor stretching to Morges and Nyon. Our CET evening sessions (5–8 PM Lausanne) fit cleanly after ISL's typical 3:30 PM dismissal. EPFL and CHUV proximity drives consistent biology/medicine application interest.",
+      "Lausanne's IB community is centred on International School of Lausanne (ISL) in Pully, with students joining from across the Vaud expat corridor stretching to Morges and Nyon. Our CET evening sessions (5–8 PM Lausanne) fit cleanly after ISL's typical 3:30 PM dismissal. EPFL and CHUV proximity drives consistent biology/medicine application interest.",
   },
 
   // ─── GERMANY (EU — WhatsApp-only CTA until VAT setup complete) ──────────────
@@ -1231,7 +1231,7 @@ export const cities: Record<CitySlug, CityConfig> = {
     ],
     neighbourhoods: ['Kladow', 'Charlottenburg', 'Wilmersdorf', 'Zehlendorf', 'Mitte'],
     localHook:
-      "Berlin's IB cohort is centred on BBIS in Kladow plus an active inner-city cluster (Cosmopolitan, Metropolitan). The growing Indian tech-sector diaspora in Mitte and Friedrichshain adds steady IB Biology HL demand. The May 2025 German IB recognition upgrade makes IB a viable pathway to Charité Medical School Berlin and Humboldt / TU Berlin life sciences for students who choose Biology HL.",
+      "Berlin's IB community is centred on BBIS in Kladow plus an active inner-city cluster (Cosmopolitan, Metropolitan). The growing Indian tech-sector diaspora in Mitte and Friedrichshain adds steady IB Biology HL demand. The May 2025 German IB recognition upgrade makes IB a viable pathway to Charité Medical School Berlin and Humboldt / TU Berlin life sciences for students who choose Biology HL.",
   },
 
   munich: {
@@ -1289,7 +1289,7 @@ export const cities: Record<CitySlug, CityConfig> = {
     ],
     neighbourhoods: ['Othmarschen', 'Blankenese', 'HafenCity', 'Eppendorf', 'Winterhude'],
     localHook:
-      "Hamburg's IB cohort is anchored by ISH in Othmarschen — one of Germany's longest-running IB schools. The shipping, finance, and media corporate expat community along the Elbe drives steady IB demand. Universitätsklinikum Hamburg-Eppendorf medical pathways now accept IB Diploma post-2025 recognition uplift.",
+      "Hamburg's IB community is anchored by ISH in Othmarschen — one of Germany's longest-running IB schools. The shipping, finance, and media corporate expat community along the Elbe drives steady IB demand. Universitätsklinikum Hamburg-Eppendorf medical pathways now accept IB Diploma post-2025 recognition uplift.",
   },
 
   // ─── NETHERLANDS (EU — WhatsApp-only CTA until VAT setup) ────────────────────
@@ -1344,7 +1344,7 @@ export const cities: Record<CitySlug, CityConfig> = {
     ibSchools: ['International School Eindhoven (ISE)', 'St. Joriscollege International Stream'],
     neighbourhoods: ['Veldhoven', 'Geldrop', 'Waalre', 'Best', 'Nuenen'],
     localHook:
-      "Eindhoven's IB cohort is anchored by ISE — serving the ASML / Philips / NXP semiconductor expat community in the Brainport region. The Indian tech-sector diaspora at ASML and the broader semiconductor cluster drives consistent IB Biology HL demand. CET evening sessions fit the post-school window cleanly.",
+      "Eindhoven's IB community is anchored by ISE — serving the ASML / Philips / NXP semiconductor expat community in the Brainport region. The Indian tech-sector diaspora at ASML and the broader semiconductor cluster drives consistent IB Biology HL demand. CET evening sessions fit the post-school window cleanly.",
   },
 
   // ─── SWEDEN (EU — WhatsApp-only CTA until VAT setup) ────────────────────────
@@ -1365,7 +1365,7 @@ export const cities: Record<CitySlug, CityConfig> = {
     ],
     neighbourhoods: ['Östermalm', 'Djurgården', 'Lidingö', 'Bromma', 'Saltsjöbaden'],
     localHook:
-      "Stockholm's IB cohort is anchored by Stockholm International School (SIS) on Djurgården and SSHL Sigtuna boarding north of the city. The Karolinska Institutet medical pathway is the dominant local biology-related university target — Karolinska accepts IB Biology HL as the 'Biology 2 or equivalent' entry requirement. Stockholm's 91%+ adult English fluency (EF EPI 617) means online English-medium tutoring is culturally seamless.",
+      "Stockholm's IB community is anchored by Stockholm International School (SIS) on Djurgården and SSHL Sigtuna boarding north of the city. The Karolinska Institutet medical pathway is the dominant local biology-related university target — Karolinska accepts IB Biology HL as the 'Biology 2 or equivalent' entry requirement. Stockholm's 91%+ adult English fluency (EF EPI 617) means online English-medium tutoring is culturally seamless.",
   },
 
   malmo: {
@@ -1384,7 +1384,7 @@ export const cities: Record<CitySlug, CityConfig> = {
     ],
     neighbourhoods: ['Limhamn', 'Västra Hamnen', 'Bunkeflostrand', 'Lund (commuter)'],
     localHook:
-      "The Malmö-Lund corridor's IB cohort is anchored by Katedralskolan Lund (one of Sweden's oldest IB schools, founded 14th-century gymnasium) and Malmö Borgarskola IB Diploma stream. Cross-strait proximity to Copenhagen (Øresund Bridge, 30 minutes) adds Danish expat-family demand. Lund University Medical School is a meaningful local target; we coach IB Biology HL for both Karolinska and Lund medical pathways.",
+      "The Malmö-Lund corridor's IB community is anchored by Katedralskolan Lund (one of Sweden's oldest IB schools, founded 14th-century gymnasium) and Malmö Borgarskola IB Diploma stream. Cross-strait proximity to Copenhagen (Øresund Bridge, 30 minutes) adds Danish expat-family demand. Lund University Medical School is a meaningful local target; we coach IB Biology HL for both Karolinska and Lund medical pathways.",
   },
 
   gothenburg: {
@@ -1403,7 +1403,7 @@ export const cities: Record<CitySlug, CityConfig> = {
     ],
     neighbourhoods: ['Långedrag', 'Örgryte', 'Hovås', 'Mölndal', 'Kungsbacka (commuter)'],
     localHook:
-      "Gothenburg's IB cohort is anchored by ISGR plus Hvitfeldtska's IB Diploma stream. The Volvo / AstraZeneca corporate expat community drives consistent IB demand, and AstraZeneca's biotech R&D presence in Mölndal adds biology-major university interest. Sahlgrenska University Hospital (Göteborg University Medical School) accepts IB Biology HL as the 'Biology 2 equivalent' entry requirement.",
+      "Gothenburg's IB community is anchored by ISGR plus Hvitfeldtska's IB Diploma stream. The Volvo / AstraZeneca corporate expat community drives consistent IB demand, and AstraZeneca's biotech R&D presence in Mölndal adds biology-major university interest. Sahlgrenska University Hospital (Göteborg University Medical School) accepts IB Biology HL as the 'Biology 2 equivalent' entry requirement.",
   },
 
   // ─── IRELAND (EU — WhatsApp-only CTA until VAT setup) ───────────────────────
@@ -1446,7 +1446,7 @@ export const cities: Record<CitySlug, CityConfig> = {
     ],
     neighbourhoods: ['Tervuren', 'Waterloo', 'Woluwe-Saint-Pierre', 'Uccle', 'Overijse'],
     localHook:
-      "Brussels hosts the densest cluster of international schools in continental Europe — driven by the EU institutions, NATO, and 200+ multinational HQs. ISB (Tervuren), BSB (Tervuren), St John's (Waterloo), and four European Schools create a massive IB/European Bac cohort. Our CET evening sessions (5–8 PM Brussels) fit the standard international-school day. Many Brussels IB families target UK Russell Group medical schools or Belgian universities (KU Leuven, ULB).",
+      "Brussels hosts the densest cluster of international schools in continental Europe — driven by the EU institutions, NATO, and 200+ multinational HQs. ISB (Tervuren), BSB (Tervuren), St John's (Waterloo), and four European Schools create a massive IB/European Bac student population. Our CET evening sessions (5–8 PM Brussels) fit the standard international-school day. Many Brussels IB families target UK Russell Group medical schools or Belgian universities (KU Leuven, ULB).",
   },
 
   copenhagen: {
@@ -1766,7 +1766,7 @@ export const cities: Record<CitySlug, CityConfig> = {
     ],
     neighbourhoods: ['Polanco', 'Santa Fe', 'Lomas de Chapultepec', 'San Ángel', 'Coyoacán'],
     localHook:
-      'Mexico City has the largest IB school concentration in Latin America — anchored by ASF, Westhill, and Greengates in the Polanco/Santa Fe corridor. The affluent Polanco/Lomas community drives pre-med aspirations via US university pipelines. CST evening sessions align with US Central Time cohorts.',
+      'Mexico City has the largest IB school concentration in Latin America — anchored by ASF, Westhill, and Greengates in the Polanco/Santa Fe corridor. The affluent Polanco/Lomas community drives pre-med aspirations via US university pipelines. CST evening sessions run alongside our US Central Time batches.',
   },
   'buenos-aires': {
     slug: 'buenos-aires',

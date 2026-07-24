@@ -2,7 +2,7 @@
  * /neet-coaching-mayur-vihar
  *
  * Delhi locality NEET coaching page — Mayur Vihar. Closes a coverage gap in
- * the Delhi NCR cluster (~200 pages) where this catchment had zero
+ * the Delhi NCR cluster (~200 pages) where this locality had zero
  * dedicated landing.
  */
 
@@ -214,9 +214,9 @@ export default function NEETCoachingMayurViharPage() {
           <p>
             If you live in Mayur Vihar — East Delhi's premier residential cluster of around 150K
             residents, whether in the judicial, IAS and DDA-allotment homes of Phase 1 or the
-            professional colonies of Phase 2 — you're in serious NEET company: DPS Mayur Vihar
-            alone produces 200+ Class 11-12 medical aspirants annually. The Blue Line metro takes
-            you to Rajiv Chowk in 18 minutes and Hauz Khas/Green Park in 30 minutes.
+            professional colonies of Phase 2 — you're in serious NEET company: DPS Mayur Vihar alone
+            produces 200+ Class 11-12 medical aspirants annually. The Blue Line metro takes you to
+            Rajiv Chowk in 18 minutes and Hauz Khas/Green Park in 30 minutes.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
@@ -234,8 +234,8 @@ export default function NEETCoachingMayurViharPage() {
           </h2>
           <p>
             <strong>DPS Mayur Vihar (Phase 1):</strong> No East Delhi school sends more students
-            into NEET — 200+ medical aspirants annually from Classes 11-12. The DPS system gives
-            you strong NCERT foundations; the typical gap is NEET exam technique (assertion-reason
+            into NEET — 200+ medical aspirants annually from Classes 11-12. The DPS system gives you
+            strong NCERT foundations; the typical gap is NEET exam technique (assertion-reason
             questions, diagram-based MCQs) which school Biology exams don't test. Most DPS MV
             families book Ascent (₹58K-90K) or Pinnacle (₹1.2L-1.56L).
           </p>
@@ -266,8 +266,8 @@ export default function NEETCoachingMayurViharPage() {
             but its generalist chains run 150-300 student batches across all subjects. Here's the
             arithmetic that matters to you: Biology is 50% of NEET marks, yet in a generalist batch
             it gets only one-third of the teaching time. That's why so many of your neighbours keep
-            a Laxmi Nagar chain for Physics and Chemistry and add Cerebrum as the biology
-            specialist — generalist coverage where it's fine, specialist depth where it counts.
+            a Laxmi Nagar chain for Physics and Chemistry and add Cerebrum as the biology specialist
+            — generalist coverage where it's fine, specialist depth where it counts.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
@@ -284,9 +284,9 @@ export default function NEETCoachingMayurViharPage() {
           <p>
             <strong>Nearest Cerebrum centre:</strong> Green Park (~30 min via Blue Line) or
             pan-India online live. If you'd rather skip the commute entirely, pan-India online live
-            batches offer the same AIIMS-trained faculty, same biology-only
-            specialist pedagogy, same 15-20 student batch structure — no train/auto-rickshaw time,
-            weekend-friendly slots.
+            batches offer the same AIIMS-trained faculty, same biology-only specialist pedagogy,
+            same 15-20 student batch structure — no train/auto-rickshaw time, weekend-friendly
+            slots.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">Related Delhi NCR pages</h2>

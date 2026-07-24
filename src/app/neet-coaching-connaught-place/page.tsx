@@ -2,7 +2,7 @@
  * /neet-coaching-connaught-place
  *
  * Delhi locality NEET coaching page — Connaught Place. Closes a coverage gap in
- * the Delhi NCR cluster (~200 pages) where this catchment had zero
+ * the Delhi NCR cluster (~200 pages) where this locality had zero
  * dedicated landing.
  */
 
@@ -16,7 +16,7 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/neet-coaching-connaught-pla
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Connaught Place | Cerebrum Biology Academy',
   description:
-    'Best NEET Coaching in Connaught Place — biology-only specialist NEET coaching for Connaught Place (Delhi) families. AIIMS-trained faculty, 15-20 student batches, ₹40K-₹1.56L/year. Nearest Cerebrum centre: South Extension (~12 min via Yellow Line) — closest of all Delhi catchments.',
+    'Best NEET Coaching in Connaught Place — biology-only specialist NEET coaching for Connaught Place (Delhi) families. AIIMS-trained faculty, 15-20 student batches, ₹40K-₹1.56L/year. Nearest Cerebrum centre: South Extension (~12 min via Yellow Line) — the shortest commute of any Delhi locality we serve.',
   keywords: [
     'neet coaching connaught-place',
     'best neet coaching connaught-place',
@@ -153,7 +153,7 @@ export default function NEETCoachingConnaughtPlacePage() {
           'Cerebrum Biology Academy Connaught Place',
         ]}
         courseName="Best NEET Coaching in Connaught Place — Programme"
-        courseDescription="Biology-only specialist NEET coaching for Connaught Place (Delhi) families. AIIMS-trained faculty led by Dr. Shekhar C Singh, 15-20 student batches, Pursuit/Ascent/Pinnacle tier options (₹40K-₹1.56L/year). Nearest offline centre: South Extension (~12 min via Yellow Line) — closest of all Delhi catchments."
+        courseDescription="Biology-only specialist NEET coaching for Connaught Place (Delhi) families. AIIMS-trained faculty led by Dr. Shekhar C Singh, 15-20 student batches, Pursuit/Ascent/Pinnacle tier options (₹40K-₹1.56L/year). Nearest offline centre: South Extension (~12 min via Yellow Line) — the shortest commute of any Delhi locality we serve."
         faqs={faqs}
       />
       <script
@@ -221,14 +221,14 @@ export default function NEETCoachingConnaughtPlacePage() {
             Why Connaught Place students choose a Biology specialist
           </h2>
           <p>
-            If you live in the Connaught Place / Lutyens belt — Delhi's most concentrated
-            diplomatic and civil-service corridor — your schools set a high bar. Modern School
-            Barakhamba and Sardar Patel Vidyalaya are 2 of the 5 most academically rigorous feeder
-            schools in India, typically producing 50-80 AIIMS/JIPMER/AFMC selections per year
-            combined. Whether your family is in the diplomatic corps, senior judiciary, cabinet
-            secretariat, journalism or industry, your NEET Biology teaching should match that
-            standard. The Rajiv Chowk metro hub connects you to all 3 Cerebrum Delhi centres (South
-            Ex via Yellow Line, Green Park via Yellow Line, Rohini via Blue Line + Red Line).
+            If you live in the Connaught Place / Lutyens belt — Delhi's most concentrated diplomatic
+            and civil-service corridor — your schools set a high bar. Modern School Barakhamba and
+            Sardar Patel Vidyalaya are 2 of the 5 most academically rigorous feeder schools in
+            India, typically producing 50-80 AIIMS/JIPMER/AFMC selections per year combined. Whether
+            your family is in the diplomatic corps, senior judiciary, cabinet secretariat,
+            journalism or industry, your NEET Biology teaching should match that standard. The Rajiv
+            Chowk metro hub connects you to all 3 Cerebrum Delhi centres (South Ex via Yellow Line,
+            Green Park via Yellow Line, Rohini via Blue Line + Red Line).
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
@@ -245,8 +245,8 @@ export default function NEETCoachingConnaughtPlacePage() {
           </h2>
           <p>
             <strong>Modern School Barakhamba Road:</strong> You're at one of India's top 5 feeder
-            schools for AIIMS/JIPMER selections, with academic foundations as strong as any in
-            Delhi — what you typically need is minimal content support and maximum exam-technique
+            schools for AIIMS/JIPMER selections, with academic foundations as strong as any in Delhi
+            — what you typically need is minimal content support and maximum exam-technique
             refinement. Most Modern School families book Pinnacle (₹1.2L-1.56L) for the 1:5 faculty
             ratio and personalised NEET PYQ pattern drilling.
           </p>
@@ -275,11 +275,11 @@ export default function NEETCoachingConnaughtPlacePage() {
           <p>
             Living in the CP / Lutyens belt puts you within 15 minutes of AIIMS New Delhi,
             Safdarjung Hospital, RML Hospital, Lady Hardinge Medical College, and Maulana Azad
-            Medical College. If your family has direct connections to the medical establishment —
-            an AIIMS faculty parent, a senior doctor at a government hospital — you'll evaluate
-            NEET coaching at a deeper level: you want faculty who understand medical education, not
-            just exam coaching. That is exactly what Dr. Shekhar C Singh's AIIMS Delhi background
-            gives you — and what no generalist chain can match.
+            Medical College. If your family has direct connections to the medical establishment — an
+            AIIMS faculty parent, a senior doctor at a government hospital — you'll evaluate NEET
+            coaching at a deeper level: you want faculty who understand medical education, not just
+            exam coaching. That is exactly what Dr. Shekhar C Singh's AIIMS Delhi background gives
+            you — and what no generalist chain can match.
           </p>
           <p>
             If yours is a diplomat family in Chanakyapuri, Jor Bagh, or Lodi Colony and your child
@@ -302,8 +302,8 @@ export default function NEETCoachingConnaughtPlacePage() {
           <p>
             <strong>Nearest Cerebrum centre:</strong> South Extension (~12 min via Yellow Line) —
             the shortest commute of any Delhi locality we serve. If you'd rather skip the commute
-            entirely, pan-India online live batches offer the same AIIMS-trained faculty,
-            same biology-only specialist pedagogy, same 15-20 student batch structure — no
+            entirely, pan-India online live batches offer the same AIIMS-trained faculty, same
+            biology-only specialist pedagogy, same 15-20 student batch structure — no
             train/auto-rickshaw time, weekend-friendly slots.
           </p>
 

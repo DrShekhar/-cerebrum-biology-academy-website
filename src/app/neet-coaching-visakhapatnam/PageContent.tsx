@@ -48,7 +48,7 @@ function useScrollAnimation(threshold = 0.1) {
 
 const visakhapatnamAreas = [
   { name: 'Visakhapatnam', distance: '0 km', landmark: 'City Center' },
-  { name: 'MVP Colony', distance: '4 km', landmark: 'Premium Area' },
+  { name: 'MVP Colony', distance: '4 km', landmark: 'Residential Area' },
   { name: 'Dwaraka Nagar', distance: '8 km', landmark: 'Residential Hub' },
   { name: 'Seethammadhara', distance: '6 km', landmark: 'Central Zone' },
   { name: 'Madhurawada', distance: '12 km', landmark: 'Growth Area' },
@@ -60,9 +60,9 @@ const visakhapatnamAreas = [
 const whyChooseUs = [
   {
     icon: Zap,
-    title: 'AP Coastal Premium Hub',
+    title: 'AP Coastal Education Hub',
     description:
-      "Visakhapatnam is Andhra Pradesh's premier coastal city with high-income families and quality education focus. 15,000+ NEET aspirants annually - Cerebrum brings structured online coaching.",
+      "Visakhapatnam is Andhra Pradesh's premier coastal city with a strong focus on quality education. 15,000+ NEET aspirants annually - Cerebrum brings structured online coaching.",
   },
   {
     icon: Target,
@@ -141,7 +141,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Visakhapatnam',
-  description: 'Best online NEET coaching for Visakhapatnam Andhra Pradesh premium families',
+  description:
+    'Best online NEET coaching for Visakhapatnam Andhra Pradesh - structured Biology classes with AIIMS-trained faculty',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-visakhapatnam',
   telephone: '+91-88264-44334',
   address: {
@@ -189,7 +190,7 @@ export default function PageContent() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Zap className="w-5 h-5 mr-2 text-yellow-400" />
-              AP Coastal Premium City | Expert Online Coaching
+              AP Coastal City | Expert Online Coaching
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -197,7 +198,7 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Classes for Andhra Pradesh's Elite Aspirants
+              Premium Biology Classes for Visakhapatnam's NEET Aspirants
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">

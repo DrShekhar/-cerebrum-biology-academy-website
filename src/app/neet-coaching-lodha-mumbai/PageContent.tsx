@@ -355,9 +355,7 @@ export default function PageContent() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Lodha Residents, Excel in NEET!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Lodha Residents, Excel in NEET!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Premium NEET coaching delivered to your home, on your schedule
             </p>

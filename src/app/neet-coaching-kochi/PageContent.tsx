@@ -60,9 +60,9 @@ const kochiAreas = [
 const whyChooseUs = [
   {
     icon: Crown,
-    title: 'Kerala Premium Families',
+    title: 'NRI-Friendly, Kerala-Rooted',
     description:
-      'Kochi attracts NRI families and high-income professionals. Cerebrum understands premium education values and delivers excellence matching Kerala family expectations.',
+      'Based in Kochi, or managing NEET prep between Kerala and the Gulf? Cerebrum delivers premium education with the flexibility your family schedule demands.',
   },
   {
     icon: Target,
@@ -88,12 +88,12 @@ const faqs = [
   {
     question: 'Do you have a physical center in Kochi?',
     answer:
-      'We operate premium online NEET classes for all Kochi students - covering Ernakulam, Kakkanad, Edappally, Vyttila, and surrounding areas. Online format ensures premium families enjoy flexibility, world-class instruction, and personalized doubt sessions without commute constraints.',
+      'We operate premium online NEET classes for all Kochi students - covering Ernakulam, Kakkanad, Edappally, Vyttila, and surrounding areas. The online format gives you flexibility, world-class instruction, and personalized doubt sessions without commute constraints.',
   },
   {
-    question: 'How do you cater to Kerala premium families?',
+    question: 'What can Kochi families expect from your coaching?',
     answer:
-      'We understand that premium Kerala families value holistic education, strong faculty credentials, and proven results. Cerebrum delivers AIIMS faculty, structured curriculum, regular progress reports, and personalized mentorship - aligning with premium education values.',
+      'If you value holistic education, strong faculty credentials, and proven results, Cerebrum delivers - AIIMS faculty, structured curriculum, regular progress reports, and personalized mentorship for your child.',
   },
   {
     question: 'Which schools do Kochi students attend?',
@@ -141,7 +141,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Kochi',
-  description: 'Best online NEET coaching for Kochi Kerala premium families',
+  description:
+    'Best online NEET coaching for Kochi Kerala - premium Biology classes with AIIMS-trained faculty',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-kochi',
   telephone: '+91-88264-44334',
   address: {
@@ -185,7 +186,7 @@ export default function PageContent() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Crown className="w-5 h-5 mr-2 text-yellow-400" />
-              Kerala Premium Families | Expert Online Coaching
+              Kochi & Ernakulam | Expert Online Coaching
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -193,7 +194,7 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Classes for Kerala's Elite Aspirants
+              Premium Biology Classes for Kochi's NEET Aspirants
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
@@ -380,8 +381,8 @@ export default function PageContent() {
               Kochi, Excel in NEET with Cerebrum!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium online coaching for Kerala families. No local competition - just world-class
-              education.
+              Premium online coaching for Kerala families - world-class education, delivered to your
+              home.
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">

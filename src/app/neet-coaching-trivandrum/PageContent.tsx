@@ -48,9 +48,9 @@ function useScrollAnimation(threshold = 0.1) {
 
 const trivandrumareas = [
   { name: 'Trivandrum', distance: '0 km', landmark: 'City Center' },
-  { name: 'Kowdiar', distance: '4 km', landmark: 'Premium Locality' },
+  { name: 'Kowdiar', distance: '4 km', landmark: 'Residential' },
   { name: 'Pattom', distance: '3 km', landmark: 'Central Hub' },
-  { name: 'Vazhuthacaud', distance: '5 km', landmark: 'Upscale Area' },
+  { name: 'Vazhuthacaud', distance: '5 km', landmark: 'Residential Area' },
   { name: 'Thampanoor', distance: '2 km', landmark: 'Main Station' },
   { name: 'Palayam', distance: '6 km', landmark: 'Business Zone' },
   { name: 'Kazhakkoottam', distance: '15 km', landmark: 'Tech Hub' },
@@ -60,9 +60,9 @@ const trivandrumareas = [
 const whyChooseUs = [
   {
     icon: Globe,
-    title: 'Kerala Capital, NRI Families',
+    title: 'Kerala Capital, NRI-Friendly',
     description:
-      'Trivandrum attracts NRI professionals and high-income families. Cerebrum delivers premium education matching international standards and global perspectives.',
+      'Recently returned from the Gulf, or planning NEET from an NRI base? Cerebrum delivers premium education matching international standards, with timezone-friendly flexibility.',
   },
   {
     icon: Target,
@@ -93,7 +93,7 @@ const faqs = [
   {
     question: 'How do you cater to NRI families in Trivandrum?',
     answer:
-      'NRI families value premium education with global standards. Cerebrum delivers AIIMS faculty, international best practices, flexibility for NRI schedules, and comprehensive progress tracking - aligning with NRI family expectations.',
+      'If your family splits time between Kerala and abroad, Cerebrum fits your reality - AIIMS faculty, international best practices, timezone-friendly scheduling, and comprehensive progress tracking you can follow from anywhere.',
   },
   {
     question: 'Which schools do Trivandrum students attend?',
@@ -141,7 +141,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Trivandrum',
-  description: 'Best online NEET coaching for Trivandrum Kerala NRI families',
+  description:
+    'Best online NEET coaching for Trivandrum Kerala - flexible batches for local and NRI schedules',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-trivandrum',
   telephone: '+91-88264-44334',
   address: {
@@ -185,7 +186,7 @@ export default function PageContent() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Globe className="w-5 h-5 mr-2 text-yellow-400" />
-              Kerala Capital, NRI Families | Expert Online Coaching
+              Kerala Capital | NRI-Friendly Expert Online Coaching
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -193,13 +194,13 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Classes for Kerala's NRI Families
+              Premium Biology Classes - Flexible for Local and NRI Schedules
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Online NEET coaching for Trivandrum, Kowdiar, Pattom & nearby areas. Learn from
-              <strong> AIIMS-trained faculty</strong> - comprehensive Kerala + CBSE curriculum for
-              8,000+ annual aspirants from premium families.
+              <strong> AIIMS-trained faculty</strong> - comprehensive Kerala + CBSE curriculum in a
+              city with 8,000+ NEET aspirants annually.
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
@@ -380,8 +381,8 @@ export default function PageContent() {
               Trivandrum, Excel in NEET with Cerebrum!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium online coaching for Kerala's NRI families. Global standards, world-class
-              education.
+              Premium online coaching with global standards and world-class education - wherever
+              your family is based.
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">

@@ -2,7 +2,7 @@
  * /neet-coaching-karol-bagh
  *
  * Delhi locality NEET coaching page — Karol Bagh. Closes a coverage gap in
- * the Delhi NCR cluster (~200 pages) where this catchment had zero
+ * the Delhi NCR cluster (~200 pages) where this locality had zero
  * dedicated landing.
  */
 
@@ -215,8 +215,8 @@ export default function NEETCoachingKarolBaghPage() {
             If you live in Karol Bagh, you already know Pusa Road is a uniquely strong UPSC + NEET
             coaching corridor. Study at Punjab Public School, Springdales Pusa Road, or Bal Bhavan
             and you typically have 1:1 access to UPSC libraries and a high-effort culture that maps
-            well to NEET preparation. From the Karol Bagh Blue Line metro you reach Rajiv Chowk in
-            8 minutes and our South Extension flagship centre via Yellow Line in 25 minutes.
+            well to NEET preparation. From the Karol Bagh Blue Line metro you reach Rajiv Chowk in 8
+            minutes and our South Extension flagship centre via Yellow Line in 25 minutes.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
@@ -290,10 +290,9 @@ export default function NEETCoachingKarolBaghPage() {
           </p>
           <p>
             <strong>Nearest Cerebrum centre:</strong> South Extension (~25 min via metro) or online
-            live. If you'd rather skip the commute entirely, pan-India online live batches offer
-            the same AIIMS-trained faculty, same biology-only specialist
-            pedagogy, same 15-20 student batch structure — no train/auto-rickshaw time,
-            weekend-friendly slots.
+            live. If you'd rather skip the commute entirely, pan-India online live batches offer the
+            same AIIMS-trained faculty, same biology-only specialist pedagogy, same 15-20 student
+            batch structure — no train/auto-rickshaw time, weekend-friendly slots.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">Related Delhi NCR pages</h2>

@@ -43,12 +43,12 @@ function useScrollAnimation(threshold = 0.1) {
 }
 
 const banjarahillsAreas = [
-  { name: 'Banjara Hills', distance: '18 km', landmark: 'Ultra-Premium' },
-  { name: 'Road No. 1-14', distance: '17 km', landmark: 'Elite Residential' },
-  { name: 'Jubilee Hills', distance: '16 km', landmark: 'Affluent Area' },
+  { name: 'Banjara Hills', distance: '18 km', landmark: 'Central Hyderabad' },
+  { name: 'Road No. 1-14', distance: '17 km', landmark: 'Residential' },
+  { name: 'Jubilee Hills', distance: '16 km', landmark: 'Residential Area' },
   { name: 'Madhapur', distance: '15 km', landmark: 'Tech Corridor' },
   { name: 'Hitec City', distance: '14 km', landmark: 'Corporate Zone' },
-  { name: 'Kondapur', distance: '16 km', landmark: 'Premium Locality' },
+  { name: 'Kondapur', distance: '16 km', landmark: 'Residential' },
   { name: 'Gachibowli', distance: '19 km', landmark: 'Tech Hub' },
   { name: 'Shilparamam', distance: '20 km', landmark: 'Mixed Use' },
 ]
@@ -59,7 +59,7 @@ const faqs = [
   {
     question: 'Why do Banjara Hills families prefer online NEET coaching?',
     answer:
-      "Banjara Hills families value premium quality and privacy. Online NEET coaching offers world-class AIIMS faculty without commute, perfect for government officials' busy schedules. High-speed connectivity and gated community infrastructure support seamless learning.",
+      "If you value quality teaching and privacy, online NEET coaching delivers both - world-class AIIMS faculty without the commute, perfect for government officials' busy schedules. High-speed connectivity and gated community infrastructure support seamless learning.",
   },
   {
     question: 'How do you support government official families?',
@@ -69,7 +69,7 @@ const faqs = [
   {
     question: 'What schools do Banjara Hills NEET students come from?',
     answer:
-      'We have students from Hyderabad Public School, Oakridge International School, Vidyaranya High School, and other elite institutions. Banjara Hills attracts educated, accomplished families prioritizing top-tier education.',
+      'We have students from Hyderabad Public School, Oakridge International School, Vidyaranya High School, and other leading institutions in and around Banjara Hills. Our coaching complements the academic rigour of these schools.',
   },
   {
     question: 'Do you provide special support for government job aspirants?',
@@ -92,7 +92,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Banjara Hills',
-  description: 'Best NEET Coaching for Banjara Hills Hyderabad - Trusted by Premium Families',
+  description:
+    'Best NEET Coaching for Banjara Hills Hyderabad - premium online Biology coaching with AIIMS-trained faculty',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-banjara-hills-hyderabad',
   telephone: '+91-88264-44334',
   address: {
@@ -143,13 +144,13 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Ultra-Premium Government Official Zone
+              Premium NEET Biology Coaching in Banjara Hills - Flexible, Transfer-Proof
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for Banjara Hills, Road No 1-14, & nearby ultra-premium areas.
-              Learn from Dr. Shekhar C Singh, AIIMS Alumnus - trusted by government officials and
-              affluent families.
+              Premium NEET coaching for Banjara Hills, Road No 1-14, & nearby areas. Learn from Dr.
+              Shekhar C Singh, AIIMS Alumnus - online classes that continue seamlessly through
+              postings and transfers.
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
@@ -204,7 +205,7 @@ export default function PageContent() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Crown className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
                 <div className="text-2xl font-bold">Premium</div>
-                <div className="text-sm opacity-80">Elite Families</div>
+                <div className="text-sm opacity-80">Personal Attention</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
@@ -234,7 +235,7 @@ export default function PageContent() {
               Banjara Hills & Nearby Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Online NEET coaching for Hyderabad premium families
+              Online NEET Biology coaching across Banjara Hills and Hyderabad
             </p>
           </div>
 
@@ -330,7 +331,7 @@ export default function PageContent() {
               Banjara Hills Students, Excel in NEET!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium coaching for Hyderabad's elite
+              Premium coaching with small batches and AIIMS-trained faculty
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">

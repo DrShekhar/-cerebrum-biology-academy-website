@@ -50,7 +50,7 @@ const goregaonAreas = [
   { name: 'Goregaon West', distance: '18 km', landmark: 'Film City Adjacent' },
   { name: 'Film City', distance: '17 km', landmark: 'Entertainment Industry' },
   { name: 'Oberoi Garden City', distance: '18 km', landmark: 'Premium Gated Community' },
-  { name: 'Malad West', distance: '20 km', landmark: 'Premium Locality' },
+  { name: 'Malad West', distance: '20 km', landmark: 'Residential' },
   { name: 'Malad East', distance: '20 km', landmark: 'Residential Hub' },
   { name: 'Powai', distance: '16 km', landmark: 'IT Hub' },
   { name: 'Kandivali', distance: '22 km', landmark: 'Residential Area' },
@@ -59,21 +59,21 @@ const goregaonAreas = [
 const whyChooseUs = [
   {
     icon: Gem,
-    title: 'Film City & Premium Expertise',
+    title: 'Film City & Gated Community Expertise',
     description:
-      'Goregaon is the entertainment hub with premium gated communities. We specialize in coaching for Oberoi Garden City residents and affluent families near Film City.',
+      'Goregaon is the entertainment hub with premium gated communities. We coach students from Oberoi Garden City and homes near Film City, with schedules that flex around industry hours.',
   },
   {
     icon: Target,
     title: '67+ AIIMS Selections',
     description:
-      'Proven track record with students from elite schools across Goregaon, Malad, and surrounding premium residential areas.',
+      'Proven track record with students from top schools across Goregaon, Malad, and surrounding residential areas.',
   },
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
     description:
-      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching high-achievers from premium gated communities.',
+      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching high-achieving NEET aspirants.',
   },
   {
     icon: Star,
@@ -87,7 +87,7 @@ const faqs = [
   {
     question: 'Do you have a coaching center in Goregaon or Film City area?',
     answer:
-      'Our main center is in Greater Noida. For Goregaon and Film City area students, we offer premium live online NEET classes with personalized attention. Many Oberoi Garden City and premium family residents prefer online coaching for convenience. Our comprehensive material and recorded lectures ensure continuous preparation.',
+      'Our main center is in Greater Noida. For Goregaon and Film City area students, we offer premium live online NEET classes with personalized attention. Many Oberoi Garden City and Goregaon residents prefer online coaching for convenience. Our comprehensive material and recorded lectures ensure continuous preparation.',
   },
   {
     question: 'How do you cater to entertainment industry families?',
@@ -97,7 +97,7 @@ const faqs = [
   {
     question: 'Which schools do your Goregaon students attend?',
     answer:
-      'We have students from top schools including Cathedral School, Bombay Scottish, Jamnabai Narsee, and other elite institutions in Goregaon and Malad. These academically rigorous schools align perfectly with our NEET preparation.',
+      'We have students from top schools including Cathedral School, Bombay Scottish, Jamnabai Narsee, and other leading institutions in Goregaon and Malad. These academically rigorous schools align perfectly with our NEET preparation.',
   },
   {
     question: 'What are the benefits of online coaching for Goregaon residents?',
@@ -120,7 +120,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Goregaon',
-  description: 'Best NEET Coaching for Goregaon & Film City - Premium gated community coaching',
+  description:
+    'Best NEET Coaching for Goregaon & Film City - premium online Biology coaching with AIIMS-trained faculty',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-goregaon-mumbai',
   telephone: '+91-88264-44334',
   address: {
@@ -171,13 +172,13 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Coaching for Film City & Premium Gated Communities
+              Premium NEET Biology Coaching for Goregaon & Film City Area
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Exclusive NEET coaching for Goregaon, Oberoi Garden City, and Film City area. Learn
-              from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by premium Goregaon
-              families.
+              Online NEET coaching for Goregaon, Oberoi Garden City, and Film City area. Learn from{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - flexible classes that fit around
+              school and industry schedules.
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
@@ -262,7 +263,7 @@ export default function PageContent() {
               Goregaon & Surrounding Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Online NEET coaching for Film City and premium residential communities
+              Online NEET Biology coaching across Goregaon, Film City, and nearby areas
             </p>
           </div>
 
@@ -358,7 +359,7 @@ export default function PageContent() {
               Goregaon Students, Crack NEET with Excellence!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium NEET coaching for premium Goregaon and Film City families
+              Premium NEET coaching for Goregaon and Film City area students
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">

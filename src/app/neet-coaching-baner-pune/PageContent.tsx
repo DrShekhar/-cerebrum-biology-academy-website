@@ -49,7 +49,7 @@ const banerAreas = [
   { name: 'Baner', distance: '11 km', landmark: 'Premium Residential' },
   { name: 'Balewadi', distance: '10 km', landmark: 'Sports Hub' },
   { name: 'Warje', distance: '12 km', landmark: 'Planned Area' },
-  { name: 'Aundh', distance: '8 km', landmark: 'Upscale Locality' },
+  { name: 'Aundh', distance: '8 km', landmark: 'Residential Locality' },
   { name: 'Bavdhan', distance: '13 km', landmark: 'Premium Area' },
   { name: 'Pune City Centre', distance: '14 km', landmark: 'Central Business' },
   { name: 'Yerwada', distance: '10 km', landmark: 'Residential Zone' },
@@ -59,21 +59,21 @@ const banerAreas = [
 const whyChooseUs = [
   {
     icon: Gem,
-    title: 'Premium Residential Specialist',
+    title: 'Built for Baner Schedules',
     description:
-      "Baner is Pune's premium residential area home to IT professionals and affluent families. We specialize in coaching for ambitious students from high-income households.",
+      "Baner is Pune's fast-growing residential hub with a large IT-professional community. Our flexible online classes fit around school hours and busy working-parent schedules.",
   },
   {
     icon: Target,
     title: '67+ AIIMS Selections',
     description:
-      'Proven track record with students from elite schools across Baner and premium Pune localities.',
+      'Proven track record with students from top schools across Baner and nearby Pune localities.',
   },
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
     description:
-      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching high-achievers from premium families.',
+      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching high-achieving NEET aspirants.',
   },
   {
     icon: Star,
@@ -87,17 +87,17 @@ const faqs = [
   {
     question: 'Do you have a coaching center in Baner?',
     answer:
-      'Our main center is in Greater Noida. For Baner residents, we offer premium live online NEET classes. Many premium families prefer online coaching for flexibility. Our comprehensive material and recorded lectures ensure continuous preparation.',
+      'Our main center is in Greater Noida. For Baner residents, we offer premium live online NEET classes. Many Baner families prefer online coaching for flexibility. Our comprehensive material and recorded lectures ensure continuous preparation.',
   },
   {
-    question: 'How do you cater to premium Baner families?',
+    question: 'What can Baner families expect from your coaching?',
     answer:
-      "Baner represents Pune's premium lifestyle. We offer personalized attention, flexible schedules, detailed progress reports, and result-oriented teaching tailored for high-achieving families with busy schedules.",
+      'You get personalized attention, flexible schedules, detailed progress reports, and result-oriented teaching - designed for high-achieving students and busy family calendars.',
   },
   {
     question: 'Which schools do your Baner students attend?',
     answer:
-      'We have students from Cathedral School, Symbiosis, and other elite Pune institutions. These academically excellent schools align perfectly with our NEET preparation.',
+      'We have students from Cathedral School, Symbiosis, and other top Pune institutions. These academically excellent schools align perfectly with our NEET preparation.',
   },
   {
     question: 'Is online coaching suitable for IT professional families?',
@@ -120,7 +120,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Baner',
-  description: 'Best NEET Coaching for Baner - Premium residential area coaching',
+  description:
+    'Best NEET Coaching for Baner - premium online Biology coaching with AIIMS-trained faculty',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-baner-pune',
   telephone: '+91-88264-44334',
   address: {
@@ -160,18 +161,18 @@ export default function PageContent() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Gem className="w-5 h-5 mr-2 text-yellow-400" />
-              Premium Residential Coaching | AIIMS Faculty
+              Premium Small-Batch Coaching | AIIMS Faculty
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               NEET Coaching in <span className="text-yellow-400">Baner</span>
             </h1>
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Coaching for Pune's Most Sought-After Locality
+              Premium NEET Biology Coaching in Baner - Flexible Online Classes
             </h2>
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Exclusive NEET coaching for Baner, Balewadi, and premium Pune families. Learn from{' '}
-              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by Baner's elite
-              families.
+              Online NEET coaching for Baner, Balewadi, and nearby Pune areas. Learn from{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - classes built around your school
+              hours and family schedule.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Link
@@ -222,7 +223,7 @@ export default function PageContent() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Gem className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
                 <div className="text-2xl font-bold">Premium</div>
-                <div className="text-sm opacity-80">Families</div>
+                <div className="text-sm opacity-80">Personal Attention</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
@@ -246,10 +247,10 @@ export default function PageContent() {
             className={`text-center mb-16 transition-all duration-600 ${areasHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Baner & Surrounding Premium Areas
+              Baner & Surrounding Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Online NEET coaching for Pune&apos;s premium residential communities
+              Online NEET Biology coaching built around Baner schedules
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -331,7 +332,7 @@ export default function PageContent() {
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Baner Students, Excel in NEET!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium NEET coaching for Pune's most premium families
+              Premium NEET coaching built around your schedule and your aspirations
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link

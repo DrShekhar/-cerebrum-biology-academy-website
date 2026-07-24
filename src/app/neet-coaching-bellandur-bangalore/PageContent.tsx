@@ -59,9 +59,9 @@ const bellandurAreas = [
 const whyChooseUs = [
   {
     icon: Sparkles,
-    title: 'Premium Lakeside Residential Families',
+    title: 'Lakeside Gated Community Convenience',
     description:
-      'Trusted by wealthy families and professionals living in Bellandur premium gated communities near the lake.',
+      'Trusted by families across Bellandur gated communities near the lake - premium online classes with zero commute through Outer Ring Road traffic.',
   },
   {
     icon: Target,
@@ -71,15 +71,15 @@ const whyChooseUs = [
   },
   {
     icon: GraduationCap,
-    title: 'AIIMS Faculty & Luxury Learning',
+    title: 'AIIMS Faculty & Premium Learning',
     description:
-      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience. Premium online classes for discerning families.',
+      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience. Premium online classes with personal attention in every batch.',
   },
   {
     icon: Star,
-    title: 'Excellence in Premium Segment',
+    title: 'Excellence with Personal Service',
     description:
-      'Students score 680+, selected for AIIMS/NLM, with white-glove service and personalized attention for premium families.',
+      'Students score 680+, selected for AIIMS/NLM, with white-glove service and personalized attention for every student.',
   },
 ]
 
@@ -87,22 +87,22 @@ const faqs = [
   {
     question: 'Is there online NEET coaching available for Bellandur residents?',
     answer:
-      'Yes! Our premium online NEET coaching is ideal for Bellandur families. You get live classes from AIIMS faculty, recorded lectures for flexible viewing, and personalized doubt solving. The Bellandur premium residential community values quality education, and our online platform delivers excellence from your home.',
+      'Yes! Our premium online NEET coaching is ideal for Bellandur families. You get live classes from AIIMS faculty, recorded lectures for flexible viewing, and personalized doubt solving. If quality education matters to you, our online platform delivers excellence straight to your home.',
   },
   {
     question: 'Why is Bellandur suitable for online NEET coaching?',
     answer:
-      'Bellandur families appreciate premium quality and convenience. Online coaching aligns perfectly - no commute to coaching centers, high internet connectivity in the locality, flexible scheduling around family activities, and world-class AIIMS faculty. Many parents manage busy schedules and prefer home-based learning.',
+      'Online coaching fits Bellandur life perfectly - no commute to coaching centers, high internet connectivity in the locality, flexible scheduling around family activities, and world-class AIIMS faculty. Many parents manage busy schedules and prefer home-based learning.',
   },
   {
     question: 'What schools do Bellandur NEET students come from?',
     answer:
-      'We have students from Inventure Academy, Greenwood High School, Canadian International School, Sri Aurobindo Society School, and other premium institutions. Bellandur attracts affluent families who prioritize quality education, and our coaching complements these premium schools perfectly.',
+      'We have students from Inventure Academy, Greenwood High School, Canadian International School, Sri Aurobindo Society School, and other premium institutions. Our coaching complements the academic rigour of these schools perfectly.',
   },
   {
-    question: 'How do you support premium residential families in Bellandur?',
+    question: 'What level of service can Bellandur families expect?',
     answer:
-      'We offer white-glove service - personalized study plans, flexible class timings, premium support team, recorded sessions, and regular progress reports. Our parent portal gives families full visibility. We understand the expectations of premium Bellandur families and deliver accordingly.',
+      'We offer white-glove service - personalized study plans, flexible class timings, a dedicated support team, recorded sessions, and regular progress reports. Our parent portal gives you full visibility. Whatever standard you hold us to, we aim to exceed it.',
   },
 ]
 
@@ -120,7 +120,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Bellandur',
-  description: 'Best NEET Coaching for Bellandur Bangalore - Trusted by Premium Families',
+  description:
+    'Best NEET Coaching for Bellandur Bangalore - premium online Biology coaching with AIIMS-trained faculty',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-bellandur-bangalore',
   telephone: '+91-88264-44334',
   address: {
@@ -163,7 +164,7 @@ export default function PageContent() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Sparkles className="w-5 h-5 mr-2 text-yellow-400" />
-              Premium Families | AIIMS Faculty
+              Premium Small-Batch Coaching | AIIMS Faculty
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -175,9 +176,9 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for Bellandur, Varthur, Marthahalli & nearby premium areas.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by affluent
-              families in Bangalore's premier residential localities.
+              Premium NEET coaching for Bellandur, Varthur, Marthahalli & nearby areas. Learn from{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - online classes that skip the
+              Outer Ring Road commute entirely.
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
@@ -262,7 +263,7 @@ export default function PageContent() {
               Bellandur & Nearby Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Online NEET coaching for East Bangalore premium residential families
+              Online NEET Biology coaching across Bellandur and East Bangalore
             </p>
           </div>
 
@@ -358,7 +359,7 @@ export default function PageContent() {
               Bellandur Students, Crack NEET with Premium Coaching!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Excellence and convenience for Bangalore's premium families
+              Excellence and convenience, delivered to your home in Bellandur
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">

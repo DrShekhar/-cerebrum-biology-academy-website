@@ -169,9 +169,8 @@ export default function PageContent({ faqs }: PageContentProps) {
 
             <p className="hero-description text-lg md:text-xl opacity-80 mb-8 max-w-4xl mx-auto speakable-intro">
               Join Delhi's most trusted NEET Biology coaching. Civil Lines families trust us for
-              academic excellence. Direct Yellow Line Metro to our Rohini DC Chowk
-              center - just 8 stops, 20 minutes! AIIMS faculty, 98% success rate, small batches of
-              15-20 students.
+              academic excellence. Direct Yellow Line Metro to our Rohini DC Chowk center - just 8
+              stops, 20 minutes! AIIMS faculty, 98% success rate, small batches of 15-20 students.
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
@@ -269,9 +268,8 @@ export default function PageContent({ faqs }: PageContentProps) {
               Why Civil Lines Families Trust Cerebrum
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              If you expect excellence from a coaching institute, Cerebrum delivers - AIIMS
-              faculty, proven results, and personalized attention, all a direct Metro ride from
-              Civil Lines.
+              If you expect excellence from a coaching institute, Cerebrum delivers - AIIMS faculty,
+              proven results, and personalized attention, all a direct Metro ride from Civil Lines.
             </p>
           </div>
 
@@ -320,7 +318,7 @@ export default function PageContent({ faqs }: PageContentProps) {
               </div>
             </div>
 
-            {/* Ultra-Premium Expectations */}
+            {/* What Families Get at Cerebrum */}
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-indigo-100 animate-fadeInUp">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center">

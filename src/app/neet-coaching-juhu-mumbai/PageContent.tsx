@@ -177,8 +177,8 @@ export default function PageContent() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Discreet, flexible NEET coaching for Juhu, JVPD Scheme, and nearby areas. Learn from{' '}
-              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - classes built around your
-              school hours and travel plans.
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - classes built around your school
+              hours and travel plans.
             </p>
 
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
