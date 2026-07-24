@@ -1,0 +1,677 @@
+'use client'
+
+import { useState } from 'react'
+import Link from 'next/link'
+import {
+  CheckCircle,
+  ChevronRight,
+  ChevronDown,
+  MapPin,
+  Phone,
+  Play,
+  Home,
+  Award,
+  Clock,
+  BookOpen,
+  Star,
+  GraduationCap,
+  Languages,
+  Wallet,
+} from 'lucide-react'
+import { Button } from '@/components/ui/Button'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
+interface FAQ {
+  question: string
+  answer: string
+}
+
+const hbseSchools = [
+  { name: 'GSSS Sector 15', area: 'Sector 15', type: 'Government' },
+  { name: 'GSSS Sector 16', area: 'Sector 16', type: 'Government' },
+  { name: 'GSSS Sector 21', area: 'Sector 21', type: 'Government' },
+  { name: 'DAV Public School', area: 'NIT Faridabad', type: 'Private HBSE' },
+  { name: 'Govt Schools NIT Faridabad', area: 'NIT Faridabad', type: 'Government' },
+  { name: 'Govt Schools Old Faridabad', area: 'Old Faridabad', type: 'Government' },
+  { name: 'Govt Schools Ballabhgarh', area: 'Ballabhgarh', type: 'Government' },
+  { name: 'Private HBSE Schools', area: 'Faridabad', type: 'Private HBSE' },
+]
+
+const bridgeAdvantages = [
+  {
+    title: 'Hindi + English Support',
+    description: 'Concepts in Hindi, answers in English - best of both worlds.',
+    icon: Languages,
+  },
+  {
+    title: 'HBSE-to-NCERT Bridge',
+    description: 'Cover syllabus gaps and terminology differences systematically.',
+    icon: BookOpen,
+  },
+  {
+    title: 'Affordable Fees',
+    description: 'Special pricing for state board students starting ₹35,000/year.',
+    icon: Wallet,
+  },
+  {
+    title: 'AIIMS Faculty',
+    description: 'Learn from Dr. Shekhar who understands state board challenges.',
+    icon: GraduationCap,
+  },
+]
+
+const successStats = [
+  { stat: 'AIIMS', label: 'Trained Faculty' },
+  { stat: '15-20', label: 'Students per Batch' },
+  { stat: 'Hindi + English', label: 'Bilingual Teaching' },
+  { stat: 'NCERT', label: 'Bridge Program' },
+]
+
+const syllabusGaps = [
+  {
+    topic: 'Biotechnology Principles',
+    hbse: 'Basic Coverage',
+    ncert: 'Detailed + Applications',
+    priority: 'High',
+  },
+  {
+    topic: 'Human Reproduction',
+    hbse: 'Limited Details',
+    ncert: 'Complete Coverage',
+    priority: 'High',
+  },
+  {
+    topic: 'Ecology & Environment',
+    hbse: 'Moderate',
+    ncert: 'Extensive + Diagrams',
+    priority: 'Medium',
+  },
+  {
+    topic: 'Molecular Basis of Inheritance',
+    hbse: 'Basic',
+    ncert: 'Detailed Mechanisms',
+    priority: 'High',
+  },
+  {
+    topic: 'Plant Physiology',
+    hbse: 'Partial',
+    ncert: 'Complete with Experiments',
+    priority: 'Medium',
+  },
+]
+
+export default function HaryanaBoardNEETCoachingFaridabadContent({ faqs }: { faqs: FAQ[] }) {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
+
+  const handleWhatsApp = () => {
+    trackAndOpenWhatsApp({
+      source: 'haryana-board-neet-coaching-faridabad',
+      message:
+        'Hi! I am a Haryana Board (HBSE) student looking for NEET Biology coaching. Please share details about Hindi medium batches and fees.',
+      campaign: 'hbse-neet-faridabad',
+    })
+  }
+
+  return (
+    <main className="min-h-screen bg-white">
+      <nav className="bg-gray-100 py-3 px-4">
+        <div className="max-w-7xl mx-auto">
+          <ol className="flex items-center flex-wrap gap-1 text-sm">
+            <li>
+              <Link href="/" className="text-gray-600 hover:text-teal-600">
+                <Home className="w-4 h-4" />
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <Link href="/neet-coaching-faridabad" className="text-gray-600 hover:text-teal-600">
+                NEET Coaching Faridabad
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <span className="text-green-700 font-medium">Haryana Board NEET Coaching</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="relative py-20 md:py-28 bg-gradient-to-br from-green-700 to-teal-800 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-teal-500 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4">
+          <div className="max-w-4xl animate-fadeInUp">
+            <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Languages className="w-4 h-4" />
+              Hindi + English Bilingual Support
+            </div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Haryana Board (HBSE)
+              <span className="block text-yellow-400 mt-2">NEET Coaching in Faridabad</span>
+            </h1>
+
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl">
+              Don&apos;t let language be a barrier. Our bilingual coaching helps HBSE students
+              bridge the gap to NCERT and crack NEET with confidence.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-4 mb-8">
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
+                <Languages className="w-5 h-5 text-yellow-400" />
+                <span>Hindi + English</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
+                <Star className="w-5 h-5 text-yellow-400" />
+                <span>Hindi + English Medium</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
+                <Wallet className="w-5 h-5 text-green-400" />
+                <span>Starting ₹35,000/year</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row gap-4">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="secondary"
+                  size="xl"
+                  className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  Book Free Demo Class
+                </Button>
+              </Link>
+              <button
+                onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
+              >
+                <Phone className="w-5 h-5" />
+                Get HBSE Batch Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-12 bg-white border-b">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {successStats.map((item, index) => (
+              <div key={item.label} className="text-center animate-fadeInUp">
+                <p className="text-3xl md:text-4xl font-bold text-green-600">{item.stat}</p>
+                <p className="text-sm text-slate-600 mt-1">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Bridge Advantages */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Why HBSE Students Succeed with Us
+            </h2>
+            <p className="text-xl text-slate-600">
+              Bridge language and syllabus gaps for NEET success
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {bridgeAdvantages.map((advantage, index) => (
+              <div
+                key={advantage.title}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp"
+              >
+                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                  <advantage.icon className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{advantage.title}</h3>
+                <p className="text-slate-600 text-sm">{advantage.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Syllabus Gap Table */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              HBSE to NCERT Syllabus Gaps We Bridge
+            </h2>
+            <p className="text-xl text-slate-600">
+              Key topics where we provide extra focus for HBSE students
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
+              <thead className="bg-green-600 text-white">
+                <tr>
+                  <th className="px-6 py-4 text-left">Topic</th>
+                  <th className="px-6 py-4 text-left">HBSE Coverage</th>
+                  <th className="px-6 py-4 text-left">NCERT Coverage</th>
+                  <th className="px-6 py-4 text-left">Priority</th>
+                </tr>
+              </thead>
+              <tbody>
+                {syllabusGaps.map((gap, index) => (
+                  <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                    <td className="px-6 py-4 font-medium text-slate-900">{gap.topic}</td>
+                    <td className="px-6 py-4 text-slate-600">{gap.hbse}</td>
+                    <td className="px-6 py-4 text-green-600 font-semibold">{gap.ncert}</td>
+                    <td className="px-6 py-4">
+                      <span
+                        className={`px-3 py-1 rounded-full text-xs font-semibold ${gap.priority === 'High' ? 'bg-red-100 text-red-700' : 'bg-yellow-100 text-yellow-700'}`}
+                      >
+                        {gap.priority}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-center text-slate-500 mt-4 text-sm">
+            Our bridge program systematically covers all these gaps in the first 4 weeks.
+          </p>
+        </div>
+      </section>
+
+      {/* Schools */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Students from HBSE Schools Across Region
+            </h2>
+            <p className="text-xl text-slate-600">
+              Government and private HBSE-affiliated schools trust us
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {hbseSchools.map((school, index) => (
+              <div
+                key={school.name}
+                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6 border border-green-100 animate-fadeInUp"
+              >
+                <h3 className="text-lg font-bold text-slate-900 mb-1">{school.name}</h3>
+                <p className="text-sm text-slate-500 mb-2">{school.area}</p>
+                <span
+                  className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${school.type === 'Government' ? 'bg-green-100 text-green-700' : 'bg-teal-100 text-teal-700'}`}
+                >
+                  {school.type}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Bilingual Approach */}
+      <section className="py-16 bg-gradient-to-br from-green-600 to-teal-600 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="animate-fadeInUp">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Bilingual Teaching Approach</h2>
+              <p className="text-xl text-green-100 mb-6">
+                We understand Hindi medium students. Concepts are explained in Hindi for clarity,
+                but you&apos;re trained to read and answer in English for NEET.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-300" />
+                  Concept explanation in Hindi initially
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-300" />
+                  Gradual transition to English terminology
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-300" />
+                  Hindi study materials available
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-300" />
+                  Doubt clearing in both languages
+                </li>
+              </ul>
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="bg-white text-green-600 hover:bg-green-50">
+                  <Play className="w-4 h-4 mr-2" />
+                  Join Hindi-English Batch
+                </Button>
+              </Link>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
+              <h3 className="text-2xl font-bold mb-6">What HBSE Students Get</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between py-3 border-b border-white/20">
+                  <span>Batch size</span>
+                  <span className="font-semibold">15-20 students</span>
+                </div>
+                <div className="flex justify-between py-3 border-b border-white/20">
+                  <span>Teaching medium</span>
+                  <span className="font-semibold">Hindi + English</span>
+                </div>
+                <div className="flex justify-between py-3 border-b border-white/20">
+                  <span>Faculty</span>
+                  <span className="font-semibold">AIIMS-trained</span>
+                </div>
+                <div className="flex justify-between py-3">
+                  <span>First 4 weeks</span>
+                  <span className="font-semibold text-green-300">NCERT bridge</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Affordable Pricing */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Affordable Fees for HBSE Students
+            </h2>
+            <p className="text-xl text-slate-600">
+              Quality education shouldn&apos;t break the bank
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gray-50 rounded-2xl p-8 border-2 border-gray-200 animate-fadeInUp">
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Foundation Batch</h3>
+              <p className="text-slate-600 mb-4">For Class 11 HBSE students</p>
+              <p className="text-4xl font-bold text-green-600 mb-2">₹35,000</p>
+              <p className="text-sm text-slate-500 mb-6">per year</p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  HBSE-NCERT Bridge
+                </li>
+                <li className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  Bilingual Teaching
+                </li>
+                <li className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  Weekend Batches
+                </li>
+                <li className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  Hindi Study Material
+                </li>
+              </ul>
+              <Button variant="outline" className="w-full" onClick={handleWhatsApp}>
+                Enquire Now
+              </Button>
+            </div>
+
+            <div className="bg-green-50 rounded-2xl p-8 border-2 border-green-500 relative animate-fadeInUp">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                Most Popular
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Intensive Batch</h3>
+              <p className="text-slate-600 mb-4">For Class 12 HBSE students</p>
+              <p className="text-4xl font-bold text-green-600 mb-2">₹45,000</p>
+              <p className="text-sm text-slate-500 mb-6">per year</p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  Everything in Foundation
+                </li>
+                <li className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  Daily Practice Tests
+                </li>
+                <li className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  Board + NEET Combo
+                </li>
+                <li className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  Personal Mentoring
+                </li>
+              </ul>
+              <Button className="w-full bg-green-600 hover:bg-green-700" onClick={handleWhatsApp}>
+                Enquire Now
+              </Button>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-8 border-2 border-gray-200 animate-fadeInUp">
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Dropper Batch</h3>
+              <p className="text-slate-600 mb-4">For HBSE passouts</p>
+              <p className="text-4xl font-bold text-green-600 mb-2">₹55,000</p>
+              <p className="text-sm text-slate-500 mb-6">per year</p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  Full-day Batches
+                </li>
+                <li className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  Intensive Revision
+                </li>
+                <li className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  100+ Mock Tests
+                </li>
+                <li className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  1-on-1 Doubt Sessions
+                </li>
+              </ul>
+              <Button variant="outline" className="w-full" onClick={handleWhatsApp}>
+                Enquire Now
+              </Button>
+            </div>
+          </div>
+
+          <div className="mt-8 bg-yellow-50 rounded-xl p-6 text-center">
+            <p className="text-lg font-semibold text-yellow-800">
+              <Award className="w-5 h-5 inline-block mr-2" />
+              Scholarship up to 50% for meritorious & financially needy students. EMI options
+              available.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Location */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                  Accessible from All Areas
+                </h2>
+                <p className="text-slate-600 mb-6">
+                  Our center at <strong>Huda Market, Sector 17</strong> is well-connected by bus and
+                  metro routes from NIT Faridabad, Old Faridabad, Ballabhgarh, and all Faridabad
+                  sectors.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <p className="flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-green-600" />
+                    {CONTACT_INFO.location.faridabad.streetAddress}
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-green-600" />
+                    Morning, Evening & Weekend Batches
+                  </p>
+                </div>
+                <div className="flex gap-4">
+                  <a href={`tel:${CONTACT_INFO.phone.primary}`}>
+                    <Button variant="outline">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Call Now
+                    </Button>
+                  </a>
+                  <a href={CONTACT_INFO.location.faridabad.mapUrl} target="_blank" rel="noopener">
+                    <Button>
+                      <MapPin className="w-4 h-4 mr-2" />
+                      Get Directions
+                    </Button>
+                  </a>
+                </div>
+              </div>
+              <div className="bg-green-50 rounded-xl p-6">
+                <h3 className="font-bold text-lg mb-4">Batch Timings for HBSE Students</h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between py-2 border-b">
+                    <span>Morning Batch</span>
+                    <span className="font-semibold">6:30 - 8:30 AM</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b">
+                    <span>Evening Batch</span>
+                    <span className="font-semibold">5:00 - 7:00 PM</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b">
+                    <span>Weekend Batch</span>
+                    <span className="font-semibold">Sat-Sun Full Day</span>
+                  </div>
+                  <div className="flex justify-between py-2">
+                    <span>Online Option</span>
+                    <span className="font-semibold text-green-600">Available</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <VideoTestimonialsSection />
+      <NEETToolsWidget
+        title="Free NEET Preparation Tools"
+        subtitle="Use our AI-powered tools to boost your preparation"
+      />
+
+      {/* FAQs */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl overflow-hidden shadow-sm">
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full flex items-center justify-between p-6 text-left"
+                >
+                  <span className="font-semibold text-slate-900 pr-4">{faq.question}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-slate-500 transition-transform ${openFaq === index ? 'rotate-180' : ''}`}
+                  />
+                </button>
+                {openFaq === index && (
+                  <div className="px-6 pb-6">
+                    <p className="text-slate-600">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
+          <div className="grid md:grid-cols-4 gap-4">
+            <Link
+              href="/cbse-biology-coaching-faridabad"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 className="font-semibold text-teal-600">CBSE Biology Coaching</h3>
+              <p className="text-sm text-gray-600">For CBSE board students</p>
+            </Link>
+            <Link
+              href="/online-neet-classes-faridabad"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 className="font-semibold text-teal-600">Online NEET Classes</h3>
+              <p className="text-sm text-gray-600">Live interactive sessions</p>
+            </Link>
+            <Link
+              href="/neet-test-series-faridabad"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 className="font-semibold text-teal-600">NEET Test Series</h3>
+              <p className="text-sm text-gray-600">Mock tests & practice</p>
+            </Link>
+            <Link
+              href="/neet-coaching-faridabad"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3>
+              <p className="text-sm text-gray-600">All programs</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your NEET Journey?</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Join our HBSE batch preparing for NEET with bilingual support
+          </p>
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="secondary"
+                size="xl"
+                className="bg-white text-green-600 hover:bg-gray-100 font-bold"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Book Free Demo
+              </Button>
+            </Link>
+            <a href={`tel:${CONTACT_INFO.phone.primary}`}>
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-white text-white hover:bg-white hover:text-green-600"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}

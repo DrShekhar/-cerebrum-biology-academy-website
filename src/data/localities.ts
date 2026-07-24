@@ -16,6 +16,13 @@ export interface Locality {
     localKeywords: string[]
     h1: string
     metaRobots: 'index,follow' | 'noindex,follow'
+    /**
+     * When this locality's search intent is better served by a curated
+     * standalone page (e.g. /neet-coaching-faridabad/[area]), point the
+     * canonical there to avoid two indexable pages competing for the same
+     * keyword. Falls back to the self URL when unset.
+     */
+    canonicalUrl?: string
   }
 
   coordinates: { lat: number; lng: number }
@@ -8467,6 +8474,7 @@ export const localities: Locality[] = [
       localKeywords: ['sector 15 faridabad', 'neelam bata road', 'bata chowk', 'nit faridabad'],
       h1: 'Best NEET Biology Coaching in Sector 15 Faridabad',
       metaRobots: 'index,follow',
+      canonicalUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad/sector-15',
     },
 
     coordinates: { lat: 28.4089, lng: 77.3178 },
@@ -8571,6 +8579,7 @@ export const localities: Locality[] = [
       localKeywords: ['nit faridabad', 'sector 15', 'neelam flyover', 'surajkund road'],
       h1: 'Best NEET Biology Coaching near NIT Faridabad',
       metaRobots: 'index,follow',
+      canonicalUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad/nit-faridabad',
     },
 
     coordinates: { lat: 28.4142, lng: 77.312 },
@@ -8672,6 +8681,7 @@ export const localities: Locality[] = [
       localKeywords: ['old faridabad', 'railway road', 'ajronda chowk', 'saran chowk'],
       h1: 'Best NEET Biology Coaching in Old Faridabad',
       metaRobots: 'index,follow',
+      canonicalUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad/old-faridabad',
     },
 
     coordinates: { lat: 28.4167, lng: 77.3 },
@@ -8979,6 +8989,7 @@ export const localities: Locality[] = [
       localKeywords: ['sector 16 faridabad', 'st johns school', 'bata chowk', 'huda gymkhana'],
       h1: 'Premium NEET Biology Coaching in Sector 16 Faridabad',
       metaRobots: 'index,follow',
+      canonicalUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad/sector-16',
     },
     coordinates: { lat: 28.4069, lng: 77.3158 },
     centerAddress: 'Sector 17, Faridabad - Just 1 km away',
@@ -9687,6 +9698,7 @@ export const localities: Locality[] = [
       ],
       h1: 'Premium NEET Biology Coaching in Sector 21 Faridabad',
       metaRobots: 'index,follow',
+      canonicalUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad/sector-21',
     },
     coordinates: { lat: 28.4028, lng: 77.3118 },
     centerAddress: 'Sector 17 Faridabad - 3 km from Sector 21',
@@ -9769,6 +9781,7 @@ export const localities: Locality[] = [
       localKeywords: ['sector 28 faridabad', 'sector 28 metro', 'commercial area', 'mathura road'],
       h1: 'Metro-Connected NEET Coaching in Sector 28 Faridabad',
       metaRobots: 'index,follow',
+      canonicalUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad/sector-28',
     },
     coordinates: { lat: 28.4467, lng: 77.3133 },
     centerAddress: 'Sector 17 Faridabad - 4 km from Sector 28',
@@ -9950,6 +9963,7 @@ export const localities: Locality[] = [
       localKeywords: ['sector 84 faridabad', 'omaxe new heights', 'greater faridabad', 'neharpar'],
       h1: 'Quality NEET Biology Coaching in Sector 84 Greater Faridabad',
       metaRobots: 'index,follow',
+      canonicalUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad/sector-84',
     },
     coordinates: { lat: 28.367, lng: 77.291 },
     centerAddress: 'Sector 17 Faridabad - 15 km from Sector 84',

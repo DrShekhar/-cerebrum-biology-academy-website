@@ -6,6 +6,7 @@ export function generateLocalityMetadata(
   baseUrl: string = 'https://cerebrumbiologyacademy.com'
 ): Metadata {
   const pageUrl = `${baseUrl}/locations/${locality.citySlug}/${locality.slug}`
+  const canonicalUrl = locality.seo.canonicalUrl || pageUrl
   const ogTitle = `NEET Biology Coaching in ${locality.displayName}`
   const imageUrl = `${baseUrl}/api/og?title=${encodeURIComponent(ogTitle)}&subtitle=${encodeURIComponent('Expert Faculty • Small Batches • Proven Results')}&locality=${encodeURIComponent(locality.displayName)}`
 
@@ -28,7 +29,7 @@ export function generateLocalityMetadata(
       },
     },
     alternates: {
-      canonical: pageUrl,
+      canonical: canonicalUrl,
     },
     openGraph: {
       type: 'website',

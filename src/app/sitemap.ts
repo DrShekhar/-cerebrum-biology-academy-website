@@ -1744,6 +1744,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'ib-biology-tutor-modern-dps-faridabad',
       'ib-biology-tutor-ryan-international-faridabad',
       'ib-biology-tutor-shri-ram-faridabad',
+      'ib-igcse-biology-tuition-faridabad',
+      'nseb-coaching-faridabad',
+      'haryana-board-neet-coaching-faridabad',
     ].map((slug) => ({
       url: `${baseUrl}/${slug}`,
       lastModified: lastUpdated,
@@ -8386,12 +8389,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly' as const,
     priority: 0.85,
   }))
-  const localityRoutes: MetadataRoute.Sitemap = allLocalities.map((loc) => ({
-    url: `${baseUrl}/locations/${loc.citySlug}/${loc.slug}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }))
+  const localityRoutes: MetadataRoute.Sitemap = allLocalities
+    // Skip localities that canonicalise to a curated standalone page — only
+    // the canonical URL belongs in the sitemap, not the deduped twin.
+    .filter((loc) => !loc.seo.canonicalUrl)
+    .map((loc) => ({
+      url: `${baseUrl}/locations/${loc.citySlug}/${loc.slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    }))
 
   // Biology definitions pages
   const definitionRoutes: MetadataRoute.Sitemap = biologyDefinitions.map((def) => ({

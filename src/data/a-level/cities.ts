@@ -692,6 +692,58 @@ export const aLevelCities: ALevelCityConfig[] = [
     },
   },
   {
+    slug: 'faridabad',
+    cityName: 'Faridabad',
+    countryCode: 'IN',
+    country: 'India',
+    region: 'Delhi NCR',
+    timezone: 'IST',
+    timezoneIana: 'Asia/Kolkata',
+    examBoards: ['CAIE', 'Edexcel'],
+    heroBlurb:
+      'If your child is on an A-Level track in Faridabad — at Manav Rachna International, DPS, Apeejay or Ryan International — Cerebrum coaches A-Level Biology online and in person at our Sector 17 centre (SCF-130, Huda Market), for students aiming at UK and Indian medical schools without the daily trip into Delhi.',
+    schools: [
+      'Manav Rachna International School (MRIS)',
+      'Delhi Public School Faridabad',
+      'Apeejay School Faridabad',
+      'Ryan International School',
+      'The Shri Ram School',
+    ],
+    faqs: [
+      {
+        question: 'Where do Faridabad A-Level Biology students study with Cerebrum?',
+        answer:
+          'In person at our Faridabad centre (SCF-130, 2nd Floor, Above Union Bank, Huda Market, Sector 17), a short hop from Bata Chowk Metro — or live online on IST-friendly slots if you prefer to skip the commute.',
+      },
+      {
+        question: 'Which A-Level exam boards do Faridabad students use?',
+        answer:
+          'Mostly CAIE (Cambridge International) A-Level Biology, with Edexcel International A-Level students also supported. Every batch trains on board-specific past papers and mark schemes.',
+      },
+      {
+        question: 'How much does A-Level Biology tutoring cost in Faridabad?',
+        answer:
+          'Group sessions start at ₹2,000/hr, with annual programme packages from ₹60,000/year. One-to-one examiner-style sessions are available at the Sector 17 centre or online.',
+      },
+      {
+        question: 'Can you prepare a Faridabad student for both A-Level and NEET Biology?',
+        answer:
+          'Yes. If you want to keep UK and Indian medical options open, our integrated track covers both curricula, using the heavy overlap in cell biology, genetics and human physiology.',
+      },
+      {
+        question: 'Which universities do Faridabad A-Level students target?',
+        answer:
+          "Mostly UK Russell Group (Imperial, UCL, Edinburgh, King's) for medicine and biosciences; some also use A-Level grades for Indian private medical colleges alongside NEET.",
+      },
+    ],
+    pricing: {
+      localCurrency: 'INR',
+      currencySymbol: '₹',
+      perHour: 2000,
+      perHourText: '₹2,000–3,500/hr',
+    },
+  },
+  {
     slug: 'delhi-ncr',
     cityName: 'Delhi NCR',
     countryCode: 'IN',
