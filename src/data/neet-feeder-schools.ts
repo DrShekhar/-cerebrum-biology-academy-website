@@ -155,24 +155,24 @@ function tierBonusFAQs(
   if (tier === 'elite') {
     return [
       {
-        question: `Does Cerebrum produce AIIMS rankers from ${shortName}-tier schools?`,
-        answer: `Yes — Cerebrum has placed 500+ students in AIIMS (Delhi, Jodhpur, Bhopal, Bhubaneswar, Patna, Raipur) across 12 years. Elite-school cohorts typically aim for AIIMS Delhi or MAMC; we coach to that bar with Pinnacle 1:1 mentoring directly from Dr. Shekhar. Recent toppers from ${shortName}-tier feeder schools include NEET 702/720 (AIIMS Delhi) and NEET 688/720 (MAMC Delhi).`,
+        question: `Does Cerebrum produce AIIMS rankers from schools like ${shortName}?`,
+        answer: `Yes — Cerebrum has placed 500+ students in AIIMS (Delhi, Jodhpur, Bhopal, Bhubaneswar, Patna, Raipur) across 12 years. Students from schools like ${shortName} typically aim for AIIMS Delhi or MAMC; we coach to that bar with Pinnacle 1:1 mentoring directly from Dr. Shekhar. Recent toppers from similar schools include NEET 702/720 (AIIMS Delhi) and NEET 688/720 (MAMC Delhi).`,
       },
       {
         question: `Should ${shortName} students pair Cerebrum with Aakash / FIITJEE for AIIMS prep?`,
-        answer: `Common pattern at elite schools: students keep Aakash / FIITJEE for Physics + Chemistry depth (especially for AIIMS-level integer/numerical questions) and add Cerebrum specifically for Biology. The 360/720 Biology section is structurally where Cerebrum's biology-only specialisation compounds vs generalist Physics + Chemistry coaching.`,
+        answer: `A common pattern: many ${shortName} students keep Aakash / FIITJEE for Physics + Chemistry depth (especially for AIIMS-level integer/numerical questions) and add Cerebrum specifically for Biology. The 360/720 Biology section is structurally where Cerebrum's biology-only specialisation compounds vs generalist Physics + Chemistry coaching.`,
       },
     ]
   }
   if (tier === 'emerging') {
     return [
       {
-        question: `Can ${shortName} students afford the Pursuit tier?`,
-        answer: `Yes — Pursuit at ₹40,000/year is intentionally priced as the entry tier for students from emerging-feeder schools where AIIMS-Delhi-fee burden is unrealistic. Same AIIMS / IIT-trained faculty (20–25 student batches), same NCERT pedagogy. EMI plans available. State medical colleges (Delhi government colleges, Haryana state, UP government) are realistic targets at Pursuit-tier preparation.`,
+        question: `Can ${shortName} students afford the Pursuit plan?`,
+        answer: `Yes — Pursuit at ₹40,000/year is intentionally priced as the most affordable way in, so cost doesn't have to decide your preparation. Same AIIMS / IIT-trained faculty (20–25 student batches), same NCERT pedagogy. EMI plans available. State medical colleges (Delhi government colleges, Haryana state, UP government) are realistic targets at Pursuit-level preparation.`,
       },
       {
         question: `What if my mock score is currently below 200/360 in Biology?`,
-        answer: `Cerebrum's score-jump programmes are built for exactly this gap. Documented improvements: 180 → 320 in 6 months, 220 → 350 in 8 months. ${shortName} students typically respond well to NCERT line-by-line + weekly mock + 1:1 doubt review cycle. Start with Pursuit; upgrade to Ascent or Pinnacle mid-year if you out-grow the tier.`,
+        answer: `Cerebrum's score-jump programmes are built for exactly this gap. Documented improvements: 180 → 320 in 6 months, 220 → 350 in 8 months. ${shortName} students typically respond well to NCERT line-by-line + weekly mock + 1:1 doubt review cycle. Start with Pursuit; upgrade to Ascent or Pinnacle mid-year if you outgrow it.`,
       },
     ]
   }
@@ -180,7 +180,7 @@ function tierBonusFAQs(
   return [
     {
       question: `What's the average NEET score for ${shortName} alumni at Cerebrum?`,
-      answer: `Premium-feeder Cerebrum cohorts average 320–340 / 360 in NEET Biology and 600–680 / 720 overall, placing into top-quartile government and deemed medical colleges. Specific outcomes vary by tier (Pursuit aims for state colleges; Ascent for premium government colleges; Pinnacle for AIIMS / JIPMER).`,
+      answer: `Our students from schools like ${shortName} average 320–340 / 360 in NEET Biology and 600–680 / 720 overall, placing into top-quartile government and deemed medical colleges. Specific outcomes vary by plan (Pursuit aims for state colleges; Ascent for premium government colleges; Pinnacle for AIIMS / JIPMER).`,
     },
   ]
 }
@@ -223,7 +223,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'South Extension (5 km · 15 min)',
     metroNote: 'AIIMS Metro (Yellow Line) — 4 km',
     feederContext:
-      "DPS RK Puram is consistently ranked among Delhi's top CBSE schools and a major NEET feeder. Class 12 science students typically split between IIT-JEE and NEET preparation streams.",
+      "DPS RK Puram is consistently ranked among Delhi's top CBSE schools and a major source of NEET aspirants. Class 12 science students typically split between IIT-JEE and NEET preparation streams.",
     tier: 'elite',
   },
   'sanskriti-school-delhi': {
@@ -237,7 +237,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'South Extension (6 km · 18 min)',
     metroNote: 'Race Course Metro (Yellow Line) — 1 km',
     feederContext:
-      "Sanskriti is one of Delhi's most prestigious CBSE schools, drawing diplomatic-family and senior-bureaucrat children. Class 12 science cohorts typically target AIIMS, JIPMER and top US/UK premed routes.",
+      "Sanskriti is one of Delhi's most prestigious CBSE schools, drawing diplomatic-family and senior-bureaucrat children. Class 12 science students typically target AIIMS, JIPMER and top US/UK premed routes.",
     tier: 'elite',
   },
   'modern-school-barakhamba-delhi': {
@@ -251,7 +251,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'South Extension (6 km · 20 min) · Green Park (5 km · 15 min)',
     metroNote: 'Barakhamba Road Metro (Blue Line) — adjacent',
     feederContext:
-      "Modern School Barakhamba (founded 1920) is Delhi's oldest elite English-medium school. Strong NEET feeder, with annual cohorts targeting AIIMS Delhi and MAMC.",
+      "Modern School Barakhamba (founded 1920) is Delhi's oldest elite English-medium school. Large numbers of its students sit NEET each year, many targeting AIIMS Delhi and MAMC.",
     tier: 'elite',
   },
   'springdales-school-delhi': {
@@ -265,7 +265,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'South Extension (4–8 km depending on campus)',
     metroNote: 'Dhaula Kuan Metro (Pink Line) — 1 km for Dhaula Kuan campus',
     feederContext:
-      'Springdales is a heritage CBSE school with two Delhi campuses. Science cohorts produce annual NEET / IIT-JEE qualifiers; strong international-curriculum bridge for IB / AP Biology after Class 12.',
+      'Springdales is a heritage CBSE school with two Delhi campuses. Its science stream produces NEET / IIT-JEE qualifiers every year; strong international-curriculum bridge for IB / AP Biology after Class 12.',
     tier: 'premium',
   },
   'mothers-international-delhi': {
@@ -293,7 +293,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'South Extension (5 km · 18 min)',
     metroNote: 'Nehru Place Metro (Violet Line) — 3 km',
     feederContext:
-      'DPS Mathura Road serves New Friends Colony, Sukhdev Vihar and East-of-Kailash residents. Strong CBSE Class 12 science cohort with consistent annual NEET selections.',
+      'DPS Mathura Road serves New Friends Colony, Sukhdev Vihar and East-of-Kailash residents. Strong CBSE Class 12 science stream with consistent annual NEET selections.',
     tier: 'premium',
   },
   'tagore-international-delhi': {
@@ -307,7 +307,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'South Extension (7 km · 22 min) · Green Park (5 km · 15 min)',
     metroNote: 'Vasant Vihar Metro (Magenta Line) — 1 km',
     feederContext:
-      'Tagore International Vasant Vihar serves diplomatic-family and senior-bureaucrat children. Class 12 science cohort typically targets AIIMS Delhi, JIPMER, MAMC and overseas premed.',
+      'Tagore International Vasant Vihar serves diplomatic-family and senior-bureaucrat children. Class 12 science students typically target AIIMS Delhi, JIPMER, MAMC and overseas premed.',
     tier: 'elite',
   },
   'gd-goenka-gurugram': {
@@ -335,7 +335,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'Gurugram Sector 51 (2 km · 8 min)',
     metroNote: 'Sector 53–54 Metro (Rapid Metro) — adjacent',
     feederContext:
-      "Suncity is among Gurugram's top-tier CBSE schools. Strong Class 11–12 NEET cohort drawn from DLF Phase 4–5, Sector 53–54, and Golf Course Road residential clusters.",
+      "Suncity is among Gurugram's leading CBSE schools. Many of its Class 11–12 NEET aspirants come from DLF Phase 4–5, Sector 53–54, and Golf Course Road residential clusters.",
     tier: 'premium',
   },
   'shriram-school-aravali-gurugram': {
@@ -349,7 +349,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'Gurugram Sector 51 (10 km · 25 min)',
     metroNote: 'Cab access; HUDA City Centre Metro 10 km',
     feederContext:
-      "Shri Ram Aravali is among Delhi NCR's most academically rigorous schools. NEET cohort typically combines CBSE-stream Class 12 + IGCSE A-Level Biology students considering Indian or international premed.",
+      "Shri Ram Aravali is among Delhi NCR's most academically rigorous schools. NEET aspirants here are typically a mix of CBSE-stream Class 12 and IGCSE A-Level Biology students considering Indian or international premed.",
     tier: 'elite',
   },
   'pathways-world-aravali-gurugram': {
@@ -377,7 +377,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'Gurugram Sector 51 (3 km · 10 min)',
     metroNote: 'Sector 54 Chowk (Rapid Metro) — 3 km',
     feederContext:
-      "Heritage Xperiential is among Gurugram's academically rigorous experiential-learning schools. Multi-curriculum: CBSE + IGCSE + IB Diploma streams. NEET cohort typically combines CBSE Class 12 + IB Biology HL students.",
+      "Heritage Xperiential is among Gurugram's academically rigorous experiential-learning schools. Multi-curriculum: CBSE + IGCSE + IB Diploma streams. NEET aspirants typically include both CBSE Class 12 and IB Biology HL students.",
     tier: 'premium',
   },
   'dps-sector-45-gurugram': {
@@ -391,7 +391,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'Gurugram Sector 51 (5 km · 12 min)',
     metroNote: 'HUDA City Centre Metro (Yellow Line) — 5 km',
     feederContext:
-      "DPS Sector 45 is among Gurugram's top-tier CBSE schools, serving DLF Phase 4–5 and Golf Course Road residential clusters. Strong Class 12 science cohort with consistent NEET selections.",
+      "DPS Sector 45 is among Gurugram's leading CBSE schools, serving DLF Phase 4–5 and Golf Course Road residential clusters. Strong Class 12 science stream with consistent NEET selections.",
     tier: 'premium',
   },
   'dps-noida': {
@@ -405,7 +405,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'Live online · nearest walk-in centre: South Extension, New Delhi',
     metroNote: 'Botanical Garden Metro (Blue Line) — 4 km',
     feederContext:
-      'DPS Noida is the flagship Noida CBSE school. Annual NEET cohort consistently produces AIIMS, MAMC and KMC Manipal selections.',
+      'DPS Noida is the flagship Noida CBSE school. Its NEET aspirants consistently earn AIIMS, MAMC and KMC Manipal selections year after year.',
     tier: 'premium',
   },
   'cambridge-international-noida': {
@@ -433,7 +433,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'Live online · nearest walk-in centre: South Extension, New Delhi',
     metroNote: 'Botanical Garden Metro (Blue Line) — 3 km',
     feederContext:
-      'Amity International Noida is one of multiple Amity schools across NCR. Strong CBSE Class 12 science cohort, NEET-bound students typically target AIIMS Delhi and Delhi-region medical colleges.',
+      'Amity International Noida is one of multiple Amity schools across NCR. Strong CBSE Class 12 science stream; NEET-bound students typically target AIIMS Delhi and Delhi-region medical colleges.',
     tier: 'premium',
   },
   'lotus-valley-international-noida': {
@@ -447,7 +447,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'Live online · nearest walk-in centre: South Extension, New Delhi',
     metroNote: 'Botanical Garden Metro (Blue Line) — 6 km',
     feederContext:
-      'Lotus Valley International is a premium multi-curriculum school in Noida (CBSE + IGCSE + IB Diploma). NEET cohort combines CBSE-stream Class 12 + IB Biology HL students considering Indian medical colleges via NRI quota.',
+      'Lotus Valley International is a premium multi-curriculum school in Noida (CBSE + IGCSE + IB Diploma). NEET aspirants include both CBSE-stream Class 12 and IB Biology HL students considering Indian medical colleges via NRI quota.',
     tier: 'premium',
   },
   'apeejay-school-faridabad': {
@@ -461,7 +461,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'Faridabad Sector 17 (2 km · 8 min)',
     metroNote: 'Bata Chowk Metro (Violet Line) — 2 km',
     feederContext:
-      'Apeejay Faridabad is the top-tier CBSE school in Faridabad. Annual NEET cohort feeds AIIMS Delhi, MAMC and Haryana state government medical colleges.',
+      'Apeejay Faridabad is the leading CBSE school in Faridabad. Its NEET aspirants go on to AIIMS Delhi, MAMC and Haryana state government medical colleges every year.',
     tier: 'emerging',
   },
   'delhi-public-school-faridabad': {
@@ -475,7 +475,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'Faridabad Sector 17 (3 km · 10 min)',
     metroNote: 'Bata Chowk Metro (Violet Line) — 3 km',
     feederContext:
-      'DPS Faridabad serves the broader Faridabad NCR catchment. Strong Class 12 science cohort with consistent annual NEET selections.',
+      'DPS Faridabad serves students from across Faridabad and the surrounding NCR. Strong Class 12 science stream with consistent annual NEET selections.',
     tier: 'emerging',
   },
   'dps-ghaziabad': {
@@ -489,7 +489,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     nearestCerebrumCentre: 'Live online · nearest walk-in centre: South Extension, New Delhi',
     metroNote: 'Vaishali Metro (Blue Line) — 4 km',
     feederContext:
-      'DPS Ghaziabad serves Vasundhara, Indirapuram and broader Ghaziabad. Strong Class 12 science feeder; NEET cohort typically targets Delhi-region and UP-state medical colleges.',
+      'DPS Ghaziabad serves Vasundhara, Indirapuram and broader Ghaziabad. Strong Class 12 science stream; NEET aspirants typically target Delhi-region and UP-state medical colleges.',
     tier: 'emerging',
   },
 }
@@ -531,12 +531,12 @@ export function buildNEETFeederSchoolConfig(key: NEETFeederSchoolKey): BestVerti
       {
         tier: 'Pursuit (Affordable)',
         price: '₹40,000–₹75,000 / year',
-        description: `30–40 student batches taught by AIIMS / IIT-trained faculty. Most affordable tier. Good fit for ${s.shortName} Class 11 + 12 students wanting quality NEET prep at a reasonable price.`,
+        description: `30–40 student batches taught by AIIMS / IIT-trained faculty. Most affordable plan. Good fit for ${s.shortName} Class 11 + 12 students wanting quality NEET prep at a reasonable price.`,
       },
       {
         tier: 'Ascent (Most Popular)',
         price: '₹58,000–₹90,000 / year',
-        description: `12–16 student batches with weekly doubt sessions. Most popular tier for ${s.shortName} students balancing CBSE Boards + NEET preparation.`,
+        description: `12–16 student batches with weekly doubt sessions. Most popular plan for ${s.shortName} students balancing CBSE Boards + NEET preparation.`,
       },
       {
         tier: 'Pinnacle (1:1 Premium)',
