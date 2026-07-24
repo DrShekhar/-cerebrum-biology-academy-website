@@ -31,35 +31,35 @@ export const northDelhiEnriched: Record<string, NorthDelhiEnrichment> = {
     metaDescription:
       'Kamla Nagar next to Delhi University — a student epicentre. Live online NEET Biology coaching with small batches and AIIMS-trained faculty, structured amid all the buzz.',
     intro:
-      'Kamla Nagar sits right beside Delhi University — Hindu, SRCC and Miranda House are minutes away — which makes it one of North Delhi’s liveliest student neighbourhoods and a magnet for coaching. For NEET aspirants here the challenge isn’t options, it’s focus. Our live online Biology programme brings small, examiner-informed batches and AIIMS-trained faculty with the discipline the DU-adjacent buzz can lack, reachable from the Vishwavidyalaya metro belt without joining another crowded classroom.',
+      'If you’re preparing for NEET in Kamla Nagar — right beside Delhi University, with Hindu, SRCC and Miranda House minutes away — you live in one of North Delhi’s liveliest student neighbourhoods and a magnet for coaching. Your challenge isn’t options, it’s focus. Our live online Biology programme brings you small, examiner-informed batches and AIIMS-trained faculty with the discipline the DU-adjacent buzz can lack, reachable from the Vishwavidyalaya metro belt without joining another crowded classroom.',
   },
   'ashok-vihar': {
     metaTitle: 'NEET Biology Coaching in Ashok Vihar, North Delhi | Cerebrum',
     metaDescription:
       'Ashok Vihar (Phases 1–4) near Netaji Subhash Place — DAV, Ryan and Modern School families. Live online NEET Biology coaching, small batches, AIIMS-trained faculty.',
     intro:
-      'Ashok Vihar is a settled North Delhi colony across Phases 1 to 4, anchored by DAV, Ryan and Modern School and the Netaji Subhash Place commercial hub next door. Its NEET aspirants come from education-focused families who want serious Biology preparation without a long commute, so we run small live online batches led by AIIMS-trained faculty — the depth of a specialist centre delivered right into the neighbourhood off the NSP and Shalimar Bagh metro lines.',
+      'If you live in Ashok Vihar — the settled North Delhi colony across Phases 1 to 4, anchored by DAV, Ryan and Modern School with the Netaji Subhash Place commercial hub next door — you come from an education-focused neighbourhood and want serious Biology preparation without a long commute. So we run small live online batches led by AIIMS-trained faculty — the depth of a specialist centre delivered right into your neighbourhood off the NSP and Shalimar Bagh metro lines.',
   },
   'kingsway-camp': {
     metaTitle: 'NEET Biology Coaching in Kingsway Camp, North Delhi (near DU & GTB) | Cerebrum',
     metaDescription:
       'Kingsway Camp near Delhi University and GTB Hospital — medical-minded families. Live online NEET Biology coaching with AIIMS-trained faculty and small, focused batches.',
     intro:
-      'Kingsway Camp sits between Delhi University and GTB Hospital, so it draws an unusually academic and medically-minded community — exactly the households planning early for a medical seat. That makes it one of our natural catchments: our live online Biology classes give Kingsway Camp students small batches and AIIMS-trained faculty, matched to serious aspirants, and reachable straight off the GTB Nagar and Vishwavidyalaya metro stations.',
+      'If your home is in Kingsway Camp, between Delhi University and GTB Hospital, you’re part of an unusually academic and medically-minded community — exactly the kind of household that plans early for a medical seat. That makes you one of our natural catchments: our live online Biology classes give you small batches and AIIMS-trained faculty, matched to serious aspirants like you, and reachable straight off the GTB Nagar and Vishwavidyalaya metro stations.',
   },
   'adarsh-nagar': {
     metaTitle: 'NEET Biology Coaching in Adarsh Nagar, North Delhi | Cerebrum',
     metaDescription:
       'Adarsh Nagar — well-connected North Delhi on the Yellow Line. Live online NEET Biology coaching, small batches, AIIMS-trained faculty, timed around local school hours.',
     intro:
-      'Adarsh Nagar is a well-connected North Delhi colony on the Yellow Line between Azadpur and Model Town, home to families from DAV, Sarvodaya and Ryan who value reliable education. Rather than send their children across the city to a coaching hub, its NEET aspirants get our live online Biology classes — small batches, AIIMS-trained faculty and testing built in — delivered locally and scheduled around Adarsh Nagar’s school timetables.',
+      'If you live in Adarsh Nagar — a well-connected North Delhi colony on the Yellow Line between Azadpur and Model Town — and your school is DAV, Sarvodaya or Ryan, you value reliable education. Rather than travel across the city to a coaching hub, you get our live online Biology classes — small batches, AIIMS-trained faculty and testing built in — delivered locally and scheduled around your school timetable.',
   },
   'prashant-vihar': {
     metaTitle: 'NEET Biology Coaching in Prashant Vihar, North Delhi (Rohini zone) | Cerebrum',
     metaDescription:
       'Prashant Vihar in the Rohini zone — quiet, education-focused colonies near Rohini West/Pitampura metro. Live online NEET Biology coaching, small batches, AIIMS-trained faculty.',
     intro:
-      'Prashant Vihar is a quiet, well-kept colony in the Rohini zone, the kind of education-focused North Delhi pocket where families plan seriously for medicine. For their NEET aspirants we keep our live online Biology batches small and the mentorship personal, taught by AIIMS-trained faculty — a specialist Biology programme they can rely on close to home, a short hop from the Rohini West and Pitampura metro stations.',
+      'If you live in Prashant Vihar — the quiet, well-kept colony in the Rohini zone, the kind of education-focused North Delhi pocket where families plan seriously for medicine — you want a specialist Biology programme you can rely on close to home. For your NEET preparation we keep our live online Biology batches small and the mentorship personal, taught by AIIMS-trained faculty, a short hop from the Rohini West and Pitampura metro stations.',
   },
 }
 
